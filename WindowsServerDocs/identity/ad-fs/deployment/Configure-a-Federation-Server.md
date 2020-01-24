@@ -16,11 +16,11 @@ ms.technology: identity-adfs
 
 After you install the Active Directory Federation Services \(AD FS\) role service on your computer, you are ready to configure this computer to become a federation server. You can do one of the following:  
   
--   [Configure the first federation server in a new federation server farm](assetId:///e340cf8f-acf3-4cba-8135-a9353b85e714#BKMK_1)  
+-   [Configure the first federation server in a new federation server farm](Configure-a-Federation-Server.md#configure-the-first-federation-server-in-a-new-federation-server-farm)  
   
--   [Add a federation server to an existing federation server farm](assetId:///e340cf8f-acf3-4cba-8135-a9353b85e714#BKMK_2)  
+-   [Add a federation server to an existing federation server farm](Configure-a-Federation-Server.md#add-a-federation-server-to-an-existing-federation-server-farm)  
   
-## <a name="BKMK_1"></a>Configure the first federation server in a new federation server farm  
+## Configure the first federation server in a new federation server farm  
   
 ### To configure the first federation server in a new federation server farm by using the Active Directory Federation Service Configuration Wizard  
   
@@ -66,7 +66,7 @@ After you install the Active Directory Federation Services \(AD FS\) role serv
   
 9. On the **Results** page, review the results and check whether the configuration is completed successfully, and then click **Next steps required for completing your federation service deployment**. For more information, see [Next steps for completing your AD FS installation](https://go.microsoft.com/fwlink/p/?LinkId=286704). Click **Close** to exit the wizard.  
   
-### <a name="BKMK_3"></a>To configure the first federation server in a new federation server farm via Windows PowerShell  
+### To configure the first federation server in a new federation server farm via Windows PowerShell  
 You can create a new federation server farm by using either a new or existing gMSA account or an existing domain user account.  
   
 -   **If you want to create a new federation server by using a new gMSA account, do the following:**  
@@ -125,7 +125,7 @@ You can create a new federation server farm by using either a new or existing gM
         > [!IMPORTANT]  
         > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012 and SQL Server 2014.  
   
-## <a name="BKMK_2"></a>Add a federation server to an existing federation server farm  
+## Add a federation server to an existing federation server farm  
   
 > [!IMPORTANT]  
 > Ensure that you have completed [Step 3: Install the AD FS Role Service](../../ad-fs/deployment/Install-the-AD-FS-Role-Service.md), before you start any of the procedures in this section.  
