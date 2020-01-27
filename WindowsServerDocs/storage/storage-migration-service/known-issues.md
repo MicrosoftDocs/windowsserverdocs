@@ -19,7 +19,7 @@ For example, Windows Server, version 1903 includes new features and fixes for St
 
 ## <a name="collecting-logs"></a> How to collect log files when working with Microsoft Support
 
-The Storage Migration Service contains event logs for the Orchestrator service and the Proxy Service. The urchestrator server always contains both event logs, and destination servers with the proxy service installed contain the proxy logs. These logs are located under:
+The Storage Migration Service contains event logs for the Orchestrator service and the Proxy Service. The orchestrator server always contains both event logs, and destination servers with the proxy service installed contain the proxy logs. These logs are located under:
 
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService-Proxy
@@ -273,7 +273,7 @@ As an alternative workaround:
    ```
 ## Error "Dll was not found" when running inventory from a cluster node
 
-When attempting to run inventory with the Storage Migration Service orchestrator installed on a Windows Server 2019 failover cluster node and targeting a Windows Server failover cluster general use file server source, you receive the following error:
+When attempting to run inventory with the Storage Migration Service and targeting a Windows Server failover cluster general use file server source, you receive the following errors:
 
     DLL not found
     [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   

@@ -332,7 +332,7 @@ After enabling multisite in your deployment, you can add additional entry points
 15. On the **Adding Entry Point** dialog box, click **Close** and then on the Add an Entry Point Wizard, click **Close**.  
   
     > [!NOTE]  
-    > If the entry point that was added is in a different forest than the existing entry points or client computers, then it is required to click **Refresh Management Servers** in the **Tasks** pane to discover the domain controllers and System Center Configuration Manager in the new forest.  
+    > If the entry point that was added is in a different forest than the existing entry points or client computers, then it is required to click **Refresh Management Servers** in the **Tasks** pane to discover the domain controllers and Configuration Manager in the new forest.  
   
 16. Repeat this procedure from step 2 for every entry point that you want to add to your multisite deployment.  
   
