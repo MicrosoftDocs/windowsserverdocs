@@ -317,9 +317,9 @@ DirectAccess clients initiate communication with management servers that provide
   
 -   Domain controllers: Automatic discovery of domain controllers is performed for the domains that contain client computers and for all domains in the same forest as the Remote Access server.  
   
--   System Center Configuration Manager servers  
+-   Microsoft Endpoint Configuration Manager servers  
   
-Domain controllers and System Center Configuration Manager servers are automatically detected the first time DirectAccess is configured. The detected domain controllers are not displayed in the console, but settings can be retrieved using Windows PowerShell cmdlets. If domain controller or System Center Configuration Manager servers are modified, clicking **Update Management Servers** in the console refreshes the management server list.  
+Domain controllers and Configuration Manager servers are automatically detected the first time DirectAccess is configured. The detected domain controllers are not displayed in the console, but settings can be retrieved using Windows PowerShell cmdlets. If domain controller or Configuration Manager servers are modified, clicking **Update Management Servers** in the console refreshes the management server list.  
   
 **Management server requirements**  
   

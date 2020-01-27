@@ -130,7 +130,7 @@ These file servers use Server Message Block (SMB) to exchange information betwee
 
 Supported application servers include computers that are running Windows Server 2016,  Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2 with Background Intelligent Transfer Service (BITS) installed and enabled. 
 
-In addition, the application server must have the BranchCache feature installed. As examples of application servers, you can deploy Microsoft Windows Server Update Services (WSUS) and Microsoft System Center Configuration Manager Branch Distribution Point servers as BranchCache content servers.
+In addition, the application server must have the BranchCache feature installed. As examples of application servers, you can deploy Microsoft Windows Server Update Services (WSUS) and Microsoft Endpoint Configuration Manager Branch Distribution Point servers as BranchCache content servers.
 
 ## <a name="BKMK_3a"></a>BranchCache and the cloud
 
