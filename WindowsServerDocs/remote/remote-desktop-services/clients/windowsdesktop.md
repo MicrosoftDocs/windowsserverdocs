@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/04/2019
+ms.date: 01/28/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -97,17 +97,14 @@ Workspaces can contain multiple managed resources, including desktops. When acce
 
 ### Desktop settings
 
-You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings:
-
-1. From the Connection Center, right-click on a desktop resource.
-2. Select **Settings** from the drop-down menu.
-3. The Settings panel appears on the right side of the client displaying the name of the desktop.
+You can configure some of the settings for desktop resources to ensure the experience meets your needs. To access the list of available settings right-click on the desktop resource and select **Settings**.
 
 The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
 
-- **Use all monitors** switches the desktop session between using all available local monitors and only one monitor.
-- **Start in full screen** determines whether the session will launch in full-screen or windowed mode. This setting is automatically enabled when using all monitors.
-- **Update the resolution on resize** changes the behavior when you resize the session in windowed mode. If enabled, the resolution of the remote desktop will update to match the size of the local window. If disabled, the session will retain the resolution specified in **Resolution** for its entire duration. This setting is automatically enabled when using all monitors.
+- **Use multiple displays** switches the desktop session between using a single or multiple displays.
+- **Select the displays to use for the session** specifies which local displays to use for the session. All selected displays must be adjacent to each other. This setting is automatically disabled when you use a single display.
+- **Start in full screen** determines whether the session will launch in full-screen or windowed mode. This setting is automatically enabled when you use multiple displays.
+- **Update the resolution on resize** makes the Remote Desktop resolution automatically update when you resize the session in windowed mode. When disabled, the session always remains at whichever resolution you specify in **Resolution**. This setting is automatically enabled when you use multiple displays.
 - **Resolution** lets you specify the resolution of the remote desktop. The session will retain this resolution for its entire duration. This setting is automatically disabled if the resolution is set to update on resize.
 - **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is automatically disabled if the resolution is set to update on resize.
 - **Fit session to window** determines how the session is displayed when the resolution of the remote desktop differs from the size of the local window. When enabled, the session content will be resized to fit inside the window while preserving the aspect ratio of the session. When disabled, scrollbars or black areas will be shown when the resolution and window size don't match.
