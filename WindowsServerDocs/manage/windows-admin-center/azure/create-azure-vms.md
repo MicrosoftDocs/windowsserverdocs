@@ -15,7 +15,7 @@ ms.prod: windows-server
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Windows Admin Center-managed workloads like [Storage Migration Service](../../storage/storage-migration-service/overview.md) and [Storage Replica](../../storage/storage-replica/storage-replica-overview.md). Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system. You can also deploy new Azure VMs without a workload from the Windows Admin Center Connections page.
+Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Windows Admin Center-managed workloads like [Storage Migration Service](../../../storage/storage-migration-service/overview.md) and [Storage Replica](../../../storage/storage-replica/storage-replica-overview.md). Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system. You can also deploy new Azure VMs without a workload from the Windows Admin Center Connections page.
 
 Windows Admin Center also manages a variety of Azure services. [Learn more about the Azure integration options available with Windows Admin Center](../plan/azure-integration-options.md).
 
@@ -23,8 +23,8 @@ Windows Admin Center also manages a variety of Azure services. [Learn more about
 
 Windows Admin Center version 1910 Azure VM deployment supports the following scenarios:
 
-- [Storage Migration Service](../../storage/storage-migration-service/overview.md)
-- [Storage Replica](../../storage/storage-replica/storage-replica-overview.md)
+- [Storage Migration Service](../../../storage/storage-migration-service/overview.md)
+- [Storage Replica](../../../storage/storage-replica/storage-replica-overview.md)
 - [New standalone server (without roles)](index.md#extend-on-premises-capacity-with-azure)
 
 ## Requirements
