@@ -29,7 +29,7 @@ Windows Admin Center version 1910 Azure VM deployment supports the following sce
 
 ## Requirements
 
-Using "Create a new Azure VM" requires that you have:
+Creating a new Azure VM from within Windows Admin Center requires that you have:
 
 - An [Azure subscription](https://azure.microsoft.com).
 - A [Windows Admin Center gateway registered with Azure](https://docs.microsoft.com/windows-server/manage/windows-admin-center/azure/azure-integration)
