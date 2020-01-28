@@ -211,9 +211,9 @@ To enable authenticated communication with the HCP services, we need to create 3
     ![Print Server Cloud Print Deploy](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
 
     - Check the log file to see if there is any error:
-    `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0>notepad CloudPrintDeploy.log`
+    `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
 
-4. Open RegitEdit in an elevated command prompt. Go to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService.
+4. Run **RegitEdit** in an elevated command prompt. Go to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CloudPrint\EnterpriseCloudPrintService.
     - Make sure AzureAudience is set to the Application ID URI of Enterprise Cloud Print app.
     - Make sure AzureTenant is set to the Azure AD domain name.
 
@@ -442,6 +442,11 @@ On an Azure AD joined device that has the MDM policies configured:
 > Note: If using the “EcpPrintTest” printer, you can find the output file in the Print Server machine under “C:\\ECPTestOutput\\EcpTestPrint.xps” location.
 
 ## Troubleshooting
+
+If Azure AD pre authentication is desired,
+- Ensure HTTP2 is disabled on the connector server. See the linked article in Step 2.1
+- Ensure Windows Authentication is enabled in IIS. See Step 5.3
+- Switching to passthrough will reset the single sign-on setting. Revisit Step 5 to setup Azure AD pre authentication again
 
 There are various logs that can help troubleshoot failures.
 - On Windows 10 Client.
