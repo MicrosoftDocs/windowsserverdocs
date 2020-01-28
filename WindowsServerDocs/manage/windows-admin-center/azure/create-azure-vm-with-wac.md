@@ -1,17 +1,17 @@
 ---
-title: Deploying Azure Virtual Machines Using Windows Admin Center
+title: Deploy Azure Virtual Machines using Windows Admin Center
 description: Deploying Azure virtual machines with Windows Admin Center. Configuring Azure virtual machines as part of Windows Admin Center-managed scenarios.
 ms.technology: manage
 ms.topic: article
-author: ned-pyle
+author: nedpyle
 ms.author: nedpyle
 manager: jgerend
-ms.date: 01/16/2020
+ms.date: 01/28/2020
 ms.localizationpriority: medium
 ms.prod: windows-server
 ---
 
-# Azure virtual machine deployment overview
+# Deploy Azure virtual machines from within Windows Admin Center
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
@@ -26,8 +26,6 @@ Windows Admin Center version 1910 Azure VM deployment supports the following sce
 - [Storage Migration Service (SMS)](https://docs.microsoft.com/windows-server/storage/storage-migration-service/overview)
 - [Storage Replica (SR)](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-overview)
 - [New standalone server (without roles)](https://docs.microsoft.com/windows-server/manage/windows-admin-center/azure/#extend-on-premises-capacity-with-azure)
-
-*------ A screenshot of Conan goes here-------*
 
 ## Requirements
 
@@ -47,22 +45,13 @@ Azure VM deployment steps and wizards vary by scenario. Review the workload's do
 
 From the *Storage Migration Service* tool within Windows Admin Center, perform an inventory of one or more source servers. Once you're in the *Transfer Data* phase, select **Create a new Azure VM** on the *Specify a destination* page then click **Create VM**. This begins a step-by-step creation tool that selects a Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019 Azure VM as a destination for the migration. Storage Migration Service Inventory data will provide several recommended VM sizes to match your source, but you can override this by clicking **See all sizes**. Source server data will also be used to automatically configure your managed disks and their file systems as well as join your new Azure VM to your Active Directory domain. If the VM is Windows Server 2019 (recommended), Windows Admin center installs the Storage migration Service proxy feature. Once it has created the Azure VM, Windows Admin Center will return to the normal Storage Migration Service transfer workflow.  
 
-Here's a demo of using Windows Admin Center to deploy a new destination server in Azure for the Storage Migration Service.
-
-*------A youtube video demo of SMS and Conan goes here------*
 
 ### Deploying Azure VMs as part of Storage Replica
 
 From the *Storage Replica* tool within Windows Admin Center, under the *Partnerships* tab, click **New** and then under *Replicate with another server* click **Use a New Azure VM** then click **Next**. Specify your source server information and replication group name, then click **Next**. This begins a step-by-step creation tool that will automatically select a Windows Server 2016 or Windows Server 2019 Azure VM as a destination for the migration source. Source server data will provide several recommended VM sizes to match your source, but you can override this by clicking **See all sizes**. Inventory data will also be used to automatically configure your managed disks and their file systems, as well as join your new Azure VM to your Active Directory domain. Once Windows Admin Center has created the Azure VM, provide a replicaiton group name and click **Create**. Windows Admin Center will return to the normal Storage Replica initial synchronization and start protecting your data.
 
-Here's a demo of using Windows Admin Center to deploy a new partner server in Azure for Storage Replica.
-
-*------A youtube video demo of SR and Conan goes here------*
 
 ### Deploying a new standalone Azure VM
 
 From the *All Connections* page within Windows Admin Center, go to **Add** and select **Create new** under **Azure VM**. This begins a step-by-step creation tool that will let you select a Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019 Azure VM, pick a size, add managed disks, and optionally join your Active Directory domain.
 
-Here's a demo of using Windows Admin Center to deploy a new standalone server in Azure.
-
-*------A youtube video demo of SR and Conan goes here------*
