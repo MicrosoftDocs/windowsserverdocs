@@ -58,7 +58,7 @@ You can use the Remote Desktop Licensing Manager to track and generate reports o
 
 ## Note about CAL versions
 
-The CAL used by users or devices must correspond to the version of Windows Server that the user or device is connecting to. You can't use CALs for earlier versions to access later versions of Windows Server, but you can use later versions of CALs to access earlier versions of Windows Server.
+The CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use CALs for earlier versions to access later versions of Windows Server, but you can use later versions of CALs to access earlier versions of Windows Server. For example, a RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
 
 The following table shows the CALs required to connect to RD Session Hosts.
 
@@ -70,10 +70,7 @@ The following table shows the CALs required to connect to RD Session Hosts.
 | **2016 session host**         | No     | No     | Yes    | Yes    |
 | **2019 session host**         | No     | No     | No     | Yes    |
 
-When you install an RD Session Host, you must use a license that's the same version or later. For example, a RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
-
 You must install your RDS CAL on a compatible RD license server. The following table shows which CAL and license server versions are compatible with each other.
-
 
 |                  | 2008 R2 and earlier CAL | 2012 CAL | 2016 CAL | 2019 CAL |
 |---------------------------------|--------|--------|--------|--------|
