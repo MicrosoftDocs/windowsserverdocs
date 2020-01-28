@@ -24,7 +24,7 @@ Windows Admin Center also manages a variety of Azure services. [Learn more about
 Windows Admin Center version 1910 Azure VM deployment supports the following scenarios:
 
 - [Storage Migration Service](../../storage/storage-migration-service/overview.md)
-- [Storage Replica (SR)](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-overview)
+- [Storage Replica](../../storage/storage-replica/storage-replica-overview.md)
 - [New standalone server (without roles)](https://docs.microsoft.com/windows-server/manage/windows-admin-center/azure/#extend-on-premises-capacity-with-azure)
 
 ## Requirements
