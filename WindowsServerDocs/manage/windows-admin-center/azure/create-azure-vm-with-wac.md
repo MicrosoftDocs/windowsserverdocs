@@ -25,7 +25,7 @@ Windows Admin Center version 1910 Azure VM deployment supports the following sce
 
 - [Storage Migration Service](../../storage/storage-migration-service/overview.md)
 - [Storage Replica](../../storage/storage-replica/storage-replica-overview.md)
-- [New standalone server (without roles)](https://docs.microsoft.com/windows-server/manage/windows-admin-center/azure/#extend-on-premises-capacity-with-azure)
+- [New standalone server (without roles)](index.md#extend-on-premises-capacity-with-azure)
 
 ## Requirements
 
