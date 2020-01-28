@@ -36,7 +36,7 @@ The Storage Migration Service supports migrating local users and groups after in
 
 ## Is domain controller migration supported?
 
-The Storage Migration Service doesn't currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes.
+The Storage Migration Service doesn't currently migrate domain controllers in Windows Server 2019. As a workaround, as long as you have more than one domain controller in the Active Directory domain, demote the domain controller before migrating it, then promote the destination after cut over completes. If you do choose to migrate a domain controller source or destination, you won't be able to cut over. You must never migrate users and groups when migrating from or to a domain controller.
 
 ## What attributes are migrated by the Storage Migration Service?
 
@@ -134,6 +134,10 @@ The Storage Migration Service uses an extensible storage engine (ESE) database t
 6. Ensure that SYSTEM has full control to all files and subfolders of that folder
 7. Remove your own accounts permissions.
 8. Start the "Storage Migration Service" service.
+
+## Does the Storage Migration Service migrate locally installed applications from the source computer?
+
+No, the Storage Migration Service doesn't migrate locally installed applications. After you complete migration, re-install any applications onto the destination computer that were running on the source computer. There's no need to reconfigure any users or their applications; the Storage Migration Service is designed to make the server change invisible to clients. 
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 

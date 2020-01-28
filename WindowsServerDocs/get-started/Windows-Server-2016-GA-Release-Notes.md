@@ -23,7 +23,7 @@ This document is continuously updated. As critical issues requiring a workaround
 
 ## Express updates available starting in November 2018 (NEW)
 
-Starting with the November 2018 "Update Tuesday" update, Windows will again publish [Express updates](express-updates.md) for Windows Server 2016. If you're using WSUS and System Center Configuration Manager (SCCM) you will once again see two packages for the Windows Server 2016 update: a Full update and an Express update. If you want to use Express for your server environments, you need to confirm that the server has taken a full update since November 2017 (KB# 4048953) to ensure the Express update installs correctly. If you attempt an Express update on a server that hasn't been updated since the 2017 11B update (KB# 4048953), you'll see repeated failures that consume bandwidth and CPU resources in an infinite loop. If you get into this scenario, stop pushing the Express update, and instead push a recent Full update to stop the failure loop.
+Starting with the November 2018 "Update Tuesday" update, Windows will again publish [Express updates](express-updates.md) for Windows Server 2016. If you're using WSUS and Configuration Manager you will once again see two packages for the Windows Server 2016 update: a Full update and an Express update. If you want to use Express for your server environments, you need to confirm that the server has taken a full update since November 2017 (KB# 4048953) to ensure the Express update installs correctly. If you attempt an Express update on a server that hasn't been updated since the 2017 11B update (KB# 4048953), you'll see repeated failures that consume bandwidth and CPU resources in an infinite loop. If you get into this scenario, stop pushing the Express update, and instead push a recent Full update to stop the failure loop.
 
 ## Server Core installation option
 
@@ -36,7 +36,7 @@ To avoid this, after the first boot, set the print spooler to disabled.
 ## Containers
 
 [comment]: # (ID: 371; Submitter: taylorb; state: signed off)
-- Before you use containers, install [Servicing stack update for Windows 10 Version 1607: August 23, 2016](https://support.microsoft.com/en-us/kb/3176936) or any later updates that are available. Otherwise, a number of problems can occur, including failures in building, starting, or running containers, and errors similar to "CreateProcess failed in Win32: The RPC server is unavailable."
+- Before you use containers, install [Servicing stack update for Windows 10 Version 1607: August 23, 2016](https://support.microsoft.com/kb/3176936) or any later updates that are available. Otherwise, a number of problems can occur, including failures in building, starting, or running containers, and errors similar to "CreateProcess failed in Win32: The RPC server is unavailable."
 
 [comment]: # (ID: 373; Submitter: plang; state: signed off)
 - The NanoServerPackage OneGet provider does not work in Windows Containers. To work around this, use Find-NanoServerPackage and Save-NanoServerPackage on a different computer (not a container) to download the needed package. Then copy the packages into the container and install them.

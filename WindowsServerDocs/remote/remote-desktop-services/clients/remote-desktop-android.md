@@ -10,7 +10,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
 ms.date: 12/02/2019
 ms.localizationpriority: medium

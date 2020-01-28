@@ -20,7 +20,7 @@ ms.technology: identity-adfs
 To protect against common security vulnerabilities and provide administrators the ability to take advantage of the latest advancements in browser-based protection mechanisms, AD FS 2019 added the functionality to customize the HTTP security response headers sent by AD FS. This is accomplished through the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.  
 
 >[!NOTE]
->The functionality to customize the HTTP security response headers (except CORS Headers) using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/en-us/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/en-us/help/4507459/windows-10-update-kb4507459). 
+>The functionality to customize the HTTP security response headers (except CORS Headers) using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/help/4507459/windows-10-update-kb4507459). 
 
 In this document we will discuss commonly used security response headers to demonstrate how to customize headers sent by AD FS 2019.   
  
@@ -31,11 +31,11 @@ In this document we will discuss commonly used security response headers to demo
 Before we discuss headers, let's look into a few scenarios creating the need for admins to customize security headers 
  
 ## Scenarios 
-1. Administrator has enabled [**HTTP Strict-Transport-Security (HSTS)**](#http-strict-transport-security-hsts) (forces all connections over HTTPS encryption) to protect the users who might access the web app using HTTP from a public wifi access point that might be hacked. She would like to further strengthen security by enabling HSTS for subdomains.  
-2. Administrator has configured the [**X-Frame-Options**](#x-frame-options) response header (prevents rendering any web page in an iFrame) to protect the web pages from being clickjacked. However, she needs to customize the header value due to a new business requirement to display data (in iFrame) from an application with a different origin (domain).
-3. Administrator has enabled [**X-XSS-Protection**](#x-xss-protection) (prevents cross scripting attacks) to sanitize and block the page if browser detects cross scripting attacks. However, she needs to customize header to allow the page to load once sanitized.  
+1. Administrator has enabled [**HTTP Strict-Transport-Security (HSTS)**](#http-strict-transport-security-hsts) (forces all connections over HTTPS encryption) to protect the users who might access the web app using HTTP from a public wifi access point that might be hacked. They would like to further strengthen security by enabling HSTS for subdomains.  
+2. Administrator has configured the [**X-Frame-Options**](#x-frame-options) response header (prevents rendering any web page in an iFrame) to protect the web pages from being clickjacked. However, they need to customize the header value due to a new business requirement to display data (in iFrame) from an application with a different origin (domain).
+3. Administrator has enabled [**X-XSS-Protection**](#x-xss-protection) (prevents cross scripting attacks) to sanitize and block the page if browser detects cross scripting attacks. However, they need to customize header to allow the page to load once sanitized.  
 4. Administrator needs to enable [**Cross Origin Resource Sharing (CORS)**](#cross-origin-resource-sharing-cors-headers) and set the origin (domain) on AD FS to allow a Single Page Application to access a web API with another domain.  
-5. Administrator has enabled [**Content Security Policy (CSP)**](#content-security-policy-csp) header to prevent cross site scripting and data injection attacks by disallowing any cross-domain requests. However, due to a new business requirement she needs to customize the header to allow web page to load images from any origin and restrict media to trusted providers.  
+5. Administrator has enabled [**Content Security Policy (CSP)**](#content-security-policy-csp) header to prevent cross site scripting and data injection attacks by disallowing any cross-domain requests. However, due to a new business requirement they need to customize the header to allow web page to load images from any origin and restrict media to trusted providers.  
 
  
 ## HTTP Security Response Headers 
@@ -229,7 +229,7 @@ Use the following table and links to determine which web browsers are compatible
 |-----|-----|
 |HTTP Strict-Transport-Security (HSTS)|[HSTS browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/Strict-Transport-Security#Browser_compatibility)|
 |X-Frame-Options|[X-Frame-Options browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)| 
-|X-XSS-Protection|[X-XSS-Protection browser compatibility](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
+|X-XSS-Protection|[X-XSS-Protection browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/Headers/X-XSS-Protection#Browser_compatibility)| 
 |Cross Origin Resource Sharing (CORS)|[CORS browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/CORS#Browser_compatibility) 
 |Content Security Policy (CSP)|[CSP browser compatibility](https://developer.mozilla.org/docs/Web/HTTP/CSP#Browser_compatibility) 
 

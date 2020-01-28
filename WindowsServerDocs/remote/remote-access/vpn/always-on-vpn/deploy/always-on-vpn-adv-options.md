@@ -115,7 +115,7 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
    Event ID:      41  
    ...  
    Event Xml:
-   <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <Event xmlns="https://schemas.microsoft.com/win/2004/08/events/event">
     <UserData>  
      <CertVerifyRevocation>  
 	  <Certificate fileRef="C97AE73E9823E8179903E81107E089497C77A720.cer" subjectName="client01.corp.contoso.com" />  

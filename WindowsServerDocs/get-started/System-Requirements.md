@@ -122,4 +122,4 @@ For detailed steps to install Windows Server 2016 as a Nano Server, see [Install
 - [Windows Processor Requirements](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
 - [Comparison of Standard and Datacenter editions of Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
 - [Windows 10 System Requirements](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
-- [Download the Windows Server 2016 licensing datasheet](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)
+- [Download the Windows Server 2016 licensing datasheet](https://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

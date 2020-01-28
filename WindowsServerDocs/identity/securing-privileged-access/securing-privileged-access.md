@@ -86,7 +86,7 @@ Follow the guidance in the article [Manage emergency access accounts in Azure AD
 
 ### 2. Just in time local admin passwords
 
-To mitigate the risk of an adversary stealing a local administrator account password hash from the local SAM database and abusing it to attack other computers, organizations should ensure every machine has a unique local administrator password. The Local Administrator Password Solution (LAPS) tool can configure unique random passwords on each workstation and server store them in Active Directory (AD) protected by an ACL. Only eligible authorized users can read or request the reset of these local administrator account passwords. You can obtain the LAPS for use on workstations and servers from [the Microsoft Download Center](http://Aka.ms/LAPS).
+To mitigate the risk of an adversary stealing a local administrator account password hash from the local SAM database and abusing it to attack other computers, organizations should ensure every machine has a unique local administrator password. The Local Administrator Password Solution (LAPS) tool can configure unique random passwords on each workstation and server store them in Active Directory (AD) protected by an ACL. Only eligible authorized users can read or request the reset of these local administrator account passwords. You can obtain the LAPS for use on workstations and servers from [the Microsoft Download Center](https://aka.ms/LAPS).
 
 Additional guidance for operating an environment with LAPS and PAWs can be found in the section [Operational standards based on clean source principle](securing-privileged-access-reference-material.md#operational-standards-based-on-clean-source-principle).
 
