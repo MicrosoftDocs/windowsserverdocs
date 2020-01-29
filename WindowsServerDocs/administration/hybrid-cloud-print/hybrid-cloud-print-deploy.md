@@ -443,10 +443,16 @@ On an Azure AD joined device that has the MDM policies configured:
 
 ## Troubleshooting
 
-If Azure AD pre authentication is desired,
+CloudPrintDeploy PowerShell script failed
+- Ensure Windows Server has the latest update.
+- If Windows Server Update Services (WSUS) is used, please see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+
+Publishing printer failed with message: "Authorization has been denied for this request"
+- If Azure AD pre authentication is used, ensure Windows authentication is enabled in IIS. See Step 5.3.
+- Switching from Azure AD pre authentication to passthrough resets the single sign-on setting. Revisit Step 5 to setup Azure AD pre authentication again.
+
+Print jobs on the Windows 10 client machines linger in "Sent to printer" state
 - Ensure HTTP2 is disabled on the connector server. See the linked article in Step 2.1
-- Ensure Windows Authentication is enabled in IIS. See Step 5.3
-- Switching to passthrough will reset the single sign-on setting. Revisit Step 5 to setup Azure AD pre authentication again
 
 There are various logs that can help troubleshoot failures.
 - On Windows 10 Client.
