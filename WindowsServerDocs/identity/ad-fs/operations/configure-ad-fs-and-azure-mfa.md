@@ -74,8 +74,44 @@ The following pre-requisites are required when using Azure MFA for authenticatio
 - Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
 - [Windows Azure Active Directory Module for Windows PowerShell](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).  
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.  
-- Enterprise administrator credentials to configure the AD FS farm for Azure MFA.  
-  
+- Enterprise administrator credentials to configure the AD FS farm for Azure MFA.
+
+### Microsoft Azure Government additional steps
+
+For customers that use Azure Government cloud, complete the following additional configuration steps on the primary AD FS server for a cluster. These changes then take effect on all AD FS nodes in the cluster:
+
+1. Open a PowerShell prompt and export the ADFS configuration file for Azure Multi-Factor Authentication using the [Export-AdfsAuthenticationProviderConfigurationData](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. Specify your own `-FilePath <path>` location to save the exported file:
+
+    ```powershell
+    Export-AdfsAuthenticationProviderConfigurationData – Name AzureMfaAuthentication -FilePath <path>
+    ```
+
+1. Open the resulting file in a text editor such as Notepad. Make a note of the *tenantId* and *clientId* for use in the next step.
+1. Set the Azure tenant and client information using the [Set-AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. Enter your *tenantId* and *clientId* from the previous step:
+
+    ```powershell
+    Set-AdfsAzureMfaTenant -TenantId <tenantId from file> -ClientId <clientId from file> -Environment USGov
+    ```
+
+1. Restart AD FS service on each node in the cluster.
+
+    For minimal impact, take each ADFS server out of the NLB rotation one at a time and wait for all connections to drain.
+
+If you run a Windows Server without the latest service pack, the [Set-AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet doesn't support the `-Environment` parameter. If the previous steps failed to configure the Azure tenant due to the missing parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlets correctly registered your tenant and client information:
+
+1. Open **Registry Editor** on the ADFS server.
+1. Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ADFS`. Create the following registry key values:
+
+    | Registry key       | Value |
+    |--------------------|-----------------------------------|
+    | SasUrl             | https://adnotifications.windowsazure.us/StrongAuthenticationService.svc/Connector |
+    | StsUrl             | https://login.microsoftonline.us |
+    | ResourceUri        | https://adnotifications.windowsazure.us/StrongAuthenticationService.svc/Connector |
+
+1. Restart the AD FS service, then repeat these steps for each AD FS node in the cluster.
+
+    For minimal impact, take each ADFS server out of the NLB rotation one at a time and wait for all connections to drain.
+
 ## Configure the AD FS Servers
 
 In order to complete configuration for Azure MFA for AD FS, you need to configure each AD FS server using the steps described. 
