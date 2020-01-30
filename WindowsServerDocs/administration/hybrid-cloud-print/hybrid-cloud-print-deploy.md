@@ -447,9 +447,9 @@ Below are common issues during HCP deployment
 
 |Error |Recommended steps |
 |------|------|
-|CloudPrintDeploy PowerShell script failed |
-- Ensure Windows Server has the latest update.<br>
-- If Windows Server Update Services (WSUS) is used, please see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs). |
+|CloudPrintDeploy PowerShell script failed | <ul>
+<li>Ensure Windows Server has the latest update.</li>
+<li>If Windows Server Update Services (WSUS) is used, please see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).</li></ul> |
 |Publishing printer failed | - For passthrough pre authentication, ensure the user publishing the printer is given proper permission to the publishing database.<br> - For Azure AD pre authentication, ensure Windows authentication is enabled in IIS. See Step 5.3. In addition, try passthrough pre authentication first. If passthrough pre authentication works, the issue is likely related to application proxy. See [Troubleshoot Application Proxy problems and error messages](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-troubleshoot). Note that switching to passthrough resets the single sign-on setting; revisit Step 5 to setup Azure AD pre authentication again. |
 |Print jobs stay in "Sent to printer" state on Windows 10 client machines | - Ensure TLS 1.2 is enabled on the connector server. See the linked article in Step 2.1.<br> - Ensure HTTP2 is disabled on the connector server. See the linked article in Step 2.1.|
 
