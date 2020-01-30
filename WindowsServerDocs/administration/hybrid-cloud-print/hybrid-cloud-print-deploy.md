@@ -443,28 +443,18 @@ On an Azure AD joined device that has the MDM policies configured:
 
 ## Troubleshooting
 
-CloudPrintDeploy PowerShell script failed
-- Ensure Windows Server has the latest update.
-- If Windows Server Update Services (WSUS) is used, please see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+Below are common issues during HCP deployment
 
-Publishing printer failed with message: "Authorization has been denied for this request"
-- If Azure AD pre authentication is used, ensure Windows authentication is enabled in IIS. See Step 5.3.
-- Switching from Azure AD pre authentication to passthrough resets the single sign-on setting. Revisit Step 5 to setup Azure AD pre authentication again.
+|Error |Recommended steps |
+|------|------|
+|CloudPrintDeploy PowerShell script failed | - Ensure Windows Server has the latest update.<br> - If Windows Server Update Services (WSUS) is used, please see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs). |
+|Publishing printer failed | - For passthrough pre authentication, ensure the user publishing the printer is given proper permission to the publishing database.<br> - For Azure AD pre authentication, ensure Windows authentication is enabled in IIS. See Step 5.3. In addition, try passthrough pre authentication first. If passthrough pre authentication works, the issue is likely related to application proxy. See [Troubleshoot Application Proxy problems and error messages](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-troubleshoot). Note that switching to passthrough resets the single sign-on setting; revisit Step 5 to setup Azure AD pre authentication again. |
+|Print jobs stay in "Sent to printer" state on Windows 10 client machines | - Ensure TLS 1.2 is enabled on the connector server. See the linked article in Step 2.1.<br> - Ensure HTTP2 is disabled on the connector server. See the linked article in Step 2.1.|
 
-Print jobs on the Windows 10 client machines linger in "Sent to printer" state
-- Ensure HTTP2 is disabled on the connector server. See the linked article in Step 2.1
+Below are locations of logs that can help troubleshooting
 
-There are various logs that can help troubleshoot failures.
-- On Windows 10 Client.
-    - Use Feedback Hub to add a new feedback.
-        - Click on **Start** and type "Feedback Hub".
-        - Under category, select **Problem**, **Devices and Drivers**, **Print**.
-        - In the section for adding more details, click on the **Start recording** button.
-        - Retry the print job that failed.
-        - Go back to Feedback Hub and click on the **Stop Recording** button.
-        - Click on **Submit** to submit your feedback.
-    - Use Event Viewer to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation.
-- On Connector Server.
-    - Use Event Viewer to see log of Application Proxy. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > AadApplicationProxy > Connector > Admin.
-- On Print Server.
-    - Logs for Mopria Discovery Service app and Enterprise Cloud Print app can be found at C:\inetpub\logs\LogFiles\W3SVC1.
+|Component |Log location |
+|------|------|
+|Windows 10 Client | - Use Event Viewer to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation.<br> - Use Feedback Hub to collect logs. See [Send feedback to Microsoft with the Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) |
+|Connector Server | Use Event Viewer to see log of Application Proxy. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > AadApplicationProxy > Connector > Admin. |
+|Print Server | Logs for Mopria Discovery Service app and Enterprise Cloud Print app can be found at C:\inetpub\logs\LogFiles\W3SVC1. |
