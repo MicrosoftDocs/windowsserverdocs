@@ -447,16 +447,14 @@ Below are common issues during HCP deployment
 
 |Error |Recommended steps |
 |------|------|
-|CloudPrintDeploy PowerShell script failed | <ul>
-<li>Ensure Windows Server has the latest update.</li>
-<li>If Windows Server Update Services (WSUS) is used, please see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).</li></ul> |
-|Publishing printer failed | - For passthrough pre authentication, ensure the user publishing the printer is given proper permission to the publishing database.<br> - For Azure AD pre authentication, ensure Windows authentication is enabled in IIS. See Step 5.3. In addition, try passthrough pre authentication first. If passthrough pre authentication works, the issue is likely related to application proxy. See [Troubleshoot Application Proxy problems and error messages](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-troubleshoot). Note that switching to passthrough resets the single sign-on setting; revisit Step 5 to setup Azure AD pre authentication again. |
-|Print jobs stay in "Sent to printer" state on Windows 10 client machines | - Ensure TLS 1.2 is enabled on the connector server. See the linked article in Step 2.1.<br> - Ensure HTTP2 is disabled on the connector server. See the linked article in Step 2.1.|
+|CloudPrintDeploy PowerShell script failed | <ul><li>Ensure Windows Server has the latest update.</li><li>If Windows Server Update Services (WSUS) is used, please see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).</li></ul> |
+|Publishing printer failed | <ul><li>For passthrough pre authentication, ensure the user publishing the printer is given proper permission to the publishing database.</li><li>For Azure AD pre authentication, ensure Windows authentication is enabled in IIS. See Step 5.3. In addition, try passthrough pre authentication first. If passthrough pre authentication works, the issue is likely related to application proxy. See [Troubleshoot Application Proxy problems and error messages](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-troubleshoot). Note that switching to passthrough resets the single sign-on setting; revisit Step 5 to setup Azure AD pre authentication again.</li></ul> |
+|Print jobs stay in "Sent to printer" state | <ul><li>Ensure TLS 1.2 is enabled on the connector server. See the linked article in Step 2.1.</li><li>Ensure HTTP2 is disabled on the connector server. See the linked article in Step 2.1.</li></ul> |
 
 Below are locations of logs that can help troubleshooting
 
 |Component |Log location |
 |------|------|
-|Windows 10 Client | - Use Event Viewer to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation.<br> - Use Feedback Hub to collect logs. See [Send feedback to Microsoft with the Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) |
+|Windows 10 Client | <ul><li>Use Event Viewer to see log of Azure AD operations. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > Windows > AAD > Operation.</li><li>Use Feedback Hub to collect logs. See [Send feedback to Microsoft with the Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)</li></ul> |
 |Connector Server | Use Event Viewer to see log of Application Proxy. Click on **Start** and type "Event Viewer". Navigate to Applications and Services Logs > Microsoft > AadApplicationProxy > Connector > Admin. |
 |Print Server | Logs for Mopria Discovery Service app and Enterprise Cloud Print app can be found at C:\inetpub\logs\LogFiles\W3SVC1. |
