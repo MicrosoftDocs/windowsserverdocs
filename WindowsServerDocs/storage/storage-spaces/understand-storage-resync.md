@@ -34,7 +34,7 @@ Suppose we update our string from "HELLO" to "HELP!" at this time.
 
 ![ASCII of string "help!"](media/understand-storage-resync/help.png)
 
-Once we update the string, copy #2 and #3 will be succesfully updated. However, copy #1 still cannot be accessed because server #1 is down temporarily (for maintanence). 
+Once we update the string, copy #2 and #3 will be successfully updated. However, copy #1 still cannot be accessed because server #1 is down temporarily (for maintanence). 
 
 ![Gif of writing to copy #2 and #2"](media/understand-storage-resync/write.gif)
 
