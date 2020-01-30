@@ -35,7 +35,7 @@ AD FS uses Schannel.dll to perform its secure communications interactions.  Curr
 > 
 > If you are applying these changes, they must be applied to all of your AD FS servers in your farm.  After applying these changes a reboot is required.
 
-In todays day and age, hardening your servers and removing older or weak cipher suites is becoming a major priority for many organizations.  Software suites are available that will test your servers and provide detailed infomation on these protocols and suites.  In order to remain compliant or achieve secure ratings, removing or disabling weaker protocols or cipher suites has become a must.  The remainder of this document will provide guidance on how to enable or disable certain protocols and cipher suites.
+In today's day and age, hardening your servers and removing older or weak cipher suites is becoming a major priority for many organizations.  Software suites are available that will test your servers and provide detailed information on these protocols and suites.  In order to remain compliant or achieve secure ratings, removing or disabling weaker protocols or cipher suites has become a must.  The remainder of this document will provide guidance on how to enable or disable certain protocols and cipher suites.
 
 The registry keys below are located in the same location:  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Use regedit or PowerShell to enable or disable these protocols and cipher suites.
 
