@@ -41,6 +41,7 @@
 #### [Azure Update Management](azure/azure-update-management.md)
 ### [Connect Windows Admin Center to Azure](azure/azure-integration.md)
 ### [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md)
+### [Create Azure VMs with Windows Admin Center](azure/create-azure-vms.md)
 ### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
 
 ## Support
