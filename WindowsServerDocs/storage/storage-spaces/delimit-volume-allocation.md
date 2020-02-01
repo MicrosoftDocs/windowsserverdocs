@@ -160,7 +160,7 @@ Delimit each three-way mirror volume to four servers, not more.
 
 Balance how much storage is allocated to each server, accounting for volume size.
 
-### Stager delimited allocation volumes
+### Stagger delimited allocation volumes
 
 To maximize fault tolerance, make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). 
 
