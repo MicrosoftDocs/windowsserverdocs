@@ -53,7 +53,7 @@ With delimited allocation, you specify a subset of servers to use (minimum four)
 For example, if you have an 8 node cluster (nodes 1 through 8), you can specify a volume to be located only on disks in nodes 1, 2, 3, 4.
 #### Advantages
 
-With the example allocation, the volume is likely to survive three concurrent failures. If nodes 1,2, and 6 go down, only 2 of the nodes that hold the 3 copies of data for the volume are down and the volume will stay online.
+With the example allocation, the volume is likely to survive three concurrent failures. If nodes 1, 2, and 6 go down, only 2 of the nodes that hold the 3 copies of data for the volume are down and the volume will stay online.
 
 Survival probability depends on the number of servers and other factors – see [Analysis](#analysis) for details.
 
