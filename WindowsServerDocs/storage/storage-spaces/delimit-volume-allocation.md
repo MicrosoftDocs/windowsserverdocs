@@ -50,7 +50,7 @@ The volume goes offline and becomes inaccessible until the servers are recovered
 
 With delimited allocation, you specify a subset of servers to use (minimum four). The volume is divided into slabs that are copied three times, like before, but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
 
-For example, if you have an 8 node cluster (nodes 1 through 8) you can specify a volume to be located on only on disks in nodes 1,2,3,4.
+For example, if you have an 8 node cluster (nodes 1 through 8), you can specify a volume to be located only on disks in nodes 1, 2, 3, 4.
 #### Advantages
 
 With the example allocation, the volume is likely to survive three concurrent failures. If nodes 1,2, and 6 go down, only 2 of the nodes that hold the 3 copies of data for the volume are down and the volume will stay online.
