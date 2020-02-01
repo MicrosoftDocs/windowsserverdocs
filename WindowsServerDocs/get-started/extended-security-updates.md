@@ -8,7 +8,7 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.date: 01/23/2020
+ms.date: 02/03/2020
 ---
 
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
@@ -42,11 +42,20 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 If you run Windows Server 2008 / 2008 R2 VMs in Azure, they're automatically enabled for extended security updates. You don't need to configure anything, and there's no additional charge for using extended security updates with Azure VMs. Extended security updates are automatically delivered to Azure VMs if they're configured to receive updates.
 
-For other environments, such as on-premises VMs or physical servers, you need to manually request and configure extended security updates. If you've already purchased extended security updates, which are available through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE), you can use one of the following steps to get an activation key:
+For other environments, such as on-premises VMs or physical servers, you need to manually request and configure extended security updates. If you've already purchased extended security updates, which are available through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE), you can use one of two ways to get an activation key:
 
-* Sign in to the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) to view and get activation keys.
-* Register for extended security updates in the Azure portal to get the Windows Server 2008/R2 activation keys.
-    * See the following steps in this article for steps on how to complete this process.
+* [Sign in to the Microsoft Volume Licensing Service Center](#sign-in-to-the-microsoft-volume-licensing-service-center).
+* [Register for extended security updates in the Azure portal](#register-for-extended-security-updates).
+
+## Sign in to the Microsoft Volume Licensing Service Center
+
+The Volume Licensing Service Center is a quick, easy way to view and download your activation keys.
+
+To get your keys:
+
+1. Go to the [Volume Licensing Service Center page](https://www.microsoft.com/vlsc) and sign in with your Azure credentials.​
+
+2. Select **Licenses** > **Relationship Summary** > **Licensing ID** > **Product Keys**.
 
 ## Register for extended security updates
 
@@ -56,7 +65,7 @@ To use extended security updates, you create a multiple activation key (MAK) and
 >
 > You don't need to register for extended security updates if you're running Windows Server 2008 and 2008 R2 on Azure VMs. For other environments, such as on-premises VMs or physical servers, [purchase extended security updates](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) before you try to register and use them.
 
-> [!IMPORTANT]
+> [!IMPORTANT] <!--This text needs to be replaced-->
 >
 > Make sure that you've followed the previous steps to purchase extended security updates through your Volume Licensing Program. Before following the steps below, send an e-mail to [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com) with the following information for approval to use the feature:
 >
