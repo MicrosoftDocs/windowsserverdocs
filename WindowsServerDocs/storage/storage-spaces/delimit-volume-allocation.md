@@ -164,7 +164,7 @@ Balance how much storage is allocated to each server, accounting for volume size
 
 To maximize fault tolerance, make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). 
 
-For example on an 8 node system:
+For example on an eight-node system:
 Volume 1: Servers 1, 2, 3, 4
 Volume 2: Servers 5, 6, 7, 8
 Volume 3: Servers 3, 4, 5, 6
