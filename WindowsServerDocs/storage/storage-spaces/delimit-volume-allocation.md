@@ -166,7 +166,7 @@ To maximize fault tolerance, make each volume's allocation unique, meaning it do
 
 For example on an 8 node system:
 Volume 1: Servers 1, 2, 3, 4
-Volume 2: Servers 5,6,7,8
+Volume 2: Servers 5, 6, 7, 8
 Volume 3: Servers 3,4,5,6
 Volume 4: Servers 1,2,7,8
 
