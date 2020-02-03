@@ -54,7 +54,7 @@ Operating system components that are available as part of the Server Core App Co
         -   From an elevated PowerShell session: 
 
             ```PowerShell
-            Install-WindowsFeature -NameFailover-Clustering -IncludeManagementTools
+            Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
             ```
 
         -   To run Failover Cluster Manager, enter **cluadmin** at the command prompt.
