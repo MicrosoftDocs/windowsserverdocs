@@ -12,7 +12,7 @@ ms.date: 02/03/2020
 ---
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
 
->Applies To: Windows Server 2008 / 2008 R2
+>Applies to: Windows Server 2008 and Windows Server 2008 R2
 
 Windows Server 2008 and Windows Server 2008 R2 reach the end of their support lifecycle on January 14, 2020. Windows Server Long Term Servicing Channel (LTSC) has a minimum of ten years of support - five years for mainstream support and five years for extended support. This support includes regular security updates.
 
@@ -61,12 +61,10 @@ To get your keys:
 To use extended security updates, you create a multiple activation key (MAK) and apply it to Windows Server 2008 and 2008 R2 computers. This key lets the Windows Update servers know that you can continue to receive security updates. You register for extended security updates and manage these keys using the Azure portal, even if you only use on-premises computers.
 
 > [!NOTE]
->
 > You don't need to register for extended security updates if you're running Windows Server 2008 and 2008 R2 on Azure VMs. For other environments, such as on-premises VMs or physical servers, [purchase extended security updates](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) before you try to register and use them.
 
 > [!IMPORTANT] <!--This text needs to be replaced-->
->
-> Make sure that you've followed the previous steps to purchase extended security updates through your Volume Licensing Program. Before following the steps below, send an e-mail to [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com) with the following information for approval to use the feature:
+>Make sure that you've followed the previous steps to purchase extended security updates through your Volume Licensing Program. Before following the steps below, send an e-mail to [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com) with the following information for approval to use the feature:
 >
 > * Customer Name:
 > * Azure Subscription:
@@ -82,24 +80,24 @@ To use extended security updates, you create a multiple activation key (MAK) and
 To register non-Azure VMs for extended security updates and create a key, complete the following steps in the Azure Portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
-1. In the search box at the top of the Azure portal, search for and select **Extended Security Updates**.
+2. In the search box at the top of the Azure portal, search for and select **Extended Security Updates**.
 
     ![Search for extended security updates in the Azure portal](media/extended-security-updates/esu-portal-search.png)
 
     If you haven't use extended security updates before, chose to **+ Create** an extended security updates resource first. Otherwise, select your resource from the list.
 
-1. Under **Register for Extended Service Updates**, select **Get started**.
+3. Under **Register for Extended Service Updates**, select **Get started**.
 
     ![Get started with Extended Security Updates in the Azure portal](media/extended-security-updates/get-started-with-esu.png)
 
-1. To create your first key, select **Get key**.
+4. To create your first key, select **Get key**.
 
     ![Choose to create a key in the Azure portal](media/extended-security-updates/get-key.png)
 
     > [!NOTE]
     > You need an Azure subscription associated with your account to create the extended security update resource and key. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription using the guided steps shown in the portal.
 
-1. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.
+5. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.
 
     Under **Registration details**, enter the following information:
 
@@ -112,7 +110,7 @@ To register non-Azure VMs for extended security updates and create a key, comple
 
     When ready, select **Review + register**.
 
-1. After successful validation, a summary of your choices for the new registry resource is shown. If needed, correct any validation errors or update your configuration choice. The Azure [Terms of Use](https://azure.microsoft.com/support/legal/) and [Privacy Policy](https://privacy.microsoft.com/privacystatement) are available.
+6. After successful validation, a summary of your choices for the new registry resource is shown. If needed, correct any validation errors or update your configuration choice. The Azure [Terms of Use](https://azure.microsoft.com/support/legal/) and [Privacy Policy](https://privacy.microsoft.com/privacystatement) are available.
 
     Check the box to confirm that you have eligible computers and the key is only to be used within your organization:
 
