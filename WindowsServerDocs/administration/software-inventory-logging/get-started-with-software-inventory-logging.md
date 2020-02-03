@@ -43,5 +43,5 @@ Software Inventory Logging can assist server administrators in performing the fo
 [Manage Software Inventory Logging](manage-software-inventory-logging.md)<br>
 [Software Inventory Logging Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)<br>
 [Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)
-[Volume Activation Management Tool](http://blogs.technet.com/b/volume-licensing/)
+[Volume Activation Management Tool](https://blogs.technet.com/b/volume-licensing/)
 

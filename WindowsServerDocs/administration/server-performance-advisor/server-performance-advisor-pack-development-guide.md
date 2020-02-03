@@ -121,7 +121,7 @@ The following is an example header for the ProvisionMetadata.xml file:
 
 ``` syntax
 <advisorPack
-xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/ap/2010"
+xmlns="https://microsoft.com/schemas/ServerPerformanceAdvisor/ap/2010"
 name="Microsoft.ServerPerformanceAdvisor.CoreOS.V2"
 displayName="Microsoft CoreOS Advisor Pack V2"
 description="Microsoft CoreOS Advisor Pack"
@@ -173,7 +173,7 @@ A data collector set defines the performance data that the SPA framework should 
 
 ``` syntax
 <advisorPack>
-<dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
+<dataSourceDefinition xmlns="https://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
  <dataCollectorSet duration="10">
 <registryKeys>
  ?<registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\\</registryKey>
@@ -1175,7 +1175,7 @@ To translate the previous steps into SPA provision metadata, add the script in t
 
 ``` syntax
 <advisorPack>
-<dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
+<dataSourceDefinition xmlns="https://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
  <dataCollectorSet >
 <registryKeys>
  ?<registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\$(NetworkAdapter.PNPDeviceID)\FriendlyName</registryKey>

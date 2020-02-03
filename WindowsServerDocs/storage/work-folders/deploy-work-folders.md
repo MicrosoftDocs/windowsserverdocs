@@ -281,7 +281,7 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 - "Force automatic setup for all users" policy setting in Computer Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
   
 > [!NOTE]
->  These policy settings are available only when editing Group Policy from a computer running Group Policy Management on Windows 8.1, Windows Server 2012 R2 or later. Versions of Group Policy Management from earlier operating systems do not have this setting available. These policy settings do apply to Windows 7 PCs on which the [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) app has been installed.  
+>  These policy settings are available only when editing Group Policy from a computer running Group Policy Management on Windows 8.1, Windows Server 2012 R2 or later. Versions of Group Policy Management from earlier operating systems do not have this setting available. These policy settings do apply to Windows 7 PCs on which the [Work Folders for Windows 7](https://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) app has been installed.  
   
 ##  <a name="BKMK_LINKS"></a> See also  
  For additional related information, see the following resources.  
@@ -290,5 +290,5 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 |------------------|----------------|  
 |**Understanding**|-   [Work Folders](work-folders-overview.md)|  
 |**Planning**|-   [Designing a Work Folders Implementation](plan-work-folders.md)|
-|**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)<br />-   [A new user attribute for Work Folders server Url](http://blogs.technet.com/b/filecab/archive/2013/10/09/a-new-user-attribute-for-work-folders-server-url.aspx) (blog post)|  
+|**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://blogs.technet.com/b/filecab/archive/2013/10/09/a-new-user-attribute-for-work-folders-server-url.aspx) (blog post)|  
 |**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](https://technet.microsoft.com/library/jj966264(v=ws.11).aspx)<br />-   [Sync Share Cmdlets](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)|

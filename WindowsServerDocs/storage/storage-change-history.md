@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 08/19/2019
+ms.date: 1/16/2019
 description: New and updated topics in the on-premises storage documentation for Windows Server for IT Pros.
 ---
 # Change history for storage topics in Windows Server
@@ -17,6 +17,21 @@ description: New and updated topics in the on-premises storage documentation for
 This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619) or [Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## January 2020
+
+| New or changed topic | Description |
+| --- | --- |
+|[Understand and deploy persistent memory](storage-spaces/deploy-pmem.md) | Added known hardware issue. |
+
+## December 2019
+
+| New or changed topic                                        | Description |
+| ---                                                         | ---           |
+| [Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)| Edited to further refine the guidance, based on customer requests.|
+| [Extend a volume in Disk Management](disk-management/extend-a-basic-volume.md) | Added guidance in response to customer feedback. |
+| [Change a dynamic disk back to a basic disk](disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md) | Fixed an error in the command line and added some info based on customer feedback. |
+
 
 ## August 2019
 
@@ -158,7 +173,7 @@ This topic lists new and updated topics in the [Storage](storage.md) documentati
 |New or changed topic|Description|
 |---|---|
 |[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
-|[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing) section to add extensive troubleshooting steps, based on customer requests.|
+|[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) section to add extensive troubleshooting steps, based on customer requests.|
 |[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
 |[Planning volumes in Storage Spaces Direct](storage-spaces/plan-volumes.md)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
 |[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|

@@ -22,6 +22,8 @@ In the latest update to AD FS, a reduction in latency is targeted through the ad
 
 When the `backgroundCacheRefreshEnabled` is set to true, AD FS will enable the background thread to run cache updates. The frequency of fetching data from the cache can be customized to a time value by setting `cacheRefreshIntervalSecs`. The default value is set to 300 seconds when `backgroundCacheRefreshEnabled` is set to true. After the set value duration, AD FS begins refreshing it's cache and while the update is in progress, the old cache data will continue to be used.  
 
+When AD FS receives a request for an application, AD FS retrieves the application from SQL and adds it to the cache. At the `cacheRefreshIntervalSecs` value, the application in the cache is refreshed using the background thread. While an entry exists in the cache, incoming requests will use the cache while the background refresh is in progress. If an entry is not accessed for 5 * `cacheRefreshIntervalSecs`, it is dropped from the cache. The oldest entry can also be dropped from the cache once the configurable `maxRelyingPartyEntries` value is reached.
+
 >[!NOTE]
 > The cache's data will be refreshed outside of the `cacheRefreshIntervalSecs` value if ADFS receives a notification from SQL signifying that a change has occurred in the database. This notification will trigger the cache to be refreshed. 
 

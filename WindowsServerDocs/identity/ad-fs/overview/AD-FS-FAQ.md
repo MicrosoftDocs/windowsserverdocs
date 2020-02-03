@@ -66,6 +66,8 @@ AD FS supports multiple multi-forest configuration and relies on the underlying 
 - In the event of a one way forest trust such as a DMZ forest containing partner identities, we recommend deploying ADFS in the corp forest and treating the DMZ forest as another local claims provider trust connected via LDAP. In this case Windows Integrated auth will not work for the DMZ forest users and they will be required to perform Password auth as that is the only supported mechanism for LDAP. In the event you cannot pursue this option, you would need to set up another ADFS in the DMZ forest and add that as Claims Provider Trust in the ADFS in the corp forest. Users will need to do Home realm discovery but both Windows Integrated auth and Password auth will work. Please make appropriate changes in the issuance rules in ADFS in DMZ forest as ADFS in the corp forest will not be able to get extra user information about the user from the DMZ forest.
 - While domain level trusts are supported and can work, we highly recommend you moving to a forest level trust model. Additionally, you would need to ensure that UPN routing and NETBIOS name resolution of names need to work accurately.
 
+>[!NOTE]  
+>If elective authentication is used with a 2-way trust configuration, ensure the caller user is granted the "allow to authenticate" permission on the target service account. 
 
 
 ## Design
@@ -302,4 +304,7 @@ In AD FS 2016, token binding is automatically enabled and causes multiple known 
 `Set-AdfsProperties -IgnoreTokenBinding $true`
 
 ### I have upgraded my farm from AD FS in Windows Server 2016 to AD FS in Windows Server 2019. The Farm Behavior Level for the AD FS farm has been successfully raised to 2019 but the Web Application Proxy configuration is still displayed as Windows Server 2016?
-After an upgrade to Windows Server 2019, the configuration version of the Web Application Proxy will continue to display as Windows Server 2016. The Web Application Proxy does not have new version specific features for Windows Server 2019, and if the Farm Behaviour Level has been successfully raised on AD FS, the Web Application Proxy will continue to display as Windows Server 2016 by design. 
+After an upgrade to Windows Server 2019, the configuration version of the Web Application Proxy will continue to display as Windows Server 2016. The Web Application Proxy does not have new version specific features for Windows Server 2019, and if the Farm Behaviour Level has been successfully raised on AD FS, the Web Application Proxy will continue to display as Windows Server 2016 by design.
+
+### Can I estimate the size of the ADFSArtifactStore before enabling ESL?
+With ESL enabled, AD FS tracks the account activity and known locations for users in the ADFSArtifactStore database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the ADFSArtifactStore database to grow at a rate of up to 1GB per 100,000 users. If the AD FS farm is using the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data. To prevent filling this drive, ensure you have a minimum of 5GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to an additional 1GB of RAM for user populations of 500,000 or less.

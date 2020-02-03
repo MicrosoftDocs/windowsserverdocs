@@ -18,11 +18,19 @@ ms.localizationpriority: medium
 
 This article provides troubleshooting information to help you respond to error messages that you may receive when you try to use a Multiple Activation Key (MAK) or the Key Management Service (KMS) to perform Volume Activation on one or more Windows-based computers. Look for the error code in the following table, and then select the link to see more information about that error code and how to resolve it.
 
-For more information about volume activation, see [Plan for volume activation](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/plan-for-volume-activation-client).
+For more information about volume activation, see [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client).
 
 For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
 
-For more information about volume activation for older versions of Windows, see KB 929712, [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+For more information about volume activation for older versions of Windows, see KB 929712, [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+
+## Diagnostic tool
+
+Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. Download the diagnostic tool from [here](https://aka.ms/SaRA-WindowsActivation).
+
+This tool will try to activate Windows. If it returns an activation error code, the tool will display targeted solutions for known error codes.
+
+The following error codes are supported: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008.
 
 ## Summary of error codes
 
@@ -181,7 +189,7 @@ The MAK is not supported.
 
 #### Resolution
 
-To troubleshoot this issue, verify that the MAK that you are using is the MAK that was provided by Microsoft. To verify that the MAK is valid, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+To troubleshoot this issue, verify that the MAK that you are using is the MAK that was provided by Microsoft. To verify that the MAK is valid, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004C001 The activation server determined the specified product key is invalid
 
@@ -191,7 +199,7 @@ The MAK that you entered is not valid.
 
 #### Resolution
 
-Verify that the key is the MAK that was provided by Microsoft. For additional assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+Verify that the key is the MAK that was provided by Microsoft. For additional assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004C003 The activation server determined the specified product key is blocked
 
@@ -201,7 +209,7 @@ The MAK is blocked on the activation server.
 
 #### Resolution
 
-To obtain a new MAK, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers). After you obtain the new MAK, try installing and activating Windows again.  
+To obtain a new MAK, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers). After you obtain the new MAK, try installing and activating Windows again.  
 
 ### 0xC004C008 The activation server determined that the specified product key could not be used
 
@@ -211,7 +219,7 @@ The KMS key has exceeded its activation limit. A KMS host key can be activated u
 
 #### Resolution
 
-If you require additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).  
+If you require additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).  
 
 ### 0xC004C020 The activation server reported that the Multiple Activation Key has exceeded its limit
 
@@ -221,7 +229,7 @@ The MAK has exceeded its activation limit. By design, MAKs can be activated a li
 
 #### Resolution
 
-If you require additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+If you require additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004C021 The activation server reported that the Multiple Activation Key extension limit has been exceeded
 
@@ -231,7 +239,7 @@ The MAK has exceeded its activation limit. By design, MAKs activate a limited nu
 
 #### Resolution
 
-If you need additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+If you need additional activations, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004F009 The Software Protection Service reported that the grace period expired
 
@@ -241,7 +249,7 @@ The grace period expired before the system was activated. Now, the system is in 
 
 #### Resolution
 
-For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004F00F The Software Licensing Server reported that the hardware ID binding is beyond level of tolerance
 
@@ -298,7 +306,7 @@ In order to activate, you need to do one of the following:
   > If you receive error 0x80072ee2 when you attempt to activate, use the phone activation method that follows instead.
 - Activate by phone by following these steps:
    1. Run **slmgr /dti** and then record the value of the Installation ID. </li>
-   1. Contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers) and provide the Installation ID in order to receive a Confirmation ID.</li>
+   1. Contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers) and provide the Installation ID in order to receive a Confirmation ID.</li>
    1. To activate by using the Confirmation ID, run **slmgr /atp &lt;Confirmation ID&gt;**.
 
 ### 0xC004F038 The count reported by your Key Management Service (KMS) is insufficient
@@ -380,7 +388,7 @@ Windows Activation Tools (WAT) has determined that the system is not genuine.
 
 #### Resolution
 
-For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+For assistance, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### 0xC004F065 The Software Protection Service reported that the application is running within the valid non-genuine period
 

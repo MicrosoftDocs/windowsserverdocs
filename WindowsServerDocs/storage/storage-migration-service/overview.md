@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate storage to Win
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 10/25/2019
+ms.date: 01/17/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -40,6 +40,10 @@ Migration is a three-step process:
 
 ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
 **Figure 2: Storage Migration Service inventorying servers**
+
+Here's a video showing how to use Storage Migration Service to take a server, such as a Windows Server 2008 R2 server that's now out of support, and move the storage to a newer server.
+
+> [!VIDEO https://www.youtube.com/embed/h-Xc9j1w144]
 
 ## Requirements
 
@@ -89,12 +93,17 @@ The source server must run one of the following operating systems:
 - Windows Server 2012 R2 Essentials
 - Windows Server 2016 Essentials
 - Windows Server 2019 Essentials
+- Windows Storage Server 2008
+- Windows Storage Server 2008 R2
+- Windows Storage Server 2012
+- Windows Storage Server 2012 R2
+- Windows Storage Server 2016
 
 Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
 
 You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
-- Failover clusters
+- Failover clusters running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 - Linux servers that use Samba. We've tested the following:
     - CentOS 7
     - Debian GNU/Linux 8

@@ -69,7 +69,7 @@ When creating a shielded or encryption-supported VM or converting an existing VM
 
 **How many shielding data files do I need?** A single shielding data file can be used to create every shielded VM. If, however, a given shielded VM requires that any of the four items be different, then an additional shielding data file is necessary. For example, you might have one shielding data file for your IT department and a different shielding data file for the HR department because their initial administrator password and RDP certificates differed.
 
-While using separate shielding data files for each shielded VM is possible, it is not necessarily the optimal choice and should be done for the right reasons. For example, if every shielded VM needs to have a different administrator password, consider instead using a password management service or tool such as [Microsoft's Local Administrator Password Solution (LAPS)](https://www.microsoft.com/en-us/download/details.aspx?id=46899).
+While using separate shielding data files for each shielded VM is possible, it is not necessarily the optimal choice and should be done for the right reasons. For example, if every shielded VM needs to have a different administrator password, consider instead using a password management service or tool such as [Microsoft's Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899).
 
 ## Creating a shielded VM on a virtualization fabric
 

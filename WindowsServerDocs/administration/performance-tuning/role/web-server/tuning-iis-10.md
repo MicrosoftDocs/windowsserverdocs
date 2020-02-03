@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Tuning IIS 10.0
 
-Internet Information Services (IIS) 10.0 is included with Windows ServerÂ 2016. It uses a process model similar to that of IIS 8.5 and IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
+Internet Information Services (IIS) 10.0 is included with Windows Server 2016. It uses a process model similar to that of IIS 8.5 and IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
 
 HTTP.sys is responsible for connection management and request handling. The request can be served from the HTTP.sys cache or passed to a worker process for further handling. Multiple worker processes can be configured, which provides isolation at a reduced cost. For more info on how request handling works, see the following figure:
 
@@ -405,6 +405,6 @@ The following issues can affect IIS performance:
 
     For performance reasons, the use of CGI applications to serve requests is not recommended with IIS. Frequently creating and deleting CGI processes involves significant overhead. Better alternatives include using FastCGI, ISAPI application scripts and ASP or ASP.NET scripts. Isolation is available for each of these options.
 
-# See also
+## See also
 - [Web Server performance tuning](index.md) 
 - [HTTP 1.1/2 tuning](http-performance.md)

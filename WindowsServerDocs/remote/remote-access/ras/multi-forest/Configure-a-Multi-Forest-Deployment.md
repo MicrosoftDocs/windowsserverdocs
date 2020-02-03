@@ -230,7 +230,7 @@ To enable  Windows 7  client computers from Forest2 to access resources through 
 ### <a name="RefreshMgmtServers"></a>Refresh the management servers list  
 Remote Access automatically discovers the infrastructure servers in all the forests that contain DirectAccess configuration GPOs. If DirectAccess was deployed on a server from Forest1, the server GPO will be written to its domain in Forest1. If you enabled access to DirectAccess for clients from Forest2, the client GPO will be written to a domain in Forest2.  
   
-The automatic discovery process of infrastructure servers is required to allow access through DirectAccess to the domain controllers and System Center Configuration Manager. You must manually start the discovery process.  
+The automatic discovery process of infrastructure servers is required to allow access through DirectAccess to the domain controllers and Microsoft Endpoint Configuration Manager. You must manually start the discovery process.  
   
 ##### To refresh the management servers list  
   

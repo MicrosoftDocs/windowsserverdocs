@@ -9,34 +9,129 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
-ms.date: 09/11/2019
+ms.date: 01/06/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can always contact us via **Help > Report an Issue**.
+If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.3.7
+
+*Date published: 1/6/20*
+
+In our final update of the year, we finetuned some code and fixed the following behaviors:
+
+- Copying things from the remote session to a network share or USB drive no longer creates empty files.
+- Specifying an empty password in a user account no longer causes a double certificate prompt.
+
+## Updates for version 10.3.6
+
+*Date published: 1/6/20*
+
+In this release, we addressed an issue that created zero-length files whenever you copied a folder from the remote session to the local machine using file copy and paste.
+
+## Updates for version 10.3.5
+
+*Date published: 1/6/20*
+
+We made this update with the help of everyone who reported issues. In this version, we've made the following changes:
+
+- Redirected folders can now be marked as read-only to prevent their contents from being changed in the remote session.
+- We addressed a 0x607 error that appeared when connecting using RPC over HTTPS RD Gateway scenarios.
+- Fixed cases where users were double-prompted for credentials.
+- Fixed cases where users received the certificate warning prompt twice.
+- Added heuristics to improve trackpad-based scrolling.
+- The client no longer shows the "Saved Desktops" group if there are no user-created groups.
+- Updated UI for the tiles in PC view.
+- Fixes to address crashes sent to us via application telemetry.
+
+> [!NOTE]
+> In this release, we now accept feedback for the Mac client only through [UserVoice](https://remotedesktop.uservoice.com/forums/287834-remote-desktop-for-mac).
+
+## Updates for version 10.3.4
+
+*Date published: 11/18/19*
+
+We've been hard at work listening to your feedback and have put together a collection of bug fixes and feature updates.
+
+- When connecting via an RD Gateway with multifactor authentication, the gateway connection will be held open to avoid multiple MFA prompts.
+- All the client UI is now fully keyboard-accessible with Voiceover support.
+- Files copied to the clipboard in the remote session are now only transferred when pasting to the local computer.
+- URLs copied to the clipboard in the remote session now paste correctly to the local computer.
+- Scale factor remoting to support Retina displays is now available for multimonitor scenarios.
+- Addressed a compatibility issue with FreeRDP-based RD servers that was causing connectivity issues in redirection scenarios.
+- Addressed smart card redirection compatibility with future releases of Windows 10.
+- Addressed an issue specific to macOS 10.15 where the incorrect available space was reported for redirected folders.
+- Published PC connections are represented with a new icon in the Workspaces tab.
+- "Feeds" are now called "Workspaces," and "Desktops" are now called "PCs."
+- Fixed inconsistencies and bugs in user account handling in the preferences UI.
+- Lots of bug fixes to make things run smoother and more reliably.
+
+## Updates for version 10.3.3
+
+*Date published: 11/18/19*
+
+We've put together a feature update and fixed bugs for the 10.3.3 release.
+
+First, we've added user defaults to disable smart card, clipboard, microphone, camera, and folder redirection:
+
+- ClientSettings.DisableSmartcardRedirection
+- ClientSettings.DisableClipboardRedirection
+- ClientSettings.DisableMicrophoneRedirection
+- ClientSettings.DisableCameraRedirection
+- ClientSettings.DisableFolderRedirection
+
+Next, the bug fixes:
+
+- Resolved an issue that was causing programmatic session window resizes to not be detected.
+- Fixed an issue where the session window contents appeared small when connecting in windowed mode (with dynamic display enabled).
+- Addressed initial flicker that occurred when connecting to a session in windowed mode with dynamic display enabled.
+- Fixed graphics mispaints that occurred when connected to Windows 7 after toggling fit-to-window with dynamic display enabled.
+- Fixed a bug that caused an incorrect device name to be sent to the remote session (breaking licensing in some third-party apps).
+- Resolved an issue where remote app windows would occupy an entire monitor when maximized.
+- Addressed an issue where the access permissions UI appeared underneath local windows.
+- Cleaned up some shutdown code to ensure the client closes more reliably.
+
+## Updates for version 10.3.2
+
+*Date published: 11/18/19*
+
+In this release, we fixed a bug that made the display low resolution while connecting to a session
+
+## Updates for version 10.3.1
+
+*Date published: 11/18/19*
+
+We've put together some fixes to address regressions that managed to sneak into the 10.3.0 release.
+
+- Addressed connectivity issues with RD Gateway servers that were using 4096-bit asymmetric keys.
+- Fixed a bug that caused the client to randomly stop responding when downloading feed resources.
+- Fixed a bug that caused the client to crash while opening.
+- Fixed a bug that caused the client to crash while importing connections from Remote Desktop, version 8.
 
 ## Updates for version 10.3.0
+
 *Date published: 8/27/19*
 
 It's been a few weeks since we last updated, but we've been hard at work during that time. Version 10.3.0 brings some new features and lots of under-the-hood fixes.
 
- - Camera redirection is now possible when connecting to Windows 10 1809, Windows Server 2019 and later.
- - On Mojave and Catalina we've added a new dialog that requests your permission to use the microphone and camera for device redirection.
- - The feed subscription flow has been rewritten to be simpler and faster.
- - Clipboard redirection now includes the Rich Text Format (RTF).
- - When entering your password you have the option to reveal it with a "Show password" checkbox.
- - Addressed scenarios where the session window was jumping between monitors.
- - The Connection Center displays high resolution remote app icons (when available).
- - Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
- - Cmd+R now refreshes all of your subscribed feeds.
- - Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
- - Added a new secondary click option to change the icon size in the Feeds tab of the Connection Center.
- - A new simplified and cleaner app icon.
+- Camera redirection is now possible when connecting to Windows 10 1809, Windows Server 2019 and later.
+- On Mojave and Catalina we've added a new dialog that requests your permission to use the microphone and camera for device redirection.
+- The feed subscription flow has been rewritten to be simpler and faster.
+- Clipboard redirection now includes the Rich Text Format (RTF).
+- When entering your password you have the option to reveal it with a "Show password" checkbox.
+- Addressed scenarios where the session window was jumping between monitors.
+- The Connection Center displays high resolution remote app icons (when available).
+- Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
+- Cmd+R now refreshes all of your subscribed feeds.
+- Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
+- Added a new secondary click option to change the icon size in the Feeds tab of the Connection Center.
+- A new, simplified, and clean app icon.
 
 ## Updates for version 10.2.13
 

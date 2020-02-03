@@ -5,13 +5,12 @@ ms.assetid: 51a1ee61-3ffe-4f65-b8de-ff21903e1e74
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.date: 07/24/19
+ms.date: 07/24/2019
 ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---
-
 # Advanced features of Always On VPN
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
@@ -116,7 +115,7 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
    Event ID:      41  
    ...  
    Event Xml:
-   <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <Event xmlns="https://schemas.microsoft.com/win/2004/08/events/event">
     <UserData>  
      <CertVerifyRevocation>  
 	  <Certificate fileRef="C97AE73E9823E8179903E81107E089497C77A720.cer" subjectName="client01.corp.contoso.com" />  

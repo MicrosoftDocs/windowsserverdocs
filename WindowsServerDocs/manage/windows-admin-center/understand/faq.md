@@ -6,7 +6,7 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.date: 06/07/2019
+ms.date: 12/02/2019
 ms.prod: windows-server
 ---
 # Windows Admin Center Frequently Asked Questions
@@ -80,7 +80,7 @@ Yes! the [Showscript feature](../use/get-started.md#view-powershell-scripts-used
 
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
-Windows Admin Center now supports **limited** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don't exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers [move to Azure or upgrade to the latest version of Windows Server](https://www.microsoft.com/en-us/cloud-platform/windows-server-2008).
+Windows Admin Center now supports **limited** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don't exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers [move to Azure or upgrade to the latest version of Windows Server](https://www.microsoft.com/cloud-platform/windows-server-2008).
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 
@@ -88,7 +88,7 @@ We are investigating due to customer demand, but there is currently no locked pl
 
 ## Which web browsers are supported by Windows Admin Center?
 
-The latest versions of Microsoft Edge (Windows 10, version 1709 or later) and Google Chrome browsers are tested and supported on Windows 10. [View browser specific known issues](../support/known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
+The latest versions of Microsoft Edge (Windows 10, version 1709 or later), Google Chrome, and [Microsoft Edge Insider](https://microsoftedgeinsider.com) are tested and supported on Windows 10. [View browser specific known issues](../support/known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
 
 ## How does Windows Admin Center handle security?
 
@@ -137,14 +137,14 @@ There are two versions of Windows Admin Center available for download:
 
 ### Windows Admin Center
 
-* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1904.
+* For IT admins who are not able to update frequently or who want more validation time for the releases they use in production, this version is for you. Our current generally available (GA) release is Windows Admin Center 1910.
 * [!INCLUDE [support-policy](../includes/support-policy.md)]
 * To get the latest release, [download here](https://aka.ms/WACDownload).
 
 ### Windows Admin Center Preview
 
 * For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
-* To get the latest Insider Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
+* To get the latest Insider Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
 
 ## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
 
@@ -156,7 +156,7 @@ Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point 
 
 ## What is the version history of Windows Admin Center?
 
-[View the version history here.](../overview.md#release-history)
+[View the version history here.](../support/release-history.md)
 
 ## I'm having an issue with Windows Admin Center, where can I get help?
 

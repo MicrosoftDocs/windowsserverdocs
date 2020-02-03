@@ -27,7 +27,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 
 ```
-start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/b {<Command> | <Program>} [<Parameters>]]
+start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/elevate] [/b] [<Command> [<Parameter>... ] | <Program> [<Parameter>... ]]
 ```
 
 ## Parameters
@@ -42,9 +42,10 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 |/low \| /normal \| /high \| /realtime \| /abovenormal \| /belownormal|Starts an application in the specified priority class. Valid priority class values are **/low**, **/normal**, **/high**, **/realtime**, **/abovenormal**, and **/belownormal**.|
 |/affinity \<HexAffinity>|Applies the specified processor affinity mask (expressed as a hexadecimal number) to the new application.|
 |/wait|Starts an application and waits for it to end.|
+|/elevate|Runs application as administrator.|
 |/b|Starts an application without opening a new Command Prompt window. CTRL+C handling is ignored unless the application enables CTRL+C processing. Use CTRL+BREAK to interrupt the application.|
-|/b \<Command> \| \<Program>|Specifies the command or program to start.|
-|\<Parameters>|Specifies parameters to pass to the command or program.|
+|\<Command> \| \<Program>|Specifies the command or program to start.|
+|\<Parameter>...|Specifies parameters to pass to either the command or the program.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
@@ -54,7 +55,7 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 - When you run a 32-bit graphical user interface (GUI) application, **cmd** does not wait for the application to quit before returning to the command prompt. This behavior does not occur if you run the application from a command script.
 - When you run a command that uses a first token that does not contain an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:  
   ```
-  .COM;.EXE;.BAT;.CMD 
+  .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC 
   ```  
   Note that the syntax is the same as the PATH variable, with semicolons separating each extension.
 - When it searches for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.

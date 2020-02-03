@@ -49,15 +49,15 @@ Windows Server 2016 removes the restriction for the number of Connection Brokers
 
 ## Support for graphics processing unit (GPU) acceleration
 
-Remote Desktop Services support systems equipped with GPUs. Applications that require GPU can be used over the remote connection. Additionally, GPU-accelerated rendering and encoding can be enabled for improved app performance and scalability.
+Remote Desktop Services support systems equipped with GPUs. Applications that require a GPU can be used over the remote connection. Additionally, GPU-accelerated rendering and encoding can be enabled for improved app performance and scalability.
 
-Remote Desktop Services Session Hosts an singe-session client operating systems can take an advantage of a physical or a virtual GPUs presented to the operating system in many ways including the [Azure GPU optimized virtual machine sizes](/en-us/azure/virtual-machines/windows/sizes-gpu), GPUs available to the physical RDSH server, RemoteFX vGPUs (Only on Windows Server 2016) and GPUs presented to the VMs by supported hypervisors.
+Remote Desktop Services Session Hosts and single-session client operating systems can take advantage of the physical or virtual GPUs presented to the operating system in many ways, including the [Azure GPU optimized virtual machine sizes](/en-us/azure/virtual-machines/windows/sizes-gpu), GPUs available to the physical RDSH server, RemoteFX vGPUs (Only on Windows Server 2016), and GPUs presented to the VMs by supported hypervisors.
 
 See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
 GPU vendors may have a separate licensing scheme for RDSH scenarios or restrict GPU use on the server OS, verify the requirements with your favorite vendor.
 
-GPUs presented by a non-Microsoft hypervisors or Cloud Platform must have drivers digitally-signed by WHQL and supplied by the GPU vendor.
+GPUs presented by a non-Microsoft hypervisor or Cloud Platform must have drivers digitally-signed by WHQL and supplied by the GPU vendor.
 
 ### Remote Desktop Session Host support for GPUs
 

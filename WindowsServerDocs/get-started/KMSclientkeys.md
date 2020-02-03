@@ -7,7 +7,7 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 05/21/2019
+ms.date: 11/12/2019
 ms.topic: get-started-article
 ---
 # KMS client setup keys
@@ -31,9 +31,9 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | If you want to…    | …use these resources   |
 |--------------------|------------------------|
 | Activate Windows outside of a volume-activation scenario (that is, you're trying to activate a retail version of Windows), **these keys will not work**. | Use these links for retail versions of Windows: |
-| Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
+| Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
 
--   [Get Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
+-   [Get Windows 10](https://www.microsoft.com/windows/get-windows-10)
 
 -   [Get a new Windows product key](https://support.microsoft.com/help/10749/windows-product-key)
 
@@ -45,26 +45,12 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 ## Windows Server Semi-Annual Channel versions
 
-### Windows Server, version 1903 and Windows Server, version 1809
+### Windows Server, version 1909, version 1903, and version 1809
 
 | Operating system edition  | KMS Client Setup Key          |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
-
-### Windows Server, version 1803
-
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
-| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
-
-### Windows Server, version 1709
-
-| Operating system edition       | KMS Client Setup Key          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
-| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
 
 ## Windows Server LTSC/LTSB versions
 
@@ -85,7 +71,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 ## Windows 10, all supported Semi-Annual Channel versions
 
-See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
+See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
 
 | Operating system edition          | KMS Client Setup Key          |
 |-----------------------------------|-------------------------------|
@@ -126,6 +112,21 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/
 | Windows 10 Enterprise 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
 ## Earlier versions of Windows Server
+
+### Windows Server, version 1803
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
+| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
+
+### Windows Server, version 1709
+
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
+| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+
 ### Windows Server 2012 R2
 
 | Operating system edition               | KMS Client Setup Key          |

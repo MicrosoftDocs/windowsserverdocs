@@ -280,9 +280,9 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
   
 ## See also  
   
--   [Services Integration Overview for Windows Server Essentials - Part 1](http://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)  
+-   [Services Integration Overview for Windows Server Essentials - Part 1](https://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)  
   
--   [Services Integration Overview for Windows Server Essentials - Part 2](http://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)  
+-   [Services Integration Overview for Windows Server Essentials - Part 2](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)  
   
 -   [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)  
   

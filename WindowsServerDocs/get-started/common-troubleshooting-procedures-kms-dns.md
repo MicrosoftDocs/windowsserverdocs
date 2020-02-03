@@ -84,7 +84,7 @@ Verify basic IP connectivity to the DNS server by using the ping command. To do 
 
 Check the registry of the KMS host server to determine whether it is registering with DNS. By default, a KMS host server dynamically registers a DNS SRV record one time every 24 hours. 
 > [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/en-us/help/322756) in case problems occur.  
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.  
 
 To check this setting, follow these steps:
 1. Start Registry Editor. To do this, right-click **Start**, select **Run**, type **regedit**, and then press Enter.

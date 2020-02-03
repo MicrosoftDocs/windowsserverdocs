@@ -73,7 +73,7 @@ The following features and functionalities are deprecated starting with this rel
 
 -   **Scregedit.exe** is deprecated. If you have scripts that depend on Scregedit.exe, adjust them to use Reg.exe or Windows PowerShell methods.  
 
--   **Sconfig.exe** is deprecated. Use Windows PowerShell instead.  
+-   **Sconfig.exe** is deprecated. Use [Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016) instead. 
 
 ### NetCfg custom APIs
 
