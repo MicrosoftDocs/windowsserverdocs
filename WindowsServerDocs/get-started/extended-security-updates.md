@@ -10,7 +10,6 @@ ms.topic: get-started-article
 ms.localizationpriority: high
 ms.date: 02/03/2020
 ---
-
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
 
 >Applies To: Windows Server 2008 / 2008 R2
