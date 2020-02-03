@@ -125,7 +125,7 @@ In order to enable on-behalf-of authentication, we need to ensure that AD FS ret
     => issue(claim = c);
 
     @RuleName = "Issue user_impersonation scope"
-    => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
+    => issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO10.PNG)
 
