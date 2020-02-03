@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: lizap
 ms.author: elizapo
-ms.date: 01/30/2020
+ms.date: 02/03/2020
 manager: dongill
 ---
 # License your RDS deployment with client access licenses (CALs)
@@ -58,11 +58,11 @@ You can use the Remote Desktop Licensing Manager to track and generate reports o
 
 ## Note about CAL versions
 
-The CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use CALs for earlier versions to access later versions of Windows Server, but you can use later versions of CALs to access earlier versions of Windows Server. For example, a RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
+The CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of CALs to access earlier versions of Windows Server. For example, a RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
 
 The following table shows the CALs required to connect to RD Session Hosts.
 
-|                  | 2008 R2 and earlier CAL | 2012 CAL | 2016 CAL | 2019 CAL |
+|                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL |
 |---------------------------------|--------|--------|--------|--------|
 | **2008, 2008 R2 session host** | Yes    | Yes    | Yes    | Yes     |
 | **2012 session host**         | No     | Yes    | Yes    | Yes    |
@@ -72,9 +72,9 @@ The following table shows the CALs required to connect to RD Session Hosts.
 
 You must install your RDS CAL on a compatible RD license server. Any RDS license server can host licenses from all previous versions of Remote Desktop Services and the current version of Remote Desktop Services. For example, a Windows Server 2016 RDS license server can host licenses from all previous versions of RDS, while a Windows Server 2012 R2 RDS license server can only host licenses up to Windows Server 2012 R2.
 
-The following table shows which CAL and license server versions are compatible with each other.
+The following table shows which RDS CAL and license server versions are compatible with each other.
 
-|                  | 2008 R2 and earlier CAL | 2012 CAL | 2016 CAL | 2019 CAL |
+|                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL |
 |---------------------------------|--------|--------|--------|--------|
 | **2008, 2008 R2 license server** | Yes    | No   | No   | No    |
 | **2012 license server**         | Yes     | Yes    | No   | No    |
