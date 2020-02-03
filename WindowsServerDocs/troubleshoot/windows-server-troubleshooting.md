@@ -50,7 +50,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [Advanced troubleshooting for stop error or blue screen error](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors.md)
 - [Advanced troubleshooting for stop error 7B or Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device.md)
 - [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart.md)
-- [Blue screen occurs when you update the in-box Broadcom NIC driver](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update.md)
+- [Stop error occurs when you update the in-box Broadcom network adapter driver](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update.md)
 
 ## Troubleshoot AD forest recovery
 
