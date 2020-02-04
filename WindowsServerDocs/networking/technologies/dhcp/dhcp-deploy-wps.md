@@ -330,8 +330,8 @@ Restart-Computer
 
 For more information about these commands, see the following topics.
 
-- [Rename-Computer](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/rename-computer)
-- [Restart-Computer](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer)
+- [Rename-Computer](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer)
+- [Restart-Computer](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-computer)
 
 ### Join the computer to the domain \(Optional\)
 
@@ -450,8 +450,8 @@ Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.co
 
 For more information about these commands, see the following topics.
 
-- [Set-DhcpServerv4DnsSetting](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
-- [Set-DhcpServerDnsCredential](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverdnscredential)
+- [Set-DhcpServerv4DnsSetting](https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
+- [Set-DhcpServerDnsCredential](https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverdnscredential)
 
 ### Configure the Corpnet Scope
 
@@ -503,7 +503,7 @@ The following reference provides command descriptions and syntax for all DHCP Se
 > [!NOTE]
 > You can not use Windows Server 2016 commands in Windows Server 2012 R2.
 
-- [DhcpServer Module](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/)
+- [DhcpServer Module](https://docs.microsoft.com/powershell/module/dhcpserver/)
 
 The following reference provides command descriptions and syntax for all DHCP Server Windows PowerShell commands for Windows Server 2012 R2. The topic lists commands in alphabetical order based on the verb at the beginning of the commands, such as **Get** or **Set**.
 
