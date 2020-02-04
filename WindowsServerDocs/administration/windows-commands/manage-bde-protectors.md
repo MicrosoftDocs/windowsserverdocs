@@ -42,7 +42,7 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 
 ### <a name="BKMK_addprotectors"></a>-add syntax and parameters
 ```
-manage-bde  protectors  add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
+manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
 [-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin] 
 [-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>] 
 [{-?|/?}] [{-help|-h}]
@@ -72,7 +72,7 @@ manage-bde  protectors  add [<Drive>] [-forceupgrade] [-recoverypassword <Numeri
 
 ### <a name="BKMK_deleteprotectors"></a>-delete syntax and parameters
 ```
-manage-bde  protectors  delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
+manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
 [-id <KeyProtectorID>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
@@ -98,7 +98,7 @@ manage-bde  protectors  delete <Drive> [-type {recoverypassword|externalkey|cert
 
 ### <a name="BKMK_disableprot"></a>-disable syntax and parameters
 ```
-manage-bde  protectors  disable <Drive> [-RebootCount <integer 0 - 15>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde  -protectors  -disable <Drive> [-RebootCount <integer 0 - 15>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
 |   Parameter   |                                                                                                                                                                                                                   Description                                                                                                                                                                                                                    |
@@ -113,23 +113,23 @@ manage-bde  protectors  disable <Drive> [-RebootCount <integer 0 - 15>] [-comput
 ## <a name="BKMK_Examples"></a>Examples
 The following example illustrates using the **-protectors** command to add a certificate key protector identified by a certificate file to drive E.
 ```
-manage-bde  protectors  add E: -certificate  cf "c:\File Folder\Filename.cer"
+manage-bde  -protectors  -add E: -certificate  -cf "c:\File Folder\Filename.cer"
 ```
 The following example illustrates using the **-protectors** command to add an **adaccountorgroup** key protector identified by domain and user name to drive E.
 ```
-manage-bde  protectors  add E: -sid DOMAIN\user
+manage-bde  -protectors  -add E: -sid DOMAIN\user
 ```
 The following example illustrates using the **protectors** command to disable protection until the computer has rebooted 3 times.
 ```
-manage-bde  protectors  disable C: -rc 3
+manage-bde  -protectors  -disable C: -rc 3
 ```
 The following example illustrates using the **-protectors** command to delete all TPM and startup key based key protectors on drive C.
 ```
-manage-bde  protectors  delete C: -type tpmandstartupkey
+manage-bde  -protectors -delete C: -type tpmandstartupkey
 ```
 The following example illustrates using the **-protectors** command to back up all recovery information for drive C to AD DS.
 ```
-manage-bde  protectors  adbackup C:
+manage-bde  -protectors  -adbackup C:
 ```
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
