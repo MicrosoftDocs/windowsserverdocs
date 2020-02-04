@@ -218,14 +218,13 @@ In order to complete the on-behalf-of flow, you need to create a backend resourc
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO3.PNG)
 
-* Give appropriate controller name
+* Give the controller an appropriate name.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO13.PNG)
 
-* Add the following code in the controller
+* Add the following code in the controller:
 
-
-~~~
+```cs
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -234,15 +233,16 @@ In order to complete the on-behalf-of flow, you need to create a backend resourc
     using System.Web.Http;
     namespace WebAPIOBO.Controllers
     {
+        [Authorize]
         public class WebAPIOBOController : ApiController
         {
             public IHttpActionResult Get()
             {
-                return Ok("WebAPI via OBO");
+                return Ok($"WebAPI via OBO (user: {User.Identity.Name}");
             }
         }
     }
-~~~
+```
 
 This code will simply return the string when anyone puts a Get request for the WebAPI WebAPIOBO
 
