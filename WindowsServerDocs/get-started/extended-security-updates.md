@@ -63,19 +63,18 @@ To use extended security updates, you create a multiple activation key (MAK) and
 > [!NOTE]
 > You don't need to register for extended security updates if you're running Windows Server 2008 and 2008 R2 on Azure VMs. For other environments, such as on-premises VMs or physical servers, [purchase extended security updates](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) before you try to register and use them.
 
-> [!IMPORTANT] <!--This text needs to be replaced-->
->Make sure that you've followed the previous steps to purchase extended security updates through your Volume Licensing Program. Before following the steps below, send an e-mail to [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com) with the following information for approval to use the feature:
->
-> * Customer Name:
-> * Azure Subscription:
-> * EA Agreement Number (for ESU):
-> * Number of ESU servers:
->
-> The team will review provided information and add the user / subscription to the approved list.
->
-> If the requestor is not approved, the following error can occur:
->
-> [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
+The Extended Security Updates feature is still in preview. Before you continue, make sure you're on the list of approved users or subscribers. To request access, open the Azure client and make a request that includes the following information:
+
+* Customer name
+* Azure subscription
+* A Agreement Number (for ESU)
+* Number of ESU servers
+
+The team will review the information you provide. If everything looks okay, they'll add you to the approved list.
+
+If team doesn't approve the request, you'll see the following error:
+
+[The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
 
 To register non-Azure VMs for extended security updates and create a key, complete the following steps in the Azure Portal:
 
