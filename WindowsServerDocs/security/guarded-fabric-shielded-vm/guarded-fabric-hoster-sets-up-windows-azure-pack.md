@@ -43,7 +43,7 @@ Install and configure Windows Azure Pack (WAP) on the machine where you wish to 
 
 1.  Reviewing [WAP system requirements](https://technet.microsoft.com/library/dn296442.aspx) and install the [prerequisite software](https://technet.microsoft.com/library/dn469335.aspx).
 
-2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine is not connected to the Internet, follow the [offline installation instructions](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
+2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine is not connected to the Internet, follow the [offline installation instructions](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
 
 3.  Open the Web Platform Installer and find **Windows Azure Pack: Portal and API Express** under the **Products** tab. Click **Add**, then **Install** at the bottom of the window.
 

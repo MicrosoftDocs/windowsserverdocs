@@ -35,7 +35,7 @@ You should establish a baseline power measurement before you tune your server fo
 
 If your server has the necessary support, you can use the power metering and budgeting features in Windows Server 2016 to view system-level energy consumption by using Performance Monitor.
 
-One way to determine whether your server has support for metering and budgeting is to review the [Windows Server Catalog](http://www.windowsservercatalog.com). If your server model qualifies for the new Enhanced Power Management qualification in the Windows Hardware Certification Program, it is guaranteed to support the metering and budgeting functionality.
+One way to determine whether your server has support for metering and budgeting is to review the [Windows Server Catalog](https://www.windowsservercatalog.com). If your server model qualifies for the new Enhanced Power Management qualification in the Windows Hardware Certification Program, it is guaranteed to support the metering and budgeting functionality.
 
 Another way to check for metering support is to manually look for the counters in Performance Monitor. Open Performance Monitor, select **Add Counters**, and then locate the **Power Meter** counter group.
 
