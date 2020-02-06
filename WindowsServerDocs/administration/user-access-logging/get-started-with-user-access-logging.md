@@ -70,7 +70,7 @@ The following server roles and services can be supported by UAL:
 -   Web Server (IIS)  
   
     > [!WARNING]  
-    > To use UAL with IIS, you must use iisual.exe. For more information, see [Analyzing Client Usage Data with IIS User Access Logging](http://www.iis.net/learn/manage/configuring-security/analyzing-client-usage-data-with-iis-user-access-logging).  
+    > To use UAL with IIS, you must use iisual.exe. For more information, see [Analyzing Client Usage Data with IIS User Access Logging](https://www.iis.net/learn/manage/configuring-security/analyzing-client-usage-data-with-iis-user-access-logging).  
   
 -   Microsoft Message Queue (MSMQ) Services  
   
