@@ -136,7 +136,7 @@ Here's how to configure Folder Redirection in Group Policy:
     > To apply Folder Redirection to client computers running Windows XP or Windows Server 2003, select the **Settings** tab and select the **Also apply redirection policy to Windows 2000, Windows 2000 Server, Windows XP, and Windows Server 2003 operating systems** checkbox.
 
 5. In the **Target folder location** section, select **Create a folder for each user under the root path** and then in the **Root Path** box, type the path to the file share storing redirected folders, for example: **\\\\fs1.corp.contoso.com\\users$**
-6. Select the **Settings** tab, and in the **Policy Removal** section, optionally select **Redirect the folder back to the local userprofile location when the policy is removed** (this setting can help make Folder Redirection behave more predictably for adminisitrators and users).
+6. Select the **Settings** tab, and in the **Policy Removal** section, optionally select **Redirect the folder back to the local userprofile location when the policy is removed** (this setting can help make Folder Redirection behave more predictably for administrators and users).
 7. Select **OK**, and then select **Yes** in the Warning dialog box.
 
 ## Step 5: Enable the Folder Redirection GPO

@@ -159,7 +159,7 @@ We recommend that you follow these guidelines:
 
 -   All cluster nodes should be uniformly configured to use the same update source, for example, a WSUS server, Windows Update, or Microsoft Update.  
 
--   If you use a configuration management system to apply software updates to computers on the network, exclude cluster nodes from all required or automatic updates. Examples of configuration management systems include Microsoft System Center Configuration Manager 2007 and Microsoft System Center Virtual Machine Manager 2008.  
+-   If you use a configuration management system to apply software updates to computers on the network, exclude cluster nodes from all required or automatic updates. Examples of configuration management systems include Microsoft Endpoint Configuration Manager and Microsoft System Center Virtual Machine Manager 2008.  
 
 -   If internal software distribution servers \(for example, WSUS servers\) are used to contain and deploy the updates, ensure that those servers correctly identify the approved updates for the cluster nodes.  
 

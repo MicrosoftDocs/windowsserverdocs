@@ -23,7 +23,7 @@ When Windows Admin Center is launched, it will connect to the registered extensi
 
 ## How to implement the extension discovery banner
 
-The "tags" metadata in the .nuspec file is used to declare which hardware manufacturer and/or models your extension supports. Tags are delimited by spaces and you can add either a manufacturer or model tag, or both to declare the supported manufacturer and/or models. The tag format is ``"[value type]_[value condition]"`` where [value type] is either "Manufacturer" or "Model" (case sensitive), and [value condition] is a [Javascript regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) defining the manufacturer or model string, and [value type] and [value condition] are separated by an underscore. This string is then encoded using URI encoding and added to the .nuspec "tags" metadata string.
+The "tags" metadata in the .nuspec file is used to declare which hardware manufacturer and/or models your extension supports. Tags are delimited by spaces and you can add either a manufacturer or model tag, or both to declare the supported manufacturer and/or models. The tag format is ``"[value type]_[value condition]"`` where [value type] is either "Manufacturer" or "Model" (case sensitive), and [value condition] is a [Javascript regular expression](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) defining the manufacturer or model string, and [value type] and [value condition] are separated by an underscore. This string is then encoded using URI encoding and added to the .nuspec "tags" metadata string.
 
 ### Example
 

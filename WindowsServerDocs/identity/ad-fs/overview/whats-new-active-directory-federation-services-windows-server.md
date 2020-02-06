@@ -5,7 +5,7 @@ description:
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 04/23/2019
+ms.date: 01/22/2020
 ms.topic: article
 ms.prod: windows-server
 
@@ -85,9 +85,8 @@ ClaimsXray/TokenResponse&prompt=login**
  
 With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. This is consistent with how one can do authentication against Azure AD also. 
 
-The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example  
+The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. 
 
-**< create a valid sample request>**
 > [!NOTE]
 > Only one resource can be specified in the authentication request. If more than one resource is included in the request, AD FS will return an error and authentication will not succeed. 
 
@@ -158,7 +157,11 @@ For more information about using device based conditional access with AD FS
 *  [Planning for Device Based Conditional Access with AD FS](../../ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)  
 * [Access Control Policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md)  
 
-### Sign in with Windows Hello for Business   
+### Sign in with Windows Hello for Business  
+
+> [!NOTE]
+> Currently, Google Chrome and the [new Microsoft Edge built on Chromium](https://www.microsoft.com/edge?form=MB110A&OCID=MB110A) open source project browsers are not supported for browser based single-sign on (SSO) with Microsoft Windows Hello for Business. Please use Internet Explorer or an older version of Microsoft Edge.  
+
 Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture (a PIN, a biometric gesture like fingerprint, or facial recognition). AD FS 2016 supports these new Windows 10 capabilities so that users can sign in to AD FS applications from the intranet or the extranet without the need to provide a password.
 
 For more information about using Microsoft Windows Hello for Business in your organization

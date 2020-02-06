@@ -31,9 +31,9 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | If you want to…    | …use these resources   |
 |--------------------|------------------------|
 | Activate Windows outside of a volume-activation scenario (that is, you're trying to activate a retail version of Windows), **these keys will not work**. | Use these links for retail versions of Windows: |
-| Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
+| Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
 
--   [Get Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
+-   [Get Windows 10](https://www.microsoft.com/windows/get-windows-10)
 
 -   [Get a new Windows product key](https://support.microsoft.com/help/10749/windows-product-key)
 
@@ -71,7 +71,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 ## Windows 10, all supported Semi-Annual Channel versions
 
-See the [Windows lifecycle fact sheet](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
+See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
 
 | Operating system edition          | KMS Client Setup Key          |
 |-----------------------------------|-------------------------------|

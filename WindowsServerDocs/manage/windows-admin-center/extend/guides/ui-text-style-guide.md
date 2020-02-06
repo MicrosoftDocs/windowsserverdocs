@@ -5,7 +5,7 @@ ms.technology: manage
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 10/17/2018
+ms.date: 01/17/2020
 ms.localizationpriority: medium
 ms.prod: windows-server
 ---
@@ -222,7 +222,7 @@ Status messages consist of pop-up (toast) messages and notifications.
 |String type         | Notes                               |
 |------------        |-------------------------------------|
 |Toast               |Sentence case with ending punctuation - ideally with an object variable so users can understand what object the message applies to in case they've navigated away from the object|
-|Notification heading|Sentence case w/out ending punctuation (it's a heading) - ideally with an object variable|
+|Notification heading (title) |Sentence case without ending punctuation (it's a heading) - ideally with an object variable|
 |Notification details|Full sentences, ideally with a link to the UI that displays the object|
 
 Here are some detailed recommendations for notification messages:
@@ -230,9 +230,9 @@ Here are some detailed recommendations for notification messages:
 |String type         | Notes                               |
 |------------        |-------------------------------------|
 |Started             |Omit when possible - usually you can just skip to the in-progress message to minimize the number of distractions.|
-|In progress         |Start with the verb of the action you're performing and end with ellipses to indicate an ongoing operation. Here's an example:<br> *Creating the volume "Customer data"...*|
-|Success             |Start with "Successfully" and end with what the software just did. Here's an example:<br> *Successfully created the volume "Customer data".*|
-|Failure             |Start with "Couldn't" and end with what the software couldn't do. Here's an example:<br> *Couldn't create the volume "Customer data".*|
+|In progress         |Start with the verb of the action you're performing and end with ellipses to indicate an ongoing operation. Here's an example:<br> *Creating the volume 'Customer data'...* <br><br>When there are multiple variables, use this pattern: <br>*Deleting the following virtual machine: {0}; Host: {1}* |
+|Success             |Start with "Successfully" and end with what the software just did. Here's an example:<br> *Successfully created the volume 'Customer data'.*|
+|Failure             |Start with "Couldn't" and end with what the software couldn't do. Here's an example:<br> *Couldn't create the volume 'Customer data'.*|
 
 ## Tooltips
 

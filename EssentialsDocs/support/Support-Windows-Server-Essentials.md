@@ -22,7 +22,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 ##  <a name="BKMK_Top"></a> Top support solutions and updates  
   
--   [Top support solutions for Windows Server 2012 R2 and Windows Server 2012](http://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
+-   [Top support solutions for Windows Server 2012 R2 and Windows Server 2012](https://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
   
 -   [Update for the Windows Server Essentials Migration Preparation Tool](https://support.microsoft.com/kb/2908176) (December 2013)  
   
@@ -111,7 +111,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Support for small businesses](https://smallbusiness.support.microsoft.com/contact)  
   
--   [Windows Server Essentials and Small Business Server Blog](http://blogs.technet.com/b/sbs/)  
+-   [Windows Server Essentials and Small Business Server Blog](https://blogs.technet.com/b/sbs/)  
   
 ## End-to-end solution guides  
   

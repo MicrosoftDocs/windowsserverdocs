@@ -95,7 +95,7 @@ If you are using alternate login id with Exchange and Skype for Business, the us
 >[!NOTE]
 >For the best end-user experience, Microsoft recommends using Hybrid Modern Authentication.
 
-or more information see, [Hybrid Modern Authentication Overview](https://support.office.com/en-us/article/Hybrid-Modern-Authentication-overview-and-prerequisites-for-using-it-with-on-premises-Skype-for-Business-and-Exchange-servers-ef753b32-7251-4c9e-b442-1a5aec14e58d)
+or more information see, [Hybrid Modern Authentication Overview](https://support.office.com/article/Hybrid-Modern-Authentication-overview-and-prerequisites-for-using-it-with-on-premises-Skype-for-Business-and-Exchange-servers-ef753b32-7251-4c9e-b442-1a5aec14e58d)
 
 ### Pre-requisites for Exchange and Skype for Business
 The following are pre-requisites for achieving SSO with alternate ID.

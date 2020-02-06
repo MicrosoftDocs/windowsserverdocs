@@ -13,7 +13,7 @@ The OpenSSH Client and OpenSSH Server are separately installable components in W
 Users with these Windows versions should use the instructions that follow to install and configure OpenSSH. 
 
 > [!NOTE] 
-> Users who acquired OpenSSH from the PowerShell Github repo (https://github.com/PowerShell/OpenSSH-Portable) should use the instructions from there, and __should not__ use these instructions. 
+> Users who acquired OpenSSH from the PowerShell GitHub repo (https://github.com/PowerShell/OpenSSH-Portable) should use the instructions from there, and __should not__ use these instructions. 
 
 
 ## Installing OpenSSH from the Settings UI on Windows Server 2019 or Windows 10 1809

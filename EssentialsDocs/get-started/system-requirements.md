@@ -43,7 +43,7 @@ manager: dongill
   
  Actual requirements will vary based on your system configuration and the applications and features you choose to install. Processor performance depends not only on the clock frequency of the processor, but also on the number of cores and the size of the processor cache. Storage space requirements for the system partition are approximate. Additional available storage space may be required if you are installing over a network.  
   
- For more information about the hardware requirements, see the [Windows Server Catalog](http://www.windowsservercatalog.com/).  
+ For more information about the hardware requirements, see the [Windows Server Catalog](https://www.windowsservercatalog.com/).  
   
  All server hardware should meet the requirements established for the  Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](https://msdn.microsoft.com/windows/hardware/gg487403.aspx).  
 

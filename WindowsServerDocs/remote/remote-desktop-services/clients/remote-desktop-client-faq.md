@@ -61,7 +61,7 @@ Make note of the name of this PC under **How to connect to this PC**. You'll nee
 You can grant permission for specific users to access this PC - to do that, click **Select users that can remotely access this PC**.
 Members of the Administrators group automatically have access.
 
-For Windows 8.1, follow the instructions to allow remote connections in [Connect to another desktop using Remote Desktop Connections](https://support.microsoft.com/en-us/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
+For Windows 8.1, follow the instructions to allow remote connections in [Connect to another desktop using Remote Desktop Connections](https://support.microsoft.com/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
 
 
 

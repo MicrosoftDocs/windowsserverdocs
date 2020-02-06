@@ -22,7 +22,7 @@ ms.localizationpriority: medium
 You can use Remote Desktop to connect to and control your PC from a remote device by using a [Microsoft Remote Desktop client](remote-desktop-clients.md) (available for Windows, iOS, macOS and Android). When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.  
 
 > [!NOTE]
-> You can use Remote Desktop to connect to Windows 10 Pro and Enteprise, Windows 8.1 and 8 Enterprise and Pro, Windows 7 Professional, Enterprise, and Ultimate, and Windows Server versions newer than Windows Server 2008. You can't connect to computers running the Home edition (like Windows 10 Home). 
+> You can use Remote Desktop to connect to Windows 10 Pro and Enterprise, Windows 8.1 and 8 Enterprise and Pro, Windows 7 Professional, Enterprise, and Ultimate, and Windows Server versions newer than Windows Server 2008. You can't connect to computers running a Home edition (like Windows 10 Home). 
 
 To connect to a remote PC, that computer must be turned on, it must have a network connection, Remote Desktop must be enabled, you must have network access to the remote computer (this could be through the Internet), and you must have permission to connect. For permission to connect, you must be on the list of users. Before you start a connection, it's a good idea to look up the name of the computer you're connecting to and to make sure Remote Desktop connections are allowed through its firewall.
 
@@ -33,7 +33,7 @@ The simplest way to allow access to your PC from a remote device is using the Re
 ### Windows 10 Fall Creator Update (1709) or later
 
 You can configure your PC for remote access with a few easy steps.
-1. On the device you want to connect to, select **Start**  and the click the **Settings** icon on the left.
+1. On the device you want to connect to, select **Start**  and then click the **Settings** icon on the left.
 2. Select the **System** group followed by the [**Remote Desktop**](ms-settings:remotedesktop) item.
 3. Use the slider to enable Remote Desktop.
 4. It is also recommended to keep the PC awake and discoverable to facilitate connections. Click **Show settings** to enable.
@@ -51,7 +51,7 @@ To enable Remote Desktop using the legacy system properties, follow the instruct
 
 ## Should I enable Remote Desktop?
 
-If you only want to access your PC when you are physically sitting in front of it, you don't need to enable Remote Desktop. Enabling Remote Desktop opens a port on your PC that is visible to your local network. You should only enable Remote Desktop in trusted networks, such as your home. You also don't want to enable Remote Desktop on any PC where access is tightly controlled.
+If you only want to access your PC when you are physically using it, you don't need to enable Remote Desktop. Enabling Remote Desktop opens a port on your PC that is visible to your local network. You should only enable Remote Desktop in trusted networks, such as your home. You also don't want to enable Remote Desktop on any PC where access is tightly controlled.
 
 Be aware that when you enable access to Remote Desktop, you are granting anyone in the Administrators group, as well as any additional users you select, the ability to remotely access their accounts on the computer.
 

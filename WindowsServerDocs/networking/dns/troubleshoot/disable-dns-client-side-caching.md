@@ -1,7 +1,7 @@
 ---
 title: Disable DNS client-side caching on DNS clients
 description: This article introduces how to disable DNS client-side caching on DNS clients.
-manager: willchen
+manager: dcscontentpm
 ms.prod: 
 ms.technology: networking-dns
 ms.topic: article

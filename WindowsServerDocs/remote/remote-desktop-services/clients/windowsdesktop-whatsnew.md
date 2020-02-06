@@ -9,9 +9,9 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
-ms.date: 12/04/2019
+ms.date: 01/29/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,8 +24,21 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.535  |
-|Insider    |1.2.535  |
+|Public     |1.2.605  |
+|Insider    |1.2.605  |
+
+## Updates for version 1.2.605
+
+*Date published: 01/29/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
+
+- You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select **Settings**.
+- Fixed an issue where the connection settings didn’t display the correct available scale factors.
+- Fixed an issue where Narrator couldn’t read the dialogue shown while the connection initiated.
+- Fixed an issue where the wrong user name displayed when the Azure Active Directory and Active Directory names didn’t match.
+- Fixed an issue that made the client stop responding when initiating a connection while not connected to a network.
+- Fixed an issue that caused the client to stop responding when attaching a headset.
 
 ## Updates for version 1.2.535
 

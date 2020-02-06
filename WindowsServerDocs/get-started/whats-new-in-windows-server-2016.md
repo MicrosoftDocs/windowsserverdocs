@@ -80,7 +80,7 @@ Here are some other new administration features:
 ### PowerShell Desired State Configuration (DSC) in Windows Management Framework (WMF) 5
 Windows Management Framework 5 includes updates to Windows PowerShell Desired State Configuration (DSC), Windows Remote Management (WinRM), and Windows Management Instrumentation (WMI).
 
-For more info about testing the DSC features of Windows Management Framework 5, see the series of blog posts discussed in [Validate features of PowerShell DSC](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/). To download, see [Windows Management Framework 5.1](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
+For more info about testing the DSC features of Windows Management Framework 5, see the series of blog posts discussed in [Validate features of PowerShell DSC](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/). To download, see [Windows Management Framework 5.1](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure).
 
 ### PackageManagement unified package management for software discovery, installation, and inventory
 Windows Server 2016 and Windows 10 includes a new PackageManagement feature (formerly called OneGet) that enables IT Professionals or DevOps to automate software discovery, installation, and inventory (SDII), locally or remotely, no matter what the installer technology is and where the software is located. 
@@ -189,10 +189,9 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 
 - The DSN name limit is enlarged from 256 bytes to 3072 bytes. See [IDtcToXaHelperFactory::Create](https://msdn.microsoft.com/library/ms686861(v=vs.85).aspx), [IDtcToXaHelperSinglePipe::XARMCreate](https://msdn.microsoft.com/library/ms679248(v=vs.85).aspx), or [IDtcToXaMapper::RequestNewResourceManager](https://msdn.microsoft.com/library/ms680310(v=vs.85).aspx) for details.
 
-- Improved tracing allowing you to set a registry key to include an image file path in the trace log file name so you can tell which trace log file to check. See [How to enable diagnostic tracing for MS DTC on a Windows-based computer](https://support.microsoft.com/en-us/kb/926099) for details on configuring tracing for MSDTC.
+- Improved tracing allowing you to set a registry key to include an image file path in the trace log file name so you can tell which trace log file to check. See [How to enable diagnostic tracing for MS DTC on a Windows-based computer](https://support.microsoft.com/kb/926099) for details on configuring tracing for MSDTC.
 
 
 
 ## See Also  
 -   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
-

@@ -9,14 +9,23 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
-ms.date: 09/11/2019
+ms.date: 01/02/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Store client
 
 We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.1.1107
+
+*Date published: 09/04/2019*
+
+- You can now copy files between local and remote PCs.
+- You can now use your email address to access remote resources (if enabled by your admin).
+- You can now change user account assignments for remote resource feeds.
+- The app now shows the proper icon for .rdp files assigned to this app in File Explorer instead of a blank default icon.
 
 ## Updates for version 10.1.1098
 

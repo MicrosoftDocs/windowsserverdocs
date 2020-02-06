@@ -78,4 +78,4 @@ If you are not using the default RADIUS ports in your NPS deployment, you must c
 
 ## Next steps
 
-[Step 6. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md): In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, System Center Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings.
+[Step 6. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md): In this step, you configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. You can use several technologies to configure Windows 10 VPN clients, including Windows PowerShell, Microsoft Endpoint Configuration Manager, and Intune. All three require an XML VPN profile to configure the appropriate VPN settings.
