@@ -417,6 +417,65 @@ If you have already run transfer one ore more times:
  4. For any disabled users or groups with names that now contain a suffix added by Storage Migration Service, you can delete these accounts. You can confirm that user accounts were added later because they will only contain the Domain Users group and will have a created date/time matching the Storage Migration Service transfer start time.
  
  If you wish to use Storage Migration Service with domain controllers for transfer purposes, ensure you always select "Don't transfer users and groups" on the transfer settings page in Windows Admin Center.
+ 
+ ## Error 53, "failed to inventory all specified devices" when running inventory, 
+
+When attempting to run inventory, you receive:
+
+    Failed to inventory all specified devices 
+    
+    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+    Source:        Microsoft-Windows-StorageMigrationService
+    Date:          1/16/2020 8:31:17 AM
+    Event ID:      2516
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      ned.corp.contoso.com
+    Description:
+    Couldn't inventory files on the specified endpoint.
+    Job: ned1
+    Computer: ned.corp.contoso.com
+    Endpoint: hithere
+    State: Failed
+    File Count: 0
+    File Size in KB: 0
+    Error: 53
+    Error Message: Endpoint scan failed
+    Guidance: Check the detailed error and make sure the inventory requirements are met. This could be because of missing permissions on the source computer.
+
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          1/16/2020 8:31:17 AM
+    Event ID:      10004
+    Task Category: None
+    Level:         Critical
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      ned.corp.contoso.com
+    Description:
+    01/16/2020-08:31:17.031 [Crit] Consumer Task failed with error:The network path was not found.
+    . StackTrace=   at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
+       at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
+       at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetEnvironmentPathFolders(String ServerName, Boolean IsServerLocal)
+       at Microsoft.StorageMigration.Proxy.Service.Discovery.ScanUtils.<ScanSMBEndpoint>d__3.MoveNext()
+       at Microsoft.StorageMigration.Proxy.EndpointScanOperation.Run()
+       at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(EndpointScanRequest scanRequest, Guid operationId)
+       at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(Object request)
+       at Microsoft.StorageMigration.Proxy.Common.ProducerConsumerManager`3.Consume(CancellationToken token)    
+       
+    01/16/2020-08:31:10.015 [Erro] Endpoint Scan failed. Error: (53) The network path was not found.
+    Stack trace:
+       at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
+       at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
+
+At this stage, Storage Migration Service orchestrator is attempting remote registry reads to determine source machine configuration, but is being rejected by the source server saying the registry path does not exist. This can be caused by:
+
+ 1. The Remote Registry service is not running on the source computer.
+ 2. A firewall does not allow remote registry connections to the source server from the Orchestrator.
+ 3. The source migration account does not have remote registry permissions to connect to the source computer.
+ 4. The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
 
 ## See also
 
