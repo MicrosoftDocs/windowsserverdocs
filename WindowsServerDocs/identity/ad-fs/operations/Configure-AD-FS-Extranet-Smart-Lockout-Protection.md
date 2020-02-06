@@ -147,7 +147,7 @@ When configuring the Extranet Smart Lockout, follow best practices for setting t
 
 `ExtranetObservationWindow (new-timespan -Minutes 30)`
 
-`ExtranetLockoutThreshold: – 2x AD Threshold Value`
+`ExtranetLockoutThreshold: Half of AD Threshold Value`
 
 AD value: 20, ExtranetLockoutThreshold: 10
 
