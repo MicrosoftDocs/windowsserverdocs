@@ -164,10 +164,12 @@ Follow these steps to deploy the web client to an RD Web Access server that does
 
 Follow the instructions under [How to publish the Remote Desktop web client](remote-desktop-web-client-admin.md#how-to-publish-the-remote-desktop-web-client), replacing steps 4 and 5 with the following.
 
-4. Import the Remote Desktop web client management PowerShell module from the local folder:
-    ```PowerShell
-    Import-Module -Name "C:\WebClient\"
-    ```
+4. You have two options to retrieve the latest web client management PowerShell module:
+    - Import the Remote Desktop web client management PowerShell module:
+      ```PowerShell
+      Import-Module -Name RDWebClientManagement
+      ```
+    - Copy the downloaded RDWebClientManagement folder to one of the local PowerShell module folders listed under **$env:psmodulePath**, or add the path to the folder with the downloaded files to the **$env:psmodulePath**.
 
 5. Deploy the latest version of the Remote Desktop web client from the local folder (replace with the appropriate zip file):
     ```PowerShell
