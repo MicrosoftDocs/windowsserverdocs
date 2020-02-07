@@ -28,9 +28,11 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 > - The iOS client supports devices running iOS 6.x and newer.
 
 ## Get the Remote Desktop Beta client and start using it
+
 The iOS Beta client available today through Apple TestFlight supports connections to Windows Virtual Desktop resources.
 
 ### Download the Remote Desktop iOS Beta client from Apple TestFlight
+
 Here's how to set up the Remote Desktop Beta client on your iOS device:
 
 1. Install the [Apple TestFlight](https://apps.apple.com/us/app/testflight/id899247664) app on your iOS device.
@@ -39,6 +41,7 @@ Here's how to set up the Remote Desktop Beta client on your iOS device:
 4. When you are redirected to the TestFlight app, select **Accept** and then **Install** the client.
 
 ### Add a connection to a PC
+
 To create a remote connection to a PC:
 
 1. In the Connection Center, tap **+**, and then tap **Add PC**.
@@ -59,6 +62,7 @@ To create a remote connection to a PC:
 5. Select **Save** to add the remote PC connection.
 
 ### Add remote resources
+
 Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The iOS client supports resources published from **Remote Desktop Services** and **Windows Virtual Desktop** deployments. To add remote resources:
 
 1. In the Connection Center tap **+**, and then tap **Add Workspace**.
@@ -137,7 +141,7 @@ To delete a user account:
 
 1. In the Connection Center, tap **Settings**, and then tap **User Accounts**.
 2. Select the account you would like to delete.
-3. Tap **Delete**.   
+3. Tap **Delete**.
 
 ## Connect to an RD Gateway to access internal assets
 
@@ -152,6 +156,7 @@ To set up a new gateway:
    - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
 ## Navigate the Remote Desktop session
+
 When you start a remote desktop session, there are tools available that you can use to navigate the session.
 
 ### Start a Remote Desktop Connection
@@ -172,6 +177,7 @@ The connection bar gives you access to additional navigation controls.
 - **Move the connection bar**: Tap and hold the connection bar, and then drag and drop to a new location at the top of the screen.
 
 ### Session selection
+
 You can have multiple connections open to different PCs at the same time. Tap the connection bar to display the session selection bar on the left-hand side of the screen. The session selection bar enables you to view your open connections and switch between them.
 
 - Switch between apps in an open remote resource session.
