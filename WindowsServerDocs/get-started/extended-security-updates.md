@@ -8,7 +8,7 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.date: 02/03/2020
+ms.date: 02/08/2020
 ---
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
 
@@ -63,18 +63,31 @@ To use extended security updates, you create a multiple activation key (MAK) and
 > [!NOTE]
 > You don't need to register for extended security updates if you're running Windows Server 2008 and 2008 R2 on Azure VMs. For other environments, such as on-premises VMs or physical servers, [purchase extended security updates](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) before you try to register and use them.
 
-The Extended Security Updates feature is still in preview. Before you continue, make sure you're on the list of approved users or subscribers. To request access, open the Azure client and make a request that includes the following information:
+### Register an Azure VM
 
-* Customer name
-* Azure subscription
-* A Agreement Number (for ESU)
-* Number of ESU servers
+The extended security updates feature is still in preview. Before you continue, make sure you're on the list of approved users or subscribers. To request access to the private preview:
 
-The team will review the information you provide. If everything looks okay, they'll add you to the approved list.
+1. Open Azure and go to the **Windows Multiple Activation Key** page.
+2. Select **Get key**
+3. On the page that says "Register to get a Multiple Activation Key," select **join the private preview**.
+4. An email message window will open. This email is your access request to the product team.
+  
+    Include the following information in your request:
 
-If team doesn't approve the request, you'll see the following error:
+    * Customer name
+    * Azure subscription
+    * Agreement number (for ESU)
+    * Number of ESU servers
+
+5. When you're done, send the email.
+
+The team will review the information you provide in your request email. If everything looks okay, they'll add you to the approved list.
+
+If the team doesn't approve your request, you'll see the following error:
 
 [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
+
+### Register a non-Azure VM
 
 To register non-Azure VMs for extended security updates and create a key, complete the following steps in the Azure Portal:
 
