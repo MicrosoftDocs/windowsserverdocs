@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/29/2020
+ms.date: 02/11/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -25,7 +25,20 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.605  |
-|Insider    |1.2.605  |
+|Insider    |1.2.673  |
+
+## Updates for version 1.2.673
+
+*Date published: 02/11/2020*
+
+Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+
+- Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or ome of the signscope properties has been modified.
+- Updated the experience when a Workspace is empty or has been removed so the Connection Center doesn't appear empty.
+- Added the activity ID and error code on disconnect messages to improve troubleshooting. Press CTRL+C on the dialog to copy.
+- Fixed an issue where the display selection on the desktop connection settings page was empty and failed to detect displays.
+- Fixed an issue where the client update could initiate an automatic restart of the PC.
+- Fixed an issue where windowless icons could appear on the taskbar.
 
 ## Updates for version 1.2.605
 
