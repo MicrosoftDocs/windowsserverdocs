@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 Use the links in this topic to learn more about the concepts that were discussed in this tuning guide.
 
 ## Microsoft Windows Server Websites
--   [Windows Server Catalog](http://www.windowsservercatalog.com/)
+-   [Windows Server Catalog](https://www.windowsservercatalog.com/)
 
 -   [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default.aspx)
 
