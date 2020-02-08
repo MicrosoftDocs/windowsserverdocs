@@ -311,7 +311,9 @@ To configure a file server failover cluster, follow the below steps.
 
    ![File Server Type](media/Cluster-File-Server/Cluster-FS-File-Server-Type.png)
 
-8. In the **Client Access Point** window, input the name of the file server you will be using.  Please note that this is not the name of the cluster.  This is for the file share connectivity.  For example, if I want to connect to \\SERVER, the name inputted would be SERVER.
+8. In the **Client Access Point** window, input the name of the file server you will be using.  Please note that this is not the name of the cluster.  
+This is for the file share connectivity.  
+For example, if you want to connect to \\\\SERVER, specify the name as SERVER.
 
    > [!NOTE]
    > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
@@ -341,3 +343,20 @@ To configure a file server failover cluster, follow the below steps.
 14. Choose **Close**.
 
 15. Repeat this process for any additional shares.
+
+#### Using PowerShell
+
+1. Open an administrative PowerShell session by right-clicking the Start button and then selecting **Windows PowerShell (Admin)**.
+
+2. Run the following command to create the cluster if you are using static IP Addresses.
+
+   ```PowerShell
+   #Add file server role
+   $ACFSHT = @{
+     Cluster       = 'CLUSTER'
+     Name          = 'FileServer'
+     Storage       = 'Cluster Disk 1' 
+     StaticAddress = '1.1.1.5'
+   }
+   Add-ClusterFileServerRole  @ACFSHT
+   ```
