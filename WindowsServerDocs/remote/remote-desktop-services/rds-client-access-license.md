@@ -30,9 +30,9 @@ Use the following information to learn about how client access licensing works i
   - [Understanding the CALs model](#understanding-the-cals-model)
   - [Note about CAL versions](#note-about-cal-versions)
 
-## Understanding the CALs model
+## Understanding the RDS CAL model
 
-There are two types of CALs:
+There are two types of RDS CALs:
 
 - RDS Per Device CALs
 - RDS Per User CALs
@@ -41,26 +41,26 @@ The following table outlines the differences between the two types of CALs:
 
 | Per Device                                                     | Per User                                                                         |
 |----------------------------------------------------------------|----------------------------------------------------------------------------------|
-| CALs are physically assigned to each device.                   | CALs are assigned to a user in Active Directory.                                 |
-| CALs are tracked by the license server.                        | CALs are tracked by the license server.                                          |
-| CALs can be tracked regardless of Active Directory membership. | CALs cannot be tracked within a workgroup.                                       |
-| You can revoke up to 20% of CALs.                              | You cannot revoke any CALs.                                                      |
-| Temporary CALs are valid for 52–89 days.                       | Temporary CALs are not available.                                                |
-| CALs cannot be overallocated.                                  | CALs can be overallocated (in breach of the Remote Desktop licensing agreement). |
+| RDS CALs are physically assigned to each device.                   | RDS CALs are assigned to a user in Active Directory.                                 |
+| RDS CALs are tracked by the license server.                        | RDS CALs are tracked by the license server.                                          |
+| RDS CALs can be tracked regardless of Active Directory membership. | RDS CALs cannot be tracked within a workgroup.                                       |
+| You can revoke up to 20% of RDS CALs.                              | You cannot revoke any RDS CALs.                                                      |
+| Temporary RDS CALs are valid for 52–89 days.                       | Temporary RDS CALs are not available.                                                |
+| RDS CALs cannot be overallocated.                                  | RDS CALs can be overallocated (in breach of the Remote Desktop licensing agreement). |
 
-When you use the Per Device model, a temporary license is issued the first time a device connects to the RD Session Host. The second time that device connects, as long as the license server is activated and there are available CALs, the license server issues a permanent RDS Per Device CAL.
+When you use the Per Device model, a temporary license is issued the first time a device connects to the RD Session Host. The second time that device connects, as long as the license server is activated and there are available RDS CALs, the license server issues a permanent RDS Per Device CAL.
 
-When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. The license server issues licenses from the available CAL pool or the Over-Used CAL pool. It's your responsibility to ensure that all of your users have a valid license and zero Over-Used CALs—otherwise, you're in violation of the Remote Desktop Services license terms.
+When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. The license server issues licenses from the available RDS CAL pool or the Over-Used RDS CAL pool. It's your responsibility to ensure that all of your users have a valid license and zero Over-Used CALs—otherwise, you're in violation of the Remote Desktop Services license terms.
 
-To ensure you are in compliance with the Remote Destkop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough Per User CALs installed on the license server for all of your users.
+To ensure you are in compliance with the Remote Destkop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough RDS Per User CALs installed on the license server for all of your users.
 
 You can use the Remote Desktop Licensing Manager to track and generate reports on RDS Per User CALs.
 
-## Note about CAL versions
+## Note about RDS CAL versions
 
-The CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of CALs to access earlier versions of Windows Server. For example, a RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
+The RDS CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of RDS CALs to access earlier versions of Windows Server. For example, a RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
 
-The following table shows the CALs required to connect to RD Session Hosts.
+The following table shows the RDS CALs required to connect to RD Session Hosts.
 
 |                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL |
 |---------------------------------|--------|--------|--------|--------|
