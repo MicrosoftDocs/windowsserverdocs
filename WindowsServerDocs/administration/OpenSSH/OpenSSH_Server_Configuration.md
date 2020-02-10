@@ -83,7 +83,7 @@ For Windows OpenSSH, the only available authentication methods are "password" an
 
 ### AuthorizedKeysFile 
 
-The default is “.ssh/authorized_keys .ssh/authorized_keys2”. If the path is not absolute, it is taken relative to user's home directory (or profile image path). Ex. c:\users\user.
+The default is “.ssh/authorized_keys .ssh/authorized_keys2”. If the path is not absolute, it is taken relative to user's home directory (or profile image path). Ex. c:\users\user. Note that if the user belongs to the administrator group, %programdata%/ssh/administrators_authorized_keys is used instead.
 
 ### ChrootDirectory (Support added in v7.7.0.0)
 
