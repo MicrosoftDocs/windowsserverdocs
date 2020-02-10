@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 - When a Workspace is empty or has been removed, the Connection Center no longer appears to be empty.
 - Added the activity ID and error code on disconnect messages to improve troubleshooting. You can copy the dialog message with **Ctrl+C**.
 - Fixed an issue that caused the desktop connection settings to not detect displays.
-- The client update no longer automatically restarts the PC.
+- Client updates no longer automatically restart the PC.
 - Windowless icons should no longer appear on the taskbar.
 
 ## Updates for version 1.2.605
