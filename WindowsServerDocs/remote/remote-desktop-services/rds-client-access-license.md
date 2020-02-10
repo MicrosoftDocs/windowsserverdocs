@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: lizap
 ms.author: elizapo
-ms.date: 02/03/2020
+ms.date: 02/10/2020
 manager: dongill
 ---
 # License your RDS deployment with client access licenses (CALs)
@@ -27,8 +27,8 @@ Although there is a licensing grace period during which no license server is req
 Use the following information to learn about how client access licensing works in Remote Desktop Services and to deploy and manage your licenses:
 
 - [License your RDS deployment with client access licenses (CALs)](#license-your-rds-deployment-with-client-access-licenses-cals)
-  - [Understanding the CALs model](#understanding-the-cals-model)
-  - [Note about CAL versions](#note-about-cal-versions)
+  - [Understanding the RDS CAL model](#understanding-the-rds-cal-model)
+  - [Note about RDS CAL versions](#note-about-rds-cal-versions)
 
 ## Understanding the RDS CAL model
 
