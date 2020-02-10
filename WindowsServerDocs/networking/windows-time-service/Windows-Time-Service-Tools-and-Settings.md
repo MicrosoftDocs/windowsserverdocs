@@ -71,6 +71,25 @@ The following tables describe the parameters that you can use with W32tm.exe.
 
 For more information about **W32tm.exe**, see [Windows help](https://support.microsoft.com/hub/4338813/windows-help?os=windows-10).  
 
+**Examples**
+
+If you want to set the local Windows Time client to point to two different time servers, one named ntpserver.contoso.com and another named clock.adatum.com, type the following command at the command line, and then press ENTER:
+
+```cmd
+w32tm /config /manualpeerlist:"ntpserver.contoso.com clock.adatum.com" /syncfromflags:manual /update
+```
+
+For a list of valid NTP servers that are available on the Internet for external time synchronization, see [A list of the Simple Network Time Protocol (SNTP) time servers that are available on the Internet](https://go.microsoft.com/fwlink/?linkid=60401).
+
+If you want to check the Windows Time client configuration from a Windows-based client computer that has a host name of CONTOSOW1, run the following command:
+
+```cmd
+W32tm /query /computer:contosoW1 /configuration
+```
+
+The output of this command is a list of configuration parameters that are set for the Windows Time client.
+
+
 ## Windows Time service registry entries
 
 The following registry entries are associated with the Windows Time service.  
@@ -156,7 +175,7 @@ In the following table, "All versions" includes Windows 7, Windows 8, Windows 10
 The following three registry entries are not a part of the W32Time default configuration but can be added to the registry to obtain increased logging capabilities. The information logged to the System Event log can be modified by changing value for the **EventLogFlags** setting in the Group Policy Object Editor. By default, the time service logs an event every time that it switches to a new time source.
 
 > [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings differ from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003.
+> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy Object (GPO) settings differ from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to  Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003.
 
 The following registry entries must be added in order to enable W32Time logging:  
 
