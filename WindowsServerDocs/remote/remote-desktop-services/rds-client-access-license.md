@@ -28,7 +28,7 @@ Use the following information to learn about how client access licensing works i
 
 - [License your RDS deployment with client access licenses (CALs)](#license-your-rds-deployment-with-client-access-licenses-cals)
   - [Understanding the RDS CAL model](#understanding-the-rds-cal-model)
-  - [Note about RDS CAL versions](#note-about-rds-cal-versions)
+  - [RDS CAL version compatibility](#rds-cal-version-compatibility)
 
 ## Understanding the RDS CAL model
 
@@ -52,15 +52,15 @@ When you use the Per Device model, a temporary license is issued the first time 
 
 When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. The license server issues licenses from the available RDS CAL pool or the Over-Used RDS CAL pool. It's your responsibility to ensure that all of your users have a valid license and zero Over-Used CALs—otherwise, you're in violation of the Remote Desktop Services license terms.
 
-To ensure you are in compliance with the Remote Destkop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough RDS Per User CALs installed on the license server for all of your users.
+To ensure you are in compliance with the Remote Desktop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough RDS Per User CALs installed on the license server for all of your users.
 
 You can use the Remote Desktop Licensing Manager to track and generate reports on RDS Per User CALs.
 
-## Note about RDS CAL versions
+## RDS CAL version compatibility
 
-The RDS CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of RDS CALs to access earlier versions of Windows Server. For example, a RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
+The RDS CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of RDS CALs to access earlier versions of Windows Server. For example, an RDS 2016 CAL or higher is required to connect to a Windows Server 2016 RD Session Host, while an RDS 2012 CAL or higher is required to connect to a Windows Server 2012 R2 RD Session Host.
 
-The following table shows the RDS CALs required to connect to RD Session Hosts.
+The following table shows which RDS CAL and RD Session Host versions are compatible with each other.
 
 |                  | RDS 2008 R2 and earlier CAL | RDS 2012 CAL | RDS 2016 CAL | RDS 2019 CAL |
 |---------------------------------|--------|--------|--------|--------|
