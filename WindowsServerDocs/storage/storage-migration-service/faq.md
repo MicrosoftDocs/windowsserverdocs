@@ -145,7 +145,7 @@ No, the Storage Migration Service doesn't migrate locally installed applications
 
 ## What happens with existing files on the destination server?
 
-When performing a transfer, the Storage Migration Service seeks to mirror data from the source server. The destination server should not contain any production data or connected users, as that data could be overwritten. By default, the first transfer mkes a backup copy of any data on the destination server as a safeguard. On all subsequent transfers, by default, the Storage Migration Service will mirror data onto the destination; this means not only adding new files, but also arbitrarily overwriting any existing files and deleting any files not present on the source. This behavior is intentional and provides perfect fidelity with the source computer. 
+When performing a transfer, the Storage Migration Service seeks to mirror data from the source server. The destination server should not contain any production data or connected users, as that data could be overwritten. By default, the first transfer makes a backup copy of any data on the destination server as a safeguard. On all subsequent transfers, by default, the Storage Migration Service will mirror data onto the destination; this means not only adding new files, but also arbitrarily overwriting any existing files and deleting any files not present on the source. This behavior is intentional and provides perfect fidelity with the source computer. 
 
 ## What do the error numbers mean in the transfer CSV?
 
