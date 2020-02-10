@@ -87,10 +87,10 @@ Many registry entries for the Windows Time service are the same as the Group Pol
 - **HKLM\SYSTEM\CurrentControlSet\Services\W32Time\\**
   
    There are several registry entries under this subkey. The Windows Time settings are stored in values across all of these entries:
-  - [Parameters](#hklmsystemcurrentcontrolsetservicesw32timeparameters)
-  - [Config](#hklmsystemcurrentcontrolsetservicesw32timeconfig)
-  - [NtpClient](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpclient)
-  - [NtpServer](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpserver)
+  - [Parameters](#hklmsystemcurrentcontrolsetservicesw32timeparameters-subkey-entries)
+  - [Config](#hklmsystemcurrentcontrolsetservicesw32timeconfig-subkey-entries)
+  - [NtpClient](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpclient-subkey-entries)
+  - [NtpServer](#hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpserver-subkey-entries)
 
 Many of the values in the W32Time section of the registry are used internally by W32Time to store information. These values should not be manually changed at any time. Do not modify any of the settings in this section unless you are familiar with the setting and are certain that the new value will work as expected. The following registry entries are located under the following subkey:
 
@@ -110,15 +110,15 @@ The other default location is the following subkey:
 > Some of the parameters in the registry are measured in clock ticks and some are measured in seconds. To convert the time from clock ticks to seconds, use these conversion factors:  
 > - 1 minute = 60 sec  
 > - 1 sec = 1000 ms  
-> - 1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://docs.microsoft.com/dotnet/api/system.datetime.ticks?redirectedfrom=MSDN&view=netframework-4.7.2#System_DateTime_Ticks).  
+> - 1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://docs.microsoft.com/dotnet/api/system.datetime.ticks).  
 >  
 > For example, 5 minutes becomes 5 &times; 60 &times; 1000 &times; 10000 = 3,000,000,000 clock ticks.  
 
-### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+### "HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" subkey entries
 
-"All versions" include Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. Some entries are only available on newer Windows versions.
+In the following table, "All versions" includes Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. Some entries are only available on newer Windows versions.
 
-| Registry Entry | Version | Description |
+| Registry entry | Version | Description |
 | --- | --- | --- |
 |**AllowNonstandardModeCombinations** | All |Entry indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is **1**. The default value for stand-alone clients and servers is **1**. |
 |**NtpServer** |All | Entry specifies a space-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive: For more information about this mode, see [Windows Time Server: 3.3 Modes of Operation](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x08 Client</li></ul><br />There is no default value for this registry entry on domain members. The default value on stand-alone clients and servers is time.windows.com,0x1.<br /><br />**Note**<br />For more information on available NTP Servers, see KB 262680, [A list of the Simple Network Time Protocol (SNTP) time servers that are available on the Internet](https://support.microsoft.com/help/262680/a-list-of-the-simple-network-time-protocol-sntp-time-servers-that-are) |
@@ -126,9 +126,9 @@ The other default location is the following subkey:
 |**ServiceMain** |All |Entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is **SvchostEntry_W32Time**. The default value on stand-alone clients and servers is **SvchostEntry_W32Time**. |
 |**Type** |All |Entry indicates which peers to accept synchronization from:  <ul><li>**NoSync**. The time service does not synchronize with other sources.</li><li>**NTP**. The time service synchronizes from the servers specified in the **NtpServer**. registry entry.</li><li>**NT5DS**. The time service synchronizes from the domain hierarchy.  </li><li>**AllSync**. The time service uses all the available synchronization mechanisms.  </li></ul>The default value on domain members is **NT5DS**. The default value on stand-alone clients and servers is **NTP**. |
 
-### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config
+### "HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config" subkey entries
 
-|Registry Entry |Version |Description |
+|Registry entry |Version |Description |
 | --- | --- | --- |
 |**AnnounceFlags** |All |Entry controls whether this computer is marked as a reliable time server. A computer is not marked as reliable unless it is also marked as a time server.<ul><li>**0x00**. Not a time server</li><li>**0x01**. Always time server</li><li>**0x02**. Automatic time server</li><li>**0x04**. Always-reliable time server</li><li>**0x08**. Automatic reliable time server</li></ul><br />The default value for domain members is **10**. The default value for stand-alone clients and servers is **10**. |
 |**EventLogFlags** |All |Entry controls the events that the time service logs.<ul><li>**0x1**. Time jump</li><li>**0x2**. Source change</li></ul><br />The default value on domain members is **2**. The default value on stand-alone clients and servers is **2**. |
@@ -151,7 +151,7 @@ The other default location is the following subkey:
 |**UpdateInterval** |All |Entry specifies the number of clock ticks between phase correction adjustments. The default value for domain controllers is **100**. The default value for domain members is **30,000**. The default value for stand-alone clients and servers is **360,000**.<br /><br />**Note**<br />Zero is not a valid value for the **UpdateInterval** registry entry. On computers running Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2, if the value is set to **0**, the Windows Time service automatically changes it to **1**.|
 |**UtilizeSslTimeData** |Post Windows 10 build 1511 |Value of **1** indicates that W32Time uses multiple SSL timestamps to Seed a clock that is grossly inaccurate. |
 
-#### Additional entries to control logging
+#### Additional entries that control logging
 
 The following three registry entries are not a part of the W32Time default configuration but can be added to the registry to obtain increased logging capabilities. The information logged to the System Event log can be modified by changing value for the **EventLogFlags** setting in the Group Policy Object Editor. By default, the time service logs an event every time that it switches to a new time source.
 
@@ -166,9 +166,9 @@ The following registry entries must be added in order to enable W32Time logging:
 |**FileLogName** |All |Entry controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time. |
 |**FileLogSize** |All |Entry controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, Entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Please use **1000000** or larger value for this setting. This value does not affect the event log entries normally created by Windows Time. |
 
-### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+### "HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient" subkey entries
 
-|Registry Entry |Version |Description |
+|Registry entry |Version |Description |
 | --- | --- | --- |
 |**AllowNonstandardModeCombinations** |All |Entry indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is **1**. The default value for stand-alone clients and servers is **1**.|
 |**CompatibilityFlags** |All |Entry specifies the following compatibility flags and values:<ul><li>**0x00000001** - DispersionInvalid</li><li>**0x00000002** - IgnoreFutureRefTimeStamp</li><li>**0x80000000** - AutodetectWin2K</li><li>**0x40000000** - AutodetectWin2KStage2</li></ul><br />The default value for domain members is **0x80000000**. The default value for stand-alone clients and servers is **0x80000000**. |
@@ -183,7 +183,7 @@ The following registry entries must be added in order to enable W32Time logging:
 |**SpecialPollInterval** |All |Entry specifies the special poll interval, in seconds, for manual peers. When the **SpecialInterval** 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval determined by the operating system. The default value on domain members is **3,600**. The default value on stand-alone clients and servers is **604,800**.<br/><br/>New for build 1702, **SpecialPollInterval** is contained by the **MinPollInterval** and **MaxPollInterval** Config registry values.|
 |**SpecialPollTimeRemaining** |All |Entry is maintained by W32Time. It contains reserved data that is used by the Windows operating system. It specifies the time, in seconds, before W32Time will resynchronize after the computer has restarted. Any changes to this setting can cause unpredictable results. The default value on both domain members and on stand-alone clients and servers is left blank. |
 
-### HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
+### "HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer" subkey entries
 
 |Registry Entry |Version |Description |
 | --- | --- | --- |
@@ -192,7 +192,7 @@ The following registry entries must be added in order to enable W32Time logging:
 |**Enabled** |All |Entry indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>**1** - Yes</li><li>**0** - No</li></ul>The default value on domain members is **1**. The default value on stand-alone clients and servers is **1**. |
 |**InputProvider** |All |Entry indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock. <ul><li>**1** - Yes</li><li>**0** - No = 0 </li></ul><br />Default value for both domain members and stand-alone clients: 1 |
 
-### MaxAllowedPhaseOffset information
+### "MaxAllowedPhaseOffset" information
 
 In order for W32Time to set the computer clock gradually, the offset must be less than the **MaxAllowedPhaseOffset** value and satisfy the following equation at the same time:  
 
