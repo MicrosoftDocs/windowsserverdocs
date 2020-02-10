@@ -348,9 +348,9 @@ For example, if you want to connect to \\\\SERVER, specify the name as SERVER.
 
 1. Open an administrative PowerShell session by right-clicking the Start button and then selecting **Windows PowerShell (Admin)**.
 
-2. Run the following command to create the cluster if you are using static IP Addresses.
+2. Run the following command to create the cluster if you are using static IP addresses.
 
-   ```PowerShell
+   ```powershell
    #Add file server role
    $ACFSHT = @{
      Cluster       = 'CLUSTER'
