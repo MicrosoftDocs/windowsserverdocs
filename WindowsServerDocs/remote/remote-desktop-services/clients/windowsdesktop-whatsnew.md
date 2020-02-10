@@ -31,14 +31,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 *Date published: 02/11/2020*
 
-Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pPJm), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pFbw), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4pN07)
 
-- Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or ome of the signscope properties has been modified.
-- Updated the experience when a Workspace is empty or has been removed so the Connection Center doesn't appear empty.
-- Added the activity ID and error code on disconnect messages to improve troubleshooting. Press CTRL+C on the dialog to copy.
-- Fixed an issue where the display selection on the desktop connection settings page was empty and failed to detect displays.
-- Fixed an issue where the client update could initiate an automatic restart of the PC.
-- Fixed an issue where windowless icons could appear on the taskbar.
+- Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope properties has been modified.
+- When a Workspace is empty or has been removed, the Connection Center no longer appears to be empty.
+- Added the activity ID and error code on disconnect messages to improve troubleshooting. You can copy the dialog message with **Ctrl+C**.
+- Fixed an issue that caused the desktop connection settings to not detect displays.
+- The client update no longer automatically restarts the PC.
+- Windowless icons should no longer appear on the taskbar.
 
 ## Updates for version 1.2.605
 
