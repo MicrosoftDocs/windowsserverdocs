@@ -149,7 +149,7 @@ When performing a transfer, the Storage Migration Service seeks to mirror data f
 
 ## What do the error numbers mean in the transfer CSV?
 
-Most errors found in the transfer CSV file are Windows System Error Codes. You can find out what each error means by reviewing the (Win32 error codes documentation)[https://docs.microsoft.com/windows/win32/debug/system-error-codes]. 
+Most errors found in the transfer CSV file are Windows System Error Codes. You can find out what each error means by reviewing the [Win32 error codes documentation](https://docs.microsoft.com/windows/win32/debug/system-error-codes). 
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
