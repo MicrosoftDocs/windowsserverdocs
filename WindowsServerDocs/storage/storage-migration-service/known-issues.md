@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 10/09/2019
+ms.date: 02/10/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -472,10 +472,10 @@ When attempting to run inventory, you receive:
 
 At this stage, Storage Migration Service orchestrator is attempting remote registry reads to determine source machine configuration, but is being rejected by the source server saying the registry path does not exist. This can be caused by:
 
- 1. The Remote Registry service is not running on the source computer.
- 2. A firewall does not allow remote registry connections to the source server from the Orchestrator.
- 3. The source migration account does not have remote registry permissions to connect to the source computer.
- 4. The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
+ - The Remote Registry service is not running on the source computer.
+ - firewall does not allow remote registry connections to the source server from the Orchestrator.
+ - The source migration account does not have remote registry permissions to connect to the source computer.
+ - The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
 
 ## See also
 
