@@ -156,11 +156,14 @@ On each AD FS server, in the local computer My store, there will be a self signe
 
 If the validity period of your certificates is nearing its end, start the renewal process by generating a new Azure MFA certificate on each AD FS server. In a PowerShell command window, generate a new certificate on each AD FS server using the following cmdlet:
 
+> [!CAUTION]
+> If your certificate has already expired, don't add the `-Renew $true` parameter to the following command. In this scenario, the existing expired certificate is replaced with a new one instead of being left in place and an additional certificate created.
+
 ```
 PS C:\> $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
 ```
 
-As a result of this cmdlet, a new certificate that is valid from 2 days in the future to 2 days + 2 years will be generated.  AD FS and Azure MFA operations will not be affected by this cmdlet or the new certificate. (Note: the 2 day delay is intentional and provides time to execute the steps below to configure the new certificate in the tenant before AD FS starts using it for Azure MFA.)
+If the certificate hasn't already expired, a new certificate that is valid from 2 days in the future to 2 days + 2 years is generated. AD FS and Azure MFA operations aren't affected by this cmdlet or the new certificate. (Note: the 2 day delay is intentional and provides time to execute the steps below to configure the new certificate in the tenant before AD FS starts using it for Azure MFA.)
 
 ### Configure each new AD FS Azure MFA certificate in the Azure AD tenant
 
@@ -170,7 +173,7 @@ Using the Azure AD PowerShell module, for each new certificate (on each AD FS se
 PS C:/> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
 ```
 
-`$newcert` is the new certificate. The base64 encoded certificate can be obtained by exporting the certificate (without the private key) as a DER encoded file and opening in Notepad.exe, then copy/pasting to the PowerShell session and assigning to the variable `$newcert`.
+If your previous certificate had already expired, restart the AD FS service to pick up the new certificate. You don't need to restart the AD FS service if you renewed a certificate before it expired.
 
 ### Verify that the new certificate(s) will be used for Azure MFA
 
