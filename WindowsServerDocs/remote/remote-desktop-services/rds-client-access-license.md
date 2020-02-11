@@ -11,7 +11,7 @@ ms.topic: article
 ms.assetid: 5be6546b-df16-4475-bcba-aa75aabef3e3
 author: lizap
 ms.author: elizapo
-ms.date: 02/10/2020
+ms.date: 02/12/2020
 manager: dongill
 ---
 # License your RDS deployment with client access licenses (CALs)
