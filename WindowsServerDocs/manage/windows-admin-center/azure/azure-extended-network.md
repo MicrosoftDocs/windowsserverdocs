@@ -20,11 +20,11 @@ The network is extended using a bidirectional VXLAN tunnel between two Windows S
 Each subnet that you are going to extend requires one pair of appliances.  Multiple subnets can be extended using multiple pairs.
 
 > [!NOTE]
-> Azure Extended Network should only be used for machines that cannot have their IP address changed when migrating to Azure.  It is always better to change the IP address and connect it to a subnet that wholly exists in Azure if that is an option.
+> Azure Extended Network should only be used for machines that cannot have their IP address changed when migrating to Azure.  It is always better to change the IP address and connect it to a subnet that wholly exists in Azure, if that is an option.
 
 ## Planning
 
-To prepare to use Azure Extended Network you must identify which subnet you want to stretch, then perform the following steps:
+To prepare to use Azure Extended Network, you must identify which subnet you want to stretch, then perform the following steps:
 
 ### Capacity planning
 
@@ -36,7 +36,7 @@ Before you use Windows Admin Center, you must perform the following steps throug
 
 1. Create a Virtual network in Azure that contains at least two subnets, in addition to subnets required for your gateway connection.  One of the subnets you create must use the same subnet CIDR as the on-premises subnet you want to extend.  The subnet must be unique within your routing domain so that it does not overlap with any on-premises subnets.
 2. Configure a Virtual Network Gateway to use a Site-to-site or Express Route connection to connect the Azure Virtual network to your on-premises network.  
-3. Create a Windows Server 2019 VM in Azure that is capable of running nested virtualization.    Connect the primary network interface to the routable subnet, and the second network interface to the extended subnet.  
+3. Create a Windows Server 2019 VM in Azure that is capable of running nested virtualization.  Connect the primary network interface to the routable subnet, and the second network interface to the extended subnet.  
 4. Start the VM, enable the Hyper-V role, and reboot.  For example:
 
 ```powershell
@@ -54,7 +54,7 @@ New-VMSwitch -Name "Extended" -AllowManagementOS $true -NetAdapterName "Ethernet
 
 You must also perform some manual configuration in your on-premises infrastructure:
 
-1. Make sure the subnet you want to extend and a second subnet that is unique and does not overlap with any subnets in the Azure Virtual Network are available on the physical machine where you will deploy the on-premises VM.
+1. Make sure the subnet you want to extend and a second subnet that is unique, and does not overlap with any subnets in the Azure Virtual Network, are available on the physical machine where you will deploy the on-premises VM.
 2. Create a Windows Server 2019 VM on any hypervisor that supports nested virtualization.   It is strongly recommended that you create this as a highly available VM in a cluster.  Connect a virtual network adapter to the routable subnet, and a second virtual network adapter to the extended subnet.  
 3. Start the VM, enable the Hyper-V role, and reboot.
 
@@ -92,7 +92,7 @@ Then select **Extensions**:
 In the Available extensions list, select **Azure Extended Network**, then click **Install**.
 After a few seconds you should see a message indicating a successful installation:
 ![Image](../media/azure-extended-network/installation-success.png)
-3. Connect your Windows Admin Center deployment to Azure if you haven’t already done so.  If you skip this step now you will be prompted to do so later during the configuration process.
+3. Connect your Windows Admin Center deployment to Azure, if you haven’t already done so.  If you skip this step now, you will be prompted to do so later during the configuration process.
 4. Add a connection to the on-premises virtual appliance.  Return to the connection page and Select **Add** and enter the connection information (machine name and credentials) for the On-premises virtual appliance. Click on the server to connect and you should see Azure Extended Network in the list of tools for this server:
 ![Image](../media/azure-extended-network/azure-extended-network.png)
 Click on **Azure Extended Network** to begin.  The first time you will be presented with an overview and a setup button:  
@@ -106,7 +106,7 @@ Click on **Azure Extended Network** to begin.  The first time you will be presen
 
 > [!IMPORTANT] Scroll down if necessary and click **Upload** before you click **Next: Extended-Network Setup**.
 
-4. Select the Subnet CIDR of the On-Premises network that you want to extend.  The list of subnets is read in from the virtual appliance.  If you have not connected the virtual appliance to the correct set of subnets, then you will not see the desired subnet CIDR in this list.
+4. Select the Subnet CIDR of the On-Premises network that you want to extend.  The list of subnets is read in from the virtual appliance.  If you have not connected the virtual appliance to the correct set of subnets, you will not see the desired subnet CIDR in this list.
 Click Next after selecting the Subnet CIDR.
 5. Select the Subscription, Resource Group and Virtual Network that you are extending into:
 ![Image](../media/azure-extended-network/azure-network.png) 
@@ -117,7 +117,7 @@ If it looks correct, you can click Next.
 7. For the Azure virtual appliance you will need to select the Resource Group and VM to use:
 ![Image](../media/azure-extended-network/azure-network-gateway.png) 
 After selecting the VM, you will also need to select the Azure Extended-Network Gateway Subnet CIDR.  Then click Next: Deploy.
-8. Review the summary information then click Deploy to begin the deployment process.  Deployment will take approximately 5-10 minutes.  When deployment is complete you will see the following panel for managing the extended IP addresses, and status should say **OK**:
+8. Review the summary information then click Deploy to begin the deployment process.  Deployment will take approximately 5-10 minutes.  When deployment is complete, you will see the following panel for managing the extended IP addresses, and the status should say **OK**:
 ![Image](../media/azure-extended-network/installation-complete.png) 
 
 ## Manage
@@ -133,14 +133,14 @@ To extend an address
 
 3. Use the **Add** button to manually add an address.  Addresses that you add that are on-premises will be reachable by the Azure Addresses that you add to the Azure Address list, and vice versa.
 
-4. Azure Extended Network scans the network to discovered IP addresses and populates the Suggestion lists based on this scan.  To extend these addresses you must use the dropdown list and select the checkbox next to the discovered address.  Not all addresses will be discovered.  Optionally, use the **Add** button to manually add addresses that are not discovered automatically.
+4. Azure Extended Network scans the network to discover IP addresses, and populates the Suggestion lists based on this scan.  To extend these addresses, you must use the dropdown list and select the checkbox next to the discovered address.  Not all addresses will be discovered.  Optionally, use the **Add** button to manually add addresses that are not discovered automatically.
 ![Image](../media/azure-extended-network/add-ipv4-addresses-panel-filled.png)
 
 5. Click **Submit** when complete.  You will see the status change to **Updating**, then **Progressing**, and finally back to **OK** when the configuration is complete.
 
 Your addresses are now extended.  Use the Add IPv4 Addresses button to add additional addresses at any time.  If an IP address is no longer in use at either end of the extended network, select the checkbox next to it and select Remove IPv4 Addresses.
 
-If you no longer want to use Azure Extended Network, click the **Remove Azure Extended-Network** button.  This will uninstall the agent from the two virtual appliances and remove the extended IP addresses.  The network will stop being extended.  You will have to re-run the setup after removing if you want to start using the extended network again.
+If you no longer want to use Azure Extended Network, click the **Remove Azure Extended-Network** button.  This will uninstall the agent from the two virtual appliances and remove the extended IP addresses.  The network will stop being extended.  You will have to re-run the setup after removing it, if you want to start using the extended network again.
 
 ## Troubleshooting
 
@@ -149,7 +149,7 @@ If you receive an error during the deployment of Azure Extended Network, follow 
 1. Verify that both virtual appliances are using Windows Server 2019.
 2. Verify that you are not running the Windows Admin Center gateway on one of the virtual appliances.  It is recommended that you run Windows Admin Center from an on-premises network.
 3. Make sure you can remote into the on-premises VM from the Windows Admin Center gateway using enter-pssession.
-4. If there is a firewall in between Azure and on-premises, confirm that it is configured to allow UDP traffic on the selected port (default 4789).   Use a tool such as ctsTraffic to configure a listener and a sender.  Verify traffic can be sent in both directions on the specified port.
+4. If there is a firewall in between Azure and on-premises, confirm that it is configured to allow UDP traffic on the selected port (default 4789).   Use a tool such as ctsTraffic to configure a listener and a sender.  Verify that traffic can be sent in both directions on the specified port.
 5. Use pktmon to verify that packets are being sent and received as expected.  Run pktmon on each virtual appliance:
 
 ```powershell
@@ -163,7 +163,7 @@ Pktmon stop
 Netsh trace convert input=<path to pktmon etl file>
 ```
 
-7. Open the text file that is produced from each virtual appliance and search for UDP traffic on the specified port (default 4789).   If you see traffic sent from the on-premises virtual appliance, but not received by the Azure virtual appliance then you need to verify the routing and firewall between the appliances.  If you see traffic sent from on-premises into Azure, you should then see the Azure virtual appliance send a packet in response.  If that packet is never received by the on-premises virtual appliance then you need to verify that the routing is correct and there is not a firewall blocking traffic in between.
+7. Open the text file that is produced from each virtual appliance and search for UDP traffic on the specified port (default 4789).   If you see traffic sent from the on-premises virtual appliance, but not received by the Azure virtual appliance, you need to verify the routing and firewall between the appliances.  If you see traffic sent from on-premises into Azure, you should then see the Azure virtual appliance send a packet in response.  If that packet is never received by the on-premises virtual appliance, you need to verify that the routing is correct and there is not a firewall blocking traffic in between.
 
 ### Diagnosing the data path after initial configuration
 
