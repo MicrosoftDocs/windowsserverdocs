@@ -31,7 +31,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 ### Download the Remote Desktop client from the iOS store
 
-You'll need to follow these steps to get started with Remote Desktop on your iOS device:
+Follow these steps to get started with Remote Desktop on your iOS device:
 
 1. Download the Microsoft Remote Desktop client from the [iOS App Store](https://aka.ms/rdios) or [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
