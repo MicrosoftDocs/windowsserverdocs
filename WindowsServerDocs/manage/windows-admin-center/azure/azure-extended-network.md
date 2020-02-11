@@ -112,9 +112,10 @@ Click Next after selecting the Subnet CIDR.
 ![Image](../media/azure-extended-network/azure-network.png) 
 The Azure Location and Azure Subnet will be selected automatically.  Click Next: Extended-Network Gateway Setup to proceed.
 6. You will now configure the virtual appliances.  The on-premises gateway should have its information populated automatically:
-![Image](../media/azure-extended-network/azure-network-gateway.png) 
+![Image](../media/azure-extended-network/on-premises-network-gateway.png) 
 If it looks correct, you can click Next.
 7. For the Azure virtual appliance you will need to select the Resource Group and VM to use:
+![Image](../media/azure-extended-network/azure-network-gateway.png) 
 After selecting the VM, you will also need to select the Azure Extended-Network Gateway Subnet CIDR.  Then click Next: Deploy.
 8. Review the summary information then click Deploy to begin the deployment process.  Deployment will take approximately 5-10 minutes.  When deployment is complete you will see the following panel for managing the extended IP addresses, and status should say **OK**:
 ![Image](../media/azure-extended-network/installation-complete.png) 
@@ -155,7 +156,7 @@ If you receive an error during the deployment of Azure Extended Network, follow 
 Pktmon start –etw
 ```
 
-6. Run Azure Extended Network configuration
+6. Run the Azure Extended Network configuration, then stop the trace:
 
 ```powershell
 Pktmon stop
