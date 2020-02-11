@@ -334,7 +334,7 @@ For example, if you want to connect to \\\\SERVER, specify the name as SERVER.
     - Location/path of the folder shared to be shared
     - The name of the share users connect to
     - Additional settings such as Access-based enumeration, caching, encryption, etc
-    - File level permissions if they are ptjer than the defaults
+    - File level permissions if they are other than the defaults
 
 12. On the **Confirmation** page, verify what you have configured and select **Create** to create the file server share.
 
