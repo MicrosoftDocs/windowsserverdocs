@@ -229,7 +229,7 @@ Before creating a cluster, we strongly recommend that you validate your configur
 
 5. In the **Testing Options** window, select **Run all tests (recommended)**, and **Next**.
 
-6. On the **Confirmation** page, it gives you the listing of all the tests it it is check.  Choose **Next** and the tests begin.
+6. On the **Confirmation** page, it gives you the listing of all the tests it checks.  Choose **Next** and the tests begin.
 
 7. Once completed, the **Summary** page appears after the tests run. To view Help topics that helps you interpret the results, click **More about cluster validation tests**.
 
@@ -313,7 +313,7 @@ To configure a file server failover cluster, follow the below steps.
 
 8. In the **Client Access Point** window, input the name of the file server you are using.  Please note that this is not the name of the cluster.  
 This is for the file share connectivity.  
-For example, if you want to connect to \\\\SERVER, specify the name as SERVER.
+For example, if you want to connect to  \\\\SERVER, specify the name as SERVER.
 
    > [!NOTE]
    > If you are using static IP addresses, you need to select the network to use and input the IP address to be used for the cluster name.  If you are using DHCP for your IP addresses, the IP address is configured automatically for you.
