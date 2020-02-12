@@ -56,5 +56,10 @@ MSIE 10.0; Windows NT 6|IE 10.0 for Windows XP and newer versions of desktop ope
 Windows NT 6.3; Trident/7.0</br></br>Windows NT 6.3; Win64; x64; Trident/7.0</br></br>Windows NT 6.3; WOW64; Trident/7.0| Windows 8.1 desktop operating system, different platforms|
 Windows NT 6.2; Trident/7.0</br></br>Windows NT 6.2; Win64; x64; Trident/7.0</br></br>Windows NT 6.2; WOW64; Trident/7.0|Windows 8 desktop operating system, different platforms|
 Windows NT 6.1; Trident/7.0</br></br>Windows NT 6.1; Win64; x64; Trident/7.0</br></br>Windows NT 6.1; WOW64; Trident/7.0|Windows 7 desktop operating system, different platforms|
+Edg/79.0.309.43 | Microsoft Edge (Chromium) | 
 MSIPC| Microsoft Information Protection and Control Client|
 Windows Rights Management Client|Windows Rights Management Client|
+
+#AdditionalLinks
+
+[Microsoft Edge documentation](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string)
