@@ -106,6 +106,18 @@ C. The client then sends the authorization code in the Access Token Request as u
 D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" from (B).  Access is denied if they are not equal. 
 
 #### FAQ 
+>[!NOTE] You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'. 
+> To remediate this error: 
+> 1. Launch AD FS management console. Brose to "Services > Scope Descriptions"
+> 2. Right click "Scope Descriptions" and select "Add Scope Description"
+> 3. Under name type "ugs" and Click Apply > OK
+> 4. Launch Powershell as Administrator
+> 5. Execute the command "Get-AdfsApplicationPermission". Look for the ScopeNames :{openid, aza} that has the ClientRoleIdentifier. Make a note of the ObjectIdentifier.
+> 6. Execute the command "Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'
+> 7. Restart the ADFS service.
+> 8. On the client: Restart the client. User should be prompted to provision WHFB.
+> 9. If the provisioning window does not pop up then need to collect NGC trace logs and further troubleshoot.
+
 **Q.** Can I pass resource value as part of the scope value like how requests are done against Azure AD? 
 </br>**A.** With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example  
 **< create a valid sample request>**
