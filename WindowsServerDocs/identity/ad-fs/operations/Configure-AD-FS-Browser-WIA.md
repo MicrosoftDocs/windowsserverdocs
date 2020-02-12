@@ -60,6 +60,6 @@ Edg/79.0.309.43 | Microsoft Edge (Chromium) |
 MSIPC| Microsoft Information Protection and Control Client|
 Windows Rights Management Client|Windows Rights Management Client|
 
-#AdditionalLinks
+### Additional links
 
 [Microsoft Edge documentation](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string)
