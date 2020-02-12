@@ -12,7 +12,7 @@ ms.service: na
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 ---
 
->Applies To: Windows 10, Windows Server 2016, Windows Server 2019
+>Applies To: Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
 
 # Manage Hyper-V Integration Services
 
@@ -221,10 +221,10 @@ These examples demonstrate stopping and starting the KVP daemon, named `hv_kvp_d
 
 We recommend that you keep integration services up to date to get the best performance and most recent features for your virtual machines. This happens for most Windows guests by default if they are set up to get important updates from Windows Update. Linux guests using current kernels will receive the latest integration components when you update the kernel.
 
-**For virtual machines running on Windows 10 hosts:**
+**For virtual machines running on Windows 10/Windows Server 2016/2019 hosts:**
 
 > [!NOTE]
-> The image file vmguest.iso isn't included with Hyper-V on Windows 10 because it's no longer needed.
+> The image file vmguest.iso isn't included with Hyper-V on Windows 10/Windows Server 2016/2019 because it's no longer needed.
 
 | Guest  | Update mechanism | Notes |
 |:---------|:---------|:---------|
@@ -245,14 +245,14 @@ We recommend that you keep integration services up to date to get the best perfo
 | - | | |
 | Linux guests | package manager | Integration services for Linux are built into the distro but there may be optional updates available. ******** |
 
-\* If the Data Exchange integration service can't be enabled, the integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file. Instructions for applying a cab are available in this [blog post](https://blogs.technet.com/b/virtualization/archive/2015/07/24/integration-components-available-for-virtual-machines-not-connected-to-windows-update.aspx).
+\* If the Data Exchange integration service can't be enabled, the integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file. Instructions for applying a cab are available in this [blog post](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247).
 
-**For virtual machines running on Windows 8.1 hosts:**
+**For virtual machines running on Windows 8.1/Windows Server 2012R2 hosts:**
 
 | Guest  | Update mechanism | Notes |
 |:---------|:---------|:---------|
 | Windows 10 | Windows Update | |
-| Windows 8.1 | Windows Update | |
+| Windows 8.1 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows 8 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows 7 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows Vista (SP 2) | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
@@ -260,7 +260,7 @@ We recommend that you keep integration services up to date to get the best perfo
 | - | | |
 | Windows Server 2016 | Windows Update | |
 | Windows Server, Semi-Annual Channel | Windows Update | |
-| Windows Server 2012 R2 | Windows Update | |
+| Windows Server 2012 R2 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows Server 2012 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows Server 2008 R2 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows Server 2008 (SP 2) | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
@@ -272,17 +272,17 @@ We recommend that you keep integration services up to date to get the best perfo
 | Linux guests | package manager | Integration services for Linux are built into the distro but there may be optional updates available. ** |
 
 
-**For virtual machines running on Windows 8 hosts:**
+**For virtual machines running on Windows 8/Windows Server 2012 hosts:**
 
 | Guest  | Update mechanism | Notes |
 |:---------|:---------|:---------|
-| Windows 8.1 | Windows Update | |
+| Windows 8.1 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows 8 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows 7 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows Vista (SP 2) | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows XP (SP 2, SP 3) | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | - | | |
-| Windows Server 2012 R2 | Windows Update | |
+| Windows Server 2012 R2 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows Server 2012 | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
 | Windows Server 2008 R2 | Integration Services disk | See [instructions](#install-or-update-integration-services), below.|
 | Windows Server 2008 (SP 2) | Integration Services disk | See [instructions](#install-or-update-integration-services), below. |
@@ -297,8 +297,11 @@ For more details about Linux guests, see [Supported Linux and FreeBSD virtual ma
 
 ## Install or update integration services
 
-For hosts earlier than Windows Server 2016 and Windows 10, you'll need to manually install or update the integration services in the guest operating systems. 
-  
+>[!NOTE]
+>For hosts earlier than Windows Server 2016 and Windows 10, you'll need to **manually install or update** the integration services in the guest operating systems. 
+
+Procedure to manually Install or update the integration services:
+
 1.  Open Hyper-V Manager. From the Tools menu of Server Manager, click **Hyper-V Manager**.  
   
 2.  Connect to the virtual machine. Right-click the virtual machine and click **Connect**.  
@@ -307,4 +310,9 @@ For hosts earlier than Windows Server 2016 and Windows 10, you'll need to manual
   
 4.  After the installation finishes, all integration services are available for use.
 
-These steps can't be automated or done within a Windows PowerShell session for online virtual machines. You can apply them to offline VHDX images; [see this blog post](https://blogs.technet.microsoft.com/virtualization/2013/04/18/how-to-install-integration-services-when-the-virtual-machine-is-not-running/).
+>[!NOTE]
+>These steps **can't be automated** or done within a Windows PowerShell session for **online** virtual machines.
+
+>You can apply them to **offline** VHDX images; [see this article](https://docs.microsoft.com/en-us/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running).
+
+>You can also automate the deploy of the integration services through **Configuration Manager** with the VMs **Online**, but you need to restart the VMs at the end of the installation; [see this article](https://docs.microsoft.com/en-us/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)
