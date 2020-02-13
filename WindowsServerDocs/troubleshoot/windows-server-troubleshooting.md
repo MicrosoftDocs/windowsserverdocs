@@ -40,17 +40,17 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot startup and restart
 
-- [Advanced troubleshooting for Windows startup](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup.md)
-- [How to determine the appropriate page file size for 64-bit versions of Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size.md)
-- [Generate a kernel or complete crash dump](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump.md)
-- [Introduction to the page file](https://docs.microsoft.com/windows/client-management/introduction-page-file.md)
-- [Configure system failure and recovery options in Windows](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options.md)
-- [Advanced troubleshooting for Windows boot problems](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems.md)
-- [Advanced troubleshooting for Windows-based computer freeze](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze.md)
-- [Advanced troubleshooting for stop error or blue screen error](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors.md)
-- [Advanced troubleshooting for stop error 7B or Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device.md)
-- [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart.md)
-- [Stop error occurs when you update the in-box Broadcom network adapter driver](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update.md)
+- [Advanced troubleshooting for Windows startup](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup)
+- [How to determine the appropriate page file size for 64-bit versions of Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)
+- [Generate a kernel or complete crash dump](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump)
+- [Introduction to the page file](https://docs.microsoft.com/windows/client-management/introduction-page-file)
+- [Configure system failure and recovery options in Windows](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options)
+- [Advanced troubleshooting for Windows boot problems](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems)
+- [Advanced troubleshooting for Windows-based computer freeze](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze)
+- [Advanced troubleshooting for stop error or blue screen error](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors)
+- [Advanced troubleshooting for stop error 7B or Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device)
+- [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart)
+- [Stop error occurs when you update the in-box Broadcom network adapter driver](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update)
 
 ## Troubleshoot AD forest recovery
 
