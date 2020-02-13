@@ -115,7 +115,7 @@ For this, you will need to update your **StorageTier** templates to have both *P
 
 #### Option 3
 
-You may find it easiest to simply remove the existing tier template and create the two new ones. This will not affect any pre-existing volumes which were created by refering the tier template: it's just a template.
+You may find it easiest to simply remove the existing tier template and create the two new ones. This will not affect any pre-existing volumes which were created by referring the tier template: it's just a template.
 
 ```PowerShell
 Remove-StorageTier -FriendlyName Capacity

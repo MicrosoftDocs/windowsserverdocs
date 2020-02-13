@@ -59,7 +59,7 @@ The following are general requirements for a failover cluster to support updates
 ## <a name="BKMK_NODE_CONFIG"></a>Configure the nodes for remote management  
 To use Cluster-Aware Updating, all nodes of the cluster must be configured for remote management. By default, the only task you must perform to configure the nodes for remote management is to [Enable a firewall rule to allow automatic restarts](#BKMK_FW). 
 
-The following table lists the complete remote managment requirements, in case your environment diverges from the defaults.
+The following table lists the complete remote management requirements, in case your environment diverges from the defaults.
 
 These requirements are in addition to the installation requirements for the [Install the Failover Clustering feature and the Failover Clustering Tools](#BKMK_REQ_CLUS) and the general clustering requirements that are described in previous sections in this topic.  
 

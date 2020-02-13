@@ -68,4 +68,4 @@ You can find information on tuning HNV Gateways for use with SDN in the [HVN Gat
 
 ## Software Load Balancer (SLB)
 
-SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use iwth SLB Gateways in the [Software Load Balancer Gateways](slb-gateway-performance.md) section.
+SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use with SLB Gateways in the [Software Load Balancer Gateways](slb-gateway-performance.md) section.
