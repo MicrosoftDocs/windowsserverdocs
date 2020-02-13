@@ -61,7 +61,7 @@ Starting with Windows Server 2016, the Hyper-V hypervisor supports several modes
 
 The classic scheduler has been the default for all versions of the Windows Hyper-V hypervisor since its inception, including Windows Server 2016 Hyper-V. The classic scheduler provides a fair share, preemptive round- robin scheduling model for guest virtual processors.
 
-The classic scheduler type is the most appropriate for the vast majority of traditional Hyper-V uses – for private clouds, hosting providers, and so on. The performance characteristics are well understood and are best optimized to support a wide range of virtualization scenarios, such as over-subscription of VPs to LPs, running many heterogenous VMs and workloads simultaneously, running larger scale high performance VMs, supporting the full feature set of Hyper-V without restrictions, and more.
+The classic scheduler type is the most appropriate for the vast majority of traditional Hyper-V uses – for private clouds, hosting providers, and so on. The performance characteristics are well understood and are best optimized to support a wide range of virtualization scenarios, such as over-subscription of VPs to LPs, running many heterogeneous VMs and workloads simultaneously, running larger scale high performance VMs, supporting the full feature set of Hyper-V without restrictions, and more.
 
 ### The core scheduler
 

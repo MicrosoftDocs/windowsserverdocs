@@ -31,7 +31,7 @@ A System Insights capability is a machine learning or statistics model that anal
 Additionally, each capability runs locally on a Windows Server instance, and each capability can be managed individually.
 
 ### Capability outputs
-When a capability is invoked, it provides an output to help explain the result of its analysis or prediction. Each output must contain a **Status** and a **Status Description** to describe the prediction, and each result can optionally contain capability-specific data associated with the prediction. The **Status Description** helps provides a contextual explaination for the **Status**, and the capability reports either an **OK**, **Warning**, or **Critical** status. Additionally, a capability can use an **Error** or **None** status if no prediction was made. Together, here are the capability statuses and their basic meanings: 
+When a capability is invoked, it provides an output to help explain the result of its analysis or prediction. Each output must contain a **Status** and a **Status Description** to describe the prediction, and each result can optionally contain capability-specific data associated with the prediction. The **Status Description** helps provides a contextual explanation for the **Status**, and the capability reports either an **OK**, **Warning**, or **Critical** status. Additionally, a capability can use an **Error** or **None** status if no prediction was made. Together, here are the capability statuses and their basic meanings: 
 
 - **Ok** - Everything looks good.
 - **Warning** - No immediate attention required, but you should take a look. 
