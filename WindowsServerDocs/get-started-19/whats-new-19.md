@@ -172,7 +172,7 @@ Here's a list of what's new in Failover Clustering. For details, see [What's new
 
 ### Linux containers on Windows
 
-It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogenous container host environment while providing flexibility to application developers.
+It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogeneous container host environment while providing flexibility to application developers.
 
 ### Built-in Support for Kubernetes
 
