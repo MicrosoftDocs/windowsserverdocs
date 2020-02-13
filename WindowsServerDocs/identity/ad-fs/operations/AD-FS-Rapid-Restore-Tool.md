@@ -24,6 +24,9 @@ The AD FS Rapid Restore tool can be used in the following scenarios:
 	- Use the tool to create a cold standby installation of AD FS that can be quickly deployed in place of the online AD FS server
 2. Deploy identical test and production environments
 	- Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
+3. Migrate from a SQL based configuration to WID and vice versa
+	- Use the tool to move from a SQL based farm configuration to WID or vice versa. 
+
 
 >[!NOTE] 
 >If you are using SQL Merge Replication or Always on Availablity Groups, the Rapid Restore tool is not supported. We recommend using SQL based backups and a backup of the SSL certificate as an alternative.
