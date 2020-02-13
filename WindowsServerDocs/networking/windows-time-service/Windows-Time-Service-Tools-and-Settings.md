@@ -90,20 +90,34 @@ W32tm /query /computer:contosoW1 /configuration
 The output of this command is a list of configuration parameters that are set for the Windows Time client.
 
 
-## Windows Time service registry entries
+## Windows Time service registry entries and Group Policy settings
 
-The following registry entries are associated with the Windows Time service.  
-
-This information is provided as a reference for use in troubleshooting or verifying that the required settings are applied. It is recommended that you do not directly edit the registry unless there is no other alternative. Modifications to the registry are not validated by the registry editor or by Windows before they are applied, and as a result, incorrect values can be stored. This can cause unrecoverable errors in the system.  
-
-When possible, use Group Policy or other Windows tools, such as Microsoft Management Console (MMC), to accomplish tasks rather than editing the registry directly. If you must edit the registry, use extreme caution.  
+The Windows Time service stores a number of configuration properties as registry entries. You can use Group Policy Objects to modify this configuration information.
 
 > [!WARNING]  
-> Some of the preset values that are configured in the System Administrative template file (System.adm) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003.  
+> The information about these registry entries is provided as a reference for use in troubleshooting or verifying that the required settings are applied. Many of the values in the W32Time section of the registry are used internally by W32Time to store information. Do not manually change these values. Modifications to the registry are not validated by the registry editor or by Windows before they are applied. If the registry contains invalid values, Windows may experience unrecoverable errors.  
 
-Many registry entries for the Windows Time service are the same as the Group Policy setting of the same name. The Group Policy settings correspond to the registry entries of the same name located in the following subkey:  
+Windows stores the Windows Time service policy information in the W32Time.admx administrative template file, under **Computer Configuration\Administrative Templates\System\Windows Time Service**. It stores the configuration information that the policies define in the registry, and uses those registry entries to configure the registry entries for the Windows Time service. As a result, the values defined by Group Policy overwrite any pre-existing values in the Windows Time service section of the registry.
+
+
+|GPO category |GPO registry subkey |Windows Time service registry subkey |
+| --- | --- | --- |
+|Time Providers\\ NTP Client | | |
+|Time Providers\\ NTP Server | | |
+
+
+
+Many registry entries for the Windows Time service are the same as the Group Policy setting of the same name.  
+
+ The Group Policy settings correspond to the registry entries of the same name located in the following subkey:  
 
 - **HKLM\SYSTEM\CurrentControlSet\Services\W32Time\\**
+
+Some of the preset values that are configured in the System Administrative template file (W32Time.admx) for the Group Policy object (GPO) settings are different from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003.
+
+
+
+
   
    There are several registry entries under this subkey. The Windows Time settings are stored in values across all of these entries:
   - [Parameters](#parameters)
@@ -111,9 +125,7 @@ Many registry entries for the Windows Time service are the same as the Group Pol
   - [NtpClient](#ntpclient)
   - [NtpServer](#ntpserver)
 
-Many of the values in the W32Time section of the registry are used internally by W32Time to store information. These values should not be manually changed at any time. Do not modify any of the settings in this section unless you are familiar with the setting and are certain that the new value will work as expected. The following registry entries are located under the following subkey:
 
-- **HKLM\SYSTEM\CurrentControlSet\Services\W32Time**  
 
 When you create a policy, the settings are configured in the following subkey, which does not take precedence over the next subkey:
 
