@@ -8,13 +8,13 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.date: 02/13/2020
+ms.date: 02/15/2020
 ---
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
 
 >Applies to: Windows Server 2008 and Windows Server 2008 R2
 
-Windows Server 2008 and Windows Server 2008 R2 reach the end of their support lifecycle on January 14, 2020. Windows Server Long Term Servicing Channel (LTSC) has a minimum of ten years of support - five years for mainstream support and five years for extended support. This support includes regular security updates.
+Windows Server 2008 and Windows Server 2008 R2 reached the end of their support lifecycle on January 14, 2020. Windows Server Long Term Servicing Channel (LTSC) has a minimum of ten years of support—five years for mainstream support and five years for extended support. This support includes regular security updates.
 
 End of support also means the end of security updates. This scenario can cause security or compliance issues and put business applications at risk. Microsoft recommends that you [upgrade to the current version of Windows Server](modernize-windows-server-2008.md) for the most advanced security, performance, and innovation.
 
@@ -126,6 +126,8 @@ To get your keys from the Volume Licensing Service Center:
 1. Go to the [Volume Licensing Service Center page](https://www.microsoft.com/vlsc) and sign in with your Azure credentials.​
 
 2. Select **Licenses** > **Relationship Summary** > **Licensing ID** > **Product Keys**.
+
+To learn more about how to get Extended Security Updates for eligible Windows devices, see [our Tech Community post](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
 ## Download and apply Extended Security Updates
 
