@@ -106,7 +106,8 @@ C. The client then sends the authorization code in the Access Token Request as u
 D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" from (B).  Access is denied if they are not equal. 
 
 #### FAQ 
->[!NOTE] You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'. 
+>[!NOTE] 
+> You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'. 
 > To remediate this error: 
 > 1. Launch AD FS management console. Brose to "Services > Scope Descriptions"
 > 2. Right click "Scope Descriptions" and select "Add Scope Description"
