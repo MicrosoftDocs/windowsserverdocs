@@ -191,7 +191,10 @@ Configuring the following network services appropriately is critical for success
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.  
   
 In addition, if client user certificate authentication \(clientTLS authentication using X509 user certificates\) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers\).  
-  
+
+> [!NOTE]
+> Please also make sure 49443 port is not used by other services on Web Application Proxy server.
+
 **Configuring DNS**  
   
 -   For intranet access, all clients accessing AD FS service within the internal corporate network \(intranet\) must be able to resolve the AD FS service name \(name provided by the SSL certificate\) to the load balancer for the AD FS servers or the AD FS server.  
