@@ -37,7 +37,7 @@ Rundll32 <DLLname>
 
 ## Remarks
 
-Rundll32 can only call functions from a DLL that are explicitly written to be called by Rundll32.
+Rundll32 can only call functions from a DLL explicitly written to be called by Rundll32.
 
 #### Additional references
 
