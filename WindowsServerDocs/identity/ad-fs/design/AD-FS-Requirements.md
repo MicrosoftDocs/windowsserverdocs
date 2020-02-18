@@ -90,6 +90,11 @@ Domain controllers in all user domains and the domain to which the AD FS servers
   
 > [!NOTE]  
 > All support for environments with Windows Server 2003 domain controllers will end after the Extended Support End Date for Windows Server 2003. Customers are strongly recommended to upgrade their domain controllers as soon as possible. Visit [this page](https://support.microsoft.com/lifecycle/search/default.aspx?sort=PN&alpha=Windows+Server+2003&Filter=FilterNO) for additional information on Microsoft Support Lifecycle. For issues discovered that are specific to Windows Server 2003 domain controller environments, fixes will be issued only for security issues and if a fix can be issued prior to the expiry of Extended Support for Windows Server 2003.  
+
+
+
+>[!NOTE]
+> AD FS requires a full writable Domain Controller to function as opposed to a Read-Only Domain Controller. If a planned topology includes a Read-Only Domain controller, the Read-Only domain controller can be used for authentication but LDAP claims processing will require a connection to the writable domain controller.
   
 **Domain functional\-level requirements**  
   
