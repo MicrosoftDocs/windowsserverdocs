@@ -8,7 +8,7 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.date: 02/15/2020
+ms.date: 02/18/2020
 ---
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
 
@@ -18,14 +18,14 @@ Windows Server 2008 and Windows Server 2008 R2 reached the end of their support 
 
 End of support also means the end of security updates. This scenario can cause security or compliance issues and put business applications at risk. Microsoft recommends that you [upgrade to the current version of Windows Server](modernize-windows-server-2008.md) for the most advanced security, performance, and innovation.
 
-If you can't upgrade all your servers by the end of support lifecycle deadline, the following options help protect applications and data during the upgrade transition:
+If you haven't already upgraded your servers, the following options will help protect your apps and data during the transition:
 
 * Migrate existing Windows Server 2008 and 2008 R2 workloads as-is to Azure Virtual Machines (VMs).
   * This migration to Azure automatically provides an additional three years of extended security updates (ESU). There's no additional charge for extended security updates on top of Azure VM's cost, and there's no additional configuration required.
 * Purchase an extended security update subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version.
   * These updates are provided for up to three years after the end of support lifecycle date.
 
-After the three year period of extended updates, there's no option for computers to receive additional updates.
+After the three year period of extended updates, we'll stop updating for Windows Server 2008 and 2008 R2. We recommend you update your version of Windows Server to a more recent version as soon as possible.
 
 ## What are extended security updates for Windows Server?
 
@@ -43,10 +43,10 @@ If you run Windows Server 2008 or 2008 R2 VMs in Azure, they're automatically en
 
 For other environments, such as on-premises VMs or physical servers, you need to manually request and configure Extended Security Updates. You can purchase Extended Security Updates through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE).
 
-When you've purchased Extended Security Updates, you can use one of the following two methods to get your keys.
+When you've purchased Extended Security Updates, you can use one of the following methods to get your keys:
 
-* If you have Azure Portal, you can [register for Extended Security Updates in the Azure Portal](#register-for-extended-security-updates-on-azure-portal).
-* If you don't have access to Azure Portal, you can [sign in to the Microsoft Volume Licensing Service Center](#sign-in-to-the-microsoft-volume-licensing-service-center).
+* If you want to get Extended Security Update keys from the Azure Portal, you can [register for Extended Security Updates in the Azure Portal](#register-for-extended-security-updates-on-azure-portal).
+* You can also [sign in to the Microsoft Volume Licensing Service Center](#sign-in-to-the-microsoft-volume-licensing-service-center) to get your keys without using the Azure Portal.
 
 ### Register for Extended Security Updates on Azure Portal
 
@@ -72,8 +72,11 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     ![Choose to create a key in the Azure Portal](media/extended-security-updates/get-key.png)
 
-    > [!NOTE]
-    > You need an Azure subscription associated with your account to create the Extended Security Update resource and key. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription using the guided steps shown in the portal.
+    You need an Azure subscription associated with your account to create the Extended Security Update resource and key. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription in the Azure Portal.
+
+    In addition, your Azure subscription must be assigned the Contributor role for the security update to work. To check your role, enter "Subscriptions" into the search box. You'll see a table that will show you your role next to your subscription ID and name.
+
+    If you don't own your subscription and need to request a role change, you can check who owns it. Go to the role table described in the previous paragraph, select the subscription name, then go to the menu on the left side of the page and select **Access control (IAM)** > **Role assignments** and look for the "Owners" section in the table.
 
 5. If you see a page that says "Register to get a Multiple Activation Key," that means you need to request access to the private preview before you can use Extended Security Updates. If you don't see this page, skip ahead to step 6.
 
