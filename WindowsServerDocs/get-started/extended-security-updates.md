@@ -85,7 +85,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
     Include the following information in your request:
 
     * Customer name
-    * Azure subscription
+    * Azure subscription ID
     * Agreement number (for ESU)
     * Number of ESU servers
 
