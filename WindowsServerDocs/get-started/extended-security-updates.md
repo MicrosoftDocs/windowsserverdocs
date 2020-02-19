@@ -8,7 +8,7 @@ author: iainfoulds
 ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.date: 02/18/2020
+ms.date: 02/20/2020
 ---
 # How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)
 
@@ -74,9 +74,9 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     You need an Azure subscription associated with your account to create the Extended Security Update resource and key. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription in the Azure Portal.
 
-    In addition, your Azure subscription must be assigned the Contributor role for the security update to work. To check your role, enter "Subscriptions" into the search box. You'll see a table that will show you your role next to your subscription ID and name.
+    Your Azure subscription must also be assigned the Contributor role for the security update to work. To check your role, enter "Subscriptions" into the search box. You'll see a table that will show you your role next to your subscription ID and name.
 
-    If you don't own your subscription and need to request a role change, you can check who owns it. Go to the role table described in the previous paragraph, select the subscription name, then go to the menu on the left side of the page and select **Access control (IAM)** > **Role assignments** and look for the "Owners" section in the table.
+    If you aren't a Contributor, you can ask the subscription owner to change your role. To find out who owns your subscription, go to the role table described in the previous paragraph and select your subscription's name. Next, go to the menu on the left side of the page and select **Access control (IAM)** > **Role assignments** and look for the "Owners" section in the table.
 
 5. If you see a page that says "Register to get a Multiple Activation Key," that means you need to request access to the private preview before you can use Extended Security Updates. If you don't see this page, skip ahead to step 6.
 
@@ -109,6 +109,11 @@ To register your VM for Extended Security Updates and create a key, open the Azu
     | Operating system    | Choose the operating system to use this key with, such as Windows Server 2008 or Windows Server 2008 R2. |
 
     When ready, select **Review + register**.
+
+    >[!NOTE]
+    >Make sure you've selected the Azure subscription that's been onboardedto join the private preview in your global filter. You can check your global subscription filter by selecting the **Filter** button in the ribbon at the top of the Azure Portal window.
+    >
+    > ![An image of the Azure Portal ribbon with the Filter button selected](azure-ribbon-filter.png)
 
 7. After successful validation, a summary of your choices for the new registry resource is shown. If needed, correct any validation errors or update your configuration choice. The Azure [Terms of Use](https://azure.microsoft.com/support/legal/) and [Privacy Policy](https://privacy.microsoft.com/privacystatement) are available.
 
