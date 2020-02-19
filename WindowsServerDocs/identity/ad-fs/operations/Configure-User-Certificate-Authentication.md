@@ -35,6 +35,8 @@ If you are configuring AD FS for Azure AD certificate authentication, ensure tha
 Additionally, there some optional aspects.
 - If you wish to use claims based on certificate fields and extensions in addition to EKU (claim type https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim pass through rules on the Active Directory claims provider trust.  See below for a complete list of available certificate claims.  
 - If you need to restrict access based on the type of cert, you can use the additional properties on the certificate in AD FS issuance authorization rules for the application. Common scenarios are "only allow certificates provisioned by an MDM provider" or "only allow smart card certificates"
+>[!IMPORTANT]
+> Customers using device code flow for authentication and performing device authentication using an IDP other than Azure AD (e.g AD FS) will not be able to enforce device based access (e.g. only allow managed devices using a 3rd party MDM service) for Azure AD resources. To protect access to your corporate resources in Azure AD and prevent any data leakage, customers should configure Azure AD device based Conditional Access (i.e. “Require device to be marked complaint” grant control in Azure AD Conditional Access).
 - Configure allowed issuing certification authorities for client certificates using the guidance under "Management of trusted issuers for client authentication" in [this article](https://technet.microsoft.com/library/dn786429(v=ws.11).aspx).
 - You may want to consider modifying the sign-in pages to suit the needs of your end users when doing certificate authentication. Common cases are to (a) Change 'Sign-in with your X509 certificate' to something more end user friendly
 
