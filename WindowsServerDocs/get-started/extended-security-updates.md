@@ -111,7 +111,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
     When ready, select **Review + register**.
 
     >[!NOTE]
-    >Make sure you've selected the Azure subscription that's been onboardedto join the private preview in your global filter. You can check your global subscription filter by selecting the **Filter** button in the ribbon at the top of the Azure Portal window.
+    >Make sure you've selected the Azure subscription that you joined the private preview with in your global filter. Select the **Filter** button in the Azure Portal ribbon to check your global subscription filter.
     >
     > ![An image of the Azure Portal ribbon with the Filter button selected](media/azure-ribbon-filter.png)
 
