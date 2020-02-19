@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: danihalfin
-ms.author: jopoulso
+ms.author: vichen
 ms.date: 06/13/2019
 ---
 # Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
