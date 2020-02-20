@@ -99,7 +99,7 @@ The Windows Time service stores a number of configuration properties as registry
 Windows stores the Windows Time service policy information in the W32Time.admx administrative template file, under **Computer Configuration\Administrative Templates\System\Windows Time Service**. It stores the configuration information that the policies define in the registry, and uses those registry entries to configure the registry entries for the Windows Time service. As a result, the values defined by Group Policy overwrite any pre-existing values in the Windows Time service section of the registry.
 
 > [!IMPORTANT]  
-Some of the preset GPO settings differ from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003.
+> Some of the preset GPO settings differ from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003.
 
 For example, suppose you edit policy settings in the **Configure Windows NTP Client** policy.
 
@@ -127,9 +127,9 @@ The following table lists the policies that you can configure for the Windows Ti
 |Time Providers\Enable Windows NTP Client |W32Time\TimeProviders\NtpClient |
 |Time Providers\Enable Windows NTP Server |W32Time\TimeProviders\NtpServer |
 
-<sup>1</sup> Category path: **Computer Configuration\Administrative Templates\System\Windows Time Service**  
-<sup>2</sup> Subkey: **HKLM\SOFTWARE\Policies\Microsoft\Windows**  
-<sup>3</sup> Subkey: **HKLM\SYSTEM\CurrentControlSet\Services**
+> <sup>1</sup> Category path: **Computer Configuration\Administrative Templates\System\Windows Time Service**  
+> <sup>2</sup> Subkey: **HKLM\SOFTWARE\Policies\Microsoft\Windows**  
+> <sup>3</sup> Subkey: **HKLM\SYSTEM\CurrentControlSet\Services**
 
 ## Enabling W32Time logging
 
