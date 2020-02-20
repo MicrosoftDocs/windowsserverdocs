@@ -272,7 +272,7 @@ Figure 3: Optimized System Properties, Performance Options
 
 The following are the optimization settings applied to the default user profile registry hive to optimize performance:
 
-```regexp
+```
 Delete HKLM\Temp\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v OneDriveSetup /f
 add "HKLM\Temp\Control Panel\Desktop" /v DragFullWindows /t REG_SZ /d 0 /f
 add "HKLM\Temp\Control Panel\Desktop" /v WallPaper /t REG_SZ /d "" /f
@@ -541,7 +541,7 @@ Most of these recommendations mirror recommendations for Windows Server 2016, in
 
 Many services that might seem like good candidates to disable are set to manual service start type. This means that the service won't automatically start and isn't started unless a process or event triggers a request to the service being considered for disabling. Services that are already set to start type manual are usually not listed here.
 
-> ![NOTE]
+> [!NOTE]
 > You can enumerate running services with this PowerShell sample code, outputting only the service short name:
 
 ```powershell
@@ -714,31 +714,30 @@ The following settings are documented in the [Windows Server 2016 Performance Tu
 
 #### DisableBandwidthThrottling
 
-HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableBandwidthThrottling
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableBandwidthThrottling`
 
 Applies to Windows 10. The default is **0**. By default, the SMB redirector throttles throughput across high-latency network connections, in some cases to avoid network-related timeouts. Setting this registry value to 1 disables this throttling, enabling higher file transfer throughput over high-latency network connections. Consider setting this value to **1**.
 
 #### FileInfoCacheEntriesMax
 
-HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileInfoCacheEntriesMax
-
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileInfoCacheEntriesMax`
 Applies to Windows 10. The default is **64**, with a valid range of 1 to 65536. This value is used to determine the amount of file metadata that can be cached by the client. Increasing the value can reduce network traffic and increase performance when many files are accessed. Try increasing this value to **1024**.
 
 #### DirectoryCacheEntriesMax
 
-HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheEntriesMax
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheEntriesMax`
 
 Applies to Windows 10. The default is **16**, with a valid range of 1 to 4096. This value is used to determine the amount of directory information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when large directories are accessed. Consider increasing this value to **1024**.
 
 #### FileNotFoundCacheEntriesMax
 
-HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileNotFoundCacheEntriesMax
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileNotFoundCacheEntriesMax`
 
 Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536. This value is used to determine the amount of file name information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when many file names are accessed. Consider increasing this value to **2048**.
 
 #### DormantFileLimit
 
-HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit`
 
 Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
 
