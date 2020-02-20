@@ -256,11 +256,11 @@ There are customizations that can be made to a Windows registry file called ‘C
 
 Figure 1: Normal Windows 10, version 1909 taskbar
 
-![Normal Windows 10, version 1909 taskbar](../media/rds-vdi-recommendations-1909/standard-taskbar.png)
- 
+![Standard version of the Windows 10, version 1909 taskbar](media/rds-vdi-recommendations-1909/standard-taskbar.png)
+
 Figure 2: Taskbar using the small icons setting
 
-![Taskbar using the small icons setting](../media/rds-vdi-recommendations-1909/taskbar-sm-icons.png)
+![Taskbar using the small icons setting](media/rds-vdi-recommendations-1909/taskbar-sm-icons.png)
 
 Also, to reduce the transmitting of images over the VDI infrastructure, you can set the default background to a solid color instead of the default Windows 10 image. You can also set the logon screen to be a solid color, as well as turn off the opaque blurring effect on logon.
 
@@ -268,7 +268,7 @@ The following settings are applied to the default user profile registry hive, ma
 
 Figure 3: Optimized System Properties, Performance Options
 
-![Optimized System Properties, Performance Options](../media/rds-vdi-recommendations-1909/performance-options.png)
+![Optimized System Properties, Performance Options](media/rds-vdi-recommendations-1909/performance-options.png)
 
 The following are the optimization settings applied to the default user profile registry hive to optimize performance:
 
@@ -325,7 +325,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Control Panel | | | |
 | *Control Panel | Allow online tips | | Disabled. Settings won't contact Microsoft content services to retrieve tips and help content. |
 | *Control Panel\Personalization | Won't show the Lock screen | Enabled. This setting controls whether the lock screen appears for users. If you enable this policy setting, users that are not required to press CTRL + ALT + DEL before signing in will see their selected tile after locking their PC. |
-| *Control Panel\Personalization | Force a specific default lock screen and logon image | [![UI to set path to the Lock screen](../media/lock-screen-image-settings.png)](media/lock-screen-image-settings.png) | Enabled. This setting lets you specify the default lock screen and logon image shown when no user is signed in, and also sets the specified image as the default for all users--it replaces the default image.<p>We recommend using a low resolution, non-complex image so less data is transmitted over the network each time the image is rendered. |
+| *Control Panel\Personalization | Force a specific default lock screen and logon image | [![UI to set path to the Lock screen](media/lock-screen-image-settings.png)](media/lock-screen-image-settings.png) | Enabled. This setting lets you specify the default lock screen and logon image shown when no user is signed in, and also sets the specified image as the default for all users--it replaces the default image.<p>We recommend using a low resolution, non-complex image so less data is transmitted over the network each time the image is rendered. |
 | *Control Panel\Regional and Language Options\Handwriting personalization | Turn off automatic learning | | Enabled. If you enable this policy setting, automatic learning stops, and any stored data is deleted. Users can't configure this setting in Control Panel. |
 | Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Network | | | |
 | Background Intelligent Transfer Service (BITS) | Do not allow the BITS client to use Windows Branch Cache |  | Enabled |
@@ -654,7 +654,7 @@ Whether from Microsoft Update, or from your internal resources, apply the availa
 
 At some point during the image optimization process available Windows updates should be applied. There is a setting in Windows 10 Update Settings that can provide additional updates:
 
-![Additional updates](../media/rds-vdi-recommendations-1909/servicing.png)
+![Additional updates](media/rds-vdi-recommendations-1909/servicing.png)
 
 This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image. That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
 
@@ -669,7 +669,7 @@ For Windows Defender it might be best to allow the updates to occur, even on non
 
 Windows is configured, by default, to collect and save limited diagnostic data. The purpose is to enable diagnostics, or to record data if further troubleshooting is necessary. Automatic system traces can be found at the location shown in the following illustration:
 
-![System Traces](../media/rds-vdi-recommendations-1909/system-traces.png)
+![System Traces](media/rds-vdi-recommendations-1909/system-traces.png)
 
 Some of the traces displayed under **Event Trace Sessions** and **Startup Event Trace Sessions** can't and should not be stopped. Others, such as the ‘WiFiSession’ trace can be stopped. To stop a running trace under **Event Trace Sessions** right-click the trace and then click ‘Stop’. Use the following procedure to prevent the traces from starting automatically on startup:
 
@@ -761,36 +761,25 @@ Here are suggestions for various disk cleanup tasks. These should all be tested 
 
 1. Run (elevated) Disk Cleanup Wizard after applying all updates. Include the categories ‘Delivery Optimization’ and ‘Windows Update Cleanup’. This process can be automated, using command line `Cleanmgr.exe` with the `/SAGESET:11` option. The `/SAGESET` option sets registry values that can be used later to automate disk cleanup, that uses every available option in the Disk Cleanup Wizard.
 
-    a. On a test VM, from a clean installation, running `Cleanmgr.exe /SAGESET:11` reveals that there are only two automatic disk cleanup options enabled by default:
+    1. On a test VM, from a clean installation, running `Cleanmgr.exe /SAGESET:11` reveals that there are only two automatic disk cleanup options enabled by default:
     
-        i. Downloaded Program Files
-        
-        ii.	Temporary Internet Files
+        - Downloaded Program Files
 
-    b. If you set more options, or all options, those options are recorded in the registry, according to the **Index** value provided in the previous command (`Cleanmgr.exe /SAGESET:11`). In this case, we are going to use the value `11` as our index, for a subsequent automated disk cleanup procedure.
+        - Temporary Internet Files
 
-    c. After running `Cleanmgr.exe /SAGESET:11` you'll see several categories of disk cleanup options. You can check every option, and then click **OK**. The Disk Cleanup Wizard disappears and your settings are saved in the registry.
+    2. If you set more options, or all options, those options are recorded in the registry, according to the **Index** value provided in the previous command (`Cleanmgr.exe /SAGESET:11`). In this case, we are going to use the value `11` as our index, for a subsequent automated disk cleanup procedure.
+
+    3. After running `Cleanmgr.exe /SAGESET:11` you'll see several categories of disk cleanup options. You can check every option, and then click **OK**. The Disk Cleanup Wizard disappears and your settings are saved in the registry.
 
 2. Cleanup your Volume Shadow Copy storage, if any is in use.
 
-    a. Open an elevated command prompt and run the following commands:
-
-        ```
-        vssadmin list shadows
-        vssadmin list shadowstorage
-        ```
-
+    - Open an elevated command prompt and run the `vssadmin list shadows` command and then the `vssadmin list shadowstorage` command.
+    
         If output from these commands is **No items found that satisfy the query**, then there is no VSS storage in use.
 
-3. Cleanup temporary files and logs. From an elevated command prompt, type:
+3. Cleanup temporary files and logs. From an elevated command prompt, run the `Del C:\*.tmp /s` command, the `Del C:\Windows\Temp\.` command, and the `Del %temp%\.` command.
 
-    a. Del C:\*.tmp /s
-
-    b. Del C:\Windows\Temp\.
-
-    c.	Del %temp%\.
-
-4. Delete any unused profiles on the system by running, `wmic path win32_UserProfile where LocalPath="c:\\users\\<user>" Delete`
+4. Delete any unused profiles on the system by running, `wmic path win32_UserProfile where LocalPath="c:\users\<user>" Delete`.
 
 ### Remove OneDrive Components
 
