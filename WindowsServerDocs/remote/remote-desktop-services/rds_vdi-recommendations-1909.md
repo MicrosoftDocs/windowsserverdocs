@@ -46,12 +46,17 @@ Persistent VDI is, at the basic level, a VM that saves operating system states i
 There are several different implementations of persistent VDI:
 
 - Traditional virtual machine, where the VM has its own virtual disk file, starts up normally, saves changes from one session to the next. The difference is how the user accesses this VM. There might be a web portal the user logs into that automatically directs the user to their one or more assigned VDI VMs.
+
 - Image-based persistent virtual machine, optionally with personal virtual disks. In this type of implementation there is a base/gold image on one or more host servers. A VM is created, and one or more virtual disks are created and assigned to this disk for persistent storage.
-     - When the VM is started, a copy of the base image is read into the memory of that VM. At the same time, a persistent virtual disk is assigned to that VM, with any previous operating system changes merged through a complex process.
-     - Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
-     - In this circumstance, operating system and app servicing might operate normally, using traditional servicing software such as Windows Server Update Services, or other management technologies.
-     - The difference between a persistent VDI machine, and a “normal” virtual machine is the relationship to the master/gold image. At some point updates must be applied to the master. This is where implementations decide how the user persistent changes are handled. In some cases, the disk with the changes are discarded and/or reset, thus setting a new checkpoint. It might also be that the changes the user makes are kept through monthly quality updates, and the base is reset following a Feature Update.
- 
+
+    - When the VM is started, a copy of the base image is read into the memory of that VM. At the same time, a persistent virtual disk is assigned to that VM, with any previous operating system changes merged through a complex process.
+
+    - Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
+
+    - In this circumstance, operating system and app servicing might operate normally, using traditional servicing software such as Windows Server Update Services, or other management technologies.
+
+    - The difference between a persistent VDI machine, and a “normal” virtual machine is the relationship to the master/gold image. At some point updates must be applied to the master. This is where implementations decide how the user persistent changes are handled. In some cases, the disk with the changes are discarded and/or reset, thus setting a new checkpoint. It might also be that the changes the user makes are kept through monthly quality updates, and the base is reset following a Feature Update.
+
 ### Non-Persistent VDI
 
 When a non-persistent VDI implementation is based on a base or “gold” image, the optimizations are mostly performed in the base image, and then through local settings and local policies.
@@ -61,11 +66,17 @@ With image-based non-persistent VDI, the base image is read-only. When a non-per
 One important aspect of non-persistent VDI that is based on a single image is servicing. Updates to the operating system and components are delivered usually once per month. With image-based VDI, there is a set of processes that must be performed to get updates to the image:
 
 - On a given host, all the VMs on that host, that are derived from the base image must be shut down / turned off. This means the users are redirected to other VMs.
+
 - The base image is then opened and started up. All maintenance activities are then performed, such as operating system updates, .NET updates, app updates, etc.
+
 - Any new settings that need to be applied are applied at this time.
+
 - Any other maintenance is performed at this time.
+
 - The base image is then shut down.
+
 - The base image is sealed and set to go back into production.
+
 - Users can log back on.
 
 > [!NOTE]
@@ -105,31 +116,27 @@ You might note that this document and the associated scripts on GitHub do not mo
 
 #### VDI Optimization Categories
 
-- Global operating system settings
+- Global operating system setting categories:
+
     - UWP app cleanup
+
     - Optional Features cleanup
+
     - Local policy settings
+
     - System services
+
     - Scheduled tasks
+
     - Apply Windows (and other) updates
+
     - Automatic Windows traces
+
     - Disk cleanup prior to finalizing (sealing) image
-- User settings
-- Hypervisor / Host settings
 
-Global VDI settingd can be categorized, as follows:
+    - User settings
 
-- [Universal Windows Platform (UWP) app cleanup](#universal-windows-platform-app-cleanup)
-- [Clean up optional features](#clean-up-optional-features)
-- [Local policy settings](#local-policy-settings)
-- [System services](#system-services)
-- [Scheduled tasks](#scheduled-tasks)
-- [Apply Windows and other updates](#apply-windows-and-other-updates)
-- [Automatic Windows traces](#automatic-windows-traces)
-- [Windows Defender optimization with VDI](#windows-defender-optimization-with-vdi)
-- [Client network performance tuning by registry settings](https://docs.microsoft.com/windows-server/administration/performance-tuning/)
-- Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887) guidance.
--  [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
+    - Hypervisor / Host settings
 
 ### Universal Windows Platform (UWP) application cleanup
 
@@ -151,14 +158,14 @@ Run the following command to enumerate provisioned UWP apps from a running opera
 
 ```powershell
 
-    Get-AppxProvisionedPackage -Online 
+    Get-AppxProvisionedPackage -Online
 
     DisplayName  : Microsoft.3DBuilder
     Version      : 13.0.10349.0  
     Architecture : neutral
     ResourceId   : \~ 
-    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe 
-    Regions      : 
+    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
+    Regions      :
     ...
 ```
 
@@ -183,7 +190,7 @@ Each UWP app should be evaluated for applicability in each unique environment. Y
 
 ### Manage Windows Optional Features using PowerShell
 
-You can manage Windows Optional Features using PowerShell. For more information, see https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx. To enumerate currently installed Windows Features, run the following PowerShell command:
+You can manage Windows Optional Features using PowerShell. For more information, see [Windows 10: Managing Optional Features with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx). To enumerate currently installed Windows Features, run the following PowerShell command:
 
 ```powershell
 Get-WindowsOptionalFeature -Online
@@ -246,7 +253,7 @@ You can use the built-in Dism.exe tool to enumerate and control Windows Optional
 #### Default user settings
 
 There are customizations that can be made to a Windows registry file called ‘C:\Users\Default\NTUSER.DAT’. Any settings made to this file will be applied to any subsequent user profiles created from a device running this image. You can control which settings to apply to the default user profile, by editing the file ‘Win10_1909_DefaultUserSettings.txt’. One setting that you might want to consider carefully, new to this iteration of settings recommendations, is a setting called **TaskbarSmallIcons**. You might want to check with your user base before implementing this setting. **TaskbarSmallIcons** makes the Windows Task Bar smaller and consumes less screen space, makes the icons more compact, minimizes the Search interface, and is depicted before and after in the following illustrations:
- 
+
 Figure 1: Normal Windows 10, version 1909 taskbar
 
 ![Normal Windows 10, version 1909 taskbar](../media/rds-vdi-recommendations-1909/standard-taskbar.png)
@@ -265,7 +272,7 @@ Figure 3: Optimized System Properties, Performance Options
 
 The following are the optimization settings applied to the default user profile registry hive to optimize performance:
 
-```Name
+```regexp
 Delete HKLM\Temp\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v OneDriveSetup /f
 add "HKLM\Temp\Control Panel\Desktop" /v DragFullWindows /t REG_SZ /d 0 /f
 add "HKLM\Temp\Control Panel\Desktop" /v WallPaper /t REG_SZ /d "" /f
@@ -296,6 +303,7 @@ add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /
 add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f
 add HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager /v SystemPaneSuggestionsEnabled /t REG_DWORD /d 0 /f
 ```
+
 In the local policy settings, you might want to disable images for backgrounds in VDI.  If you do want images, you might want to create custom background images at a reduced color depth to limit network bandwidth used for transmitting image information. If you decide to specify no background image in local policy, you might want to set the background color before setting local policy, because once the policy is set, the user has no way to change the background color. It might be better to specify “(null)” as the background image. There is another policy setting in the next section on not using background over Remote Desktop Protocol sessions.
 
 ### Local policy settings
