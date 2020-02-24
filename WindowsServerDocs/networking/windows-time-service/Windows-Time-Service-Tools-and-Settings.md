@@ -2,10 +2,10 @@
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time service tools and settings
 description:
-author: shortpatti
+author: Teresa-Motiv
 ms.author: pashort
 manager: dougkim
-ms.date: 01/27/2020
+ms.date: 02/24/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
