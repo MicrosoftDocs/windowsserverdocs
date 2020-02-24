@@ -312,12 +312,11 @@ In the following tables, "All versions" refers to versions of Windows that inclu
 |**Enabled** |All versions |Indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>**1** - Yes</li><li>**0** - No</li></ul>The default value on domain members is **1**. The default value on stand-alone clients and servers is **1**. |
 |**InputProvider** |All versions |Indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock. <ul><li>**1** - Yes</li><li>**0** - No = 0 </li></ul>Default value for both domain members and stand-alone clients: 1 |
 
-
-## Reference: Windows Time service GPO pre-set values  
+## Reference: Pre-set values for the Windows Time service GPO settings  
 
 The following table lists the global Group Policy settings that are associated with the Windows Time service and the pre-set value associated with each setting. For more information about each setting, see the corresponding registry entries in [Windows Time Service Registry Entries](#windows-time-service-registry-entries) earlier in this article. The following settings are contained in a single GPO called **Global Configuration Settings**.  
 
-### Global Group Policy settings for the Windows Time service
+### Pre-set values for "Global Group Policy" settings
 
 |Group Policy setting|Pre-set value|  
 | --- | --- |
@@ -337,9 +336,9 @@ The following table lists the global Group Policy settings that are associated w
 |**SpikeWatchPeriod**|**90**|  
 |**UpdateInterval**|**100**|  
 
-The following table lists the available settings for the **Configure Windows NTP Client** GPO and the pre-set values that are associated with the Windows Time service. For more information about each setting, see the corresponding registry entries in [Windows Time service registry entries](#windows-time-service-registry-entries) earlier in this article.  
+### Pre-set values for "Configure Windows NTP Client" settings
 
-### NTP Client Group Policy settings for the Windows Time service
+The following table lists the available settings for the **Configure Windows NTP Client** GPO and the pre-set values that are associated with the Windows Time service. For more information about each setting, see the corresponding registry entries in [Windows Time service registry entries](#windows-time-service-registry-entries) earlier in this article.  
 
 |Group Policy setting|Pre-set value|  
 |------------------------|-----------------|  
