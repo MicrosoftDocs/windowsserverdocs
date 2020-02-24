@@ -21,7 +21,7 @@ audience: Admin
 
 In this topic, you learn about tools and settings for Windows Time service (W32Time).  
 
-If you want to synchronize time for only a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see [Where to Find Windows Time Service Configuration Information](https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-top).  
+If you want to synchronize time for only a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional topics about how to configure Windows Time service, see [Where to Find Windows Time Service Configuration Information](windows-time-service-top.md).  
 
 > [!CAUTION]  
 > You should not use the **Net time** command to configure or set time when the Windows Time service is running.  
@@ -314,7 +314,7 @@ In the following tables, "All versions" refers to versions of Windows that inclu
 
 ## Reference: Pre-set values for the Windows Time service GPO settings  
 
-The following table lists the global Group Policy settings that are associated with the Windows Time service and the pre-set value associated with each setting. For more information about each setting, see the corresponding registry entries in [Windows Time Service Registry Entries](#windows-time-service-registry-entries) earlier in this article. The following settings are contained in a single GPO called **Global Configuration Settings**.  
+The following table lists the global Group Policy settings that are associated with the Windows Time service and the pre-set value associated with each setting. For more information about each setting, see the corresponding registry entries in [Reference: Windows Time service registry entries](#reference-windows-time-service-registry-entries) earlier in this article. The following settings are contained in a single GPO called **Global Configuration Settings**.  
 
 ### Pre-set values for "Global Group Policy" settings
 
@@ -338,7 +338,7 @@ The following table lists the global Group Policy settings that are associated w
 
 ### Pre-set values for "Configure Windows NTP Client" settings
 
-The following table lists the available settings for the **Configure Windows NTP Client** GPO and the pre-set values that are associated with the Windows Time service. For more information about each setting, see the corresponding registry entries in [Windows Time service registry entries](#windows-time-service-registry-entries) earlier in this article.  
+The following table lists the available settings for the **Configure Windows NTP Client** GPO and the pre-set values that are associated with the Windows Time service. For more information about each setting, see the corresponding registry entries in [Reference: Windows Time service registry entries](#reference-windows-time-service-registry-entries) earlier in this article.  
 
 |Group Policy setting|Pre-set value|  
 |------------------------|-----------------|  
