@@ -52,7 +52,7 @@ When you use the Per Device model, a temporary license is issued the first time 
 
 When you use the Per User model, licensing is not enforced and each user is granted a license to connect to an RD Session Host from any number of devices. The license server issues licenses from the available RDS CAL pool or the Over-Used RDS CAL pool. It's your responsibility to ensure that all of your users have a valid license and zero Over-Used CALs—otherwise, you're in violation of the Remote Desktop Services license terms.
 
-An example of where one would use the Per Device model would be in an environment where there are two more more shifts using the same computers to access the RD Session Host(s). The Per User model would be best for environments where users have their own dedicated Windows device to access the RD Session Host(s).
+An example of where one would use the Per Device model would be in an environment where there are two or more shifts using the same computers to access the RD Session Host(s). The Per User model would be best for environments where users have their own dedicated Windows device to access the RD Session Host(s).
 
 To ensure you are in compliance with the Remote Desktop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough RDS Per User CALs installed on the license server for all of your users.
 
