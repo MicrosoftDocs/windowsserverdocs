@@ -350,7 +350,7 @@ The following table lists the available settings for the **Configure Windows NTP
 |**SpecialPollInterval**|**3,600**|  
 |**EventLogFlags**|**0**|  
 
-## Network ports that the Windows Time service uses
+## Reference: Network ports that the Windows Time service uses
 
 Windows Time follows the NTP specification, which requires the use of UDP port 123 for all time synchronization communication. This port is reserved by Windows Time and remains reserved at all times. Whenever the computer synchronizes its clock or provides time to another computer, that communication is performed on UDP port 123.  
 
