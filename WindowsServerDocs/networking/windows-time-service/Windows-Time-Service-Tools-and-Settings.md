@@ -239,7 +239,7 @@ Windows Time service stores information under the following registry subkeys:
 - [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**](#ntpclient)
 - [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer**](#ntpserver)
 
-Additionally, for troubleshooting purposes, you can [add entries in order to configure logs](#additional-entries-that-control-logging).
+Additionally, for troubleshooting purposes, you can [add entries in order to configure logs](#enabling-w32time-logging).
 
 In the following tables, "All versions" refers to versions of Windows that include Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. Some entries are only available on later Windows versions.
 
