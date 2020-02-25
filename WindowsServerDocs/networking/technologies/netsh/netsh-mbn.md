@@ -16,10 +16,10 @@ ms.date: 02/20/2020
 
 Use **netsh mbn** to query and configure mobile broadband settings and parameters.
 
->[!TIP]
->You can get help on the netsh mbn command by using 
+> [!TIP]
+> You can get help on the netsh mbn command by using 
 >
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh mbn /?
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh mbn /?
 
 The available netsh mbn commands are:
 
