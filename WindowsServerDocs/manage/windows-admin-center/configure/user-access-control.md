@@ -105,7 +105,7 @@ One of the benefits of using Azure AD as an additional layer of security to cont
 
 When you install Windows Admin Center on Windows 10, it's ready to use single sign-on. If you're going to use Windows Admin Center on Windows Server, however, you need to set up some form of Kerberos delegation in your environment before you can use single sign-on. The delegation configures the gateway computer as trusted to delegate to the target node. 
 
-To configure [Resource-based constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) in your environment, use the following PowerShell example. This example shows how you would configure a Windows Server [node01.contoso.com] to accept delegation from your Windows Admin Center getway [wac.contoso.com] in the contoso.com domain.
+To configure [Resource-based constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) in your environment, use the following PowerShell example. This example shows how you would configure a Windows Server [node01.contoso.com] to accept delegation from your Windows Admin Center gateway [wac.contoso.com] in the contoso.com domain.
 
 ```powershell
 Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToAccount (Get-ADComputer wac)
