@@ -54,7 +54,7 @@ When you use the Per User model, licensing is not enforced and each user is gran
 
 An example of where one would use the Per Device model would be in an environment where there are two or more shifts using the same computers to access the RD Session Host(s). The Per User model would be best for environments where users have their own dedicated Windows device to access the RD Session Host(s).
 
-To ensure you are in compliance with the Remote Desktop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have a enough RDS Per User CALs installed on the license server for all of your users.
+To ensure you are in compliance with the Remote Desktop Services license terms, track the number of RDS Per User CALs used in your organization and be sure to have enough RDS Per User CALs installed on the license server for all of your users.
 
 You can use the Remote Desktop Licensing Manager to track and generate reports on RDS Per User CALs.
 
