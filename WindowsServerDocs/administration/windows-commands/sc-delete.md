@@ -43,9 +43,18 @@ Use **Add or Remove Programs** on **Control Panel** to delete DHCP, DNS, or any 
 
 ## Examples
 
+### DOS Examples
+
 To delete the service subkey **NewServ** from the registry on the local computer, type:
 ```
 sc delete newserv
+```
+
+### Powershell Examples
+
+To delete the service subkey **NewServ** from the registry on the local computer, type:
+```
+sc.exe delete newserv
 ```
 
 #### Additional references
