@@ -312,5 +312,5 @@ Procedure to manually Install or update the integration services:
 
 > [!NOTE]
 > These steps **can't be automated** or done within a Windows PowerShell session for **online** virtual machines.
-> You can apply them to **offline** VHDX images; [see this article](https://docs.microsoft.com/en-us/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running).
+> You can apply them to **offline** VHDX images; see [How to install integration services when the virtual machine is not running](https://docs.microsoft.com/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running).
 > You can also automate the deploy of the integration services through **Configuration Manager** with the VMs **Online**, but you need to restart the VMs at the end of the installation; [see this article](https://docs.microsoft.com/en-us/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)
