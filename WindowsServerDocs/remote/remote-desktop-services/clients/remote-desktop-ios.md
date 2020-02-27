@@ -166,6 +166,9 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 The iOS client currently only supports Swiftpoint GT and ProPoint mice. For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
+> [!TIP]
+> Swiftpoint is offering an [exclusive discount on the ProPoint mouse](https://www.swiftpoint.com/microsoft) for iOS client users.
+
 ## Use a keyboard in a remote session
 
 You can use either an on-screen keyboard or physical keyboard in your remote session.
@@ -174,20 +177,7 @@ For on-screen keyboards, use the button on the right edge of the bar above the k
 
 If Bluetooth is enabled for your iOS device, the client automatically detects the Bluetooth keyboard.
 
-Be aware that, due to limitations on the OS, special keys such as Ctrl, Option, and Function will not work as expected with a Bluetooth keyboard. The following keys work:
+While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 
-- Alphanumeric keys
-- Cursor keys
-- Tab: Tab works, but Shift+Tab does not work
-- Home / Pos1: Alt+Left = Home
-- End: Alt+Right = End
-- Page Up: Alt+Up = Page Up
-- Page Down: Alt+Down = Page Down
-- Select All: Command+A = Ctrl+A (Select all in most programs)
-- Cut: Command+X = Ctrl+X (Cut in most programs)
-- Copy: Command+C = Ctrl+C (Copy in most programs)
-- Paste: Command+V = Ctrl+V (Paste in most programs)
-- Symbols: Alt+Alphanumeric keys will produce different symbols depending on the language configured
-
-> [!TIP]
+> [!IMPORTANT]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
