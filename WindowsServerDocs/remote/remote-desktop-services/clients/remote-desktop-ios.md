@@ -164,7 +164,9 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Supported input devices
 
-The iOS client currently only supports Swiftpoint GT and ProPoint mice. For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
+Basic Bluetooth mouse support is available in iOS 13 and iPadOS as an accessibility feature (https://support.apple.com/HT210546). Deeper mouse integration in the RD Client is available by using the Swiftpoint GT and ProPoint mice. In addition, external keyboards that are compatible with iOS and iPadOS are also supported.
+
+For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
 > [!TIP]
 > Swiftpoint is offering an [exclusive discount on the ProPoint mouse](https://www.swiftpoint.com/microsoft) for iOS client users.
