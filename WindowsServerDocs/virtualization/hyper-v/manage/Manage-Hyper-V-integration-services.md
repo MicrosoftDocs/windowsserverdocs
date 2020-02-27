@@ -297,8 +297,8 @@ For more details about Linux guests, see [Supported Linux and FreeBSD virtual ma
 
 ## Install or update integration services
 
->[!NOTE]
->For hosts earlier than Windows Server 2016 and Windows 10, you'll need to **manually install or update** the integration services in the guest operating systems. 
+> [!NOTE]
+> For hosts earlier than Windows Server 2016 and Windows 10, you'll need to **manually install or update** the integration services in the guest operating systems. 
 
 Procedure to manually Install or update the integration services:
 
@@ -310,9 +310,7 @@ Procedure to manually Install or update the integration services:
   
 4.  After the installation finishes, all integration services are available for use.
 
->[!NOTE]
->These steps **can't be automated** or done within a Windows PowerShell session for **online** virtual machines.
-
->You can apply them to **offline** VHDX images; [see this article](https://docs.microsoft.com/en-us/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running).
-
->You can also automate the deploy of the integration services through **Configuration Manager** with the VMs **Online**, but you need to restart the VMs at the end of the installation; [see this article](https://docs.microsoft.com/en-us/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)
+> [!NOTE]
+> These steps **can't be automated** or done within a Windows PowerShell session for **online** virtual machines.
+> You can apply them to **offline** VHDX images; [see this article](https://docs.microsoft.com/en-us/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running).
+> You can also automate the deploy of the integration services through **Configuration Manager** with the VMs **Online**, but you need to restart the VMs at the end of the installation; [see this article](https://docs.microsoft.com/en-us/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)
