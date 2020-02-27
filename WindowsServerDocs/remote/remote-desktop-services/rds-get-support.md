@@ -18,7 +18,6 @@ manager: scottman
 
 In addition to the information here in the Windows Server 2016 library, you can use the following resources to learn about and get help with Remote Desktop Services:
 
-- On Twitter? So are we: [@RDS4U](https://twitter.com/RDS4U)
 - Participate in general discussions about Remote Desktop Services in the [RDS TechNet forum](https://aka.ms/technetforum-rds).
 - For discussion about Remote Desktop applications/clients for Windows, Android, iOS, and Mac, visit the [Remote Desktop clients TechNet forum](https://aka.ms/technetforum-rdc).
 - For MultiPoint, check out the [MultiPoint TechNet forum](https://aka.ms/multipoint-forum).
