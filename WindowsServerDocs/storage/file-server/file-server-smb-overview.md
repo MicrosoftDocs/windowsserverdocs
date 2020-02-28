@@ -35,7 +35,7 @@ The following sections describe functionality that was added in SMB 3 and subseq
 
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |
-| Ability to require write-through to disk on file shares that aren't continuously available | New | To provide some added assurance that writes to a file share make it all the way through the software and hardware stack to the physical disk prior to the write operation returning as completed, you can enable write-through on the file share using either the `NET USE /WRITETHROUGH` command ore the `New-SMBMapping -UseWriteThrough` PowerShell cmdlet. There's some amount of performance hit to using write-through; see the blog post [Controlling write-through behaviors in SMB](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-write-through-behaviors-in-smb/bc-p/1083417#M677) for further discussion. |
+| Ability to require write-through to disk on file shares that aren't continuously available | New | To provide some added assurance that writes to a file share make it all the way through the software and hardware stack to the physical disk prior to the write operation returning as completed, you can enable write-through on the file share using either the `NET USE /WRITETHROUGH` command or the `New-SMBMapping -UseWriteThrough` PowerShell cmdlet. There's some amount of performance hit to using write-through; see the blog post [Controlling write-through behaviors in SMB](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-write-through-behaviors-in-smb/bc-p/1083417#M677) for further discussion. |
 
 ## Features added in Windows Server, version 1709, and Windows 10, version 1709
 
