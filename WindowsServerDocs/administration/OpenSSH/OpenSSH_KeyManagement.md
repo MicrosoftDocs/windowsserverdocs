@@ -152,7 +152,7 @@ This example uses the Repair-AuthorizedKeyPermissions function in the OpenSSHUti
 # Make sure that the .ssh directory exists in your server's home folder
 ssh user1@domain1@contoso.com mkdir C:\users\user1\.ssh\
 
-# Use scp to opy the public key file generated previously to authorized_keys on your server
+# Use scp to copy the public key file generated previously to authorized_keys on your server
 scp C:\Users\user1\.ssh\id_ed25519.pub user1@domain1@contoso.com:C:\Users\user1\.ssh\authorized_keys
 
 # Appropriately ACL the authorized_keys file on your server  
