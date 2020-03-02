@@ -293,13 +293,15 @@ To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-
 
 ## Error "There are no more endpoints available from the endpoint mapper" when running inventory against a Windows Server 2003 source computer
 
-When attempting to run inventory with the Storage Migration Service orchestrator server patched with the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) cumulative update or later, you receive the following error:
+When attempting to run inventory with the Storage Migration Service orchestrator against a Windows Server 2003 source computer, you receive the following error:
 
     There are no more endpoints available from the endpoint mapper  
 
-To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
+This issue is resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update.
 
-Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause Storage Migration Service to no longer start. To resolve this issue, you can backup and delete the Storage Migration Service database:
+## Uninstalling a cumulutative update prevents Storage Migration Service from starting
+
+Uninstalling Windows Server cumulative updates may prevent the Storage Migration Service from starting. To resolve this issue, you can backup and delete the Storage Migration Service database:
 
 1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
@@ -370,13 +372,7 @@ Examining the source computer shows that the original IP address fails to change
 
 This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address, subnet, and gateway. 
 
-This issue is caused by a regression in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. There are currently two workarounds for this issue:
-
-  - Prior to cut over: instead of setting a new static IP address on cutover, select "Use DHCP" and ensure that a DHCP scope covers that subnet. SMS will configure the source computer to use DHCP on source computer interfaces and cut over will proceed normally. 
-  
-  - If cut over is already stuck: logon to the source computer and enable DHCP on its network interfaces, after ensuring that a DHCP scope covers that subnet. When the source computer acquires a DHCP-provided IP address, SMS will proceed with the cut over normally.
-  
-In both workarounds, after cut over completes, you can then set a static IP address on the old source computer as you see fit and stop using DHCP.   
+This issue is resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update.
 
 ## Slower than expected re-transfer performance
 
