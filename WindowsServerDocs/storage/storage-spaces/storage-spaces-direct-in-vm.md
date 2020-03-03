@@ -60,10 +60,6 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
     Get-storagesubsystem clus* | set-storagehealthsetting -name “System.Storage.PhysicalDisk.AutoReplace.Enabled” -value “False”
     ```
 
--   Not supported: Host level virtual disk snapshot/restore
-
-    Instead use traditional guest level backup solutions to backup and restore the data on the Storage Spaces Direct volumes.
-
 -   To give greater resiliency to possible VHD / VHDX / VMDK storage latency in guest clusters, increase the Storage Spaces I/O timeout value:
 
     `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout`
@@ -71,6 +67,16 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
     `dword: 00007530`
 
     The decimal equivalent of Hexadecimal 7530 is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
+
+## Not supported
+
+-   Host level virtual disk snapshot/restore
+
+    Instead use traditional guest level backup solutions to backup and restore the data on the Storage Spaces Direct volumes.
+
+-   Host level virtual disk size change
+
+    The virtual disks exposed through the virtual machine must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the virtual machines and adding them to the pool. It’s highly recommended to use virtual disks of the same size and characteristics as the current virtual disks.
 
 ## See also
 
