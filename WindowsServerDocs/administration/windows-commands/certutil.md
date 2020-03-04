@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 Certutil.exe is a command-line program that is installed as part of Certificate Services. You can use Certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
 
-When certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. When cerutil is run on a non-certification authority, the command defaults to running the certutil [-dump](#-dump) verb.
+When certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. When certutil is run on a non-certification authority, the command defaults to running the certutil [-dump](#-dump) verb.
 
 > [!WARNING]
 > Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running the commands shown in the [Syntax notations](#syntax-notations) section.
