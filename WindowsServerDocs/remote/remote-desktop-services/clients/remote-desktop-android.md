@@ -12,7 +12,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2019
+ms.date: 03/07/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Android client
@@ -97,7 +97,7 @@ The Remote Desktop client supports pinning connections to your home screen by us
 
 1. Tap **Apps** to launch the apps menu.
 2. Tap **Widgets**.
-3. Swipe through the widgets and look for the Remote Desktop icon with the description: “Pin Remote Desktop.”
+3. Swipe through the widgets and look for the Remote Desktop icon with the description: "Pin Remote Desktop."
 4. Tap and hold that Remote Desktop widget and move it to the home screen.
 5. When you release the icon, you'll see the saved remote desktops. Choose the connection that you want to save to your home screen.
 
@@ -179,7 +179,7 @@ Here's a brief introduction to how to open and navigate your Remote Desktop sess
 ### Start a Remote Desktop connection
 
 1. Tap **the name of your Remote Desktop connection** to start the session.
-2. If you're asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don’t ask me again for connections to this computer** to always accept the certificate by default.
+2. If you're asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don't ask me again for connections to this computer** to always accept the certificate by default.
 
 ### Connection bar
 
@@ -223,3 +223,9 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Right-click          | Tap with two fingers                                                    |
 | Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                         |
 | Mouse pointer | Mouse wheel          | Tap and hold with two fingers, then drag up or down                     |
+
+## Join the Beta channel
+
+If you want access to the latest features before anyone else and want to help identify issues before new versions are released to all users, the Beta channel is for you! This is also a great way for enterprise admins to see what's coming to their users soon and validate the client in their environment.
+
+To join the Beta, simply provide consent to join the Beta and download the client using the link on the page. You will receive early versions of the client directly through the Google Play Store as with other apps.
