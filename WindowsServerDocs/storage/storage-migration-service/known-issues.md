@@ -3,7 +3,7 @@ title: Storage Migration Service known issues
 description: Known issues and troubleshooting support for Storage Migration Service, such as how to collect logs for Microsoft Support.
 author: nedpyle
 ms.author: nedpyle
-manager: siroy
+manager: tiaascs
 ms.date: 02/10/2020
 ms.topic: article
 ms.prod: windows-server
@@ -293,13 +293,15 @@ To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-
 
 ## Error "There are no more endpoints available from the endpoint mapper" when running inventory against a Windows Server 2003 source computer
 
-When attempting to run inventory with the Storage Migration Service orchestrator server patched with the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) cumulative update or later, you receive the following error:
+When attempting to run inventory with the Storage Migration Service orchestrator against a Windows Server 2003 source computer, you receive the following error:
 
     There are no more endpoints available from the endpoint mapper  
 
-To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
+This issue is resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update.
 
-Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause Storage Migration Service to no longer start. To resolve this issue, you can backup and delete the Storage Migration Service database:
+## Uninstalling a cumulutative update prevents Storage Migration Service from starting
+
+Uninstalling Windows Server cumulative updates may prevent the Storage Migration Service from starting. To resolve this issue, you can backup and delete the Storage Migration Service database:
 
 1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
@@ -341,7 +343,7 @@ When attempting to run cut over of a Windows Server 2008 R2 cluster source, the 
 
 This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the the destination cluster netname and IP address to match the original source. 
 
-## Cutover hangs on "38% Mapping network interfaces on the source computer..." 
+## Cutover hangs on "38% Mapping network interfaces on the source computer..." when using DHCP 
 
 When attempting to run cut over of a source computer, having set the source computer to use a new static (not DHCP) IP address on one or more network interfaces, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
 
@@ -370,13 +372,7 @@ Examining the source computer shows that the original IP address fails to change
 
 This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address, subnet, and gateway. 
 
-This issue is caused by a regression in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. There are currently two workarounds for this issue:
-
-  - Prior to cut over: instead of setting a new static IP address on cutover, select "Use DHCP" and ensure that a DHCP scope covers that subnet. SMS will configure the source computer to use DHCP on source computer interfaces and cut over will proceed normally. 
-  
-  - If cut over is already stuck: logon to the source computer and enable DHCP on its network interfaces, after ensuring that a DHCP scope covers that subnet. When the source computer acquires a DHCP-provided IP address, SMS will proceed with the cut over normally.
-  
-In both workarounds, after cut over completes, you can then set a static IP address on the old source computer as you see fit and stop using DHCP.   
+This issue is resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update.
 
 ## Slower than expected re-transfer performance
 
@@ -487,6 +483,49 @@ At this stage, Storage Migration Service orchestrator is attempting remote regis
  - firewall does not allow remote registry connections to the source server from the Orchestrator.
  - The source migration account does not have remote registry permissions to connect to the source computer.
  - The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
+ 
+ ## Cutover hangs on "38% Mapping network interfaces on the source computer..." 
+
+When attempting to run cut over of a source computer, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
+
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          1/11/2020 8:51:14 AM
+    Event ID:      20505
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      nedwardo.contosocom
+    Description:
+    Couldn't establish a CIM session with the computer.
+
+    Computer: 172.16.10.37
+    User Name: nedwardo\MsftSmsStorMigratSvc
+    Error: 40970
+    Error Message: Unknown error (0xa00a)
+
+    Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
+
+This issue is caused by Group Policy that sets the following registry value on the source computer:
+
+ "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+ LocalAccountTokenFilterPolicy = 0"
+ 
+This setting is not part of standard Group Policy, it's an add-on configured using the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319):
+ 
+ - Windows Server 2012 R2: "Computer Configuration\Administrative Templates\SCM: Pass the Hash Mitigations\Apply UAC restrictions to local accounts on network logons"
+ - Widows Server 2016: "Computer Configuration\Administrative Templates\MS Security Guide\Apply UAC restrictions to local accounts on network logons"
+ 
+It can also be set using Group Policy Preferences with a custom registry setting. You can use the GPRESULT tool to determine which policy is applying this setting to the source computer.
+
+The Storage Migration Service temporarily enables the [LocalAccountTokenFilterPolicy](https://support.microsoft.com/help/951016/description-of-user-account-control-and-remote-restrictions-in-windows) as part of the cut over process, then removes it when done. When Group Policy applies a conflicting Group Policy Object (GPO), it overrides the Storage Migration Service and prevents cut over.
+
+To workaround this issue, use one of the following options:
+
+1. Temporarily move the source computer from the Active Directory OU that applies this conflicting GPO. 
+2. Temporarily disable the GPO that applies this conflicting policy.
+3. Temporarily create a new GPO that sets this setting to Disabled and applies to specific OU of source servers, with a higher precedence than any other GPOs.
 
 ## See also
 
