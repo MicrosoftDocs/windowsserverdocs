@@ -26,4 +26,4 @@ Displays current volume shadow copy backups and all installed shadow copy writer
 |[Vssadmin list shadowstorage](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788045(v%3dws.11))|Lists all shadow copy storage associations on the system.|
 |[Vssadmin list volumes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788064(v%3dws.11))|Lists volumes that are eligible for shadow copies.|
 |[Vssadmin list writers](vssadmin-list-writers.md)|Lists all subscribed volume shadow copy writers on the system.|
-|[Vssadmin resize shadowstorage](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788050(v%3dws.11))|Resizes the maximum size for a shadow copy storage association.|
+|[Vssadmin resize shadowstorage](vssadmin-resize-shadowstorage.md)|Resizes the maximum size for a shadow copy storage association.|
