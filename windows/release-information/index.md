@@ -1,1 +1,1 @@
-# Welcome to rel-info!
+# Welcome to release info!
