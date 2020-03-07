@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 02/25/2020
+ms.date: 03/10/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -25,7 +25,21 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.675  |
-|Insider    |1.2.675  |
+|Insider    |1.2.787  |
+
+## Updates for version 1.2.787
+
+*Date published: 03/10/2020*
+
+Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+
+- Renamed the Update action for Workspaces to Refresh for consistency with other Remote Desktop clients.
+- You can now refresh a Workspace directly from its context menu.
+- Manually refreshing a Workspace now ensures all the local content is updated.
+- You can now reset the client's user data from the About page without needing to uninstall the app.
+- You can also reset the client's user data using msrdcw.exe /reset with an optional /f option.
+- We now automatically look for an update when navigating to the About page. Also updated how we report that an update is available.
+- Updated the color of some of the buttons for consistency.
 
 ## Updates for version 1.2.675
 
@@ -47,9 +61,9 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
 
 - You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select **Settings**.
-- Fixed an issue where the connection settings didn’t display the correct available scale factors.
-- Fixed an issue where Narrator couldn’t read the dialogue shown while the connection initiated.
-- Fixed an issue where the wrong user name displayed when the Azure Active Directory and Active Directory names didn’t match.
+- Fixed an issue where the connection settings didn't display the correct available scale factors.
+- Fixed an issue where Narrator couldn't read the dialogue shown while the connection initiated.
+- Fixed an issue where the wrong user name displayed when the Azure Active Directory and Active Directory names didn't match.
 - Fixed an issue that made the client stop responding when initiating a connection while not connected to a network.
 - Fixed an issue that caused the client to stop responding when attaching a headset.
 
