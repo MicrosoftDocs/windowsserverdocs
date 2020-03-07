@@ -31,7 +31,7 @@ Here are a few things you can use Windows Admin Center for:
 
 |     |     |
 | --- | --- |
-| ![](media/simple-icon.png)| **Simplify server management** <br/> Manage your servers and clusters with modernized versions of familiar tools such as Server Manager. Install in under five minutes and manage servers in your environment immediately, no target configuration required. For details, see [What is Windows Admin Center?](understand/what-is.md). |
+| ![](media/simple-icon.png)| **Simplify server management** <br/> Manage your servers and clusters with modernized versions of familiar tools such as Server Manager. Install in under five minutes and manage servers in your environment immediately, no additional configuring required. For details, see [What is Windows Admin Center?](understand/what-is.md). |
 | ![](media/future-icon.png)| **Work with hybrid solutions** <br/> Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services. For details, see [Azure hybrid services](azure/index.md) |
 | ![](media/secure-icon.png)| **Streamline hyperconverged management** <br/> Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more. For details, see [Manage Hyper-Converged Infrastructure with Windows Admin Center](use/manage-hyper-converged.md)|
 
