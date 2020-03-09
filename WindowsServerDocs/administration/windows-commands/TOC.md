@@ -483,6 +483,7 @@
 #### [vssadmin delete shadows](vssadmin-delete-shadows.md)
 #### [vssadmin list shadows](vssadmin-list-shadows.md)
 #### [vssadmin list writers](vssadmin-list-writers.md)
+#### [vssadmin resize shadowstorage](vssadmin-resize-shadowstorage.md)
 ### [unlodctr](unlodctr_1.md)
 ### [ver](ver.md)
 ### [verifier](verifier.md)
