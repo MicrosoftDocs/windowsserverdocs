@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 # Remote Desktop client disconnects and can't reconnect to the same session
 
-After Remote Desktop client loses its connection to the remote desktop, the client can't immediately reconnect. The user recieves one of the following error messages:
+After Remote Desktop client loses its connection to the remote desktop, the client can't immediately reconnect. The user receives one of the following error messages:
 
   - The client couldn't connect to the terminal server because of a security error. Make sure you are signed in to the network, then try connecting again.
   - Remote Desktop disconnected. Because of a security error, the client could not connect to the remote computer. Verify that you are logged onto the network and then try connecting again.

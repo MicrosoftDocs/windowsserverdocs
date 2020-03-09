@@ -22,6 +22,10 @@ Storage Migration Service won't transfer files or folders that we know could int
 - pagefile.sys, hiberfil.sys, swapfile.sys, winpepge.sys, config.sys, bootsect.bak, bootmgr, bootnxt
 - Any files or folders on the source server that conflicts with excluded folders on the destination. <br>For example, if there's a N:\Windows folder on the source and it gets mapped to the C:\ volume on the destination, it won't get transferred—regardless of what it contains—because it would interfere with the C:\Windows system folder on the destination.
 
+## Are locked files migrated?
+
+The Storage Migration Service doesn't migrate files that applications exclusively lock. The service does automatically retry three times with a sixty second delay between tries, and you can control the number of attempts and the delay. You can also re-run transfers to copy just the files that were previously skipped due to sharing violations.
+
 ## Are domain migrations supported?
 
 The Storage Migration Service doesn't allow migrating between Active Directory domains. Migrations between servers will always join the destination server to the same domain. You can use migration credentials from different domains in the Active Directory forest. The Storage Migration Service does support migrating between workgroups.  
@@ -138,6 +142,14 @@ The Storage Migration Service uses an extensible storage engine (ESE) database t
 ## Does the Storage Migration Service migrate locally installed applications from the source computer?
 
 No, the Storage Migration Service doesn't migrate locally installed applications. After you complete migration, re-install any applications onto the destination computer that were running on the source computer. There's no need to reconfigure any users or their applications; the Storage Migration Service is designed to make the server change invisible to clients. 
+
+## What happens with existing files on the destination server?
+
+When performing a transfer, the Storage Migration Service seeks to mirror data from the source server. The destination server should not contain any production data or connected users, as that data could be overwritten. By default, the first transfer makes a backup copy of any data on the destination server as a safeguard. On all subsequent transfers, by default, the Storage Migration Service will mirror data onto the destination; this means not only adding new files, but also arbitrarily overwriting any existing files and deleting any files not present on the source. This behavior is intentional and provides perfect fidelity with the source computer. 
+
+## What do the error numbers mean in the transfer CSV?
+
+Most errors found in the transfer CSV file are Windows System Error Codes. You can find out what each error means by reviewing the [Win32 error codes documentation](https://docs.microsoft.com/windows/win32/debug/system-error-codes). 
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 

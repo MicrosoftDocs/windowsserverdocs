@@ -9,10 +9,10 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
-author: lizap
-manager: dongill
-ms.author: elizapo
-date: 08/27/2019
+author: Heidilohr
+manager: lizross
+ms.author: helohr
+date: 02/11/2020
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client
@@ -27,60 +27,13 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md)
 > - The iOS client supports devices running iOS 6.x and newer.
 
-## Get the Remote Desktop Beta client and start using it
-The iOS Beta client available today through Apple TestFlight supports connections to Windows Virtual Desktop resources.
-
-### Download the Remote Desktop iOS Beta client from Apple TestFlight
-Here's how to set up the Remote Desktop Beta client on your iOS device:
-
-1. Install the [Apple TestFlight](https://apps.apple.com/us/app/testflight/id899247664) app on your iOS device.
-2. On your iOS device, open a browser and navigate to [aka.ms/rdiosbeta](https://aka.ms/rdiosbeta).
-3. Under the label **Step 2 Join the Beta** select **Start Testing**.
-4. When you are redirected to the TestFlight app, select **Accept** and then **Install** the client.
-
-### Add a connection to a PC
-To create a remote connection to a PC:
-
-1. In the Connection Center, tap **+**, and then tap **Add PC**.
-2. Enter the name of the remote PC into **PC Name**. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-3. Select the **User Account** you'll use to access the remote PC.
-   - Select **Ask Every Time** for the client to ask for your credentials every time you connect to the remote PC.
-   - Select **Add User Account** to save an account that you use frequently so you don't have to enter credentials every time you sign in. Follow [these instructions](#manage-your-user-accounts) to manage your user accounts.
-4. You can also set the following optional parameters:
-   - In **Friendly Name**, you can enter an easier-to-remember name for the PC you're connecting to.
-   - **Admin Mode** lets you connect to an admin session on the remote PC.
-   - **Swap Mouse Buttons** switches the commands sent by right and left mouse gestures. Ideal for left-handed users.
-   - The **Gateway** is the Remote Desktop gateway you'll use to connect to a computer from an external network. Contact your system administrator for more information.
-   - **Sound** selects the device your remote session uses for audio. You can choose to play sound on your local device, the remote device, or not at all.
-   - **Microphone** enables microphone redirection. This setting is disabled by default.
-   - **Camera** enables camera redirection. This setting is disabled by default.
-   - **Clipboard** enables clipboard redirection. This setting is enabled by default.
-   - **Storage** enables local storage redirection. This setting is disabled by default.
-5. Select **Save** to add the remote PC connection.
-
-### Add remote resources
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The iOS client supports resources published from **Remote Desktop Services** and **Windows Virtual Desktop** deployments. To add remote resources:
-
-1. In the Connection Center tap **+**, and then tap **Add Workspace**.
-2. Enter the **Feed URL**. This can be a URL or email address:
-   - The **URL** is the RD Web Access server's URL, provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use `https://rdweb.wvd.microsoft.com`.
-   - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
-3. Tap **Next**.
-4. Provide your sign in information when prompted. This can vary based on the deployment and can include:
-   - **User name**, the user name that has permission to access the resources.
-   - **Password**, the password associated with the user name.
-   - **Additional factor**, which you may be prompted for if authentication was configured that way by your admin.
-5. Tap **Save**.
-
-The remote resources will be displayed in the Connection Center.
-
 ## Get the Remote Desktop client and start using it
 
 ### Download the Remote Desktop client from the iOS store
 
 Follow these steps to get started with Remote Desktop on your iOS device:
 
-1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
+1. Download the Microsoft Remote Desktop client from the [iOS App Store](https://aka.ms/rdios) or [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
@@ -137,7 +90,7 @@ To delete a user account:
 
 1. In the Connection Center, tap **Settings**, and then tap **User Accounts**.
 2. Select the account you would like to delete.
-3. Tap **Delete**.   
+3. Tap **Delete**.
 
 ## Connect to an RD Gateway to access internal assets
 
@@ -152,6 +105,7 @@ To set up a new gateway:
    - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
 
 ## Navigate the Remote Desktop session
+
 When you start a remote desktop session, there are tools available that you can use to navigate the session.
 
 ### Start a Remote Desktop Connection
@@ -172,6 +126,7 @@ The connection bar gives you access to additional navigation controls.
 - **Move the connection bar**: Tap and hold the connection bar, and then drag and drop to a new location at the top of the screen.
 
 ### Session selection
+
 You can have multiple connections open to different PCs at the same time. Tap the connection bar to display the session selection bar on the left-hand side of the screen. The session selection bar enables you to view your open connections and switch between them.
 
 - Switch between apps in an open remote resource session.
@@ -209,9 +164,12 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Supported input devices
 
-The [Remote Desktop iOS beta client](https://aka.ms/rdiosbeta) supports the Swiftpoint GT and ProPoint physical mice. Swiftpoint is offering an [exclusive discount](https://www.swiftpoint.com/microsoft/) on the GT for iOS beta client users.
+Basic [Bluetooth mouse support](https://support.apple.com/HT210546) is available in iOS 13 and iPadOS as an accessibility feature. Deeper mouse integration in the RD Client is available by using the Swiftpoint GT and ProPoint mice. In addition, external keyboards that are compatible with iOS and iPadOS are also supported.
 
-The iOS client currently only supports Swiftpoint mice. Refer to the [What's new in the iOS client](ios-whatsnew.md) page and the [iOS App Store](https://aka.ms/rdios) for news about support for other devices in the future.
+For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
+
+> [!TIP]
+> Swiftpoint is offering an [exclusive discount on the ProPoint mouse](https://www.swiftpoint.com/microsoft) for iOS client users.
 
 ## Use a keyboard in a remote session
 
@@ -221,20 +179,7 @@ For on-screen keyboards, use the button on the right edge of the bar above the k
 
 If Bluetooth is enabled for your iOS device, the client automatically detects the Bluetooth keyboard.
 
-Be aware that, due to limitations on the OS, special keys such as Ctrl, Option, and Function will not work as expected with a Bluetooth keyboard. The following keys work:
+While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 
-- Alphanumeric keys
-- Cursor keys
-- Tab: Tab works, but Shift+Tab does not work
-- Home / Pos1: Alt+Left = Home
-- End: Alt+Right = End
-- Page Up: Alt+Up = Page Up
-- Page Down: Alt+Down = Page Down
-- Select All: Command+A = Ctrl+A (Select all in most programs)
-- Cut: Command+X = Ctrl+X (Cut in most programs)
-- Copy: Command+C = Ctrl+C (Copy in most programs)
-- Paste: Command+V = Ctrl+V (Paste in most programs)
-- Symbols: Alt+Alphanumeric keys will produce different symbols depending on the language configured
-
-> [!TIP]
+> [!IMPORTANT]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

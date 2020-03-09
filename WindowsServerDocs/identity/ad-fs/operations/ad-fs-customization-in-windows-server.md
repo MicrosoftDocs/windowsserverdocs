@@ -74,7 +74,7 @@ To assign a custom theme per RP use the following procedure:
 `Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme`  
   
 ## Home Realm Discovery  
-For home realm dicovery customization see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  
+For home realm discovery customization see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  
   
 ## Updated password page  
 For information on customizing the update password page see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  

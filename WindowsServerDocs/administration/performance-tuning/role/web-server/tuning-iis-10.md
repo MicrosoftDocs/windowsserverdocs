@@ -118,7 +118,7 @@ The settings in this section affect the IISÂ 10.0 worker process behavior. Mos
 
 %SystemRoot%\\system32\\inetsrv\\config\\applicationHost.config
 
-Use Appcmd.exe, the IIS 10.0 Management Console, the WebAdministration or IISAdministration PowerShell Cmdlets to change them. Most settings are automatically detected, and they do not require a restart of the IIS 10.0 worker processes or web application server. For more info about the applicationHost.config file, see [Introduction to ApplicationHost.config](http://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig).
+Use Appcmd.exe, the IIS 10.0 Management Console, the WebAdministration or IISAdministration PowerShell Cmdlets to change them. Most settings are automatically detected, and they do not require a restart of the IIS 10.0 worker processes or web application server. For more info about the applicationHost.config file, see [Introduction to ApplicationHost.config](https://www.iis.net/learn/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig).
 
 
 ## Ideal CPU setting for NUMA hardware

@@ -287,7 +287,7 @@ The steps that follow constitute the OBO flow and are explained with the help of
 
   1. The client application makes a request to API A with token A.  
   Note: While configuring OBO flow in AD FS make sure scope `user_impersonation` is selected and client do request `user_impersonation` scope in the request. 
-  2. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A. For more details refer to On-Behalf Of sample here Add link.  
+  2. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A.
   3. The AD FS token issuance endpoint validates API A's credentials with token A and issues the access token for API B (token B). 
   4. Token B is set in the authorization header of the request to API B. 
   5. Data from the secured resource is returned by API B. 
