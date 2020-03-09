@@ -33,9 +33,9 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qZVh), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qXhC), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qRVA)
 
-- Renamed the **Update** action for Workspaces to **Refresh** for consistency with other Remote Desktop clients.
+- Renamed the "Update" action for Workspaces to "Refresh" for consistency with other Remote Desktop clients.
 - You can now refresh a Workspace directly from its context menu.
-- Manually refreshing a Workspace now ensures all the local content is updated.
+- Manually refreshing a Workspace now ensures all local content is updated.
 - You can now reset the client's user data from the About page without needing to uninstall the app.
 - You can also reset the client's user data using msrdcw.exe /reset with an optional /f parameter.
 - We now automatically look for a client update when navigating to the About page.
