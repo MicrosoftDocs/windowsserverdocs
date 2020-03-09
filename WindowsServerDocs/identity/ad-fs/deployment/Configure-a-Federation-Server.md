@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 
 # Configure a Federation Server
 
-<<<<<<< HEAD
+
 After you install the Active Directory Federation Services \(AD FS\) role service on your computer, you are ready to configure this computer to become a federation server. You can do one of the following:  
   
 -   [Configure the first federation server in a new federation server farm](Configure-a-Federation-Server.md#configure-the-first-federation-server-in-a-new-federation-server-farm)  
@@ -430,5 +430,5 @@ You can add a federation server to an existing farm by using either an existing 
 
 [Deploying a Federation Server Farm](../../ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)
 
->>>>>>> fcab56f42ee31b6df93b5bfc6510426117a1389c
+
 
