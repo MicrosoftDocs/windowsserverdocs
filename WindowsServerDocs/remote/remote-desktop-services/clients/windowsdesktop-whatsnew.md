@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 - You can now refresh a Workspace directly from its context menu.
 - Manually refreshing a Workspace now ensures all local content is updated.
 - You can now reset the client's user data from the About page without needing to uninstall the app.
-- You can also reset the client's user data using msrdcw.exe /reset with an optional /f parameter.
+- You can also reset the client's user data using msrdcw.exe /reset with an optional /f parameter to skip the prompt.
 - We now automatically look for a client update when navigating to the About page.
 - Updated the color of the buttons for consistency.
 
