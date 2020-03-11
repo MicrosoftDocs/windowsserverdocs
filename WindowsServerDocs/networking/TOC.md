@@ -204,6 +204,7 @@
 ### [Network Shell (Netsh) example batch file](technologies/netsh/netsh-wins.md)
 ### [Netsh http commands](technologies/netsh/netsh-http.md)
 ### [Netsh interface portproxy commands](technologies/netsh/netsh-interface-portproxy.md)
+### [Netsh mbn commands](technologies/netsh/netsh-mbn.md)
 
 ## [Network subsystem performance tuning](technologies/network-subsystem/net-sub-performance-top.md)
 ### [Choosing a network adapter](technologies/network-subsystem/net-sub-choose-nic.md)
