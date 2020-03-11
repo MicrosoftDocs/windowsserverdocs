@@ -226,8 +226,8 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Join the Beta channel
 
-If you want access to the latest features before anyone else and want to help identify issues before new versions are released to all users, then the Beta channel is for you! This is also a great way for enterprise admins to see what's coming to their users soon and validate the client in their environment.
+If you want access to the latest features before anyone else, or want to help identify issues before new versions are released, then the Beta channel is for you! The Beta channel is also a great way for enterprise admins to validate new versions of the Android client for users in their environment.
 
-To join the Beta, simply provide consent to access early versions and download the client. You will receive early versions directly through the Google Play Store.
+To join the Beta, simply provide consent to access preview versions and download the client. You will receive preview versions directly through the Google Play Store.
 
 [Join the Beta](https://play.google.com/apps/testing/com.microsoft.rdc.androidx)
