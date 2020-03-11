@@ -12,7 +12,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/07/2020
+ms.date: 03/12/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Android client
@@ -226,6 +226,8 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Join the Beta channel
 
-If you want access to the latest features before anyone else and want to help identify issues before new versions are released to all users, the Beta channel is for you! This is also a great way for enterprise admins to see what's coming to their users soon and validate the client in their environment.
+If you want access to the latest features before anyone else and want to help identify issues before new versions are released to all users, then the Beta channel is for you! This is also a great way for enterprise admins to see what's coming to their users soon and validate the client in their environment.
 
-To join the Beta, simply provide consent to join the Beta and download the client using the link on the page. You will receive early versions of the client directly through the Google Play Store as with other apps.
+To join the Beta, simply provide consent to access early versions and download the client. You will receive early versions directly through the Google Play Store.
+
+[Join the Beta](https://play.google.com/apps/testing/com.microsoft.rdc.androidx)
