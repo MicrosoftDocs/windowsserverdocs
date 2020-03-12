@@ -48,6 +48,10 @@ Azure VM deployment steps and wizards vary by scenario. Review the workload's do
 This begins a step-by-step creation tool that selects a Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019 Azure VM as a destination for the migration. Storage Migration Service provides recommended VM sizes to match your source, but you can override them by clicking **See all sizes**.
 <br><br>Source server data is also used to automatically configure your managed disks and their file systems as well as join your new Azure VM to your Active Directory domain. If the VM is Windows Server 2019 (which we recommend), Windows Admin Center installs the Storage Migration Service proxy feature. Once it has created the Azure VM, Windows Admin Center returns to the normal Storage Migration Service transfer workflow.  
 
+Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
+
+> [!VIDEO https://youtu.be/_VqD7HjTewQ] 
+
 ### Deploying Azure VMs as part of Storage Replica
 
 1. From the *Storage Replica* tool within Windows Admin Center, under the *Partnerships* tab, select **New** and then under *Replicate with another server* select **Use a New Azure VM** then select **Next**.
