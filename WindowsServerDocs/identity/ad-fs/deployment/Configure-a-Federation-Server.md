@@ -214,15 +214,7 @@ You can add a federation server to an existing farm by using either an existing 
         > [!IMPORTANT]  
         > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012 and SQL Server 2014.  
   
-## See Also 
 
-[AD FS Deployment](../../ad-fs/AD-FS-Deployment.md)  
-
-[Windows Server 2012 R2 AD FS Deployment Guide](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)  
- 
-[Deploying a Federation Server Farm](../../ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)  
-  
-=======
 After you install the Active Directory Federation Services \(AD FS\) role service on your computer, you are ready to configure this computer to become a federation server. You can do one of the following:
 
 -   [Configure the first federation server in a new federation server farm](Configure-a-Federation-Server.md#BKMK_1)
