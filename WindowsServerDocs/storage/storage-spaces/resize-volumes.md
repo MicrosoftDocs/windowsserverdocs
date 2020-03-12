@@ -7,13 +7,16 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/07/2019
+ms.date: 03/10/2020
 ---
 
 # Extending volumes in Storage Spaces Direct
 > Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides instructions for resizing volumes on a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster by using Windows Admin Center.
+
+> [!WARNING]
+> **Not supported: resizing the underlying storage used by Storage Spaces Direct.** If you are running Storage Spaces Direct in a virtualized storage environment, including in Azure, resizing or changing the characteristics of the storage devices used by the virtual machines isn't supported and will cause data to become inaccessible. Instead, follow the instructions in the [Add servers or drives](add-nodes.md) section to add additional capacity before extending volumes.
 
 Watch a quick video on how to resize a volume.
 
