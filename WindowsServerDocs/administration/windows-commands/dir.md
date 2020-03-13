@@ -59,7 +59,7 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
   **Asterisk (\*):** Use the asterisk as a substitute for any string of characters, for example:  
   - **dir \*.txt** lists all files in the current directory with extensions that begin with .txt, such as .txt, .txt1, .txt_old.
   - **dir read\*.txt** lists all files in the current directory that begin with "read" and with extensions that begin with .txt, such as .txt, .txt1, or .txt_old.
-  - **dir read\*.\\*** lists all files in the current directory that begin with "read" with any extension.
+  - **dir read\*.\*** lists all files in the current directory that begin with "read" with any extension.
 
   The asterisk wildcard always uses short file name mapping, so you might get unexpected results. For example, the following directory contains two files (t.txt2 and t97.txt): 
  
