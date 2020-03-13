@@ -30,7 +30,7 @@ Extranet Smart Lockout in AD FS 2019 adds the following advantages compared to A
 ### Configuration information
 When ESL is enabled, a new table in the Artifact database, AdfsArtifactStore.AccountActivity, is created and a node is selected in the AD FS farm as the “User Activity” master. In a WID configuration, this node is always the primary node. In a SQL configuration, one node is selected to be the User Activity master.  
 
-To view the node selected as the User Activity master. Get-AdfsFarmInformation.FarmRoles
+To view the node selected as the User Activity master. (Get-AdfsFarmInformation).FarmRoles
 
 All secondary nodes will contact the master node on each fresh login through Port 80 to learn the latest value of the bad password counts and new familiar location values, and update that node after the login is processed.
 
