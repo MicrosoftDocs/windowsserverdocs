@@ -114,7 +114,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
 
 6.  Disable the HttpOnly cookie property in Web Application Proxy on the RDG published application. To allow the RDG ActiveX control access to the Web Application Proxy authentication cookie, you have to disable the HttpOnly property on the Web Application Proxy cookie.
 
-    This requires the following  to be installed [Web Application Proxy Hotfix](https://support.microsoft.com/kb/3000850) or the [https://support.microsoft.com/kb/3000850](https://support.microsoft.com/kb/3000850).
+    This requires you to install the [November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 (KB3000850)](https://support.microsoft.com/kb/3000850).
 
     After installing the hotfix, run the following PowerShell script on the Web Application Proxy server specifying the relevant application name:
 
