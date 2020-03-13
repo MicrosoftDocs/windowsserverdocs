@@ -159,7 +159,7 @@ By default, the remote session will use the same keyboard locale as the OS you'r
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
-Windows Server 2012 R2 introduced support for a new authentication method, Remote Desktop Gateway pluggable authentication and authorization, which provides more flexibility for custom authentication routines. You can try now this authentication model with the Mac client. 
+Windows Server 2012 R2 introduced support for a new authentication method, Remote Desktop Gateway pluggable authentication and authorization, which provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client. 
 
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 are not supported, although the article above discusses them.
@@ -169,4 +169,3 @@ To learn more about this feature, check out [https://aka.ms/paa-sample](https://
 
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
-
