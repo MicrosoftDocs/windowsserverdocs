@@ -114,7 +114,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
 
 6.  Disable the HttpOnly cookie property in Web Application Proxy on the RDG published application. To allow the RDG ActiveX control access to the Web Application Proxy authentication cookie, you have to disable the HttpOnly property on the Web Application Proxy cookie.
 
-    This requires the following  to be installed [Web Application Proxy Hotfix](https://support.microsoft.com/en-gb/kb/3000850) or the [https://support.microsoft.com/en-gb/kb/3000850](https://support.microsoft.com/en-gb/kb/3000850).
+    This requires the following  to be installed [Web Application Proxy Hotfix](https://support.microsoft.com/kb/3000850) or the [https://support.microsoft.com/kb/3000850](https://support.microsoft.com/kb/3000850).
 
     After installing the hotfix, run the following PowerShell script on the Web Application Proxy server specifying the relevant application name:
 
@@ -156,7 +156,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
 
             This tells the Collection server to include the custom RDP properties in the RDP files that are sent to clients. These tell the client that pre-authentication is required and to pass the cookies for the pre-authentication server address to the Remote Desktop Connection client (mstsc.exe) . This, in conjunction with disabling HttpOnly on the Web Application Proxy application, allows the Remote Desktop Connection client (mstsc.exe) to utilize the Web Application Proxy authentication cookie obtained through the browser.
 
-            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](https://docs.microsoft.com/en-gb/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731249(v=ws.10)).
+            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731249(v=ws.10)).
 
 ## <a name="BKMK_Links"></a>See also
 
