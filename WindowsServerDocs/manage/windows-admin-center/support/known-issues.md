@@ -65,7 +65,7 @@ Windows Admin Center is not tested with Mozilla Firefox, but most functionality 
 
 ## WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service. Websocket support in Azure AD Application Proxy compatibility is in [preview](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/) and looking for feedback on compatibility.
+Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service. 
 
 ## Support for Windows Server versions before 2016 (2012 R2, 2012, 2008 R2)
 
