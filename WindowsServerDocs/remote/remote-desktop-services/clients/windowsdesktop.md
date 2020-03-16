@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/29/2020
+ms.date: 03/04/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -128,5 +128,6 @@ You might need the client logs when investigating a problem.
 
 To retrieve the client logs:
 
-1. Open **File Explorer**.
-2. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
+1. Ensure no sessions are active and the client process isn't running in the background by right-clicking on the **Remote Desktop** icon in the system tray and selecting **Disconnect all sessions**.
+2. Open **File Explorer**.
+3. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
