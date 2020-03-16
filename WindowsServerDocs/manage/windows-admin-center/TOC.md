@@ -83,7 +83,6 @@
 #### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [QCT](extend/case-studies/qct.md)
-#### [Squared Up](extend/case-studies/squared-up.md)
 #### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
 
 
