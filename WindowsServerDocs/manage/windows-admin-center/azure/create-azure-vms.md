@@ -50,7 +50,7 @@ This begins a step-by-step creation tool that selects a Windows Server 2012 R2, 
 
 Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
 
-> [!VIDEO https://youtu.be/_VqD7HjTewQ] 
+> [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
 
 ### Deploying Azure VMs as part of Storage Replica
 
