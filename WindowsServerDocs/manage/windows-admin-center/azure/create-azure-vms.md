@@ -64,6 +64,6 @@ Here's a video showing how to use Storage Replica to migrate to Azure VMs.
 1. From the *All Connections* page within Windows Admin Center, select **Add**.
 2. In the *Azure VM* section, select **Create new**.<br><br> This begins a step-by-step creation tool that will let you select a Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019 Azure VM, pick a size, add managed disks, and optionally join your Active Directory domain.
 
-Here's a video showing how to use Storage Replica to migrate to Azure VMs.
+Here's a video showing how to use Windows Admin Center to create Azure VMs.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/__A8J9aC_Jk] 
