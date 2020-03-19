@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/10/2020
+ms.date: 03/24/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,14 +24,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.675  |
-|Insider    |1.2.787  |
+|Public     |1.2.789  |
+|Insider    |1.2.789  |
 
-## Updates for version 1.2.787
+## Updates for version 1.2.789
 
-*Date published: 03/10/2020*
+*Date published: 03/24/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qZVh), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qXhC), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qRVA)
+Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
 
 - Renamed the "Update" action for Workspaces to "Refresh" for consistency with other Remote Desktop clients.
 - You can now refresh a Workspace directly from its context menu.
