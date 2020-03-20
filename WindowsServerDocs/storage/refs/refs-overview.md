@@ -78,7 +78,7 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 - Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents.
 
 > [!NOTE]
-> Storage Spaces supports local non-removable direct-attached via BusTypes SATA, SAS, NVME, or attached via HBA (aka RAID controller in pass-through mode).
+> Storage Spaces supports local non-removable direct-attached via BusTypes SATA, SAS, NVME, or attached via HBA (Pass-Through mode - IT Mode _not_ IR Mode).
 
 ### Basic disks
 
@@ -86,7 +86,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets. 
 
 > [!NOTE]
-> Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. 
+> Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, or NVME. 
 
 ### Backup target
 
