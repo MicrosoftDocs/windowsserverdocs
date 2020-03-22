@@ -258,7 +258,7 @@ The following are example values for parameters used in the commands below. Ensu
 
 ```xml
 $TemplateName = 'Template'
-$ProfileName = 'Contoso AlwaysOn VPN'
+$ProfileName = 'Contoso%20AlwaysOn%20VPN'
 $Servers = 'vpn.contoso.com'
 $DnsSuffix = 'corp.contoso.com'
 $DomainName = '.corp.contoso.com'
