@@ -31,7 +31,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 *Date published: 03/24/2020*
 
-Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4saMV), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4s8bF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4s2Z6)
 
 - Renamed the "Update" action for Workspaces to "Refresh" for consistency with other Remote Desktop clients.
 - You can now refresh a Workspace directly from its context menu.
