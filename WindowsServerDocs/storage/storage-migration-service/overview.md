@@ -128,6 +128,9 @@ The destination server must run one of the following operating systems:
 
 Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Storage Migration Service. Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system. 
 
+   Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
+   > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
+
 ## What's new in Storage Migration Service
 
 The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or later, or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
