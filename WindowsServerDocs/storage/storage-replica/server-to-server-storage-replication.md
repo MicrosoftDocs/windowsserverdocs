@@ -83,6 +83,9 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 1.  Install Windows Server on both server nodes with an installation type of Windows Server **(Desktop Experience)**. 
  
     To use an Azure VM connected to your network via an ExpressRoute, see [Adding an Azure VM connected to your network via ExpressRoute](#add-azure-vm-expressroute).
+    
+    > [!NOTE]
+    > Starting in Windows Admin Center 1910, you can configure a destination server automatically in Azure, If you choose that option, there is no need to perform the remaining operations in Step 2 for the destination server. 
 
 3.  Add network information, join the servers to the same domain as your Windows 10 management PC (if you're using one), and then restart the servers.  
 
@@ -194,6 +197,19 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 2. On the **All Connections** page, select the source server.
 3. Select **Storage Replica** from Tools panel.
 4. Select **New** to create a new partnership.
+
+> [!NOTE] 
+Windows Admin Center 1910 supports creating Azure VMs directly:
+
+a. From the *Storage Replica* tool within Windows Admin Center, under the *Partnerships* tab, select **New** and then under *Replicate with another server* select **Use a New Azure VM** then select **Next**.
+b. Specify your source server information and replication group name, and then select **Next**.<br><br>
+This begins a process that automatically selects a Windows Server 2016 or Windows Server 2019 Azure VM as a destination for the migration source. Storage Migration Service recommends VM sizes to match your source, but you can override this by selecting **See all sizes**. Inventory data is used to automatically configure your managed disks and their file systems, as well as join your new Azure VM to your Active Directory domain. 
+c. After Windows Admin Center creates the Azure VM, provide a replication group name and then select **Create**. Windows Admin Center then begins the normal Storage Replica initial synchronization process to start protecting your data.
+
+Here's a video showing how to use Storage Replica to migrate to Azure VMs.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
+
 5. Provide the details of the partnership, and then select **Create**. <br>
    ![The New Partnership screen showing partnership details, such as an 8 GB log size.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
 
