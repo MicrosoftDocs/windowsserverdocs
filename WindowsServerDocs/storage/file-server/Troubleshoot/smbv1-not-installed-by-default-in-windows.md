@@ -145,7 +145,7 @@ If you cannot use any of these workarounds, or if the application manufacturer
 
 #### Windows Server best practices analyzer messaging
 
-Windows Server 2012 and later server operation systems contain a best practice analyzer (BPA) for file servers. If you have followed the correct online guidance to uninstall SMB1, running this BPA will return a contradictory warning message:
+Windows Server 2012 and later server operation systems contain a best practices analyzer (BPA) for file servers. If you have followed the correct online guidance to uninstall SMB1, running this BPA will return a contradictory warning message:
 
     ResultNumber : 52
     ResultId     : 2710698646
