@@ -141,7 +141,21 @@ All Windows devices within that subnet that have these settings will now appear 
 If you cannot use any of these workarounds, or if the application manufacturer cannot provide supported versions of SMB, you can re-enable SMBv1 manually by following the steps in [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](detect-enable-and-disable-smbv1-v2-v3.md).
 
 > [!IMPORTANT]
-> We strongly recommend that you do not reinstall SMBv1. This is because this older protocol has known security issues regarding ransomware and other malware.   
+> We strongly recommend that you don't reinstall SMBv1. This is because this older protocol has known security issues regarding ransomware and other malware.  
+
+#### Windows Server best practices analyzer messaging
+
+Windows Server 2012 and later server operation systems contain a best practices analyzer (BPA) for file servers. If you have followed the correct online guidance to uninstall SMB1, running this BPA will return a contradictory warning message:
+
+    Title: The SMB 1.0 file sharing protocol should be enabled
+    Severity: Warning
+    Date: 3/25/2020 12:38:47 PM
+    Category: Configuration
+    Problem: The Server Message Block 1.0 (SMB 1.0) file sharing protocol is disabled on this file server.
+    Impact: SMB not in a default configuration, which could lead to less than optimal behavior.
+    Resolution: Use Registry Editor to enable the SMB 1.0 protocol.
+
+You should ignore this specific BPA rule's guidance, it's deprecated. We repeat: don't enable SMB 1.0.
 
 ## References
 
