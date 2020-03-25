@@ -141,7 +141,7 @@ All Windows devices within that subnet that have these settings will now appear 
 If you cannot use any of these workarounds, or if the application manufacturer cannot provide supported versions of SMB, you can re-enable SMBv1 manually by following the steps in [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](detect-enable-and-disable-smbv1-v2-v3.md).
 
 > [!IMPORTANT]
-> We strongly recommend that you do not reinstall SMBv1. This is because this older protocol has known security issues regarding ransomware and other malware.  
+> We strongly recommend that you don't reinstall SMBv1. This is because this older protocol has known security issues regarding ransomware and other malware.  
 
 #### Windows Server best practices analyzer messaging
 
