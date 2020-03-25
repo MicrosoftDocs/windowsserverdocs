@@ -155,7 +155,7 @@ Windows Server 2012 and later server operation systems contain a best practices 
     Impact: SMB not in a default configuration, which could lead to less than optimal behavior.
     Resolution: Use Registry Editor to enable the SMB 1.0 protocol.
 
-You should ignore this specific BPA rule's guidance, it is deprecated. 
+You should ignore this specific BPA rule's guidance, it's deprecated. We repeat: don't enable SMB 1.0.
 
 ## References
 
