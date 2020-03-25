@@ -147,20 +147,13 @@ If you cannot use any of these workarounds, or if the application manufacturer
 
 Windows Server 2012 and later server operation systems contain a best practices analyzer (BPA) for file servers. If you have followed the correct online guidance to uninstall SMB1, running this BPA will return a contradictory warning message:
 
-    ResultNumber : 52
-    ResultId     : 2710698646
-    ModelId      : Microsoft/Windows/FileServices
-    SubModelId   : SMB
-    RuleId       : 52
-    ComputerName : 
-    Context      : FileServices
-    Source       : 
-    Severity     : Warning
-    Category     : Configuration
-    Title        : The SMB 1.0 file sharing protocol should be disabled
-    Problem      : The Server Message Block 1.0 (SMB 1.0) file sharing protocol is enabled on this file server.
-    Impact       : SMB not in a default configuration, which could lead to less than optimal behavior.
-    Resolution   : Remove SMB1 features.
+    Title: The SMB 1.0 file sharing protocol should be enabled
+    Severity: Warning
+    Date: 3/25/2020 12:38:47 PM
+    Category: Configuration
+    Problem: The Server Message Block 1.0 (SMB 1.0) file sharing protocol is disabled on this file server.
+    Impact: SMB not in a default configuration, which could lead to less than optimal behavior.
+    Resolution: Use Registry Editor to enable the SMB 1.0 protocol.
 
 You should ignore this specific BPA rule's guidance, it is deprecated. 
 
