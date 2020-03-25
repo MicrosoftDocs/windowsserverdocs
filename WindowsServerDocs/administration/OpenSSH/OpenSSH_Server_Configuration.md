@@ -12,7 +12,7 @@ title: OpenSSH Server Configuration for Windows
 
 This topic covers the Windows-specific configuration for OpenSSH Server (sshd). 
 
-OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not be duplicated in this documentation set. 
+OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not duplicated in this documentation set. 
 
 ## Configuring the default shell for OpenSSH in Windows
 
