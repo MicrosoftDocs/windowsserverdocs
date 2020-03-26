@@ -1,14 +1,12 @@
 ---
 ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
 title: Install Active Directory Domain Services (Level 100)
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

@@ -1,5 +1,4 @@
 ---
-ms.assetid: 
 title: Support boundary for high-accuracy time
 description: This article describes the support boundary for the Windows Time (W32Time) service in environments that require highly accurate and stable system time. 
 author: eross-msft

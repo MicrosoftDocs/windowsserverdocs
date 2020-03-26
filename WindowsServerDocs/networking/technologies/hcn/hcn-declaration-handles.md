@@ -1,6 +1,5 @@
 ---
 title: RPC context handles for HCN
-description:
 ms.author: jmesser
 author: jmesser81
 ms.date: 11/05/2018

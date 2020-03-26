@@ -1,14 +1,12 @@
 ---
 ms.assetid: f643099e-f9c6-476f-9378-5a9228c39b33
 title: Appendix E - Securing Enterprise Admins Groups in Active Directory
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

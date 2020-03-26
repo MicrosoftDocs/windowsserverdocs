@@ -1,12 +1,8 @@
 ---
 title: Features removed or planned for removal in Windows Server 2019
 description: Learn about the Features and functionalities removed or planned for removal starting with Windows Server 2019.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -30,7 +26,7 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 We're removing the following features and functionalities from the installed product image in Windows Server 2019. Applications or code that depend on these features won't function in this release unless you use an alternate method.
 
-| Feature	| Instead you can use... |
+| Feature    | Instead you can use... |
 | --------- | -------------------- |
 | Business Scanning, also called Distributed Scan Management (DSM)|We're removing this secure scanning and scanner management capability - there are no devices that support this feature. |
 | Print components - now optional component for Server Core installations|In previous releases of Windows Server, the print components were *disabled* by default in the Server Core installation option. We changed that in Windows Server 2016, enabling them by default. In Windows Server 2019, those print components are once again disabled by default for Server Core. If you need to enable the print components, you can do so by running the **Install-WindowsFeature Print-Server** cmdlet. |
@@ -43,7 +39,7 @@ We're no longer actively developing these features and may remove them from a fu
 
 If you have feedback about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). 
 
-| Feature	  | Instead you can use... |
+| Feature      | Instead you can use... |
 | ----------- | --------------------- |
 | Key Storage Drive in Hyper-V|We're no longer working on the Key Storage Drive feature in Hyper-V. If you're using generation 1 VMs, check out [Generation 1 VM Virtualization Security](../virtualization/hyper-v/learn-more/generation-1-virtual-machine-security-settings-for-hyper-v.md) for information about options going forward. If you're creating new VMs use Generation 2 virtual machines with TPM devices for a more secure solution. |
 | Trusted Platform Module (TPM) management console|The information previously available in the TPM management console is now available on the [**Device security**](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/wdsc-device-security) page in the [Windows Defender Security Center](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center). |

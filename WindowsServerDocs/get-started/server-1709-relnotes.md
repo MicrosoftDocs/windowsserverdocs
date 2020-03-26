@@ -1,13 +1,9 @@
 ---
 title: Release Notes - Important Issues in Windows Server, version 1709
 description: "Summarizes critical issues requiring workaround to avoid crash, hang, installation failure, data loss."
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 04/23/2018
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo

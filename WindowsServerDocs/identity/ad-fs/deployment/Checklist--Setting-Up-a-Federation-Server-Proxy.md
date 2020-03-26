@@ -6,15 +6,13 @@ manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
-ms.author: billmath
 ms.author: billmath
 ---
 
 # Checklist: Setting Up a Federation Server Proxy
 
-This checklist includes the deployment tasks for preparing a server running Windows Server® 2012 for the federation server proxy role in Active Directory Federation Services \(AD FS\).  
+This checklist includes the deployment tasks for preparing a server running Windows Server&reg; 2012 for the federation server proxy role in Active Directory Federation Services \(AD FS\).  
   
 > [!NOTE]  
 > Complete the tasks in this checklist in order. When a reference link takes you to a procedure, return to this topic after you complete the steps in that procedure so that you can proceed with the remaining tasks in this checklist.  

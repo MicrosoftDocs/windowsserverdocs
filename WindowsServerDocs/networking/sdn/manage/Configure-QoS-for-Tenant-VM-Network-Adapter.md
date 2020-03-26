@@ -2,12 +2,12 @@
 title: Configure Quality of Service (QoS) for a tenant VM network adapter
 description: When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
 manager: dougkim
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: lizross

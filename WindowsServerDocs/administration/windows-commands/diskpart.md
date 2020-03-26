@@ -2,7 +2,7 @@
 title: DiskPart commands
 ms.prod: windows-server
 ms.technology: storage
-author: JasonGerend
+author: jasongerend
 manager: elizapo
 ms.author: jgerend
 ---

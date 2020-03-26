@@ -1,12 +1,10 @@
 ---
 title: Why Privileged Access Workstations can help secure your organization
 description: How PAW can increase your organization's security posture
-
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 93589778-3907-4410-8ed5-e7b6db406513
 ms.date: 03/13/2019
-
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba

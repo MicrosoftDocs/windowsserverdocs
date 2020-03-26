@@ -9,7 +9,6 @@ ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: 
 ms.date: 05/01/2018
 
 ---

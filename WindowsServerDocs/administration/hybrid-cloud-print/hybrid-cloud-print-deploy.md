@@ -2,11 +2,7 @@
 title: Deploy Windows Server Hybrid Cloud Print
 description: "How to set up Microsoft Hybrid Cloud Print"
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: Windows Server 2016
-ms.tgt_pltfrm: na
-ms.topic:
+ms.technology: windows server 2016
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
 author: msjimwu
 ms.author: coreyp
@@ -433,13 +429,13 @@ On an Azure AD joined device that has the MDM policies configured:
     - Click on **Add printer or scanner**.
     - You should see a "Search for cloud printers" (or "Search for printers in my organization" on a more recent Windows 10 machine) link.
     - Click on the link.
-    - Click the “Please select a search location” link.
+    - Click the "Please select a search location" link.
         - You should see the device location hierarchy.
     - Pick a location and click **OK** and then click **Search** button to find the printers.
     - Select printer and click **Add device** button.
     - After successful printer installation, print to the printer from your favorite app.
 
-> Note: If using the “EcpPrintTest” printer, you can find the output file in the Print Server machine under “C:\\ECPTestOutput\\EcpTestPrint.xps” location.
+> Note: If using the "EcpPrintTest" printer, you can find the output file in the Print Server machine under "C:\\ECPTestOutput\\EcpTestPrint.xps" location.
 
 ## Troubleshooting
 

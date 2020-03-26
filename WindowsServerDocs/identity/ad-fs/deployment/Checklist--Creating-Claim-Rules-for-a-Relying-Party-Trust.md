@@ -1,15 +1,12 @@
 ---
 ms.assetid: 44271f44-b50a-4bce-9375-4fcab9618048
 title: Checklist - Creating Claim Rules for a Relying Party Trust
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
-ms.author: billmath
 ms.author: billmath
 ---
 

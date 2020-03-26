@@ -1,14 +1,12 @@
 ---
 ms.assetid: 846c3680-b321-47da-8302-18472be42421
 title: Deploy Claims Across Forests (Demonstration Steps)
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

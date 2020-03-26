@@ -2,7 +2,6 @@
 title: Performance Tuning Network Adapters
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
 audience: Admin
-ms.custom:
   - CI ID 111485
   - CSSTroubleshoot
 ms.prod: windows-server

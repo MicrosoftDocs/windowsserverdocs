@@ -1,14 +1,12 @@
 ---
 ms.assetid: 533ce45c-67cc-4fbf-bb19-f364874e52c1
 title: AD DS Getting Started
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # AD DS Getting Started

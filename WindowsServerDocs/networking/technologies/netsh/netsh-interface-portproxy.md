@@ -4,7 +4,6 @@ description: Use the netsh interface portproxy commands to act as proxies betwee
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: 
 manager: dougkim
 ms.author: lizross
 author: eross-msft

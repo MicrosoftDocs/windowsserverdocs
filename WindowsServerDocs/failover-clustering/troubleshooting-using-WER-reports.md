@@ -5,11 +5,7 @@ keywords: Failover Cluster,WER Reports,Diagnostics,Cluster, Windows Error Report
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.author: vpetter
-ms.technology: storage-failover-clustering
-ms.topic: article
-author: vpetter
 ms.date: 03/27/2018
-ms.localizationpriority: 
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting 
 
@@ -304,7 +300,7 @@ To identify why the disk failed, navigate to the events under **FailoverClusteri
 
 ### Physical disk timed out
 
-To diagnose this issue, navigate to the WER report folder. The folder contains log files and dump files for **RHS**, **clussvc.exe**, and of the process that hosts the “**smphost**” service, as shown below:
+To diagnose this issue, navigate to the WER report folder. The folder contains log files and dump files for **RHS**, **clussvc.exe**, and of the process that hosts the "**smphost**" service, as shown below:
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_64acaf7e4590828ae8a3ac3c8b31da9a789586d4_00000000_cab_1d94712e

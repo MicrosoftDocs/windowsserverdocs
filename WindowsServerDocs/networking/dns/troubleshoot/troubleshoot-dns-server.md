@@ -2,7 +2,6 @@
 title: Troubleshooting DNS Servers
 description: This article introduces how to troubleshoot DNS issue from server-side. 
 manager: dcscontentpm
-ms.prod: 
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan

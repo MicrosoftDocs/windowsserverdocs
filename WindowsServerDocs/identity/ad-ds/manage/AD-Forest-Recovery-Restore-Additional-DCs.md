@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Redeploy remaining DCs  
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

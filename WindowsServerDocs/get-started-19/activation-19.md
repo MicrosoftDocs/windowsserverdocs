@@ -1,12 +1,8 @@
 ---
 title: Windows Server 2019 Activation
 description: "How to activate Windows Server 2019"
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 author: coreyp-at-msft

@@ -4,9 +4,6 @@ description: Use netsh mbn to query and configure mobile broadband settings and 
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: 
-manager: 
-ms.author: 
 author: apdutta
 ms.date: 02/20/2020
 ---

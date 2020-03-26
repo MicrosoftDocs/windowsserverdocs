@@ -2,7 +2,6 @@
 title: Get Started
 description: "Basics for Server: system requirements, release notes, upgrade options"
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: get-started
 ms.date: 03/16/2018

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 53ee93e2-09ea-4f8b-adb7-c24c59f055ea
 title: How URIs Are Used in AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -36,7 +34,7 @@ The following table describes the identifiers that are most often handled by adm
 |Claim type|This identifier is used to define the type of claim.  It is used by this Federation Service, claims providers, and relying parties when sending and receiving claims.|When the Federation Service receives claims from a claims provider, the claim rules associated with the corresponding claims provider trust allow the administrator to compare claim types and process claims.  The claim rules associated with a relying party trust also allow the administrator to compare claim types from the claims coming out of the claims provider trust rules, and decide which claims to issue.|  
   
 ## URI prefix matching for relying party identifiers  
-The path syntax of a URI is organized hierarchically and is delimited by either all “\/” characters or all “:”characters.  Thus the path may be split into path sections based on the delimiting character.  When prefix matching, each section must be a full match according to the matching rules \(these rules govern the casing of matches\). For more information about matching rules, see the RFC's mentioned above.  
+The path syntax of a URI is organized hierarchically and is delimited by either all "\/" characters or all ":"characters.  Thus the path may be split into path sections based on the delimiting character.  When prefix matching, each section must be a full match according to the matching rules \(these rules govern the casing of matches\). For more information about matching rules, see the RFC's mentioned above.  
   
 When a relying party is identified in a request to the Federation Service, AD FS uses prefix matching logic to determine if there is a matching relying party trust in the AD FS configuration database.  
   

@@ -1,11 +1,9 @@
 ---
 title: Windows Server 2019 Gateway Performance
-description: 
 manager: dougkim
 ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
-ms.assetid: 
 ms.author: lizross
 author: eross-msft
 ms.date: 08/22/2018

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: Appendix B - Privileged Accounts and Groups in Active Directory
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

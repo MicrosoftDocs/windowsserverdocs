@@ -1,11 +1,9 @@
 ---
 title: Virtual network peering
-description:  
 manager: dougkim
 ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
-ms.assetid: 
 ms.author: lizross
 author: eross-msft
 ms.date: 08/08/2018

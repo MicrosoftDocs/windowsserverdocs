@@ -1,13 +1,9 @@
 ---
 title: Upgrade and Conversion Options for Windows Server 2016
 description: "Explains all supported upgrade paths to Windows Server 2016."
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 01/18/2017
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: jaimeo
@@ -19,7 +15,7 @@ ms.localizationpriority: medium
 
 >Applies To: Windows Server 2019, Windows Server 2016
 
-This topic includes information about upgrading to Windows Server® 2016 from a variety of previous operating systems using a variety of methods.
+This topic includes information about upgrading to Windows Server&reg; 2016 from a variety of previous operating systems using a variety of methods.
 
 The process of moving to Windows Server 2016 might vary greatly depending on which operating system you are starting with and the pathway you take. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 deployment.
 
@@ -30,7 +26,7 @@ and Migration](https://technet.microsoft.com/windowsserver/dn458795).
 
 - **Cluster OS Rolling Upgrade** is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
 
-- **License conversion** In some operating system releases, you can convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. We call this “license conversion.” For example, if you are running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter.
+- **License conversion** In some operating system releases, you can convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. We call this "license conversion." For example, if you are running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter.
 
 - **Upgrade** means moving from your existing operating system release to a more recent release while staying on the same hardware. (This is sometimes called "in-place" upgrade.) For example, if your server is running Windows Server 2012, or Windows Server 2012 R2, you can upgrade it to Windows Server 2016. You can upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition.
 
@@ -86,21 +82,21 @@ You can convert the evaluation version of Windows Server 2016 Standard to either
 
 Before you attempt to convert from evaluation to retail, verify that your server is actually running an evaluation version. To do this, do either of the following:
 
-- From an elevated command prompt, run **slmgr.vbs /dlv**; evaluation versions will include “EVAL” in the output.
+- From an elevated command prompt, run **slmgr.vbs /dlv**; evaluation versions will include "EVAL" in the output.
 
 - From the Start screen, open **Control Panel**. Open **System and Security**, and then **System**. View Windows activation status in the Windows activation area of the **System** page. Click **View details** in Windows activation for more information about your Windows activation status.
 
 If you have already activated Windows, the Desktop shows the time remaining in the evaluation period.
 
-If the server is running a retail version instead of an evaluation version, see the “Upgrading previous retail versions of Windows Server to Windows Server 2016” section of this topic for instructions to upgrade to Windows Server 2016.
+If the server is running a retail version instead of an evaluation version, see the "Upgrading previous retail versions of Windows Server to Windows Server 2016" section of this topic for instructions to upgrade to Windows Server 2016.
 
 For **Windows Server 2016 Essentials**: You can convert to the full retail version by entering a retail, volume license, or OEM key in the command **slmgr.vbs**.
 
 If the server is running an evaluation version of Windows Server 2016 Standard or Windows Server 2016 Datacenter, you can convert it to a retail version as follows:
 
-1.	If the server is a **domain controller**, you cannot convert it to a retail version. In this case, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](https://technet.microsoft.com/library/hh994618.aspx).
-2.	Read the license terms.
-3.	From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. Make note of the edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
+1.    If the server is a **domain controller**, you cannot convert it to a retail version. In this case, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](https://technet.microsoft.com/library/hh994618.aspx).
+2.    Read the license terms.
+3.    From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. Make note of the edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
 
 For the evaluation version of Windows Server 2016 Standard, you can also convert to the retail version of Windows Server 2016 Datacenter in one step using this same command and the appropriate product key.
 
@@ -109,8 +105,8 @@ For the evaluation version of Windows Server 2016 Standard, you can also convert
 
 ## Converting a current retail edition to a different current retail edition
 
-At any time after installing Windows Server 2016, you can run Setup to repair the installation (sometimes called “repair in place”) or, in certain cases, to convert to a different edition.
-You can run Setup to perform a “repair in place” on any edition of Windows Server 2016; the result will be the same edition you started with.
+At any time after installing Windows Server 2016, you can run Setup to repair the installation (sometimes called "repair in place") or, in certain cases, to convert to a different edition.
+You can run Setup to perform a "repair in place" on any edition of Windows Server 2016; the result will be the same edition you started with.
 
 For Windows Server 2016 Standard, you can convert the system to Windows Server 2016 Datacenter as follows: From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. For Windows Server 2016 Standard this will be `ServerStandard`. Run the command **DISM /online /Get-TargetEditions** to get the ID of the edition you can upgrade to. Make note of this edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID of your target and its retail product key. The server will restart twice.
 

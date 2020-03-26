@@ -1,7 +1,6 @@
 ---
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time service tools and settings
-description:
 author: Teresa-Motiv
 ms.author: lizross
 manager: dougkim
@@ -9,7 +8,6 @@ ms.date: 02/24/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.custom:
   - CI ID 113344
   - CSSTroubleshoot
 audience: Admin

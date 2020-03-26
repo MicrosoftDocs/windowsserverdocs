@@ -1,12 +1,10 @@
 ---
 title: Setup Geographic Redundancy with SQL Server Replication
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: active-directory-federation-services
 ms.author: billmath
 ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
@@ -18,7 +16,7 @@ ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
 > [!IMPORTANT]  
 > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 or higher.
   
-If you are using SQL Server as your AD FS configuration database, you can set up geo\-redundancy for your AD FS farm using SQL Server replication. Geo\-redundancy replicates data between two geographically distant sites so that applications can switch from one site to another. This way, in case of the failure of one site, you can still have all the configuration data available at the second site. For more information, see the “SQL Server geographic redundancy section” in [Federation Server Farm Using SQL Server](../design/Federation-Server-Farm-Using-SQL-Server.md).  
+If you are using SQL Server as your AD FS configuration database, you can set up geo\-redundancy for your AD FS farm using SQL Server replication. Geo\-redundancy replicates data between two geographically distant sites so that applications can switch from one site to another. This way, in case of the failure of one site, you can still have all the configuration data available at the second site. For more information, see the "SQL Server geographic redundancy section" in [Federation Server Farm Using SQL Server](../design/Federation-Server-Farm-Using-SQL-Server.md).  
   
 ## Prerequisites  
 Install and configure a SQL server farm. For more information, see [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://technet.microsoft.com/evalcenter/hh225126.aspx). On the initial SQL Server, make sure that the SQL Server Agent service is running and set to automatic start.  
@@ -129,7 +127,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
   
 9. On **Subscription Type**, choose **Client** and click **Next**.  
   
-   Implications of this are documented [here](https://technet.microsoft.com/library/ms151191.aspx) and [here](https://technet.microsoft.com/library/ms151170.aspx).  Essentially, we take the simple “first to publisher wins” conflict resolution and we do not need to republish to other subscribers.  
+   Implications of this are documented [here](https://technet.microsoft.com/library/ms151191.aspx) and [here](https://technet.microsoft.com/library/ms151170.aspx).  Essentially, we take the simple "first to publisher wins" conflict resolution and we do not need to republish to other subscribers.  
    ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql33.png) </br>
    
 10. On the **Wizard Actions** page, ensure **Create the subscription** is checked and click **Next**. 
@@ -162,7 +160,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
 3.  Give the corresponding domain account read and write permissions on the share configured as distributor.  Make sure that you set read and write permissions both on the share permissions and the local file permissions.  
   
 ## Configure AD FS node\(s\) to point to the SQL Server replica farm  
-Now that you have set up geo redundancy, the AD FS farm nodes can be configured to point to your replica SQL Server farm using the standard AD FS “join” farm capabilities, either from the AD FS Configuration Wizard UI or using Windows PowerShell.  
+Now that you have set up geo redundancy, the AD FS farm nodes can be configured to point to your replica SQL Server farm using the standard AD FS "join" farm capabilities, either from the AD FS Configuration Wizard UI or using Windows PowerShell.  
   
 If you use the AD FS Configuration Wizard UI, select **Add a federation server to a federation server farm**. **Do NOT** select **Create the first federation server in a federation server farm**.  
   

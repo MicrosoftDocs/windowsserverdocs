@@ -1,14 +1,12 @@
 ---
 ms.assetid: 9831b421-8fb7-4e15-ac27-c013cbca6d05
 title: Certificate Requirements for Federation Servers
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 39ecc468-77c5-4938-827e-48ce498a25ad
 title: Appendix A - Reviewing AD FS Requirements
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -29,7 +27,7 @@ The following minimum and recommended hardware requirements apply to the federat
 |Disk space|50 MB|100 MB|  
   
 ## Software requirements  
-AD FS relies on server functionality that is built into the Windows Server® 2012 operating system.  
+AD FS relies on server functionality that is built into the Windows Server&reg; 2012 operating system.  
   
 > [!NOTE]  
 > The Federation Service and Federation Service Proxy role services cannot coexist on the same computer.  

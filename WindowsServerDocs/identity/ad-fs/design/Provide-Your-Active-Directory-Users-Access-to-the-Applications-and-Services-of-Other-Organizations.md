@@ -1,14 +1,12 @@
 ---
 ms.assetid: 2d62386c-b466-4a54-b6fa-5d16cda120d8
 title: Provide Your Active Directory Users Access to the Applications and Services of Other Organizations
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

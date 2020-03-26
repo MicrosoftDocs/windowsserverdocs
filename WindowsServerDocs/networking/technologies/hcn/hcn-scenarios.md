@@ -1,6 +1,5 @@
 ---
 title: Host Compute Network (HCN) scenarios
-description:
 ms.author: jmesser
 author: jmesser81
 ms.date: 11/05/2018

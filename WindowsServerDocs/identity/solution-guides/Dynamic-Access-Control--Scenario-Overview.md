@@ -1,14 +1,12 @@
 ---
 ms.assetid: 7b22adfa-298d-413c-88d0-1231825b7d4d
 title: Dynamic Access Control Scenario Overview
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

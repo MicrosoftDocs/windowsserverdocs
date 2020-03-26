@@ -1,14 +1,12 @@
 ---
 ms.assetid: e9563792-cd73-4a32-b4a1-5bd6a2109016
 title: AD FS Development
-description:
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # AD FS Development

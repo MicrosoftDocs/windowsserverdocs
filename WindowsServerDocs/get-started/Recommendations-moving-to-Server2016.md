@@ -1,13 +1,9 @@
 ---
 title: Recommendations for moving to Windows Server 2016
 description: "Recommendations for moving to Windows Server 2016."
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 10/18/2016
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: jaimeo

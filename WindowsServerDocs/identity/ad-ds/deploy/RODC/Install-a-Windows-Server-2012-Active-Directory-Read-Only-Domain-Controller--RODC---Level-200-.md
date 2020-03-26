@@ -8,7 +8,6 @@ manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -296,8 +295,8 @@ The **Additional Options** page provides configuration options to name a domain 
 You can also choose to install the domain controller using backed up media using the Install from media (IFM) option. The **Install from media** checkbox provides a browse option once selected and you must click **Verify** to ensure the provided path is valid media.
 
 Guidelines for the IFM source:
-•	Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
-•	The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
+*    Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
+*    The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
 
 For more information about changes in IFM, see [Ntdsutil.exe Install from Media Changes](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM). If using media protected with a SYSKEY, Server Manager prompts for the image's password during verification. 
   
@@ -554,8 +553,8 @@ The **Additional Options** page provides configuration options to name a domain 
 You can also choose to install the domain controller using backed up media using the Install from media (IFM) option. The **Install from media** checkbox provides a browse option once selected and you must click **Verify** to ensure the provided path is valid media.
 
 Guidelines for the IFM source:
-•	Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
-•	The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
+*    Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
+*    The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
 
 For more information about changes in IFM, see [Ntdsutil.exe Install from Media Changes](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM). If using media protected with a SYSKEY, Server Manager prompts for the image's password during verification.
   

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 434fd617-373a-405e-bae4-da324ea83efc
 title: Windows Server 2012 R2 AD FS Deployment Guide
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -147,7 +145,7 @@ You can create a new federation server farm by using either a new or existing gM
 4.  On the **Specify Farm** page, provide the name of the primary federation server in a farm that uses WID or specify the database host name and the database instance name of an existing federation server farm that uses SQL Server.  
   
     > [!WARNING]  
-    > In Windows Server® 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](Configure-a-Federation-Server.md#BKMK_3).  
+    > In Windows Server&reg; 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](Configure-a-Federation-Server.md#BKMK_3).  
   
     > [!IMPORTANT]  
     > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012.  
@@ -347,7 +345,7 @@ You can create a new federation server farm by using either a new or existing gM
 4.  On the **Specify Farm** page, provide the name of the primary federation server in a farm that uses WID or specify the database host name and the database instance name of an existing federation server farm that uses SQL Server.
 
     > [!WARNING]
-    > In Windows Server® 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](Configure-a-Federation-Server.md#BKMK_3).
+    > In Windows Server&reg; 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](Configure-a-Federation-Server.md#BKMK_3).
 
     > [!IMPORTANT]
     > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012.

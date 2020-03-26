@@ -524,7 +524,7 @@ Checking if physical nics support jumbo packets on host
 Physical Nic  <NIC> Ethernet Adapter #2 can support SDN traffic. Encapoverhead value set on the nic is  160
 Cannot send jumbo packets to the destination. Physical switch ports may not be configured to support jumbo packets.
 
-# TODO: Success Results aftering updating MTU on physical switch ports
+
 ```
 
 *Remediation*

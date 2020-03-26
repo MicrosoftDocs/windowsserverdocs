@@ -1,14 +1,12 @@
 ---
 ms.assetid: 24c4d183-100f-4c05-a463-e2584e45f860
 title: Active Directory Federation Services
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

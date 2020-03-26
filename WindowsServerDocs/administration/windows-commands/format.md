@@ -2,11 +2,11 @@
 title: Format
 ms.prod: windows-server
 manager: dongill
-ms.author: JGerend
+ms.author: jgerend
 ms.technology: storage
 ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
-author: JasonGerend
+author: jasongerend
 ms.date: 10/16/2017
 ---
 

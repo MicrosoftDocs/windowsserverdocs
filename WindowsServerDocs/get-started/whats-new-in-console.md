@@ -1,13 +1,9 @@
 ---
 title: What's New in the Windows Console in Windows Server 2016
 description: "Lists the important new features in the Windows Server 2016 console."
-ms.custom: na
 ms.prod: windows-server
 ms.technology: server-general
-ms.reviewer: na
-ms.suite: na
 ms.date: 10/04/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: jaimeo

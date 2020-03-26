@@ -1,13 +1,11 @@
 ---
 ms.assetid: e7f9e518-2d5d-4a0d-9147-34e1304f42ac
 title: Checklist - Configuring AD FS  to Consume Claims from AD FS 1.x
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
