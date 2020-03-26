@@ -9,8 +9,8 @@ ms.workload: identity
 
 ms.topic: article
 ms.date: 06/28/2019
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---

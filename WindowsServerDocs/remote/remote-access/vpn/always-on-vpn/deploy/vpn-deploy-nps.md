@@ -6,8 +6,8 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/30/2018
 ---
 
