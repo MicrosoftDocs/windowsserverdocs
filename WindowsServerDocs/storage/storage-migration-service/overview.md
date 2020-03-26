@@ -133,6 +133,8 @@ Windows Admin Center version 1910 allows you to deploy Azure virtual machines. T
 
 ## What's new in Storage Migration Service
 
+Windows Admin Center version 1910 adds the ability to deploy Azure virtual machines. This integrates Azure VM deployment into Storage Migration Service. For more info, see [Azure VM migration](#azure-vm-migration).
+
 The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or later, or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
 - Migrate local users and groups to the new server
