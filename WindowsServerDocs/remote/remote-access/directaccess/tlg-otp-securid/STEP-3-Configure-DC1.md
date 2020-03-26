@@ -10,8 +10,8 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # STEP 3 Configure DC1
 

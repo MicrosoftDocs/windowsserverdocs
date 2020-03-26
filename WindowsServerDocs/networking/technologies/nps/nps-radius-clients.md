@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # RADIUS Clients

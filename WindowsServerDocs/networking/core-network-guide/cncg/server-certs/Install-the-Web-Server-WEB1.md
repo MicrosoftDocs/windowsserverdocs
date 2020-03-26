@@ -8,8 +8,8 @@ ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Install the Web Server WEB1
 

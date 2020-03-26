@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: b89213d8-143a-45f3-a609-bc6a7027204c
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Install Data Center Bridging \(DCB\) in Windows Server 2016 or Windows 10

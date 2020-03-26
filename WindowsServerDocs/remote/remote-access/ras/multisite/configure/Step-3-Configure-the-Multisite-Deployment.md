@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 3 Configure the Multisite Deployment
 

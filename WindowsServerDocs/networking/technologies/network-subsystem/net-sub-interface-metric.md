@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 3266328c-ca82-40d2-90ca-854b7088ccaa
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Configure the Order of Network Interfaces

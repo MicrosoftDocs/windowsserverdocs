@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Troubleshooting Enabling OTP
 

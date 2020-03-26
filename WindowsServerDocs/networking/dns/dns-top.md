@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 1324ba18-4e28-4b9d-bbe7-75707e6d30ab
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Domain Name System (DNS)
 

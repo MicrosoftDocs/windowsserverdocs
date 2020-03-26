@@ -2,7 +2,7 @@
 title: "What's New in Windows Server 2019 Essentials"
 description: "Describes what's changed in Windows Server Essentials 2019"
 ms.custom: na
-ms.prod: windows-server-2019-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

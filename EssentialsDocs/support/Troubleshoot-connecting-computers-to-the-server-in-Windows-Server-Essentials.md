@@ -3,7 +3,7 @@ title: "Troubleshoot connecting computers to the server in Windows Server Essent
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

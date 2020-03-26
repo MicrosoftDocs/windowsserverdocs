@@ -10,8 +10,8 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment
 

@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: fc77450e-2af1-47ba-bb23-1fd36d9efdbf
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Verify Configuration After NPS Changes

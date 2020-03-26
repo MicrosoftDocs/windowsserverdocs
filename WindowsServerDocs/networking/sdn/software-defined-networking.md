@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/09/2018
 ---
 # SDN in Windows Server overview

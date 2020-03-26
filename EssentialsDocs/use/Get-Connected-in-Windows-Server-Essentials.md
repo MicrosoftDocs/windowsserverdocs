@@ -3,7 +3,7 @@ title: Get Connected in Windows Server Essentials
 description: Describes how to use Windows Server Essentials
 ms.custom: na
 ms.date: 05/07/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

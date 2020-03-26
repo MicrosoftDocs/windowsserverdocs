@@ -10,8 +10,8 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Create an Access Policy
 

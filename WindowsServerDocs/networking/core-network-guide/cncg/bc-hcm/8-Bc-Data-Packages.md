@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Create Content Server Data Packages for Web and File Content (Optional)

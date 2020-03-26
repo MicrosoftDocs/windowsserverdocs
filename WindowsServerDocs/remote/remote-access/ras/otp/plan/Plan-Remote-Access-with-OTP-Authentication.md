@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 762bc463-eead-46ac-8b90-32355743c27c
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Plan Remote Access with OTP Authentication
 

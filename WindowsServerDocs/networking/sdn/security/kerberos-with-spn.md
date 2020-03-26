@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/23/2018
 ---
 

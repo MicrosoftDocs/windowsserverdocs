@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f92b1335-ac4a-4501-a5ec-d1851e6f0fc7
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Troubleshoot a Multisite Deployment
 

@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/24/2018
 ---
 # Create a VM and connect to a tenant virtual network or VLAN

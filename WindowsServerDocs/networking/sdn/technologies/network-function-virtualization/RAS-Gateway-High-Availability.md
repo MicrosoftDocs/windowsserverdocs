@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # RAS Gateway High Availability
 

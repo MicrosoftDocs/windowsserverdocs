@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Plan a Multisite Deployment
 

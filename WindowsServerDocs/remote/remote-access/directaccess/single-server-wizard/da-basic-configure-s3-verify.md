@@ -10,8 +10,8 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 3 Verify Deployments
 

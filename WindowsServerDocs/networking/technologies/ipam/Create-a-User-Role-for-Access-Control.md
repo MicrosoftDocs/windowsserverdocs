@@ -10,8 +10,8 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Create a User Role for Access Control
 

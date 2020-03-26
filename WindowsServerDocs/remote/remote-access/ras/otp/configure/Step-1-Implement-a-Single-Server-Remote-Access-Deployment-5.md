@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0f4d665-d44e-4348-a89f-5f9191bd96fd
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 1 Implement a Single Server Remote Access Deployment
 

@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 763d11a8-4225-4d96-b56f-1ec62e256bfd
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Security for SDN

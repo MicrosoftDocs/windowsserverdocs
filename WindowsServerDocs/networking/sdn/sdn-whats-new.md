@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: efad919b-e9e7-4a0c-b373-e68a092f93b5
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 10/02/2018
 ---
 # What's New in SDN for Windows Server 2019

@@ -6,8 +6,8 @@ ms.technology: networking
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Core network companion guidance

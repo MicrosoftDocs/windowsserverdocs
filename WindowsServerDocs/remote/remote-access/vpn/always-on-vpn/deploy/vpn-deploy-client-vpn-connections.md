@@ -7,8 +7,8 @@ ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.reviewer: deverette
 ---
 # Step 6. Configure Windows 10 client Always On VPN connections
