@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate storage to Win
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 01/17/2020
+ms.date: 03/26/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -15,7 +15,7 @@ ms.technology: storage
 
 Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 
-This topic discusses why you'd want to use Storage Migration Service, how the migration process works, and what the requirements are for source and destination servers.
+This topic discusses why you'd want to use Storage Migration Service, how the migration process works, what the requirements are for source and destination servers, and [what's new in Storage Migration Service](#whats-new-in-storage-migration-service).
 
 ## Why use Storage Migration Service
 
