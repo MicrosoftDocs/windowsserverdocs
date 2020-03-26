@@ -206,7 +206,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 
     > [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
 
-5. Provide the details of the partnership, and then select **Create**. <br>
+5. Provide the details of the partnership, and then select **Create** (as shown in Figure 3). <br>
    ![The New Partnership screen showing partnership details, such as an 8 GB log size.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
 
     **Figure 3: Creating a new partnership**
