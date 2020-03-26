@@ -3,7 +3,7 @@ title: "Install Windows Server Essentials"
 description: "Describes how to install and customize Windows Server Essentials"
 ms.custom: na
 ms.date: 01/02/2017
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

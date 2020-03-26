@@ -1,7 +1,7 @@
 ---
 title: Deploy graphics devices using RemoteFX vGPU
 description: Learn how to deploy and configure RemoteFX vGPU in Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: rickman
 author: rick-man
 ms.author: rickman
