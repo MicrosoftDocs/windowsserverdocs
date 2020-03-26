@@ -2,8 +2,8 @@
 ms.assetid: 
 title: Insider preview for Windows Time Service features in Windows Server 2019
 description: New Windows Time Service features in Windows Server 2019
-author: shortpatti
-ms.author: pashort
+author: eross-msft
+ms.author: lizross
 ms.date: 09/05/2018
 ms.topic: article
 ms.prod: windows-server

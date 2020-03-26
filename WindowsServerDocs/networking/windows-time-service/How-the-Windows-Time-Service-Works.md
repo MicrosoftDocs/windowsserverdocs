@@ -2,8 +2,8 @@
 ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: How the Windows Time Service Works
 description:
-author: shortpatti
-ms.author: pashort
+author: eross-msft
+ms.author: lizross
 manager: dougkim
 ms.date: 05/08/2018
 ms.topic: article

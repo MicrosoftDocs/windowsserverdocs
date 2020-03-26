@@ -7,7 +7,7 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 10/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Cluster connection type changes in Windows Admin Center v1909

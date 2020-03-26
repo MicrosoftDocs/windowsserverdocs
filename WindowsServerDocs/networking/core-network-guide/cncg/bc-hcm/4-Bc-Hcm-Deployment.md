@@ -7,8 +7,8 @@ ms.suite: na
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: c635fa48-d064-4b8b-9dce-9f26abfbcfa4
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # BranchCache Hosted Cache Mode Deployment

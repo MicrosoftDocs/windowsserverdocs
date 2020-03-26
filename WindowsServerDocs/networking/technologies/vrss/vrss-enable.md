@@ -8,8 +8,8 @@ ms.assetid: cb48315c-0204-4927-aa24-64f6789c2e20
 manager: dougkim
 ms.localizationpriority: medium
 ms.date: 09/05/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Enable vRSS on a Virtual Network Adapter
