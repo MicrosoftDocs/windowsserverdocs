@@ -4,7 +4,7 @@ description: Brief description of topic for search engine results
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 02/13/2019
+ms.date: 03/25/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -56,15 +56,15 @@ In this step you transfer data after specifying where to put it on the destinati
 1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
 2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also click "Create a new Azure VM" then use the wizard to deploy a new destination server in Azure. This will automatically size your VM, provision storage, format disks, join the domain, and add the Storage Migration Service proxy to a Windows Server 2019 destination. You can choose from Windows Server 2019 (recommended), Windows Server 2016, and Windows Server 2012 R2 VMs of any size and use managed disks.   
 
- > [!NOTE]
-   > Using "Create a new Azure VM" requires that you have:
-   > - A valid Azure subscription.
-   > - An existing Azure Compute resource group where you have Create rights.
-   > - An existing Azure Virtual Network and subnet. 
-   > - An Azure Express Route or VPN solution tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
+    > [!NOTE]
+    > Using "Create a new Azure VM" requires that you have:
+    > - A valid Azure subscription.
+    > - An existing Azure Compute resource group where you have Create rights.
+    > - An existing Azure Virtual Network and subnet. 
+    > - An Azure Express Route or VPN solution tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
    
-   Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
-   > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
+    Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
+    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
 
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
    ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
