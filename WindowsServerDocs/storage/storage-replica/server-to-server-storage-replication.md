@@ -7,7 +7,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 03/26/2020
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server-to-server storage replication with Storage Replica
@@ -196,19 +196,15 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     3. Type the name of the server and then select **Submit**.
 2. On the **All Connections** page, select the source server.
 3. Select **Storage Replica** from Tools panel.
-4. Select **New** to create a new partnership.
-
-> [!NOTE] 
-> Windows Admin Center version 1910 supports creating Azure VMs directly:
-
-   a. From the *Storage Replica* tool within Windows Admin Center, under the *Partnerships* tab, select **New** and then under *Replicate with another server* select **Use a New Azure VM** then select **Next**.
+4. Select **New** to create a new partnership. To create a new Azure VM to use as the destination for the partnership:
+   a. Under **Replicate with another server** select **Use a New Azure VM** and then select **Next**. If you don't see this option, make sure that you're using Windows Admin Center version 1910 or a later version.
    b. Specify your source server information and replication group name, and then select **Next**.<br><br>
-This begins a process that automatically selects a Windows Server 2016 or Windows Server 2019 Azure VM as a destination for the migration source. Storage Migration Service recommends VM sizes to match your source, but you can override this by selecting **See all sizes**. Inventory data is used to automatically configure your managed disks and their file systems, as well as join your new Azure VM to your Active Directory domain. 
+   This begins a process that automatically selects a Windows Server 2019 or Windows Server 2016 Azure VM as a destination for the migration source. Storage Migration Service recommends VM sizes to match your source, but you can override this by selecting **See all sizes**. Inventory data is used to automatically configure your managed disks and their file systems, as well as join your new Azure VM to your Active Directory domain. 
    c. After Windows Admin Center creates the Azure VM, provide a replication group name and then select **Create**. Windows Admin Center then begins the normal Storage Replica initial synchronization process to start protecting your data.
 
-Here's a video showing how to use Storage Replica to migrate to Azure VMs.
+   Here's a video showing how to use Storage Replica to migrate to Azure VMs.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
+   > [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
 
 5. Provide the details of the partnership, and then select **Create**. <br>
    ![The New Partnership screen showing partnership details, such as an 8 GB log size.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
