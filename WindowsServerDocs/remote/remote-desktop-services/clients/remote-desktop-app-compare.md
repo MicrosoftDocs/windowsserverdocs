@@ -30,36 +30,36 @@ If you remote into your personal desktop, there are additional redirections that
 
 ### Input redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC)| Windows Store | Android | iOS | macOS |          Web client           |
-|-------------|---------------------------|----------------------------|---------------|---------|-----|-------|-------------------------------|
-| Keyboard    | X                         | X                          | X             | X       | X   | X     | X                             |
-| Mouse       | X                         | X                          | X             | X       | X\* | X     | X                             |
-| Touch       | X                         | X                          | X             | X       | X   |       | X (Edge and IE not supported) |
-| Pen         | X                         | X                          |               |         |     |       |                               |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client    |
+|-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|---------------|
+| Keyboard    | X                         | X                           | X             | X       | X   | X     | X             |
+| Mouse       | X                         | X                           | X             | X       | X\* | X     | X             |
+| Touch       | X                         | X                           | X             | X       | X   |       | X (except IE) |
+| Pen         | X                         | X                           |               |         |     |       |               |
 
 *View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
 
 ### Port redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC)| Windows Store | Android | iOS | macOS |          Web client           |
-|-------------|---------------------------|----------------------------|---------------|---------|-----|-------|-------------------------------|
-| Serial port | X                         | X                          |               |         |     |       |                               |
-| USB         | X                         | X                          |               |         |     |       |                               |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client |
+|-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|------------|
+| Serial port | X                         | X                           |               |         |     |       |            |
+| USB         | X                         | X                           |               |         |     |       |            |
 
 When you enable USB port redirection, any USB devices attached to the USB port are automatically recognized in the remote session.
 
 ### Other redirection (devices, etc)
 
-| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC)| Windows Store | Android | iOS         | macOS                          | Web client    |
-|---------------------|---------------------------|----------------------------|---------------|---------|-------------|--------------------------------|---------------|
-| Cameras             | X                         | X                          |               |         |             |                                |               |
-| Clipboard           | X                         | X                          | X             | text    | text, image | X                              | text          |
-| Local drive/storage | X                         | X                          |               | X       |             | x                              |               |
-| Location            | X                         | X                          |               |         |             |                                |               |
-| Microphones         | X                         | X                          | X             |         |             | X                              |               |
-| Printers            | X                         | X                          |               |         |             | X (CUPS only)                  | PDF print     |
-| Scanners            | X                         | X                          |               |         |             |                                |               |
-| Smart Cards         | X                         | X                          |               |         |             | X (Windows auth not supported) |               |
-| Speakers            | X                         | X                          | X             | X       | X           | X                              | X (except IE) |
+| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS         | macOS                           | Web client    |
+|---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
+| Cameras             | X                         | X                           |               |         |             | X                               |               |
+| Clipboard           | X                         | X                           | X             | text    | text, image | X                               | text          |
+| Local drive/storage | X                         | X                           |               | X       |             | X                               |               |
+| Location            | X                         | X                           |               |         |             |                                 |               |
+| Microphones         | X                         | X                           | X             |         |             | X                               |               |
+| Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
+| Scanners            | X                         | X                           |               |         |             |                                 |               |
+| Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |
+| Speakers            | X                         | X                           | X             | X       | X           | X                               | X (except IE) |
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
