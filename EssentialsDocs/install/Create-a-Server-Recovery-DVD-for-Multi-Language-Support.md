@@ -2,7 +2,7 @@
 title: Create a Server Recovery DVD for Multi-Language Support
 description: Describes how to use Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 author: daveba
