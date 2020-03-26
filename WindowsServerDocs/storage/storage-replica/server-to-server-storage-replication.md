@@ -85,7 +85,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     To use an Azure VM connected to your network via an ExpressRoute, see [Adding an Azure VM connected to your network via ExpressRoute](#add-azure-vm-expressroute).
     
     > [!NOTE]
-    > Starting in Windows Admin Center version 1910, you can configure a destination server automatically in Azure. If you choose that option, you don't need to perform the remaining operations in Step 2 for the destination server. 
+    > Starting in Windows Admin Center version 1910, you can configure a destination server automatically in Azure. If you choose that option, install Windows Server on the source server and then skip to [Step 3: Set up server-to-server replication](#step-3-set-up-server-to-server-replication). 
 
 3.  Add network information, join the servers to the same domain as your Windows 10 management PC (if you're using one), and then restart the servers.  
 
