@@ -199,7 +199,7 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 4. Select **New** to create a new partnership.
 
 > [!NOTE] 
-Windows Admin Center 1910 supports creating Azure VMs directly:
+> Windows Admin Center version 1910 supports creating Azure VMs directly:
 
    a. From the *Storage Replica* tool within Windows Admin Center, under the *Partnerships* tab, select **New** and then under *Replicate with another server* select **Use a New Azure VM** then select **Next**.
    b. Specify your source server information and replication group name, and then select **Next**.<br><br>
