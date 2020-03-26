@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-nlb
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ms.date: 09/13/2018
 ---
 # Network Load Balancing

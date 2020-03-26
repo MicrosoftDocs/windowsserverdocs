@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/23/2018
 ---
 # Deploy Network Controller using Windows PowerShell

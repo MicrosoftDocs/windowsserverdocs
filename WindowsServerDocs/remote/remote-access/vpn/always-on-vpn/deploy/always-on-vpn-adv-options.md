@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/24/2019
-ms.author: pashort, v-tea
-author: shortpatti
+ms.author: lizross, v-tea
+author: eross-msft
 ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---

@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # NPS Proxy Server Load Balancing

@@ -10,8 +10,8 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a6291ba-0d39-4434-a8c5-0f0369860faa
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # IP Address Management (IPAM)
 

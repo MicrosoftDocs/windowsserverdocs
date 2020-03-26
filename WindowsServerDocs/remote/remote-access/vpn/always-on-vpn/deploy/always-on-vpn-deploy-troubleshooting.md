@@ -7,8 +7,8 @@ ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 ms.localizationpriority: medium 
 ms.date: 06/11/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Troubleshoot Always On VPN 
 

@@ -10,8 +10,8 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # DirectAccess Offline Domain Join
 

@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: shortpatti
-ms.author: pashort
+author: eross-msft
+ms.author: lizross
 ---
 # Wireless Access Deployment Overview
 

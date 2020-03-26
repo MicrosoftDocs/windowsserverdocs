@@ -10,8 +10,8 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Add a DNS Resource Record
 

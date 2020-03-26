@@ -10,8 +10,8 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45cada9e-69b9-43df-b6f5-6d3942435809
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Purge Utilization Data
 

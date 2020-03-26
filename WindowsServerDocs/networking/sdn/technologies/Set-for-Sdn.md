@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa5b5d11-3921-44f9-8e14-e378c75fca76
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Switch Embedded Teaming for SDN
 

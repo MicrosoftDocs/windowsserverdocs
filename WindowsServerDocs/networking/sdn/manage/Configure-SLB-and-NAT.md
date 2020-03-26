@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/23/2018
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)

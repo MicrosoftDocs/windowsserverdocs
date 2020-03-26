@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment
 

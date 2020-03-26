@@ -3,7 +3,7 @@ title: "Transition from Windows Server Essentials to Windows Server 2012 R2 Stan
 description: "Describes how to use Windows Server Essentials"
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

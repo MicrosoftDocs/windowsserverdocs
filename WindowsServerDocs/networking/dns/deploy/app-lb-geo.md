@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Use DNS Policy for Application Load Balancing With Geo-Location Awareness

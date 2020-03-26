@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Internal DNS Service (iDNS) for SDN
 

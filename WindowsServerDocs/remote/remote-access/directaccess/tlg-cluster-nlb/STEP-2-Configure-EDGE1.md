@@ -10,8 +10,8 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84457351-1ca7-4e7c-8e2c-53d55b1fcdc0
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # STEP 2 Configure EDGE1
 

@@ -10,8 +10,8 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 

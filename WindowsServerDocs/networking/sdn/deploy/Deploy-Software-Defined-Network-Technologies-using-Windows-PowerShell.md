@@ -10,8 +10,8 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 842ed937-559a-4f30-86dc-c93475433b4e
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/23/2018
 ---
 # Deploy Software Defined Network technologies using Windows PowerShell

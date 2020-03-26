@@ -10,8 +10,8 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 3 Configure a Load-Balanced Cluster
 

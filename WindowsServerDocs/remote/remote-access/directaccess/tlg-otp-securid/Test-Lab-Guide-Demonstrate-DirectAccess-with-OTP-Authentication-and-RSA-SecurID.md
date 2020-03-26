@@ -10,8 +10,8 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10c7a49c-5671-4bec-b562-13fdd67f4629
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Test Lab Guide: Demonstrate DirectAccess with OTP Authentication and RSA SecurID
 

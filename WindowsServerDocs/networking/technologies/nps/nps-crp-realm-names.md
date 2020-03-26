@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Realm Names

@@ -6,7 +6,7 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
-ms.author: pashort
+ms.author: lizross
 author: kallie-b
 ---
 # Contact the Datacenter and Cloud Networking Team
