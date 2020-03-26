@@ -6,8 +6,8 @@ ms.technology: networking-ras
 ms.topic: article
 
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 06/28/2019
 ms.reviewer: deverette
 ---

@@ -7,8 +7,8 @@ ms.topic: article
 ms.assetid: 
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/04/2018
 ---
 
