@@ -1,12 +1,8 @@
 ---
 title: "Prepare your Source Server for Windows Server Essentials migration1"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
@@ -76,7 +72,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 #### Run the Windows Server Solutions Best Practices Analyzer  
  You can run the Windows Server Solutions Best Practices Analyzer (BPA) to verify that there are no issues on your server, network, or domain before you start the migration process. The BPA collects configuration information from the following sources:  
   
--   Active Directory® Windows Management Instrumentation (WMI)  
+-   Active Directory&reg; Windows Management Instrumentation (WMI)  
   
 -   The registry  
   

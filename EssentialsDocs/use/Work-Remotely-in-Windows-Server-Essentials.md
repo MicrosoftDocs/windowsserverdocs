@@ -1,12 +1,8 @@
 ---
 title: "Work Remotely in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
@@ -23,8 +19,8 @@ manager: dongill
  The following topics can help you access your server resources remotely:  
   
 
--   [Use Remote Web Access in Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
-  
+-      [Use Remote Web Access in Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
+     
 -   [Use VPN to connect to Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)  
   
 -   [Use the My Server app to connect to Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_App)  
