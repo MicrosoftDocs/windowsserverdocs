@@ -70,4 +70,3 @@
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
-""

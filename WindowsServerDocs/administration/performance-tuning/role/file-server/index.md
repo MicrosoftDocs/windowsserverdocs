@@ -7,8 +7,6 @@ ms.topic: article
 author: phstee
 ms.author: nedpyle; danlo; dkruse; v-tea
 ms.date: 12/12/2019
-  - CI ID 111495
-  - CSSTroubleshoot
 manager: dcscontentpm
 audience: Admin
 ---
