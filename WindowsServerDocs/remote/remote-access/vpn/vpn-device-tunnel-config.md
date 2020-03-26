@@ -6,8 +6,8 @@ ms.date: 11/05/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium 
 ---
 # Configure VPN device tunnels in Windows 10
@@ -31,8 +31,8 @@ Device tunnel can only be configured on domain-joined devices running Windows 10
 You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections. 
 
 ```PowerShell
-$VPNRootCertAuthority = “Common Name of trusted root certification authority”
-$RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like “*$VPNRootCertAuthority*” })
+$VPNRootCertAuthority = "Common Name of trusted root certification authority"
+$RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like "*$VPNRootCertAuthority*" })
 Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateNameToAccept $RootCACert -PassThru
 ```
 

@@ -2,6 +2,7 @@
 title: Example of generated C# code for the top level IPAM & Subnet object
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 

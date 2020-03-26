@@ -8,10 +8,10 @@ ms.topic: article
 ms.assetid: 68fdc02b-2904-4a67-8bfe-45e426f2bd6c
 ms.author: lizross
 author: eross-msft
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+
+
+
+
 ---
 
 # STEP 1 Complete the DirectAccess Configuration

@@ -1,12 +1,8 @@
 ---
 title: Remote Server Administration Tools
 description: "Top level topic for Remote Server Administration Tools"
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-rsat
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft

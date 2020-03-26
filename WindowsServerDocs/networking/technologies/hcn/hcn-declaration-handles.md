@@ -2,6 +2,7 @@
 title: RPC context handles for HCN
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 

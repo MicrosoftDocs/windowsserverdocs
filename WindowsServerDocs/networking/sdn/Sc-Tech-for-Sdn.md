@@ -1,17 +1,13 @@
 ---
 title: System Center Technologies for SDN
 description: You can use this topic to learn about the Software Defined Networking (SDN) technologies that are provided in System Center.
-manager: brianlic
-
+manager: grcusanz
 ms.prod: windows-server
-
-
 ms.technology: networking-sdn
-
 ms.topic: article
 ms.assetid: f66ee49a-1fd3-4927-a813-64a15017b63b
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ---
 # System Center Technologies for SDN
 

@@ -7,8 +7,8 @@ ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 ms.localizationpriority: medium 
 ms.date: 06/11/2018
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ---
 # Troubleshoot Always On VPN 
 
@@ -30,7 +30,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
     - If you know which tunnel to use for your deployment, set the type of VPN to that particular tunnel type on the VPN client side.
 
-    - By making a VPN connection with a particular tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, “GRE blocked for PPTP”).
+    - By making a VPN connection with a particular tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, "GRE blocked for PPTP").
 
     - This error also occurs when the VPN server cannot be reached or the tunnel connection fails.
 

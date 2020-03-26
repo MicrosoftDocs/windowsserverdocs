@@ -1,8 +1,8 @@
 ---
 title: Insider preview for Windows Time Service features in Windows Server 2019
 description: New Windows Time Service features in Windows Server 2019
-author: eross-msft
-ms.author: lizross
+author: dcuomo
+ms.author: dacuo
 ms.date: 09/05/2018
 ms.topic: article
 ms.prod: windows-server
@@ -51,7 +51,7 @@ When receiving a timing packet over the network from a time server, it must be p
 
 ![software timestamping](../media/Windows-Time-Service/software-timestamping.png)
 
-To address this problem, software timestamping allows us to timestamp packets before and after the “Windows Networking Components” shown above to account for the delay in the operating system.
+To address this problem, software timestamping allows us to timestamp packets before and after the "Windows Networking Components" shown above to account for the delay in the operating system.
 
 For more information, see:
 

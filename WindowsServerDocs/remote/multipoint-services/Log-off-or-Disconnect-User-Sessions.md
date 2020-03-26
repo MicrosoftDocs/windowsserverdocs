@@ -1,12 +1,8 @@
 ---
 title: Log off or Disconnect User Sessions
 description: Learn how to manually log off a user
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3e9bbcdc-e33b-481e-8b46-787a4f6d58bc
 author: lizap

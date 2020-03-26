@@ -2,6 +2,7 @@
 title: Host Compute Network (HCN) scenarios
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 
@@ -30,7 +31,7 @@ void CreateHcnNetwork()
     unique_hcn_network hcnnetwork;
     wil::unique_cotaskmem_string result;
     std::wstring settings = LR"( 
-	{ 
+    { 
         "SchemaVersion": { 
             "Major": 2, 
             "Minor": 0 
@@ -88,11 +89,11 @@ void CreateHcnNetwork()
     if (FAILED(result)) 
     { 
                     // UnMarshal  the result Json
-	 // ErrorSchema
+     // ErrorSchema
         //   {
-    	//	"ErrorCode" : <uint32>,
-    	//	"Error" : <string>,
-    	//	"Success" : <bool>,
+        //    "ErrorCode" : <uint32>,
+        //    "Error" : <string>,
+        //    "Success" : <bool>,
        //   }
 
         // Failed to create network
@@ -216,7 +217,7 @@ void CreateAndHotAddEndpoint()
             "Suffix" : "net.home",
             "ServerList" : "10.0.0.10",
         }
-    })”;
+    })";
     GUID endpointGuid;  
     HRESULT result = CoCreateGuid(&endpointGuid);
 
@@ -394,7 +395,7 @@ void CreateHcnNamespace()
     unique_hcn_namespace handle;
     wil::unique_cotaskmem_string errorRecord;
     std::wstring settings = LR"( 
-	{ 
+    { 
         "SchemaVersion": { 
             "Major": 2, 
             "Minor": 0 
@@ -416,11 +417,11 @@ void CreateHcnNamespace()
     if (FAILED(result)) 
     { 
                     // UnMarshal  the result Json
-	 // ErrorSchema
+     // ErrorSchema
         //   {
-    	//	"ErrorCode" : <uint32>,
-    	//	"Error" : <string>,
-    	//	"Success" : <bool>,
+        //    "ErrorCode" : <uint32>,
+        //    "Error" : <string>,
+        //    "Success" : <bool>,
        //   }
 
         // Failed to create network
@@ -577,7 +578,7 @@ void CreateHcnLoadBalancer()
     unique_hcn_loadbalancer handle;
     wil::unique_cotaskmem_string errorRecord;
     std::wstring settings = LR"( 
-	 { 
+     { 
         "SchemaVersion": { 
             "Major": 2, 
             "Minor": 0 
@@ -612,11 +613,11 @@ void CreateHcnLoadBalancer()
     if (FAILED(hr)) 
     { 
                     // UnMarshal  the result Json
-	 // ErrorSchema
+     // ErrorSchema
         //   {
-    	//	"ErrorCode" : <uint32>,
-    	//	"Error" : <string>,
-    	//	"Success" : <bool>,
+        //    "ErrorCode" : <uint32>,
+        //    "Error" : <string>,
+        //    "Success" : <bool>,
        //   }
 
         // Failed to create network

@@ -2,12 +2,8 @@
 title: Create a DNS Zone
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-
 ms.prod: windows-server
-
-
 ms.technology: networking-ipam
-
 ms.topic: article
 ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
 ms.author: lizross

@@ -1,8 +1,7 @@
 ---
 title: Troubleshooting Web Application Proxy
-description:
-author: kgremban
-manager: femila
+ms.author: kgremban
+author: eross-msft
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server

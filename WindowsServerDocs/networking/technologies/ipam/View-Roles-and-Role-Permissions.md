@@ -2,12 +2,8 @@
 title: View Roles and Role Permissions
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-
 ms.prod: windows-server
-
-
 ms.technology: networking-ipam
-
 ms.topic: article
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
 ms.author: lizross

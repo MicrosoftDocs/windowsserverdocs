@@ -2,6 +2,7 @@
 title: Host Compute Network (HCN) JSON document schemas
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 
