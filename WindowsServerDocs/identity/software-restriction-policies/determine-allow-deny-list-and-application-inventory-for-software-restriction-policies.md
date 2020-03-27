@@ -1,6 +1,6 @@
 ---
 title: Determine Allow-Deny List and Application Inventory for Software Restriction Policies
-description: "Windows Server Security"
+description: Windows Server Security
 ms.prod: windows-server
 ms.technology: security-software-restriction-policies
 ms.topic: article

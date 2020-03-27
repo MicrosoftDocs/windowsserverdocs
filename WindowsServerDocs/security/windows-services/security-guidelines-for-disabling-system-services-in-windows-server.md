@@ -1,10 +1,8 @@
 ---
 title: Security guidelines for system services in Windows Server 2016
 description: Security guidelines for disabling services in Windows Server 2016 with Desktop Experience
-ms.custom: na
 ms.prod: windows-server
 ms.technology: techgroup-security
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 11/26/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
@@ -18,7 +16,7 @@ Applies to: Windows Server 2016
 
 The Windows operating system includes many system services that provide important functionality. Different services have different default startup policies: some are started by default (automatic), some when needed (manual), and some are disabled by default and must be explicitly enabled before they can run. These defaults were chosen carefully for each service to balance performance, functionality, and security for typical customers.
 
-However, some enterprise customers may prefer a more security-focused balance for their Windows PCs and servers, one that reduces their attack surface to the absolute minimum, and may therefore wish to fully disable all services that are not needed in their specific environments. For those customers, Microsoft® is providing the accompanying guidance regarding which services can safely be disabled for this purpose.
+However, some enterprise customers may prefer a more security-focused balance for their Windows PCs and servers, one that reduces their attack surface to the absolute minimum, and may therefore wish to fully disable all services that are not needed in their specific environments. For those customers, Microsoft&reg; is providing the accompanying guidance regarding which services can safely be disabled for this purpose.
 
 The guidance is only for Windows Server 2016 with Desktop Experience (unless used as a desktop replacement for end users). Beginning with Windows Server 2019, these guidelines are configured by default. Each service on the system is categorized as follows:
 
