@@ -1,6 +1,6 @@
 ---
 title: Manage Hyper-V on Windows Server
-description: "Gives links to articles on managing Hyper-V"
+description: Gives links to articles on managing Hyper-V
 ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v

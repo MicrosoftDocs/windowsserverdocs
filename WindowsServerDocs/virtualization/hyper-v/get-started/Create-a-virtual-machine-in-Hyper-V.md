@@ -1,14 +1,12 @@
 ---
 title: Create a virtual machine in Hyper-V
-description: "Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell"
+description: Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
 ---

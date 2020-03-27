@@ -1,7 +1,7 @@
 ---
 title: Cluster affinity
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft

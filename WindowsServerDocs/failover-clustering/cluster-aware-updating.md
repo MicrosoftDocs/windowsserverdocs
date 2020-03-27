@@ -4,7 +4,7 @@ description: Cluster-Aware Updating (CAU) automates software update installation
 ms.topic: article
 ms.prod: windows-server
 ms.topic: article
-ms.manager: lizross
+manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering

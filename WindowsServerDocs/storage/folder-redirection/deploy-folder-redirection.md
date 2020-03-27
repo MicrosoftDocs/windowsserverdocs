@@ -1,5 +1,5 @@
 ---
-title: Deploy Folder Redirection with Offline Files
+title: Deploy Folder Redirection with Offline FilesDeploy Folder Redirection with Offline Files
 description: How to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 ms.prod: windows-server 
 ms.topic: article 
@@ -24,7 +24,7 @@ For a list of recent changes to this topic, see [Change history](#change-history
 
 ### Hardware requirements
 
-Folder Redirection requires an x64-based or x86-based computer; it is not supported by Windows® RT.
+Folder Redirection requires an x64-based or x86-based computer; it is not supported by Windows&reg; RT.
 
 ### Software requirements
 

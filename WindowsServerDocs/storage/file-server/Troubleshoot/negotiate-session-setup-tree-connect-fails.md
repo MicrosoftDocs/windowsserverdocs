@@ -3,7 +3,6 @@ title: Negotiate, Session Setup, and Tree Connect Failures
 description: Introduces how to troubleshoot the Negotiate, Session Setup, and Tree Connect Failures.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -25,11 +24,11 @@ If you are using Windows Server 2008 R2, there are hotfixes for this problem. Ma
 
 The SMB server receives an SMB SESSION\_SETUP request from a SMB client but failed to response.
 
-If the fully qualified domain name (FQDN) or Network Basic Input/Output System (NetBIOS) name of the server is used in the Universal Naming Convention (UNC) path, Windows will use Kerberos for authentication.
+If the fully qualified domain name (FQDN) or Network Basic Input/Output System (NetBIOS) name of the server is 'sed in the Universal Naming Convention (UNC) path, Windows will use Kerberos for authentication.
 
 After the Negotiate response, there will be an attempt to get a Kerberos ticket for the Common Internet File System (CIFS) service principal name (SPN) of the server. Look at the Kerberos traffic on TCP port 88 to make sure that there are no Kerberos errors when the SMB client is gaining the token.
 
-> [!NOTE]
+> [!NOTE]""""
 > The errors that occur during the Kerberos Pre-Authentication are OK. The errors that occur after the Kerberos Pre-Authentication (instances in which authentication does not work), are the errors that caused the SMB problem.
 
 Additionally, make the following checks:
@@ -80,7 +79,7 @@ Follow these guidelines as you troubleshoot:
 - Windows 8, Windows Server 2012, and later versions of Windows support client-side encryption (SMBv3 and later).
 
 - Windows 7, Windows Server 2008 R2 and earlier versions of Windows do not support client-side encryption.
-
+'
 - Samba and third-party device may not support encryption. You may have to consult product documentation for more information.
 
 ## References

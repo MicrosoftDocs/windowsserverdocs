@@ -1,14 +1,14 @@
 ---
 title: Microsoft Hyper-V Server 2016
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
+
 ms.topic: get-started-article
 ms.assetid: f815ada0-4c63-4e73-9c24-dc5eb21526c7
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 07/26/2017
 ---

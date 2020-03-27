@@ -1,14 +1,12 @@
 ---
 title: Hyper-V on Windows Server
-description: "Provides links to key articles about trying out, planning, deploying, and managing Hyper-V"
+description: Provides links to key articles about trying out, planning, deploying, and managing Hyper-V
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0baef6b8-598c-4fe0-9f31-5869fc4e0f69
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/07/2016
 ---

@@ -3,7 +3,6 @@ title: SMB Multichannel troubleshooting
 description: Introduces SMB Multichannel troubleshooting methods.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -42,7 +41,7 @@ The following command reveals which connection profile is being used. You can al
 
 **Get-NetConnectionProfile**
 
-Under the **File and Printer Sharing** group, check the firewall inbound rules to make sure that “SMB-In” is enabled for the correct profile.
+Under the **File and Printer Sharing** group, check the firewall inbound rules to make sure that "SMB-In" is enabled for the correct profile.
 
 ![SMB-in rules](media/smb-multichannel-troubleshooting-1.png)
 
@@ -54,9 +53,9 @@ You can also enable **File and Printer Sharing** in the **Network and Sharing Ce
 
 You need the SMB connection tracing information that starts from the TCP three-way handshake. We recommend that you close all applications (especially Windows Explorer) before you start the capture. Restart the **Workstation** service on the SMB client, start the packet capture, and then reproduce the issue.
 
-Make sure that the SMBv3.*x* connection is being negotiated, and that nothing in between the server and the client is affecting dialect negotiation. SMBv2 and earlier versions don’t support multichannel.
+Make sure that the SMBv3.*x* connection is being negotiated, and that nothing in between the server and the client is affecting dialect negotiation. SMBv2 and earlier versions don't support multichannel.
 
-Look for the NETWORK\_INTERFACE\_INFO packets. This is where the SMB client requests a list of adapters from the SMB server. If these packets aren’t exchanged, multichannel doesn’t work.
+Look for the NETWORK\_INTERFACE\_INFO packets. This is where the SMB client requests a list of adapters from the SMB server. If these packets aren't exchanged, multichannel doesn't work.
 
 The server responds by returning a list of valid network interfaces. Then, the SMB client adds those to the list of available adapters for multichannel. At this point, multichannel should start and, at least, try to start the connection.
 
@@ -76,6 +75,6 @@ In the following scenarios, an adapter cannot be used:
 
 - Something blocked the network interface request and response packets.
 
-- The client and server can’t communicate over the extra network interface. For example, the TCP three-way handshake failed, the connection is blocked by a firewall, session setup failed, and so on.
+- The client and server can't communicate over the extra network interface. For example, the TCP three-way handshake failed, the connection is blocked by a firewall, session setup failed, and so on.
 
 If the adapter and its IPv6 address are on the list that is sent by the server, the next step is to see whether communications are tried over that interface. Filter the trace by the link-local address and SMB traffic, and look for a connection attempt. If this is a NetConnection trace, you can also examine Windows Filtering Platform (WFP) events to see whether the connection is being blocked.

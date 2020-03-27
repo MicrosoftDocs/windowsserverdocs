@@ -3,7 +3,6 @@ title: Advanced Troubleshooting Server Message Block (SMB)
 description: Introduces the advanced Server Message Block (SMB) troubleshooting methods.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -79,7 +78,7 @@ This section provides the steps for using netshell to collect network trace.
    ```
 
 > [!NOTE] 
-> You should trace only a minimum amount of the data that’s transferred. For performance issues, always take both a good and bad trace, if the situation allows it.
+> You should trace only a minimum amount of the data that's transferred. For performance issues, always take both a good and bad trace, if the situation allows it.
 
 ### Analyze the traffic
 
