@@ -1,5 +1,5 @@
 ---
-title: "Step 1: Prepare your Source Server for Windows Server Essentials migration"
+title: Step 1: Prepare your Source Server for Windows Server Essentials migration
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
 ms.prod: windows-server
@@ -10,9 +10,9 @@ ms.author: coreyp
 manager: dongill
 ---
 
-
-
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+
+# Step 1: Prepare your Source Server for Windows Server Essentials migration
 
 This topic explains how to back up the Source Server, evaluate the Source Server system health, install the most recent service packs and fixes, and verify the network configuration.  
 

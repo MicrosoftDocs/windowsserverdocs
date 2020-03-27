@@ -7,7 +7,7 @@ ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: anpaul
-author: Anirban Paul
+author: AnirbanPaul
 ---
 # Contact the Datacenter and Cloud Networking Team
 
