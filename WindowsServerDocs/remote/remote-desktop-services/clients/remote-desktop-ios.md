@@ -1,12 +1,12 @@
 ---
 title: Get started with the iOS client
 description: Learn how to set up the Remote Desktop client for iOS
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr

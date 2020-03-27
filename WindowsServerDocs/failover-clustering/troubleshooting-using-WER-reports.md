@@ -1,10 +1,10 @@
 ---
 title: Troubleshooting a Failover Cluster using Windows Error Reporting
 description: Troubleshooting a Failover Cluster using WER Reports, with specific details on how to gather reports and diagnose common issues.
-keywords: Failover Cluster,WER Reports,Diagnostics,Cluster, Windows Error Reporting
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.author: vpetter
+author: dcuomo
 ms.date: 03/27/2018
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting 

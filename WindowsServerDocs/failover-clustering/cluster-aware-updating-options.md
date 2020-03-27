@@ -1,13 +1,13 @@
 ---
 ms.assetid: 2f4b6641-0ec2-4b1c-85fb-a1f1d16685c8
 title: Cluster-Aware Updating advanced options and updating run profiles
+description: How to configure advanced options and updating run profiles for Cluster-Aware Updating (CAU)
 ms.topic: article
 ms.prod: windows-server
-manager: dongill
+manager: lizross
 ms.author: jgerend
 author: JasonGerend
 ms.date: 08/06/2018
-description: How to configure advanced options and updating run profiles for Cluster-Aware Updating (CAU)
 ---
 # Cluster-Aware Updating advanced options and updating run profiles
 
@@ -74,7 +74,7 @@ $MyRunProfile = Import-Clixml C:\Windows\Cluster\DefaultParameters.xml
 Invoke-CauRun –ClusterName CONTOSO-FC1 @MyRunProfile   
 ```  
   
- By using an Updating Run Profile, you can update a failover cluster in a repeatable fashion with consistent settings for exception management, time bounds, and other operational parameters. Because these settings are typically specific to a class of failover clusters—such as “All Microsoft SQL Server clusters”, or “My business-critical clusters”—you might want to name each Updating Run Profile according to the class of Failover Clusters it will be used with. In addition, you might want to manage the Updating Run Profile on a file share that is accessible to all of the failover clusters of a specific class in your IT organization.  
+ By using an Updating Run Profile, you can update a failover cluster in a repeatable fashion with consistent settings for exception management, time bounds, and other operational parameters. Because these settings are typically specific to a class of failover clusters—such as "All Microsoft SQL Server clusters", or "My business-critical clusters"—you might want to name each Updating Run Profile according to the class of Failover Clusters it will be used with. In addition, you might want to manage the Updating Run Profile on a file share that is accessible to all of the failover clusters of a specific class in your IT organization.  
   
   
   

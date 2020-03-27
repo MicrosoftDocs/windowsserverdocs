@@ -2,12 +2,11 @@
 title: On connecting, user receives Remote Desktop Service is currently busy message
 description: Troubleshooting the Remote Desktop Service is currently busy error when users start a remote desktop connection.
 audience: itpro ​
-ms.custom: na
+
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
+
+
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan

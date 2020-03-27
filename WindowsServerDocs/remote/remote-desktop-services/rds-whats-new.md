@@ -1,14 +1,14 @@
 ---
 title: What's new in Remote Desktop Services
 description: Provides description of new features RDS in Windows Server 2016.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 10/11/2016  
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 04d52dff-e61b-4633-9908-be8600abc2ba
 author: ChristianMontoya

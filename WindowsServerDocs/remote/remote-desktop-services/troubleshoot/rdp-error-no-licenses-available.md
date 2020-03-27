@@ -2,12 +2,11 @@
 title: Clients can't connect and see No licenses available error
 description: Troubleshooting no licenses available error with remote deskotp connection
 audience: itpro ​
-ms.custom: na
+
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
+
+
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan

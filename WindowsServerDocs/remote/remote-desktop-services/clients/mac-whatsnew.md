@@ -1,12 +1,12 @@
 ---
 title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
+
 ms.topic: article
 author: heidilohr
 manager: lizross

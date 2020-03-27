@@ -1,12 +1,13 @@
 ---
 title: Deploying a two-node clustered file server
+description: This article describes creating a two-node file server cluster
 ms.prod: windows-server
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 02/01/2019
-description: This article describes creating a two-node file server cluster
 ---
 # Deploying a two-node clustered file server
 
@@ -50,7 +51,7 @@ The following list describes shared folder configuration functionality that is i
 
 For a failover cluster in Windows Server 2016 or Windows Server 2019 to be considered an officially supported solution by Microsoft, the solution must meet the following criteria.
 
-- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2016, this is the “Certified for Windows Server 2016” logo. For Windows Server 2019, this is the “Certified for Windows Server 2019” logo. For more information about what hardware and software systems have been certified, please visit the Microsoft [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx) site.
+- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2016, this is the "Certified for Windows Server 2016" logo. For Windows Server 2019, this is the "Certified for Windows Server 2019" logo. For more information about what hardware and software systems have been certified, please visit the Microsoft [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx) site.
 
 - The fully configured solution (servers, network, and storage) must pass all tests in the validation wizard, which is part of the failover cluster snap-in.
 

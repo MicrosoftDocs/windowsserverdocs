@@ -5,7 +5,7 @@ ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
-ms.tgt_pltfrm: na
+
 ms.topic: article
 author: lizap
 manager: dougkim

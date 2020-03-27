@@ -5,6 +5,7 @@ ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 03/07/2019
 description: This article describes failover cluster affinity and antiAffinity levels
 ---

@@ -1,10 +1,10 @@
 ---
-title: 'Configuring cluster accounts in Active Directory'
+title: Configuring cluster accounts in Active Directory
 ms.date: 11/12/2012
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 author: JasonGerend
-manager: elizapo
+manager: lizross
 ms.author: jgerend
 ---
 # Configuring cluster accounts in Active Directory
@@ -24,7 +24,7 @@ This section describes the Active Directory computer accounts (also called Activ
       
     For example, if you create a cluster called Cluster1 and then try to configure a clustered print server called PrintServer1 on your cluster, the Cluster1 account in Active Directory will need to retain the correct permissions so that it can be used to create a computer account called PrintServer1.  
       
-    The cluster name account is created in the default container for computer accounts in Active Directory. By default this is the “Computers” container, but the domain administrator can choose to redirect it to another container or organizational unit (OU).  
+    The cluster name account is created in the default container for computer accounts in Active Directory. By default this is the "Computers" container, but the domain administrator can choose to redirect it to another container or organizational unit (OU).  
       
   - **The computer account (computer object) of a clustered service or application.** These accounts are created automatically by the High Availability wizard as part of the process of creating most types of clustered services or application, the exception being a Hyper-V virtual machine. The cluster name account is granted the necessary permissions to control these accounts.  
       
@@ -101,7 +101,7 @@ As described in the preceding three sections, certain requirements must be met b
           
       - The account (or the group that the account is a member of) must be given the **Create Computer objects** and **Read All Properties** permissions in the container that is used for computer accounts in the domain. For more information, see [Steps for configuring the account for the person who installs the cluster](#steps-for-configuring-the-account-for-the-person-who-installs-the-cluster), later in this guide.  
           
-      - If your organization chooses to prestage the cluster name account (a computer account with the same name as the cluster), the prestaged cluster name account must give “Full Control” permission to the account of the person who installs the cluster. For other important details about how to prestage the cluster name account, see [Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account), later in this guide.  
+      - If your organization chooses to prestage the cluster name account (a computer account with the same name as the cluster), the prestaged cluster name account must give "Full Control" permission to the account of the person who installs the cluster. For other important details about how to prestage the cluster name account, see [Steps for prestaging the cluster name account](#steps-for-prestaging-the-cluster-name-account), later in this guide.  
           
 
 ### Planning ahead for password resets and other account maintenance

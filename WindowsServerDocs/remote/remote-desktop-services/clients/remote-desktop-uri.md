@@ -1,12 +1,12 @@
 ---
 title: Remote Desktop clients URI scheme
 description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: lizap

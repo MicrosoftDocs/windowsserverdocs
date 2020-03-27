@@ -1,14 +1,14 @@
 ---
 title: RDS - Partners for hosting desktops and apps
 description: List of partners who can host desktops and apps using RDS.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/27/2017  
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap

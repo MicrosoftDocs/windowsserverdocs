@@ -4,7 +4,7 @@ title: What's new in Failover Clustering in Windows Server
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
-manager: dongill
+manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
