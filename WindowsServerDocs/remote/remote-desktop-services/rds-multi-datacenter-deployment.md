@@ -1,12 +1,8 @@
 ---
 title: Geo-redundant RDS data centers in Azure
 description: Learn how to create an RDS deployment that uses multiple data centers to provide high availability across geographic locations.
-
 ms.prod: windows-server
-
-
 ms.technology: remote-desktop-services
-
 ms.topic: article
 ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
 author: haley-rowland
@@ -60,7 +56,7 @@ Create the following resources in Azure to create a geo-redundant multi-data cen
    
       2. Edit the computer names so that they don't collide with those in the deployment in RG A.
       
-         Locate the VMs in the **Resources** section of the template. Change the **computerName** field under **osProfile**. For example, "gateway" can become"gateway**-b**"; "[concat('rdsh-', copyIndex())]" can become "[concat('rdsh-b-', copyIndex())]", and “broker” can become “broker**-b**”.
+         Locate the VMs in the **Resources** section of the template. Change the **computerName** field under **osProfile**. For example, "gateway" can become"gateway**-b**"; "[concat('rdsh-', copyIndex())]" can become "[concat('rdsh-b-', copyIndex())]", and "broker" can become "broker**-b**".
       
          (You can also change the names of the VMs manually after you run the template.)
    2. As in step 3 above, use the information in [Remote Desktop Services - High availability](rds-plan-high-availability.md) to configure the other RDS components for high availability.
@@ -97,7 +93,7 @@ To enable UPDs on both deployments, do the following:
 
 Create an [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) profile, and make sure to select the **Priority** routing method. Set the two endpoints to the public IP addresses of each deployment. Under **Configuration**, change the protocol to HTTPS (instead of HTTP) and the port to 443 (instead of 80). Take note of the **DNS time to live**, and set it appropriately for your failover needs. 
 
-Note that Traffic Manager requires endpoints to return 200 OK in response to a GET request in order to be marked as "healthy." The publicIP object created from the RDS templates will function, but do not add a path addendum. Instead, you can give end users the Traffic Manager URL with “/RDWeb” appended, for example: ```http://deployment.trafficmanager.net/RDWeb```
+Note that Traffic Manager requires endpoints to return 200 OK in response to a GET request in order to be marked as "healthy." The publicIP object created from the RDS templates will function, but do not add a path addendum. Instead, you can give end users the Traffic Manager URL with "/RDWeb" appended, for example: ```http://deployment.trafficmanager.net/RDWeb```
 
 By deploying Azure Traffic Manager with the Priority routing method, you prevent end users from accessing the passive deployment while the active deployment is functional. If end users access the passive deployment and the Storage Replica direction hasn't been switched for failover, the user sign-in hangs as the deployment tries and fails to access the file share on the passive Storage Spaces Direct cluster - eventually the deployment will give up and give the user a temporary profile.  
 

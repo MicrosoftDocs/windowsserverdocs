@@ -1,12 +1,8 @@
 ---
 title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
-
 ms.prod: windows-server
-
-
 ms.technology: remote-desktop-services
-
 ms.topic: article
 author: heidilohr
 manager: lizross
@@ -253,7 +249,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 
 *Date published: 08/06/2018*
 
-- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: “AzureAD\user” or “AzureAD\user@domain”.
+- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: "AzureAD\user" or "AzureAD\user@domain".
 - Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0

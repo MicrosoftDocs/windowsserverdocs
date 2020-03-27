@@ -1,11 +1,7 @@
 ---
 title: Poor performance or application problems during remote desktop connection
 description: Troubleshooting poor performance or application problems during remote desktop connection.
-audience: itpro ​
-
 ms.reviewer: rklemen
-
-
 ms.topic: troubleshooting
 author: kaushika-msft
 manager: dcscontentpm

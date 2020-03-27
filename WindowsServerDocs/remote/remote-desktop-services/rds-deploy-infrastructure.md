@@ -1,14 +1,10 @@
 ---
 title: Deploy your Remote Desktop environment
-
 ms.prod: windows-server
 description: Basic steps to deploy a Remote Desktop environment.
-
-
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/10/2017
-
 ms.topic: article
 author: lizap
 manager: dongill

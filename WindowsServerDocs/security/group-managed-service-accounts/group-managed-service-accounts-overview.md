@@ -1,12 +1,8 @@
 ---
 title: Group Managed Service Accounts Overview
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-gmsa
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
 author: coreyp-at-msft

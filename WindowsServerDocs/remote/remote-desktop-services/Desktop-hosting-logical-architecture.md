@@ -1,14 +1,10 @@
 ---
 title: Remote Desktop Services architecture
 description: Architecture diagrams for RDS
-
 ms.prod: windows-server
-
-
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 02/10/2017
-
 ms.topic: article
 ms.assetid: 7f73bb0a-ce98-48a4-9d9f-cf7438936ca1
 author: lizap
@@ -26,8 +22,8 @@ Below are various configurations for deploying Remote Desktop Services to host W
 ## Standard RDS deployment architectures
 
 Remote Desktop Services has two standard architectures:
--	Basic deployment – This contains the minimum number of servers to create a fully effective RDS environment
--	Highly available deployment – This contains all necessary components to have the highest guaranteed uptime for your RDS environment
+-    Basic deployment – This contains the minimum number of servers to create a fully effective RDS environment
+-    Highly available deployment – This contains all necessary components to have the highest guaranteed uptime for your RDS environment
 
 ### Basic deployment
 

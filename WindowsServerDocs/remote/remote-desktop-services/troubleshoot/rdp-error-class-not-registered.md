@@ -1,11 +1,7 @@
 ---
 title: Clients can't connect and get the Class not registered error
 description: Troubleshooting "Class not registered" error with remote desktop connection.
-audience: itpro ​
-
 ms.reviewer: rklemen
-
-
 ms.topic: troubleshooting
 author: kaushika-msft
 manager: dcscontentpm

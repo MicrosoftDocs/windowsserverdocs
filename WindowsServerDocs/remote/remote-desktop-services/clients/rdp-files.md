@@ -1,22 +1,18 @@
 ---
 title: Supported Remote Desktop RDP file settings
 description: Learn about the RDP file settings for Remote Desktop
-
 ms.prod: windows-server
-
-
 ms.technology: remote-desktop-services
-
 ms.topic: article
-author: btaintor
-manager: dongill
+author: heidilohr
+manager: lizross
 ms.author: helohr
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ---
 # Supported Remote desktop RDP file settings
 
-The following table includes list of supported RDP file settings that you can use with the Windows and HTML clients. An “x” in the platform column indicates that the setting is supported. However, this list is not a complete list of supported settings for the Windows and HTML5 clients. We'll continue to update this table to include more supported RDP settings for the Windows and HTML5 clients as well as the macOS, iOS, and Android clients.
+The following table includes list of supported RDP file settings that you can use with the Windows and HTML clients. An "x" in the platform column indicates that the setting is supported. However, this list is not a complete list of supported settings for the Windows and HTML5 clients. We'll continue to update this table to include more supported RDP settings for the Windows and HTML5 clients as well as the macOS, iOS, and Android clients.
 
 Please refer to [this documentation](https://go.microsoft.com/fwlink/?linkid=2098243&clcid=0x409) detailing how to use PowerShell to customize RDP properties for a host pool.
 
@@ -37,7 +33,7 @@ Please refer to [this documentation](https://go.microsoft.com/fwlink/?linkid=209
 | devicestoredirect:s:value | Determines which devices on the client computer will be redirected and available in the remote session. | - *: Redirect all supported devices, including ones that are connected later<br> - Valid hardware ID for one or more devices | | x | x | x |
 | disableconnectionsharing:i:value | Determines whether the remote desktop client reconnects to any existing open connections or initiate a new connection when a RemoteApp or desktop is launched | - 0: Reconnect to any existing session<br>- 1: Initiate new connection | 0 | x | x | x |
 | domain:s:value | Specifies the name of the domain in which the user account that will be used to log on to the remote computer is located. | A valid domain name, such as "CONTOSO" | No Default Value | x | x | x |
-| drivestoredirect:s:value | Determines which local disk drives on the client computer will be redirected and available in the remote session. | - No value specified: don't redirect any drives<br>- * : Redirect all disk drives, including drives that are connected later<br>- DynamicDrives: redirect any drives that are connected later<br>- The drive and labels for one or more drives, such as "drivestoredirect:s:C:;E:;": redirect the specified drive(s)| No value specified: don't redirect any drives | x | x	| |
+| drivestoredirect:s:value | Determines which local disk drives on the client computer will be redirected and available in the remote session. | - No value specified: don't redirect any drives<br>- * : Redirect all disk drives, including drives that are connected later<br>- DynamicDrives: redirect any drives that are connected later<br>- The drive and labels for one or more drives, such as "drivestoredirect:s:C:;E:;": redirect the specified drive(s)| No value specified: don't redirect any drives | x | x    | |
 | enablecredsspsupport:i:value | Determines whether RDP will use the Credential Security Support Provider (CredSSP) for authentication if it is available. | - 0: RDP will not use CredSSP, even if the operating system supports CredSSP<br>- 1: RDP will use CredSSP if the operating system support CredSSP | 1 | x | x | |
 | encode redirected video capture:i:value | Enables or disables encoding of redirected video. | - 0: Disable encoding of redirected video<br>- 1: Enable encoding of redirected video | 1 | x | x | x |
 | full address:s:value | This setting specifies the name or IP address of the remote computer that you want to connect to | A valid computer name, IPv4 address, or IPv6 address. | | x | x | x |

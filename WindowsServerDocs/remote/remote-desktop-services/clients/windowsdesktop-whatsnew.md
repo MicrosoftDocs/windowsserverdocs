@@ -1,12 +1,8 @@
 ---
 title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
-
 ms.prod: windows-server
-
-
 ms.technology: remote-desktop-services
-
 ms.topic: article
 author: heidilohr
 manager: lizross
