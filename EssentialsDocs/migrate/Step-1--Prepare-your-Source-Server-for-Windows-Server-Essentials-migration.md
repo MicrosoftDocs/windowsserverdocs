@@ -1,6 +1,6 @@
 ---
-title: Step 1: Prepare your Source Server for Windows Server Essentials migration
-description: "Describes how to use Windows Server Essentials"
+title: "Step 1: Prepare your Source Server for Windows Server Essentials migration"
+description: Describes how to use Windows Server Essentials
 ms.date: 10/03/2016
 ms.prod: windows-server
 ms.topic: article
