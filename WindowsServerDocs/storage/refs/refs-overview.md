@@ -167,4 +167,4 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
 - [ReFS block cloning](block-cloning.md)
 - [ReFS integrity streams](integrity-streams.md)
-- [ReFS Version history (unoffical)](https://gist.github.com/0xbadfca11/da0598e47dd643d933dc#file-windows-refs-versions-en-md)
+- [ReFS Version history (unofficial)](https://gist.github.com/0xbadfca11/da0598e47dd643d933dc#file-windows-refs-versions-en-md)
