@@ -150,15 +150,16 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | File system compression | No | Yes |
 | File system encryption | No | Yes |
 | Transactions | No | Yes |
-| Hard links | No | Yes |
+| Hard links | Yes<sup>4</sup> | Yes |
 | Object IDs | No | Yes |
 | Offloaded Data Transfer (ODX) | No | Yes |
-| Short names | No | Yes |
+| Short names (SFN 8.3) | No | Yes |
 | Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
 | Bootable | No | Yes |
 | Page file support | No | Yes |
 | Supported on removable media | No | Yes |
+4. Available on Windows 10 Enterprise / Pro for Workstations or Server vNext 19536 or later, on newly formatted ReFS 3.5 volumes
 
 ## See also
 
@@ -166,3 +167,4 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
 - [ReFS block cloning](block-cloning.md)
 - [ReFS integrity streams](integrity-streams.md)
+- [ReFS Version history (unoffical)](https://gist.github.com/0xbadfca11/da0598e47dd643d933dc#file-windows-refs-versions-en-md)
