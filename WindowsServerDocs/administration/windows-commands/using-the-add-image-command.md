@@ -1,12 +1,8 @@
 ---
-title: Using the add-Image Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: add-Image
+description: Windows Commands topic for add-Image, which adds images to a Windows Deployment Services server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d5b6f4da-90ba-4b0e-9423-66c8ef5172e2
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the add-Image Command
+# add-Image
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds images to a Windows Deployment Services server. For examples of how you can use this command, see [Examples](#BKMK_examples).
+Adds images to a Windows Deployment Services server. For examples of how you can use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
 for boot images, use the following syntax:
 ```

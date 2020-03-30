@@ -1,12 +1,8 @@
 ---
 title: unlodctr
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for unlodctr, which removes Performance counter names and Explain text for a service or device driver from the system registry
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc8aa6f0-c1d9-47ea-937a-28152148e774
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Removes Performance counter names and Explain text for a service or device driver from the system registry.   
+Removes **Performance counter** names and **Explain** text for a service or device driver from the system registry.   
 
 ## Syntax  
 ```  

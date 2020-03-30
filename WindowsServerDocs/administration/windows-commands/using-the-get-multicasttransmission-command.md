@@ -1,12 +1,8 @@
 ---
-title: Using the get-MulticastTransmission Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-MulticastTransmission
+description: Windows Commands topic for get-MulticastTransmission, which displays information about the multicast transmission for a specified image.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b733737b-1e81-43d4-a058-d6985a613bef
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-MulticastTransmission Command
+# get-MulticastTransmission
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about the multicast transmission for a specified image.
+
 ## Syntax
 **Windows Server 2008**
 ```

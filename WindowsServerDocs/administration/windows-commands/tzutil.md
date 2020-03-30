@@ -1,12 +1,8 @@
 ---
 title: tzutil
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for tzutil, which displays the Windows Time Zone utility. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bcf6e007-c9b6-4df5-83c5-ed7b4b1b5913
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the Windows time Zone Utility. 
+Displays the Windows Time Zone utility. 
+
 ## Syntax
 ```
 tzutil [/?] [/g] [/s <timeZoneID>[_dstoff]] [/l]

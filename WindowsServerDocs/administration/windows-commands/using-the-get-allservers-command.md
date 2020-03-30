@@ -1,12 +1,8 @@
 ---
-title: Using the get-AllServers Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-AllServers
+description: Windows Commands topic for get-AllServers, which retrieves information about all Windows Deployment Services servers. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fe2e3c69-8f2e-457d-af55-d249ebf70f53
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the get-AllServers Command
-
-
+# get-AllServers
 
 Retrieves information about all Windows Deployment Services servers.
 

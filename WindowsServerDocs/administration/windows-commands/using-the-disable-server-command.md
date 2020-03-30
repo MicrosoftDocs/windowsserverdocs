@@ -1,12 +1,8 @@
 ---
-title: Using the disable-Server Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: disable-Server
+description: Windows Commands topic for disable-Server, which disables all services for a Windows Deployment Services server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b69fcfe0-b744-4794-bc75-2c9218c0ba66
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the disable-Server Command
-
-
+# disable-Server
 
 Disables all services for a Windows Deployment Services server.
 

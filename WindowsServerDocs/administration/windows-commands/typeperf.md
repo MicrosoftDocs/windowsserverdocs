@@ -1,15 +1,10 @@
 ---
 title: typeperf
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for typeperf, which writes performance data to the command window or to a log file. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # typeperf
-
-
 
 The **typeperf** command writes performance data to the command window or to a log file. To stop **typeperf**, press CTRL+C.
 

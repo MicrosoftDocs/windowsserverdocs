@@ -1,12 +1,8 @@
 ---
-title: Using the delete-AutoaddDevices Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: delete-AutoaddDevices
+description: Windows Commands topic for delete-AutoaddDevices, which deletes computers that are pending, rejected, or approved from the Auto-add database. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the delete-AutoaddDevices Command
+# delete-AutoaddDevices
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-deletes computers that are pending, rejected, or approved from the Auto-add database. This database stores information about these computers on the server.
+Deletes computers that are pending, rejected, or approved from the Auto-add database. This database stores information about these computers on the server.
+
 ## Syntax
 ```
 wdsutil /delete-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevices | RejectedDevices |ApprovedDevices}

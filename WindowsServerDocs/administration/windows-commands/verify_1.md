@@ -1,6 +1,6 @@
 ---
 title: verify
-description: Windows Commands topic for **** - 
+description: Windows Commands topic for verify, which tells **cmd** whether to verify that your files are written correctly to a disk. 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

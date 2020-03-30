@@ -1,12 +1,8 @@
 ---
 title: telnet send
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for telnet send, which sends telnet commands to the telnet server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c217abc-1182-466e-914c-1ff16755021b vhorne
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends telnet commands to the telnet server.   
+
 ## Syntax  
 ```  
 sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]  

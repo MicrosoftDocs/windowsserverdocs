@@ -1,12 +1,8 @@
 ---
 title: tree
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for tree, which displays the directory structure of a path, or of the disk in a drive, graphically.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 345d3192-401e-4a3b-a8ac-36a85c7be79d
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # tree
-
-
 
 Displays the directory structure of a path or of the disk in a drive graphically.
 

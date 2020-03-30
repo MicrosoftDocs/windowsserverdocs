@@ -1,12 +1,8 @@
 ---
-title: Using the get-ImageFile Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-ImageFile
+description: Windows Commands topic for get-ImageFile, which retrieves information about the images contained in a Windows Image (.wim) file. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the get-ImageFile Command
-
-
+# get-ImageFile
 
 Retrieves information about the images contained in a Windows Image (.wim) file.
 

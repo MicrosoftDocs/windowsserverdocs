@@ -1,12 +1,8 @@
 ---
 title: tskill
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for tskill, which ends a process running in a session on a Remote Desktop Session Host server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 08986e6a-6900-4ece-85a1-8f73b14db1b3 Lizap
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Ends a process running in a session on a Remote Desktop Session Host (rd Session Host) server.
+Ends a process running in a session on a Remote Desktop Session Host server.
 for examples of how to use this command, see [Examples](#BKMK_examples).
 
 > [!NOTE]

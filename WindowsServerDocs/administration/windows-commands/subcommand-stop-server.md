@@ -1,12 +1,8 @@
 ---
 title: Subcommand stop-Server
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand stop-Server, which stops all services on a Windows Deployment Services server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 09f411c0-099f-4591-95fd-b77b3fd9118a
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops all services on a Windows Deployment Services server.
+
 ## Syntax
 ```
 wdsutil [Options] /Stop-Server [/Server:<Server name>]

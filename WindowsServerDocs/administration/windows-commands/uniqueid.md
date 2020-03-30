@@ -1,12 +1,8 @@
 ---
 title: uniqueid
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for uniqueid, which displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64235a4a-b91c-46da-b9b0-68ee90571c2a
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # uniqueid
-
-
 
 Displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
 

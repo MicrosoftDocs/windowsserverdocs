@@ -1,12 +1,8 @@
 ---
-title: Using the replace-Image Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: replace-Image
+description: Windows Commands topic for replace-Image, which replaces an existing image with a new version of that image.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68ded3df-e309-420f-9f5d-caeb609385a5
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-replaces an existing image with a new version of that image.
+Replaces an existing image with a new version of that image.
 ## Syntax
 for boot images:
 ```

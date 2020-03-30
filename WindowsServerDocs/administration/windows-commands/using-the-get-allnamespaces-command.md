@@ -1,12 +1,8 @@
 ---
-title: Using the get-AllNamespaces Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-AllNamespaces
+description: Windows Commands topic for get-AllNamespaces, which displays information about all namespaces on a server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e8fe896d-a69a-4180-923b-9f18185f5941
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-AllNamespaces Command
+# get-AllNamespaces
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about all namespaces on a server.
+
 ## Syntax
 Windows Server 2008:
 ```

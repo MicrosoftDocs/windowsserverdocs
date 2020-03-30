@@ -1,12 +1,8 @@
 ---
-title: Using the remove-Namespace Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: remove-Namespace
+description: Windows Commands topic for remove-Namespace, which removes a custom namespace.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4eb758b6-8519-4e26-9fe0-2e19bb0e8702
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes a custom namespace.
+Removes a custom namespace.
+
 ## Syntax
 ```
 wdsutil /remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/force]

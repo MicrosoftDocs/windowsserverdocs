@@ -1,12 +1,8 @@
 ---
 title: unexpose
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for unexpose, which unexposes a shadow copy that was exposed by using the expose command. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58dc7d0f-52e9-4587-9487-d3b4c3e52640
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # unexpose
-
-
 
 Unexposes a shadow copy that was exposed by using the **expose** command. The exposed shadow copy can be specified by its Shadow ID, drive letter, share, or mount point.
 

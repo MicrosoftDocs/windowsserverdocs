@@ -1,12 +1,8 @@
 ---
 title: telnet quit
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for telnet quit,which exits telnet.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a6e033f2-f0c2-404c-9cb4-abd1d7af0eea vhorne
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-exits telnet.   
+Exits telnet.   
+
 ## Syntax  
 ```  
 q[uit]  

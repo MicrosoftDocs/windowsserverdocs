@@ -1,12 +1,8 @@
 ---
-title: Using the get-ImageGroup Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-ImageGroup
+description: Windows Commands topic for get-ImageGroup, which retrieves information about an image group and the images in it.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0fc25aca-a529-44ee-bc8e-96bc8affb458
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-ImageGroup Command
+# get-ImageGroup
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about an image group and the images within it.
+
 ## Syntax
 ```
 wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/detailed]

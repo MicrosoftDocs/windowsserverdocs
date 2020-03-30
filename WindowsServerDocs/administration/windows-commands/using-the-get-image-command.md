@@ -1,12 +1,8 @@
 ---
-title: Using the get-Image Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-Image
+description: Windows Commands topic for get-Image, which retrieves information about an image. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-Image Command
+# get-Image
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about an image.
+
 ## Syntax
 for boot images:
 ```

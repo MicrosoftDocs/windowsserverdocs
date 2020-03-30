@@ -1,12 +1,8 @@
 ---
 title: Subcommand start-Server
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand start-Server, which starts all services for a Windows Deployment Services server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e4343e2-0a16-4e65-8769-c09adaef5680
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-starts all services for a Windows Deployment Services server.
+Starts all services for a Windows Deployment Services server.
+
 ## Syntax
 ```
 wdsutil [Options] /start-Server [/Server:<Server name>]

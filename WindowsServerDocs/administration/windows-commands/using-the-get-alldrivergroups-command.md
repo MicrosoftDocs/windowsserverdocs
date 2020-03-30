@@ -1,12 +1,8 @@
 ---
-title: Using the get-AllDriverGroups Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-AllDriverGroups
+description: Windows Commands topic for get-AllDriverGroups, which displays information about all the driver groups on a server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f245ba53-f150-41b1-8418-38dcf0410a05
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-AllDriverGroups Command
+# get-AllDriverGroups
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about all the driver groups on a server.
+
 ## Syntax
 ```
 wdsutil /Get-AllDriverGroups [/Server:<Server name>] [/Show:{PackageMetaData | Filters | All}]

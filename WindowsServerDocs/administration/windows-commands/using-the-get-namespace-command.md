@@ -1,12 +1,8 @@
 ---
-title: Using the get-Namespace Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-Namespace
+description: Windows Commands topic for get-Namespace, which displays information about a custom namespace. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ea641bab-e97b-4909-918e-447730027dc1
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-Namespace Command
+# get-Namespace
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about a custom namespace.
+
 ## Syntax
 Windows Server 2008 R2
 ```

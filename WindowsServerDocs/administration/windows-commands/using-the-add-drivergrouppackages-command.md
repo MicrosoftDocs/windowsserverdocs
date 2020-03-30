@@ -1,12 +1,8 @@
 ---
-title: Using the add-DriverGroupPackages Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: add-DriverGroupPackages
+description: Windows Commands topic for add-DriverGroupPackages, which add driver group packages.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 29022f53-ce14-4b2d-a81a-679c18e022b2
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the add-DriverGroupPackages Command
+# add-DriverGroupPackages
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-for examples of how you can use this command, see [Examples](#BKMK_examples).
+Adds driver group packages. For examples of how you can use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 wdsutil /add-DriverGroupPackages /DriverGroup:<Group Name> [/Server:<Server Name>] /Filtertype:<Filter type> /Operator:{Equal | NotEqual | GreaterOrEqual | LessOrEqual | Contains} /Value:<Value> [/Value:<Value>

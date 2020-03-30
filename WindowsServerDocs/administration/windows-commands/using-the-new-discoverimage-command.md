@@ -1,12 +1,8 @@
 ---
-title: Using the new-DiscoverImage Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: new-DiscoverImage
+description: Windows Commands topic for new-DiscoverImage, which creates a new discover image from an existing boot image.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the new-DiscoverImage Command
-
-
+# new-DiscoverImage
 
 Creates a new discover image from an existing boot image. Discover images are boot images that force the Setup.exe program to start in Windows Deployment Services mode and then discover a Windows Deployment Services server. Typically these images are used to deploy images to computers that are not capable of booting to PXE. For more information, see Creating Images ([https://go.microsoft.com/fwlink/?LinkId=115311](https://go.microsoft.com/fwlink/?LinkId=115311)).
 

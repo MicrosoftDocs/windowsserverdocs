@@ -1,12 +1,8 @@
 ---
 title: Subcommand set-DriverGroupFilter
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand set-DriverGroupFilter, which adds or removes an existing driver group filter from a driver group.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 829ab1f0-4514-421e-9cc0-767b238da69c
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # Subcommand: set-DriverGroupFilter
-
-
 
 Adds or removes an existing driver group filter from a driver group.
 

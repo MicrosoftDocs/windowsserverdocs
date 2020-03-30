@@ -1,12 +1,8 @@
 ---
 title: Subcommand start-TransportServer
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand start-TransportServer, which starts all services for a Transport Server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e93bc84-5b9e-4f9d-8cf0-1634417da0f6
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-starts all services for a Transport Server.
+Starts all services for a Transport Server.
+
 ## Syntax
 ```
 wdsutil [Options] /start-TransportServer [/Server:<Server name>]

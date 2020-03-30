@@ -1,12 +1,8 @@
 ---
-title: Using the copy-DriverGroup Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: copy-DriverGroup
+description: Windows Commands topic for copy-DriverGroup, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0aaf6fa5-8b5b-4a1e-ae9b-8b5c6d89f571
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the copy-DriverGroup Command
-
-
+# copy-DriverGroup
 
 Duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 

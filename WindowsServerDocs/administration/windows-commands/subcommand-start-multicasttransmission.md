@@ -1,12 +1,8 @@
 ---
 title: Subcommand start-MulticastTransmission
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1b2d459-1ece-49d4-997c-9d206c463b61
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-starts a Scheduled-Cast transmission of an image.
+Starts a Scheduled-Cast transmission of an image.
+
 ## Syntax
 **Windows Server 2008**
 ```

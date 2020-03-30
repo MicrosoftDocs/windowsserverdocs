@@ -1,12 +1,8 @@
 ---
 title: tscon
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for tscon, which connects to another session on a Remote Desktop Session Host (rd Session Host) server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
 author: coreyp-at-msft
@@ -18,8 +14,9 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Connects to another session on a Remote Desktop Session Host (rd Session Host) server.  
-for examples of how to use this command, see [Examples](#BKMK_examples).  
+Connects to another session on a Remote Desktop Session Host server.  
+
+For examples of how to use this command, see [Examples](#BKMK_examples).  
 
 > [!NOTE]  
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  

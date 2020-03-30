@@ -1,12 +1,8 @@
 ---
 title: type
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for type, which displays the contents of a text file. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c44fe905-a865-4c97-8cc5-fb95fec7d4d5
 author: coreyp-at-msft
@@ -16,12 +12,9 @@ manager: dansimp
 
 # type
 
-
 In the Windows Command shell, **type** is a built in command which displays the contents of a text file. Use the **type** command to view a text file without modifying it.
 
-
 In PowerShell, **type** is a built-in alias to the **[Get-Content](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content)** cmdlet which also displays the contents of a file, but with a different syntax.
-
 
 For examples of how to use this command within the Windows Command shell (Cmd.exe), see [Examples](#BKMK_examples).
 

@@ -1,12 +1,8 @@
 ---
-title: Using the remove-ImageGroup Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: remove-ImageGroup 
+description: Windows Commands topic for remove-ImageGroup, which removes an image group from a server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b2c9813-5df2-4272-8449-26f3bb16f82b
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes an image group from a server.
+Removes an image group from a server.
+
 ## Syntax
 ```
 wdsutil [Options] /remove-ImageGroumediaGroup:<Image group name> [/Server:<Server name>]

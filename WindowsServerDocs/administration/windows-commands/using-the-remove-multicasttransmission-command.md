@@ -1,12 +1,8 @@
 ---
-title: Using the remove-MulticastTransmission Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: remove-MulticastTransmission
+description: Windows Commands topic for remove-MulticastTransmission, which disables multicast transmitting for an image. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a7f5c31-bfbf-425d-9129-a6f9173fe83d
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disables multicast transmitting for an image. Unless you specify **/force**, existing clients will complete the image transfer but new clients will not be allowed to join.
+
 ## Syntax
 **Windows Server 2008**
 ```

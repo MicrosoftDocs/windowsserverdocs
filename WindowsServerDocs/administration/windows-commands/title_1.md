@@ -1,15 +1,10 @@
 ---
 title: title
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for title, which creates a title for the Command Prompt window.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0bbe8bd-201a-4b6c-b617-5d9809881dc8
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # title
-
-
 
 Creates a title for the Command Prompt window.
 

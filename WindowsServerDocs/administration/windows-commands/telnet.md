@@ -1,12 +1,8 @@
 ---
 title: telnet
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for telnet, which communicates with a computer running the telnet Server service. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b70a6156-9413-4300-84ce-a34c467e2b4e
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Communicates with a computer running the telnet Server service. 
+Communicates with a computer running the telnet Server service.
+ 
 ## Syntax
 ```
 telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 | ansi | vtnt}] [<Host> [<Port>]] [/?]

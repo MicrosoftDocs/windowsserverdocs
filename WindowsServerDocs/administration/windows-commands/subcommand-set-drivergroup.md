@@ -1,12 +1,8 @@
 ---
 title: Subcommand set-DriverGroup
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand set-DriverGroup, which sets the properties of an existing driver group on a server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4ba9b1c-8c52-4fd5-969b-f7905611b364
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the properties of an existing driver group on a server.
+
 ## Syntax
 ```
 wdsutil /Set-DriverGroup /DriverGroup:<Group Name> [/Server:<Server Name>] [/Name:<New Group Name>] [/Enabled:{Yes | No}] [/Applicability:{Matched | All}]

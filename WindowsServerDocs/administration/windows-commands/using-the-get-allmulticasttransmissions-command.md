@@ -1,12 +1,8 @@
 ---
-title: Using the get-AllMulticastTransmissions Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-AllMulticastTransmissions
+description: Windows Commands topic for get-AllMulticastTransmissions, which displays information about all multicast transmissions on a server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95b8fb79-7a8a-4f0c-88f4-92bc1111c67f
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-AllMulticastTransmissions Command
+# get-AllMulticastTransmissions
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about all multicast transmissions on a server.
+
 ## Syntax
 for Windows Server 2008:
 ```

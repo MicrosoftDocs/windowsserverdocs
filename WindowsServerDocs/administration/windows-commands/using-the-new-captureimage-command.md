@@ -1,12 +1,8 @@
 ---
-title: Using the new-CaptureImage Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: new-CaptureImage
+description: Windows Commands topic for new-CaptureImage, which creates a new capture image from an existing boot image. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2dfd08f0-be59-4715-96e6-c498305873f4
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the new-CaptureImage Command
-
-
+# new-CaptureImage
 
 Creates a new capture image from an existing boot image. Capture images are boot images that start the Windows Deployment Services capture utility instead of starting Setup. When you boot a reference computer (that has been prepared with Sysprep) into a capture image, a wizard creates an install image of the reference computer and saves it as a Windows Image (.wim) file. You can also add the image to media (such as a CD, DVD, or USB drive), and then boot a computer from that media. After you create the install image, you can add the image to the server for PXE boot deployment. For more information, see Creating Images ([https://go.microsoft.com/fwlink/?LinkId=115311](https://go.microsoft.com/fwlink/?LinkId=115311)).
 

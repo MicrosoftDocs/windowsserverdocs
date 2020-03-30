@@ -1,12 +1,8 @@
 ---
-title: Using the get-DriverPackage Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-DriverPackage
+description: Windows Commands topic for get-DriverPackage, which displays information about a driver package on the server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 94d231e4-ff01-48e7-9bc8-7b0d97a4339e
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the get-DriverPackage Command
-
-
+# get-DriverPackage
 
 Displays information about a driver package on the server.
 

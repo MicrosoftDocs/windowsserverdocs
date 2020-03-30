@@ -1,12 +1,8 @@
 ---
-title: Using the add-ImageDriverPackages Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: add-ImageDriverPackages
+description: Windows Commands topic for add-ImageDriverPackages, which adds driver packages from the driver store to a boot image.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
 author: coreyp-at-msft
@@ -14,12 +10,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the add-ImageDriverPackages Command
+# add-ImageDriverPackages
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds driver packages from the driver store to a boot image. The image version must be Windows 7 or Windows Server 2008 R2 or later.
+Adds driver packages from the driver store to a boot image. The image version must be Windows 7 or Windows Server 2008 R2 or later.
 for examples of how you can use this command, see [Examples](#BKMK_examples).
+
 ## Syntax
 ```
 wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 

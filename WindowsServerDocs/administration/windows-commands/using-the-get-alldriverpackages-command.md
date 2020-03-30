@@ -1,12 +1,8 @@
 ---
-title: Using the get-AllDriverPackages Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-AllDriverPackages
+description: Windows Commands topic for get-AllDriverPackages, which displays information about all the driver packages on a server that match the specified search criteria. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9eb8fcb7-ef46-4c8d-9623-8969a3c8b8a4
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-AllDriverPackages Command
+# get-AllDriverPackages
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about all the driver packages on a server that match the specified search criteria.
+
 ## Syntax
 ```
 wdsutil /Get-AllDriverPackages [/Server:<Server name>] [/Show:{Drivers | Files | All}] [/Filtertype:<Filter type> /Operator:{Equal | NotEqual | GreaterOrEqual | LessOrEqual | Contains} /Value:<Value> [/Value:<Value> ...]]

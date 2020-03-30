@@ -1,12 +1,8 @@
 ---
 title: tsecimp
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for tsecimp, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d7488ec6-0eff-45ff-89ee-9cbe752416bf
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # tsecimp
-
-
 
 Imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini). You can also use this command to display the list of TAPI providers and the lines devices associated with each of them, validate the structure of the XML file without importing the contents, and check domain membership.
 

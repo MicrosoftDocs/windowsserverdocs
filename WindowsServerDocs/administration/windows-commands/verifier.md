@@ -1,12 +1,8 @@
 ---
 title: verifier
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for verifier, which runs the Driver verifier manager.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 782173d6-f196-4bc4-a547-76109829453c
 

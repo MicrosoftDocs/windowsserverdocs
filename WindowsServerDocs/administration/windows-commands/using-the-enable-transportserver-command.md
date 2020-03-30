@@ -1,12 +1,8 @@
 ---
-title: Using the enable-TransportServer Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: enable-TransportServer
+description: Windows Commands topic for enable-TransportServer, which enables all services for the Transport Server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9d79dba1-4b57-4a00-8cba-877e6b8618e6
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the enable-TransportServer Command
+# enable-TransportServer
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables all services for the Transport Server.
+
 ## Syntax
 ```
 wdsutil [Options] /Enable-TransportServer [/Server:<Server name>]

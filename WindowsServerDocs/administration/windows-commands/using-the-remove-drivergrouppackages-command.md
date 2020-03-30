@@ -1,12 +1,8 @@
 ---
-title: Using the remove-DriverGroupPackages Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: remove-DriverGroupPackages
+description: Windows Commands topic for remove-DriverGroupPackages, which removes driver packages from a driver group on a server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b499635-6285-491c-8854-5665489f4364
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the remove-DriverGroupPackages Command
+# remove-DriverGroupPackages
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes driver packages from a driver group on a server.
+Removes driver packages from a driver group on a server.
+
 ## Syntax
 ```
 wdsutil /remove-DriverGroupPackages /DriverGroup:<Group Name> [/Server:<Server Name>] /Filtertype:<Filter type> /Operator:{Equal | NotEqual | GreaterOrEqual | LessOrEqual | Contains} /Value:<Value> [/Value:<Value> ...]

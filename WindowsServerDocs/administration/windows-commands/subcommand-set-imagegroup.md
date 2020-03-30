@@ -1,12 +1,8 @@
 ---
 title: Subcommand set-ImageGroup
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand set-ImageGroup, which changes the attributes of an image group.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d86946a-e261-4d41-8b0c-1ab0ba2e3430
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the attributes of an image group.
+Changes the attributes of an image group.
+
 ## Syntax
 ```
 wdsutil [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/Name:<New image group name>] [/Security:<SDDL>]

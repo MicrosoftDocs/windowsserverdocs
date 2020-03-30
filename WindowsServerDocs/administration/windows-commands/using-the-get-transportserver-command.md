@@ -1,12 +1,8 @@
 ---
-title: Using the get-TransportServer Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-TransportServer
+description: Windows Commands topic for get-TransportServer, which displays information about a specified Transport Server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de634123-0179-41b2-9c6f-726508130ff5
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-TransportServer Command
+# get-TransportServer
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about a specified Transport Server.
+
 ## Syntax
 ```
 wdsutil [Options] /Get-TransportServer [/Server:<Server name>] /Show:{Config}

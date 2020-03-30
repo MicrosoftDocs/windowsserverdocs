@@ -1,12 +1,8 @@
 ---
-title: Using the remove-DriverGroupPackage Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: remove-DriverGroupPackage
+description: Windows Commands topic for remove-DriverGroupPackage, which removes a driver package from a driver group on a server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e48616d-d6a4-45f0-a5c6-efe62bf6a0ed
 author: coreyp-at-msft
@@ -15,7 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the remove-DriverGroupPackage Command
+# remove-DriverGroupPackage
 
 
 

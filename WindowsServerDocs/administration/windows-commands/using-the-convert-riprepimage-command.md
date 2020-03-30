@@ -1,12 +1,8 @@
 ---
-title: Using the convert-RiprepImage Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: convert-RiprepImage
+description: Windows Commands topic for convert-RiprepImage, which converts an existing Remote Installation Preparation (RIPrep) image to Windows Image (.wim) format. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88c2b96f-5947-4b64-9dcf-1946b3c013cf
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the convert-RiprepImage Command
-
-
+# convert-RiprepImage
 
 Converts an existing Remote Installation Preparation (RIPrep) image to Windows Image (.wim) format.
 

@@ -1,12 +1,8 @@
 ---
-title: Using the remove-DriverGroupFilter Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: remove-DriverGroupFilter
+description: Windows Commands topic for remove-DriverGroupFilter, which removes a filter rule from a driver group on a server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 837bd5d4-c79d-4714-942d-9875bd8e61dc
 author: coreyp-at-msft
@@ -15,7 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the remove-DriverGroupFilter Command
+# remove-DriverGroupFilter
 
 
 

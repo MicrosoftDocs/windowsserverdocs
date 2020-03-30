@@ -1,12 +1,8 @@
 ---
-title: Using the Export-Image Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: Export-Image
+description: Windows Commands topic for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the Export-Image Command
+# Export-Image
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Exports an existing image from the image store to another Windows Image (.wim) file.
+
 ## Syntax
 for boot images:
 ```

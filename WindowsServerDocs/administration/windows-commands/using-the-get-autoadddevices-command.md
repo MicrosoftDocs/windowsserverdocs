@@ -1,12 +1,8 @@
 ---
-title: Using the get-AutoaddDevices Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-AutoaddDevices
+description: Windows Commands topic for get-AutoaddDevices, which displays all computers that are in the Auto-add database on a Windows Deployment Services server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the get-AutoaddDevices Command
+# get-AutoaddDevices
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays all computers that are in the Auto-add database on a Windows Deployment Services server.
+
 ## Syntax
 ```
 wdsutil [Options] /Get-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevices | RejectedDevices | ApprovedDevices}

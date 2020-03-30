@@ -1,12 +1,8 @@
 ---
-title: Using the remove-Image Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: remove-Image
+description: Windows Commands topic for remove-Image, which deletes an image from a server.  
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce5e2384-2264-4b22-92af-74eec8c10ae0
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the remove-Image Command
+# remove-Image
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-deletes an image from a server.
+Deletes an image from a server.
+
 ## Syntax
 for boot images:
 ```

@@ -1,12 +1,8 @@
 ---
 title: Subcommand set-DriverPackage
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand set-DriverPackage, which renames and/or enables or disables a driver package on a server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 11804bb6-ca29-4461-8c63-5131748cd742
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # Subcommand: set-DriverPackage
-
-
 
 Renames and/or enables or disables a driver package on a server.
 

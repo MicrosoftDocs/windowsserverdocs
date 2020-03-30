@@ -1,12 +1,8 @@
 ---
-title: Using the get-DriverPackageFile Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: get-DriverPackageFile
+description: Windows Commands topic for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f01a2c67-7e9c-4aad-b625-383f5a1fca25
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the get-DriverPackageFile Command
-
-
+# get-DriverPackageFile
 
 Displays information about a driver package, including the drivers and files it contains.
 

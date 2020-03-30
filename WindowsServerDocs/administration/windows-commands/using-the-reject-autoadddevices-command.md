@@ -1,12 +1,8 @@
 ---
-title: Using The Reject-AutoaddDevices Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: Reject-AutoaddDevices
+description: Windows Commands topic for Reject-AutoaddDevices, which rejects computers that are pending administrative approval. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ea25a4b2-5fad-4360-9c47-c2c9df7ea31f
 author: coreyp-at-msft
@@ -14,7 +10,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using The Reject-AutoaddDevices Command
+# Reject-AutoaddDevices
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

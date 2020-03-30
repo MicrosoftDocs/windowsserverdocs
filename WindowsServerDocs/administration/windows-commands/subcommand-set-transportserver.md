@@ -1,12 +1,8 @@
 ---
 title: Subcommand set-TransportServer
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand set-TransportServer, which sets configuration settings for a Transport Server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7863225c-f4b2-4cd0-b929-78a454bef249
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets configuration settings for a Transport Server.
+
 ## Syntax
 ```
 wdsutil [Options] /Set-TransportServer [/Server:<Server name>]

@@ -1,12 +1,8 @@
 ---
-title: Using the enable-Server Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: enable-Server
+description: Windows Commands topic for enable-Server, which enables all services for Windows Deployment Services. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 939ffbfb-cf3c-4310-9627-6e7e0c0644d6
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the enable-Server Command
+# enable-Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables all services for Windows Deployment Services.
+
 ## Syntax
 ```
 wdsutil [Options] /Enable-Server [/Server:<Server name>]

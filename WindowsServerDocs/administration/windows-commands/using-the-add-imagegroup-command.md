@@ -1,12 +1,8 @@
 ---
-title: Using the add-ImageGroup Command
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: add-ImageGroup
+description: Windows Commands topic for add-ImageGroup, which adds an image group to a Windows Deployment Services server. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6ca88671-51de-4924-b969-88f3dfd84270
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the add-ImageGroup Command
+# add-ImageGroup
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds an image group to a Windows Deployment Services server.
+Adds an image group to a Windows Deployment Services server.
+
 ## Syntax
 ```
 wdsutil [Options] /add-ImageGroumediaGroup:<Image group name> [/Server:<Server name>]
