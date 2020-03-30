@@ -42,7 +42,7 @@ manage-bde -changekey [<Drive>] [<PathToExternalKeyDirectory>] [-computername <N
 
 The following example illustrates using the **-changekey** command to create a new startup key on drive E to use with BitLocker encryption on drive C.
 ```
-manage-bde –changekey C: E:\
+manage-bde -changekey C: E:\
 ```
 
 #### Additional references
