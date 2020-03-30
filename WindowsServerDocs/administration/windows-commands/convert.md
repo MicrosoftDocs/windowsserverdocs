@@ -1,6 +1,6 @@
 ---
 title: convert
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -50,7 +50,7 @@ convert [<Volume>] /fs:ntfs [/v] [/cvtarea:<FileName>] [/nosecurity] [/x]
 
     Volume conversion from FAT or FAT32 to NTFS leaves the files intact, but the volume might lack some performance benefits compared to volumes initially formatted with NTFS. For example, the MFT might become fragmented on converted volumes. In addition, on converted boot volumes, **convert** applies the same default security that is applied during Windows Setup.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To convert the volume on drive E to NTFS and display all messages during the conversion process, type:
 ```

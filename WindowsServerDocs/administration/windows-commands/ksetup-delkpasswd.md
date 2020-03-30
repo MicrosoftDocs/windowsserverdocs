@@ -1,6 +1,6 @@
 ---
 title: ksetup:delkpasswd
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ ksetup /delkpasswd <RealmName> <KpasswdName>
 
 ## Remarks
 Run the command **ksetup** to verify the KDC name. If **kpasswd =** does not appear in the output, then the mapping has not been configured. Multiple mappings will be listed, if set.
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 verify the realm CORP.CONTOSO.COM uses the non-Windows KDC server mitkdc.contoso.com as the password server:
 ```
 ksetup /delkpasswd CORP.CONTOSO.COM mitkdc.contoso.com

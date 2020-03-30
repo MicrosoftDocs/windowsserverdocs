@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifycmdline
-description: "Windows Commands topic for **bitsadmin getnotifycmdline** - Retrieves the command-line command that is run when the job finishes transferring data."
+description: Windows Commands topic for **bitsadmin getnotifycmdline** - Retrieves the command-line command that is run when the job finishes transferring data.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /GetNotifyCmdLine <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the command-line command used by the service when the job named *myDownloadJob* completes.
 ```

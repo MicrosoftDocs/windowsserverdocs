@@ -1,6 +1,6 @@
 ---
 title: Using the get-Server Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ wdsutil [Options] /Get-Server [/Server:<Server name>] /Show:{Config | Images | A
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |/Show:{Config &#124; Images &#124; All}|Specifies the type of information to return.<br /><br />-   **Config** returns configuration information.<br />-   **Images** returns information about image groups, boot images, and install images.<br />-   **All** returns configuration information and image information.|
 |[/detailed]|You can use this option with **/Show:Images** or **/Show:All** to indicate that all image metadata from each image should be returned. If the **/detailed** option is not used, the default behavior is to return the image name, description, and file name.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To view information about the server, type:
 ```
 wdsutil /Get-Server /Show:Config

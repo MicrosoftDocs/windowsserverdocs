@@ -1,6 +1,6 @@
 ---
 title: ftp recv
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ recv <remoteFile> [<LocalFile>]
 ## Remarks  
 - The **recv** command is identical to the **get** command.  
 - if *LocalFile* is not specified, the file is given the *remoteFile* name.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   copy **test.txt** to the local computer using the current file transfer type.  
   ```  
   recv test.txt  

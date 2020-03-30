@@ -1,6 +1,6 @@
 --- 
 title: System Requirements
-description: "What are the minimum requirements for storage, CPU, network, memory, RAM in a clean installation of each installation option." 
+description: What are the minimum requirements for storage, CPU, network, memory, RAM in a clean installation of each installation option. 
 ms.prod: windows-server
 ms.date: 10/17/2017
 ms.technology: server-general
@@ -21,16 +21,16 @@ This topic addresses the minimum system requirements to run Windows Server&reg; 
 > In this release, clean installations are recommended.  
 
 > [!NOTE]  
-> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the "Server with Desktop Experience" option when you install Windows Server 2016. For more information, see [Install Nano Server](Getting-Started-with-Nano-Server.md)  
+> If at the time of installation, you choose to install with the Server Core option, you should be aware that no GUI components are installed at all and you will not be able to install or uninstall them with Server Manager. If you need GUI features, be sure to choose the Server with Desktop Experience option when you install Windows Server 2016. For more information, see [Install Nano Server](Getting-Started-with-Nano-Server.md)  
 
 
 ## Review system requirements  
-The following are estimated system requirements Windows Server 2016. If your computer has less than the "minimum" requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
+The following are estimated system requirements Windows Server 2016. If your computer has less than the minimum requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
 
 Unless otherwise specified, these minimum system requirements apply to all installation options (Server Core, Server with Desktop Experience, and Nano Server) and both Standard and Datacenter editions.  
 
 > [!IMPORTANT]  
-> The highly diverse scope of potential deployments makes it unrealistic to state "recommended" system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
+> The highly diverse scope of potential deployments makes it unrealistic to state recommended system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
 
 
 ## Processor  

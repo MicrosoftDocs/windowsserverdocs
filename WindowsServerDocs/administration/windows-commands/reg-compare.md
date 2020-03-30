@@ -1,6 +1,6 @@
 ---
 title: reg compare
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -63,7 +63,7 @@ The following table lists the symbols displayed in the results.
 |<|*KeyName1* data is less than *KeyName2* data.|
 |>|*KeyName1* data is greater than *KeyName2* data.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To compare all values under the key **MyApp** with all values under the key **SaveMyApp**, type:
 

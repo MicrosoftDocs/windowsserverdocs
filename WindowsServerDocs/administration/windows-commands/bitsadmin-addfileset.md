@@ -1,6 +1,6 @@
 ---
 title: bitsadmin addfileset
-description: "Windows Commands topic for **bitsadmin addfileset** - adds one or more files to the specified job."
+description: Windows Commands topic for **bitsadmin addfileset** - adds one or more files to the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ bitsadmin /addfileset <Job> <TextFile>
 |Job|The job's display name or GUID|
 |TextFile|A text file, each line of which contains a remote and a local file name.</br>Note: The names are space-delimited. Lines that begin with a # character are treated as a comment.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 ```
 C:\>bitsadmin /addfileset files.txt

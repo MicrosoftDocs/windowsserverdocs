@@ -1,6 +1,6 @@
 ---
 title: bitsadmin create
-description: "Windows Commands topic for **bitsadmin create** - creates a transfer job with the given display name."
+description: Windows Commands topic for **bitsadmin create** - creates a transfer job with the given display name.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /create [type] DisplayName
 
 **BITS 1.2 and earlier**: The /Upload and /Upload-Reply types are not available.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 Creates a download job named *myDownloadJob*.
 

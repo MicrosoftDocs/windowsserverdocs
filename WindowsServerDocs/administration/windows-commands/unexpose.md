@@ -1,6 +1,6 @@
 ---
 title: unexpose
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ unexpose {<ShadowID> | <Drive:> | <Share> | <MountPoint>}
 
 -   You can use an existing alias or an environment variable in place of *ShadowID*. Use **add** without parameters to see existing aliases.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To unexpose the shadow copy associated with Drive P, type:
 ```

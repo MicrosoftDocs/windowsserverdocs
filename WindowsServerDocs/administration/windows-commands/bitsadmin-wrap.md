@@ -1,6 +1,6 @@
 ---
 title: bitsadmin wrap
-description: "Windows Commands topic for **bitsadmin wrap** - Wraps any line of output text extending beyond the rightmost edge of the command window to the next line."
+description: Windows Commands topic for **bitsadmin wrap** - Wraps any line of output text extending beyond the rightmost edge of the command window to the next line.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ bitsadmin /Wrap Job
 
 Specify before other switches. By default, all switches, except the [bitsadmin monitor](bitsadmin-monitor.md) switch, wrap the output.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves information for the job named *myDownloadJob* and wraps the output.
 

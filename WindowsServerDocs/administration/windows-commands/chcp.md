@@ -1,6 +1,6 @@
 ---
 title: chcp
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -59,7 +59,7 @@ The following table lists each supported code page and its country/region or lan
 -   You do not need to prepare code pages (as in MS-DOS).
 -   Programs that you start after you assign a new code page use the new code page. However, programs (except Cmd.exe) that you start before you assign the new code page use the original code page.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To view the active code page setting, type:
 ```

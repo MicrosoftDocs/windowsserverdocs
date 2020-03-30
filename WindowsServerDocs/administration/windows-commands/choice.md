@@ -1,6 +1,6 @@
 ---
 title: choice
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -26,19 +26,19 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ## Syntax
 
 ```
-choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m <"Text">]
+choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m <Text>]
 ```
 
 ## Parameters
 
 |Parameter|Description|
 |---------|-----------|
-|/c \<Choice1><Choice2><…>|Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is "YN", which is displayed as `[Y,N]?`.|
+|/c \<Choice1><Choice2><…>|Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is YN, which is displayed as `[Y,N]?`.|
 |/n|Hides the list of choices, although the choices are still enabled and the message text (if specified by **/m**) is still displayed.|
 |/cs|Specifies that the choices are case-sensitive. By default, the choices are not case-sensitive.|
 |/t \<Timeout>|Specifies the number of seconds to pause before using the default choice specified by **/d**. Acceptable values are from **0** to **9999**. If **/t** is set to **0**, **choice** does not pause before returning the default choice.|
 |/d \<Choice>|Specifies the default choice to use after waiting the number of seconds specified by **/t**. The default choice must be in the list of choices specified by **/c**.|
-|/m <"Text">|Specifies a message to display before the list of choices. If **/m** is not specified, only the choice prompt is displayed.|
+|/m <Text>|Specifies a message to display before the list of choices. If **/m** is not specified, only the choice prompt is displayed.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
@@ -48,7 +48,7 @@ choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m 
 > [!NOTE]
 > When you use ERRORLEVEL values in a batch program, list them in decreasing order.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To present the choices Y, N, and C, type the following line in a batch file:
 ```
@@ -58,9 +58,9 @@ The following prompt appears when the batch file runs the **choice** command:
 ```
 [Y,N,C]?
 ```
-To hide the choices Y, N, and C, but display the text "Yes, No, or Continue", type the following line in a batch file:
+To hide the choices Y, N, and C, but display the text Yes, No, or Continue, type the following line in a batch file:
 ```
-choice /c ync /n /m "Yes, No, or Continue?"
+choice /c ync /n /m Yes, No, or Continue?
 ```
 The following prompt appears when the batch file runs the **choice** command:
 ```
@@ -72,7 +72,7 @@ Yes, No, or Continue?
 
 To show both the text and the options used in the previous examples, type the following line in a batch file:
 ```
-choice /c ync /m "Yes, No, or Continue"
+choice /c ync /m Yes, No, or Continue
 ```
 The following prompt appears when the batch file runs the **choice** command:
 ```

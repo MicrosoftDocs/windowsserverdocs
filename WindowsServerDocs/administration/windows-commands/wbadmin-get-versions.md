@@ -1,12 +1,8 @@
 ---
 title: wbadmin get versions
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin get versions, which lists details about the available backups that are stored on the local computer or another computer.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
 author: coreyp-at-msft
@@ -44,7 +40,7 @@ wbadmin get versions
 
 To list items available for recovery from a specific backup, use **wbadmin get items**.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To see a list of available backups that are stored on volume h, type:
 ```

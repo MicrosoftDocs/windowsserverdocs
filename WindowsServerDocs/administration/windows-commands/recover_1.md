@@ -1,6 +1,6 @@
 ---
 title: recover
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -43,7 +43,7 @@ recover [noerr]
 -   This command operates on disks that are failed or failing. It also operates on volumes that are failed, failing, or in failed redundancy state.
 -   A disk that is part of a disk group must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To recover the disk group that contains the disk with focus, type:
 ```

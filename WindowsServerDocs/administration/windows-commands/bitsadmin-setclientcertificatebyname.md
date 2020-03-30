@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: "Windows Commands topic for **bitsadmin setclientcertificatebyname** - Specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request."
+description: Windows Commands topic for **bitsadmin setclientcertificatebyname** - Specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject
 |Store_name|The name of the certificate store. Possible values include:</br>CA (Certification Authority certificates)</br>MY (Personal certificates)</br>ROOT (Root certificates)</br>SPC (Software Publisher Certificate)|
 |Subject_name|Name of the certificate|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example specifies the name of the client certificate *myCertificate* to use for client authentication in an HTTPS (SSL) request for the job named *myJob*.
 ```

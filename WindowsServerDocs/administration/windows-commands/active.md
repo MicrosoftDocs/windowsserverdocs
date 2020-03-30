@@ -1,6 +1,6 @@
 ---
 title: active
-description: "Windows Commands topic for **active** - On basic disks, marks the partition with focus as active."
+description: Windows Commands topic for **active** - On basic disks, marks the partition with focus as active.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ active
 -   Only partitions can be marked as active.
 -   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To mark the partition with focus as the active partition, type:
 ```

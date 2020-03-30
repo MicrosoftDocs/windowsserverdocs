@@ -1,6 +1,6 @@
 ---
 title: clip
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ clip < <FileName>
 
 You can use the **clip** command to copy data directly into any application that can receive text from the Clipboard.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To copy the current directory listing to the Windows clipboard, type:
 ```

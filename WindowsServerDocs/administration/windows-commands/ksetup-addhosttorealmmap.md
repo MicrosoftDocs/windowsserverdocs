@@ -1,6 +1,6 @@
 ---
 title: ksetup:addhosttorealmmap
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ This command allows you to map a host or multiple hosts that are sharing the sam
 
 The mapping is recorded in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 As part of configuring the realm CONTOSO, map the host computer IPops897 to the realm:
 ```

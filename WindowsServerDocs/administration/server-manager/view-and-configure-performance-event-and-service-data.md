@@ -1,6 +1,6 @@
 ---
 title: View and Configure Performance Event and Service Data
-description: "Server Manager"
+description: Server Manager
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ This topic contains the following sections.
 
 -   [View and copy event or performance entries](#BKMK_copy)  
 
-## <a name="BKMK_thumb"></a>What are thumbnails?  
+## <a name=BKMK_thumb></a>What are thumbnails?  
 *Thumbnails* are displayed on the Server Manager dashboard for each role (a role's thumbnail reflects data collected about all of the servers in the Server Manager pool that are running the role), for each server group, for the **All Servers** group (all of the servers in the Server Manager pool), and for the local server. After Server Manager gets data from managed servers, thumbnails are automatically created for roles that are running on servers in the server pool.  
 
 if the Server Manager console is running on a client computer as part of Remote Server Administration Tools, there is no **Local Server** thumbnail.  
@@ -53,7 +53,7 @@ The thumbnail displays a quick view of the status and manageability of roles, se
 |Performance|You can configure the **Performance** row to display alerts for a role or server group when performance alerts occur that match resource types, servers, or time periods that you specify in the **Performance detail View** dialog box.<br /><br />By default, performance counters are turned off. Managed servers that are running operating systems newer than Windows Server 2003, and for which performance counters have not been started, typically show manageability status errors of **online - Performance counters not started** in the **Servers** tile of role or group pages. To turn performance counters on for managed servers, on the **All Servers** page, right-click entries in the **Performance** tile that show a **Counter Status** value of **Off**, and then click **start Performance Counters**. You can also start performance counters by right-clicking entries for servers in the **Servers** tile of role or group pages, and then clicking **start Performance Counters**.|  
 |BPA results|You can configure the **BPA results** row to display alerts for a role or server group when BPA scan results are found that match severity levels, servers, or BPA categories that you specify in the **BPA Results detail View** dialog box.|  
 
-## <a name="BKMK_events"></a>View and configure events  
+## <a name=BKMK_events></a>View and configure events  
 In this section, learn how to configure what event log data is collected from servers in the Server Manager server pool, and which events you want highlighted in thumbnails.  
 
 > [!NOTE]  
@@ -99,7 +99,7 @@ In this section, learn how to configure what event log data is collected from se
 
 10. Click **OK** to save your changes, close the **detail View** dialog box, and view the event alert changes in the source thumbnail.  
 
-## <a name="BKMK_perf"></a>View and configure performance log data  
+## <a name=BKMK_perf></a>View and configure performance log data  
 In this section, learn how to configure what performance log data is collected from servers in the Server Manager server pool, and which performance counter alerts you want highlighted in thumbnails.  
 
 By default, performance counters are turned off. Managed servers that are running operating systems newer than Windows Server 2003, and for which performance counters have not been started, typically show manageability status errors of **online - Performance counters not started** in the **Servers** tile of role or group pages. To turn performance counters on for managed servers, on the **All Servers** page, right-click entries in the **Performance** tile that show a **Counter Status** value of **Off**, and then click **start Performance Counters**. You can also start performance counters by right-clicking entries for servers in the **Servers** tile of role or group pages, and then clicking **start Performance Counters**.  
@@ -169,7 +169,7 @@ for more information about analyzing performance counter data that you view in S
 
 for more information about advanced performance monitoring and analysis tools that are available for  Windows Server 2012  and later releases of Windows Server, including Server Performance Advisor 3.0, see [Performance](https://msdn.microsoft.com/windows/hardware/gg463374.aspx) on MSDN.  
 
-## <a name="BKMK_services"></a>Manage services and configure service alerts  
+## <a name=BKMK_services></a>Manage services and configure service alerts  
 In this section, learn how to start, stop, restart, pause, or resume services that are displayed in the **Services** tile on role and server group pages in Server Manager. You can also configure the services about which you are alerted in thumbnails on the Server Manager dashboard.  
 
 > [!NOTE]  
@@ -203,7 +203,7 @@ In this section, learn how to start, stop, restart, pause, or resume services th
 
 8.  Click **OK** to save your changes, close the **detail View** dialog box, and view the service alert changes in the source thumbnail.  
 
-## <a name="BKMK_copy"></a>View and copy event, service, or performance entries  
+## <a name=BKMK_copy></a>View and copy event, service, or performance entries  
 You can copy event, service, or performance entry properties in both the **detail View** dialog boxes and the **Events** and **Performance** tiles for a role or group. Right-click an event or performance entry, and then click **copy**.  
 
 The **Events** tile also lets you preview event properties in the bottom half of the tile by selecting an event in the list. To copy the properties shown in the preview, right click the preview pane, and then click **copy**.  

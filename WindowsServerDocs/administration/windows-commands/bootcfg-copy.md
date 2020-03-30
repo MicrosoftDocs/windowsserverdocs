@@ -1,6 +1,6 @@
 ---
 title: bootcfg copy
-description: "Windows Commands topic for **bootcfg copy** - Makes a copy of an existing boot entry, to which you can add command-line options."
+description: Windows Commands topic for **bootcfg copy** - Makes a copy of an existing boot entry, to which you can add command-line options.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,10 +35,10 @@ bootcfg /copy [/s <computer> [/u <Domain>\<User> /p <Password>]] [/d <Descriptio
 | /id <OSEntryLineNum> |         Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to copy. The first line after the [operating systems] section header is 1.         |
 |          /?          |                                                                                Displays help at the command prompt.                                                                                 |
 
-## <a name="BKMK_examples"></a>Examples
-The following examples show how you can use the **bootcfg /copy** command to copy boot entry 1 and enter "\ABC Server\\" as the description:
+## <a name=BKMK_examples></a>Examples
+The following examples show how you can use the **bootcfg /copy** command to copy boot entry 1 and enter \ABC Server\\ as the description:
 ```
-bootcfg /copy /d "\ABC Server\" /id 1
+bootcfg /copy /d \ABC Server\ /id 1
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: ftp mdir
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ mdir <remoteFile>[ ] <LocalFile>
   type a hyphen (**-**) to use the current working directory on the remote computer.  
 - Specifying a *LocalFile*  
   type a hyphen (**-**) to display the listing on the screen.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Display a directory listing of **dir1** and **dir2** on the screen  
   ```  
   mdir dir1 dir2 -  

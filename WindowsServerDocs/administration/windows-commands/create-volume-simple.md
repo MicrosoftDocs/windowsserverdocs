@@ -1,6 +1,6 @@
 ---
 title: create volume simple
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create a volume of 1000 megabytes in size, on disk 1, type:  
   
 ```  

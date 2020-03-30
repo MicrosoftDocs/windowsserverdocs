@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestSites
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ dfsdiag /TestSites </Machine:<server name>| /DFSpath:<namespace root or DFS fold
 |\/Recurse|Enumerates and verifies the site associations for all folder targets under the specified namespace root.|  
 |\/Full|verifies that AD DS and the registry of the server contain the same site association information.|  
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To TBD, type:  
   
 ```  

@@ -1,6 +1,6 @@
 ---
 title: ftp ascii
-description: "Windows Commands topic for ftp ascii "
+description: Windows Commands topic for ftp ascii 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ none
 - The default file transfer type is ASCII.  
 - In ASCII mode, character conversions to and from the network standard character set are performed. For example, end-of-line characters are converted as necessary, based on the target operating system.  
 - **ftp** supports both ASCII and binary image file transfer types. Use ASCII when transferring text files. For more information about binary file transfer, see **ftp: binary** in additional references.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Set the file transfer type to ASCII.  
   ```  
   ascii  

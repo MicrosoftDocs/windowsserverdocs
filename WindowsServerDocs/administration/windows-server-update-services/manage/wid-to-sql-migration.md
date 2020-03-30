@@ -1,11 +1,8 @@
 ---
 title: Migrating the WSUS Database from (Windows Internal Database) WID to SQL
-description: "Windows Server Update Service (WSUS) topic - How to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server."
+description: Windows Server Update Service (WSUS) topic - How to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 author: coreyp-at-msft
@@ -146,8 +143,8 @@ The **NT AUTHORITY\NETWORK SERVICE** account should be listed.
     >
     > ![image11](images/image11.png)
 
-4. On the **User Mapping** page, select the **SUSDB** Database under **"Users mapped to this login"**
-5. Check **webservice** under the **"Database role membership for: SUSDB"**:
+4. On the **User Mapping** page, select the **SUSDB** Database under **Users mapped to this login**
+5. Check **webservice** under the **Database role membership for: SUSDB**:
     ![image12](images/image12.png)
 6. Click  **OK** to save settings.
     > [!NOTE]

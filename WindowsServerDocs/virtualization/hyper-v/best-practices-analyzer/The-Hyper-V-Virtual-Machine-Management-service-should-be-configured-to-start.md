@@ -1,8 +1,7 @@
 ---
 title: The Hyper-V Virtual Machine Management service should be configured to start automatically
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav

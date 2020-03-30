@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getsecurityflags
-description: "Windows Commands topic for **bitsadmin getsecurityflags** - Reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer."
+description: Windows Commands topic for **bitsadmin getsecurityflags** - Reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ bitsadmin /GetSecurityFlags <Job>
 |-------|--------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following example retrieves the securitly flags from a job named *myJob*.
 
 ```

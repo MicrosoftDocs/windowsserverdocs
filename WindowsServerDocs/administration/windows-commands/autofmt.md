@@ -1,6 +1,6 @@
 ---
 title: autofmt
-description: "Windows Commands topic for **autofmt** - formats a drive or partition when called from the Windows recovery Console."
+description: Windows Commands topic for **autofmt** - formats a drive or partition when called from the Windows recovery Console.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

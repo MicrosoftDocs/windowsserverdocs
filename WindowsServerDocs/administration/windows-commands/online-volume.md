@@ -1,6 +1,6 @@
 ---
 title: online volume
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ online volume [noerr]
 -   This command operates on volumes that have failed, are failing, or are in failed redundancy state.
 -   A volume must be selected for this command to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To bring the volume with focus online, type:
 ```

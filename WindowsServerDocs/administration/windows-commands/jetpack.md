@@ -1,6 +1,6 @@
 ---
 title: jetpack
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ jetpack.EXE <database name> <temp database name>
 |<temp database name>|Specifies the temporary database file.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To compact the WINS database:
 ```
 cd %SYSTEMROOT%\SYSTEM32\WINS

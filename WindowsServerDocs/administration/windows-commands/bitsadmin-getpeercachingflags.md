@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getpeercachingflags
-description: "Windows Commands topic for **bitsadmin getpeercachingflags** - Retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers."
+description: Windows Commands topic for **bitsadmin getpeercachingflags** - Retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ bitsadmin /GetPeerCachingFlags <Job>
 |-------|--------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following example retrieves the flags for the job named *myJob*.
 
 ```

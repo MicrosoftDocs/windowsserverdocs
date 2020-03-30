@@ -1,6 +1,6 @@
 ---
 title: icacls
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -136,13 +136,13 @@ To restore the DACLs for every file within ACLFile that exists in the C:\Windows
 icacls c:\windows\ /restore aclfile
 ```
 
-To grant the user User1 Delete and Write DAC permissions to a file named "Test1", type:
+To grant the user User1 Delete and Write DAC permissions to a file named Test1, type:
 
 ```
 icacls test1 /grant User1:(d,wdac)
 ```
 
-To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a file, named "Test2", type:
+To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a file, named Test2, type:
 
 ```
 icacls test2 /grant *S-1-1-0:(d,wdac)

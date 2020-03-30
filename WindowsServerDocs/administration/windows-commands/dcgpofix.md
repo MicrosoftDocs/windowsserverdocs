@@ -1,6 +1,6 @@
 ---
 title: dcgpofix
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ DCGPOFix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]
 -   The **dcgpofix** command is available in Windows Server 2008 R2 and Windows Server 2008, except on Server Core installations.
 -   Although the Group Policy Management Console (GPMC) is distributed with Windows Server 2008 R2 and Windows Server 2008, you must install Group Policy Management as a feature through Server Manager.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Restore the Default Domain Policy GPO to its original state. You will lose any changes that you have made to this GPO. As a best practice, you should configure the Default Domain Policy GPO only to manage the default Account Policies settings, Password Policy, Account Lockout Policy, and Kerberos Policy. In this example, you ignore the version of the Active Directory schema so that the **dcgpofix** command is not limited to same schema as the Windows version in which the command was shipped.
 ```

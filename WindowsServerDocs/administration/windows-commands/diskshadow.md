@@ -1,6 +1,6 @@
 ---
 title: diskshadow
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -69,7 +69,7 @@ You can run the following commands in the diskshadow command interpreter or thro
   
 -   at a minimum, only **add** and **create** are necessary to create a shadow copy. However, this will forfeit the context and option settings, will be a copy backup, and will only create a shadow copy with no backup execution script.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 This is a sample sequence of commands that will create a shadow copy for backup. It can be saved to file as script.dsh, and executed with diskshadow \/s script.dsh  
   
 Assume the following:  

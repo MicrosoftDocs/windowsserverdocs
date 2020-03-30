@@ -1,6 +1,6 @@
 ---
 title: arp
-description: "Windows Commands topic for **arp** - Displays and modifies entries in the address Resolution Protocol (arp) cache used to store IP addresses and their resolved physical addresses."
+description: Windows Commands topic for **arp** - Displays and modifies entries in the address Resolution Protocol (arp) cache used to store IP addresses and their resolved physical addresses.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ arp [/a [<Inetaddr>] [/n <ifaceaddr>]] [/g [<Inetaddr>] [-n <ifaceaddr>]] [/d <I
 - The IP addresses for *Inetaddr* and *ifaceaddr* are expressed in dotted decimal notation.
 - The physical address for *Etheraddr* consists of six bytes expressed in hexadecimal notation and separated by hyphens (for example, 00-AA-00-4F-2A-9C).
 - Entries added with the **/s** parameter are static and do not time out of the arp cache. The entries are removed if the TCP/IP protocol is stopped and started. To create permanent static arp cache entries, place the appropriate **arp** commands in a batch file and use Scheduled Tasks to run the batch file at startup.
-  ## <a name="BKMK_Examples"></a>Examples
+  ## <a name=BKMK_Examples></a>Examples
   To display the arp cache tables for all interfaces, type:
   ```
   arp /a

@@ -1,6 +1,6 @@
 ---
 title: freedisk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [
 - Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user s password.
 - for unattended installations, you can use **freedisk** in installation batch files to check for the prerequisite amount free space before continuing with the installation.
 - When you use **freedisk** in a batch file, it returns a **0** if there is enough space and a **1** if there is not enough space.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
   To determine whether there are at least 50 MB of free space available on drive C:, type:
   ```
   freedisk 50mb 

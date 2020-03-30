@@ -1,6 +1,6 @@
 ---
 title: eventcreate
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,17 +45,17 @@ eventcreate [/s <Computer> [/u <Domain\User> [/p <Password>]] {[/l {APPLICATION|
 
 -   Custom events cannot be written to the security log.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following examples show how you can use the eventcreate command:
 ```
-eventcreate /t error /id 100 /l application /d "Create event in application log"
-eventcreate /t information /id 1000 /so winmgmt /d "Create event in WinMgmt source"
-eventcreate /t error /id 2001 /so winword /l application /d "new src Winword in application log"
-eventcreate /s server /t error /id 100 /l application /d "Remote machine without user credentials"
-eventcreate /s server /u user /p password /id 100 /t error /l application /d "Remote machine with user credentials"
-eventcreate /s server1 /s server2 /u user /p password /id 100 /t error /so winmgmt /d "Creating events on Multiple remote machines"
-eventcreate /s server /u user /id 100 /t warning /so winmgmt /d "Remote machine with partial user credentials"
+eventcreate /t error /id 100 /l application /d Create event in application log
+eventcreate /t information /id 1000 /so winmgmt /d Create event in WinMgmt source
+eventcreate /t error /id 2001 /so winword /l application /d new src Winword in application log
+eventcreate /s server /t error /id 100 /l application /d Remote machine without user credentials
+eventcreate /s server /u user /p password /id 100 /t error /l application /d Remote machine with user credentials
+eventcreate /s server1 /s server2 /u user /p password /id 100 /t error /so winmgmt /d Creating events on Multiple remote machines
+eventcreate /s server /u user /id 100 /t warning /so winmgmt /d Remote machine with partial user credentials
 ```
 
 #### Additional References

@@ -1,6 +1,6 @@
 ---
 title: query process
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -51,7 +51,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >   -   The name of the process
 >   -   The ID of the process
 > - When **query process** returns information, a greater than (>) symbol is displayed before each process that belongs to the current session.
->   ## <a name="BKMK_examples"></a>Examples
+>   ## <a name=BKMK_examples></a>Examples
 > - To display information about the processes being used by all sessions, type:
 >   ```
 >   query process *

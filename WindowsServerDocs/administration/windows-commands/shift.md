@@ -1,6 +1,6 @@
 ---
 title: shift
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ shift [/n <N>]
 - The **shift** command has no effect on the **%\\*** batch parameter.
 - There is no backward **shift** command. After you implement the **shift** command, you cannot recover the batch parameter (**%0**) that existed before the shift.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following lines from a sample batch file called Mycopy.bat demonstrate how to use **shift** with any number of batch parameters. In this example, Mycopy.bat copies a list of files to a specific directory. The batch parameters are represented by the directory and file name arguments.
 ```
@@ -56,7 +56,7 @@ rem mycopy dir file1 file2 ...
 set todir=%1
 :getfile
 shift
-if "%1"=="" goto end
+if %1== goto end
 copy %1 %todir%
 goto getfile
 :end

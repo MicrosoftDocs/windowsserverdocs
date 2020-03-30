@@ -1,6 +1,6 @@
 ---
 title: tsdiscon
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 -   The **/server** parameter is required only if you use **tsdiscon** from a remote server.
 -   The console session cannot be disconnected.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 - To disconnect the current session, type:
   ```
   tsdiscon

@@ -1,6 +1,6 @@
 ---
 title: Using the remove-MulticastTransmission Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -51,20 +51,20 @@ mediatype:{Install&#124;Boot}|Specifies the image type. Note that this option mu
 |\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group is used. If more than one image group exists on the server, you must use this option to specify the image group name.|
 |[/Filename:<File name>]|Specifies the file name. If the source image cannot be uniquely identified by name, you must use this option to specify the file name.|
 |[/force]|removes the transmission and terminates all clients. Unless you specify a value for the **/force** option, existing clients can complete the image transfer but new clients are not able to join.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To stop a namespace (current clients will complete the transmission, but new clients will not be able to join), type:
 ```
-wdsutil /remove-MulticastTransmissiomedia:"Vista with Office"
+wdsutil /remove-MulticastTransmissiomedia:Vista with Office
 /Imagetype:Install
 ```
 ```
-wdsutil /remove-MulticastTransmissiomedia:"x64 Boot Image"
+wdsutil /remove-MulticastTransmissiomedia:x64 Boot Image
 /Imagetype:Boot /Architecture:x64
 ```
 To force termination of all clients, type:
 ```
 wdsutil /remove-MulticastTransmission /Server:MyWDSServer
-/Image:"Vista with Officemediatype:InstalmediaGroup:ImageGroup1
+/Image:Vista with Officemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /force
 ```
 #### additional references

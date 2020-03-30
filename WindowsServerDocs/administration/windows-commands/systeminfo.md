@@ -1,6 +1,6 @@
 ---
 title: systeminfo
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ Systeminfo [/s <Computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE 
 |/nh|Suppresses column headers in the output. Valid when the **/fo** parameter is set to TABLE or CSV.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To view configuration information for a computer named Srvmain, type:
 

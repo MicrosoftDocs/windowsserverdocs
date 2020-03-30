@@ -1,6 +1,6 @@
 ---
 title: tskill
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,12 +46,12 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 - When all processes that are running in a session end, the session also ends.
 - if you use the *ProcessName* and the **/server:**<em>ServerName</em> parameters, you must also specify either the **/id:**<em>SessionID</em> or the **/a** parameter.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 - To end process 6543, type:
   ```
   tskill 6543
   ```
-- To end the process "explorer" running on session 5, type:
+- To end the process explorer running on session 5, type:
   ```
   tskill explorer /id:5
   ```

@@ -1,6 +1,6 @@
 ---
 title: ftp quit
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -25,7 +25,7 @@ quit
 ```  
 ### Parameters  
 none  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 End the ftp session with the remote computer and exit **ftp** to the operating system command prompt.  
 ```  
 quit  

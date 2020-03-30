@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache
-description: "Windows Commands topic for **bitsadmin cache** switches - Contains a list of the bitsadmin /Cache switches"
+description: Windows Commands topic for **bitsadmin cache** switches - Contains a list of the bitsadmin /Cache switches
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

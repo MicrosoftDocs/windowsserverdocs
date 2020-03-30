@@ -1,6 +1,6 @@
 ---
 title: Merge vdisk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD.
 > ## Remarks
 > - A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
 > - This parameter modifies the parent VHD. As a result, other differencing VHDs that are dependent on the parent will no longer be valid.
->   ## <a name="BKMK_Examples"></a>Examples
+>   ## <a name=BKMK_Examples></a>Examples
 >   To merge a differencing VHD with its parent VHD, type:
 >   ```
 >   merge vdisk depth=1

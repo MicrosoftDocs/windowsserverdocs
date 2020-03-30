@@ -1,6 +1,6 @@
 ---
 title: reg restore
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -47,7 +47,7 @@ Reg restore <KeyName> <FileName>
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To restore the file named NTRKBkUp.hiv into the key HKLM\Software\Microsoft\ResKit, and overwrite the existing contents of the key, type:
 ```

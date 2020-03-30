@@ -1,6 +1,6 @@
 ---
 title: reg add
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -50,9 +50,9 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 |   0   |   Success   |
 |   1   |   Failure   |
 
--   For the REG_EXPAND_SZ key type, use the caret symbol ( **^** ) with **%**" inside the /d parameter
+-   For the REG_EXPAND_SZ key type, use the caret symbol ( **^** ) with **%** inside the /d parameter
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To add the key HKLM\Software\MyCo on remote computer ABC, type:
 ```

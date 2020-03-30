@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getmaxdownloadtime
-description: "Windows Commands topic for **bitsadmin getmaxdownloadtime** - Retrieves the download timeout in seconds."
+description: Windows Commands topic for **bitsadmin getmaxdownloadtime** - Retrieves the download timeout in seconds.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ bitsadmin /GetMaxDownloadtime <Job>
 
 -   N\/A
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following example gets maximum download time for the job named *myDownloadJob* in seconds.
 
 ```

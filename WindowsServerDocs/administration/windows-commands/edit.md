@@ -1,6 +1,6 @@
 ---
 title: edit
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ edit [/b] [/h] [/r] [/s] [/<NNN>] [[<Drive>:][<Path>]<FileName> [<FileName2> [..
 -   For additional help, open MS-DOS Editor, and then press the F1 key.
 -   Some monitors do not support the display of shortcut keys by default. If your monitor does not display shortcut keys, use **/b**.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To open MS-DOS Editor, type:
 ```

@@ -1,12 +1,8 @@
 ---
 title: wbadmin get status
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin get status, which reports the status of the backup or recovery operation that is currently running.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2911b944-7b95-46aa-8c1e-1d55a2fcc94c
 author: coreyp-at-msft

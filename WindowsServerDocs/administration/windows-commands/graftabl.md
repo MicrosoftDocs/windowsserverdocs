@@ -1,6 +1,6 @@
 ---
 title: graftabl
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -49,7 +49,7 @@ graftabl /status
     |2|A file error occurred.|
 -   You can use the ERRORLEVEL environment variable in a batch program to process exit codes that are returned by **graftabl**.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To view the current code page used by **graftabl**, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin geterrorcount
-description: "Windows Commands topic for **bitsadmin geterrorcount** - Retrieves a count of the number of times the specified job generated a transient error."
+description: Windows Commands topic for **bitsadmin geterrorcount** - Retrieves a count of the number of times the specified job generated a transient error.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /GetErrorCount <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves error count information for the job named *myDownloadJob*.
 ```

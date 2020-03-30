@@ -1,6 +1,6 @@
 ---
 title: create volume mirror
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ create volume mirror [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr] [noer
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create a mirrored volume of 1000 megabytes in size, on disks 1 and 2, type:  
   
 ```  

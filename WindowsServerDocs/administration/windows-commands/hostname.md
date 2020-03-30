@@ -1,6 +1,6 @@
 ---
 title: hostname
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ hostname
 |/?|Displays help at the command prompt.|
 ## Remarks
 This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network.
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To display the name of the computer, type:
 ```
 hostname

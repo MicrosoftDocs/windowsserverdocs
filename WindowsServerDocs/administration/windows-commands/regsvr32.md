@@ -1,6 +1,6 @@
 ---
 title: regsvr32
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 |\<DllName>|The name of the .dll file that will be registered.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To register the .dll for the Active Directory Schema, type:
 ```

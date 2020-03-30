@@ -1,6 +1,6 @@
 ---
 title: ftp disconnect_1
-description: "Windows Commands topic for ftp disconnect_1"
+description: Windows Commands topic for ftp disconnect_1
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -25,7 +25,7 @@ disconnect
 ```  
 ### Parameters  
 none  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Disconnect from the remote computer and retain the **ftp>** prompt.  
 ```  
 disconnect  

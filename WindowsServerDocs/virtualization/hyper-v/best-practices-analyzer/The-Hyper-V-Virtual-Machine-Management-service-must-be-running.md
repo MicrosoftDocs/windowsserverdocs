@@ -1,8 +1,7 @@
 ---
 title: The Hyper-V Virtual Machine Management service must be running
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
@@ -77,7 +76,7 @@ To install the Hyper-V Management tools:
     sc start vmms  
     ```  
   
-If the service is already configured to start automatically and you just need to restart the service, you can do that from Hyper-V Manager, or from the "sc start vmms" command shown above.  
+If the service is already configured to start automatically and you just need to restart the service, you can do that from Hyper-V Manager, or from the sc start vmms command shown above.  
   
 #### To restart the service from Hyper-V Manager  
   

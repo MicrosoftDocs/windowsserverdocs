@@ -1,7 +1,7 @@
 ---
 title: auditpol restore
-description: "Windows Commands topic for **auditpol restore** - 
-Restores system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file that is syntactically consistent with the comma-separated value (CSV) file format used by the /backup option."
+description: Windows Commands topic for **auditpol restore** - 
+Restores system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file that is syntactically consistent with the comma-separated value (CSV) file format used by the /backup option.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ auditpol /restore /file:<filename>
 |/?|Displays help at the command prompt.|
 ## Remarks
 for restore operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform the restore operation by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. SeSecurityPrivilege is useful when restoring the security descriptor in the event of an inadvertent error or malicious attack.
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To restore system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file named auditpolicy.csv that was created by using the /backup command, type:
 ```
 auditpol /restore /file:c:\auditpolicy.csv

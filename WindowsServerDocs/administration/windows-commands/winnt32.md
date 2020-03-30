@@ -1,12 +1,8 @@
 ---
 title: winnt32
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for winnt32, which performs an installation of, or upgrade to, a product in Windows Server 2003.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5a0a6fb3-ba4e-4ace-8984-7f6d3875560e
 author: coreyp-at-msft

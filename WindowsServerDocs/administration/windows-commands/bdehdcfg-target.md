@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg target
-description: "Windows Commands topic for bdehdcfg target - Prepares a partition for use as a system drive by BitLocker and Windows recovery."
+description: Windows Commands topic for bdehdcfg target - Prepares a partition for use as a system drive by BitLocker and Windows recovery.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge}
 |\<DriveLetter> shrink|Reduces the drive specified by the amount necessary to create an active system partition. To use this command, the drive specified must have at least 5 percent free space.|
 |\<DriveLetter> merge|Uses the drive specified as the active system partition. The operating system drive cannot be a target for merge.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example depicts using the **target** command to designate an existing drive (P) as the system drive.
 ```

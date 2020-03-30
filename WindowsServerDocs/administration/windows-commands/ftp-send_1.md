@@ -1,6 +1,6 @@
 ---
 title: ftp send_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ send <LocalFile> [<remoteFile>]
 ## Remarks  
 - The **send** command is identical to the **put** command.  
 - if *remoteFile* is not specified, the file is given the *LocalFile* name.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   copy the local file **test.txt** and name it **test1.txt** on the remote computer.  
   ```  
   send test.txt test1.txt  

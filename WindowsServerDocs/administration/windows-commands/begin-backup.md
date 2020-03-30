@@ -1,6 +1,6 @@
 ---
 title: Begin backup
-description: "Windows Commands topic for **Begin backup** - starts a full backup session."
+description: Windows Commands topic for **Begin backup** - starts a full backup session.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

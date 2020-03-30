@@ -1,6 +1,6 @@
 ---
 title: bitsadmin takeownership
-description: "Windows Commands topic for **bitsadmin takeownership** - Lets a user with administrative privileges take ownership of the specified job."
+description: Windows Commands topic for **bitsadmin takeownership** - Lets a user with administrative privileges take ownership of the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /TakeOwnership <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example takes ownership of the job named *myDownloadJob*.
 ```

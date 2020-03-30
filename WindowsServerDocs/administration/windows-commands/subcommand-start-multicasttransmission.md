@@ -1,6 +1,6 @@
 ---
 title: Subcommand start-MulticastTransmission
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -50,16 +50,16 @@ mediatype:{Install&#124;Boot}|Specifies the image type. Note that this option mu
 |/Architecture:{x86 &#124; ia64 &#124; x64}|The architecture of the boot image that is associated with the transmission to start. Since it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure that the correct transmission is used.|
 |\mediaGroup:<Image group name>]|Specifies the image group of the image. If no image group name is specified and only one image group exists on the server, that image group will be used. If more than one image group exists on the server, you must use this option to specify the image group name.|
 |[/Filename:<File name>]|Specifies the name of the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To start a multicast transmission, type one of the following:
 ```
-wdsutil /start-MulticastTransmissiomedia:"Vista with Office"
+wdsutil /start-MulticastTransmissiomedia:Vista with Office
 /Imagetype:Install
-wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:"Vista with Officemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
+wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:Vista with Officemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
 ```
 To start a boot image multicast transmission for Windows Server 2008 R2, type:
 ```
-wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:"X64 Boot Imagemediatype:Boot /Architecture:x64
+wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemediatype:Boot /Architecture:x64
 /Filename:boot.wim\n\
 ```
 #### additional references

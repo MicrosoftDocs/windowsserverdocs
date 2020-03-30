@@ -1,6 +1,6 @@
 ---
 title: append
-description: "Windows Commands topic for "
+description: Windows Commands topic for 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -47,7 +47,7 @@ append ;
 |         ;         |                                                                     Clears the appended directory list.                                                                     |
 |        /?         |                                                                    Displays help at the command prompt.                                                                     |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To clear the appended directory list, type:
 ```

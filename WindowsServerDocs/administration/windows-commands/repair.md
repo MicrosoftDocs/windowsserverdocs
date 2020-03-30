@@ -1,6 +1,6 @@
 ---
 title: repair
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ repair disk=<n> [align=<n>] [noerr]
   
 -   A volume in a RAID\-5 array must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To replace the volume with focus by replacing it with dynamic disk 4, type:  
   
 ```  

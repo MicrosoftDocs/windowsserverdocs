@@ -1,6 +1,6 @@
 ---
 title: manage-bde WipeFreeSpace
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the "Used Space Only" encryption method provides the same level of protection as the "Full Volume Encryption" encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the Used Space Only encryption method provides the same level of protection as the Full Volume Encryption encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
 ## Syntax
 
@@ -38,7 +38,7 @@ manage-bde -WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **-w** command to create wipe the free space on drive C.
 ```

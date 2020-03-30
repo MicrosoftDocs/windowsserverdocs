@@ -1,6 +1,6 @@
 ---
 title: shrink
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ shrink querymax [noerr]
 - if a minimum amount is specified but not enough free space is available, the command will fail.
 - A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 - This command does not operate on original equipment manufacturer (OEM) partitions, Extensible Firmware Interface (EFI) system partitions, or recovery partitions.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
   To reduce the size of the selected volume by the largest possible amount between 250 and 500 megabytes, type:
   ```
   shrink desired=500 minimum=250

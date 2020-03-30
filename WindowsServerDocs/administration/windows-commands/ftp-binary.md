@@ -1,6 +1,6 @@
 ---
 title: ftp binary
-description: "Windows Commands topic for ftp binary"
+description: Windows Commands topic for ftp binary
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ binary
 none  
 ## Remarks <optional section>  
 **ftp** supports both ASCII and binary image file transfer types. Use binary when transferring executable files. In binary mode, files are transferred in one-byte units. For more information about ASCII file transfer, see  **ftp: ascii** in additional references.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Set the file transfer type to binary.  
 ```  
 binary  

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getstate
-description: "Windows Commands topic for bitsadmin getstate"
+description: Windows Commands topic for bitsadmin getstate
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -48,7 +48,7 @@ The possible states are:
 | ACKNOWLEDGED    | The job was completed. |
 | CANCELED        | The job was canceled. |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the state for the job named *myDownloadJob*.
 

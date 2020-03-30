@@ -1,6 +1,6 @@
 ---
 title: wbadmin
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for wbadmin, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.  
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

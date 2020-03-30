@@ -1,6 +1,6 @@
 ---
 title: goto
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -57,7 +57,7 @@ goto <Label>
 
     You can use **goto** with other commands to perform conditional operations. For more information about using **goto** for conditional operations, see the [If](if.md) command reference.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following batch program formats a disk in drive A as a system disk. If the operation is successful, the **goto** command directs processing to the **:end** label:
 ```

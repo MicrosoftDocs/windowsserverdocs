@@ -1,6 +1,6 @@
 ---
 title: atmadm
-description: "Windows Commands topic for **atmadm** - Monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network."
+description: Windows Commands topic for **atmadm** - Monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -122,7 +122,7 @@ atmadm [/c][/a][/s]
     |Signaling and ILMI Packets Sent|Number of integrated local management interface (ILMI) packets sent to the switch to which this computer is attempting to connect.|
     |Signaling and ILMI Packets Received|Number of ILMI packets received from the atM switch.|
     
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 To display call information for all current connections to the atM network adapter installed on this computer, type:
 

@@ -1,6 +1,6 @@
 ---
 title: msg
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -48,8 +48,8 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
 -   if you do not specify a user or a session, **msg** displays an error message. When specifying a session, it must be an active one.
 -   The user must have Message special access permission to send a message.
 
-## <a name="BKMK_examples"></a>Examples
--   To send the message entitled "Let's meet at 1PM today" to all sessions for User1, type:
+## <a name=BKMK_examples></a>Examples
+-   To send the message entitled Let's meet at 1PM today to all sessions for User1, type:
     ```
     msg User1 Let's meet at 1PM today
     ```

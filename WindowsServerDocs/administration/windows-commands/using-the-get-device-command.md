@@ -1,6 +1,6 @@
 ---
 title: Using the get-Device Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -30,14 +30,14 @@ wdsutil /Get-Device {/Device:<Device name> | /ID:<MAC or UUID>} [/Domain:<Domain
 |/ID:<MAC or UUID>|Specifies either the MAC address or the UUID (GUID) of the computer, as shown in the following examples. Note that a valid GUID must be in one of two formats  binary string or GUID string<br /><br />-   **Binary string**: /ID:ACEFA3E81F20694E953EB2DAA1E8B1B6<br />-   **MAC address**: 00B056882FDC (no dashes) or 00-B0-56-88-2F-DC (with dashes)<br />-   **GUID string**: /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6|
 |[/Domain:<Domain>]|Specifies the domain to be searched for the prestaged computer. The default value for this parameter is the local domain.|
 |[/forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should search the entire forest or the local domain. The default value is **No**, meaning that only the local domain will be searched.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To get information by using the computer name, type:
 ```
 wdsutil /Get-Device /Device:computer1
 ```
 To get information by using the MAC address, type:
 ```
-wdsutil /verbose /Get-Device /ID:"00-B0-56-88-2F-DC" /Domain:MyDomain
+wdsutil /verbose /Get-Device /ID:00-B0-56-88-2F-DC /Domain:MyDomain
 ```
 To get information by using the GUID string, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: create partition efi
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ create partition efi [size=<n>] [offset=<n>] [noerr]
   
 -   A gpt disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create an EFI partition of 1000 megabytes on the selected disk, type:  
   
 ```  

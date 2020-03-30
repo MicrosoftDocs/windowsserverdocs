@@ -1,6 +1,6 @@
 ---
 title: Using the new-DiscoverImage Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,17 +46,17 @@ WDSUTIL [Options] /New-DiscoverImage [/Server:<Server name>]
 | [/Filename:\<File name>] |                                                                                                                                                                                                                                                                                                                                                                         If the image cannot be uniquely identified by name, you must use this option to specify the file name.                                                                                                                                                                                                                                                                                                                                                                          |
 |    /DestinationImage     | Specifies the settings for the destination image. You can specify the settings using the following options:</br>-   /FilePath:< File path and name> - Sets full file path for the new image.</br>-   [/Name:\<Name>] - Sets the display name of the image. If no display name is specified, the display name of the source image will be used.</br>-   [/Description: \<Description>] - Sets the description of the image.</br>-   [/WDSServer: \<Server name>] - Specifies the name of the server that all clients who boot from the specified image should contact to download the install image. By default, all clients who boot this image will discover a valid Windows Deployment Services server. Using this option bypasses the discovery functionality and forces the booted client to contact the specified server.</br>-   [/Overwrite:{Yes |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To create a discover image out of boot image, and name it WinPEDiscover.wim, type:
 ```
-WDSUTIL /New-DiscoverImage /Image:"WinPE boot image" /Architecture:x86 /DestinationImage /FilePath:"C:\Temp\WinPEDiscover.wim"
+WDSUTIL /New-DiscoverImage /Image:WinPE boot image /Architecture:x86 /DestinationImage /FilePath:C:\Temp\WinPEDiscover.wim
 ```
 To create a discover image out of boot image, and name it WinPEDiscover.wim with the specified settings, type:
 ```
 WDSUTIL /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
-/Image:"WinPE boot image" /Architecture:x64 /Filename:boot.wim /DestinationImage /FilePath:"\\Server\Share\WinPEDiscover.wim" 
-/Name:"New WinPE image" /Description:"WinPE image for WDS Client discovery" /Overwrite:No
+/Image:WinPE boot image /Architecture:x64 /Filename:boot.wim /DestinationImage /FilePath:\\Server\Share\WinPEDiscover.wim 
+/Name:New WinPE image /Description:WinPE image for WDS Client discovery /Overwrite:No
 ```
 
 #### Additional references

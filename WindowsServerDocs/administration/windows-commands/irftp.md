@@ -1,6 +1,6 @@
 ---
 title: irftp
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]
 -   Before using this command, verify that the devices that you want to communicate over an infrared link have infrared functionality enabled and working correctly, and that an infrared link is established between the devices.  
 -   Used without parameters or used with **/s**, **irftp** opens the **Wireless Link** dialog box, where you can select the files that you want to send without using the command line.  
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Send Example.txt over the infrared link.  
 ```  
 irftp c:\example.txt  

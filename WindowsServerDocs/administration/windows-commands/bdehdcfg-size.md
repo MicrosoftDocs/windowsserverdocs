@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg size
-description: "Windows Commands topic - Specifies the size of the system partition when a new system drive is being created."
+description: Windows Commands topic - Specifies the size of the system partition when a new system drive is being created.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ If you do not specify a size, the tool will use the default value of 300 MB. The
 > [!NOTE]
 > The **size** command cannot be combined with the **target** \<DriveLetter> **merge** command.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **size** command to allocate 500 MB to the default system drive.
 ```

@@ -1,6 +1,6 @@
 ---
 title: san
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ san [policy={onlineAll | offlineAll | offlineShared}] [noerr]
 
 ## Remarks
 - if the command is given with no parameters, the current san policy is displayed.
-  ## <a name="BKMK_Examples"></a>Examples
+  ## <a name=BKMK_Examples></a>Examples
   To view the current policy, type:
   ```
   san

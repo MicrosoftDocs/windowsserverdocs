@@ -1,6 +1,6 @@
 ---
 title: ftype
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -48,7 +48,7 @@ The following table describes how **ftype** substitutes variables within an open
 |%2, %3, ...|Gets the first parameter (%2), the second parameter (%3), and so on.|
 |%~\<N>|Gets all of the remaining parameters starting with the *N*th parameter, where *N* can be any number from 2 to 9.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the current file types that have open command strings defined, type:
 ```

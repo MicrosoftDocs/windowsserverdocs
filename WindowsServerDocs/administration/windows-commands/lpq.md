@@ -1,6 +1,6 @@
 ---
 title: lpq
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ lpq -S <ServerName> -P <printerName> [-l]
 
 ## Remarks  
 The **-S** and **-P** parameters are case sensitive and must be typed in upper-case letters.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 This example shows how to display the status of the Laserprinter1 printer queue on an LPD host at 10.0.0.45:  
 ```  
 lpq -S 10.0.0.45 -P Laserprinter1  

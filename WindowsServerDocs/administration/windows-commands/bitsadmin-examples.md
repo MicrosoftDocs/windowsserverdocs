@@ -1,6 +1,6 @@
 ---
 title: bitsadmin examples
-description: "The following examples show how to use the bitsadmin tool to perform the most common tasks."
+description: The following examples show how to use the bitsadmin tool to perform the most common tasks.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

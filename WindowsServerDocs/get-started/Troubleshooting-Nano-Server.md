@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Nano Server
-description: "Recovery Console, Emergency Management Services, kernel debugging"
+description: Recovery Console, Emergency Management Services, kernel debugging
 ms.prod: windows-server
 manager: DonGill
 ms.technology: server-nano

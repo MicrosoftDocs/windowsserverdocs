@@ -1,6 +1,6 @@
 ---
 title: Install or Uninstall Roles, Role Services, or Features
-description: "Server Manager"
+description: Server Manager
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

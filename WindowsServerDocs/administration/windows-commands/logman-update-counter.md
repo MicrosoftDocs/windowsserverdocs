@@ -1,6 +1,6 @@
 ---
 title: logman update counter
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -54,7 +54,7 @@ logman update counter <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command updates the data collector perf_log, changing the sample interval to 10 and the log format to CSV and adding versioning to the log file name in the format mmddhhmm.  
 ```  
 logman update perf_log -si 10 -f csv -v mmddhhmm  

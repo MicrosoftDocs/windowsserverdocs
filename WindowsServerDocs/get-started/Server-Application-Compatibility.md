@@ -1,6 +1,6 @@
 ---
 title: Microsoft Server Application Compatibility
-description: "Compatibility chart for Server 2016 and Microsoft server applications."
+description: Compatibility chart for Server 2016 and Microsoft server applications.
 ms.prod: windows-server
 ms.date: 08/01/2018
 ms.technology: server-general

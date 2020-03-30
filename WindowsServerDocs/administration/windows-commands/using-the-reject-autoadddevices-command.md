@@ -1,6 +1,6 @@
 ---
 title: Using The Reject-AutoaddDevices Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ wdsutil [Options] /Reject-AutoaddDevices [/Server:<Server name>] /RequestId:<Req
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/RequestId:<Request ID &#124; ALL>|Specifies the request ID assigned to the pending computer. To reject all pending computers, specify **ALL**.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To reject a single computer, type:
 ```
 wdsutil /Reject-AutoaddDevices /RequestId:12

@@ -1,6 +1,6 @@
 ---
 title: pause
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -50,7 +50,7 @@ pause
   If you press Y (for yes) in response to this message, the batch program ends and control returns to the operating system.
 - You can insert the **pause** command before a section of the batch file that you might not want to process. When **pause** suspends processing of the batch program, you can press CTRL+C and then press Y to stop the batch program.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To create a batch program that prompts the user to change disks in one of the drives, type:
 ```

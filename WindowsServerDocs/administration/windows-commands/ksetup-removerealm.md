@@ -1,6 +1,6 @@
 ---
 title: ksetup:removerealm
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -39,9 +39,9 @@ The realm name is stored in two places in the registry: **HKEY_LOCAL_MACHINE\SYS
 
 You cannot remove the default realm name from the domain controller because this will reset its DNS information, and removing it might make the domain controller unusable.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
-Mistakenly set the realm name by misspelling ".COM" on the local computer to CORP.CONTOSO.CON
+Mistakenly set the realm name by misspelling .COM on the local computer to CORP.CONTOSO.CON
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```

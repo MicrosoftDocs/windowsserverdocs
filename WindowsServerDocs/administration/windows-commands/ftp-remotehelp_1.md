@@ -1,6 +1,6 @@
 ---
 title: ftp remotehelp_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ remotehelp [<Command>]
 |[<Command>]|Specifies the name of the command about which you want help. If *Command* is not specified, **ftp** displays a list of all remote commands.|  
 ## Remarks  
 You can run remote commands using **quote** or **literal**.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Display a list of remote commands.  
 ```  
 remotehelp  

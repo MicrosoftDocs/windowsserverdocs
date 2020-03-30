@@ -1,6 +1,6 @@
 ---
 title: bootcfg rmsw
-description: "Windows Commands topic for **bootcfg rmsw** - removes operating system load options for a specified operating system entry."
+description: Windows Commands topic for **bootcfg rmsw** - removes operating system load options for a specified operating system entry.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ bootcfg /rmsw [/s <computer> [/u <Domain>\<User> [/p <Password>]]] [/mm] [/bv] [
 | /id <OSEntryLineNum> | Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file from which the OS Load Options are removed. The first line after the [operating systems] section header is 1. |
 |          /?          |                                                                                          Displays help at the command prompt.                                                                                          |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /rmsw**command:
 ```
 bootcfg /rmsw /mm 64 /id 2 

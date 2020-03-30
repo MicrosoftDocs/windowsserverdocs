@@ -1,6 +1,6 @@
 ---
 title: select volume
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,7 +45,7 @@ select volume={<n>|<d>}
   
 -   if a partition is selected with a corresponding volume, the volume will be automatically selected.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To shift the focus to volume 2, type:  
   
 ```  
@@ -58,7 +58,7 @@ To shift the focus to drive C, type:
 select volume=c  
 ```  
   
-To shift the focus to the volume mounted on a folder named "mountpath", type:  
+To shift the focus to the volume mounted on a folder named mountpath, type:  
   
 ```  
 select volume=c:\mountpath  

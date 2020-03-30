@@ -1,6 +1,6 @@
 ---
 title: bitsadmin makecustomheaderswriteonly
-description: "Windows Commands topic for **bitsadmin makecustomheaderswriteonly** - Make a job's Custom HTTP Headers write-only (cannot be undone)."
+description: Windows Commands topic for **bitsadmin makecustomheaderswriteonly** - Make a job's Custom HTTP Headers write-only (cannot be undone).
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

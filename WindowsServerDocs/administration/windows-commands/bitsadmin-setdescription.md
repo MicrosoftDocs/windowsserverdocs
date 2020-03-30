@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdescription
-description: "Windows Commands topic for **bitsadmin setdescription** - Sets the description of the specified job."
+description: Windows Commands topic for **bitsadmin setdescription** - Sets the description of the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,11 +34,11 @@ bitsadmin /SetDescription <Job> <Description>
 |Job|The job's display name or GUID|
 |Description|Text used to describe the job.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the description for the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /SetDescription myDownloadJob "Music Downloads"
+C:\>bitsadmin /SetDescription myDownloadJob Music Downloads
 ```
 
 #### Additional references

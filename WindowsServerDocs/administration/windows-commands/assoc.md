@@ -1,6 +1,6 @@
 ---
 title: assoc
-description: "Windows Commands topic for **assoc** - Displays or modifies file name extension associations."
+description: Windows Commands topic for **assoc** - Displays or modifies file name extension associations.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -47,7 +47,7 @@ assoc [<.ext>[=[<FileType>]]]
 -   To view current file types that have open command strings defined, use the **ftype** command.
 -   To redirect the output of **assoc** to a text file, use the **>** redirection operator.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To view the current file type association for the file name extension .txt, type:
 ```

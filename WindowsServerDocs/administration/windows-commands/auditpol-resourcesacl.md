@@ -1,6 +1,6 @@
 ---
 title: auditpol resourceSACL
-description: "Windows Commands topic for **uditpol resourceSACL** - Configures global resource system access control lists (SAcls)."
+description: Windows Commands topic for **uditpol resourceSACL** - Configures global resource system access control lists (SAcls).
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -60,7 +60,7 @@ auditpol /resourceSACL
 
 For resourceSACL operations, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform resourceSACL operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the remove operation.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 To set a global resource SACL to audit successful access attempts by a user on a registry key:
 ```

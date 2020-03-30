@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers
-description: "Windows Commands topic for **bitsadmin peers** - listing of the **Peers** switches."
+description: Windows Commands topic for **bitsadmin peers** - listing of the **Peers** switches.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

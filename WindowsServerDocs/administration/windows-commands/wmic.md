@@ -1,12 +1,8 @@
 ---
 title: wmic
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wmic, which displays WMI information inside an interactive command shell. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
 author: coreyp-at-msft
@@ -40,7 +36,7 @@ The following sub-commands are available at all times:
 |context|Displays the current values of all global switches.|
 |[quit \| exit]|Exits the WMIC command shell.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the current values of all global switches, type:
 ```

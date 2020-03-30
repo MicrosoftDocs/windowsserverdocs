@@ -1,6 +1,6 @@
 ---
 title: ksetup:server
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -39,7 +39,7 @@ There is no way to remove the targeted server name; you can only change it back 
 
 The target server name is stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\LSA\Kerberos**. It is not reported by using **ksetup**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Make your **ksetup** configurations effective on the IPops897 computer that is connected on the Contoso domain:
 ```

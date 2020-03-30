@@ -1,6 +1,6 @@
 ---
 title: attributes volume
-description: "Windows Commands topic for **attributes volume** - Displays, sets, or clears the attributes of a volume."
+description: Windows Commands topic for **attributes volume** - Displays, sets, or clears the attributes of a volume.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -48,7 +48,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
   
 -   A volume must be selected for the **attributes volume** command to succeed. Use the **select volume** command to select a volume and shift the focus to it.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To display the current attributes on the selected volume, type:  
   
 ```  

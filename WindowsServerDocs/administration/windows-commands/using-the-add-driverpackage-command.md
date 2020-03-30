@@ -1,6 +1,6 @@
 ---
 title: Using the add-DriverPackage Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,14 +37,14 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 | [/DriverGroup:\<Group Name>] |                             Specifies the name of the driver group to which the package should be added.                              |
 |   [/Name:\<Friendly Name>]   |                                           States the friendly name for the driver package.                                            |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To add a driver package, type one of the following:
 ```
-WDSUTIL /verbose /Add-DriverPackage /InfFile:"C:\Temp\Display.inf"
+WDSUTIL /verbose /Add-DriverPackage /InfFile:C:\Temp\Display.inf
 ```
 ```
-WDSUTIL /Add-DriverPackage /Server:MyWDSServer /InfFile:"C:\Temp\Display.inf" /Architecture:x86 /DriverGroup:x86Drivers /Name:"Display Driver"
+WDSUTIL /Add-DriverPackage /Server:MyWDSServer /InfFile:C:\Temp\Display.inf /Architecture:x86 /DriverGroup:x86Drivers /Name:Display Driver
 ```
 
 #### Additional references

@@ -1,6 +1,6 @@
 ---
 title: ftp append
-description: "Windows Commands topic for ftp append "
+description: Windows Commands topic for ftp append 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ append <LocalFile> [remoteFile]
 
 ## Remarks  
 if *remoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 append file1.txt to file2.txt on the remote computer.  
 ```  
 append file1.txt file2.txt  

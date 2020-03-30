@@ -1,6 +1,6 @@
 ---
 title: del
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -70,7 +70,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 > Before you use wildcard characters with the **del** command, use the same wildcard characters with the **dir** command to list all the files that will be deleted.
 > -   The **del** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To delete all the files in a folder named Test on drive C, type either of the following:
 ```

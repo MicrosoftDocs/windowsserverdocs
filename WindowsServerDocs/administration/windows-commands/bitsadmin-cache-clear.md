@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache clear
-description: "Windows Commands topic for **bitsadmin cache clear** - Purges the local cache."
+description: Windows Commands topic for **bitsadmin cache clear** - Purges the local cache.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Purges the local cache.
 bitsadmin /Cache /Clear 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example purges the local cache.
 ```

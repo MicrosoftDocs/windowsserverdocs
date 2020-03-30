@@ -1,12 +1,8 @@
 ---
 title: wbadmin stop job
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin stop job, which cancels the backup or recovery operation that is currently running. Canceled operations cannot be restarted—you must rerun a canceled backup or recovery operation from the beginning.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3b83b398-39c7-4410-bf17-5c1fb1a4f46d
 author: coreyp-at-msft

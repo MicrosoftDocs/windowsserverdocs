@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplydata
-description: "Windows Commands topic for **bitsadmin getreplydata** - Retrieves the server's reply data in hexadecimal format."
+description: Windows Commands topic for **bitsadmin getreplydata** - Retrieves the server's reply data in hexadecimal format.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /GetReplyData <Job>
 
 Valid only for upload-reply jobs.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the reply data for the job named *myDownloadJob*.
 ```

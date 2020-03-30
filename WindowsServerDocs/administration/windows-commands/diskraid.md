@@ -1,6 +1,6 @@
 ---
 title: diskraid
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -70,7 +70,7 @@ To view the command syntax, click a command:
 -   [standby](#BKMK_35)
 -   [unmask](#BKMK_36)
 
-### <a name="BKMK_1"></a>add
+### <a name=BKMK_1></a>add
 
 Adds an existing LUN to the currently selected LUN, or adds an iSCSI target portal to the currently selected iSCSI target portal group.
 
@@ -98,7 +98,7 @@ Specifies the iSCSI target portal number to add to the currently selected iSCSI 
 
 Specifies that any failures that occur while performing this operation will be ignored. This is useful in script mode.
 
-### <a name="BKMK_2"></a>associate
+### <a name=BKMK_2></a>associate
 
 Sets the specified list of controller ports as active for the currently selected LUN (other controller ports are made inactive), or adds the specified controller ports to the list of existing active controller ports for the currently selected LUN, or associates the specified iSCSI target for the currently selected LUN.
 
@@ -154,7 +154,7 @@ Controller port associations changed.
 (Controller ports active after this command: Ctlr 0 Port 0, Ctlr 0 Port 1, Ctlr 1 Port 1)
 ```
 
-### <a name="BKMK_3"></a>automagic
+### <a name=BKMK_3></a>automagic
 
 Sets or clears flags that give hints to providers on how to configure a LUN. Used with no parameters, the **automagic** operation displays a list of flags.
 
@@ -202,7 +202,7 @@ Flags are identified by three-letter acronyms.
 |WTC|Write-Through Caching Enabled|
 |YNK|Removable|
 
-### <a name="BKMK_4"></a>break
+### <a name=BKMK_4></a>break
 
 Removes the plex from the currently selected LUN. The plex and the data it contained are not retained, and the drive extents may be reclaimed.
 
@@ -233,7 +233,7 @@ Specifies that any failures that occur while performing this operation will be i
 > [!CAUTION]
 > All data contained on the original LUN is not guaranteed to be consistent.
 
-### <a name="BKMK_5"></a>chap
+### <a name=BKMK_5></a>chap
 
 Sets the Challenge Handshake Authentication Protocol (CHAP) shared secret so that iSCSI initiators and iSCSI targets can communicate with one another.
 
@@ -276,7 +276,7 @@ Specifies a target in the currently selected subsystem to associate with the sec
 
 Specifies an initiator iSCSI name to associate with the secret. This is optional when setting a secret on a target and leaving it out indicates that the secret will be used for all initiators that do not already have an associated secret.
 
-### <a name="BKMK_6"></a>create
+### <a name=BKMK_6></a>create
 
 Creates a new LUN or iSCSI target on the currently selected subsystem, or creates a target portal group on the currently selected target. You can view the actual binding using the **DiskRAID list** command.
 
@@ -369,7 +369,7 @@ Specifies that any failures that occur while performing this operation will be i
 -   Either the **size**= or the **drives**= parameter must be specified. They can also be used together.
 -   The stripe size for a LUN cannot be changed after creation.
 
-### <a name="BKMK_7"></a>delete
+### <a name=BKMK_7></a>delete
 
 Deletes the currently selected LUN, iSCSI target (as long as there are not any LUNs associated with the iSCSI target) or iSCSI target portal group.
 
@@ -403,7 +403,7 @@ Deletes the currently selected iSCSI target portal group.
 
 Specifies that any failures that occur while performing this operation will be ignored. This is useful in script mode.
 
-### <a name="BKMK_8"></a>detail
+### <a name=BKMK_8></a>detail
 
 Displays detailed information about the currently selected object of the specified type.
 
@@ -467,7 +467,7 @@ Lists detailed information about the currently selected iSCSI target portal grou
 
 For use only with the LUN parameter. Lists additional information, including its plexes.
 
-### <a name="BKMK_9"></a>dissociate
+### <a name=BKMK_9></a>dissociate
 
 Sets specified list of controller ports as inactive for the currently selected LUN (other controller ports are not affected), or dissociates the specified list of iSCSI targets for the currently selected LUN.
 
@@ -520,7 +520,7 @@ Controller port associations changed.
 (Controller ports active after this command: Ctlr 0 Port 1)
 ```
 
-### <a name="BKMK_10"></a>exit
+### <a name=BKMK_10></a>exit
 
 Exits DiskRAID.
 
@@ -530,7 +530,7 @@ Exits DiskRAID.
 exit
 ```
 
-### <a name="BKMK_11"></a>extend
+### <a name=BKMK_11></a>extend
 
 Extends the currently selected LUN by adding sectors to the end of the LUN. Not all providers support extending LUNs. Does not extend any volumes or file systems contained on the LUN. After you extend the LUN, you should extend the associated on-disk structures using the **DiskPart extend** command.
 
@@ -566,7 +566,7 @@ Specifies that any failures that occur while performing this operation should be
 
 Either the *size* or the \<drive> parameter must be specified. They can also be used together.
 
-### <a name="BKMK_12"></a>flushcache
+### <a name=BKMK_12></a>flushcache
 
 Clears the cache on the currently selected controller.
 
@@ -576,7 +576,7 @@ Clears the cache on the currently selected controller.
 flushcache controller
 ```
 
-### <a name="BKMK_13"></a>help
+### <a name=BKMK_13></a>help
 
 Displays a list of all DiskRAID commands.
 
@@ -586,7 +586,7 @@ Displays a list of all DiskRAID commands.
 help
 ```
 
-### <a name="BKMK_14"></a>importtarget
+### <a name=BKMK_14></a>importtarget
 
 Retrieves or sets the current Volume Shadow Copy Service (VSS) import target that is set for the currently selected subsystem.
 
@@ -602,7 +602,7 @@ importtarget subsystem [set target]
 
 If specified, sets the currently selected target to the VSS import target for the currently selected subsystem. If not specified, the command retrieves the current VSS import target that is set for the currently selected subsystem.
 
-### <a name="BKMK_15"></a>initiator
+### <a name=BKMK_15></a>initiator
 
 Retrieves information about the local iSCSI initiator.
 
@@ -612,7 +612,7 @@ Retrieves information about the local iSCSI initiator.
 initiator
 ```
 
-### <a name="BKMK_16"></a>invalidatecache
+### <a name=BKMK_16></a>invalidatecache
 
 Invalidates the cache on the currently selected controller.
 
@@ -622,7 +622,7 @@ Invalidates the cache on the currently selected controller.
 invalidatecache controller
 ```
 
-### <a name="BKMK_18"></a>lbpolicy
+### <a name=BKMK_18></a>lbpolicy
 
 Sets the load balance policy on the currently selected LUN.
 
@@ -657,7 +657,7 @@ Specifies the load balance policy. If the type is not specified, then the **path
 
 Specifies whether a path is **primary** or has a particular \<weight>. Any paths not specified are implicitly set as backup. Any paths listed must be one of the currently selected LUN's paths.
 
-### <a name="BKMK_19"></a>list
+### <a name=BKMK_19></a>list
 
 Displays a list of objects of the specified type.
 
@@ -717,7 +717,7 @@ Lists summary information about all iSCSI targets in the currently selected subs
 
 Lists summary information about all iSCSI target portal groups in the currently selected target. The currently selected portal group is marked by an asterisk (*).
 
-### <a name="BKMK_20"></a>login
+### <a name=BKMK_20></a>login
 
 Logs the specified iSCSI initiator adapter into the currently selected iSCSI target.
 
@@ -763,7 +763,7 @@ Identified by three letter acronyms:
 
 **EDD**: Enable data digest
 
-### <a name="BKMK_21"></a>logout
+### <a name=BKMK_21></a>logout
 
 Logs the specified iSCSI initiator adapter out of the currently selected iSCSI target.
 
@@ -779,7 +779,7 @@ logout target iadapter= <iadapter>
 
 Specifies the initiator adapter with a login session to logout from.
 
-### <a name="BKMK_22"></a>maintenance
+### <a name=BKMK_22></a>maintenance
 
 Performs maintenance operations on the currently selected object of the specified type.
 
@@ -803,7 +803,7 @@ Specifies the maintenance operation to perform. The *operation* type can be **sp
 
 Specifies the number of times to repeat the *operation*. This is typically used with **blink**, **beep**,or **ping**.
 
-### <a name="BKMK_23"></a>name
+### <a name=BKMK_23></a>name
 
 Sets the friendly name of the currently selected subsystem, LUN, or iSCSI target to the specified name.
 
@@ -819,7 +819,7 @@ name {subsystem | lun | target} [<name>]
 
 Specifies a name for the subsystem, LUN, or target. The name must be less than 64 characters in length. If no name is supplied, the existing name, if any, is deleted.
 
-### <a name="BKMK_24"></a>offline
+### <a name=BKMK_24></a>offline
 
 Sets the state of the currently selected object of the specified type to **offline**.
 
@@ -837,7 +837,7 @@ Specifies the type of object on which to perform this operation. The \<object>
 
 type can be **subsystem**, **controller**, **drive**, **LUN**, or **tportal**.
 
-### <a name="BKMK_25"></a>online
+### <a name=BKMK_25></a>online
 
 Sets the state of the selected object of the specified type to **online**. If object is **hbaport**, changes the status of the paths to the currently selected HBA port to **online**.
 
@@ -855,7 +855,7 @@ Specifies the type of object on which to perform this operation. The \<object>
 
 type can be **hbaport**, **subsystem**, **controller**, **drive**, **LUN**, or **tportal**.
 
-### <a name="BKMK_26"></a>recover
+### <a name=BKMK_26></a>recover
 
 Performs operations necessary, such as resynchronization or hot sparing, to repair the currently selected fault-tolerant LUN. For example, RECOVER might cause a hot spare to be bound to a RAID set that has a failed disk or other disk extent reallocation.
 
@@ -865,7 +865,7 @@ Performs operations necessary, such as resynchronization or hot sparing, to repa
 recover <lun>
 ```
 
-### <a name="BKMK_27"></a>reenumerate
+### <a name=BKMK_27></a>reenumerate
 
 Reenumerates objects of the specified type. If you use the extend LUN command, you must use the refresh command to update the disk size before using the reenumerate command.
 
@@ -885,7 +885,7 @@ Queries the provider to discover any new subsystems that were added in the curre
 
 Queries the internal I/O buses to discover any new drives that were added in the currently selected subsystem.
 
-### <a name="BKMK_28"></a>refresh
+### <a name=BKMK_28></a>refresh
 
 Refreshes internal data for the currently selected provider.
 
@@ -895,7 +895,7 @@ Refreshes internal data for the currently selected provider.
 refresh provider
 ```
 
-### <a name="BKMK_29"></a>rem
+### <a name=BKMK_29></a>rem
 
 Used to comment scripts.
 
@@ -905,7 +905,7 @@ Used to comment scripts.
 Rem <comment>
 ```
 
-### <a name="BKMK_30"></a>remove
+### <a name=BKMK_30></a>remove
 
 Removes the specified iSCSI target portal from the currently selected target portal group.
 
@@ -925,7 +925,7 @@ Specifies the iSCSI target portal to remove.
 
 Specifies that any failures that occur while performing this operation should be ignored. This is useful in script mode.
 
-### <a name="BKMK_31"></a>replace
+### <a name=BKMK_31></a>replace
 
 Replaces the specified drive with the currently selected drive.
 
@@ -945,7 +945,7 @@ Specifies the \<drive_number> for the drive to be replaced.
 
 -   The specified drive may not be the currently selected drive.
 
-### <a name="BKMK_32"></a>reset
+### <a name=BKMK_32></a>reset
 
 Resets the currently selected controller or port.
 
@@ -965,7 +965,7 @@ Resets the controller.
 
 Resets the port.
 
-### <a name="BKMK_33"></a>select
+### <a name=BKMK_33></a>select
 
 Displays or changes the currently selected object.
 
@@ -1033,7 +1033,7 @@ Sets the focus to the specified iSCSI target portal group within the currently s
 
 Specifies the \<object number> to select. If the <object number> specified is not valid, any existing selections for objects of the specified type are cleared. If no <object number> is specified, the current object is displayed.
 
-### <a name="BKMK_34"></a>setflag
+### <a name=BKMK_34></a>setflag
 
 Sets the currently selected drive as a hot spare.
 
@@ -1057,7 +1057,7 @@ Unselects the currently selected drive as a hot spare.
 
 Hot spares cannot be used for ordinary LUN binding operations. They are reserved for fault handling only. The drive must not be currently bound to any existing LUN.
 
-### <a name="BKMK_shrink"></a>shrink
+### <a name=BKMK_shrink></a>shrink
 
 Reduces the size of the selected LUN.
 
@@ -1077,7 +1077,7 @@ Specifies the desired amount of space in megabytes (MB) to reduce the size of th
 
 Specifies that any failures that occur while performing this operation will be ignored. This is useful in script mode.
 
-### <a name="BKMK_35"></a>standby
+### <a name=BKMK_35></a>standby
 
 Changes the status of the paths to the currently selected host bus adapter (HBA) port to STANDBY.
 
@@ -1093,7 +1093,7 @@ standby hbaport
 
 Changes the status of the paths to the currently selected host bus adapter (HBA) port to STANDBY.
 
-### <a name="BKMK_36"></a>unmask
+### <a name=BKMK_36></a>unmask
 
 Makes the currently selected LUNs accessible from the specified hosts.
 

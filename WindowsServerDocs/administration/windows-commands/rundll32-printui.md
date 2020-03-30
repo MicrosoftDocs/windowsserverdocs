@@ -1,6 +1,6 @@
 ---
 title: rundll32 printui.dll,PrintUIEntry
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -93,7 +93,7 @@ There are two types of parameters: base parameters and modification parameters. 
 ## Remarks  
 - The **PrintUIEntry** keyword is case sensitive, and you must enter the syntax for this command with the exact capitalization shown in the examples in this topic.  
 - See [Examples](#BKMK_Examples) in this document for the syntax for some common tasks. For more examples, at a command prompt type: **rundll32 printui.dll,PrintUIEntry /?**  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   To add a new remote printer, printer1, for a computer, Client1, which is visible for the user account where this command is run, type:  
   ```  
   rundll32 printui.dll PrintUIEntry /in /n\\client1\printer1  

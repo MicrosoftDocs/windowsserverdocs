@@ -1,6 +1,6 @@
 ---
 title: Set context
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ set context {clientaccessible | persistent [nowriters] | volatile [nowriters]}
 
 -   The *clientaccessible* context is persistent by default.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To prevent shadow copies from being deleted when you exit DiskShadow, type:
 ```

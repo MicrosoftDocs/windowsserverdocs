@@ -1,6 +1,6 @@
 ---
 title: tpmtool
-description: "Windows Commands topic for tpmtool - gets information about the Trusted Platform Module."
+description: Windows Commands topic for tpmtool - gets information about the Trusted Platform Module.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ tpmtool /parameter [<arguments>]
 |parsetcglogs [-validate (-v)]|Displays the parsed TCG log, also known as the Windows Boot Configuration Log (WBCL). The most up-to-date event descriptions can be found on the [TCG website](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/), under **Event Descriptions**. If the `-validate` flag set, validates that the Platform Configuration Register (PCR) values on the TPM match values in the log.|
 |/?|Displays help at the command prompt.|
 
-## <a name="tpmtool_examples"></a>Examples
+## <a name=tpmtool_examples></a>Examples
 
 To display the basic information of the TPM, type:
 ```

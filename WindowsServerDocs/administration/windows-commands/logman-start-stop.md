@@ -1,6 +1,6 @@
 ---
 title: logman start | stop
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ logman stop <[-n] <name>> [options]
 |        -ets        | Send commands to Event Trace Sessions directly without saving or scheduling. |
 |        -as         |               Perform the requested operation asynchronously.                |
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command starts the data collector perf_log on the remote computer server_1.  
 ```  
 logman start perf_log -s server_1  

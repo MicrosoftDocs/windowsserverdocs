@@ -1,6 +1,6 @@
 ---
 title: create partition extended
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -49,7 +49,7 @@ create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]
   
 -   A basic MBR disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create an extended partition of 1000 megabytes in size, type:  
   
 ```  

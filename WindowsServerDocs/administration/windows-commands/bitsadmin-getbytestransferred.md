@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getbytestransferred
-description: "Windows Commands topic for **bitsadmin getbytestransferred** - Retrieves the number of bytes transferred for the specified job."
+description: Windows Commands topic for **bitsadmin getbytestransferred** - Retrieves the number of bytes transferred for the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /GetBytesTransferred <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the number of bytes transferred for the job named *myDownloadJob*.
 ```

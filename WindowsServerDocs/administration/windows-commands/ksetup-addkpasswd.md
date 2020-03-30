@@ -1,6 +1,6 @@
 ---
 title: ksetup:addkpasswd
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ Run the command **ksetup** to verify the KDC name. If **kpasswd =** does not app
 
 You can add additional KDC names one at a time.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Configure the realm, CORP.CONTOSO.COM, so that it uses the non-Windows KDC server, mitkdc.contoso.com, as the password server:
 ```

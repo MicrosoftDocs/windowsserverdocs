@@ -1,6 +1,6 @@
 ---
 title: rd
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -54,7 +54,7 @@ rmdir [<Drive>:]<Path> [/s [/q]]
     If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then use **rd** (specify *Path* if necessary).
 -   The **rd** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 You cannot delete the directory that you are currently working in. You must change to a directory that is not within the current directory. For example, to change to the parent directory, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: recover
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -39,11 +39,11 @@ recover [<Drive>:][<Path>]<FileName>
 ## Remarks
 
 -   The **recover** command reads a file, sector-by-sector, and recovers data from the good sectors. Data in bad sectors is lost.
--   Bad sectors reported by **chkdsk** were marked as "bad" when your disk was prepared for operation. They pose no danger, and **recover** does not affect them.
+-   Bad sectors reported by **chkdsk** were marked as bad when your disk was prepared for operation. They pose no danger, and **recover** does not affect them.
 -   Because all data in bad sectors is lost when you recover a file, you should recover only one file at a time.
 -   You cannot use wildcard characters (**&#42;** and **?**) with the **recover** command. You must specify a file (and the location of the file if it is not in the current directory).
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To recover the file Story.txt in the \Fiction directory on drive D, type:
 ```

@@ -1,12 +1,8 @@
 ---
 title: wbadmin delete catalog
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin delete catalog, which deletes the backup catalog that is stored on the local computer.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3041407-4577-4716-a39f-2c8ab48818d1
 author: coreyp-at-msft

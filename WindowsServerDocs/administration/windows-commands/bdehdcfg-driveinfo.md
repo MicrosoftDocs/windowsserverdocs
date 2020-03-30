@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg driveinfo
-description: "Windows Commands topic for ** bdehdcfg: driveinfo** - Displays the drive letter, the total size, the maximum free space, and the partition characteristics."
+description: Windows Commands topic for ** bdehdcfg: driveinfo** - Displays the drive letter, the total size, the maximum free space, and the partition characteristics.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ bdehdcfg -driveinfo <DriveLetter>
 
 ## Remarks
 The command is informational only and makes no modifications to the drive.
-## <a name="BKMK_Examples"></a>Example
+## <a name=BKMK_Examples></a>Example
 The following example will display the drive information for drive C.
 ```
 bdehdcfg  driveinfo C:

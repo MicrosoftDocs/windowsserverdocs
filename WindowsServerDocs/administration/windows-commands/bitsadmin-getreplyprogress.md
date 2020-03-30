@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplyprogress
-description: "Windows Commands topic for **bitsadmin getreplyprogress** - Retrieves the size and progress of the server reply."
+description: Windows Commands topic for **bitsadmin getreplyprogress** - Retrieves the size and progress of the server reply.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /GetReplyProgress <Job>
 
 Valid only for upload-reply jobs.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the reply progress for the job named *myDownloadJob*.
 ```

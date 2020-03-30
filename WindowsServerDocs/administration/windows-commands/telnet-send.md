@@ -1,6 +1,6 @@
 ---
 title: telnet send
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]
 | <string>  | Sends whatever string you type to the telnet server. |
 |     ?     |     Displays help associated with this command.      |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Send  Are you there to the telnet server.  
 ```  
 sen ayt  

@@ -1,6 +1,6 @@
 ---
 title: Using the delete-AutoaddDevices Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ wdsutil /delete-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevic
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/Devicetype:{PendingDevices &#124; RejectedDevices &#124;ApprovedDevices}|Specifies the type of computer to delete from the database. This can be any of the following three types:<br /><br />-   **PendingDevices** returns all computers in the database that have a status of pending.<br />-   **RejectedDevices** returns all computers in the database that have a status of rejected.<br />-   **ApprovedDevices** returns all computers that have a status of approved.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To delete all rejected computers, type:
 ```
 wdsutil /delete-AutoaddDevices /Devicetype:RejectedDevices

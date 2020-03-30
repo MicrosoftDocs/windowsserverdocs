@@ -1,12 +1,8 @@
 ---
 title: wbadmin restore catalog
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin restore catalog, which recovers a backup catalog for the local computer from a storage location that you specify.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce1e24a0-821d-4353-b09d-8f82c5c4ad56
 author: coreyp-at-msft
@@ -46,7 +42,7 @@ wbadmin restore catalog
 
 If the location (disk, DVD, or remote shared folder) where you store your backups is damaged or lost and cannot be used to restore the backup catalog, use **wbadmin delete catalog** to delete the corrupted catalog. In this case, you should create a new backup once your backup catalog is deleted.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To restore a catalog from a backup stored on disk d:, type:
 ```

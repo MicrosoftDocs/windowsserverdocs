@@ -1,6 +1,6 @@
 ---
 title: list
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -39,7 +39,7 @@ list providers
 |shadows|Lists persistent and existing non-persistent shadow copies. See [List shadows](list-shadows.md) for syntax and parameters.|
 |providers|Lists currently registered shadow copy providers. See [List providers](list-providers.md) for syntax and parameters.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To list all shadow copies, type:
 ```

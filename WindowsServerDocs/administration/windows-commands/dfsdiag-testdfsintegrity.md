@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestDFSIntegrity
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ dfsdiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]
 |\/Recurse|Performs the testing including the namespace interlinks.|  
 |\/Full|verifies the consistency of share and NTFS Acls and client side configuration on all folder targets. It also verifies that the online property is set.|  
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To TBD, type:  
   
 ```  

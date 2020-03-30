@@ -1,6 +1,6 @@
 ---
 title: gpt
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ gpt attributes=<n>
 - The EFI System partition contains only those binaries necessary to start the operating system. This makes it easy for OEM binaries or binaries specific to an operating system to be placed in other partitions.
 - A basic gpt partition must be selected for this operation to succeed. Use the **select partition** command to select a basic gpt partition and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
   If you are moving a gpt disk to a new computer and would like to prevent that computer from automatically assigning a drive letter to the partition with focus, type:
   ```

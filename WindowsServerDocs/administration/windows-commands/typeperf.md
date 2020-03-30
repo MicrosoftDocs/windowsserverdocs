@@ -1,6 +1,6 @@
 ---
 title: typeperf
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -58,11 +58,11 @@ typeperf -qx [object] [options]
 |            -s \<computer_name>             |                   Specifies a remote computer to monitor if no computer is specified in the counter path.                    |
 |                     -y                     |                                        Answer yes to all questions without prompting.                                        |
 
-## <a name="BKMK_EXAMPLES"></a>Examples
+## <a name=BKMK_EXAMPLES></a>Examples
 
 - The following example writes the values for the local computer's performance counter **\\\\Processor(_Total)\% Processor Time** to the command window at a default sample interval of 1 second until CTRL+C is pressed.  
   ```
-  typeperf "\Processor(_Total)\% Processor Time"
+  typeperf \Processor(_Total)\% Processor Time
   ```  
 - The following example writes the values for the list of counters in the file **counters.txt** to the tab-delimited file **domain2.tsv** at a sample interval of 5 seconds until 50 samples have been collected.  
   ```

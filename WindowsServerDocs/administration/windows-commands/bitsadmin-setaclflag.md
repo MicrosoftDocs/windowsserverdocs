@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setaclflag
-description: "Windows Commands topic for **bitsadmin setaclflag** - Sets the access control list propagations flags."
+description: Windows Commands topic for **bitsadmin setaclflag** - Sets the access control list propagations flags.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ bitsadmin /SetAclFlags <Job> <Flags>
 
 The SetAclFlags switch is used to maintain Owner and access control list information when a job is downloading data from a Windows (SMB) share.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the access control list propagation flags for the job named *myDownloadJob* to maintain the owner and group information with the downloaded files.
 ```

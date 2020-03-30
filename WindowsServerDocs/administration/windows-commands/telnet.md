@@ -1,6 +1,6 @@
 ---
 title: telnet
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 -   You must install the telnet client software before you can run this command. For more information, see [Installing telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx).
 -   You can run telnet without parameters to enter the telnet context, indicated by the telnet prompt (**Microsoft telnet>**). From the telnet prompt, you can use telnet commands to manage the computer running the telnet client.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 Use telnet to connect to the computer running the telnet Server Service at telnet.microsoft.com.
 ```
 telnet telnet.microsoft.com

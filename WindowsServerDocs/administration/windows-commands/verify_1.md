@@ -1,6 +1,6 @@
 ---
 title: verify
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ verify [on | off]
 |[on \| off]|Switches the **verify** setting on or off.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the current **verify** setting, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: Detach vdisk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -39,7 +39,7 @@ detach vdisk [noerr]
   
 -   A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.  
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To detach the selected VHD, type:  
   
 ```  

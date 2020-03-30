@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and version
-description: "Windows Commands topic for **bitsadmin util and version** - Displays the version of BITS service."
+description: Windows Commands topic for **bitsadmin util and version** - Displays the version of BITS service.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ The **Verbose** switch performs the following:
 -   Verifies the BITS Service can be started
 -   Displays BITS Group Policy values (Windows Vista only)
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example the version of the BITS Service.
 ```

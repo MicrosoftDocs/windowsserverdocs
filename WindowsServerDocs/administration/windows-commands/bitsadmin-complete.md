@@ -1,6 +1,6 @@
 ---
 title: bitsadmin complete
-description: "Windows Commands topic for **bitsadmin complete** - completes the job. The downloaded files are not available to you until you use this switch."
+description: Windows Commands topic for **bitsadmin complete** - completes the job. The downloaded files are not available to you until you use this switch.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ bitsadmin /complete <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 When the state of the job is TRANSFERRED, BITS has successfully transferred all files in the job. However, the files are not available until you use the **/complete** switch. If multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
 ```

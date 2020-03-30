@@ -1,6 +1,6 @@
 ---
 title: copy
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -108,7 +108,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
     To copy all of a directory's files and subdirectories, use the **xcopy** command.
 -   The **copy** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To copy a file called Memo.doc to Letter.doc in the current drive and ensure that an end-of-file character (CTRL+Z) is at the end of the copied file, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: manage-bde unlock
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,11 +45,11 @@ manage-bde -unlock {-recoverypassword <Password>|-recoverykey <PathToExternalKey
 |-? or /?||Displays brief Help at the command prompt.|
 |-help or -h||Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **-unlock** command to unlock drive E with a recovery key file that has been saved to a backup folder on another drive.
 ```
-manage-bde –unlock E: -recoverykey "F:\Backupkeys\recoverykey.bek"
+manage-bde –unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
 ```
 
 #### Additional references

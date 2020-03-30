@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxyusage
-description: "Windows Commands topic for **bitsadmin getproxyusage** - Retrieves the proxy usage setting for the specified job."
+description: Windows Commands topic for **bitsadmin getproxyusage** - Retrieves the proxy usage setting for the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,7 +41,7 @@ The possible values are:
 -   OVERRIDE—Use an explicit proxy list.
 -   AUTODETECT—Automatically detect the proxy settings.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the proxy usage for the job named *myDownloadJob*.
 ```

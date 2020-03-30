@@ -1,15 +1,10 @@
 ---
 title: winrs
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for winrs, which allows you to manage and execute programs remotely.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c370de31-5651-400a-872d-ef229aae2309
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -35,7 +30,7 @@ winrs [/<parameter>[:<value>]] <command>
 |      /timeout:\<seconds>       |                                                                                                                                                                             This option is deprecated.                                                                                                                                                                             |
 |       /directory:\<path>       |                                                                                            Specifies starting directory for remote shell.<br /><br />if not specified, the remote shell will start in the user's home directory defined by the environment variable **%USERPROFILE%**.                                                                                             |
 | /environment:\<string>=<value> |                                                                          Specifies a single environment variable to be set when shell starts, which allows changing default environment for shell.<br /><br />Multiple occurrences of this switch must be used to specify multiple environment variables.                                                                          |
-|            /noecho             |                                                                                                    Specifies that echo should be disabled. This may be necessary to ensure that user's answers to remote prompts are not displayed locally.<br /><br />By default echo is "on".                                                                                                    |
+|            /noecho             |                                                                                                    Specifies that echo should be disabled. This may be necessary to ensure that user's answers to remote prompts are not displayed locally.<br /><br />By default echo is on.                                                                                                    |
 |           /noprofile           |                                              Specifies that the user's profile should not be loaded.<br /><br />By default, the server will attempt to load the user profile.<br /><br />if the remote user is not a local administrator on the target system, then this option will be required (the default will result in error).                                               |
 |         /allowdelegate         |                                                                                                                  Specifies that the user's credentials can be used to access a remote share, for example, found on a different machine than the target endpoint.                                                                                                                   |
 |          /compression          |                                                                           Turn on compression.  Older installations on remote machines may not support compression so it is off by default.<br /><br />Default setting is off, since older installations on remote machines may not support compression.                                                                           |
@@ -47,7 +42,7 @@ winrs [/<parameter>[:<value>]] <command>
 -   To terminate the **/remote** command, the user can type **Ctrl-C** or **Ctrl-break**, which will be sent to the remote shell. The second **Ctrl-C** will force termination of **winrs.exe**.  
 -   To manage active remote shells or winrs configuration, use the WinRM tool.  The URI alias to manage active shells is **shell/cmd**.  The URI alias for winrs configuration is **winrm/config/winrs**.  
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 ```  
 winrs /r:https://contoso.com command  
 ```  

@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-DriverPackage
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ WDSUTIL /Set-DriverPackage [/Server:<Server name>] {/DriverPackage:<Name> | /Pac
 |   [/Name:\<New Name>]    |                                                                                                                                                                                              Specifies the new name for the driver package.                                                                                                                                                                                              |
 |      [/Enabled:{Yes      |                                                                                                                                                                                                                   No}                                                                                                                                                                                                                    |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To change settings about a package, type one of the following:
 ```

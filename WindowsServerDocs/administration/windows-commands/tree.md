@@ -1,6 +1,6 @@
 ---
 title: tree
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -43,7 +43,7 @@ tree [<Drive>:][<Path>] [/f] [/a]
 
 The structure displayed by **tree** depends upon the parameters that you specify at the command prompt. If you do not specify a drive or path, **tree** displays the tree structure beginning with the current directory of the current drive.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the names of all the subdirectories on the disk in your current drive, type:
 ```

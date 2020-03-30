@@ -1,6 +1,6 @@
 ---
 title: cd
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -55,7 +55,7 @@ If command extensions are enabled, the following conditions apply to the **cd** 
   ```  
   is the same as:  
   ```
-  cd "username\programs\start menu"
+  cd username\programs\start menu
   ```  
   The quotation marks are required, however, if extensions are disabled.
 
@@ -64,7 +64,7 @@ To disable command extensions, type:
 cmd /e:off
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The root directory is the top of the directory hierarchy for a drive. To return to the root directory, type:
 ```

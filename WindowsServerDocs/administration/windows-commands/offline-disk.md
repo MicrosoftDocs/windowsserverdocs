@@ -1,6 +1,6 @@
 ---
 title: offline disk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ offline disk [noerr]
 -   If a dynamic disk in a disk group is taken offline, the status of the disk changes to **missing** and the group shows a disk that is offline. The missing disk is moved to the invalid group. If the dynamic disk is the last disk in the group, then the status of the disk will change to **offline**, and the empty group will be removed.
 -   A disk must be selected for the **offline disk** command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To take the disk with focus offline, type:
 ```

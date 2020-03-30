@@ -1,6 +1,6 @@
 ---
 title: Recommendations for moving to Windows Server 2016
-description: "Recommendations for moving to Windows Server 2016."
+description: Recommendations for moving to Windows Server 2016.
 ms.prod: windows-server
 ms.date: 10/18/2016
 ms.technology: server-general
@@ -23,7 +23,7 @@ ms.localizationpriority: medium
 |**ISV application workloads**|- Upgrades to Windows Server 2016 should use application-specific guidance. <br>- For more information on Windows Server compatibility with non-Microsoft applications, visit the [Windows Server Logo Certification portal](https://msdn.microsoft.com/enterprisecloudcertified).|- To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. Follow migration guides as applicable. <br>- Or, remain on your current OS and run in a virtual machine running on a Windows Server 2016 host, or Microsoft Azure. Contact your EA reseller, TAM, or Microsoft for extended support options through [Software Assurance](https://www.microsoft.com/Licensing/licensing-programs/software-assurance-default.aspx).|
 |**Custom application workloads**|- Consult with application developers on compatibility with Windows Server 2016 and upgrade guidance. <br>- Leverage Microsoft Azure to test application on Windows Server 2016 prior to switch. <br>- See complete options in the next section.|- Consult with your application developers on compatibility with Windows Server 2016 and upgrade guidance. <br>- Leverage Microsoft Azure to test your application on Windows Server 2016 prior to switch. <br>- To take advantage of new features in Windows Server 2016, deploy new hardware, or install Windows Server 2016 in a virtual machine on an existing host. Some new features work best on a Windows Server 2016 physical host running Hyper-V. <br>- See complete options in the next section.|
 
-## Complete options for moving servers running custom or "in-house" applications on older versions of Windows Server to Windows Server 2016
+## Complete options for moving servers running custom or in-house applications on older versions of Windows Server to Windows Server 2016
 
 There are more options than ever before to help you and your customers take advantage of features in Windows Server 2016, with minimal impact to your current services and workloads.
 

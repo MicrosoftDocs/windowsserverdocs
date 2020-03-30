@@ -1,6 +1,6 @@
 ---
 title: cmdkey
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ cmdkey [{/add:<TargetName>|/generic:<TargetName>}] {/smartcard|/user:<UserName> 
 ## Remarks
 - if more than one smart card is found on the system when the /smartcard command-line option is used, **cmdkey** will display information about all available smart cards and then prompt the user to specify which one to use.
 - Passwords will not be displayed once they are stored.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
   To display a list of all user names and credentials that are stored, type:
   ```
   cmdkey /list

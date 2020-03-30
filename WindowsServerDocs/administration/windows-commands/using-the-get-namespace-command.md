@@ -1,6 +1,6 @@
 ---
 title: Using the get-Namespace Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,14 +36,14 @@ wdsutil /Get-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/det
 |        [/Server:<Server name>]        |                                                                                                             Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.                                                                                                              |
 | [/Show:Clients] or [/details:Clients] |                                                                                                                                                  Displays information about client computers that are connected to the specified namespace.                                                                                                                                                  |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To view information about a namespace, type:
 ```
-wdsutil /Get-Namespace /Namespace:"Custom Auto 1"
+wdsutil /Get-Namespace /Namespace:Custom Auto 1
 ```
 To view information about a namespace and the clients that are connected, type one of the following:
-- Windows Server 2008: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /Show:Clients`
-- Windows Server 2008 R2: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /details:Clients`
+- Windows Server 2008: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /Show:Clients`
+- Windows Server 2008 R2: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /details:Clients`
   #### additional references
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)

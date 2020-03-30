@@ -1,6 +1,6 @@
 ---
 title: label
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -54,7 +54,7 @@ label [/mp] [<Volume>] [<Label>]
   ```  
   Press Y to delete the label, or press N to keep the label.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To label a disk in drive A that contains sales information for July, type:
 ```

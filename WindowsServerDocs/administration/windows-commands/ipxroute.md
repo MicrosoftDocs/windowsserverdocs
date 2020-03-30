@@ -1,6 +1,6 @@
 ---
 title: ipxroute
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,7 +41,7 @@ ipxroute config
 |remove= *xxxxxxxxxxxx*|removes the given node address from the source routing table.|  
 |config|Displays information about all of the bindings for which IPX is configured.|  
 |/?|Displays help at the command prompt.|  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To display the network segments that the workstation is attached to, the workstation node address, and frame type being used, type:  
 ```  
 ipxroute config  

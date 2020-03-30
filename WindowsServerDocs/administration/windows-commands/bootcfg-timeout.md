@@ -1,7 +1,7 @@
 ---
 title: bootcfg timeout
-description: "Windows Commands topic for **bootcfg timeout** - 
-changes the operating system time-out value."
+description: Windows Commands topic for **bootcfg timeout** - 
+changes the operating system time-out value.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 |      /p <Password>      |                                                                                                                                            Specifies the <Password> of the user account that is specified in the **/u** parameter.                                                                                                                                             |
 |           /?            |                                                                                                                                                                      Displays help at the command prompt.                                                                                                                                                                      |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /timeout** command:
 ```
 bootcfg /timeout 30

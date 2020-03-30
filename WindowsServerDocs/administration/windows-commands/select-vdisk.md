@@ -1,6 +1,6 @@
 ---
 title: select vdisk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,11 +36,11 @@ select vdisk file=<full path> [noerr]
 |file\=<full path>|Specifies the full path and file name of an existing VHD file.|  
 |noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To shift the focus to the VHD named Test.vhd, type:  
   
 ```  
-select vdisk file="c:\test\test.vhd"  
+select vdisk file=c:\test\test.vhd  
 ```  
   
 #### additional references  

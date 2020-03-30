@@ -1,6 +1,6 @@
 ---
 title: Sc config
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -52,11 +52,11 @@ sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys 
 -   For each command-line option (parameter), the equal sign is part of the option name.
 -   A space is required between an option and its value (for example, **type= own**. If the space is omitted, the operation will fail.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To specify a binary path for the NEWSERVICE service, type:
 ```
-sc config NewService binpath= "ntsd -d c:\windows\system32\NewServ.exe"
+sc config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
 ```
 
 #### Additional references

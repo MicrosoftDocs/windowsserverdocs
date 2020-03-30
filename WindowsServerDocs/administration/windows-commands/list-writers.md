@@ -1,6 +1,6 @@
 ---
 title: list writers
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ list writers [metadata | detailed | status]
 |detailed|Lists the same information as **metadata**, but **detailed** includes the full file list for all components.|
 |status|Lists only the identity and status of registered writers.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To list only the identity and status of writers, type:
 ```
@@ -46,12 +46,12 @@ list writers status
 Output that is similar to the following displays:
 ```
 Listing writer status ...
-* WRITER "System Writer"
+* WRITER System Writer
         - Status: 5 (VSS_WS_WAITING_FOR_BACKUP_COMPLETE)
         - Writer Failure code: 0x00000000 (S_OK)
         - Writer ID: {e8132975-6f93-4464-a53e-1050253ae220}
         - Instance ID: {7e631031-c695-4229-9da1-a7de057e64cb}
-* WRITER "Shadow Copy Optimization Writer"
+* WRITER Shadow Copy Optimization Writer
         - Status: 1 (VSS_WS_STABLE)
         - Writer Failure code: 0x00000000 (S_OK)
         - Writer ID: {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
@@ -59,7 +59,7 @@ Listing writer status ...
 ...
 ...
 ...
-* WRITER "Registry Writer"
+* WRITER Registry Writer
         - Status: 1 (VSS_WS_STABLE)
         - Writer Failure code: 0x00000000 (S_OK)
         - Writer ID: {afbab4a2-367d-4d15-a586-71dbb18f8485}

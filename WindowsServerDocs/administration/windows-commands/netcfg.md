@@ -1,6 +1,6 @@
 ---
 title: netcfg
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/b|Displays the **binding paths**, when followed by a string containing the name of the path.|
 |/?|Displays **help** at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 To install the protocol *example* using c:\oemdir\example.inf:
 ```

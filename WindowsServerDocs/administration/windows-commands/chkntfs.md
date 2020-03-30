@@ -1,6 +1,6 @@
 ---
 title: chkntfs
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -47,7 +47,7 @@ chkntfs [/c <Volume> [...]]
 |/c \<Volume> [...]|Schedules one or more volumes to be checked when the computer is started, and runs **chkdsk** on those that are dirty.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the type of file system for drive C, type:
 ```

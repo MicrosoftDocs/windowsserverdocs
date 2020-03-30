@@ -1,6 +1,6 @@
 ---
 title: logoff
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 - if <*SessionID*> or <*SessionName*> is not specified, **logoff** logs off the user from the current session. If you specify <*SessionName*>, it must be an active one.
 - When you log off a user, all processes end and the session is deleted from the server.
 - You cannot log off a user from the console session.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
 - To log off a user from the current session, type:
   ```
   logoff

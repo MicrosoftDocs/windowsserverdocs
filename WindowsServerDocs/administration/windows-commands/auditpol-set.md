@@ -1,7 +1,7 @@
 ---
 title: auditpol set
-description: "Windows Commands topic for **auditpol set** - 
-Sets the per-user audit policy, system audit policy, or auditing options."
+description: Windows Commands topic for **auditpol set** - 
+Sets the per-user audit policy, system audit policy, or auditing options.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -48,15 +48,15 @@ auditpol /set
 
 ## Remarks
 for all set operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform set operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the set operation.
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 ### Examples for the per-user audit policy
 To set the per-user audit policy for all subcategories under the detailed Tracking category for the user mikedan so that all the user's successful attempts will be audited, type:
 ```
-auditpol /set /user:mikedan /category:"detailed Tracking" /include /success:enable
+auditpol /set /user:mikedan /category:detailed Tracking /include /success:enable
 ```
 To set the per-user audit policy for categories specified by name and GUID, and subcategories specified by GUID to suppress auditing for any successful or failed attempts, type:
 ```
-auditpol /set /user:mikedan /exclude /category:"Object Access","System",{6997984b-797a-11d9-bed3-505054503030} 
+auditpol /set /user:mikedan /exclude /category:Object Access,System,{6997984b-797a-11d9-bed3-505054503030} 
 /subcategory:{0ccee9210-69ae-11d9-bed3-505054503030},:{0ccee9211-69ae-11d9-bed3-505054503030}, /success:enable /failure:enable
 ```
 To set the per-user audit policy for the specified user for all the categories for the suppression of auditing of all but successful attempts, type:
@@ -66,7 +66,7 @@ auditpol /set /user:mikedan /exclude /category:* /success:enable
 ### Examples for the system audit policy
 To set the system audit policy for all subcategories under the detailed Tracking category to include auditing for only successful attempts, type:
 ```
-auditpol /set /category:"detailed Tracking" /success:enable
+auditpol /set /category:detailed Tracking /success:enable
 ```
 > [!NOTE]
 > The failure setting is not altered.

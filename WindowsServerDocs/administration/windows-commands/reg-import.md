@@ -1,6 +1,6 @@
 ---
 title: reg import
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,7 +45,7 @@ The following table lists the return values for the **reg import** operation.
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To import registry entries from the file named AppBkUp.reg, type:
 ```

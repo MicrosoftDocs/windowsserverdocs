@@ -1,6 +1,6 @@
 ---
 title: Using the get-MulticastTransmission Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -54,24 +54,24 @@ mediatype:Install|Specifies the image type. Note that this option must be set to
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the boot image that is associated with the transmission. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure                                   that the correct image is used.|
 |[/Filename:<File name>]|Specifies the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
 |[/Show:Clients]<br /><br />or<br /><br />[/details:Clients]|Displays information about client computers that are connected to the multicast transmission.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 **Windows Server 2008**
 To view information about the transmission for an image named  Vista with Office, type one of the following:
 ```
-wdsutil /Get-MulticastTransmissiomedia:"Vista with Officemediatype:Install
-wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:"Vista with Officemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim /Show:Clients
+wdsutil /Get-MulticastTransmissiomedia:Vista with Officemediatype:Install
+wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:Vista with Officemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim /Show:Clients
 ```
 **Windows Server 2008 R2**
 To view information about the transmission for an image named  Vista with Office, type one of the following:
 ```
-wdsutil /Get-MulticastTransmissiomedia:"Vista with Office"
+wdsutil /Get-MulticastTransmissiomedia:Vista with Office
  /Imagetype:Install
 ```
 ```
-wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:"Vista with Officemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim /details:Clients
+wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:Vista with Officemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim /details:Clients
 ```
 ```
-wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:"X64 Boot Imagemediatype:Boot /Architecture:x64 /Filename:boot.wim /details:Clients
+wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemediatype:Boot /Architecture:x64 /Filename:boot.wim /details:Clients
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

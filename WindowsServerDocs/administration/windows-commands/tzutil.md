@@ -1,6 +1,6 @@
 ---
 title: tzutil
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ tzutil [/?] [/g] [/s <timeZoneID>[_dstoff]] [/l]
 ## Remarks
 An exit code of **0** indicates the command completed successfully.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To display the current time zone ID, type:
 ```
 tzutil /g

@@ -1,6 +1,6 @@
 ---
 title: Evntcmd
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -59,19 +59,19 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
   - The parameter *delete_TRAP_DEST* specifies that you do not want trap messages to be sent to a specified host within a community.  
   - The parameter *CommunityName* specifies, by name, the community in which trap messages are sent.  
   - The parameter *HostID* specifies, by name or IP address, the host to which you do not want trap messages to be sent.  
-    ## <a name="BKMK_Examples"></a>Examples  
+    ## <a name=BKMK_Examples></a>Examples  
     The following examples illustrate entries in the configuration file for the **evntcmd** command. They are not designed to be typed at a command prompt.  
     To send a trap message if the Event Log service is restarted, type:  
     ```  
-    #pragma add System "Eventlog" 2147489653  
+    #pragma add System Eventlog 2147489653  
     ```  
     To send a trap message if the Event Log service is restarted twice in three minutes, type:  
     ```  
-    #pragma add System "Eventlog" 2147489653 2 180  
+    #pragma add System Eventlog 2147489653 2 180  
     ```  
     To stop sending a trap message whenever the Event Log service is restarted, type:  
     ```  
-    #pragma delete System "Eventlog" 2147489653  
+    #pragma delete System Eventlog 2147489653  
     ```  
     To send trap messages within the community named Public to the host with the IP address 192.168.100.100, type:  
     ```  

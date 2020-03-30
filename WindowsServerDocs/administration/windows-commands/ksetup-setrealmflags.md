@@ -1,6 +1,6 @@
 ---
 title: ksetup:setrealmflags
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -52,7 +52,7 @@ Realm flags are stored in the registry under **HKEY_LOCAL_MACHINE\SYSTEM\Current
 
 You can see what realm flags are available and set by viewing the output of **ksetup**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 List the available and set realm flags for the realm CONTOSO:
 ```

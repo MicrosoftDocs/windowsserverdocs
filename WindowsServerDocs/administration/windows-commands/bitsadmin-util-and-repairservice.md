@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and repairservice
-description: "Windows Commands topic for **bitsadmin util and repairservice** - Command used to fix known issues with various versions of BITS service."
+description: Windows Commands topic for **bitsadmin util and repairservice** - Command used to fix known issues with various versions of BITS service.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -43,7 +43,7 @@ This switch resolves errors related to incorrect service configuration and depen
 > [!IMPORTANT]
 > This command is not supported on Windows Vista.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example repairs the BITS Service configuration.
 ```

@@ -1,6 +1,6 @@
 ---
 title: Using the get-AllMulticastTransmissions Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 |    /details:clients     |                                                                                                                                                                                              Only supported for Windows Server 2008 R2. If present, clients that are connected to                              the transmission will be displayed.                                                                                                                                                                                               |
 | [/ExcludedeletePending] |                                                                                                                                                                                                                                              Excludes any deactivated transmissions from the list.                                                                                                                                                                                                                                               |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To view information about all transmissions, type:
 - Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions`
 - Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Show:All`

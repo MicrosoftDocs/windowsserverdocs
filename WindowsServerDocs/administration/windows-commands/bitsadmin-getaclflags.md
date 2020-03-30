@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getaclflags
-description: "Windows Commands topic for **bitsadmin getaclflags** - Retrieves the access control list propagations flags."
+description: Windows Commands topic for **bitsadmin getaclflags** - Retrieves the access control list propagations flags.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -39,7 +39,7 @@ Displays one or more of the following flag values:
 -   D: Copy DACL information with file.
 -   S: Copy SACL information with file.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the access control list propagation flags for the job named *myDownloadJob*.
 ```

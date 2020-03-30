@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestReferral
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,7 +45,7 @@ dfsdiag /TestReferral /DFSpath:<DFS path for getting referrals> [/Full]
 |\/DFSpath:<path for getting referrals>|This DFS path can be one of the following:<br /><br />-   \(blank\): Tests trusted domains.<br />-   \\\\Domain: Domain controller referrals.<br />-   \\\\Domain\\SYSvol: SYSvol referrals.<br />-   \\\\Domain\\NETLOGON: NETLOGON referrals.<br />-   \\\\<Domain or server>\\<Namespace Root>: Namespace root referrals.<br />-   \\\\<Domain or server>\\<Namespace root>\\<DFS folder>: DFS folder \(link\) referrals.|  
 |\/Full|Applied only to Domain and Root  referrals. verifies the consistency of site association information between the registry and active directory Domain Services \(AD DS\).|  
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To TBD, type:  
   
 ```  

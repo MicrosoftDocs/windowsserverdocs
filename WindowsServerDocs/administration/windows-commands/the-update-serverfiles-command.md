@@ -1,6 +1,6 @@
 ---
 title: The Update-ServerFiles Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
 |---------|-----------|
 |[/Server:\<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To update the files, type one of the following:
 ```

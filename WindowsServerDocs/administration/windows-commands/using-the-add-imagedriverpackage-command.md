@@ -1,6 +1,6 @@
 ---
 title: Using the add-ImageDriverPackage Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,13 +38,13 @@ wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype
 |           [/DriverPackage:<Name>           |                                                                                                                                                                                   Specifies the name of the driver package to add to the image.                                                                                                                                                                                    |
 |             [/PackageId:<ID>]              | Specifies the Windows Deployment Services ID of the driver package. You must specify this option if the driver package cannot be uniquely identified by name. To find the Package ID, click the driver group that the package is in (or the **All Packages** node), right-click the package, and then click **Properties**. The Package ID is listed on the **General** tab. For example:  {DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}. |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To add a driver package to a boot image, type one of the following:
 ```
-wdsutil /add-ImageDriverPackagmedia:"WinPE Boot Imagemediatype:Boot /Architecture:x86 /DriverPackage:XYZ
+wdsutil /add-ImageDriverPackagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /DriverPackage:XYZ
 ```
 ```
-wdsutil /verbose /add-ImageDriverPackagmedia:"WinPE Boot Image" /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
+wdsutil /verbose /add-ImageDriverPackagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-DriverGroupFilter
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ WDSUTIL /Set-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>]
 |    [/AddValue:\<Value>]    | Specifies the new client value to add to the filter. You can specify multiple values for a single filter type. See the following list for valid attribute values for **ChassisType**. For information about obtaining the values for all other filter types, see [Driver Group Filters](https://go.microsoft.com/fwlink/?LinkID=155158) (<https://go.microsoft.com/fwlink/?LinkID=155158>).</br>**Other**</br>**UnknownChassis**</br>**Desktop**</br>**LowProfileDesktop**</br>**PizzaBox**</br>**MiniTower**</br>**Tower**</br>**Portable**</br>**Laptop**</br>**Notebook**</br>**Handheld**</br>**DockingStation**</br>**AllInOne**</br>**SubNotebook**</br>**SpaceSaving**</br>**LunchBox**</br>**MainSystemChassis**</br>**ExpansionChassis**</br>**SubChassis**</br>**BusExpansionChassis**</br>**PeripheralChassis**</br>**StorageChassis**</br>**RackMountChassis**</br>**SealedCaseComputer**</br>**MultiSystemChassis**</br>**CompactPci**</br>**AdvancedTca** |
 |  [/RemoveValue:\<Value>]   |                                                                                                                                                                                                                                                                                                                                                                                                                                     Specifies the existing client value to remove from the filter as specified with **/AddValue**.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To remove a filter, type one of the following:
 ```

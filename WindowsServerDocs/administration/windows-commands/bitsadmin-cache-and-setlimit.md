@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and setlimit
-description: "Windows Commands topic for **bitsadmin cache and setlimit** - Sets the cache size limit."
+description: Windows Commands topic for **bitsadmin cache and setlimit** - Sets the cache size limit.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /Cache /SetLimit Percent
 |---------|-----------|
 |Percent|The cache limit defined as a percentage of the total hard disk space..|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example limits the cache size to 50%.
 ```

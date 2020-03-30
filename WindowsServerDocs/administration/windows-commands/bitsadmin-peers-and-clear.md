@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and clear
-description: "Windows Commands topic for **bitsadmin peers and clear** - Clears the peer list."
+description: Windows Commands topic for **bitsadmin peers and clear** - Clears the peer list.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Clears the peer list.
 bitsadmin /Peers /Clear 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example clears the peer list.
 ```

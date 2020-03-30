@@ -1,6 +1,6 @@
 ---
 title: help
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ help [<Command>]
 |---------|-----------|
 |\<Command>|Specifies the name of the command that you want information about.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To view information about the **robocopy** command, type either of the following:
 ```

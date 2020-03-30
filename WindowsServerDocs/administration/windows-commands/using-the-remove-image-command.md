@@ -1,6 +1,6 @@
 ---
 title: Using the remove-Image Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,20 +37,20 @@ mediatype:{Boot &#124; Install}|Specifies the type of image.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image. Because it is possible to have the same image name for different boot images in different architectures, specifying the architecture value ensures that the correct image will be removed.|
 |\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group will be used. If more than one image group exists, you must use this option to specify the image group.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To remove a boot image, type:
 ```
-wdsutil /remove-Imagmedia:"WinPE Boot Imagemediatype:Boot /Architecture:x86
+wdsutil /remove-Imagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86
 ```
 ```
-wdsutil /verbose /remove-Imagmedia:"WinPE Boot Image" /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim
+wdsutil /verbose /remove-Imagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim
 ```
 To remove an install image, type:
 ```
-wdsutil /remove-Imagmedia:"Windows Vista with Officemediatype:Install
+wdsutil /remove-Imagmedia:Windows Vista with Officemediatype:Install
 ```
 ```
-wdsutil /verbose /remove-Imagmedia:"Windows Vista with Office" /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
+wdsutil /verbose /remove-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

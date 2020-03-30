@@ -1,6 +1,6 @@
 ---
 title: ntfrsutl
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -49,7 +49,7 @@ ntfrsutl poll[/quickly[=[<N>]]][/slowly[=[<N>]]][/now][<computer>]
 |    poll     | Specifies the current polling intervals.<br /><br />Parameters:<br /><br /><ul><li>**\/quickly**\[**\=**\[ <N>\]\]  \(Polls quickly\)<br /><br /><ul><li>**quickly** \- Polls quickly until stable configuration is rectrieved</li><li>**quickly\=** \- Polls quickly every default minutes.</li><li>**quickly\=**<N> \- Polls quickly every *N* minutes</li></ul></li><li>**\/slowly**\[**\=**\[ <N>\]\] \(Polls slowly\)<br /><br /><ul><li>**slowly** \- Polls slowly until stable configuration is retrieved</li><li>**slowly\=** \- Polls slowly every default minutes</li><li>**slowly\=**<N> \- Polls quickly every *N* minutes</li></ul></li><li>**\/now** \(Polls now\)</li></ul> |
 |     \/?     |                                                                                                                                                                                                                                                                                                                            Displays help at the command prompt.                                                                                                                                                                                                                                                                                                                            |
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To determine the polling interval for file replication:  
   
 ```  

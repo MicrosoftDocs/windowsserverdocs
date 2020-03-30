@@ -1,6 +1,6 @@
 ---
 title: ftp mdelete_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ mdelete <remoteFile>[ ]
 |--------------|--------------------------------------|
 | <remoteFile> | Specifies the remote file to delete. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 delete remote files **a.exe** and **b.exe**.  
 ```  
 mdelete a.exe b.exe  

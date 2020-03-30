@@ -1,6 +1,6 @@
 ---
 title: mode
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -30,7 +30,7 @@ You can use **mode** to perform the following tasks—each task uses a different
 -   [To change the size of the command prompt screen buffer](#BKMK_5)
 -   [To set the keyboard typematic rate](#BKMK_6)
 
-## <a name="BKMK_1"></a>To configure a serial communications port
+## <a name=BKMK_1></a>To configure a serial communications port
 
 ### Syntax
 
@@ -56,7 +56,7 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 |  idsr={on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
 |     /?      |                                                                                                                                                                        Displays help at the command prompt.                                                                                                                                                                         |
 
-## <a name="BKMK_2"></a>To display the status of all devices or of a single device
+## <a name=BKMK_2></a>To display the status of all devices or of a single device
 
 ### Syntax
 
@@ -76,7 +76,7 @@ mode [<Device>] [/status]
 
 If used without parameters, **mode** displays the status of all devices that are installed on your system.
 
-## <a name="BKMK_3"></a>To redirect output from a parallel port to a serial communications port
+## <a name=BKMK_3></a>To redirect output from a parallel port to a serial communications port
 
 ### Syntax
 
@@ -111,7 +111,7 @@ mode lpt1
 ```
 This command prevents the redirection the file from LPT1 to COM1.
 
-## <a name="BKMK_4"></a>To select, refresh, or display the numbers of the code pages for the console
+## <a name=BKMK_4></a>To select, refresh, or display the numbers of the code pages for the console
 
 ### Syntax
 
@@ -131,7 +131,7 @@ mode <Device> codepage [/status]
 |/status|Displays the numbers of the current code pages selected for the specified device. You can abbreviate **/status** to **/sta**. Whether or not you specify **/status**, **mode codepage** displays the numbers of the code pages that are selected for the specified device.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_5"></a>To change the size of the command prompt screen buffer
+## <a name=BKMK_5></a>To change the size of the command prompt screen buffer
 
 ### Syntax
 
@@ -148,7 +148,7 @@ mode con[:] [cols=<C>] [lines=<N>]
 |lines=\<N>|Specifies the number of lines in the command prompt screen buffer.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_6"></a>To set the keyboard typematic rate
+## <a name=BKMK_6></a>To set the keyboard typematic rate
 
 ### Syntax
 

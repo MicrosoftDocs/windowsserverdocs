@@ -1,6 +1,6 @@
 ---
 title: Subcommand start-TransportServer
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ wdsutil [Options] /start-TransportServer [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the Transport Server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To start the server, type one of the following:
 ```
 wdsutil /start-TransportServer

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getmodificationtime
-description: "Windows Commands topic for **bitsadmin getmodificationtime** - Retrieves the last time the job was modified or data was successfully transferred."
+description: Windows Commands topic for **bitsadmin getmodificationtime** - Retrieves the last time the job was modified or data was successfully transferred.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /GetModificationTime <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the last modified time for the job named *myDownloadJob*.
 ```

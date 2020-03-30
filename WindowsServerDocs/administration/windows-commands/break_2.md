@@ -1,6 +1,6 @@
 ---
 title: break
-description: "Windows Commands topic for **break_2** - Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume."
+description: Windows Commands topic for **break_2** - Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ break [writable] <SetID>
 -   Exposed volumes, like the shadow copies they originate from, are read-only by default.
 -   The alias of the shadow copy ID, which is stored as an environment variable by the **load metadata** command, can be used in the *SetID* parameter.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To make a shadow copy with the alias name Alias1 accessible as a writable volume in the operating system, type:
 ```

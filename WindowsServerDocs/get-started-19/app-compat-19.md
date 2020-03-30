@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2019 and Microsoft Server application compatibility
-description: "Compatibility table for Windows Server 2019 and Microsoft server applications"
+description: Compatibility table for Windows Server 2019 and Microsoft server applications
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: at
-description: "Windows Commands topic for **at** - Schedules commands and programs to run on a computer at a specified time and date."
+description: Windows Commands topic for **at** - Schedules commands and programs to run on a computer at a specified time and date.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -99,7 +99,7 @@ To learn more about a command with the identification number 3 on the Corp serve
 
 To schedule a net share command to run on the Corp server at 8:00 A.M. and redirect the listing to the Maintenance server, in the Reports shared directory, and the Corp.txt file, type:
 
-`at \\corp 08:00 cmd /c "net share reports=d:\marketing\reports >> \\maintenance\reports\corp.txt"`
+`at \\corp 08:00 cmd /c net share reports=d:\marketing\reports >> \\maintenance\reports\corp.txt`
 
 To back up the hard drive of the Marketing server to a tape drive at midnight every five days, create a batch program called Archive.cmd, which contains the backup commands, and then schedule the batch program to run, type:
 

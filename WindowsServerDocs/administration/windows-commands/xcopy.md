@@ -1,12 +1,8 @@
 ---
 title: xcopy
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for xcopy,w hich copies files and directories, including subdirectories. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft

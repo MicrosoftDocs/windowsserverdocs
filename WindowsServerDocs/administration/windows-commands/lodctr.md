@@ -1,6 +1,6 @@
 ---
 title: lodctr
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,11 +35,11 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 |        /?        |                                                                                                                             Displays help at the command prompt.                                                                                                                             |
 
 ## Remarks
-If the information that you supply contains spaces, use quotation marks around the text (for example, "<filename>").
-## <a name="BKMK_Examples"></a>Examples
+If the information that you supply contains spaces, use quotation marks around the text (for example, <filename>).
+## <a name=BKMK_Examples></a>Examples
 To save the current Performance registry settings and counter Explain text to file **perf backup1.txt**:
 ```
-lodctr /s:"perf backup1.txt"
+lodctr /s:perf backup1.txt
 ```
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

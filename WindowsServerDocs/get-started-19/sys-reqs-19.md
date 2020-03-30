@@ -1,6 +1,6 @@
 --- 
 title: Windows Server 2019 System Requirements
-description: "Minimum requirements for storage, CPU, network, memory, RAM in a clean installation of Windows Server 2019." 
+description: Minimum requirements for storage, CPU, network, memory, RAM in a clean installation of Windows Server 2019. 
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -18,12 +18,12 @@ This topic outlines the minimum system requirements to run Windows Server&reg; 2
 
 ## Review system requirements  
 
-The following are estimated system requirements Windows Server 2019. If your computer has less than the "minimum" requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
+The following are estimated system requirements Windows Server 2019. If your computer has less than the minimum requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
 
 Unless otherwise specified, these minimum system requirements apply to all installation options (Server Core, Server with Desktop Experience, and Nano Server) and both Standard and Datacenter editions.  
 
 > [!IMPORTANT]  
-> The highly diverse scope of potential deployments makes it unrealistic to state "recommended" system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
+> The highly diverse scope of potential deployments makes it unrealistic to state recommended system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.  
 
 ## Processor  
 

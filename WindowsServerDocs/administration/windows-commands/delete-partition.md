@@ -1,6 +1,6 @@
 ---
 title: delete partition
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,7 +41,7 @@ delete partition [noerr] [override]
 > -   You cannot delete the system partition, boot partition, or any partition that contains the active paging file or crash dump information.
 > -   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To delete the partition with focus, type:
 ```

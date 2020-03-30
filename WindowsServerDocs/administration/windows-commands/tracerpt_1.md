@@ -1,6 +1,6 @@
 ---
 title: tracerpt
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -51,12 +51,12 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 |          -summary [filename]           |                                  Generate a summary report text file. Filename if not specified is summary.txt.                                   |
 |             -o [filename]              |                                      Generate a text output file. Filename if not specified is dumpfile.xml.                                      |
 |           -report [filename]           |                                  Generate a text output report file. Filename if not specified is workload.xml.                                   |
-|                  -lr                   |                        Specify "less restrictive." This uses best efforts for events that do not match the events schema.                         |
+|                  -lr                   |                        Specify less restrictive. This uses best efforts for events that do not match the events schema.                         |
 |           -export [filename]           |                                  Generate an Event Schema export file. Filename if not specified is schema.man.                                   |
 |       [-l] \<value [value […]]>        |                                                   Specify the Event Trace log file to process.                                                    |
 | -rt \<session_name [session_name […]]> |                                                Specify Real-time Event Trace Session data sources.                                                |
 
-## <a name="BKMK_EXAMPLES"></a>Examples
+## <a name=BKMK_EXAMPLES></a>Examples
 
 - This example creates a report based on the two event logs **logfile1.etl** and **logfile2.etl** and creates the dump file **logdump.xml** in XML format.  
   ```
@@ -74,7 +74,7 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
   ```
   tracerpt logfile.etl counterfile.blg -report logrpt.xml -df schema.xml
   ```  
-- This example reads the real-time Event Trace Session "NT Kernel Logger" and produces the dump file **logfile.csv** in CSV format.  
+- This example reads the real-time Event Trace Session NT Kernel Logger and produces the dump file **logfile.csv** in CSV format.  
   ```
-  tracerpt -rt "NT Kernel Logger" -o logfile.csv -of CSV
+  tracerpt -rt NT Kernel Logger -o logfile.csv -of CSV
   ```

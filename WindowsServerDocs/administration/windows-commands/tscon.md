@@ -1,6 +1,6 @@
 ---
 title: tscon
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
 -   if you do not specify a password in the <*Password*> parameter, and the target session belongs to a user other than the current one, **tscon** fails.  
 -   You cannot connect to the console session.  
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 - To connect to session 12 on the current rd Session Host server and disconnect the current session, type:  
   ```  
   tscon 12  

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gettemporaryname
-description: "Windows Commands topic for **bitsadmin gettemporaryname** - Reports the temporary filename of the given file within the job."
+description: Windows Commands topic for **bitsadmin gettemporaryname** - Reports the temporary filename of the given file within the job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ bitsadmin /GetTemporaryName <Job> <file index>
 |Job|The job's display name or GUID|
 |File index|Starts from 0|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example reports the temporary filename of file 2 for the job named *myJob*.
 ```

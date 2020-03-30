@@ -1,6 +1,6 @@
 ---
 title: Set id
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ set id={ <byte> | <GUID> } [override] [noerr]
   
 -   This command does not work on dynamic disks or on Microsoft Reserved partitions.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To set the type field to 0x07 and force the file system to dismount, type:  
   
 ```  

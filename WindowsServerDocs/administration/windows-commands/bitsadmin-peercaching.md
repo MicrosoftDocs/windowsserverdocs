@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching
-description: "Windows Commands topic for **bitsadmin peercaching** - listing of the peercaching switches."
+description: Windows Commands topic for **bitsadmin peercaching** - listing of the peercaching switches.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

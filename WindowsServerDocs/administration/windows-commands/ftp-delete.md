@@ -1,6 +1,6 @@
 ---
 title: ftp delete
-description: "Windows Commands topic for ftp delete"
+description: Windows Commands topic for ftp delete
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ delete <remoteFile>
 |--------------|-------------------------------|
 | <remoteFile> | Specifies the file to delete. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 delete the file test.txt on the remote computer.  
 ```  
 delete test.txt  

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gettype
-description: "Windows Commands topic for **bitsadmin gettype** - Retrieves the job type of the specified job."
+description: Windows Commands topic for **bitsadmin gettype** - Retrieves the job type of the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /GetType <Job>
 
 The type can be DOWNLOAD, UPLOAD, UPLOAD-REPLY, or UNKNOWN.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the job type for the job named *myDownloadJob*.
 ```

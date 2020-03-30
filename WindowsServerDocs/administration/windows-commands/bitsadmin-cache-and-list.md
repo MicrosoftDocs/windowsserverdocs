@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and list
-description: "Windows Commands topic for **bitsadmin cache and list** - lists all cache entries."
+description: Windows Commands topic for **bitsadmin cache and list** - lists all cache entries.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Lists all cache entries.
 bitsadmin /Cache /List [/Verbose] 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example lists all cache entries in verbose format.
 ```

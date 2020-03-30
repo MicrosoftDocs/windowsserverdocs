@@ -1,6 +1,6 @@
 ---
 title: endlocal
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ endlocal
 > [!NOTE]
 > For more information about enabling and disabling command extensions, see [Cmd](cmd.md).
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 You can localize environment variables in a batch file. For example, the following program starts the superapp batch program on the network, directs the output to a file, and displays the file in Notepad:
 ```

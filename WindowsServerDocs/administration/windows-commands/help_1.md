@@ -1,6 +1,6 @@
 ---
 title: help
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ help [<command>]
   
 -   if no command is specified, **help** will display all possible commands.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To display a list of all commands available in DiskPart, type:  
   
 ```  

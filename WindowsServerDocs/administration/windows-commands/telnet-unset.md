@@ -1,6 +1,6 @@
 ---
 title: telnet unset
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]
 |logging|Turns off logging.|  
 |ntlm|Turns off NTLM authentication.|  
 |?|Displays help for this command.|  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Turn off logging.  
 ```  
 u logging  

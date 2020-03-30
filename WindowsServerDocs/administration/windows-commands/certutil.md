@@ -1,6 +1,6 @@
 ---
 title: certutil
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -236,8 +236,8 @@ AttributeString -- Request Attribute name and value pairs
 
 - Names and values are colon separated.
 - Multiple name, value pairs are newline separated.
-- Example: "CertificateTemplate:User\nEMail:User@Domain.com"
-- Each "\n" sequence is converted to a newline separator.
+- Example: CertificateTemplate:User\nEMail:User@Domain.com
+- Each \n sequence is converted to a newline separator.
 
 [-config Machine\CAName]
 
@@ -332,7 +332,7 @@ CertUtil [Options] -CAInfo [InfoName [Index | ErrorCode]]
 
 Display CA Information
 
-InfoName -- indicates the CA property to display (see below). Use "\*" for all properties.
+InfoName -- indicates the CA property to display (see below). Use \* for all properties.
 
 Index -- optional zero-based property index
 
@@ -525,19 +525,19 @@ csv: Output as Comma Separated Values
 
 To display the StatusCode column for all entries: -out StatusCode
 
-To display all columns for the last entry: -restrict "RequestId==$"
+To display all columns for the last entry: -restrict RequestId==$
 
-To display RequestId and Disposition for three requests: -restrict "RequestId>=37,RequestId\<40" -out "RequestId,Disposition"
+To display RequestId and Disposition for three requests: -restrict RequestId>=37,RequestId\<40 -out RequestId,Disposition
 
-To display Row Ids and CRL Numbers for all Base CRLs: -restrict "CRLMinBase=0" -out "CRLRowId,CRLNumber" CRL
+To display Row Ids and CRL Numbers for all Base CRLs: -restrict CRLMinBase=0 -out CRLRowId,CRLNumber CRL
 
-To display Base CRL Number 3: -v -restrict "CRLMinBase=0,CRLNumber=3" -out "CRLRawCRL" CRL
+To display Base CRL Number 3: -v -restrict CRLMinBase=0,CRLNumber=3 -out CRLRawCRL CRL
 
 To display the entire CRL table: CRL
 
-Use "Date[+|-dd:hh]" for date restrictions
+Use Date[+|-dd:hh] for date restrictions
 
-Use "now+dd:hh" for a date relative to the current time
+Use now+dd:hh for a date relative to the current time
 
 [-silent] [-split] [-config Machine\CAName] [-restrict RestrictionList] [-out ColumnList]
 
@@ -726,11 +726,11 @@ Dump certificate store
 
 CertificateStoreName: Certificate store name. Examples:
 
-- "My", "CA" (default), "Root",
-- "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
-- "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
-- "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
-- "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
+- My, CA (default), Root,
+- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
+- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
 - ldap: (AD computer object certificates)
 - -user ldap: (AD user object certificates)
 
@@ -816,22 +816,22 @@ PropertyInfFile -- INF file containing external properties:
      19 = Empty ; Add archived property, OR:
      19 =       ; Remove archived property
 
-     11 = "{text}Friendly Name" ; Add friendly name property
+     11 = {text}Friendly Name ; Add friendly name property
 
-     127 = "{hex}" ; Add custom hexadecimal property
-         _continue_ = "00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f"
-         _continue_ = "10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f"
+     127 = {hex} ; Add custom hexadecimal property
+         _continue_ = 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+         _continue_ = 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
 
-     2 = "{text}" ; Add Key Provider Information property
-       _continue_ = "Container=Container Name&"
-       _continue_ = "Provider=Microsoft Strong Cryptographic Provider&"
-       _continue_ = "ProviderType=1&"
-       _continue_ = "Flags=0&"
-       _continue_ = "KeySpec=2"
+     2 = {text} ; Add Key Provider Information property
+       _continue_ = Container=Container Name&
+       _continue_ = Provider=Microsoft Strong Cryptographic Provider&
+       _continue_ = ProviderType=1&
+       _continue_ = Flags=0&
+       _continue_ = KeySpec=2
 
-     9 = "{text}" ; Add Enhanced Key Usage property
-       _continue_ = "1.3.6.1.5.5.7.3.2,"
-       _continue_ = "1.3.6.1.5.5.7.3.1,"
+     9 = {text} ; Add Enhanced Key Usage property
+       _continue_ = 1.3.6.1.5.5.7.3.2,
+       _continue_ = 1.3.6.1.5.5.7.3.1,
 ```
 
 [-f] [-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-csp Provider]
@@ -846,11 +846,11 @@ Dump certificate store
 
 CertificateStoreName: Certificate store name. Examples:
 
-- "My", "CA" (default), "Root",
-- "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
-- "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
-- "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
-- "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
+- My, CA (default), Root,
+- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
+- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
 - ldap: (AD machine object certificates)
 - -user ldap: (AD user object certificates)
 
@@ -885,11 +885,11 @@ Delete certificate from store
 
 CertificateStoreName: Certificate store name. Examples:
 
-- "My", "CA" (default), "Root",
-- "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
-- "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
-- "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
-- "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
+- My, CA (default), Root,
+- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
+- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
 - ldap: (AD machine object certificates)
 - -user ldap: (AD user object certificates)
 
@@ -1317,7 +1317,7 @@ CRL: Create an empty CRL. Validity period and other options must not be present.
 
 OutFileList: comma separated list of modified Certificate or CRL output files. The number of files must match InFileList.
 
-StartDate+dd:hh: new validity period: optional date plus; optional days and hours validity period; If both are specified, use a plus sign (+) separator. Use "now[+dd:hh]" to start at the current time. Use "never" to have no expiration date (for CRLs only).
+StartDate+dd:hh: new validity period: optional date plus; optional days and hours validity period; If both are specified, use a plus sign (+) separator. Use now[+dd:hh] to start at the current time. Use never to have no expiration date (for CRLs only).
 
 SerialNumberList: comma separated serial number list to add or remove
 
@@ -1328,8 +1328,8 @@ ObjectIdList: comma separated extension ObjectId list to remove
 ```
 [Extensions]
      2.5.29.31 = ; Remove CRL Distribution Points extension
-     2.5.29.15 = "{hex}" ; Update Key Usage extension
-     _continue_="03 02 01 86"
+     2.5.29.15 = {hex} ; Update Key Usage extension
+     _continue_=03 02 01 86
 ```
 
 HashAlgorithm: Name of the hash algorithm preceded by a # sign
@@ -1478,15 +1478,15 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name\*" to prefix match)
+RegistryValueName: registry value name (use Name\* to prefix match)
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
 
-If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
+Use chain\ChainCacheResyncFiletime \@now to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1516,15 +1516,15 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name\*" to prefix match)
+RegistryValueName: registry value name (use Name\* to prefix match)
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
 
-If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
+Use chain\ChainCacheResyncFiletime \@now to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1554,15 +1554,15 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name\*" to prefix match)
+RegistryValueName: registry value name (use Name\* to prefix match)
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
 
-If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
+Use chain\ChainCacheResyncFiletime \@now to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1660,7 +1660,7 @@ PFXOutFile: PFX output file
 
 ExtendedProperties: Include extended properties
 
-The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "\*", the user will be prompted for the output file password.
+The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is \*, the user will be prompted for the output file password.
 
 [-f] [-user] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
 
@@ -1684,7 +1684,7 @@ V3CACertId: V3 CA Certificate match token.  See [-store](#-store) CertId descrip
 
 Salt: EPF output file salt string
 
-The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "\*", the user will be prompted for the output file password.
+The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is \*, the user will be prompted for the output file password.
 
 [-f] [-silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
 
@@ -1721,7 +1721,7 @@ This section defines the options that you can specify with the command.
 |-UserName UserName|Use named account for SSL credentials. For selection U/I, use -UserName.|
 |-Cert CertId|Signing certificate|
 |-dc DCName|Target a specific Domain Controller|
-|-restrict RestrictionList|Comma separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. Examples:</br>"RequestId = 47"</br>"+RequesterName >= a, RequesterName < b"</br>"-RequesterName > DOMAIN, Disposition = 21"|
+|-restrict RestrictionList|Comma separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. Examples:</br>RequestId = 47</br>+RequesterName >= a, RequesterName < b</br>-RequesterName > DOMAIN, Disposition = 21|
 |-out ColumnList|Comma separated Column List|
 |-p Password|Password|
 |-ProtectTo SAMNameAndSIDList|Comma separated SAM Name/SID List|

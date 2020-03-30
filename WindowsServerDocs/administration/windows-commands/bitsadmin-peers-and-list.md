@@ -1,7 +1,7 @@
 ---
 title: bitsadmin peers and list
-description: "Windows Commands topic for **bitsadmin peers and list** - 
-lists all peers."
+description: Windows Commands topic for **bitsadmin peers and list** - 
+lists all peers.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ Lists all peers.
 bitsadmin /Peers /List 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example lists all peers.
 ```

@@ -1,6 +1,6 @@
 ---
 title: logman create alert
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -57,10 +57,10 @@ logman create alert <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command creates an alert called new_alert that fires when the performance counter % Processor time in the Processor(_Total) counter group exceeds the counter value of 50.  
 ```  
-logman create alert new_alert -th "\Processor(_Total)\% Processor time>50"  
+logman create alert new_alert -th \Processor(_Total)\% Processor time>50  
 ```  
 > [!NOTE]
 > The threshold value defined is based on the value collected by the counter, so in this example, the value of 50 equates to 50% Processor time.  

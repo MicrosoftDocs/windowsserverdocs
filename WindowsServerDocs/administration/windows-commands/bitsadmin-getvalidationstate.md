@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getvalidationstate
-description: "Windows Commands topic for **bitsadmin getvalidationstate** - Reports the content validation state of the given file within the job. "
+description: Windows Commands topic for **bitsadmin getvalidationstate** - Reports the content validation state of the given file within the job. 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ bitsadmin /GetValidationState <Job> <file index>
 |Job|The job's display name or GUID|
 |File index|Starts from 0|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example gets the content validation state of file 2 within the job named *myJob*.
 ```

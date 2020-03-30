@@ -1,8 +1,7 @@
 ---
 title: Configure a virtual machine with a SCSI controller to be able to hot plug and hot unplug storage
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav

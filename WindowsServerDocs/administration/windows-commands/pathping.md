@@ -1,6 +1,6 @@
 ---
 title: pathping
-description: "Learn how to get network latency and loss information using the pathping command."
+description: Learn how to get network latency and loss information using the pathping command.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -50,7 +50,7 @@ pathping [/n] [/h] [/g <Hostlist>] [/p <Period>] [/q <NumQueries> [/w <timeout>]
 -   When using the **/w** parameter, multiple pings can be sent in parallel. Because of this, the amount of time specified in the *timeout* parameter is not bounded by the amount of time specified in the *Period* parameter for waiting between pings.
 -   This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example shows **pathping** command output:
 

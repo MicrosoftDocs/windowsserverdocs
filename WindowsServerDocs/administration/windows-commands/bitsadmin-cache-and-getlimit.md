@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and getlimit
-description: "Windows Commands topic for **bitsadmin cache and getlimit** - Retrieves the cache limit."
+description: Windows Commands topic for **bitsadmin cache and getlimit** - Retrieves the cache limit.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Retrieves the cache limit.
 bitsadmin /Cache /GetLimit 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the cache limit..
 ```

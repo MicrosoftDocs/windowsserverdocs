@@ -1,6 +1,6 @@
 ---
 title: bootcfg dbg1394
-description: "Windows Commands topic for **bootcfg dbg1394** - Configures 1394 port debugging for a specified operating system entry"
+description: Windows Commands topic for **bootcfg dbg1394** - Configures 1394 port debugging for a specified operating system entry
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,7 +36,7 @@ bootcfg /dbg1394 {ON | OFF}[/s <computer> [/u <Domain>\<User> /p <Password>]] [/
 | /id <OSEntryLineNum> |                                  Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to which the 1394 port debugging options are added. The first line after the [operating systems] section header is 1.                                  |
 |          /?          |                                                                                                                               Displays help at the command prompt.                                                                                                                               |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /dbg1394**command:
 ```
 bootcfg /dbg1394 /id 2 

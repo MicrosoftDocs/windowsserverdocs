@@ -1,6 +1,6 @@
 ---
 title: extend
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -52,7 +52,7 @@ extend filesystem [noerr]
   
 -   The partition must have an associated volume before it can be extended.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To extend the volume or partition with focus by 500 megabytes, on disk 3, type:  
   
 ```  

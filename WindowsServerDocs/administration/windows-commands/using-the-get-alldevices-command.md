@@ -1,6 +1,6 @@
 ---
 title: Using the get-AllDevices Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ wdsutil [Options] /Get-AllDevices [/forest:{Yes | No}] [/ReferralServer:<Server 
 |-------|--------|
 |[/forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|
 |[/ReferralServer:<Server name>]|Returns only those computers that are prestaged for the specified server.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To view all computers, type one of the following:
 ```
 wdsutil /Get-AllDevices

@@ -1,6 +1,6 @@
 ---
 title: ftp open_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ open <computer> [<Port>]
 
 ## Remarks  
 You can use an IP address or computer name (in which case a DNS server or Hosts file must be available) to specify **computer**.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Connect to the ftp server at **ftp.microsoft.com**.  
 ```  
 Open ftp.microsoft.com  

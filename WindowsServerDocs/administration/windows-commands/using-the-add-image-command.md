@@ -1,6 +1,6 @@
 ---
 title: Using the add-Image Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -51,19 +51,19 @@ mediatype:{Boot&#124;Install}|Specifies the type of images to be added.|
 |\mediaGroup:<Image group name>]|Specifies the name of the image group in which the images are to be added. If more than one image group exists on the server, the image group must be specified. If this is not specified and an image group does not already exist, a new image group will be created. Otherwise, the existing image group will be used.|
 |[/SingleImage:<Single image name>] [/Name:<Name>] [/Description:<Description>]|Copies the specified single image out of a .wim file, and sets the image's display name and description.|
 |[/UnattendFile:<Unattend file path>]|Specifies the full path to the unattended installation file to be associated with the images that are being added. If **/SingleImage** is not specified, the same unattend file will be associated with all of the images in the .wim file.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To add a boot image, type:
 ```
-wdsutil /add-ImagmediaFile:"C:\MyFolder\Boot.wimmediatype:Boot
-wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share\Boot.wim /Server:MyWDSServemediatype:Boot /Name:"My WinPE Image" 
-/Description:"WinPE Image containing the WDS Client" /Filename:WDSBoot.wim
+wdsutil /add-ImagmediaFile:C:\MyFolder\Boot.wimmediatype:Boot
+wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share\Boot.wim /Server:MyWDSServemediatype:Boot /Name:My WinPE Image 
+/Description:WinPE Image containing the WDS Client /Filename:WDSBoot.wim
 ```
 To add an install image, type one of the following:
 ```
-wdsutil /add-ImagmediaFile:"C:\MyFolder\Install.wimmediatype:Install
+wdsutil /add-ImagmediaFile:C:\MyFolder\Install.wimmediatype:Install
 wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
-/SingleImage:"Windows Pro" /Name:"My WDS Image"
-/Description:"Windows Pro image with Microsoft Office" /Filename:"Win Pro.wim" /UnattendFile:"\\server\share\unattend.xml"
+/SingleImage:Windows Pro /Name:My WDS Image
+/Description:Windows Pro image with Microsoft Office /Filename:Win Pro.wim /UnattendFile:\\server\share\unattend.xml
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

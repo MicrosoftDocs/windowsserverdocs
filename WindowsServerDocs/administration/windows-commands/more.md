@@ -1,6 +1,6 @@
 ---
 title: more
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -64,7 +64,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 -   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**\|**), you can use such commands as **dir**, **sort**, and **type**.
 -   The **more** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To view the first screen of information of a file named Clients.new, type one of the following commands:
 ```

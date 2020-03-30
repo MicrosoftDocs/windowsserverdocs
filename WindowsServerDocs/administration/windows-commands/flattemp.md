@@ -1,6 +1,6 @@
 ---
 title: flattemp
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,7 +45,7 @@ flattemp {/query | /enable | /disable}
 -   You might encounter application errors if the user's temporary folder is on a network drive. This occurs when the shared network drive becomes momentarily inaccessible on the network. Because the temporary files of the application are either inaccessible or out of synchronization, it responds as if the disk has stopped. Moving the temporary folder to a network drive is not recommended. The default is to keep temporary folders on the local hard disk. If you experience unexpected behavior or disk-corruption errors with certain applications, stabilize your network or move the temporary folders back to the local hard disk.
 -   if you disable using separate temporary folders per-session, **flattemp** settings are ignored. This option is set in the Remote Desktop Services Configuration tool.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 -   To display the current setting for flat temporary folders, type:
     ```
     flattemp /query

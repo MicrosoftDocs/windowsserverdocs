@@ -1,6 +1,6 @@
 ---
 title: telnet close
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -25,7 +25,7 @@ c[lose]
 ```  
 ### Parameters  
 none  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Close the current connection.  
 ```  
 c  

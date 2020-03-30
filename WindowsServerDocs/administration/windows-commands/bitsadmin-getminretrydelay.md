@@ -1,7 +1,7 @@
 ---
 title: bitsadmin getminretrydelay
-description: "Windows Commands topic for **bitsadmin getminretrydelay** - 
-Retrieves the length of time, in seconds, that the service waits after encountering a transient error before trying to transfer the file."
+description: Windows Commands topic for **bitsadmin getminretrydelay** - 
+Retrieves the length of time, in seconds, that the service waits after encountering a transient error before trying to transfer the file.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ bitsadmin /GetMinRetryDelay <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the minimum retry delay for the job named *myDownloadJob*.
 ```

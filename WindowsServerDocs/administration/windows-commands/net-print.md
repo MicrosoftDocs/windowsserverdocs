@@ -1,6 +1,6 @@
 ---
 title: Net print
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -60,7 +60,7 @@ for examples of how to use this command, see the [Examples](#BKMK_examples) sect
 >   Job parameters
 >   additional info
 >   ```
->   ## <a name="BKMK_examples"></a>Examples
+>   ## <a name=BKMK_examples></a>Examples
 >   This example shows how to list the contents of the Dotmatrix print queue on the \\\Production computer:
 >   ```
 >   Net print \\Production\Dotmatrix 

@@ -1,6 +1,6 @@
 ---
 title: automount
-description: "Windows Commands topic for **automount** - Enables or disables the automount feature."
+description: Windows Commands topic for **automount** - Enables or disables the automount feature.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

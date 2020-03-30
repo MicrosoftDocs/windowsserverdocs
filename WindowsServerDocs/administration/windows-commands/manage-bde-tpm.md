@@ -1,6 +1,6 @@
 ---
 title: manage-bde tpm
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ ms.date: 10/16/2017
 > |    -? or /?     |                                                               Displays brief help at the command prompt.                                                               |
 > |   -help or -h   |                                                             Displays complete help at the command prompt.                                                              |
 > 
-> ## <a name="BKMK_Examples"></a>Examples
+> ## <a name=BKMK_Examples></a>Examples
 > The following example illustrates using the **-tpm** command to turn on the TPM.
 > ```
 > manage-bde  tpm -turnon

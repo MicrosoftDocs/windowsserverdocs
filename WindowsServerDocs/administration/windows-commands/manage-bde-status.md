@@ -1,6 +1,6 @@
 ---
 title: manage-bde status
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -49,7 +49,7 @@ manage-bde -status [<Drive>] [-protectionaserrorlevel] [-computername <Name>] [{
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **-status** command to display the status of drive C.
 ```

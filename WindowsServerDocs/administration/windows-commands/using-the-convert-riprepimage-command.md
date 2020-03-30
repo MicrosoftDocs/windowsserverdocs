@@ -1,6 +1,6 @@
 ---
 title: Using the convert-RiprepImage Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,20 +40,20 @@ WDSUTIL [Options] /Convert-RIPrepImage /FilePath:<File path and name>
 | /FilePath:\<File path and name> |                                                                                                                                                                                                       Specifies the full path and file name of the .sif file that corresponds to the RIPrep image. This file is typically called Riprep.sif and is found in the \Templates subfolder of the folder that contains the RIPrep image.                                                                                                                                                                                                       |
 |        /DestinationImage        | Specifies the settings for the destination image, using the following options.</br>-   /FilePath:\<File path and name> - Sets the full file path for the new file. For example: **C:\Temp\convert.wim**</br>-   [/Name:\<Name>] - Sets the display name of the image. If no display name is specified, the display name of the source image will be used.</br>-   [/Description: \<Description>] - Sets the description of the image.</br>-   [/InPlace] - Specifies that the conversion should take place on the original RIPrep image and not on a copy of the original image, which is the default behavior.</br>-   [/Overwrite:{Yes |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To convert the specified RIPrep.sif image to RIPREP.wim, type:
 ```
-WDSUTIL /Convert-RiPrepImage /FilePath:"R:\RemoteInstall\Setup\English
-\Images\Win2k3.SP1\i386\Templates\riprep.sif" /DestinationImage
-/FilePath:"C:\Temp\RIPREP.wim"
+WDSUTIL /Convert-RiPrepImage /FilePath:R:\RemoteInstall\Setup\English
+\Images\Win2k3.SP1\i386\Templates\riprep.sif /DestinationImage
+/FilePath:C:\Temp\RIPREP.wim
 ```
 To convert the specified RIPrep.sif image to RIPREP.wim with the specified name and description, and overwrite it with the new file if a file already exists, type:
 ```
-WDSUTIL /Verbose /Progress /Convert-RiPrepImage /FilePath:"\\Server
-\RemInst\Setup\English\Images\WinXP.SP2\i386\Templates\riprep.sif"
-/DestinationImage /FilePath:"\\Server\Share\RIPREP.wim"
-/Name:"WindowsXP image" /Description:"Converted RIPREP image of WindowsXP"
+WDSUTIL /Verbose /Progress /Convert-RiPrepImage /FilePath:\\Server
+\RemInst\Setup\English\Images\WinXP.SP2\i386\Templates\riprep.sif
+/DestinationImage /FilePath:\\Server\Share\RIPREP.wim
+/Name:WindowsXP image /Description:Converted RIPREP image of WindowsXP
 /Overwrite:Append
 ```
 

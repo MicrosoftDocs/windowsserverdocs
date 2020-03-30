@@ -1,6 +1,6 @@
 ---
 title: ksetup:domain
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ ksetup /domain <DomainName>
 
 None.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Establish a connection to a valid domain, such as Microsoft by using the /mapuser subcommand:
 ```

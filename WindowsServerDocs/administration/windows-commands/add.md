@@ -1,6 +1,6 @@
 ---
 title: add
-description: "Windows Commands topic for **add** - Mirrors the simple volume with focus to the specified disk."
+description: Windows Commands topic for **add** - Mirrors the simple volume with focus to the specified disk.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

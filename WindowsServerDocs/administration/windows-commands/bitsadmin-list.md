@@ -1,6 +1,6 @@
 ---
 title: bitsadmin list
-description: "Windows Commands topic for **bitsadmin list** - lists the transfer jobs owned by the current user."
+description: Windows Commands topic for **bitsadmin list** - lists the transfer jobs owned by the current user.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ bitsadmin /List [/allusers][/verbose]
 
 You must have administrator privileges to use the /allusers parameter
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves information about jobs owned by the current user.
 ```

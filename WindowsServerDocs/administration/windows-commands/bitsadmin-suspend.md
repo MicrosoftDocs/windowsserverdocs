@@ -1,7 +1,7 @@
 ---
 title: bitsadmin suspend
-description: "Windows Commands topic for **bitsadmin suspend** - 
-Suspends the specified job."
+description: Windows Commands topic for **bitsadmin suspend** - 
+Suspends the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /Suspend <Job>
 
 To restart the job, use the [bitsadmin resume](bitsadmin-resume.md) switch.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example suspends the job named *myDownloadJob*.
 

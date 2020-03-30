@@ -1,6 +1,6 @@
 ---
 title: tracert
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -43,7 +43,7 @@ tracert [/d] [/h <MaximumHops>] [/j <Hostlist>] [/w <timeout>] [/R] [/S <Srcaddr
 -   To trace a path and provide network latency and packet loss for each router and link in the path, use the **pathping** command.  
 -   This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.  
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To trace the path to the host named corp7.microsoft.com, type:  
 ```  
 tracert corp7.microsoft.com  

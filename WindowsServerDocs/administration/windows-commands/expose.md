@@ -1,6 +1,6 @@
 ---
 title: expose
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 
 -   You can use an existing alias or an environment variable in place of *ShadowID*. Use **add** without parameters to see existing aliases.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To expose the persistent shadow copy associated with the VSS_SHADOW_1 environment variable as drive X, type:
 ```

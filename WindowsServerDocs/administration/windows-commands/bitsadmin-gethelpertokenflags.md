@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gethelpertokenflags
-description: "Windows Commands topic for **bitsadmin gethelpertokenflags** - Returns the usage flags for a helper token that is associated with a BITS transfer job."
+description: Windows Commands topic for **bitsadmin gethelpertokenflags** - Returns the usage flags for a helper token that is associated with a BITS transfer job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

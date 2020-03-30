@@ -1,6 +1,6 @@
 ---
 title: auditpol clear
-description: "Windows Commands topic for **auditpol clear** - deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled."
+description: Windows Commands topic for **auditpol clear** - deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ auditpol /clear [/y]
 
 ## Remarks
 for clear operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform the clear operation by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the clear operation.
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To delete the per-user audit policy for all users, reset (disable) the system audit policy for all subcategories, and set all the audit policy settings to disabled, at a confirmation prompt, type:
 ```
 auditpol /clear

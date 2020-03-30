@@ -1,6 +1,6 @@
 ---
 title: ksetup:changepassword
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ If you want to force a password change at next logon, this command allows the us
 
 The output of the command informs you of the success or failure status.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Change the password of a user who is currently logged on to this computer in this domain:
 ```

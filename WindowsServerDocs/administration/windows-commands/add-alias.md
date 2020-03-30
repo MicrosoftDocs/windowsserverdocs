@@ -1,6 +1,6 @@
 ---
 title: add alias
-description: "Windows Commands topic for **add alias** - adds aliases to the alias environment."
+description: Windows Commands topic for **add alias** - adds aliases to the alias environment.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,7 +41,7 @@ add alias <AliasName> <AliasValue>
 
 -   Aliases are saved in the metadata file and will be loaded with the **load metadata** command.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To list all shadows, including their aliases, type:
 ```

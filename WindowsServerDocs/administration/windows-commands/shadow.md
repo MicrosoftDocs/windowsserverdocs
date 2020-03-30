@@ -1,6 +1,6 @@
 ---
 title: shadow
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   The console session can neither remotely control another session nor can it be remotely controlled by another session.
 -   When you want to end remote control (shadowing), press CTRL+\* (by using \* from the numeric keypad only).
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 -   To shadow session 93, type:
     ```
     shadow 93

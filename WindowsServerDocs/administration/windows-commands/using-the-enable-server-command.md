@@ -1,6 +1,6 @@
 ---
 title: Using the enable-Server Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ wdsutil [Options] /Enable-Server [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To enable the services on the server, run one of the following:
 ```
 wdsutil /Enable-Server

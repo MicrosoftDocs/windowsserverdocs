@@ -1,6 +1,6 @@
 ---
 title: ksetup:delhosttorealmmap
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ When a host to realm (or multiple hosts to realm) mapping exists, this command r
 
 The mapping is recorded in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**. You should verify the mapping in the registry after using this command.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Altering the configuration of the realm CONTOSO, delete the mapping of the host computer IPops897 to the realm:
 ```

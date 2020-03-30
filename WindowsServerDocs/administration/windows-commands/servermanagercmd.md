@@ -1,6 +1,6 @@
 ---
 title: Servermanagercmd
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -51,7 +51,7 @@ Servermanagercmd can be run from any directory on the server's local drives. You
 > [!IMPORTANT]
 > Because of security restrictions imposed by User Account Control in  Windows Server 2008 R2 , you must run **Servermanagercmd** in a Command prompt window opened with elevated permissions. To do this, right-click the Command prompt executable, or the **Command prompt** object on the **start** menu, and then click **Run as administrator**.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following example shows how to use **servermanagercmd** to display a list of all roles, role services, and features available, and which roles, role services, and features are installed on the computer.
 ```
 servermanagercmd -query

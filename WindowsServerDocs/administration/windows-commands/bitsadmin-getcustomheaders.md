@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcustomheaders
-description: "Windows Commands topic for **bitsadmin getcustomheaders** - Retrieves the custom HTTP headers from the job."
+description: Windows Commands topic for **bitsadmin getcustomheaders** - Retrieves the custom HTTP headers from the job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /GetCustomHeaders <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example gets the custom headers for the job named *myDownloadJob*.
 ```

@@ -1,6 +1,6 @@
 ---
 title: The progress Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,5 +31,5 @@ WDSUTIL /progress <commands>
 
 To initialize the server and display progress, type:
 ```
-WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:"C:\RemoteInstall"
+WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:C:\RemoteInstall
 ```

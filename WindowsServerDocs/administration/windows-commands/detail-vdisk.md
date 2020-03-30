@@ -1,6 +1,6 @@
 ---
 title: detail vdisk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -30,7 +30,7 @@ detail vdisk
   
 -   A VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a vdisk and shift the focus to it.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To see details about the selected VHD, type:  
   
 ```  

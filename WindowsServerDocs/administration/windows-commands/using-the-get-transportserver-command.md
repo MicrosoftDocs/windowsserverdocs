@@ -1,6 +1,6 @@
 ---
 title: Using the get-TransportServer Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ wdsutil [Options] /Get-TransportServer [/Server:<Server name>] /Show:{Config}
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/Show:{Config}|Returns configuration information about the specified Transport Server.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To view information about the server, type:
 ```
 wdsutil /Get-TransportServer /Show:Config

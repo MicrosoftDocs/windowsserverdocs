@@ -1,6 +1,6 @@
 ---
 title: mstsc
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -50,7 +50,7 @@ mstsc.exe /migrate
 -   Default.rdp is stored for each user as a hidden file in the user's Documents folder. User created .rdp files are saved by default in the user's Documents folder but can be saved anywhere.
 -   To span across monitors, the monitors must use the same resolution and must be aligned horizontally (that is, side by side). There is currently no support for spanning multiple monitors vertically on the client system.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 -   To connect to a session in full-screen mode, type:
     ```
     mstsc /f

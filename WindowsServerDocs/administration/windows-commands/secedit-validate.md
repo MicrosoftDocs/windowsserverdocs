@@ -1,6 +1,6 @@
 ---
 title: secedit:validate
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ The log file will not be updated.
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 After a rollback is performed on a security template, you want to verify that the rollback inf file, secRBKcontoso.inf, is valid.
 ```

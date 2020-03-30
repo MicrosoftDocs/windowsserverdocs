@@ -1,6 +1,6 @@
 ---
 title: reset session
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,7 +45,7 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   You should reset a session only when it malfunctions or appears to have stopped responding.  
 -   The **/server** parameter is required only if you use **reset session** from a remote server.  
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 - To reset the session designated rdp-tcp#6, type:  
   ```  
   reset session rdp-tcp#6  

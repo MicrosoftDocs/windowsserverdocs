@@ -1,6 +1,6 @@
 ---
 title: convert mbr
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ convert mbr [noerr]
 
 -   A basic disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To convert a basic disc from GPT partition style to MBR partition style, type>:
 ```

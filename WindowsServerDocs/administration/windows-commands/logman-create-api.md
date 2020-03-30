@@ -1,6 +1,6 @@
 ---
 title: logman create api
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -58,7 +58,7 @@ logman create api <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command creates an API trace counter called trace_notepad for the executable file c:\windows\notepad.exe and outputs the results to the file c:\notepad.etl.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -o c:\notepad.etl  

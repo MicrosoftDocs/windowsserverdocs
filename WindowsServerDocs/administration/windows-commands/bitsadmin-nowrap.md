@@ -1,6 +1,6 @@
 ---
 title: bitsadmin nowrap
-description: "Windows Commands topic for **bitsadmin nowrap** - Truncates any line of output text extending beyond the rightmost edge of the command window."
+description: Windows Commands topic for **bitsadmin nowrap** - Truncates any line of output text extending beyond the rightmost edge of the command window.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ bitsadmin /NoWrap
 
 By default, all switches, except the **Monitor** switch, wrap the output. Specify the **NoWrap** switch before other switches.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the state for the job named *myDownloadJob* and does not wrap the output
 ```

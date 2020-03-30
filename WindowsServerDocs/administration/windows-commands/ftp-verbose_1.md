@@ -1,6 +1,6 @@
 ---
 title: ftp verbose_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ verbose
 none  
 ## Remarks  
 By default, **verbose** is on.  When **verbose** is on, all **ftp** responses are displayed.  When a file transfer is completed, statistics regarding the efficiency of the transfer are also displayed.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Toggle **verbose** mode on and off.  
 ```  
 verbose  

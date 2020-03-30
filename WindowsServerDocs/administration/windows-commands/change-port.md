@@ -1,6 +1,6 @@
 ---
 title: change port
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > ## Remarks
 > - Most MS-DOS applications support only COM1 through COM4 serial ports. The **change port** command maps a serial port to a different port number, allowing applications that do not support high-numbered COM ports to access the serial port. remapping works only for the current session and is not retained if you log off from a session and then log on again.
 > - Use **change port** without any parameters to display the available COM ports and their current mappings.
->   ## <a name="BKMK_examples"></a>Examples
+>   ## <a name=BKMK_examples></a>Examples
 > - To map COM12 to COM1 for use by an MS-DOS-based application, type:
 >   ```
 >   change port com12=com1

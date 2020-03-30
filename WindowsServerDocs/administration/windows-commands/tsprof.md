@@ -1,6 +1,6 @@
 ---
 title: tsprof
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -52,12 +52,12 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 ## Remarks
 -   The **tsprof** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server  2008  or RD Session Host role service on a computer running Windows Server 2008 R2.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 -   To copy user configuration information from LocalUser1 to LocalUser2, type:
     ```
     tsprof /copy /local LocalUser1 LocalUser2
     ```
--   To set the Remote Desktop Services profile path for LocalUser1 to a directory called "c:\profiles," type:
+-   To set the Remote Desktop Services profile path for LocalUser1 to a directory called c:\profiles, type:
     ```
     tsprof /update /local /profile:c:\profiles LocalUser1
     ```

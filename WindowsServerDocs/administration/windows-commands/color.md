@@ -1,6 +1,6 @@
 ---
 title: color
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -65,7 +65,7 @@ color [[<B>]<F>]
 -   To set the default Command Prompt window color, click the upper-left corner of the Command Prompt window, click **Defaults**, click the **Colors** tab, and then click the colors that you want to use for the **Screen Text** and **Screen Background**.
 -   If *B* and *F* are the same, the **color** command sets ERRORLEVEL to 1, and no change is made to either the foreground or the background color.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To change the Command Prompt window background color to gray and the foreground color to red, type:
 ```

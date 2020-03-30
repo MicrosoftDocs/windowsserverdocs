@@ -1,6 +1,6 @@
 ---
 title: Using the disable-TransportServer Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ wdsutil [Options] /Disable-TransportServer [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the Transport Server to be disabled. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no Transport Server name is specified, the local server will be used.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To disable the server, type:
 ```
 wdsutil /Disable-TransportServer

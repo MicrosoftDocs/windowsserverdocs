@@ -1,6 +1,6 @@
 ---
 title: ftp rmdir_1
-description: "Windows Commands topic for ftp rmdir_1 "
+description: Windows Commands topic for ftp rmdir_1 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ rmdir <directory>
 |-------------|-------------------------------------------------------|
 | <directory> | Specifies the name of the remote directory to delete. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 delete the **Pictures** remote directory.  
 ```  
 rmdir Pictures  

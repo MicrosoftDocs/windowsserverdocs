@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifyflags
-description: "Windows Commands topic for **bitsadmin setnotifyflags** - Sets the event notification flags for the specified job."
+description: Windows Commands topic for **bitsadmin setnotifyflags** - Sets the event notification flags for the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,7 +41,7 @@ The **NotifyFlags** parameter can contain one or more of the following notificat
 |2|Generate an event when an error occurs.|
 |4|Disable notifications.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the notify flags for transferred and error events job for job named *myDownloadJob*.
 ```

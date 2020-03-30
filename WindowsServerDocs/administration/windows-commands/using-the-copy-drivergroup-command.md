@@ -1,6 +1,6 @@
 ---
 title: Using the copy-DriverGroup Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ WDSUTIL /Copy-DriverGroup [/Server:<Server name>] /DriverGroup:<Source Group Nam
 |/DriverGroup:\<Source Group Name>|Specifies the name of the source driver group.|
 |/GroupName:\<New Group Name>|Specifies the name of the new driver group.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To copy a driver group, type one of the following:
 ```

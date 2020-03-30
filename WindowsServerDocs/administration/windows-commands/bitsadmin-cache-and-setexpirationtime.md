@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and setexpirationtime
-description: "Windows Commands topic for **bitsadmin cache and setexpirationtime** - Sets the cache expiration time."
+description: Windows Commands topic for **bitsadmin cache and setexpirationtime** - Sets the cache expiration time.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ bitsadmin /Cache /SetExpirationtime secs
 |Parameter|Description|
 |-------|--------|
 |secs|The number of seconds until the cache expires.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following example expires the cache in 60 seconds.
 ```
 C:\>bitsadmin /Cache / SetExpirationtime 60

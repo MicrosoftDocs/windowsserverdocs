@@ -1,7 +1,7 @@
 ---
 title: bitsadmin getfilestotal
-description: "Windows Commands topic for **bitsadmin getfilestotal** - 
-Retrieves the number of files in the specified job."
+description: Windows Commands topic for **bitsadmin getfilestotal** - 
+Retrieves the number of files in the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ bitsadmin /GetFilesTotal <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the number of files included in the job named *myDownloadJob*.
 ```

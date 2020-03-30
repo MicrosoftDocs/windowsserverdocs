@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setminretrydelay
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ bitsadmin /SetMinRetryDelay <Job> <RetryDelay>
 |Job|The job's display name or GUID|
 |RetryDelay|A number represented in seconds.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the minimum retry delay for the job named *myDownloadJob* to 35 seconds.
 ```

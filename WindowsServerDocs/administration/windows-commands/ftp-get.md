@@ -1,6 +1,6 @@
 ---
 title: ftp get
-description: "Windows Commands topic for ftp get"
+description: Windows Commands topic for ftp get
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -32,7 +32,7 @@ get <remoteFile> [<LocalFile>]
 
 ## Remarks  
 The **get** command is identical to the **recv** command.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 copy **test.txt** to the local computer using the current file transfer type.  
 ```  
 get test.txt  

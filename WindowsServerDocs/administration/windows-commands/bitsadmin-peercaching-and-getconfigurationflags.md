@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching and getconfigurationflags
-description: "Windows Commands topic for **bitsadmin peercaching and getconfigurationflags** - Gets the configuration flags that determine if the computer serves content to peers and can download content from peers."
+description: Windows Commands topic for **bitsadmin peercaching and getconfigurationflags** - Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /PeerCaching /GetConfigurationFlags <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example gets the configuration flags for the job named *myJob*.
 ```

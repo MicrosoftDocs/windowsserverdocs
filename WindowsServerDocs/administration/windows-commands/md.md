@@ -1,6 +1,6 @@
 ---
 title: Md
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,7 +45,7 @@ mkdir [<Drive>:]<Path>
 
 Command extensions, which are enabled by default, allow you to use a single **md** command to create intermediate directories in a specified path.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To create a directory named Directory1 within the current directory, type:
 ```

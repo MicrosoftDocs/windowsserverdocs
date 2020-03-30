@@ -1,6 +1,6 @@
 ---
 title: logman create trace
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -62,7 +62,7 @@ logman create trace <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following example creates an event trace data collector called trace_log using no fewer than 16 and no more than 256 buffers, each buffer 64kb in size, and outputs the results to the location c:\logfile.  
 ```  
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile  

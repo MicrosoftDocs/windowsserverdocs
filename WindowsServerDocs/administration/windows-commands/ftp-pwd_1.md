@@ -1,6 +1,6 @@
 ---
 title: ftp pwd_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -25,7 +25,7 @@ pwd
 ```  
 ### Parameters  
 none  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Display the current remote computer directory.  
 ```  
 pwd  

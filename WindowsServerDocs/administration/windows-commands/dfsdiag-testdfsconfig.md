@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestDFSConfig
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ dfsdiag /TestDFSConfig /DFSRoot:<namespace>
 |-----------------------|-----------------------------------------|
 | \/DFSRoot:<namespace> | The namespace \(DFS root\) to diagnose. |
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To TBD, type:  
   
 ```  

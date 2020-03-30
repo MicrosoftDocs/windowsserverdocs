@@ -1,6 +1,6 @@
 ---
 title: select partition
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ select partition=<n>
   
 -   if a partition is selected with a corresponding volume, the volume will be automatically selected.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To shift the focus to partition 3, type:  
   
 ```  

@@ -1,6 +1,6 @@
 ---
 title: Diskpart Scripts and Examples
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,8 +29,8 @@ Use Diskpart `/s` to run scripts that automate disk\-related tasks, such as crea
     clean  
     convert gpt  
     create partition primary size=300  
-    format quick fs=ntfs label="Windows RE tools"  
-    assign letter="T"  
+    format quick fs=ntfs label=Windows RE tools  
+    assign letter=T  
     ```  
   
 -   To run a DiskPart script, at the command prompt, type the following command, where *scriptname* is the name of the text file that contains your script.  

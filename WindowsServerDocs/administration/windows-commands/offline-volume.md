@@ -1,6 +1,6 @@
 ---
 title: offline volume
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ offline volume [noerr]
 
 -   A volume must be selected for this to succeed. Use the **select volume** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To take the disk with focus offline, type:
 ```

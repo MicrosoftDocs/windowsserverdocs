@@ -1,6 +1,6 @@
 ---
 title: dfsrmig
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -43,7 +43,7 @@ dfsrmig [/SetGlobalState <state> | /GetGlobalState | /GetMigrationState | /creat
 - The **dfsrmig** tool is supported only on domain controllers that run at the  Windows Server 2008  domain functional level, because SYSvol migration from FRS to DFS Replication is only possible on domain controllers that operate at the  Windows Server 2008  domain functional level.
 - You can run the **dfsrmig** command on any domain controller, but operations that create or manipulate AD DS objects are only allowed on read-write capable domain controllers (not on read-only domain controllers).
 - Running **dfsrmig** without any options displays help at the command prompt.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
   To set the global migration state to prepared (**1**) and initiate migration to or rollback from the Prepared state, type:
   ```
   dfsrmig /SetGlobalState 1

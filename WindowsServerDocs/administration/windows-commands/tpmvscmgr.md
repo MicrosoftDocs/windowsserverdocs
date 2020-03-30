@@ -1,6 +1,6 @@
 ---
 title: tpmvscmgr
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -62,19 +62,19 @@ Membership in the **Administrators** group (or equivalent) on the target compute
 
 For alphanumeric inputs, the full 127 character ASCII set is allowed.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following command shows how to create a virtual smart card that can be later managed by a smart card management tool launched from another computer.
 ```
-tpmvscmgr.exe create /name "VirtualSmartCardForCorpAccess" /AdminKey DEFAULT /PIN PROMPT
+tpmvscmgr.exe create /name VirtualSmartCardForCorpAccess /AdminKey DEFAULT /PIN PROMPT
 ```
 Alternatively, instead of using a default administrator key, you can create an administrator key at the command line. The following command shows how to create an administrator key.
 ```
-tpmvscmgr.exe create /name "VirtualSmartCardForCorpAccess" /AdminKey PROMPT /PIN PROMPT
+tpmvscmgr.exe create /name VirtualSmartCardForCorpAccess /AdminKey PROMPT /PIN PROMPT
 ```
 The following command will create the unmanaged virtual smart card that can be used to enroll certificates.
 ```
-tpmvscmgr.exe create /name "VirtualSmartCardForCorpAccess" /AdminKey RANDOM /PIN PROMPT /generate
+tpmvscmgr.exe create /name VirtualSmartCardForCorpAccess /AdminKey RANDOM /PIN PROMPT /generate
 ```
 The following command will create a virtual smart card with a randomized administrator key. The key is automatically discarded after the cardis created. This means that if the user forgets the PIN or wants to the change the PIN, the user needs to delete the card and create it again. To delete the card, the user can run the following command.
 ```

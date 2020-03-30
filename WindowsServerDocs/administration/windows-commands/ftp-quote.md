@@ -1,6 +1,6 @@
 ---
 title: ftp quote
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ quote <Argument>[ ]
 
 ## Remarks  
 The **quote** command is identical to the **literal** command.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Send a **quit** command to the remote ftp server.  
 ```  
 quote quit  

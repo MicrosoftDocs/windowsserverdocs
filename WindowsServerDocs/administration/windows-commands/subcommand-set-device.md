@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-Device
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 |[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that the computer will use.|
 |[/Domain:<Domain>]|Specifies the domain to be searched for the prestaged computer. The default value is the local domain.|
 |[/resetAccount]|resets the permissions on the specified computer so that anyone with the appropriate permissions can join the domain by using this account.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To set the network boot program and referral server for a computer, type:
 ```
 wdsutil /Set-Device /Device:computer1 /ReferralServer:MyWDSServer

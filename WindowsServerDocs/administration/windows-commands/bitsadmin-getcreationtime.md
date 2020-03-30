@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcreationtime
-description: "Windows Commands topic for **bitsadmin getcreationtime** - Retrieves the creation time for the specified job."
+description: Windows Commands topic for **bitsadmin getcreationtime** - Retrieves the creation time for the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /GetCreationTime <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the creation time for the job named *myDownloadJob*.
 ```

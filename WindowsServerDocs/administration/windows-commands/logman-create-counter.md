@@ -1,6 +1,6 @@
 ---
 title: logman create counter
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -55,14 +55,14 @@ logman create counter <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command creates a counter called perf_log using the % Processor time counter from the Processor(_Total) counter category.  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time"  
+logman create counter perf_log -c \Processor(_Total)\% Processor time  
 ```  
 The following command creates a counter called perf_log using the % Processor time counter from the Processor(_Total) counter category, creating a log file with a maximum size of 10 MB and collecting data for 1 minute and 0 seconds.  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time" -max 10 -rf 01:00  
+logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -rf 01:00  
 ```  
 #### additional references  
 [logman](logman.md)  

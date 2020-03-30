@@ -1,6 +1,6 @@
 ---
 title: ksetup:dumpstate
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ This command does not display the computer password that is set by using the com
 
 **Ksetup** produces the same output as **ksetup /dumpstate**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Find most of the Kerberos realm configurations on a computer:
 ```

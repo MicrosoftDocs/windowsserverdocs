@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and getieproxy
-description: "Windows Commands topic for **bitsadmin util and getieproxy** - Retrieves the proxy usage for the given service account."
+description: Windows Commands topic for **bitsadmin util and getieproxy** - Retrieves the proxy usage for the given service account.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /Util /GetIEProxy <Account> [/Conn <ConnectionName>]
 
 This switch shows the value for each proxy usage, not just the proxy usage you specified for the service account. For details on setting the proxy usage for service accounts, see the [bitsadmin util and setieproxy](bitsadmin-util-and-setieproxy.md) switch.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example displays the proxy usage for the NETWORK SERVICE account.
 

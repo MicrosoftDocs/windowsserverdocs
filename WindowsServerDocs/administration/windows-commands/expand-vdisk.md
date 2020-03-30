@@ -1,6 +1,6 @@
 ---
 title: expand vdisk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ expands a virtual hard disk (VHD) to the size that you specify.
 > 
 > ## Remarks
 > - A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a volume and shift the focus to it.
->   ## <a name="BKMK_Examples"></a>Examples
+>   ## <a name=BKMK_Examples></a>Examples
 >   To expand the selected VHD to 20 GB, type:
 >   ```
 >   expand vdisk maximum=20000

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and help
-description: "Windows Commands topic for **bitsadmin util and help** - Displays the command-line usage for the **Util** switches."
+description: Windows Commands topic for **bitsadmin util and help** - Displays the command-line usage for the **Util** switches.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Displays the command-line usage for the **Util** switches.
 Bitsadmin /Util /Help 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following command displays the command-line help for the **Util** switches.
 ```

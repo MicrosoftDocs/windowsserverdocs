@@ -1,6 +1,6 @@
 ---
 title: add
-description: "Windows Commands topic for **add_1** - adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment."
+description: Windows Commands topic for **add_1** - adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ add alias <AliasName> <AliasValue>
 |alias|Adds the given name and value to the alias environment. See [Add alias](add-alias.md) for syntax and parameters.|
 |/?|Displays help at the command line.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the volumes added and the aliases that are currently in the environment, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: ftp:debug
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ none
 ## Remarks  
 - By default, debugging is off.  
 - When debugging is on, each command that is sent to the remote computer is displayed, preceded by the greater than (>) character.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Toggle debug mode on and off.  
   ```  
   debug  

@@ -1,6 +1,6 @@
 ---
 title: ftp mkdir
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ mkdir <directory>
 |-------------|-------------------------------------------------|
 | <directory> | Specifies the name of the new remote directory. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 create a directory called **dir1** on the remote computer.  
 ```  
 mkdir dir1  

@@ -1,6 +1,6 @@
 ---
 title: ftp prompt_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ none
 ## Remarks  
 - By default, **prompt** is on.  
 - **ftp** prompts during multiple file transfers to allow you to selectively retrieve or store files.  **Mget** and **mput** transfer all files if **prompt** is off.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Toggle prompt mode on and off.  
   ```  
   prompt  

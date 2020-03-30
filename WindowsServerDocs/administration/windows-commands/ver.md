@@ -1,6 +1,6 @@
 ---
 title: ver
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ ver
 |---------|-----------|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To obtain the version number of the operating system from the Command shell (cmd.exe), type:
 

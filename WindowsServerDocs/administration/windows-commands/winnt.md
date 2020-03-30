@@ -1,6 +1,6 @@
 ---
 title: winnt
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for winnt, which is deprecated, and is not guaranteed to be supported in future releases of Windows.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

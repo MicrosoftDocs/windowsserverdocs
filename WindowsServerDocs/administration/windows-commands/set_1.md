@@ -1,6 +1,6 @@
 ---
 title: set
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -51,7 +51,7 @@ set /a <Variable>=<Expression>
   When command extensions are enabled (the default) and you run **set** with a value, it displays all of the variables that begin with that value.
 - Using special characters
 
-  The characters **<**, **>**, **|**, **&**, **^** are special command shell characters, and they must be preceded by the escape character (**^**) or enclosed in quotation marks when used in *String* (for example, **"StringContaining&Symbol"**). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value.
+  The characters **<**, **>**, **|**, **&**, **^** are special command shell characters, and they must be preceded by the escape character (**^**) or enclosed in quotation marks when used in *String* (for example, **StringContaining&Symbol**). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value.
 - Using environment variables
 
   Use environment variables to control the behavior of some batch files and programs and to control the way Windows and the MS-DOS subsystem appears and works. The **set** command is often used in the Autoexec.nt file to set environment variables.
@@ -101,7 +101,7 @@ set /a <Variable>=<Expression>
 
   The **set** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To set an environment variable named TEST^1, type:
 ```
@@ -111,11 +111,11 @@ set testVar=test^^1
 > [!NOTE]
 > The **set** command assigns everything that follows the equal sign (=) to the value of the variable. If you type:
 > ```
-> set testVar="test^1"
+> set testVar=test^1
 > ```
 > You get the following result:
 > ```
-> testVar="test^1"
+> testVar=test^1
 > ```
 > To set an environment variable named TEST&1, type:
 > ```

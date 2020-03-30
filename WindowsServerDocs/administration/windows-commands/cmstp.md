@@ -1,6 +1,6 @@
 ---
 title: cmstp
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -22,11 +22,11 @@ Installs or removes a Connection Manager service profile. Used without optional 
 ## Syntax
 Syntax 1:
 ```
-ServiceProfileFileName .exe /q:a /c:"cmstp.exe ServiceProfileFileName .inf [/nf] [/ni] [/ns] [/s] [/su] [/u]"
+ServiceProfileFileName .exe /q:a /c:cmstp.exe ServiceProfileFileName .inf [/nf] [/ni] [/ns] [/s] [/su] [/u]
 ```
 Syntax 2:
 ```
-cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileName.inf"
+cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileName.inf
 ```
 ### Parameters
 |Parameter|Description|
@@ -45,18 +45,18 @@ cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileNam
 ## Remarks
 **/s** is the only parameter that you can use in combination with **/u**.
 Syntax 1 is the typical syntax used in a custom installation application. To use this syntax, you must run **cmstp** from the directory that contains the <ServiceProfileFileName>.exe file.
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To install the Fiction service profile without any support files, type:
 ```
-fiction.exe /c:"cmstp.exe fiction.inf /nf"
+fiction.exe /c:cmstp.exe fiction.inf /nf
 ```
 To silently install the Fiction service profile for a single user, type:
 ```
-fiction.exe /c:"cmstp.exe fiction.inf /s /su"
+fiction.exe /c:cmstp.exe fiction.inf /s /su
 ```
 To silently uninstall the Fiction service profile, type:
 ```
-fiction.exe /c:"cmstp.exe fiction.inf /s /u"
+fiction.exe /c:cmstp.exe fiction.inf /s /u
 ```
 ## additional references
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

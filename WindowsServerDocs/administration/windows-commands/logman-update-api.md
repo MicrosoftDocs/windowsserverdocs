@@ -1,6 +1,6 @@
 ---
 title: logman update api
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -57,7 +57,7 @@ logman update api <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command updates the existing API trace counter called trace_notepad for the executable file c:\windows\notepad.exe by excluding the API call TlsGetValue produced by the module kernel32.dll.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  

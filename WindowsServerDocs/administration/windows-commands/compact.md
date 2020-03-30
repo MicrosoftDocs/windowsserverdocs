@@ -1,6 +1,6 @@
 ---
 title: compact
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -49,7 +49,7 @@ compact [/c | /u] [/s[:<Dir>]] [/a] [/i] [/f] [/q] [<FileName>[...]]
 -   You cannot use **compact** to read, write, or mount volumes that have been compressed using DriveSpace or DoubleSpace.
 -   You cannot use **compact** to compress file allocation table (FAT) or FAT32 partitions.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To set the compression state of the current directory, its subdirectories, and existing files, type:
 ```

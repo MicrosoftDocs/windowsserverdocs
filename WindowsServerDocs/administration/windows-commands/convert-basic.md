@@ -1,6 +1,6 @@
 ---
 title: convert basic
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,7 +41,7 @@ convert basic [noerr]
 > The disk must be empty to convert it to a basic disk. Back up your data, and then delete all partitions or volumes before converting the disk.
 > -   A dynamic disk must be selected for this operation to succeed. Use the **select disk** command to select a dynamic disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To convert the selected dynamic disk to basic, type:
 ```

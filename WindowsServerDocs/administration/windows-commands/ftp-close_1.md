@@ -1,6 +1,6 @@
 ---
 title: ftp close_1
-description: "Windows Commands topic for ftp close_1"
+description: Windows Commands topic for ftp close_1
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -25,7 +25,7 @@ close
 ```  
 ### Parameters  
 none  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 End the ftp session with the remote server and remain at the **ftp>** prompt.  
 ```  
 close  

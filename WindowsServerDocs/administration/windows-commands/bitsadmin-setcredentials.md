@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setcredentials
-description: "Windows Commands topic for **bitsadmin setcredentials** - adds credentials to a job."
+description: Windows Commands topic for **bitsadmin setcredentials** - adds credentials to a job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /SetCredentials <Job> <Target> <Scheme> <Username> <Password>
 |Username|The name of the provided credentials|
 |Password|The password associated with the provided *Username*|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example Adds credentials to the job named *myDownloadJob*.
 ```

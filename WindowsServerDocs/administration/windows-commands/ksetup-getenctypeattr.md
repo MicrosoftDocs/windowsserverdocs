@@ -1,6 +1,6 @@
 ---
 title: ksetup:getenctypeattr
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,7 +41,7 @@ If the command succeeds or fails, a status message is displayed upon successful 
 
 To set the domain that you want to connect to and use, run the **ksetup /domain \<DomainName>** command.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Verify the encryption type attribute for the domain:
 ```

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setvalidationstate
-description: "Windows Commands topic for **bitsadmin setvalidationstate** - Sets the content validation state of the given file within the job."
+description: Windows Commands topic for **bitsadmin setvalidationstate** - Sets the content validation state of the given file within the job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ bitsadmin /SetValidationState <Job> <file index> <true|false>
 | File index |         Starts from 0          |
 |    True    |             False              |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the content validation state of file 2 to TRUE for the job named *myJob*.
 ```

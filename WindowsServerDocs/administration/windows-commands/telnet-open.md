@@ -1,6 +1,6 @@
 ---
 title: telnet open
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -30,7 +30,7 @@ o[pen] <hostname> [<Port>]
 | <hostname> |                         Specifies the computer name or IP address.                         |
 |  [<Port>]  | Specifies the TCP port that the telnet server is listening on. The default is TCP port 23. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Connect to a telnet server at telnet.microsoft.com.  
 ```  
 o telnet.microsoft.com  

@@ -1,6 +1,6 @@
 ---
 title: bootcfg default
-description: "Windows Commands topic for **bootcfg default** - Specifies the operating system entry to designate as the default."
+description: Windows Commands topic for **bootcfg default** - Specifies the operating system entry to designate as the default.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ bootcfg /default [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntr
 | /id <OSEntryLineNum> | Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to designate as default. The first line after the [operating systems] section header is 1.  |
 |          /?          |                                                                                 Displays help at the command prompt.                                                                                 |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /default**command:
 ```
 bootcfg /default /id 2

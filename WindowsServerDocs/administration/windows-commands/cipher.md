@@ -1,6 +1,6 @@
 ---
 title: cipher
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -66,7 +66,7 @@ cipher /rekey [PathName [...]]
 -   You can use multiple directory names and wildcards.
 -   You must put spaces between multiple parameters.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the encryption status of each of the files and subdirectories in the current directory, type:
 ```

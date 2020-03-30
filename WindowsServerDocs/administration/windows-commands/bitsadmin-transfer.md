@@ -1,6 +1,6 @@
 ---
 title: bitsadmin Transfer
-description: "Windows Commands topic for **bitsadmin Transfer** - Transfers one or more files."
+description: Windows Commands topic for **bitsadmin Transfer** - Transfers one or more files.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ By default, the BITSAdmin service creates a download job that runs at **NORMAL**
 > [!NOTE]
 > The BITSAdmin command continues to run if a transient error occurs. To end the command, press CTRL+C.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example starts a transfer job with named *myDownloadJob*.
 ```

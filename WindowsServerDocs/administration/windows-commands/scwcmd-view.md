@@ -1,6 +1,6 @@
 ---
 title: Scwcmd view
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -39,7 +39,7 @@ scwcmd view /x:<Xmlfile.xml> [/s:<Xslfile.xsl>]
 
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 To view Policyfile.xml by using the Policyview.xsl transform, type:
 ```

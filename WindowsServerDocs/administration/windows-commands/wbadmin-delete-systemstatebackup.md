@@ -1,12 +1,8 @@
 ---
 title: wbadmin delete systemstatebackup
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin delete systemstatebackup, which deletes the system state backups that you specify.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 707d37cb-448d-4542-b6ac-1fc89e749788
 author: coreyp-at-msft
@@ -52,7 +48,7 @@ wbadmin delete systemstatebackup
 |-machine|Specifies the computer whose system state backup you want to delete. Useful when multiple computers were backed up to the same location. Should be used when the **-backupTarget** parameter is specified.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To delete the system state backup created on March 31, 2013 at 10:00 AM, type:
 ```

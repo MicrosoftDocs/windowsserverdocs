@@ -1,6 +1,6 @@
 ---
 title: reg copy
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -49,7 +49,7 @@ reg copy <KeyName1> <KeyName2> [/s] [/f]
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To copy all subkeys and values under the key MyApp to the key SaveMyApp, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: telnet set
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 ## Remarks  
 1. You can use the **unset** command to turn off an option that was previously set.  
 2. On non-English versions of telnet, the **codeset** <option> is available. **Codeset** <option> sets the current code set to an option, which can be any one of the following: **shift JIS**, **Japanese EUC**, **JIS Kanji**, **JIS Kanji (78)**, **DEC Kanji**, **NEC Kanji**. You should set the same code set on the remote computer.  
-   ## <a name="BKMK_Examples"></a>Examples  
+   ## <a name=BKMK_Examples></a>Examples  
    Set the log file and begin logging to the local file tnlog.txt  
    ```  
    set logfile tnlog.txt  

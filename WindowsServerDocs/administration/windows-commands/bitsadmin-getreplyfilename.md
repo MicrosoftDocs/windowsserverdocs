@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplyfilename
-description: "Windows Commands topic for **bitsadmin getreplyfilename** - Gets the path of the file that contains the server reply."
+description: Windows Commands topic for **bitsadmin getreplyfilename** - Gets the path of the file that contains the server reply.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /GetReplyFileName <Job>
 
 Valid only for upload-reply jobs.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the reply filename for the job named *myDownloadJob*.
 ```

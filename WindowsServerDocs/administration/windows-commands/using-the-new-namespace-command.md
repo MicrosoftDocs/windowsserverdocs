@@ -1,6 +1,6 @@
 ---
 title: Using the new-Namespace Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -41,15 +41,15 @@ wdsutil [Options] /New-Namespace [/Server:<Server name>]
 |/ContentProvider:<Name>]|Specifies the name of the content provider that will provide content for the namespace.|
 |[/ConfigString:<Configuration string>]|Specifies the configuration string for the content provider.|
 |/Namespacetype: {AutoCast &#124; ScheduledCast}|Specifies the settings for the transmission. You specify the settings using the following options:<br /><br />-   [/time: <time>] - Sets the time that the transmission should start by using the following format: YYYY/MM/DD:hh:mm. This option applies only to Scheduled-Cast transmissions.<br />-   [/Clients: <Number of clients>] - Sets the minimum number of clients to wait for before the transmission starts. This option applies only to Scheduled-Cast transmissions.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To create an Auto-Cast namespace, type:
 ```
-wdsutil /New-Namespace /FriendlyName:"Custom AutoCast Namespace" /Namespace:"Custom Auto 1" /ContentProvider:MyContentProvider /Namespacetype:AutoCast
+wdsutil /New-Namespace /FriendlyName:Custom AutoCast Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider /Namespacetype:AutoCast
 ```
 To create a Scheduled-Cast namespace, type:
 ```
-wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:"Custom Scheduled Namespace" /Namespace:"Custom Auto 1" /ContentProvider:MyContentProvider 
-/Namespacetype:ScheduledCast /time:"2006/11/20:17:00" /Clients:20
+wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider 
+/Namespacetype:ScheduledCast /time:2006/11/20:17:00 /Clients:20
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

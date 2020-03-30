@@ -1,6 +1,6 @@
 ---
 title: ftp hash_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ none
 ## Remarks  
 - The size of a data block is 2048 bytes.  
 - By default, **hash** is off.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Toggle number sign (#) printing for each data block that is transferred.  
   ```  
   hash  

@@ -1,6 +1,6 @@
 ---
 title: klist
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -113,7 +113,7 @@ The parameters display the following information:
 **Other considerations**
 -   Klist.exe is available in Windows Server 2012 and Windows 8, and it requires no special installation.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 1. When you are diagnosing an Event ID 27 while processing a ticket-granting service (TGS) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
    ```

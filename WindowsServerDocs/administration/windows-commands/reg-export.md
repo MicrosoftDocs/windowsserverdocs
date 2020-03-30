@@ -1,6 +1,6 @@
 ---
 title: reg export
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -47,7 +47,7 @@ The following table lists the return values for the **reg export** operation.
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To export the contents of all subkeys and values of the key MyApp to the file AppBkUp.reg, type:
 ```

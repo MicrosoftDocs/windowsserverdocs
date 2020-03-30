@@ -1,6 +1,6 @@
 ---
 title: logman update alert
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -56,10 +56,10 @@ logman update alert <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following example updates the existing data collector new_alert, setting the threshold value for the counter % Processor time in the Processor(_Total) counter group to 40%.  
 ```  
-logman update alert new_alert -th "\Processor(_Total)\% Processor time>40"  
+logman update alert new_alert -th \Processor(_Total)\% Processor time>40  
 ```  
 #### additional references  
 [logman](logman.md)  

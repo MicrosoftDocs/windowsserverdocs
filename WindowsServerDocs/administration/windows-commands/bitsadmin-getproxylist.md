@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxylist - Retrieves the proxy list for the specified job.
-description: "Windows Commands topic for **bitsadmin getproxylist** - Retrieves the proxy list for the specified job."
+description: Windows Commands topic for **bitsadmin getproxylist** - Retrieves the proxy list for the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ bitsadmin /GetProxyList <Job>
 
 The proxy list is the list of proxy servers to use. The list is comma-delimited.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the proxy list for the job named *myDownloadJob*.
 ```

@@ -1,6 +1,6 @@
 ---
 title: reg save
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -48,7 +48,7 @@ reg save <KeyName> <FileName> [/y]
 |1|Failure|
 -   Before editing any registry entries, save the parent subkey with the **reg save** operation. If the edit fails, restore the original subkey with the **reg restore** operation.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To save the hive MyApp into the current folder as a file named AppBkUp.hiv, type:
 ```

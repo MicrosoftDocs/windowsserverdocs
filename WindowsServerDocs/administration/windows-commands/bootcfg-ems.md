@@ -1,7 +1,7 @@
 ---
 title: bootcfg ems
-description: "Windows Commands topic for **bootcfg ems** - 
-Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer."
+description: Windows Commands topic for **bootcfg ems** - 
+Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer. By enabling Emergency Management Services, you add a "redirect=Port#" line to the [boot loader] section of the Boot.ini file and a /redirect option to the specified operating system entry line. The Emergency Management Services feature is enabled only on servers.
+Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer. By enabling Emergency Management Services, you add a redirect=Port# line to the [boot loader] section of the Boot.ini file and a /redirect option to the specified operating system entry line. The Emergency Management Services feature is enabled only on servers.
 
 ## Syntax
 ```
@@ -38,7 +38,7 @@ bootcfg /ems {ON | OFF | edit} [/s <computer> [/u <Domain>\<User> /p <Password>]
 |                       /id <OSEntryLineNum>                       |                                                                                                                                                                                              Specifies the operating system entry line number to which the Emergency Management Services option is added in the [operating systems] section of the Boot.ini file. The first line after the [operating systems] section header is 1. This parameter is required when the Emergency Management Services value is set to **ON** or **OFF**.                                                                                                                                                                                              |
 |                                /?                                |                                                                                                                                                                                                                                                                                                                                                 Displays help at the command prompt.                                                                                                                                                                                                                                                                                                                                                  |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /ems** command:
 ```
 bootcfg /ems on /port com1 /baud 19200 /id 2 

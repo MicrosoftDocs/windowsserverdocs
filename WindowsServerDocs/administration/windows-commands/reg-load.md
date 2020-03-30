@@ -1,6 +1,6 @@
 ---
 title: reg load
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ The following table lists the return values for the **reg load** operation.
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To load the file named TempHive.hiv to the key HKLM\TempHive, type:
 ```

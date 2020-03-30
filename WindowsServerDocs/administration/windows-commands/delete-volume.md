@@ -1,6 +1,6 @@
 ---
 title: delete volume
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ delete volume [noerr]
 -   You cannot delete the system volume, boot volume, or any volume that contains the active paging file or crash dump (memory dump).
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To delete the volume with focus, type:
 ```

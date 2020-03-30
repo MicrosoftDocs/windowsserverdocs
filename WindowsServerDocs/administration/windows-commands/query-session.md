@@ -1,6 +1,6 @@
 ---
 title: query session
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -55,7 +55,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >                                   5 idle
 >   ```
 >   The greater than (>) symbol indicates the current session. SESSIONNAME specifies the name assigned to the session. USERNAME indicates the user name of the user connected to the session. STATE provides information about the current state of the session. TYPE indicates the session type. DEVICE, which is not present for the console or network-connected sessions, is the device name assigned to the session. The comment following session information is from the session profile. Any sessions in which the initial state is configured as DISABLED do not show up in the **query session** list until they are enabled.
->   ## <a name="BKMK_examples"></a>Examples
+>   ## <a name=BKMK_examples></a>Examples
 > - To display information about all active sessions on server SERver2, type:
 >   ```
 >   query session /server:SERver2

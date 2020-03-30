@@ -1,8 +1,7 @@
 ---
 title: Certificate-based authentication is configured, but the specified certificate is not installed on the Replica server or failover cluster nodes
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav

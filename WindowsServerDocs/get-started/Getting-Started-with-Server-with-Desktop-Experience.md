@@ -1,6 +1,6 @@
 ---
 title: Install Server with Desktop Experience
-description: "Explains how to obtain and install a Server with Desktop Experience installation " 
+description: Explains how to obtain and install a Server with Desktop Experience installation  
 ms.prod: windows-server
 ms.date: 01/18/2017
 ms.technology: server-general
@@ -23,7 +23,7 @@ The Server with Desktop Experience option installs the standard user interface a
 >
 > Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. If you install Server with Desktop Experience and later decide to use Server Core, you should do a fresh installation.
 
-**User interface:** standard graphical user interface ("Server Graphical Shell"). The Server Graphical Shell includes the new Windows 10 shell. The specific Windows features installed by default with this option are User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation and Desktop Experience. While these features do appear in Server Manager in this release, uninstalling them is not supported and they will not be available in future releases.
+**User interface:** standard graphical user interface (Server Graphical Shell). The Server Graphical Shell includes the new Windows 10 shell. The specific Windows features installed by default with this option are User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation and Desktop Experience. While these features do appear in Server Manager in this release, uninstalling them is not supported and they will not be available in future releases.
 
 **Install, configure, uninstall server roles locally:** with Server Manager or with Windows PowerShell
 

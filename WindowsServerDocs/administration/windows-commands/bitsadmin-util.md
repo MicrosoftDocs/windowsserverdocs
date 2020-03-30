@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util
-description: "Windows Commands topic for **bitsadmin util** - list of the **Util** switches"
+description: Windows Commands topic for **bitsadmin util** - list of the **Util** switches
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

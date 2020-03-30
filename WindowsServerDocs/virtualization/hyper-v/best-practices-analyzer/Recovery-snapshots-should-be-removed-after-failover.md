@@ -1,6 +1,6 @@
 ---
 title: Recovery snapshots should be removed after failover
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
 
 manager: dongill

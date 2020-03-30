@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-DriverGroup
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ wdsutil /Set-DriverGroup /DriverGroup:<Group Name> [/Server:<Server Name>] [/Nam
 |[/Name:<New Group Name>]|Specifies the new name for the driver group.|
 |[/Enabled:{Yes &#124; No}|Enables or disables the driver group.|
 |[/Applicability:{Matched &#124; All}]|Specifies which packages to install if the filter criteria is met. **Matched** means install only the driver packages that match a client s hardware. **All** means install all packages to clients regardless of their hardware.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To set the properties for a driver group, type one of the following:
 ```
 wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes

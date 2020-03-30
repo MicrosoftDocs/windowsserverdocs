@@ -1,6 +1,6 @@
 ---
 title: Scwcmd transform
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -46,7 +46,7 @@ scwcmd transform /p:<Policyfile.xml> /g:<GPODisplayName>
 
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 To create a GPO named FileServerSecurity from a file named FileServerPolicy.xml, type:
 ```

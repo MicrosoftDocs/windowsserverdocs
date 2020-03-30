@@ -1,6 +1,6 @@
 ---
 title: bootcfg delete
-description: "Windows Commands topic for **bootcfg delete** - deletes an operating system entry in the operating systems section of the Boot.ini file."
+description: Windows Commands topic for **bootcfg delete** - deletes an operating system entry in the operating systems section of the Boot.ini file.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ bootcfg /delete [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntry
 | /id <OSEntryLineNum> |        Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to delete. The first line after the [operating systems] section header is 1.        |
 |          /?          |                                                                                Displays help at the command prompt.                                                                                 |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /delete**command:
 ```
 bootcfg /delete /id 1

@@ -1,6 +1,6 @@
 ---
 title: autoconv
-description: "Windows Commands topic for **autoconv** - converts file allocation table (Fat) and Fat32 volumes to the NTFS file system."
+description: Windows Commands topic for **autoconv** - converts file allocation table (Fat) and Fat32 volumes to the NTFS file system.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

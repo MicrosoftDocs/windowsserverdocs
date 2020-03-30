@@ -1,6 +1,6 @@
 ---
 title: uniqueid
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ uniqueid disk [id={<dword> | <GUID>}] [noerr]
 -   This command works on basic and dynamic disks.
 -   A disk must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the signature of the MBR disk with focus, type:
 ```

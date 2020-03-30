@@ -1,6 +1,6 @@
 ---
 title: finger
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ Multiple User@Host parameters can be specified.
 You must prefix **finger** parameters with a hyphen (-) rather than a slash (/).
 This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 The Windows Server 2003 does not provide a finger service.
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To display information for user1 on the computer users.microsoft.com, type:
 ```
 finger user1@users.microsoft.com

@@ -1,6 +1,6 @@
 ---
 title: openfiles
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -26,7 +26,7 @@ This topic includes information about the following commands:
 -   [openfiles /query](#BKMK_query)
 -   [openfiles /local](#BKMK_local)
 
-## <a name="BKMK_disconnect"></a>openfiles /disconnect
+## <a name=BKMK_disconnect></a>openfiles /disconnect
 
 Enables an administrator to disconnect files and folders that have been opened remotely through a shared folder.
 
@@ -55,7 +55,7 @@ To disconnect all open files with the file ID 26843578, type:
 ```
 openfiles /disconnect /id 26843578
 ```
-To disconnect all open files and directories accessed by the user "hiropln," type:
+To disconnect all open files and directories accessed by the user hiropln, type:
 ```
 openfiles /disconnect /a hiropln
 ```
@@ -63,16 +63,16 @@ To disconnect all open files and directories with read/write mode, type:
 ```
 openfiles /disconnect /o read/write
 ```
-To disconnect the directory with the Open File name "C:\TestShare\", regardless of who is accessing it, type:
+To disconnect the directory with the Open File name C:\TestShare\, regardless of who is accessing it, type:
 ```
-openfiles /disconnect /a * /op "c:\testshare\"
+openfiles /disconnect /a * /op c:\testshare\
 ```
-To disconnect all open files on the remote computer "srvmain" that are being accessed by the user "hiropln," regardless of their ID, type:
+To disconnect all open files on the remote computer srvmain that are being accessed by the user hiropln, regardless of their ID, type:
 ```
 openfiles /disconnect /s srvmain /u maindom\hiropln /id *
 ```
 
-## <a name="BKMK_query"></a>openfiles /query
+## <a name=BKMK_query></a>openfiles /query
 
 Queries and displays all open files.
 
@@ -108,7 +108,7 @@ To query and display all open files in list format with detailed information, ty
 ```
 openfiles /query /fo list /v
 ```
-To query and display all open files on the remote system "srvmain" by using the credentials for the user "hiropln" on the "maindom" domain, type:
+To query and display all open files on the remote system srvmain by using the credentials for the user hiropln on the maindom domain, type:
 ```
 openfiles /query /s srvmain /u maindom\hiropln /p p@ssW23
 ```
@@ -116,7 +116,7 @@ openfiles /query /s srvmain /u maindom\hiropln /p p@ssW23
 > [!NOTE]
 > In this example, the password is supplied on the command line. To prevent displaying the password, leave out the **/p** option. You will be prompted for the password, which will not be echoed to the screen.
 
-## <a name="BKMK_local"></a>openfiles /local
+## <a name=BKMK_local></a>openfiles /local
 
 Enables or disables the system Maintain Objects List global flag. If used without parameters, **openfiles /local** displays the current status of the Maintain Objects List global flag.
 

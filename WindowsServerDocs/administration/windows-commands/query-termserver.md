@@ -1,6 +1,6 @@
 ---
 title: query termserver
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > - **query termserver** searches the network for all attached rd Session Host servers and returns the following information:
 >   - The name of the server
 >   - The network (and node address if the /address option is used)
->     ## <a name="BKMK_examples"></a>Examples
+>     ## <a name=BKMK_examples></a>Examples
 > - To display information about all rd Session Host servers on the network, type:
 >   ```
 >   query termserver

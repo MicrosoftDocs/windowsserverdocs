@@ -1,6 +1,6 @@
 ---
 title: ftp literal_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ literal <Argument> [ ]
 
 ## Remarks  
 The **literal** command is identical to the **quote** command.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Send a **quit** command to the remote ftp server.  
 ```  
 literal quit  

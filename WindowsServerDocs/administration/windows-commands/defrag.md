@@ -1,6 +1,6 @@
 ---
 title: defrag
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -66,7 +66,7 @@ defrag <volume> [/<Parameter>]*
 - To interrupt the defragmentation process, at the command line, press **CTRL+C**.
 - Running the **defrag** command and Disk defragmenter are mutually exclusive. If you are using Disk defragmenter to defragment a volume and you run the **defrag** command at a command-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk defragmenter, the defragmentation options in Disk defragmenter are unavailable.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To defragment the volume on drive C while providing progress and verbose output, type:
 ```
 defrag C: /U /V
@@ -84,7 +84,7 @@ To defragment all volumes with normal priority and provide verbose output, type:
 defrag /C /H /V
 ```
 
-## <a name="BKMK_scheduledTask"></a>Scheduled task
+## <a name=BKMK_scheduledTask></a>Scheduled task
 Defrag's scheduled task runs as a maintenance task and is usually scheduled to run every week. Administrator can change the frequency using **Optimize Drives** application.
 - When run from the scheduled task, **defrag** has below policy for SSDs:
    - **Traditional defrag** (i.e. moving files to make them reasonably contiguous) and **retrim** is run only once every month.
@@ -96,7 +96,7 @@ Defrag's scheduled task runs as a maintenance task and is usually scheduled to r
    - Starts only if the computer is on AC power, and stops if the computer switches to battery power
    - Stops if the computer ceases to be idle
 
-## <a name="BKMK_additionalRef"></a>Additional references
+## <a name=BKMK_additionalRef></a>Additional references
 -   [chkdsk](chkdsk.md)
 -   [fsutil](fsutil.md)
 -   [fsutil dirty](fsutil-dirty.md)

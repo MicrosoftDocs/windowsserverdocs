@@ -1,6 +1,6 @@
 ---
 title: comp
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -86,7 +86,7 @@ comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 
     To compare more files, press Y. The **comp** command prompts you for the locations and names of the new files. To stop the comparisons, press N. When you press Y, **comp** prompts you for command-line options to use. If you do not specify any command-line options, **comp** uses the ones you specified before.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To compare the contents of the directory C:\Reports with the backup directory \\\\Sales\Backup\April, type:
 ```

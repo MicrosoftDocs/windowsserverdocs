@@ -1,6 +1,6 @@
 ---
 title: rpcping
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -70,10 +70,10 @@ rpcping [/t <protseq>] [/s <server_addr>] [/e <endpoint>
 |                /p                |                                                                                                                                                                                                                                                                                                                      Specifies to prompt for credentials if authentication fails.                                                                                                                                                                                                                                                                                                                       |
 |                /?                |                                                                                                                                                                                                                                                                                                                                  Displays help at the command prompt.                                                                                                                                                                                                                                                                                                                                   |
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To find out if your Exchange server that you connect through RPC/HTTP is accessible, type:
 ```
-rpcping /t ncacn_http /s exchange_server /o RpcProxy=front_end_proxy /P "username,domain,*" /H Basic /u NTLM /a connect /F 3
+rpcping /t ncacn_http /s exchange_server /o RpcProxy=front_end_proxy /P username,domain,* /H Basic /u NTLM /a connect /F 3
 ```
 
 ## Additional references

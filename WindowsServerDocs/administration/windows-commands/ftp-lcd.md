@@ -1,6 +1,6 @@
 ---
 title: ftp lcd
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ lcd [<directory>]
 |Parameter|Description|  
 |-------|--------|  
 |[<directory>]|Specifies the directory on the local computer to which to change. If *directory* is not specified, the current working directory is changed to the default directory.|  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 change the working directory on the local computer to **C:\dir1**  
 ```  
 lcd C:\dir1  

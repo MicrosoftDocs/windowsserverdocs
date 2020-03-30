@@ -1,6 +1,6 @@
 ---
 title: mqbkup
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ mqbkup {/b | /r} <folder path_to_storage_device>
 |/r|Specifies restore operation|  
 |<folder path_to_storage\_device>|Specifies the path where the MSMQ message files and registry settings are stored|  
 |/?|Displays help at the command prompt.|  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To backup all MSMQ message files and registry settings and store them in the *Msmqbkup* folder on your C: drive.  
 ```  
 mqbkup /b c:\msmqbkup  

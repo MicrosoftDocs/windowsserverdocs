@@ -1,6 +1,6 @@
 ---
 title: if
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -63,9 +63,9 @@ if defined <Variable> <Command> [else <Expression>]
     -   **%cmdextversion%** expands into the string representation of the current value of **cmdextversion**. This assumes that there is not an existing environment variable with the name CMDEXTVERSION—if there is, you will get the CMDEXTVERSION value instead.
 -   You must use the **else** clause on the same line as the command after the **if**.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
-To display the message "Cannot find data file" if the file Product.dat cannot be found, type:
+To display the message Cannot find data file if the file Product.dat cannot be found, type:
 ```
 if not exist product.dat echo Cannot find data file 
 ```
@@ -105,7 +105,7 @@ echo The Product.dat file is missing.
 > :end
 > echo Done! 
 > ```
-> To go to the "okay" label if the value of the ERRORLEVEL environment variable is less than or equal to 1, type:
+> To go to the okay label if the value of the ERRORLEVEL environment variable is less than or equal to 1, type:
 > ```
 > if %errorlevel% LEQ 1 goto okay
 > ```

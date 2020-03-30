@@ -1,6 +1,6 @@
 ---
 title: serverceipoptin
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -30,7 +30,7 @@ serverceipoptin [/query] [/enable] [/disable]
 |/enable|Enables participation.|
 |/disable|Disables participation.|
 |/?|Displays help at the command prompt.|
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To verify the current settings, type:
 ```
 serverceipoptin /query

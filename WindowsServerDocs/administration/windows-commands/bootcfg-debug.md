@@ -1,7 +1,7 @@
 ---
 title: bootcfg debug
-description: "Windows Commands topic for **bootcfg debug** - 
-adds or changes the debug settings for a specified operating system entry."
+description: Windows Commands topic for **bootcfg debug** - 
+adds or changes the debug settings for a specified operating system entry.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ bootcfg /debug {ON | OFF | edit}[/s <computer> [/u <Domain>\<User> /p <Password>
 
 ##### Remarks
 - if 1394 port debugging is required, use [bootcfg dbg1394](bootcfg-dbg1394.md).
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
   The following examples show how you can use the **bootcfg /debug**command:
   ```
   bootcfg /debug on /port com1 /id 2 

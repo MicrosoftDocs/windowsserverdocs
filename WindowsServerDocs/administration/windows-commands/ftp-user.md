@@ -1,6 +1,6 @@
 ---
 title: ftp user
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ user <UserName> [<Password>] [<Account>]
 | [<Password>] |               Specifies the password for *UserName*. If a password is not specified but is required,  **ftp** prompts for the password.               |
 | [<Account>]  | Specifies an account with which to log on to the remote computer. If an *Account* is not specified but is required,  **ftp** prompts for the account. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Specify User1 with the password Password1.  
 ```  
 user User1 Password1  

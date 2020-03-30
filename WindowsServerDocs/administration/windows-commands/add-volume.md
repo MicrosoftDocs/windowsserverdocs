@@ -1,6 +1,6 @@
 ---
 title: add volume
-description: "Windows Commands topic for **add volume** - adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied."
+description: Windows Commands topic for **add volume** - adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -43,7 +43,7 @@ add volume <Volume> [provider <ProviderID>]
 -   Each time a volume is added, it is checked to ensure that VSS supports shadow copy creation of that volume. This primary check may be invalidated, however, by later use of the **set context** command.
 -   When a shadow copy is created, an environment variable links the alias to the shadow ID, so the alias can then be used for scripting.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To view the current list of registered providers, at the `DISKSHADOW>` prompt, type:
 ```

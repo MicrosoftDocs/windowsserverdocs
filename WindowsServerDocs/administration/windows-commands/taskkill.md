@@ -1,6 +1,6 @@
 ---
 title: taskkill
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -70,28 +70,28 @@ To end the processes with process IDs 1230, 1241, and 1253, type:
 taskkill /pid 1230 /pid 1241 /pid 1253
 ```
 
-To forcefully end the process "Notepad.exe" if it was started by the system, type:
+To forcefully end the process Notepad.exe if it was started by the system, type:
 
 ```
-taskkill /f /fi "USERNAME eq NT AUTHORITY\SYSTEM" /im notepad.exe
+taskkill /f /fi USERNAME eq NT AUTHORITY\SYSTEM /im notepad.exe
 ```
 
-To end all processes on the remote computer "Srvmain" with an image name beginning with "note," while using the credentials for the user account Hiropln, type:
+To end all processes on the remote computer Srvmain with an image name beginning with note, while using the credentials for the user account Hiropln, type:
 
 ```
-taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi "IMAGENAME eq note*" /im *
+taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi IMAGENAME eq note* /im *
 ```
 
 To end the process with the process ID 2134 and any child processes that it started, but only if those processes were started by the Administrator account, type:
 
 ```
-taskkill /pid 2134 /t /fi "username eq administrator"
+taskkill /pid 2134 /t /fi username eq administrator
 ```
 
 To end all processes that have a process ID greater than or equal to 1000, regardless of their image names, type:
 
 ```
-taskkill /f /fi "PID ge 1000" /im *
+taskkill /f /fi PID ge 1000 /im *
 ```
 
 #### additional references

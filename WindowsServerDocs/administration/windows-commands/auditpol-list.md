@@ -1,7 +1,7 @@
 ---
 title: auditpol list
-description: "Windows Commands topic for **auditpol list** - 
-lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined."
+description: Windows Commands topic for **auditpol list** - 
+lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ auditpol /list
 |/?|Displays help at the command prompt.|
 ## Remarks
 for all list operations for the per-user policy, you must have Read permission on that object set in the security descriptor. You can also perform list operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the list operation.
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To list all users who have a defined audit policy, type:
 ```
 auditpol /list /user
@@ -53,7 +53,7 @@ auditpol /list /subcategory:* /r
 ```
 To list the subcategories of the detailed Tracking and DS Access categories, type:
 ```
-auditpol /list /subcategory:"detailed Tracking","DS Access"
+auditpol /list /subcategory:detailed Tracking,DS Access
 ```
 #### additional references
 [Command-Line Syntax Key](command-line-syntax-key.md)

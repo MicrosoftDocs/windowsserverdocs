@@ -1,6 +1,6 @@
 ---
 title: bitsadmin addfile
-description: "Windows Commands topic for **bitsadmin addfile** - adds a file to the specified job."
+description: Windows Commands topic for **bitsadmin addfile** - adds a file to the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ bitsadmin /AddFile <Job> <RemoteURL> <LocalName>
 |RemoteURL|The URL of the file on the server.|
 |LocalName|The name of the file on the local computer. *LocalName* must contain an absolute path to the file.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 Add a file to the job. Repeat this call for each file you want to add. If multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
 ```

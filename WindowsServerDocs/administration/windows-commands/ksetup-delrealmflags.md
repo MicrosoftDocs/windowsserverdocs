@@ -1,6 +1,6 @@
 ---
 title: ksetup:delrealmflags
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -51,7 +51,7 @@ Realm flags are stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentCon
 
 You can see what realm flags are available and set by viewing the output of **ksetup** or **ksetup /dumpstate**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 List the available realm flags for the realm CONTOSO:
 ```

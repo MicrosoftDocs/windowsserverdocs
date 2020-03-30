@@ -1,6 +1,6 @@
 ---
 title: serverweroptin
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -30,7 +30,7 @@ serverweroptin [/query] [/detailed] [/summary]
 |/detailed|Sends detailed reports automatically.|
 |/summary|Sends summary reports automatically.|
 |/?|Displays help at the command prompt.|
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To verify the current setting, type:
 ```
 serverweroptin /query

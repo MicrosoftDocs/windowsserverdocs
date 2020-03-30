@@ -1,6 +1,6 @@
 ---
 title: ftp mget
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ mget <remoteFile>[ ]
 |--------------|-----------------------------------------------------------|
 | <remoteFile> | Specifies the remote files to copy to the local computer. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 copy remote files **a.exe** and **b.exe** to the local computer using the current file transfer type.  
 ```  
 mget a.exe b.exe  

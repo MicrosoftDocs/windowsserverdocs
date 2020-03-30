@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnoprogresstimeout
-description: "Windows Commands topic for **bitsadmin setnoprogresstimeout** - Sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs."
+description: Windows Commands topic for **bitsadmin setnoprogresstimeout** - Sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ bitsadmin /SetNoProgressTimeout <Job> <TimeOutvalue>
 -   The timeout interval stops or resets when a byte of data is successfully transferred.
 -   If no progress timeout interval exceeds the *TimeOutvalue*, then the job is placed in a fatal error state.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the no progress time out value for the job named *myDownloadJob* to 20 seconds
 ```

@@ -1,6 +1,6 @@
 ---
 title: logman update trace
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -61,7 +61,7 @@ logman update trace <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command updates the existing data collector perf_log, changing the maximum log size to 10 MB, updating the log file format to CSV, and appending file versioning in the format mmddhhmm.  
 ```  
 logman update perf_log -max 10 -f csv -v mmddhhmm  

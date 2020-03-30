@@ -1,6 +1,6 @@
 ---
 title: exit
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ exit [/b] [<exitCode>]
 | `<exitCode>` | Specifies a numeric number. If **/b** is specified, the ERRORLEVEL environment variable is set to that number. If you are quitting **Cmd.exe**, the process exit code is set to that number. |
 |     /?     |                                                                             Displays help at the command prompt.                                                                             |
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To close the command interpreter, Cmd.exe, type:  
 ```  
 exit  

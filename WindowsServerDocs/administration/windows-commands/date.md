@@ -1,6 +1,6 @@
 ---
 title: date
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -45,7 +45,7 @@ date [/t | <Month-Day-Year>]
 -   Valid *Day* values are 1 through 31.
 -   Valid *Year* values are either 00 through 99, or 1980 through 2099. If you use two digits, the values 80 through 99 correspond to the years 1980 through 1999.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 If command extensions are enabled, to display the current system date, type:
 ```

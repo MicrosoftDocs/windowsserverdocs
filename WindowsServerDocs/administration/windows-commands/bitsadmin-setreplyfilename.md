@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setreplyfilename
-description: "Windows Commands topic for **bitsadmin setreplyfilename** - Specify the path of the file that contains the server reply."
+description: Windows Commands topic for **bitsadmin setreplyfilename** - Specify the path of the file that contains the server reply.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ bitsadmin /SetReplyFileName <Job> <Path>
 
 Valid only for upload-reply jobs.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the reply filename pathfor the job named *myDownloadJob*.
 ```

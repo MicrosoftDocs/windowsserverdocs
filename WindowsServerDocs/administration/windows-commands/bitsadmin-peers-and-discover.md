@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and discover
-description: "Windows Commands topic for **bitsadmin peers and discover** - Discovers peers again."
+description: Windows Commands topic for **bitsadmin peers and discover** - Discovers peers again.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Discovers peers again.
 bitsadmin /Peers /Discover 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example discovers peers.
 ```

@@ -1,6 +1,6 @@
 ---
 title: Configure a Server Core installation of Windows Server with Sconfig.cmd
-description: "Explains how to use Sconfig.cmd" 
+description: Explains how to use Sconfig.cmd 
 ms.prod: windows-server
 ms.date: 10/17/2017
 ms.technology: server-general

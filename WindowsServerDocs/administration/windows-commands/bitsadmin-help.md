@@ -1,6 +1,6 @@
 ---
 title: bitsadmin help
-description: "Windows Commands topic for **bitsadmin help** - Displays the command-line usage."
+description: Windows Commands topic for **bitsadmin help** - Displays the command-line usage.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Displays the command-line usage.
 bitsadmin /help | /?
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the command-line help.
 ```

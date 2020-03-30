@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching and help
-description: "Windows Commands topic for **bitsadmin peercaching and help** - Displays the command-line usage for the **PeerCaching** switches."
+description: Windows Commands topic for **bitsadmin peercaching and help** - Displays the command-line usage for the **PeerCaching** switches.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Displays the command-line usage for the **PeerCaching** switches.
 Bitsadmin /PeerCaching /Help 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following command displays the command-line help for the **PeerCaching** switches.
 ```

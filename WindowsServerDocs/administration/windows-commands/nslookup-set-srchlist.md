@@ -1,6 +1,6 @@
 ---
 title: nslookup set srchlist
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -33,7 +33,7 @@ Set srchlist=<DomainName>[/...]
 
 ## Remarks
 - The **set srchlist**command overrides the default DNS domain name and search list of the **set domain** command. Use the **set all** command to display the list.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
   The following example sets the DNS domain to mfg.widgets.com and the search list to the three names:
   ```
   set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com

@@ -1,6 +1,6 @@
 ---
 title: Using the get-AllNamespaces Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,7 +38,7 @@ wdsutil /Get-AllNamespaces [/Server:<Server name>] [/ContentProvider:<name>] [/d
 |    [/details:Clients]     |                           Only supported for Windows Server 2008 R2. Displays information about client computers that are connected to the namespace.                           |                        |
 |  [/ExcludedeletePending]  |                                                              Excludes any deactivated transmissions from the list.                                                              |                        |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To view all namespaces, type:
 ```
 wdsutil /Get-AllNamespaces
@@ -46,11 +46,11 @@ wdsutil /Get-AllNamespaces
 To view all namespaces except those that are deactivated, type:
 - Windows Server 2008
   ```
-  wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:"MyContentProv" /Show:Clients /ExcludedeletePending
+  wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:MyContentProv /Show:Clients /ExcludedeletePending
   ```
 - Windows Server 2008 R2
   ```
-  wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:"MyContentProv" /details:Clients /ExcludedeletePending
+  wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:MyContentProv /details:Clients /ExcludedeletePending
   ```
   #### additional references
   [Command-Line Syntax Key](command-line-syntax-key.md)

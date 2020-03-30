@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getowner
-description: "Windows Commands topic for **bitsadmin getowner** - Retrieves the owner of the specified job."
+description: Windows Commands topic for **bitsadmin getowner** - Retrieves the owner of the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ bitsadmin /GetOwner <Job>
 |---------|-----------|
 |Job|The job's display name or GUID|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example displays the owner for the job named *myDownloadJob*.
 ```

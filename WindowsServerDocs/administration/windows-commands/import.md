@@ -1,6 +1,6 @@
 ---
 title: import
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -34,7 +34,7 @@ import
 -   Transportable shadow copies are not stored on the system immediately. Their details are stored in a Backup Components Document XML file, which DiskShadow automatically requests and saves in a .cab metadata file in the working directory. You can change the path and name of this file using the **set metadata** command.
 -   Before you can use **import**, you must load a DiskShadow metadata file using the **load metadata** command.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following is a sample DiskShadow script that demonstrates the use of the **import** command:
 ```

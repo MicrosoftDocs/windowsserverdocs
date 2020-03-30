@@ -1,6 +1,6 @@
 ---
 title: attach vdisk
-description: "Windows Commands topic for **attach vdisk** - attaches (sometimes called mounts or surfaces) a virtual hard disk (VHD) so that it appears on the host computer as a local hard disk drive."
+description: Windows Commands topic for **attach vdisk** - attaches (sometimes called mounts or surfaces) a virtual hard disk (VHD) so that it appears on the host computer as a local hard disk drive.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ attach vdisk [readonly] { [sd=<SDDL>] | [usefilesd] } [noerr]
 
 ## Remarks
 - A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
-  ## <a name="BKMK_Examples"></a>Examples
+  ## <a name=BKMK_Examples></a>Examples
   To attach the selected VHD as read-only, type:
   ```
   attach vdisk readonly

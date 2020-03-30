@@ -1,7 +1,7 @@
 ---
 title: bitsadmin setpriority
-description: "Windows Commands topic for **bitsadmin setpriority** - 
-Sets the priority of the specified job."
+description: Windows Commands topic for **bitsadmin setpriority** - 
+Sets the priority of the specified job.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ bitsadmin /SetPriority <Job> <Priority>
 |Job|The job's display name or GUID|
 |Priority|One of the following values:</br>-   FOREGROUND</br>-   HIGH</br>-   NORMAL</br>-   LOW|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the priority for the job named *myDownloadJob* to normal.
 ```

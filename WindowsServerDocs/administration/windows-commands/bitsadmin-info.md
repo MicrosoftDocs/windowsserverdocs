@@ -1,6 +1,6 @@
 ---
 title: bitsadmin info
-description: "Windows Commands topic for **Displays summary information about the specified job.** - bitsadmin info"
+description: Windows Commands topic for **Displays summary information about the specified job.** - bitsadmin info
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -37,7 +37,7 @@ bitsadmin /Info <Job> [/verbose]
 
 Use the /verbose parameter to provide detailed information about the job.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves information about the job named *myDownloadJob*.
 ```

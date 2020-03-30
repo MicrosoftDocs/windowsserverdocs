@@ -1,6 +1,6 @@
 ---
 title: compact vdisk
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ Reduces the physical size of a dynamically expanding virtual hard disk (VHD) fil
 > ## Remarks
 > - A dynamically expanding VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
 > - You can only compact dynamically expanding VHDs that are detached or attached as read-only.
->   ## <a name="BKMK_Examples"></a>Examples
+>   ## <a name=BKMK_Examples></a>Examples
 >   To compact a dynamically expanding VHD, type:
 >   ```
 >   compact vdisk

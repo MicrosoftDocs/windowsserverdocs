@@ -1,6 +1,6 @@
 ---
 title: call
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -52,7 +52,7 @@ You can use the following optional syntaxes as substitutions for batch parameter
 
 |Batch Parameter|Description|
 |---------------|-----------|
-|%~1|Expands **%1** and removes surrounding quotation marks (" ").|
+|%~1|Expands **%1** and removes surrounding quotation marks ( ).|
 |%~f1|Expands **%1** to a fully qualified path.|
 |%~d1|Expands **%1** to a drive letter only.|
 |%~p1|Expands **%1** to a path only.|
@@ -95,7 +95,7 @@ In the above examples, **%1** and PATH can be replaced by other valid values. Th
 
     `call :<Label> <Arguments>`
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To run the Checknew.bat program from another batch program, type the following command in the parent batch program:
 ```

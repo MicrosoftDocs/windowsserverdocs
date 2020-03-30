@@ -1,13 +1,9 @@
 ---
 title: winsat mem
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for winsat mem, which tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+winms.topic: article
 ms.assetid: cda017bf-6193-43c1-b71f-e379c23e1152
 author: coreyp-at-msft
 ms.author: coreyp
@@ -44,11 +40,11 @@ winsat mem <parameters>
 |-xml \<file name>|Save the output of the assessment as the specified XML file. If the specified file exists, it will be overwritten.|
 |-idiskinfo|Save information about physical volumes and logical disks as part of the **\<SystemConfig>** section in the XML output.|
 |-iguid|Create a globally unique identifier (GUID) in the XML output file.|
-|-note "note text"|Add the note text to the **\<note>** section in the XML output file.|
+|-note note text|Add the note text to the **\<note>** section in the XML output file.|
 |-icn|Include the local computer name in the XML output file.|
 |-eef|Enumerate extra system information in the XML output file.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 - The following example runs the assessment for a minimum of 4 seconds and no longer than 12 seconds, using a 32MB buffer size and saving the results in XML format to the file **memtest.xml**.  
   ```

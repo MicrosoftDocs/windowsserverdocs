@@ -1,6 +1,6 @@
 ---
 title: bitsadmin reset
-description: "Windows Commands topic for **bitsadmin reset** - Cancels all jobs in the transfer queue that the current user owns."
+description: Windows Commands topic for **bitsadmin reset** - Cancels all jobs in the transfer queue that the current user owns.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -40,7 +40,7 @@ You must have administrator privileges to use the **AllUsers** parameter.
 > [!NOTE]
 > Administrators cannot reset jobs created by Local System. Use the task scheduler to schedule this command as a task using the Local System credentials.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example cancels all the jobs in the transfer queue for the current user.
 ```

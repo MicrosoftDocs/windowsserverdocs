@@ -1,6 +1,6 @@
 ---
 title: cls
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ cls
 |---------|-----------|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To clear all information that appears in the Command Prompt window and return to a blank window, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: driverquery
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ driverquery [/s <System> [/u [<Domain>\]<Username> [/p <Password>]]] [/fo {table
 |            /si            |                                                                                                                          Provides information about signed drivers.                                                                                                                          |
 |            /?             |                                                                                                                             Displays help at the command prompt.                                                                                                                             |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display a list of installed device drivers on the local computer, type:
 ```

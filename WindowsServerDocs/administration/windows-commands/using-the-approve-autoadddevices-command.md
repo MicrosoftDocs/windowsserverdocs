@@ -1,6 +1,6 @@
 ---
 title: Using the Approve-AutoaddDevices Command
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -38,14 +38,14 @@ wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<R
 |[/BootProgram:<Relative path>]|Specifies the relative path from the remoteInstall folder to the network boot program that this computer should receive. For example: **boot\x86\pxeboot.com**.|
 |[/WdsClientUnattend:<Relative path>]|Specifies the relative path from the remoteInstall folder to the unattend file that automates the Windows Deployment Services client.|
 |[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that this computer should receive.|
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 To approve the computer with a RequestId of 12, type:
 ```
 wdsutil /Approve-AutoaddDevices /RequestId:12
 ```
 To approve the computer with a RequestID of 20 and deploy the image with the specified settings, type:
 ```
-wdsutil /Approve-AutoaddDevices /RequestId:20 /MachineName:computer1 /OU:"OU=Test,CN=company,DC=Domain,DC=Com" /User:Domain\User1 
+wdsutil /Approve-AutoaddDevices /RequestId:20 /MachineName:computer1 /OU:OU=Test,CN=company,DC=Domain,DC=Com /User:Domain\User1 
 /JoinRights:Full /ReferralServer:MyWDSServer /BootProgram:boot\x86\pxeboot.n12 /WdsClientUnattend:WDSClientUnattend\Unattend.xml /BootImagepath:boot\x86\images\boot.wim
 ```
 To approve all pending computers, type:

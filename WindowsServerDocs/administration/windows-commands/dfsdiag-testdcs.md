@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestDCs
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -43,7 +43,7 @@ dfsdiag /TestDCs [/Domain:<Domain name>]
 ## Remarks  
 \/Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To verify the configuration of domain controllers in the Contoso.com domain, type:  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: bitsadmin util and enableanalyticchannel
-description: "Windows Commands topic for **bitsadmin util and enableanalyticchannel** - 
-Enables or disables the BITS client analytic channel."
+description: Windows Commands topic for **bitsadmin util and enableanalyticchannel** - 
+Enables or disables the BITS client analytic channel.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -28,7 +28,7 @@ Enables or disables the BITS client analytic channel.
 bitsadmin /Util /EnableAnalyticChannel TRUE|FALSE
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example enables the BITS client analytic channel.
 ```

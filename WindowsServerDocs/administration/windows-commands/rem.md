@@ -1,6 +1,6 @@
 ---
 title: rem
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,7 +42,7 @@ rem [<Comment>]
 -   You cannot use a redirection character (**<** or **>**) or pipe (**|**) in a batch file comment.
 -   Although you can use **rem** without a comment to add vertical spacing to a batch file, you can also use blank lines. Blank lines are ignored when a batch program is processed.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example shows a batch file that uses remarks for comments and for vertical spacing:
 ```

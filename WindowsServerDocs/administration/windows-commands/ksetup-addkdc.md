@@ -1,6 +1,6 @@
 ---
 title: ksetup:addkdc
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -42,13 +42,13 @@ The computer must be restarted before the new realm setting will be used.
 
 To verify the default realm name for the computer, or to verify that this command worked as intended, run **ksetup** at the command prompt and verify the output for the added KDC.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Configure a non-Windows KDC server and the realm that the workstation should use:
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to "p@sswrd1%". Then restart the computer.
+Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to p@sswrd1%. Then restart the computer.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```

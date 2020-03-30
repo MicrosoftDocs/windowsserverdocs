@@ -1,6 +1,6 @@
 ---
 title: attrib
-description: "Windows Commands topic for **attrib** - Displays, sets, or removes attributes assigned to files or directories."
+description: Windows Commands topic for **attrib** - Displays, sets, or removes attributes assigned to files or directories.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -50,7 +50,7 @@ attrib [{+|-}r] [{+|-}a] [{+|-}s] [{+|-}h] [{+|-}i] [<Drive>:][<Path>][<FileName
 -   If a file has the System (**s**) or Hidden (**h**) attribute set, you must clear the attribute before you can change any other attributes for that file.
 -   The Archive attribute (**a**) marks files that have changed since the last time they were backed up. Note that the **xcopy** command uses archive attributes.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the attributes of a file named News86 that is located in the current directory, type:
 ```

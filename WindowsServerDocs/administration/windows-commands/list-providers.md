@@ -1,6 +1,6 @@
 ---
 title: list providers
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 list providers
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To list the currently registered shadow copy providers, type:
 ```

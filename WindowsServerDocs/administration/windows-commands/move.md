@@ -1,6 +1,6 @@
 ---
 title: move
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -44,7 +44,7 @@ move [{/y | /-y}] [<Source>] [<Target>]
 -   The **/y** command-line option might be preset in the COPYCMD environment variable. You can override this with **/-y** on the command line. The default is to prompt before overwriting files unless the **copy** command is run from within a batch script.
 -   Moving encrypted files to a volume that does not support Encrypting File System (EFS) results in an error. Decrypt the files first or move the files to a volume that supports EFS.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To move all files with the .xls extension from the \Data directory to the \Second_Q\Reports directory, type:
 ```

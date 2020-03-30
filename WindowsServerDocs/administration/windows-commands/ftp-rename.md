@@ -1,6 +1,6 @@
 ---
 title: ftp rename
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -30,7 +30,7 @@ rename <FileName> <NewFileName>
 |  <FileName>   | Specifies the file that you want to rename. |
 | <NewFileName> |        Specifies the new file name.         |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 rename the remote file **example.txt** to **example1.txt**  
 ```  
 rename example.txt example1.txt  

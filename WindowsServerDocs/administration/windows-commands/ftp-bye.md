@@ -1,6 +1,6 @@
 ---
 title: ftp bye
-description: "Windows Commands topic for ftp bye"
+description: Windows Commands topic for ftp bye
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ bye
 none  
 ## Remarks  
 **Bye** and **quit** both end the ftp session with the remote computer and exits.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 End the ftp session with the remote computer and exit.  
 ```  
 bye  

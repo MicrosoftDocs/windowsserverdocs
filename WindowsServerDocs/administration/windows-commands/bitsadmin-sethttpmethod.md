@@ -1,6 +1,6 @@
 ---
 title: bitsadmin sethttpmethod
-description: "Windows Commands topic for **bitsadmin sethttpmethod** - Sets the HTTP verb to use."
+description: Windows Commands topic for **bitsadmin sethttpmethod** - Sets the HTTP verb to use.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na

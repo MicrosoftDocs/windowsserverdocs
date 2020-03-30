@@ -1,6 +1,6 @@
 ---
 title: diskcomp
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -102,7 +102,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
   To process exit codes that are returned by **diskcomp**, you can use the ERRORLEVEL environment variable on the **if** command line in a batch program.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 If your computer has only one floppy disk drive (for example, drive A), and you want to compare two disks, type:
 ```
@@ -126,7 +126,7 @@ goto exit
 echo ERROR: An irrecoverable error occurred 
 goto exit 
 :break 
-echo "You just pressed CTRL+C" to stop the comparison 
+echo You just pressed CTRL+C to stop the comparison 
 goto exit 
 :no_compare 
 echo Disks are not the same 

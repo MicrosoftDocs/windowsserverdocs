@@ -1,6 +1,6 @@
 ---
 title: bitsadmin rawreturn
-description: "Windows Commands topic for **bitsadmin rawreturn** - Returns data suitable for parsing."
+description: Windows Commands topic for **bitsadmin rawreturn** - Returns data suitable for parsing.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -31,7 +31,7 @@ Strips newline characters and formatting from the output.
 
 Typically, you use this command in conjunction with the **Create** and **Get\\*** switches to receive only the value. You must specify this switch before other switches.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the raw data for the state of the job named *myDownloadJob*.
 ```

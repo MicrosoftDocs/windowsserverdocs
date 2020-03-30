@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and getexpirationtime
-description: "Windows Commands topic for **bitsadmin cache and getexpirationtime** - Retrieves the cache expiration time."
+description: Windows Commands topic for **bitsadmin cache and getexpirationtime** - Retrieves the cache expiration time.
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -27,7 +27,7 @@ Retrieves the cache expiration time.
 bitsadmin /Cache /GetExpirationTime 
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following retrieves the cache expiration time.
 ```

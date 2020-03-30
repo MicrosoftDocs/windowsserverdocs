@@ -1,6 +1,6 @@
 ---
 title: ftp mls_1
-description: "Windows Commands topic for **** - "
+description: Windows Commands topic for **** - 
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -35,7 +35,7 @@ mls <remoteFile>[ ] <LocalFile>
   type a hyphen (**-**) to use the current working directory on the remote computer.  
 - Specifying *LocalFile*  
   type a hyphen (**-**) to display the listing on the screen.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Display an abbreviated list of files and subdirectories for **dir1** and **dir2**.  
   ```  
   mls dir1 dir2 -  

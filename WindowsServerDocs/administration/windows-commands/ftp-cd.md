@@ -1,6 +1,6 @@
 ---
 title: ftp cd
-description: "Windows Commands topic for ftp cd"
+description: Windows Commands topic for ftp cd
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -29,7 +29,7 @@ cd <remotedirectory>
 |-------------------|-----------------------------------------------------------------------------|
 | <remotedirectory> | Specifies the directory on the remote computer to which you want to change. |
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 change the directory on the remote computer to **Docs**.  
 ```  
 cd Docs  
