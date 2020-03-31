@@ -1,12 +1,8 @@
 ---
 title: bitsadmin cache and list
-description: Windows Commands topic for **bitsadmin cache and list** - lists all cache entries.
-
+description: Windows Commands topic for bitsadmin cache and list, which lists all cache entries.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 9b4d10a6-42f8-487c-9f0b-65bc15682b7e
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin cache and list
-
-
 
 Lists all cache entries.
 

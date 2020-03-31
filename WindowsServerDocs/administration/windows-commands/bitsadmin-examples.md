@@ -1,12 +1,8 @@
 ---
 title: bitsadmin examples
 description: The following examples show how to use the bitsadmin tool to perform the most common tasks.
-
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: cb8f8374-ba6e-4a68-85a1-9a95b8215354
 author: coreyp-at-msft

@@ -1,12 +1,8 @@
 ---
 title: bitsadmin cache and info
-description: Windows Commands topic for **bitsadmin cache and info** - Dumps a specific cache entry.
-
+description: Windows Commands topic for bitsadmin cache and info, which dumps a specific cache entry.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 15975cbf-dba6-49ca-a725-d15ce1952de5
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin cache and info
-
-
 
 Dumps a specific cache entry.
 

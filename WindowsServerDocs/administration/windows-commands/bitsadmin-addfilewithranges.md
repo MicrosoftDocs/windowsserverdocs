@@ -1,12 +1,8 @@
 ---
 title: bitsadmin addfilewithranges
-description: Windows Commands topic for **bitsadmin addfilewithranges** - adds a file to the specified job. BITS downloads the specified ranges from the remote file.
-
+description: Windows Commands topic for bitsadmin addfilewithranges, which adds a file to the specified job. BITS downloads the specified ranges from the remote file.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: df0ce0bf-dff1-4a48-a16f-fd2f4d5f7189
 author: coreyp-at-msft

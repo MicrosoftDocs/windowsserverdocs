@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getdisplayname
-description: Windows Commands topic for **bitsadmin getdisplayname** - Retrieves the display name of the specified job.
-
+description: Windows Commands topic for bitsadmin getdisplayname, which retrieves the display name of the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: e5c0e76c-4cc6-42d8-ac30-30bf3dc11b9b
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin getdisplayname
-
-
 
 Retrieves the display name of the specified job.
 

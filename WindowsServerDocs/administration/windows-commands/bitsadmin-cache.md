@@ -1,12 +1,8 @@
 ---
 title: bitsadmin cache
-description: Windows Commands topic for **bitsadmin cache** switches - Contains a list of the bitsadmin /Cache switches
-
+description: Windows Commands topic for bitsadmin cache, which contains a list of the bitsadmin /Cache switches.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 9ae4a283-a187-4fe3-b05c-4b53732c27cb
 author: coreyp-at-msft
@@ -17,6 +13,8 @@ ms.date: 10/16/2017
 # bitsadmin cache
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Contains a list of the bitsadmin /Cache switches.
 
 ## Syntax
 

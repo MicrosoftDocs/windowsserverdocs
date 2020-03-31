@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getaclflags
-description: Windows Commands topic for **bitsadmin getaclflags** - Retrieves the access control list propagations flags.
-
+description: Windows Commands topic for bitsadmin getaclflags, which retrieves the access control list propagations flags.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 99266def-7479-4430-a61c-98ec433fa88b
 author: coreyp-at-msft

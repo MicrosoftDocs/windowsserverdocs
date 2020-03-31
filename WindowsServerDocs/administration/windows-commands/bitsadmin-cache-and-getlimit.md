@@ -1,12 +1,8 @@
 ---
 title: bitsadmin cache and getlimit
-description: Windows Commands topic for **bitsadmin cache and getlimit** - Retrieves the cache limit.
-
+description: Windows Commands topic for bitsadmin cache and getlimit, which retrieves the cache limit.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 2f3e9912-928c-483b-9acb-55fa5fc975a0
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin cache and getlimit
-
-
 
 Retrieves the cache limit.
 

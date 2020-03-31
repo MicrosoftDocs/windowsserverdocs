@@ -1,12 +1,8 @@
 ---
 title: bdehdcfg restart
-description: Windows Commands topic for bdehdcfg restart - Tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
-
+description: Windows Commands topic for bdehdcfg restart, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: a98b76bb-36f1-4790-b337-7dc35f606bc6
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bdehdcfg: restart
-
-
 
 Informs the Bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 

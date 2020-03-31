@@ -1,12 +1,8 @@
 ---
 title: bcdboot
-description: Windows Commands topic for **bcdboot** - Quickly set up a system partition, or repair the boot environment located on the system partition.
-
+description: Windows Commands topic for bcdboot, which quickly set up a system partition, or repair the boot environment located on the system partition.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: e62a250e-08e9-47f6-89d1-e6002560ab57
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bcdboot
-
-
 
 Enables you to quickly set up a system partition, or to repair the boot environment located on the system partition. The system partition is set up by copying a simple set of Boot Configuration Data (BCD) files to an existing empty partition.
 

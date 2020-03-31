@@ -1,12 +1,8 @@
 ---
 title: bdehdcfg target
-description: Windows Commands topic for bdehdcfg target - Prepares a partition for use as a system drive by BitLocker and Windows recovery.
-
+description: Windows Commands topic for bdehdcfg target, which prepares a partition for use as a system drive by BitLocker and Windows recovery.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: f761d25d-8349-4ac7-ac46-6bb340a4348f
 author: coreyp-at-msft
@@ -17,9 +13,9 @@ ms.date: 10/16/2017
 
 # bdehdcfg: target
 
+Prepares a partition for use as a system drive by BitLocker and Windows Recovery. By default, this partition is created without a drive letter.
 
-
-Prepares a partition for use as a system drive by BitLocker and Windows Recovery. By default, this partition is created without a drive letter. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
 ## Syntax
 

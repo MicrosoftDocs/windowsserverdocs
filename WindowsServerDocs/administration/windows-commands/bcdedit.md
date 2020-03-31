@@ -1,12 +1,8 @@
 ---
 title: bcdedit
-description: Windows Commands topic for **bcdedit** - create new stores, modify existing stores, and add boot menu parameters.
-
+description: Windows Commands topic for bcdedit, which creates new stores, modify existing stores, and add boot menu parameters.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 03/27/2018
 ---
 
 # bcdedit
-
-
 
 Boot Configuration Data (BCD) files provide a store that is used to describe boot applications and boot application settings. The objects and elements in the store effectively replace Boot.ini.
 

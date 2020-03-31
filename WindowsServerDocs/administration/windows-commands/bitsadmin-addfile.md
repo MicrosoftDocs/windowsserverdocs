@@ -1,12 +1,8 @@
 ---
 title: bitsadmin addfile
-description: Windows Commands topic for **bitsadmin addfile** - adds a file to the specified job.
-
+description: Windows Commands topic for bitsadmin addfile, which adds a file to the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 1b31aa93-0364-465b-af36-754968825989
 author: coreyp-at-msft

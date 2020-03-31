@@ -1,12 +1,8 @@
 ---
 title: bitsadmin geterror
-description: Windows Commands topic for **bitsadmin geterror** - Retrieves detailed error information for the specified job.
-
+description: Windows Commands topic for bitsadmin geterror, which retrieves detailed error information for the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: cbe5bca1-d2dd-4ce6-903f-f85de4a2ec6a
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin geterror
-
-
 
 Retrieves detailed error information for the specified job.
 

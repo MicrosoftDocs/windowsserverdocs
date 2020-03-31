@@ -1,12 +1,8 @@
 ---
 title: bdehdcfg quiet
-description: Windows Commands topic for bdehdcfg quiet - Tells bdehdcfg to not display all actions and errors.
-
+description: Windows Commands topic for bdehdcfg quiet, which tells bdehdcfg to not display all actions and errors.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 7f75b702-890b-4ff9-805c-edf5cadd8822
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bdehdcfg: quiet
-
-
 
 Informs the Bdehdcfg command-line tool that all actions and errors are not to be displayed in the command-line interface. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 
