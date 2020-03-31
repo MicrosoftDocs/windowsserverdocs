@@ -1,12 +1,12 @@
 ---
 title: prndrvr
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 82b09e3e-bd38-4df1-9953-b0e9ee2565a3
 author: coreyp-at-msft

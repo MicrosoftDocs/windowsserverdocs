@@ -1,12 +1,12 @@
 ---
 title: ftp cd
 description: Windows Commands topic for ftp cd
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a574855a-31b4-45c6-bce2-581c7231c99b vhorne
 author: coreyp-at-msft

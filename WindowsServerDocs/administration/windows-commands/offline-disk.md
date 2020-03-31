@@ -1,12 +1,12 @@
 ---
 title: offline disk
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8fb9b3c3-0b2c-4192-a2e7-f706292653e3
 author: coreyp-at-msft

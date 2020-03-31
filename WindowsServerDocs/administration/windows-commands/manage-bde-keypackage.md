@@ -1,12 +1,12 @@
 ---
 title: manage-bde KeyPackage
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c631ef10-2a2f-4541-8578-292f2d4e9e80
 

@@ -1,12 +1,12 @@
 ---
 title: ftp dir
 description: Windows Commands topic for ftp dir
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a29a92a5-7b79-4e6e-95cf-2ccb38bb6fb2 vhorne
 author: coreyp-at-msft

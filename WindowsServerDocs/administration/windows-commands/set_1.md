@@ -1,15 +1,10 @@
 ---
 title: set
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for set, which displays, sets, or removes CMD.EXE environment variables. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # set
-
-
 
 Displays, sets, or removes CMD.EXE environment variables. If used without parameters, **set** displays the current environment variable settings.
 

@@ -1,12 +1,12 @@
 ---
 title: ksetup:setcomputerpassword
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e307d8f6-3b93-4c24-ac04-f31549f7dc7d
 author: coreyp-at-msft

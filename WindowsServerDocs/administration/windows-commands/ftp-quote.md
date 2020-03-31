@@ -1,12 +1,12 @@
 ---
 title: ftp quote
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4500a1d3-c091-42c7-a909-f61df7f2e993 vhorne
 author: coreyp-at-msft

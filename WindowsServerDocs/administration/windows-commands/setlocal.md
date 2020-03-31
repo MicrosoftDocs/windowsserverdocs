@@ -1,15 +1,10 @@
 ---
 title: setlocal
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for setlocal, which starts localization of environment variables in a batch file.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4e4b6d3-3f1a-4851-a782-25ee2470e16e
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # setlocal
-
-
 
 Starts localization of environment variables in a batch file. Localization continues until a matching **endlocal** command is encountered or the end of the batch file is reached.
 

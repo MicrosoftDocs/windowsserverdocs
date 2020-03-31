@@ -1,12 +1,12 @@
 ---
 title: bcdboot
 description: Windows Commands topic for **bcdboot** - Quickly set up a system partition, or repair the boot environment located on the system partition.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e62a250e-08e9-47f6-89d1-e6002560ab57
 author: coreyp-at-msft

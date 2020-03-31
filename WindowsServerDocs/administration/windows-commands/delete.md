@@ -1,12 +1,12 @@
 ---
 title: delete
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 021799a3-11a2-4e7f-8fdc-fba24ca2ba21
 author: coreyp-at-msft

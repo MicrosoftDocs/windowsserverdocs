@@ -1,12 +1,12 @@
 ---
 title: bdehdcfg target
 description: Windows Commands topic for bdehdcfg target - Prepares a partition for use as a system drive by BitLocker and Windows recovery.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f761d25d-8349-4ac7-ac46-6bb340a4348f
 author: coreyp-at-msft

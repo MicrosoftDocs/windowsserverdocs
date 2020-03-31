@@ -1,12 +1,8 @@
 ---
 title: setx
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for setx, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ef37482f-f8a8-4765-951a-2518faac3f44
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # setx
-
-
 
 Creates or modifies environment variables in the user or system environment, without requiring programming or scripting. The **Setx** command also retrieves the values of registry keys and writes them to text files.
 

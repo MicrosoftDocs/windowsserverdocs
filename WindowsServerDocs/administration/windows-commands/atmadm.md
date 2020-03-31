@@ -1,12 +1,8 @@
 ---
 title: atmadm
-description: Windows Commands topic for **atmadm** - Monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network.
-ms.custom: na
+description: Windows Commands topic for atmadm, which monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 37156c2e-c4d4-4fd8-a03d-245fb60bf996
 author: coreyp-at-msft

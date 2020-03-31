@@ -1,15 +1,10 @@
 ---
 title: assign
-description: Windows Commands topic for **assign** - assigns a drive letter or mount point to the volume with focus.
-ms.custom: na
+description: Windows Commands topic for assign, which assigns a drive letter or mount point to the volume with focus.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 57912b73-622e-489b-b053-a369021ba8e1
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -19,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-assigns a drive letter or mount point to the volume with focus.
+Assigns a drive letter or mount point to the volume with focus.
 
 ## Syntax
 ```

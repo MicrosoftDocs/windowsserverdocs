@@ -1,12 +1,8 @@
 ---
 title: add alias
-description: Windows Commands topic for **add alias** - adds aliases to the alias environment.
-ms.custom: na
+description: Windows Commands topic for add alias which, adds aliases to the alias environment.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fe12f5d-11e9-4f3d-b7f9-40b26c8685e5
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # add alias
-
-
 
 Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt.
 

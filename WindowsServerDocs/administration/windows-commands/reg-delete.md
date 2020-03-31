@@ -1,12 +1,12 @@
 ---
 title: reg delete
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: cee05071-1607-4ab1-b8ab-65caebeb85c3
 author: coreyp-at-msft

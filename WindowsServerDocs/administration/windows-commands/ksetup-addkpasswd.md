@@ -1,12 +1,12 @@
 ---
 title: ksetup:addkpasswd
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d3196995-1b38-48ff-ba08-911cfab77317
 author: coreyp-at-msft

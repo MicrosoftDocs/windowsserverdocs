@@ -1,12 +1,12 @@
 ---
 title: bcdedit
 description: Windows Commands topic for **bcdedit** - create new stores, modify existing stores, and add boot menu parameters.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 author: coreyp-at-msft

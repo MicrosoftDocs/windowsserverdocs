@@ -1,12 +1,12 @@
 ---
 title: eventcreate
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f2b1b26d-a70e-49a6-832b-91eb5a1a159a
 author: coreyp-at-msft

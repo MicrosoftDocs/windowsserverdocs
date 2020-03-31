@@ -1,12 +1,12 @@
 ---
 title: ksetup:server
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e3407111-ac92-457f-aa1f-a04fe9109d59
 author: coreyp-at-msft

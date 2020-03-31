@@ -1,12 +1,12 @@
 ---
 title: nslookup set class
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ed826400-40da-42b6-b7f0-95db73790723
 author: coreyp-at-msft

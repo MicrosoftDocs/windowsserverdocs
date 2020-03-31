@@ -1,12 +1,12 @@
 ---
 title: ftp close_1
 description: Windows Commands topic for ftp close_1
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1dc344a9-64f7-45bc-9d44-a48afc844e36 vhorne
 author: coreyp-at-msft

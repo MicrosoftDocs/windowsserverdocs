@@ -1,12 +1,12 @@
 ---
 title: popd
 description: Learn how to change the directory to the directory most recently stored by the pushd command.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8a4c52d5-9fd1-4eac-9c0c-5767b25728ed
 author: coreyp-at-msft

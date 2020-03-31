@@ -1,12 +1,12 @@
 ---
 title: ftp mls_1
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4738fd49-0e80-4bdf-a773-0f973db3a710 vhorne
 author: coreyp-at-msft

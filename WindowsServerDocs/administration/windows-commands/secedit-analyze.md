@@ -1,12 +1,12 @@
 ---
 title: secedit:analyze
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3430cf9d-1411-48b1-b5a9-2e47701dc87f
 author: coreyp-at-msft

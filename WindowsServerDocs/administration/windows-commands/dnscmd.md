@@ -1,12 +1,12 @@
 ---
 title: Dnscmd
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e7f31cb5-a426-4e25-b714-88712b8defd5
 author: coreyp-at-msft

@@ -1,11 +1,11 @@
 ---
 title: dfsutil
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ef5093a4-0d24-4b21-9d04-59933ad98e2c
 robots: noindex,nofollow

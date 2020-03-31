@@ -1,12 +1,12 @@
 ---
 title: bitsadmin removeclientcertificate
 description: Windows Commands topic for **bitsadmin removeclientcertificate** - removes the client certificate from the job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b417c3e5-aadd-4fcc-968f-45d8b67ca516
 author: coreyp-at-msft

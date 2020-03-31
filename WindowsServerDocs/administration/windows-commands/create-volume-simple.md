@@ -1,12 +1,12 @@
 ---
 title: create volume simple
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: query
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 675c5128-f3cf-4e8f-8a3f-b29ab2a8b6de
 author: coreyp-at-msft

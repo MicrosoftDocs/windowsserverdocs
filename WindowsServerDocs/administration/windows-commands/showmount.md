@@ -1,12 +1,8 @@
 ---
 title: showmount
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for showmount, which displays mounted directories. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a6dd562e-e3bd-4ee6-be3b-6d29e29fd20e
 author: coreyp-at-msft

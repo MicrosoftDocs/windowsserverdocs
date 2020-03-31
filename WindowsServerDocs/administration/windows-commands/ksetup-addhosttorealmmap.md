@@ -1,12 +1,12 @@
 ---
 title: ksetup:addhosttorealmmap
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 237742d5-fa68-466c-b97e-636f489248ea
 author: coreyp-at-msft

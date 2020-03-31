@@ -1,15 +1,10 @@
 ---
 title: shutdown
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for shutdown, which enables you to shut down or restart local or remote computers one at a time.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # shutdown
-
-
 
 Enables you to shut down or restart local or remote computers one at a time.
 

@@ -1,12 +1,12 @@
 ---
 title: bitsadmin getcustomheaders
 description: Windows Commands topic for **bitsadmin getcustomheaders** - Retrieves the custom HTTP headers from the job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1f0d38d3-e865-4474-81e8-773d65c3d1cc
 author: coreyp-at-msft

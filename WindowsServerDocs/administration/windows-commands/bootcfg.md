@@ -1,12 +1,12 @@
 ---
 title: bootcfg
 description: Windows Commands topic for **bootcfg** - Configures, queries, or changes Boot.ini file settings.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3deb354c-5717-4066-bc79-b9323d559e44
 

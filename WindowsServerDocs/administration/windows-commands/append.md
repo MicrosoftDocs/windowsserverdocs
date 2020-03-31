@@ -1,12 +1,8 @@
 ---
 title: append
-description: Windows Commands topic for 
-ms.custom: na
+description: Windows Commands topic for append, which allows programs to open data files in specified directories, as if they were in the current directory.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9c3fea20-9502-40ad-a442-7a927aad88eb
 author: coreyp-at-msft
@@ -17,13 +13,10 @@ ms.date: 10/16/2017
 
 # append
 
-
-
 Allows programs to open data files in specified directories as if they were in the current directory. If used without parameters, **append** displays the appended directory list.
 
 > [!NOTE]
 > This command not supported in Windows 10.
->
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 

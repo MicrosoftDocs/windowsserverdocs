@@ -1,12 +1,12 @@
 ---
 title: Servermanagercmd
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 507c4b87-8e13-4872-8b34-0c7508eecbc1
 author: coreyp-at-msft

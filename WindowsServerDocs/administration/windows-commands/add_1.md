@@ -1,15 +1,10 @@
 ---
 title: add
-description: Windows Commands topic for **add_1** - adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
-ms.custom: na
+description: Windows Commands topic for add_1, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,7 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # add
-
 
 Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. If used without subcommands, **add** lists the current volumes and aliases.
 

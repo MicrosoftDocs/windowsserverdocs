@@ -1,12 +1,12 @@
 ---
 title: bdehdcfg size
 description: Windows Commands topic - Specifies the size of the system partition when a new system drive is being created.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 80f55b1d-a28d-4edf-9997-1fb918b7b5a1
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: lodctr
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 5a849abd-6b31-4833-bc8a-306c05eca29a
 author: coreyp-at-msft

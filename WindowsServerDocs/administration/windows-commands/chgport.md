@@ -1,12 +1,12 @@
 ---
 title: chgport
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8adb145f-6c53-4549-9253-9a966794a4f3
 author: coreyp-at-msft

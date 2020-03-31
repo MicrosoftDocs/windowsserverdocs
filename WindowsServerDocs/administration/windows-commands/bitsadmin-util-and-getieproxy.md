@@ -1,12 +1,12 @@
 ---
 title: bitsadmin util and getieproxy
 description: Windows Commands topic for **bitsadmin util and getieproxy** - Retrieves the proxy usage for the given service account.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6d50c7e3-f4eb-4ca5-9f0c-4ed396087db6
 author: coreyp-at-msft

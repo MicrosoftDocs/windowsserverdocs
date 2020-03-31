@@ -1,12 +1,12 @@
 ---
 title: bitsadmin peercaching
 description: Windows Commands topic for **bitsadmin peercaching** - listing of the peercaching switches.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c2eaa3c7-9d30-4731-8a78-4b6e6041d29a
 author: coreyp-at-msft

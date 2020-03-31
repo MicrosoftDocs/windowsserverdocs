@@ -1,12 +1,12 @@
 ---
 title: bitsadmin addfileset
 description: Windows Commands topic for **bitsadmin addfileset** - adds one or more files to the specified job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 75466994-262f-4724-b14d-f813c5397675
 author: coreyp-at-msft

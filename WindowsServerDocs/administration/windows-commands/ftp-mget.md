@@ -1,12 +1,12 @@
 ---
 title: ftp mget
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6c85ae96-ec51-48a9-a227-7f02c7332c69 vhorne
 author: coreyp-at-msft

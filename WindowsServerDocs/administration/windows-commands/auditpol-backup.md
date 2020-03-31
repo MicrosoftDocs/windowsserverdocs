@@ -1,12 +1,8 @@
 ---
 title: auditpol backup
-description: Windows Commands topic for **auditpol backup** - Backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
-ms.custom: na
+description: Windows Commands topic for auditpol backup, which backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc84e581-aa0f-4c91-b13b-1d970bad5517
 author: coreyp-at-msft

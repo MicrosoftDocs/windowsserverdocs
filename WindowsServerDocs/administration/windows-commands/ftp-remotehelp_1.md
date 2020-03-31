@@ -1,12 +1,12 @@
 ---
 title: ftp remotehelp_1
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ef23adf3-ead4-44c8-ac1d-c8a6f4b2bf73 vhorne
 author: coreyp-at-msft

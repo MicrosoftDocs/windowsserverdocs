@@ -2,12 +2,12 @@
 title: bootcfg debug
 description: Windows Commands topic for **bootcfg debug** - 
 adds or changes the debug settings for a specified operating system entry.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 28afa5fb-a236-46e2-b1a4-a3c43a49c437
 author: coreyp-at-msft

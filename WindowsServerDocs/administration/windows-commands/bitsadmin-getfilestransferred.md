@@ -1,12 +1,12 @@
 ---
 title: bitsadmin getfilestransferred
 description: Windows Commands topic for **bitsadmin getfilestransferred** - Retrieves the number of files transferred for the specified job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e282815c-938b-4ac0-a09d-9baafb656dcb
 author: coreyp-at-msft

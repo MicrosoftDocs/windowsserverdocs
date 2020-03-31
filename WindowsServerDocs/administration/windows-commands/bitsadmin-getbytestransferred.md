@@ -1,12 +1,12 @@
 ---
 title: bitsadmin getbytestransferred
 description: Windows Commands topic for **bitsadmin getbytestransferred** - Retrieves the number of bytes transferred for the specified job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 47bbf184-e06f-4be0-b2ba-d32b10d82002
 author: coreyp-at-msft

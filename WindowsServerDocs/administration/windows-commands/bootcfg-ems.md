@@ -2,12 +2,12 @@
 title: bootcfg ems
 description: Windows Commands topic for **bootcfg ems** - 
 Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 57abdc50-c64a-45f1-8470-3f8c3a51f743
 author: coreyp-at-msft

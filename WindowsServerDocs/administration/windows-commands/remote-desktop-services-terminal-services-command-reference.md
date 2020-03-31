@@ -1,12 +1,12 @@
 ---
 title: Remote Desktop Services (Terminal Services) Command Reference
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2f371848-5c48-470c-908c-afbc95d3a805
 

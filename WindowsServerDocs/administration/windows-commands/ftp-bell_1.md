@@ -1,12 +1,12 @@
 ---
 title: ftp bell_1
 description: Windows Commands topic for ftp bell_1
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: bfc00fb6-b3d0-42a1-ac6d-df46f89dc152 vhorne
 author: coreyp-at-msft

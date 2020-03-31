@@ -1,12 +1,12 @@
 ---
 title: bitsadmin util and version
 description: Windows Commands topic for **bitsadmin util and version** - Displays the version of BITS service.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 98f17328-dfbd-4cbb-93c1-b8d424bc3f0a
 author: coreyp-at-msft

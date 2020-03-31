@@ -1,12 +1,12 @@
 ---
 title: rundll32
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 46d9cd64-8186-4cd4-a500-44700340fe81
 author: coreyp-at-msft

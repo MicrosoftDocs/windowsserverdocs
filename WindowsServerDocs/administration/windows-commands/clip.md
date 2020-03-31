@@ -1,12 +1,12 @@
 ---
 title: clip
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 85322d85-3376-4806-845b-93ac77fe27bf
 author: coreyp-at-msft

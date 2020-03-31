@@ -1,12 +1,12 @@
 ---
 title: ftp type
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6e96dcd4-08f8-4e7b-90b7-1e1761fea4c7 vhorne
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: nslookup server
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 608267f8-f7b4-412a-8dcd-e08b5ffc2085
 author: coreyp-at-msft

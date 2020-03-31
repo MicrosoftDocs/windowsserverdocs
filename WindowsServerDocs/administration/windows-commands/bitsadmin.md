@@ -1,12 +1,12 @@
 ---
 title: bitsadmin
 description: Windows Commands topic for **bitsadmin** - bitsadmin is a command-line tool that you can use to create, download, or upload jobs and monitor their progress.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
 author: coreyp-at-msft

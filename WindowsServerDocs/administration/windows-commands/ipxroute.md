@@ -1,12 +1,12 @@
 ---
 title: ipxroute
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3a30304f-655e-43d2-a4ac-7568abf8975c
 

@@ -1,12 +1,8 @@
 ---
-title: Set id
-description: Windows Commands topic for **** - 
-ms.custom: na
+title: Set ID
+description: Windows Commands topic for the Diskpart Set ID, which changes the partition type field for the partition with focus.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886
 author: coreyp-at-msft
@@ -14,7 +10,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Set id
+# Set ID
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

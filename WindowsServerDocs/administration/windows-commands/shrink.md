@@ -1,12 +1,8 @@
 ---
 title: shrink
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for DiskPart shrink, which reduces the size of the selected volume by the amount you specify.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec87cc7c-9846-465e-a10d-4ee10db4f4e6
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: ksetup:addkdc
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 98bfc23a-14c4-401c-bcb3-9903c5cdde64
 author: coreyp-at-msft

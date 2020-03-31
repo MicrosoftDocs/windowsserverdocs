@@ -1,12 +1,12 @@
 ---
 title: Run Best Practices Analyzer Scans and Manage Scan Results_1
 description: Server Manager
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
 author: coreyp-at-msft

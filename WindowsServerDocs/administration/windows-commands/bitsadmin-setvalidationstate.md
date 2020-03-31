@@ -1,12 +1,12 @@
 ---
 title: bitsadmin setvalidationstate
 description: Windows Commands topic for **bitsadmin setvalidationstate** - Sets the content validation state of the given file within the job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e8fc8e8c-171c-4681-8057-6986b018e576
 author: coreyp-at-msft

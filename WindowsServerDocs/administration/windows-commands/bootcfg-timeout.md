@@ -2,12 +2,12 @@
 title: bootcfg timeout
 description: Windows Commands topic for **bootcfg timeout** - 
 changes the operating system time-out value.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
 author: coreyp-at-msft

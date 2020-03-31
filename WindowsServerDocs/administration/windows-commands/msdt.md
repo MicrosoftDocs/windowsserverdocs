@@ -1,12 +1,12 @@
 ---
 title: msdt
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
 

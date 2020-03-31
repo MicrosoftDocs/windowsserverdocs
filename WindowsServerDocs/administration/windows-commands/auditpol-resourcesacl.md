@@ -1,12 +1,8 @@
 ---
 title: auditpol resourceSACL
-description: Windows Commands topic for **uditpol resourceSACL** - Configures global resource system access control lists (SAcls).
-ms.custom: na
+description: Windows Commands topic for auditpol resourceSACL, which configures global resource system access control lists (SAcls).
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 28771ba7-967a-45e9-9bf0-b2a2673070f0
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # auditpol resourceSACL
-
-
 
 Configures global resource system access control lists (SACLs).
 

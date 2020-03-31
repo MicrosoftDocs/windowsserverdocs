@@ -1,12 +1,8 @@
 ---
 title: shift
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for shift, which changes the position of batch parameters in a batch file. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b56574e8-570a-4cc9-bbac-1b94fbf6a47a
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # shift
-
-
 
 Changes the position of batch parameters in a batch file.
 

@@ -1,12 +1,12 @@
 ---
 title: nslookup set retry
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 615fdfa2-fa29-47a8-8c9e-a6c5b45b3b71
 author: coreyp-at-msft

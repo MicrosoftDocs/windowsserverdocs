@@ -1,12 +1,12 @@
 ---
 title: manage-bde pause
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: efda0e08-b9ff-4e71-83d8-bb666b3032bd
 author: coreyp-at-msft

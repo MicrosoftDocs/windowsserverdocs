@@ -1,12 +1,8 @@
 ---
 title: sort
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for sort, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 77116469-4790-4442-8a21-9fa73b65ef9f
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # sort
-
-
 
 Reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 

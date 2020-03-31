@@ -1,12 +1,12 @@
 ---
 title: ftp mdelete_1
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8a80a8f5-e880-40a8-abc9-29a41836844f vhorne
 author: coreyp-at-msft

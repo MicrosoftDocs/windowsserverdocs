@@ -1,12 +1,8 @@
 ---
 title: attributes volume
-description: Windows Commands topic for **attributes volume** - Displays, sets, or clears the attributes of a volume.
-ms.custom: na
+description: Windows Commands topic for attributes volume, which displays, sets, or clears the attributes of a volume.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e40e8284-3d57-4de8-a46c-e4ade34a0d53
 author: coreyp-at-msft
@@ -18,12 +14,10 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays, sets, or clears the attributes of a volume.  
-  
-  
-  
+Displays, sets, or clears the attributes of a volume.
+
 ## Syntax  
-  
+
 ```  
 attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | shadowcopy}] [noerr]  
 ```  

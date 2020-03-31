@@ -1,12 +1,12 @@
 ---
 title: bitsadmin util
 description: Windows Commands topic for **bitsadmin util** - list of the **Util** switches
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e8278a28-1ecc-42be-92e2-c93dee59751d
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: break
 description: Windows Commands topic for **break_2** - Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: bitsadmin getreplydata
 description: Windows Commands topic for **bitsadmin getreplydata** - Retrieves the server's reply data in hexadecimal format.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 819f97d5-b255-4b2d-9f63-0daa73915434
 author: coreyp-at-msft

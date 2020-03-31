@@ -1,12 +1,12 @@
 ---
 title: bitsadmin cache and setexpirationtime
 description: Windows Commands topic for **bitsadmin cache and setexpirationtime** - Sets the cache expiration time.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 00ea6e4e-b707-4b31-88dd-b61a78565c8d
 author: coreyp-at-msft

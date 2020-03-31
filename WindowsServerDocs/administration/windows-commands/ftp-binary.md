@@ -1,12 +1,12 @@
 ---
 title: ftp binary
 description: Windows Commands topic for ftp binary
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ee925b4d-85d2-47b1-b7d6-3832b7ec5505 vhorne
 author: coreyp-at-msft

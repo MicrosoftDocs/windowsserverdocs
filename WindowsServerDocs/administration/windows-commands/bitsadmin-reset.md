@@ -1,12 +1,12 @@
 ---
 title: bitsadmin reset
 description: Windows Commands topic for **bitsadmin reset** - Cancels all jobs in the transfer queue that the current user owns.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0e4f9d1d-072c-493f-8d7a-f6d713c3ef29
 author: coreyp-at-msft

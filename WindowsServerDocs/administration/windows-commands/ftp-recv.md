@@ -1,12 +1,12 @@
 ---
 title: ftp recv
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f249ce61-247d-421b-9b93-48bce5108800 vhorne
 author: coreyp-at-msft

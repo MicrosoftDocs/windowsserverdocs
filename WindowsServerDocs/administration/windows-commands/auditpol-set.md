@@ -1,13 +1,8 @@
 ---
 title: auditpol set
-description: Windows Commands topic for **auditpol set** - 
-Sets the per-user audit policy, system audit policy, or auditing options.
-ms.custom: na
+description: Windows Commands topic for auditpol set, which sets the per-user audit policy, system audit policy, or auditing options.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4947486-87bd-48cb-ba81-7230c8e70895
 author: coreyp-at-msft

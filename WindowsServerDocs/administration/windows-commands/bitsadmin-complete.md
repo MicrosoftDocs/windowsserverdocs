@@ -1,12 +1,12 @@
 ---
 title: bitsadmin complete
 description: Windows Commands topic for **bitsadmin complete** - completes the job. The downloaded files are not available to you until you use this switch.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a5e86677-8f7b-43b3-929e-97706c57e7f1
 author: coreyp-at-msft

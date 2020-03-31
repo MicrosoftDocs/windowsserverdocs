@@ -1,12 +1,12 @@
 ---
 title: convert
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ae151297-af21-4701-bd69-21d775518e03
 author: coreyp-at-msft

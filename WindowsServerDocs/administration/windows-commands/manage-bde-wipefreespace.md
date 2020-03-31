@@ -1,12 +1,12 @@
 ---
 title: manage-bde WipeFreeSpace
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b8d83a2a-c5c8-4019-9041-23d1d6abf282
 author: coreyp-at-msft

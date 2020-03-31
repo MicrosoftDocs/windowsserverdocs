@@ -1,12 +1,12 @@
 ---
 title: repair
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9f84f661-f3cd-48c8-bf08-87819cf626fe
 author: coreyp-at-msft

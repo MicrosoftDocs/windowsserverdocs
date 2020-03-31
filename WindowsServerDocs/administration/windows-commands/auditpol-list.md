@@ -1,13 +1,8 @@
 ---
 title: auditpol list
-description: Windows Commands topic for **auditpol list** - 
-lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined.
-ms.custom: na
+description: Windows Commands topic for auditpol list, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45502abe-3d6e-4e13-94f0-8e6fcb6db860
 author: coreyp-at-msft
@@ -19,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined.
+Lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined.
 
 ## Syntax
 ```

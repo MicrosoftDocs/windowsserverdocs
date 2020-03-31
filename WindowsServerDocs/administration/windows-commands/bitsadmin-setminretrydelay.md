@@ -1,12 +1,12 @@
 ---
 title: bitsadmin setminretrydelay
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ce8674ca-6cc5-4bb2-8dda-7dfbb1cd6830
 author: coreyp-at-msft

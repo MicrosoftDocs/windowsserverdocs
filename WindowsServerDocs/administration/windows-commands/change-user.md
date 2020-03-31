@@ -1,12 +1,12 @@
 ---
 title: change user
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6202f024-8cf5-411e-89b1-ee37ff46499d
 author: coreyp-at-msft

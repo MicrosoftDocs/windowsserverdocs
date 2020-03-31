@@ -1,12 +1,12 @@
 ---
 title: wbadmin
 description: Windows Commands topic for wbadmin, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.  
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4b0b3f32-d21f-4861-84bb-b2eadbf1e7b8
 author: coreyp-at-msft

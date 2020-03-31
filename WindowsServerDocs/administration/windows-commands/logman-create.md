@@ -1,12 +1,12 @@
 ---
 title: logman create
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 972f0126-7bc4-4b14-9265-062864f3ffd4
 

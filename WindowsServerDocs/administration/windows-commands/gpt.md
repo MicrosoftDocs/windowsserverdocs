@@ -1,12 +1,12 @@
 ---
 title: gpt
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1d6f9029-807f-4420-a336-36669b5361bc
 author: coreyp-at-msft

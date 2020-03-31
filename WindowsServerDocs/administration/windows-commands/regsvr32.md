@@ -1,12 +1,12 @@
 ---
 title: regsvr32
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3345e964-7d3e-42b8-abeb-42ed6edfe2b2
 author: coreyp-at-msft

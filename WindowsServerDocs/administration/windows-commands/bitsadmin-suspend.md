@@ -2,12 +2,12 @@
 title: bitsadmin suspend
 description: Windows Commands topic for **bitsadmin suspend** - 
 Suspends the specified job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f9d42500-7bea-4aa8-a9f0-c22f6ed3e73b
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: detail volume
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 38f2bc75-2ed6-4e80-aa74-ab83133db1cd
 author: coreyp-at-msft

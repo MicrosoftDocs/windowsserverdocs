@@ -1,12 +1,12 @@
 ---
 title: ftp bye
 description: Windows Commands topic for ftp bye
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f20e2bf2-7d12-4606-942a-8ed555eb8e90 vhorne
 author: coreyp-at-msft

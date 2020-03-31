@@ -1,12 +1,12 @@
 ---
 title: serverweroptin
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f3c0b0af-cafb-4f09-8b36-5a357ddf392d
 author: coreyp-at-msft

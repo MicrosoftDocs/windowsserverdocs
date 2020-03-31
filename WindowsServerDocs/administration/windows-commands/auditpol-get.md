@@ -1,13 +1,8 @@
 ---
 title: auditpol get
-description: Windows Commands topic for **auditpol get** - 
-Retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.
-ms.custom: na
+description: Windows Commands topic for auditpol get, which retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fe13de4e-836c-4207-b47c-64b6272d6c41
 author: coreyp-at-msft

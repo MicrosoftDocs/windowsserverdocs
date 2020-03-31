@@ -1,12 +1,12 @@
 ---
 title: ftp get
 description: Windows Commands topic for ftp get
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d70355c4-58ef-43e0-916b-c7ecf77e6ee4 vhorne
 author: coreyp-at-msft

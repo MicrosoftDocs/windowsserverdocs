@@ -1,12 +1,12 @@
 ---
 title: reset
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: afbdab44-199c-4e11-884f-e96804965c21
 author: coreyp-at-msft

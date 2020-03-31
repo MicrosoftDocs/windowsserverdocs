@@ -1,12 +1,12 @@
 ---
 title: cacls
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
 author: coreyp-at-msft

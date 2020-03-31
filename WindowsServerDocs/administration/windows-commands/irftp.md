@@ -1,12 +1,12 @@
 ---
 title: irftp
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e15c60a7-546d-4e9f-9871-43aaa1b569d6 vhorne
 author: coreyp-at-msft

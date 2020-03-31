@@ -1,12 +1,8 @@
 ---
 title: assoc
-description: Windows Commands topic for **assoc** - Displays or modifies file name extension associations.
-ms.custom: na
+description: Windows Commands topic for assoc, which displays or modifies file name extension associations.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
 author: coreyp-at-msft
@@ -17,13 +13,10 @@ ms.date: 10/16/2017
 
 # assoc
 
-
-
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
 
 > [!NOTE]
 > This command is only supported within CMD.EXE and is not available from PowerShell.
->
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 

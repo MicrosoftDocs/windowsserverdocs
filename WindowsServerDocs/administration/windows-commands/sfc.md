@@ -1,12 +1,8 @@
 ---
 title: sfc
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c58c25da-e028-42a6-9e10-973484a4b953
 author: coreyp-at-msft
@@ -19,7 +15,8 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 ```

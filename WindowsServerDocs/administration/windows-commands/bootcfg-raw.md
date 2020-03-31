@@ -2,12 +2,12 @@
 title: bootcfg raw
 description: Windows Commands topic for **bootcfg raw** - 
 adds operating system load options specified as a string to an operating system entry in the **[operating systems]** section of the Boot.ini file.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e3458749-b0a0-460f-a022-3ff199a71f27
 author: coreyp-at-msft

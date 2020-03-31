@@ -1,12 +1,12 @@
 ---
 title: bitsadmin setdescription
 description: Windows Commands topic for **bitsadmin setdescription** - Sets the description of the specified job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1e46a5dd-4637-4a2e-b88f-d3f85b177db8
 author: coreyp-at-msft

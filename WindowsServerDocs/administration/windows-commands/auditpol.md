@@ -1,12 +1,8 @@
 ---
 title: auditpol
-description: Windows Commands topic for **auditpol** - Displays information about and performs functions to manipulate audit policies.
-ms.custom: na
+description: Windows Commands topic for auditpol, which displays information about and performs functions to manipulate audit policies.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a02cfb9d-732f-4e77-aeba-f18265daa3af
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # auditpol
-
-
 
 Displays information about and performs functions to manipulate audit policies.
 

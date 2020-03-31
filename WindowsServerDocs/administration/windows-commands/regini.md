@@ -1,12 +1,12 @@
 ---
 title: regini
 description: Learn how to modify the registry from the command prompt or by using a script.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 5ff18dc3-5bd8-400a-b311-fd73a3267e8c
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: nslookup finger Command
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 11ea2bde-8ccb-4b87-bbad-231dd9e5e858
 author: coreyp-at-msft

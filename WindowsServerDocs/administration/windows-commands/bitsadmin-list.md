@@ -1,12 +1,12 @@
 ---
 title: bitsadmin list
 description: Windows Commands topic for **bitsadmin list** - lists the transfer jobs owned by the current user.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1416965e-e0e6-49cf-b1d4-b286d3cf8716
 author: coreyp-at-msft

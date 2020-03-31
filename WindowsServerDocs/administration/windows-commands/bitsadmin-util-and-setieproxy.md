@@ -1,12 +1,12 @@
 ---
 title: bitsadmin util and setieproxy
 description: Windows Commands topic for **bitsadmin util and setieproxy** - Set proxy settings to use when transferring files using a service account.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0e9f31ba-3070-4ffd-a94c-388c8d78f688
 author: coreyp-at-msft

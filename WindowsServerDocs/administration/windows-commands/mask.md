@@ -1,12 +1,12 @@
 ---
 title: mask
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: bf301474-d74a-44e7-9fad-c8a11e7ca3bd
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: ktmutil
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 53bc56df-f0e5-443b-ab20-bbf8b11d4a9a
 

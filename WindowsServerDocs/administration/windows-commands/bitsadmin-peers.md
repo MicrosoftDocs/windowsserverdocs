@@ -1,12 +1,12 @@
 ---
 title: bitsadmin peers
 description: Windows Commands topic for **bitsadmin peers** - listing of the **Peers** switches.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 5effbd52-993a-4657-b331-596c64deb8fb
 author: coreyp-at-msft

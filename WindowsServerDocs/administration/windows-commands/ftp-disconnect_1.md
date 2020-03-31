@@ -1,12 +1,12 @@
 ---
 title: ftp disconnect_1
 description: Windows Commands topic for ftp disconnect_1
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f91ac304-f126-49df-9ab9-b8fa2ea515fd vhorne
 author: coreyp-at-msft

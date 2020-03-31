@@ -1,12 +1,8 @@
 ---
 title: auditpol remove
-description: Windows Commands topic for **auditpol remove** - removes the per-user audit policy for a specified account or all accounts.
-ms.custom: na
+description: Windows Commands topic for auditpol remove, which removes the per-user audit policy for a specified account or all accounts.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: be42ec55-235c-44f7-9abd-ed1cf3f5b1f5
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes the per-user audit policy for a specified account or all accounts.
+Removes the per-user audit policy for a specified account or all accounts.
 
 ## Syntax
 ```

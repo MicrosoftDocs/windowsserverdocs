@@ -1,12 +1,8 @@
 ---
 title: Set option
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Set option, which sets the options for shadow copy creation.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d8d4921-9fdd-4a3c-bb0f-9df5458c4b84
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # Set option
-
-
 
 Sets the options for shadow copy creation. If used without parameters, **set option** displays help at the command prompt.
 

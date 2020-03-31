@@ -1,12 +1,12 @@
 ---
 title: Software Inventory Logging Aggregator
 description: Describes how to install and manage Software Inventory Logging Aggregator
-ms.custom: na
+
 ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+
+
+
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor

@@ -1,12 +1,12 @@
 ---
 title: ksetup:addenctypeattr
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 32cc87d7-b9e1-4d14-9eb7-3b439c55aa3a
 author: coreyp-at-msft

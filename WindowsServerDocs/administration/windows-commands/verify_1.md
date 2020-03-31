@@ -1,12 +1,12 @@
 ---
 title: verify
 description: Windows Commands topic for verify, which tells **cmd** whether to verify that your files are written correctly to a disk. 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: dfe8bc91-d948-4e47-84ad-a79a60506ffa
 

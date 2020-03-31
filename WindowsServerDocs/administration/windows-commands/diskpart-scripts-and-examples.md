@@ -1,12 +1,12 @@
 ---
 title: Diskpart Scripts and Examples
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 319c0795-11df-47c8-b203-eadb0577ee0d
 author: coreyp-at-msft

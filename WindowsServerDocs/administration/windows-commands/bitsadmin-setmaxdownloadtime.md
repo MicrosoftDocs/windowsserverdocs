@@ -1,12 +1,12 @@
 ---
 title: bitsadmin setmaxdownloadtime
 description: Windows Commands topic for **bitsadmin setmaxdownloadtime** - Sets the download timeout in seconds.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 16b96cf1-5738-415c-9b9d-c4ea8d5e4fec
 author: coreyp-at-msft

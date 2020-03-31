@@ -1,12 +1,12 @@
 ---
 title: End backup
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8ac1f283-6ecf-4523-8e96-95d435dd4f7f
 author: coreyp-at-msft

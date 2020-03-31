@@ -1,12 +1,12 @@
 ---
 title: Scwcmd view
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7995959a-d93e-4865-a6a0-2ab18c2bb47f
 author: coreyp-at-msft

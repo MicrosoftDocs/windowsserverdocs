@@ -1,12 +1,8 @@
 ---
 title: Subcommand set-Device
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for Subcommand set-Device, which changes the attributes of a prestaged computer. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the attributes of a prestaged computer. A prestaged computer is a computer that has been linked to a computer account object in active directory Domain Servers (AD DS). Prestaged clients are also called known computers. You can configure properties on the computer account to control the installation for the client. For example, you can configure the network boot program and the unattend file that the client should receive, as well as the server from which the client should download the network boot program.
+Changes the attributes of a prestaged computer. A prestaged computer is a computer that has been linked to a computer account object in active directory Domain Servers (AD DS). Prestaged clients are also called known computers. You can configure properties on the computer account to control the installation for the client. For example, you can configure the network boot program and the unattend file that the client should receive, as well as the server from which the client should download the network boot program.
+
 ## Syntax
 ```
 wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] 

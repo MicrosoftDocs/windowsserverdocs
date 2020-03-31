@@ -2,12 +2,12 @@
 title: bitsadmin cancel
 description: Windows Commands topic for **bitsadmin cancel** - 
 removes the job from the transfer queue and deletes all temporary files associated with the job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7374b544-6a16-4d3e-872c-dcf4c02ad89d
 author: coreyp-at-msft

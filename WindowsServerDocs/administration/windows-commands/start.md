@@ -1,15 +1,10 @@
 ---
 title: start
-description: Windows Commands topic for **** - 
-ms.custom: na
+description: Windows Commands topic for start, which starts a separate Command Prompt window to run a specified program or command.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # start
-
-
 
 Starts a separate Command Prompt window to run a specified program or command.
 

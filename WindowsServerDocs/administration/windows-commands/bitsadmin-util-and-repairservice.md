@@ -1,12 +1,12 @@
 ---
 title: bitsadmin util and repairservice
 description: Windows Commands topic for **bitsadmin util and repairservice** - Command used to fix known issues with various versions of BITS service.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2ac7baeb-4340-4186-bfcb-66478195378d
 author: coreyp-at-msft

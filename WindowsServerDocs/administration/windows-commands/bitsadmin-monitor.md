@@ -2,12 +2,12 @@
 title: bitsadmin monitor
 description: Windows Commands topic for **bitsadmin monitor** - 
 Monitors jobs in the transfer queue that the current user owns.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2c424d27-e011-49c2-b579-a2c235467c39
 author: coreyp-at-msft

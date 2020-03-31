@@ -1,12 +1,12 @@
 ---
 title: bitsadmin getowner
 description: Windows Commands topic for **bitsadmin getowner** - Retrieves the owner of the specified job.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 5203f84c-a879-4f31-ae3e-7ea74bd63ca5
 author: coreyp-at-msft

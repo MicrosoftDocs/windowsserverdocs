@@ -1,12 +1,12 @@
 ---
 title: logman update
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c98af84f-64ba-40c3-826d-75b80dfb9b34 britw
 author: coreyp-at-msft

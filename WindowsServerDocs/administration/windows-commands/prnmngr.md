@@ -1,12 +1,12 @@
 ---
 title: prnmngr
 description: Learn how to add, delete, and list printers and connections.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 39eee1a8-4b41-4c9f-941e-486495135eb8
 author: coreyp-at-msft

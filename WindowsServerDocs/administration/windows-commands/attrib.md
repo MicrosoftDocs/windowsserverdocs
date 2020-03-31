@@ -1,12 +1,8 @@
 ---
 title: attrib
-description: Windows Commands topic for **attrib** - Displays, sets, or removes attributes assigned to files or directories.
-ms.custom: na
+description: Windows Commands topic for attrib, which displays, sets, or removes attributes assigned to files or directories.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e763ca5-21a2-45d2-b26d-a9c44c99091a
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # attrib
-
-
 
 Displays, sets, or removes attributes assigned to files or directories. If used without parameters, **attrib** displays attributes of all files in the current directory.
 

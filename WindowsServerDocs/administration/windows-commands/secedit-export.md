@@ -1,12 +1,12 @@
 ---
 title: secedit:export
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 49a8b241-aa8c-45b7-844d-67a29fab708e
 author: coreyp-at-msft

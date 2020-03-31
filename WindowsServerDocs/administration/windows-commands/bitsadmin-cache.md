@@ -1,12 +1,12 @@
 ---
 title: bitsadmin cache
 description: Windows Commands topic for **bitsadmin cache** switches - Contains a list of the bitsadmin /Cache switches
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9ae4a283-a187-4fe3-b05c-4b53732c27cb
 author: coreyp-at-msft

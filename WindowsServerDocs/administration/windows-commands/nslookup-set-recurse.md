@@ -1,12 +1,12 @@
 ---
 title: nslookup set recurse
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d1b7a93f-dfb0-4ccd-b230-e0953057fada
 author: coreyp-at-msft

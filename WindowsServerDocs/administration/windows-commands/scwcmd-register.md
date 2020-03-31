@@ -1,12 +1,12 @@
 ---
 title: Scwcmd register
 description: Windows Commands topic for **** - 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: fe4d126a-9f27-4076-b7b1-fbefa45f378a
 author: coreyp-at-msft

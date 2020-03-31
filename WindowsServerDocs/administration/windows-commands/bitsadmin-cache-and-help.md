@@ -1,12 +1,12 @@
 ---
 title: bitsadmin cache and help
 description: Windows Commands topic for **bitsadmin cache and help** - Displays the command-line usage for the **Cache** switches.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0b14db49-84ac-4c2f-bf1f-f65e13cbfb35
 author: coreyp-at-msft

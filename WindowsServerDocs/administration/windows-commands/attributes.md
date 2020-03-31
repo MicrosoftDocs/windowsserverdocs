@@ -1,12 +1,8 @@
 ---
 title: attributes
-description: Windows Commands topic for **attributes** - Displays, sets, or clears the attributes of a disk or volume.
-ms.custom: na
+description: Windows Commands topic for attributes, which displays, sets, or clears the attributes of a disk or volume.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da67c481-b3b1-4aa9-840a-10828ef1b6e5
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # attributes
-
-
 
 Displays, sets, or clears the attributes of a disk or volume.
 
