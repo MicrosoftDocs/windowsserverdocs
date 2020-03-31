@@ -28,7 +28,7 @@ If the fully qualified domain name (FQDN) or Network Basic Input/Output System (
 
 After the Negotiate response, there will be an attempt to get a Kerberos ticket for the Common Internet File System (CIFS) service principal name (SPN) of the server. Look at the Kerberos traffic on TCP port 88 to make sure that there are no Kerberos errors when the SMB client is gaining the token.
 
-> [!NOTE]""""
+> [!NOTE]
 > The errors that occur during the Kerberos Pre-Authentication are OK. The errors that occur after the Kerberos Pre-Authentication (instances in which authentication does not work), are the errors that caused the SMB problem.
 
 Additionally, make the following checks:
@@ -79,7 +79,7 @@ Follow these guidelines as you troubleshoot:
 - Windows 8, Windows Server 2012, and later versions of Windows support client-side encryption (SMBv3 and later).
 
 - Windows 7, Windows Server 2008 R2 and earlier versions of Windows do not support client-side encryption.
-'
+
 - Samba and third-party device may not support encryption. You may have to consult product documentation for more information.
 
 ## References

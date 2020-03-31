@@ -1,6 +1,6 @@
 ---
 title: Get Started
-description: Basics for Server: system requirements, release notes, upgrade options
+description: Basics for Server 2016 - System requirements, release notes, upgrade options
 ms.prod: windows-server
 manager: dongill
 ms.technology: get-started
