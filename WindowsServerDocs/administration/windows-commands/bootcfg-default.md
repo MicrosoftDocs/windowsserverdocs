@@ -1,12 +1,8 @@
 ---
 title: bootcfg default
-description: Windows Commands topic for **bootcfg default** - Specifies the operating system entry to designate as the default.
-
+description: Windows Commands topic for bootcfg default, which specifies the operating system entry to designate as the default.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: e21824d7-8278-41d7-a2c5-ce09803d513a
 author: coreyp-at-msft

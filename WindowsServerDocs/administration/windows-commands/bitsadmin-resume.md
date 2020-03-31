@@ -1,12 +1,8 @@
 ---
 title: bitsadmin resume
-description: Windows Commands topic for **bitsadmin resume** - Activates a new or suspended job in the transfer queue.
-
+description: Windows Commands topic for bitsadmin resume, which activates a new or suspended job in the transfer queue.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 7c7540a9-a11a-4910-923a-2a2a61cbf11d
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin resume
-
-
 
 Activates a new or suspended job in the transfer queue.
 

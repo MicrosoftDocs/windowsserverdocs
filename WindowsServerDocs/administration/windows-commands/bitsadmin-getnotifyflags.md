@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getnotifyflags
-description: Windows Commands topic for **bitsadmin getnotifyflags** - Retrieves the notify flags for the specified job.
-
+description: Windows Commands topic for bitsadmin getnotifyflags, which retrieves the notify flags for the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: d4657e6c-8959-4db7-a4af-e73d3f80ecf8
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin getnotifyflags
-
-
 
 Retrieves the notify flags for the specified job.
 

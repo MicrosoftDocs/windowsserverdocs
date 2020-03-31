@@ -1,13 +1,8 @@
 ---
 title: bootcfg debug
-description: Windows Commands topic for **bootcfg debug** - 
-adds or changes the debug settings for a specified operating system entry.
-
+description: Windows Commands topic for bootcfg debug, which adds or changes the debug settings for a specified operating system entry.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 28afa5fb-a236-46e2-b1a4-a3c43a49c437
 author: coreyp-at-msft
@@ -19,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds or changes the debug settings for a specified operating system entry.
+Adds or changes the debug settings for a specified operating system entry.
 
 ## Syntax
 ```

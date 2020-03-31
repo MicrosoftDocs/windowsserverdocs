@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setreplyfilename
-description: Windows Commands topic for **bitsadmin setreplyfilename** - Specify the path of the file that contains the server reply.
-
+description: Windows Commands topic for bitsadmin setreplyfilename, which specifies the path of the file that contains the server reply.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: c26d3342-0533-40b1-a13e-e09678232b25
 author: coreyp-at-msft
@@ -17,7 +13,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setreplyfilename
 
-Specify the path of the file that contains the server reply.
+Specifies the path of the file that contains the server reply.
 
 **BITS 1.2 and earlier**: Not supported.
 

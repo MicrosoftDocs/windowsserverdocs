@@ -1,12 +1,8 @@
 ---
 title: bitsadmin gettype
-description: Windows Commands topic for **bitsadmin gettype** - Retrieves the job type of the specified job.
-
+description: Windows Commands topic for bitsadmin gettype, which retrieves the job type of the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: bec16f04-3e95-4587-889e-3de6ad03c9c8
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin gettype
-
-
 
 Retrieves the job type of the specified job.
 

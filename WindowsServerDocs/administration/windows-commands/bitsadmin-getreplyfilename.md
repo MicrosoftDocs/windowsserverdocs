@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getreplyfilename
-description: Windows Commands topic for **bitsadmin getreplyfilename** - Gets the path of the file that contains the server reply.
-
+description: Windows Commands topic for bitsadmin getreplyfilename, which gets the path of the file that contains the server reply.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 85447184-1732-4816-a365-2e3599551bf8
 author: coreyp-at-msft

@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getstate
-description: Windows Commands topic for bitsadmin getstate
-
+description: Windows Commands topic for bitsadmin getstate, which retrieves the state of the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 1252d6cf-14ca-44df-beb2-930ff011f297
 author: coreyp-at-msft
@@ -16,7 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin getstate
-
 
 Retrieves the state of the specified job.
 

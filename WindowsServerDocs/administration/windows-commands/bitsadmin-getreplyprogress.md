@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getreplyprogress
-description: Windows Commands topic for **bitsadmin getreplyprogress** - Retrieves the size and progress of the server reply.
-
+description: Windows Commands topic for bitsadmin getreplyprogress, which retrieves the size and progress of the server reply.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 7f7cb0b4-ad95-44fd-a35d-0ddf5fc0b0d0
 author: coreyp-at-msft

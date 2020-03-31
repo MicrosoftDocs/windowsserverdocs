@@ -1,12 +1,8 @@
 ---
 title: bitsadmin help
-description: Windows Commands topic for **bitsadmin help** - Displays the command-line usage.
-
+description: Windows Commands topic for bitsadmin help, which displays the command-line usage.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: c30d89e4-25a3-4974-a002-37138d01e077
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin help
-
-
 
 Displays the command-line usage.
 

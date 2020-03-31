@@ -1,12 +1,8 @@
 ---
 title: bitsadmin gethelpertokenflags
-description: Windows Commands topic for **bitsadmin gethelpertokenflags** - Returns the usage flags for a helper token that is associated with a BITS transfer job.
-
+description: Windows Commands topic for bitsadmin gethelpertokenflags, which returns the usage flags for a helper token that is associated with a BITS transfer job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp

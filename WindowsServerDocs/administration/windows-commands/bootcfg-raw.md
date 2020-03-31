@@ -1,13 +1,8 @@
 ---
 title: bootcfg raw
-description: Windows Commands topic for **bootcfg raw** - 
-adds operating system load options specified as a string to an operating system entry in the **[operating systems]** section of the Boot.ini file.
-
+description: Windows Commands topic for bootcfg raw, which adds operating system load options, specified as a string, to an operating system entry in the operating system section of the Boot.ini file.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: e3458749-b0a0-460f-a022-3ff199a71f27
 author: coreyp-at-msft
@@ -19,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds operating system load options specified as a string to an operating system entry in the **[operating systems]** section of the Boot.ini file.
+Adds operating system load options specified as a string to an operating system entry in the **[operating systems]** section of the Boot.ini file.
 
 ## Syntax
 ```

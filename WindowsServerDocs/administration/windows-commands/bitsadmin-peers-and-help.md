@@ -1,12 +1,8 @@
 ---
 title: bitsadmin peers and help
-description: Windows Commands topic for **bitsadmin peers and help** - Displays the command-line usage for the **Peers** switches.
-
+description: Windows Commands topic for bitsadmin peers and help, which displays the command-line usage for the Peers switches.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 49016dcb-e3be-44d9-b00a-1a42eb5984ff
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin peers and help
-
-
 
 Displays the command-line usage for the **Peers** switches.
 

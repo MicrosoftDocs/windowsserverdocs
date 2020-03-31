@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setaclflag
-description: Windows Commands topic for **bitsadmin setaclflag** - Sets the access control list propagations flags.
-
+description: Windows Commands topic for bitsadmin setaclflag, which sets the access control list propagations flags.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 6e3bcda0-827d-4dfd-8384-d1da018f3e10
 author: coreyp-at-msft

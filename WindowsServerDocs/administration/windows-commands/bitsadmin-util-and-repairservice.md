@@ -1,12 +1,8 @@
 ---
 title: bitsadmin util and repairservice
-description: Windows Commands topic for **bitsadmin util and repairservice** - Command used to fix known issues with various versions of BITS service.
-
+description: Windows Commands topic for bitsadmin util and repairservice, which fixes known issues in various versions of BITS service.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 2ac7baeb-4340-4186-bfcb-66478195378d
 author: coreyp-at-msft
@@ -17,7 +13,7 @@ ms.date: 10/16/2017
 
 # bitsadmin util and repairservice
 
-If BITS fails to start, use this switch to fix known issues with various versions of BITS.
+If BITS fails to start, use this switch to fix known issues in various versions of BITS.
 
 **BITSAdmin 1.5 and earlier:** Not supported.
 

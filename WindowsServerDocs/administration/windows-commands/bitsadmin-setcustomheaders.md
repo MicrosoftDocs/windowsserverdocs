@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setcustomheaders
-description: Windows Commands topic for **bitsadmin setcustomheaders** - add a custom HTTP header to a GET request.
-
+description: Windows Commands topic for bitsadmin setcustomheaders, which adds a custom HTTP header to a GET request.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: ed926410-80d0-46ed-9a90-f752c164bb9a
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin setcustomheaders
-
-
 
 Add a custom HTTP header to a GET request.
 

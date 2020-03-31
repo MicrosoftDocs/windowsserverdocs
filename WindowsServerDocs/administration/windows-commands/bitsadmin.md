@@ -1,12 +1,8 @@
 ---
 title: bitsadmin
-description: Windows Commands topic for **bitsadmin** - bitsadmin is a command-line tool that you can use to create, download, or upload jobs and monitor their progress.
-
+description: Windows Commands topic for bitsadmin, which is a command-line tool used to create, download, or upload jobs and monitor their progress.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 > **Applies To**: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-bitsadmin is a command-line tool that you can use to create download or upload jobs and monitor their progress. The bitsadmin tool uses switches to identify the work to perform.  You can call `bitsadmin /?` or `bitsadmin /HELP` to get a list of switches.
+Bitsadmin is a command-line tool that you can use to create download or upload jobs and monitor their progress. The bitsadmin tool uses switches to identify the work to perform.  You can call `bitsadmin /?` or `bitsadmin /HELP` to get a list of switches.
 
 Most switches require a \<Job\> parameter that you set to the job's display name, or GUID. Note that a job's display name may not be unique. The **/create** and **/list** switches return a job's GUID.
 

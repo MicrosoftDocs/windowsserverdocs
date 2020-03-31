@@ -1,12 +1,8 @@
 ---
 title: bitsadmin info
-description: Windows Commands topic for **Displays summary information about the specified job.** - bitsadmin info
-
+description: Windows Commands topic for bitsadmin info, which displays summary information about the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 5c306677-0d64-41c0-8276-5bba7750cecb
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin info
-
-
 
 Displays summary information about the specified job.
 

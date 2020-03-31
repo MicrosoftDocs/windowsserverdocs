@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache
-description: Windows Commands topic for bitsadmin cache, which contains a list of the bitsadmin /Cache switches.
+description: Windows Commands topic for bitsadmin cache, which contains a list of the bitsadmin cache switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,12 +1,8 @@
 ---
 title: break
-description: Windows Commands topic for **break_1** - Sets or clears extended CTRL+C checking on MS-DOS systems. If used without parameters, **break** displays the current setting. 
-
+description: Windows Commands topic for break_1, which sets or clears extended CTRL+C checking on MS-DOS systems.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: c89b7357-d69e-4141-826e-73c9ba0fc630
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # break
-
-
 
 Sets or clears extended CTRL+C checking on MS-DOS systems. If used without parameters, **break** displays the current setting.
 

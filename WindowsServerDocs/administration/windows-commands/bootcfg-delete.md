@@ -1,12 +1,8 @@
 ---
 title: bootcfg delete
-description: Windows Commands topic for **bootcfg delete** - deletes an operating system entry in the operating systems section of the Boot.ini file.
-
+description: Windows Commands topic for bootcfg delete, which deletes an operating system entry in the operating systems section of the Boot.ini file.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 71382e29-9b39-41c8-9c23-cf0ff829440a
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-deletes an operating system entry in the [operating systems] section of the Boot.ini file.
+Deletes an operating system entry in the [operating systems] section of the Boot.ini file.
 
 ## Syntax
 ```

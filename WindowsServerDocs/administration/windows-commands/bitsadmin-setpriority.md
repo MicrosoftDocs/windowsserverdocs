@@ -1,13 +1,8 @@
 ---
 title: bitsadmin setpriority
-description: Windows Commands topic for **bitsadmin setpriority** - 
-Sets the priority of the specified job.
-
+description: Windows Commands topic for bitsadmin setpriority, which sets the priority of the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 90788363-01a2-4d7c-a560-a3eba45b5e9e
 author: coreyp-at-msft
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin setpriority
-
-
 
 Sets the priority of the specified job.
 

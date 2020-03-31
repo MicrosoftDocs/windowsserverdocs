@@ -1,6 +1,6 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: Windows Commands topic for **bitsadmin replaceremoteprefix** - All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*.
+description: Windows Commands topic for bitsadmin replaceremoteprefix, which changes all files in the job whose remote URL begins with *OldPrefix* to use *NewPrefix*.
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # bitsadmin replaceremoteprefix
 
-All files in the job whose remote URL begins with *OldPrefix* are changed to use *NewPrefix*.
+Changes all files in the job whose remote URL begins with *OldPrefix* to use *NewPrefix*.
 
 ## Syntax
 

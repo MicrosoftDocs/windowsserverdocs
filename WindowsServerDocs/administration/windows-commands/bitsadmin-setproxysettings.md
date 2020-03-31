@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setproxysettings
-description: Windows Commands topic for **bitsadmin setproxysettings** - Sets the proxy settings for the specified job.
-
+description: Windows Commands topic for bitsadmin setproxysettings, which sets the proxy settings for the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: be8edb1b-614e-4d0b-a8f8-64b4bde3e64b
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin setproxysettings
-
-
 
 Sets the proxy settings for the specified job.
 

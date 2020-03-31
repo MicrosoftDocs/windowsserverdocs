@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getproxylist - Retrieves the proxy list for the specified job.
-description: Windows Commands topic for **bitsadmin getproxylist** - Retrieves the proxy list for the specified job.
-
+description: Windows Commands topic for bitsadmin getproxylist, which retrieves the proxy list for the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: eebfa727-d8f1-4ae3-9382-6d8ffe8c3df3
 author: coreyp-at-msft

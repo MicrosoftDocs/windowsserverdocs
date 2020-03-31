@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getpriority
-description: Windows Commands topic for **bitsadmin getpriority** - Retrieves the priority of the specified job.
-
+description: Windows Commands topic for bitsadmin getpriority, which retrieves the priority of the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp

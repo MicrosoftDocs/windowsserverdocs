@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getvalidationstate
-description: Windows Commands topic for **bitsadmin getvalidationstate** - Reports the content validation state of the given file within the job. 
-
+description: Windows Commands topic for bitsadmin getvalidationstate, which reports the content validation state of the given file within the job. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 6ada3f1f-9967-4262-9d22-ed641e23f516
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin getvalidationstate
-
-
 
 Reports the content validation state of the given file within the job.
 

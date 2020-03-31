@@ -1,12 +1,8 @@
 ---
 title: bootcfg addsw
-description: Windows Commands topic for **bootcfg addsw** - adds operating system load options for a specified operating system entry.
-
+description: Windows Commands topic for bootcfg addsw, which adds operating system load options for a specified operating system entry.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: d8389293-ecd9-42f0-b84b-b9ead4cf52e6
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds operating system load options for a specified operating system entry.
+Adds operating system load options for a specified operating system entry.
 
 ## Syntax
 ```

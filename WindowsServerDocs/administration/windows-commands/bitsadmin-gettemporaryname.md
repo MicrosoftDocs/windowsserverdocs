@@ -1,12 +1,8 @@
 ---
 title: bitsadmin gettemporaryname
-description: Windows Commands topic for **bitsadmin gettemporaryname** - Reports the temporary filename of the given file within the job.
-
+description: Windows Commands topic for bitsadmin gettemporaryname, which reports the temporary filename of the given file within the job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 68925edc-a801-4292-a812-7471c4f60fdd
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin gettemporaryname
-
-
 
 Reports the temporary filename of the given file within the job.
 

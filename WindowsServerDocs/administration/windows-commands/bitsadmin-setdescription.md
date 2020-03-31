@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setdescription
-description: Windows Commands topic for **bitsadmin setdescription** - Sets the description of the specified job.
-
+description: Windows Commands topic for bitsadmin setdescription, which sets the description of the specified job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 1e46a5dd-4637-4a2e-b88f-d3f85b177db8
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # bitsadmin setdescription
-
-
 
 Sets the description of the specified job.
 

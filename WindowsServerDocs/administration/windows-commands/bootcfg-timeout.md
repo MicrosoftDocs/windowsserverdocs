@@ -1,13 +1,8 @@
 ---
 title: bootcfg timeout
-description: Windows Commands topic for **bootcfg timeout** - 
-changes the operating system time-out value.
-
+description: Windows Commands topic for bootcfg timeout, which changes the operating system time-out value.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
 author: coreyp-at-msft
@@ -19,13 +14,16 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the operating system time-out value.
+Changes the operating system time-out value.
 
 ## Syntax
+
 ```
 bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 ```
+
 ## Parameters
+
 
 |        Parameter        |                                                                                                                                                                                  Description                                                                                                                                                                                   |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
