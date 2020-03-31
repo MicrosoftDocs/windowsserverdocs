@@ -1,12 +1,8 @@
 ---
 title: certreq
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for certreq, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.  
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
 author: coreyp-at-msft
@@ -17,13 +13,10 @@ ms.date: 10/16/2017
 
 # certreq
 
-
-
 Certreq can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.
 
 > [!WARNING]
-> - Earlier versions of certreq may not provide all of the options that are described in this document. You can see all the options that a specific version of certreq provides by running the commands shown in the Syntax notations section.
-> - Certreq does not support creating a new certificate request based on a Key Attestation template when in a CEP/CES environment
+> Earlier versions of certreq may not provide all of the options that are described in this document. You can see all the options that a specific version of certreq provides by running the commands shown in the Syntax notations section. Certreq does not support creating a new certificate request based on a Key Attestation template when in a CEP/CES environment
 
 ## <a name=BKMK_Contents></a>Contents
 

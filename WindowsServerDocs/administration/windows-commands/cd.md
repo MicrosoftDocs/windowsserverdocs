@@ -1,12 +1,8 @@
 ---
 title: cd
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for cd, which displays the name of or changes the current directory. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 932d9cc1-3dff-40da-835c-1cb0894874f1
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # cd
-
-
 
 Displays the name of or changes the current directory. If used with only a drive letter (for example, `cd C:`), **cd** displays the names of the current directory in the specified drive. If used without parameters, **cd** displays the current drive and directory.
 

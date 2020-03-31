@@ -1,12 +1,8 @@
 ---
 title: cacls
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for cacls, which displays or modifies discretionary access control lists (DACL) on specified files.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays or modifies discretionary access control lists (DACL) on specified files.  
+
 ## Syntax  
 ```  
 cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]  

@@ -1,12 +1,8 @@
 ---
 title: call
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for call, which calls one batch program from another without stopping the parent batch program.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
 author: coreyp-at-msft
@@ -17,14 +13,12 @@ ms.date: 06/05/2018
 
 # call
 
-
-
-Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call.
-
-> [!NOTE]
-> **Call** has no effect at the command prompt when it is used outside of a script or batch file.
+Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
+
+> [!NOTE]
+> Call has no effect at the command prompt when it is used outside of a script or batch file.
 
 ## Syntax
 
