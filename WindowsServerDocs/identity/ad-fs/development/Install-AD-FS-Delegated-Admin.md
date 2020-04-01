@@ -2,9 +2,10 @@
 ms.assetid: 46725afe-8652-4cd7-928c-93b98f7fbae3
 title: Creating an AD FS farm without Domain Administrator privileges
 description: Using the Install-AdfsFarm cmdlet and script to create an AD FS farm using delegated admin credentials
+author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 04/31/2017
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: windows-server-threshold
 
@@ -84,7 +85,7 @@ PS:\>$localAdminCred = (get-credential)
 PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
 ```
 
-# Script for preparing AD
+## Script for preparing AD
 The following PowerShell script can be used to accomplish the examples above
 
 ```
