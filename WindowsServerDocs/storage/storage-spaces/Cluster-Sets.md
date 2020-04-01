@@ -165,7 +165,7 @@ When creating a cluster set, you following prerequisites are recommended:
 
         Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
 
-9. Configure Kerberos [constrained delegation](https://blogs.technet.microsoft.com/virtualization/2017/02/01/live-migration-via-constrained-delegation-with-kerberos-in-windows-server-2016/) between all cluster set members.
+9. Configure Kerberos [constrained delegation](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) between all cluster set members.
 
 10. Configure the cross-cluster virtual machine live migration authentication type to Kerberos on each node in the Cluster Set.
 
