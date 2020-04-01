@@ -43,6 +43,6 @@ To prevent shadow copies from being deleted when you exit DiskShadow, type:
 set context persistent
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

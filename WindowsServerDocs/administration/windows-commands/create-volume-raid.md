@@ -1,12 +1,8 @@
 ---
 title: create volume raid
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for create volume raid, which creates a RAID-5 volume using three or more specified dynamic disks.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
 author: coreyp-at-msft
@@ -18,13 +14,11 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates a RAID\-5 volume using three or more specified dynamic disks.  
-  
+Creates a RAID-5 volume using three or more specified dynamic disks.  
+
 > [!IMPORTANT]  
-> This DiskPart command is not available in any edition of Windows Vista.  
-  
-  
-  
+> This DiskPart command is not available in any edition of Windows Vista.
+
 ## Syntax  
   
 ```  
@@ -51,7 +45,7 @@ To create a RAID\-5 volume of 1000 megabytes in size, using disks 1, 2 and 3, ty
 create volume raid size=1000 disk=1,2,3  
 ```  
   
-#### additional references  
+## Additional References  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

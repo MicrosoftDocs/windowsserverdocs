@@ -41,6 +41,6 @@ The following example retrieves the notify interface for the job named *myDownlo
 C:\>bitsadmin /GetNotifyInterface myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

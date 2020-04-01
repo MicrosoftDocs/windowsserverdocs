@@ -34,6 +34,6 @@ The following example retrieves the last modified time for the job named *myDown
 C:\>bitsadmin /GetModificationTime myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

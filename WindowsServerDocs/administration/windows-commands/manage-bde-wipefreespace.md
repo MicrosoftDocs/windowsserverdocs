@@ -49,7 +49,7 @@ The following example illustrates using the **-w** command with the **-cancel** 
 manage-bde -w -Cancel C:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

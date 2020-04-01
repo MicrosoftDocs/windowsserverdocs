@@ -57,7 +57,7 @@ To bring the disk with focus online, type:
 online disk
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

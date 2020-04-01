@@ -43,6 +43,6 @@ To view detailed information about all servers, type:
 WDSUTIL /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

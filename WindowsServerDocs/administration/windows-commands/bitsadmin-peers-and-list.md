@@ -28,6 +28,6 @@ The following example lists all peers.
 C:\>bitsadmin /Peers /List
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

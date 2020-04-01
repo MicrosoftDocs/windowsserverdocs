@@ -47,6 +47,6 @@ To display the contents of a lengthy file named Holiday.mar one screen at a time
 type holiday.mar | more 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

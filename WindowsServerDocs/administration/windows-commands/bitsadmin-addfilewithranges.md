@@ -47,6 +47,6 @@ The following example tells BITS to transfer 100 bytes from offset 0, 100 bytes 
 C:\>bitsadmin /addfilewithranges http://downloadsrv/10mb.zip c:\10mb.zip 0:100,2000:100,5000:eof
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

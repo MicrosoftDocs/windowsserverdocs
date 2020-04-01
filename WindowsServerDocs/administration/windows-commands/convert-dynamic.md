@@ -1,12 +1,8 @@
 ---
 title: convert dynamic
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for convert dynamic, which converts a basic disk into a dynamic disk.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # convert dynamic
-
-
 
 Converts a basic disk into a dynamic disk.
 
@@ -47,7 +41,7 @@ To convert a basic disk into a dynamic disk, type:
 convert dynamic
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

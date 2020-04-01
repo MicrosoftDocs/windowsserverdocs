@@ -40,6 +40,6 @@ The following example retrieves the reply data for the job named *myDownloadJob*
 C:\>bitsadmin /GetReplyData myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

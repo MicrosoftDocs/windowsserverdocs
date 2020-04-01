@@ -40,6 +40,6 @@ The following example retrieves the reply filename for the job named *myDownload
 C:\>bitsadmin /GetReplyFileName myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -34,6 +34,6 @@ When the state of the job is TRANSFERRED, BITS has successfully transferred all 
 C:\>bitsadmin /complete myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

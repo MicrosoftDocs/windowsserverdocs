@@ -48,6 +48,6 @@ The audit policy command-line tool can be used to:
 -   Load an audit policy from a CSV text file.
 -   Configure global resource SACLs.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

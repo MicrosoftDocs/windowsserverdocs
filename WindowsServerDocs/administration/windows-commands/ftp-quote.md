@@ -36,6 +36,6 @@ Send a **quit** command to the remote ftp server.
 ```  
 quote quit  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: literal_1](ftp-literal_1.md)  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

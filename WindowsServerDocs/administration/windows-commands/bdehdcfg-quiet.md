@@ -36,7 +36,7 @@ The following example illustrates using the **quiet** command.
 bdehdcfg -target default -quiet
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Bdehdcfg](bdehdcfg.md)

@@ -67,6 +67,6 @@ Listing writer status ...
 8 writers listed. 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

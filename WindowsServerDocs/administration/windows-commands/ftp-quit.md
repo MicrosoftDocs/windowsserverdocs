@@ -30,5 +30,5 @@ End the ftp session with the remote computer and exit **ftp** to the operating s
 ```  
 quit  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

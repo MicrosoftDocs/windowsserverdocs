@@ -1,12 +1,8 @@
 ---
 title: choice
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for choice, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: c65a9119-410b-4dcf-9fa7-4e07d2a7238b
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # choice
-
-
 
 Prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice. If used without parameters, **choice** displays the default choices **Y** and **N**.
 
@@ -90,6 +84,6 @@ The following prompt appears when the batch file runs the **choice** command:
 > [!NOTE]
 > In this example, if the user does not press a key within five seconds, **choice** selects **N** by default and returns an error value of 2. Otherwise, **choice** returns the value corresponding to the user's choice.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

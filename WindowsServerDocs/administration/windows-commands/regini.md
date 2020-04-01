@@ -46,6 +46,6 @@ The following guidelines apply primarily to the content of the text files that c
 -   Use the backslash to indicate continuation of a line. The command will ignore all characters from the backslash up to (but not including) the first non-blank character of the next line. If you include more than one space before the backslash, it is replaced by a single space.
 -   Use hard-tab characters to control indentation. This indentation indicates the tree structure of the registry keys; however, these characters are converted to a single space regardless of their position.
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

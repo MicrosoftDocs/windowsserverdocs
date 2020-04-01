@@ -52,7 +52,7 @@ ksetup /addkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 This results in a non-Windows Kerberos password server that controls all the passwords for authentication between it and the realm.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:delkpasswd](ksetup-delkpasswd.md)

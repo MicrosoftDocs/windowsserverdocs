@@ -48,7 +48,7 @@ Change the computer account password on the local computer from IPops897 to IPop
 ksetup /setcomputerpassword IPop$897!
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

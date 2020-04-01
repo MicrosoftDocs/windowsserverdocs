@@ -48,6 +48,6 @@ The following example shows how you can use the **pwlauncher** command to enable
 Pwlauncher /enable
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

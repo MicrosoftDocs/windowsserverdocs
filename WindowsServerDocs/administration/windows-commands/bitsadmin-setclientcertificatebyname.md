@@ -37,6 +37,6 @@ The following example specifies the name of the client certificate *myCertificat
 C:\>bitsadmin Bitsadmin /SetClientCertificateByName myJob 1 MY myCertificate 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

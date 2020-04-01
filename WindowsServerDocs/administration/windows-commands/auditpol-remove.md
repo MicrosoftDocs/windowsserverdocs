@@ -42,5 +42,5 @@ To remove the per-user audit policy for all users, type:
 ```
 auditpol /remove /allusers
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)

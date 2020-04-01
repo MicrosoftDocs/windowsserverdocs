@@ -119,6 +119,6 @@ To format a floppy disk in drive A and assign it the volume label "DATA," type:
 format a: /v:DATA
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](https://technet.microsoft.com/library/cc771080.aspx)

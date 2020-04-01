@@ -43,7 +43,7 @@ The following example illustrates using the **size** command to allocate 500 MB 
 bdehdcfg -target default -size 500
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Bdehdcfg](bdehdcfg.md)

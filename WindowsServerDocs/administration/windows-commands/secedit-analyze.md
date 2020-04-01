@@ -56,7 +56,7 @@ Let's say that the analysis revealed some inadequacies so the security template,
 Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /overwrite /log C:\Security\FY11\SecAnalysisContosoFY11.xml /quiet
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit](secedit.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

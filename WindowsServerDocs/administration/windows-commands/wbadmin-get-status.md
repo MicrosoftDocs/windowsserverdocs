@@ -34,7 +34,7 @@ This subcommand has no parameters.
 -   This subcommand will not stop until the current backup or recovery operation is finished—the subcommand will continue to run even if you close the command window.
 -   If you want to stop the current backup or recovery operation, use the **wbadmin stop job** subcommand.
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

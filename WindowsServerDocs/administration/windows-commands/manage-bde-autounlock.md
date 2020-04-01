@@ -48,7 +48,7 @@ The following example illustrates using the **-autounlock** command to enable au
 manage-bde –autounlock -enable E:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

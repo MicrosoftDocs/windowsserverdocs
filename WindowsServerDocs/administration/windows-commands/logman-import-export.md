@@ -43,5 +43,5 @@ The following command imports the XML file c:\windows\perf_log.xml from the comp
 ```  
 logman import perf_log -s server_1 -xml c:\windows\perf_log.xml  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

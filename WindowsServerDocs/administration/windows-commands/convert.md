@@ -1,12 +1,8 @@
 ---
 title: convert
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for convert, which converts file allocation table (FAT) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 96e437c0-1aa3-46ab-9078-a7b8cdaf3792
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # convert
-
-
 
 Converts file allocation table (FAT) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact. Volumes converted to the NTFS file system cannot be converted back to FAT or FAT32.
 
@@ -57,6 +51,6 @@ To convert the volume on drive E to NTFS and display all messages during the con
 convert e: /fs:ntfs /v
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

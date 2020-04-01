@@ -34,6 +34,6 @@ The following example retrieves error count information for the job named *myDow
 C:\>bitsadmin /GetErrorCount myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

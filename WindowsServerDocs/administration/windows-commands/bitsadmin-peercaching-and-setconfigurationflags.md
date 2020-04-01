@@ -35,6 +35,6 @@ The following example specifies the job's data to be downloaded from peers for t
 C:\> Bitsadmin /PeerCaching /SetConfigurationFlags myJob 1
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

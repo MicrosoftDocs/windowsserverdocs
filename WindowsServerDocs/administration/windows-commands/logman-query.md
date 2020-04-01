@@ -47,5 +47,5 @@ The following command lists all available providers of data collectors on the ta
 ```  
 logman query providers  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

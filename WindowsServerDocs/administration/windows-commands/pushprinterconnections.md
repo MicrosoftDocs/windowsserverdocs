@@ -38,7 +38,7 @@ pushprinterconnections <-log> <-?>
 
 This utility is for use in machine startup or user logon scripts, and should not be run from the command line.
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Deploy Printers by Using Group Policy](https://go.microsoft.com/fwlink/?LinkId=230627)

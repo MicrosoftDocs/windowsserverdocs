@@ -48,7 +48,7 @@ Verify the encryption type attribute for the domain:
 ksetup /getenctypeattr mit.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Klist](klist.md)
 -   [Ksetup:domain](ksetup-domain.md)

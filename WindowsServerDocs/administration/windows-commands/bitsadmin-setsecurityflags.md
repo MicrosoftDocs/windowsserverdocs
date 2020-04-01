@@ -49,6 +49,6 @@ The following example sets the security flags to enable a CRL check for the job 
 C:\>bitsadmin /SetSecurityFlags myJob 0x0001
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

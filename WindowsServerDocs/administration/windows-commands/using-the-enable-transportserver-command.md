@@ -30,7 +30,7 @@ To enable the services on the server, run one of the following:
 wdsutil /Enable-TransportServer
 wdsutil /verbose /Enable-TransportServer /Server:MyWDSServer
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-TransportServer Command](using-the-disable-transportserver-command.md)
 [Using the get-TransportServer Command](using-the-get-transportserver-command.md)

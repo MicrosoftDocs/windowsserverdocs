@@ -40,6 +40,6 @@ The following example suspends the job named *myDownloadJob*.
 C:\>bitsadmin /Suspend myDownloadJob
 ```
 
-#### additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

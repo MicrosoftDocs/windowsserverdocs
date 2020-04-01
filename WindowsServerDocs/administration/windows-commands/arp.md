@@ -47,5 +47,5 @@ arp [/a [<Inetaddr>] [/n <ifaceaddr>]] [/g [<Inetaddr>] [-n <ifaceaddr>]] [/d <I
   ```
   arp /s 10.0.0.80 00-AA-00-4F-2A-9C 
   ```
-  ## additional references
+  ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)

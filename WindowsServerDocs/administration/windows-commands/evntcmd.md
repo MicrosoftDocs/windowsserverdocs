@@ -85,5 +85,5 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
     ```  
     #pragma delete_TRAP_DEST private localhost  
     ```  
-    ## additional references  
+    ## Additional References  
 - [Command-Line Syntax Key](command-line-syntax-key.md)  

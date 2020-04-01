@@ -63,6 +63,6 @@ To restart the remote computer \\\\ServerName with the same parameters, type:
 shutdown /r /m \\servername /t 60 /c Reconfiguring myapp.exe /f /d p:4:1
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

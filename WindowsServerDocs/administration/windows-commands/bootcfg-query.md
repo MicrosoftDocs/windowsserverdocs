@@ -52,5 +52,5 @@ bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
   bootcfg /query /s srvmain /u maindom\hiropln /p p@ssW23
   bootcfg /query /u hiropln /p p@ssW23
   ```
-  #### additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)

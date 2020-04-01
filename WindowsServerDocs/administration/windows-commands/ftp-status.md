@@ -30,5 +30,5 @@ Display the current status of ftp connections.
 ```  
 status  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

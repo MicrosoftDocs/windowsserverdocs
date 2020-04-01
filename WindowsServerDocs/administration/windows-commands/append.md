@@ -51,6 +51,6 @@ To store a copy of the appended directory to an environment variable named APPEN
 append /e
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

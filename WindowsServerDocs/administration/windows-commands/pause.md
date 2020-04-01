@@ -63,6 +63,6 @@ goto begin
 ```
 In this example, all the files on the disk in drive A are copied to the current directory. After the message prompts you to put a new disk in drive A, the **pause** command suspends processing so that you can change disks and then press any key to resume processing. This batch program runs in an endless loop—the **goto begin** command sends the command interpreter to the Begin label of the batch file. To stop this batch program, press CTRL+C and then press Y.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

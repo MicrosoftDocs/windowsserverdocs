@@ -50,6 +50,6 @@ To recover the file Story.txt in the \Fiction directory on drive D, type:
 recover d:\fiction\story.txt 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

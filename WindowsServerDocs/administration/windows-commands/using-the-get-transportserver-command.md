@@ -34,7 +34,7 @@ To view configuration information, type:
 ```
 wdsutil /Get-TransportServer /Server:MyWDSServer /Show:Config
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-TransportServer Command](using-the-disable-transportserver-command.md)
 [Using the enable-TransportServer Command](using-the-enable-transportserver-command.md)

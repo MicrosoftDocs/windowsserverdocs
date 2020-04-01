@@ -121,7 +121,7 @@ To read the USN journal with a specific start USN, type:
 fsutil usn readjournal startusn=0xF00
 ```
 
-#### Additional references
+## Additional References
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 [Fsutil](Fsutil.md)

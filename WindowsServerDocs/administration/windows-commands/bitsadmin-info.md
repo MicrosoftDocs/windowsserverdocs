@@ -38,6 +38,6 @@ The following example retrieves information about the job named *myDownloadJob*.
 C:\>bitsadmin /Info myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -60,6 +60,6 @@ The following command updates the existing configuration data collector cfg_log 
 ```  
 logman update cfg cfg_log -reg HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  
 [logman create cfg](logman-create-cfg.md)  

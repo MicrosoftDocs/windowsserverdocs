@@ -37,6 +37,6 @@ set all
 
 -   **Set all** also prints information about the default server and computer (that is, the host).
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

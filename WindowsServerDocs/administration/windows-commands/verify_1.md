@@ -48,6 +48,6 @@ To turn the **verify** setting on, type:
 Verify on
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

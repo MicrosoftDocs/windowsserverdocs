@@ -35,5 +35,5 @@ Offline volume
 |[Offline disk](offline-disk.md)|Takes the offline disk with focus to the online state.|
 |[Offline volume](offline-volume.md)|Takes the offline volume with focus to the online state.|
 
-#### Additional references
+## Additional References
 

@@ -34,6 +34,6 @@ The following example retrieves the minimum retry delay for the job named *myDow
 C:\>bitsadmin /GetMinRetryDelay myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

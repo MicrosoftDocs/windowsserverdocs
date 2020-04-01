@@ -38,6 +38,6 @@ exec <ScriptFile.cmd>
 -   This command is used to duplicate or restore data as part of a backup or restore sequence.
 -   If the script fails, an error is returned and DiskShadow quits.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

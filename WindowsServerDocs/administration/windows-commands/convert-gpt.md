@@ -1,12 +1,8 @@
 ---
 title: convert gpt
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for convert gpt, which converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: b3b1b747-0a7a-4be2-8487-2c4be16ee190
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # convert gpt
-
-
 
 Converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.
 
@@ -49,7 +43,7 @@ To convert a basic disc from MBR partition style to GPT partition style, type:
 convert gpt
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

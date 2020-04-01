@@ -1,12 +1,8 @@
 ---
 title: Commands by Server Role
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for Commands by Server Role, which describes the primary function of the server.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 343597ec-9b92-4b92-8d6c-faef4b565068
 author: coreyp-at-msft
@@ -22,5 +18,5 @@ A server role describes the primary function of the server. Administrators can c
 
 -   [Print Command Reference](print-command-reference.md)
 -   [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
--   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+-   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)
 -   [Windows Server Backup Command Reference](windows-server-backup-command-reference.md)

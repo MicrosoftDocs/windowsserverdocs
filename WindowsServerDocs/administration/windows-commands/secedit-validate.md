@@ -51,7 +51,7 @@ After a rollback is performed on a security template, you want to verify that th
 Secedit /validate secRBKcontoso.inf
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Secedit](secedit.md)

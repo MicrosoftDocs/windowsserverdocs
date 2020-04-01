@@ -60,6 +60,6 @@ rem Set prompt to indicate current directory
 prompt $p$g
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

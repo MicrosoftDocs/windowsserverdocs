@@ -41,7 +41,7 @@ copy **test.txt** to the local computer as **test1.txt** using the current file 
 ```  
 Get test.txt test1.txt  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: ascii](ftp-ascii.md)  
 -   [ftp: binary](ftp-binary.md)  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

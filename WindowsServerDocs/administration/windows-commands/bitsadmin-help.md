@@ -28,6 +28,6 @@ The following example retrieves the command-line help.
 C:\>bitsadmin /help
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

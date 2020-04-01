@@ -35,6 +35,6 @@ set [no]d2
 |  **d2**   |                 Turns on exhaustive Debugging Mode.                  |
 |   {help   |                                  ?}                                  |
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

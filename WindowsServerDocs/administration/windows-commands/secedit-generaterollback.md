@@ -54,7 +54,7 @@ After creating the security template using the Security Configuration and Analys
 Secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcontoso.inf /rbk sectmplcontosoRBK.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit](secedit.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

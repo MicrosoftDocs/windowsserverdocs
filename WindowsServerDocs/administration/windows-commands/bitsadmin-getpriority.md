@@ -37,6 +37,6 @@ The following example retrieves the priority for the job named *myDownloadJob*.
 C:\>bitsadmin /GetPriority myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

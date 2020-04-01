@@ -70,7 +70,7 @@ The following example displays RSoP data for the computer **srvmain** and the lo
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
   ```
   
-## additional references
+## Additional References
 - [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -38,7 +38,7 @@ verify the realm CORP.CONTOSO.COM uses the non-Windows KDC server mitkdc.contoso
 ksetup /delkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 To verify the command worked as intended, run **ksetup** on the Windows computer to verify the realm CORP.CONTOSO.COM is not mapped to a Kerberos password server (the KDC name).
-## additional references
+## Additional References
 -   [ksetup](ksetup.md)
 -   [ksetup:delkpasswd](ksetup-delkpasswd.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

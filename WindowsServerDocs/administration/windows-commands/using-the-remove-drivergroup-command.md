@@ -37,6 +37,6 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:PrinterDrivers
 WDSUTIL /Remove-DriverGroup /DriverGroup:PrinterDrivers /Server:MyWdsServer
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

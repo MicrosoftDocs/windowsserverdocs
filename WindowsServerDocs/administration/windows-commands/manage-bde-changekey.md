@@ -45,7 +45,7 @@ The following example illustrates using the **-changekey** command to create a n
 manage-bde -changekey C: E:\
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

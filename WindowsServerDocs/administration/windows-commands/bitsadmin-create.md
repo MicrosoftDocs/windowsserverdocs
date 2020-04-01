@@ -41,6 +41,6 @@ Creates a download job named *myDownloadJob*.
 C:\>bitsadmin /create myDownloadJob
 ```
 
-## additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

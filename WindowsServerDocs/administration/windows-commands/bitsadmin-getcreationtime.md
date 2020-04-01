@@ -36,6 +36,6 @@ The following example retrieves the creation time for the job named *myDownloadJ
 C:\>bitsadmin /GetCreationTime myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

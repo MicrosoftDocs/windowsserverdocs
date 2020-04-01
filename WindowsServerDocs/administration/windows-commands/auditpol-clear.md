@@ -40,5 +40,5 @@ auditpol /clear /y
 ```
 > [!NOTE]
 > The preceding example is useful when using a script to perform this operation.
-> #### additional references
+> ## Additional References
 > [Command-Line Syntax Key](command-line-syntax-key.md)

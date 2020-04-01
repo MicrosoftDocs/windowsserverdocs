@@ -46,6 +46,6 @@ The following example repairs the BITS Service configuration.
 C:\>bitsadmin /Util /RepairService
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

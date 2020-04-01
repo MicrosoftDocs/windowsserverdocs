@@ -46,7 +46,7 @@ bitsadmin /Cache /SetExpirationtime
 |[bitsadmin cache and getexpirationtime](bitsadmin-cache-and-getexpirationtime.md)|Retrieves the cache expiration time.|
 |[bitsadmin cache and setexpirationtime](bitsadmin-cache-and-setexpirationtime.md)|Sets the cache expiration time.|
 
-## additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

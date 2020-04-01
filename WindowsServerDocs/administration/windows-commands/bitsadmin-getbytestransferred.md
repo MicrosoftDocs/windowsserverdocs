@@ -34,6 +34,6 @@ The following example retrieves the number of bytes transferred for the job name
 C:\>bitsadmin /GetBytesTransferred myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -58,7 +58,7 @@ Import just the security policies portion of the file to a different database on
 Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies\SecContoso.inf /areas securitypolicy /log C:\Security\FY11\SecAnalysisContosoFY12.log /quiet
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit:export](secedit-export.md)
 -   [Secedit:generaterollback](secedit-generaterollback.md)

@@ -35,7 +35,7 @@ The following example retrieves the flags for the job named *myJob*.
 C:\>bitsadmin /GetPeerCachingFlags myJob
 ```
 
-## additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

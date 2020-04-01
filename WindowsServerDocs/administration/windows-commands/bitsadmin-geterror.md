@@ -34,6 +34,6 @@ The following example retrieves the error information for the job named *myDownl
 C:\>bitsadmin /GetError myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

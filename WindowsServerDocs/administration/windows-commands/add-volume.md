@@ -56,6 +56,6 @@ To add drive C to the Shadow Copy Set and assign an alias named System1, type:
 add volume c: alias System1
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

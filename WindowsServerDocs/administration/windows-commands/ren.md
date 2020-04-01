@@ -57,6 +57,6 @@ To change the name of a directory from Chap10 to Part10, type:
 ren chap10 part10 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

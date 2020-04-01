@@ -32,5 +32,5 @@ retain
 -   On a master boot record (MBR) dynamic disk, this command creates a partition entry in the master boot record.
 -   On a GUID partition table (GPT) dynamic disk, this command creates a partition entry in the GUID partition table.
 
-#### Additional references
+## Additional References
 

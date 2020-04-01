@@ -37,5 +37,5 @@ Save a list of the current directory on the remote computer in the local file **
 ```  
 dir . dirlist.txt  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

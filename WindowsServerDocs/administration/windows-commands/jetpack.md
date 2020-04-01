@@ -56,5 +56,5 @@ jetpack.exe compacts the WINS or DHCP database by doing the following:
 > [!NOTE]
 > During the compact process, jetpack.exe creates a temporary file with the name that is specified by the *temp database name* parameter. The temporary file is removed when the compact process is complete. Make sure you do not have a file already existing in WINS or DHCP folder with the same name as the one specified in the *temp database name* parameter.
 
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

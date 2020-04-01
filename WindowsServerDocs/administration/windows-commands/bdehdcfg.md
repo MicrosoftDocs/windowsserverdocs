@@ -49,6 +49,6 @@ The following example depicts Bdehdcfg being used with the default drive to crea
 bdehdcfg -target unallocated –newdriveletter P: -quiet -restart
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -41,5 +41,5 @@ The following command starts the data collector perf_log on the remote computer 
 ```  
 logman start perf_log -s server_1  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

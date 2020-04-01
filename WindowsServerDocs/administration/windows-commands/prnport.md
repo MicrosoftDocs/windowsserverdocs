@@ -80,6 +80,6 @@ To add a standard TCP/IP printing port on the local computer that connects to a 
 cscript prnport -a -r IP_10.2.3.4 -h 10.2.3.4
 ```
 
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

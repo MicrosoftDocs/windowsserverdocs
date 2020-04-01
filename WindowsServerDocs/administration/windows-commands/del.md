@@ -86,6 +86,6 @@ To delete all read-only files in the current directory, type:
 del /a:r *.*
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

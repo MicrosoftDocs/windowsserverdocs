@@ -63,7 +63,7 @@ ksetup /delrealmflags CONTOSO ncsupported delegate
 ```
 Run the **ksetup** command to verify that the realm flag is set by viewing the output and looking for **Realm flags =**.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup:listrealmflags](ksetup-listrealmflags.md)
 -   [Ksetup:setrealmflags](ksetup-setrealmflags.md)

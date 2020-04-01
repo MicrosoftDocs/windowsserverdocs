@@ -38,7 +38,7 @@ expands a virtual hard disk (VHD) to the size that you specify.
 >   ```
 >   expand vdisk maximum=20000
 >   ```
->   ## additional references
+>   ## Additional References
 > - [Command-Line Syntax Key](command-line-syntax-key.md)
 > - [attach vdisk](attach-vdisk.md)
 > - [compact vdisk](compact-vdisk.md)

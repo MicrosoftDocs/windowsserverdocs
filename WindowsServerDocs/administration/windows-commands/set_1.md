@@ -140,6 +140,6 @@ set p
 > [!NOTE]
 > This command requires command extensions, which are enabled by default.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

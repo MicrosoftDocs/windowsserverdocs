@@ -66,6 +66,6 @@ The following command updates the existing data collector perf_log, changing the
 ```  
 logman update perf_log -max 10 -f csv -v mmddhhmm  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  
 [logman create trace](logman-create-trace.md)  

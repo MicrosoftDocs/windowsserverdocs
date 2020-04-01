@@ -25,6 +25,6 @@ begin backup
 
 -   This command overrides the default copy backup setting.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

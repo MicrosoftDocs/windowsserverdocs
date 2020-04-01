@@ -132,6 +132,6 @@ dir c:\*.txt /w/o/s/p
 
 **Dir** displays, in wide format, an alphabetized list of the matching file names in each directory, and it pauses each time the screen fills until you press any key to continue.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

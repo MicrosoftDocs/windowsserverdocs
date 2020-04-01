@@ -58,7 +58,7 @@ To TBD, type:
 dfsdiag /TestReferral /DFSpath:  
 ```  
   
-## additional references  
+## Additional References  
   
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
   

@@ -28,6 +28,6 @@ The following example retrieves the cache limit..
 C:\>bitsadmin /Cache /GetLimit 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

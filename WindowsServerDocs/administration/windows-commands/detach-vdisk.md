@@ -46,7 +46,7 @@ To detach the selected VHD, type:
 detach vdisk  
 ```  
   
-## additional references  
+## Additional References  
   
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
   

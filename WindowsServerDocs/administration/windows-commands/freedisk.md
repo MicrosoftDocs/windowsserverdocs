@@ -47,5 +47,5 @@ freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [
   ```
   INFO: The specified 52,428,800 byte(s) of free space is available on current drive.
   ```
-  ## additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)

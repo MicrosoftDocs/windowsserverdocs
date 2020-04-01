@@ -1,12 +1,8 @@
 ---
 title: chkntfs
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for chkntfs, which displays or modifies automatic disk checking when the computer is started. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # chkntfs
-
-
 
 Displays or modifies automatic disk checking when the computer is started. If used without options, **chkntfs** displays the file system of the specified volume. If automatic file checking is scheduled to run, **chkntfs** displays whether the specified volume is dirty or is scheduled to be checked the next time the computer is started.
 
@@ -90,6 +84,6 @@ chkntfs /x c: d: e:
 chkntfs /c d:
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

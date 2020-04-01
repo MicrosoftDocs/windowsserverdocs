@@ -118,6 +118,6 @@ To display the contents of a file named Ipconfig.out — along with the contents
 setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

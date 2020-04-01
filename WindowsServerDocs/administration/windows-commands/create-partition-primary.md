@@ -1,12 +1,8 @@
 ---
 title: create partition primary
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for create partition primary, which creates a primary partition on the basic disk with focus. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be
 author: coreyp-at-msft
@@ -18,11 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates a primary partition on the basic disk with focus.  
-  
-> [!CAUTION]  
-  
-  
+Creates a primary partition on the basic disk with focus.  
   
 ## Syntax  
   
@@ -55,7 +47,7 @@ To create a primary partition of 1000 megabytes in size, type:
 create partition primary size=1000  
 ```  
   
-#### additional references  
+## Additional References  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

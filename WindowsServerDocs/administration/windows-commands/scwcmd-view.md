@@ -46,6 +46,6 @@ To view Policyfile.xml by using the Policyview.xsl transform, type:
 scwcmd view /x:C:\policies\Policyfile.xml /s:C:\viewers\Policyview.xsl
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

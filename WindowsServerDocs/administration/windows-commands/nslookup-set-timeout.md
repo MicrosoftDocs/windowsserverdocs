@@ -37,6 +37,6 @@ set timeout=<Number>
   ```
   set timeout=2
   ```
-  ## additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup set retry](nslookup-set-retry.md)

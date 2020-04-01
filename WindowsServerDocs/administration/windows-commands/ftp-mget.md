@@ -34,7 +34,7 @@ copy remote files **a.exe** and **b.exe** to the local computer using the curren
 ```  
 mget a.exe b.exe  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: ascii](ftp-ascii.md)  
 -   [ftp: binary](ftp-binary.md)  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

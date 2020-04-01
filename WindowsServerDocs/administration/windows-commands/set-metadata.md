@@ -28,6 +28,6 @@ set metadata [<Drive>:][<Path>]<MetaData.cab>
 |[\<Drive>:][<Path>]|Specifies the location to create the metadata file.|
 |\<MetaData.cab>|Specifies the name of the cab file to store shadow creation metadata.|
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -42,7 +42,7 @@ put <LocalFile> [<remoteFile>]
   ```
   put program.exe
   ```
-  ## additional references
+  ## Additional References
 - [ftp: ascii](ftp-ascii.md)
 - [ftp: binary](ftp-binary.md)
 - [Command-Line Syntax Key](command-line-syntax-key.md)

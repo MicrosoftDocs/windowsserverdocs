@@ -38,7 +38,7 @@ To see the properties of the selected partition, type:
 detail partition
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -110,7 +110,7 @@ echo The Product.dat file is missing.
 > if %errorlevel% LEQ 1 goto okay
 > ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

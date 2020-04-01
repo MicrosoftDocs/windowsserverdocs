@@ -185,6 +185,6 @@ The following example enumerates the environment variable names in the current e
 for /f usebackq delims== %i in ('set') do @echo %i 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

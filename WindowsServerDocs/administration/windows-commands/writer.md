@@ -43,6 +43,6 @@ To exclude a writer with the name System Writer, type:
 writer exclude System Writer
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

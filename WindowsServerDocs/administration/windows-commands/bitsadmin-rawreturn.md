@@ -34,6 +34,6 @@ The following example retrieves the raw data for the state of the job named *myD
 C:\>bitsadmin /RawReturn /GetState myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

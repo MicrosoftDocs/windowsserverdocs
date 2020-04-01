@@ -44,6 +44,6 @@ The following example retrieves the notify flags for the job named *myDownloadJo
 C:\>bitsadmin /GetNotifyFlags myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

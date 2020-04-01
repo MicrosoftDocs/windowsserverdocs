@@ -37,6 +37,6 @@ The following example the version of the BITS Service.
 C:\>bitsadmin /Util /Version
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -83,6 +83,6 @@ To display the value and data for value names of null (default) under HKLM\SOFTW
 REG QUERY HKLM\SOFTWARE /ve
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

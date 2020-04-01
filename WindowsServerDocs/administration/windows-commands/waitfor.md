@@ -65,6 +65,6 @@ To manually activate the espresso\build007 signal, type:
 waitfor /si espresso\build007
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

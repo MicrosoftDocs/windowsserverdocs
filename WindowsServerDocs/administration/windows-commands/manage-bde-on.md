@@ -82,7 +82,7 @@ The following example illustrates using the **-on** command to turn on BitLocker
 manage-bde –on C: -fet Hardware
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

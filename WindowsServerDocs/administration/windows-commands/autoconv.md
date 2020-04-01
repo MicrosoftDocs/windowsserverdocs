@@ -18,7 +18,7 @@ Converts file allocation table (Fat) and Fat32 volumes to the NTFS file system, 
 
 ## Remarks
 You cannot run **autoconv** on the command-line. This will only be run at startup, if set through **convert.exe**.
-## additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [autochk](autochk.md)
 [convert](convert.md)

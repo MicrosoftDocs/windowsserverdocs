@@ -27,6 +27,6 @@ bitsadmin /GetHttpMethod <Job> <HTTPMethod>
 |Job|The job's display name or GUID|
 |HTTPMethod|The HTTP verb to use|
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

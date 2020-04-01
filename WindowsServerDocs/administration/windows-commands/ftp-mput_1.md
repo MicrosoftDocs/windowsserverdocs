@@ -34,7 +34,7 @@ copy **Program1.exe** and **Program2.exe** to the remote computer using the curr
 ```  
 mput Program1.exe Program2.exe  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: ascii](ftp-ascii.md)  
 -   [ftp: binary](ftp-binary.md)  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

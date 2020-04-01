@@ -39,7 +39,7 @@ The following example gets maximum download time for the job named *myDownloadJo
 C:\>bitsadmin /GetMaxDownloadtime myDownloadJob
 ```
 
-## additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

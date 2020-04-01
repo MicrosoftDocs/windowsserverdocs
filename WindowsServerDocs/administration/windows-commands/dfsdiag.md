@@ -39,6 +39,6 @@ dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| 
 |[Dfsdiag TestReferral](dfsdiag-testreferral.md)|Checks referral responses.|
 |/?|Displays help at the command prompt.|
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

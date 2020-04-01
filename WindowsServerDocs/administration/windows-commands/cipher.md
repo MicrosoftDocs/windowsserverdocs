@@ -1,12 +1,8 @@
 ---
 title: cipher
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for cipher, which displays or alters the encryption of directories and files on NTFS volumes. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 78ef795e-0f87-4acd-8d15-192c972c0f41
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # cipher
-
-
 
 Displays or alters the encryption of directories and files on NTFS volumes. If used without parameters, **cipher** displays the encryption state of the current directory and any files it contains.
 

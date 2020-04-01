@@ -29,5 +29,5 @@ bitsadmin /Peers /list
 |[bitsadmin peers and discover](bitsadmin-peers-and-discover.md)|Discovers peers again.|
 |[bitsadmin peers and clear](bitsadmin-peers-and-clear.md)|Clears the peers list.|
 |[bitsadmin peers and list](bitsadmin-peers-and-list.md)|list all peers.|
-## additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)

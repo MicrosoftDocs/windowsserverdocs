@@ -59,6 +59,6 @@ The following command updates the data collector perf_log, changing the sample i
 ```  
 logman update perf_log -si 10 -f csv -v mmddhhmm  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  
 [logman create counter](logman-create-counter.md)  

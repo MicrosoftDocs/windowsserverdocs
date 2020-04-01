@@ -34,6 +34,6 @@ The following example removes the client certificate from the job named *myJob*.
 C:\>Bitsadmin /RemoveClientCertificate myJob 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

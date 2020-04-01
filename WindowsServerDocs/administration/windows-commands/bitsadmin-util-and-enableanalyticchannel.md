@@ -28,6 +28,6 @@ The following example enables the BITS client analytic channel.
 C:\>bitsadmin /Util / EnableAnalyticChannel TRUE
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

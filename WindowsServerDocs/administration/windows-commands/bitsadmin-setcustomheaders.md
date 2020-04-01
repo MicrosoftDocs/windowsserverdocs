@@ -39,6 +39,6 @@ The following example adds a custom HTTP header for the job named *myDownloadJob
 C:\>bitsadmin / SetCustomHeaders myDownloadJob Accept-encoding:deflate/gzip
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

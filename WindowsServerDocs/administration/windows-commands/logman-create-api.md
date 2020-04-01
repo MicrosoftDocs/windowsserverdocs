@@ -71,5 +71,5 @@ The following command creates an API trace counter called trace_notepad for the 
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

@@ -43,5 +43,5 @@ bootcfg /raw [/s <computer> [/u <Domain>\<User> /p <Password>]] <OSLoadOptionsSt
   bootcfg /raw /debug /sos /id 2
   bootcfg /raw /s srvmain /u maindom\hiropln /p p@ssW23 /crashdebug  /id 2
   ```
-  #### additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -48,7 +48,7 @@ ksetup /delhosttorealmmap IPops897 CONTOSO
 ```
 After running this command, you can verify in the registry that the mapping is as intended.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
 -   [Ksetup](ksetup.md)

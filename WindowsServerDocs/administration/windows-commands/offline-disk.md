@@ -49,7 +49,7 @@ To take the disk with focus offline, type:
 offline disk
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

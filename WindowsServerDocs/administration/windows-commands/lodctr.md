@@ -41,6 +41,6 @@ To save the current Performance registry settings and counter Explain text to fi
 ```
 lodctr /s:perf backup1.txt
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 

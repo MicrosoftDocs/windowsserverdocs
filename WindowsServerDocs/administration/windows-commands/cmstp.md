@@ -1,12 +1,8 @@
 ---
 title: cmstp
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for cmstp, which installs or removes a Connection Manager service profile.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 34aad544-11c3-4e85-8bbf-5bc5a971da93
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Installs or removes a Connection Manager service profile. Used without optional parameters, **cmstp** installs a service profile with default settings appropriate to the operating system and to the user's permissions. 
+
 ## Syntax
 Syntax 1:
 ```
@@ -42,9 +39,11 @@ cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileNam
 |/au|Specifies that the service profile should be installed for all users. This parameter is only valid for computers running Windows Server 2003, Windows 2000, or Windows XP.|
 |/u|Specifies that the service profile should be uninstalled.|
 |/?|Displays help at the command prompt.|
+
 ## Remarks
 **/s** is the only parameter that you can use in combination with **/u**.
 Syntax 1 is the typical syntax used in a custom installation application. To use this syntax, you must run **cmstp** from the directory that contains the <ServiceProfileFileName>.exe file.
+
 ## <a name=BKMK_Examples></a>Examples
 To install the Fiction service profile without any support files, type:
 ```
@@ -58,5 +57,5 @@ To silently uninstall the Fiction service profile, type:
 ```
 fiction.exe /c:cmstp.exe fiction.inf /s /u
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

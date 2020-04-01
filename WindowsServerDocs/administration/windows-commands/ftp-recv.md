@@ -42,7 +42,7 @@ recv <remoteFile> [<LocalFile>]
   ```  
   recv test.txt test1.txt  
   ```  
-  ## additional references  
+  ## Additional References  
 - [ftp: ascii](ftp-ascii.md)  
 - [ftp: binary](ftp-binary.md)  
 - [ftp: get](ftp-get.md)  

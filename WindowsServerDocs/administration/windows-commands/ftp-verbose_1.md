@@ -32,5 +32,5 @@ Toggle **verbose** mode on and off.
 ```  
 verbose  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

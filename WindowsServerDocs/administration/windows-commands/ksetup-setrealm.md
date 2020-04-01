@@ -46,7 +46,7 @@ Set the realm for this computer to a specific domain name to restrict access by 
 ksetup /setrealm CONTOSO
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Ksetup](ksetup.md)

@@ -48,6 +48,6 @@ To load a metadata file called metafile.cab from the default location, type:
 load metadata metafile.cab
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -53,6 +53,6 @@ To load the file named TempHive.hiv to the key HKLM\TempHive, type:
 REG LOAD HKLM\TempHive TempHive.hiv
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

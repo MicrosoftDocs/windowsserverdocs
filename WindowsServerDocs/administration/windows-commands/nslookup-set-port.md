@@ -34,6 +34,6 @@ set port=<Port>
 |  \<Port>  | Specifies the new value for the default TCP/UDP DNS name server port. The default port is 53. |
 |   {help   |                                              ?}                                               |
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

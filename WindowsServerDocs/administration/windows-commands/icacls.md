@@ -148,6 +148,6 @@ To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a f
 icacls test2 /grant *S-1-1-0:(d,wdac)
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

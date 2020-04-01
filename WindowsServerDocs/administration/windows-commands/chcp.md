@@ -1,12 +1,8 @@
 ---
 title: chcp
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for chcp, which changes the active console code page.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # chcp
-
-
 
 Changes the active console code page. If used without parameters, **chcp** displays the number of the active console code page.
 
@@ -77,6 +71,6 @@ If the specified code page is invalid, the following error message appears:
 
 `Invalid code page`
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

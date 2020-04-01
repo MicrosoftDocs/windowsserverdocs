@@ -40,6 +40,6 @@ The following example retrieves information for the job named *myDownloadJob* an
 C:\>bitsadmin /Wrap /Info myDownloadJob /verbose
 ```
 
-#### additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

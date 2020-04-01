@@ -51,7 +51,7 @@ Find most of the Kerberos realm configurations on a computer:
 ksetup /dumpstate
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

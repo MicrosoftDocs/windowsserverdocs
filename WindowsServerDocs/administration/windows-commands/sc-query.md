@@ -93,6 +93,6 @@ To display information for drivers in the Network Driver Interface Specification
 sc query type= driver group= ndis
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

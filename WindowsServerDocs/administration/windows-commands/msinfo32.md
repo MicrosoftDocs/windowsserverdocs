@@ -58,6 +58,6 @@ To display resource conflict information and create an .nfo file called conflict
 ```
 msinfo32 /nfo conflicts.nfo /categories    +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 

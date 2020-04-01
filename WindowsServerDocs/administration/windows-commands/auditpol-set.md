@@ -74,5 +74,5 @@ auditpol /set /category:detailed Tracking /success:enable
 > ```
 > auditpol /set /option:CrashOnAuditFail /value:enable
 > ```
-> #### additional references
+> ## Additional References
 > [Command-Line Syntax Key](command-line-syntax-key.md)

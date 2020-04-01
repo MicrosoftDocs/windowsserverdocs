@@ -60,7 +60,7 @@ Remove the set encryption type attribute for the domain mit.contoso.com:
 ksetup /delenctypeattr mit.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Klist](klist.md)
 -   [Ksetup:domain](ksetup-domain.md)

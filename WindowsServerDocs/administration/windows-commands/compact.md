@@ -1,12 +1,8 @@
 ---
 title: compact
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for compact, which displays or alters the compression of files or directories on NTFS partitions.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 429b3752-df0a-43a4-a210-df2f3ad03c3b
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # compact
-
-
 
 Displays or alters the compression of files or directories on NTFS partitions. If used without parameters, **compact** displays the compression state of the current directory and the files it contains.
 
@@ -80,6 +74,6 @@ To remove the compressed attribute from the directory C:\Tmp, without changing t
 compact /u c:\tmp
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

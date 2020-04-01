@@ -38,7 +38,7 @@ Set srchlist=<DomainName>[/...]
   ```
   set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
   ```
-  ## additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup set domain](nslookup-set-domain.md)
   [nslookup set all](nslookup-set-all.md)

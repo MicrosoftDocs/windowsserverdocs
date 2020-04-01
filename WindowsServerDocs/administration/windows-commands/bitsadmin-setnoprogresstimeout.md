@@ -41,6 +41,6 @@ The following example sets the no progress time out value for the job named *myD
 C:\>bitsadmin /SetNoProgressTimeout myDownloadJob 20
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

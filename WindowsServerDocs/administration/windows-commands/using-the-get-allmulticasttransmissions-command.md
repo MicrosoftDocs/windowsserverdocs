@@ -42,7 +42,7 @@ To view information about all transmissions, type:
   To view information about all transmissions except deactivated transmissions, type:
 - Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
 - Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
-  #### additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [Using the get-MulticastTransmission Command](using-the-get-multicasttransmission-command.md)
   [Using the new-MulticastTransmission Command](using-the-new-multicasttransmission-command.md)

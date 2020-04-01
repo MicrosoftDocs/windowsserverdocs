@@ -53,7 +53,7 @@ To restore a catalog from a backup stored in the shared folder \\\\servername\sh
 wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

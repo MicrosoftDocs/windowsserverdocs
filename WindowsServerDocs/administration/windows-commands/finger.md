@@ -46,5 +46,5 @@ To display information for all users on the computer users.microsoft.com, type:
 ```
 finger @users.microsoft.com
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

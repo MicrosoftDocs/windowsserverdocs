@@ -51,6 +51,6 @@ WDSUTIL /Verbose /Progress /Convert-RiPrepImage /FilePath:\\Server
 /Overwrite:Append
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

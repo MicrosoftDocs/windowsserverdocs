@@ -39,7 +39,7 @@ The following example depicts using the **target** command to designate an exist
 bdehdcfg -target P: merge
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Bdehdcfg](bdehdcfg.md)

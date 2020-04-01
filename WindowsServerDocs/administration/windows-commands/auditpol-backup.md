@@ -36,6 +36,6 @@ auditpol /backup /file:C:\auditpolicy.csv
 ```
 > [!NOTE]
 > if no drive is specified, the current directory is used.
-> #### additional references
+> ## Additional References
 > [Command-Line Syntax Key](command-line-syntax-key.md)
 > [auditpol restore](auditpol-restore.md)

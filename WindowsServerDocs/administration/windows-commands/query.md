@@ -39,6 +39,6 @@ query user
 |[query termserver](query-termserver.md)|Displays a list of all rd Session Host servers on the network.|
 |[query user](query-user.md)|Displays information about user sessions on an rd Session Host server.|
 
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

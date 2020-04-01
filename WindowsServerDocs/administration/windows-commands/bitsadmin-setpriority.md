@@ -35,6 +35,6 @@ The following example sets the priority for the job named *myDownloadJob* to nor
 C:\>bitsadmin /SetPriority myDownloadJob NORMAL
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

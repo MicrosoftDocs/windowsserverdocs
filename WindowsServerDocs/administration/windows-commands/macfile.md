@@ -169,5 +169,5 @@ To remove the volume called Sales Reports on the local server, type:
 macfile volume /remove /name:Sales Reports
 ```
 
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

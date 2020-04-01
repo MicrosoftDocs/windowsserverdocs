@@ -41,5 +41,5 @@ The following command deletes the data collector perf_log.
 ```  
 logman delete perf_log  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

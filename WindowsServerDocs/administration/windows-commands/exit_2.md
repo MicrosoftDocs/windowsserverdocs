@@ -38,6 +38,6 @@ To close the command interpreter, Cmd.exe, type:
 ```  
 exit  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
 

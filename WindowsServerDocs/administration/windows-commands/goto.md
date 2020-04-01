@@ -69,7 +69,7 @@ echo An error occurred during formatting.
 echo End of batch program. 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

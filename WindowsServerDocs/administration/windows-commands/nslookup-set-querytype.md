@@ -52,6 +52,6 @@ Displays a short summary of <strong>nslookup</strong> subcommands
 ## Remarks
 - The <strong>set type</strong> command performs the same function as the <strong>set querytype</strong> command.
 - For more information about resource record types, see Request for Comment (Rfc) 1035.
-  ## additional references
+  ## Additional References
   <a href=command-line-syntax-key.md data-raw-source=[Command-Line Syntax Key](command-line-syntax-key.md)>Command-Line Syntax Key</a>
   <a href=nslookup-set-type.md data-raw-source=[nslookup set type](nslookup-set-type.md)>nslookup set type</a>

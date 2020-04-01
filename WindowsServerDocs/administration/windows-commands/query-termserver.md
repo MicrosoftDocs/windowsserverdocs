@@ -57,7 +57,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >   ```
 >   query termserver Server3 /address
 >   ```
->   #### additional references
+>   ## Additional References
 >   [Command-Line Syntax Key](command-line-syntax-key.md)
 >   [query](query.md)
->   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+>   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

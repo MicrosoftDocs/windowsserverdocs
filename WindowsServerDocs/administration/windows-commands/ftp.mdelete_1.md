@@ -34,5 +34,5 @@ delete remote files **a.exe** and **b.exe**.
 ```  
 mdelete a.exe b.exe  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

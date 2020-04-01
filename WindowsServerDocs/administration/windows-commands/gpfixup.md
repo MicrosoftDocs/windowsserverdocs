@@ -62,7 +62,7 @@ This example is the same as the previous one, except that it assumes the NetBIOS
 gpfixup /olddns: MyOldDnsName /newdns:MyNewDnsName /dc:MyDcDnsName 2>&1 >gpfixup.log
 ```
 
-#### Additional references
+## Additional References
 
 -   [Administering Active Directory Domain Rename](https://go.microsoft.com/fwlink/?LinkId=198385)
 -   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)

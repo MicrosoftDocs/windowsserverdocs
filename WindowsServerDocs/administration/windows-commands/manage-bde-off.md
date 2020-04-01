@@ -44,7 +44,7 @@ The following example illustrates using the **-off** command to turn off BitLock
 manage-bde –off C:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

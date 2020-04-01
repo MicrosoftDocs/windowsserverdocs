@@ -46,7 +46,7 @@ To set various settings for a computer, type:
 wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml 
 /User:Domain\user /JoinRights:JoinOnly /JoinDomain:No /BootImagepath:boot\x86\images\boot.wim /Domain:NorthAmerica /resetAccount
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-Device command](using-the-add-device-command.md)
 [Using the get-AllDevices Command](using-the-get-alldevices-command.md)

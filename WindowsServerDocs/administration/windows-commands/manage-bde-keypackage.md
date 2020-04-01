@@ -50,7 +50,7 @@ manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path f:\Folder
 > [!TIP]
 > Use **manage-bde –protectors –get** along with the drive letter that you want to create a key package for to get a list of available GUIDs to use as the ID value.
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

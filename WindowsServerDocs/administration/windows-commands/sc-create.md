@@ -60,6 +60,6 @@ sc \\myserver create NewService binpath= c:\windows\system32\NewServ.exe
 sc create NewService binpath= c:\windows\system32\NewServ.exe type= share start= auto depend= +TDI NetBIOS
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

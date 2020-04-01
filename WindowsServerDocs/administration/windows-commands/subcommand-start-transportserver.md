@@ -30,7 +30,7 @@ To start the server, type one of the following:
 wdsutil /start-TransportServer
 wdsutil /verbose /start-TransportServer /Server:MyWDSServer
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-TransportServer Command](using-the-disable-transportserver-command.md)
 [Using the enable-TransportServer Command](using-the-enable-transportserver-command.md)

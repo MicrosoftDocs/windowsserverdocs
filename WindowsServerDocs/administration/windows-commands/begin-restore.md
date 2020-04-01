@@ -21,6 +21,6 @@ Starts a restore session and issues a **PreRestore** event to involved writers.
 begin restore
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

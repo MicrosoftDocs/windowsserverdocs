@@ -81,5 +81,5 @@ To display active TCP connections and the process IDs using numerical form, type
 netstat -n -o
 ```
 
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

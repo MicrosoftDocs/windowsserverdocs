@@ -46,6 +46,6 @@ ms.date: 10/16/2017
 > ```
 > manage-bde  tpm  takeownership 0wnerP@ss
 > ```
-> ## additional references
+> ## Additional References
 > -   [Command-Line Syntax Key](command-line-syntax-key.md)
 > -   [manage-bde](manage-bde.md)

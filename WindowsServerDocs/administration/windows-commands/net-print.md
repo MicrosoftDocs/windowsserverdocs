@@ -77,6 +77,6 @@ for examples of how to use this command, see the [Examples](#BKMK_examples) sect
 >   ```
 >   Net print \\Production 263 /release 
 >   ```
->   #### additional references
+>   ## Additional References
 >   [Command-Line Syntax Key](command-line-syntax-key.md)
 >   [print Command Reference](print-command-reference.md)

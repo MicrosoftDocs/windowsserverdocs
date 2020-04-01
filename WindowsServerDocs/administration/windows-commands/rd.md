@@ -74,6 +74,6 @@ rd /s /q test
 > [!CAUTION]
 > When you run **rd /s** in quiet mode, the entire directory tree is deleted without confirmation. Ensure that important files are moved or backed up before using the **/q** command-line option.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -81,6 +81,6 @@ To change the name of a printer on the remote computer named HRServer from color
 cscript prncnfg -x -S HRServer -P colorprinter_2 -z "colorprinter 3" 
 ```
 
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

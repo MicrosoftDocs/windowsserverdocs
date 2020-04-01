@@ -38,6 +38,6 @@ Display the syntax for the **feat** remote command.
 ```  
 remotehelp feat  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: quote](ftp-quote.md)  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

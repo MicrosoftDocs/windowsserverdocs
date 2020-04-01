@@ -59,6 +59,6 @@ To specify a binary path for the NEWSERVICE service, type:
 sc config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

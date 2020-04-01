@@ -32,6 +32,6 @@ end backup
 
 -   This command should be used for all full backups.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

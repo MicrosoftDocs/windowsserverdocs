@@ -77,6 +77,6 @@ To delete the current label for drive C, follow these steps:
    ```  
 3. Press Y to delete the current label.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

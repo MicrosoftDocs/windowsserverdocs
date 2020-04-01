@@ -34,6 +34,6 @@ The following example displays the owner for the job named *myDownloadJob*.
 C:\>bitsadmin /GetOwner myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

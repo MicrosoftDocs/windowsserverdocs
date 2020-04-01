@@ -34,6 +34,6 @@ The following example retrieves the time that the job named *myDownloadJob* fini
 C:\>bitsadmin /GetCompletionTime myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

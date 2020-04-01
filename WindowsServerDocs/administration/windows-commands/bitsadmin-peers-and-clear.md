@@ -28,6 +28,6 @@ The following example clears the peer list.
 C:\>bitsadmin /Peers /Clear
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

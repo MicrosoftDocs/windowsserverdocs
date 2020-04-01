@@ -42,6 +42,6 @@ The following example retrieves the access control list propagation flags for th
 C:\>bitsadmin /getaclflags myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

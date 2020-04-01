@@ -36,6 +36,6 @@ bitsadmin /Util /version
 |[bitsadmin util and setieproxy](bitsadmin-util-and-setieproxy.md)|Specifies proxy settings to use when transferring files using a service account.|
 |[bitsadmin util and version](bitsadmin-util-and-version.md)|Displays the version of the BITS service|
 
-#### additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

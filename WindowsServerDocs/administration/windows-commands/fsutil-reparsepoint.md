@@ -53,7 +53,7 @@ To delete a reparse point from a specified file or directory, use the following 
 fsutil reparsepoint delete c:\server
 ```
 
-#### Additional references
+## Additional References
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 [Fsutil](Fsutil.md)

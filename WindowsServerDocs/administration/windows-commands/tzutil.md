@@ -44,6 +44,6 @@ To set the current time zone to Pacific Standard time and disable Daylight Savin
 ```
 tzutil /s Pacific Standard time_dstoff
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 

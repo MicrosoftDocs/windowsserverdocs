@@ -55,6 +55,6 @@ Alternatively, you can assign the alias by using the shadow copy ID:
 add alias System1 {ff47165a-1946-4a0c-b7f4-80f46a309278}
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

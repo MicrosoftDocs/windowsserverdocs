@@ -29,4 +29,4 @@ This command is the same as the **query process** command.
 ## Additional references
 [query process](query-process.md)  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)  
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)  

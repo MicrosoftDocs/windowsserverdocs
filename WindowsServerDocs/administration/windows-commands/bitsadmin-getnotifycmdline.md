@@ -36,6 +36,6 @@ The following example retrieves the command-line command used by the service whe
 C:\>bitsadmin /GetNotifyCmdLine myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -35,7 +35,7 @@ WDSUTIL /Disable-Server
 WDSUTIL /Verbose /Disable-Server /Server:MyWDSServer
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

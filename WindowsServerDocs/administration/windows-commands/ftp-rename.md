@@ -35,5 +35,5 @@ rename the remote file **example.txt** to **example1.txt**
 ```  
 rename example.txt example1.txt  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -20,6 +20,6 @@ ms.date: 10/16/2017
 
 This command is the same as the **makecab** command.
 See [makecab](makecab.md) for syntax and parameters.
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 

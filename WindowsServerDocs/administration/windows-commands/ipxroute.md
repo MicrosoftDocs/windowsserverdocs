@@ -46,5 +46,5 @@ To display the network segments that the workstation is attached to, the worksta
 ```  
 ipxroute config  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

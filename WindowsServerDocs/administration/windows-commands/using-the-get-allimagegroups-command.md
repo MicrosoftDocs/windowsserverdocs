@@ -31,7 +31,7 @@ To view information about the image groups, type one of the following:
 wdsutil /Get-AllImageGroups
 wdsutil /verbose /Get-AllImageGroups /Server:MyWDSServer /detailed
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
 [Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)

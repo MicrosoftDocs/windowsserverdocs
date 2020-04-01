@@ -41,5 +41,5 @@ Connect to the ftp server at **ftp.microsoft.com** that is listening on TCP port
 ```  
 open ftp.microsoft.com 755  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

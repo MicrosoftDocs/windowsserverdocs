@@ -52,6 +52,6 @@ To pause the command processor indefinitely until a key is pressed, type:
 timeout /t -1
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

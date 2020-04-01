@@ -44,7 +44,7 @@ The following example illustrates using the **-lock** command to lock data drive
 manage-bde –lock D:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

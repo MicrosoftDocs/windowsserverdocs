@@ -49,7 +49,7 @@ To approve all pending computers, type:
 ```
 wdsutil /verbose /Approve-AutoaddDevices /RequestId:ALL
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the delete-AutoaddDevices Command](using-the-delete-autoadddevices-command.md)
 [Using the get-AutoaddDevices Command](using-the-get-autoadddevices-command.md)

@@ -1,15 +1,10 @@
 ---
 title: copy
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for copy, which copies one or more files from one location to another.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # copy
-
-
 
 Copies one or more files from one location to another.
 
@@ -149,6 +142,6 @@ To combine all files with the .txt extension, and then combine all files with th
 copy *.txt + *.ref Combined.doc
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

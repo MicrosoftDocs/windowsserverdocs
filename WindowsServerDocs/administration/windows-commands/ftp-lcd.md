@@ -32,5 +32,5 @@ change the working directory on the local computer to **C:\dir1**
 ```  
 lcd C:\dir1  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -1,12 +1,8 @@
 ---
 title: comp
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for comp, which compares the contents of two files or sets of files byte-by-byte.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 40319d23-704d-4da1-be93-8259547275d0
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # comp
-
-
 
 Compares the contents of two files or sets of files byte-by-byte. If used without parameters, **comp** prompts you to enter the files to compare.
 
@@ -97,6 +91,6 @@ To compare the first ten lines of the text files in the \Invoice directory and d
 comp \invoice\*.txt \invoice\backup\*.txt /n=10 /d
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

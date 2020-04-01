@@ -39,7 +39,7 @@ To see the properties of the selected disk, and information about the volumes in
 detail disk
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

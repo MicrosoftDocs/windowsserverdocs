@@ -19,7 +19,7 @@ Formats a drive or partition when called from the Windows Recovery Console.
 
 You cannot run **Autofmt** directly from the command-line.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

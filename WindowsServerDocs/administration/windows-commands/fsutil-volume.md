@@ -81,7 +81,7 @@ To find the file(s) that are using the clusters, specified by the logical cluste
 fsutil volume querycluster C: 50 0x2000
 ```
 
-#### Additional references
+## Additional References
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 [Fsutil](Fsutil.md)

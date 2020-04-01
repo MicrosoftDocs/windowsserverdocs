@@ -34,5 +34,5 @@ delete the file test.txt on the remote computer.
 ```  
 delete test.txt  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

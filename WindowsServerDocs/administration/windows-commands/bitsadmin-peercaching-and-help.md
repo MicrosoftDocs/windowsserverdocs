@@ -28,6 +28,6 @@ The following command displays the command-line help for the **PeerCaching** swi
 Bitsadmin /PeerCaching /Help
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -45,5 +45,5 @@ mdir <remoteFile>[ ] <LocalFile>
   ```  
   mdir dir1 dir2 dirlist.txt  
   ```  
-  ## additional references  
+  ## Additional References  
 - [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -44,6 +44,6 @@ The following example sets the notify flags for transferred and error events job
 C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

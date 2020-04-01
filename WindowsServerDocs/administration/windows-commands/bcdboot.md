@@ -35,6 +35,6 @@ bcdboot <source> [/l] [/s]
 
 For more examples of how to use this command, see the [BCDboot Command-Line Options](https://technet.microsoft.com/library/hh824874.aspx) topic.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

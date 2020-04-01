@@ -34,6 +34,6 @@ The following example deletes all cache entries for https://www.microsoft.com/en
 C:\>bitsadmin /DeleteURL https://www.microsoft.com/en/us/default.aspx 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

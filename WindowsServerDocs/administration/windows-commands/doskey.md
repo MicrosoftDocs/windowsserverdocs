@@ -191,6 +191,6 @@ To delete a macro called vlist, type:
 doskey vlist =
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

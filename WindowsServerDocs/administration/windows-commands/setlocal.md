@@ -71,6 +71,6 @@ endlocal
 start notepad c:\superapp.out
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

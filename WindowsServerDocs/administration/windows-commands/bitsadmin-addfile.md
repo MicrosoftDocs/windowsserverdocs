@@ -36,6 +36,6 @@ Add a file to the job. Repeat this call for each file you want to add. If multip
 C:\>bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

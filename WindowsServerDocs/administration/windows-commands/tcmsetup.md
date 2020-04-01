@@ -48,7 +48,7 @@ tcmsetup  [/q] /c /d
 -   Before a client user can use a phone or line on a TAPI server, the telephony server administrator must assign the user to the phone or line.
 -   The list of telephony servers that is created by this command replaces any existing list of telephony servers available to the client. You cannot use this command to add to the existing list.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

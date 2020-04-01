@@ -46,6 +46,6 @@ To list all shadow copies, type:
 list shadows all
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -51,7 +51,7 @@ To see a list of available backups that are stored in the remote shared folder \
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

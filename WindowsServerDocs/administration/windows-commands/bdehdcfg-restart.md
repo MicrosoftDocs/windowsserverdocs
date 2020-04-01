@@ -36,7 +36,7 @@ The following example illustrates using the **restart** command.
 bdehdcfg -target default -restart
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Bdehdcfg](bdehdcfg.md)

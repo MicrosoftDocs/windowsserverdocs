@@ -50,7 +50,7 @@ Force a background update of all Group Policy settings, regardless of whether th
 gpupdate /force
 ```
 
-#### Additional references
+## Additional References
 
 -   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

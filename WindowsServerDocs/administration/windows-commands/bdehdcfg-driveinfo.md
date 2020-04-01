@@ -35,6 +35,6 @@ The following example will display the drive information for drive C.
 ```
 bdehdcfg  driveinfo C:
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [bdehdcfg](bdehdcfg.md)

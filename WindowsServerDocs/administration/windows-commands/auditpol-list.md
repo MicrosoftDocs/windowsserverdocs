@@ -50,5 +50,5 @@ To list the subcategories of the detailed Tracking and DS Access categories, typ
 ```
 auditpol /list /subcategory:detailed Tracking,DS Access
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)

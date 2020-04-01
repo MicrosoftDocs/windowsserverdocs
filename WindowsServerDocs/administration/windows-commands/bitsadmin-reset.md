@@ -43,6 +43,6 @@ The following example cancels all the jobs in the transfer queue for the current
 C:\>bitsadmin /Reset
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

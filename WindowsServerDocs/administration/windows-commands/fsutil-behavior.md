@@ -121,7 +121,7 @@ To override the default behavior for TRIM \(disabledeletenotify\) for NTFS and R
 fsutil behavior set DisableDeleteNotify 1
 ```
 
-#### Additional references
+## Additional References
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 [Fsutil](Fsutil.md)

@@ -51,7 +51,7 @@ ksetup /removerealm CORP.CONTOSO.CON
 ```
 Verify the removal by running **ksetup** and review the output.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:setrealm](ksetup-setrealm.md)

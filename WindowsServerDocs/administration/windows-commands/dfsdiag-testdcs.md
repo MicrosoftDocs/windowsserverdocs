@@ -50,7 +50,7 @@ To verify the configuration of domain controllers in the Contoso.com domain, typ
 dfsdiag /TestDCs /Domain:Contoso.com  
 ```  
   
-## additional references  
+## Additional References  
   
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
   

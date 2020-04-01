@@ -71,6 +71,6 @@ To add an expanded registry entry to HKLM\Software\MyCo with a value name of **P
 REG ADD HKLM\Software\MyCo /v Path /t REG_EXPAND_SZ /d ^%systemroot^%
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

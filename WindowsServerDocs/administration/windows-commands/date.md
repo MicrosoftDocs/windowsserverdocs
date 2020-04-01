@@ -64,6 +64,6 @@ Enter the new date: (mm-dd-yy)
 ```
 To keep the current date and return to the command prompt, press ENTER. To change the current date, type the new date and then press ENTER.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

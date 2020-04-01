@@ -61,7 +61,7 @@ To send the file Report.txt in the c:\Accounting directory to the Printer1 print
 print /d:\\copyroom\printer1 c:\accounting\report.txt 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -32,6 +32,6 @@ set retry=<Number>
 
 ## Remarks
 - When a reply to a request is not received within a certain amount of time, the time-out period is doubled and the request is resent. The retry value controls how many times a request is resent before giving up. You can change the time-out period with the **set timeout** subcommand.
-  ## additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup set timeout](nslookup-set-timeout.md)

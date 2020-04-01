@@ -36,5 +36,5 @@ The following examples show how you can use the **bootcfg /delete**command:
 bootcfg /delete /id 1
 bootcfg /delete /s srvmain /u maindom\hiropln /p p@ssW23 /id 3
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)

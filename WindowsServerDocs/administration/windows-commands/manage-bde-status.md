@@ -56,7 +56,7 @@ The following example illustrates using the **-status** command to display the s
 manage-bde –status C:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

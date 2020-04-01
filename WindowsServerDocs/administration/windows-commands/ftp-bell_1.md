@@ -32,5 +32,5 @@ Toggle an audible sound to occur after each file transfer command is completed.
 ```  
 bell  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

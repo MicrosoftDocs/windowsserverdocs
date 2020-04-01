@@ -72,6 +72,6 @@ To delete a version 3 Windows NT x86 printer driver for Laser printer model 1, t
 cscript Prndrvr -a -m Laser printer model 1 -v 3 -e Windows NT x86 
 ```
 
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

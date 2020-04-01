@@ -54,7 +54,7 @@ change user {/execute | /install | /query}
   ```
   change user /query
   ```
-  #### additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [change](change.md)
   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

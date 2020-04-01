@@ -36,6 +36,6 @@ The following example sets the content validation state of file 2 to TRUE for th
 C:\>bitsadmin /SetValidationState myJob 2 TRUE 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

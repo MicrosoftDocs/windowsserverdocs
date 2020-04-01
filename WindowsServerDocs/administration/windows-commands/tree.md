@@ -52,6 +52,6 @@ To print a list of all the directories on drive C, type:
 tree c:\ /f  prn 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

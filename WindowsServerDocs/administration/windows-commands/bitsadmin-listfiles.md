@@ -34,6 +34,6 @@ The following example retrieves the list of files for the job named *myDownloadJ
 C:\>bitsadmin /GetNotifyFlags myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -34,6 +34,6 @@ The following example deletes the cache entry with the RecordID of {6511FB02-E19
 C:\>bitsadmin /Cache /Delete {6511FB02-E195-40A2-B595-E8E2F8F47702} 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

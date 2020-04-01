@@ -62,6 +62,6 @@ Enter the new time:
 ```
 To keep the current time and return to the command prompt, press ENTER. To change the current time, type the new time and then press ENTER.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

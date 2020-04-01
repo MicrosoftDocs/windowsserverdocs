@@ -1,12 +1,8 @@
 ---
-title: Cmd
-description: Windows Commands topic for **** - 
-
+title: cmd
+description: Windows Commands topic for cmd, which starts a new instance of the command interpreter, Cmd.exe. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
 author: coreyp-at-msft
@@ -15,7 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Cmd
+# cmd
 
 Starts a new instance of the command interpreter, Cmd.exe. If used without parameters, **cmd** displays the version and copyright information of the operating system.
 
@@ -165,6 +161,6 @@ If the information that you supply contains spaces, use quotation marks around t
 
 If you process file and directory name completion from within *String*, any part of the *Path* to the right of the cursor is discarded (at the point in *String* where the completion was processed).
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

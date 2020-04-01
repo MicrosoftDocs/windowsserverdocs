@@ -34,6 +34,6 @@ The following example removes the *myDownloadJob* job from the transfer queue.
 C:\>bitsadmin /cancel myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -34,5 +34,5 @@ delete the **Pictures** remote directory.
 ```  
 rmdir Pictures  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

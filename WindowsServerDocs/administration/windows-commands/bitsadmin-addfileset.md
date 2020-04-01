@@ -34,6 +34,6 @@ bitsadmin /addfileset <Job> <TextFile>
 C:\>bitsadmin /addfileset files.txt
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

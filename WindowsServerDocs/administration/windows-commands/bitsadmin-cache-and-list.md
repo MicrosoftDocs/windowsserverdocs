@@ -28,6 +28,6 @@ The following example lists all cache entries in verbose format.
 C:\> bitsadmin /Cache /List /Verbose
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

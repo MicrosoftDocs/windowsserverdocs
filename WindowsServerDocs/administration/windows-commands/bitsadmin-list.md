@@ -39,6 +39,6 @@ The following example retrieves information about jobs owned by the current user
 C:\>bitsadmin /List 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

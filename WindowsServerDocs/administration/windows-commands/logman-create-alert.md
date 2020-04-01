@@ -64,5 +64,5 @@ logman create alert new_alert -th \Processor(_Total)\% Processor time>50
 ```  
 > [!NOTE]
 > The threshold value defined is based on the value collected by the counter, so in this example, the value of 50 equates to 50% Processor time.  
-> #### additional references  
+> ## Additional References  
 > [logman](logman.md)  

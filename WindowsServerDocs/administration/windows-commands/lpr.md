@@ -51,6 +51,6 @@ lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o |
   lpr -S 10.0.0.45 -P Laserprinter1 -o l PostScript_file.ps  
   ```  
 
-#### additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
 -   [print Command Reference](print-command-reference.md)  

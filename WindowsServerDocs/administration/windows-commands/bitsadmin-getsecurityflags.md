@@ -35,7 +35,7 @@ The following example retrieves the securitly flags from a job named *myJob*.
 C:\>bitsadmin /GetSecurityFlags myJob 
 ```
 
-## additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

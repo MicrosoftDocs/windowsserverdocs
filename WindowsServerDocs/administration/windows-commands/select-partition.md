@@ -57,7 +57,7 @@ To display the partition that currently has the focus in the selected disk, type
 select partition  
 ```  
   
-#### additional references  
+## Additional References  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

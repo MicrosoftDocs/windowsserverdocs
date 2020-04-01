@@ -27,5 +27,5 @@ Close the current connection.
 ```  
 c  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

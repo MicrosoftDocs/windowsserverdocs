@@ -62,6 +62,6 @@ To delete the printer named colorprinter_2 from the remote computer named HRServ
 cscript prnmngr -d -s HRServer -p colorprinter_2 
 ```
 
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

@@ -41,6 +41,6 @@ The following example displays the proxy usage for the NETWORK SERVICE account.
 C:\>bitsadmin /Util /GetIEProxy NETWORKSERVICE
 ```
 
-## additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

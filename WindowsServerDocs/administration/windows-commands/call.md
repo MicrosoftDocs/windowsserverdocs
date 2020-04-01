@@ -100,6 +100,6 @@ If the parent batch program accepts two batch parameters and you want it to pass
 call checknew %1 %2
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

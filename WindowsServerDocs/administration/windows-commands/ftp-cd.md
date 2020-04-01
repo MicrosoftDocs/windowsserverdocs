@@ -38,5 +38,5 @@ change the directory on the remote computer to **May Videos**.
 ```  
 cd  May Videos  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

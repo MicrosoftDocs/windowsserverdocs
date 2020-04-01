@@ -73,6 +73,6 @@ The following example attempts to repair drive C and write the content from driv
 repair-bde C: D: -pw
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

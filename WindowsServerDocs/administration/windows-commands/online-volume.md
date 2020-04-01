@@ -51,7 +51,7 @@ To bring the volume with focus online, type:
 online volume
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

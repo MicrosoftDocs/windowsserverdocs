@@ -41,7 +41,7 @@ wdsutil /Get-Namespace /Namespace:Custom Auto 1
 To view information about a namespace and the clients that are connected, type one of the following:
 - Windows Server 2008: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /Show:Clients`
 - Windows Server 2008 R2: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /details:Clients`
-  #### additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
   [Using the new-Namespace Command](using-the-new-namespace-command.md)

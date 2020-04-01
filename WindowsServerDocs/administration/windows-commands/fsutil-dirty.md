@@ -64,7 +64,7 @@ To set the dirty bit on drive C, type:
 fsutil dirty set C:
 ```
 
-#### Additional references
+## Additional References
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 [Fsutil](Fsutil.md)

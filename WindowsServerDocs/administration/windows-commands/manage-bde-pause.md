@@ -44,7 +44,7 @@ The following example illustrates using the **-pause** command to pause BitLocke
 manage-bde –pause C:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

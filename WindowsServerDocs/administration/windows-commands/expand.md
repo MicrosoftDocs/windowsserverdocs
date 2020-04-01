@@ -42,5 +42,5 @@ expand <source>.cab /f:<files> <destination>
 ## Remarks  
 - Using **expand** at the recovery Console  
   The **expand** command, with different parameters, is available from the recovery Console. For more information about the recovery Console, see [article 314058](https://support.microsoft.com/kb/314058) in the Microsoft Knowledge Base.  
-  ## additional references  
+  ## Additional References  
   [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -46,7 +46,7 @@ Make your **ksetup** configurations effective on the IPops897 computer that is c
 ksetup /server IPops897.corp.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -36,5 +36,5 @@ Specify User1 with the password Password1.
 ```  
 user User1 Password1  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

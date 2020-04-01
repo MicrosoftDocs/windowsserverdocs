@@ -42,5 +42,5 @@ bootcfg /s srvmain /ems off /id 2
 bootcfg /ems edit /port com2 /baud 115200 
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /ems off /id 2
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)

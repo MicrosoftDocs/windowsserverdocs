@@ -38,7 +38,7 @@ The following example shows the default drive being assigned the drive letter P.
 bdehdcfg -target default -newdriveletter P:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Bdehdcfg](bdehdcfg.md)

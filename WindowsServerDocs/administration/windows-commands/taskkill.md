@@ -91,5 +91,5 @@ To end all processes that have a process ID greater than or equal to 1000, regar
 taskkill /f /fi PID ge 1000 /im *
 ```
 
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)

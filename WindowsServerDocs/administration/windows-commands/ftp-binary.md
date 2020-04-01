@@ -32,6 +32,6 @@ Set the file transfer type to binary.
 ```  
 binary  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: ascii](ftp-ascii.md)  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

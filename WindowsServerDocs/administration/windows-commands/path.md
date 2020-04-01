@@ -55,6 +55,6 @@ To search the paths C:\User\Taxes, B:\User\Invest, and B:\Bin for external comma
 
 `path c:\user\taxes;b:\user\invest;b:\bin`
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

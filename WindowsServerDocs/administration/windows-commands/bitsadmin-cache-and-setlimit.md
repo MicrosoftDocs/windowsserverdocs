@@ -34,6 +34,6 @@ The following example limits the cache size to 50%.
 C:\>bitsadmin /Cache /SetLimit 50 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

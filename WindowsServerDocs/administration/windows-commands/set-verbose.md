@@ -31,6 +31,6 @@ set verbose {on | off}
 
 -   If verbose mode is on, **set** provides details of writer inclusion or exclusion and details of metadata compression and extraction.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

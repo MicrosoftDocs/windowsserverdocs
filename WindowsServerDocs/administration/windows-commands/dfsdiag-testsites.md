@@ -56,7 +56,7 @@ To TBD, type:
 dfsdiag /TestSites /DFSpath:\\Contoso.com\Namespace2 /Recurse /Full  
 ```  
   
-## additional references  
+## Additional References  
   
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
   

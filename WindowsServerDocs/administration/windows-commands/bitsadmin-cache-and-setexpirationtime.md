@@ -35,6 +35,6 @@ The following example expires the cache in 60 seconds.
 C:\>bitsadmin /Cache / SetExpirationtime 60
 ```
 
-## additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

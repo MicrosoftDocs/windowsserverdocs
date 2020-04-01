@@ -1,12 +1,8 @@
 ---
 title: create
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for create, which creates a partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD). 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: b45acde1-8f4f-4ec3-b905-d8188f884af8
 author: coreyp-at-msft
@@ -17,8 +13,6 @@ ms.date: 10/16/2017
 
 # create
 
-
-
 Creates a partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD).
 
 ## Syntax
@@ -28,10 +22,3 @@ create partition
 create volume
 create vdisk
 ```
-
-## Parameters
-
-| Parameter | Description |
-|-----------|-------------|
-|           |             |
-

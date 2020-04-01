@@ -86,6 +86,6 @@ ksetup
 
 The Kerberos version 5 protocol is the default for network authentication on computers running Windows XP Professional, Windows Vista, and Windows 7. The Kerberos SSP searches the registry for the domain name of the user's realm and then resolves the name to an IP address by querying a DNS server. The Kerberos protocol can use DNS to locate KDCs by using only the realm name, but it must be specially configured to do so.
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

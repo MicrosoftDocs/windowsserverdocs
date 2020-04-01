@@ -51,7 +51,7 @@ Restore the Default Domain Controllers Policy GPO to its original state. You wil
 dcgpofix /ignoreschema /target:DC
 ```
 
-#### Additional references
+## Additional References
 
 -   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

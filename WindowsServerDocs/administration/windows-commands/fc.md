@@ -119,6 +119,6 @@ To compare each batch file in the root directory on drive C to the file with the
 fc c:*.bat d:*.bat
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

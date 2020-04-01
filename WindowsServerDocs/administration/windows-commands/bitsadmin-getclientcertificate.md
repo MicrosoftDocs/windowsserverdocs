@@ -34,6 +34,6 @@ The following example retrieves the client certificate for the job named *myDown
 C:\>bitsadmin / GetClientCertificate myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

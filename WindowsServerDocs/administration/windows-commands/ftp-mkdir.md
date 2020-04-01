@@ -34,5 +34,5 @@ create a directory called **dir1** on the remote computer.
 ```  
 mkdir dir1  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -47,6 +47,6 @@ scwcmd <command> [<subcommand>]
 |/view|Renders an .xml file by using a specified .xsl transform.</br>See [Scwcmd: view](scwcmd-view.md) for syntax and options.|
 |/?|Displays help at the command prompt.|
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

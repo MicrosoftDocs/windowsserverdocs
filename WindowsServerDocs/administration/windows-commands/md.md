@@ -62,7 +62,7 @@ md \Taxes\Property
 md \Taxes\Property\Current
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -44,7 +44,7 @@ The following example illustrates using the **-changepin** command to change the
 manage-bde –changepin C:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

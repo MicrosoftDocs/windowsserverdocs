@@ -51,7 +51,7 @@ cls
 echo All text files deleted in the %1 directory
 ```
 
-## additional references
+## Additional References
 -   [pushd](pushd.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -53,7 +53,7 @@ Remove the association by using the following command:
 Ksetup /delkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

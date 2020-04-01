@@ -62,7 +62,7 @@ wdsutil /Export-Imagmedia:Windows Vista with Officemediatype:Install /Destinatio
 wdsutil /verbose /Progress /Export-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
 /Filename:install.wim /DestinationImage /Filepath:\\server\share\export.wim /Name:Exported Windows image /Description:Windows Vista image from WDS server /Overwrite:append
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-Image Command](using-the-add-image-command.md)
 [Using the copy-Image Command](using-the-copy-image-command.md)

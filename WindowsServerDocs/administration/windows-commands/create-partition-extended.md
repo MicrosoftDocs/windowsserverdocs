@@ -1,12 +1,8 @@
 ---
 title: create partition extended
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for create partition extended, which creates an extended partition on the disk with focus. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 4ad7cb66-9c66-4153-b94e-1030a7225070
 author: coreyp-at-msft
@@ -14,14 +10,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # create partition extended
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates an extended partition on the disk with focus. You can use this command only on Master Boot Record \(MBR\) disks.  
-  
-  
-  
+Creates an extended partition on the disk with focus. You can use this command only on Master Boot Record (MBR) disks.
+
 ## Syntax  
   
 ```  
@@ -56,7 +51,7 @@ To create an extended partition of 1000 megabytes in size, type:
 create partition extended size=1000  
 ```  
   
-#### additional references  
+## Additional References  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

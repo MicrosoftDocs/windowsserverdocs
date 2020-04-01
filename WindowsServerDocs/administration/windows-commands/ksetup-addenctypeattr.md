@@ -67,7 +67,7 @@ Verify that the encryption type attribute was set as intended for the domain:
 ksetup /getenctypeattr corp.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Klist](klist.md)
 -   [Ksetup:domain](ksetup-domain.md)

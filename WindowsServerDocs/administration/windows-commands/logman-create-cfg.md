@@ -65,5 +65,5 @@ The following command creates a configuration data collector called cfg_log that
 ```  
 logman create cfg cfg_log -mgt root\wmi:select * FROM MSNdis_Vendordriverversion  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

@@ -68,7 +68,7 @@ To disable self-healing repair on drive C, type:
 fsutil repair set c: 0
 ```
 
-#### Additional references
+## Additional References
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 [Fsutil](Fsutil.md)

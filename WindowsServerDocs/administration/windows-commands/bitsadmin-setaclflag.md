@@ -39,6 +39,6 @@ The following example sets the access control list propagation flags for the job
 C:\>bitsadmin /setaclflags myDownloadJob OG
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

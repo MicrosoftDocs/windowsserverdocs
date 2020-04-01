@@ -110,6 +110,6 @@ The following examples can be used at the **more** prompt (`-- More --`).
   ```  
   Type the number of lines to skip, and then press ENTER. **More** skips the specified number of lines and displays the next screen of information.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

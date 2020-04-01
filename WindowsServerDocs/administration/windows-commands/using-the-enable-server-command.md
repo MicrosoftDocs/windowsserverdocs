@@ -30,7 +30,7 @@ To enable the services on the server, run one of the following:
 wdsutil /Enable-Server
 wdsutil /verbose /Enable-Server /Server:MyWDSServer
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-Server Command](using-the-disable-server-command.md)
 [Using the get-Server Command](using-the-get-server-command.md)

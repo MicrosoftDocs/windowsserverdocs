@@ -30,7 +30,7 @@ To reinitialize the server, type one of the following:
 wdsutil /Uninitialize-Server
 wdsutil /verbose /Uninitialize-Server /Server:MyWDSServer
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-Server Command](using-the-disable-server-command.md)
 [Using the enable-Server Command](using-the-enable-server-command.md)

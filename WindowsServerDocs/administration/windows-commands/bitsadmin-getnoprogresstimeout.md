@@ -34,6 +34,6 @@ The following example retrieves the progress time out value for the job named *m
 C:\>bitsadmin /GetNoProgressTimeout myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -28,6 +28,6 @@ The following example purges the local cache.
 C:\>bitsadmin /Cache /Clear 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

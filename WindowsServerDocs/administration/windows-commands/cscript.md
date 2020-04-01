@@ -1,12 +1,8 @@
 ---
 title: cscript
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for cscript, which starts a script so that it runs in a command-line environment.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
 author: coreyp-at-msft
@@ -18,7 +14,8 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-starts a script so that it runs in a command-line environment.
+Starts a script so that it runs in a command-line environment.
+
 ## Syntax
 ```
 cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}] [/I] [/Job:<Identifier>] [{/Logo|/NoLogo}] [/S] [/T:<Seconds>] [/X] [/U] [/?] [<ScriptArguments>]

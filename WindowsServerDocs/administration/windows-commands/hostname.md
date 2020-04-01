@@ -34,5 +34,5 @@ To display the name of the computer, type:
 ```
 hostname
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

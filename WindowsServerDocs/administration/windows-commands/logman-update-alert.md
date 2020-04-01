@@ -61,6 +61,6 @@ The following example updates the existing data collector new_alert, setting the
 ```  
 logman update alert new_alert -th \Processor(_Total)\% Processor time>40  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  
 [logman create alert](logman-create-alert.md)  

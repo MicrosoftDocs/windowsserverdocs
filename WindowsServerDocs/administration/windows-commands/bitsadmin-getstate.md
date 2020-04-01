@@ -51,6 +51,6 @@ The following example retrieves the state for the job named *myDownloadJob*.
 C:\>bitsadmin /GetState myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

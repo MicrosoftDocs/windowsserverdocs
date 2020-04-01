@@ -47,7 +47,7 @@ To create a copy of the specified image, apply the specified settings, and name 
 wdsutil /verbose /Progress /copy-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
 /Filename:install.wim /DestinationImage /Name:copy of Windows Vista with Office /Filename:WindowsVista.wim /Description:This is a copy of the original Windows image with Office installed
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-Image Command](using-the-add-image-command.md)
 [Using the Export-Image Command](using-the-export-image-command.md)

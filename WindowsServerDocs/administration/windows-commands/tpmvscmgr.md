@@ -76,6 +76,6 @@ tpmvscmgr.exe destroy /instance <instance ID>
 ```
 where \<instance ID> is the value printed on the screen when the user created the card. Specifically, for the first card created, the instance ID is ROOT\SMARTCARDREADER\0000.
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

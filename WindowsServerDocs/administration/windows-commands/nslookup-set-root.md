@@ -32,6 +32,6 @@ set root=<RootServer>
 
 ## Remarks
 - The **set root** subcommand affects the **root** subcommand.
-  ## additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup root](nslookup-root.md)

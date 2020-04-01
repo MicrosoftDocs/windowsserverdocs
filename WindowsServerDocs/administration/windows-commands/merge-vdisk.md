@@ -39,7 +39,7 @@ Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD.
 >   ```
 >   merge vdisk depth=1
 >   ```
->   ## additional references
+>   ## Additional References
 > - [Command-Line Syntax Key](command-line-syntax-key.md)
 > - [attach vdisk](attach-vdisk.md)
 > - [compact vdisk](compact-vdisk.md)

@@ -35,6 +35,6 @@ set [no]search
 |  **search**  | Appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received. The default syntax is **search**. |
 |    {help     |                                                                              ?}                                                                               |
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

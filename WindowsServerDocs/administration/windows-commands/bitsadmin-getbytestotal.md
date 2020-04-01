@@ -34,6 +34,6 @@ The following example retrieves the size of the job named *myDownloadJob*.
 C:\>bitsadmin /GetBytesTotal myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

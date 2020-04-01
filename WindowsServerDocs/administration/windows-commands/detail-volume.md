@@ -39,7 +39,7 @@ To see all the disks in which the current volume resides, type:
 detail volume
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

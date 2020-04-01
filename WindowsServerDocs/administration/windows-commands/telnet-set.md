@@ -44,5 +44,5 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
    ```  
    set logfile tnlog.txt  
    ```  
-   ## additional references  
+   ## Additional References  
 3. [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -61,7 +61,7 @@ To remove the hidden and read\-only attributes on the selected volume, type:
 attributes volume clear hidden readonly  
 ```  
   
-#### additional references  
+## Additional References  
 [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

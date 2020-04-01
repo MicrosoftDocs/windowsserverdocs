@@ -44,7 +44,7 @@ The following example illustrates using the **-changepassword** command to chang
 manage-bde –changepassword D:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

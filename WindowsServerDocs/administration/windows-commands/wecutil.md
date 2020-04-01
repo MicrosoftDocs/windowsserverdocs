@@ -156,6 +156,6 @@ Delete a subscription named sub1:
 wecutil ds sub1
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

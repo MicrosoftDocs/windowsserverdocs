@@ -61,7 +61,7 @@ When a security template is created using the Security Template snap-in and the 
 > [!NOTE]
 > The Microsoft Management Console (MMC) and the Security Configuration and Analysis snap-in are not available on Server Core.
 
-#### Additional references
+## Additional References
 
 For examples of how this command can be used, see the examples section in any of the subcommand files.
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

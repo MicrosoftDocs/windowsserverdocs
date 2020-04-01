@@ -46,7 +46,7 @@ wdsutil /verbose /add-ImageDriverPackagemedia: WinPE Boot Image /Server:MyWDSSer
 ```
 wdsutil /verbose /add-ImageDriverPackagemedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filtertype:PackageClass /Operator:Equal /Value:Net /Value:System /Value:DiskDrive /Value:HDC /Value:SCSIAdapter
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-ImageDriverPackage Command](using-the-add-imagedriverpackage-command.md)
 [Using the add-AllDriverPackages subcommand](using-the-add-alldriverpackages-subcommand.md)

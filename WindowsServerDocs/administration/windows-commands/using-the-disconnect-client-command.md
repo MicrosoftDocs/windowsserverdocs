@@ -40,6 +40,6 @@ To disconnect a client and force the installation to fail, type:
 WDSUTIL /Disconnect-Client /Server:MyWDSServer /ClientId:1 /Force
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

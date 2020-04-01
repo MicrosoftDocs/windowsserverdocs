@@ -52,6 +52,6 @@ To import registry entries from the file named AppBkUp.reg, type:
 reg import AppBkUp.reg
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

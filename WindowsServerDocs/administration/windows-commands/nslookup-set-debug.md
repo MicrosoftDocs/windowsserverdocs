@@ -39,6 +39,6 @@ set [no]debug
 
 -   With Debugging Mode turned on, more information is printed about the packet sent to the server and the resulting answer.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

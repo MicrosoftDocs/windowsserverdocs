@@ -40,6 +40,6 @@ WDSUTIL /Get-DriverPackage /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318}
 WDSUTIL /Get-DriverPackage /DriverPackage:MyDriverPackage /Show:All
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

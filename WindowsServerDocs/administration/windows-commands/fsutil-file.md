@@ -130,7 +130,7 @@ To set a range of a file on an NTFS volume to zeros to empty it, type:
 fsutil file setzerodata offset=100 length=150 c:\temp\sample.txt  
 ```
 
-#### Additional references
+## Additional References
 [Command-Line Syntax Key](Command-Line-Syntax-Key.md)
 
 [Fsutil](Fsutil.md)

@@ -54,6 +54,6 @@ To restore the file named NTRKBkUp.hiv into the key HKLM\Software\Microsoft\ResK
 REG RESTORE HKLM\Software\Microsoft\ResKit NTRKBkUp.hiv
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

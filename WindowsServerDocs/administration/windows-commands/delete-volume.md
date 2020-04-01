@@ -45,7 +45,7 @@ To delete the volume with focus, type:
 delete volume
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

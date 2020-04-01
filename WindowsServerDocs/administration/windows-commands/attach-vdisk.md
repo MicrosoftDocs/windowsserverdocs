@@ -39,7 +39,7 @@ attach vdisk [readonly] { [sd=<SDDL>] | [usefilesd] } [noerr]
   ```
   attach vdisk readonly
   ```
-  ## additional references
+  ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [compact vdisk](compact-vdisk.md)
 

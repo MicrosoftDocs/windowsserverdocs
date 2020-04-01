@@ -44,7 +44,7 @@ The following example illustrates using the **-upgrade** command to upgrade BitL
 manage-bde –upgrade C:
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

@@ -44,5 +44,5 @@ san [policy={onlineAll | offlineAll | offlineShared}] [noerr]
   ```
   san policy=offlineAll
   ```
-  ## additional references
+  ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)

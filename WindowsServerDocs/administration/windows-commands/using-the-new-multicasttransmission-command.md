@@ -71,7 +71,7 @@ To create a Scheduled-Cast transmission of an install image, type:
 wdsutil /New-MulticastTransmission /FriendlyName:WDS SchedCast Transmission /Server:MyWDSServemedia:Vista with Officemediatype:Install 
 /Transmissiontype:ScheduledCast /time:2006/11/20:17:00 /Clients:100
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-AllMulticastTransmissions Command](using-the-get-allmulticasttransmissions-command.md)
 [Using the get-MulticastTransmission Command](using-the-get-multicasttransmission-command.md)

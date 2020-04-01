@@ -46,6 +46,6 @@ echo Files Updated.
 title Command Prompt
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

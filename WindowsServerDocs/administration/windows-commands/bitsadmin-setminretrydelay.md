@@ -35,6 +35,6 @@ The following example sets the minimum retry delay for the job named *myDownload
 C:\>bitsadmin /SetMinRetryDelay myDownloadJob 35
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

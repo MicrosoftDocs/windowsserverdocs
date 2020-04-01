@@ -38,6 +38,6 @@ The following example retrieves the job type for the job named *myDownloadJob*.
 C:\>bitsadmin /GetType myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

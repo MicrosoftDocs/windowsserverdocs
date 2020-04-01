@@ -59,7 +59,7 @@ This /is /the /example /of /calling /command /with /parameters
 This /is /a:different /example
 ```
 
-## additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 

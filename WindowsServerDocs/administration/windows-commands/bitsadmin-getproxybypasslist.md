@@ -38,6 +38,6 @@ The following example retrieves the proxy bypass list for the job named *myDownl
 C:\>bitsadmin /GetProxyBypassList myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

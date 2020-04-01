@@ -35,6 +35,6 @@ set [no]vc
 |  **vc**   |             Specifies to always use a virtual circuit when sending requests to the server.             |
 |   {help   |                                                   ?}                                                   |
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

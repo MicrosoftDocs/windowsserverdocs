@@ -38,6 +38,6 @@ The following example removes credentials from the job named *myDownloadJob*.
 C:\>bitsadmin /RemoveCredentials myDownloadJob SERVER BASIC
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -34,6 +34,6 @@ The following example gets the custom headers for the job named *myDownloadJob*.
 C:\>bitsadmin /GetCustomHeaders myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

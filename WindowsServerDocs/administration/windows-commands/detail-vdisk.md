@@ -37,7 +37,7 @@ To see details about the selected VHD, type:
 detail vdisk  
 ```  
   
-#### additional references  
+## Additional References  
   
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
   

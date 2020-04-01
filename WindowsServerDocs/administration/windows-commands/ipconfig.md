@@ -77,6 +77,6 @@ To set the DHCP class ID for the Local Area Connection adapter to TEST, type:
 ipconfig /setclassid Local Area Connection TEST
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

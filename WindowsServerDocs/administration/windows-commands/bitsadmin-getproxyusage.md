@@ -42,6 +42,6 @@ The following example retrieves the proxy usage for the job named *myDownloadJob
 C:\>bitsadmin /GetProxyUsage myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

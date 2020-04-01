@@ -48,7 +48,7 @@ To delete the partition with focus, type:
 delete partition
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

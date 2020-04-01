@@ -53,6 +53,6 @@ To create a GPO named FileServerSecurity from a file named FileServerPolicy.xml,
 scwcmd transform /p:FileServerPolicy.xml /g:FileServerSecurity
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -44,7 +44,7 @@ select vdisk
 -   If a volume is selected with a corresponding partition, the partition will be automatically selected.
 -   If a partition is selected with a corresponding volume, the volume will be automatically selected.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

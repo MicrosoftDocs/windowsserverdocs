@@ -28,6 +28,6 @@ The following command displays the command-line help for the **Util** switches.
 Bitsadmin /Util /Help
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

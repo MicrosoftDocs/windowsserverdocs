@@ -57,7 +57,7 @@ Import that file to a different database on another computer.
 Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg SecContoso.inf /log C:\Security\FY11\SecAnalysisContosoFY12.log /quiet
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit:import](secedit-import.md)
 -   [Secedit](secedit.md)

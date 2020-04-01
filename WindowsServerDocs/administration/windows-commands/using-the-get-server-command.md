@@ -35,7 +35,7 @@ To view detailed information about the server, type:
 ```
 wdsutil /verbose /Get-Server /Server:MyWDSServer /Show:All /detailed
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-Server Command](using-the-disable-server-command.md)
 [Using the enable-Server Command](using-the-enable-server-command.md)

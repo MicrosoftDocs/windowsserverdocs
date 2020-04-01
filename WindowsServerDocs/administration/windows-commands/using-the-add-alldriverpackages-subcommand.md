@@ -40,7 +40,7 @@ WDSUTIL /verbose /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers /Architectur
 WDSUTIL /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers\Printers /DriverGroup:Printer Drivers
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

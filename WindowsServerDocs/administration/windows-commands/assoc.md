@@ -63,6 +63,6 @@ To send the output of **assoc** to the file assoc.txt, type:
 assoc>assoc.txt
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

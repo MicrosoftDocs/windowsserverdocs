@@ -33,6 +33,6 @@ set <KeyWord>[=<Value>]
 
 ## Remarks
 Use **set all** to see a listing of the current settings.
-## additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [nslookup set all](nslookup-set-all.md)

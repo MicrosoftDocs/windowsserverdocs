@@ -38,6 +38,6 @@ delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <Shad
 |  id \<ShadowID>   |              Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.               |
 | exposed {\<Drive> |                                                                            <MountPoint>}                                                                             |
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

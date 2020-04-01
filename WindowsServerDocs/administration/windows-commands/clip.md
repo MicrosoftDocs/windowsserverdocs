@@ -1,12 +1,8 @@
 ---
 title: clip
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for clip, which redirects the command output from the command line to the Windows clipboard. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 85322d85-3376-4806-845b-93ac77fe27bf
 author: coreyp-at-msft
@@ -17,9 +13,7 @@ ms.date: 10/16/2017
 
 # clip
 
-
-
-Redirects command output from the command line to the Windows clipboard. You can then paste this text output into other programs.
+Redirects the command output from the command line to the Windows clipboard. You can then paste this text output into other programs.
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
@@ -57,6 +51,6 @@ To copy the contents of a file called Readme.txt to the Windows Clipboard, type:
 clip < readme.txt
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

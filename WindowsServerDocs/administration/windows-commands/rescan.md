@@ -27,7 +27,7 @@ Locates new disks that may have been added to the computer.
 rescan
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)
 

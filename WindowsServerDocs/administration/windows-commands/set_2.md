@@ -35,6 +35,6 @@ set metadata <MetaData.cab>
 |metadata|Sets the name and location of the shadow creation metadata file. See [Set metadata](set-metadata.md) for syntax and parameters.|
 |/?|Displays help at the command prompt.|
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

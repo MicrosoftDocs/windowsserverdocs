@@ -53,7 +53,7 @@ To TBD, type:
 dfsdiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace  
 ```  
   
-## additional references  
+## Additional References  
   
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  
   

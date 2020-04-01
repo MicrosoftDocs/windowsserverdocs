@@ -53,7 +53,7 @@ Run the Ksetup tool at the command line of the same computer as in the preceding
 Ksetup /setcomputerpassword p@sswrd1%
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)

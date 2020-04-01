@@ -91,6 +91,6 @@ To manually change the command prompt to the default setting (the current drive 
 prompt $p$g
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

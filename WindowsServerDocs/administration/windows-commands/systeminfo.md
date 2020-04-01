@@ -48,6 +48,6 @@ To remotely view configuration information (in list format) for a computer named
 
 **systeminfo /s srvmain2 /u maindom\hiropln /p p@ssW23 /fo list**
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

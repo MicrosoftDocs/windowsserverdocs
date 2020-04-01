@@ -175,6 +175,6 @@ mode con[:] [rate=<R> delay=<D>]
 
   Valid values for *D* are 1, 2, 3, and 4 (representing 0.25, 0.50, 0.75, and 1 second). The default value is 2. If you set the delay, you must also set the rate.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

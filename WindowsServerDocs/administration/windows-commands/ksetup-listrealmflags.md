@@ -61,7 +61,7 @@ ksetup /setrealmflags CORP.CONTOSO.COM sendaddress tcpsupported delete ncsupport
 ksetup /setrealmflags CORP.CONTOSO.COM 0xF
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup:setrealmflags](ksetup-setrealmflags.md)
 -   [Ksetup:addrealmflags](ksetup-addrealmflags.md)

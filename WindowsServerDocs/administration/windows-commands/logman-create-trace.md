@@ -67,5 +67,5 @@ The following example creates an event trace data collector called trace_log usi
 ```  
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

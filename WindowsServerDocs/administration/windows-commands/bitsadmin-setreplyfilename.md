@@ -41,6 +41,6 @@ The following example sets the reply filename pathfor the job named *myDownloadJ
 C:\>bitsadmin /SetReplyFileName myDownloadJob c:\reply
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

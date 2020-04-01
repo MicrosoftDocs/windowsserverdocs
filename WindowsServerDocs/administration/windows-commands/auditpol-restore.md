@@ -32,6 +32,6 @@ To restore system audit policy settings, per-user audit policy settings for all 
 ```
 auditpol /restore /file:c:\auditpolicy.csv
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [auditpol backup](auditpol-backup.md)

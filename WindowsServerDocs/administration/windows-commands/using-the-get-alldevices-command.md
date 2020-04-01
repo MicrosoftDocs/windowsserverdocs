@@ -31,7 +31,7 @@ To view all computers, type one of the following:
 wdsutil /Get-AllDevices
 wdsutil /verbose /Get-AllDevices /forest:Yes /ReferralServer:MyWDSServer
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Subcommand: set-Device](subcommand-set-device.md)
 [Using the add-Device command](using-the-add-device-command.md)

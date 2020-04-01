@@ -57,7 +57,7 @@ To list all current print jobs in the queue for the local printer named colorpri
 cscript prnjobs.vbs -l -p colorprinter_2
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Print Command Reference](print-command-reference.md)

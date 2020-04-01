@@ -30,7 +30,7 @@ To disable the server, type:
 wdsutil /Disable-TransportServer
 wdsutil /verbose /Disable-TransportServer /Server:MyWDSServer
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the enable-TransportServer Command](using-the-enable-transportserver-command.md)
 [Using the get-TransportServer Command](using-the-get-transportserver-command.md)

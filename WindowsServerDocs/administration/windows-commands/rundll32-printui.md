@@ -122,7 +122,7 @@ There are two types of parameters: base parameters and modification parameters. 
   ```  
   rundll32 printui.dll PrintUIEntry /p /n\\printer3  
   ```  
-  ## additional references  
+  ## Additional References  
 
 - [rundll32](rundll32.md)  
 - [print Command Reference](print-command-reference.md)  

@@ -33,6 +33,6 @@ revert <ShadowCopyID>
 |---------|-----------|
 |\<ShadowCopyID>|Specifies the shadow copy ID to revert the volume to.|
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

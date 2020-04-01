@@ -47,7 +47,7 @@ To create a Scheduled-Cast namespace, type:
 wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider 
 /Namespacetype:ScheduledCast /time:2006/11/20:17:00 /Clients:20
 ```
-#### additional references
+## Additional References
 [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
 [Using the remove-Namespace Command](using-the-remove-namespace-command.md)

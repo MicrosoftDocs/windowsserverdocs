@@ -65,6 +65,6 @@ To use the **driverquery** command on a remote server named **server1** using th
 driverquery /s server1 /u maindom\user1 /p p@ssw3d
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

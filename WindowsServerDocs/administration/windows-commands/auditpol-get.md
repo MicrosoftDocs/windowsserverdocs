@@ -81,5 +81,5 @@ auditpol /get /user:{S-1-5-21-1443922412-3030960370-963420232-51} /category:Syst
 > ```
 > auditpol /get /option:CrashOnAuditFail /r
 > ```
-> #### additional references
+> ## Additional References
 > [Command-Line Syntax Key](command-line-syntax-key.md)

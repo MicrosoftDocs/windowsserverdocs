@@ -30,5 +30,5 @@ Disconnect from the remote computer and retain the **ftp>** prompt.
 ```  
 disconnect  
 ```  
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

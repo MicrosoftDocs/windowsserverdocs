@@ -53,6 +53,6 @@ bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1,proxy2,proxy3 NUL
 bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1:80 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1257,6 +1257,6 @@ schtasks /query /s Reskit16 /fo csv /nh >> \\svr01\data\tasklogs\p0102.csv
 ```
 In response, **SchTasks.exe** adds the tasks scheduled for the Reskit16 computer to the p0102.csv file on the local computer, Svr01.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

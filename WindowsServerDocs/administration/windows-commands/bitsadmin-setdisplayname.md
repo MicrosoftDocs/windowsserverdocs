@@ -35,6 +35,6 @@ The following example sets the display name for the job named *myDownloadJob* to
 C:\>bitsadmin /SetDisplayName myDownloadJob Download Music Job
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

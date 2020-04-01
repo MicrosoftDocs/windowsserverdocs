@@ -35,6 +35,6 @@ The following example reports the temporary filename of file 2 for the job named
 C:\>bitsadmin /GetTemporaryName myJob 1 
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

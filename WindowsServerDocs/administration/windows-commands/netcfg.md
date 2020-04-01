@@ -66,5 +66,5 @@ To display binding paths containing *MS_TCPIP*:
 ```
 netcfg /b ms_tcpip
 ```
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

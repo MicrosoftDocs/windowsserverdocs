@@ -61,6 +61,6 @@ Force the currently logged on user to change the password at the next logon:
 ksetup /changepassword Pas$w0rd *
 ```
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)

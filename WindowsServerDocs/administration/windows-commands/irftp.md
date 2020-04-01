@@ -42,5 +42,5 @@ Send Example.txt over the infrared link.
 irftp c:\example.txt  
 ```  
 
-## additional references  
+## Additional References  
 -   [Command-Line Syntax Key](command-line-syntax-key.md)  

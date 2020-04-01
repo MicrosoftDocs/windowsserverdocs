@@ -60,6 +60,6 @@ To delete the registry value MTU under HKLM\Software\MyCo on the computer named 
 REG DELETE \\ZODIAC\HKLM\Software\MyCo /v MTU
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -32,6 +32,6 @@ lserver <DNSDomain>
 
 ## Remarks
 - The **lserver** command uses the initial server to look up the information about the specified DNS domain. This is in contrast to the **server** command, which uses the current default server.
-  ## additional references
+  ## Additional References
   [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup server](nslookup-server.md)

@@ -41,6 +41,6 @@ The following example monitors the transfer queue for jobs owned by the current 
 C:\>bitsadmin /Monitor /refesh 60
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

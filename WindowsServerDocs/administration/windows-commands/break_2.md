@@ -48,6 +48,6 @@ break writable %Alias1%
 > [!NOTE]
 > Access to the volume is made directly to the hardware provider without record of the volume having been a shadow copy.
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

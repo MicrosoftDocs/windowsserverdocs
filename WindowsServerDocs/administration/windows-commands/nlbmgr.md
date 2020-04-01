@@ -33,6 +33,6 @@ nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
 | /autorefresh <interval> |                                                                                                          Causes Network Load Balancing Manager to refresh its host and cluster information every <interval> seconds. If no interval is specified, the information is refreshed every 60 seconds.                                                                                                          |
 |           /?            |                                                                                                                                                                                   Displays help at the command prompt.                                                                                                                                                                                    |
 
-## additional references
+## Additional References
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 

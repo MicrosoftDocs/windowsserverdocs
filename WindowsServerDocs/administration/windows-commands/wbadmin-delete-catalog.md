@@ -36,7 +36,7 @@ wbadmin delete catalog
 
 If you delete the backup catalog for a computer, you will not be able to access the backups created of that computer using the Windows Server Backup snap-in. In this case, if you can access another backup location, use **wbadmin restore catalog** to restore the backup catalog from that location. You should create a new backup once your backup catalog is deleted.
 
-#### Additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

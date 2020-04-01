@@ -77,6 +77,6 @@ To compare all subkeys and values under HKLM\Software\MyCo on the computer named
 
 REG COMPARE \\\\ZODIAC\HKLM\Software\MyCo \\\\. /s
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

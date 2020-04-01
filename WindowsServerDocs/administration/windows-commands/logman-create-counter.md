@@ -64,5 +64,5 @@ The following command creates a counter called perf_log using the % Processor ti
 ```  
 logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -rf 01:00  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

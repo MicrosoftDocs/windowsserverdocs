@@ -39,6 +39,6 @@ The following example sets the timeout for the job named *myDownloadJob* to 10 s
 C:\>bitsadmin /SetMaxDownloadTime myDownloadJob 10
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -122,7 +122,7 @@ To display NetBIOS session statistics by IP address every five seconds, type:
 nbtstat /S 5
 ```
 
-## additional references
+## Additional References
 
 -   [Command-Line Syntax Key](command-line-syntax-key.md)
 
