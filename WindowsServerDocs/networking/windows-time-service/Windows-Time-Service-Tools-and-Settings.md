@@ -128,7 +128,7 @@ The following table lists the policies that you can configure for the Windows Ti
 |Time Providers\Enable Windows NTP Server |W32Time\TimeProviders\NtpServer |
 
 > <sup>1</sup> Category path: **Computer Configuration\Administrative Templates\System\Windows Time Service**  
-> <sup>2</sup> Subkey: **HKLM\SOFTWARE\Policies\Microsoft\Windows**  
+> <sup>2</sup> Subkey: **HKLM\SOFTWARE\Policies\Microsoft**  
 > <sup>3</sup> Subkey: **HKLM\SYSTEM\CurrentControlSet\Services**
 
 ## Enabling W32Time logging
