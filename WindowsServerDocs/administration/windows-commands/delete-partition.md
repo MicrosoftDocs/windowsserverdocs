@@ -1,12 +1,8 @@
 ---
 title: delete partition
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for delete partition, which deletes the partition with focus.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # delete partition
-
-
 
 Deletes the partition with focus.
 

@@ -1,11 +1,8 @@
 ---
 title: dfsutil
-
+description: Windows Commands topic for dfsutil, which manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: ef5093a4-0d24-4b21-9d04-59933ad98e2c
 robots: noindex,nofollow
@@ -19,8 +16,6 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The dfsutil command manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
-
-for examples of how this command can be used, see 
 
 ## Syntax
 
@@ -43,21 +38,8 @@ command </parameter> </param2>
 |[dfsutil Cache](dfsutil-cache.md)|Displays or flushes the client cache.|
 |[dfsutil oldcli](dfsutil-oldcli.md)|Use the dfsutil \/oldcli command to use of the original dfsutil syntax.|
 
-## Remarks <optional section>
+## Remarks
 if you specify an object \(such as a namespace server\) at the end of a command, most commands will display information about the object without requiring further parameters or commands. For example, when using the dfsutil Root command, you can append a namespace root to the command to view information about the root.
-
-## <a name="BKMK_Examples"></a>Examples
-&lt;Here is where you put a detailed description of your example.&gt;
-
-```
-This /is /the /example /of /calling /command /with /parameters
-```
-
-&lt;Here is where you put a detailed description of another example.&gt;
-
-```
-This /is /a:different /example
-```
 
 ## Additional References
 

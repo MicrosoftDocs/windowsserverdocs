@@ -1,6 +1,6 @@
 ---
 title: attributes disk
-description: Windows Commands topic for attributes disk, which displays, sets, or clears the attributes of a disk.
+description: Windows Commands topic for **attributes disk**, which displays, sets, or clears the attributes of a disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -14,9 +14,6 @@ ms.date: 10/16/2017
 # attributes disk
 
 Displays, sets, or clears the attributes of a disk.
-
-> [!IMPORTANT]
-> This parameter is not available in any edition of Windows Vista.
 
 ## Syntax
 
@@ -51,5 +48,4 @@ attributes disk set readonly
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

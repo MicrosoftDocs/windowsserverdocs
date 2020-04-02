@@ -1,6 +1,6 @@
 ---
 title: add alias
-description: Windows Commands topic for add alias which, adds aliases to the alias environment.
+description: Windows Commands topic for **add alias**, which adds aliases to the alias environment.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -27,9 +27,9 @@ add alias <AliasName> <AliasValue>
 
 |Parameter|Description|
 |---------|-----------|
-|\<AliasName>|Specifies the name of the alias.|
-|\<AliasValue>|Specifies the value of the alias.|
-|/?|Displays help at the command prompt.|
+|`<AliasName>`|Specifies the name of the alias.|
+|`<AliasValue>`|Specifies the value of the alias.|
+|`/?`|Displays help at the command prompt.|
 
 ## Remarks
 
@@ -38,23 +38,30 @@ add alias <AliasName> <AliasValue>
 ## <a name=BKMK_examples></a>Examples
 
 To list all shadows, including their aliases, type:
+
 ```
 list shadows all
 ```
+
 The following excerpt shows a shadow copy to which the default alias, VSS_SHADOW_x, has been assigned:
+
 ```
 * Shadow Copy ID = {ff47165a-1946-4a0c-b7f4-80f46a309278}
 %VSS_SHADOW_1%
 ```
+
 To assign a new alias with the name System1 to this shadow copy, type:
+
 ```
 add alias System1 %VSS_SHADOW_1%
 ```
+
 Alternatively, you can assign the alias by using the shadow copy ID:
+
 ```
 add alias System1 {ff47165a-1946-4a0c-b7f4-80f46a309278}
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: append
-description: Windows Commands topic for append, which allows programs to open data files in specified directories, as if they were in the current directory.
+description: Windows Commands topic for **append**, which allows programs to open data files in specified directories, as if they were in the current directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -29,28 +29,31 @@ append ;
 
 ## Parameters
 
-|     Parameter     |                                                                                 Description                                                                                 |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [\<Drive>:]<Path> |                                                                 Specifies a drive and directory to append.                                                                  |
-|       /x:on       |                                                  Applies appended directories to file searches and launching applications.                                                  |
-|      /x:off       |                                     Applies appended directories only to requests to open files.</br>**/x:off** is the default setting.                                     |
-|     /path:on      |                               Applies appended directories to file requests that already specify a path. **/path:on** is the default setting.                               |
-|     /path:off     |                                                                    Turns off the effect of **/path:on**.                                                                    |
-|        /e         | Stores a copy of the appended directory list in an environment variable named APPEND. **/e** may be used only the first time you use **append** after starting your system. |
-|         ;         |                                                                     Clears the appended directory list.                                                                     |
-|        /?         |                                                                    Displays help at the command prompt.                                                                     |
+| Parameter | Description |
+| --------- | ----------- |
+| `[\<Drive>:]<Path>` | Specifies a drive and directory to append. |
+| `/x:on` | Applies appended directories to file searches and launching applications. |
+| `/x:off` | Applies appended directories only to requests to open files. The **/x:off** option is the default setting. |
+| `/path:on` | Applies appended directories to file requests that already specify a path. **/path:on** is the default setting. |
+| `/path:off` | Turns off the effect of **/path:on**. |
+| `/e` | Stores a copy of the appended directory list in an environment variable named APPEND. **/e** may be used only the first time you use **append** after starting your system. |
+| `;` | Clears the appended directory list. |
+| `/?` | Displays help at the command prompt. |
 
 ## <a name=BKMK_examples></a>Examples
 
 To clear the appended directory list, type:
+
 ```
 append ;
 ```
+
 To store a copy of the appended directory to an environment variable named APPEND, type:
+
 ```
 append /e
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

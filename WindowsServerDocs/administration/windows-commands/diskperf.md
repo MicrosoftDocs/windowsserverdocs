@@ -1,12 +1,8 @@
 ---
 title: diskperf
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for diskperf, which can be used to remotely enable or disable physical or logical disk performance counters on computers running Windows 2000.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: f06916e8-069b-4ec8-a6eb-59f1d9f77111
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # diskperf
-
-
 
 In Windows 2000, physical and logical disk performance counters are not enabled by default.
 

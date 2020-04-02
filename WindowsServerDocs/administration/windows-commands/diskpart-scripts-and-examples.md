@@ -1,12 +1,8 @@
 ---
 title: Diskpart Scripts and Examples
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for Diskpart scripts and examples about how to automate disk-related tasks, such as creating volumes or converting disks to dynamic disks.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 319c0795-11df-47c8-b203-eadb0577ee0d
 author: coreyp-at-msft
@@ -14,11 +10,11 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Diskpart Scripts and Examples
+# Diskpart scripts and examples
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Use Diskpart `/s` to run scripts that automate disk\-related tasks, such as creating volumes or converting disks to dynamic disks. Scripting these tasks is useful if you deploy Windows by using unattended Setup or the Sysprep tool, which do not support creating volumes other than the boot volume.  
+Use Diskpart `/s` to run scripts that automate disk-related tasks, such as creating volumes or converting disks to dynamic disks. Scripting these tasks is useful if you deploy Windows by using unattended Setup or the Sysprep tool, which do not support creating volumes other than the boot volume.  
   
 -   To create a Diskpart script, create a text file that contains the Diskpart commands that you want to run, with one command per line, and no empty lines. You can start a line with `rem` to make the line a comment.  
   
@@ -50,9 +46,10 @@ Use Diskpart `/s` to run scripts that automate disk\-related tasks, such as crea
   
 When DiskPart starts, the DiskPart version and computer name display at the command prompt. By default, if DiskPart encounters an error while attempting to perform a scripted task, DiskPart stops processing the script and displays an error code \(unless you specified the **noerr** parameter\). However, DiskPart always returns errors when it encounters syntax errors, regardless of whether you used the **noerr** parameter. The **noerr** parameter enables you to perform useful tasks such as using a single script to delete all partitions on all disks regardless of the total number of disks.  
   
-## See Also  
-[Sample: Configure UEFI\/gpt\-Based Hard Drive Partitions by Using Windows PE and DiskPart](https://technet.microsoft.com/library/hh825686.aspx)  
-[Sample: Configure BIOS\/MBR\-Based Hard Disk Partitions by Using Windows PE and DiskPart](https://technet.microsoft.com/library/hh825677.aspx)  
-[Storage Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848705.aspx)  
+## Additional References
+  
+- [Sample: Configure UEFI\/gpt\-Based Hard Drive Partitions by Using Windows PE and DiskPart](https://technet.microsoft.com/library/hh825686.aspx)  
+- [Sample: Configure BIOS\/MBR\-Based Hard Disk Partitions by Using Windows PE and DiskPart](https://technet.microsoft.com/library/hh825677.aspx)  
+- [Storage Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848705.aspx)  
   
 

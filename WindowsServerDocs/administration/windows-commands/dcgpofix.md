@@ -1,12 +1,8 @@
 ---
 title: dcgpofix
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for dcgpofix, which recreates the default Group Policy Objects (GPOs) for a domain.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 81d5fa65-2aea-49d3-b353-357441846c00
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # dcgpofix
-
-
 
 Recreates the default Group Policy Objects (GPOs) for a domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 

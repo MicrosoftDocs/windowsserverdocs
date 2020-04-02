@@ -1,6 +1,6 @@
 ---
 title: add
-description: Windows Commands topic for add_1, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
+description: Windows Commands topic for **add**, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -30,19 +30,22 @@ add alias <AliasName> <AliasValue>
 
 ## Add subcommands
 
-|Subcommand|Description|
-|----------|-----------|
-|volume|Adds a volume to the Shadow Copy Set, which is the set of volumes to be shadow copied. See [Add volume](add-volume.md) for syntax and parameters.|
-|alias|Adds the given name and value to the alias environment. See [Add alias](add-alias.md) for syntax and parameters.|
-|/?|Displays help at the command line.|
+| Subcommand | Description |
+| ---------- | ----------- |
+| volume | Adds a volume to the Shadow Copy Set, which is the set of volumes to be shadow copied. See [Add volume](add-volume.md) for syntax and parameters. |
+| alias | Adds the given name and value to the alias environment. See [Add alias](add-alias.md) for syntax and parameters. |
+| `/?` | Displays help at the command line. |
 
 ## <a name=BKMK_examples></a>Examples
 
 To display the volumes added and the aliases that are currently in the environment, type:
+
 ```
 add
 ```
+
 The following output shows that drive C has been added to the Shadow Copy Set:
+
 ```
 Volume c: alias System1    GUID \\?\Volume{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}\
 1 volume in Shadow Copy Set.
@@ -51,4 +54,4 @@ No Diskshadow aliases in the environment.
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

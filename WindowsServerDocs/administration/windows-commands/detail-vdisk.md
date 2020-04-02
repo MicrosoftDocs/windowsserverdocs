@@ -1,12 +1,8 @@
 ---
 title: detail vdisk
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for detail disk, which displays the properties of the selected virtual hard disk (VHD).
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: da0f350c-1ce3-4c3f-988c-15f83402e716
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the properties of the selected virtual hard disk \(VHD\).  
+Displays the properties of the selected virtual hard disk (VHD).  
   
 ## Syntax  
   
@@ -43,9 +39,7 @@ detail vdisk
   
 -   [attach vdisk](attach-vdisk.md)  
   
--   [compact vdisk](compact-vdisk.md)  
-  
-  
+-   [compact vdisk](compact-vdisk.md)
   
 -   [Detach vdisk](detach-vdisk.md)  
   

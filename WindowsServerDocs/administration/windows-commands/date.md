@@ -1,12 +1,8 @@
 ---
 title: date
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for date, which displays or sets the system date. If used without parameters,
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: ce6700fb-32f9-4350-a1af-5aee61d4448c
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # date
-
-
 
 Displays or sets the system date. If used without parameters, **date** displays the current system date setting and prompts you to enter a new date.
 

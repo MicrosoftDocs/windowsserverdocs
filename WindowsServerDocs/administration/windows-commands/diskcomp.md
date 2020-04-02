@@ -1,12 +1,8 @@
 ---
 title: diskcomp
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for diskcomp, which compares the contents of two floppy disks.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
 author: coreyp-at-msft
@@ -17,9 +13,9 @@ ms.date: 10/16/2017
 
 # diskcomp
 
+Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.
 
-
-Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.For examples of how to use this command, see [Examples](#BKMK_examples).
+For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 

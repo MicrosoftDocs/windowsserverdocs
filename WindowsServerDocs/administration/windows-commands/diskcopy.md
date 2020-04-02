@@ -1,12 +1,8 @@
 ---
 title: diskcopy
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for diskcopy, which copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 5fd21efa-52cc-4e70-a7fe-35125a435106
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 05/07/2018
 ---
 
 # diskcopy
-
-
 
 Copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive. If used without parameters, **diskcopy** uses the current drive for the source disk and the destination disk.
 
@@ -79,9 +73,11 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 > [!NOTE]
 > You cannot use **xcopy** to copy a startup disk.
-> -   Understanding **diskcopy** exit codes
 
-    The following table explains each exit code.  
+### Understanding **diskcopy** exit codes
+
+    The following table explains each exit code.
+	
     |Exit code|Description|
     |---------|-----------|
     |0|Copy operation was successful|

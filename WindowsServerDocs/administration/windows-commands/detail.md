@@ -1,12 +1,8 @@
 ---
 title: detail
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for detail, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 305755bd-1a51-486b-8515-62d3f227c291
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # detail
-
-
 
 Displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 

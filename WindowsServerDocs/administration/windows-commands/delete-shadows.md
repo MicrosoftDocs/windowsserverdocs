@@ -1,12 +1,8 @@
 ---
 title: delete shadows
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for delete shadows, which deletes shadow copies.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # delete shadows
-
-
 
 Deletes shadow copies.
 
@@ -29,14 +23,14 @@ delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <Shad
 
 ## Parameters
 
-|     Parameter     |                                                                             Description                                                                              |
-|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|        all        |                                                                      Deletes all shadow copies.                                                                      |
-| volume \<Volume>  |                                                            Deletes all shadow copies of the given volume.                                                            |
-| oldest \<Volume>  |                                                         Deletes the oldest shadow copy of the given volume.                                                          |
-|   set \<SetID>    | Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
-|  id \<ShadowID>   |              Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment.               |
-| exposed {\<Drive> |                                                                            <MountPoint>}                                                                             |
+| Parameter | Description |
+| ---- | ---- |
+| all | Deletes all shadow copies. |
+| volume \<Volume> | Deletes all shadow copies of the given volume. |
+| oldest \<Volume> | Deletes the oldest shadow copy of the given volume. |
+| set \<SetID> | Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
+| id \<ShadowID> | Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
+| exposed {\<Drive> | <MountPoint>} |
 
 ## Additional References
 

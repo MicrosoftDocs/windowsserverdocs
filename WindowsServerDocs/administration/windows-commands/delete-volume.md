@@ -1,12 +1,8 @@
 ---
 title: delete volume
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for delete volume, which deletes the selected volume.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: f625933d-0f47-409e-93b2-a3e234049a5d
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # delete volume
-
-
 
 Deletes the selected volume.
 
@@ -29,9 +23,9 @@ delete volume [noerr]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+| Parameter | Description |
+| --------- | ----------- |
+| noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
 ## Remarks
 

@@ -1,24 +1,18 @@
 ---
-title: dfsutil Cache
-
+title: dfsutil cache
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
-ms.assetid: b31e94aa-ef41-44bc-9891-4715d7ce2301
 robots: noindex,nofollow
+ms.assetid: 7bb6a932-d129-4a12-914d-4de3bb612d45
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
 
-# dfsutil Cache
-
-
+# dfsutil Client
 
 ## This topic is no longer available
 
-We are sorry—the topic that you requested is no longer available.
+We're sorry. The topic that you requested is no longer available.

@@ -1,12 +1,8 @@
 ---
 title: del
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for del, which deletes one or more files.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 346eede2-2085-44f5-9936-6877b5d5a833
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # del
-
-
 
 Deletes one or more files. This command is the same as the **erase** command.
 
@@ -46,7 +40,8 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 
 > [!CAUTION]
 > If you use **del** to delete a file from your disk, you cannot retrieve it.
-> -   If you use **/p**, **del** displays the name of a file and sends the following message:
+
+-   If you use **/p**, **del** displays the name of a file and sends the following message:
 
     `FileName, Delete (Y/N)?`
 
@@ -68,7 +63,8 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 
 > [!NOTE]
 > Before you use wildcard characters with the **del** command, use the same wildcard characters with the **dir** command to list all the files that will be deleted.
-> -   The **del** command, with different parameters, is available from the Recovery Console.
+
+-   The **del** command, with different parameters, is available from the Recovery Console.
 
 ## <a name=BKMK_examples></a>Examples
 

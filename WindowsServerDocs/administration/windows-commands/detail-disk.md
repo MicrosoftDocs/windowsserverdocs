@@ -1,12 +1,8 @@
 ---
 title: detail disk
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for detail disk, which displays the properties of the selected disk and the volumes on that disk.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 6b09cf40-8d93-452b-b449-5242e62a4102
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # detail disk
-
-
 
 Displays the properties of the selected disk and the volumes on that disk.
 

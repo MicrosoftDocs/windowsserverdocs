@@ -1,6 +1,6 @@
 ---
 title: add
-description: Windows Commands topic for add, which mirrors the simple volume with focus to the specified disk.
+description: Windows Commands topic for **add**, which mirrors the simple volume with focus to the specified disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -14,7 +14,4 @@ ms.date: 10/16/2017
 # add
 
 Mirrors the simple volume with focus to the specified disk.
-
-> [!IMPORTANT]
-> This DiskPart command is not available in any edition of Windows Vista.
 

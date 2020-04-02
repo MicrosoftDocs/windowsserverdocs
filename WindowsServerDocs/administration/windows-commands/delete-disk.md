@@ -1,12 +1,8 @@
 ---
 title: delete disk
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for delete disk, which deletes a missing dynamic disk from the list of disks.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # delete disk
-
-
 
 Deletes a missing dynamic disk from the list of disks.
 

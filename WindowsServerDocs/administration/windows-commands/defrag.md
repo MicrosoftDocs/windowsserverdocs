@@ -1,12 +1,8 @@
 ---
 title: defrag
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for defrag, which locates and consolidates fragmented files on local volumes to improve system performance.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
 author: coreyp-at-msft
@@ -19,6 +15,7 @@ ms.date: 10/16/2017
 >Applies To: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
+
 Membership in the local **Administrators** group, or equivalent, is the minimum required to run this command.
 
 ## Syntax

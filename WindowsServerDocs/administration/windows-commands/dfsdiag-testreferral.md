@@ -1,12 +1,8 @@
 ---
 title: dfsdiag TestReferral
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for dfsdiag TestReferral, which checks Distributed File System (DFS) referrals.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 877c60dc-e993-4bd5-87dd-e892e3f98a1a
 author: coreyp-at-msft
@@ -18,7 +14,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Checks Distributed File System \(DFS\) referrals by performing the following tests:  
+Checks Distributed File System (DFS) referrals by performing the following tests:  
   
 -   When you use the DFSpath parameter without arguments, this command validates that the referral list includes all trusted domains.  
   
@@ -28,10 +24,8 @@ Checks Distributed File System \(DFS\) referrals by performing the following tes
   
 -   When you specify a namespace root, in addition to performing the same health checks as when you specify a domain, the command performs a DFS configuration check \(dfsdiag \/TestDFSConfig\) and a namespace integrity check \(dfsdiag \/TestDFSIntegrity\).  
   
--   When you specify a DFS folder \(link\), in addition to performing the same health checks as when you specify a namespace root, the command validates the site configuration for folder targets \(dfsdiag \/testsites\) and validates the site association of the local host.  
-  
-  
-  
+-   When you specify a DFS folder \(link\), in addition to performing the same health checks as when you specify a namespace root, the command validates the site configuration for folder targets \(dfsdiag \/testsites\) and validates the site association of the local host.
+
 ## Syntax  
   
 ```  
@@ -46,14 +40,11 @@ dfsdiag /TestReferral /DFSpath:<DFS path for getting referrals> [/Full]
 |\/Full|Applied only to Domain and Root  referrals. verifies the consistency of site association information between the registry and active directory Domain Services \(AD DS\).|  
   
 ## <a name=BKMK_Examples></a>Examples  
-To TBD, type:  
   
 ```  
 dfsdiag /TestReferral /DFSpath:\\Contoso.com\MyNamespace  
 ```  
-  
-To TBD, type:  
-  
+
 ```  
 dfsdiag /TestReferral /DFSpath:  
 ```  

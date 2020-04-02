@@ -1,12 +1,8 @@
 ---
 title: dfsdiag TestDCs
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for dfsdiag TestDCs, which checks the configuration of domain controllers in the specified domain.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: abb915ab-23eb-45d7-9a2e-b6b9a5756a70
 author: coreyp-at-msft
@@ -20,14 +16,12 @@ ms.date: 10/16/2017
 
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:  
   
--   verifies that the Distributed File System \(DFS\) Namespace service is running and that its startup type is set to Automatic.  
+-   Verifies that the Distributed File System (DFS) Namespace service is running and that its startup type is set to Automatic.  
   
--   Checks for the support of site\-costed referrals for NETLOGON and SYSvol.  
+-   Checks for the support of site-costed referrals for NETLOGON and SYSvol.  
   
--   verifies the consistency of the site association by hostname and IP address.  
-  
-  
-  
+-   Verifies the consistency of the site association by hostname and IP address.
+
 ## Syntax  
   
 ```  

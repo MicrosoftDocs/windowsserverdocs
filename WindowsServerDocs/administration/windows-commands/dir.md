@@ -1,12 +1,8 @@
 ---
 title: dir
-description: Windows Commands topic for **** - 
-
+description: Windows Commands topic for dir, which displays a list of a directory's files and subdirectories.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: edcbf69b-eaa4-466e-b210-3dd8892f4d93
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # dir
-
-
 
 Displays a list of a directory's files and subdirectories. If used without parameters, **dir** displays the disk's volume label and serial number, followed by a list of directories and files on the disk (including their names and the date and time each was last modified). For files, **dir** displays the name extension and the size in bytes. **Dir** also displays the total number of files and directories listed, their cumulative size, and the free space (in bytes) remaining on the disk.
 
@@ -98,7 +92,7 @@ To display all directories one after the other, in alphabetical order, in wide f
 dir /s/w/o/p
 ```
 
-**Dir** lists the root directory, the subdirectories, and the files in the root directory, including extensions. Then, **dir** lists the subdirectory names and file names in each subdirectory in the tree.
+The **dir** command lists the root directory, the subdirectories, and the files in the root directory, including extensions. Then, **dir** lists the subdirectory names and file names in each subdirectory in the tree.
 
 To alter the preceding example so that **dir** displays the file names and extensions, but omits the directory names, type:
 
@@ -130,8 +124,8 @@ To display a list of all the file names with the .txt extension in all directori
 dir c:\*.txt /w/o/s/p
 ```
 
-**Dir** displays, in wide format, an alphabetized list of the matching file names in each directory, and it pauses each time the screen fills until you press any key to continue.
+The **dir** command displays, in wide format, an alphabetized list of the matching file names in each directory, and it pauses each time the screen fills until you press any key to continue.
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
