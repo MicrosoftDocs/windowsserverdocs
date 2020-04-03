@@ -28,7 +28,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<ServerName>] [/time:<Seconds>] [/v] [/w] [<Message>]
 ```
 
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                                                               Description                                                                                                                               |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

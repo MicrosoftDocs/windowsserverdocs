@@ -23,7 +23,7 @@ appends a local file to a file on the remote computer using the current file typ
 ```  
 append <LocalFile> [remoteFile]  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter   |                               Description                                |
 |--------------|--------------------------------------------------------------------------|

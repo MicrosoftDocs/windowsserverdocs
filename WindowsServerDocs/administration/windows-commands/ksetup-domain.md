@@ -27,7 +27,7 @@ Sets the domain name for all Kerberos operations. For examples of how this comma
 ksetup /domain <DomainName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

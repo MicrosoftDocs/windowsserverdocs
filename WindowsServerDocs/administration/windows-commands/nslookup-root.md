@@ -23,7 +23,7 @@ changes the default server to the server for the root of the Domain Name System 
 ```
 root 
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                      Description                      |
 |-----------------|-------------------------------------------------------|

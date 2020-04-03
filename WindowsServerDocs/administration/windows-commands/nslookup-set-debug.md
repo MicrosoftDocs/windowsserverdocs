@@ -27,7 +27,7 @@ Turns Debugging Mode on or off.
 set [no]debug
 ```
 
-## Parameters
+### Parameters
 
 |  Parameter  |                         Description                          |
 |-------------|--------------------------------------------------------------|

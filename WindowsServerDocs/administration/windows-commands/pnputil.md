@@ -25,7 +25,7 @@ Pnputil.exe is a command line utility that you can use to manage the driver stor
 pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

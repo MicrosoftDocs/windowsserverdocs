@@ -21,7 +21,7 @@ Retrieves the access control list (ACL) propagations flags.
 bitsadmin /GetAclFlags <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

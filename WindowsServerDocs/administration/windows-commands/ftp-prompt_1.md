@@ -23,7 +23,7 @@ Toggles between **prompt** mode on and off.
 ```  
 prompt  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 - By default, **prompt** is on.  

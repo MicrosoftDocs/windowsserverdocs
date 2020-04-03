@@ -26,7 +26,7 @@ fsutil sparse [setflag] <FileName>
 fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 ```
 
-## Parameters
+### Parameters
 
 |     Parameter     |                                                    Description                                                    |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|

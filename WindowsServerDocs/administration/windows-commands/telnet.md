@@ -20,7 +20,7 @@ Communicates with a computer running the telnet Server service.
 ```
 telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 | ansi | vtnt}] [<Host> [<Port>]] [/?]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/a|attempt automatic logon. Same as /l option except uses the currently logged on user s name.|

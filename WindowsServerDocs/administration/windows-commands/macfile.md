@@ -31,7 +31,7 @@ Manages File Server for Macintosh servers, volumes, directories, and files. You 
 macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName>] [/group:<GroupName>] [/permissions:<Permissions>]
 ```
 
-### Parameters
+#### Parameters
 -   /server:\\\\<computerName>
     Specifies the server on which to change a directory. If omitted, the operation is performed on the local computer.
 -   /path:<directory>
@@ -77,7 +77,7 @@ macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName
 macfile forkize[/server:\\<computerName>] [/creator:<CreatorName>] [/type:<typeName>]  [/datafork:<Filepath>] [/resourcefork:<Filepath>] /targetfile:<Filepath>
 ```
 
-### Parameters
+#### Parameters
 
 |         Parameter          |                                                                                                           Description                                                                                                            |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -108,7 +108,7 @@ macfile forkize /server:\\servera /creator:MSWD /type:TEXT /targetfile:d:\Word d
 macfile server [/server:\\<computerName>] [/maxsessions:{Number | unlimited}] [/loginmessage:<Message>]
 ```
 
-### Parameters
+#### Parameters
 
 |               Parameter                |                                                                                                                                                                           Description                                                                                                                                                                            |
 |----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -133,7 +133,7 @@ macfile volume {/add|/set} [/server:\\<computerName>] /name:<volumeName>/path:<d
 macfile volume /remove[/server:\\<computerName>] /name:<volumeName>
 ```
 
-### Parameters
+#### Parameters
 
 |              Parameter               |                                                                                                                                                                       Description                                                                                                                                                                        |
 |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

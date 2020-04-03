@@ -27,7 +27,7 @@ Uses the Key Distribution Center (KDC) password (kpasswd) value to change the pa
 ksetup /changepassword <OldPasswd> <NewPasswd>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

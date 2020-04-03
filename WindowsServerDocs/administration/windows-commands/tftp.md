@@ -25,7 +25,7 @@ Transfers files to and from a remote computer, typically a computer running UNIX
 tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]  
 ```  
 
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |-i|Specifies binary image transfer mode (also called octet mode). In binary image mode, the file is transferred in one-byte units. Use this mode when transferring binary files. If **-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end-of-line (EOL) characters to an appropriate format for the specified computer. Use this mode when transferring text files. If a file transfer is successful, the data transfer rate is displayed.|  

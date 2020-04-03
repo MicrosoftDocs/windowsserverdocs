@@ -27,7 +27,7 @@ Resumes BitLocker encryption or decryption after it has been paused. For example
 manage-bde -resume [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

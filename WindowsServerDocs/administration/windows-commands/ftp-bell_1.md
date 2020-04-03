@@ -23,7 +23,7 @@ Toggles an audible sound to occur after each file transfer command is completed.
 ```  
 bell  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 By default, bell is off.  

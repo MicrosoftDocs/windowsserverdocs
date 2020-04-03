@@ -23,7 +23,7 @@ Creates an extended partition on the disk with focus. You can use this command o
 create partition extended [size=<n>] [offset=<n>] [align=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |  Parameter  |                                                                                                                             Description                                                                                                                              |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 load metadata [<Drive>:][<Path>]<MetaData.cab>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

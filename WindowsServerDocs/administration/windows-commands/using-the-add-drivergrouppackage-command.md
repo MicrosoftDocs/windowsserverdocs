@@ -20,7 +20,7 @@ Adds a driver package to a driver group.
 ```
 wdsutil /add-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>] {/DriverPackage:<Name> | /PackageId:<ID>}
 ```
-## Parameters
+### Parameters
 
 |         Parameter         |                                                                                                                                               Description                                                                                                                                               |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -23,7 +23,7 @@ changes the default Domain Name System (DNS) domain name to the name specified.
 ```
 set domain=<DomainName>
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                           Description                                           |
 |-----------------|-------------------------------------------------------------------------------------------------|

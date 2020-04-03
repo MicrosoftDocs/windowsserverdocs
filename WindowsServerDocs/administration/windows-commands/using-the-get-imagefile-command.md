@@ -21,7 +21,7 @@ Retrieves information about the images contained in a Windows Image (.wim) file.
 WDSUTIL [Options] /Get-ImageFile /ImageFile:<wim file path> [/Detailed]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

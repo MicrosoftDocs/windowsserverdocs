@@ -23,7 +23,7 @@ Cancels all jobs in the transfer queue that the current user owns.
 bitsadmin /Reset [/AllUsers]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

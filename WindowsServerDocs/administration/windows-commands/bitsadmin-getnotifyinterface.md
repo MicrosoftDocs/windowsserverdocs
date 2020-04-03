@@ -21,7 +21,7 @@ Determines whether another program has registered a COM callback interface (the 
 bitsadmin /GetNotifyInterface <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

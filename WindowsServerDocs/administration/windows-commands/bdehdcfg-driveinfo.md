@@ -24,7 +24,7 @@ For examples of how this command can be used, see [Examples](#BKMK_Examples).
 bdehdcfg -driveinfo <DriveLetter>
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

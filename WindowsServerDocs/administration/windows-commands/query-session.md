@@ -27,7 +27,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > ```
 > query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |      Parameter       |                                                      Description                                                      |
 > |----------------------|-----------------------------------------------------------------------------------------------------------------------|

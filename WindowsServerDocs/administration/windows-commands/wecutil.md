@@ -31,7 +31,7 @@ wecutil  [{es | enum-subscription}]
 [{qc | quick-config} [/q:[<Quiet>]]].
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

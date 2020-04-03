@@ -27,7 +27,7 @@ Reverts a volume back to a specified shadow copy. This is supported only for sha
 revert <ShadowCopyID>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

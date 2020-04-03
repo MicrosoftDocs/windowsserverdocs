@@ -22,7 +22,7 @@ for examples of how you can use this command, see [Examples](#BKMK_examples).
 wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] [/WdsClientUnattend:<Relative path>] 
 [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/OU:<DN of OU>] [/Domain:<Domain>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/Device:<computer name>|Specifies the name of the computer to be added.|

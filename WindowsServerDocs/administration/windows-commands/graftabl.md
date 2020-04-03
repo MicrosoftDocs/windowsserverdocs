@@ -30,7 +30,7 @@ graftabl <CodePage>
 graftabl /status
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

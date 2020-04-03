@@ -20,7 +20,7 @@ Removes a custom namespace.
 ```
 wdsutil /remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/force]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/Namespace:<Namespace name>|Specifies the name of the namespace. This is not the friendly name, and it must be unique.<p>-   **Deployment Server role service**: The syntax for namespace name is /Namespace:WDS:<ImageGroup>/<ImageName>/<Index>. For example: **WDS:ImageGroup1/install.wim/1**<br />-   **Transport Server role service**: This value must match the name given to the namespace when it was created on the server.|

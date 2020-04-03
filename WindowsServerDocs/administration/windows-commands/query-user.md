@@ -26,7 +26,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > ```
 > query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |      Parameter       |                                                     Description                                                     |
 > |----------------------|---------------------------------------------------------------------------------------------------------------------|

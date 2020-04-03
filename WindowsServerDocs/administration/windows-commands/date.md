@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 date [/t | <Month-Day-Year>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

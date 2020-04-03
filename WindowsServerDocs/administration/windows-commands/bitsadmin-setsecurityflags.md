@@ -21,7 +21,7 @@ Sets flags for HTTP that determine if BITS should check the certificate revocati
 bitsadmin /SetSecurityFlags <Job> <Value>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

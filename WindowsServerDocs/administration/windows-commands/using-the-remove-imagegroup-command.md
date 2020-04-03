@@ -20,7 +20,7 @@ Removes an image group from a server.
 ```
 wdsutil [Options] /remove-ImageGroumediaGroup:<Image group name> [/Server:<Server name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group to be removed|

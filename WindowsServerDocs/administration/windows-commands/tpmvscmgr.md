@@ -24,7 +24,7 @@ Tpmvscmgr create [/name] [/AdminKey DEFAULT | PROMPT | RANDOM] [/PIN DEFAULT | P
 Tpmvscmgr destroy [/instance <instance ID>] [/?]
 ```
 
-### Parameters for Create command
+#### Parameters for Create command
 
 The Create command sets up new virtual smart cards on the user's system. It returns the instance ID of the newly created card for later reference if deletion is required. The instance ID is in the format **ROOT\SMARTCARDREADER\000n** where **n** starts from 0 and is increased by 1 each time you create a new virtual smart card.
 
@@ -38,7 +38,7 @@ The Create command sets up new virtual smart cards on the user's system. It retu
 |/machine|Allows you to specify the name of a remote computer on which the virtual smart card can be created. This can be used in a domain environment only, and it relies on DCOM. For the command to succeed in creating a virtual smart card on a different computer, the user running this command must be a member in the local administrators group on the remote computer.|
 |/?|Displays Help for this command.|
 
-### Parameters for Destroy command
+#### Parameters for Destroy command
 
 The Destroy command securely deletes a virtual smart card from the user's computer.
 

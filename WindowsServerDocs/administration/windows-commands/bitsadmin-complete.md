@@ -21,7 +21,7 @@ Completes the job. The downloaded files are not available to you until you use t
 bitsadmin /complete <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -23,7 +23,7 @@ Sets or displays the file transfer type.
 ```  
 type [<typeName>]  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter   |            Description            |
 |--------------|-----------------------------------|

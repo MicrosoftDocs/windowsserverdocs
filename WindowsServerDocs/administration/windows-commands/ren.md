@@ -28,7 +28,7 @@ ren [<Drive>:][<Path>]<FileName1> <FileName2>
 rename [<Drive>:][<Path>]<FileName1> <FileName2>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

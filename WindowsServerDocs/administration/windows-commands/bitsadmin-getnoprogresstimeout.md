@@ -21,7 +21,7 @@ Retrieves the length of time, in seconds, that the service tries to transfer the
 bitsadmin /GetNoProgressTimeout <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

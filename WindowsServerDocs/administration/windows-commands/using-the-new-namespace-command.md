@@ -27,7 +27,7 @@ wdsutil [Options] /New-Namespace [/Server:<Server name>]
          [/time:<YYYY/MM/DD:hh:mm>]
          [/Clients:<Number of clients>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|

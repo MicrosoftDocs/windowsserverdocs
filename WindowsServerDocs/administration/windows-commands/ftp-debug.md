@@ -23,7 +23,7 @@ Toggles Debugging mode.
 ```  
 debug  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 - By default, debugging is off.  

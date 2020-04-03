@@ -20,7 +20,7 @@ Retrieves information from the specified Windows Deployment Services server.
 ```
 wdsutil [Options] /Get-Server [/Server:<Server name>] /Show:{Config | Images | All} [/detailed]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|

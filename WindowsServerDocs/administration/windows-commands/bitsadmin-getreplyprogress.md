@@ -23,7 +23,7 @@ Retrieves the size and progress of the server reply.
 bitsadmin /GetReplyProgress <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

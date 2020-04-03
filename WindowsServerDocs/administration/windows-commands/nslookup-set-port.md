@@ -27,7 +27,7 @@ Changes the default TCP/UDP Domain Name System (DNS) name server port to the val
 set port=<Port>
 ```
 
-## Parameters
+### Parameters
 
 | Parameter |                                          Description                                          |
 |-----------|-----------------------------------------------------------------------------------------------|

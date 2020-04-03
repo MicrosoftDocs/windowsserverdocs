@@ -27,7 +27,7 @@ Update an existing data collector.
 logman update <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -20,7 +20,7 @@ Retrieves information about an image group and the images within it.
 ```
 wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/detailed]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group.|

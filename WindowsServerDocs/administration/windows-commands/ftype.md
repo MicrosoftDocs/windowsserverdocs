@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ftype [<FileType>[=[<OpenCommandString>]]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -27,7 +27,7 @@ Pauses BitLocker encryption or decryption. For examples of how this command can 
 manage-bde -pause <Volume> [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

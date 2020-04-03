@@ -25,7 +25,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...] 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

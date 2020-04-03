@@ -27,7 +27,7 @@ Retrieves the encryption type attribute for the domain. For examples of how this
 ksetup /getenctypeattr <DomainName> 
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

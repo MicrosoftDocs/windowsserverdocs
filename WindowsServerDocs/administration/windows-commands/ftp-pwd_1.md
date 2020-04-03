@@ -23,7 +23,7 @@ Displays the current remote computer directory.
 ```  
 pwd  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 Display the current remote computer directory.  

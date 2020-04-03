@@ -21,7 +21,7 @@ Disconnects a client from a multicast transmission or namespace. Unless you spec
 WDSUTIL /Disconnect-Client /ClientId:<Client ID> [/Server:<Server name>] [/Force]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

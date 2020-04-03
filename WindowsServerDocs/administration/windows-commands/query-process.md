@@ -27,7 +27,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > ```
 > query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <ProgramName>] [/server:<ServerName>]
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |      Parameter       |                                                                 Description                                                                  |
 > |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|

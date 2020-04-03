@@ -21,7 +21,7 @@ Recreates the default Group Policy Objects (GPOs) for a domain. For examples of 
 DCGPOFix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]
 ```
 
-### Parameters
+#### Parameters
 
 |    Parameter    |                                                                                                 Description                                                                                                 |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

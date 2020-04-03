@@ -36,7 +36,7 @@ For examples of how this command can be used, see [Examples](#BKMK_Examples).
 bdehdcfg [–driveinfo <DriveLetter>] [-target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge}] [–newdriveletter] [–size <SizeinMB>] [-quiet]
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- |----------- |

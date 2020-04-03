@@ -25,7 +25,7 @@ Prints a test page, pauses or resumes a printer, and clears a printer queue.
 cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
 [-p <printerName>] [-u <UserName>] [-w <Password>]  
 ```  
-## Parameters  
+### Parameters  
 
 |Parameter|Description|  
 |-------|--------|  

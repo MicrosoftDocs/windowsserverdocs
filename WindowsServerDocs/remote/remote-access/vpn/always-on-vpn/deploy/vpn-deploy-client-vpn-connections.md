@@ -232,7 +232,7 @@ Use the **VPN_Profile.ps1** script in Windows PowerShell or Microsoft Endpoint C
 >[!NOTE]
 >To view the full example script, see the section [MakeProfile.ps1 Full Script](#makeprofileps1-full-script).
 
-#### Parameters
+##### Parameters
 
 Configure the following parameters:
 

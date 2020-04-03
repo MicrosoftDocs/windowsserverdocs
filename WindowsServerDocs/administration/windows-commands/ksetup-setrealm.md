@@ -27,7 +27,7 @@ Sets the name of a Kerberos realm. For examples of how this command can be used,
 ksetup /setrealm <DNSDomainName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

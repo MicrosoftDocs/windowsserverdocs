@@ -21,7 +21,7 @@ Reports the content validation state of the given file within the job.
 bitsadmin /GetValidationState <Job> <file index> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

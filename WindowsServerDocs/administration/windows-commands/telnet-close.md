@@ -20,7 +20,7 @@ Closes the current connection.
 ```  
 c[lose]  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 Close the current connection.  

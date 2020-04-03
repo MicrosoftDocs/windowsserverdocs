@@ -23,7 +23,7 @@ Displays information about a user or users on a specified remote computer (typic
 ```
 finger [-l] [<User>] [@<Host>] [...]
 ```
-### Parameters
+#### Parameters
 
 | Parameter |                                                                            Description                                                                            |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|

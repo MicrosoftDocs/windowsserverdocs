@@ -23,7 +23,7 @@ Ends the ftp session with the remote server and remains at the **ftp>** prompt.
 ```  
 close  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 End the ftp session with the remote server and remain at the **ftp>** prompt.  

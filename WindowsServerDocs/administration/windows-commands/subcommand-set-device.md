@@ -21,7 +21,7 @@ Changes the attributes of a prestaged computer. A prestaged computer is a comput
 wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] 
 [/WdsClientUnattend:<Relative path>] [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/Domain:<Domain>] [/resetAccount]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/Device:<computer name>|Specifies the name of the computer (SAM-Account-Name).|

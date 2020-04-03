@@ -23,7 +23,7 @@ For instructions regarding how to use this command, see [Remove a Missing Dynami
 delete disk [noerr] [override]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

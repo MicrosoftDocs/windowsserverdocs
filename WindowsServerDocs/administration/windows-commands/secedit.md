@@ -33,7 +33,7 @@ secedit
 [/validate <configuration file name>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

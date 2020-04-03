@@ -25,7 +25,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ```  
 exit [/b] [<exitCode>]  
 ```  
-## Parameters  
+### Parameters  
 
 | Parameter  |                                                                                         Description                                                                                          |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

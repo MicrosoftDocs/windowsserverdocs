@@ -23,7 +23,7 @@ deletes a remote directory.
 ```  
 rmdir <directory>  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter  |                      Description                      |
 |-------------|-------------------------------------------------------|

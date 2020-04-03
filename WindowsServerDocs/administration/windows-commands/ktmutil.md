@@ -37,7 +37,7 @@ ktmutil force rollback {??Guid}
 ktmutil forget
 ```
 
-## Parameters
+### Parameters
 
 ## Remarks
 

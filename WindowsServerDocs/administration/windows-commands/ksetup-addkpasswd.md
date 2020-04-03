@@ -27,7 +27,7 @@ Adds a Kerberos password (Kpasswd) server address for a realm. For examples of h
 ksetup /addkpasswd <RealmName> [<KpasswdName>]
 ```
 
-### Parameters
+#### Parameters
 
 If the Kerberos realm that the workstation will be authenticating to supports the Kerberos change password protocol, you can configure a client computer running the Windows operating system to use a Kerberos password server. This setting is configured on the realm side.
 

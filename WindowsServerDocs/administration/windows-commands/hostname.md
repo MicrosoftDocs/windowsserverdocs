@@ -23,7 +23,7 @@ Displays the host name portion of the full computer name of the computer.
 ```
 hostname
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/?|Displays help at the command prompt.|

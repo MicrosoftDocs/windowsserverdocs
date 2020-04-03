@@ -26,7 +26,7 @@ For instructions regarding how to use this command, see [Change a GUID Partition
 convert mbr [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -25,7 +25,7 @@ To use this subcommand, you must be a member of the **Backup Operators** group o
 wbadmin get status
 ```
 
-## Parameters
+### Parameters
 
 This subcommand has no parameters.
 

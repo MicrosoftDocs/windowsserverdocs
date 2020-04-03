@@ -22,7 +22,7 @@ Retrieves the download timeout in seconds.
 bitsadmin /GetMaxDownloadtime <Job> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

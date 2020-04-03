@@ -21,7 +21,7 @@ Logs display information to a file.
 dispdiag [-testacpi] [-d] [-delay <Seconds>] [-out <FilePath>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

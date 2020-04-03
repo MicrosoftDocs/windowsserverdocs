@@ -28,7 +28,7 @@ repairs the RAID\-5 volume with focus by replacing the failed disk region with t
 repair disk=<n> [align=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 | Parameter  |                                                                                             Description                                                                                              |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

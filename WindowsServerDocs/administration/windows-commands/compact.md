@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 compact [/c | /u] [/s[:<Dir>]] [/a] [/i] [/f] [/q] [<FileName>[...]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

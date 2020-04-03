@@ -27,7 +27,7 @@ Deletes instances of Key Distribution Center (KDC) names for the Kerberos realm.
 ksetup /delkdc <RealmName> <KDCName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

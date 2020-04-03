@@ -21,7 +21,7 @@ Enables you to quickly set up a system partition, or to repair the boot environm
 bcdboot <source> [/l] [/s]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 edit [/b] [/h] [/r] [/s] [/<NNN>] [[<Drive>:][<Path>]<FileName> [<FileName2> [...]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

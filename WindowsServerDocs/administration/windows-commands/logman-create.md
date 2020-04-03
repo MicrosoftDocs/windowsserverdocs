@@ -26,7 +26,7 @@ ms.date: 10/16/2017
 logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

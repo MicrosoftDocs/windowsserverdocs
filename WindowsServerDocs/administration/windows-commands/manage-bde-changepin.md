@@ -27,7 +27,7 @@ Modifies the PIN for an operating system drive. The user is prompted to enter a 
 manage-bde -changepin [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

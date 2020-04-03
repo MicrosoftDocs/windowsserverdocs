@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 unexpose {<ShadowID> | <Drive:> | <Share> | <MountPoint>}
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -27,7 +27,7 @@ Allows you to specify a name for a computer running the Windows operating system
 ksetup /server <ServerName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

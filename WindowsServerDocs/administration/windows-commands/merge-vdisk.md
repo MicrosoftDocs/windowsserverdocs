@@ -25,7 +25,7 @@ Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD.
 > ```
 > merge vdisk depth=<n>
 > ```
-> ### Parameters
+> #### Parameters
 > 
 > | Parameter |                                                                                    Description                                                                                    |
 > |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

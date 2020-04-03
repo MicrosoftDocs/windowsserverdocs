@@ -21,7 +21,7 @@ Retrieves the number of bytes transferred for the specified job.
 bitsadmin /GetBytesTransferred <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

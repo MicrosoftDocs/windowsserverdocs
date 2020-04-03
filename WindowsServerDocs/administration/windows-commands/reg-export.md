@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 Reg export KeyName FileName [/y]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

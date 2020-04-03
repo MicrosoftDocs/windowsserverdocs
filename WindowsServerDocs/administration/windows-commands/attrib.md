@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 attrib [{+|-}r] [{+|-}a] [{+|-}s] [{+|-}h] [{+|-}i] [<Drive>:][<Path>][<FileName>] [/s [/d] [/l]]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

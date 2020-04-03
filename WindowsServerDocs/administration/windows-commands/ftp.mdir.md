@@ -23,7 +23,7 @@ Displays a directory list of files and subdirectories in a remote directory.
 ```  
 mdir <remoteFile>[ ] <LocalFile>  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter   |                               Description                                |
 |--------------|--------------------------------------------------------------------------|

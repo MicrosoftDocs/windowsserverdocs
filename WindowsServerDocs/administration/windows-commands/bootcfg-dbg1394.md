@@ -20,7 +20,7 @@ Configures 1394 port debugging for a specified operating system entry.
 ```
 bootcfg /dbg1394 {ON | OFF}[/s <computer> [/u <Domain>\<User> /p <Password>]] [/ch <Channel>] /id <OSEntryLineNum>
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                                                                           Description                                                                                                                                            |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

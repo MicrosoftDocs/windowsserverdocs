@@ -24,7 +24,7 @@ Displays or sets the GUID partition table (GPT) identifier or master boot record
 uniqueid disk [id={<dword> | <GUID>}] [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |  Parameter   |                                                                                             Description                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

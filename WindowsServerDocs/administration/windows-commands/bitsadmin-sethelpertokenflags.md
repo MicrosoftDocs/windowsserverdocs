@@ -22,7 +22,7 @@ Sets the usage flags for a [helper token](/windows/desktop/bits/helper-tokens-f
 bitsadmin /SetHelperTokenFlags <Job> <Flags>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

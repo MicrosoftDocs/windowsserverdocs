@@ -20,7 +20,7 @@ Starts all services for a Windows Deployment Services server.
 ```
 wdsutil [Options] /start-Server [/Server:<Server name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server to be started. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|

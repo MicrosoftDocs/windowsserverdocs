@@ -27,7 +27,7 @@ Maps the name of a Kerberos principal to an account. For examples of how this co
 ksetup /mapuser <Principal> <Account>
 ```
 
-### Parameters
+#### Parameters
 
 |  Parameter   |                                                   Description                                                   |
 |--------------|-----------------------------------------------------------------------------------------------------------------|

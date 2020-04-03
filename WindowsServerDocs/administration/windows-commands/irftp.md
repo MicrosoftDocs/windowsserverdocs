@@ -24,7 +24,7 @@ Sends files over an infrared link.
 irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]  
 ```  
 
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |Drive:\|Specifies the drive that contains the files that you want to send over an infrared link.|  

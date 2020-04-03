@@ -21,7 +21,7 @@ Sets the configuration flags that determine if the computer can serve content to
 bitsadmin /PeerCaching /SetConfigurationFlags <Job> <Value>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

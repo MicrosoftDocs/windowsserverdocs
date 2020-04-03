@@ -20,7 +20,7 @@ Displays the Windows Time Zone utility.
 ```
 tzutil [/?] [/g] [/s <timeZoneID>[_dstoff]] [/l]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/?|Displays help at the command prompt.|

@@ -21,7 +21,7 @@ Sets the priority of the specified job.
 bitsadmin /SetPriority <Job> <Priority>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

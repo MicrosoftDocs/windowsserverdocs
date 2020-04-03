@@ -27,7 +27,7 @@ Locks a BitLocker-protected drive to prevent access to it unless the unlock key 
 manage-bde -lock [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

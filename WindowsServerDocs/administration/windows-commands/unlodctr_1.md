@@ -20,7 +20,7 @@ Removes **Performance counter** names and **Explain** text for a service or devi
 ```  
 Unlodctr <DriverName>   
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |\<DriverName>|removes the Performance counter name settings and Explain text for driver or service <DriverName> from the Windows Server 2003 registry.|  

@@ -27,7 +27,7 @@ Adds a service principal name (SPN) mapping between the stated host and the real
 ksetup /addhosttorealmmap <HostName> <RealmName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

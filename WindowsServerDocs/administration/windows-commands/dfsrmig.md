@@ -25,7 +25,7 @@ dfsrmig [/SetGlobalState <state> | /GetGlobalState | /GetMigrationState | /creat
 /deleteRoNtfrsMember [<read_only_domain_controller_name>] | /deleteRoDfsrMember [<read_only_domain_controller_name>] | /?]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | -----_ | ------ |

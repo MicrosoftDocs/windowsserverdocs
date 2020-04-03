@@ -21,7 +21,7 @@ Deletes a specific cache entry.
 bitsadmin /Cache /Delete RecordID 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

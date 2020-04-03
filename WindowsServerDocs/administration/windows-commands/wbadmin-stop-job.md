@@ -26,7 +26,7 @@ wbadmin stop job
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

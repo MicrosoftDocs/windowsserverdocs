@@ -21,7 +21,7 @@ Lets a user with administrative privileges take ownership of the specified job.
 bitsadmin /TakeOwnership <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

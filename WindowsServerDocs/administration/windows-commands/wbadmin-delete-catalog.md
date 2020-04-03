@@ -26,7 +26,7 @@ wbadmin delete catalog
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

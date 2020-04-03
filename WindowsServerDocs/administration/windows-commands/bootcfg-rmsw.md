@@ -20,7 +20,7 @@ Removes operating system load options for a specified operating system entry.
 ```
 bootcfg /rmsw [/s <computer> [/u <Domain>\<User> [/p <Password>]]] [/mm] [/bv] [/so] [/ng] /id <OSEntryLineNum>
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                                      Description                                                                                                       |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

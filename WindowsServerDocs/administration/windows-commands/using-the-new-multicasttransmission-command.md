@@ -42,7 +42,7 @@ wdsutil [Options] /New-MulticastTransmissiomedia:<Image name>
         /Architecture:{x86 | ia64 | x64}
         [/Filename:<File name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image to be transmitted using multicasting.|

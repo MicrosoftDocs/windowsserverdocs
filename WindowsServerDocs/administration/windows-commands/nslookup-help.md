@@ -27,7 +27,7 @@ Displays a short summary of **nslookup** subcommands.
 {help | ?}
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 |-----------|-------------|

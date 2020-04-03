@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 find [/v] [/c] [/n] [/i] [/off[line]] <String> [[<Drive>:][<Path>]<FileName>[...]]
 ```
 
-## Parameters
+### Parameters
 
 |           Parameter           |                                              Description                                               |
 |-------------------------------|--------------------------------------------------------------------------------------------------------|

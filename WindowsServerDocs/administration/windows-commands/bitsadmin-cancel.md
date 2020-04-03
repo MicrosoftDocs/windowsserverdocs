@@ -21,7 +21,7 @@ Removes the job from the transfer queue and deletes all temporary files associat
 bitsadmin /cancel <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

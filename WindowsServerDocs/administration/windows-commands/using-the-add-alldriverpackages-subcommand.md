@@ -21,7 +21,7 @@ Adds all driver packages that are stored in a folder to a server.
 WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>] [/Architecture:{x86 | ia64 | x64}] [/DriverGroup:<Group Name>]
 ```
 
-## Parameters
+### Parameters
 
 |          Parameter           |                                                              Description                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|

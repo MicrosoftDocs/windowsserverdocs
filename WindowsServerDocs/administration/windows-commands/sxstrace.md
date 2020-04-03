@@ -26,7 +26,7 @@ Diagnoses side-by-side problems.
 sxstrace [{[trace -logfile:<FileName> [-nostop]|[parse -logfile:<FileName> -outfile:<ParsedFile>  [-filter:<AppName>]}]  
 ```  
 
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |trace|Enables tracing for sxs (side-by-side)|  

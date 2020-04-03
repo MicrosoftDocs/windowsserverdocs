@@ -35,7 +35,7 @@ For instructions regarding how to use this command, see [Reactivate a Missing or
 online disk [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

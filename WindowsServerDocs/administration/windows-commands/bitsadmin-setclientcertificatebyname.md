@@ -21,7 +21,7 @@ Specifies the subject name of the client certificate to use for client authentic
 bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject_name>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 chcp [<NNN>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

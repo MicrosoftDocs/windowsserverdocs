@@ -34,7 +34,7 @@ wdsutil [Options] /Set-TransportServer [/Server:<Server name>]
                  [/StreamCount:{2 | 3}]
                  [/Fallback:{Yes | No}]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the Transport Server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no Transport Server name is specified, the local server is used.|

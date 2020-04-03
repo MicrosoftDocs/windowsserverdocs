@@ -23,7 +23,7 @@ For examples of how this command can be used, see the Examples section in each t
 auditpol command [<sub-command><options>]
 ```
 
-### Parameters
+#### Parameters
 
 | Sub-command | Description |
 | ----------- | ----------- |

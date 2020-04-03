@@ -21,7 +21,7 @@ Deletes shadow copies.
 delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <ShadowID> | exposed {<Drive> | <MountPoint>}]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | ---- | ---- |

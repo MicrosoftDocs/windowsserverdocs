@@ -20,7 +20,7 @@ Deletes an operating system entry in the [operating systems] section of the Boot
 ```
 bootcfg /delete [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntryLineNum>]
 ```
-## Parameters
+### Parameters
 
 |         Term         |                                                                                             Definition                                                                                              |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

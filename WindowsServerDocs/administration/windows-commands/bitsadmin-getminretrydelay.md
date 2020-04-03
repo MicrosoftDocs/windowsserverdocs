@@ -21,7 +21,7 @@ Retrieves the length of time, in seconds, that the service waits after encounter
 bitsadmin /GetMinRetryDelay <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

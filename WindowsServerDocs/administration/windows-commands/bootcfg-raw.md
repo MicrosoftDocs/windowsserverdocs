@@ -20,7 +20,7 @@ Adds operating system load options specified as a string to an operating system 
 ```
 bootcfg /raw [/s <computer> [/u <Domain>\<User> /p <Password>]] <OSLoadOptionsString> [/id <OSEntryLineNum>] [/a]
 ```
-## Parameters
+### Parameters
 
 |         Term          |                                                                                                            Definition                                                                                                             |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

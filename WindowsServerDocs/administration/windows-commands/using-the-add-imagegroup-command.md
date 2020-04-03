@@ -20,7 +20,7 @@ Adds an image group to a Windows Deployment Services server.
 ```
 wdsutil [Options] /add-ImageGroumediaGroup:<Image group name> [/Server:<Server name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group to be added.|

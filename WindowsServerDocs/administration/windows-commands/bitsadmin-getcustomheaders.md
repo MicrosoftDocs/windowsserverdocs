@@ -21,7 +21,7 @@ Retrieves the custom HTTP headers from the job.
 bitsadmin /GetCustomHeaders <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

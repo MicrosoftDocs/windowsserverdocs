@@ -21,7 +21,7 @@ Gets the configuration flags that determine if the computer serves content to pe
 bitsadmin /PeerCaching /GetConfigurationFlags <Job> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

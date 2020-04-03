@@ -27,7 +27,7 @@ Displays a list of disks, of partitions in a disk, of volumes in a disk, or of v
 list { disk | partition | volume | vdisk }
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

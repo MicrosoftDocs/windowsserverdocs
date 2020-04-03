@@ -30,7 +30,7 @@ wbadmin restore catalog
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

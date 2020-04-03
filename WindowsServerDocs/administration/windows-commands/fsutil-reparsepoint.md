@@ -24,7 +24,7 @@ fsutil reparsepoint [query] <FileName>
 fsutil reparsepoint [delete] <FileName>
 ```
 
-## Parameters
+### Parameters
 
 | Parameter  |                                                                Description                                                                |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------|

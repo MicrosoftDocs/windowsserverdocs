@@ -25,7 +25,7 @@ To list the disks that are online with this subcommand, you must be a member of 
 wbadmin get disks
 ```
 
-## Parameters
+### Parameters
 
 This subcommand has no parameters.
 

@@ -24,7 +24,7 @@ Update the properties of an existing configuration data collector.
 ```  
 logman update cfg <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                    Parameter                     |                                                                               Description                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

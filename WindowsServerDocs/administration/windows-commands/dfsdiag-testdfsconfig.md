@@ -34,7 +34,7 @@ Checks the configuration of a Distributed File System (DFS) namespace by perform
 dfsdiag /TestDFSConfig /DFSRoot:<namespace>  
 ```  
   
-### Parameters  
+#### Parameters  
   
 |       Parameter       |               Description               |
 |-----------------------|-----------------------------------------|

@@ -23,7 +23,7 @@ Ends the ftp session with the remote computer and exits.
 ```  
 bye  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 **Bye** and **quit** both end the ftp session with the remote computer and exits.  

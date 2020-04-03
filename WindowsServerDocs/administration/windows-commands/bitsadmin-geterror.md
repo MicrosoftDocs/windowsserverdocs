@@ -21,7 +21,7 @@ Retrieves detailed error information for the specified job.
 bitsadmin /GetError <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

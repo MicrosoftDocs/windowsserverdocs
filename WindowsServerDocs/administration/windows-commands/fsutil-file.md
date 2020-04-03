@@ -36,7 +36,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------------|---------------|

@@ -28,7 +28,7 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------------|---------------|

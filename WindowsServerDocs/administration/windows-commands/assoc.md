@@ -26,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 assoc [<.ext>[=[<FileType>]]]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

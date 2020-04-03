@@ -26,7 +26,7 @@ The **ping** command verifies IP-level connectivity to another TCP/IP computer b
 ping [/t] [/a] [/n <Count>] [/l <Size>] [/f] [/I <TTL>] [/v <TOS>] [/r <Count>] [/s <Count>] [{/j <Hostlist> | /k <Hostlist>}] [/w <timeout>] [/R] [/S <Srcaddr>] [/4] [/6] <TargetName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |-------|--------|

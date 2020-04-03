@@ -27,7 +27,7 @@ Appends the Domain Name System (DNS) domain names in the DNS domain search list 
 set [no]search
 ```
 
-## Parameters
+### Parameters
 
 |  Parameter   |                                                                          Description                                                                          |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|

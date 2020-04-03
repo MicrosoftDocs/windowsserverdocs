@@ -25,7 +25,7 @@ import a Data Collector Set from an XML file, or export a Data Collector Set to 
 logman import <[-n] <name>> <-xml <name>> [options]  
 logman export <[-n] <name>> <-xml <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |        Parameter        |                                                                        Description                                                                        |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|

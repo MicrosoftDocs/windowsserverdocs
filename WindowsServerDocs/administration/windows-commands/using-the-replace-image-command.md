@@ -39,7 +39,7 @@ wdsutil [Options] /replace-Imagmedia:<Image name> [/Server:<Server name>]
          [/Name:<Image name>]
          [/Description:<Image description>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image to be replaced.|

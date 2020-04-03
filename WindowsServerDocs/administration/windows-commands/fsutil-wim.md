@@ -24,7 +24,7 @@ fsutil wim [queryfile] <filename>
 fsutil wim [removewim] <drive name> <data source>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |-------------|---------------|

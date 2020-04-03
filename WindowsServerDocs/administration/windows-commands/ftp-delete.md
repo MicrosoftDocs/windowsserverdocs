@@ -23,7 +23,7 @@ deletes files on remote computers.
 ```  
 delete <remoteFile>  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter   |          Description          |
 |--------------|-------------------------------|

@@ -21,7 +21,7 @@ Retrieves the display name of the specified job.
 bitsadmin /GetDisplayName <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -24,7 +24,7 @@ Update the properties of an existing API tracing data collector.
 ```  
 logman update api <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                    Parameter                     |                                                                               Description                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

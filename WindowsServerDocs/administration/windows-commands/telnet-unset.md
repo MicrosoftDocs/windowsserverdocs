@@ -20,7 +20,7 @@ Turns off previously set options.
 ```  
 u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |bsasdel|Sends **Backspace** as a **Backspace**.|  

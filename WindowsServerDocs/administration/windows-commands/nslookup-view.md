@@ -23,7 +23,7 @@ Sorts and lists the output of the previous **ls** subcommand or commands.
 ```  
 view <FileName>  
 ```  
-## Parameters  
+### Parameters  
 
 |    Parameter    |                                            Description                                            |
 |-----------------|---------------------------------------------------------------------------------------------------|

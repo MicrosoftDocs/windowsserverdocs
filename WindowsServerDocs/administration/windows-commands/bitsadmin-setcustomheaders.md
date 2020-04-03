@@ -21,7 +21,7 @@ Add a custom HTTP header to a GET request.
 bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

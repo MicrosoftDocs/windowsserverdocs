@@ -20,7 +20,7 @@ Specifies the operating system entry to designate as the default.
 ```
 bootcfg /default [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntryLineNum>]
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                             Description                                                                                              |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

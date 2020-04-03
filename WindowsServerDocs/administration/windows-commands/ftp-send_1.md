@@ -23,7 +23,7 @@ Copies a local file to the remote computer using the current file transfer type.
 ```  
 send <LocalFile> [<remoteFile>]  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter   |                    Description                    |
 |--------------|---------------------------------------------------|

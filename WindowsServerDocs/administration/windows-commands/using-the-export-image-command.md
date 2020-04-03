@@ -38,7 +38,7 @@ wdsutil [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
          [/Description:<Description>]
      [/Overwrite:{Yes | No | append}]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image to be exported.|

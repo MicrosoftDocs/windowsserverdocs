@@ -22,7 +22,7 @@ Sets the current command prompt's primary token (or an arbitrary local user acco
 bitsadmin /SetHelperToken <Job> [\<username@domain\> \<password\>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

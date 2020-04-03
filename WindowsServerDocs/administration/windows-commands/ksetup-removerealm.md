@@ -27,7 +27,7 @@ Deletes all information for the specified realm from the registry. For examples 
 ksetup /removerealm <RealmName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

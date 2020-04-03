@@ -20,7 +20,7 @@ Displays information about the driver groups on a server.
 ```
 wdsutil /Get-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/DriverGroup:<Group Name>|Specifies the name of the driver group.|

@@ -23,7 +23,7 @@ Copies local files to the remote computer using the current file transfer type.
 ```  
 mput <LocalFile>[ ]  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter  |                       Description                        |
 |-------------|----------------------------------------------------------|

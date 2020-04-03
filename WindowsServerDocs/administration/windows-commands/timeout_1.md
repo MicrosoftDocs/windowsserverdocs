@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 timeout /t <TimeoutInSeconds> [/nobreak] 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

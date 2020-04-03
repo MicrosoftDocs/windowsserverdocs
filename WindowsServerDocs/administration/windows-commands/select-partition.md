@@ -28,7 +28,7 @@ selects the specified partition and shifts the focus to it. This command can als
 select partition=<n>  
 ```  
   
-## Parameters  
+### Parameters  
   
 |   Parameter    |                                                                                    Description                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

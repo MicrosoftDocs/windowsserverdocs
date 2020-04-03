@@ -29,7 +29,7 @@ wbadmin get versions
 [-machine:BackupMachineName]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

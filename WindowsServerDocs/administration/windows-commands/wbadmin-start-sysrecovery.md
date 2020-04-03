@@ -38,7 +38,7 @@ wbadmin start sysrecovery
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

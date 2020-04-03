@@ -27,7 +27,7 @@ Sets realm flags for the specified realm. For examples of how this command can b
 ksetup /setrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsupported] [rc4]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

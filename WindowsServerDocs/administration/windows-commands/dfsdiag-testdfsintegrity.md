@@ -28,7 +28,7 @@ Checks the integrity of the Distributed File System (DFS) namespace by performin
 dfsdiag /TestDFSIntegrity /DFSRoot: <DFS root path> [/Recurse] [/Full]
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 |-------|--------|

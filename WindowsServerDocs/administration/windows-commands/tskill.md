@@ -25,7 +25,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /a] [/v]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

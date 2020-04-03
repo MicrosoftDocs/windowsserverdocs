@@ -27,7 +27,7 @@ Exits **nslookup**.
 Nslookup /exit
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 |-----------|-------------|

@@ -21,7 +21,7 @@ The Diskpart shrink command reduces the size of the selected volume by the amoun
 shrink [desired=<n>] [minimum=<n>] [nowait] [noerr]
 shrink querymax [noerr]
 ```
-## Parameters
+### Parameters
 
 |  Parameter  |                                                                                             Description                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

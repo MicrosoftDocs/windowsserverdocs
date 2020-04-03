@@ -23,7 +23,7 @@ Sets the file transfer type to ASCII.
 ```  
 ascii  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 - The default file transfer type is ASCII.  

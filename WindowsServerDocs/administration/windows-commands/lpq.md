@@ -24,7 +24,7 @@ Displays the status of a print queue on a computer running Line printer Daemon (
 ```  
 lpq -S <ServerName> -P <printerName> [-l]  
 ```  
-## Parameters  
+### Parameters  
 
 |    Parameter     |                                                                        Description                                                                        |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|

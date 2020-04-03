@@ -23,7 +23,7 @@ Disconnects from the remote computer and retains the **ftp>** prompt.
 ```  
 disconnect  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 Disconnect from the remote computer and retain the **ftp>** prompt.  

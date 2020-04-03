@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 Print [/d:<PrinterName>] [<Drive>:][<Path>]<FileName>[ ...]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

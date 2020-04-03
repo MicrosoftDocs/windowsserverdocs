@@ -27,7 +27,7 @@ Decrypts the drive and turns off BitLocker. All key protectors are removed when 
 manage-bde -off [<Volume>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

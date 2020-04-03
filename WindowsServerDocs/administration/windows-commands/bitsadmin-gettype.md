@@ -21,7 +21,7 @@ Retrieves the job type of the specified job.
 bitsadmin /GetType <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

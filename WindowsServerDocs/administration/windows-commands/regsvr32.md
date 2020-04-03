@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

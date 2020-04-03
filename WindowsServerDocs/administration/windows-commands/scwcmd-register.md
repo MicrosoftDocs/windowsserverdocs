@@ -27,7 +27,7 @@ Extends or customizes the Security Configuration Wizard (SCW) Security Configura
 scwcmd register /kbname:<MyApp> [/kbfile:<kb.xml>] [/kb:<path>] [/d]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

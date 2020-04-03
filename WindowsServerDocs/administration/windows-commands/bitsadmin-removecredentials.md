@@ -23,7 +23,7 @@ Removes credentials from a job.
 bitsadmin /RemoveCredentials <Job> <Target> <Scheme>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

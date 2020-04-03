@@ -24,7 +24,7 @@ query data collector or data collector set properties.
 ```  
 logman query [providers|Data Collector Set name] [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |     Parameter      |                                 Description                                  |
 |--------------------|------------------------------------------------------------------------------|

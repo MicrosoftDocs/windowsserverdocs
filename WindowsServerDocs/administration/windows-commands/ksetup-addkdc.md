@@ -27,7 +27,7 @@ Adds a Key Distribution Center (KDC) address for the given Kerberos realm. For e
 ksetup /addkdc <RealmName> [<KDCName>] 
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

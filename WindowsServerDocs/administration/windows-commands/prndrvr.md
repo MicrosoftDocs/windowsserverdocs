@@ -27,7 +27,7 @@ cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}]
 [-h <path>] [-i <inf file>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

@@ -21,7 +21,7 @@ Updates files in the REMINST shared folder by using the latest files that are st
 WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

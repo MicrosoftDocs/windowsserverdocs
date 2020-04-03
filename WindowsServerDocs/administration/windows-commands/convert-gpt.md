@@ -23,7 +23,7 @@ For instructions regarding how to use this command, see [Change a Master Boot Re
 convert gpt [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

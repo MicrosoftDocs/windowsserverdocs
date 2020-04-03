@@ -20,7 +20,7 @@ Makes a copy of an existing boot entry, to which you can add command-line option
 ```
 bootcfg /copy [/s <computer> [/u <Domain>\<User> /p <Password>]] [/d <Description>] [/id <OSEntryLineNum>]
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                             Description                                                                                             |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

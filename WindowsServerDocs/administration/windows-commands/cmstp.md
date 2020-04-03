@@ -25,7 +25,7 @@ Syntax 2:
 ```
 cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileName.inf
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |< ServiceProfileFileName >.exe|Specifies, by name, the installation package that contains the profile that you want to install.<p>Required for Syntax 1 but not valid for Syntax 2.|

@@ -27,7 +27,7 @@ Modifies the password for a data drive. The user is prompted for a new password.
 manage-bde -changepassword [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

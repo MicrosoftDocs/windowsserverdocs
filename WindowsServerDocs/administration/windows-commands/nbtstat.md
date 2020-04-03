@@ -26,7 +26,7 @@ Displays NetBIOS over TCP/IP (NetBT) protocol statistics, NetBIOS name tables fo
 nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [<Interval>]
 ```
 
-### Parameters
+#### Parameters
 
 |    Parameter    |                                                                                                                         Description                                                                                                                         |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

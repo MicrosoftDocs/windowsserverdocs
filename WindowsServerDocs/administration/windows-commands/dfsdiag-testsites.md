@@ -22,7 +22,7 @@ Checks the configuration of active directory Domain Services (AD DS) sites by ve
 dfsdiag /TestSites </Machine:<server name>| /DFSpath:<namespace root or DFS folder> [/Recurse]> [/Full]  
 ```  
   
-### Parameters  
+#### Parameters  
   
 |Parameter|Description|  
 |-------|--------|  

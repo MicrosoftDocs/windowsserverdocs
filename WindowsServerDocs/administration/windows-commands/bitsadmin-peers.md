@@ -22,7 +22,7 @@ bitsadmin /Peers /Discover
 bitsadmin /Peers /Clear
 bitsadmin /Peers /list
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[bitsadmin peers and help](bitsadmin-peers-and-help.md)|Displays the command-line usage for the /Peers switches.|

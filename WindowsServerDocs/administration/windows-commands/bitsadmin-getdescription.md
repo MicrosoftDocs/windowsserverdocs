@@ -21,7 +21,7 @@ Retrieves the description of the specified job.
 bitsadmin /GetDescription <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

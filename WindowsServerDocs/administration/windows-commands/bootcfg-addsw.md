@@ -20,7 +20,7 @@ Adds operating system load options for a specified operating system entry.
 ```
 bootcfg /addsw [/s <computer> [/u <Domain>\<User> /p <Password>]] [/mm <MaximumRAM>] [/bv] [/so] [/ng] /id <OSEntryLineNum>
 ```
-## Parameters
+### Parameters
 
 |         Term         |                                                                                                            Definition                                                                                                            |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

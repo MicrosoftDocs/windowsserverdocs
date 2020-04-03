@@ -24,7 +24,7 @@ Sends a file to a computer or printer sharing device running the Line printer Da
 ```  
 lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o | -o l] [-x] [-d] <filename>  
 ```  
-## Parameters  
+### Parameters  
 
 |     Parameter      |                                                                                                           Description                                                                                                           |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

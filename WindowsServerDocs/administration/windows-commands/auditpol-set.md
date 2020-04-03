@@ -28,7 +28,7 @@ auditpol /set
 [/option:<option name> /value: <enable>|<disable>]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

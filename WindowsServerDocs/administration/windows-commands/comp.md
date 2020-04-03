@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

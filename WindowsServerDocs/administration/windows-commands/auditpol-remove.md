@@ -23,7 +23,7 @@ auditpol /remove [/user[:<username>|<{SID}>]]
 [/allusers]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | ------- | -------- |

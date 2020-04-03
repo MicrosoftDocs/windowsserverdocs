@@ -20,7 +20,7 @@ Sends telnet commands to the telnet server.
 ```  
 sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]  
 ```  
-### Parameters  
+#### Parameters  
 
 | Parameter |                     Description                      |
 |-----------|------------------------------------------------------|

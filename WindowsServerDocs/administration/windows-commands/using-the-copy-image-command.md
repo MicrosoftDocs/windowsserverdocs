@@ -28,7 +28,7 @@ wdsutil [Options] /copy-Imagmedia:<Image name> [/Server:<Server name>]
          /Filename:<File name>
          [/Description:<Description>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image to be copied.|

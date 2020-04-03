@@ -29,7 +29,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 flattemp {/query | /enable | /disable}
 ```
 
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/query|Queries the current setting.|

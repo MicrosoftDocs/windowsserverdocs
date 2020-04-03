@@ -27,7 +27,7 @@ whoami {[/user] [/groups] [/priv]} [/fo <Format>] [/nh]
 whoami /all [/fo <Format>] [/nh]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

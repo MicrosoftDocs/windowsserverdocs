@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 mask <ShadowSetID>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

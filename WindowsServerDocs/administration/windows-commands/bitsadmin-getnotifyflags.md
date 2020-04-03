@@ -21,7 +21,7 @@ Retrieves the notify flags for the specified job.
 bitsadmin /GetNotifyFlags <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

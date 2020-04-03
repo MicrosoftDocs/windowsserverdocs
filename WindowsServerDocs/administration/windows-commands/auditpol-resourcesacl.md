@@ -30,7 +30,7 @@ auditpol /resourceSACL
 [/view [/user:<user>] [/type:<resource>]]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

@@ -27,7 +27,7 @@ Prints the current values of the configuration settings.
 set all 
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 |-----------|-------------|

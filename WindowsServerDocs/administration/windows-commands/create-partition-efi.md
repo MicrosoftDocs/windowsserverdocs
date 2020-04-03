@@ -23,7 +23,7 @@ On Itanium-based computers, creates an Extensible Firmware Interface (EFI) syste
 create partition efi [size=<n>] [offset=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |  Parameter  |                                                                                             Description                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

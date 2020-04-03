@@ -21,7 +21,7 @@ Deletes the partition with focus.
 delete partition [noerr] [override]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

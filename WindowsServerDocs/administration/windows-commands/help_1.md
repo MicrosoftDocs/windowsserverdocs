@@ -28,7 +28,7 @@ Displays a list of the available commands or detailed help information on a spec
 help [<command>]  
 ```  
   
-## Parameters  
+### Parameters  
   
 | Parameter |                              Description                              |
 |-----------|-----------------------------------------------------------------------|

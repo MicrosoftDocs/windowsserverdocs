@@ -28,7 +28,7 @@ ipxroute resolve {guid | name} {GUID | <AdapterName>}
 ipxroute board= N [def] [gbr] [mbr] [remove=xxxxxxxxxxxx]  
 ipxroute config  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |servers[ /type=X]|Displays the Service Access Point (SAP) table for the specified server type.  **X** must be an integer. For example, **/type=4** displays all file servers. If you do not specify **/type**, **ipxroute servers** displays all types of servers, listing them by server name.|  

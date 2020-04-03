@@ -20,7 +20,7 @@ Displays the Windows Deployment Services properties of all prestaged computers. 
 ```
 wdsutil [Options] /Get-AllDevices [/forest:{Yes | No}] [/ReferralServer:<Server name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[/forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|

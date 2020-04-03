@@ -27,7 +27,7 @@ Reads Deployed Printer Connection settings from Group Policy and deploys/removes
 pushprinterconnections <-log> <-?>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

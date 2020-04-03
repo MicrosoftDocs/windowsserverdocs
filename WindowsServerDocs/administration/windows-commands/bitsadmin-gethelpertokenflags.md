@@ -22,7 +22,7 @@ Returns the usage flags for a [helper token](/windows/desktop/bits/helper-token
 bitsadmin /GetHelperTokenFlags <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

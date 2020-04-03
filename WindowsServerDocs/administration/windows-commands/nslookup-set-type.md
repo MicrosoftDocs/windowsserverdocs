@@ -23,7 +23,7 @@ Changes the resource record type for the query.
 ```
 set type=<ResourceRecordtype>
 ```
-## Parameters
+### Parameters
 <ResourceRecordtype>
 Specifies a DNS resource record type. The default resource record type is A. The following table lists the valid values for this command.
 

@@ -22,7 +22,7 @@ Retrieves flags that determine if the files of the job can be cached and served 
 bitsadmin /GetPeerCachingFlags <Job> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

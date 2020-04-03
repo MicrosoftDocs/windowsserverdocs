@@ -21,7 +21,7 @@ Sets the event notification flags for the specified job.
 bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

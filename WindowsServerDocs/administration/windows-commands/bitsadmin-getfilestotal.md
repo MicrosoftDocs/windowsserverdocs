@@ -21,7 +21,7 @@ Retrieves the number of files in the specified job.
 bitsadmin /GetFilesTotal <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

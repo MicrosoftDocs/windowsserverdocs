@@ -27,7 +27,7 @@ Executes a file on the local computer. The file can be a **cmd** script.
 exec <ScriptFile.cmd>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

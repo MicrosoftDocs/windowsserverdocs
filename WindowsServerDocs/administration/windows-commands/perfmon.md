@@ -25,7 +25,7 @@ Start Windows Reliability and Performance Monitor in a specific standalone mode.
 perfmon </res|report|rel|sys>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

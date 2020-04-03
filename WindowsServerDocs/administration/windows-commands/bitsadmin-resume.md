@@ -21,7 +21,7 @@ Activates a new or suspended job in the transfer queue.
 bitsadmin /Resume <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -25,7 +25,7 @@ expands a virtual hard disk (VHD) to the size that you specify.
 > ```
 > expand vdisk maximum=<n>
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |  Parameter  |                      Description                      |
 > |-------------|-------------------------------------------------------|

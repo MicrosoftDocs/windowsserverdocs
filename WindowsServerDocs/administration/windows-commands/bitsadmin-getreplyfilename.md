@@ -23,7 +23,7 @@ Gets the path of the file that contains the server reply.
 bitsadmin /GetReplyFileName <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

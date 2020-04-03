@@ -27,7 +27,7 @@ Adds additional realm flags to the specified realm. For examples of how this com
 ksetup /addrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsupported] [rc4]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

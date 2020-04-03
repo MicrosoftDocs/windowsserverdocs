@@ -21,7 +21,7 @@ Deletes all cache entries for the given URL.
 bitsadmin /DeleteURL url
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

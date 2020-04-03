@@ -39,7 +39,7 @@ wbadmin start recovery
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

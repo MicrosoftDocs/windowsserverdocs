@@ -31,7 +31,7 @@ For examples of how to use this command, see [Examples](#examples).
 chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]] [/b]  
 ```
 
-## Parameters
+### Parameters
 
 |      Parameter       |                  Description                                    |
 | -------------------- | ------------------------------------------------------------------------ |

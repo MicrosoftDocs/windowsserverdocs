@@ -21,7 +21,7 @@ Sets the options for shadow copy creation. If used without parameters, **set opt
 set option {[differential | plex] [transportable] [[rollbackrecover] [txfrecover] | [noautorecover]]}
 ```
 
-## Parameters
+### Parameters
 
 |     Parameter     |                                                                                                  Description                                                                                                  |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

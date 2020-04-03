@@ -24,7 +24,7 @@ Use the [bitsadmin resume](bitsadmin-resume.md) switch to activate the job in th
 bitsadmin /create [type] DisplayName
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

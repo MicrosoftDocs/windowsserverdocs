@@ -35,7 +35,7 @@ When you use **scwcmd** to configure, analyze, or roll back a policy on a remote
 scwcmd <command> [<subcommand>]
 ```
 
-## Parameters
+### Parameters
 
 |Subcommand|Description|
 |----------|-----------|

@@ -21,7 +21,7 @@ Assigns a new drive letter to the portion of a drive used as the system drive. F
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -newdriveletter <DriveLetter>
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | ---------| ----------- |

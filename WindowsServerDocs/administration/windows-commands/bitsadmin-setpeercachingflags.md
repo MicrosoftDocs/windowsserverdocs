@@ -21,7 +21,7 @@ Sets flags that determine if the files of the job can be cached and served to pe
 bitsadmin /SetPeerCachingFlags <Job> <value> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

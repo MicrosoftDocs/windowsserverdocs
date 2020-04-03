@@ -27,7 +27,7 @@ Removes the encryption type attribute for the domain. For examples of how this c
 ksetup /delenctypeattr <DomainName> 
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

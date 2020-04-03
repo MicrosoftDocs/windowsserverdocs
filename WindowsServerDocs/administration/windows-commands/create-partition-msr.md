@@ -26,7 +26,7 @@ Creates a Microsoft Reserved (MSR) partition on a GUID partition table (gpt) dis
 create partition msr [size=<n>] [offset=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |  Parameter  |                                                                                                                         Description                                                                                                                         |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

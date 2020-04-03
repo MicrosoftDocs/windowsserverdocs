@@ -21,7 +21,7 @@ Sets the cache size limit.
 bitsadmin /Cache /SetLimit Percent
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

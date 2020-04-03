@@ -21,7 +21,7 @@ Informs the Bdehdcfg command-line tool that the computer should be restarted aft
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -restart
 ```
 
-### Parameters
+#### Parameters
 
 This command takes no additional parameters.
 

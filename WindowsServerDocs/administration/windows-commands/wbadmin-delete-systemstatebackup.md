@@ -37,7 +37,7 @@ wbadmin delete systemstatebackup
 > [!IMPORTANT]
 > One and only one of these parameters must be specified: **-keepVersions**, **-version**, or **-deleteOldest**.
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

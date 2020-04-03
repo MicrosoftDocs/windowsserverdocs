@@ -30,7 +30,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 verify [on | off]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -25,7 +25,7 @@ for install images:
 ```
 wdsutil [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>] [/Filename:<File name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image.|

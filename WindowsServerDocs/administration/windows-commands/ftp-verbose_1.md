@@ -23,7 +23,7 @@ Toggles **verbose** mode.
 ```  
 verbose  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 By default, **verbose** is on.  When **verbose** is on, all **ftp** responses are displayed.  When a file transfer is completed, statistics regarding the efficiency of the transfer are also displayed.  

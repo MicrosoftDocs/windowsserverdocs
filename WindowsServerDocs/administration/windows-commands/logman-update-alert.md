@@ -24,7 +24,7 @@ Update the properties of an existing alert data collector.
 ```  
 logman update alert <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                 Parameter                  |                                                                               Description                                                                               |
 |--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

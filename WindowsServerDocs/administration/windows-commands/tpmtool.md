@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#tpmtool_examples).
 ```
 tpmtool /parameter [<arguments>]
 ```
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

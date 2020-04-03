@@ -22,7 +22,7 @@ Changes the operating system time-out value.
 bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 ```
 
-## Parameters
+### Parameters
 
 
 |        Parameter        |                                                                                                                                                                                  Description                                                                                                                                                                                   |

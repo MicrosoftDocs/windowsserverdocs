@@ -24,7 +24,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -21,7 +21,7 @@ Sets the proxy settings for the specified job.
 bitsadmin /SetProxySettings <Job> <Usage> [List] [Bypass]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

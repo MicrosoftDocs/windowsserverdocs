@@ -75,7 +75,7 @@ add plex lun=n [noerr]
 add tpgroup tportal=n [noerr]
 ```
 
-#### Parameters
+##### Parameters
 
 **plex lun**=*n*
 
@@ -104,7 +104,7 @@ associate ports [add] <n-m>[,<n-m>[,…]]
 associate targets [add] <n>[,<n> [,…]]
 ```
 
-#### Parameters
+##### Parameters
 
 **controllers**
 
@@ -158,7 +158,7 @@ Sets or clears flags that give hints to providers on how to configure a LUN. Use
 automagic {set | clear | apply} all <flag=value> [<flag=value> [...]]
 ```
 
-#### Parameters
+##### Parameters
 
 **set**
 
@@ -206,7 +206,7 @@ Removes the plex from the currently selected LUN. The plex and the data it conta
 break plex=<plex_number> [noerr]
 ```
 
-#### Parameters
+##### Parameters
 
 **plex**
 
@@ -240,7 +240,7 @@ chap target set secret=[<secret>] [initiator=<initiatorname>]
 chap target remember secret=[<secret>] initiator=<initiatorname>
 ```
 
-#### Parameters
+##### Parameters
 
 **initiator set**
 
@@ -375,7 +375,7 @@ delete target [noerr]
 delete tpgroup [noerr]
 ```
 
-#### Parameters
+##### Parameters
 
 **lun**
 
@@ -407,7 +407,7 @@ Displays detailed information about the currently selected object of the specifi
 Detail {hbaport | iadapter | iportal | provider | subsystem | controller | port | drive | lun | tportal | target | tpgroup} [verbose]
 ```
 
-#### Parameters
+##### Parameters
 
 **hbaport**
 
@@ -534,7 +534,7 @@ Extends the currently selected LUN by adding sectors to the end of the LUN. Not 
 extend lun [size=<LUN_size>] [drives=<drive_number>, [<drive_number>, ...]] [noerr]
 ```
 
-#### Parameters
+##### Parameters
 
 **size=**
 
@@ -627,7 +627,7 @@ lbpolicy set lun type=<type> [paths=<path>-{primary | <weight>}[,<path>-{primary
 lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[,…]]
 ```
 
-#### Parameters
+##### Parameters
 
 **type**
 
@@ -661,7 +661,7 @@ Displays a list of objects of the specified type.
 List {hbaports | iadapters | iportals | providers | subsystems | controllers | ports | drives | LUNs | tportals | targets | tpgroups}
 ```
 
-#### Parameters
+##### Parameters
 
 **hbaports**
 
@@ -721,7 +721,7 @@ Logs the specified iSCSI initiator adapter into the currently selected iSCSI tar
 login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none | oneway | mutual}] [iportal=<iportal>] [tportal=<tportal>] [<flag> [<flag> […]]]
 ```
 
-#### Parameters
+##### Parameters
 
 **type**
 
@@ -767,7 +767,7 @@ Logs the specified iSCSI initiator adapter out of the currently selected iSCSI t
 logout target iadapter= <iadapter>
 ```
 
-#### Parameters
+##### Parameters
 
 **iadapter**
 
@@ -783,7 +783,7 @@ Performs maintenance operations on the currently selected object of the specifie
 maintenance <object operation> [count=<iteration>]
 ```
 
-#### Parameters
+##### Parameters
 
 \<object>
 
@@ -869,7 +869,7 @@ Reenumerates objects of the specified type. If you use the extend LUN command, y
 reenumerate {subsystems | drives}
 ```
 
-#### Parameters
+##### Parameters
 
 **subsystems**
 
@@ -949,7 +949,7 @@ Resets the currently selected controller or port.
 Reset {controller | port}
 ```
 
-#### Parameters
+##### Parameters
 
 **controller**
 
@@ -969,7 +969,7 @@ Displays or changes the currently selected object.
 Select {hbaport | iadapter | iportal | provider | subsystem | controller | port | drive | lun | tportal | target | tpgroup } [<n>]
 ```
 
-#### Parameters
+##### Parameters
 
 **object**
 
@@ -1037,7 +1037,7 @@ Sets the currently selected drive as a hot spare.
 setflag drive hotspare={true | false}
 ```
 
-#### Parameters
+##### Parameters
 
 **true**
 
@@ -1061,7 +1061,7 @@ Reduces the size of the selected LUN.
 shrink lun size=<n> [noerr]
 ```
 
-#### Parameters
+##### Parameters
 
 **size=**
 
@@ -1081,7 +1081,7 @@ Changes the status of the paths to the currently selected host bus adapter (HBA)
 standby hbaport
 ```
 
-#### Parameters
+##### Parameters
 
 **hbaport**
 
@@ -1097,7 +1097,7 @@ Makes the currently selected LUNs accessible from the specified hosts.
 unmask LUN {all | none | [add] wwn=<hexadecimal_number> [;<hexadecimal_number> [;…]] | [add] initiator=<initiator>[;<initiator>[;…]]} [uninstall]
 ```
 
-#### Parameters
+##### Parameters
 
 **all**
 

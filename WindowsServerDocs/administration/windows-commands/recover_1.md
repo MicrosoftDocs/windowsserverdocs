@@ -30,7 +30,7 @@ Refreshes the state of all disks in a disk group, attempt to recover disks in an
 recover [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

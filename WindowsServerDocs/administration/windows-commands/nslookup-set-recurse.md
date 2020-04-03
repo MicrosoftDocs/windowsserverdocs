@@ -27,7 +27,7 @@ Tells the Domain Name System (DNS) name server to query other servers if it does
 set [no]recurse
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                                  Description                                                                  |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------|

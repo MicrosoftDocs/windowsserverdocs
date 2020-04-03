@@ -23,7 +23,7 @@ Connects to the specified ftp server.
 ```  
 open <computer> [<Port>]  
 ```  
-### Parameters  
+#### Parameters  
 
 | Parameter  |                                           Description                                            |
 |------------|--------------------------------------------------------------------------------------------------|

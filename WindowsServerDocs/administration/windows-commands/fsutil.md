@@ -26,7 +26,7 @@ Performs tasks that are related to file allocation table (FAT) and NTFS file sys
 >```
 > You'll be prompted to restart your computer once it's installed. After your computer restarts, you'll be able to run **Fsutil** as an administrator.
 
-## Parameters
+### Parameters
 
 |Subcommand |Description|
 |---|---|

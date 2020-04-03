@@ -27,7 +27,7 @@ Sets the password for the local computer. For examples of how this command can b
 ksetup /setcomputerpassword <Password>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

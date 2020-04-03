@@ -26,7 +26,7 @@ typeperf -q [object] [options]
 typeperf -qx [object] [options]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

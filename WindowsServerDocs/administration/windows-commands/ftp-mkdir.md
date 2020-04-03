@@ -23,7 +23,7 @@ creates a directory on the remote computer.
 ```  
 mkdir <directory>  
 ```  
-### Parameters  
+#### Parameters  
 
 |  Parameter  |                   Description                   |
 |-------------|-------------------------------------------------|

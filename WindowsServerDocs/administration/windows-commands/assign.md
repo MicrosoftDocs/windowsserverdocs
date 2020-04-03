@@ -23,7 +23,7 @@ Assigns a drive letter or mount point to the volume with focus.
 assign [{letter=<d> | mount=<path>}] [noerr]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

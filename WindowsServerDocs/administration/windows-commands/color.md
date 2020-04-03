@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 color [[<B>]<F>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

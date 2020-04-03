@@ -23,7 +23,7 @@ Allows you to enable error reporting.
 ```
 serverweroptin [/query] [/detailed] [/summary]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/query|verifies the current setting.|

@@ -21,7 +21,7 @@ Retrieves a count of the number of times the specified job generated a transient
 bitsadmin /GetErrorCount <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

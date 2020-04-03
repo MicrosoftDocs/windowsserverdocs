@@ -26,7 +26,7 @@ cscript pubprn {<ServerName> | <UNCprinterpath>}
 LDAP://CN=<Container>,DC=<Container>
 ```
 
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |\<ServerName>|Specifies the name of the Windows server that hosts the printer that you want to publish. If you do not specify a computer, the local computer is used.|

@@ -20,7 +20,7 @@ Displays and modifies entries in the Address Resolution Protocol (ARP) cache. Th
 ```
 arp [/a [<Inetaddr>] [/n <ifaceaddr>]] [/g [<Inetaddr>] [-n <ifaceaddr>]] [/d <Inetaddr> [<ifaceaddr>]] [/s <Inetaddr> <Etheraddr> [<ifaceaddr>]]
 ```
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

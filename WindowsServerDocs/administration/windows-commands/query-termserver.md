@@ -26,7 +26,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > ```
 > query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |    Parameter     |                                                                        Description                                                                         |
 > |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|

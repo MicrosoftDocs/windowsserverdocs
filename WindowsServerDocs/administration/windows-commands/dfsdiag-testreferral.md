@@ -32,7 +32,7 @@ Checks Distributed File System (DFS) referrals by performing the following tests
 dfsdiag /TestReferral /DFSpath:<DFS path for getting referrals> [/Full]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |-------|--------|

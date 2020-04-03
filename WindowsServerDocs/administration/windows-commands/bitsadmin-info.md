@@ -21,7 +21,7 @@ Displays summary information about the specified job.
 bitsadmin /Info <Job> [/verbose]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

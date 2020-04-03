@@ -22,7 +22,7 @@ Retrieves the proxy usage for the given service account.
 bitsadmin /Util /GetIEProxy <Account> [/Conn <ConnectionName>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

@@ -35,7 +35,7 @@ wdsutil /add-ImagmediaFile:<wim file path>
      [/Filename:<File name>]
      [/UnattendFile:<Unattend file path>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 mediaFile:<.wim file path>|Specifies the full path and file name of the Windows Image (.wim) file that contains the images to be added.|

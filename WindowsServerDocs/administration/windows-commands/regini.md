@@ -27,7 +27,7 @@ For details on the format and content of the text script file that Regini.exe us
 regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputWidth][-b] textFiles...
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 

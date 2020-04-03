@@ -23,7 +23,7 @@ changes the working directory on the local computer. By default, the working dir
 ```  
 lcd [<directory>]  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |[<directory>]|Specifies the directory on the local computer to which to change. If *directory* is not specified, the current working directory is changed to the default directory.|  

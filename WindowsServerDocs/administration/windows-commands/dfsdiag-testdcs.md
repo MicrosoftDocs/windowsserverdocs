@@ -28,7 +28,7 @@ Checks the configuration of domain controllers by performing the following tests
 dfsdiag /TestDCs [/Domain:<Domain name>]  
 ```  
   
-### Parameters  
+#### Parameters  
   
 |Parameter|Description|  
 |-------|--------|  

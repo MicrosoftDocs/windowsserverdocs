@@ -34,7 +34,7 @@ wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>]
      [/UnattendFile:<Unattend file path>]
          [/OverwriteUnattend:{Yes | No}]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image.|

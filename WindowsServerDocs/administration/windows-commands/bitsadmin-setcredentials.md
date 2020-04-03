@@ -23,7 +23,7 @@ Adds credentials to a job.
 bitsadmin /SetCredentials <Job> <Target> <Scheme> <Username> <Password>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -23,7 +23,7 @@ Allows you to participate in the Customer Experience Improvement Program (CEIP).
 ```
 serverceipoptin [/query] [/enable] [/disable]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/query|verifies the current setting.|

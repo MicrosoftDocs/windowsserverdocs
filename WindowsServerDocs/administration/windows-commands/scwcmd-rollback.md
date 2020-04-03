@@ -27,7 +27,7 @@ Applies the most recent rollback policy available, and then deletes that rollbac
 scwcmd rollback /m:<ComputerName> [/u:<UserName>] [/pw:<Password>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

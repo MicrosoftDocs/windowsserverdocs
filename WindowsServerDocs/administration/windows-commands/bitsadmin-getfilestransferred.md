@@ -21,7 +21,7 @@ Retrieves the number of files transferred for the specified job.
 bitsadmin /GetFilesTransferred <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

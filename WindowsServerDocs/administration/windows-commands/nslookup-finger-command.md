@@ -27,7 +27,7 @@ Connects with the finger server on the current computer.
 finger [<UserName>] [{[>] <FileName>|[>>] <FileName>}]
 ```
 
-## Parameters
+### Parameters
 
 |  Parameter  |                                                                               Description                                                                               |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

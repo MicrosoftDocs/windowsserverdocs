@@ -21,7 +21,7 @@ Disables all services for a Windows Deployment Services server.
 WDSUTIL [Options] /Disable-Server [/Server:<Server name>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

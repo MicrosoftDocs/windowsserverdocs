@@ -24,7 +24,7 @@ Checks to see if the specified amount of disk space is available before continui
 ```
 freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [<Value>]
 ```
-## Parameters
+### Parameters
 
 |       Parameter       |                                                                                         Description                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

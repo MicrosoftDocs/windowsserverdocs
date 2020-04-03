@@ -23,7 +23,7 @@ Ends the ftp session with the remote computer and exits **ftp** to the operating
 ```  
 quit  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 End the ftp session with the remote computer and exit **ftp** to the operating system command prompt.  

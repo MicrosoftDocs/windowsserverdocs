@@ -38,7 +38,7 @@ For examples of how this command can be used, see [Examples](#BKMK_Examples).
 manage-bde -status [<Drive>] [-protectionaserrorlevel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

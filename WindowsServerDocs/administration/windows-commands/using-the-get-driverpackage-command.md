@@ -21,7 +21,7 @@ Displays information about a driver package on the server.
 WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name> | /PackageId:<ID>} [/Show:{Drivers | Files | All}]
 ```
 
-## Parameters
+### Parameters
 
 |        Parameter         |                                                                           Description                                                                            |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|

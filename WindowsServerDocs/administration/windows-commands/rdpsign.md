@@ -29,7 +29,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

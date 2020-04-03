@@ -20,7 +20,7 @@ Retrieves Windows Deployment Services information about a prestaged computer (th
 ```
 wdsutil /Get-Device {/Device:<Device name> | /ID:<MAC or UUID>} [/Domain:<Domain>] [/forest:{Yes | No}]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/Device:<Device name>|Specifies the name of the computer (SAMAccountName).|

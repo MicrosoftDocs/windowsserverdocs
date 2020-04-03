@@ -20,7 +20,7 @@ Removes a driver package from a server.
 ```
 wdsutil /remove-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}
 ```
-## Parameters
+### Parameters
 
 |        Parameter        |                                                                            Description                                                                             |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|

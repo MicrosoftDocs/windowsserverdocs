@@ -20,7 +20,7 @@ Displays operating parameters.
 ```  
 d[isplay]  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 Display operating parameters.  

@@ -23,7 +23,7 @@ Returns the media access control (MAC) address and list of network protocols ass
 ```
 getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | list | CSV}][/nh][/v]
 ```
-### Parameters
+#### Parameters
 
 |             Parameter              |                                                                                          Description                                                                                          |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

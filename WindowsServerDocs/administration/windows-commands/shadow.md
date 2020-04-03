@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 ```
 
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |\<SessionName>|Specifies the name of the session that you want to remotely control.|

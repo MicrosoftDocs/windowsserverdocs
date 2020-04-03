@@ -22,7 +22,7 @@ Deletes the per-user audit policy for all users, resets (disables) the system au
 auditpol /clear [/y]
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | ----------- | --------------- |

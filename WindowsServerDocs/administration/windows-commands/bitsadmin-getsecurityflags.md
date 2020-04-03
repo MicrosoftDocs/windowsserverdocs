@@ -22,7 +22,7 @@ Reports the HTTP security flags for URL redirection and checks performed on the 
 bitsadmin /GetSecurityFlags <Job> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

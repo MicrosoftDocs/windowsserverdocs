@@ -23,7 +23,7 @@ For examples of how this command can be used, see [Examples](#BKMK_Examples).
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge}
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

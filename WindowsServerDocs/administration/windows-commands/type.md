@@ -24,7 +24,7 @@ For examples of how to use this command within the Windows Command shell (Cmd.ex
 type [<Drive>:][<Path>]<FileName>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

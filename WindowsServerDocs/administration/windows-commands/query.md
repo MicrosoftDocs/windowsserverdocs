@@ -31,7 +31,7 @@ query termserver
 query user
 ```
 
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[query process](query-process.md)|Displays information about processes that are running on an rd Session Host server.|

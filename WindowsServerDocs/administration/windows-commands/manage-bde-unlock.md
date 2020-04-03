@@ -27,7 +27,7 @@ Unlocks a BitLocker-protected drive by using a recovery password or a recovery k
 manage-bde -unlock {-recoverypassword <Password>|-recoverykey <PathToExternalKeyFile>} <Drive> [-certificate {-cf PathToCertificateFile | -ct CertificateThumbprint} {-pin}] [-password] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Value|Description|
 |---------|-----|-----------|

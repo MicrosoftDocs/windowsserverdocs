@@ -27,7 +27,7 @@ Removes a service principal name (SPN) mapping between the stated host and the r
 ksetup /delhosttorealmmap <HostName> <RealmName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -28,7 +28,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 change port [<PortX>=<PortY| /d <PortX| /query]
 ```
 
-## Parameters
+### Parameters
 
 
 |    Parameter    |              Description               |

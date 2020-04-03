@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -23,7 +23,7 @@ Changes the default server to the specified Domain Name System (DNS) domain.
 ```
 lserver <DNSDomain> 
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                      Description                      |
 |-----------------|-------------------------------------------------------|

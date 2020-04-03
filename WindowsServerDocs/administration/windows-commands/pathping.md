@@ -27,7 +27,7 @@ Provides information about network latency and network loss at intermediate hops
 ```
 pathping [/n] [/h] [/g <Hostlist>] [/p <Period>] [/q <NumQueries> [/w <timeout>] [/i <IPaddress>] [/4 <IPv4>] [/6 <IPv6>][<TargetName>]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/n|Prevents **pathping** from attempting to resolve the IP addresses of intermediate routers to their names. This might expedite the display of **pathping** results.|

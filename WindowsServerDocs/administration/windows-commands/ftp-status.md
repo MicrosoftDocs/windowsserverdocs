@@ -23,7 +23,7 @@ Displays the current status of ftp connections.
 ```  
 status  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 Display the current status of ftp connections.  

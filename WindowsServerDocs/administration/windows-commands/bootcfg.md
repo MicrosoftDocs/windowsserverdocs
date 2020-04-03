@@ -23,7 +23,7 @@ Configures, queries, or changes Boot.ini file settings.
 bootcfg <parameter> [arguments...]  
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|  
 |-------|--------|  

@@ -24,7 +24,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 clip < <FileName>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

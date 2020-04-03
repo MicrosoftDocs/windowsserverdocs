@@ -26,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 mklink [[/d] | [/h] | [/j]] <Link> <Target>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

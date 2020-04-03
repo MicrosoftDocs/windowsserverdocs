@@ -23,7 +23,7 @@ For an example of how this command can be used, see [Examples](#BKMK_Examples).
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink} -size <SizeinMB>
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

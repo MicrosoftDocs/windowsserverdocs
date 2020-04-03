@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 fsutil dirty {query | set} <VolumePath>
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                 Description                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|

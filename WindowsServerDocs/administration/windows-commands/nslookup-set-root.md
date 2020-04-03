@@ -23,7 +23,7 @@ Changes the name of the root server used for queries.
 ```
 set root=<RootServer>
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                   Description                                    |
 |-----------------|----------------------------------------------------------------------------------|

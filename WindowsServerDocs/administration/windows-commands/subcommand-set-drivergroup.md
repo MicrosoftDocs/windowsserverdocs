@@ -20,7 +20,7 @@ Sets the properties of an existing driver group on a server.
 ```
 wdsutil /Set-DriverGroup /DriverGroup:<Group Name> [/Server:<Server Name>] [/Name:<New Group Name>] [/Enabled:{Yes | No}] [/Applicability:{Matched | All}]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/DriverGroup:<Group Name>|Specifies the name of the driver group.|

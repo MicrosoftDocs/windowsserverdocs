@@ -27,7 +27,7 @@ Upgrades the BitLocker version. For examples of how this command can be used, se
 manage-bde -upgrade [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

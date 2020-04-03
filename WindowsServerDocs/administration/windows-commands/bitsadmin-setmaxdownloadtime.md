@@ -21,7 +21,7 @@ Sets the download timeout in seconds.
 bitsadmin /SetMaxDownloadTime <Job> <Timeout>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

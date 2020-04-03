@@ -20,7 +20,7 @@ Changes the attributes of an image group.
 ```
 wdsutil [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/Name:<New image group name>] [/Security:<SDDL>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group.|

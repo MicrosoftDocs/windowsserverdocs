@@ -23,7 +23,7 @@ If BITS fails to start, use this switch to fix known issues in various versions 
 bitsadmin /Util /RepairService [/Force]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

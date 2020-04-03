@@ -21,7 +21,7 @@ Specifies the identifier of the client certificate to use for client authenticat
 bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-decimal_cert_id>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

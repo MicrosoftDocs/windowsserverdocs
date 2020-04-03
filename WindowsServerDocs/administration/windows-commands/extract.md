@@ -27,7 +27,7 @@ EXTRACT [/Y] source [newname]
 EXTRACT [/Y] /C source destination
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

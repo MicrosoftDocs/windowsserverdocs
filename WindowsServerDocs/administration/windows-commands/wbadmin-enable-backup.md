@@ -69,7 +69,7 @@ wbadmin enable backup
 [-allowDeleteOldBackups]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

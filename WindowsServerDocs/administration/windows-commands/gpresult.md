@@ -27,7 +27,7 @@ To use RSoP reporting for remotely targeted computers through the firewall, you 
 gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
 ```
 
-## Parameters
+### Parameters
 
 > [!NOTE]
 > Except when you use **/?**, you must include an output option, either **/r**, **/v**, **/z**, **/x**, or **/h**.

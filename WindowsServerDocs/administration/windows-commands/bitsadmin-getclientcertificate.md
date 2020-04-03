@@ -21,7 +21,7 @@ Retrieves the client certificate from the job.
 bitsadmin /GetClientCertificate <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

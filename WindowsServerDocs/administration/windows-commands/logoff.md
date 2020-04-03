@@ -28,7 +28,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 ```
 logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                             Description                                                                              |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -25,7 +25,7 @@ start a data collector and set the begin time to manual, or stop a data collecto
 logman start <[-n] <name>> [options]  
 logman stop <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |     Parameter      |                                 Description                                  |
 |--------------------|------------------------------------------------------------------------------|

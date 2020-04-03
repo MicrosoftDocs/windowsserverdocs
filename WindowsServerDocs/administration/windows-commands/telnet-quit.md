@@ -20,7 +20,7 @@ Exits telnet.
 ```  
 q[uit]  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## <a name=BKMK_Examples></a>Examples  
 exit telnet.  

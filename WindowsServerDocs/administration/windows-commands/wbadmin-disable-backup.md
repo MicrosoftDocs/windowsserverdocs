@@ -26,7 +26,7 @@ wbadmin disable backup
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

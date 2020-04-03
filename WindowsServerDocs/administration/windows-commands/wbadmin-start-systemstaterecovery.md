@@ -50,7 +50,7 @@ wbadmin start systemstaterecovery
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

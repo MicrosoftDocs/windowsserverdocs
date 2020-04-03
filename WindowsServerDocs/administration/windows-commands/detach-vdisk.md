@@ -26,7 +26,7 @@ Stops the selected virtual hard disk (VHD) from appearing as a local hard disk d
 detach vdisk [noerr]  
 ```  
   
-### Parameters  
+#### Parameters  
   
 |Parameter|Description|  
 |-------|--------|  

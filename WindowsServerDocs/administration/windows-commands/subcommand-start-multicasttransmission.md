@@ -38,7 +38,7 @@ wdsutil [Options] /start-MulticastTransmissiomedia:<Image name>
        mediaGroup:<Image Group>]
         [/Filename:<File name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Specifies the name of the image.|

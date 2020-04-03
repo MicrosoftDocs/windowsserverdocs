@@ -25,7 +25,7 @@ compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Pr
 jetpack.EXE <database name> <temp database name>
 ```
 
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |<database name>|Specifies the original database file.|

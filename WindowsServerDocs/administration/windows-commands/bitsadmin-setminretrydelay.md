@@ -21,7 +21,7 @@ Sets the minimum length of time, in seconds, that BITS waits after encountering 
 bitsadmin /SetMinRetryDelay <Job> <RetryDelay>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

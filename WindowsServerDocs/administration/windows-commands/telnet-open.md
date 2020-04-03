@@ -20,7 +20,7 @@ Connects to a telnet server.
 ```  
 o[pen] <hostname> [<Port>]  
 ```  
-### Parameters  
+#### Parameters  
 
 | Parameter  |                                        Description                                         |
 |------------|--------------------------------------------------------------------------------------------|

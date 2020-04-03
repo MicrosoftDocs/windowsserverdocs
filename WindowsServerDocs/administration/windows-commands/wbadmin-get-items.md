@@ -30,7 +30,7 @@ wbadmin get items
 [-machine:<BackupMachineName>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

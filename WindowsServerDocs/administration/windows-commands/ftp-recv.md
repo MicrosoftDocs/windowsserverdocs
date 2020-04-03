@@ -23,7 +23,7 @@ Copies a remote file to the local computer using the current file transfer type.
 ```  
 recv <remoteFile> [<LocalFile>]  
 ```  
-### Parameters  
+#### Parameters  
 
 |   Parameter   |                   Description                    |
 |---------------|--------------------------------------------------|

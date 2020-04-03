@@ -1,6 +1,6 @@
 ---
-title: Begin restore
-description: Windows Commands topic for Begin restore, which starts a restore session and issues a PreRestore event to involved writers.
+title: begin restore
+description: Windows Commands topic for **begin restore**, which starts a restore session and issues a PreRestore event to involved writers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -23,4 +23,4 @@ begin restore
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

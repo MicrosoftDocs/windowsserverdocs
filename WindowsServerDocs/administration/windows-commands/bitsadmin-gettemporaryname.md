@@ -21,7 +21,7 @@ Reports the temporary filename of the given file within the job.
 bitsadmin /GetTemporaryName <Job> <file index> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

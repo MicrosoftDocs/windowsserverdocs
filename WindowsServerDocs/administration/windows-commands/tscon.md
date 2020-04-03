@@ -25,7 +25,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ```  
 tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /password:*] [/v]  
 ```  
-## Parameters  
+### Parameters  
 
 |Parameter|Description|  
 |-------|--------|  

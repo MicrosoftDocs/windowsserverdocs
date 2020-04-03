@@ -31,7 +31,7 @@ tsprof /copy {/domain:<DomainName> | /local} [/profile:<path>] <Src_usr> <Dest_u
 tsprof /q {/domain:<DomainName> | /local} <UserName>
 ```
 
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/update|Updates profile path information for <*UserName*> in domain <*DomainName*> to <*Profilepath*>.|

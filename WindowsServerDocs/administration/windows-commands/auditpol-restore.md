@@ -22,7 +22,7 @@ Restores system audit policy settings, per-user audit policy settings for all us
 auditpol /restore /file:<filename>
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | ------- | -------- |

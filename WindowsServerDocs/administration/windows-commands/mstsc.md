@@ -30,7 +30,7 @@ mstsc.exe /edit <Connection File>
 mstsc.exe /migrate
 ```
 
-## Parameters
+### Parameters
 
 |        Parameter        |                                                         Description                                                         |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------|

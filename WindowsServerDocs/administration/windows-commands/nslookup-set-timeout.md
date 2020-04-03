@@ -23,7 +23,7 @@ changes the initial number of seconds to wait for a reply to a lookup request.
 ```
 set timeout=<Number>
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                           Description                                            |
 |-----------------|--------------------------------------------------------------------------------------------------|

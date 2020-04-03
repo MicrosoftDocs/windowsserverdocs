@@ -20,7 +20,7 @@ Sets the HTTP verb to use.
 bitsadmin /GetHttpMethod <Job> <HTTPMethod>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

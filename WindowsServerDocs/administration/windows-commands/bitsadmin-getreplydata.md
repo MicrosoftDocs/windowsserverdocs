@@ -23,7 +23,7 @@ Retrieves the server's reply data in hexadecimal format.
 bitsadmin /GetReplyData <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

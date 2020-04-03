@@ -20,7 +20,7 @@ The Diskpart clean command removes any and all partition or volume formatting fr
 ```
 clean [all]
 ```
-## Parameters
+### Parameters
 
 | Parameter |                                                        Description                                                        |
 |-----------|---------------------------------------------------------------------------------------------------------------------------|

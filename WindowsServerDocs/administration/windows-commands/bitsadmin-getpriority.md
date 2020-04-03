@@ -20,7 +20,7 @@ Retrieves the priority of the specified job.
 bitsadmin /GetPriority <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

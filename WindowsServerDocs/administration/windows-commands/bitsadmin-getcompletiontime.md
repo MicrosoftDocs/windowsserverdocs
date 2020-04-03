@@ -21,7 +21,7 @@ Retrieves the time that the job finished transferring data.
 bitsadmin /GetCompletionTime <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -27,7 +27,7 @@ append [[<Drive>:]<Path>[;...]] [/x[:on|:off]] [/path:[:on|:off] [/e]
 append ;
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

@@ -21,7 +21,7 @@ Retrieves the proxy bypass list for the specified job.
 bitsadmin /GetProxyBypassList <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

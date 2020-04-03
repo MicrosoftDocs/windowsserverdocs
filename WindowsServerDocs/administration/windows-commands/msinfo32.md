@@ -23,7 +23,7 @@ Opens the System Information tool to display a comprehensive view of the hardwar
 ```
 msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/showcategories] [/category <CategoryID>] [/categories {+<CategoryID>(+<CategoryID>)|+all(-<CategoryID>)}]
 ```
-### Parameters
+#### Parameters
 
 |    Parameter    |                                                                                                                                 Description                                                                                                                                  |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

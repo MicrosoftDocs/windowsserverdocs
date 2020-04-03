@@ -27,7 +27,7 @@ Forces a BitLocker-protected drive into recovery mode on restart. This command d
 manage-bde –forcerecovery <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

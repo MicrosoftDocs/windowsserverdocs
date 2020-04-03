@@ -24,7 +24,7 @@ convert gpt
 convert mbr
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

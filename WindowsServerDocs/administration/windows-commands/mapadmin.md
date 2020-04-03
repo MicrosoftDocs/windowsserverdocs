@@ -54,7 +54,7 @@ Specifies the user name of the user whose credentials are to be used. It might b
 Specifies the password of the user. If you specify the **-u** option but omit the **-p** option, you are prompted for the user's password.
 The specific action that **mapadmin** performs depends on the command argument you specify:
 
-## Parameters
+### Parameters
 ### start
 starts the User Name Mapping service.
 

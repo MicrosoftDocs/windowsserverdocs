@@ -24,7 +24,7 @@ changes the default Domain Name System (DNS) domain name and search list.
 ```
 Set srchlist=<DomainName>[/...]
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                                                                        Description                                                                                        |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

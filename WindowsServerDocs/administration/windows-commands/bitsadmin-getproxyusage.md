@@ -21,7 +21,7 @@ Retrieves the proxy usage setting for the specified job.
 bitsadmin /GetProxyUsage <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

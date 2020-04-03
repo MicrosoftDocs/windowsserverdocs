@@ -23,7 +23,7 @@ Removes a driver package from a driver group on a server.
 WDSUTIL /Remove-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>] {/DriverPackage:<Name> | /PackageId:<ID>}
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -21,7 +21,7 @@ Sets the content validation state of the given file within the job.
 bitsadmin /SetValidationState <Job> <file index> <true|false> 
 ```
 
-## Parameters
+### Parameters
 
 | Parameter  |          Description           |
 |------------|--------------------------------|

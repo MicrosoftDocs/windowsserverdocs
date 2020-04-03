@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m <Text>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

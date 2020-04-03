@@ -24,7 +24,7 @@ Retrieves information about all Windows Deployment Services servers.
 WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Forest:{Yes | No}]
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                                                                                 Description                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -26,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|

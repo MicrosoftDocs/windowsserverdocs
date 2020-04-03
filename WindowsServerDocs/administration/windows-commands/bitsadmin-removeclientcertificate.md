@@ -21,7 +21,7 @@ Removes the client certificate from the job.
 bitsadmin /RemoveClientCertificate <Job> 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

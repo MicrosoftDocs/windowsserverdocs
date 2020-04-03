@@ -21,7 +21,7 @@ Displays information about a driver package, including the drivers and files it 
 WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
 ```
 
-## Parameters
+### Parameters
 
 |         Parameter         |                              Description                               |
 |---------------------------|------------------------------------------------------------------------|

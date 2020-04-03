@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir=<offline windows directory> /offbootdir=<offline boot directory>]
 ```
 
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/scannow|Scans the integrity of all protected system files and repairs files with problems when possible.|

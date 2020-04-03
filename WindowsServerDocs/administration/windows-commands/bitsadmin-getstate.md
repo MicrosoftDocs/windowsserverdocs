@@ -21,7 +21,7 @@ Retrieves the state of the specified job.
 bitsadmin /GetState <Job>
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

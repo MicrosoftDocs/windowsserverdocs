@@ -41,7 +41,7 @@ wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
     mediaGroup:<Image Group>]
      [/Filename:<File name>]
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 media:<Image name>|Displays the multicast transmission that is associated with this image.|

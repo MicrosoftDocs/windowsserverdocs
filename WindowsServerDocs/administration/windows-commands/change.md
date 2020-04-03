@@ -28,7 +28,7 @@ Changes Remote Desktop Session Host server settings for logons, COM port mapping
  change user
  ```
  
- ## Parameters
+ ### Parameters
  
  |            Parameter            |                                                   Description                                                   |
  |---------------------------------|-----------------------------------------------------------------------------------------------------------------|

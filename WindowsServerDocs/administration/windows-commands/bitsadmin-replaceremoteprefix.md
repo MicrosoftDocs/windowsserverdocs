@@ -25,7 +25,7 @@ Changes all files in the job whose remote URL begins with *OldPrefix* to use *Ne
 bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

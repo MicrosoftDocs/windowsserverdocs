@@ -22,7 +22,7 @@ Returns the SID of a BITS transfer job's [helper token](/windows/desktop/bits/h
 bitsadmin /GetHelperTokensID <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

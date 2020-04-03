@@ -20,7 +20,7 @@ Queries and displays the [boot loader] and [operating systems] section entries f
 ```
 bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
 ```
-## Parameters
+### Parameters
 
 |        Term         |                                                                                             Definition                                                                                              |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

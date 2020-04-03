@@ -23,7 +23,7 @@ Set the proxy settings to use when transferring files using a service account.
 bitsadmin /Util /SetIEProxy <Account> <Usage>[/Conn <ConnectionName>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|

@@ -23,7 +23,7 @@ removes a Kerberos password server (Kpasswd) for a realm. For examples of how th
 ```
 ksetup /delkpasswd <RealmName> <KpasswdName>
 ```
-### Parameters
+#### Parameters
 
 |   Parameter   |                                                                                                   Description                                                                                                   |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

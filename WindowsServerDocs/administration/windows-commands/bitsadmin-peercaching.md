@@ -22,7 +22,7 @@ bitsadmin /PeerCaching /help
 bitsadmin /PeerCaching /SetConfigurationFlags
 bitsadmin /PeerCaching /GetConfigurationFlags
 ```
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[bitsadmin peercaching and help](bitsadmin-peercaching-and-help.md)|Displays the command-line usage for the /PeerCaching switches.|
