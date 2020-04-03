@@ -28,7 +28,7 @@ The following feature distribution map indicates the features that are present i
 
 | **Feature**                                                                                                                                  | **Windows Server operating system version** | **10.0-10.3 (buster)** | **9.0-9.12 (stretch)** | **8.0-8.11 (jessie)** | **7.0-7.11 (wheezy)** |
 |----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-| **Availability**                                                                                                                             |                                             | Built in              | Built in              | Built in              | Built in (Note 6)     |
+| **Availability**                                                                                                                             |                                             | Built in              | Built in              | Built in              | Built in (Note 5)     |
 | **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
 | Windows Server 2016 Accurate Time                                                                                                            | 2019, 2016                                  | &#10004; Note 4       | &#10004; Note 4       |                       |                       |
 | **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                                       |                                             |                       |                       |                       |                       |
@@ -42,7 +42,7 @@ The following feature distribution map indicates the features that are present i
 | **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                             |                       |                       |                       |                       |
 | VHDX resize                                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004; Note 1       | &#10004; Note 1       | &#10004; Note 1       | &#10004; Note 1       |
 | Virtual Fibre Channel                                                                                                                        | 2019, 2016, 2012 R2                         |                       |                       |                       |                       |
-| Live virtual machine backup                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004;     | &#10004;     | &#10004;     | &#10004;       |
+| Live virtual machine backup                                                                                                                  | 2019, 2016, 2012 R2                         | &#10004; Note2 | &#10004; Note2 | &#10004; Note2 | &#10004; Note2 |
 | TRIM support                                                                                                                                 | 2019, 2016, 2012 R2                         | &#10004; Note 4       | &#10004; Note 4       |                       |                       |
 | SCSI WWN                                                                                                                                     | 2019, 2016, 2012 R2                         | &#10004; Note 4       | &#10004; Note 4       |                       |                       |
 | **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                             |                       |                       |                       |                       |
@@ -77,6 +77,8 @@ The following feature distribution map indicates the features that are present i
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
    ```
 4. The latest upstream kernel capabilities are only available by using the kernel included [Debian backports](https://wiki.debian.org/Backports).
+
+5. While Debian 7.x is out of support and uses an older kernel, the kernel included in Debian backports for Debian 7.x has improved Hyper-V capabilities.
 
 See Also
 
