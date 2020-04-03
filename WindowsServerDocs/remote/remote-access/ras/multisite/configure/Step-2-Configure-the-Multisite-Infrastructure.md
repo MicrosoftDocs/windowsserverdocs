@@ -235,7 +235,7 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
   
 #### <a name="ChangeDC"></a>To change the domain controller that manages server GPOs  
   
--   Run the Windows PowerShell cmdlet  [Set-DAEntryPointDC](https://docs.microsoft.com/en-us/powershell/module/remoteaccess/set-daentrypointdc) on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
+-   Run the Windows PowerShell cmdlet  [Set-DAEntryPointDC](https://docs.microsoft.com/powershell/module/remoteaccess/set-daentrypointdc) on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.
   
     -   To replace the unreachable domain controller "dc1.corp.contoso.com" with the domain controller "dc2.corp.contoso.com", do the following:  
   
@@ -330,4 +330,3 @@ To optimize the configuration distribution time, do one of the following:
   
 -   [Step 3: Configure the multisite deployment](Step-3-Configure-the-Multisite-Deployment.md)  
 -   [Step 1: Implement a single server Remote Access deployment](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
-
