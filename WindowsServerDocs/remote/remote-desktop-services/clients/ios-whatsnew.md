@@ -18,16 +18,19 @@ ms.localizationpriority: medium
 
 We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), adding new features and fixing issues. You'll find the latest updates on this page.
 
+>[!IMPORTANT]
+>We're committed to making this app the best Remote Desktop client for iOS and value your feedback. You can report any issues at **Help** > **Report an Issue**.
+
 ## Updates for version 10.0.5
 
 *Date published: 03/09/20*
 
 We've put together some bug fixes and feature updates for this 10.0.5 release. Here's what's new:
 
-- Automatic import of launched RDP files (look for the toggle in General settings).
+- Launched RDP files are now automatically imported (look for the toggle in General settings).
 - You can now launch iCloud-based RDP files that haven't been downloaded in the Files app yet.
 - The remote session can now extend underneath the Home indicator on iPhones (look for the toggle in Display settings).
-- Added support for typing composite characters (such as é) with multiple keystrokes.
+- Added support for typing composite characters with multiple keystrokes, such as é.
 - Added support for the iPad on-screen floating keyboard.
 - Added support for adjusting properties of redirected cameras from a remote session.
 - Fixed a bug in the gesture recognizer that caused the client to become unresponsive when connected to a remote session.
@@ -39,11 +42,11 @@ We've put together some bug fixes and feature updates for this 10.0.5 release. H
 - Fixed scenarios where the Windows on-screen keyboard in the remote session was too small.
 - Implemented auto-keyboard focus throughout the Connection Center to make data entry more seamless.
 - Pressing **Enter** at a credential prompt now results in the prompt being dismissed and the current flow resuming.
-- Fixed a scenario where the client would crash when pressing **Shift + Option + Left, Up, or Down arrow key**.
+- Fixed a scenario where the client would crash when pressing Shift + Option + Left, Up, or Down arrow key.
 - Fixed a crash that occurred when removing a SwiftPoint device.
 - Fixed other crashes reported to us by users since the last release.
 
-Thanks to everyone who reported bugs and worked with us to diagnose issues. If you encounter any errors, you can report them at **Help** > **Report an Issue**.
+We'd like to thank everyone who reported bugs and worked with us to diagnose issues.
 
 ## Updates for version 10.0.4
 
@@ -61,7 +64,7 @@ It's time for another update! We want to thank everyone who reported bugs and wo
 - Fixed a bug where some Chinese input would remain in the remote session after deletion.
 - Fixed other crashes reported to us by users since the last release.
 
-We appreciate all your comments sent to us through the App Store, in-app feedback, and email. We'll continue focusing on making this app better with each release. If you encounter any errors, report them at **Settings** > **Report an Issue**.
+We appreciate all your comments sent to us through the App Store, in-app feedback, and email. We'll continue focusing on making this app better with each release.
 
 ## Updates for version 10.0.3
 
@@ -82,8 +85,6 @@ It's 2020 and time for our first release of the year, which means new features a
 - Fixed a bug that caused the Bluetooth permissions UI to repeatedly appear at launch for some users.
 - Fixed other crashes reported to us by users since the last release.
 
-We're committed to making this app the best Remote Desktop client for iOS and value your feedback. If you encounter any errors, Report them to us at **Settings** > **Report an Issue**.
-
 ## Updates for version 10.0.2
 
 *Date published: 12/20/19*
@@ -96,8 +97,6 @@ We've been working hard to fix bugs and add useful features. Here's what's new i
 - Fixed a crash that happened whenever someone pressed the Option and Up or Down arrow keys at the same time on a hardware keyboard.
 - Updated the on-screen keyboard layout used in the password prompt UI to make finding the Backslash key easier.
 - Fixed other crashes reported to us by users since the last release.
-
-We're committed to making this app the best Remote Desktop client for iOS and value your feedback. If you encounter any errors, report them at **Settings** > **Report an Issue**.
 
 ## Updates for version 10.0.1
 
