@@ -13,7 +13,7 @@ ms.date: 05/24/2018
 ---
 # Plan your WSUS deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
@@ -31,7 +31,7 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 
 ### System Requirements
 
-Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
+Hardware and database software requirements are driven by the number of client computers being updated in your organization.  Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
 -   Server hardware requirements to enable WSUS role are bound to hardware requirements. The minimum hardware requirements for WSUS are:
 
@@ -39,9 +39,12 @@ Before you enable the WSUS server role, confirm that the server meets the system
 
     -   **Memory:** WSUS requires an additional 2 GB of RAM more than what is required by the server and all other services or software.
 
-    -   **Available disk space:** 10 GB (40 GB or greater is recommended)
+    -   **Available disk space:** 40 GB or greater is recommended
 
-    -   **Network adapter:** 100 megabits per second (Mbps) or greater
+    -   **Network adapter:** 100 megabits per second (Mbps) or greater (1GB is recommended)
+
+> [!NOTE] 
+> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rullup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.  
 
 -   Software Requirements:
 
