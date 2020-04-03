@@ -35,7 +35,7 @@ bitsadmin /Cache /SetExpirationtime
 
 |Parameter|Description|
 |-------|--------|
-|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|Displays the command\-line usage for the \/Cache switches.|
+|[bitsadmin cache and help](bitsadmin-cache-and-help.md)|Displays the command-line usage for the /Cache switches.|
 |[bitsadmin cache and clear](bitsadmin-cache-clear.md)|Purges the local cache.|
 |[bitsadmin cache and delete](bitsadmin-cache-and-delete.md)|deletes a cache entry.|
 |[bitsadmin cache and deleteurl](bitsadmin-cache-and-deleteurl.md)|deletes all cache entries for the given URL.|

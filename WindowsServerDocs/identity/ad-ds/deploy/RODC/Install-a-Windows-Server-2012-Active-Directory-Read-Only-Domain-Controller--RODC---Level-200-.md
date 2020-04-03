@@ -33,7 +33,7 @@ The following diagram illustrates the Active Directory Domain Services Read-Only
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
-|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<br /><br />***-DomainControllerAccountName***<br /><br />***-DomainName***<br /><br />***-SiteName***<br /><br />*-AllowPasswordReplicationAccountName*<br /><br />***-Credential***<br /><br />*-DelegatedAdministratorAccountName*<br /><br />*-DenyPasswordReplicationAccountName*<br /><br />*-NoGlobalCatalog*<br /><br />*-InstallDNS*<br /><br />-ReplicationSourceDC|  
+|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<p>***-DomainControllerAccountName***<p>***-DomainName***<p>***-SiteName***<p>*-AllowPasswordReplicationAccountName*<p>***-Credential***<p>*-DelegatedAdministratorAccountName*<p>*-DenyPasswordReplicationAccountName*<p>*-NoGlobalCatalog*<p>*-InstallDNS*<p>-ReplicationSourceDC|  
   
 > [!NOTE]  
 > The **-credential** argument is only required if you are not already logged on as a member of the Domain Admins group.  
@@ -48,7 +48,7 @@ The diagram below illustrates the Active Directory Domain Services configuration
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
-|Install-AddsDomaincontroller|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-ApplicationPartitionsToReplicate*<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />*-InstallationMediaPath*<br /><br />*-LogPath*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />***-UseExistingAccount***|  
+|Install-AddsDomaincontroller|-SkipPreChecks<p>***-DomainName***<p>*-SafeModeAdministratorPassword*<p>*-ApplicationPartitionsToReplicate*<p>*-CreateDNSDelegation*<p>***-Credential***<p>-CriticalReplicationOnly<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>*-InstallationMediaPath*<p>*-LogPath*<p>-Norebootoncompletion<p>*-ReplicationSourceDC*<p>*-SystemKey*<p>*-SYSVOLPath*<p>***-UseExistingAccount***|  
   
 > [!NOTE]  
 > The **-credential** argument is only required if you are not already logged on as a member of the Domain Admins group.  
@@ -417,7 +417,7 @@ The following diagram illustrates the Active Directory Domain Services configura
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
-|Install-AddsDomainController|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />***-SiteName***<br /><br />*-ApplicationPartitionsToReplicate*<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />*-CriticalReplicationOnly*<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-DNSOnNetwork<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-AllowPasswordReplicationAccountName*<br /><br />*-DelegatedAdministratorAccountName*<br /><br />*-DenyPasswordReplicationAccountName*<br /><br />***-ReadOnlyReplica***|  
+|Install-AddsDomainController|-SkipPreChecks<p>***-DomainName***<p>*-SafeModeAdministratorPassword*<p>***-SiteName***<p>*-ApplicationPartitionsToReplicate*<p>*-CreateDNSDelegation*<p>***-Credential***<p>*-CriticalReplicationOnly*<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>-DNSOnNetwork<p>*-InstallationMediaPath*<p>*-InstallDNS*<p>*-LogPath*<p>-MoveInfrastructureOperationMasterRoleIfNecessary<p>*-NoGlobalCatalog*<p>-Norebootoncompletion<p>*-ReplicationSourceDC*<p>-SkipAutoConfigureDNS<p>*-SystemKey*<p>*-SYSVOLPath*<p>*-AllowPasswordReplicationAccountName*<p>*-DelegatedAdministratorAccountName*<p>*-DenyPasswordReplicationAccountName*<p>***-ReadOnlyReplica***|  
   
 > [!NOTE]  
 > The **-credential** argument is only required if you are not already logged on as a member of the Domain Admins group.  

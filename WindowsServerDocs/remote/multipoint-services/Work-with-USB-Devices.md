@@ -24,7 +24,7 @@ The following table shows a list of devices and how they behave, depending on wh
 |||||  
 |-|-|-|-|  
 |**Device**|**Behavior when it is connected directly to the computer**|**Behavior when it is connected to a station**|**Notes**|  
-|Keyboard|We do not recommend connecting a keyboard directly to the computer.|Accessible only to the station user.|If the keyboard contains a USB port, then the USB hub inside the keyboard may be the station hub. Other USB devices attached to that port are available only to user who is using that keyboard.<br /><br />Some station hubs are equipped with a PS\/2 mouse port that is converted into a USB connection inside the hub.|  
+|Keyboard|We do not recommend connecting a keyboard directly to the computer.|Accessible only to the station user.|If the keyboard contains a USB port, then the USB hub inside the keyboard may be the station hub. Other USB devices attached to that port are available only to user who is using that keyboard.<p>Some station hubs are equipped with a PS\/2 mouse port that is converted into a USB connection inside the hub.|  
 |Mouse|We do not recommend connecting a mouse directly to the computer.|Accessible only to the station user.|Some station hubs are equipped with a PS\/2 mouse port that is converted into a USB connection inside the hub.|  
 |USB hub|See [Working with station hubs](#working-with-station-hubs).|See [Working with station hubs](#working-with-station-hubs).||  
 |Video monitor|See [MultiPoint Services Video Devices](work-with-video-devices.md).|See [MultiPoint Services Video Devices](work-with-video-devices.md).||  

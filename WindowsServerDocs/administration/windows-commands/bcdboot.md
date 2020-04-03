@@ -1,6 +1,6 @@
 ---
 title: bcdboot
-description: Windows Commands topic for bcdboot, which quickly set up a system partition, or repair the boot environment located on the system partition.
+description: Windows Commands topic for **bcdboot**, which quickly set up a system partition, or repair the boot environment located on the system partition.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,8 +15,6 @@ ms.date: 10/16/2017
 
 Enables you to quickly set up a system partition, or to repair the boot environment located on the system partition. The system partition is set up by copying a simple set of Boot Configuration Data (BCD) files to an existing empty partition.
 
-For more information about BCDboot, including information on where to find BCDboot and examples of how to use this command, see the [BCDboot Command-Line Options](https://technet.microsoft.com/library/hh824874.aspx) topic.
-
 ## Syntax
 
 ```
@@ -25,16 +23,16 @@ bcdboot <source> [/l] [/s]
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|source|Specifies the location of the Windows directory to use as the source for copying boot environment files.|
-|/l|Specifies the locale. The default locale is US English.|
-|/s|Specifies the volume letter of the system partition. The default is the system partition identified by the firmware.|
+| Parameter | Description |
+| --------- | ----------- |
+| source | Specifies the location of the Windows directory to use as the source for copying boot environment files. |
+| /l | Specifies the locale. The default locale is US English. |
+| /s | Specifies the volume letter of the system partition. The default is the system partition identified by the firmware. |
 
 ## <a name=BKMK_examples></a>Examples
 
-For more examples of how to use this command, see the [BCDboot Command-Line Options](https://technet.microsoft.com/library/hh824874.aspx) topic.
+For information about where to find BCDboot and examples of how to use this command, see the [BCDboot Command-Line Options](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)x) topic.
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

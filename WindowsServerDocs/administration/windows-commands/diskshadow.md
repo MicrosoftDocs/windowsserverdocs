@@ -43,7 +43,7 @@ You can run the following commands in the diskshadow command interpreter or thro
 |[Simulate restore](simulate-restore.md)|Tests writer involvement in restore sessions on the computer without issuing **PreRestore** or **PostRestore** events to writers.|  
 |[Load metadata](load-metadata.md)|Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore.|  
 |[writer](writer.md)|verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.|  
-|[add_1](add_1.md)|adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.|  
+|[add](add.md)|adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.|  
 |[create_1](create_1.md)|starts the shadow copy creation process, using the current context and option settings.|  
 |[exec](exec.md)|executes a file on the local computer.|  
 |[Begin backup](begin-backup.md)|starts a full backup session.|  

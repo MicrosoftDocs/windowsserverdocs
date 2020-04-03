@@ -50,7 +50,7 @@ mediatype:Install|Specifies the image type. Note that this option must be set to
 |\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group is used. If more than one image group exists on the server, you must use this option to specify an image group.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the boot image that is associated with the transmission. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure                                   that the correct image is used.|
 |[/Filename:<File name>]|Specifies the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-|[/Show:Clients]<br /><br />or<br /><br />[/details:Clients]|Displays information about client computers that are connected to the multicast transmission.|
+|[/Show:Clients]<p>or<p>[/details:Clients]|Displays information about client computers that are connected to the multicast transmission.|
 ## <a name=BKMK_examples></a>Examples
 **Windows Server 2008**
 To view information about the transmission for an image named  Vista with Office, type one of the following:

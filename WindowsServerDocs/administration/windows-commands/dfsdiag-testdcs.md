@@ -32,10 +32,11 @@ dfsdiag /TestDCs [/Domain:<Domain name>]
   
 |Parameter|Description|  
 |-------|--------|  
-|\/Domain:<Domain name>|Domain that you want to check.|  
+|/Domain:`<domain_name>`|Domain that you want to check.|  
   
 ## Remarks  
-\/Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
+
+/Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
   
 ## <a name=BKMK_Examples></a>Examples  
 To verify the configuration of domain controllers in the Contoso.com domain, type:  

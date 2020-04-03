@@ -195,7 +195,7 @@ To configure the certificate template for TPM key attestation, do the following 
   
         |Value name|Type|Data|  
         |--------------|--------|--------|  
-        |EndorsementKeyListDirectories|REG_MULTI_SZ|<LOCAL or UNC path to EKPUB allow list(s)><br /><br />Example:<br /><br />*\\\blueCA.contoso.com\ekpub*<br /><br />*\\\bluecluster1.contoso.com\ekpub*<br /><br />D:\ekpub|  
+        |EndorsementKeyListDirectories|REG_MULTI_SZ|<LOCAL or UNC path to EKPUB allow list(s)><p>Example:<p>*\\\blueCA.contoso.com\ekpub*<p>*\\\bluecluster1.contoso.com\ekpub*<p>D:\ekpub|  
   
         HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\\<CA Sanitized Name>  
   

@@ -1,6 +1,6 @@
 ---
 title: autofmt
-description: Windows Commands topic for autofmt, which formats a drive or partition when called from the Windows recovery Console.
+description: Windows Commands topic for **autofmt**, which formats a drive or partition when called from the Windows recovery Console.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -21,6 +21,6 @@ You cannot run **Autofmt** directly from the command-line.
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Working with File Systems](https://go.microsoft.com/fwlink/?LinkId=4509)
+- [Working with File Systems](https://go.microsoft.com/fwlink/?LinkId=4509)

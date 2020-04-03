@@ -227,7 +227,7 @@ The following table shows the minimum hardware and software requirements for the
 
 Host|Hardware Requirements|Software Requirements|  
 --------|-------------------------|-------------------------  
-|Physical Hyper-v host|4-Core 2.66 GHz CPU<br /><br />32 GB of RAM<br /><br />300 GB Disk Space<br /><br />1 Gb/s (or faster) physical network adapter|OS: Windows Server 2016<br /><br />Hyper-V Role installed|  
+|Physical Hyper-v host|4-Core 2.66 GHz CPU<p>32 GB of RAM<p>300 GB Disk Space<p>1 Gb/s (or faster) physical network adapter|OS: Windows Server 2016<p>Hyper-V Role installed|  
 
 
 **SDN infrastructure virtual machine role requirements**  
@@ -236,8 +236,8 @@ Role|vCPU requirements|Memory requirements|Disk requirements|
 --------|---------------------|-----------------------|---------------------  
 |Network controller (three node)|4 vCPUs|4 GB min (8 GB recommended)|75 GB for the OS drive  
 |SLB/MUX (three node)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
-|RAS Gateway<br /><br />(single pool of three node gateways, two active, one passive)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
-|RAS Gateway BGP router for SLB/MUX peering<br /><br />(alternatively use ToR switch as BGP Router)|2 vCPUs|2 GB|75 GB for the OS drive|  
+|RAS Gateway<p>(single pool of three node gateways, two active, one passive)|8 vCPUs|8 GB recommended|75 GB for the OS drive  
+|RAS Gateway BGP router for SLB/MUX peering<p>(alternatively use ToR switch as BGP Router)|2 vCPUs|2 GB|75 GB for the OS drive|  
 
 
 If you use VMM for deployment, additional infrastructure virtual machine resources are required for VMM and other non-SDN infrastructure. For additional information, see [Minimum Hardware Recommendations for System Center Technical Preview.](https://technet.microsoft.com/library/dn997303.aspx)  

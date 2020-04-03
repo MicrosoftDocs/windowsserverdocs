@@ -100,7 +100,7 @@ nslookup /view <FileName>
   |`No response from server`|No DNS name server is running on the server computer.|
   |`No records`|The DNS name server does not have resource records of the current query type for the computer, although the computer name is valid. The query type is specified with the **set querytype** command.|
   |`Nonexistent domain`|The computer or DNS domain name does not exist.|
-  |`Connection refused`<br /><br />-or-<br /><br />`Network is unreachable`|The connection to the DNS name server or finger server could not be made. This error commonly occurs with **ls** and **finger** requests.|
+  |`Connection refused`<p>-or-<p>`Network is unreachable`|The connection to the DNS name server or finger server could not be made. This error commonly occurs with **ls** and **finger** requests.|
   |`Server failure`|The DNS name server found an internal inconsistency in its database and could not return a valid answer.|
   |`Refused`|The DNS name server refused to service the request.|
   |`format error`|The DNS name server found that the request packet was not in the proper format. It may indicate an error in **nslookup**.|

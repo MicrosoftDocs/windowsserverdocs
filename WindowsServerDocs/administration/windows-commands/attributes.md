@@ -1,6 +1,6 @@
 ---
 title: attributes
-description: Windows Commands topic for attributes, which displays, sets, or clears the attributes of a disk or volume.
+description: Windows Commands topic for **attributes**, which displays, sets, or clears the attributes of a disk or volume.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -24,12 +24,11 @@ Attributes volume
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[Attributes disk](attributes-disk.md)|Displays, sets, or clears the attributes of a disk.|
-|[Attributes volume](attributes-volume.md)|Displays, sets, or clears the attributes of a volume.|
+| Parameter | Description |
+| --------- | ----------- |
+| [Attributes disk](attributes-disk.md) | Displays, sets, or clears the attributes of a disk. |
+| [Attributes volume](attributes-volume.md) | Displays, sets, or clears the attributes of a volume. |
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

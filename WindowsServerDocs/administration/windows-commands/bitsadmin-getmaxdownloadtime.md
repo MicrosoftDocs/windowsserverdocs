@@ -28,10 +28,6 @@ bitsadmin /GetMaxDownloadtime <Job>
 |-------|--------|
 |Job|The job's display name or GUID|
 
-## Remarks
-
--   N\/A
-
 ## <a name=BKMK_examples></a>Examples
 The following example gets maximum download time for the job named *myDownloadJob* in seconds.
 

@@ -32,7 +32,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/l|Provides the **location** of INF|
 |/c|Provides the **class** of the component to be installed; protocol, Service, or client|
 |/i|Provides the component **ID**|
-|/s|Provides the type of components to **show**.<br /><br />\ta = adapters, n = net components|
+|/s|Provides the type of components to **show**.<p>\ta = adapters, n = net components|
 |/b|Displays the **binding paths**, when followed by a string containing the name of the path.|
 |/?|Displays **help** at the command prompt.|
 

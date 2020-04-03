@@ -29,14 +29,14 @@ Assign the following values:
 |Setting|Values|  
 |-----------|----------|  
 |Enable screen saver|Disabled|  
-|Screen saver timeout|Disabled<br /><br />Seconds: xxx|  
+|Screen saver timeout|Disabled<p>Seconds: xxx|  
 |Password protect the screen saver|Disabled|  
   
 **POLICY:** Computer Configuration >Windows Settings >Security Settings >Local Policies >User Rights Assignment > **Allow log on locally**  
   
 |Setting|Values|  
 |-----------|----------|  
-|Allow log on locally|Ensure that the list of accounts includes the WMSshell account.<br /><br />**Note:** By default, the WMSshell account is a member of the Users group. If the Users group is in the list, and WMSshell is a member of the Users group, you do not need to add the WMSshell account to the list.|  
+|Allow log on locally|Ensure that the list of accounts includes the WMSshell account.<p>**Note:** By default, the WMSshell account is a member of the Users group. If the Users group is in the list, and WMSshell is a member of the Users group, you do not need to add the WMSshell account to the list.|  
   
 > [!IMPORTANT]  
 > When you set any group policies, make sure that the policies do not interfere with automatic updates and error Windows error reporting on the MultiPoint server. These are set by the **Install updates automatically** and **Automatic Windows Error Reporting** settings that were selected during Windows MultiPoint Server installation, configured in MultiPoint Manager using **Edit server settings**, or configured in scheduled updates for Disk Protection.  

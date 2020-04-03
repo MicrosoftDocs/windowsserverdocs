@@ -26,7 +26,7 @@ bitsadmin /Util /GetIEProxy <Account> [/Conn <ConnectionName>]
 
 |Parameter|Description|
 |-------|--------|
-|Account|Specifies the service account whose proxy settings you want to retrieve. Possible values are:<br /><br />-   LOCALSYSTEM<br />-   NETWORKSERVICE<br />-   LOCALSERVICE|
+|Account|Specifies the service account whose proxy settings you want to retrieve. Possible values are:<p>-   LOCALSYSTEM<br />-   NETWORKSERVICE<br />-   LOCALSERVICE|
 |ConnectionName|Optional used with the **/Conn** parameter to specify the modem connection to use. If you do not specify the **/Conn** parameter, BITS uses the LAN connection. Specify the modem connection name immediately following the **/Conn** parameter.|
 
 ## Remarks

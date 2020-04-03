@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg quiet
-description: Windows Commands topic for bdehdcfg quiet, which tells bdehdcfg to not display all actions and errors.
+description: Windows Commands topic for **bdehdcfg quiet**, which tells bdehdcfg to not display all actions and errors.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -32,11 +32,13 @@ If any Yes/No (Y/N) prompts would have been displayed during the drive preparati
 ## <a name="BKMK_Examples"></a>Examples
 
 The following example illustrates using the **quiet** command.
+
 ```
 bdehdcfg -target default -quiet
 ```
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Bdehdcfg](bdehdcfg.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Bdehdcfg](bdehdcfg.md)

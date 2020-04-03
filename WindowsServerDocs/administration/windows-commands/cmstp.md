@@ -28,9 +28,9 @@ cmstp.exe [/nf] [/ni] [/ns] [/s] [/su] [/u]  [Drive:][path]ServiceProfileFileNam
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-|< ServiceProfileFileName >.exe|Specifies, by name, the installation package that contains the profile that you want to install.<br /><br />Required for Syntax 1 but not valid for Syntax 2.|
-|/q:a|Specifies that the profile should be installed without prompting the user. The verification message that the installation has succeeded will still appear.<br /><br />Required for Syntax 1 but not valid for Syntax 2.|
-|[Drive:][path] <ServiceProfileFileName>.inf|Required. Specifies, by name, the configuration file that determines how the profile should be installed.<br /><br />The [Drive:][path] parameter is not valid for Syntax 1.|
+|< ServiceProfileFileName >.exe|Specifies, by name, the installation package that contains the profile that you want to install.<p>Required for Syntax 1 but not valid for Syntax 2.|
+|/q:a|Specifies that the profile should be installed without prompting the user. The verification message that the installation has succeeded will still appear.<p>Required for Syntax 1 but not valid for Syntax 2.|
+|[Drive:][path] <ServiceProfileFileName>.inf|Required. Specifies, by name, the configuration file that determines how the profile should be installed.<p>The [Drive:][path] parameter is not valid for Syntax 1.|
 |/nf|Specifies that the support files should not be installed.|
 |/ni|Specifies that a desktop icon should not be created. This parameter is only valid for computers running Windows 95, Windows 98, Windows NT 4.0, or Windows Millennium edition.|
 |/ns|Specifies that a desktop shortcut should not be created. This parameter is only valid for computers running a member of the Windows Server 2003 family, Windows 2000, or Windows XP.|

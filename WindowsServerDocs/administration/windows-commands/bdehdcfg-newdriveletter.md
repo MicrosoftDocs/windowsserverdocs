@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg newdriveletter
-description: Windows Commands topic for bdehdcfg newdriveletter, which assigns a new drive letter to the portion of a drive used as the system drive.
+description: Windows Commands topic for **bdehdcfg newdriveletter**, which assigns a new drive letter to the portion of a drive used as the system drive.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -23,9 +23,9 @@ bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} 
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<DriveLetter>|Defines the drive letter that will be assigned to the specified target drive.|
+| Parameter | Description |
+| ---------| ----------- |
+|`<DriveLetter>`|Defines the drive letter that will be assigned to the specified target drive.|
 
 ## Remarks
 
@@ -34,11 +34,13 @@ As a best practice, it is recommended that you do not assign a drive letter to y
 ## <a name="BKMK_Examples"></a>Examples
 
 The following example shows the default drive being assigned the drive letter P.
+
 ```
 bdehdcfg -target default -newdriveletter P:
 ```
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Bdehdcfg](bdehdcfg.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Bdehdcfg](bdehdcfg.md)

@@ -55,9 +55,9 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 |/R|If <filename> is a reparse point, open it rather than its target.|
 |\<startingvcn>|Specifies first VCN to query. If omitted, start at VCN 0.|
 |\<numvcns>|Number of VCNs to query. If omitted or 0, query until EOF.|
-|queryfileid|Queries the file ID of a file on an NTFS volume.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|queryfileid|Queries the file ID of a file on an NTFS volume.<p>This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |\<volume>|Specifies the volume as drive name followed by a colon.|
-|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<p>This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |\<fileid>|Specifies the ID of the file on an NTFS volume.|
 |queryoptimizemetadata|Queries the metadata state of a file.|
 |queryvaliddata|Queries the valid data length for a file.|

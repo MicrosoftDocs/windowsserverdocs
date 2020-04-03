@@ -39,7 +39,7 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |filelayout|Displays NTFS metadata for the given file.|
 |\<fileid>|Specifies the file id.|
 |list|Lists all of the volumes on the system.|
-|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<p>This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |\<cluster>|Specifies the logical cluster number (LCN).|
 
 ## <a name="BKMK_examples"></a>Examples

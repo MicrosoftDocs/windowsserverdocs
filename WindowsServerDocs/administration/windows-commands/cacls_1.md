@@ -31,9 +31,9 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 |         /s:sddl         |                                       replaces the Acls with those specified in the SDDL string (not valid with **/e**, **/g**, **/r**, **/p**, or **/d**).                                        |
 |           /e            |                                                                                 edit ACL instead of replacing it.                                                                                  |
 |           /c            |                                                                                 Continue on access denied errors.                                                                                  |
-|    /g user:\<perm\>     |   Grant specified user access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control   |
+|    /g user:\<perm\>     |   Grant specified user access rights.<p>Valid values for permission:<p>-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control   |
 |      /r user [...]      |                                                                  Revoke specified user's access rights (only valid with **/e**).                                                                   |
-| [/p user:\<perm\> [...] | replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control |
+| [/p user:\<perm\> [...] | replace specified user's access rights.<p>Valid values for permission:<p>-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control |
 |     [/d user [...]      |                                                                                    Deny specified user access.                                                                                     |
 |           /?            |                                                                                Displays help at the command prompt.                                                                                |
 

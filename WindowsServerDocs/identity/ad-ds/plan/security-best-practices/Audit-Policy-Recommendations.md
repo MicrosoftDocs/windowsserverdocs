@@ -59,7 +59,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 **Audit Policy**  
 
-|Audit Policy Category or Subcategory|Windows Default<br /><br />Success    Failure|Baseline Recommendation<br /><br />Success    Failure|Stronger Recommendation<br /><br />Success    Failure|  
+|Audit Policy Category or Subcategory|Windows Default<p>Success    Failure|Baseline Recommendation<p>Success    Failure|Stronger Recommendation<p>Success    Failure|  
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**Account Logon**||||  
 |Audit Credential Validation|No    No|Yes    No|Yes    Yes|  
@@ -137,7 +137,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 **Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings Recommendations**  
 
-|Audit Policy Category or Subcategory|Windows Default<br /><br />Success    Failure|Baseline Recommendation<br /><br />Success    Failure|Stronger Recommendation<br /><br />Success    Failure|  
+|Audit Policy Category or Subcategory|Windows Default<p>Success    Failure|Baseline Recommendation<p>Success    Failure|Stronger Recommendation<p>Success    Failure|  
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**Account Logon**||||  
 |Audit Credential Validation|No    No|Yes    Yes|Yes    Yes|  

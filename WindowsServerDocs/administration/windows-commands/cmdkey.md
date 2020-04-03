@@ -24,8 +24,8 @@ cmdkey [{/add:<TargetName>|/generic:<TargetName>}] {/smartcard|/user:<UserName> 
 
 |             Parameters             |                                                                                    Description                                                                                     |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         /add:<TargetName>          | adds a user name and password to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with. |
-|       /generic:<TargetName>        |   adds generic credentials to the list.<br /><br />Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.    |
+|         /add:<TargetName>          | adds a user name and password to the list.<p>Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with. |
+|       /generic:<TargetName>        |   adds generic credentials to the list.<p>Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.    |
 |             /smartcard             |                                                                    Retrieves the credential from a smart card.                                                                     |
 |          /user:<UserName>          |                                 Specifies the user or account name to store with this entry. If *UserName* is not supplied, it will be requested.                                  |
 |          /pass:<Password>          |                                       Specifies the password to store with this entry. If *Password* is not supplied, it will be requested.                                        |

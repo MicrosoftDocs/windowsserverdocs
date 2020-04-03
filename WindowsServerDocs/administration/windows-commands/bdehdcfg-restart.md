@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg restart
-description: Windows Commands topic for bdehdcfg restart, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
+description: Windows Commands topic for **bdehdcfg restart**, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -32,11 +32,13 @@ If other users are logged on to the computer and the **quiet** command is not sp
 ## <a name="BKMK_Examples"></a>Examples
 
 The following example illustrates using the **restart** command.
+
 ```
 bdehdcfg -target default -restart
 ```
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Bdehdcfg](bdehdcfg.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Bdehdcfg](bdehdcfg.md)

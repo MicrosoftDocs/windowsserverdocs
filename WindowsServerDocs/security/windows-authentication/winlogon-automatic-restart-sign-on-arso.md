@@ -84,7 +84,7 @@ If you disable this policy setting, the device does not store the user's credent
   
 |Value Name|Type|Data|  
 |-------|----|----|  
-|DisableAutomaticRestartSignOn|DWORD|0<br /><br />**Example:**<br /><br />0 (Enabled)<br /><br />1 (Disabled)|  
+|DisableAutomaticRestartSignOn|DWORD|0<p>**Example:**<p>0 (Enabled)<p>1 (Disabled)|  
   
 **Policy Registry Location:** HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System  
   
@@ -136,6 +136,6 @@ The Logon Hours and parental controls can prohibit a new user session from being
   
 |Term|Definition|  
 |----|-------|  
-|Autologon|Autologon is a feature that has been present in Windows for several releases.  It is a documented feature of Windows that even has tools such as Autologon for Windows v3.01 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<br /><br />It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret.|  
+|Autologon|Autologon is a feature that has been present in Windows for several releases.  It is a documented feature of Windows that even has tools such as Autologon for Windows v3.01 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<p>It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret.|  
   
 

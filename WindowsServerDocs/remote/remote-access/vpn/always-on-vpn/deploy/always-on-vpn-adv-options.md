@@ -70,7 +70,7 @@ The following table lists the releases that contain the fixes for each version o
 
 1. Install the Windows updates as they become available.
 1. Make sure that all the VPN client and RRAS server certificates that you use have CDP entries, and that the RRAS server can reach the respective CRLs.
-1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<br /><br />
+1. On the RRAS server, use the **Set-VpnAuthProtocol** PowerShell cmdlet to configure the **RootCertificateNameToAccept** parameter.<p>
    The following example lists the commands to do this. In the example, **CN=Contoso Root Certification Authority** represents the distinguished name of the Root Certification Authority. 
    ``` powershell
    $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority*" } )

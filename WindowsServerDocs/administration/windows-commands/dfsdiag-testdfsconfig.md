@@ -38,7 +38,7 @@ dfsdiag /TestDFSConfig /DFSRoot:<namespace>
   
 |       Parameter       |               Description               |
 |-----------------------|-----------------------------------------|
-| \/DFSRoot:<namespace> | The namespace (DFS root) to diagnose. |
+| /DFSRoot:`<namespace>` | The namespace (DFS root) to diagnose. |
   
 ## <a name=BKMK_Examples></a>Examples  
   

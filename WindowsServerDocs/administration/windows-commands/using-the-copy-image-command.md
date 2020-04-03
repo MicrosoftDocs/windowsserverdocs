@@ -36,7 +36,7 @@ media:<Image name>|Specifies the name of the image to be copied.|
 mediatype:Install|Specifies the type of image to be copied. This option must be set to **install**.|
 |\mediaGroup:<Image group name>]|Specifies the image group that contains the image to be copied. If no image group is specified and only one group exists on the server, that image group will be used by default. If more than one image group exists on the server, you must specify the image group.|
 |[/Filename:<Filename>]|Specifies the file name of the image to be copied. If the source image cannot be uniquely identified by name, you must specify the file name.|
-|/DestinationImage|Specifies the settings for the destination image, as described in the following table.<br /><br />-   /Name:<Name> - Sets the display name of the image to be copied.<br />-   /Filename:<Filename> - Sets the name of the destination image file that will contain the image copy.<br />-   [/Description: <Description>] - Sets the description of the image copy.|
+|/DestinationImage|Specifies the settings for the destination image, as described in the following table.<p>-   /Name:<Name> - Sets the display name of the image to be copied.<br />-   /Filename:<Filename> - Sets the name of the destination image file that will contain the image copy.<br />-   [/Description: <Description>] - Sets the description of the image copy.|
 ## <a name=BKMK_examples></a>Examples
 To create a copy of the specified image and name it WindowsVista.wim, type:
 ```

@@ -587,7 +587,7 @@ For web authentication, use the reference from the table below:
 
 |Connection method|Logon type|Reusable credentials on destination|Comments|
 |-----------|-------|--------------------|------|
-|IIS "Basic Authentication"|NetworkCleartext<br />(IIS 6.0+)<br /><br />Interactive<br />(prior to IIS 6.0)|v||
+|IIS "Basic Authentication"|NetworkCleartext<br />(IIS 6.0+)<p>Interactive<br />(prior to IIS 6.0)|v||
 |IIS "Integrated Windows Authentication"|Network|-|NTLM and Kerberos Providers.|
 
 Column Definitions:

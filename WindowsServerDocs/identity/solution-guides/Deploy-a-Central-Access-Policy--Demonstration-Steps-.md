@@ -35,9 +35,9 @@ This section provides the high-level series of steps that aid in the planning ph
 |-|--------|-----------|  
 |1.1|Business determines that a central access policy is needed|To protect finance information that is stored on file servers, the finance department security operations is working with central information security to specify the need for a central access policy.|  
 |1.2|Express the access policy|Finance documents should only be read by members of the Finance department. Members of the Finance department should only access documents in their own country. Only Finance Administrators should have write-access. An exception will be allowed for members of the FinanceException group. This group will have Read access.|  
-|1.3|Express the access policy in  Windows Server 2012  constructs|Targeting:<br /><br />-   Resource.Department Contains Finance<br /><br />Access rules:<br /><br />-   Allow read User.Country=Resource.Country AND User.department = Resource.Department<br />-   Allow Full control User.MemberOf(FinanceAdmin)<br /><br />Exception:<br /><br />Allow read memberOf(FinanceException)|  
-|1.4|Determine the file properties required for the policy|Tag files with:<br /><br />-   Department<br />-   Country|  
-|1.5|Determine the claim types and groups required for the policy|Claim types:<br /><br />-   Country<br />-   Department<br /><br />User groups:<br /><br />-   FinanceAdmin<br />-   FinanceException|  
+|1.3|Express the access policy in  Windows Server 2012  constructs|Targeting:<p>-   Resource.Department Contains Finance<p>Access rules:<p>-   Allow read User.Country=Resource.Country AND User.department = Resource.Department<br />-   Allow Full control User.MemberOf(FinanceAdmin)<p>Exception:<p>Allow read memberOf(FinanceException)|  
+|1.4|Determine the file properties required for the policy|Tag files with:<p>-   Department<br />-   Country|  
+|1.5|Determine the claim types and groups required for the policy|Claim types:<p>-   Country<br />-   Department<p>User groups:<p>-   FinanceAdmin<br />-   FinanceException|  
 |1.6|Determine the servers on which to apply this policy|Apply the policy on all finance file servers.|  
 
 ## <a name="BKMK_1.3"></a>Implement: Configure the components and policy  
@@ -45,8 +45,8 @@ This section presents an example that deploys a central access policy for financ
 
 |No|Step|Example|  
 |------|--------|-----------|  
-|2.1|Create claim types|Create the following claim types:<br /><br />-   Department<br />-   Country|  
-|2.2|Create resource properties|Create and enable the following resource properties:<br /><br />-   Department<br />-   Country|  
+|2.1|Create claim types|Create the following claim types:<p>-   Department<br />-   Country|  
+|2.2|Create resource properties|Create and enable the following resource properties:<p>-   Department<br />-   Country|  
 |2.3|Configure a central access rule|Create a Finance Documents rule that includes the policy determined in the previous section.|  
 |2.4|Configure a central access policy (CAP)|Create a CAP called Finance Policy and add the Finance Documents rule to that CAP.|  
 |2.5|Target central access policy to the file servers|Publish the Finance Policy CAP to the file servers.|  

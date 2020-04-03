@@ -291,8 +291,8 @@ The following tables describe the `<Template>` attributes and the possible `<Exi
   
 |`<Template>` attribute|Description|  
 |--------------------------|---------------|  
-|`path`|The full path to the installation program for the file type that is defined in the `<Extension name>` attribute.<br /><br />To specify the path to an update file in the hotfix root folder structure, use `$update$`.|  
-|`parameters`|A string of required and optional parameters for the program that is specified in `path`.<br /><br />To specify a parameter that is the path to an update file in the hotfix root folder structure, use `$update$`.|  
+|`path`|The full path to the installation program for the file type that is defined in the `<Extension name>` attribute.<p>To specify the path to an update file in the hotfix root folder structure, use `$update$`.|  
+|`parameters`|A string of required and optional parameters for the program that is specified in `path`.<p>To specify a parameter that is the path to an update file in the hotfix root folder structure, use `$update$`.|  
   
 |`<ExitConditions>` subelement|Description|  
 |---------------------------------|---------------|  

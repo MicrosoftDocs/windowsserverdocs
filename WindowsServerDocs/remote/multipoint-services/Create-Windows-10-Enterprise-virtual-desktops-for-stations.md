@@ -22,7 +22,7 @@ To prepare to create station virtual desktops, ensure that your MultiPoint Servi
 |Hardware|Requirements|         |
 |------------|----------------|----------------| 
 |CPU (multimedia)|1 core or thread per virtual machine|  
-|Solid State Drive (SSD)|Capacity >= 20GB per station + 40GB for the MultiPoint Services host operating system<br /><br />Random Read\/Write IOPS >= 3K per station|  
+|Solid State Drive (SSD)|Capacity >= 20GB per station + 40GB for the MultiPoint Services host operating system<p>Random Read\/Write IOPS >= 3K per station|  
 |RAM|2GB per station + 2GB for the Windows MultiPoint Server host operating system|  
 |Graphics|DX11|  
 |BIOS|BIOS CPU setting configured to enable virtualization – Second Level Address Translation (SLAT)|  

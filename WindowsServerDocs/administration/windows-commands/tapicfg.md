@@ -38,7 +38,7 @@ tapicfg install /directory:<PartitionName> [/server:<DCName>] [/forcedefault]
 |-------|--------|
 |install /directory:\<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition to be created. This name must be a fully qualified domain name.|
 |/server: \<DCName>|Specifies the DNS name of the domain controller on which the TAPI application directory partition is created. If the domain controller name is not specified, the name of the local computer is used.|
-|/forcedefault|Specifies that this directory is the default TAPI application directory partition for the domain. There can be multiple TAPI application directory partitions in a domain.<br /><br />if this directory is the first TAPI application directory partition created on the domain, it is automatically set as the default, regardless of whether you use the **/forcedefault** option.|
+|/forcedefault|Specifies that this directory is the default TAPI application directory partition for the domain. There can be multiple TAPI application directory partitions in a domain.<p>if this directory is the first TAPI application directory partition created on the domain, it is automatically set as the default, regardless of whether you use the **/forcedefault** option.|
 |/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_remove"></a>tapicfg remove

@@ -26,7 +26,7 @@ tzutil [/?] [/g] [/s <timeZoneID>[_dstoff]] [/l]
 |/?|Displays help at the command prompt.|
 |/g|Displays the current time zone ID.|
 |/s \<timeZoneID>[_dstoff]|Sets the current time zone using the specified time zone ID. The **_dstoff** suffix disables Daylight Saving time adjustments for the time zone (where applicable).|
-|/l|lists all valid time zone IDs and display names. The output will be:<br /><br />-   \<display name><br />-   \<time zone ID>|
+|/l|lists all valid time zone IDs and display names. The output will be:<p>-   \<display name><br />-   \<time zone ID>|
 
 ## Remarks
 An exit code of **0** indicates the command completed successfully.

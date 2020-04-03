@@ -201,10 +201,10 @@ The following table lists the queries that a domain controller makes to find a t
 |----------------|---------------------|------------|------------------------------|  
 |1|Parent domain controller|In-site|Prefers a reliable time source but it can synchronize with a non-reliable time source if that is all that is available.|  
 |2|Local domain controller|In-site|Only synchronizes with a reliable time source.|  
-|3|Local PDC emulator|In-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.|  
+|3|Local PDC emulator|In-site|Does not apply.<p>A domain controller does not attempt to synchronize with itself.|  
 |4|Parent domain controller|Out-of-site|Prefers a reliable time source but it can synchronize with a non-reliable time source if that is all that is available.|  
 |5|Local domain controller|Out-of-site|Only synchronizes with a reliable time source.|  
-|6|Local PDC emulator|Out-of-site|Does not apply.<br /><br />A domain controller does not attempt to synchronize with itself.| 
+|6|Local PDC emulator|Out-of-site|Does not apply.<p>A domain controller does not attempt to synchronize with itself.| 
   
 **Note**  
   

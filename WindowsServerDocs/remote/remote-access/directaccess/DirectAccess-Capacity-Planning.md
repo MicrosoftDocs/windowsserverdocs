@@ -27,7 +27,7 @@ The following chart shows the results of the high-end hardware performance test 
 ||||  
 |-|-|-|  
 |Configuration - Hardware|Low-end  Hardware (4GB ram, 4 core)|High-end Hardware (8 GB, 8 core)|  
-|Double Tunnel<br /><br />-   PKI<br /><br />-   Including DNS64/NAT64|750 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 75 Mbps. Stretch target is 1000 users @ 50% CPU.|1500 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 150 Mbps.|  
+|Double Tunnel<p>-   PKI<p>-   Including DNS64/NAT64|750 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 75 Mbps. Stretch target is 1000 users @ 50% CPU.|1500 concurrent connections at 50% CPU, 50 % Memory with Corpnet NIC throughput 150 Mbps.|  
 ## Test Environment
 
 **Perf Bench Topology**  

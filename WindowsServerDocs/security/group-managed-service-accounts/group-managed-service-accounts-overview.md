@@ -50,7 +50,7 @@ The following table provides links to additional resources related to Managed Se
 
 |Content type|References|
 |--------|-------|
-|**Product evaluation**|[What's New for Managed Service Accounts](what-s-new-for-managed-service-accounts.md)<br /><br />[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<br /><br />[Service Accounts Step\-by\-Step Guide](https://technet.microsoft.com/library/dd548356(v=ws.10).aspx)|
+|**Product evaluation**|[What's New for Managed Service Accounts](what-s-new-for-managed-service-accounts.md)<p>[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<p>[Service Accounts Step\-by\-Step Guide](https://technet.microsoft.com/library/dd548356(v=ws.10).aspx)|
 |**Planning**|Not yet available|
 |**Deployment**|Not yet available|
 |**Operations**|[Managed Service Accounts in Active Directory](https://technet.microsoft.com/library/dd378925(v=ws.10).aspx)|

@@ -47,7 +47,7 @@ media:<Image name>|Specifies the name of the image to be replaced.|
 mediatype:{Boot &#124; Install}|Specifies the type of image to be replaced.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image to be replaced. Because it is possible to have the same image name for different boot images in different architectures, specifying the architecture ensures that the correct image is replaced.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-|/replacementImage|Specifies the settings for the replacement image. You set these settings using the following options:<br /><br />-  mediaFile: <file path> - Specifies the name and location (full path) of the new .wim file.<br />-   [/SourceImage: <image name>] - Specifies the image to be used if the .wim file contains multiple images. This option applies only to install images.<br />-   [/Name:<Image name>]   Sets the display name of the image.<br />-   [/Description:<Image description>] - Sets the description of the image.|
+|/replacementImage|Specifies the settings for the replacement image. You set these settings using the following options:<p>-  mediaFile: <file path> - Specifies the name and location (full path) of the new .wim file.<br />-   [/SourceImage: <image name>] - Specifies the image to be used if the .wim file contains multiple images. This option applies only to install images.<br />-   [/Name:<Image name>]   Sets the display name of the image.<br />-   [/Description:<Image description>] - Sets the description of the image.|
 ## <a name=BKMK_examples></a>Examples
 To replace a boot image, type one of the following:
 ```

@@ -176,7 +176,7 @@ MultiPoint Services supports peripheral devices that are connected to a station 
   
 ||Connected to Host Computer|Connected to Station Hub or Downstream Hub|  
 |-|------------------------------|----------------------------------------------|  
-|Keyboard|Not functional, unless it is part of a PS/2 station. |Available to individual station<br /><br />Cannot be connected to a downstream hub|  
+|Keyboard|Not functional, unless it is part of a PS/2 station. |Available to individual station<p>Cannot be connected to a downstream hub|  
 |Mouse|Not functional, unless it is part of a PS/2 station. |Available to individual station|  
 |Speaker/headphones|Not functional, unless it is part of a PS/2 station.|Available to individual station|  
 |USB storage device|Available to all stations|Available to individual station|  
