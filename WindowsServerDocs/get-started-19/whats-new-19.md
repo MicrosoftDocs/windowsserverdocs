@@ -66,7 +66,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     Office files), scripts, lateral movement, ransomware behavior, and
     email-based threats.
 
--   [Network protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc)
+-   [Network protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/network-protection)
     protects the endpoint against web-based threats by blocking any outbound
     process on the device to untrusted hosts/IP addresses through Windows
     Defender SmartScreen.

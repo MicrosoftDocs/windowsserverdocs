@@ -166,7 +166,7 @@ When creating a cluster set, you following prerequisites are recommended:
 
         Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
 
-9. Configure Kerberos [constrained delegation](https://blogs.technet.microsoft.com/virtualization/2017/02/01/live-migration-via-constrained-delegation-with-kerberos-in-windows-server-2016/) between all cluster set members.
+9. Configure Kerberos [constrained delegation](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) between all cluster set members.
 
 10. Configure the cross-cluster virtual machine live migration authentication type to Kerberos on each node in the Cluster Set.
 
@@ -255,7 +255,7 @@ Live migrating a virtual machine between different cluster set clusters is not t
 
 With Cluster sets these steps are not necessary and only one command is needed.  First, you should set all networks to be available for the migration with the command:
 
-    Set-VMHost -UseAnyNetworkMigration $true
+    Set-VMHost -UseAnyNetworkForMigration $true
 
 For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
 
