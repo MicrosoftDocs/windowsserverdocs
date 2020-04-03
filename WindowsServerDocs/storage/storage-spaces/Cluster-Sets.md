@@ -254,7 +254,7 @@ Live migrating a virtual machine between different cluster set clusters is not t
 
 With Cluster sets these steps are not necessary and only one command is needed.  First, you should set all networks to be available for the migration with the command:
 
-	Set-VMHost -UseAnyNetworkMigration $true
+	Set-VMHost -UseAnyNetworkForMigration $true
 
 For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2-CL3 on CLUSTER3.  The single command would be:
 
