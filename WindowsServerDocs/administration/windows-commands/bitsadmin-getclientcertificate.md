@@ -17,8 +17,6 @@ ms.date: 10/16/2017
 
 # bitsadmin getclientcertificate
 
-
-
 Retrieves the client certificate from the job.
 
 ## Syntax
@@ -29,15 +27,16 @@ bitsadmin /GetClientCertificate <Job>
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description                    |
+| --------- | ------------------------------ |
+| Job       | The job's display name or GUID |
 
 ## <a name="BKMK_examples"></a>Examples
 
 The following example retrieves the client certificate for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin / GetClientCertificate myDownloadJob
+C:\>bitsadmin /GetClientCertificate myDownloadJob
 ```
 
 #### Additional references

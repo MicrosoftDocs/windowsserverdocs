@@ -21,15 +21,15 @@ Sets the HTTP verb to use.
 ## Syntax
 
 ```
-bitsadmin /GetHttpMethod <Job> <HTTPMethod>
+bitsadmin /SetHttpMethod <Job> <HTTPMethod>
 ```
 
 ## Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|HTTPMethod|The HTTP verb to use|
+| Parameter  | Description                    |
+| ---------  | ------------------------------ |
+| Job        | The job's display name or GUID |
+| HTTPMethod | The HTTP verb to use           |
 
 #### Additional references
 
