@@ -1,14 +1,10 @@
 ---
 title: Desktop hosting service
 description: Describes the components of a desktop hosting service.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 07/06/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross

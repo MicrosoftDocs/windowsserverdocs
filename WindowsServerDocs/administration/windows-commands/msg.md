@@ -1,12 +1,12 @@
 ---
 title: msg
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9501cf3e-568e-4982-9987-8daecc6c17ff
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<ServerName>] [/time:<Seconds>] [/v] [/w] [<Message>]
 ```
 
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                                                               Description                                                                                                                               |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,8 +48,8 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
 -   if you do not specify a user or a session, **msg** displays an error message. When specifying a session, it must be an active one.
 -   The user must have Message special access permission to send a message.
 
-## <a name="BKMK_examples"></a>Examples
--   To send the message entitled "Let's meet at 1PM today" to all sessions for User1, type:
+## <a name=BKMK_examples></a>Examples
+-   To send the message entitled Let's meet at 1PM today to all sessions for User1, type:
     ```
     msg User1 Let's meet at 1PM today
     ```
@@ -74,6 +74,6 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
     msg * /time:10 Let's meet at 1PM today
     ```
 
-#### additional references
--  [Command-Line Syntax Key](command-line-syntax-key.md)
--  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+## Additional References
+-  - [Command-Line Syntax Key](command-line-syntax-key.md)
+-  [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

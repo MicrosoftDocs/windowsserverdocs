@@ -1,14 +1,13 @@
 ---
 title: A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: c35f08b2-e624-4811-a159-c1e5bb6d5281
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings

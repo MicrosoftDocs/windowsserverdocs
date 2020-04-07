@@ -1,5 +1,5 @@
 ﻿---
-title: 'Migrate SYSVOL replication to DFS Replication'
+title: Migrate SYSVOL replication to DFS Replication
 ms.date: 07/02/2012
 ms.prod: windows-server
 ms.technology: storage
@@ -71,9 +71,9 @@ This document assumes that you have a basic knowledge of Active Directory Domain
 
 [SYSVOL Migration Series: Part 3—Migrating to the 'PREPARED' state](https://go.microsoft.com/fwlink/?linkid=121758)
 
-[SYSVOL Migration Series: Part 4—Migrating to the ‘REDIRECTED' state](https://go.microsoft.com/fwlink/?linkid=121759)
+[SYSVOL Migration Series: Part 4—Migrating to the 'REDIRECTED' state](https://go.microsoft.com/fwlink/?linkid=121759)
 
-[SYSVOL Migration Series: Part 5—Migrating to the ‘ELIMINATED' state](https://go.microsoft.com/fwlink/?linkid=121760)
+[SYSVOL Migration Series: Part 5—Migrating to the 'ELIMINATED' state](https://go.microsoft.com/fwlink/?linkid=121760)
 
 [Step-by-Step Guide for Distributed File Systems in Windows Server 2008](https://go.microsoft.com/fwlink/?linkid=85231)
 

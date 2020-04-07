@@ -1,12 +1,8 @@
 ---
-title: Remote Desktop - Compare the clients
-description: Learn how the different RD clients compare when it comes to supported features and functions.
-ms.custom: na
+title: Remote Desktop - compare the client apps
+description: Learn how the different RD apps compare when it comes to supported features and functions.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr

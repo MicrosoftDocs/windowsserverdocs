@@ -1,12 +1,12 @@
 ---
 title: msinfo32
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a38f31d7-1766-4103-becc-9d0b87c2826d
 author: coreyp-at-msft
@@ -23,11 +23,11 @@ Opens the System Information tool to display a comprehensive view of the hardwar
 ```
 msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/showcategories] [/category <CategoryID>] [/categories {+<CategoryID>(+<CategoryID>)|+all(-<CategoryID>)}]
 ```
-### Parameters
+#### Parameters
 
 |    Parameter    |                                                                                                                                 Description                                                                                                                                  |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     <path>      | Specifies the file to be opened in the format *C:\Folder1\File1.XXX*, where *C* is the drive letter, *Folder1* is the folder, *File1* is the file name, and *XXX* is the file name extension.<br /><br />This file can be an **.nfo**, **.xml**, **.txt**, or **.cab** file. |
+|     <path>      | Specifies the file to be opened in the format *C:\Folder1\File1.XXX*, where *C* is the drive letter, *Folder1* is the folder, *File1* is the file name, and *XXX* is the file name extension.<p>This file can be an **.nfo**, **.xml**, **.txt**, or **.cab** file. |
 | <computerName>  |                                                                             Specifies the name of the target or local computer. This can be a UNC name, an IP address, or a full computer name.                                                                              |
 |  <CategoryID>   |                                                                                     Specifies the ID of the category item. You can obtain the category ID by using **/showcategories**.                                                                                      |
 |      /pch       |                                                                                                       Displays the System History view in the System Information tool.                                                                                                       |
@@ -41,7 +41,7 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/show
 
 ## Remarks
 Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx).
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To list the available category IDs, type:
 ```
 msinfo32 /showcategories
@@ -58,6 +58,6 @@ To display resource conflict information and create an .nfo file called conflict
 ```
 msinfo32 /nfo conflicts.nfo /categories    +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware
 ```
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 

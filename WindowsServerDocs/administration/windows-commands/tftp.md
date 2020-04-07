@@ -1,12 +1,12 @@
 ---
 title: tftp
 description: Transfer files to and from a remote computer.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef vhorne
 author: coreyp-at-msft
@@ -25,7 +25,7 @@ Transfers files to and from a remote computer, typically a computer running UNIX
 tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]  
 ```  
 
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |-i|Specifies binary image transfer mode (also called octet mode). In binary image mode, the file is transferred in one-byte units. Use this mode when transferring binary files. If **-i** is omitted, the file is transferred in ASCII mode. This is the default transfer mode. This mode converts the end-of-line (EOL) characters to an appropriate format for the specified computer. Use this mode when transferring text files. If a file transfer is successful, the data transfer rate is displayed.|  
@@ -47,4 +47,4 @@ tftp  -i Host1 get boot.img
 ```  
 
 ## Additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

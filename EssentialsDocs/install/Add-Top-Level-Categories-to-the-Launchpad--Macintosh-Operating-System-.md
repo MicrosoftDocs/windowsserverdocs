@@ -1,12 +1,8 @@
 ---
 title: "Add Top-Level Categories to the Launchpad (Macintosh Operating System)"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ee2173c3-e464-4001-9f43-6d926a575092
 author: nnamuhcs

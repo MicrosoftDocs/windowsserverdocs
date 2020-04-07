@@ -1,12 +1,8 @@
 ---
 title: diskshadow
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for diskshadow, which is a tool that exposes the functionality offered by the volume shadow copy Service (VSS).
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221
 author: coreyp-at-msft
@@ -18,12 +14,12 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service \(VSS\). By default, diskshadow uses an interactive command interpreter similar to that of diskraid or DiskPart. diskshadow also includes a scriptable mode.  
+diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service (VSS). By default, diskshadow uses an interactive command interpreter similar to that of diskraid or DiskPart. diskshadow also includes a scriptable mode.  
   
 > [!NOTE]  
 > Membership in the local Administrators group, or equivalent, is the minimum required to run diskshadow.  
   
-for examples of how to use diskshadow commands, see [Examples](#BKMK_examples).  
+For examples of how to use diskshadow commands, see [Examples](#BKMK_examples).  
   
 ## Syntax  
 for interactive mode, type the following at the command prompt to start the diskshadow command interpreter:  
@@ -47,7 +43,7 @@ You can run the following commands in the diskshadow command interpreter or thro
 |[Simulate restore](simulate-restore.md)|Tests writer involvement in restore sessions on the computer without issuing **PreRestore** or **PostRestore** events to writers.|  
 |[Load metadata](load-metadata.md)|Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore.|  
 |[writer](writer.md)|verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.|  
-|[add_1](add_1.md)|adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.|  
+|[add](add.md)|adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.|  
 |[create_1](create_1.md)|starts the shadow copy creation process, using the current context and option settings.|  
 |[exec](exec.md)|executes a file on the local computer.|  
 |[Begin backup](begin-backup.md)|starts a full backup session.|  
@@ -67,9 +63,9 @@ You can run the following commands in the diskshadow command interpreter or thro
   
 ## Remarks  
   
--   at a minimum, only **add** and **create** are necessary to create a shadow copy. However, this will forfeit the context and option settings, will be a copy backup, and will only create a shadow copy with no backup execution script.  
+-   At a minimum, only **add** and **create** are necessary to create a shadow copy. However, this will forfeit the context and option settings, will be a copy backup, and will only create a shadow copy with no backup execution script.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 This is a sample sequence of commands that will create a shadow copy for backup. It can be saved to file as script.dsh, and executed with diskshadow \/s script.dsh  
   
 Assume the following:  
@@ -102,7 +98,7 @@ end backup
 #End of script  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 

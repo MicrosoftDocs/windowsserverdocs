@@ -1,11 +1,11 @@
 ---
 title: Capture TPM-mode information required by HGS
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 04/01/2019
 ---

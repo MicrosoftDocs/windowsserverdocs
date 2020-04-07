@@ -1,12 +1,8 @@
 ---
 title: xcopy
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for xcopy,w hich copies files and directories, including subdirectories. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft
@@ -26,7 +22,7 @@ For examples of how to use this command, see [Examples](#examples).
 Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]] [{/y | /-y}] [/z] [/b] [/j]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -204,7 +200,7 @@ rem  3 File(s) copied
 
 In the preceding example, this particular source parameter value **.\\toc\*.yml** copy the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
 
-#### Additional references
+## Additional References
 
 -   [Copy](copy.md)
 -   [Move](move.md)
@@ -212,4 +208,4 @@ In the preceding example, this particular source parameter value **.\\toc\*.yml*
 -   [Attrib](attrib.md)
 -   [Diskcopy](diskcopy.md)
 -   [If](if.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: nslookup root
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9c29edc3-ec49-43f2-bc49-86bf0612d816
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ changes the default server to the server for the root of the Domain Name System 
 ```
 root 
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                      Description                      |
 |-----------------|-------------------------------------------------------|
@@ -31,6 +31,6 @@ root
 
 ## Remarks
 - Currently, the ns.nic.ddn.mil name server is used. This command is a synonym for lserver ns.nic.ddn.mil. You can change the name of the root server with the **set root** command.
-  ## additional references
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  ## Additional References
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup set root](nslookup-set-root.md)

@@ -1,10 +1,10 @@
 ---
 title: Branch Office Considerations
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ---
 

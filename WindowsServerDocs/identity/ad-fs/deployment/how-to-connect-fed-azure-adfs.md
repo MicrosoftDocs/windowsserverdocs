@@ -1,21 +1,13 @@
 ---
 title: Active Directory Federation Services in Azure | Microsoft Docs
 description: In this document you will learn how to deploy AD FS in Azure for high availablity.
-services: active-directory
-documentationcenter: ''
 author: billmath
 manager: mtillman
-editor: ''
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: get-started-article
 ms.date: 10/28/2018
 ms.subservice: hybrid
 ms.author: billmath
-ms.custom: H1Hack27Feb2017
 ---
 # Deploying Active Directory Federation Services in Azure
 AD FS provides simplified, secured identity federation and Web single sign-on (SSO) capabilities. Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. As a result, it becomes important to have a highly available AD FS infrastructure to ensure access to resources both on-premises and in the cloud. Deploying AD FS in Azure can help achieve the high availability required with minimal efforts.
@@ -155,7 +147,7 @@ To deploy an ILB, select Load Balancers in the Azure portal and click on add (+)
 ![Browse load balancer](./media/how-to-connect-fed-azure-adfs/browseloadbalancer.png)
 
 * **Name**: Give any suitable name to the load balancer
-* **Scheme**: Since this load balancer will be placed in front of the AD FS servers and is meant for internal network connections ONLY, select “Internal”
+* **Scheme**: Since this load balancer will be placed in front of the AD FS servers and is meant for internal network connections ONLY, select "Internal"
 * **Virtual Network**: Choose the virtual network where you are deploying your AD FS
 * **Subnet**: Choose the internal subnet here
 * **IP Address assignment**: Static

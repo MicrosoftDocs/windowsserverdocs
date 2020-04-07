@@ -1,12 +1,12 @@
 ---
 title: qprocess
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9825cb01-11e0-4cd1-8142-57910e2f4056
 author: coreyp-at-msft
@@ -28,5 +28,5 @@ This command is the same as the **query process** command.
 
 ## Additional references
 [query process](query-process.md)  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)  

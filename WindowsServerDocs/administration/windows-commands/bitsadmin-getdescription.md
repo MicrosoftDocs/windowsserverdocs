@@ -1,13 +1,8 @@
 ---
 title: bitsadmin getdescription
-description: "Windows Commands topic for **bitsadmin getdescription** - 
-Retrieves the description of the specified job."
-ms.custom: na
+description: Windows Commands topic for **bitsadmin getdescription**, which retrieves the description of the specified job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3974603-ebbe-4d31-8217-040fe2d90c85
 author: coreyp-at-msft
@@ -18,29 +13,28 @@ ms.date: 10/16/2017
 
 # bitsadmin getdescription
 
-
-
 Retrieves the description of the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetDescription <Job>
+bitsadmin /getdescription <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the description for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetDescription myDownloadJob
+C:\>bitsadmin /getdescription myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

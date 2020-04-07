@@ -1,14 +1,13 @@
 ---
 title: A virtual machine running Windows 8 and configured with Dynamic Memory should use recommended values for memory settings
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: a17d774e-62bb-40a7-9ddb-80d07596d51c
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows 8 and configured with Dynamic Memory should use recommended values for memory settings

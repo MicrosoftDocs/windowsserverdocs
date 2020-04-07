@@ -1,11 +1,8 @@
 ---
 title: Windows Server Software-Defined Datacenter
-description: "Windows Server SDDC Overview"
+Description: Windows Server SDDC Overview
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: SDDC
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: coreyp-at-msft
 ms.author: coreyp
@@ -250,7 +247,7 @@ Windows PowerShell Desired State Configuration is a configuration management pla
 
 ![](media/sddc/spacer1.png)![](media/sddc/dsc.png)
 
-DSC supports  “continuous deployments,” so you can deploy configurations over and over without breaking anything.
+DSC supports  "continuous deployments," so you can deploy configurations over and over without breaking anything.
 
 -  DSC configurations only apply settings that have changed from the original for faster deployments.
 -  DSC can be used on-premises, in a public, or in a private Cloud environment.

@@ -1,12 +1,8 @@
 ---
 title: bitsadmin nowrap
-description: "Windows Commands topic for **bitsadmin nowrap** - Truncates any line of output text extending beyond the rightmost edge of the command window."
-ms.custom: na
+description: Windows Commands topic for **bitsadmin nowrap**, which truncates any line of output text extending beyond the rightmost edge of the command window.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 85a47b90-783a-41e4-96f2-81f26ae8ca93
 author: coreyp-at-msft
@@ -17,25 +13,22 @@ ms.date: 10/16/2017
 
 # bitsadmin nowrap
 
-Truncates any line of output text extending beyond the rightmost edge of the command window.
+Truncates any line of output text extending beyond the right-most edge of the command window. By default, all switches, except the **monitor** switch, wrap the output. Specify the **nowrap** switch before other switches.
 
 ## Syntax
 
 ```
-bitsadmin /NoWrap
+bitsadmin /nowrap
 ```
 
-## Remarks
+## <a name=BKMK_examples></a>Examples
 
-By default, all switches, except the **Monitor** switch, wrap the output. Specify the **NoWrap** switch before other switches.
+The following example retrieves the state for the job named *myDownloadJob* and does not wrap the output.
 
-## <a name="BKMK_examples"></a>Examples
-
-The following example retrieves the state for the job named *myDownloadJob* and does not wrap the output
 ```
-C:\>bitsadmin /NoWrap /GetState myDownloadJob
+C:\>bitsadmin /nowrap /getstate myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

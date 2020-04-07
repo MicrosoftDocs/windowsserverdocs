@@ -1,14 +1,12 @@
 ---
 ms.assetid: c17d143b-86b4-47c0-b76e-1862dda8f0bd
 title: Walkthrough - Workplace Join with a Windows Device
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

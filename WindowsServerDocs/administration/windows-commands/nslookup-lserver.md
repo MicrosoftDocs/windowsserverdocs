@@ -1,12 +1,12 @@
 ---
 title: nslookup lserver
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Changes the default server to the specified Domain Name System (DNS) domain.
 ```
 lserver <DNSDomain> 
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                      Description                      |
 |-----------------|-------------------------------------------------------|
@@ -32,6 +32,6 @@ lserver <DNSDomain>
 
 ## Remarks
 - The **lserver** command uses the initial server to look up the information about the specified DNS domain. This is in contrast to the **server** command, which uses the current default server.
-  ## additional references
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  ## Additional References
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup server](nslookup-server.md)

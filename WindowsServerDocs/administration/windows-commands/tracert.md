@@ -1,12 +1,8 @@
 ---
 title: tracert
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for tracert, which determines the path taken to a destination, by sending Internet Control Message Protocol (ICMP) echo requests or ICMPv6 messages to the destination with incrementally increasing time to Live (TTL) field values.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9032a032-2e5e-49d4-9e86-f821600e4ba6
 author: coreyp-at-msft
@@ -24,7 +20,7 @@ Determines the path taken to a destination by sending Internet Control Message P
 ```  
 tracert [/d] [/h <MaximumHops>] [/j <Hostlist>] [/w <timeout>] [/R] [/S <Srcaddr>] [/4][/6] <TargetName>  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |/d|Prevents **tracert** from attempting to resolve the IP addresses of intermediate routers to their names. This can speed up the display of **tracert** results.|  
@@ -43,7 +39,7 @@ tracert [/d] [/h <MaximumHops>] [/j <Hostlist>] [/w <timeout>] [/R] [/S <Srcaddr
 -   To trace a path and provide network latency and packet loss for each router and link in the path, use the **pathping** command.  
 -   This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.  
 
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To trace the path to the host named corp7.microsoft.com, type:  
 ```  
 tracert corp7.microsoft.com  
@@ -57,4 +53,4 @@ To trace the path to the host named corp7.microsoft.com and use the loose source
 tracert /j 10.12.0.1 10.29.3.1 10.1.44.1 corp7.microsoft.com  
 ```  
 ## Additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

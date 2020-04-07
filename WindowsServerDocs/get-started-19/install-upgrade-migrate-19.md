@@ -1,6 +1,6 @@
 ---
 title: Install, upgrade, or migrate to Windows Server 2019
-description: "How to clean install, in-place upgrade or migrate to, Windows Server"
+description: How to clean install, in-place upgrade or migrate to, Windows Server
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article

@@ -1,13 +1,9 @@
 ---
 title: View User Connection Status
 description: Learn how to view user status in MultiPoint Services
-ms.custom: na
 ms.date: 07/08/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 426df382-07a0-4be1-a87a-12e63bd8157b
 author: lizap

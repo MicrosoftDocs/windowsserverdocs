@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 fsutil dirty {query | set} <VolumePath>
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                 Description                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -64,8 +64,8 @@ To set the dirty bit on drive C, type:
 fsutil dirty set C:
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

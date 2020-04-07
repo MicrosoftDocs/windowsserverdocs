@@ -1,12 +1,8 @@
 ---
 title: create volume stripe
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for create volume stripe, which creates a striped volume using two or more specified dynamic disks. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 20dce735-5f7c-4f83-a580-d087e2913a00
 author: coreyp-at-msft
@@ -18,20 +14,18 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates a striped volume using two or more specified dynamic disks.  
+Creates a striped volume using two or more specified dynamic disks.  
   
 > [!IMPORTANT]  
-> for Windows Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.  
-  
-  
-  
+> for Windows Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.
+
 ## Syntax  
   
 ```  
 create volume stripe [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |         Parameter         |                                                                                                                            Description                                                                                                                            |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,15 +38,15 @@ create volume stripe [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr]
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create a striped volume of 1000 megabytes in size, on disks 1 and 2, type:  
   
 ```  
 create volume stripe size=1000 disk=1,2  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

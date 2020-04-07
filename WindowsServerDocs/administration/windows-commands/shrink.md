@@ -1,12 +1,8 @@
 ---
 title: shrink
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for DiskPart shrink, which reduces the size of the selected volume by the amount you specify.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec87cc7c-9846-465e-a10d-4ee10db4f4e6
 author: coreyp-at-msft
@@ -25,7 +21,7 @@ The Diskpart shrink command reduces the size of the selected volume by the amoun
 shrink [desired=<n>] [minimum=<n>] [nowait] [noerr]
 shrink querymax [noerr]
 ```
-## Parameters
+### Parameters
 
 |  Parameter  |                                                                                             Description                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +40,7 @@ shrink querymax [noerr]
 - if a minimum amount is specified but not enough free space is available, the command will fail.
 - A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 - This command does not operate on original equipment manufacturer (OEM) partitions, Extensible Firmware Interface (EFI) system partitions, or recovery partitions.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
   To reduce the size of the selected volume by the largest possible amount between 250 and 500 megabytes, type:
   ```
   shrink desired=500 minimum=250

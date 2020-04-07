@@ -1,12 +1,8 @@
 ---
 title: bootcfg rmsw
-description: "Windows Commands topic for **bootcfg rmsw** - removes operating system load options for a specified operating system entry."
-ms.custom: na
+description: Windows Commands topic for bootcfg rmsw, which removes operating system load options for a specified operating system entry.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fd7e4248-880e-4e2b-929e-87f8d44b9a63
 author: coreyp-at-msft
@@ -18,13 +14,13 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes operating system load options for a specified operating system entry.
+Removes operating system load options for a specified operating system entry.
 
 ## Syntax
 ```
 bootcfg /rmsw [/s <computer> [/u <Domain>\<User> [/p <Password>]]] [/mm] [/bv] [/so] [/ng] /id <OSEntryLineNum>
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                                      Description                                                                                                       |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +34,7 @@ bootcfg /rmsw [/s <computer> [/u <Domain>\<User> [/p <Password>]]] [/mm] [/bv] [
 | /id <OSEntryLineNum> | Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file from which the OS Load Options are removed. The first line after the [operating systems] section header is 1. |
 |          /?          |                                                                                          Displays help at the command prompt.                                                                                          |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /rmsw**command:
 ```
 bootcfg /rmsw /mm 64 /id 2 
@@ -47,5 +43,5 @@ bootcfg /rmsw /so /ng /s srvmain /u hiropln /id 2
 bootcfg /rmsw /ng /id 2 
 bootcfg /rmsw /mm 96 /ng /s srvmain /u maindom\hiropln /p p@ssW23 /id 2       
 ```
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: "Customize Storage Spaces"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c96d66b-be4a-4572-9b9f-29555c00ae9a
 author: nnamuhcs

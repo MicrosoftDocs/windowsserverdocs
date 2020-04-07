@@ -2,7 +2,6 @@
 title: Performance Tuning Network Adapters
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
 audience: Admin
-ms.custom:
   - CI ID 111485
   - CSSTroubleshoot
 ms.prod: windows-server
@@ -10,7 +9,7 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
-ms.author: lizross
+ms.author: v-tea
 author: Teresa-Motiv
 ms.date: 12/23/2019
 ---
@@ -101,7 +100,7 @@ The SMI is the highest-priority interrupt on the system, and places the CPU in a
 
 Unfortunately, this behavior can result in latency spikes of 100 microseconds or more.
 
-If you need to achieve the lowest latency, you should request a BIOS version from your hardware provider that reduces SMIs to the lowest degree possible. These BIOS versions are frequently referred to as “low latency BIOS” or “SMI free BIOS.” In some cases, it is not possible for a hardware platform to eliminate SMI activity altogether because it is used to control essential functions (for example, cooling fans).
+If you need to achieve the lowest latency, you should request a BIOS version from your hardware provider that reduces SMIs to the lowest degree possible. These BIOS versions are frequently referred to as "low latency BIOS" or "SMI free BIOS." In some cases, it is not possible for a hardware platform to eliminate SMI activity altogether because it is used to control essential functions (for example, cooling fans).
 
 > [!NOTE]  
 > The operating system cannot control SMIs because the logical processor is running in a special maintenance mode, which prevents operating system intervention.

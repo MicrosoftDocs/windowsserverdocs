@@ -134,7 +134,7 @@ When application writes occur on the source data copy, the originating storage d
 
 | Mode | Diagram | Steps |
 | -------- | ----------- | --------- |
-| **Synchronous**<br /><br />Zero Data Loss<br /><br />RPO | ![Diagram showing how Storage Replica writes data in synchronous replication](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png) | 1.  Application writes data<br />2.  Log data is written and the data is replicated to the remote site<br />3.  Log data is written at the remote site<br />4.  Acknowledgement from the remote site<br />5.  Application write acknowledged<br /><br />t & t1 : Data flushed to the volume, logs always write through |
+| **Synchronous**<p>Zero Data Loss<p>RPO | ![Diagram showing how Storage Replica writes data in synchronous replication](./media/Storage-Replica-Overview/Storage_SR_SynchronousV2.png) | 1.  Application writes data<br />2.  Log data is written and the data is replicated to the remote site<br />3.  Log data is written at the remote site<br />4.  Acknowledgement from the remote site<br />5.  Application write acknowledged<p>t & t1 : Data flushed to the volume, logs always write through |
 
 ### Asynchronous replication
 
@@ -146,7 +146,7 @@ With its higher than zero RPO, asynchronous replication is less suitable for HA 
 
 | Mode | Diagram | Steps |
 | -------- | ----------- | --------- |
-| **Asynchronous**<br /><br />Near zero data loss<br /><br />(depends on multiple factors)<br /><br />RPO | ![Diagram showing how Storage Replica writes data in asynchronous replication](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<br /><br />t & t1 : Data flushed to the volume, logs always write through |
+| **Asynchronous**<p>Near zero data loss<p>(depends on multiple factors)<p>RPO | ![Diagram showing how Storage Replica writes data in asynchronous replication](./media/Storage-Replica-Overview/Storage_SR_AsynchronousV2.png)|1.  Application writes data<br />2.  Log data written<br />3.  Application write acknowledged<br />4.  Data replicated to the remote site<br />5.  Log data written at the remote site<br />6.  Acknowledgement from the remote site<p>t & t1 : Data flushed to the volume, logs always write through |
 
 ### Key evaluation points and behaviors  
 

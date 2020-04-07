@@ -1,12 +1,12 @@
 ---
 title: logman create cfg
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: bfc87093-3ff5-4e19-aa93-d185fb8e2239
 
@@ -25,7 +25,7 @@ create a configuration data collector.
 ```  
 logman create cfg <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                    Parameter                     |                                                                               Description                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,14 +56,14 @@ logman create cfg <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command creates a configuration data collector called cfg_log using the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\\.  
 ```  
-logman create cfg cfg_log -reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\\"  
+logman create cfg cfg_log -reg HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\\  
 ```  
 The following command creates a configuration data collector called cfg_log that records all WMI objects from root\wmi in the database column MSNdis_Vendordriverversion.  
 ```  
-logman create cfg cfg_log -mgt "root\wmi:select * FROM MSNdis_Vendordriverversion"  
+logman create cfg cfg_log -mgt root\wmi:select * FROM MSNdis_Vendordriverversion  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

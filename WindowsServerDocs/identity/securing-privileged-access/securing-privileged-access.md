@@ -1,12 +1,10 @@
 ---
 title: Securing privileged access
 description: Phased approach to securing privileged access
-
 ms.prod: windows-server
 ms.topic: conceptual
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
 ms.date: 02/25/2019
-
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba

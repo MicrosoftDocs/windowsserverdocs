@@ -1,12 +1,12 @@
 ---
 title: ksetup:delhosttorealmmap
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3faee482-a96c-4614-86fd-aaa446643ec4
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Removes a service principal name (SPN) mapping between the stated host and the r
 ksetup /delhosttorealmmap <HostName> <RealmName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -40,7 +40,7 @@ When a host to realm (or multiple hosts to realm) mapping exists, this command r
 
 The mapping is recorded in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**. You should verify the mapping in the registry after using this command.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Altering the configuration of the realm CONTOSO, delete the mapping of the host computer IPops897 to the realm:
 ```
@@ -48,8 +48,8 @@ ksetup /delhosttorealmmap IPops897 CONTOSO
 ```
 After running this command, you can verify in the registry that the mapping is as intended.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
 -   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

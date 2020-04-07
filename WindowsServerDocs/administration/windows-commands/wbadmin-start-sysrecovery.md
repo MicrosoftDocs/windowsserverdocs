@@ -1,12 +1,8 @@
 ---
 title: wbadmin start sysrecovery
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin start sysrecovery, which performs a system recovery (bare metal recovery) using the parameters that you specify. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95b8232f-7c42-452b-838e-15b0cf6faebe
 author: coreyp-at-msft
@@ -42,7 +38,7 @@ wbadmin start sysrecovery
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -55,7 +51,7 @@ wbadmin start sysrecovery
 |-skipBadClusterCheck|Skips checking your recovery disks for bad cluster information. If you are restoring to an alternate server or hardware, we recommend that you do not use this parameter. You can manually run **chkdsk /b** on your recovery disks at any time to check them for bad clusters, and then update the file system information accordingly.</br>Warning: Until you run **chkdsk** as described, the bad clusters reported on your recovered system may not be accurate.|
 |-quiet|Runs the command with no prompts to the user.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To start recovering the information from the backup that was run on March 31, 2013 at 9:00 A.M., located on drive d:, type:
 ```
@@ -66,8 +62,8 @@ To start recovering the information from the backup that was run on April 30, 20
 wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get-WBBareMetalRecovery](https://technet.microsoft.com/library/jj902461.aspx) cmdlet

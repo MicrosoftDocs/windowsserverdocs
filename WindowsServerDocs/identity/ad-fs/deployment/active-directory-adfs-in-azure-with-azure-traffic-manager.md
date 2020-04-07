@@ -1,18 +1,11 @@
 ---
 title: High availability cross-geographic AD FS deployment in Azure with Azure Traffic Manager | Microsoft Docs
-description: In this document you will learn how to deploy AD FS in Azure for high availablity.
-keywords: Ad fs with Azure traffic manager, adfs with Azure Traffic Manager,geographic, multi datacenter, geographic datacenters, multi geographic datacenters, deploy AD FS in azure, deploy azure adfs, azure adfs, azure ad fs,deploy adfs, deploy ad fs, adfs in azure, deploy adfs in azure, deploy AD FS in azure, adfs azure, introduction to AD FS, Azure, AD FS in Azure, iaas, ADFS, move adfs to azure
+description: How to deploy AD FS in Azure for high availability.
 services: active-directory
-documentationcenter: ''
 author: anandyadavmsft
 manager: mtillman
-editor: ''
-
+ms.prod: windows-server
 ms.assetid: a14bc870-9fad-45ed-acd5-a90ccd432e54
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: get-started-article
 ms.date: 09/01/2016
 ms.author: anandy;billmath
@@ -82,7 +75,7 @@ Follow the steps below to create a traffic manager profile. For more information
     ![Configure probe](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/mystsconfig.png) 
    
    > [!NOTE]
-   > **Ensure that the status of the endpoints is ONLINE once the configuration is complete**. If all endpoints are in ‘degraded' state, Azure Traffic Manager will do a best attempt to route the traffic assuming that the diagnostics is incorrect and all endpoints are reachable.
+   > **Ensure that the status of the endpoints is ONLINE once the configuration is complete**. If all endpoints are in 'degraded' state, Azure Traffic Manager will do a best attempt to route the traffic assuming that the diagnostics is incorrect and all endpoints are reachable.
    > 
    > 
 5. **Modifying DNS records for Azure Traffic Manager:** Your federation service should be a CNAME to the Azure Traffic Manager DNS name. Create a CNAME in the public DNS records so that whoever is trying to reach the federation service actually reaches the Azure Traffic Manager.

@@ -1,12 +1,12 @@
 ---
 title: icacls
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ icacls <FileName> [/grant[:r] <Sid>:<Perm>[...]] [/deny <Sid>:<Perm>[...]] [/rem
 icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c] [/l] [/q]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -136,18 +136,18 @@ To restore the DACLs for every file within ACLFile that exists in the C:\Windows
 icacls c:\windows\ /restore aclfile
 ```
 
-To grant the user User1 Delete and Write DAC permissions to a file named "Test1", type:
+To grant the user User1 Delete and Write DAC permissions to a file named Test1, type:
 
 ```
 icacls test1 /grant User1:(d,wdac)
 ```
 
-To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a file, named "Test2", type:
+To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a file, named Test2, type:
 
 ```
 icacls test2 /grant *S-1-1-0:(d,wdac)
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

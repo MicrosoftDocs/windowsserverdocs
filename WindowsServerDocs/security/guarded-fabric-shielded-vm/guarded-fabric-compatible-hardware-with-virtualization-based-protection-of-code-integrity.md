@@ -1,11 +1,11 @@
 ---
 title: Compatible hardware with Windows Server Virtualization-based protection of Code Integrity
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 15ded82c-f70f-4efb-9e26-2731127931af
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
@@ -28,7 +28,7 @@ The adoption of the new UEFI standard takes time; meanwhile, to prevent customer
 The following configurations are known to be non-compatible with Virtualization-based protection of code integrity and cannot be used as a host for Shielded VMs:
 
 - Dell PowerEdge Servers running PERC H330 RAID Controllers
-    For more information, see the following article from Dell Support [H330 – Enabling “Host Guardian Hyper-V Support” or “Device Guard” on Win 2016 OS causes OS boot failure](http://www.dell.com/Support/Article/us/en/19/QNA44045).  
+    For more information, see the following article from Dell Support [H330 – Enabling "Host Guardian Hyper-V Support" or "Device Guard" on Win 2016 OS causes OS boot failure](http://www.dell.com/Support/Article/us/en/19/QNA44045).  
 
 
 ## Compatible systems

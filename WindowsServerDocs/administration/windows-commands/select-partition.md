@@ -1,12 +1,12 @@
 ---
 title: select partition
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ selects the specified partition and shifts the focus to it. This command can als
 select partition=<n>  
 ```  
   
-## Parameters  
+### Parameters  
   
 |   Parameter    |                                                                                    Description                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +44,7 @@ select partition=<n>
   
 -   if a partition is selected with a corresponding volume, the volume will be automatically selected.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To shift the focus to partition 3, type:  
   
 ```  
@@ -57,8 +57,8 @@ To display the partition that currently has the focus in the selected disk, type
 select partition  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

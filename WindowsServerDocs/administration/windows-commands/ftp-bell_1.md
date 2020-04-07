@@ -1,12 +1,12 @@
 ---
 title: ftp bell_1
-description: "Windows Commands topic for ftp bell_1"
-ms.custom: na
+description: Windows Commands topic for ftp bell_1
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: bfc00fb6-b3d0-42a1-ac6d-df46f89dc152 vhorne
 author: coreyp-at-msft
@@ -23,14 +23,14 @@ Toggles an audible sound to occur after each file transfer command is completed.
 ```  
 bell  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 By default, bell is off.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Toggle an audible sound to occur after each file transfer command is completed.  
 ```  
 bell  
 ```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -1,7 +1,6 @@
 ---
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Windows Server 2016 Functional Levels
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -10,7 +9,6 @@ ms.topic: article
 ms.prod: windows-server
 ms.custom: it-pro
 ms.reviewer: maheshu
-
 ms.technology: identity-adds
 ---
 # Forest and Domain Functional Levels
@@ -46,7 +44,7 @@ Supported Domain Controller Operating System:
 ### Windows Server 2016 domain functional level features
 
 * All default Active Directory features, all features from the Windows Server 2012R2 domain functional level, plus the following features:
-   * DCs can support automatic rolling of the NTLM and other password-based secrets on a user account configured to require PKI authentication. This configuration is also known as “Smart card required for interactive logon”
+   * DCs can support automatic rolling of the NTLM and other password-based secrets on a user account configured to require PKI authentication. This configuration is also known as "Smart card required for interactive logon"
    * DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
    * Kerberos clients successfully authenticating with the PKInit Freshness Extension will get the fresh public key identity SID.
 

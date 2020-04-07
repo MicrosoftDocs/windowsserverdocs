@@ -1,12 +1,12 @@
 ---
 title: Manage Software Inventory Logging
 description: Describes how to manage Software Inventory Logging
-ms.custom: na
+
 ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+
+
+
 ms.topic: article
 ms.assetid: 812173d1-2904-42f4-a9e2-de19effec201
 author: brentfor

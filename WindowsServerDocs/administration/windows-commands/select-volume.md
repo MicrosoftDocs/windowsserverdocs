@@ -1,12 +1,12 @@
 ---
 title: select volume
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ selects the specified volume and shifts the focus to it. This command can also b
 select volume={<n>|<d>}  
 ```  
   
-## Parameters  
+### Parameters  
   
 | Parameter |                                                                               Description                                                                                |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ select volume={<n>|<d>}
   
 -   if a partition is selected with a corresponding volume, the volume will be automatically selected.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To shift the focus to volume 2, type:  
   
 ```  
@@ -58,7 +58,7 @@ To shift the focus to drive C, type:
 select volume=c  
 ```  
   
-To shift the focus to the volume mounted on a folder named "mountpath", type:  
+To shift the focus to the volume mounted on a folder named mountpath, type:  
   
 ```  
 select volume=c:\mountpath  
@@ -70,8 +70,8 @@ To display the volume that currently has the focus in the selected disk, type:
 select volume  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

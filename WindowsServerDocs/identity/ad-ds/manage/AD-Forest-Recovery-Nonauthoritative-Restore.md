@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Nonauthoritative restore
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

@@ -1,14 +1,12 @@
 ---
 title: Configure virtual local area networks for Hyper-V
-description: "Gives instructions for configuring a virtual local area network (VLAN) for use by virtual machines on a Hyper-V host."
+description: Gives instructions for configuring a virtual local area network (VLAN) for use by virtual machines on a Hyper-V host.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/11/2016
 ---

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 96b9f4e6-f01c-4517-8299-017d187d447e
 title: Create a Rule to Send an Authentication Method Claim
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

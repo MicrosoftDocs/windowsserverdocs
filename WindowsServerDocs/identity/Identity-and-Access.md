@@ -1,6 +1,5 @@
 ---
 title: Identity | Access
-description: 
 author: billmath
 manager: femila
 layout: LandingPage

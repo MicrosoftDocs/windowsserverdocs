@@ -1,12 +1,8 @@
 ---
 title: tsprof
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for tsprof, which copies the Remote Desktop Services user configuration information from one user to another. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 27047868-b706-4208-b7e0-1437a2325dd3
 author: coreyp-at-msft
@@ -35,7 +31,7 @@ tsprof /copy {/domain:<DomainName> | /local} [/profile:<path>] <Src_usr> <Dest_u
 tsprof /q {/domain:<DomainName> | /local} <UserName>
 ```
 
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/update|Updates profile path information for <*UserName*> in domain <*DomainName*> to <*Profilepath*>.|
@@ -52,16 +48,16 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 ## Remarks
 -   The **tsprof** command is only available when you have installed the Terminal Server role service on a computer running  Windows Server  2008  or RD Session Host role service on a computer running Windows Server 2008 R2.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 -   To copy user configuration information from LocalUser1 to LocalUser2, type:
     ```
     tsprof /copy /local LocalUser1 LocalUser2
     ```
--   To set the Remote Desktop Services profile path for LocalUser1 to a directory called "c:\profiles," type:
+-   To set the Remote Desktop Services profile path for LocalUser1 to a directory called c:\profiles, type:
     ```
     tsprof /update /local /profile:c:\profiles LocalUser1
     ```
 
-#### Additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

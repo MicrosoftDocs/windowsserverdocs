@@ -1,12 +1,12 @@
 ---
 title: mqbkup
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7bdd41c4-75ef-455f-b241-1d64a4c7acf5
 
@@ -26,14 +26,14 @@ Before using the MSMQ Message Backup/Restore utility you must close all local ap
 ```  
 mqbkup {/b | /r} <folder path_to_storage_device>  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |/b|Specifies backup operation|  
 |/r|Specifies restore operation|  
 |<folder path_to_storage\_device>|Specifies the path where the MSMQ message files and registry settings are stored|  
 |/?|Displays help at the command prompt.|  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To backup all MSMQ message files and registry settings and store them in the *Msmqbkup* folder on your C: drive.  
 ```  
 mqbkup /b c:\msmqbkup  
@@ -48,5 +48,5 @@ To restore MSMQ messages and registry settings:
 mqbkup /r c:\msmqbkup  
 ```  
 The locations of folders used to store MSMQ message files are stored in the registry. Thus, the utility will restore MSMQ message files to the folders specified in the registry and not to the storage folders used before the restore operation. If the folders specified in the registry do not exist, the restore operation will automatically create them. If folders directories do exist and are not empty, the utility will prompt you for permission to delete the current contents of these folders.  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

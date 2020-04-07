@@ -1,6 +1,5 @@
 ---
 title: Configure AD FS Banned IP Addesses
-description:
 author: billmath
 ms.author: billmath
 manager: mtillman

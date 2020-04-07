@@ -1,12 +1,12 @@
 ---
 title: nslookup set domain
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9d4d28e8-6e88-42cc-801f-94e9d8e051f4
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ changes the default Domain Name System (DNS) domain name to the name specified.
 ```
 set domain=<DomainName>
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                           Description                                           |
 |-----------------|-------------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ set domain=<DomainName>
 
 ## Remarks
 - The default DNS domain name is appended to a lookup request depending on the state of the **defname** and **search** options. The DNS domain search list contains the parents of the default DNS domain if it has at least two components in its name. For example, if the default DNS domain is mfg.widgets.com, the search list is named both mfg.widgets.com and widgets.com. Use the **set srchlist** command to specify a different list and the **set all** command to display the list.
-  ## additional references
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  ## Additional References
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup set srchlist](nslookup-set-srchlist.md)
   [nslookup set all](nslookup-set-all.md)

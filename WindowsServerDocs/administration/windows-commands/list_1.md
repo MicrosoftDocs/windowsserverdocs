@@ -1,12 +1,12 @@
 ---
 title: list
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Displays a list of disks, of partitions in a disk, of volumes in a disk, or of v
 list { disk | partition | volume | vdisk }
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,7 +42,7 @@ list { disk | partition | volume | vdisk }
 -   The object marked with an asterisk (*) has focus.
 -   When listing disks, if a disk is missing, its disk number is prefixed with M. For example, the first missing disk is numbered M0.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 ```
 list disk
@@ -51,7 +51,7 @@ list volume
 list vdisk
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

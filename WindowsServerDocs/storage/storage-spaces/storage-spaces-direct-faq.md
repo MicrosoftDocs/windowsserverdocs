@@ -1,7 +1,6 @@
 ---
 title: Storage Spaces Direct - Frequently asked questions
 description: Learn how about Storage Spaces Direct
-keywords: Storage Spaces
 ms.prod: windows-server
 ms.author: kaushik
 ms.technology: storage-spaces
@@ -30,10 +29,10 @@ Yes, you can use the NTFS file system with Storage Spaces Direct. However, REFS 
 
 After you have added the new fault domain, the new virtual disks that you create will jump to 3-way mirror. However, the existing virtual disk will remain a 2-way mirrored disk. You can copy the data to the new virtual disks from the existing volumes to gain the benefits of the new resiliency.
  
-## The Storage Spaces Direct was created using the autoconfig:0 switch and the pool created manually. When I try to query the Storage Spaces Direct pool to create a new volume, I get a message that says, “Enable-ClusterS2D again.“ What should I do?
+## The Storage Spaces Direct was created using the autoconfig:0 switch and the pool created manually. When I try to query the Storage Spaces Direct pool to create a new volume, I get a message that says, "Enable-ClusterS2D again." What should I do?
 
 By default, when you configure Storage Spaces Direct by using the enable-S2D cmdlet, the cmdlet does everything for you. It creates the pool and the tiers. When using autoconfig:0, everything must be done manually. If you created only the pool, the tier is not necessarily created. You will receive an 
-“Enable-ClusterS2D again” error message if you have either not created Tiers at all or not created Tiers in a manner corresponding to the devices attached. We recommend that you do not use the autoconfig switch in a production environment. 
+"Enable-ClusterS2D again" error message if you have either not created Tiers at all or not created Tiers in a manner corresponding to the devices attached. We recommend that you do not use the autoconfig switch in a production environment. 
  
 ## Is it possible to add a spinning disk (HDD) to the Storage Spaces Direct pool after you have created Storage Spaces Direct with SSD devices?
 
@@ -83,5 +82,5 @@ Storage Spaces Direct uses SCSI Enclosure Services (SES) mapping to make sure th
 This one:
 
 ```powershell
-get-virtualdisk -friendlyname “xyz” | get-physicalextent
+get-virtualdisk -friendlyname "xyz" | get-physicalextent
 ```

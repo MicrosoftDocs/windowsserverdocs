@@ -1,14 +1,12 @@
 ---
 title: Get started with Hyper-V on Windows Server
-description: "Gives links to articles on getting started with Hyper-V"
+description: Gives links to articles on getting started with Hyper-V
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9a3f8b74-f3c0-433f-a320-850ca8610757
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/07/2016
 ---

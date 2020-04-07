@@ -1,12 +1,12 @@
 ---
 title: manage-bde protectors
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1f9b22c5-cc93-45df-9165-bedee94998da
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Manages the protection methods used for the BitLocker encryption key. For exampl
 ```
 manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup}] <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
-### Parameters
+#### Parameters
 
 |   Parameter   |                                                                                                                                                                                           Description                                                                                                                                                                                            |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 |   -? or /?    |                                                                                                                                                                            Displays brief help at the command prompt.                                                                                                                                                                            |
 |  -help or -h  |                                                                                                                                                                          Displays complete help at the command prompt.                                                                                                                                                                           |
 
-### <a name="BKMK_addprotectors"></a>-add syntax and parameters
+### <a name=BKMK_addprotectors></a>-add syntax and parameters
 ```
 manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
 [-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin] 
@@ -61,7 +61,7 @@ manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <Nume
 |             -cf              |                                                                                                                                              Specifies that a certificate file will be used to provide the public key certificate.                                                                                                                                              |
 |   <pathToCertificateFile>    |                                                                                                                                                             Represents the directory path to the certificate file.                                                                                                                                                              |
 |             -ct              |                                                                                                                                           Specifies that a certificate thumbprint will be used to identify the public key certificate                                                                                                                                           |
-|   <CertificateThumbprint>    |                                                       Specifies the value of the thumbprint property of the certificate you want to use. For example, a certificate thumbprint value of "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" should be specified as "a909502dd82ae41433e6f83886b00d4277a32a7b."                                                        |
+|   <CertificateThumbprint>    |                                                       Specifies the value of the thumbprint property of the certificate you want to use. For example, a certificate thumbprint value of a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b should be specified as a909502dd82ae41433e6f83886b00d4277a32a7b.                                                        |
 |          -tpmandpin          |                                                                                           adds a Trusted Platform Module (TPM) and personal identification number (PIN) protector for the operating system drive. You can also use **-tp** as an abbreviated version of this command.                                                                                           |
 |      -tpmandstartupkey       |                                                                                                                    adds a TPM and startup key protector for the operating system drive. You can also use **-tsk** as an abbreviated version of this command.                                                                                                                    |
 |   -tpmandpinandstartupkey    |                                                                                                                adds a TPM, PIN, and startup key protector for the operating system drive. You can also use **-tpsk** as an abbreviated version of this command.                                                                                                                 |
@@ -70,7 +70,7 @@ manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <Nume
 |        -computername         |                                                                                                       Specifies that manage-bde is being used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.                                                                                                       |
 |            <Name>            |                                                                                                         Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.                                                                                                         |
 
-### <a name="BKMK_deleteprotectors"></a>-delete syntax and parameters
+### <a name=BKMK_deleteprotectors></a>-delete syntax and parameters
 ```
 manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
 [-id <KeyProtectorID>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
@@ -96,7 +96,7 @@ manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|ce
 |        -? or /?        |                                                               Displays brief help at the command prompt.                                                               |
 |      -help or -h       |                                                             Displays complete help at the command prompt.                                                              |
 
-### <a name="BKMK_disableprot"></a>-disable syntax and parameters
+### <a name=BKMK_disableprot></a>-disable syntax and parameters
 ```
 manage-bde  -protectors  -disable <Drive> [-RebootCount <integer 0 - 15>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
@@ -110,10 +110,10 @@ manage-bde  -protectors  -disable <Drive> [-RebootCount <integer 0 - 15>] [-comp
 |   -? or /?    |                                                                                                                                                                                                    Displays brief help at the command prompt.                                                                                                                                                                                                    |
 |  -help or -h  |                                                                                                                                                                                                  Displays complete help at the command prompt.                                                                                                                                                                                                   |
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 The following example illustrates using the **-protectors** command to add a certificate key protector identified by a certificate file to drive E.
 ```
-manage-bde  -protectors  -add E: -certificate  -cf "c:\File Folder\Filename.cer"
+manage-bde  -protectors  -add E: -certificate  -cf c:\File Folder\Filename.cer
 ```
 The following example illustrates using the **-protectors** command to add an **adaccountorgroup** key protector identified by domain and user name to drive E.
 ```
@@ -131,6 +131,6 @@ The following example illustrates using the **-protectors** command to back up a
 ```
 manage-bde  -protectors  -adbackup C:
 ```
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [manage-bde](manage-bde.md)
