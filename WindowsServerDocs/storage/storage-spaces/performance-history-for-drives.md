@@ -1,12 +1,11 @@
 ---
 title: Performance history for drives
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 

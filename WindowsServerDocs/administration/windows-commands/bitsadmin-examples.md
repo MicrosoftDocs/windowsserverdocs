@@ -1,12 +1,8 @@
 ---
 title: bitsadmin examples
-description: "The following examples show how to use the bitsadmin tool to perform the most common tasks."
-ms.custom: na
+description: The following examples show how to use the bitsadmin tool to perform the most common tasks.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cb8f8374-ba6e-4a68-85a1-9a95b8215354
 author: coreyp-at-msft
@@ -23,47 +19,63 @@ The following examples show how to use the `bitsadmin` tool to perform the most 
 
 The **/transfer** switch is a shortcut for performing the tasks listed below. This switch creates the job, adds the files to the job, activates the job in the transfer queue, and completes the job. BITSAdmin continues to show progress information in the MS-DOS window until the transfer completes or an error occurs.
 
-**bitsadmin /transfer myDownloadJob /download /priority normal `https://downloadsrv/10mb.zip c:\\10mb.zip`**
+`bitsadmin /transfer myDownloadJob /download /priority normal https://downloadsrv/10mb.zip c:\\10mb.zip`
 
 ## Create a download job
 
 Use the **/create** switch to create a download job named myDownloadJob.
 
-**bitsadmin /create myDownloadJob**
+### Syntax
+
+```
+bitsadmin /create myDownloadJob
+```
 
 BITSAdmin returns a GUID that uniquely identifies the job. Use the GUID or job name in subsequent calls. The following text is sample output.
 
-``` syntax
-Created job {C775D194-090F-431F-B5FB-8334D00D1CB6}.
-```
+#### Sample output
 
-Next, use the **/addfile** switch to add one or more files to the download job.
+`created job {C775D194-090F-431F-B5FB-8334D00D1CB6}`
 
 ## Add files to the download job
 
-Use the **/addfile** switch to add a file to the job. Repeat this call for each file you want to add. If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
+Use the **/addfile** switch to add a file to the job. Repeat this call for each file you want to add.
 
-**bitsadmin /addfile myDownloadJob https://downloadsrv/10mb.zip c:\\10mb.zip**
+If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
 
-To activate the job in the transfer queue, use the **/resume** switch.
+### Syntax
+
+```
+bitsadmin /addfile myDownloadJob https://downloadsrv/10mb.zip c:\\10mb.zip
+```
 
 ## Activate the download job
 
-When you create a new job, BITS suspends the job. To activate the job in the transfer queue, use the **/resume** switch. If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
+When you create a new job, BITS suspends the job. To activate the job in the transfer queue, use the **/resume** switch.
 
-**bitsadmin /resume myDownloadJob**
+If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
 
-To determine the progress of the job, use the **/list**, **/info**, or **/monitor** switch.
+### Syntax
+
+`bitsadmin /resume myDownloadJob`
 
 ## Determine the progress of the download job
 
-Use the **/info** switch to determine the progress of a job. If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
+Use the **/info** switch to return the state of the job and the number of files and bytes transferred. When the state is TRANSFERRED, BITS has successfully transferred all files in the job.
 
-**bitsadmin /info myDownloadJob /verbose**
+- Use the **/verbose** argument to get complete details of the job.
 
-The **/info** switch returns the state of the job and the number of files and bytes transferred. When the state is TRANSFERRED, BITS has successfully transferred all files in the job. The **/verbose** argument provides complete details of the job. The following text is sample output.
+- Use the **/list** or **/monitor** switch to get all of the jobs in the transfer queue.
 
-``` syntax
+If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
+
+### Syntax
+
+`bitsadmin /info myDownloadJob /verbose`
+
+#### Sample output
+
+```
 GUID: {482FCAF0-74BF-469B-8929-5CCD028C9499} DISPLAY: myDownloadJob
 TYPE: DOWNLOAD STATE: TRANSIENT_ERROR OWNER: domain\user
 PRIORITY: NORMAL FILES: 0 / 1 BYTES: 0 / UNKNOWN
@@ -82,36 +94,48 @@ JOB FILES:
 NOTIFICATION COMMAND LINE: none
 ```
 
-To receive information for all jobs in the transfer queue, use the **/list** or **/monitor** switch.
-
 ## Completing the download job
 
-When the state of the job is TRANSFERRED, BITS has successfully transferred all files in the job. However, the files are not available until you use the **/complete** switch. If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
+When the state of the job is TRANSFERRED, BITS has successfully transferred all files in the job. However, the files are not available until you use the **/complete** switch.
 
-**bitsadmin /complete myDownloadJob**
+If multiple jobs use myDownloadJob as their name, you must replace myDownloadJob with the job's GUID to uniquely identify the job.
+
+### Syntax
+
+`bitsadmin /complete myDownloadJob`
 
 ## Monitoring jobs in the transfer queue
 
 Use the **/list**, **/monitor**, or **/info** switch to monitor jobs in the transfer queue. The **/list** switch provides information for all jobs in the queue.
 
-**bitsadmin /list**
+## /list switch
 
-The **/list** switch returns the state of the job and the number of files and bytes transferred for all jobs in the transfer queue. The following text is sample output.
+The **/list** switch returns the state of the job and the number of files and bytes transferred for all jobs in the transfer queue.
 
-``` syntax
+### Syntax
+
+`bitsadmin /list`
+
+#### Sample output for the /list switch
+
+```
 {6AF46E48-41D3-453F-B7AF-A694BBC823F7} job1 SUSPENDED 0 / 0 0 / 0
 {482FCAF0-74BF-469B-8929-5CCD028C9499} job2 TRANSIENT_ERROR 0 / 1 0 / UNKNOWN
 
 Listed 2 job(s).
 ```
 
-Use the **/monitor** switch to monitor all jobs in the queue. The **/monitor** switch refreshes the data every 5 seconds. To stop the refresh, enter CTRL+C.
+## /monitor switch
 
-**bitsadmin /monitor**
+The **/monitor** switch returns the state of the job and the number of files and bytes transferred for all jobs in the transfer queue, refreshing the data every 5 seconds. To stop the refresh, press CTRL+C.
 
-The **/monitor** switch returns the state of the job and the number of files and bytes transferred for all jobs in the transfer queue. The following text is sample output.
+### Syntax
 
-``` syntax
+`bitsadmin /monitor`
+
+#### Sample output
+
+```
 MONITORING BACKGROUND COPY MANAGER(5 second refresh)
 {6AF46E48-41D3-453F-B7AF-A694BBC823F7} job1 SUSPENDED 0 / 0 0 / 0
 {482FCAF0-74BF-469B-8929-5CCD028C9499} job2 TRANSIENT_ERROR 0 / 1 0 / UNKNOWN
@@ -122,11 +146,13 @@ MONITORING BACKGROUND COPY MANAGER(5 second refresh)
 
 Use the **/reset** switch to remove all jobs from the transfer queue.
 
-**bitsadmin /reset**
+### Syntax
 
-The following text is sample output.
+`bitsadmin /reset`
 
-``` syntax
+#### Sample output
+
+```
 {DC61A20C-44AB-4768-B175-8000D02545B9} canceled.
 {BB6E91F3-6EDA-4BB4-9E01-5C5CBB5411F8} canceled.
 2 out of 2 jobs canceled.

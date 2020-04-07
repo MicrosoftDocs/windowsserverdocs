@@ -1,14 +1,12 @@
 ---
 ms.assetid: 4ef052f0-61a9-4912-b780-5c96187c850f
 title: AD FS Deployment Topology Considerations
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -26,15 +24,15 @@ AD FS features
 |Feature|Supported by WID?|Supported by SQL Server?|More information about this feature|  
 |-----------|---------------------|----------------------------|---------------------------------------|  
 |Federation server farm deployment|Yes, with a limit of 30 federation servers for each farm|Yes. There is no enforced limit for the number of federation servers that you can deploy in a single farm|[Determine Your AD FS Deployment Topology](Determine-Your-AD-FS-Deployment-Topology.md)|  
-|SAML artifact resolution **Note:** This feature is not required for Microsoft Online Services, Microsoft Office 365, Microsoft Exchange, or Microsoft Office SharePoint scenarios.|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[Best Practices for Secure Planning and Deployment of AD FS](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
-|SAML\/WS\-Federation token replay detection|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[Best Practices for Secure Planning and Deployment of AD FS](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
+|SAML artifact resolution **Note:** This feature is not required for Microsoft Online Services, Microsoft Office 365, Microsoft Exchange, or Microsoft Office SharePoint scenarios.|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<p>[Best Practices for Secure Planning and Deployment of AD FS](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
+|SAML\/WS\-Federation token replay detection|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<p>[Best Practices for Secure Planning and Deployment of AD FS](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)|  
 
 Database features  
 
 |Feature|Supported by WID?|Supported by SQL Server?|More information about this feature|  
 |-----------|---------------------|----------------------------|---------------------------------------|  
 |Basic database redundancy using pull replication, where one or more servers hosting a read\-only copy of the database request changes that are made on a source server that hosts a read\/write copy of the database|Yes|No|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)|  
-|Database redundancy using high\-availability solutions, such as failover clustering or mirroring \(at the database layer only\) **Note:** All AD FS deployment topologies support clustering at the AD FS service layer.|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<br /><br />[High Availability Solutions Overview](https://go.microsoft.com/fwlink/?LinkId=179853)|  
+|Database redundancy using high\-availability solutions, such as failover clustering or mirroring \(at the database layer only\) **Note:** All AD FS deployment topologies support clustering at the AD FS service layer.|No|Yes|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)<p>[High Availability Solutions Overview](https://go.microsoft.com/fwlink/?LinkId=179853)|  
 
 ### SQL Server considerations  
 You should consider the following deployment facts if you select SQL Server as the configuration database for your AD FS deployment.  

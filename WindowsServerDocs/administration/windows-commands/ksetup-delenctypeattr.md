@@ -1,12 +1,12 @@
 ---
 title: ksetup:delenctypeattr
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4fc25ef3-e271-4229-a712-72c507df55aa
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Removes the encryption type attribute for the domain. For examples of how this c
 ksetup /delenctypeattr <DomainName> 
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -41,7 +41,7 @@ A status message is displayed upon successful or failed completion.
 
 To set the domain that you want to connect to and use, run the **ksetup /domain \<DomainName>** command.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Determine the current encryption types that are set on this computer:
 ```
@@ -60,11 +60,11 @@ Remove the set encryption type attribute for the domain mit.contoso.com:
 ksetup /delenctypeattr mit.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Klist](klist.md)
 -   [Ksetup:domain](ksetup-domain.md)
 -   [Ksetup:addenctypeattr](ksetup-addenctypeattr.md)
 -   [Ksetup:setenctypeattr](ksetup-setenctypeattr.md)
 -   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

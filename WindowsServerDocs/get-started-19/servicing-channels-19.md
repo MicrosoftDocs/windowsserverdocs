@@ -1,6 +1,6 @@
 ---
 title: Servicing Channels
-description: "Explanation of Windows Server service channels: LTSC and SAC"
+description: Explanation of Windows Server service channels - LTSC and SAC
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -106,7 +106,7 @@ Nano Server is available as a container operating system in the Semi-Annual Chan
 
 ## How to tell whether a server is running an LTSC or SAC release
 
-Generally speaking, Long-Term Servicing Channel releases such as Windows Server 2019 are released at the same time as a new version of the Semi-Annual Channel, for example, Windows Server, version 1809. This can make it a little tricky to determine whether a server is running Semi-Annual Channel release. Instead of looking at the build number, you must look at the product name: Semi-Annual Channel releases use the "Windows Server Standard" or "Windows Server Datacenter" product name, without a version number, while Long-Term Servicing Channel releases include the version number, for example, "Windows Server 2019 Datacenter".
+Generally speaking, Long-Term Servicing Channel releases such as Windows Server 2019 are released at the same time as a new version of the Semi-Annual Channel, for example, Windows Server, version 1809. This can make it a little tricky to determine whether a server is running Semi-Annual Channel release. Instead of looking at the build number, you must look at the product name: Semi-Annual Channel releases use the Windows Server Standard or Windows Server Datacenter product name, without a version number, while Long-Term Servicing Channel releases include the version number, for example, Windows Server 2019 Datacenter.
 
 >[!Note]  
 > The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) is a better starting point for App Developers.
@@ -116,7 +116,7 @@ Open Powershell and use the Get-ItemProperty Cmdlet, or the Get-ComputerInfo Cmd
 **Windows Server 2019 Datacenter Edition (LTSC) with Desktop Experience example:**
 
 ````PowerShell
-Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````
@@ -131,7 +131,7 @@ CurrentBuild              : 17763
 **Windows Server, version 1809 (SAC) Standard Edition Server Core example:**
 
 ````PowerShell
-Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````

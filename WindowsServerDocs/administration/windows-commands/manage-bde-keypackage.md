@@ -1,12 +1,12 @@
 ---
 title: manage-bde KeyPackage
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c631ef10-2a2f-4541-8578-292f2d4e9e80
 
@@ -28,7 +28,7 @@ Generates a key package for a drive. The key package can be used in conjunction 
 manage-bde -KeyPackage [<Drive>] [-ID <KeyProtectoryID>] [-path <PathToExternalKeyDirectory>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -40,17 +40,17 @@ manage-bde -KeyPackage [<Drive>] [-ID <KeyProtectoryID>] [-path <PathToExternalK
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **-KeyPackage** command to create a key package for drive C  based off the key protector identified by the GUID and to save the key package to F:\Folder.
 ```
-manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path "f:\Folder"
+manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path f:\Folder
 ```
 
 > [!TIP]
 > Use **manage-bde –protectors –get** along with the drive letter that you want to create a key package for to get a list of available GUIDs to use as the ID value.
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

@@ -1,12 +1,12 @@
 ---
 title: Configure Features on Demand in Windows Server
-description: "Server Manager"
-ms.custom: na
+description: Server Manager
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 author: coreyp-at-msft
@@ -46,7 +46,7 @@ This topic contains the following sections.
 
 -   [Remove feature files by using Uninstall-WindowsFeature](#BKMK_remove)
 
-## <a name="BKMK_store"></a>Create a feature file or side-by-side store
+## <a name=BKMK_store></a>Create a feature file or side-by-side store
 This section describes how to set up a remote feature file shared folder (also called a side-by-side store) that stores the files required to install roles, role services, and features on servers that run  Windows Server 2012 R2  or  Windows Server 2012 . After you have set up a feature store, you can install roles, role services, and features on servers that are running those operating systems, and specify the feature store as the location of installation source files.
 
 #### To create a feature file store
@@ -66,14 +66,14 @@ This section describes how to set up a remote feature file shared folder (also c
 
 3.  Copy the **Sources\SxS** folder from your Windows Server installation media to the shared folder that you created in step 1.
 
-## <a name="BKMK_methods"></a>Methods of removing feature files
+## <a name=BKMK_methods></a>Methods of removing feature files
 Two methods are available for removing feature files from Windows Server in a Features on Demand configuration.
 
 -   The `remove` parameter of the `Uninstall-WindowsFeature` cmdlet lets you delete feature files from a server or offline virtual hard disk (VHD) that is running  Windows Server 2012 R2  or  Windows Server 2012 . Valid values for the `remove` parameter are the names of roles, role services, and features.
 
 -   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. For more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](https://technet.microsoft.com/library/hh824822.aspx).
 
-## <a name="BKMK_remove"></a>Remove feature files by using Uninstall-WindowsFeature
+## <a name=BKMK_remove></a>Remove feature files by using Uninstall-WindowsFeature
 You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role services, and features from servers and offline VHDs that are running  Windows Server 2012 R2  or  Windows Server 2012 , and to delete feature files. You can both uninstall and delete the same roles, role services, and features in the same command if desired.
 
 > [!IMPORTANT]

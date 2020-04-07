@@ -1,12 +1,12 @@
 ---
 title: ftp glob_1
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 111494f9-0083-4f48-9d35-46366debafae vhorne
 author: coreyp-at-msft
@@ -23,15 +23,15 @@ Toggles wildcard expansion of local file names.
 ```  
 glob  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 - By default, globbing is on.  
 - Globbing permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file or path names.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Toggle wildcard expansion of local file names.  
   ```  
   glob  
   ```  
-  ## additional references  
-- [Command-Line Syntax Key](command-line-syntax-key.md)  
+  ## Additional References  
+- - [Command-Line Syntax Key](command-line-syntax-key.md)  

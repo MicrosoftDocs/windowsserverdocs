@@ -1,12 +1,8 @@
 ---
 title: wbadmin start systemstaterecovery
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin start systemstaterecovery, which performs a system state recovery to a location, and from a backup, that you specify.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
 author: coreyp-at-msft
@@ -54,7 +50,7 @@ wbadmin start systemstaterecovery
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -67,7 +63,7 @@ wbadmin start systemstaterecovery
 |-autoReboot|Specifies to restart the system at the end of the system state recovery operation. This parameter is valid only for a recovery to the original location. We do not recommend you use this parameter if you need to perform steps after the recovery operation.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 - To perform a system state recovery of the backup from 03/31/2013 at 9:00 A.M., type:  
   ```
@@ -78,8 +74,8 @@ wbadmin start systemstaterecovery
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet

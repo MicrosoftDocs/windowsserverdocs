@@ -1,6 +1,5 @@
 ---
 title: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
-description:
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

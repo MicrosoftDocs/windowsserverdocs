@@ -1,12 +1,12 @@
 ---
 title: ftp open_1
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4b61926a-dc60-4b4c-96d3-64e5c91c18ba vhorne
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Connects to the specified ftp server.
 ```  
 open <computer> [<Port>]  
 ```  
-### Parameters  
+#### Parameters  
 
 | Parameter  |                                           Description                                            |
 |------------|--------------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ open <computer> [<Port>]
 
 ## Remarks  
 You can use an IP address or computer name (in which case a DNS server or Hosts file must be available) to specify **computer**.  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 Connect to the ftp server at **ftp.microsoft.com**.  
 ```  
 Open ftp.microsoft.com  
@@ -41,5 +41,5 @@ Connect to the ftp server at **ftp.microsoft.com** that is listening on TCP port
 ```  
 open ftp.microsoft.com 755  
 ```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

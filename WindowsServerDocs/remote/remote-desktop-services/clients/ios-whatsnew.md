@@ -1,12 +1,8 @@
 ---
 title: What's new in the iOS client
 description: Learn about recent changes to the Remote Desktop client for iOS
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
@@ -142,4 +138,4 @@ It's been well over a year since we last updated the Remote Desktop Client for i
 
 ## How to report issues
 
-We're committed to making this app the best it can be and value your feedback. You can report issues to us by navigating to **Settings*- > **Report an Issue** in the client.
+We're committed to making this app the best it can be and value your feedback. You can report issues to us by navigating to **Settings** > **Report an Issue** in the client.

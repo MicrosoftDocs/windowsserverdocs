@@ -1,13 +1,11 @@
 ---
 ms.assetid: c87dc32d-ab33-44d2-a46f-f9f878b4e5b4
 title: Planning to Deploy AD FS
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

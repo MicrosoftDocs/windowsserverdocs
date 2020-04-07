@@ -1,13 +1,12 @@
 ---
 title: Configure the Failover TCP/IP settings that you want the Replica virtual machine to use in the event of a failover
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Configure the Failover TCP/IP settings that you want the Replica virtual machine to use in the event of a failover

@@ -1,14 +1,12 @@
 ---
 ms.assetid: c32606b4-2ee2-4df3-a704-8ac6723e188f
 title: DNS and AD DS
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # DNS and AD DS

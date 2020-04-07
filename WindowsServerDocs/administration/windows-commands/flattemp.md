@@ -1,12 +1,12 @@
 ---
 title: flattemp
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 059a0960-1fd9-4382-87fe-a85d5dccdaea
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 flattemp {/query | /enable | /disable}
 ```
 
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |/query|Queries the current setting.|
@@ -45,7 +45,7 @@ flattemp {/query | /enable | /disable}
 -   You might encounter application errors if the user's temporary folder is on a network drive. This occurs when the shared network drive becomes momentarily inaccessible on the network. Because the temporary files of the application are either inaccessible or out of synchronization, it responds as if the disk has stopped. Moving the temporary folder to a network drive is not recommended. The default is to keep temporary folders on the local hard disk. If you experience unexpected behavior or disk-corruption errors with certain applications, stabilize your network or move the temporary folders back to the local hard disk.
 -   if you disable using separate temporary folders per-session, **flattemp** settings are ignored. This option is set in the Remote Desktop Services Configuration tool.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 -   To display the current setting for flat temporary folders, type:
     ```
     flattemp /query
@@ -59,7 +59,7 @@ flattemp {/query | /enable | /disable}
     flattemp /disable
     ```
 
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

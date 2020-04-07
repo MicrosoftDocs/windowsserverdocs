@@ -1,14 +1,13 @@
 ---
 title: Enable all virtual network adapters configured for a virtual machine
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Enable all virtual network adapters configured for a virtual machine

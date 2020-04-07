@@ -1,12 +1,8 @@
 ---
 title: wbadmin start backup
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin start backup, which creates a backup using specified parameters. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 56f3e752-d99a-4c3d-8e97-10303c37dd78
 author: coreyp-at-msft
@@ -58,7 +54,7 @@ Wbadmin start backup
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -77,7 +73,7 @@ Wbadmin start backup
 |-vssCopy|For Windows 7 and Windows Server 2008 R2 and later, performs a copy backup using VSS. All files are backed up but the history of the files being backup up is not updated so you preserve the all the information on which files where changed, deleted, and so on, as well as any application log files. Using this type of backup does not affect the sequence of incremental and differential backups that might happen independent of this copy backup. This is the default value.</br>Warning: A copy backup cannot be used for incremental or differential backups or restores.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following examples show how the **wbadmin start backup** command can be used in different backup scenarios:
 
@@ -102,7 +98,7 @@ Scenario #1
   wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
   ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

@@ -1,14 +1,13 @@
 ---
 title: Storage controllers should be enabled in virtual machines to provide access to attached storage
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 532548a1-8ffe-4b5b-902e-ed2f0819012b
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Storage controllers should be enabled in virtual machines to provide access to attached storage

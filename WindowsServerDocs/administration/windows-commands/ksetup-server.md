@@ -1,12 +1,12 @@
 ---
 title: ksetup:server
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e3407111-ac92-457f-aa1f-a04fe9109d59
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Allows you to specify a name for a computer running the Windows operating system
 ksetup /server <ServerName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -39,14 +39,14 @@ There is no way to remove the targeted server name; you can only change it back 
 
 The target server name is stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\LSA\Kerberos**. It is not reported by using **ksetup**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Make your **ksetup** configurations effective on the IPops897 computer that is connected on the Contoso domain:
 ```
 ksetup /server IPops897.corp.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

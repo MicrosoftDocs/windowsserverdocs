@@ -26,7 +26,7 @@ The minimum amount of storage space that can be used for shadow copy storage can
 vssadmin resize shadowstorage /for=<ForVolumeSpec> /on=<OnVolumeSpec> [/maxsize=<MaxSizeSpec>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---|---|

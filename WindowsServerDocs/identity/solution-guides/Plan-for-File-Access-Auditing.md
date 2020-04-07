@@ -1,14 +1,12 @@
 ---
 ms.assetid: 3ea48a72-20a2-4da4-84e4-26b5728513ce
 title: Plan for File Access Auditing
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

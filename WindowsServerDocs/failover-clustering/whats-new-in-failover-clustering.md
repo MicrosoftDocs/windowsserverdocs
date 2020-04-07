@@ -4,7 +4,7 @@ title: What's new in Failover Clustering in Windows Server
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.topic: get-started-article
-manager: dongill
+manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
@@ -23,22 +23,22 @@ This topic explains the new and changed functionality in Failover Clustering for
     With cluster sets, you can move online virtual machines (live migrate) between clusters within the cluster set.
 
     For more info, see [Cluster sets](../storage/storage-spaces/cluster-sets.md).
+                
+- **Azure-aware clusters**                
+                
+    Failover clusters now automatically detect wh    n th    y're    runn    ng in Azure IaaS virtual machines and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Dynamic Network Name for cluster name.
+                
+- **Cross-dom    in c    uste     mig    ation**
+                
+    Failover Clusters can now dynamically move from one Active Directory domain to another, simplifying domain consolidation and allowing clusters to b' created by hardware partners and joined to the customer's domain later.    
+- **USB witness**                
 
-- **Azure-aware clusters**
-
-    Failover clusters now automatically detect when they're running in Azure IaaS virtual machines and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Dynamic Network Name for cluster name.
-
-- **Cross-domain cluster migration**
-
-    Failover Clusters can now dynamically move from one Active Directory domain to another, simplifying domain consolidation and allowing clusters to be created by hardware partners and joined to the customer's domain later.
-- **USB witness**
-
-    You can now use a simple USB drive attached to a network switch as a witness in determining quorum for a cluster. This extends the File Share Witness to support any SMB2-compliant device.
-
-- **Cluster infrastructure improvements**
-
-    The CSV cache is now enabled by default to boost virtual machine performance. MSDTC now supports Cluster Shared Volumes, to allow deploying MSDTC workloads on Storage Spaces Direct such as with SQL Server. Enhanced logic to detect partitioned nodes with self-healing to return nodes to cluster membership. Enhanced cluster network route detection and self-healing.
-
+    You can now use a si    ple    USB    drive attached to a    network switch as a witness in determining quorum for a cluster. This extends the File Share Witness to support any SMB2-compliant device.
+                
+- **Cluster infras    ruct    re i    prov    ments**
+                
+    The CSV cache is now enabled    by d    faul     to     oost virtual machine performance. MSDTC now supports Cluster Shared Volumes, to allow deploying MSDTC workloads on Storage Spaces Direct such as with SQL Server. Enhanced logic to detect partitioned nodes with self-healing to return nodes to cluster membership. Enhanced cluster network route detection and self-healing.
+                
 - **Cluster Aware Updating supports Storage Spaces Direct**
 
     Cluster Aware Updating (CAU) is now integrated and aware of Storage Spaces Direct, validating and ensuring data resynchronization completes on each node. Cluster Aware Updating inspects updates to intelligently restart only if necessary. This enables orchestrating restarts of all servers in the cluster for planned maintenance.

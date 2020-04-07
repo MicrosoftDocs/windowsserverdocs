@@ -1,7 +1,7 @@
 ---
 title: Overview about Windows Server upgrades | Microsoft Docs
 description: Learn some general Windows Server upgrade information, along with what to think about before you do the actual upgrade. 
-ms.prod: windows server
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman
@@ -37,3 +37,4 @@ However, we realize that's not always possible. You can use the following diagra
 Windows Server can be typically be upgraded through at least one, and sometimes even two, versions. For example, Windows Server 2012 R2 and Windows Server 2016 can both be upgraded in-place to Windows Server 2019.
 
 You can also upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition. For more information about upgrade options other than in-place upgrade, see [Upgrade and conversion options for Windows Server](../get-started/supported-upgrade-paths.md).
+""'

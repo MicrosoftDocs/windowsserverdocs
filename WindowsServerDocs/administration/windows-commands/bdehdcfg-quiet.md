@@ -1,12 +1,8 @@
 ---
 title: bdehdcfg quiet
-description: Windows Commands topic for bdehdcfg quiet - Tells bdehdcfg to not display all actions and errors.
-ms.custom: na
+description: Windows Commands topic for **bdehdcfg quiet**, which tells bdehdcfg to not display all actions and errors.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7f75b702-890b-4ff9-805c-edf5cadd8822
 author: coreyp-at-msft
@@ -17,8 +13,6 @@ ms.date: 10/16/2017
 
 # bdehdcfg: quiet
 
-
-
 Informs the Bdehdcfg command-line tool that all actions and errors are not to be displayed in the command-line interface. For an example of how this command can be used, see [Examples](#BKMK_Examples).
 
 ## Syntax
@@ -27,7 +21,7 @@ Informs the Bdehdcfg command-line tool that all actions and errors are not to be
 bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -quiet
 ```
 
-### Parameters
+#### Parameters
 
 This command takes no additional parameters.
 
@@ -38,11 +32,13 @@ If any Yes/No (Y/N) prompts would have been displayed during the drive preparati
 ## <a name="BKMK_Examples"></a>Examples
 
 The following example illustrates using the **quiet** command.
+
 ```
 bdehdcfg -target default -quiet
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Bdehdcfg](bdehdcfg.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Bdehdcfg](bdehdcfg.md)

@@ -1,13 +1,11 @@
 ---
 ms.assetid: 276a7f7d-5faa-4c00-a51c-3fa511fe52f9
 title: Set up an AD FS lab environment
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 
@@ -257,7 +255,7 @@ You must complete the following steps to set up a web server with this sample cl
   
     2.  Search the file for the second instance of `ExpectedClaims`.  
   
-    3.  Comment out the entire `IF` statement and its braces. Indicate comments by typing “//” (without the quotes) at the beginning of a line.  
+    3.  Comment out the entire `IF` statement and its braces. Indicate comments by typing "//" (without the quotes) at the beginning of a line.  
   
     4.  Your `FOREACH` statement should now look like this code example.  
   

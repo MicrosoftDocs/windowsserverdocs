@@ -1,12 +1,12 @@
 ---
 title: query
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 675c5128-f3cf-4e8f-8a3f-b29ab2a8b6de
 author: coreyp-at-msft
@@ -31,7 +31,7 @@ query termserver
 query user
 ```
 
-## Parameters
+### Parameters
 |Parameter|Description|
 |-------|--------|
 |[query process](query-process.md)|Displays information about processes that are running on an rd Session Host server.|
@@ -39,6 +39,6 @@ query user
 |[query termserver](query-termserver.md)|Displays a list of all rd Session Host servers on the network.|
 |[query user](query-user.md)|Displays information about user sessions on an rd Session Host server.|
 
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

@@ -1,12 +1,12 @@
 ---
 title: ksetup:delkdc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7d6ec389-094c-4a7b-a78b-605497ddc289
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Deletes instances of Key Distribution Center (KDC) names for the Kerberos realm.
 ksetup /delkdc <RealmName> <KDCName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,7 +42,7 @@ On computers running Windows 2000 Server with Service Pack 1 (SP1) and earlier, 
 
 To verify the default realm name for the computer, or to verify that this command worked as intended, run **ksetup** at the command prompt and verify that the KDC that was removed does not exist in the list.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The security requirements for this computer have changed so the link between the Windows realm and the non-Windows realm must be removed. First, determine which association to remove and produce the output of existing associations:
 ```
@@ -53,7 +53,7 @@ Remove the association by using the following command:
 Ksetup /delkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

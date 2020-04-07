@@ -1,12 +1,12 @@
 ---
 title: logman query
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1116a0f0-5415-4369-a045-12f79f8f66de
 author: coreyp-at-msft
@@ -22,9 +22,9 @@ query data collector or data collector set properties.
 
 ## Syntax  
 ```  
-logman query [providers|"Data Collector Set name"] [options]  
+logman query [providers|Data Collector Set name] [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |     Parameter      |                                 Description                                  |
 |--------------------|------------------------------------------------------------------------------|
@@ -34,18 +34,18 @@ logman query [providers|"Data Collector Set name"] [options]
 |    [-n] <name>     |                          Name of the target object.                          |
 |        -ets        | Send commands to Event Trace Sessions directly without saving or scheduling. |
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command lists all Data Collector Sets configured on the target system.  
 ```  
 logman query  
 ```  
 The following command lists the data collectors contained in the Data Collector Set named perf_log.  
 ```  
-logman query "perf_log"  
+logman query perf_log  
 ```  
 The following command lists all available providers of data collectors on the target system.  
 ```  
 logman query providers  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

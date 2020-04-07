@@ -1,14 +1,12 @@
 ---
 ms.assetid: a0f7bb11-47a5-47ff-a70c-9e6353382b39
 title: Manage Risk with Conditional Access Control
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

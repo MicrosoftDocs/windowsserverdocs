@@ -1,12 +1,12 @@
 ---
 title: mstsc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 59801227-1e7e-4dbd-96e6-f54102a3ce92
 author: coreyp-at-msft
@@ -30,7 +30,7 @@ mstsc.exe /edit <Connection File>
 mstsc.exe /migrate
 ```
 
-## Parameters
+### Parameters
 
 |        Parameter        |                                                         Description                                                         |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -50,7 +50,7 @@ mstsc.exe /migrate
 -   Default.rdp is stored for each user as a hidden file in the user's Documents folder. User created .rdp files are saved by default in the user's Documents folder but can be saved anywhere.
 -   To span across monitors, the monitors must use the same resolution and must be aligned horizontally (that is, side by side). There is currently no support for spanning multiple monitors vertically on the client system.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 -   To connect to a session in full-screen mode, type:
     ```
     mstsc /f
@@ -60,6 +60,6 @@ mstsc.exe /migrate
     mstsc /edit filename.rdp
     ```
 
-#### additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

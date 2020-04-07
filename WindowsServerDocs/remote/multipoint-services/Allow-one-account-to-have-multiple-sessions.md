@@ -1,12 +1,8 @@
 ---
 title: Allow one account to have multiple sessions
 description: Let a user access multiple systems at the same time.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f14cf1bd-f176-4de4-b27d-f3d8e6334158
 author: lizap

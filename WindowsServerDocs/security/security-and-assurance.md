@@ -1,11 +1,9 @@
 ---
 title: Security | Assurance
-description: "An overview of Security in Windows Server"
-ms.custom: na
+description: An overview of Security in Windows Server
 layout: LandingPage
 ms.prod: windows-server
 ms.technology: techgroup-security
-ms.tgt_pltfrm: na
 ms.topic: landing-page
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft

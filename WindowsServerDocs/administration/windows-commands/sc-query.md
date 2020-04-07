@@ -1,12 +1,12 @@
 ---
 title: Sc query
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
 ```
 
-## Parameters
+### Parameters
 
 |       Parameter        |                                                                                                                          Description                                                                                                                          |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
 |     state= {active     |                                                                                                                           inactive                                                                                                                            |
 | bufsize= \<BufferSize> |                     Specifies the size (in bytes) of the enumeration buffer. The default buffer size is 1,024 bytes. You should increase the size of the enumeration buffer when the display resulting from a query exceeds 1,024 bytes.                      |
 |   ri= \<ResumeIndex>   | Specifies the index number at which enumeration is to begin or resume. The default value is **0** (zero). Use this parameter in conjunction with the **bufsize=** parameter when more information is returned by a query than the default buffer can display. |
-|  group= \<GroupName>   |                                                                             Specifies the service group to be enumerated. By default, all groups are enumerated (**group= ""**).                                                                              |
+|  group= \<GroupName>   |                                                                             Specifies the service group to be enumerated. By default, all groups are enumerated (**group= **).                                                                              |
 |           /?           |                                                                                                             Displays help at the command prompt.                                                                                                              |
 
 ## Remarks
@@ -57,7 +57,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
   sc query bufsize= 1822 ri= 79
   ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display information for active services only, type either of the following commands:
 ```
@@ -93,6 +93,6 @@ To display information for drivers in the Network Driver Interface Specification
 sc query type= driver group= ndis
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

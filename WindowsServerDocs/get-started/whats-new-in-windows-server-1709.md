@@ -1,6 +1,6 @@
 ---
 title: What's New in Windows Server, version 1709
-description: "What are the new features in compute, identity, management, automation, networking, security, storage."
+description: What are the new features in compute, identity, management, automation, networking, security, storage.
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 06/03/2019
 
 >Applies To: Windows Server (Semi-Annual Channel)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
+<img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
 
 > [!IMPORTANT]
 > Windows Server, version 1709 is out of support as of April 9, 2019.
@@ -144,7 +144,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 
 **Software Defined Networking**
 
-- **Virtual Network Encryption** is a new feature that provides the ability for the virtual network traffic to be encrypted between Virtual Machines that communicate with each other within subnets that are marked as "Encryption Enabled". This feature utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt the packets.  DTLS provides protection against eavesdropping, tampering and forgery by anyone with access to the physical network.
+- **Virtual Network Encryption** is a new feature that provides the ability for the virtual network traffic to be encrypted between Virtual Machines that communicate with each other within subnets that are marked as Encryption Enabled. This feature utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt the packets.  DTLS provides protection against eavesdropping, tampering and forgery by anyone with access to the physical network.
  
 **Windows 10 VPN**
 

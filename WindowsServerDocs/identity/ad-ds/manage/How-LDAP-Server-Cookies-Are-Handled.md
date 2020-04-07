@@ -1,14 +1,12 @@
 ---
 ms.assetid: 3acaa977-ed63-4e38-ac81-229908c47208
 title: How LDAP Server Cookies Are Handled
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

@@ -1,14 +1,12 @@
 ---
 ms.assetid: e831f781-3c45-4d44-b411-160d121d1324
 title: Claims Transformation Rules Language
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

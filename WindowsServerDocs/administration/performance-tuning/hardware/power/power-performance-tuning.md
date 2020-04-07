@@ -4,7 +4,7 @@ description: Processor Power Management (PPM) Tuning for the Windows Server Bala
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author:  Qizha;TristanB
+ms.author:  qizha;tristanb
 author: phstee
 ms.date: 10/16/2017
 ---

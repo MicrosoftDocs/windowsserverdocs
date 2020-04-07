@@ -1,12 +1,12 @@
 ---
 title: mklink
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0ce4df22-2dbc-48fc-9c16-b721ae85f857
 author: coreyp-at-msft
@@ -26,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 mklink [[/d] | [/h] | [/j]] <Link> <Target>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,7 +37,7 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 |\<Target>|Specifies the path (relative or absolute) that the new symbolic link refers to.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example demonstrates the creation and removal of a symbolic link named MyFolder and MyFile.file from the root directory to the \Users\User1\Documents directory and a example.file located within the directory:
 ```

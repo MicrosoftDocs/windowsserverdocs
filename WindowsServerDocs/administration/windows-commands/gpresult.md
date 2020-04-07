@@ -1,12 +1,12 @@
 ---
 title: gpresult
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: dfaa3adf-2c83-486c-86d6-23f93c5c883c
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ To use RSoP reporting for remotely targeted computers through the firewall, you 
 gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
 ```
 
-## Parameters
+### Parameters
 
 > [!NOTE]
 > Except when you use **/?**, you must include an output option, either **/r**, **/v**, **/z**, **/x**, or **/h**.
@@ -70,7 +70,7 @@ The following example displays RSoP data for the computer **srvmain** and the lo
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
   ```
   
-## additional references
+## Additional References
 - [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+- - [Command-Line Syntax Key](command-line-syntax-key.md)

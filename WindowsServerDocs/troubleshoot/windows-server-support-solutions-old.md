@@ -2,7 +2,6 @@
 title: Top support solutions for Windows Server
 description: Get links to solutions for Windows Server issues
 ms.prod: windows-server
-ms.service: na
 manager: alant
 ms.technology: server-general
 ms.date: 03/16/2018

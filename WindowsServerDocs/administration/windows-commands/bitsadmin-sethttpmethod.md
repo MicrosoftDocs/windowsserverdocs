@@ -1,12 +1,8 @@
 ---
 title: bitsadmin sethttpmethod
-description: "Windows Commands topic for **bitsadmin sethttpmethod** - Sets the HTTP verb to use."
-ms.custom: na
+description: Windows Commands topic for bitsadmin sethttpmethod, which sets the HTTP verb to use.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
@@ -24,13 +20,13 @@ Sets the HTTP verb to use.
 bitsadmin /GetHttpMethod <Job> <HTTPMethod>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
 |Job|The job's display name or GUID|
 |HTTPMethod|The HTTP verb to use|
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

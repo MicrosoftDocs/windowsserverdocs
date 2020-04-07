@@ -1,12 +1,12 @@
 ---
 title: ipconfig
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 15071c2c-4815-4893-93b2-ab30232e312e
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Displays all current TCP/IP network configuration values and refreshes Dynamic H
 ipconfig [/allcompartments] [/all] [/renew [<Adapter>]] [/release [<Adapter>]] [/renew6[<Adapter>]] [/release6 [<Adapter>]] [/flushdns] [/displaydns] [/registerdns] [/showclassid <Adapter>] [/setclassid <Adapter> [<ClassID>]]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -47,7 +47,7 @@ ipconfig [/allcompartments] [/all] [/renew [<Adapter>]] [/release [<Adapter>]] [
 ## Remarks
 
 - This command is most useful on computers that are configured to obtain an IP address automatically. This enables users to determine which TCP/IP configuration values have been configured by DHCP, Automatic Private IP Addressing (APIPA), or an alternate configuration.
-- If the name you supply for *Adapter* contains any spaces, use quotation marks around the adapter name (example: **"**<em>Adapter Name</em>**"**).
+- If the name you supply for *Adapter* contains any spaces, use quotation marks around the adapter name (example: ****<em>Adapter Name</em>****).
 - For adapter names, **ipconfig** supports the use of the asterisk (\*) wildcard character to specify either adapters with names that begin with a specified string or adapters with names that contain a specified string. For example, **Local\*** matches all adapters that start with the string Local and **\*Con\*** matches all adapters that contain the string Con.
 
 ## Examples
@@ -62,7 +62,7 @@ ipconfig /all
 ```
 To renew a DHCP-assigned IP address configuration for only the Local Area Connection adapter, type:
 ```
-ipconfig /renew "Local Area Connection"
+ipconfig /renew Local Area Connection
 ```
 To flush the DNS resolver cache when troubleshooting DNS name resolution problems, type:
 ```
@@ -74,9 +74,9 @@ ipconfig /showclassid Local*
 ```
 To set the DHCP class ID for the Local Area Connection adapter to TEST, type:
 ```
-ipconfig /setclassid "Local Area Connection" TEST
+ipconfig /setclassid Local Area Connection TEST
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

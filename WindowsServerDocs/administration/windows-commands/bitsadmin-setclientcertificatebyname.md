@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: "Windows Commands topic for **bitsadmin setclientcertificatebyname** - Specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request."
-ms.custom: na
+description: Windows Commands topic for bitsadmin setclientcertificatebyname, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f308a6d9-d0da-48be-ae41-eced14b3cccb
 author: coreyp-at-msft
@@ -17,8 +13,6 @@ ms.date: 10/16/2017
 
 # bitsadmin setclientcertificatebyname
 
-
-
 Specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
 
 ## Syntax
@@ -27,7 +21,7 @@ Specifies the subject name of the client certificate to use for client authentic
 bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject_name>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -36,13 +30,13 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject
 |Store_name|The name of the certificate store. Possible values include:</br>CA (Certification Authority certificates)</br>MY (Personal certificates)</br>ROOT (Root certificates)</br>SPC (Software Publisher Certificate)|
 |Subject_name|Name of the certificate|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example specifies the name of the client certificate *myCertificate* to use for client authentication in an HTTPS (SSL) request for the job named *myJob*.
 ```
 C:\>bitsadmin Bitsadmin /SetClientCertificateByName myJob 1 MY myCertificate 
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -4,7 +4,7 @@ description: Performance tuning recommmendations for IIS 10.0 web servers on Win
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: DavSo; Ericam; YaShi
+ms.author: davso; ericam; yashi
 author: phstee
 ms.date: 10/16/2017
 ---

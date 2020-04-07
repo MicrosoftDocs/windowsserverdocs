@@ -1,12 +1,11 @@
 ---
 title: Drive symmetry considerations for Storage Spaces Direct 
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 

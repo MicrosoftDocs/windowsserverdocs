@@ -1,8 +1,7 @@
 ---
 title: Plan Your WSUS Deployment
-description: "Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics"
+description: Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
@@ -212,7 +211,7 @@ Windows Server Update Services (WSUS) uses two types of storage systems: a datab
 Updates are composed of two parts: metadata that describes the update, and the files that are required to install the update. Update metadata is typically much smaller than the actual update, and it is stored in the WSUS database. Update files are stored on a local WSUS server or on a Microsoft Update Web server.
 
 ### WSUS database
-WSUS requires a database for each WSUS server. WSUS supports the use of a database that resides on a different computer than the WSUS server, with some restrictions. For a list of supported databases and remote database limitations, see section "1.1 Review initial considerations and system requirements," in this guide.
+WSUS requires a database for each WSUS server. WSUS supports the use of a database that resides on a different computer than the WSUS server, with some restrictions. For a list of supported databases and remote database limitations, see section 1.1 Review initial considerations and system requirements, in this guide.
 
 The WSUS database stores the following information:
 
@@ -430,7 +429,7 @@ By default, the products to be updated are Windows and Office, and the default c
 ### Installation
 Updates typically consist of new versions of files that already exist on the computer that is being updated. On a binary level, these existing files might not differ very much from updated versions. The express installation files feature identifies the exact bytes between versions, creates and distributes updates of only those differences, and then merges the existing file together with the updated bytes.
 
-Sometimes this feature is called "delta delivery" because it downloads only the delta (difference) between two versions of a file. Express installation files are larger than the updates that are distributed to client computers because the express installation file contains all possible versions of each file that is to be updated.
+Sometimes this feature is called delta delivery because it downloads only the delta (difference) between two versions of a file. Express installation files are larger than the updates that are distributed to client computers because the express installation file contains all possible versions of each file that is to be updated.
 
 You can use express installation files to limit the bandwidth that is consumed on the local network, because WSUS transmits only the delta applicable to a particular version of an updated component. However, this comes at the cost of additional bandwidth between your WSUS server, any upstream WSUS servers, and Microsoft Update, and requires additional local disk space. By default, WSUS does not use express installation files.
 

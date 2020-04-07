@@ -1,12 +1,8 @@
 ---
 title: Activate the Remote Desktop Services license server
 description: Install and activate the RD license server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb24ddd2-0361-41fe-bd6b-c7c63427cb71
 author: lizap

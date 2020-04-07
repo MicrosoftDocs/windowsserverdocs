@@ -27,7 +27,7 @@ fsutil fsinfo [statistics] <VolumePath>
 fsutil fsinfo [volumeinfo] <RootPath>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
@@ -147,8 +147,8 @@ UserFileReadBytes :    1305244512
 LogFileWriteBytes :    180936704       
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Fsutil](Fsutil.md)
 
 

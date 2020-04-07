@@ -1,12 +1,8 @@
 ---
 title: Command-Line Syntax Key
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for Command-Line Syntax Key, which describes the notation used to indicate command-line syntax. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 338c0381-ad63-4a4c-bd2c-42c7a93821fe
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # Command-Line Syntax Key
-
-
 
 The following table describes the notation used to indicate command-line syntax.
 
