@@ -5,7 +5,6 @@ ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ef5093a4-0d24-4b21-9d04-59933ad98e2c
-robots: noindex,nofollow
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -13,36 +12,35 @@ ms.date: 10/16/2017
 ---
 # dfsutil
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The dfsutil command manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
+The dfsutil command manages DFS Namespaces, servers and clients. Most of the time you can instead use the newer DFS Namespaces PowerShell cmdlets, though there are a few commands that still require dfsutil.
 
-## Syntax
+## Parameters available in PowerShell
 
-```
-command </parameter> </param2>
-```
+You can use the following parameters from PowerShell:
 
-#### Parameters
+| Parameter | Description |
+| --------- | ----------- |
+| root | Displays, creates, removes, imports, exports namespace roots. |
+| link | Displays, creates, removes, or moves folders (links). |
+| target | Displays, create, remove folder target or namespace server. |
+| property | Displays or modifies a folder target or namespace server. |
+| server | Displays or modifies namespace configuration. |
+| domain | Displays all domain-based namespaces in a domain. |
 
-|Parameter|Description|
-|-------|--------|
-|[dfsutil Root](dfsutil-root.md)|Displays,creates,removes,imports,exports namespace roots.|
-|[dfsutil Link](dfsutil-link.md)|Displays, creates, removes, or moves folders \(links\).|
-|[dfsutil Target](dfsutil-target.md)|Displays,create,remove folder target or namespace server.|
-|[dfsutil Property](dfsutil-property.md)|Displays or modifies a folder target or namespace server.|
-|[dfsutil Client](dfsutil-client.md)|Displays or modifies client information or registry keys.|
-|[dfsutil Server](dfsutil-server.md)|Displays or modifies namespace configuration.|
-|[dfsutil Diag](dfsutil-diag.md)|Perform diagnostics or view dfsdirs\/dfspath.|
-|[dfsutil Domain](dfsutil-domain.md)|Displays all domain\-based namespaces in a domain.|
-|[dfsutil Cache](dfsutil-cache.md)|Displays or flushes the client cache.|
-|[dfsutil oldcli](dfsutil-oldcli.md)|Use the dfsutil \/oldcli command to use of the original dfsutil syntax.|
+## Parameters only available in dfsutil
 
-## Remarks
-if you specify an object \(such as a namespace server\) at the end of a command, most commands will display information about the object without requiring further parameters or commands. For example, when using the dfsutil Root command, you can append a namespace root to the command to view information about the root.
+You can use the following parameters only from dfsutil.
+
+| Parameter | Description |
+| --------- | ----------- |
+| client | Displays or modifies client information or registry keys. |
+| diag | Perform diagnostics or view dfsdirs/dfspath. |
+| cache | Displays or flushes the client cache. |
+
+For more info about each of these commands, open a command prompt on a server with the DFS Namespaces management tools installed, and then type `dfsutil client /?`, `dfsutil diag /?`, or `dfsutil cache /?`.
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
-
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)
