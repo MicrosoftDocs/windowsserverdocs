@@ -56,8 +56,8 @@ ms.technology: identity-adfs
   
 |From|To AD FS installed with Windows Server 2012 R2|  
 |----------|----------------------------------------------------------------------------------------------|  
-|AD FS 2.0 federation server installed on Windows Server 2008 or Windows Server 2008 R2|Migration on the same server is supported. For more information, see:<br /><br /> [Preparing to Migrate the AD FS Federation Server](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [Migrating the AD FS Federation Server](migrate-ad-fs-fed-server-r2.md)|  
-|AD FS federation server installed on Windows Server 2012|Migration on the same server is supported.  For more information see:<br /><br /> [Preparing to Migrate the AD FS Federation Server](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [Migrating the AD FS Federation Server](migrate-ad-fs-fed-server-r2.md)|  
+|AD FS 2.0 federation server installed on Windows Server 2008 or Windows Server 2008 R2|Migration on the same server is supported. For more information, see:<p> [Preparing to Migrate the AD FS Federation Server](prepare-migrate-ad-fs-server-r2.md)<p> [Migrating the AD FS Federation Server](migrate-ad-fs-fed-server-r2.md)|  
+|AD FS federation server installed on Windows Server 2012|Migration on the same server is supported.  For more information see:<p> [Preparing to Migrate the AD FS Federation Server](prepare-migrate-ad-fs-server-r2.md)<p> [Migrating the AD FS Federation Server](migrate-ad-fs-fed-server-r2.md)|  
   
 ## Next Steps
  [Preparing to Migrate the AD FS Federation Server](prepare-migrate-ad-fs-server-r2.md)   

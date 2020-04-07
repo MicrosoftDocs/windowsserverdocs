@@ -1,14 +1,13 @@
 ---
 title: Offer all available integration services to virtual machines
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Offer all available integration services to virtual machines

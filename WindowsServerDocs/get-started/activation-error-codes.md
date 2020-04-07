@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 9/18/2019
 ms.technology: server-general
 ms.topic: article
-ms.assetid: 
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium

@@ -1,6 +1,5 @@
 ---
 title: ReFS integrity streams
-description:
 author: gawatu
 ms.author: jgerend
 manager: dmoss

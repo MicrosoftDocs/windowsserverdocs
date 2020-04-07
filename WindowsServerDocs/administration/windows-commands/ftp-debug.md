@@ -1,12 +1,12 @@
 ---
 title: ftp:debug
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 16293dbf-1b7f-4b62-be4d-876179563ad7 vhorne
 author: coreyp-at-msft
@@ -23,15 +23,15 @@ Toggles Debugging mode.
 ```  
 debug  
 ```  
-### Parameters  
+#### Parameters  
 none  
 ## Remarks  
 - By default, debugging is off.  
 - When debugging is on, each command that is sent to the remote computer is displayed, preceded by the greater than (>) character.  
-  ## <a name="BKMK_Examples"></a>Examples  
+  ## <a name=BKMK_Examples></a>Examples  
   Toggle debug mode on and off.  
   ```  
   debug  
   ```  
-  ## additional references  
-- [Command-Line Syntax Key](command-line-syntax-key.md)  
+  ## Additional References  
+- - [Command-Line Syntax Key](command-line-syntax-key.md)  

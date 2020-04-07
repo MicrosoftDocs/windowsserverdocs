@@ -1,12 +1,8 @@
 ---
 title: "Migrate Windows Server Essentials to New Hardware"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f695ae90-3160-407b-bebf-9e460f22c86d
 author: nnamuhcs
@@ -18,7 +14,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-This guide describes how to migrate an existing  Windows Server® 2012 Essentials domain to  Windows Server Essentials on new hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the  Windows Server Essentials network after you finish the migration.  
+This guide describes how to migrate an existing  Windows Server&reg; 2012 Essentials domain to  Windows Server Essentials on new hardware, and then to migrate the settings and data. This guide also describes how to remove your existing server from the  Windows Server Essentials network after you finish the migration.  
   
 > [!NOTE]
 >  To avoid problems during migration, the  Windows Server Essentials product development team strongly recommends that you read this document before you begin the migration.  

@@ -1,14 +1,10 @@
 ---
 title: Manage a personal desktop session collection in RDS
 description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 11/08/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill

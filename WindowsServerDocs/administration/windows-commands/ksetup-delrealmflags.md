@@ -1,12 +1,12 @@
 ---
 title: ksetup:delrealmflags
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 22053041-1eb4-47f5-bed9-3d5681bcde7d
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Removes realm flags from the specified realm.  For examples of how this command 
 ksetup /delrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsupported] [rc4]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -51,7 +51,7 @@ Realm flags are stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentCon
 
 You can see what realm flags are available and set by viewing the output of **ksetup** or **ksetup /dumpstate**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 List the available realm flags for the realm CONTOSO:
 ```
@@ -63,9 +63,9 @@ ksetup /delrealmflags CONTOSO ncsupported delegate
 ```
 Run the **ksetup** command to verify that the realm flag is set by viewing the output and looking for **Realm flags =**.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup:listrealmflags](ksetup-listrealmflags.md)
 -   [Ksetup:setrealmflags](ksetup-setrealmflags.md)
 -   [Ksetup:addrealmflags](ksetup-addrealmflags.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

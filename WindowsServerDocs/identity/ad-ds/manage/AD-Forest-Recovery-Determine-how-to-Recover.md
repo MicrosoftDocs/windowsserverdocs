@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Determine how to recover the forest 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

@@ -1,12 +1,12 @@
 ---
 title: ksetup:setcomputerpassword
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e307d8f6-3b93-4c24-ac04-f31549f7dc7d
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Sets the password for the local computer. For examples of how this command can b
 ksetup /setcomputerpassword <Password>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -41,14 +41,14 @@ You must restart the computer for the password change to take effect.
 
 The computer account password is not displayed in the registry or as output from the **ksetup** command.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Change the computer account password on the local computer from IPops897 to IPop$897!.
 ```
 ksetup /setcomputerpassword IPop$897!
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

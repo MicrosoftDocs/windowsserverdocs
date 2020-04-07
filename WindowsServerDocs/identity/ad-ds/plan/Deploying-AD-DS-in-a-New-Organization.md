@@ -1,14 +1,12 @@
 ---
 ms.assetid: a589dda6-e05b-4b44-ae3e-b15dd3877617
 title: Deploying AD DS in a New Organization
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

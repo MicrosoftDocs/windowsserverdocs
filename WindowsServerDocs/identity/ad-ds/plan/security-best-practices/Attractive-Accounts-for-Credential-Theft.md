@@ -1,14 +1,12 @@
 ---
 ms.assetid: 34244b53-1206-4f5b-8c4d-3ebf574d8e24
 title: Attractive Accounts for Credential Theft
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

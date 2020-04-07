@@ -1,5 +1,4 @@
 ---
-ms.assetid: 
 title: Insider Preview for HPN features in Windows Server 2019
 description: Learn about the new High-Performance Networking features in Windows Server 2019.
 manager: dougkim

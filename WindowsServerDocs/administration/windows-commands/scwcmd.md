@@ -1,12 +1,12 @@
 ---
 title: Scwcmd
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 188ae881-c7d4-4a7a-b967-8fdc79f5f345
 author: coreyp-at-msft
@@ -35,7 +35,7 @@ When you use **scwcmd** to configure, analyze, or roll back a policy on a remote
 scwcmd <command> [<subcommand>]
 ```
 
-## Parameters
+### Parameters
 
 |Subcommand|Description|
 |----------|-----------|
@@ -47,6 +47,6 @@ scwcmd <command> [<subcommand>]
 |/view|Renders an .xml file by using a specified .xsl transform.</br>See [Scwcmd: view](scwcmd-view.md) for syntax and options.|
 |/?|Displays help at the command prompt.|
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

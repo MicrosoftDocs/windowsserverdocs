@@ -1,12 +1,8 @@
 ---
 title: Datagram Transport Layer Security protocol
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 57b8873a-ad9c-4f2c-93e0-a2af352c6965
 author: coreyp-at-msft
@@ -32,3 +28,4 @@ The cipher suites that are available for configuration are patterned after those
 [IETF RFC 4347 Datagram Transport Layer Security](http://tools.ietf.org/html/rfc4347)
 
 
+                                        

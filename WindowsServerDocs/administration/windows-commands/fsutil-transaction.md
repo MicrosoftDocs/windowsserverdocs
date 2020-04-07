@@ -27,7 +27,7 @@ fsutil transaction [query] [{Files|All}] <GUID>
 fsutil transaction [rollback] <GUID>
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter  |                                                                                                                                                     Description                                                                                                                                                     |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -36,7 +36,7 @@ fsutil transaction [rollback] <GUID>
 |  fileinfo  |                                                                                                                              Displays transaction information for the specified file.                                                                                                                               |
 | <Filename> |                                                                                                                                         Specifies full path and file name.                                                                                                                                          |
 |    list    |                                                                                                                                 Displays a list of currently running transactions.                                                                                                                                  |
-|   query    | Displays information for the specified transaction.<br /><br />-   If **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   If **fsutil transaction query All** is specified, all information for the transaction will be displayed. |
+|   query    | Displays information for the specified transaction.<p>-   If **fsutil transaction query Files** is specified, the file information will be displayed only for the specified transaction.<br />-   If **fsutil transaction query All** is specified, all information for the transaction will be displayed. |
 |  rollback  |                                                                                                                                Rolls back a specified transaction to the beginning.                                                                                                                                 |
 
 ### Remarks
@@ -51,7 +51,7 @@ fsutil transaction fileinfo c:\test.txt
 ```
 
 ### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

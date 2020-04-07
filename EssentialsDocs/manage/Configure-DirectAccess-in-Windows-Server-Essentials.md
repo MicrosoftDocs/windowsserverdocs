@@ -1,12 +1,8 @@
 ---
 title: "Configure DirectAccess in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c959b6fc-c67e-46cd-a9cb-cee71a42fa4c
 author: nnamuhcs
@@ -72,7 +68,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
   
 ##  <a name="BKMK_AddRAM"></a> Step 1: Add Remote Access Management Tools to your server  
   
-#### To add Remote Access Management Tools  
+#### To add Remote Acc&reg;ss Management Tools  &reg;
   
 1.  On the server, in the bottom left corner of the Start page, click the **Server Manager** icon.  
   

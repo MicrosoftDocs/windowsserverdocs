@@ -30,7 +30,7 @@ author: daveba
 ### Link to article about sub-technology
 
 ## Sub-technology
-
+    
 ### Link to article about sub-technology
 
 ### Link to article about sub-technology
@@ -43,3 +43,4 @@ author: daveba
 ### Link to article about sub-technology
 
 ### Link to article about sub-technology
+    

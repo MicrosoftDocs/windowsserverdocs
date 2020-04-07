@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Performing a full server recovery 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

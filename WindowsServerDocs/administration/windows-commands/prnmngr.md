@@ -1,12 +1,12 @@
 ---
 title: prnmngr
 description: Learn how to add, delete, and list printers and connections.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 39eee1a8-4b41-4c9f-941e-486495135eb8
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ cscript Prnmngr {-a | -d | -x | -g | -t | -l | -?}[c] [-s <ServerName>]
 [-w <Password>]
 ```
 
-## Parameters
+### Parameters
 
 |           Parameter           |                                                                                                                                                                                        Description                                                                                                                                                                                        |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,6 +62,6 @@ To delete the printer named colorprinter_2 from the remote computer named HRServ
 cscript prnmngr -d -s HRServer -p colorprinter_2 
 ```
 
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

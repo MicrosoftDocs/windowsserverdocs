@@ -1,12 +1,12 @@
 ---
 title: rpcinfo
 description: Learn how to list the programs on a remote computer.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7c342232-a8f0-42ff-8f11-d18c4981f5ca
 author: coreyp-at-msft
@@ -25,7 +25,7 @@ Lists programs on remote computers. The **rpcinfo** command-line utility makes a
 rpcinfo [/p [<Node>]] [/b <Program version>] [/t <Node Program> [<version>]] [/u <Node Program> [<version>]]
 ```
 
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/p [\<Node>]|lists all programs registered with the port mapper on the specified host. If you do not specify a node (computer) name, the program queries the port mapper on the local host.|
@@ -53,4 +53,4 @@ rpcinfo /u <Node Program> [<version>]
 ```
 
 ## Additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

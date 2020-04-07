@@ -1,12 +1,12 @@
 ---
 title: logman delete
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8f3b2422-3dce-4fb4-adbb-8536b1d7da2b
 
@@ -25,7 +25,7 @@ delete an existing data collector.
 ```  
 logman delete <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |        Parameter        |                                                                               Description                                                                               |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -36,10 +36,10 @@ logman delete <[-n] <name>> [options]
 |          -ets           |                                              Send commands to Event Trace Sessions directly without saving or scheduling.                                               |
 | -[-]u <user [password]> | Specifies the user to Run As. Entering a \* for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following command deletes the data collector perf_log.  
 ```  
 logman delete perf_log  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

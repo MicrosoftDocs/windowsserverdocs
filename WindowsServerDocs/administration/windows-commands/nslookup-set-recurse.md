@@ -1,12 +1,12 @@
 ---
 title: nslookup set recurse
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d1b7a93f-dfb0-4ccd-b230-e0953057fada
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Tells the Domain Name System (DNS) name server to query other servers if it does
 set [no]recurse
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                                  Description                                                                  |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -35,6 +35,6 @@ set [no]recurse
 |  **recurse**  | Tells the Domain Name System (DNS) name server to query other servers if it does not have the information. The default syntax is **recurse**. |
 |     {help     |                                                                      ?}                                                                       |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

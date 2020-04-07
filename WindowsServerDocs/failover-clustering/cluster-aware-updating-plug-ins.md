@@ -1,14 +1,14 @@
 ---
 ms.assetid: d44d4430-41e2-483a-9685-92610cdef32a
 title: How Cluster-Aware Updating plug-ins work
+description: How to use plug-ins to coordinate updates when using Cluster-Aware Updating in Windows Server to install updates on a cluster.
 ms.topic: article
 ms.prod: windows-server
-manager: dongill
+manager: lizross
 ms.author: jgerend
 author: JasonGerend
 ms.date: 04/28/2017
 ms.technology: storage-failover-clustering
-description: How to use plug-ins to coordinate updates when using Cluster-Aware Updating in Windows Server to install updates on a cluster.
 ---
 # How Cluster-Aware Updating plug-ins work
 
@@ -291,8 +291,8 @@ The following tables describe the `<Template>` attributes and the possible `<Exi
   
 |`<Template>` attribute|Description|  
 |--------------------------|---------------|  
-|`path`|The full path to the installation program for the file type that is defined in the `<Extension name>` attribute.<br /><br />To specify the path to an update file in the hotfix root folder structure, use `$update$`.|  
-|`parameters`|A string of required and optional parameters for the program that is specified in `path`.<br /><br />To specify a parameter that is the path to an update file in the hotfix root folder structure, use `$update$`.|  
+|`path`|The full path to the installation program for the file type that is defined in the `<Extension name>` attribute.<p>To specify the path to an update file in the hotfix root folder structure, use `$update$`.|  
+|`parameters`|A string of required and optional parameters for the program that is specified in `path`.<p>To specify a parameter that is the path to an update file in the hotfix root folder structure, use `$update$`.|  
   
 |`<ExitConditions>` subelement|Description|  
 |---------------------------------|---------------|  

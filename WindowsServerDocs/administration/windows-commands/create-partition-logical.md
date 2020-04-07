@@ -1,12 +1,8 @@
 ---
 title: create partition logical
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for create partition logical, which creates a logical partition in an existing extended partition.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1f59b79a-d690-4d0e-ad38-40df5a0ce38e
 author: coreyp-at-msft
@@ -14,21 +10,20 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # create partition logical
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates a logical partition in an existing extended partition. You can only use this command on master boot record \(MBR\) disks.  
-  
-  
-  
+Creates a logical partition in an existing extended partition. You can only use this command on master boot record (MBR) disks.
+
 ## Syntax  
   
 ```  
 create partition logical [size=<n>] [offset=<n>] [align=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |  Parameter  |                                                                                                                                                                                                                       Description                                                                                                                                                                                                                        |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,15 +40,15 @@ create partition logical [size=<n>] [offset=<n>] [align=<n>] [noerr]
   
 -   A basic MBR disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create a logical partition of 1000 megabytes in size, in the extended partition of the selected disk, type:  
   
 ```  
 create partition logical size=1000  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

@@ -1,12 +1,12 @@
 ---
 title: rwinsta
 description: Learn how to reset an RDSH sessionf from the command line.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 82bee0e4-1c2c-43fe-afd3-04a6ce0f4518
 author: coreyp-at-msft
@@ -26,7 +26,7 @@ Enables you to reset (delete) a session on a Remote Desktop Session Host (rd Ses
 ## Remarks
 This command is the same as the **reset session** command.
 
-#### additional references
+## Additional References
 [reset session](reset-session.md)
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

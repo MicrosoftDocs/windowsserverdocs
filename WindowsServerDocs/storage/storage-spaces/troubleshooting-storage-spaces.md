@@ -1,7 +1,6 @@
 ---
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment.
-keywords: Storage Spaces
 ms.prod: windows-server
 ms.author: 
 ms.technology: storage-spaces
@@ -54,7 +53,7 @@ To fix this issue, follow these steps:
    ```powershell
    Remove-ClusterSharedVolume -name "VdiskName"
    ``` 
-2. On the node that owns the Available Storage group, run the following command on every disk that's in a No Redundancy state. To identify which node the “Available Storage” group is on you can run the following command.
+2. On the node that owns the Available Storage group, run the following command on every disk that's in a No Redundancy state. To identify which node the "Available Storage" group is on you can run the following command.
 
    ```powershell
    Get-ClusterGroup
@@ -173,7 +172,7 @@ To fix this issue, follow these steps:
        ```powershell
        Get-ScheduledTask | ? State -eq running
        ``` 
-4. As soon as the “Data Integrity Scan for Crash Recovery" is finished, the repair finishes and the Virtual Disks are Healthy, change the Virtual Disk parameters back. 
+4. As soon as the "Data Integrity Scan for Crash Recovery" is finished, the repair finishes and the Virtual Disks are Healthy, change the Virtual Disk parameters back. 
 
    ```powershell
    Get-ClusterResource -Name "VdiskName" | Set-ClusterParameter DiskRunChkDsk 0 
@@ -211,7 +210,7 @@ Event Source: Microsoft-Windows-FailoverClustering
 Event ID: 5120
 Description:    Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_IO_TIMEOUT(c00000b5)'. All I/O will temporarily be queued until a path to the volume is reestablished. 
 
-Cluster Shared Volume ‘CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
+Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
 ```
 
 When an Event 5120 is logged, a live dump is generated to collect debugging information that may cause additional symptoms or have a performance effect. Generating the live dump creates a brief pause to enable taking a snapshot of memory to write the dump file. Systems that have lots of memory and are under stress may cause nodes to drop out of cluster membership and also cause the following Event 1135 to be logged.

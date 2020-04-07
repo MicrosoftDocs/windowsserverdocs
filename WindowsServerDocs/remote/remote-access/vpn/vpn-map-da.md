@@ -7,8 +7,8 @@ ms.topic: article
 ms.localizationpriority: medium 
 ms.date: 11/05/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ---
 
 # Always On VPN features and functionalities

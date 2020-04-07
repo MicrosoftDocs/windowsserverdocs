@@ -1,13 +1,8 @@
 ---
 title: bootcfg timeout
-description: "Windows Commands topic for **bootcfg timeout** - 
-changes the operating system time-out value."
-ms.custom: na
+description: Windows Commands topic for bootcfg timeout, which changes the operating system time-out value.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
 author: coreyp-at-msft
@@ -19,13 +14,16 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the operating system time-out value.
+Changes the operating system time-out value.
 
 ## Syntax
+
 ```
 bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 ```
-## Parameters
+
+### Parameters
+
 
 |        Parameter        |                                                                                                                                                                                  Description                                                                                                                                                                                   |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -35,11 +33,11 @@ bootcfg /timeout <timeOutValue> [/s <computer> [/u <Domain\User>/p <Password>]]
 |      /p <Password>      |                                                                                                                                            Specifies the <Password> of the user account that is specified in the **/u** parameter.                                                                                                                                             |
 |           /?            |                                                                                                                                                                      Displays help at the command prompt.                                                                                                                                                                      |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /timeout** command:
 ```
 bootcfg /timeout 30
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /timeout 50
 ```
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

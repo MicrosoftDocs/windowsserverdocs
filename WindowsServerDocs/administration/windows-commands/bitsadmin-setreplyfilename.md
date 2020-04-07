@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setreplyfilename
-description: "Windows Commands topic for **bitsadmin setreplyfilename** - Specify the path of the file that contains the server reply."
-ms.custom: na
+description: Windows Commands topic for bitsadmin setreplyfilename, which specifies the path of the file that contains the server reply.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c26d3342-0533-40b1-a13e-e09678232b25
 author: coreyp-at-msft
@@ -17,7 +13,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setreplyfilename
 
-Specify the path of the file that contains the server reply.
+Specifies the path of the file that contains the server reply.
 
 **BITS 1.2 and earlier**: Not supported.
 
@@ -27,7 +23,7 @@ Specify the path of the file that contains the server reply.
 bitsadmin /SetReplyFileName <Job> <Path>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -38,13 +34,13 @@ bitsadmin /SetReplyFileName <Job> <Path>
 
 Valid only for upload-reply jobs.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example sets the reply filename pathfor the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /SetReplyFileName myDownloadJob c:\reply
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

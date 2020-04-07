@@ -1,11 +1,8 @@
 ---
 title: WSUS Messages and Troubleshooting Tips
-description: "Windows Server Update Service (WSUS) topic - Troubleshoot using WSUS messages"
+description: Windows Server Update Service (WSUS) topic - Troubleshoot using WSUS messages
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
 author: coreyp-at-msft
@@ -19,13 +16,13 @@ ms.date: 10/16/2017
 
 This topic contains information about the following WSUS messages:
 
--   "Computer has not reported status"
+-   Computer has not reported status
 
--   "Message ID 6703 - WSUS Synchronization Failed"
+-   Message ID 6703 - WSUS Synchronization Failed
 
--   "Error 0x80070643: Fatal error during installation"
+-   Error 0x80070643: Fatal error during installation
 
--   "Some services are not running. Check the following services [...]"
+-   Some services are not running. Check the following services [...]
 
 ## Computer has not reported status
 This message is generated in the WSUS console when a WSUS client computer does not send information to the WSUS server to indicate its current update state. This issue is typically caused by the WSUS client computer, not the WSUS server.
@@ -84,6 +81,6 @@ To resolve this problem, grant System Administrator permissions to a user accoun
     
   - **MSSQLSERver** (if you are using WMSDE or MSDE, or if you are using SQL Server and are using the default instance name for the instance name)
     
-  - **MSSQL$WSUS** (if you are using a SQL Server database and have named your database instance "WSUS")
+  - **MSSQL$WSUS** (if you are using a SQL Server database and have named your database instance WSUS)
     
     Right-click the service, and then click **Start** if the service is not running, or **Restart** to refresh the service if it is running.

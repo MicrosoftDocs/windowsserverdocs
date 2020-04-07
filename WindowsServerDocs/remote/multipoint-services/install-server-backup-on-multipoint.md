@@ -1,13 +1,9 @@
 ---
 title: Install Server Backup on your MultiPoint server
 description: Walks you through the steps to install the backup and recovery tools
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4331370-ba07-4529-92ab-db14a41bfc3b
 author: evaseydl

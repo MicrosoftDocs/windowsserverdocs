@@ -1,12 +1,12 @@
 ---
 title: reg add
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d9ad143e-dc10-4e2e-a229-408393c40079
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ reg add <KeyName> [{/v ValueName | /ve}] [/t DataType] [/s Separator] [/d Data] 
 ```
 For examples of how to use this command, see [Examples](#BKMK_examples).
 
-## Parameters
+### Parameters
 
 |      Parameter      |                                                                                                                                                                                                                                                                   Description                                                                                                                                                                                                                                                                   |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -50,9 +50,9 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 |   0   |   Success   |
 |   1   |   Failure   |
 
--   For the REG_EXPAND_SZ key type, use the caret symbol ( **^** ) with **%**" inside the /d parameter
+-   For the REG_EXPAND_SZ key type, use the caret symbol ( **^** ) with **%** inside the /d parameter
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To add the key HKLM\Software\MyCo on remote computer ABC, type:
 ```
@@ -71,6 +71,6 @@ To add an expanded registry entry to HKLM\Software\MyCo with a value name of **P
 REG ADD HKLM\Software\MyCo /v Path /t REG_EXPAND_SZ /d ^%systemroot^%
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

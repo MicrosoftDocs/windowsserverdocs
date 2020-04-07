@@ -1,12 +1,12 @@
 ---
 title: manage-bde tpm
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 11a8530d-edd7-4fe3-ae81-b943766760fe
 author: coreyp-at-msft
@@ -25,7 +25,7 @@ ms.date: 10/16/2017
 > ```
 > manage-bde -tpm [-turnon] [-takeownership <OwnerPassword>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 > ```
-> ### Parameters
+> #### Parameters
 > 
 > |    Parameter    |                                                                              Description                                                                               |
 > |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -37,7 +37,7 @@ ms.date: 10/16/2017
 > |    -? or /?     |                                                               Displays brief help at the command prompt.                                                               |
 > |   -help or -h   |                                                             Displays complete help at the command prompt.                                                              |
 > 
-> ## <a name="BKMK_Examples"></a>Examples
+> ## <a name=BKMK_Examples></a>Examples
 > The following example illustrates using the **-tpm** command to turn on the TPM.
 > ```
 > manage-bde  tpm -turnon
@@ -46,6 +46,6 @@ ms.date: 10/16/2017
 > ```
 > manage-bde  tpm  takeownership 0wnerP@ss
 > ```
-> ## additional references
-> -   [Command-Line Syntax Key](command-line-syntax-key.md)
+> ## Additional References
+> -   - [Command-Line Syntax Key](command-line-syntax-key.md)
 > -   [manage-bde](manage-bde.md)

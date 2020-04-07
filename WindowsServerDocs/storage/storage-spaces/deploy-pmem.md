@@ -1,7 +1,6 @@
 ---
 title: Understand and deploy persistent memory
 description: Detailed info on what persistent memory is and how to set it up with storage spaces direct in Windows Server 2019.
-keywords: Storage Spaces Direct,persistent memory,pmem, storage, S2D
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
@@ -32,11 +31,11 @@ Any storage system that provides fault tolerance necessarily makes distributed c
 
 If you watch the video closely, you'll notice that what's even more jaw-dropping is the latency. Even at over 13.7 M IOPS, the file system in Windows is reporting latency that's consistently less than 40 µs! (That's the symbol for microseconds, one-millionth of a second.) This speed is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
 
-Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than two years ago.
+Together, Storage Spaces Direct in Windows Server 2019 and Intel&reg; Optane&trade; DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than two years ago.
 
 ![IOPS gains](media/deploy-pmem/iops-gains.png)
 
-The test hardware was a 12-server cluster that was configured to use three-way mirroring and delimited ReFS volumes, **12** x Intel® S2600WFT, **384 GiB** memory, 2 x 28-core “CascadeLake,” **1.5 TB** Intel® Optane™ DC persistent memory as cache, **32 TB** NVMe (4 x 8 TB Intel® DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps.
+The test hardware was a 12-server cluster that was configured to use three-way mirroring and delimited ReFS volumes, **12** x Intel&reg; S2600WFT, **384 GiB** memory, 2 x 28-core "CascadeLake," **1.5 TB** Intel&reg; Optane&trade; DC persistent memory as cache, **32 TB** NVMe (4 x 8 TB Intel&reg; DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps.
 
 The following table shows the full performance numbers.  
 
@@ -53,14 +52,14 @@ The following table shows supported persistent memory hardware for Windows Serve
 | Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
 | **NVDIMM-N** in persistent mode                                  | Supported                | Supported                |
-| **Intel Optane™ DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
-| **Intel Optane™ DC Persistent Memory** in Memory Mode | Supported            | Supported                |
+| **Intel Optane&trade; DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
+| **Intel Optane&trade; DC Persistent Memory** in Memory Mode | Supported            | Supported                |
 
 > [!NOTE]  
 > Intel Optane supports both *Memory* (volatile) and *App Direct* (persistent) modes.
    
 > [!NOTE]  
-> When you restart a system that has multiple Intel® Optane™ PMem modules in App Direct mode that are divided into multiple namespaces, you might lose access to some or all of the related logical storage disks. This issue occurs on Windows Server 2019 versions that are older than version 1903.
+> When you restart a system that has multiple Intel&reg; Optane&trade; PMem modules in App Direct mode that are divided into multiple namespaces, you might lose access to some or all of the related logical storage disks. This issue occurs on Windows Server 2019 versions that are older than version 1903.
 >   
 > This loss of access occurs because a PMem module is untrained or otherwise fails when the system starts. In such a case, all the storage namespaces on any PMem module on the system fail, including namespaces that do not physically map to the failed module.
 >   

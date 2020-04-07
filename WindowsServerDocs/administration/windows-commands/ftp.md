@@ -1,12 +1,12 @@
 ---
 title: ftp
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Transfers files to and from a computer running a File Transfer Protocol (ftp) se
 ```
 ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<RecvBuffer>] [-b:<AsyncBuffers>][-w:<WindowsSize>]  [-?] [<Host>]
 ```
-### Parameters
+#### Parameters
 
 |     Parameter     |                                                                                                                                                      Description                                                                                                                                                      |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 - This command is available only if the **Internet Protocol (TCP/IP)** protocol is installed as a component in the properties of a network adapter in Network Connections.
 - **ftp** can be used interactively. After it is started, **ftp** creates a sub-environment in which you can use **ftp** commands. You can return to the command prompt by typing the **quit** command. When the **ftp** sub-environment is running, it is indicated by the **ftp >** command prompt. For more information see the **ftp** commands.
 - **ftp** supports the use of IPv6 when the IPv6 protocol is installed. For more information, see [additional references](ftp.md#BKMK_additionalRef).
-  ## <a name="BKMK_Examples"></a>Examples
+  ## <a name=BKMK_Examples></a>Examples
   To log on to the ftp server named ftp.example.microsoft.com, type:
   ```
   ftp ftp.example.microsoft.com
@@ -57,7 +57,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
   ```
   ftp -s:resync.txt ftp.example.microsoft.com
   ```
-  ## <a name="BKMK_additionalRef"></a>additional references
+  ## <a name=BKMK_additionalRef></a>additional references
 - [IP version 6](https://technet.microsoft.com/library/cc738636(v=ws.10).aspx)
 - [IPv6 applications](https://technet.microsoft.com/library/cc782509(v=ws.10).aspx)
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+- - [Command-Line Syntax Key](command-line-syntax-key.md)

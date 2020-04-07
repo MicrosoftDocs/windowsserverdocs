@@ -1,12 +1,8 @@
 ---
 title: create partition efi
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for create partition efi, which creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (gpt) disk on Itanium-based computers.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cfc1fca-6515-4a4d-bfae-615fa8045ea9
 author: coreyp-at-msft
@@ -14,21 +10,20 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # create partition efi
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-On Itanium\-based computers, creates an Extensible Firmware Interface \(EFI\) system partition on a GUID Partition Table \(gpt\) disk.  
-  
-  
-  
+On Itanium-based computers, creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (gpt) disk.
+
 ## Syntax  
   
 ```  
 create partition efi [size=<n>] [offset=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |  Parameter  |                                                                                             Description                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,15 +37,15 @@ create partition efi [size=<n>] [offset=<n>] [noerr]
   
 -   A gpt disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create an EFI partition of 1000 megabytes on the selected disk, type:  
   
 ```  
 create partition efi size=1000  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

@@ -1,12 +1,12 @@
 ---
 title: logman create trace
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
 
@@ -25,7 +25,7 @@ create an event trace data collector.
 ```  
 logman create trace <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                         Parameter                          |                                                                                                                                                                                                                                                                                                                                Description                                                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,14 +58,14 @@ logman create trace <[-n] <name>> [options]
 |                           -[-]ul                           |                                                                                                                                                                                                                                                                                                                 Run the Event Trace Session in user mode.                                                                                                                                                                                                                                                                                                                 |
 |                        -bs <value>                         |                                                                                                                                                                                                                                                                                                           Specifies the Event Trace Session buffer size in kb.                                                                                                                                                                                                                                                                                                            |
 |                       -nb <min max>                        |                                                                                                                                                                                                                                                                                                           Specifies the number of Event Trace Session buffers.                                                                                                                                                                                                                                                                                                            |
-| -mode <globalsequence&#124;localsequence&#124;pagedmemory> | Specifies the event trace session logger mode.<br /><br />**Globalsequence** specifies that the event tracer add a sequence number to every event it receives irrespective of which trace session received the event.<br /><br />**Localsequence** specifies that the event tracer add sequence numbers for events received at a specific trace session. When the **localsequence** option is used, duplicate sequence numbers can exist across all sessions but will be unique within each trace session.<br /><br />**Pagedmemory** specifies that the event tracer use paged memory rather than the default non-paged memory pool for its internal buffer allocations. |
+| -mode <globalsequence&#124;localsequence&#124;pagedmemory> | Specifies the event trace session logger mode.<p>**Globalsequence** specifies that the event tracer add a sequence number to every event it receives irrespective of which trace session received the event.<p>**Localsequence** specifies that the event tracer add sequence numbers for events received at a specific trace session. When the **localsequence** option is used, duplicate sequence numbers can exist across all sessions but will be unique within each trace session.<p>**Pagedmemory** specifies that the event tracer use paged memory rather than the default non-paged memory pool for its internal buffer allocations. |
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 The following example creates an event trace data collector called trace_log using no fewer than 16 and no more than 256 buffers, each buffer 64kb in size, and outputs the results to the location c:\logfile.  
 ```  
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

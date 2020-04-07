@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setcredentials
-description: "Windows Commands topic for **bitsadmin setcredentials** - adds credentials to a job."
-ms.custom: na
+description: Windows Commands topic for bitsadmin setcredentials, which adds credentials to a job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cd099a4-9e85-46d8-8527-edb6dfab7f97
 author: coreyp-at-msft
@@ -27,7 +23,7 @@ Adds credentials to a job.
 bitsadmin /SetCredentials <Job> <Target> <Scheme> <Username> <Password>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,13 +33,13 @@ bitsadmin /SetCredentials <Job> <Target> <Scheme> <Username> <Password>
 |Username|The name of the provided credentials|
 |Password|The password associated with the provided *Username*|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example Adds credentials to the job named *myDownloadJob*.
 ```
 C:\>bitsadmin /RemoveCredentials myDownloadJob SERVER BASIC Edward Password20
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

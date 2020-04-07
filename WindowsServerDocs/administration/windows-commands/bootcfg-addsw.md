@@ -1,12 +1,8 @@
 ---
 title: bootcfg addsw
-description: "Windows Commands topic for **bootcfg addsw** - adds operating system load options for a specified operating system entry."
-ms.custom: na
+description: Windows Commands topic for bootcfg addsw, which adds operating system load options for a specified operating system entry.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d8389293-ecd9-42f0-b84b-b9ead4cf52e6
 author: coreyp-at-msft
@@ -18,13 +14,13 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-adds operating system load options for a specified operating system entry.
+Adds operating system load options for a specified operating system entry.
 
 ## Syntax
 ```
 bootcfg /addsw [/s <computer> [/u <Domain>\<User> /p <Password>]] [/mm <MaximumRAM>] [/bv] [/so] [/ng] /id <OSEntryLineNum>
 ```
-## Parameters
+### Parameters
 
 |         Term         |                                                                                                            Definition                                                                                                            |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +34,7 @@ bootcfg /addsw [/s <computer> [/u <Domain>\<User> /p <Password>]] [/mm <MaximumR
 | /id <OSEntryLineNum> | Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to which the operating system load options are added. The first line after the [operating systems] section header is 1. |
 |          /?          |                                                                                               Displays help at the command prompt.                                                                                               |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /addsw** command:
 ```
 bootcfg /addsw /mm 64 /id 2 
@@ -47,5 +43,5 @@ bootcfg /addsw /so /ng /s srvmain /u hiropln /id 2
 bootcfg /addsw /ng /id 2 
 bootcfg /addsw /mm 96 /ng /s srvmain /u maindom\hiropln /p p@ssW23 /id 2
 ```
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

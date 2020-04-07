@@ -1,14 +1,12 @@
 ---
 ms.assetid: 7013fc21-9ced-4f9d-9588-cb04d6d60924
 title: Planning for Federation Server Capacity
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

@@ -1,11 +1,10 @@
 ---
 ms.date: 09/27/2018
 ms.topic: conceptual
-keywords: OpenSSH, SSH, SSHD, install, setup
 contributor: maertendMSFT
-author: maertendMSFT
+author: maertendmsft
 title: OpenSSH Server Configuration for Windows
-ms.product: w10
+ms.product: windows-server
 ---
 
 # OpenSSH Key Management
@@ -22,7 +21,7 @@ OpenSSH includes tools to help support this, specifically:
 * __scp__ and __sftp__ to securely copy public key files during initial use of a server
 
 This document provides an overview of how to use these tools on Windows to begin using key authentication with SSH. 
-If you are unfamiliar with SSH key management, we strongly recommend you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf) titled “Security of Interactive and Automated Access Management Using Secure Shell (SSH).”
+If you are unfamiliar with SSH key management, we strongly recommend you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf) titled "Security of Interactive and Automated Access Management Using Secure Shell (SSH)."
 
 ## About key pairs
 

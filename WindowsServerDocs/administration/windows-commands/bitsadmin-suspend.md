@@ -1,13 +1,8 @@
 ---
 title: bitsadmin suspend
-description: "Windows Commands topic for **bitsadmin suspend** - 
-Suspends the specified job."
-ms.custom: na
+description: Windows Commands topic for bitsadmin suspend, which suspends the specified job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f9d42500-7bea-4aa8-a9f0-c22f6ed3e73b
 author: coreyp-at-msft
@@ -27,7 +22,7 @@ Suspends the specified job.
 bitsadmin /Suspend <Job>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|
@@ -37,7 +32,7 @@ bitsadmin /Suspend <Job>
 
 To restart the job, use the [bitsadmin resume](bitsadmin-resume.md) switch.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example suspends the job named *myDownloadJob*.
 
@@ -45,6 +40,6 @@ The following example suspends the job named *myDownloadJob*.
 C:\>bitsadmin /Suspend myDownloadJob
 ```
 
-#### additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

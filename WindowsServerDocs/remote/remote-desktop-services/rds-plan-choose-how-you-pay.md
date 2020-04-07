@@ -1,12 +1,8 @@
 ---
 title: Remote Desktop Services - Choose how you pay
 description: Planning information about RDS licensing.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c796f832-e7cf-4bad-baeb-bb13f65612e7
 author: spatnaik

@@ -1,12 +1,12 @@
 ---
 title: pathping
-description: "Learn how to get network latency and loss information using the pathping command."
-ms.custom: na
+description: Learn how to get network latency and loss information using the pathping command.
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ec430125-b1dc-4aad-a7c9-b70f486d9e3c
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Provides information about network latency and network loss at intermediate hops
 ```
 pathping [/n] [/h] [/g <Hostlist>] [/p <Period>] [/q <NumQueries> [/w <timeout>] [/i <IPaddress>] [/4 <IPv4>] [/6 <IPv6>][<TargetName>]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/n|Prevents **pathping** from attempting to resolve the IP addresses of intermediate routers to their names. This might expedite the display of **pathping** results.|
@@ -50,7 +50,7 @@ pathping [/n] [/h] [/g <Hostlist>] [/p <Period>] [/q <NumQueries> [/w <timeout>]
 -   When using the **/w** parameter, multiple pings can be sent in parallel. Because of this, the amount of time specified in the *timeout* parameter is not bounded by the amount of time specified in the *Period* parameter for waiting between pings.
 -   This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example shows **pathping** command output:
 
@@ -87,4 +87,4 @@ In the sample report above, the **This Node/Link**, **Lost/Sent = Pct** and **ad
 The loss rates displayed for the links, identified as a vertical bar (**|**) in the **address** column, indicate link congestion that is causing the loss of packets that are being forwarded on the path. The loss rates displayed for routers (identified by their IP addresses) indicate that these routers might be overloaded.
 
 ## Additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: convert mbr
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for convert mbr, which converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a635a4c0-af73-4330-b021-51d483424537
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # convert mbr
-
-
 
 Converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
 
@@ -32,7 +26,7 @@ For instructions regarding how to use this command, see [Change a GUID Partition
 convert mbr [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,14 +36,14 @@ convert mbr [noerr]
 
 -   A basic disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To convert a basic disc from GPT partition style to MBR partition style, type>:
 ```
 convert mbr
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -4,9 +4,8 @@ description: Always On VPN has many benefits over the Windows VPN solutions of t
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: 
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 11/05/2018
 ms.localizationpriority: medium 
 ---

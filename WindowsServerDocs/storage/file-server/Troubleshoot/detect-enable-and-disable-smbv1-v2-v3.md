@@ -3,7 +3,6 @@ title: How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
 description: Describes how to enable and disable the Server Message Block protocol (SMBv1, SMBv2, and SMBv3) in Windows client and server environments. 
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -393,7 +392,7 @@ Registry entry: **Start** REG_DWORD: **4**= Disabled
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
 
-Registry entry: **DependOnService** REG_MULTI_SZ: **“Bowser”,”MRxSmb20″,”NSI”**   
+Registry entry: **DependOnService** REG_MULTI_SZ: **"Bowser","MRxSmb20″,"NSI"**   
 
 > [!NOTE]
 > The default included MRxSMB10 which is now removed as dependency.

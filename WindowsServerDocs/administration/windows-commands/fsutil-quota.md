@@ -28,7 +28,7 @@ fsutil quota [track] <VolumePath>
 fsutil quota [violations]
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                                                    Description                                                                                    |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,8 +62,8 @@ To list existing disk quotas for a disk volume that is specified with the drive 
 Fsutil quota query C:
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 
