@@ -62,7 +62,7 @@ wdsutil /verbose /Progress /replace-Imagmedia:Windows Vista Pro /Server:MyWDSSer
 /Filename:Install.wim /replacementImagmediaFile:\\MyServer\Share \Install.wim /SourceImage:Windows Vista Ultimate /Name:Windows Vista Desktop /Description:Windows Vista Ultimate with standard business applications.
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-Image Command](using-the-add-image-command.md)
 [Using the copy-Image Command](using-the-copy-image-command.md)
 [Using the Export-Image Command](using-the-export-image-command.md)

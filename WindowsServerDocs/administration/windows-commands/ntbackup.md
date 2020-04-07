@@ -25,6 +25,6 @@ You cannot recover backups that you created with **ntbackup** by using **wbadmin
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Wbadmin](wbadmin.md)

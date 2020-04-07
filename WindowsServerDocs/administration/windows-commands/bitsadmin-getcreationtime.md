@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcreationtime
-description: Windows Commands topic for bitsadmin getcreationtime, which retrieves the creation time for the specified job.
+description: Windows Commands topic for **bitsadmin getcreationtime**, which retrieves the creation time for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,29 +13,28 @@ ms.date: 10/16/2017
 
 # bitsadmin getcreationtime
 
-
-
 Retrieves the creation time for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetCreationTime <Job>
+bitsadmin /getcreationtime <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the creation time for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetCreationTime myDownloadJob
+C:\>bitsadmin /getcreationtime myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

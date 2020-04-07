@@ -134,4 +134,4 @@ Specifies general settings for User Name Mapping. The following options are avai
 -   for UNIX groups, use the form &lt;NISdomain&gt;\\&lt;groupname&gt;, &lt;groupname&gt;@&lt;NISdomain&gt;, &lt;groupname&gt;@PCNFS, or PCNFS\\&lt;groupname&gt;
 
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

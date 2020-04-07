@@ -59,5 +59,5 @@ cscript prnjobs.vbs -l -p colorprinter_2
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Print Command Reference](print-command-reference.md)

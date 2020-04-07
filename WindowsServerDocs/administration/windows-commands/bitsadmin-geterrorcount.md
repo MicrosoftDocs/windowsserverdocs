@@ -18,22 +18,23 @@ Retrieves a count of the number of times the specified job generated a transient
 ## Syntax
 
 ```
-bitsadmin /GetErrorCount <Job>
+bitsadmin /geterrorcount <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves error count information for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetErrorCount myDownloadJob
+C:\>bitsadmin /geterrorcount myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

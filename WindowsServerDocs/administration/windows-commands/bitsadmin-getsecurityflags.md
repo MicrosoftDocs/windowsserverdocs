@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getsecurityflags
-description: Windows Commands topic for bitsadmin getsecurityflags, which reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
+description: Windows Commands topic for **bitsadmin getsecurityflags**, which reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -19,23 +19,23 @@ Reports the HTTP security flags for URL redirection and checks performed on the 
 ## Syntax
 
 ```
-bitsadmin /GetSecurityFlags <Job> 
+bitsadmin /getsecurityflags <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
-The following example retrieves the securitly flags from a job named *myJob*.
+
+The following example retrieves the security flags from a job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetSecurityFlags myJob 
+C:\>bitsadmin /getsecurityflags myDownloadJob
 ```
 
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
 
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

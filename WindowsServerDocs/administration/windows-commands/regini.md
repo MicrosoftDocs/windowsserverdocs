@@ -48,4 +48,4 @@ The following guidelines apply primarily to the content of the text files that c
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -38,7 +38,7 @@ wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /PackageId:{4D36E972
 wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /DriverPackage:XYZ
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-DriverGroupPackages Command](using-the-add-drivergrouppackages-command.md)
 [Using the add-DriverPackage Command](using-the-add-driverpackage-command.md)
 [Using the add-AllDriverPackages subcommand](using-the-add-alldriverpackages-subcommand.md)

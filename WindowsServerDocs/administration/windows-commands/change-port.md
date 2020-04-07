@@ -56,6 +56,6 @@ change port [<PortX>=<PortY| /d <PortX| /query]
   ```
 
 ### Additional References
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+- - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [change](change.md)
 - [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

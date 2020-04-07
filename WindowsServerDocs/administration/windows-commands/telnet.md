@@ -48,4 +48,4 @@ telnet /f telnetlog.txt telnet.microsoft.com 44
 ## Additional References
 -   [Installing telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx)
 -   [telnet Technical Reference](https://technet.microsoft.com/library/cc754987(v=ws.10).aspx)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

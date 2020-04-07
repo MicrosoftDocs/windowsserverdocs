@@ -57,4 +57,4 @@ To search the paths C:\User\Taxes, B:\User\Invest, and B:\Bin for external comma
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

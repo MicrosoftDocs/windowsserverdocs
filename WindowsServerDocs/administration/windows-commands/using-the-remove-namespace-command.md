@@ -36,7 +36,7 @@ To force termination of all clients, type:
 wdsutil /remove-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /force
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
 [Using the new-Namespace Command](using-the-new-namespace-command.md)
 [Subcommand: start-Namespace](subcommand-start-namespace.md)

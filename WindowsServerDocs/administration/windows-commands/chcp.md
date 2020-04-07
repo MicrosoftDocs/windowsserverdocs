@@ -73,4 +73,4 @@ If the specified code page is invalid, the following error message appears:
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

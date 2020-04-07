@@ -92,4 +92,4 @@ Then type the text that you want sorted, and press ENTER at the end of each line
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -63,7 +63,7 @@ print /d:\\copyroom\printer1 c:\accounting\report.txt
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Print Command Reference](print-command-reference.md)
 

@@ -53,4 +53,4 @@ bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
   bootcfg /query /u hiropln /p p@ssW23
   ```
   ## Additional References
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  - [Command-Line Syntax Key](command-line-syntax-key.md)

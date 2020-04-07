@@ -54,7 +54,7 @@ fsutil reparsepoint delete c:\server
 ```
 
 ## Additional References
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

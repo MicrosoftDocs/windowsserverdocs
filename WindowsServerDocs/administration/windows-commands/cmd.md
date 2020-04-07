@@ -163,4 +163,4 @@ If you process file and directory name completion from within *String*, any part
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

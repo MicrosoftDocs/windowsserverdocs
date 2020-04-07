@@ -87,4 +87,4 @@ Because **find** searches are case-sensitive and **dir** produces uppercase outp
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

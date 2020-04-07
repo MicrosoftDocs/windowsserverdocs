@@ -33,5 +33,5 @@ server <DNSDomain>
 ## Remarks
 - The **server** command uses the current default server to look up the information about the specified DNS domain. This is in contrast to the **lserver** command, which uses the initial server.
   ## Additional References
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup lserver](nslookup-lserver.md)

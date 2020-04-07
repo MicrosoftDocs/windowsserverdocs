@@ -33,4 +33,4 @@ change the working directory on the local computer to **C:\dir1**
 lcd C:\dir1  
 ```  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

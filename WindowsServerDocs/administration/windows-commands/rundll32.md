@@ -41,4 +41,4 @@ Rundll32 can only call functions from a DLL explicitly written to be called by R
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

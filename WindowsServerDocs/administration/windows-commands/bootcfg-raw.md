@@ -44,4 +44,4 @@ bootcfg /raw [/s <computer> [/u <Domain>\<User> /p <Password>]] <OSLoadOptionsSt
   bootcfg /raw /s srvmain /u maindom\hiropln /p p@ssW23 /crashdebug  /id 2
   ```
   ## Additional References
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  - [Command-Line Syntax Key](command-line-syntax-key.md)

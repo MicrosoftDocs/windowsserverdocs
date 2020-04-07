@@ -57,5 +57,5 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
   tscon TERM03 /v /dest:TERM05  
   ```  
   ## Additional References  
-  [Command-Line Syntax Key](command-line-syntax-key.md)  
+  - [Command-Line Syntax Key](command-line-syntax-key.md)  
   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)  

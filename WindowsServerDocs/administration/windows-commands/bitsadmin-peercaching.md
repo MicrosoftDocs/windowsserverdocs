@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching
-description: Windows Commands topic for bitsadmin peercaching, which lists the peercaching switches.
+description: Windows Commands topic for **bitsadmin peercaching**, which lists the /peercaching switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -14,19 +14,24 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Lists the peercaching switches.
-
+Lists the /peercaching switches.
+g
 ## Syntax
+
 ```
-bitsadmin /PeerCaching /help
-bitsadmin /PeerCaching /SetConfigurationFlags
-bitsadmin /PeerCaching /GetConfigurationFlags
+bitsadmin /peercaching /help
+bitsadmin /peercaching /setconfigurationflags
+bitsadmin /peercaching /getconfigurationflags
 ```
+
 ### Parameters
-|Parameter|Description|
-|-------|--------|
-|[bitsadmin peercaching and help](bitsadmin-peercaching-and-help.md)|Displays the command-line usage for the /PeerCaching switches.|
-|[bitsadmin peercaching and setconfigurationflags](bitsadmin-peercaching-and-setconfigurationflags.md)|Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers.|
-|[bitsadmin peercaching and getconfigurationflags](bitsadmin-peercaching-and-getconfigurationflags.md)|Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.|
+
+| Parameter | Description |
+| -------------- | -------------- |
+| [bitsadmin peercaching and help](bitsadmin-peercaching-and-help.md) | Displays the command-line usage for the /peercaching switches.|
+| [bitsadmin peercaching and setconfigurationflags](bitsadmin-peercaching-and-setconfigurationflags.md) | Sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers. |
+| [bitsadmin peercaching and getconfigurationflags](bitsadmin-peercaching-and-getconfigurationflags.md) | Gets the configuration flags that determine if the computer serves content to peers and if it can download content from peers. |
+
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

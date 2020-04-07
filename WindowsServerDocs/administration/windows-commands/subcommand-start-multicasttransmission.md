@@ -60,7 +60,7 @@ wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemedia
 /Filename:boot.wim\n\
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-AllMulticastTransmissions Command](using-the-get-allmulticasttransmissions-command.md)
 [Using the get-MulticastTransmission Command](using-the-get-multicasttransmission-command.md)
 [Using the new-MulticastTransmission Command](using-the-new-multicasttransmission-command.md)

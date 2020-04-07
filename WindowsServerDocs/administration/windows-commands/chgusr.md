@@ -24,5 +24,5 @@ This command is the same as the **change user** command.
 
 ## Additional References  
 - [change user](change-user.md)  
-- [Command-Line Syntax Key](command-line-syntax-key.md)  
+- - [Command-Line Syntax Key](command-line-syntax-key.md)  
 - [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)  

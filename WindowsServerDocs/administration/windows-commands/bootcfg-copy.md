@@ -37,4 +37,4 @@ The following examples show how you can use the **bootcfg /copy** command to cop
 bootcfg /copy /d \ABC Server\ /id 1
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

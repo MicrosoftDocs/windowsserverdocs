@@ -1,6 +1,6 @@
 ---
 title: bitsadmin create
-description: Windows Commands topic for bitsadmin create, which creates a transfer job with the given display name.
+description: Windows Commands topic for **bitsadmin create**, which creates a transfer job with the given display name.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -21,17 +21,15 @@ Use the [bitsadmin resume](bitsadmin-resume.md) switch to activate the job in th
 ## Syntax
 
 ```
-bitsadmin /create [type] DisplayName
+bitsadmin /create [type] displayname
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|type|-   **/Download** transfers data from a server to a local file.<br />-   **/Upload** transfers data from a local file to a server.<br />-   **/Upload-Reply** transfers data from a local file to a server and receives a reply file from the server.<br />-   This parameter defaults to **/Download** when not specified on the command line.|
-|DisplayName|The display name assigned to the newly created job.|
-
-**BITS 1.2 and earlier**: The /Upload and /Upload-Reply types are not available.
+| Parameter | Description |
+| ------- | -------- |
+| type | - **/Download** transfers data from a server to a local file.<p>- **/Upload** transfers data from a local file to a server.<p>- **/Upload-Reply** transfers data from a local file to a server and receives a reply file from the server.<p>This parameter defaults to **/Download** when not specified on the command line. Additionally, the **/Upload** and **/Upload-Reply** types are not available in BITS 1.2 and earlier. |
+| displayname | The display name assigned to the newly created job. |
 
 ## <a name=BKMK_examples></a>Examples
 
@@ -43,4 +41,4 @@ C:\>bitsadmin /create myDownloadJob
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

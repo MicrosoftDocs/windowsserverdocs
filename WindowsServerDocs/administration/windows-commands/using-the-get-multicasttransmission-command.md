@@ -71,7 +71,7 @@ wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:Vista with Officemedi
 wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemediatype:Boot /Architecture:x64 /Filename:boot.wim /details:Clients
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-AllMulticastTransmissions Command](using-the-get-allmulticasttransmissions-command.md)
 [Using the new-MulticastTransmission Command](using-the-new-multicasttransmission-command.md)
 [Using the remove-MulticastTransmission Command](using-the-remove-multicasttransmission-command.md)

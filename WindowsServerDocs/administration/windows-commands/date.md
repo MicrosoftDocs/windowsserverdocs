@@ -60,4 +60,4 @@ To keep the current date and return to the command prompt, press ENTER. To chang
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

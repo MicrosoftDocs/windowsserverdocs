@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxyusage
-description: Windows Commands topic for bitsadmin getproxyusage, which retrieves the proxy usage setting for the specified job.
+description: Windows Commands topic for **bitsadmin getproxyusage**, which retrieves the proxy usage setting for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,30 +18,35 @@ Retrieves the proxy usage setting for the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetProxyUsage <Job>
+bitsadmin /getproxyusage <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## Remarks
 
-The possible values are:
--   PRECONFIG—use the owner's Internet Explorer defaults.
--   NO_PROXY—do not use a proxy server.
--   OVERRIDE—Use an explicit proxy list.
--   AUTODETECT—Automatically detect the proxy settings.
+The proxy usage values include:
+
+- **Preconfig** - Use the owner's Internet Explorer defaults.
+
+- **No_Proxy** - Don't use a proxy server.
+
+- **Override** - Use an explicit proxy list.
+
+- **Autodetect** - Automatically detect the proxy settings.
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the proxy usage for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetProxyUsage myDownloadJob
+C:\>bitsadmin /getproxyusage myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

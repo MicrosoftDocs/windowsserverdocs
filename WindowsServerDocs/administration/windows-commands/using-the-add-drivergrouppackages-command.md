@@ -39,7 +39,7 @@ wdsutil /verbose /add-DriverGroupPackages /DriverGroup:printerdrivers /Filtertyp
 wdsutil /verbose /add-DriverGroupPackages /DriverGroup:DisplayDriversX86 /Filtertype:PackageClass /Operator:Equal /Value:Display /Filtertype:PackageArchitecture /Operator:Equal /Value:x86 /Filtertype:Packagedateadded /Operator:LessOrEqual /Value:2008/01/01
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-DriverGroupPackage Command](using-the-add-drivergrouppackage-command.md)
 [Using the add-DriverPackage Command](using-the-add-driverpackage-command.md)
 [Using the add-AllDriverPackages subcommand](using-the-add-alldriverpackages-subcommand.md)

@@ -88,4 +88,4 @@ The Kerberos version 5 protocol is the default for network authentication on com
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -40,4 +40,4 @@ remotehelp feat
 ```  
 ## Additional References  
 -   [ftp: quote](ftp-quote.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

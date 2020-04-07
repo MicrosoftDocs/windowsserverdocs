@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and list
-description: Windows Commands topic for bitsadmin cache and list, which lists all cache entries.
+description: Windows Commands topic for **bitsadmin cache and list**, which lists all cache entries.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,16 +18,17 @@ Lists all cache entries.
 ## Syntax
 
 ```
-bitsadmin /Cache /List [/Verbose] 
+bitsadmin /cache /list [/verbose]
 ```
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example lists all cache entries in verbose format.
+
 ```
-C:\> bitsadmin /Cache /List /Verbose
+C:\> bitsadmin /cache /list /verbose
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

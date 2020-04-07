@@ -70,5 +70,5 @@ manage-bde –unlock E: -recoverypassword 111111-222222-333333-444444-555555-666
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Enabling BitLocker by Using the Command Line](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)

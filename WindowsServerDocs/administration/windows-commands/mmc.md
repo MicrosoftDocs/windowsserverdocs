@@ -41,5 +41,5 @@ mmc <path>\<filename>.msc [/a] [/64] [/32]
 - After you open **mmc** or a console file in author mode, you can open any existing console by clicking **Open** on the **Console** menu.
 - You can use the command line to create shortcuts for opening **mmc** and saved consoles. A command-line command works with the **Run** command on the **start** menu, in any command-prompt window, in shortcuts, or in any batch file or program that calls the command.
   ## Additional References
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+- - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -38,4 +38,4 @@ quote quit
 ```  
 ## Additional References  
 -   [ftp: literal_1](ftp-literal_1.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

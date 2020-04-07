@@ -146,4 +146,4 @@ wevtutil cl Application /bu:C:\admin\backups\a10306.evtx
 
 #### Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

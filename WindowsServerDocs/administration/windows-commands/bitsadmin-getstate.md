@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getstate
-description: Windows Commands topic for bitsadmin getstate, which retrieves the state of the specified job.
+description: Windows Commands topic for **bitsadmin getstate**, which retrieves the state of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,39 +18,39 @@ Retrieves the state of the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetState <Job>
+bitsadmin /getstate <job>
 ```
 
 ### Parameters
 
 | Parameter | Description |
-| --------- | ----------- |
-|    Job    | The job's display name or GUID |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+## Output
 
-The possible states are:
+The output values include:
 
-|      State      | Description |
+| State | Description |
 | --------------- | ----------- |
-| QUEUED          | The job is waiting to run. |
-| CONNECTING      | BITS is contacting the server. |
-| TRANSFERRING    | BITS is transferring data. |
-| TRANSFERRED     | BITS has successfully transferred all files in the job. |
-| SUSPENDED       | The job is paused. |
-| ERROR           | A non-recoverable error occurred; the transfer will not be retried. |
-| TRANSIENT_ERROR | A recoverable error occurred; the transfer retries when the minimum retry delay expires. |
-| ACKNOWLEDGED    | The job was completed. |
-| CANCELED        | The job was canceled. |
+| Queued | The job is waiting to run. |
+| Connecting | BITS is contacting the server. |
+| Transferring | BITS is transferring data. |
+| Transferred | BITS has successfully transferred all files in the job. |
+| Suspended | The job is paused. |
+| Error | A non-recoverable error occurred; the transfer will not be retried. |
+| Transient_Error | A recoverable error occurred; the transfer retries when the minimum retry delay expires. |
+| Acknowledged | The job completed. |
+| Canceled | The job was canceled. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the state for the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetState myDownloadJob
+C:\>bitsadmin /getstate myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getmaxdownloadtime
-description: Windows Commands topic for bitsadmin getmaxdownloadtime, which retrieves the download timeout in seconds.
+description: Windows Commands topic for **bitsadmin getmaxdownloadtime**, which retrieves the download timeout in seconds.
 ms.prod: windows-servemr
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -19,23 +19,23 @@ Retrieves the download timeout in seconds.
 ## Syntax
 
 ```
-bitsadmin /GetMaxDownloadtime <Job> 
+bitsadmin /getmaxdownloadtime <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
+
 The following example gets maximum download time for the job named *myDownloadJob* in seconds.
 
 ```
-C:\>bitsadmin /GetMaxDownloadtime myDownloadJob
+C:\>bitsadmin /getmaxdownloadtime myDownloadJob
 ```
 
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
 
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -53,4 +53,4 @@ WDSUTIL /Verbose /Progress /Convert-RiPrepImage /FilePath:\\Server
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -42,4 +42,4 @@ C:\>bitsadmin /RemoveCredentials myDownloadJob SERVER BASIC Edward Password20
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

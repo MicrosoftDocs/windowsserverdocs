@@ -42,7 +42,7 @@ wdsutil /add-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes
 wdsutil /add-DriverGroup /DriverGroup:printerdrivers /Applicability:All /Filtertype:Manufacturer /Policy:Include /Value:Name1 /Filtertype:Chassistype /Policy:Exclude /Value:Tower /Value:MiniTower
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-DriverGroupPackage Command](using-the-add-drivergrouppackage-command.md)
 [Using the add-DriverGroupPackages Command](using-the-add-drivergrouppackages-command.md)
 [Using the add-DriverGroupFilter Command](using-the-add-drivergroupfilter-command.md)

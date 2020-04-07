@@ -35,5 +35,5 @@ ls [<Option>] <DNSDomain> [{[>] <FileName>|[>>] <FileName>}]
 ## Remarks
 - The default output contains computer names and their IP addresses. When output is directed to a file, hash marks are printed for every 50 records received from the server
   ## Additional References
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup set querytype](nslookup-set-querytype.md)

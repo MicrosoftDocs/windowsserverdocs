@@ -67,4 +67,4 @@ driverquery /s server1 /u maindom\user1 /p p@ssw3d
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

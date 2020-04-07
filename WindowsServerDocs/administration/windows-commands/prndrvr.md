@@ -73,5 +73,5 @@ cscript Prndrvr -a -m Laser printer model 1 -v 3 -e Windows NT x86
 ```
 
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

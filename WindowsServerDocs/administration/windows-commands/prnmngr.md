@@ -63,5 +63,5 @@ cscript prnmngr -d -s HRServer -p colorprinter_2
 ```
 
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

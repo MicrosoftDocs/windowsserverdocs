@@ -32,7 +32,7 @@ wdsutil /add-ImageGroumediaGroup:ImageGroup2
 wdsutil /verbose /add-ImageGroumediaGroup:My Image Group /Server:MyWDSServer
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)
 [Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)
 [Using the remove-ImageGroup Command](using-the-remove-imagegroup-command.md)

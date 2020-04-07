@@ -64,4 +64,4 @@ When a security template is created using the Security Template snap-in and the 
 ## Additional References
 
 For examples of how this command can be used, see the examples section in any of the subcommand files.
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

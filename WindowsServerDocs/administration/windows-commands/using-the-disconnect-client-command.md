@@ -42,4 +42,4 @@ WDSUTIL /Disconnect-Client /Server:MyWDSServer /ClientId:1 /Force
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

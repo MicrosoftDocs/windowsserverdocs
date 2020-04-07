@@ -48,7 +48,7 @@ dfsdiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace
   
 ## Additional References  
   
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 -   [dfsdiag](dfsdiag.md)  
   

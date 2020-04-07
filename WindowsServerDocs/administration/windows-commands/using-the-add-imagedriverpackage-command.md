@@ -44,5 +44,5 @@ wdsutil /add-ImageDriverPackagmedia:WinPE Boot Imagemediatype:Boot /Architecture
 wdsutil /verbose /add-ImageDriverPackagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-ImageDriverPackages Command](using-the-add-imagedriverpackages-command.md)

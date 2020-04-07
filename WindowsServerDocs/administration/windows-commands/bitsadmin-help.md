@@ -1,6 +1,6 @@
 ---
 title: bitsadmin help
-description: Windows Commands topic for bitsadmin help, which displays the command-line usage.
+description: Windows Commands topic for **bitsadmin help**, which displays the command-line usage.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # bitsadmin help
 
-Displays the command-line usage.
+Displays help-related information about the bitsadmin command-line parameters and options.
 
 ## Syntax
 
@@ -24,10 +24,11 @@ bitsadmin /help | /?
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the command-line help.
+
 ```
 C:\>bitsadmin /help
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

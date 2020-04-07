@@ -1,6 +1,6 @@
 ---
 title: bitsadmin geterror
-description: Windows Commands topic for bitsadmin geterror, which retrieves detailed error information for the specified job.
+description: Windows Commands topic for **bitsadmin geterror**, which retrieves detailed error information for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,22 +18,23 @@ Retrieves detailed error information for the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetError <Job>
+bitsadmin /geterror <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the error information for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetError myDownloadJob
+C:\>bitsadmin /geterror myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

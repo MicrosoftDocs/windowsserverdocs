@@ -31,4 +31,4 @@ End the ftp session with the remote server and remain at the **ftp>** prompt.
 close  
 ```  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

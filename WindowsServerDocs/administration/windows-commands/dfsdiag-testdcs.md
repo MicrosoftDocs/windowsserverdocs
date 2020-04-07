@@ -47,7 +47,7 @@ dfsdiag /TestDCs /Domain:Contoso.com
   
 ## Additional References  
   
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 -   [dfsdiag](dfsdiag.md)  
   

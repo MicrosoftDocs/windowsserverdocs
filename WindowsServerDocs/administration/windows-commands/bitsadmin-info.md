@@ -1,6 +1,6 @@
 ---
 title: bitsadmin info
-description: Windows Commands topic for bitsadmin info, which displays summary information about the specified job.
+description: Windows Commands topic for **bitsadmin info**, which displays summary information about the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,26 +18,24 @@ Displays summary information about the specified job.
 ## Syntax
 
 ```
-bitsadmin /Info <Job> [/verbose]
+bitsadmin /info <job> [/verbose]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-
-## Remarks
-
-Use the /verbose parameter to provide detailed information about the job.
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
+| /verbose | Optional. Provides detailed information about each job. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves information about the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /Info myDownloadJob
+C:\>bitsadmin /info myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

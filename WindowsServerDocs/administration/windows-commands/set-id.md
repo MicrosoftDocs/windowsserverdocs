@@ -56,7 +56,7 @@ set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
 ```  
   
 ## Additional References  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

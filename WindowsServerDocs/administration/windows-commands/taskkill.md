@@ -92,4 +92,4 @@ taskkill /f /fi PID ge 1000 /im *
 ```
 
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

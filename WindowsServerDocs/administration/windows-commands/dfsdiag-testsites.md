@@ -47,7 +47,7 @@ dfsdiag /TestSites /DFSpath:\\Contoso.com\Namespace2 /Recurse /Full
   
 ## Additional References  
   
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 -   [dfsdiag](dfsdiag.md)  
   

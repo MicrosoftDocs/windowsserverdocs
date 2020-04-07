@@ -48,4 +48,4 @@ When the connection is successful, you will receive a new TGT or an existing TGT
 ## Additional References
 
 -   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

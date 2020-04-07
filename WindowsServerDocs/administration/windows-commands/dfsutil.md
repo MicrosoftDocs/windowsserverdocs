@@ -43,6 +43,6 @@ if you specify an object \(such as a namespace server\) at the end of a command,
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

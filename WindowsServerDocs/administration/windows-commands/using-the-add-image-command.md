@@ -63,7 +63,7 @@ wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Ser
 /Description:Windows Pro image with Microsoft Office /Filename:Win Pro.wim /UnattendFile:\\server\share\unattend.xml
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the copy-Image Command](using-the-copy-image-command.md)
 [Using the Export-Image Command](using-the-export-image-command.md)
 [Using the get-Image Command](using-the-get-image-command.md)

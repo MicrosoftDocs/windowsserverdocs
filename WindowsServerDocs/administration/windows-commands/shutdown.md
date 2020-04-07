@@ -65,4 +65,4 @@ shutdown /r /m \\servername /t 60 /c Reconfiguring myapp.exe /f /d p:4:1
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

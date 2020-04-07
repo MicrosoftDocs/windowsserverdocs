@@ -42,4 +42,4 @@ append the local file1.txt to a file named file1.txt on the remote computer.
 append file1.txt  
 ```  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gettype
-description: Windows Commands topic for bitsadmin gettype, which retrieves the job type of the specified job.
+description: Windows Commands topic for **bitsadmin gettype**, which retrieves the job type of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,26 +18,34 @@ Retrieves the job type of the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetType <Job>
+bitsadmin /gettype <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+## Output
 
-The type can be DOWNLOAD, UPLOAD, UPLOAD-REPLY, or UNKNOWN.
+The output values include:
+
+| Type | Description |
+| --------------- | ----------- |
+| Download | The job is a download. |
+| Upload | The job is an upload. |
+| Upload-Reply | The job is an upload-reply. |
+| Unknown | The job has an unknown type. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the job type for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetType myDownloadJob
+C:\>bitsadmin /gettype myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

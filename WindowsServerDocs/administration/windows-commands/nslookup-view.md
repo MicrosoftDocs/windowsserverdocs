@@ -31,5 +31,5 @@ view <FileName>
 | {help &#124; ?} |                       Displays a short summary of **nslookup** subcommands.                       |
 
 ## Additional References  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
 [nslookup ls](nslookup-ls.md)  

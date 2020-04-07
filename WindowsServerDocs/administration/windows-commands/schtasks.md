@@ -1259,4 +1259,4 @@ In response, **SchTasks.exe** adds the tasks scheduled for the Reskit16 computer
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

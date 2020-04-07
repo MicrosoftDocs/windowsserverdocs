@@ -1,6 +1,6 @@
 ---
 title: bitsadmin monitor
-description: Windows Commands topic for bitsadmin monitor, which monitors jobs in the transfer queue that the current user owns.
+description: Windows Commands topic for **bitsadmin monitor**, which monitors jobs in the transfer queue that are owned by the current user.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,34 +13,29 @@ ms.date: 10/16/2017
 
 # bitsadmin monitor
 
-Monitors jobs in the transfer queue that the current user owns.
+Monitors jobs in the transfer queue that are owned by the current user.
 
 ## Syntax
 
 ```
-bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
+bitsadmin /monitor [/allusers] [/refresh <seconds>]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Allusers|Optional—monitors jobs for all users.|
-|Refresh|Optional—refreshes the data at an interval specified by *Seconds*. The default refresh interval is five seconds.|
-
-## Remarks
-
-You must have administrator privileges to use the **Allusers** parameter.
-
-Use CTRL+C to stop the refresh.
+| Parameter | Description |
+| -------------- | -------------- |
+| /allusers | Optional. Monitors jobs for all users. You must have administrator privileges to use this parameter. |
+| /refresh | Optional. Refreshes the data at an interval specified by `<seconds>`. The default refresh interval is five seconds. To stop the refresh, press CTRL+C. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example monitors the transfer queue for jobs owned by the current user and refreshes the information every 60 seconds.
+
 ```
-C:\>bitsadmin /Monitor /refesh 60
+C:\>bitsadmin /monitor /refresh 60
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

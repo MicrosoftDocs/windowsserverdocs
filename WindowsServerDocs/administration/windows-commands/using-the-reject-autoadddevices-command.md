@@ -34,7 +34,7 @@ To reject all computers, type:
 wdsutil /verbose /Reject-AutoaddDevices /Server:MyWDSServer /RequestId:ALL
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the Approve-AutoaddDevices Command](using-the-approve-autoadddevices-command.md)
 [Using the delete-AutoaddDevices Command](using-the-delete-autoadddevices-command.md)
 [Using the get-AutoaddDevices Command](using-the-get-autoadddevices-command.md)

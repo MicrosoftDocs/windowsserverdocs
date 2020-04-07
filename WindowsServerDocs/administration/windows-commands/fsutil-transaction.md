@@ -51,7 +51,7 @@ fsutil transaction fileinfo c:\test.txt
 ```
 
 ### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

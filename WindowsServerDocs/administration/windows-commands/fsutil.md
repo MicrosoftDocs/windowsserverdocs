@@ -49,4 +49,4 @@ Performs tasks that are related to file allocation table (FAT) and NTFS file sys
 |[Fsutil wim](fsutil-wim.md)|Provides functions to discover and manage WIM-backed files.|
 
 ## See also
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

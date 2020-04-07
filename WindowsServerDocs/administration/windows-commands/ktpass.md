@@ -84,4 +84,4 @@ To generate a .keytab file for a host computer that is not running the Windows o
 3.  Merge the .keytab file with the /Etc/Krb5.keytab file on a host computer that is not running the Windows operating system. 
 
 ## Additional References  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  

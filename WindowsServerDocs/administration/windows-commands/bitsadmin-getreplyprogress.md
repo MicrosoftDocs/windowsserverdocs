@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplyprogress
-description: Windows Commands topic for bitsadmin getreplyprogress, which retrieves the size and progress of the server reply.
+description: Windows Commands topic for **bitsadmin getreplyprogress**, which retrieves the size and progress of the server upload reply.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,33 +13,32 @@ ms.date: 10/16/2017
 
 # bitsadmin getreplyprogress
 
-Retrieves the size and progress of the server reply.
+Retrieves the size and progress of the server upload reply.
 
-**BITS 1.2 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.2 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /GetReplyProgress <Job>
+bitsadmin /getreplyprogress <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
-
-Valid only for upload-reply jobs.
 
 ## <a name=BKMK_examples></a>Examples
 
-The following example retrieves the reply progress for the job named *myDownloadJob*.
+The following example retrieves the upload reply progress for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetReplyProgress myDownloadJob
+C:\>bitsadmin /getreplyprogress myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

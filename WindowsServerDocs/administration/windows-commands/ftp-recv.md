@@ -46,4 +46,4 @@ recv <remoteFile> [<LocalFile>]
 - [ftp: ascii](ftp-ascii.md)  
 - [ftp: binary](ftp-binary.md)  
 - [ftp: get](ftp-get.md)  
-- [Command-Line Syntax Key](command-line-syntax-key.md)  
+- - [Command-Line Syntax Key](command-line-syntax-key.md)  

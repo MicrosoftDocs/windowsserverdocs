@@ -46,4 +46,4 @@ mdir <remoteFile>[ ] <LocalFile>
   mdir dir1 dir2 dirlist.txt  
   ```  
   ## Additional References  
-- [Command-Line Syntax Key](command-line-syntax-key.md)  
+- - [Command-Line Syntax Key](command-line-syntax-key.md)  

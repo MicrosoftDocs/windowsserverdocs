@@ -112,7 +112,7 @@ echo The Product.dat file is missing.
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [If](if.md)
 

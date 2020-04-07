@@ -37,7 +37,7 @@ compact vdisk
 ```
 
 ## Additional References
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+- - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [attach vdisk](attach-vdisk.md)
 - [detail vdisk](detail-vdisk.md)
 - [Detach vdisk](detach-vdisk.md)

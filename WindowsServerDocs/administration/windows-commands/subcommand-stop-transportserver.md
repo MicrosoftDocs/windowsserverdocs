@@ -34,7 +34,7 @@ wdsutil /Stop-TransportServer
 wdsutil /verbose /Stop-TransportServer /Server:MyWDSServer
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-TransportServer Command](using-the-disable-transportserver-command.md)
 [Using the enable-TransportServer Command](using-the-enable-transportserver-command.md)
 [Using the get-TransportServer Command](using-the-get-transportserver-command.md)

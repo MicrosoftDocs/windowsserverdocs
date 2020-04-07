@@ -61,6 +61,6 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >   query process /ID:2
 >   ```
 >   ## Additional References
->   [Command-Line Syntax Key](command-line-syntax-key.md)
+>   - [Command-Line Syntax Key](command-line-syntax-key.md)
 >   [query](query.md)
 >   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

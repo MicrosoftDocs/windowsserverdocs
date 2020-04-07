@@ -34,7 +34,7 @@ wdsutil /start-Namespace /Namespace:Custom Auto 1
 wdsutil /start-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
 [Using the new-Namespace Command](using-the-new-namespace-command.md)
 [Using the remove-Namespace Command](using-the-remove-namespace-command.md)

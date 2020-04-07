@@ -54,4 +54,4 @@ scwcmd register /d /kbname:MyApp /kb:\\kbserver\kb
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

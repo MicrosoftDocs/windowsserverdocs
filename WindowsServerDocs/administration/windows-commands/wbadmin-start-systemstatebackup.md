@@ -52,6 +52,6 @@ wbadmin start systemstatebackup -backupTarget:f:
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Start-WBBackup](https://technet.microsoft.com/library/jj902459.aspx) cmdlet

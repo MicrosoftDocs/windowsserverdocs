@@ -34,4 +34,4 @@ bye
 ```  
 ## Additional References  
 -   [ftp: quit](ftp-quit.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

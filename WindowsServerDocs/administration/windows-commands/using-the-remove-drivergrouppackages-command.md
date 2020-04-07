@@ -42,5 +42,5 @@ wdsutil /verbose /remove-DriverGroupPackages /DriverGroup:DisplayDrivers
 /Filtertype:Packagedateadded /Operator:LessOrEqual /Value:2008/01/01
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the remove-DriverGroupPackage Command](using-the-remove-drivergrouppackage-command.md)

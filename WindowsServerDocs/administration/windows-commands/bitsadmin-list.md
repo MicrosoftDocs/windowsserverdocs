@@ -1,6 +1,6 @@
 ---
 title: bitsadmin list
-description: Windows Commands topic for bitsadmin list, which lists the transfer jobs owned by the current user.
+description: Windows Commands topic for **bitsadmin list**, which lists the transfer jobs owned by the current user.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,27 +18,24 @@ Lists the transfer jobs owned by the current user.
 ## Syntax
 
 ```
-bitsadmin /List [/allusers][/verbose]
+bitsadmin /list [/allusers][/verbose]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/Allusers|Optional—lists jobs for all users|
-|/Verbose|Optional—provides detailed information for each job.|
-
-## Remarks
-
-You must have administrator privileges to use the /allusers parameter
+| Parameter | Description |
+| -------------- | -------------- |
+| /allusers | Optional. Lists jobs for all users. You must have administrator privileges to use this parameter. |
+| /verbose | Optional. Provides detailed information about each job. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves information about jobs owned by the current user.
+
 ```
-C:\>bitsadmin /List 
+C:\>bitsadmin /list
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

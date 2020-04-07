@@ -49,4 +49,4 @@ mqbkup /r c:\msmqbkup
 ```  
 The locations of folders used to store MSMQ message files are stored in the registry. Thus, the utility will restore MSMQ message files to the folders specified in the registry and not to the storage folders used before the restore operation. If the folders specified in the registry do not exist, the restore operation will automatically create them. If folders directories do exist and are not empty, the utility will prompt you for permission to delete the current contents of these folders.  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

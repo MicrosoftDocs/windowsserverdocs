@@ -38,5 +38,5 @@ To remove the current Performance registry settings and counter Explain text for
 unlodctr SMTPSVC  
 ```  
 ## Additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   

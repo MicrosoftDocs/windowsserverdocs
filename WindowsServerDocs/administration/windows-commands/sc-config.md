@@ -61,4 +61,4 @@ sc config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

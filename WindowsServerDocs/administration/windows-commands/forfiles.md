@@ -92,4 +92,4 @@ forfiles /s /m *.* /c cmd /c echo The extension of @file is 0x09@ext
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -26,7 +26,7 @@ bitsadmin /addfileset <Job> <TextFile>
 | Parameter | Description |
 | --------- | ----------- |
 | Job | The job's display name or GUID. |
-| TextFile | A text file, each line of which contains a remote and a local file name. **Note: **The names are space-delimited. Lines that begin with a # character are treated as a comment. |
+| TextFile | A text file, each line of which contains a remote and a local file name. **Note:** The names are space-delimited. Lines that begin with a `#` character are treated as a comment. |
 
 ## <a name=BKMK_examples></a>Examples
 

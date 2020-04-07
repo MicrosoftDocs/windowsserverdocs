@@ -31,4 +31,4 @@ Display the current remote computer directory.
 pwd  
 ```  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

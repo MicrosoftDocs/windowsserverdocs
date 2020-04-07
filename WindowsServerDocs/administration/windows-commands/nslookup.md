@@ -112,4 +112,4 @@ nslookup /view <FileName>
     Each command-line option consists of a hyphen (-) followed immediately by the command name and, in some cases, an equal sign (=) and then a value. For example, to change the default query type to host (computer) information and the initial time-out to 10 seconds, type:
     **nslookup -querytype=hinfo -timeout=10**
     ## See Also
-    [Command-Line Syntax Key](command-line-syntax-key.md)
+    - [Command-Line Syntax Key](command-line-syntax-key.md)

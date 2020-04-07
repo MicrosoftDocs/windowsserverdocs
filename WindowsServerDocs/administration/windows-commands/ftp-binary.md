@@ -34,4 +34,4 @@ binary
 ```  
 ## Additional References  
 -   [ftp: ascii](ftp-ascii.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

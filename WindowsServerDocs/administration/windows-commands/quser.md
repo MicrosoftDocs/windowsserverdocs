@@ -29,5 +29,5 @@ This command is the same as the **query user** command.
 
 ## Additional References  
 [query user](query-user.md)  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
 [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)  

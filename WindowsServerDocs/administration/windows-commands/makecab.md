@@ -40,5 +40,5 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 -   Refer to [Microsoft Cabinet format](https://go.microsoft.com/fwlink/?LinkId=226852) on MSDN for information on directive_file.
 
 ## Additional References
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 

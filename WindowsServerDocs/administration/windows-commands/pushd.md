@@ -61,6 +61,6 @@ echo All text files deleted in the %1 directory
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Popd](popd.md)

@@ -55,4 +55,4 @@ bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1:80
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -150,4 +150,4 @@ icacls test2 /grant *S-1-1-0:(d,wdac)
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -46,7 +46,7 @@ create volume mirror size=1000 disk=1,2
 ```  
   
 ## Additional References  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

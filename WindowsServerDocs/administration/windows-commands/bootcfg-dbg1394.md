@@ -41,4 +41,4 @@ bootcfg /dbg1394 edit /ch 8 /id 2
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /dbg1394 off /id 2
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

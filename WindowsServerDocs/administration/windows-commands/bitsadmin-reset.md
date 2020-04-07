@@ -1,6 +1,6 @@
 ---
 title: bitsadmin reset
-description: Windows Commands topic for bitsadmin reset, which cancels all jobs in the transfer queue that the current user owns.
+description: Windows Commands topic for **bitsadmin reset**, which cancels all jobs in the transfer queue owned by the current user.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,36 +13,31 @@ ms.date: 10/16/2017
 
 # bitsadmin reset
 
-Cancels all jobs in the transfer queue that the current user owns.
+Cancels all jobs in the transfer queue owned by the current user. > You can't reset jobs created by Local System. Instead, you must be an administrator and use the task scheduler to schedule this command as a task using the Local System credentials.
 
-**BITSAdmin 1.5 and earlier**: If you have administrator privileges, **Reset** cancels all jobs in the queue. The /AllUsers option is not supported.
+> [!NOTE]
+> In BITSAdmin 1.5 and earlier, if you have administrator privileges, the /reset switch will cancel all the jobs in the queue. Additionally, the /allusers option isn't supported.
 
 ## Syntax
 
 ```
-bitsadmin /Reset [/AllUsers]
+bitsadmin /reset [/allusers]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|AllUsers|Optional— cancels all jobs in the queue.|
-
-## Remarks
-
-You must have administrator privileges to use the **AllUsers** parameter.
-
-> [!NOTE]
-> Administrators cannot reset jobs created by Local System. Use the task scheduler to schedule this command as a task using the Local System credentials.
+| Parameter | Description |
+| -------------- | -------------- |
+| /allusers | Optional. Cancels all jobs in the queue owned by the current user. You must have administrator privileges to use this parameter. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example cancels all the jobs in the transfer queue for the current user.
+
 ```
-C:\>bitsadmin /Reset
+C:\>bitsadmin /reset
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -45,4 +45,4 @@ WDSUTIL /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

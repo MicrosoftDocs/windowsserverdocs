@@ -128,4 +128,4 @@ The **dir** command displays, in wide format, an alphabetized list of the matchi
 
 ## Additional References
 
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+- - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin listfiles
-description: Windows Commands topic for bitsadmin listfiles, which lists the files in the specified job.
+description: Windows Commands topic for **bitsadmin listfiles**, which lists the files in the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,22 +18,23 @@ Lists the files in the specified job.
 ## Syntax
 
 ```
-bitsadmin /ListFiles <Job>
+bitsadmin /listfiles <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the list of files for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetNotifyFlags myDownloadJob
+C:\>bitsadmin /listfiles myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -62,4 +62,4 @@ sc create NewService binpath= c:\windows\system32\NewServ.exe type= share start=
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

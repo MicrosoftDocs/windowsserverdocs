@@ -35,7 +35,7 @@ To delete all approved computers, type:
 wdsutil /verbose /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:ApprovedDevices
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the Approve-AutoaddDevices Command](using-the-approve-autoadddevices-command.md)
 [Using the get-AutoaddDevices Command](using-the-get-autoadddevices-command.md)
 [Using The Reject-AutoaddDevices Command](using-the-reject-autoadddevices-command.md)

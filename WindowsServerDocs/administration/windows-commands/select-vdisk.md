@@ -45,7 +45,7 @@ select vdisk file=c:\test\test.vhd
   
 ## Additional References  
   
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 -   [attach vdisk](attach-vdisk.md)  
   

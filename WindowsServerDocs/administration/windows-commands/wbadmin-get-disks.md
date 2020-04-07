@@ -31,6 +31,6 @@ This subcommand has no parameters.
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get-WBDisk](https://technet.microsoft.com/library/jj902446.aspx) cmdlet

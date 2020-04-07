@@ -1,6 +1,6 @@
 ---
 title: bitsadmin resume
-description: Windows Commands topic for bitsadmin resume, which activates a new or suspended job in the transfer queue.
+description: Windows Commands topic for **bitsadmin resume**, which activates a new or suspended job in the transfer queue.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,21 +18,23 @@ Activates a new or suspended job in the transfer queue.
 ## Syntax
 
 ```
-bitsadmin /Resume <Job>
+bitsadmin /resume <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example resumes the job named *myDownloadJob*.
-```
-C:\>bitsadmin /Resume myDownloadJob
-```
-Additional references
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+```
+C:\>bitsadmin /resume myDownloadJob
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -32,7 +32,7 @@ wdsutil /Get-AllDevices
 wdsutil /verbose /Get-AllDevices /forest:Yes /ReferralServer:MyWDSServer
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Subcommand: set-Device](subcommand-set-device.md)
 [Using the add-Device command](using-the-add-device-command.md)
 [Using the get-Device Command](using-the-get-device-command.md)

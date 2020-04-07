@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getfilestotal
-description: Windows Commands topic for bitsadmin getfilestotal, which retrieves the number of files in the specified job.
+description: Windows Commands topic for **bitsadmin getfilestotal**, which retrieves the number of files in the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,22 +18,23 @@ Retrieves the number of files in the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetFilesTotal <Job>
+bitsadmin /getfilestotal <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the number of files included in the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetFilesTotal myDownloadJob
+C:\>bitsadmin /getfilestotal myDownloadJob
 ```
 
 ## See Also
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

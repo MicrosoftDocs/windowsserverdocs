@@ -45,7 +45,7 @@ create partition efi size=1000
 ```  
   
 ## Additional References  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

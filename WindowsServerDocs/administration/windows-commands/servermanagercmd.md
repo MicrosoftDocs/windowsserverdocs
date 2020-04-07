@@ -68,4 +68,4 @@ servermanagercmd -inputpath install.xml -whatif
 ## Additional References
 -   for a complete list of the role, role service, or feature identifiers you can specify for the *Id* parameter, or more information about using an XML answer file with **Servermanagercmd**, see the [Server Manager help](https://go.microsoft.com/fwlink/?LinkID=137387). (https://go.microsoft.com/fwlink/?LinkID=137387).
 -   See [Server Manager cmdlets](https://go.microsoft.com/fwlink/?LinkID=137653) for a listing of Windows PowerShell cmdlets that are available for Server Manager.
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

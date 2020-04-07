@@ -42,4 +42,4 @@ C:\>bitsadmin /Wrap /Info myDownloadJob /verbose
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -52,7 +52,7 @@ To set the IPv4 address range, port range, and profile for the server, type:
 wdsutil /Set-TransportServer /Server:MyWDSServer /ObtainIpv4From:Range /start:239.0.0.1 /End:239.0.0.100 /startPort:12000 /EndPort:50000 /Profile:10mbps
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-TransportServer Command](using-the-disable-transportserver-command.md)
 [Using the enable-TransportServer Command](using-the-enable-transportserver-command.md)
 [Using the get-TransportServer Command](using-the-get-transportserver-command.md)

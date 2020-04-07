@@ -43,4 +43,4 @@ Get an abbreviated directory listing of **dir1** on the remote computer and save
 ls dir1 dirlist.txt   
 ```  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

@@ -44,5 +44,5 @@ To automatically send summary reports, type
 serverweroptin /summary
 ```
 ## Additional References
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 

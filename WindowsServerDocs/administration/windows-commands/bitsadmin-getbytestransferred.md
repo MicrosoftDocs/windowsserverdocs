@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getbytestransferred
-description: Windows Commands topic for bitsadmin getbytestransferred, which retrieves the number of bytes transferred for the specified job.
+description: Windows Commands topic for **bitsadmin getbytestransferred**, which retrieves the number of bytes transferred for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,22 +18,23 @@ Retrieves the number of bytes transferred for the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetBytesTransferred <Job>
+bitsadmin /getbytestransferred <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the number of bytes transferred for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetBytesTransferred myDownloadJob
+C:\>bitsadmin /getbytestransferred myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

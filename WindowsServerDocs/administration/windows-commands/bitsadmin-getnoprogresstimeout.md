@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnoprogresstimeout
-description: Windows Commands topic for bitsadmin getnoprogresstimeout, which retrieves the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
+description: Windows Commands topic for **bitsadmin getnoprogresstimeout**, which retrieves the length of time, in seconds, that the service will try to transfer the file after a transient error occurs.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,27 +13,28 @@ ms.date: 10/16/2017
 
 # bitsadmin getnoprogresstimeout
 
-Retrieves the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
+Retrieves the length of time, in seconds, that the service will try to transfer the file after a transient error occurs.
 
 ## Syntax
 
 ```
-bitsadmin /GetNoProgressTimeout <Job>
+bitsadmin /getnoprogresstimeout <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the progress time out value for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetNoProgressTimeout myDownloadJob
+C:\>bitsadmin /getnoprogresstimeout myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

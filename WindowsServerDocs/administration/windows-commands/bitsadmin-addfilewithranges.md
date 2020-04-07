@@ -41,7 +41,7 @@ bitsadmin /AddFileWithRanges <Job> <RemoteURL> <LocalName> <RangeList>
     **Error message:** Unable to add file to job - 0x8020002c. The list of byte ranges contains some overlapping ranges, which are not supported.
 
     **Workaround:** Don't specify the zero-length range first. For example, use: 
-    
+
     `bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:5,100:0.`
 
 ## Examples

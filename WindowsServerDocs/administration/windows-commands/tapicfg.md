@@ -131,4 +131,4 @@ To display the name of the default TAPI application directory partition for the 
 tapicfg show /defaultonly
 ```
 ## Additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

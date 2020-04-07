@@ -31,7 +31,7 @@ wdsutil /Enable-Server
 wdsutil /verbose /Enable-Server /Server:MyWDSServer
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the disable-Server Command](using-the-disable-server-command.md)
 [Using the get-Server Command](using-the-get-server-command.md)
 [Using the Initialize-Server Command](using-the-initialize-server-command.md)

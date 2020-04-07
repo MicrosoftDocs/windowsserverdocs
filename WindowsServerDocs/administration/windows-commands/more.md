@@ -112,4 +112,4 @@ The following examples can be used at the **more** prompt (`-- More --`).
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

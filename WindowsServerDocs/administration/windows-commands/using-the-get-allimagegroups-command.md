@@ -32,7 +32,7 @@ wdsutil /Get-AllImageGroups
 wdsutil /verbose /Get-AllImageGroups /Server:MyWDSServer /detailed
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
 [Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)
 [Using the remove-ImageGroup Command](using-the-remove-imagegroup-command.md)

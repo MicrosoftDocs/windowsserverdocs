@@ -149,6 +149,6 @@ tsecimp /d
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)

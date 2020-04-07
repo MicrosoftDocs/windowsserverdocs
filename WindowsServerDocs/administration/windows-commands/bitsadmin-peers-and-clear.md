@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and clear
-description: Windows Commands topic for bitsadmin peers and clear, which clears the peer list.
+description: Windows Commands topic for **bitsadmin peers** and **clear**, which clears the peer list.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,16 +18,17 @@ Clears the peer list.
 ## Syntax
 
 ```
-bitsadmin /Peers /Clear 
+bitsadmin /peers /clear
 ```
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example clears the peer list.
+
 ```
-C:\>bitsadmin /Peers /Clear
+C:\>bitsadmin /peers /clear
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

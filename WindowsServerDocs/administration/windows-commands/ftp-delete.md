@@ -35,4 +35,4 @@ delete the file test.txt on the remote computer.
 delete test.txt  
 ```  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

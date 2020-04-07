@@ -132,5 +132,5 @@ The following example illustrates using the **-protectors** command to back up a
 manage-bde  -protectors  -adbackup C:
 ```
 ## Additional References
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [manage-bde](manage-bde.md)

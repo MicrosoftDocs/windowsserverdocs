@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getmodificationtime
-description: Windows Commands topic for bitsadmin getmodificationtime, which retrieves the last time the job was modified or data was successfully transferred.
+description: Windows Commands topic for **bitsadmin getmodificationtime**, which retrieves the last time the job was modified or data was successfully transferred.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,22 +18,23 @@ Retrieves the last time the job was modified or data was successfully transferre
 ## Syntax
 
 ```
-bitsadmin /GetModificationTime <Job>
+bitsadmin /getmodificationtime <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example retrieves the last modified time for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetModificationTime myDownloadJob
+C:\>bitsadmin /getmodificationtime myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -51,4 +51,4 @@ C:\>bitsadmin /SetSecurityFlags myJob 0x0001
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

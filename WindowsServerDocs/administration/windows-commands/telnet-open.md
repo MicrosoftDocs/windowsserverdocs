@@ -33,4 +33,4 @@ Connect to a telnet server at telnet.microsoft.com.
 o telnet.microsoft.com  
 ```  
 ## Additional References  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

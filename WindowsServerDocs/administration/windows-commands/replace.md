@@ -77,4 +77,4 @@ To update all the versions of a file named Phones.cli (which appear in multiple 
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

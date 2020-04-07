@@ -49,4 +49,4 @@ C:\>bitsadmin /Transfer myDownloadJob http://prodserver/audio.wma c:\downloads\a
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

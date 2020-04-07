@@ -55,4 +55,4 @@ WDSUTIL /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

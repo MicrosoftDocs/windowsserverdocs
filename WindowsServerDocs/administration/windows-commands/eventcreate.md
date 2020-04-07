@@ -60,4 +60,4 @@ eventcreate /s server /u user /id 100 /t warning /so winmgmt /d Remote machine w
 
 #### Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -47,7 +47,7 @@ wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientU
 /User:Domain\user /JoinRights:JoinOnly /JoinDomain:No /BootImagepath:boot\x86\images\boot.wim /Domain:NorthAmerica /resetAccount
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the add-Device command](using-the-add-device-command.md)
 [Using the get-AllDevices Command](using-the-get-alldevices-command.md)
 [Using the get-Device Command](using-the-get-device-command.md)

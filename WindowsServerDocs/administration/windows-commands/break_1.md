@@ -30,4 +30,4 @@ If command extensions are enabled and running on the Windows platform, inserting
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

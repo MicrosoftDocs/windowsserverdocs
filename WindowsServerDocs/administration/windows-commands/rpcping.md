@@ -77,4 +77,4 @@ rpcping /t ncacn_http /s exchange_server /o RpcProxy=front_end_proxy /P username
 ```
 
 ## Additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

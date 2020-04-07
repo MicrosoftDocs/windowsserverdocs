@@ -55,4 +55,4 @@ scwcmd transform /p:FileServerPolicy.xml /g:FileServerSecurity
 
 ## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

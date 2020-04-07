@@ -93,4 +93,4 @@ comp \invoice\*.txt \invoice\backup\*.txt /n=10 /d
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

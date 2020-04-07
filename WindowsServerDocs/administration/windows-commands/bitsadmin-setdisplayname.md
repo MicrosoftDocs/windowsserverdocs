@@ -37,4 +37,4 @@ C:\>bitsadmin /SetDisplayName myDownloadJob Download Music Job
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getowner
-description: Windows Commands topic for bitsadmin getowner, which retrieves the owner of the specified job.
+description: Windows Commands topic for bitsadmin **getowner**, which retrieves the owner of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,22 +18,23 @@ Displays the display name or GUID of the owner of the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetOwner <Job>
+bitsadmin /getowner <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
 ## <a name=BKMK_examples></a>Examples
 
 The following example displays the owner for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /GetOwner myDownloadJob
+C:\>bitsadmin /getowner myDownloadJob
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

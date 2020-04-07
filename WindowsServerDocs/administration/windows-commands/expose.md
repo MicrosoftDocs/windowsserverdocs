@@ -51,4 +51,4 @@ expose %vss_shadow_1% x:
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -70,7 +70,7 @@ fsutil 8dot3name strip /l mylogfile.log /s d:\MyData
 ```
 
 ### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

@@ -48,7 +48,7 @@ create partition logical size=1000
 ```  
   
 ## Additional References  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

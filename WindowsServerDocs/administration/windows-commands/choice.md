@@ -86,4 +86,4 @@ The following prompt appears when the batch file runs the **choice** command:
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

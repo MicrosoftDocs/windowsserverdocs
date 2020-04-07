@@ -19,5 +19,5 @@ This command is the same as the **makecab** command.
 See [makecab](makecab.md) for syntax and parameters.
 
 ## Additional References
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 

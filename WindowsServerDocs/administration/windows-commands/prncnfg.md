@@ -82,5 +82,5 @@ cscript prncnfg -x -S HRServer -P colorprinter_2 -z "colorprinter 3"
 ```
 
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

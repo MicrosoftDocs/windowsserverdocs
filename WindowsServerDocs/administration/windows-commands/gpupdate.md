@@ -53,4 +53,4 @@ gpupdate /force
 ## Additional References
 
 -   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

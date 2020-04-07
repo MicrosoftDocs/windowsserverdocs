@@ -39,6 +39,6 @@ wdsutil /Get-AllDriverPackages /Server:MyWdsServer /Show:All /Filtertype:DriverG
 wdsutil /Get-AllDriverPackages /Show:Drivers /Filtertype:Packagedateadded /Operator:GreaterOrEqual /Value:2008/01/01
 ```
 ## Additional References
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [Using the get-DriverPackage Command](using-the-get-driverpackage-command.md)
 [Using the get-DriverPackageFile Command](using-the-get-driverpackagefile-command.md)

@@ -58,4 +58,4 @@ To silently uninstall the Fiction service profile, type:
 fiction.exe /c:cmstp.exe fiction.inf /s /u
 ```
 ## Additional References
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

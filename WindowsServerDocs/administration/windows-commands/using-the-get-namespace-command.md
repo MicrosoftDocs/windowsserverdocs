@@ -42,7 +42,7 @@ To view information about a namespace and the clients that are connected, type o
 - Windows Server 2008: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /Show:Clients`
 - Windows Server 2008 R2: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /details:Clients`
   ## Additional References
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
   [Using the new-Namespace Command](using-the-new-namespace-command.md)
   [Using the remove-Namespace Command](using-the-remove-namespace-command.md)
