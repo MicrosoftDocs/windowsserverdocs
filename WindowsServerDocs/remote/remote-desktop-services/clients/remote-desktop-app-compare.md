@@ -12,7 +12,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/28/2020
+ms.date: 04/06/2020
 ms.localizationpriority: medium
 ---
 
@@ -48,15 +48,15 @@ If you remote into your personal desktop, there are additional redirections that
 
 When you enable USB port redirection, any USB devices attached to the USB port are automatically recognized in the remote session.
 
-### Other redirection (devices, etc)
+### Other redirection (devices, etc.)
 
 | Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| Cameras             | X                         | X                           |               |         |             | X                               |               |
-| Clipboard           | X                         | X                           | X             | text    | text, image | X                               | text          |
-| Local drive/storage | X                         | X                           |               | X       |             | X                               |               |
+| Cameras             | X                         | X                           |               |         |   X         | X                               |               |
+| Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
+| Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
 | Location            | X                         | X                           |               |         |             |                                 |               |
-| Microphones         | X                         | X                           | X             |         |             | X                               |               |
+| Microphones         | X                         | X                           | X             |         |  X          | X                               |               |
 | Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |
