@@ -72,6 +72,8 @@ Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific netw
 
 The Linux kernel has four different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add **elevator=noop** to the kernel parameters, and then restart.
 
+On Ubuntu 18.04 with the Azure-tuned kernel uses multi-queue I/O schedulers, so "none" is the appropriate selection instead of "noop". See [Ubuntu I/O Schedulers](https://wiki.ubuntu.com/Kernel/Reference/IOSchedulers) for more information.
+
 ## NUMA
 
 Linux kernel versions earlier than 2.6.37 don't support NUMA on Hyper-V with larger VM sizes. This issue primarily impacts older distributions using the upstream Red Hat 2.6.32 kernel, and was fixed in Red Hat Enterprise Linux (RHEL) 6.6 (kernel-2.6.32-504). Systems running custom kernels older than 2.6.37, or RHEL-based kernels older than 2.6.32-504 must set the boot parameter `numa=off` on the kernel command line in grub.conf. For more information, see [Red Hat KB 436883](https://access.redhat.com/solutions/436883).
