@@ -54,7 +54,7 @@ The following describes the changes in default configuration between Windows 201
 |**Standalone Client**||||
 | |*Time Server*|NA|time.windows.com|time.windows.com|
 | |*Polling Frequency*|NA|Once a day|Once a week|
-| |*Clock Update Frequency*|NA|Once a day|Once a hour|
+| |*Clock Update Frequency*|NA|Once a day|Once an hour|
 |**Domain Controller**||||
 | |*Time Server*|PDC/GTIMESERV|NA|PDC/GTIMESERV|
 | |*Polling Frequency*|64 -1024 seconds|NA|1024 - 32768 seconds|
