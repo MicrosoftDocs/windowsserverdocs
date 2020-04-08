@@ -1,7 +1,6 @@
 ---
 ms.assetid: e2c940f5-4b1f-457a-bc71-dcced0c752f7
 title: AD FS Technical Reference
-description:
 author: billmath
 ms.author: billmath
 manager: femila

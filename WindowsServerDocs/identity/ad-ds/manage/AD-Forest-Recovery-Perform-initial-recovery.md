@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Perform initial recovery
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

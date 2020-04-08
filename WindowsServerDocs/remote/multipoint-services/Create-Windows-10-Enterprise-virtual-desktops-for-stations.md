@@ -1,13 +1,9 @@
 ---
 title: Create Windows 10 Enterprise virtual desktops for stations
 description: Learn how to create Windows Server 2016 desktops for station
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: evaseydl
@@ -26,7 +22,7 @@ To prepare to create station virtual desktops, ensure that your MultiPoint Servi
 |Hardware|Requirements|         |
 |------------|----------------|----------------| 
 |CPU (multimedia)|1 core or thread per virtual machine|  
-|Solid State Drive (SSD)|Capacity >= 20GB per station + 40GB for the MultiPoint Services host operating system<br /><br />Random Read\/Write IOPS >= 3K per station|  
+|Solid State Drive (SSD)|Capacity >= 20GB per station + 40GB for the MultiPoint Services host operating system<p>Random Read\/Write IOPS >= 3K per station|  
 |RAM|2GB per station + 2GB for the Windows MultiPoint Server host operating system|  
 |Graphics|DX11|  
 |BIOS|BIOS CPU setting configured to enable virtualization – Second Level Address Translation (SLAT)|  

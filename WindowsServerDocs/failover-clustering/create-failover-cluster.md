@@ -5,6 +5,7 @@ ms.prod: windows-server
 ms.topic: article 
 author: JasonGerend 
 ms.author: jgerend 
+manager: lizross
 ms.technology: storage-failover-clustering 
 ms.date: 06/06/2019
 ms.localizationpriority: medium

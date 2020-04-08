@@ -1,12 +1,12 @@
 ---
 title: netstat
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 60e2718f-93cc-4ceb-bf0e-58a6a6e4fc8b
 author: coreyp-at-msft
@@ -25,7 +25,7 @@ Displays active TCP connections, ports on which the computer is listening, Ether
 netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
 ```
 
-### Parameters
+#### Parameters
 
 |   Parameter   |                                                                                                                                              Description                                                                                                                                              |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -63,7 +63,7 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<Interval>]
         for more information about the states of a TCP connection, see Rfc 793.
 -   This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To display both the Ethernet statistics and the statistics for all protocols, type:
 ```
 netstat -e -s
@@ -81,5 +81,5 @@ To display active TCP connections and the process IDs using numerical form, type
 netstat -n -o
 ```
 
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

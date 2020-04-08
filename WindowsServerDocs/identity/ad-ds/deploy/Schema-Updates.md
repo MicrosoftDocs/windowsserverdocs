@@ -8,7 +8,6 @@ manager: daveba
 ms.date: 12/02/2019
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Windows Server Active Directory schema updates

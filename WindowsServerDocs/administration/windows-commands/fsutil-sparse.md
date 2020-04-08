@@ -26,7 +26,7 @@ fsutil sparse [setflag] <FileName>
 fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 ```
 
-## Parameters
+### Parameters
 
 |     Parameter     |                                                    Description                                                    |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -55,8 +55,8 @@ To mark a file named Sample.txt in the C:\Temp directory as sparse, type:
 fsutil sparse setflag c:\temp\sample.txt 
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

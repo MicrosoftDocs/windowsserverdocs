@@ -1,11 +1,8 @@
 ---
 title: WSUS and the Catalog Site
-description: "Windows Server Update Service (WSUS) topic - How to import hotfixes into WSUS by accessing the Microsoft Update catalog site"
+description: Windows Server Update Service (WSUS) topic - How to import hotfixes into WSUS by accessing the Microsoft Update catalog site
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 author: coreyp-at-msft

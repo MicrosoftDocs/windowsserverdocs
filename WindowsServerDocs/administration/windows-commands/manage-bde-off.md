@@ -1,12 +1,12 @@
 ---
 title: manage-bde off
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0a27c119-d385-45e5-89fe-e311d4429876
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Decrypts the drive and turns off BitLocker. All key protectors are removed when 
 manage-bde -off [<Volume>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,14 +37,14 @@ manage-bde -off [<Volume>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **-off** command to turn off BitLocker on drive C.
 ```
 manage-bde –off C:
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

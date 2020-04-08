@@ -1,12 +1,8 @@
 ---
 title: cipher
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for cipher, which displays or alters the encryption of directories and files on NTFS volumes. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78ef795e-0f87-4acd-8d15-192c972c0f41
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # cipher
-
-
 
 Displays or alters the encryption of directories and files on NTFS volumes. If used without parameters, **cipher** displays the encryption state of the current directory and any files it contains.
 
@@ -38,7 +32,7 @@ cipher /removeuser /certhash:<Hash> [/s:<Directory>] [/b] [/h] [<PathName> [...]
 cipher /rekey [PathName [...]]
 ```
 
-## Parameters
+### Parameters
 
 |          Parameters           |                                                                                                                                                   Description                                                                                                                                                    |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +60,7 @@ cipher /rekey [PathName [...]]
 -   You can use multiple directory names and wildcards.
 -   You must put spaces between multiple parameters.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To display the encryption status of each of the files and subdirectories in the current directory, type:
 ```
@@ -102,4 +96,4 @@ Note that the Private directory is marked as encrypted.
 
 #### Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

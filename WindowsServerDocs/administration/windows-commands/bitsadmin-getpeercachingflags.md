@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getpeercachingflags
-description: "Windows Commands topic for **bitsadmin getpeercachingflags** - Retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers."
-ms.custom: na
+description: Windows Commands topic for **bitsadmin getpeercachingflags**, which retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c3c9f28-4c04-4c49-a23a-dee5bbcc8981
 author: coreyp-at-msft
@@ -23,23 +19,23 @@ Retrieves flags that determine if the files of the job can be cached and served 
 ## Syntax
 
 ```
-bitsadmin /GetPeerCachingFlags <Job> 
+bitsadmin /getpeercachingflags <job> 
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
-The following example retrieves the flags for the job named *myJob*.
+## <a name=BKMK_examples></a>Examples
+
+The following example retrieves the flags for the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetPeerCachingFlags myJob
+C:\>bitsadmin /getpeercachingflags myJob
 ```
 
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
 
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

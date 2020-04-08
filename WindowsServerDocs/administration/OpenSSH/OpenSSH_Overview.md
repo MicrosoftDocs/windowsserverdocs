@@ -1,10 +1,9 @@
 ---
 ms.date:  01/07/2019
 contributor:  damaerteMSFT
-author: maertendMSFT
-keywords:  OpenSSH, SSH, Win32-OpenSSH
+author: maertendmsft
 title:  OpenSSH in Windows
-ms.product: w10
+ms.product: windows-server
 ---
 # OpenSSH in Windows
 

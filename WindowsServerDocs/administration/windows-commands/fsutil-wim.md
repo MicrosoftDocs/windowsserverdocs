@@ -24,7 +24,7 @@ fsutil wim [queryfile] <filename>
 fsutil wim [removewim] <drive name> <data source>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
@@ -66,6 +66,6 @@ fsutil wim removewims C: 2
 ```
 
 ### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

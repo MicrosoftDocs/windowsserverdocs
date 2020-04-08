@@ -1,14 +1,12 @@
 ---
 ms.assetid: cd70b0aa-0a67-4966-a041-4dd3f302c98b
 title: Creating a DNS Infrastructure Design
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

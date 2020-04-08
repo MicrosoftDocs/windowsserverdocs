@@ -1,12 +1,8 @@
 ---
 title: cacls
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for cacls, which displays or modifies discretionary access control lists (DACL) on specified files.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
 author: coreyp-at-msft
@@ -19,11 +15,12 @@ ms.date: 10/16/2017
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays or modifies discretionary access control lists (DACL) on specified files.  
+
 ## Syntax  
 ```  
 cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]  
 ```  
-### Parameters  
+#### Parameters  
 
 |        Parameter        |                                                                                            Description                                                                                             |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,9 +31,9 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 |         /s:sddl         |                                       replaces the Acls with those specified in the SDDL string (not valid with **/e**, **/g**, **/r**, **/p**, or **/d**).                                        |
 |           /e            |                                                                                 edit ACL instead of replacing it.                                                                                  |
 |           /c            |                                                                                 Continue on access denied errors.                                                                                  |
-|    /g user:\<perm\>     |   Grant specified user access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control   |
+|    /g user:\<perm\>     |   Grant specified user access rights.<p>Valid values for permission:<p>-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control   |
 |      /r user [...]      |                                                                  Revoke specified user's access rights (only valid with **/e**).                                                                   |
-| [/p user:\<perm\> [...] | replace specified user's access rights.<br /><br />Valid values for permission:<br /><br />-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control |
+| [/p user:\<perm\> [...] | replace specified user's access rights.<p>Valid values for permission:<p>-   n - none<br />-   r - read<br />-   w - write<br />-   c - change (write)<br />-   f - full control |
 |     [/d user [...]      |                                                                                    Deny specified user access.                                                                                     |
 |           /?            |                                                                                Displays help at the command prompt.                                                                                |
 
@@ -60,6 +57,6 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 - You can use wildcards (**?** and **\\\***) to specify multiple files.  
 - You can specify more than one user.  
 
-#### additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)   
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)   
 -   [icacls](icacls.md)  

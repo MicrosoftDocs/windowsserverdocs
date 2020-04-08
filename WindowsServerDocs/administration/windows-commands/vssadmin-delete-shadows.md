@@ -21,7 +21,7 @@ Deletes a specified volume's shadow copies.
 vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID>] [/quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---|---|

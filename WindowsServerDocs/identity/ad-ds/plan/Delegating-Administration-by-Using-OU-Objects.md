@@ -1,14 +1,12 @@
 ---
 ms.assetid: d8e61aa4-8e4b-4097-83ca-70cf61366b75
 title: Delegating Administration by Using OU Objects
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

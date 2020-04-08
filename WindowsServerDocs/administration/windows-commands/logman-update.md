@@ -1,12 +1,12 @@
 ---
 title: logman update
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c98af84f-64ba-40c3-826d-75b80dfb9b34 britw
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Update an existing data collector.
 logman update <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,6 +37,6 @@ logman update <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 |[logman update cfg](logman-update-cfg.md)|Update a configuration data collector.|
 |[logman update api](logman-update-api.md)|Update an API tracing data collector.|
 
-#### Additional references
+## Additional References
 
 [Logman](logman.md)

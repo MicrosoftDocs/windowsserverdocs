@@ -1,12 +1,12 @@
 ---
 title: nslookup set
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1fe5b36d-e93e-468b-abca-43b0204b32d1
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Changes configuration settings that affect how lookups function.
 ```
 set <KeyWord>[=<Value>]
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                                                                                                    Description                                                                                                                    |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,6 +33,6 @@ set <KeyWord>[=<Value>]
 
 ## Remarks
 Use **set all** to see a listing of the current settings.
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [nslookup set all](nslookup-set-all.md)

@@ -1,13 +1,9 @@
 ---
 title: Add or Remove Computers
 description: Learn how to add and remove computers from MultiPoint Services.
-ms.custom: na
 ms.date: 07/11/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1c37739d-7ab0-4b80-8d05-0330e79fd631
 author: lizap

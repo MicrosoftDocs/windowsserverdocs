@@ -1,14 +1,12 @@
 ---
 ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: Configuring Alternate Login ID
-description:
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
@@ -171,7 +169,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 |Archive mailbox access (Mailbox on-premises - archive in the cloud)|Supported, no extra prompts|Supported - Users get an extra prompt for credentials when accessing the archive, they have to provide their alternate ID when prompted.| 
 |Outlook Web Access|Supported|Supported|
 |Outlook Mobile Apps for Android, IOS, and Windows Phone|Supported|Supported|
-|Skype for Business/ Lync|Supported, with no extra prompts|Supported (except as noted) but there is a potential for user confusion.</br></br>On mobile clients, Alternate Id is supported only if SIP address= email address = Alternate ID.</br></br> Users may need to sign-in twice to the Skype for Business desktop client, first using the on-premises UPN and then using the Alternate ID. (Note that the “Sign-in address” is actually the SIP address which may not be the same as the “User name”, though often is). When first prompted for a User name, the user should enter the UPN, even if it is incorrectly pre-populated with the Alternate ID or SIP address. After the user clicks sign-in with the UPN, the User name prompt reappears, this time prepopulated with the UPN. This time the user must replace this with the Alternate ID and click Sign in to complete the sign in process. On mobile clients, users should enter the on-premises user ID in the advanced page, using SAM-style format (domain\username), not UPN format.</br></br>After successful sign-in, if Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for where the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID. If the Mailbox is on-premises you need to provide the on-premises UPN.| 
+|Skype for Business/ Lync|Supported, with no extra prompts|Supported (except as noted) but there is a potential for user confusion.</br></br>On mobile clients, Alternate Id is supported only if SIP address= email address = Alternate ID.</br></br> Users may need to sign-in twice to the Skype for Business desktop client, first using the on-premises UPN and then using the Alternate ID. (Note that the "Sign-in address" is actually the SIP address which may not be the same as the "User name", though often is). When first prompted for a User name, the user should enter the UPN, even if it is incorrectly pre-populated with the Alternate ID or SIP address. After the user clicks sign-in with the UPN, the User name prompt reappears, this time prepopulated with the UPN. This time the user must replace this with the Alternate ID and click Sign in to complete the sign in process. On mobile clients, users should enter the on-premises user ID in the advanced page, using SAM-style format (domain\username), not UPN format.</br></br>After successful sign-in, if Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for where the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID. If the Mailbox is on-premises you need to provide the on-premises UPN.| 
 
 ## Additional Details & Considerations
 

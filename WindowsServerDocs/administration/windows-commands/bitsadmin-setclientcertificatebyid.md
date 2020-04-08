@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setclientcertificatebyid
-description: "Windows Commands topic for **bitsadmin setclientcertificatebyid** Specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request"
-ms.custom: na
+description: Windows Commands topic for bitsadmin setclientcertificatebyid, which specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8585a7a1-7472-437b-b04a-a11925782a3a
 author: coreyp-at-msft
@@ -17,8 +13,6 @@ ms.date: 10/16/2017
 
 # bitsadmin setclientcertificatebyid
 
-
-
 Specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request.
 
 ## Syntax
@@ -27,7 +21,7 @@ Specifies the identifier of the client certificate to use for client authenticat
 bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-decimal_cert_id>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -36,13 +30,13 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-dec
 |Store_name|The name of the certificate store. Possible values include:</br>CA (Certification Authority certificates)</br>MY (Personal certificates)</br>ROOT (Root certificates)</br>SPC (Software Publisher Certificate)|
 |Hexadecimal_cert_id|A hexadecimal number representing the hash of the certificate|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following example specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request for the job named *myJob*.
 ```
 C:\>bitsadmin Bitsadmin /SetClientCertificateByID myJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD 
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

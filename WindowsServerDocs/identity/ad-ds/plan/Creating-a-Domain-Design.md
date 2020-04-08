@@ -1,14 +1,12 @@
 ---
 ms.assetid: 2a25bf86-a8ec-4b1a-9cbb-924d5b574481
 title: Creating a Domain Design
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

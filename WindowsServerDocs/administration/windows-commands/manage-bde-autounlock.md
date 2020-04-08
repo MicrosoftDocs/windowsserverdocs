@@ -1,12 +1,12 @@
 ---
 title: manage-bde autounlock
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 063528bf-d235-4b44-887a-52a7d983e01a
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ manage-bde -autounlock [{-enable|-disable|-clearallkeys}] <Drive> [-computername
 
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -41,14 +41,14 @@ manage-bde -autounlock [{-enable|-disable|-clearallkeys}] <Drive> [-computername
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **-autounlock** command to enable automatic unlocking of data drive E.
 ```
 manage-bde –autounlock -enable E:
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

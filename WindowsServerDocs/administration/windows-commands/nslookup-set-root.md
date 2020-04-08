@@ -1,12 +1,12 @@
 ---
 title: nslookup set root
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8ad5393c-d4fd-4594-8187-576b1dcde60a
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Changes the name of the root server used for queries.
 ```
 set root=<RootServer>
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                   Description                                    |
 |-----------------|----------------------------------------------------------------------------------|
@@ -32,6 +32,6 @@ set root=<RootServer>
 
 ## Remarks
 - The **set root** subcommand affects the **root** subcommand.
-  ## additional references
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  ## Additional References
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup root](nslookup-root.md)

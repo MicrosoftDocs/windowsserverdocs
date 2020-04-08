@@ -1,13 +1,9 @@
 ---
 title: Set up a direct-video-connected station in MultiPoint Services
 description: Learn how to create a direct-video-connected station in MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 82ba3517-9743-4cde-8eea-63a17edb016f
 author: lizap
@@ -62,4 +58,4 @@ If you add more than one direct video-connected station to your MultiPoint Servi
 2.  Start (or restart) the MultiPoint Services computer, and see which monitor displays the startup screens. That station is the primary station.  
   
     > [!NOTE]  
-    > In some cases, BIOS startup information is displayed on multiple monitors simultaneously. In that case, any of the monitors can be considered the “primary station” for the purpose of accessing the BIOS.
+    > In some cases, BIOS startup information is displayed on multiple monitors simultaneously. In that case, any of the monitors can be considered the "primary station" for the purpose of accessing the BIOS.

@@ -1,12 +1,12 @@
 ---
 title: rdpsign
 description: Learn how to digitally sign an RDP file.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4a6fa8ce-3d32-49a5-b056-bcc1a23391f5
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|
@@ -66,5 +66,5 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
   rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
   ```
   ## See Also
-  [Command-Line Syntax Key](command-line-syntax-key.md)
-  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
+  [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

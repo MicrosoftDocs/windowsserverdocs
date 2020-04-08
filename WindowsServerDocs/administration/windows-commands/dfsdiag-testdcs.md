@@ -1,12 +1,8 @@
 ---
 title: dfsdiag TestDCs
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for dfsdiag TestDCs, which checks the configuration of domain controllers in the specified domain.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abb915ab-23eb-45d7-9a2e-b6b9a5756a70
 author: coreyp-at-msft
@@ -20,39 +16,38 @@ ms.date: 10/16/2017
 
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:  
   
--   verifies that the Distributed File System \(DFS\) Namespace service is running and that its startup type is set to Automatic.  
+-   Verifies that the Distributed File System (DFS) Namespace service is running and that its startup type is set to Automatic.  
   
--   Checks for the support of site\-costed referrals for NETLOGON and SYSvol.  
+-   Checks for the support of site-costed referrals for NETLOGON and SYSvol.  
   
--   verifies the consistency of the site association by hostname and IP address.  
-  
-  
-  
+-   Verifies the consistency of the site association by hostname and IP address.
+
 ## Syntax  
   
 ```  
 dfsdiag /TestDCs [/Domain:<Domain name>]  
 ```  
   
-### Parameters  
+#### Parameters  
   
 |Parameter|Description|  
 |-------|--------|  
-|\/Domain:<Domain name>|Domain that you want to check.|  
+|/Domain:`<domain_name>`|Domain that you want to check.|  
   
 ## Remarks  
-\/Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
+
+/Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
   
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 To verify the configuration of domain controllers in the Contoso.com domain, type:  
   
 ```  
 dfsdiag /TestDCs /Domain:Contoso.com  
 ```  
   
-## additional references  
+## Additional References  
   
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 -   [dfsdiag](dfsdiag.md)  
   

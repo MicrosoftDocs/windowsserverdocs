@@ -1,12 +1,12 @@
 ---
 title: rem
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7245aedb-ba6f-49bb-9f77-848c4853c68f
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Provides a way to add comments to a script.
 rem
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 In this example script, **rem** is used to provide a comment about what the script does:
 ```
@@ -45,7 +45,7 @@ create partition logical
 assign f:
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

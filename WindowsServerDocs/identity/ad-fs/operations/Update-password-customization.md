@@ -1,14 +1,12 @@
 ---
 ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
 title: Update password customization 
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

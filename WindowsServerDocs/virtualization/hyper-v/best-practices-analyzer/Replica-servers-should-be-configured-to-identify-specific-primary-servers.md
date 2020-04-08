@@ -1,14 +1,13 @@
 ---
 title: Replica servers should be configured to identify specific primary servers authorized to send replication traffic
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Replica servers should be configured to identify specific primary servers authorized to send replication traffic

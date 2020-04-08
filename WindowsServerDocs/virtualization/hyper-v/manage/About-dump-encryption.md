@@ -1,6 +1,6 @@
 ---
 title: About dump encryption
-description: "Describes how to encrypt dump files and troubleshoot encryption."
+description: Describes how to encrypt dump files and troubleshoot encryption.
 ms.prod: windows-server
 manager: dongill
 ms.topic: article

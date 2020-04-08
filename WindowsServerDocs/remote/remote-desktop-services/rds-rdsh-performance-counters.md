@@ -5,7 +5,6 @@ ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dougkim
@@ -78,13 +77,13 @@ This table shows a visual example of these instances. (You can get the same info
 
 |Type of counter|Instance name|Reported delay (ms)|
 |---------------|-------------|-------------------|
-|User Input Delay per process|1:4232 <Calculator.exe>|	200|
-|User Input Delay per process|2:1000 <Calculator.exe>|	16|
-|User Input Delay per process|1:2000 <Calculator.exe>|	32|
-|User Input Delay per session|1|	200|
-|User Input Delay per session|2|	16|
-|User Input Delay per session|Average| 	108|
-|User Input Delay per session|Max| 	200|
+|User Input Delay per process|1:4232 <Calculator.exe>|    200|
+|User Input Delay per process|2:1000 <Calculator.exe>|    16|
+|User Input Delay per process|1:2000 <Calculator.exe>|    32|
+|User Input Delay per session|1|    200|
+|User Input Delay per session|2|    16|
+|User Input Delay per session|Average|     108|
+|User Input Delay per session|Max|     200|
 
 ## Counters used in an overloaded system
 

@@ -1,12 +1,12 @@
 ---
 title: reg load
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3b0b2b1b-f510-4108-9e9d-7057e924aa6e
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 reg load KeyName FileName
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -46,13 +46,13 @@ The following table lists the return values for the **reg load** operation.
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To load the file named TempHive.hiv to the key HKLM\TempHive, type:
 ```
 REG LOAD HKLM\TempHive TempHive.hiv
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

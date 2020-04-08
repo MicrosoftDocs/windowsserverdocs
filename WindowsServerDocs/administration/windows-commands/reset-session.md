@@ -1,12 +1,12 @@
 ---
 title: reset session
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]  
 ```  
 
-## Parameters  
+### Parameters  
 
 |Parameter|Description|  
 |-------|--------|  
@@ -45,7 +45,7 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   You should reset a session only when it malfunctions or appears to have stopped responding.  
 -   The **/server** parameter is required only if you use **reset session** from a remote server.  
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 - To reset the session designated rdp-tcp#6, type:  
   ```  
   reset session rdp-tcp#6  
@@ -55,6 +55,6 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
   reset session 3  
   ```  
 
-#### Additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)  

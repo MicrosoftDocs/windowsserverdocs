@@ -1,12 +1,12 @@
 ---
 title: regini
 description: Learn how to modify the registry from the command prompt or by using a script.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 5ff18dc3-5bd8-400a-b311-fd73a3267e8c
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ For details on the format and content of the text script file that Regini.exe us
 regini [-m \\machinename | -h hivefile hiveroot][-i n] [-o outputWidth][-b] textFiles...
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 
@@ -46,6 +46,6 @@ The following guidelines apply primarily to the content of the text files that c
 -   Use the backslash to indicate continuation of a line. The command will ignore all characters from the backslash up to (but not including) the first non-blank character of the next line. If you include more than one space before the backslash, it is replaced by a single space.
 -   Use hard-tab characters to control indentation. This indentation indicates the tree structure of the registry keys; however, these characters are converted to a single space regardless of their position.
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

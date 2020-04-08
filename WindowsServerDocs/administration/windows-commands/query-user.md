@@ -1,12 +1,12 @@
 ---
 title: query user
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a670fb78-c055-464a-b61d-3a85632c52c5
 author: coreyp-at-msft
@@ -26,7 +26,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > ```
 > query user [<UserName> | <SessionName> | <SessionID>] [/server:<ServerName>]
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |      Parameter       |                                                     Description                                                     |
 > |----------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > - if you use **query user** without specifying <*UserName*>, <*SessionName*>, or <*SessionID*>, a list of all users who are logged on to the server is returned. Alternatively, you can also use **query session** to display a list of all sessions on a server.
 > - When **query user** returns information, a greater than (>) symbol is displayed before the current session.
 > - The **/server** parameter is required only if you use **query user** from a remote server.
->   ## <a name="BKMK_examples"></a>Examples
+>   ## <a name=BKMK_examples></a>Examples
 > - To display information about all users logged on the system, type:
 >   ```
 >   query user
@@ -57,7 +57,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >   ```
 >   query user USER1 /server:SERver1
 >   ```
->   #### additional references
->   [Command-Line Syntax Key](command-line-syntax-key.md)
+>   ## Additional References
+>   - [Command-Line Syntax Key](command-line-syntax-key.md)
 >   [query](query.md)
->   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+>   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

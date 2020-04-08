@@ -1,12 +1,12 @@
 ---
 title: filesystems
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3c4915a6-bd20-4af6-a94a-5fc7c20410bf
 author: coreyp-at-msft
@@ -31,5 +31,5 @@ filesystems
 
 -   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 
-#### Additional references
+## Additional References
 

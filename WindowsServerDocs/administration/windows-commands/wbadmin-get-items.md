@@ -1,12 +1,8 @@
 ---
 title: wbadmin get items
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wbadmin get items, which lists the items included in a specific backup. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 27d08ce3-6e06-4260-b264-fc1bde132d09
 author: coreyp-at-msft
@@ -34,7 +30,7 @@ wbadmin get items
 [-machine:<BackupMachineName>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,7 +38,7 @@ wbadmin get items
 |-backupTarget|Specifies the storage location that contains the backups for which you want the details. Use for listing backups stored at that target location. Backup target locations can be a locally attached disk drive or a remote shared folder. If **wbadmin get items**is run on the same computer where the backup was created, this parameter is not needed. However, this parameter is required to get information about a backup created from another computer.|
 |-machine|Specifies the name of the computer that you want the backup details for. Useful when multiple computers have been backed up to the same location. Should be used when **-backupTarget** is specified.|
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To list items from the backup that was run on March 31, 2013 at 9:00 A.M., type:
 ```
@@ -53,8 +49,8 @@ To list items from the backup of server01 that was run on April 30, 2013 at 9:00
 wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get-WBBackupSet](https://technet.microsoft.com/library/jj902473.aspx) cmdlet

@@ -1,14 +1,10 @@
 ---
 title: Upgrading your Remote Desktop Virtualization Host to Windows Server 2016 
 description: This article describes how to upgrade your existing Remote Desktop Services deployments to Windows Server 2016.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 08/01/2016  
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5aed8ba7-f541-4416-b01c-4d3b1712e2b1
 author: spatnaik
@@ -32,7 +28,7 @@ These servers should be upgraded all at once. Follow the following steps to upgr
 ## RD Virtualization Host servers in the deployment where VMs are stored in Cluster Shared Volumes (CSV) 
 
 1. Determine an upgrade strategy where some of the RDVH servers will be upgraded and some will continue to host VMs on Windows Server 2012 R2.  
-2. Isolate one or more of the RDVH servers, targeted for the initial round of upgrading, by migrating all VMs to other ‘not to be upgraded yet' RDVH servers that will remain part of the original 2012 R2 cluster.
+2. Isolate one or more of the RDVH servers, targeted for the initial round of upgrading, by migrating all VMs to other 'not to be upgraded yet' RDVH servers that will remain part of the original 2012 R2 cluster.
     1. Open Failover Cluster Manager. 
     1. Click **Roles**. 
     1. Select one or more VMs. Right-click to open the context menu. 

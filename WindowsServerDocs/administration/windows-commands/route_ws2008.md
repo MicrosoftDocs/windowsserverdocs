@@ -1,12 +1,12 @@
 ---
 title: route_ws2008
 description: Learn how to modify and display entries in the local IP routing table.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: afcd666c-0cef-47c2-9bcc-02d202b983b3
 author: coreyp-at-msft
@@ -25,13 +25,13 @@ Displays and modifies the entries in the local IP routing table. Used without pa
 route [/f] [/p] [<Command> [<Destination>] [mask <Netmask>] [<Gateway>] [metric <Metric>]] [if <Interface>]]  
 ```  
 
-### Parameters  
+#### Parameters  
 
 |Parameter|Description|  
 |-------|--------|  
 |/f|Clears the routing table of all entries that are not host routes (routes with a netmask of 255.255.255.255), the loopback network route (routes with a destination of 127.0.0.0 and a netmask of 255.0.0.0), or a multicast route (routes with a destination of 224.0.0.0 and a netmask of 240.0.0.0). If this is used in conjunction with one of the commands (such as add, change, or delete), the table is cleared prior to running the command.|  
 |/p|When used with the add command, the specified route is added to the registry and is used to initialize the IP routing table whenever the TCP/IP protocol is started. By default, added routes are not preserved when the TCP/IP protocol is started. When used with the print command, the list of persistent routes is displayed. This parameter is ignored for all other commands. Persistent routes are stored in the registry location **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\PersistentRoutes**.|  
-|\<Command>|Specifies the command you want to run. The following table lists valid commands:<br /><br />-   **add:** adds a route.<br />-   **change:** modifies an existing route.<br />-   **delete:** deletes a route or routes.<br />-   **print:** prints a route or routes.|  
+|\<Command>|Specifies the command you want to run. The following table lists valid commands:<p>-   **add:** adds a route.<br />-   **change:** modifies an existing route.<br />-   **delete:** deletes a route or routes.<br />-   **print:** prints a route or routes.|  
 |\<Destination>|Specifies the network destination of the route. The destination can be an IP network address (where the host bits of the network address are set to 0), an IP address for a host route, or 0.0.0.0 for the default route.|  
 |mask \<Netmask>|Specifies the network destination of the route. The destination can be an IP network address (where the host bits of the network address are set to 0), an IP address for a host route, or 0.0.0.0 for the default route.|  
 |\<Gateway>|Specifies the forwarding or next hop IP address over which the set of addresses defined by the network destination and subnet mask are reachable. For locally attached subnet routes, the gateway address is the IP address assigned to the interface that is attached to the subnet. For remote routes, available across one or more routers, the gateway address is a directly reachable IP address that is assigned to a neighboring router.|  
@@ -89,5 +89,5 @@ To change the next hop address of the route with the destination of 10.41.0.0 an
 route change 10.41.0.0 mask 255.255.0.0 10.27.0.25  
 ```  
 
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

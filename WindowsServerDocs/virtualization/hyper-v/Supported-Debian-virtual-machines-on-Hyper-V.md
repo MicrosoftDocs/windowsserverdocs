@@ -1,11 +1,9 @@
 ---
 title: Supported Debian virtual machines on Hyper-V
-description: "Lists the Linux integration services and features included in each version"
+description: Lists the Linux integration services and features included in each version
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 author: shirgall

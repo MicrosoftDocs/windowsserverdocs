@@ -1,12 +1,12 @@
 ---
 title: nslookup set retry
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 615fdfa2-fa29-47a8-8c9e-a6c5b45b3b71
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Sets the number of retries.
 ```
 set retry=<Number>
 ```
-## Parameters
+### Parameters
 
 |    Parameter    |                                      Description                                       |
 |-----------------|----------------------------------------------------------------------------------------|
@@ -32,6 +32,6 @@ set retry=<Number>
 
 ## Remarks
 - When a reply to a request is not received within a certain amount of time, the time-out period is doubled and the request is resent. The retry value controls how many times a request is resent before giving up. You can change the time-out period with the **set timeout** subcommand.
-  ## additional references
-  [Command-Line Syntax Key](command-line-syntax-key.md)
+  ## Additional References
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
   [nslookup set timeout](nslookup-set-timeout.md)

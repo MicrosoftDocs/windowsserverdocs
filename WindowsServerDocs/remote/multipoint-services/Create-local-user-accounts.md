@@ -1,13 +1,9 @@
 ---
 title: Create local user accounts
 description: Learn abou thte three kinds of user accounts in MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33321932-4266-4961-9924-2cb4620bfcb4
 author: evaseydl

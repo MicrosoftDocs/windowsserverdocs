@@ -1,13 +1,11 @@
 ---
 ms.assetid: e1f2ce2d-b24f-4ccd-8add-9e69419fc6c1
 title: Import a Server Authentication Certificate to the Default Web Site
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

@@ -1,12 +1,12 @@
 ---
 title: manage-bde resume
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ca3cd1ca-6f2c-4190-b68f-27816635facb
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Resumes BitLocker encryption or decryption after it has been paused. For example
 manage-bde -resume [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,14 +37,14 @@ manage-bde -resume [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example illustrates using the **-resume** command to resume BitLocker encryption on drive C.
 ```
 manage-bde –resume C:
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)
