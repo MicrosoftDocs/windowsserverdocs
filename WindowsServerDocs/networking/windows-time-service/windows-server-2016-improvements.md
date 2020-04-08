@@ -58,7 +58,7 @@ The following describes the changes in default configuration between Windows 201
 |**Domain Controller**||||
 | |*Time Server*|PDC/GTIMESERV|NA|PDC/GTIMESERV|
 | |*Polling Frequency*|64 -1024 seconds|NA|1024 - 32768 seconds|
-| |*Clock Update Frequency*|Once a second|NA|Once a hour|
+| |*Clock Update Frequency*|Once a second|NA|Once an hour|
 |**Domain Member Server**||||
 | |*Time Server*|DC|NA|DC|
 | |*Polling Frequency*|64 -1024 seconds|NA|1024 - 32768 seconds|
