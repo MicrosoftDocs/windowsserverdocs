@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setminretrydelay
-description: Windows Commands topic for bitsadmin setminretrydelay, which sets the minimum length of time, in seconds, that BITS waits after encountering a transient error before trying to transfer the file. 
+description: Windows Commands topic for **bitsadmin setminretrydelay**, which sets the minimum length of time, in seconds, that BITS waits after encountering a transient error before trying to transfer the file. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,21 +18,22 @@ Sets the minimum length of time, in seconds, that BITS waits after encountering 
 ## Syntax
 
 ```
-bitsadmin /SetMinRetryDelay <Job> <RetryDelay>
+bitsadmin /setminretrydelay <job> <retrydelay>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|RetryDelay|A number represented in seconds.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| retrydelay | Minimum length of time for BITS to wait after an error during transfer, in seconds. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following example sets the minimum retry delay for the job named *myDownloadJob* to 35 seconds.
+
 ```
-C:\>bitsadmin /SetMinRetryDelay myDownloadJob 35
+C:\>bitsadmin /setminretrydelay myDownloadJob 35
 ```
 
 ## Additional References

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setmaxdownloadtime
-description: Windows Commands topic for bitsadmin setmaxdownloadtime, which sets the download timeout in seconds.
+description: Windows Commands topic for **bitsadmin setmaxdownloadtime**, which sets the download timeout in seconds.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,25 +18,22 @@ Sets the download timeout in seconds.
 ## Syntax
 
 ```
-bitsadmin /SetMaxDownloadTime <Job> <Timeout>
+bitsadmin /setmaxdownloadtime <job> <timeout>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|Timeout|The timeout in seconds|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| timeout | The length for the download timeout, in seconds. |
 
-## Remarks
-
--   N/A
-
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following example sets the timeout for the job named *myDownloadJob* to 10 seconds.
+
 ```
-C:\>bitsadmin /SetMaxDownloadTime myDownloadJob 10
+C:\>bitsadmin /setmaxdownloadtime myDownloadJob 10
 ```
 
 ## Additional References
