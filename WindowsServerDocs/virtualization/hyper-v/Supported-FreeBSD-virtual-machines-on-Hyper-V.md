@@ -37,7 +37,7 @@ The following feature distribution map indicates the features in each version. T
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|||||
 |TCP Segmentation and Checksum Offloads|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
 |Large Receive Offload (LRO)|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||||
-|SR-IOV|2019, 2016||||||||
+|SR-IOV|2019, 2016|&#10004;|&#10004;|&#10004;|||||
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Note1|Note 1|Note 1|Note 1|Note 1|Note 1,2|Note 1,2|
 |VHDX resize|2019, 2016, 2012 R2|&#10004; Note 6|&#10004; Note 6|&#10004; Note 6|||||
 |Virtual Fibre Channel|2019, 2016, 2012 R2||||||||
