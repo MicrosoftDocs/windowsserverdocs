@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 The dfsutil command manages DFS Namespaces, servers and clients.
 
 >[!NOTE]
->The **DFS Namespaces PowerShell module** provides replacements for some of the Dfsutil parameters, while others still require you to use dfsutil. For more information about the updated PowerShell equivalents, see [DFSN](https://docs.microsoft.com/en-us/powershell/module/dfsn/?view=win10-ps).
+>The **DFS Namespaces PowerShell module** provides replacements for some of the Dfsutil parameters, while others still require you to use dfsutil. For more information about the updated PowerShell equivalents, see [DFSN](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps).
 
 ## Parameters available in PowerShell
 
