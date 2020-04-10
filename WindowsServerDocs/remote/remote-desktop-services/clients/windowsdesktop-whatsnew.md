@@ -30,16 +30,16 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
 
 - Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
-  - There are now 3 distinct display configuration options: **All displays**, **Single display** and **Select displays**.
+  - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.
   - We now only show available settings when a display configuration is selected.
   - In Select display mode, a new **Maximize to current displays** option allows you to dynamically change the displays used for the session without reconnecting. When enabled, maximizing the session causes it to go full screen on all displays touched by the session window.
-  - A new **Single display when windowed** option was added for the All displays and Select displays modes. It switches your session automatically to single display when existing full screen but returns to multiple displays when maximized.
-- A new **Display settings** group has been added to the system menu available when right-clicking the title bar of a windowed desktop session. This allows you to change some settings dynamically during a session like Single display when windowed and Maximize to current display.
-- When exiting full screen, the session window now remembers it's previous location and returns to it.
+  - We've added a new **Single display when windowed** option for all displays and select displays modes. This option switches your session automatically to a single display when you exit full screen mode, and automatically returns to multiple displays when you maximize the window.
+- We've added a new **Display settings** group to the system menu that appears when you right-click the title bar of a windowed desktop session. This will let you change some settings dynamically during a session. For example, you can change the new Single display mode when windowed and Maximize to current displays settings.
+- When you exit full screen, the session window will return to its original location when you first entered full screen.
 - Resetting your user data from the About page now redirects to the Connection Center when completed instead of closing the client.
 - Addressed some accessibility issues with tab navigation and screen readers.
 - Fixed a flickering and shrinking issue when dragging a desktop session window between displays of different scale factors.
-- Fixed an error occurring when redirecting some cameras.
+- Fixed an error that occurred when redirecting cameras.
 - Fixed multiple crashes to improve reliability.
 
 ## Updates for version 1.2.790
