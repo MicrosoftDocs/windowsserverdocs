@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and repairservice
-description: Windows Commands topic for bitsadmin util and repairservice, which fixes known issues in various versions of BITS service.
+description: Windows Commands topic for **bitsadmin util and repairservice**, which fixes known issues in various versions of BITS service.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,37 +13,32 @@ ms.date: 10/16/2017
 
 # bitsadmin util and repairservice
 
-If BITS fails to start, use this switch to fix known issues in various versions of BITS.
+If BITS fails to start, this switch attempts to resolve errors related to incorrect service configuration and dependencies on Windows services (such as LANManworkstation) and the network directory. This switch also generates output that indicates if the issues that were resolved.
 
-**BITSAdmin 1.5 and earlier:** Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.5 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /Util /RepairService [/Force]
+bitsadmin /util /repairservice [/force]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Force|Optional—deletes and recreates the service.|
-
-## Remarks
-
-This switch resolves errors related to incorrect service configuration and dependencies on Windows services (such as LANManworkstation) and the network directory. This switch generates output that indicates if the issues that were resolved.
+| Parameter | Description |
+| --------- | ----------- |
+| /force | Optional. Deletes and creates the service again.|
 
 > [!NOTE]
-> If BITS recreates the service, the service description string may be set to English in a localized system.
+> If BITS creates the service again, the service description string might be set to English even in a localized system.
 
-> [!IMPORTANT]
-> This command is not supported on Windows Vista.
+## Examples
 
-## <a name=BKMK_examples></a>Examples
+The following example repairs the BITS service configuration.
 
-The following example repairs the BITS Service configuration.
 ```
-C:\>bitsadmin /Util /RepairService
+C:\>bitsadmin /util /repairservice
 ```
 
 ## Additional References

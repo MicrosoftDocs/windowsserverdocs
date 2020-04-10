@@ -29,15 +29,15 @@ bitsadmin /removecredentials <job> <target> <scheme>
 | Parameter | Description |
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
-| target | Use either **server** or **proxy**. |
-| scheme | Use one of the following:<ul><li>**basic.** Authentication scheme where the user name and password are sent in clear-text to the server or proxy.</li><li>**digest.** A challenge-response authentication scheme that uses a server-specified data string for the challenge.</li><li>**NTLM.** A challenge-response authentication scheme that uses the credentials of the user for authentication in a Windows network environment.</li><li>**negotiate (also known as the Simple and Protected Negotiation protocol).** A challenge-response authentication scheme that negotiates with the server or proxy to determine which scheme to use for authentication. Examples are the Kerberos protocol and NTLM.</li><li>**passport.** A centralized authentication service provided by Microsoft that offers a single logon for member sites.</li></ul> |
+| target | Use either **SERVER** or **PROXY**. |
+| scheme | Use one of the following:<ul><li>**BASIC.** Authentication scheme where the user name and password are sent in clear-text to the server or proxy.</li><li>**DIGEST.** A challenge-response authentication scheme that uses a server-specified data string for the challenge.</li><li>**NTLM.** A challenge-response authentication scheme that uses the credentials of the user for authentication in a Windows network environment.</li><li>**NEGOTIATE (also known as the Simple and Protected Negotiation protocol).** A challenge-response authentication scheme that negotiates with the server or proxy to determine which scheme to use for authentication. Examples are the Kerberos protocol and NTLM.</li><li>**PASSPORT.** A centralized authentication service provided by Microsoft that offers a single logon for member sites.</li></ul> |
 
 ## Examples
 
 The following example removes credentials from the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /removecredentials myDownloadJob server basic
+C:\>bitsadmin /removecredentials myDownloadJob SERVER BASIC
 ```
 
 ## Additional References

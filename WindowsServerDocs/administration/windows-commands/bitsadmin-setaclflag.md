@@ -26,7 +26,7 @@ bitsadmin /setaclflag <job> <flags>
 | Parameter | Description |
 | --------- | ----------- |
 | job | The job's display name or GUID. |
-| flags | Specify one or more of the values, including:<ul><li>**o** - Copy owner information with file.</li><li>**g** - Copy group information with file.</li><li>Copy discretionary access control list (DACL) information with file.</li><li>Copy system access control list (SACL) information with file.</li></ul>|
+| flags | Specify one or more of the values, including:<ul><li>**o** - Copy owner information with file.</li><li>**g** - Copy group information with file.</li><li>**d** - Copy discretionary access control list (DACL) information with file.</li><li>**s** - Copy system access control list (SACL) information with file.</li></ul> |
 
 ## Remarks
 
