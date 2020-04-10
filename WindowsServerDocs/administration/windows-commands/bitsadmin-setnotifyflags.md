@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifyflags
-description: Windows Commands topic for bitsadmin setnotifyflags, which sets the event notification flags for the specified job.
+description: Windows Commands topic for **bitsadmin setnotifyflags**, which sets the event notification flags for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,30 +18,22 @@ Sets the event notification flags for the specified job.
 ## Syntax
 
 ```
-bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
+bitsadmin /setnotifyflags <job> <notifyflags>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|NotifyFlags|See Remarks|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| notifyflags | Can include one or more of the following notification flags, including:<ul><li>**1.** Generates an event when all files in the job have been transferred.</li><li>**2.** Generates an event when an error occurs.</li><li>**3.** Generates an event when all files have completed transfer or when an error occurs.</li><li>**4.** Disables notifications.</li></ul> |
 
-## Remarks
+## Examples
 
-The **NotifyFlags** parameter can contain one or more of the following notification flags.
+The following example sets the notification flags to generate an event when an error occurs, for a job named *myDownloadJob*.
 
-|-----|-----|
-|1|Generate an event when all files in the job have been transferred.|
-|2|Generate an event when an error occurs.|
-|4|Disable notifications.|
-
-## <a name=BKMK_examples></a>Examples
-
-The following example sets the notify flags for transferred and error events job for job named *myDownloadJob*.
 ```
-C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
+C:\>bitsadmin /setnotifyflags myDownloadJob 2
 ```
 
 ## Additional References

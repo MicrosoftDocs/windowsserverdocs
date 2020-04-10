@@ -1,6 +1,6 @@
 ---
 title: bitsadmin sethelpertoken
-description: Windows Commands topic for bitsadmin sethelpertoken, which sets the current command prompt's primary token (or an arbitrary local user account's token, if specified) as a BITS transfer job's helper token.
+description: Windows Commands topic for **bitsadmin sethelpertoken**, which sets the current command prompt's primary token (or an arbitrary local user account's token, if specified) as a BITS transfer job's helper token.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,22 +12,23 @@ ms.date: 03/01/2019
 
 # bitsadmin sethelpertoken
 
-Sets the current command prompt's primary token (or an arbitrary local user account's token, if specified) as a BITS transfer job's [helper token](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs).
+Sets the current command prompt's primary token (or an arbitrary local user account's token, if specified) as a BITS transfer job's [helper token](https://docs.microsoft.com/windows/win32/bits/helper-tokens-for-bits-transfer-jobs).
 
-**BITS 3.0 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 3.0 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /SetHelperToken <Job> [\<username@domain\> \<password\>]
+bitsadmin /sethelpertoken <job> [<user_name@domain> <password>]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID.|
-|\<username@domain\> \<password\>|Optional&mdash;The credentials of a local user account whose token to use.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| `<username@domain>` `<password>` | Optional. The local user account credentials for which token to use. |
 
 ## Additional References
 

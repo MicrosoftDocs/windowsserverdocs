@@ -198,12 +198,9 @@ conceptualContent:
 additionalContent:
   sections:
     - items:
-      - title: Windows Server 2012 R2 and Windows Server 2012
-        summary: Technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
+      - title: Windows Server 2012 R2 and Windows Server 2012 (Archive)
+        summary: Archive of technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
         url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
-      - title: Windows Server 2008 R2 and Windows Server 2008
-        summary: Technical content for IT professionals administering Windows Server 2008 R2 and Windows Server 2008.
-        url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
-      - title: Windows Server 2008 Developer Story
-        summary: Content for developers and other technology experts and managers interested in exploring some of the new and extended features in Windows Server 2008.
-        url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
+      - title: Windows Server Essentials
+        summary: Technical content for for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
+        url: https://docs.microsoft.com/en-us/windows-server-essentials/get-started/get-started
