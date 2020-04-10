@@ -27,7 +27,7 @@ bitsadmin /removeclientcertificate <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following example removes the client certificate from the job named *myDownloadJob*.
 

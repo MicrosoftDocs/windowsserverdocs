@@ -39,3 +39,5 @@ C:\>bitsadmin /info myDownloadJob
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin info](bitsadmin-info.md)
