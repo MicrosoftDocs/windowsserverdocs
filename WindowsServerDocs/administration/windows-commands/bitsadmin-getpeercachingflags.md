@@ -19,7 +19,7 @@ Retrieves flags that determine if the files of the job can be cached and served 
 ## Syntax
 
 ```
-bitsadmin /getpeercachingflags <job> 
+bitsadmin /getpeercachingflags <job>
 ```
 
 ### Parameters

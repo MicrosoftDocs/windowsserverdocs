@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and help
-description: Windows Commands topic for bitsadmin util and help, which displays the command-line usage for the Util switches.
+description: Windows Commands topic for **bitsadmin util and help**, which displays the command-line usage for the util switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,19 +13,20 @@ ms.date: 10/16/2017
 
 # bitsadmin util and help
 
-Displays the command-line usage for the **Util** switches.
+Displays the command-line usage for the **util** switches.
 
 ## Syntax
 
 ```
-Bitsadmin /Util /Help 
+bitsadmin /util /help
 ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following command displays the command-line help for the **Util** switches.
+
 ```
-Bitsadmin /Util /Help
+C:\>bitsadmin /util /help
 ```
 
 ## Additional References

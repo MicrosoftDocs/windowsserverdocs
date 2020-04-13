@@ -30,7 +30,7 @@ bitsadmin /reset [/allusers]
 | -------------- | -------------- |
 | /allusers | Optional. Cancels all jobs in the queue owned by the current user. You must have administrator privileges to use this parameter. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following example cancels all the jobs in the transfer queue for the current user.
 

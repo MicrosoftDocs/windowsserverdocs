@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdisplayname
-description: Windows Commands topic for bitsadmin setdisplayname, which sets the display name of the specified job.
+description: Windows Commands topic for **bitsadmin setdisplayname**, which sets the display name of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,26 +13,27 @@ ms.date: 10/16/2017
 
 # bitsadmin setdisplayname
 
-Sets the display name of the specified job.
+Sets the display name for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /SetDisplayName <Job> <DisplayName>
+bitsadmin /setdisplayname <job> <display_name>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|DisplayName|Text used for the display name of the specified job.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| display_name | Text used as the displayed name for the specific job. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example sets the display name for the job named *myDownloadJob* to *myDownloadJob2*.
+The following example sets the display name for the job to *myDownloadJob*.
+
 ```
-C:\>bitsadmin /SetDisplayName myDownloadJob Download Music Job
+C:\>bitsadmin /setdisplayname myDownloadJob
 ```
 
 ## Additional References

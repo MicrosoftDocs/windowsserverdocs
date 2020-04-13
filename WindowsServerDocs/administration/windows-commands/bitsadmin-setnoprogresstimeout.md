@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnoprogresstimeout
-description: Windows Commands topic for bitsadmin setnoprogresstimeout, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
+description: Windows Commands topic for **bitsadmin setnoprogresstimeout**, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,27 +18,30 @@ Sets the length of time, in seconds, that BITS tries to transfer the file after 
 ## Syntax
 
 ```
-bitsadmin /SetNoProgressTimeout <Job> <TimeOutvalue>
+bitsadmin /setnoprogresstimeout <job> <timeoutvalue>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|TimeOutvalue|A number represented in seconds.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| timeoutvalue | The length of time that BITS waits to transfer a file after the first error, in seconds. |
 
 ## Remarks
 
--   The no progress timeout interval begins when the job encounters a transient error.
--   The timeout interval stops or resets when a byte of data is successfully transferred.
--   If no progress timeout interval exceeds the *TimeOutvalue*, then the job is placed in a fatal error state.
+- The "no progress" timeout interval begins when the job encounters its first transient error.
 
-## <a name=BKMK_examples></a>Examples
+- The timeout interval stops or resets when a byte of data is successfully transferred.
 
-The following example sets the no progress time out value for the job named *myDownloadJob* to 20 seconds
+- If the "no progress" timeout interval exceeds the *timeoutvalue*, then the job is placed in a fatal error state.
+
+## Examples
+
+The following example sets the "no progress" timeout value to 20 seconds, for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin /SetNoProgressTimeout myDownloadJob 20
+C:\>bitsadmin /setnoprogresstimeout myDownloadJob 20
 ```
 
 ## Additional References
