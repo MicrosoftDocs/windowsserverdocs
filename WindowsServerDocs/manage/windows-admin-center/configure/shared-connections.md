@@ -14,7 +14,7 @@ ms.prod: windows-server
 
 > Applies To: Windows Admin Center Preview, Windows Admin Center
 
-With the ability to configure shared connections, gateway administrators can configure the connections list once for all users of a given Windows Admin Center gateway. 
+With the ability to configure shared connections, gateway administrators can configure the connections list once for all users of a given Windows Admin Center gateway. This feature is only available on Windows Admin Center service mode.
 
 From the **Shared Connections** tab of Windows Admin Center gateway Settings, gateway administrators can add servers, clusters, and PC connections as you would from the all connections page, including the ability to tag connections. Any connections and tags added in the Shared Connections list will appear for all users of this Windows Admin Center gateway, from their all connections page.
     ![](../media/shared-cnxns-1.png)
