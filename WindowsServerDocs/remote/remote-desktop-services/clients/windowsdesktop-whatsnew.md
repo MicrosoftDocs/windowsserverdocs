@@ -21,20 +21,20 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.790  |
-|Insider    |1.2.935  |
+|Insider    |1.2.940  |
 
-## Updates for version 1.2.935
+## Updates for version 1.2.940
 
 *Date published: 04/14/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4txOl), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ttbd), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ttbb)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4txZU), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4txZV), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4tM6I)
 
 - Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
   - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.
   - We now only show available settings when a display configuration is selected.
   - In Select display mode, a new **Maximize to current displays** option allows you to dynamically change the displays used for the session without reconnecting. When enabled, maximizing the session causes it to go full screen on all displays touched by the session window.
   - We've added a new **Single display when windowed** option for all displays and select displays modes. This option switches your session automatically to a single display when you exit full screen mode, and automatically returns to multiple displays when you maximize the window.
-- We've added a new **Display settings** group to the system menu that appears when you right-click the title bar of a windowed desktop session. This will let you change some settings dynamically during a session. For example, you can change the new Single display mode when windowed and Maximize to current displays settings.
+- We've added a new **Display settings** group to the system menu that appears when you right-click the title bar of a windowed desktop session. This will let you change some settings dynamically during a session. For example, you can change the new **Single display mode when windowed** and **Maximize to current displays** settings.
 - When you exit full screen, the session window will return to its original location when you first entered full screen.
 - Resetting your user data from the About page now redirects to the Connection Center when completed instead of closing the client.
 - Addressed some accessibility issues with tab navigation and screen readers.
