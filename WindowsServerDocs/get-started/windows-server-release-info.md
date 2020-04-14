@@ -25,7 +25,8 @@ The Semi-Annual Channel provides opportunity for customers who are innovating qu
 |Windows Server, version 1809 (Semi-Annual Channel) (Datacenter Core, Standard Core)|1809|17763.107.1010129-1455|11/13/2018|11/10/2020|Review note|
 | Windows Server 2016 (Long-Term Servicing Channel)| 1607 | 14393.0 | 10/15/2016 |01/11/2022| 01/11/2027|
 
-> [!NOTE]
+> [!IMPORTANT]
+> > End of service for Windows Server, version 1809 has been delayed due to the ongoing public health crisis. For more information, see [our Support article](https://support.microsoft.com/help/4557164).
+
+>[!NOTE]
 > Windows Server, version 1803 and later are governed by the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881). See the [Windows Lifecycle FAQ](https://support.microsoft.com/help/18581/lifecycle-faq-windows-products) and [Comparison of servicing channels](../get-started-19/servicing-channels-19.md) for details regarding servicing requirements and other important information.
-> dfd
-> End of service for Windows Server, version 1809 has been delayed due to the ongoing public health crisis. For more information, see [our Support article](https://support.microsoft.com/help/4557164).
