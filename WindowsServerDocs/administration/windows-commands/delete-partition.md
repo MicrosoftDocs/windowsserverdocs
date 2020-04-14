@@ -1,12 +1,8 @@
 ---
 title: delete partition
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for delete partition, which deletes the partition with focus.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
 author: coreyp-at-msft
@@ -17,8 +13,6 @@ ms.date: 10/16/2017
 
 # delete partition
 
-
-
 Deletes the partition with focus.
 
 ## Syntax
@@ -27,7 +21,7 @@ Deletes the partition with focus.
 delete partition [noerr] [override]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -41,14 +35,14 @@ delete partition [noerr] [override]
 > -   You cannot delete the system partition, boot partition, or any partition that contains the active paging file or crash dump information.
 > -   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To delete the partition with focus, type:
 ```
 delete partition
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

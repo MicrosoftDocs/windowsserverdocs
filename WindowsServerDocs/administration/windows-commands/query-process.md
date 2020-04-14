@@ -1,12 +1,12 @@
 ---
 title: query process
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 36ce3ffc-0092-4eb1-a374-28e6616ca946
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 > ```
 > query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <ProgramName>] [/server:<ServerName>]
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |      Parameter       |                                                                 Description                                                                  |
 > |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >   -   The name of the process
 >   -   The ID of the process
 > - When **query process** returns information, a greater than (>) symbol is displayed before each process that belongs to the current session.
->   ## <a name="BKMK_examples"></a>Examples
+>   ## <a name=BKMK_examples></a>Examples
 > - To display information about the processes being used by all sessions, type:
 >   ```
 >   query process *
@@ -60,7 +60,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >   ```
 >   query process /ID:2
 >   ```
->   #### additional references
->   [Command-Line Syntax Key](command-line-syntax-key.md)
+>   ## Additional References
+>   - [Command-Line Syntax Key](command-line-syntax-key.md)
 >   [query](query.md)
->   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+>   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

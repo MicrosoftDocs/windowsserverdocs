@@ -1,14 +1,13 @@
 ---
 title: Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 1be75890-d316-495a-b9b7-be75fc1aac10
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
@@ -39,7 +38,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
   
 *Available space may run out on the physical disk that stores the checkpoints files. If this occurs, no additional disk operations can be performed on the physical storage. Any virtual machine that relies on the physical storage could be affected.*  
   
-If physical disk space runs out, any running virtual machine that has checkpoints or virtual hard disks stored on that disk may be paused automatically. Hyper-V Manager shows the status of these virtual machines as "paused-critical".  
+If physical disk space runs out, any running virtual machine that has checkpoints or virtual hard disks stored on that disk may be paused automatically. Hyper-V Manager shows the status of these virtual machines as paused-critical.  
   
 ## Resolution  
   

@@ -1,6 +1,5 @@
 ---
 title: High-performance networking (HPN)
-description: 
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article

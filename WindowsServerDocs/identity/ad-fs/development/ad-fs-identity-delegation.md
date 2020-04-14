@@ -7,7 +7,6 @@ manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -38,7 +37,7 @@ The components involved in this scenario are:
 - sts2: An STS that is in the role of identity provider for Fabrikam.com and provides an end point that the Fabrikam employee uses to authenticate. It has established trust with Contoso.com so that Fabrikam employees are allowed to access resources on Contoso.com.
 
 >[!NOTE] 
->The term “ActAs token”, which is used often in this scenario, refers to a token that is issued by an STS and contains the user's identity. The Actor property contains the STS's identity.
+>The term "ActAs token", which is used often in this scenario, refers to a token that is issued by an STS and contains the user's identity. The Actor property contains the STS's identity.
 
 As shown in the previous diagram, the flow in this scenario is:
 
@@ -53,7 +52,7 @@ As shown in the previous diagram, the flow in this scenario is:
 There are three options available for the Fabrikam.com administrator, Frank:
 
 
-1. Purchase and install an STS product such as Active Directory® Federation Services (AD FS).
+1. Purchase and install an STS product such as Active Directory&reg; Federation Services (AD FS).
 2. Subscribe to a cloud STS product such as LiveID STS.
 3. Build a custom STS using WIF.
 

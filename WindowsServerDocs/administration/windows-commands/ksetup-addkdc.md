@@ -1,12 +1,12 @@
 ---
 title: ksetup:addkdc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 98bfc23a-14c4-401c-bcb3-9903c5cdde64
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Adds a Key Distribution Center (KDC) address for the given Kerberos realm. For e
 ksetup /addkdc <RealmName> [<KDCName>] 
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,19 +42,19 @@ The computer must be restarted before the new realm setting will be used.
 
 To verify the default realm name for the computer, or to verify that this command worked as intended, run **ksetup** at the command prompt and verify the output for the added KDC.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Configure a non-Windows KDC server and the realm that the workstation should use:
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to "p@sswrd1%". Then restart the computer.
+Run the Ksetup tool at the command line of the same computer as in the preceding command to set the local computer account password to p@sswrd1%. Then restart the computer.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,9 +1,8 @@
 ---
 ms.date:  09/27/2019
 ms.topic: conceptual
-keywords:  OpenSSH, SSH, SSHD, install, setup
 contributor:  maertendMSFT
-author: maertendMSFT
+author: maertendmsft
 title:  Installation of OpenSSH For Windows
 ---
 
@@ -114,7 +113,7 @@ ECDSA key fingerprint is SHA256:(<a large string>).
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-The answer must be either “yes” or “no”. 
+The answer must be either "yes" or "no". 
 Answering Yes will add that server to the local system's list of known ssh hosts.
 
 You will be prompted for the password at this point. As a security precaution, your password will not be displayed as you type. 

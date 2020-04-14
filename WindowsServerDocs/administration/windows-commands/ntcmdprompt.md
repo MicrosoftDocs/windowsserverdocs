@@ -1,12 +1,12 @@
 ---
 title: ntcmdprompt
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0063bdbb-dc2b-41c4-99ee-b011603aaa86
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Runs the command interpreter **Cmd.exe**, rather than **Command.com**, after run
 ```
 ntcmdprompt
 ```
-### Parameters
+#### Parameters
 
 | Parameter |             Description              |
 |-----------|--------------------------------------|
@@ -34,6 +34,6 @@ ntcmdprompt
   ## Examples
   To include **ntcmdprompt** in your **Config.nt** file, or the configuration startup file specified in the Pif, type:
   **ntcmdprompt**
-  ## additional references
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+  ## Additional References
+- - [Command-Line Syntax Key](command-line-syntax-key.md)
 

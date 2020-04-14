@@ -1,14 +1,9 @@
 ---
 title: System Insights FAQ
-description: "System Insights FAQ"
-ms.custom: na
+description: System Insights FAQ
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: system-insights
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
 author: gawatu
 ms.author: gawatu
 manager: mallikarjun.chadalapaka

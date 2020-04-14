@@ -1,12 +1,12 @@
 ---
 title: mqsvc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8bfd7874-ccb4-453f-b908-3a5b9aee0ad6
 
@@ -28,10 +28,10 @@ Message Queuing technology enables applications running at different times to co
 Mqsvc.exe
 ```
 
-### Parameters
+#### Parameters
 
 None
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

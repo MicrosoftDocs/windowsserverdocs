@@ -1,7 +1,5 @@
 ---
-ms.assetid: 
 title: Client Access Control policies in Active Directory Federation Services 2.0
-description:
 author: billmath
 ms.author: billmath
 manager: femila

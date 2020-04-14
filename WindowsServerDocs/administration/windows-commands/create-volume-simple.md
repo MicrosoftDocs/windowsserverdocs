@@ -1,12 +1,8 @@
 ---
 title: create volume simple
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for create volume simple, which creates a simple volume on the specified dynamic disk.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
 author: coreyp-at-msft
@@ -18,12 +14,10 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates a simple volume on the specified dynamic disk.  
+Creates a simple volume on the specified dynamic disk.  
   
 > [!IMPORTANT]  
-> for Windows Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.  
-  
-  
+> for Windows Vista, this DiskPart command is only available in the Windows Vista Ultimate, Windows Vista Enterprise, and Windows Vista Business editions.
   
 ## Syntax  
   
@@ -31,7 +25,7 @@ creates a simple volume on the specified dynamic disk.
 create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 | Parameter  |                                                                                                                            Description                                                                                                                            |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,15 +38,15 @@ create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To create a volume of 1000 megabytes in size, on disk 1, type:  
   
 ```  
 create volume simple size=1000 disk=1  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

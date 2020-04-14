@@ -1,7 +1,6 @@
 ---
 
 title: User Privacy and AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: mtillman

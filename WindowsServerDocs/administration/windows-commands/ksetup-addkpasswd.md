@@ -1,12 +1,12 @@
 ---
 title: ksetup:addkpasswd
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d3196995-1b38-48ff-ba08-911cfab77317
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Adds a Kerberos password (Kpasswd) server address for a realm. For examples of h
 ksetup /addkpasswd <RealmName> [<KpasswdName>]
 ```
 
-### Parameters
+#### Parameters
 
 If the Kerberos realm that the workstation will be authenticating to supports the Kerberos change password protocol, you can configure a client computer running the Windows operating system to use a Kerberos password server. This setting is configured on the realm side.
 
@@ -44,7 +44,7 @@ Run the command **ksetup** to verify the KDC name. If **kpasswd =** does not app
 
 You can add additional KDC names one at a time.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Configure the realm, CORP.CONTOSO.COM, so that it uses the non-Windows KDC server, mitkdc.contoso.com, as the password server:
 ```
@@ -52,8 +52,8 @@ ksetup /addkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 This results in a non-Windows Kerberos password server that controls all the passwords for authentication between it and the realm.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:delkpasswd](ksetup-delkpasswd.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

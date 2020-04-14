@@ -1,12 +1,12 @@
 ---
 title: nslookup
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 41516932-7833-434a-aa92-b4cf0f9a7ef7
 author: coreyp-at-msft
@@ -51,7 +51,7 @@ nslookup /set [no]vc
 nslookup /view <FileName>
 ```
 
-## Parameters
+### Parameters
 
 |                       Parameter                       |                                                                                                         Description                                                                                                         |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,7 +100,7 @@ nslookup /view <FileName>
   |`No response from server`|No DNS name server is running on the server computer.|
   |`No records`|The DNS name server does not have resource records of the current query type for the computer, although the computer name is valid. The query type is specified with the **set querytype** command.|
   |`Nonexistent domain`|The computer or DNS domain name does not exist.|
-  |`Connection refused`<br /><br />-or-<br /><br />`Network is unreachable`|The connection to the DNS name server or finger server could not be made. This error commonly occurs with **ls** and **finger** requests.|
+  |`Connection refused`<p>-or-<p>`Network is unreachable`|The connection to the DNS name server or finger server could not be made. This error commonly occurs with **ls** and **finger** requests.|
   |`Server failure`|The DNS name server found an internal inconsistency in its database and could not return a valid answer.|
   |`Refused`|The DNS name server refused to service the request.|
   |`format error`|The DNS name server found that the request packet was not in the proper format. It may indicate an error in **nslookup**.|
@@ -112,4 +112,4 @@ nslookup /view <FileName>
     Each command-line option consists of a hyphen (-) followed immediately by the command name and, in some cases, an equal sign (=) and then a value. For example, to change the default query type to host (computer) information and the initial time-out to 10 seconds, type:
     **nslookup -querytype=hinfo -timeout=10**
     ## See Also
-    [Command-Line Syntax Key](command-line-syntax-key.md)
+    - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: for
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e275726c-035f-4a74-8062-013c37f5ded1
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -99,17 +99,17 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
     The syntaxes are:  
     ```
-    for /f ["<ParsingKeywords>"] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
-    for /f ["<ParsingKeywords>"] {%%|%}<Variable> in ("<LiteralString>") do <Command> [<CommandLineOptions>]
-    for /f ["<ParsingKeywords>"] {%%|%}<Variable> in ('<Command>') do <Command> [<CommandLineOptions>]
+    for /f [<ParsingKeywords>] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
+    for /f [<ParsingKeywords>] {%%|%}<Variable> in (<LiteralString>) do <Command> [<CommandLineOptions>]
+    for /f [<ParsingKeywords>] {%%|%}<Variable> in ('<Command>') do <Command> [<CommandLineOptions>]
     ```  
     The *Set* argument specifies one or more file names. Each file is opened, read, and processed before moving to the next file in *Set*. To override the default parsing behavior, specify *ParsingKeywords*. This is a quoted string that contains one or more keywords to specify different parsing options.
 
     If you use the **usebackq** option, use one of the following syntaxes:  
     ```
-    for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ("<Set>") do <Command> [<CommandLineOptions>]
-    for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in ('<LiteralString>') do <Command> [<CommandLineOptions>]
-    for /f ["usebackq <ParsingKeywords>"] {%%|%}<Variable> in (`<Command>`) do <Command> [<CommandLineOptions>]
+    for /f [usebackq <ParsingKeywords>] {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
+    for /f [usebackq <ParsingKeywords>] {%%|%}<Variable> in ('<LiteralString>') do <Command> [<CommandLineOptions>]
+    for /f [usebackq <ParsingKeywords>] {%%|%}<Variable> in (`<Command>`) do <Command> [<CommandLineOptions>]
     ```  
     The following table lists the parsing keywords that you can use for *ParsingKeywords*.  
 
@@ -128,7 +128,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
     |Variable with modifier|Description|
     |----------------------|-----------|
-    |%~I|Expands **%I** which removes any surrounding quotation marks (" ").|
+    |%~I|Expands **%I** which removes any surrounding quotation marks ( ).|
     |%~fI|Expands **%I** to a fully qualified path name.|
     |%~dI|Expands **%I** to a drive letter only.|
     |%~pI|Expands **%I** to a path only.|
@@ -155,12 +155,12 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
     By using uppercase variable names such as **%I**, you can make your code more readable and avoid confusion with the modifiers, which are not case sensitive.
 - Parsing a string
 
-  You can use the **for /f** parsing logic on an immediate string by wrapping *\<LiteralString\>* in either: double quotes (*without* "usebackq") or in single quotes (*with* "usebackq") --for example, ("MyString") or ('MyString'). *\<LiteralString\>* is treated as a single line of input from a file. When parsing *\<LiteralString\>* in double-quotes, command symbols (such as **\\ \& \| \> \< \^**) are treated as ordinary characters.
+  You can use the **for /f** parsing logic on an immediate string by wrapping *\<LiteralString\>* in either: double quotes (*without* usebackq) or in single quotes (*with* usebackq) --for example, (MyString) or ('MyString'). *\<LiteralString\>* is treated as a single line of input from a file. When parsing *\<LiteralString\>* in double-quotes, command symbols (such as **\\ \& \| \> \< \^**) are treated as ordinary characters.
 - Parsing output
 
   You can use the **for /f** command to parse the output of a command by placing a back-quoted *\<command\>* between the parentheses. It is treated as a command line, which is passed to a child Cmd.exe. The output is captured into memory and parsed as if it is a file.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To use **for** in a batch file, use the following syntax:
 ```
@@ -174,17 +174,17 @@ In the preceding example, each file that has the .doc or .txt extension in the c
 
 To parse a file, ignoring commented lines, type:
 ```
-for /f "eol=; tokens=2,3* delims=," %i in (myfile.txt) do @echo %i %j %k
+for /f eol=; tokens=2,3* delims=, %i in (myfile.txt) do @echo %i %j %k
 ```
-This command parses each line in Myfile.txt. It ignores lines that begin with a semicolon and passes the second and third token from each line to the **for** body (tokens are delimited by commas or spaces). The body of the **for** statement references **%i** to get the second token, **%j** to get the third token, and **%k** to get all of the remaining tokens. If the file names that you supply contain spaces, use quotation marks around the text (for example, "File Name"). To use quotation marks, you must use **usebackq**. Otherwise, the quotation marks are interpreted as defining a literal string to parse.
+This command parses each line in Myfile.txt. It ignores lines that begin with a semicolon and passes the second and third token from each line to the **for** body (tokens are delimited by commas or spaces). The body of the **for** statement references **%i** to get the second token, **%j** to get the third token, and **%k** to get all of the remaining tokens. If the file names that you supply contain spaces, use quotation marks around the text (for example, File Name). To use quotation marks, you must use **usebackq**. Otherwise, the quotation marks are interpreted as defining a literal string to parse.
 
-**%i** is explicitly declared in the **for** statement. **%j** and **%k** are implicitly declared by using **tokens=**. You can use **tokens=** to specify up to 26 tokens, provided that it does not cause an attempt to declare a variable higher than the letter "z" or "Z."
+**%i** is explicitly declared in the **for** statement. **%j** and **%k** are implicitly declared by using **tokens=**. You can use **tokens=** to specify up to 26 tokens, provided that it does not cause an attempt to declare a variable higher than the letter z or Z.
 
 The following example enumerates the environment variable names in the current environment. To parse the output of a command by placing *Set* between the parentheses, type:
 ```
-for /f "usebackq delims==" %i in ('set') do @echo %i 
+for /f usebackq delims== %i in ('set') do @echo %i 
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

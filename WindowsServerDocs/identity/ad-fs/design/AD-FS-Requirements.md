@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8ce6e7c4-cf8e-4b55-980c-048fea28d50f
 title: Federation Server Farm Using SQL Server
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -77,9 +75,9 @@ The following minimum and recommended hardware requirements apply to the AD FS f
 |Disk space|32 GB|100 GB|  
   
 ## <a name="BKMK_3"></a>Software requirements  
-The following AD FS requirements are for the server functionality that is built into the Windows Server® 2012 R2 operating system:  
+The following AD FS requirements are for the server functionality that is built into the Windows Server&reg; 2012 R2 operating system:  
   
--   For extranet access, you must deploy the Web Application Proxy role service \- part of the Windows Server® 2012 R2 Remote Access server role. Prior versions of a federation server proxy are not supported with AD FS in Windows Server® 2012 R2.  
+-   For extranet access, you must deploy the Web Application Proxy role service \- part of the Windows Server&reg; 2012 R2 Remote Access server role. Prior versions of a federation server proxy are not supported with AD FS in Windows Server&reg; 2012 R2.  
   
 -   A federation server and the Web Application Proxy role service cannot be installed on the same computer.  
   
@@ -112,7 +110,7 @@ Most AD FS features do not require AD DS functional\-level modifications to oper
   
 -   Any standard service account can be used as a service account for AD FS. Group Managed Service accounts are also supported. This requires at least one domain controller \(it is recommended that you deploy two or more\) that is running Windows Server 2012 or higher.  
   
--   For Kerberos authentication to function between domain\-joined clients and AD FS, the ‘HOST\/<adfs\_service\_name>' must be registered as a SPN on the service account. By default, AD FS will configure this when creating a new AD FS farm if it has sufficient permissions to perform this operation.  
+-   For Kerberos authentication to function between domain\-joined clients and AD FS, the 'HOST\/<adfs\_service\_name>' must be registered as a SPN on the service account. By default, AD FS will configure this when creating a new AD FS farm if it has sufficient permissions to perform this operation.  
   
 -   The AD FS service account must be trusted in every user domain that contains users authenticating to the AD FS service.  
   
@@ -212,7 +210,7 @@ In addition, if client user certificate authentication \(clientTLS authenticatio
   
 For information on configuring corporate DNS for the federation service and Device Registration Service, see [Configure Corporate DNS for the Federation Service and DRS](https://technet.microsoft.com/library/dn486786.aspx).  
   
-For information on configuring corporate DNS for Web Application proxies, see the “Configure DNS” section in [Step 1: Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx).  
+For information on configuring corporate DNS for Web Application proxies, see the "Configure DNS" section in [Step 1: Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx).  
   
 For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](https://go.microsoft.com/fwlink/?LinkId=75282).  
   
@@ -220,7 +218,7 @@ For information about how to configure a cluster IP address or cluster FQDN usin
 AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md).  
   
 > [!NOTE]  
-> AD FS automatically creates an “Active Directory” attribute store, by default. Attribute store requirements depend on whether your organization is acting as the account partner \(hosting the federated users\) or the resource partner \(hosting the federated application\).  
+> AD FS automatically creates an "Active Directory" attribute store, by default. Attribute store requirements depend on whether your organization is acting as the account partner \(hosting the federated users\) or the resource partner \(hosting the federated application\).  
   
 **LDAP Attribute Stores**  
   
@@ -343,8 +341,8 @@ The following table provides additional cryptography support information on the 
 |AES256KeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#kw\-aes256](http://www.w3.org/2001/04/xmlenc#kw-aes256)|256|Supported algorithm for Encrypting the symmetric key that encrypts the security token.|  
 |RsaV15KeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#rsa\-1\_5](http://www.w3.org/2001/04/xmlenc#rsa-1_5)|1024|Supported algorithm for Encrypting the symmetric key that encrypts the security token.|  
 |RsaOaepKeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#rsa\-oaep\-mgf1p](http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p)|1024|Default. Supported algorithm for Encrypting the symmetric key that encrypts the security token.|  
-|SHA1\-[http:\/\/www.w3.org\/PICS\/DSig\/SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/SHA1_1_0.html)|N\/A|Used by AD FS Server in artifact SourceId generation:  In this scenario, the STS uses SHA1 \(per the recommendation in the SAML 2.0 standard\) to create a short 160 bit value for the artifact sourceiD.<br /><br />Also used by the ADFS web agent \(legacy component from WS2003 timeframe\) to identify changes in a “last updated” time value so that it knows when to update information from the STS.|  
-|SHA1withRSA\-<br /><br />[http:\/\/www.w3.org\/PICS\/DSig\/RSA\-SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html)|N\/A|Used in cases when AD FS Server validates the signature of SAML AuthenticationRequest, sign the artifact resolution request or response, create token\-signing certificate.<br /><br />In these cases, SHA256 is the default, and SHA1 is only used if the partner \(relying party\) cannot support SHA256 and must use SHA1.|  
+|SHA1\-[http:\/\/www.w3.org\/PICS\/DSig\/SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/SHA1_1_0.html)|N\/A|Used by AD FS Server in artifact SourceId generation:  In this scenario, the STS uses SHA1 \(per the recommendation in the SAML 2.0 standard\) to create a short 160 bit value for the artifact sourceiD.<p>Also used by the ADFS web agent \(legacy component from WS2003 timeframe\) to identify changes in a "last updated" time value so that it knows when to update information from the STS.|  
+|SHA1withRSA\-<p>[http:\/\/www.w3.org\/PICS\/DSig\/RSA\-SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html)|N\/A|Used in cases when AD FS Server validates the signature of SAML AuthenticationRequest, sign the artifact resolution request or response, create token\-signing certificate.<p>In these cases, SHA256 is the default, and SHA1 is only used if the partner \(relying party\) cannot support SHA256 and must use SHA1.|  
   
 ## <a name="BKMK_13"></a>Permissions requirements  
 The administrator that performs the installation and the initial configuration of AD FS must have domain administrator permissions in the local domain \(in other words, the domain to which the federation server is joined to.\)  

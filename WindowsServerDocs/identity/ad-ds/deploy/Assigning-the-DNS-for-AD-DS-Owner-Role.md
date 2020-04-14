@@ -1,14 +1,12 @@
 ---
 ms.assetid: 4163cf03-3bff-426c-9844-4cc2d7897d52
 title: Assigning the DNS for AD DS Owner Role
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

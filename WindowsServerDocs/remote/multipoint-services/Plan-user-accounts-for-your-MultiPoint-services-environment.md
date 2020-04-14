@@ -1,13 +1,9 @@
 ---
 title: Plan user accounts for your MultiPoint Services environment
 description: Planning information for user accounts in MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d47be540-e891-47bd-85da-6df4bbf93b2f
 author: evaseydl
@@ -22,7 +18,7 @@ The best way to implement user accounts in MultiPoint Services depends on the si
 -   **Domain accounts** - If your environment has many computers running MultiPoint Services and many users, you probably will find it more useful to set up an Active Directory Domain Services \(AD DS\) domain and use *domain user accounts*, which enable a user to access her own user profile and settings from any station in the domain. Domain user accounts must be created on the domain controller by a domain administrator.  
   
 > [!NOTE]  
-> The following sections discuss scenarios that you might implement for local user accounts in MultiPoint Services. If you are using domain user accounts, see the “One or more MultiPoint servers  in a domain network environment” scenario in [Example scenarios: MultiPoint Services user accounts](Example-scenarios--MultiPoint-Services-user-accounts.md).  
+> The following sections discuss scenarios that you might implement for local user accounts in MultiPoint Services. If you are using domain user accounts, see the "One or more MultiPoint servers  in a domain network environment" scenario in [Example scenarios: MultiPoint Services user accounts](Example-scenarios--MultiPoint-Services-user-accounts.md).  
   
 ## Planning local user accounts  
 The following sections consider the advantages, disadvantages, and requirements for several ways to implement individual or shared local user accounts in your Windows MultiPoint Services environment.  

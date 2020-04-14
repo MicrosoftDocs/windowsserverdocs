@@ -1,12 +1,12 @@
 ---
 title: nslookup set debug
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b51e04e7-5f6f-4183-88bf-5628a506bdab
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Turns Debugging Mode on or off.
 set [no]debug
 ```
 
-## Parameters
+### Parameters
 
 |  Parameter  |                         Description                          |
 |-------------|--------------------------------------------------------------|
@@ -39,6 +39,6 @@ set [no]debug
 
 -   With Debugging Mode turned on, more information is printed about the packet sent to the server and the resulting answer.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

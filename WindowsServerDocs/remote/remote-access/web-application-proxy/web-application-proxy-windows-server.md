@@ -1,13 +1,12 @@
 ---
 ms.assetid: d8adcb68-18e0-41bf-a817-d57344bf2e7d
 title: Web Application Proxy in Windows Server 2016
-description:
-author: kgremban
+ms.author: kgremban
+author: eross-msft
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: web-app-proxy
 ---
 

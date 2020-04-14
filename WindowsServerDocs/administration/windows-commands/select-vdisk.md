@@ -1,12 +1,12 @@
 ---
 title: select vdisk
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8808872a-3523-4205-a6c6-83fa738ee37a
 author: coreyp-at-msft
@@ -29,23 +29,23 @@ selects the specified virtual hard disk \(VHD\) and shifts the focus to it.
 select vdisk file=<full path> [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |Parameter|Description|  
 |-------|--------|  
 |file\=<full path>|Specifies the full path and file name of an existing VHD file.|  
 |noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To shift the focus to the VHD named Test.vhd, type:  
   
 ```  
-select vdisk file="c:\test\test.vhd"  
+select vdisk file=c:\test\test.vhd  
 ```  
   
-#### additional references  
+## Additional References  
   
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 -   [attach vdisk](attach-vdisk.md)  
   

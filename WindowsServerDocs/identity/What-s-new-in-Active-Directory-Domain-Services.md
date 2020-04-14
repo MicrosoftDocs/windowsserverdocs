@@ -1,19 +1,14 @@
 ---
 ms.assetid: 9a06cd41-426f-4cb9-89cf-f5be730e0b79
-title: What&#39;s new in Active Directory Domain Services 
-ms.custom: na
+title: What's new in Active Directory Domain Services 
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: 
-ms.suite: na
 ms.technology: active-directory-domain-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: Femila
 ms.author: billmath
 ms.date: 05/31/2017
 ---
-# What&#39;s new in Active Directory Domain Services 
+# What's new in Active Directory Domain Services 
 
 >Applies To: Windows Server 2016
 
@@ -60,7 +55,7 @@ Azure Active Directory Join enhances identity experiences for enterprise, busine
   
 Benefits:  
   
--   **Availability of Modern Settings** on corp-owned Windows devices. Oxygen Services no longer require a personal Microsoft account: they now run off users' existing work accounts to ensure compliance. Oxygen Services will work on PCs that are joined to an on-premises Windows domain, and PCs and devices that are “joined” to your Azure AD tenant (“cloud domain”). These settings include:  
+-   **Availability of Modern Settings** on corp-owned Windows devices. Oxygen Services no longer require a personal Microsoft account: they now run off users' existing work accounts to ensure compliance. Oxygen Services will work on PCs that are joined to an on-premises Windows domain, and PCs and devices that are "joined" to your Azure AD tenant ("cloud domain"). These settings include:  
   
     -   Roaming or personalization, accessibility settings and credentials  
   

@@ -4,7 +4,7 @@ description: Storage i/o performance considerations in Hyper-V performance tunin
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
 ---

@@ -1,13 +1,8 @@
 ---
 title: General Remote Desktop connection troubleshooting
 description: Troubleshooting "Class not registered" error with Remote Desktop connection.
-audience: itpro ​
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan

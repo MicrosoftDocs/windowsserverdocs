@@ -1,14 +1,12 @@
 ---
 ms.assetid: 093ef1ae-ebc1-490f-9fb1-2c000ce89eb6
 title: Using the Organizational Domain Forest Model
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Using the Organizational Domain Forest Model

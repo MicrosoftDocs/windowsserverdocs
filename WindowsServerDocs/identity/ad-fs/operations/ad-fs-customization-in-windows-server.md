@@ -1,14 +1,12 @@
 ---
 ms.assetid: 25f5aff1-6abf-4dea-b531-f1d9943bc181
 title: AD FS Customization in Windows Server 2016
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # AD FS Customization in Windows Server 2016

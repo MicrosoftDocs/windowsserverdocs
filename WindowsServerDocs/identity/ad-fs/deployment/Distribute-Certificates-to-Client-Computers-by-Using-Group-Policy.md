@@ -1,15 +1,12 @@
 ---
 ms.assetid: cf32926a-2083-408b-a264-2cad179ed18a
 title: Distribute Certificates to Client Computers by Using Group Policy
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
-ms.author: billmath
 ms.author: billmath
 ---
 

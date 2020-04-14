@@ -1,12 +1,12 @@
 ---
 title: makecab
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4da95297-c593-427b-9f76-2f389c46cbf4
 author: coreyp-at-msft
@@ -24,7 +24,7 @@ Package existing files into a cabinet (.cab) file.
 makecab [/v[n]] [/d var=<value> ...] [/l <dir>] <source> [<destination>]
 makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 ```
-### Parameters
+#### Parameters
 
 |      Parameter       |                                                                        Description                                                                        |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,6 +39,6 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 ## Remarks
 -   Refer to [Microsoft Cabinet format](https://go.microsoft.com/fwlink/?LinkId=226852) on MSDN for information on directive_file.
 
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -202,7 +202,7 @@ Additional example configuration items for AD DS and DNS are provided in the fol
 |Network Connect Bindings|Ethernet|
 |DNS Server Settings|DC1.corp.contoso.com|
 |Preferred DNS server IP address|10.0.0.2|
-|Scope values<br /><br />1.  Scope Name<br />2.  Starting IP Address<br />3.  Ending IP Address<br />4.  Subnet Mask<br />5.  Default Gateway (optional)<br />6.  Lease duration|1.  Primary Subnet<br />2.  10.0.0.1<br />3.  10.0.0.254<br />4.  255.255.255.0<br />5.  10.0.0.1<br />6.  8 days|
+|Scope values<p>1.  Scope Name<br />2.  Starting IP Address<br />3.  Ending IP Address<br />4.  Subnet Mask<br />5.  Default Gateway (optional)<br />6.  Lease duration|1.  Primary Subnet<br />2.  10.0.0.1<br />3.  10.0.0.254<br />4.  255.255.255.0<br />5.  10.0.0.1<br />6.  8 days|
 |IPv6 DHCP Server Operation Mode|Not enabled|
 
 ## <a name="bkmk_lab"></a>Using This Guide in a Test Lab

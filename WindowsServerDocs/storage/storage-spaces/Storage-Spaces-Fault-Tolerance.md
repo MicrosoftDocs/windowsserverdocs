@@ -2,7 +2,7 @@
 title: Fault tolerance and storage efficiency in Storage Spaces Direct
 ms.prod: windows-server
 ms.author: cosmosdarwin
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-Premises
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 08/11/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -116,7 +114,7 @@ The above PSH creates the following objects:
 If you plan to use Windows 10 domain join (with automatic registration to Azure AD) as described here, execute the following commands to create a service connection point in AD DS  
 1.  Open Windows PowerShell and execute the following:
     
-	`PS C:>Import-Module -Name "C:\Program Files\Microsoft Azure Active Directory Connect\AdPrep\AdSyncPrep.psm1" ` 
+    `PS C:>Import-Module -Name "C:\Program Files\Microsoft Azure Active Directory Connect\AdPrep\AdSyncPrep.psm1" ` 
 
 >Note: if necessary, copy the AdSyncPrep.psm1 file from your Azure AD Connect server.  This file is located in Program Files\Microsoft Azure Active Directory Connect\AdPrep
 
@@ -124,7 +122,7 @@ If you plan to use Windows 10 domain join (with automatic registration to Azure 
 
 2. Provide your Azure AD global administrator credentials  
 
-	`PS C:>$aadAdminCred = Get-Credential`
+    `PS C:>$aadAdminCred = Get-Credential`
 
 ![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png) 
 
@@ -163,9 +161,9 @@ For your reference, below is a comprehensive list of the AD DS devices, containe
  
 
 
-- object of type ms-DS-DeviceContainer at CN=RegisteredDevices,DC=&lt;domain&gt;  		
-	- read access to the AD FS service account   
-	- read/write access to the Azure AD Connect sync AD connector account</br></br>
+- object of type ms-DS-DeviceContainer at CN=RegisteredDevices,DC=&lt;domain&gt;          
+    - read access to the AD FS service account   
+    - read/write access to the Azure AD Connect sync AD connector account</br></br>
 
 - Container CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;  
 - Container Device Registration Service DKM under the above container

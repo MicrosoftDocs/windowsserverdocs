@@ -1,14 +1,10 @@
 ---
 title: Welcome to Remote Desktop Services in Windows Server 2016
 description: Provides an overview of Remote Desktop Services
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 02/22/2017  
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
@@ -40,7 +36,7 @@ With these options and configurations, you have the flexibility to deploy the de
 ## Next steps
 
 Here are some next steps to help you get a better understanding of RDS and even start deploying your own environment:
--	Understand the [supported configurations](rds-supported-config.md) for RDS with the various Windows and Windows Server versions
--	[Plan and design](rds-plan-and-design.md) an RDS environment to accommodate various requirements, such as high availability and multi-factor authentication.
--	Review the [Remote Desktop Services architecture models](desktop-hosting-logical-architecture.md) that work best for your desired environment.
--	Start to [deploy your RDS environment with ARM and Azure Marketplace](rds-in-azure.md).
+-    Understand the [supported configurations](rds-supported-config.md) for RDS with the various Windows and Windows Server versions
+-    [Plan and design](rds-plan-and-design.md) an RDS environment to accommodate various requirements, such as high availability and multi-factor authentication.
+-    Review the [Remote Desktop Services architecture models](desktop-hosting-logical-architecture.md) that work best for your desired environment.
+-    Start to [deploy your RDS environment with ARM and Azure Marketplace](rds-in-azure.md).

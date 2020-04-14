@@ -1,8 +1,8 @@
 ---
 title: Example of generated Go code for the top level IPAM & Subnet object
-description:
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 
@@ -24,10 +24,10 @@ package swagger
 
 type Ipam struct {
 
-	//  Type : dhcp
-	Type_ string `json:"Type,omitempty"`
+    //  Type : dhcp
+    Type_ string `json:"Type,omitempty"`
 
-	Subnets []Subnet `json:"Subnets,omitempty"`
+    Subnets []Subnet `json:"Subnets,omitempty"`
 }
 
 /*
@@ -43,13 +43,13 @@ package swagger
 
 type Subnet struct {
 
-	ID string `json:"ID,omitempty"`
+    ID string `json:"ID,omitempty"`
 
-	IpAddressPrefix string `json:"IpAddressPrefix,omitempty"`
+    IpAddressPrefix string `json:"IpAddressPrefix,omitempty"`
 
-	Policies []SubnetPolicy `json:"Policies,omitempty"`
+    Policies []SubnetPolicy `json:"Policies,omitempty"`
 
-	Routes []Route `json:"Routes,omitempty"`
+    Routes []Route `json:"Routes,omitempty"`
 }
 
 ```

@@ -1,14 +1,12 @@
 ---
 ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
 title: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

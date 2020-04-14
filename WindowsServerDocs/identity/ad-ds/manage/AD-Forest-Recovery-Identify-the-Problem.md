@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Identify the Problem
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

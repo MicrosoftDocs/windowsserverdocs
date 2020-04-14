@@ -4,10 +4,9 @@ description: In this step, you install and configure the server-side components 
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: 
 ms.localizationpriority: medium 
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
@@ -89,7 +88,7 @@ Since the RRAS server is not domain joined, autoenrollment cannot be used to enr
 6. From an elevated command prompt, navigate to the folder that contains the VPNGateway.req file created in the previous step and type:
 
    ```
-   certreq -attrib “CertificateTemplate:[Customer]VPNGateway” -submit VPNgateway.req VPNgateway.cer
+   certreq -attrib "CertificateTemplate:[Customer]VPNGateway" -submit VPNgateway.req VPNgateway.cer
    ```
 
 7. If prompted by the Certification Authority List window, select the appropriate Enterprise CA to service the certificate request.

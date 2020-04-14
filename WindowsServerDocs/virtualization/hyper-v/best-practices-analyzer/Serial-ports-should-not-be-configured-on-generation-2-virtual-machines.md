@@ -1,14 +1,13 @@
 ---
 title: Serial ports should not be configured on generation 2 virtual machines
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 87061193-dd3f-4398-aa5d-4cee83cadfa3
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Serial ports should not be configured on generation 2 virtual machines

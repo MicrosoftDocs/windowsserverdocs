@@ -1,12 +1,12 @@
 ---
 title: ksetup:delkpasswd
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2db0bfcd-bc08-48e3-9f30-65b6411839c6
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ removes a Kerberos password server (Kpasswd) for a realm. For examples of how th
 ```
 ksetup /delkpasswd <RealmName> <KpasswdName>
 ```
-### Parameters
+#### Parameters
 
 |   Parameter   |                                                                                                   Description                                                                                                   |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,13 +32,13 @@ ksetup /delkpasswd <RealmName> <KpasswdName>
 
 ## Remarks
 Run the command **ksetup** to verify the KDC name. If **kpasswd =** does not appear in the output, then the mapping has not been configured. Multiple mappings will be listed, if set.
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 verify the realm CORP.CONTOSO.COM uses the non-Windows KDC server mitkdc.contoso.com as the password server:
 ```
 ksetup /delkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 To verify the command worked as intended, run **ksetup** on the Windows computer to verify the realm CORP.CONTOSO.COM is not mapped to a Kerberos password server (the KDC name).
-## additional references
+## Additional References
 -   [ksetup](ksetup.md)
 -   [ksetup:delkpasswd](ksetup-delkpasswd.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

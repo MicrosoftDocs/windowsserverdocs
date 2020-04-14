@@ -1,12 +1,8 @@
 ---
 title: "Preconfiguring a Router"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636
 author: nnamuhcs
@@ -38,7 +34,7 @@ Typically, a new installation of the operating system requires an Internet capab
   
 -   If the router supports multiple subnets, the IP address of the server must be handed out as one DNS server through DHCP.  
   
--   If the router has an integrated access control feature for Active DirectoryÂ® Domain Services, you can automate the Active Directory integration during the Initial Configuration of the server. You should also expose this feature through the router management add-in in the Dashboard.  
+-   If the router has an integrated access control feature for Active DirectoryÂ&reg; Domain Services, you can automate the Active Directory integration during the Initial Configuration of the server. You should also expose this feature through the router management add-in in the Dashboard.  
   
 > [!NOTE]
 >  For more information about configuring wireless connections, see [Configure Support for a Wireless Network](Configure-Support-for-a-Wireless-Network.md).  

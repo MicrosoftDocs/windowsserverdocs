@@ -1,12 +1,8 @@
 ---
 title: shift
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for shift, which changes the position of batch parameters in a batch file. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b56574e8-570a-4cc9-bbac-1b94fbf6a47a
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # shift
-
-
 
 Changes the position of batch parameters in a batch file.
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 shift [/n <N>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,7 +38,7 @@ shift [/n <N>]
 - The **shift** command has no effect on the **%\\*** batch parameter.
 - There is no backward **shift** command. After you implement the **shift** command, you cannot recover the batch parameter (**%0**) that existed before the shift.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The following lines from a sample batch file called Mycopy.bat demonstrate how to use **shift** with any number of batch parameters. In this example, Mycopy.bat copies a list of files to a specific directory. The batch parameters are represented by the directory and file name arguments.
 ```
@@ -56,7 +50,7 @@ rem mycopy dir file1 file2 ...
 set todir=%1
 :getfile
 shift
-if "%1"=="" goto end
+if %1== goto end
 copy %1 %todir%
 goto getfile
 :end
@@ -64,6 +58,6 @@ set todir=
 echo All done
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

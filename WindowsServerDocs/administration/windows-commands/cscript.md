@@ -1,12 +1,8 @@
 ---
 title: cscript
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for cscript, which starts a script so that it runs in a command-line environment.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
 author: coreyp-at-msft
@@ -18,12 +14,13 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-starts a script so that it runs in a command-line environment.
+Starts a script so that it runs in a command-line environment.
+
 ## Syntax
 ```
 cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}] [/I] [/Job:<Identifier>] [{/Logo|/NoLogo}] [/S] [/T:<Seconds>] [/X] [/U] [/?] [<ScriptArguments>]
 ```
-### Parameters
+#### Parameters
 
 |      Parameter       |                                                                      Description                                                                       |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,6 +53,6 @@ cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}]
 -   You can set properties for individual scripts. See [additional References](#BKMK_references) for more information.
 -   Windows Script Host can use .wsf script files. Each .wsf file can use multiple scripting engines and perform multiple jobs.
 
-#### <a name="BKMK_references"></a>Additional references
+#### <a name=BKMK_references></a>Additional references
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

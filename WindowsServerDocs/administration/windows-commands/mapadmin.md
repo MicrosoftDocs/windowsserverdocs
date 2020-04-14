@@ -1,12 +1,12 @@
 ---
 title: mapadmin
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b17332c7-8622-4223-9c43-2fb9cf4d992d
 author: coreyp-at-msft
@@ -54,7 +54,7 @@ Specifies the user name of the user whose credentials are to be used. It might b
 Specifies the password of the user. If you specify the **-u** option but omit the **-p** option, you are prompted for the user's password.
 The specific action that **mapadmin** performs depends on the command argument you specify:
 
-## Parameters
+### Parameters
 ### start
 starts the User Name Mapping service.
 
@@ -133,5 +133,5 @@ Specifies general settings for User Name Mapping. The following options are avai
 -   for UNIX users, use the form &lt;NISdomain&gt;\\&lt;user name&gt;, &lt;user name&gt;@&lt;NISdomain&gt;, user &lt;name&gt;@PCNFS, or PCNFS\\&lt;user name&gt;
 -   for UNIX groups, use the form &lt;NISdomain&gt;\\&lt;groupname&gt;, &lt;groupname&gt;@&lt;NISdomain&gt;, &lt;groupname&gt;@PCNFS, or PCNFS\\&lt;groupname&gt;
 
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: "Enable folder redirection on the Windows Server Essentials Destination Server1"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 H1: Enable folder redirection on the Windows Server Essentials Destination Server
 ms.assetid: f67d195e-36f6-495a-8361-6d5faa889441

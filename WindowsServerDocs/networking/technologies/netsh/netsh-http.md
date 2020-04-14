@@ -4,7 +4,6 @@ description: Use netsh http to query and configure HTTP.sys settings and paramet
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: 
 manager: dougkim
 ms.author: lizross
 author: eross-msft

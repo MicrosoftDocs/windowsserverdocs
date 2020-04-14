@@ -1,10 +1,11 @@
 ---
 title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 03/29/2018
 description: This article describes the scenarios available today for disaster recovery of Microsoft HCI (Storage Spaces Direct)
 ms.localizationpriority: medium
@@ -39,10 +40,10 @@ In this scenario, there are two separate independent clusters. For configuring S
 
 The following considerations apply when deploying Storage Replica. 
 
-1.	Configuring replication is done outside of Failover Clustering. 
-2.	Choosing the method of replication will be dependent upon your network latency and RPO requirements. Synchronous replicates the data on low-latency networks with crash consistency to ensure no data loss at a time of failure. Asynchronous replicates the data over networks with higher latencies, but each site may not have identical copies at a time of failure. 
-3.	In the case of a disaster, failovers between the clusters are not automatic and need to be orchestrated manually through the Storage Replica PowerShell cmdlets. In the diagram above, ClusterA is the primary and ClusterB is the secondary. If ClusterA goes down, you would need to manually set ClusterB as Primary before you can bring the resources up. Once ClusterA is back up, you would need to make it Secondary. Once all data has been synced up, make the change and swap the roles back to the way they were originally set.
-4.	Since Storage Replica is only replicating the data, a new virtual machine or Scale Out File Server (SOFS) utilizing this data would need to be created inside Failover Cluster Manager on the replica partner.
+1.    Configuring replication is done outside of Failover Clustering. 
+2.    Choosing the method of replication will be dependent upon your network latency and RPO requirements. Synchronous replicates the data on low-latency networks with crash consistency to ensure no data loss at a time of failure. Asynchronous replicates the data over networks with higher latencies, but each site may not have identical copies at a time of failure. 
+3.    In the case of a disaster, failovers between the clusters are not automatic and need to be orchestrated manually through the Storage Replica PowerShell cmdlets. In the diagram above, ClusterA is the primary and ClusterB is the secondary. If ClusterA goes down, you would need to manually set ClusterB as Primary before you can bring the resources up. Once ClusterA is back up, you would need to make it Secondary. Once all data has been synced up, make the change and swap the roles back to the way they were originally set.
+4.    Since Storage Replica is only replicating the data, a new virtual machine or Scale Out File Server (SOFS) utilizing this data would need to be created inside Failover Cluster Manager on the replica partner.
 
 Storage Replica can be used if you have virtual machines or an SOFS running on your cluster. Bringing resources online in the replica HCI can be manual or automated through the use of PowerShell scripting.
 
@@ -54,14 +55,14 @@ Storage Replica can be used if you have virtual machines or an SOFS running on y
 
 With Hyper-V Replica, the replication is taken care of by Hyper-V. When you first enable a virtual machine for replication, there are three choices for how you wish the initial copy to be sent to the corresponding replica cluster(s).
 
-1.	Send the initial copy over the network
-2.	Send the initial copy to external media so that it can be copied onto your server manually
-3.	Use an existing virtual machine already created on the replica hosts
+1.    Send the initial copy over the network
+2.    Send the initial copy to external media so that it can be copied onto your server manually
+3.    Use an existing virtual machine already created on the replica hosts
 
 The other option is for when you wish this initial replication should take place.
 
-1.	Start the replication immediately
-2.	Schedule a time for when the initial replication takes place. 
+1.    Start the replication immediately
+2.    Schedule a time for when the initial replication takes place. 
 
 Other considerations you will need are:
 
@@ -72,9 +73,9 @@ Other considerations you will need are:
 
 When HCI participate in Hyper-V Replica, you must have the [Hyper-V Replica Broker](https://blogs.technet.microsoft.com/virtualization/2012/03/27/why-is-the-hyper-v-replica-broker-required/) resource created in each cluster. This resource does several things:
 
-1.	Gives you a single namespace for each cluster for Hyper-V Replica to connect to.
-2.	Determines which node within that cluster the replica (or extended replica) will reside on when it first receives the copy.
-3.	Keeps track of which node owns the replica (or extended replica) in case the virtual machine moves to another node. It needs to track this so that when replication takes place, it can send the information to the proper node.
+1.    Gives you a single namespace for each cluster for Hyper-V Replica to connect to.
+2.    Determines which node within that cluster the replica (or extended replica) will reside on when it first receives the copy.
+3.    Keeps track of which node owns the replica (or extended replica) in case the virtual machine moves to another node. It needs to track this so that when replication takes place, it can send the information to the proper node.
 
 ## Backup and restore
 
@@ -96,13 +97,13 @@ When an Authoritative restore is initiated on a cluster node, the cluster servic
 
 To run through an authoritative restore, the following steps can be accomplished.
 
-1.	Run WBADMIN.EXE from an administrative command prompt to get the latest version of backups that you want to install and ensure that System State is one of the components you can restore.
+1.    Run WBADMIN.EXE from an administrative command prompt to get the latest version of backups that you want to install and ensure that System State is one of the components you can restore.
 
     ```powershell
     Wbadmin get versions
     ```
 
-2.	Determine if the version backup you have has the cluster registry information in it as a component. There are a couple items you will need from this command, the version and the application/component for use in Step 3. For the version, for example, say the backup was done January 3, 2018 at 2:04am and this is the one you need restored.
+2.    Determine if the version backup you have has the cluster registry information in it as a component. There are a couple items you will need from this command, the version and the application/component for use in Step 3. For the version, for example, say the backup was done January 3, 2018 at 2:04am and this is the one you need restored.
 
     ```powershell
     wbadmin get items -backuptarget:\\backupserver\location

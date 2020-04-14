@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getsecurityflags
-description: "Windows Commands topic for **bitsadmin getsecurityflags** - Reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer."
-ms.custom: na
+description: Windows Commands topic for **bitsadmin getsecurityflags**, which reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c2e73519-34f4-487b-af11-97d5d08ef9bb
 author: coreyp-at-msft
@@ -23,23 +19,23 @@ Reports the HTTP security flags for URL redirection and checks performed on the 
 ## Syntax
 
 ```
-bitsadmin /GetSecurityFlags <Job> 
+bitsadmin /getsecurityflags <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
-The following example retrieves the securitly flags from a job named *myJob*.
+## <a name=BKMK_examples></a>Examples
+
+The following example retrieves the security flags from a job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /GetSecurityFlags myJob 
+C:\>bitsadmin /getsecurityflags myDownloadJob
 ```
 
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
 
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: call
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for call, which calls one batch program from another without stopping the parent batch program.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
 author: coreyp-at-msft
@@ -17,14 +13,12 @@ ms.date: 06/05/2018
 
 # call
 
-
-
-Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call.
-
-> [!NOTE]
-> **Call** has no effect at the command prompt when it is used outside of a script or batch file.
+Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call
 
 For examples of how to use this command, see [Examples](#BKMK_examples).
+
+> [!NOTE]
+> Call has no effect at the command prompt when it is used outside of a script or batch file.
 
 ## Syntax
 
@@ -32,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 ```
 
-## Parameters
+### Parameters
 
 |           Parameter           |                                                                         Description                                                                          |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,7 +46,7 @@ You can use the following optional syntaxes as substitutions for batch parameter
 
 |Batch Parameter|Description|
 |---------------|-----------|
-|%~1|Expands **%1** and removes surrounding quotation marks (" ").|
+|%~1|Expands **%1** and removes surrounding quotation marks ( ).|
 |%~f1|Expands **%1** to a fully qualified path.|
 |%~d1|Expands **%1** to a drive letter only.|
 |%~p1|Expands **%1** to a path only.|
@@ -95,7 +89,7 @@ In the above examples, **%1** and PATH can be replaced by other valid values. Th
 
     `call :<Label> <Arguments>`
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To run the Checknew.bat program from another batch program, type the following command in the parent batch program:
 ```
@@ -106,6 +100,6 @@ If the parent batch program accepts two batch parameters and you want it to pass
 call checknew %1 %2
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

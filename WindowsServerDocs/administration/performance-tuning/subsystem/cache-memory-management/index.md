@@ -4,7 +4,7 @@ description: Performance Tuning for Cache and Memory Manager Subsystems
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: Pavel; ATales
+ms.author: pavel; atales
 author: phstee
 ms.date: 10/16/2017
 ---

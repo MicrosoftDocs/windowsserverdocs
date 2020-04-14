@@ -1,12 +1,12 @@
 ---
 title: findstr
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c2d803fb-4cd2-46a1-a1b7-6f5e0249c418
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ For examples of how to use this command, see [Examples](#examples).
 findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] [/c:<String>] [/g:<File>] [/d:<DirList>] [/a:<ColorAttribute>] [/off[line]] <Strings> [<Drive>:][<Path>]<FileName>[ ...]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -79,7 +79,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
   .*
   ``` 
 
-  Use the following expression as part of a larger expression to match any string beginning with "b" and ending with "ing": 
+  Use the following expression as part of a larger expression to match any string beginning with b and ending with ing: 
 
   ```
   b.*ing
@@ -89,19 +89,19 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 
 Use spaces to separate multiple search strings unless the argument is prefixed with **/c**.
 
-To search for "hello" or "there" in file x.y, type:
+To search for hello or there in file x.y, type:
 
 ```
-findstr "hello there" x.y 
+findstr hello there x.y 
 ```
 
-To search for "hello there" in file x.y, type:
+To search for hello there in file x.y, type:
 
 ```
-findstr /c:"hello there" x.y 
+findstr /c:hello there x.y 
 ```
 
-To find all occurrences of the word "Windows" (with an initial capital letter W) in the file Proposal.txt, type:
+To find all occurrences of the word Windows (with an initial capital letter W) in the file Proposal.txt, type:
 
 ```
 findstr Windows proposal.txt 
@@ -113,10 +113,10 @@ To search every file in the current directory and all subdirectories that contai
 findstr /s /i Windows *.* 
 ```
 
-To find all occurrences of lines that begin with "FOR" and are preceded by zero or more spaces (as in a computer program loop), and to display the line number where each occurrence is found, type:
+To find all occurrences of lines that begin with FOR and are preceded by zero or more spaces (as in a computer program loop), and to display the line number where each occurrence is found, type:
 
 ```
-findstr /b /n /r /c:"^ *FOR" *.bas 
+findstr /b /n /r /c:^ *FOR *.bas 
 ```
 
 To search for multiple strings in a set of files, create a text file that contains each search criterion on a separate line. You can also list the exact files that you want to search in a text file. For example, to use the search criteria in the file Stringlist.txt, search the files listed in Filelist.txt, and then store the results in the file Results.out, type:
@@ -125,18 +125,18 @@ To search for multiple strings in a set of files, create a text file that contai
 findstr /g:stringlist.txt /f:filelist.txt > results.out 
 ```
 
-To list every file containing the word "computer" within the current directory and all subdirectories, regardless of case, type:
+To list every file containing the word computer within the current directory and all subdirectories, regardless of case, type:
 
 ```
-findstr /s /i /m "\<computer\>" *.*
+findstr /s /i /m \<computer\> *.*
 ```
 
-To list every file containing the word "computer" and any other words that begin with "comp", (such as "compliment" and "compete"), type:
+To list every file containing the word computer and any other words that begin with comp, (such as compliment and compete), type:
 
 ```
-findstr /s /i /m "\<comp.*" *.*
+findstr /s /i /m \<comp.* *.*
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

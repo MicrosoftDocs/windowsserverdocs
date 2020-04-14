@@ -24,7 +24,7 @@ fsutil reparsepoint [query] <FileName>
 fsutil reparsepoint [delete] <FileName>
 ```
 
-## Parameters
+### Parameters
 
 | Parameter  |                                                                Description                                                                |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------|
@@ -53,8 +53,8 @@ To delete a reparse point from a specified file or directory, use the following 
 fsutil reparsepoint delete c:\server
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

@@ -1,12 +1,12 @@
 ---
 title: ftp lcd
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 60a25808-6abb-408b-8373-0bbdcd0994b4 vhorne
 author: coreyp-at-msft
@@ -23,14 +23,14 @@ changes the working directory on the local computer. By default, the working dir
 ```  
 lcd [<directory>]  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |[<directory>]|Specifies the directory on the local computer to which to change. If *directory* is not specified, the current working directory is changed to the default directory.|  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 change the working directory on the local computer to **C:\dir1**  
 ```  
 lcd C:\dir1  
 ```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

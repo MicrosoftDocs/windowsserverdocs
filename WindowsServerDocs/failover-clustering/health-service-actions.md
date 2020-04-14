@@ -5,7 +5,6 @@ manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid:
 author: cosmosdarwin
 ms.date: 08/14/2017
 ---

@@ -1,12 +1,12 @@
 ---
 title: ksetup:dumpstate
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3ef2f7b8-97af-4f42-9542-cff324840637
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Displays the current state of realm settings for all realms that are defined on 
 ksetup /dumpstate
 ```
 
-### Parameters
+#### Parameters
 
 None
 
@@ -44,14 +44,14 @@ This command does not display the computer password that is set by using the com
 
 **Ksetup** produces the same output as **ksetup /dumpstate**.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Find most of the Kerberos realm configurations on a computer:
 ```
 ksetup /dumpstate
 ```
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

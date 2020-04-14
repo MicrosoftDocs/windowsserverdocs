@@ -1,12 +1,8 @@
 ---
 title: Manage Virtual Desktops
 description: Learn how to manage virtual desktops (VDI) in MultiPoint Services
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa9ac0ed-47cb-4811-91ff-4fcb62d7858b
 author: lizap
@@ -50,11 +46,11 @@ The system is restarted, which could take several minutes.
 ## Import a virtual desktop template  
 In the case where you have created a virtual desktop template on another MultiPoint server, you can import that template using the following steps.  
 
-1.	Open MultiPoint Manager, and then click the **Virtual Desktops** tab.  
+1.    Open MultiPoint Manager, and then click the **Virtual Desktops** tab.  
   
-2.	Under the VDI tasks, click **Import Virtual desktop template**.  
+2.    Under the VDI tasks, click **Import Virtual desktop template**.  
   
-3.	Locate the template and define path and prefix for the imported template.  
+3.    Locate the template and define path and prefix for the imported template.  
   
 ## Customize the virtual desktop template  
 After you have created the virtual desktop template, you can customize it with applications, software updates and configure system settings.   

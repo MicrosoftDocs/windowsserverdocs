@@ -1,12 +1,8 @@
 ---
 title: cd
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for cd, which displays the name of or changes the current directory. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 932d9cc1-3dff-40da-835c-1cb0894874f1
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # cd
-
-
 
 Displays the name of or changes the current directory. If used with only a drive letter (for example, `cd C:`), **cd** displays the names of the current directory in the specified drive. If used without parameters, **cd** displays the current drive and directory.
 
@@ -35,7 +29,7 @@ chdir [/d] [<Drive>:][<Path>]
 chdir [..]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -55,7 +49,7 @@ If command extensions are enabled, the following conditions apply to the **cd** 
   ```  
   is the same as:  
   ```
-  cd "username\programs\start menu"
+  cd username\programs\start menu
   ```  
   The quotation marks are required, however, if extensions are disabled.
 
@@ -64,7 +58,7 @@ To disable command extensions, type:
 cmd /e:off
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 The root directory is the top of the directory hierarchy for a drive. To return to the root directory, type:
 ```
@@ -79,6 +73,6 @@ To verify the change to the directory, type:
 cd [<Drive>:]
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

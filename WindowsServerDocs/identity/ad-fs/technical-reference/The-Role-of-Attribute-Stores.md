@@ -1,20 +1,18 @@
 ---
 ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
 title: The Role of Attribute Stores
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
 
 # The Role of Attribute Stores
-Active Directory Federation Services uses the term “attribute stores” to refer to directories or databases that an organization uses to store its user accounts and their associated attribute values. After it is configured in an identity provider organization, AD FS retrieves these attribute values from the store and creates claims based on that information so that a Web application or service that is hosted in a relying party organization can make the appropriate authorization decisions whenever a federated user \(a user whose account is stored in the identity provider organization\) attempts to access the application or service.  
+Active Directory Federation Services uses the term "attribute stores" to refer to directories or databases that an organization uses to store its user accounts and their associated attribute values. After it is configured in an identity provider organization, AD FS retrieves these attribute values from the store and creates claims based on that information so that a Web application or service that is hosted in a relying party organization can make the appropriate authorization decisions whenever a federated user \(a user whose account is stored in the identity provider organization\) attempts to access the application or service.  
   
 For more information about how claims are generated, see [The Role of Claims](The-Role-of-Claims.md).  
   

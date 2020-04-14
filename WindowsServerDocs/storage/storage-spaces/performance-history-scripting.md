@@ -1,12 +1,11 @@
 ---
 title: Scripting with Storage Spaces Direct performance history
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
