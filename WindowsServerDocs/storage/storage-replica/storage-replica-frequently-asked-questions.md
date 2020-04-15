@@ -228,7 +228,7 @@ For technical assistance with Storage Replica, you can post at [the Microsoft Te
 ## <a name="FAQ18"></a> Can Storage Replica be configured to replicate in both directions?
 Storage Replica is a one-way replication technology.  It will only replicate from the source to the destination on a per volume basis.  This direction can be reversed at any time, but is still only in one direction.  However, that does not mean you cannot have a set of volumes (source and destination) replicate in one direction and a different set of drives (source and destination) replicate in the opposite direction.  For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters L:, M:, N:, and O: and you wish to replicate drive M: from Server1 to Server2 but drive O: replicate from Server2 to Server1.  This can be done as long as there separate log drives for each of the groups. I.E. 
 
-•	Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
+- Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
 •	Server2 source drive O: with source log drive N: replicating to Server1 destination drive O: with destination log drive N:
 
 
