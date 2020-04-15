@@ -6,7 +6,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 04/15/2020
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
@@ -230,7 +230,6 @@ Storage Replica is a one-way replication technology.  It will only replicate fro
 
 - Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
 - Server2 source drive O: with source log drive N: replicating to Server1 destination drive O: with destination log drive N:
-
 
 ## Related Topics  
 - [Storage Replica Overview](storage-replica-overview.md) 
