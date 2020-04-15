@@ -42,7 +42,7 @@ To effectively use the Allow default rule, you need to determine exactly which a
 
 2.  Create the following registry value in order to enable the advanced logging feature and set the path to where the log file should be written.
 
-    **"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\ CodeIdentifiers"**
+    **"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers"**
 
     String Value: *NameLogFile path to NameLogFile*
 
