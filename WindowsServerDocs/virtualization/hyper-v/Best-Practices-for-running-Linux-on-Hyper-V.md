@@ -72,7 +72,7 @@ Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific netw
 
 The Linux kernel offers two sets of disk I/O schedulers to reorder requests.  One set is for the older ‘blk’ subsystem and one set is for the newer ‘blk-mq’ subsystem. In either case, with today’s solid state disks it is recommended to use a scheduler that passes the scheduling decisions to the underlying Hyper-V hypervisor. For Linux kernels using the ‘blk’ subsystem, this is the “noop” scheduler. For Linux kernels using the ‘blk-mq’ subsystem, this is the “none” scheduler.
 
-For a particular disk, the available schedulers can be seen at this file system location:  /sys/class/block/<diskname>/queue/scheduler, with the currently selected scheduler in square brackets.  You can change the scheduler by writing to this file system location. The change must be added to an initialization script in order to persist across reboots. Consult your Linux distro documentation for details.
+For a particular disk, the available schedulers can be seen at this file system location: /sys/class/block/`<diskname>`/queue/scheduler, with the currently selected scheduler in square brackets. You can change the scheduler by writing to this file system location. The change must be added to an initialization script in order to persist across reboots. Consult your Linux distro documentation for details.
 
 ## NUMA
 
