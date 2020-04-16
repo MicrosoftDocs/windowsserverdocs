@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/15/2020
+ms.date: 04/20/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Store client
@@ -20,7 +20,7 @@ We regularly update the [Windows Store client](windows.md), adding new features 
 
 ## Updates for version 10.1.1215
 
-*Date published: 04/15/2020*
+*Date published: 04/20/2020*
 
 - Updated the user agent string for Windows Virtual Desktop.
 
