@@ -19,7 +19,7 @@ sections:
     text: "
       Find information on known issues for Windows 10, version 1809 and Windows Server 2019. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).
       
- <table border = '0' class='box-info'><tr>
+ <table border = '0' class='box-info has-overflow-hidden'><tr>
 <td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of April 14, 2020 </strong></div><div>Windows 10, version 1809 is designated for broad deployment. The recommended servicing status is Semi-Annual Channel.&nbsp;We are delaying the scheduled end of service date for the Home, Pro, Pro Education, Pro for Workstations, and IoT Core editions of Windows 10, version 1809 to November 10, 2020.&nbsp;&nbsp;For more information see the <a href=\"https://docs.microsoft.com/windows/release-information/windows-message-center#410\" target=\"_blank\" rel=\"noopener noreferrer\">Message Center</a>.</div>
 </td></tr></table>
 
