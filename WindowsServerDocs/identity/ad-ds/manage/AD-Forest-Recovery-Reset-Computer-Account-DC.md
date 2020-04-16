@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Resetting the computer account on the DC
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

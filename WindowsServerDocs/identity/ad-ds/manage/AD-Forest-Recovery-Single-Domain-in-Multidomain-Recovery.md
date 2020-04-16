@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Recovering a single domain in a multidomain forest
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

@@ -1,30 +1,30 @@
 ---
 title: bootcfg
-description: "Windows Commands topic for **bootcfg** - Configures, queries, or changes Boot.ini file settings."
-ms.custom: na
+description: Windows Commands topic for bootcfg, which configures, queries, or changes Boot.ini file settings.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3deb354c-5717-4066-bc79-b9323d559e44
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # bootcfg
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Configures, queries, or changes Boot.ini file settings.  
-## Syntax  
+Configures, queries, or changes Boot.ini file settings.
+
+## Syntax
+
 ```  
 bootcfg <parameter> [arguments...]  
-```  
-## Parameters  
+```
+
+### Parameters
+
 |Parameter|Description|  
 |-------|--------|  
 |[bootcfg addsw](bootcfg-addsw.md)|adds operating system load options for a specified operating system entry.|  

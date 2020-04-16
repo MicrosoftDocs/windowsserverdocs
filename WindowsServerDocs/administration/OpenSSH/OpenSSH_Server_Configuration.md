@@ -1,10 +1,9 @@
 ---
 ms.date: 09/27/2018
 ms.topic: conceptual
-keywords: OpenSSH, SSH, SSHD, install, setup
 contributor: maertendMSFT
-ms.product: w10
-author: maertendMSFT
+ms.product: windows-server
+author: maertendmsft
 title: OpenSSH Server Configuration for Windows
 ---
 
@@ -12,7 +11,7 @@ title: OpenSSH Server Configuration for Windows
 
 This topic covers the Windows-specific configuration for OpenSSH Server (sshd). 
 
-OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not be duplicated in this documentation set. 
+OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not duplicated in this documentation set. 
 
 ## Configuring the default shell for OpenSSH in Windows
 
@@ -83,7 +82,7 @@ For Windows OpenSSH, the only available authentication methods are "password" an
 
 ### AuthorizedKeysFile 
 
-The default is “.ssh/authorized_keys .ssh/authorized_keys2”. If the path is not absolute, it is taken relative to user's home directory (or profile image path). Ex. c:\users\user. Note that if the user belongs to the administrator group, %programdata%/ssh/administrators_authorized_keys is used instead.
+The default is ".ssh/authorized_keys .ssh/authorized_keys2". If the path is not absolute, it is taken relative to user's home directory (or profile image path). Ex. c:\users\user. Note that if the user belongs to the administrator group, %programdata%/ssh/administrators_authorized_keys is used instead.
 
 ### ChrootDirectory (Support added in v7.7.0.0)
 

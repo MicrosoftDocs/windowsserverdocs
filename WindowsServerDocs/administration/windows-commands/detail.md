@@ -1,12 +1,8 @@
 ---
 title: detail
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for detail, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 305755bd-1a51-486b-8515-62d3f227c291
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # detail
-
-
 
 Displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 
@@ -30,7 +24,7 @@ detail volume
 detail vdisk
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -39,7 +33,7 @@ detail vdisk
 |[Detail volume](detail-volume.md)|Displays the disks on which the current volume resides.|
 |[Detail vdisk](detail-vdisk.md)|Displays the properties of the selected VHD.|
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,21 +1,19 @@
 ---
 ms.assetid: e2ad9e80-a036-4bac-a4fb-afa83756aa1f
 title: Windows Server 2012 AD FS Deployment Guide
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
 # Windows Server 2012 AD FS Deployment Guide
 
 
-You can use Active Directory® Federation Services \(AD FS\) with the Windows Server® 2012 operating system to build a federated identity management solution that extends distributed identification, authentication, and authorization services to Web\-based applications across organization and platform boundaries. By deploying AD FS, you can extend your organization's existing identity management capabilities to the Internet.  
+You can use Active Directory&reg; Federation Services \(AD FS\) with the Windows Server&reg; 2012 operating system to build a federated identity management solution that extends distributed identification, authentication, and authorization services to Web\-based applications across organization and platform boundaries. By deploying AD FS, you can extend your organization's existing identity management capabilities to the Internet.  
   
 You can deploy AD FS to:  
   

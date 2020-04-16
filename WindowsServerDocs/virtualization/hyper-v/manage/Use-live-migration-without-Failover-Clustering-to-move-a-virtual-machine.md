@@ -1,14 +1,12 @@
 ---
 title: Use live migration without Failover Clustering to move a virtual machine
-description: "Gives prerequisites and instructions for doing a live migration in a standalone environment."
+description: Gives prerequisites and instructions for doing a live migration in a standalone environment.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 01/17/2017
 ---

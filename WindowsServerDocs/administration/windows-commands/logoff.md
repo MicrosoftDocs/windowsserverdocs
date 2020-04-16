@@ -1,12 +1,12 @@
 ---
 title: logoff
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 939f09cc-de8c-436c-a05d-aca5f2a06371
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 ```
 logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                             Description                                                                              |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +44,7 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 - if <*SessionID*> or <*SessionName*> is not specified, **logoff** logs off the user from the current session. If you specify <*SessionName*>, it must be an active one.
 - When you log off a user, all processes end and the session is deleted from the server.
 - You cannot log off a user from the console session.
-  ## <a name="BKMK_examples"></a>Examples
+  ## <a name=BKMK_examples></a>Examples
 - To log off a user from the current session, type:
   ```
   logoff
@@ -58,6 +58,6 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
   logoff TERM04 /server:Server1
   ```
 
-#### additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

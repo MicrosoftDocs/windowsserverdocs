@@ -1,12 +1,8 @@
 ---
 title: "System Requirements for Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/31/2013
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 author: nnamuhcs

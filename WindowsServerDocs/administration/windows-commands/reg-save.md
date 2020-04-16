@@ -1,12 +1,12 @@
 ---
 title: reg save
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b326482b-c8af-467d-a20c-0481eeda3d5c
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 reg save <KeyName> <FileName> [/y]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -48,13 +48,13 @@ reg save <KeyName> <FileName> [/y]
 |1|Failure|
 -   Before editing any registry entries, save the parent subkey with the **reg save** operation. If the edit fails, restore the original subkey with the **reg restore** operation.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 To save the hive MyApp into the current folder as a file named AppBkUp.hiv, type:
 ```
 REG SAVE HKLM\Software\MyCo\MyApp AppBkUp.hiv
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

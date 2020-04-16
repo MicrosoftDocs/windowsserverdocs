@@ -1,12 +1,12 @@
 ---
 title: gpfixup
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2b145410-fc75-4526-932d-f16b7ee3aaef
 author: coreyp-at-msft
@@ -31,7 +31,7 @@ Gpfixup [/v]
 [/user:<USERNAME> [/pwd:{<PASSWORD>|*}]] [/?]
 ```
 
-### Parameters
+#### Parameters
 
 |       Parameter       |                                                                                                                                                                                                                               Description                                                                                                                                                                                                                               |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ Gpfixup [/v]
 -   The **gpfixup** command is available in Windows Server 2008 R2 and Windows Server 2008, except on Server Core installations.
 -   Although the Group Policy Management Console (GPMC) is distributed with Windows Server 2008 R2 and Windows Server 2008, you must install Group Policy Management as a feature through Server Manager.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 This example assumes that you have already performed a domain rename operation in which you changed the DNS name from **MyOldDnsName** to **MyNewDnsName**, and the NetBIOS name from **MyOldNetBIOSName** to **MyNewNetBIOSName**. In this example, you use the **gpfixup** command to connect to the domain controller named **MyDcDnsName** and repair GPOs and Group Policy links by updating the old domain name embedded in the GPOs and links. Status and error output is saved to a file that is named **gpfixup.log**.
 ```
@@ -62,8 +62,8 @@ This example is the same as the previous one, except that it assumes the NetBIOS
 gpfixup /olddns: MyOldDnsName /newdns:MyNewDnsName /dc:MyDcDnsName 2>&1 >gpfixup.log
 ```
 
-#### Additional references
+## Additional References
 
 -   [Administering Active Directory Domain Rename](https://go.microsoft.com/fwlink/?LinkId=198385)
 -   [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

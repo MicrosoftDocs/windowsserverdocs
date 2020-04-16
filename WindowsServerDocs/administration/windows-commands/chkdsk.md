@@ -1,6 +1,6 @@
 ---
 title: chkdsk
-description: "Windows Commands topic for chkdsk, which checks the file system and file system metadata of a volume for logical and physical errors."
+description: Windows Commands topic for chkdsk, which checks the file system and file system metadata of a volume for logical and physical errors.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -31,7 +31,7 @@ For examples of how to use this command, see [Examples](#examples).
 chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]] [/b]  
 ```
 
-## Parameters
+### Parameters
 
 |      Parameter       |                  Description                                    |
 | -------------------- | ------------------------------------------------------------------------ |
@@ -46,8 +46,8 @@ chkdsk [<Volume>[[<Path>]<FileName>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<Size>]
 |    /l[:\<Size>]     | Use with NTFS only. Changes the log file size to the size you type. If you omit the size parameter, **/l** displays the current size. |
 |         /b          | NTFS only: Clears the list of bad clusters on the volume and rescans all allocated and free clusters for errors. **/b** includes the functionality of **/r**. Use this parameter after imaging a volume to a new hard disk drive.            |
 | /scan               | NTFS only: Runs an online scan on the volume. |
-| /forceofflinefix    | NTFS only: (Must be used with "/scan"). Bypass all online repair; all defects found are queued for offline repair (i.e. "chkdsk /spotfix"). |
-| /perf               | NTFS only: (Must be used with "/scan"). Uses more system resources to complete a scan as fast aspossible. This may have a negative performance impact on other tasks running on the system.|
+| /forceofflinefix    | NTFS only: (Must be used with /scan). Bypass all online repair; all defects found are queued for offline repair (i.e. chkdsk /spotfix). |
+| /perf               | NTFS only: (Must be used with /scan). Uses more system resources to complete a scan as fast aspossible. This may have a negative performance impact on other tasks running on the system.|
 | /spotfix            | NTFS only: Runs spot fixing on the volume. |
 | /sdcleanup          | NTFS only: Garbage collect unneeded security descriptor data (implies /F). |
 | /offlinescanandfix  | Runs an offline scan and fix on the volume. |
@@ -138,4 +138,4 @@ chkdsk *.*
 
 ## Additional references
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

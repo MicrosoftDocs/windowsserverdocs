@@ -1,14 +1,12 @@
 ---
 ms.assetid: 606f4196-b579-4806-a462-3abd4d93e87c
 title: When to Use a Send LDAP Attributes as Claims Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -119,7 +117,7 @@ The previous query is made up of the following three parts:
 -   Active Directory domain—You specify the last part of the query only when the attribute store is Active Directory. \(It is not necessary when you query other attribute stores.\) This part of the query is used to specify the user account in the form domain\\name. The Active Directory attribute store uses the domain part to determine the appropriate domain controller to connect to and run the query and request the attributes.  
   
 ### Example: How to use two custom rules to extract the manager e\-mail from an attribute in Active Directory  
-The following two custom rules, when used together in the order shown below, query Active Directory for the **manager** attribute of the user account \(Rule 1\) and then use that attribute to query the user account of the manager for the **mail** attribute \(Rule 2\). Finally, the **mail** attribute is issued as a “ManagerEmail” claim. In summary, Rule 1 queries Active Directory and passes the result of the query to Rule 2, which then extracts the manager e\-mail values.  
+The following two custom rules, when used together in the order shown below, query Active Directory for the **manager** attribute of the user account \(Rule 1\) and then use that attribute to query the user account of the manager for the **mail** attribute \(Rule 2\). Finally, the **mail** attribute is issued as a "ManagerEmail" claim. In summary, Rule 1 queries Active Directory and passes the result of the query to Rule 2, which then extracts the manager e\-mail values.  
   
 For example, when these rules finish running, a claim is issued that contains the manager's e\-mail address for a user in the corp.fabrikam.com domain.  
   

@@ -1,12 +1,8 @@
 ---
 title: wdsutil
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for wdsutil, which is a command-line utility used for managing your Windows Deployment Services server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a1965a0-8677-40cc-9495-30ae806808d1
 author: coreyp-at-msft

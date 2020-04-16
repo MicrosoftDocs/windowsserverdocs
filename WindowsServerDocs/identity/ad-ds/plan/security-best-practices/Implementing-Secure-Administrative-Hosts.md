@@ -1,14 +1,12 @@
 ---
 ms.assetid: eafdddc3-40d7-4a75-8f4f-a45294aabfc8
 title: Implementing Secure Administrative Hosts
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

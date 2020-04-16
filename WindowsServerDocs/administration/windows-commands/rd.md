@@ -1,12 +1,12 @@
 ---
 title: rd
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 42e672f6-5bc2-4c16-af25-18e7ed2dd555
 author: coreyp-at-msft
@@ -30,7 +30,7 @@ rd [<Drive>:]<Path> [/s [/q]]
 rmdir [<Drive>:]<Path> [/s [/q]]
 ```
 
-## Parameters
+### Parameters
 
 |     Parameter     |                                                                 Description                                                                  |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ rmdir [<Drive>:]<Path> [/s [/q]]
     If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then use **rd** (specify *Path* if necessary).
 -   The **rd** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 
 You cannot delete the directory that you are currently working in. You must change to a directory that is not within the current directory. For example, to change to the parent directory, type:
 ```
@@ -74,6 +74,6 @@ rd /s /q test
 > [!CAUTION]
 > When you run **rd /s** in quiet mode, the entire directory tree is deleted without confirmation. Ensure that important files are moved or backed up before using the **/q** command-line option.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

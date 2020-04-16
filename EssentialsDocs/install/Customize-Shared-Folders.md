@@ -1,12 +1,8 @@
 ---
 title: "Customize Shared Folders"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
@@ -52,7 +48,7 @@ By default, the server folders are created on the largest data partition on Disk
   
 1.  Create a PostIC.cmd file for running post Initial Configuration tasks as detailed in the [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) section.  
   
-2.  Using Notepad, create a file named **customizefolders.ps1** in the C:\Windows\Setup\Scripts folder, and then paste the following Windows PowerShell® commands into the file (unmark appropriate lines depending on the desired behavior).  
+2.  Using Notepad, create a file named **customizefolders.ps1** in the C:\Windows\Setup\Scripts folder, and then paste the following Windows PowerShell&reg; commands into the file (unmark appropriate lines depending on the desired behavior).  
   
     ```  
     # Move the Documents folder to D:\ServerFolders  

@@ -1,12 +1,8 @@
 ---
 title: "Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 author: nnamuhcs

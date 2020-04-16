@@ -1,12 +1,8 @@
 ---
 title: Get started with the Android client
 description: General information about the Android client.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
@@ -66,7 +62,7 @@ Need to edit these settings? Tap the **More options** menu (**...**) next to the
 Want to remove the connection? Again, tap the **More options** menu (**...**), and then tap **Remove**.
 
 >[!TIP]
-> If you get error 0xf07 about a bad password ("We couldn't connect to the remote PC because the password associated with the user account has expired"), change your password and try again.
+> If you get error 0xf07 about a bad password (We couldn't connect to the remote PC because the password associated with the user account has expired), change your password and try again.
 
 ### Add remote resources
 
@@ -97,7 +93,7 @@ The Remote Desktop client supports pinning connections to your home screen by us
 
 1. Tap **Apps** to launch the apps menu.
 2. Tap **Widgets**.
-3. Swipe through the widgets and look for the Remote Desktop icon with the description: "Pin Remote Desktop."
+3. Swipe through the widgets and look for the Remote Desktop icon with the description: Pin Remote Desktop.
 4. Tap and hold that Remote Desktop widget and move it to the home screen.
 5. When you release the icon, you'll see the saved remote desktops. Choose the connection that you want to save to your home screen.
 

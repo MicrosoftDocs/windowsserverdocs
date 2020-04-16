@@ -1,12 +1,12 @@
 ---
 title: select disk
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a0da614b-09d9-433b-b4eb-9127f84431cb
 author: coreyp-at-msft
@@ -31,7 +31,7 @@ select disk={ <n> | <disk path> | system | next }
 > [!NOTE]  
 > The **<disk path>**, **system**, and **next** parameters are only available in Windows 7 and Windows Server 2008 R2.  
   
-## Parameters  
+### Parameters  
   
 |  Parameter  |                                                                                                                                                                                                            Description                                                                                                                                                                                                            |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ select disk={ <n> | <disk path> | system | next }
 |   system    |                                 On BIOS computers, specifies that disk 0 receives focus. On EFI computers, the disk containing the EFI system partition \(ESP\) that is used for the current boot  receives focus. On EFI computers, the command will fail if there is no ESP, if there is more than one ESP, or the computer is booted from Windows Preinstallation Environment \(Windows PE\).                                  |
 |    next     |                                                                                                                                     Once a disk is selected, this command iterates over all disks in the disk list. When you run this command, the next disk in the list will receive focus.                                                                                                                                      |
   
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To shift the focus to disk 1, type:  
   
 ```  
@@ -65,8 +65,8 @@ To shift the focus to the next disk on the computer, type:
 select disk=next  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

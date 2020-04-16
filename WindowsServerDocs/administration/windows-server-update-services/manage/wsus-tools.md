@@ -1,13 +1,8 @@
 ---
 title: Windows Server Update Services tools and utilities
-description: "WSUS tools and utilities"
-ms.custom: na
+description: WSUS tools and utilities
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
-ms.topic:
 ms.assetid: d54a1f5e-af68-497e-99be-94445769b7a6
 author: coreyp-at-msft
 ms.author: coreyp

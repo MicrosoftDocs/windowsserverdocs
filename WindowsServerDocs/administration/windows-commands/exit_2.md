@@ -1,12 +1,12 @@
 ---
 title: exit
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 23d1044b-f5c1-4180-ae6d-f553b48da4d9
 
@@ -25,7 +25,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ```  
 exit [/b] [<exitCode>]  
 ```  
-## Parameters  
+### Parameters  
 
 | Parameter  |                                                                                         Description                                                                                          |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,11 +33,11 @@ exit [/b] [<exitCode>]
 | `<exitCode>` | Specifies a numeric number. If **/b** is specified, the ERRORLEVEL environment variable is set to that number. If you are quitting **Cmd.exe**, the process exit code is set to that number. |
 |     /?     |                                                                             Displays help at the command prompt.                                                                             |
 
-## <a name="BKMK_examples"></a>Examples  
+## <a name=BKMK_examples></a>Examples  
 To close the command interpreter, Cmd.exe, type:  
 ```  
 exit  
 ```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
 

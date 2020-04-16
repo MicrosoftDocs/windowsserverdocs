@@ -1,12 +1,8 @@
 ---
 title: "Add Windows Server Essentials as a Member Server"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs

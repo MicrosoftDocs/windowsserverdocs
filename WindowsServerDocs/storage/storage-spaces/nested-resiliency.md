@@ -2,7 +2,7 @@
 title: Nested resiliency for Storage Spaces Direct
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: dansimp
+manager: dansimp
 ms.technology: storagespaces
 ms.topic: article
 author: cosmosdarwin

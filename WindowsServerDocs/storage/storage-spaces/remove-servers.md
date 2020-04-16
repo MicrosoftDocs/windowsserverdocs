@@ -3,7 +3,7 @@ title: Removing servers in Storage Spaces Direct
 ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
 ms.prod: windows-server
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin

@@ -1,12 +1,8 @@
 ---
 title: "Move Windows SBS 2011 Standard settings and data to the Destination Server for Windows Server Essentials migration"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16b24026-2fe3-4bd0-b82f-900e1564be99
 author: nnamuhcs

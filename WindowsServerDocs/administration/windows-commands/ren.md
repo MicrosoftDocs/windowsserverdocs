@@ -1,12 +1,12 @@
 ---
 title: ren
 description: Learn how to rename a file or directory with the ren command.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ ren [<Drive>:][<Path>]<FileName1> <FileName2>
 rename [<Drive>:][<Path>]<FileName1> <FileName2>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -57,6 +57,6 @@ To change the name of a directory from Chap10 to Part10, type:
 ren chap10 part10 
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

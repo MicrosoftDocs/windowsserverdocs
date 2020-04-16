@@ -1,12 +1,8 @@
 ---
 title: "Azure Virtual network integration"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d7d38505-cff5-4f15-9fd5-ae6dba15ce88
 author: nnamuhcs

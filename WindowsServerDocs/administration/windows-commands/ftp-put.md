@@ -1,12 +1,12 @@
 ---
 title: ftp put
 description: "Windows Commands topic for FTP - put"
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 95cc1e3f-523d-4374-98b8-16e6c276b2ca vhorne
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Copies a local file to the remote computer using the current file transfer type.
 ```
 put <LocalFile> [<remoteFile>]
 ```
-### Parameters
+#### Parameters
 
 |    Parameter     |                    Description                    |
 |------------------|---------------------------------------------------|
@@ -42,7 +42,7 @@ put <LocalFile> [<remoteFile>]
   ```
   put program.exe
   ```
-  ## additional references
+  ## Additional References
 - [ftp: ascii](ftp-ascii.md)
 - [ftp: binary](ftp-binary.md)
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+- - [Command-Line Syntax Key](command-line-syntax-key.md)

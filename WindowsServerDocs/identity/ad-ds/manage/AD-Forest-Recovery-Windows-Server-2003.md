@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Windows Server 2003 Recovery
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman

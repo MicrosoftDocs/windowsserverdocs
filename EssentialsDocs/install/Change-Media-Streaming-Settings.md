@@ -1,12 +1,8 @@
 ---
 title: "Change Media Streaming Settings"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dec690d2-f80c-4b09-99d6-3bba41331972
 author: nnamuhcs

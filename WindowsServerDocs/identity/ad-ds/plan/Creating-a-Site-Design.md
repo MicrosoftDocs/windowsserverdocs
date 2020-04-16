@@ -1,14 +1,12 @@
 ---
 ms.assetid: 83f746e5-81db-4610-9977-1d5c57699f50
 title: Creating a Site Design
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

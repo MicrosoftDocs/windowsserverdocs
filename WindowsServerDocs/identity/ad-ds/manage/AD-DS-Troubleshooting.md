@@ -8,9 +8,6 @@ manager: dcscontentpm
 ms.date: 11/22/2019
 ms.topic: article
 ms.prod: windows-server
-audience: Admin
-ms.custom:
-- CSSTroubleshoot 
 ms.technology: identity-adds
 ---
 

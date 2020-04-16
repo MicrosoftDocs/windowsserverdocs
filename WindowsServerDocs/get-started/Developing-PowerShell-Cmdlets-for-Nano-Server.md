@@ -1,11 +1,9 @@
 ---
 title: Developing PowerShell Cmdlets for Nano Server
-description: "porting CIM, .NET cmdlets, C++ "
+description: porting CIM, .NET cmdlets, C++ 
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
 author: jaimeo
@@ -68,7 +66,7 @@ CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] C
 ```  
 When getting a list of available modules, you can filter the list by PowerShell edition.  
 ```powershell  
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Desktop"  
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Desktop  
   
     Directory: C:\Program Files\WindowsPowerShell\Modules  
   
@@ -77,21 +75,21 @@ ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------  
 Manifest   1.0        ModuleWithPSEditions  
   
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Core" | % CompatiblePSEditions  
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Core | % CompatiblePSEditions  
 Desktop  
 Core  
   
 ```  
 Script authors can prevent a script from executing unless it is run on a compatible edition of PowerShell using the PSEdition parameter on a #requires statement.  
 ```powershell  
-Set-Content C:\script.ps1 -Value "#requires -PSEdition Core  
-Get-Process -Name PowerShell"  
+Set-Content C:\script.ps1 -Value #requires -PSEdition Core  
+Get-Process -Name PowerShell  
 Get-Content C:\script.ps1  
 #requires -PSEdition Core  
 Get-Process -Name PowerShell  
   
 C:\script.ps1  
-C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.  
+C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a #requires statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.  
 At line:1 char:1  
 + C:\script.ps1  
 + ~~~~~~~~~~~~~  
@@ -139,7 +137,7 @@ For prerequisites and a walkthrough of developing C++ on Nano Server, see [Devel
 Most C# code is supported on Nano Server. You can use [ApiPort](https://github.com/Microsoft/dotnet-apiport) to scan for incompatible APIs.  
   
 ### Powershell Core SDK  
-The module "Microsoft.PowerShell.NanoServer.SDK" is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
+The module Microsoft.PowerShell.NanoServer.SDK is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
   
 `Find-Module Microsoft.PowerShell.NanoServer.SDK -Repository PSGallery | Install-Module -Scope <scope>`  
   
@@ -208,7 +206,7 @@ public class TestNetConnectionResult
 '@  
 # Create object and set properties  
 $result = New-Object TestNetConnectionResult  
-$result.ComputerName = "Foo"  
+$result.ComputerName = Foo  
 $result.RemoteAddress = 1.1.1.1  
   
 ```  
@@ -225,7 +223,7 @@ class TestNetConnectionResult
 }  
 # Create object and set properties  
 $result = [TestNetConnectionResult]::new()  
-$result.ComputerName = "Foo"  
+$result.ComputerName = Foo  
 $result.RemoteAddress = 1.1.1.1  
   
 ```  

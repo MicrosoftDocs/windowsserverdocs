@@ -1,14 +1,12 @@
 ---
 title: Set up hosts for live migration without Failover Clustering
-description: "Gives instructions for setting up live migration in a non-clustered environment"
+description: Gives instructions for setting up live migration in a non-clustered environment
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 9/30/2016
 ---
@@ -137,7 +135,7 @@ This table describes how the performance options work.
 |----------|---------------|
     |TCP/IP|Copies the memory of the virtual machine to the destination server over a TCP/IP connection.|
     |Compression|Compresses the memory content of the virtual machine before copying it to the destination server over a TCP/IP connection. **Note:** This is the **default** setting.|
-    |SMB|Copies the memory of the virtual machine to the destination server over a SMB 3.0 connection.<br /><br />- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) capabilities enabled.<br />- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<br /><br />For more information, see [Improve Performance of a File Server with SMB Direct](https://technet.microsoft.com/library/jj134210(WS.11).aspx).|
+    |SMB|Copies the memory of the virtual machine to the destination server over a SMB 3.0 connection.<p>- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) capabilities enabled.<br />- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is identified.<p>For more information, see [Improve Performance of a File Server with SMB Direct](https://technet.microsoft.com/library/jj134210(WS.11).aspx).|
 
  ## Next steps
 

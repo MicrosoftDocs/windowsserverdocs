@@ -1,12 +1,12 @@
 ---
 title: repair-bde
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 534dca1a-05f7-4ea8-ac24-4fe5f14f988a
 author: coreyp-at-msft
@@ -36,7 +36,7 @@ For examples of how this command can be used, see [Examples](#BKMK_Examples).
 repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–lf] [-f] [{-?|/?}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -54,7 +54,7 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 
 If the path to a key package is not specified, **repair-bde** will search the drive for a key package. However, if the hard drive has been damaged, **repair-bde** may not be able to find the package and will prompt you to provide the path.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 The following example attempts to repair drive C and write the content from drive C to drive D by using the recovery key file (RecoveryKey.bek) stored on drive F and writes the results of this attempt to the log file (log.txt) on drive Z.
 ```
@@ -73,6 +73,6 @@ The following example attempts to repair drive C and write the content from driv
 repair-bde C: D: -pw
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: Remote Desktop clients URI scheme
 description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: lizap
@@ -35,7 +31,7 @@ The RDP attributes are separated by the ampersand symbol (&). For example, when 
 rdp://full%20address=s:mypc:3389&audiomode=i:2&disable%20themes=i:1
 ```
 
-This table gives a complete list of supported attributes that may be used with the iOS, Mac, and Android Remote Desktop clients. (An “x” in the platform column indicates the attribute is supported. The values denoted by chevrons (<>) represent the values that are supported by the Remote Desktop clients.)
+This table gives a complete list of supported attributes that may be used with the iOS, Mac, and Android Remote Desktop clients. (An "x" in the platform column indicates the attribute is supported. The values denoted by chevrons (<>) represent the values that are supported by the Remote Desktop clients.)
 
 | **RDP attribute**                                           | **Android** | **Mac** | **iOS** |
 |---------------------------------------------------------|---------|-----|-----|

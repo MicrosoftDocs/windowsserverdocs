@@ -1,14 +1,12 @@
 ---
 ms.assetid: 6618b3ce-0e94-4009-b887-d8e05453358b
 title: Federation Server Farm Using SQL Server
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

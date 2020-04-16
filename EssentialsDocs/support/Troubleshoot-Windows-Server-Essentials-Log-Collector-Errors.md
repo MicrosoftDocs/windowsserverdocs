@@ -1,12 +1,8 @@
 ---
 title: "Troubleshoot Windows Server Essentials Log Collector Errors"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
 author: nnamuhcs

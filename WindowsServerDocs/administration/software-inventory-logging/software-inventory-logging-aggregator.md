@@ -1,12 +1,12 @@
 ---
 title: Software Inventory Logging Aggregator
 description: Describes how to install and manage Software Inventory Logging Aggregator
-ms.custom: na
+
 ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+
+
+
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor
@@ -55,7 +55,7 @@ Once deployed correctly, the following data can be viewed at the SIL Aggregator:
 
 -   Count and location of SQL Server installations over time \(only SKUs and editions that require a license\)
 
--   Lists of software installed in Add\/Remove Programs
+-   Lists of software installed in Add/Remove Programs
 
 ### Who will use SIL?
 
@@ -379,20 +379,20 @@ Following are descriptions of each column on the **Windows Server Detail** tab o
 |Column Header|Description|
 |-----------------|---------------|
 |Calendar Month|Data in reports is grouped by month, most recent first. Data within the month is not listed in a specific order.|
-|Host Name|Network name, or FQDN, of the physical host the SIL Aggregator is successfully polling.<br /><br />Use the Get-SilVMHost cmdlet to find hosts that have been added but are not, or no longer, being polled successfully. The last successful poll will be displayed.|
+|Host Name|Network name, or FQDN, of the physical host the SIL Aggregator is successfully polling.<p>Use the Get-SilVMHost cmdlet to find hosts that have been added but are not, or no longer, being polled successfully. The last successful poll will be displayed.|
 |Host Type|Operating System manufacturer on the physical host.|
 |Hypervisor Type|Hypervisor manufacturer on the physical host.|
 |Processor Manufacturer|Processor manufacturer of the processors on the physical host.|
 |Processor Model|Processor model of the processors on the physical host.|
 |Is Hyper Threading Enabled?|Displays as either True or False depending on if hyper threading is enabled on the processors of the physical host.|
 |VM Name|The network name, or FQDN, of the Windows Server virtual machine. If the Aggregator has not received data from this machine over HTTPS, the friendly name of the VM in the hypervisor is listed.|
-|Simultaneously Running Windows Server VMs by host|Count of simultaneously running Windows Server VMs on the host. The highest number in the month for that host is the high-water mark count listed and captured at that point in time.<br /><br />See **High-Water Mark** section of this documentation.<br /><br />Physical hosts with Windows Server installed, or with Windows Server installed and no known Windows Server VMs running, will always have a count of one. If at least one known Windows Server VM is running on the host, and Windows Server is running on the host itself, the host OS is not part of the count.|
+|Simultaneously Running Windows Server VMs by host|Count of simultaneously running Windows Server VMs on the host. The highest number in the month for that host is the high-water mark count listed and captured at that point in time.<p>See **High-Water Mark** section of this documentation.<p>Physical hosts with Windows Server installed, or with Windows Server installed and no known Windows Server VMs running, will always have a count of one. If at least one known Windows Server VM is running on the host, and Windows Server is running on the host itself, the host OS is not part of the count.|
 |Physical Processor Count|Number of physical processors installed on the physical host.|
 |Physical Core Count|Number of physical processor cores installed on the physical host.|
 |Virtual Processor Count|Number of virtual processors that Windows recognizes within the VM. This value only comes from data forwarded over HTTPS using SIL in a Windows Server.|
-|Poll Date Time|Date and time of the latest high-water mark point of Windows Server VMs simultaneously running on that physical host.<br /><br />See **Poll Date Time** section of this documentation.|
+|Poll Date Time|Date and time of the latest high-water mark point of Windows Server VMs simultaneously running on that physical host.<p>See **Poll Date Time** section of this documentation.|
 |VM Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server VM.|
-|Host Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server physical host.<br /><br />It is supported to have physical hosts, running Windows Server and HyperV, to enable SIL and forward inventory data over HTTPS to a SIL Aggregator.|
+|Host Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server physical host.<p>It is supported to have physical hosts, running Windows Server and HyperV, to enable SIL and forward inventory data over HTTPS to a SIL Aggregator.|
 
 ## SIL Aggregator Cmdlets Detail
 Following are details of the SIL Aggregator cmdlets. For the full cmdlet documentation, see: [SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)

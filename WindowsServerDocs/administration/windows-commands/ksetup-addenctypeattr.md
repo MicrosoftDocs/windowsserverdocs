@@ -1,12 +1,12 @@
 ---
 title: ksetup:addenctypeattr
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 32cc87d7-b9e1-4d14-9eb7-3b439c55aa3a
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Adds the encryption type attribute to the list of possible types for the domain.
 ksetup /addenctypeattr <DomainName> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | AES128-CTS-HMAC-SHA1-96 | AES256-CTS-HMAC-SHA1-96}
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,7 +44,7 @@ If the command succeeds or fails, a status message is displayed.
 
 To set the domain that you want to connect to and use, run the **ksetup /domain \<DomainName>** command.
 
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 
 Determine the current encryption types that are set on this computer:
 ```
@@ -67,11 +67,11 @@ Verify that the encryption type attribute was set as intended for the domain:
 ksetup /getenctypeattr corp.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
 -   [Klist](klist.md)
 -   [Ksetup:domain](ksetup-domain.md)
 -   [Ksetup:setenctypeattr](ksetup-setenctypeattr.md)
 -   [Ksetup:getenctypeattr](ksetup-getenctypeattr.md)
 -   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: finger
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 907ea637-5c6c-4752-84c2-46bbf2a68a33
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Displays information about a user or users on a specified remote computer (typic
 ```
 finger [-l] [<User>] [@<Host>] [...]
 ```
-### Parameters
+#### Parameters
 
 | Parameter |                                                                            Description                                                                            |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -37,7 +37,7 @@ Multiple User@Host parameters can be specified.
 You must prefix **finger** parameters with a hyphen (-) rather than a slash (/).
 This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 The Windows Server 2003 does not provide a finger service.
-## <a name="BKMK_Examples"></a>Examples
+## <a name=BKMK_Examples></a>Examples
 To display information for user1 on the computer users.microsoft.com, type:
 ```
 finger user1@users.microsoft.com
@@ -46,5 +46,5 @@ To display information for all users on the computer users.microsoft.com, type:
 ```
 finger @users.microsoft.com
 ```
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

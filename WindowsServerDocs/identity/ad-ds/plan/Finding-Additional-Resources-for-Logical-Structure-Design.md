@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8b900c2b-35b1-4c95-a73d-e5f2e9cf0adb
 title: Finding Additional Resources for Logical Structure Design
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Finding Additional Resources for Logical Structure Design

@@ -1,12 +1,8 @@
 ---
 title: bootcfg default
-description: "Windows Commands topic for **bootcfg default** - Specifies the operating system entry to designate as the default."
-ms.custom: na
+description: Windows Commands topic for bootcfg default, which specifies the operating system entry to designate as the default.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e21824d7-8278-41d7-a2c5-ce09803d513a
 author: coreyp-at-msft
@@ -24,7 +20,7 @@ Specifies the operating system entry to designate as the default.
 ```
 bootcfg /default [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntryLineNum>]
 ```
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                             Description                                                                                              |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,11 +30,11 @@ bootcfg /default [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntr
 | /id <OSEntryLineNum> | Specifies the operating system entry line number in the [operating systems] section of the Boot.ini file to designate as default. The first line after the [operating systems] section header is 1.  |
 |          /?          |                                                                                 Displays help at the command prompt.                                                                                 |
 
-## <a name="BKMK_examples"></a>Examples
+## <a name=BKMK_examples></a>Examples
 The following examples show how you can use the **bootcfg /default**command:
 ```
 bootcfg /default /id 2
 bootcfg /default /s srvmain /u maindom\hiropln /p p@ssW23 /id 2
 ```
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

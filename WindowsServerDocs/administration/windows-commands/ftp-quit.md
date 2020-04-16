@@ -1,12 +1,12 @@
 ---
 title: ftp quit
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f5de9a79-5177-4e3a-80d9-df8f4d7660b7 vhorne
 author: coreyp-at-msft
@@ -23,12 +23,12 @@ Ends the ftp session with the remote computer and exits **ftp** to the operating
 ```  
 quit  
 ```  
-### Parameters  
+#### Parameters  
 none  
-## <a name="BKMK_Examples"></a>Examples  
+## <a name=BKMK_Examples></a>Examples  
 End the ftp session with the remote computer and exit **ftp** to the operating system command prompt.  
 ```  
 quit  
 ```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

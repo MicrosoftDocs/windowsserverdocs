@@ -1,13 +1,8 @@
 ---
 title: Clients can't connect and see No licenses available error
 description: Troubleshooting no licenses available error with remote deskotp connection
-audience: itpro ​
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
@@ -36,7 +31,7 @@ These problems tend to be associated with the following user messages:
 
 In this case, [configure the RD Licensing service](#configure-the-rd-licensing-service).
 
-If the RD License Diagnoser lists other problems, such as “The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client,” there may be a problem that affects the license certificates. Such problems tend to be associated with user messages, such as the following:
+If the RD License Diagnoser lists other problems, such as "The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client," there may be a problem that affects the license certificates. Such problems tend to be associated with user messages, such as the following:
 
 Because of a security error, the client could not connect to the Terminal server. After making sure that you are signed in to the network, try connecting to the server again.
 

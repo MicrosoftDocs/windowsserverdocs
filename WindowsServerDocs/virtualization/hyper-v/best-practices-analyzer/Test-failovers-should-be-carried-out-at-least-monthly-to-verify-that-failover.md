@@ -1,14 +1,13 @@
 ---
 title: Test failovers should be carried out at least monthly to verify that failover will succeed and that virtual machine workloads will operate as expected after failover
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 57a8aa50-e59e-4a4b-8571-1099d5a8eee4
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Test failovers should be carried out at least monthly to verify that failover will succeed and that virtual machine workloads will operate as expected after failover

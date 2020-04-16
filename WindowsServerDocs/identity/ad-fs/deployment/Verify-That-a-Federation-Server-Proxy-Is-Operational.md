@@ -1,13 +1,11 @@
 ---
 ms.assetid: d555041a-709e-42c7-920a-8dfd2c7e0488
 title: Verify That a Federation Server Proxy Is Operational
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

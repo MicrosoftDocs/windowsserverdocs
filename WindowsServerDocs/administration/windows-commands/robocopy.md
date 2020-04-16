@@ -1,12 +1,12 @@
 ---
 title: robocopy
 description: Learn how to use the robocopy command in Windows and Windows Server to copy files
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: coreyp-at-msft
@@ -25,7 +25,7 @@ Copies file data.
 robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter    |                                                                                            Description                                                                                           |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -173,6 +173,6 @@ Value | Description
     -   With the **/e** plus **/purge** options, if the destination directory exists, the destination directory security settings are not overwritten.
     -   With the **/mir** option, if the destination directory exists, the destination directory security settings are overwritten.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

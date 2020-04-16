@@ -4,7 +4,6 @@ description: This topic is part of the BranchCache Deployment Guide for Windows 
 manager: brianlic
 ms.prod: windows-server
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
 ms.author: lizross

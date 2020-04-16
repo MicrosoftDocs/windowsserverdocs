@@ -1,14 +1,13 @@
 ---
 title: Ensure sufficient physical disk space is available when virtual machines use dynamically expanding virtual hard disks
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 9e3e3e64-4b3a-4b9d-acf1-e4df61a04f1e
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Ensure sufficient physical disk space is available when virtual machines use dynamically expanding virtual hard disks

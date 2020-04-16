@@ -1,12 +1,12 @@
 ---
 title: nlbmgr
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Windows Commands topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 89cb8590-b7cf-4a27-89fa-0fa62ea1a1ca
 author: coreyp-at-msft
@@ -23,7 +23,7 @@ Using Network Load Balancing Manager, you can configure and manage your Network 
 ```
 nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
 ```
-### Parameters
+#### Parameters
 
 |        Parameter        |                                                                                                                                                                                                Description                                                                                                                                                                                                |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,6 +33,6 @@ nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
 | /autorefresh <interval> |                                                                                                          Causes Network Load Balancing Manager to refresh its host and cluster information every <interval> seconds. If no interval is specified, the information is refreshed every 60 seconds.                                                                                                          |
 |           /?            |                                                                                                                                                                                   Displays help at the command prompt.                                                                                                                                                                                    |
 
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,11 +1,7 @@
 ---
 title: Customize the Active Directory Administrative Center Navigation Pane
 ms.prod: windows-server
-description: "Windows Server Security"
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.assetid: c9933d16-e153-435a-b5b7-3e594db42d5c
 author: coreyp-at-msft
 ms.author: coreyp

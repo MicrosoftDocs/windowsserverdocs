@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#examples).
 cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/VERYLOWDISK]
 ```
 
-## Parameters
+### Parameters
 
 |      Parameter      |    Description     |
 | ------------------- | ------------------ |

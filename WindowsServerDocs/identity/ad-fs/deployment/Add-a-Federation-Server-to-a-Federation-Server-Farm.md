@@ -1,13 +1,11 @@
 ---
 ms.assetid: 6ecf8d85-cd61-4c87-add8-00a679a6e3ff
 title: Add a Federation Server to a Federation Server Farm
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

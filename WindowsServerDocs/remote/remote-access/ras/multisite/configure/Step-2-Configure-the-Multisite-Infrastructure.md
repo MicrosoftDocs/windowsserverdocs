@@ -2,12 +2,8 @@
 title: Step 2 Configure the Multisite Infrastructure
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 ms.author: lizross
@@ -235,7 +231,7 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
   
 #### <a name="ChangeDC"></a>To change the domain controller that manages server GPOs  
   
--   Run the Windows PowerShell cmdlet  `HYPERLINK "https://technet.microsoft.com/library/hh918412.aspx" Set-DAEntryPointDC` on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
+-   Run the Windows PowerShell cmdlet  [Set-DAEntryPointDC](https://docs.microsoft.com/powershell/module/remoteaccess/set-daentrypointdc) on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.
   
     -   To replace the unreachable domain controller "dc1.corp.contoso.com" with the domain controller "dc2.corp.contoso.com", do the following:  
   
@@ -294,7 +290,7 @@ Domain controller association information is stored both in the registry of the 
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution  
-When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "<https://technet.microsoft.com/library/cc978016.aspx>" closest to the Remote Access server when creating its server GPO.  
+When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is [closest to the Remote Access server](https://technet.microsoft.com/library/cc978016.aspx) when creating its server GPO.  
   
 In some scenarios, it may be required to manually modify the domain controller that manages a server GPO in order to optimize configuration distribution time:  
   
@@ -330,4 +326,3 @@ To optimize the configuration distribution time, do one of the following:
   
 -   [Step 3: Configure the multisite deployment](Step-3-Configure-the-Multisite-Deployment.md)  
 -   [Step 1: Implement a single server Remote Access deployment](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
-
