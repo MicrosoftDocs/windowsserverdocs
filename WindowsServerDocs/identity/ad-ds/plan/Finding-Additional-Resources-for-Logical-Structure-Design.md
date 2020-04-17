@@ -23,7 +23,7 @@ You can find Additional Resources for Logical Structure Design in the following 
 
 - For more information about configuring firewalls for use with AD DS, see [Active Directory in Networks Segmented by Firewalls](https://go.microsoft.com/fwlink/?LinkId=37928).
 
-- For more information about upgrading Active Directory domains to  Windows Server 2008 , see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](https://technet.microsoft.com/library/cc731188.aspx).
+- For more information about upgrading Active Directory domains to Windows Server 2008, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](https://technet.microsoft.com/library/cc731188.aspx).
 
 - For more information about restructuring AD DS domains within and between forests, see [Active Directory Migration Tool version 3.1 Migration Guide](https://go.microsoft.com/fwlink/?LinkId=93678).
 
