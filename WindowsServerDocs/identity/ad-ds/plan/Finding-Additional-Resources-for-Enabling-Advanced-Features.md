@@ -12,15 +12,12 @@ ms.technology: identity-adds
 
 # Finding Additional Resources for Enabling Advanced Features
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can find the following documentation about Active Directory Domain Services (AD DS) in the  Windows Server 2008  Technical Library:  
-  
--   For more information about deploying a  Windows Server 2008  forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain \[LH\]](assetId:///92406e8d-dc1c-4740-a00a-2c4032896dd1).  
-  
--   For more information about upgrading an Active Directory domain to  Windows Server 2008 , see [Upgrading Active Directory Domains to Windows Server 2008 AD DS Domains \[LH\]](assetId:///9c91be5f-df14-40b2-b176-2b1852a51e61).  
-  
--   For more information about deploying AD DS, see the Step-by-Step Guide for  Windows Server 2008  Active Directory Domain Services Installation and Removal ([https://go.microsoft.com/fwlink/?LinkId=100492](https://go.microsoft.com/fwlink/?LinkId=100492)).  
-  
+You can find the following documentation about Active Directory Domain Services (AD DS) in the  Windows Server 2008  Technical Library:
 
+- For more information about deploying a  Windows Server 2008  forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10)).
 
+- For more information about upgrading an Active Directory domain to  Windows Server 2008, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10)).
+
+- For more information about deploying AD DS, see the Step-by-Step Guide for  Windows Server 2008 [AD DS Installation and Removal Step-by-Step Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755258(v=ws.10)).
