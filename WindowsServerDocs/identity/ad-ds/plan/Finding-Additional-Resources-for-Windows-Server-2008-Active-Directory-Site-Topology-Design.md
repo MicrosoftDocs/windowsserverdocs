@@ -25,7 +25,7 @@ You can find the following documentation about Active Directory Domain Services 
 
 - For information about installing Network Monitor, see [Monitoring network traffic](https://go.microsoft.com/fwlink/?LinkId=107058).
 
-- For worksheets to assist you in documenting your  Windows Server 2008  AD DS site topology design, see [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608).
+- For worksheets to assist you in documenting your  Windows Server 2008 AD DS site topology design, see [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608).
 
 - For more information about shortcut trusts between domains, see [Understanding When to Create a Shortcut Trust](https://go.microsoft.com/fwlink/?LinkId=107061).
 
