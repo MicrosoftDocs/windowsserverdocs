@@ -44,7 +44,7 @@ The table also highlights which settings are supported as custom properties with
 | compression:i:value | Determines whether bulk compression is enabled when it is transmitted by RDP to the local computer.|- 0: Disable RDP bulk compression</br>- 1: Enable RDP bulk compression | 1 | X |
 | videoplaybackmode:i:value| Determines if the connection will use RDP-efficient multimedia streaming for video playback.|- 0: Don't use RDP efficient multimedia streaming for video playback</br>- 1: Use RDP-efficient multimedia streaming for video playback when possible | 1 | X |
 
-## Device redirections
+## Device redirection
 
 | RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
