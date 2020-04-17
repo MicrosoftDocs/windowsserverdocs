@@ -25,7 +25,7 @@ You must assign a name to every domain in your plan. Active Directory Domain Ser
 For more information, see [Naming conventions in Active Directory for computers, domains, sites, and OUs](https://go.microsoft.com/fwlink/?LinkId=106629).
 
 > [!NOTE]
-> Although Dcpromo.exe in Windows Server 2008 and Windows Server 2003 allows you to create a single-label DNS domain name, you should not use a single-label DNS name for a domain for several reasons. In Windows Server 2008 R2, Dcpromo.exe does not allow you to create a single-label DNS name for a domain. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](https://go.microsoft.com/fwlink/?LinkId=92467).
+> Although Dcpromo.exe in Windows Server 2008 and Windows Server 2003 allows you to create a single-label DNS domain name, you should not use a single-label DNS name for a domain for several reasons. In Windows Server 2008 R2, Dcpromo.exe does not allow you to create a single-label DNS name for a domain. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](https://support.microsoft.com/help/300684/).
 
 If the current NetBIOS name of the domain is inappropriate to represent the region or fails to satisfy the prefix naming rules, select a new prefix. In this case, the NetBIOS name of the domain is different from the DNS prefix of the domain.
 
