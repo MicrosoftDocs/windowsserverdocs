@@ -28,7 +28,7 @@ Decide which locations to create sites for as follows:
 
 - If a site is not required for a location, add the subnet of the location to a site for which the location has the maximum wide area network (WAN) speed and available bandwidth.
 
-Document locations that will become sites and the network addresses and subnet masks within each location. For a worksheet to assist you in documenting sites, see [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Associating Subnets with Sites" (DSSTOPO_6.doc).
+Document locations that will become sites and the network addresses and subnet masks within each location. For a worksheet to assist you in documenting sites, see [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Associating Subnets with Sites" (DSSTOPO_6.doc).
 
 ## Creating a site object design
 

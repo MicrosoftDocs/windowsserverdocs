@@ -17,7 +17,7 @@ You can find Additional Resources for Logical Structure Design in the following 
 
 - For more information about designing the site topology, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology.md).
 
-- For worksheets to assist you in documenting the proposed forest, domain, Domain Name System (DNS) infrastructure, and organizational unit (OU) design, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608).
+- For worksheets to assist you in documenting the proposed forest, domain, Domain Name System (DNS) infrastructure, and organizational unit (OU) design, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608).
 
 - For more information about delegated authentication and constrained delegation, see [Delegating authentication](https://go.microsoft.com/fwlink/?LinkID=106614).
 

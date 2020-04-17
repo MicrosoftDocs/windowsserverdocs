@@ -35,7 +35,7 @@ Assemble a team to design the OU structure that you use to delegate control over
 
 It is important to document your OU design. List the names of the OUs that you plan to create. And, for each OU, document the type of OU, the OU owner, the parent OU (if applicable), and the origin of that OU.
 
-For a worksheet to assist you in documenting your OU design, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608) and open "Identifying OUs for Each Domain" (DSSLOGI_9.doc).
+For a worksheet to assist you in documenting your OU design, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608) and open "Identifying OUs for Each Domain" (DSSLOGI_9.doc).
 
 ## In this section
 

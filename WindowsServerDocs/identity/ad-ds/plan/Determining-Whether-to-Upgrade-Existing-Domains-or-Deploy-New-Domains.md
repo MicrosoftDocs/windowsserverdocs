@@ -22,4 +22,4 @@ For more information about upgrading Active Directory domains to  Windows Server
 
 For more information about restructuring AD DS domains within and between forests, see [ADMT Guide: Migrating and Restructuring Active Directory Domains](https://go.microsoft.com/fwlink/?LinkId=93678).
 
-For a worksheet to assist you in documenting your plans for new and upgraded domains, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608) and open "Domain Planning" (DSSLOGI_5.doc).
+For a worksheet to assist you in documenting your plans for new and upgraded domains, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608) and open "Domain Planning" (DSSLOGI_5.doc).

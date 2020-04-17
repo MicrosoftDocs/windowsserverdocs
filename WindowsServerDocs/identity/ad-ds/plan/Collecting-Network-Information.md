@@ -26,7 +26,7 @@ After creating a location map, document the type of communication link, its link
 
 Bandwidth refers to the amount of data that you can transmit across a communication channel in a given amount of time. Available bandwidth refers to the amount of bandwidth actually available for use by AD DS. You can obtain available bandwidth information from your networking group, or you can analyze traffic on each link by using a protocol analyzer such as Network Monitor. For information about installing Network Monitor, see the article [Monitoring network traffic](https://go.microsoft.com/fwlink/?LinkId=107058).
 
-Document each location and the other locations that are linked to it. In addition, record the type of communication link and its available bandwidth. For a worksheet to assist you in listing communication links and available bandwidth, see [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Geographic Locations and Communication Links" (DSSTOPO_1.doc).
+Document each location and the other locations that are linked to it. In addition, record the type of communication link and its available bandwidth. For a worksheet to assist you in listing communication links and available bandwidth, see [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Geographic Locations and Communication Links" (DSSTOPO_1.doc).
 
 ## Listing IP subnets within each location
 
@@ -34,7 +34,7 @@ After you document the communication links and the available bandwidth between e
 
 AD DS associates a workstation with a site by comparing the workstation's IP address with the subnets that are associated with each site. As you add domain controllers to a domain, AD DS also examines their IP addresses and places them in the most appropriate site.
 
-For a worksheet to assist you in listing the IP subnets within each location, see [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Locations and Subnets" (DSSTOPO_2.doc).
+For a worksheet to assist you in listing the IP subnets within each location, see [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Locations and Subnets" (DSSTOPO_2.doc).
 
 > [!NOTE]
 > In addition to IP version 4 (IPv4) addresses, Windows Server also supports IP version 6 (IPv6) subnet prefixes. For a worksheet to assist you in listing the IPv6 subnet prefixes, see [Appendix A: Locations and subnet prefixes](../../ad-ds/plan/Appendix-A--Locations-and-Subnet-Prefixes.md).
@@ -43,4 +43,4 @@ For a worksheet to assist you in listing the IP subnets within each location, se
 
 The number of users for each regional domain that is represented in a location is one of the factors that determine the placement of regional domain controllers and global catalog servers, which is the next step in the site topology design process. For example, plan to place a regional domain controller in a location that contains more than 100 regional domain users so they can still log on to the domain if the WAN link fails.
 
-Record the locations, the domains that are represented in each location, and the number of users for each domain that is represented in each location. For a worksheet to assist you in listing the domains and the number of users that are represented in each location, see [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Domains and Users in Each Location" (DSSTOPO_3.doc).
+Record the locations, the domains that are represented in each location, and the number of users for each domain that is represented in each location. For a worksheet to assist you in listing the domains and the number of users that are represented in each location, see [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Domains and Users in Each Location" (DSSTOPO_3.doc).
