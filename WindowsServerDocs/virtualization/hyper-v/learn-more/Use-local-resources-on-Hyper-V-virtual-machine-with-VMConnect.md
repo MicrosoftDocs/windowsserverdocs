@@ -89,6 +89,8 @@ You can easily edit your connection settings for VMConnect by running the follow
   
 `VMConnect.exe <ServerName> <VMName> /edit`  
   
+**Note: An elevated command prompt may be required.**  
+  
 ## Requirements for using local resources
 
 To be able to use a computer's local resources on a virtual machine:  
