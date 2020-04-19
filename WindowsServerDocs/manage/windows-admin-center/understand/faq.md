@@ -9,6 +9,7 @@ ms.localizationpriority: medium
 ms.date: 12/02/2019
 ms.prod: windows-server
 ---
+
 # Windows Admin Center Frequently Asked Questions
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
@@ -144,7 +145,7 @@ There are two versions of Windows Admin Center available for download:
 ### Windows Admin Center Preview
 
 * For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
-* To get the latest Insider Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
+* To get the latest Insider Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
 
 ## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
 
