@@ -89,7 +89,8 @@ You can easily edit your connection settings for VMConnect by running the follow
   
 `VMConnect.exe <ServerName> <VMName> /edit`  
   
-**Note: An elevated command prompt may be required.**  
+> [!Note]
+> An elevated command prompt may be required.
   
 ## Requirements for using local resources
 
@@ -135,6 +136,5 @@ You might want use a computer's local resources to:
 ## See Also  
 [Connect to a Virtual Machine](https://technet.microsoft.com/library/cc742407.aspx)  
 [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
-
 
 
