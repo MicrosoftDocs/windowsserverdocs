@@ -93,7 +93,17 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
     
     FileTransferThreadCount
 
-   The valid range is 1 to 128 in Windows Server 2019. After changing you must restart the Storage Migration Service Proxy service on all computers participating in a migration. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings.
+   The valid range is 1 to 512 in Windows Server 2019. You don't need to restart the service to start using this setting as long as you create a new job. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings.
+
+- **Alter default parallel share threads.** The Storage Migration Service Proxy service copies from 8 shares simultaneously in a given job. You can increase the number of simultaneous share threads by adjusting the following registry REG_DWORD value name in decimal onthe Storage Migration Service orchestrator server:
+
+    HKEY_Local_Machine\Software\Microsoft\SMS
+    
+    EndpointFileTransferTaskCount 
+
+   The valid range is 1 to 512 in Windows Server 2019. You don't need to restart the service to start using this setting as long as you create a new job. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings. 
+   
+    The sum of FileTransferThreadCount and EndpointFileTransferTaskCount is how many files the Storage Migration Service can simultaneously copy from one source node in a job. To add more parallel source nodes, create and run more simultaneus jobs.
 
 - **Add cores and memory.**  We strongly recommend that the source, orchestrator, and destination computers have at least two processor cores or two vCPUs, and more can significantly aid inventory and transfer performance, especially when combined with FileTransferThreadCount (above). When transferring files that are larger than the usual Office formats (gigabytes or greater) transfer performance will benefit from more memory than the default 2GB minimum.
 
