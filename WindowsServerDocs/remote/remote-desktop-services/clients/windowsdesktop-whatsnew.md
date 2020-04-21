@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/14/2020
+ms.date: 04/28/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -20,14 +20,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.790  |
-|Insider    |1.2.940  |
+|Public     |1.2.945  |
+|Insider    |1.2.945  |
 
-## Updates for version 1.2.940
+## Updates for version 1.2.945
 
-*Date published: 04/14/2020*
+*Date published: 04/28/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4txZU), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4txZV), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4tM6I)
+Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
 
 - Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
   - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.
@@ -36,8 +36,11 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
   - We've added a new **Single display when windowed** option for all displays and select displays modes. This option switches your session automatically to a single display when you exit full screen mode, and automatically returns to multiple displays when you maximize the window.
 - We've added a new **Display settings** group to the system menu that appears when you right-click the title bar of a windowed desktop session. This will let you change some settings dynamically during a session. For example, you can change the new **Single display mode when windowed** and **Maximize to current displays** settings.
 - When you exit full screen, the session window will return to its original location when you first entered full screen.
+- The background refresh for Workspaces has been changed to every four hours instead of every hour. A refresh now happens automatically when launching the client.
 - Resetting your user data from the About page now redirects to the Connection Center when completed instead of closing the client.
+- The items in the system menu for desktop connections were re-ordered and the help topic now points to the client documentation.
 - Addressed some accessibility issues with tab navigation and screen readers.
+- Fixed an issue where the Azure Active Directory authentication dialog appeared behind the session window.
 - Fixed a flickering and shrinking issue when dragging a desktop session window between displays of different scale factors.
 - Fixed an error that occurred when redirecting cameras.
 - Fixed multiple crashes to improve reliability.
