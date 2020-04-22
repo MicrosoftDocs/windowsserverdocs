@@ -1,16 +1,16 @@
 ---
 ms.assetid: 1a6740e6-5b6d-41f8-9ec4-32cdbee3e1bb
-title: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
+title: Name Resolution for Perimeter and Internet Clients
 author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 04/13/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
-# Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
+# Name Resolution for Perimeter and Internet Clients
 
 
 So that name resolution can work successfully for a federation server proxy in an Active Directory Federation Services \(AD FS\) scenario in which one or more Domain Name System \(DNS\) zones serve both the perimeter network and Internet clients, the following tasks must be completed:  

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin suspend
-description: Windows Commands topic for bitsadmin suspend, which suspends the specified job.
+description: Windows Commands topic for **bitsadmin suspend**, which suspends the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -14,30 +14,27 @@ ms.date: 10/16/2017
 
 > Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Suspends the specified job.
+Suspends the specified job. If you suspended your job by mistake, you can use the [bitsadmin resume](bitsadmin-resume.md) switch to restart the job.
 
 ## Syntax
 
 ```
-bitsadmin /Suspend <Job>
+bitsadmin /suspend <job>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| --------- | ---------- |
+| Job | The job's display name or GUID. |
 
-## Remarks
-
-To restart the job, use the [bitsadmin resume](bitsadmin-resume.md) switch.
-
-## <a name=BKMK_examples></a>Examples
+## Example
 
 The following example suspends the job named *myDownloadJob*.
 
+
 ```
-C:\>bitsadmin /Suspend myDownloadJob
+C:\>bitsadmin /suspend myDownloadJob
 ```
 
 ## Additional References

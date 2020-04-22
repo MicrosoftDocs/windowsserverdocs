@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setcustomheaders
-description: Windows Commands topic for bitsadmin setcustomheaders, which adds a custom HTTP header to a GET request.
+description: Windows Commands topic for **bitsadmin setcustomheaders**, which adds a custom HTTP header to a GET request.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,30 +13,27 @@ ms.date: 10/16/2017
 
 # bitsadmin setcustomheaders
 
-Add a custom HTTP header to a GET request.
+Add a custom HTTP header to a GET request sent to an HTTP server.
 
 ## Syntax
 
 ```
-bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
+bitsadmin /setcustomheaders <job> <header1> <header2> <...>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|Header1 Header2 . . .|The custom headers for the job|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| `<header1> <header2>` and so on | The custom headers for the job. |
 
-## Remarks
+## Examples
 
--   This switch is used to add a custom HTTP header to a GET request sent to an HTTP server.
+The following example adds a custom HTTP header for the job named *myDownloadJob*. For more information about GET requests, see [Method Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) and [Header Field Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
 
-## <a name=BKMK_examples></a>Examples
-
-The following example adds a custom HTTP header for the job named *myDownloadJob*.
 ```
-C:\>bitsadmin / SetCustomHeaders myDownloadJob Accept-encoding:deflate/gzip
+C:\>bitsadmin /setcustomheaders myDownloadJob accept-encoding:deflate/gzip
 ```
 
 ## Additional References

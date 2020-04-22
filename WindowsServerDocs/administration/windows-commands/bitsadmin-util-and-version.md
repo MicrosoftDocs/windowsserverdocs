@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and version
-description: Windows Commands topic for bitsadmin util and version, which displays the version of BITS service.
+description: Windows Commands topic for **bitsadmin util and version**, which displays the version of BITS service.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,26 +15,27 @@ ms.date: 10/16/2017
 
 Displays the version of BITS service (for example, 2.0).
 
-**BITSAdmin 1.5 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.5 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /Util /Version [/Verbose]
+bitsadmin /util /version [/verbose]
 ```
 
-## Remarks
+### Parameters
 
-The **Verbose** switch performs the following:
--   Displays the file version for each BITS related DLL
--   Verifies the BITS Service can be started
--   Displays BITS Group Policy values (Windows Vista only)
+| Parameter | Description |
+| --------- | ----------- |
+| /verbose | Use this switch to display the file version for each BITS-related DLL and to verify whether the BITS service can start.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following example the version of the BITS Service.
+
 ```
-C:\>bitsadmin /Util /Version
+C:\>bitsadmin /util /version
 ```
 
 ## Additional References

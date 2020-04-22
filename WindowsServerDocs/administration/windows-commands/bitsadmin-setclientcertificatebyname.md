@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: Windows Commands topic for bitsadmin setclientcertificatebyname, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
+description: Windows Commands topic for **bitsadmin setclientcertificatebyname**, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,23 +18,24 @@ Specifies the subject name of the client certificate to use for client authentic
 ## Syntax
 
 ```
-bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject_name>
+bitsadmin /setclientcertificatebyname <job> <store_location> <store_name> <subject_name>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|Store_location|Identifies the location of a system store to use for looking up the certificate. Possible values include:</br>1 (CURRENT_USER)</br>2 (LOCAL_MACHINE)</br>3 (CURRENT_SERVICE)</br>4 (SERVICES)</br>5 (USERS)</br>6 (CURRENT_USER_GROUP_POLICY)</br>7 (LOCAL_MACHINE_GROUP_POLICY)</br>8 (LOCAL_MACHINE_ENTERPRISE)|
-|Store_name|The name of the certificate store. Possible values include:</br>CA (Certification Authority certificates)</br>MY (Personal certificates)</br>ROOT (Root certificates)</br>SPC (Software Publisher Certificate)|
-|Subject_name|Name of the certificate|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
+| store_location | Identifies the location of a system store to use for looking up the certificate. Possible values include:<ul><li>1 (CURRENT_USER)</li><li>2 (LOCAL_MACHINE)</li><li>3 (CURRENT_SERVICE)</li><li>4 (SERVICES)</li><li>5 (USERS)</li><li>6 (CURRENT_USER_GROUP_POLICY)</li><li>7 (LOCAL_MACHINE_GROUP_POLICY)</li><li>8 (LOCAL_MACHINE_ENTERPRISE)</li></ul> |
+| store_name | The name of the certificate store. Possible values include:<ul><li>CA (Certification Authority certificates)</li><li>MY (Personal certificates)</li><li>ROOT (Root certificates)</li><li>SPC (Software Publisher Certificate)</li></ul> |
+| subject_name | Name of the certificate. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example specifies the name of the client certificate *myCertificate* to use for client authentication in an HTTPS (SSL) request for the job named *myJob*.
+The following example specifies the name of the client certificate *myCertificate* to use for client authentication in an HTTPS (SSL) request for the job named *myDownloadJob*.
+
 ```
-C:\>bitsadmin Bitsadmin /SetClientCertificateByName myJob 1 MY myCertificate 
+C:\>bitsadmin /setclientcertificatebyname myDownloadJob 1 MY myCertificate
 ```
 
 ## Additional References
