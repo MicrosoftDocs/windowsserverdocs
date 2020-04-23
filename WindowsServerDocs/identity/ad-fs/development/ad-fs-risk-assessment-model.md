@@ -314,7 +314,7 @@ The method returns the [Risk Score](https://docs.microsoft.com/dotnet/api/micros
 **A:** Though not currently available, we are working on building the intelligence to suggest risky IPs, users, etc. in the Pluggable Risk Assessment Model. We will share the launch dates soon. 
 
 **What other sample plug-ins are available?**</br>
-**A:** Following sample plug-in(s) are available.
+**A:** The following sample plug-in(s) are available:
 |Name|Description| 
 |-----|-----|
 |[Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)|Sample plug-in that blocks authentication or enforces MFA based on user risk level determined by Azure AD Identity Protection.| 
