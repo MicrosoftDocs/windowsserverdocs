@@ -63,6 +63,7 @@ sections:
   - type: markdown
     text: "<div>This table offers a summary of current active issues and those issues that have been resolved in the last 30 days.</div><br>
       <table border ='0'><tr><td width='65%'>Summary</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>Last updated</td></tr>
+      <tr><td><div id='400msg'></div><b>Social media reports related to issues with KB4549951</b><br>Reported issues include Bluetooth, stop error with blue screen and other related issues.<br><br><a href = '#400msgdesc'>See details ></a></td><td>OS Build 18362.778<br><br>April 14, 2020<br><a href ='https://support.microsoft.com/help/4549951' target='_blank'>KB4549951</a></td><td>Investigating<br><a href = '' target='_blank'></a></td><td>April 24, 2020 <br>12:47 PM PT</td></tr>
       <tr><td><div id='406msg'></div><b>Devices using a proxy might show limited or no internet connection status</b><br>Network Connectivity Status Indicator might show limited or no internet connection and apps may have issues connecting.<br><br><a href = '#406msgdesc'>See details ></a></td><td>OS Build 18362.693<br><br>February 27, 2020<br><a href ='https://support.microsoft.com/help/4535996' target='_blank'>KB4535996</a></td><td>Resolved<br><a href = 'https://support.microsoft.com/help/4554364' target='_blank'>KB4554364</a></td><td>March 30, 2020 <br>02:00 PM PT</td></tr>
       <tr><td><div id='393msg'></div><b>“Reset this PC” feature might fail</b><br>“Reset this PC” feature is also called “Push Button Reset” or PBR.<br><br><a href = '#393msgdesc'>See details ></a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>February 15, 2020 <br>01:22 AM PT</td></tr>
       <tr><td><div id='392msg'></div><b>You might encounter issues with KB4524244</b><br>You might encounter issues trying to install or after installing KB4524244<br><br><a href = '#392msgdesc'>See details ></a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>February 15, 2020 <br>01:22 AM PT</td></tr>
@@ -78,6 +79,15 @@ sections:
         <div>
         </div> 
       "
+- title: April 2020
+- items:
+  - type: markdown
+    text: "
+      <table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
+      <tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;'><div id='400msgdesc'></div><b>Social media reports related to issues with KB4549951</b><div>We have seen social media reports related to <a href='https://support.microsoft.com/help/4549951' target='_blank'>KB4549951</a> that mention Bluetooth, stop error with blue screen and other related issues.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 1909; Windows 10, version 1903</li><li>Server: None</li></ul><div></div><div><strong>Next steps: </strong> To date, we have not seen these issues reflected in telemetry, support data or customer feedback channels. We continuously investigate all customer feedback and are closely monitoring this situation.&nbsp;<strong>Note</strong> If you experience any issues we'd like to know. Please provide feedback using the keyboard shortcut&nbsp;<strong>Windows + F&nbsp;</strong>or go to the Start menu and select <strong>Feedback Hub&nbsp;</strong>so that we can investigate.</div><br><a href ='#400msg'>Back to top</a></td><td>OS Build 18362.778<br><br>April 14, 2020<br><a href ='https://support.microsoft.com/help/4549951' target='_blank'>KB4549951</a></td><td>Investigating<br><a href = '' target='_blank'></a></td><td>Last updated:<br>April 24, 2020 <br>12:47 PM PT<br><br>Opened:<br>April 24, 2020 <br>12:47 PM PT</td></tr>
+      </table>
+      "
+
 - title: March 2020
 - items:
   - type: markdown
