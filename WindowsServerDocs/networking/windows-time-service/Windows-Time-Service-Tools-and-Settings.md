@@ -90,7 +90,7 @@ The output of this command is a list of configuration parameters that are set fo
 > ```cmd
 > w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0xa" /syncfromflags:manual /update
 > ```
-> The meaning of specified flag is explained [below](https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings#parameters).
+> The meaning of specified flag is explained [below](https://docs.microsoft.com/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings#parameters).
 
 ## Using Group Policy to configure the Windows Time service
 
