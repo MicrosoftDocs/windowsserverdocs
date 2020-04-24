@@ -310,3 +310,8 @@ With ESL enabled, AD FS tracks the account activity and known locations for user
 
 ### I am seeing Event 570 (Active Directory trust enumeration was unable to enumerate one of more domains due to the following error. Enumeration will continue but the Active Directory identifier list may not be correct. Validate that all expected Active Directory identifiers are present by running Get-ADFSDirectoryProperties) on AD FS 2019. What is the mitigation for this event?
 This event occurs when forests are not trusted when AD FS attempts to enumerate all the forests in a chain of trusted forests and connect across all the forests. For example, if the AD FS Forest A and Forest B are trusted, and Forest B and Forest C are trusted, AD FS will enumerate all three forests and attempt to find a trust between Forest A and C. If users from the failing forest should be authenticated by AD FS, set up a trust between the AD FS forest and the failing forest. If the users from the failing forest should not be authenticated by AD FS, this error should be ignored.
+
+### I am seeing an "Event ID 364: Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Authentication of the presented token failed. Token Binding claim in token must match the binding provided by the channel." What should I do to resolve this?
+In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
+
+`Set-AdfsProperties -IgnoreTokenBinding $true`
