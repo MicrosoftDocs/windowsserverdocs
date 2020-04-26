@@ -49,7 +49,7 @@ Background processes:
 - The SEA and LON load balancers monitor health of the DNS servers individually, and withdraw servers from the pool that are not healthy.
 - The SEA and LON load balancers monitor health of their own local DNS services based on criteria specified in the load balancer configuration. If the service health drops below threshold, the 10.10.10.10 VIP is no longer announced as available, and the route is withdrawn, resulting in failover to the next closest VIP.
 
-## Frequenty asked questions
+## Frequently asked questions
 
 Q: Is Anycast DNS a good solution to use in an on-premises DNS environment?
 A: Anycast DNS works seamlessly with an on-premises DNS service. However, Anycast is not *required* for the DNS service to scale.
