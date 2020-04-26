@@ -23,11 +23,11 @@ With Anycast DNS, you can enhance DNS response time and simplify DNS client sett
 
 ## How Anycast DNS works
 
-Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS client queries to the closest DNS server or group of DNS servers. 
+Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preffered DNS server or group of DNS servers, usually one that is the closest to the DNS client. 
 
 DNS servers that exist in multiple geographical locations each advertise a single, identical IP address called a <i>virtual IP address (VIP)</i> from their local gateway (router). When a DNS client query is initiated, the client's gateway evaluates which of the available routes to the destination is the shortest, and sends the DNS query to that location.
 
-Note that routing preferences can also be adjusted to prefer one location over another irrespective of geographical location.
+Note that routing preferences can also be adjusted to prefer one location over another irrespective of geographical location. For example, you might wish to set a low preference for a disaster recovery location so that it is only used when other services are not available. Or, you might wish to redirect DNS queries temporarily to a different location during maintenance.
 
 ### Example of Anycast DNS
 
