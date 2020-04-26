@@ -25,9 +25,7 @@ With Anycast DNS, you can enhance DNS response time and simplify DNS client sett
 
 Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preffered DNS server or group of DNS servers, usually one that is the closest to the DNS client. 
 
-DNS servers that exist in multiple geographical locations each advertise a single, identical IP address called a <i>virtual IP address (VIP)</i> from their local gateway (router). When a DNS client query is initiated, the client's gateway evaluates which of the available routes to the destination is the shortest, and sends the DNS query to that location.
-
-Note that routing preferences can also be adjusted to prefer one location over another irrespective of geographical location. For example, you might wish to set a low preference for a disaster recovery location so that it is only used when other services are not available. Or, you might wish to redirect DNS queries temporarily to a different location during maintenance.
+DNS servers that exist in multiple geographical locations each advertise a single, identical IP address called a <i>virtual IP address (VIP)</i> from their local gateway (router). When a DNS client query is initiated, the client's gateway evaluates which of the available routes to the destination is preferred, and sends the DNS query to that location. In general, the closest location is preferred, but routing preferences can be adjusted to prefer one location over another irrespective of geographical location. 
 
 ### Example of Anycast DNS
 
@@ -38,7 +36,7 @@ Following is an example of how Anycast DNS works.
 3. The SEA router sends the query to the 10.10.10.10 destination corresponding to the SEA load balancer VIP.
 4. The SEA load balancer randomly selects a DNS server from the pool of healthy, available DNS servers. In this case, the server chosen is SEA-DC16.
 5. The SEA-DC16 server responds to the DNS client query. 
-   - Optional: Servers have a non-AD integrated primary zone **loc.tst** that includes TXT records unique to the location and server identity for use in troubleshooting. For example, the client might issue the query **nslookup -type=TXT server.loc.tst** to determine the specific server that answered the query. All DNS servers have this zone, but only one is shown in the diagram. The zone name should be unique but can anything you choose.
+   - Optional: Servers have a non-AD integrated primary zone **loc.tst** that includes TXT records unique to the location and server identity for use in troubleshooting. For example, the client might issue the query **nslookup -type=TXT server.loc.tst** to determine the specific server that answered the query (SEA-DC16). <br>All DNS servers have this zone, but only one is shown in the diagram. The zone name should be unique but can anything you choose.
 6. The load balancer returns the DNS response to the SEA router.
 7. The SEA router returns the DNS response to the local router.
 8. The DNS client receives the DNS response from the local router.
