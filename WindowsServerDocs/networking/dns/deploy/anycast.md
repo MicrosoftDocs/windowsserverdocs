@@ -23,9 +23,9 @@ With Anycast DNS, you can enhance DNS response time and simplify DNS client sett
 
 ## How Anycast DNS works
 
-Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preffered DNS server or group of DNS servers, usually one that is the closest to the DNS client. 
+Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preferred DNS server or group of DNS servers, usually one that is the closest to the DNS client. 
 
-DNS servers that exist in multiple geographical locations each advertise a single, identical IP address called a <i>virtual IP address (VIP)</i> from their local gateway (router). When a DNS client query is initiated, the client's gateway evaluates which of the available routes to the destination is preferred, and sends the DNS query to that location. In general, the closest location is preferred, but routing preferences can be adjusted to prefer one location over another irrespective of geographical location. 
+DNS servers that exist in multiple geographical locations each advertise a single, identical IP address called a <i>virtual IP address (VIP)</i> from their local gateway (router). When a DNS client query is initiated, the client's gateway evaluates which of the available routes to the destination is preferred and sends the DNS query to that location. In general, the closest location is preferred, but routing preferences can be adjusted to prefer one location over another irrespective of geographical location. 
 
 ### Example of Anycast DNS
 
@@ -36,7 +36,7 @@ Following is an example of how Anycast DNS works.
 3. The SEA router sends the query to the 10.10.10.10 destination corresponding to the SEA load balancer VIP.
 4. The SEA load balancer randomly selects a DNS server from the pool of healthy, available DNS servers. In this case, the server chosen is SEA-DC16.
 5. The SEA-DC16 server responds to the DNS client query. 
-   - Optional: Servers have a non-AD integrated primary zone **loc.tst** that includes TXT records unique to the location and server identity for use in troubleshooting. For example, the client might issue the query **nslookup -type=TXT server.loc.tst** to determine the specific server that answered the query (SEA-DC16). <br>All DNS servers have this zone, but only one is shown in the diagram. The zone name should be unique but can anything you choose.
+   - Optional: Servers have a non-AD integrated primary zone **loc.tst** that includes TXT records unique to the location and server identity for use in troubleshooting. For example, the client might issue the query **nslookup -type=TXT server.loc.tst** to determine the specific server that responded (SEA-DC16). All DNS servers have this zone, but only one is shown in the diagram. The zone name should be unique but can anything you choose.
 6. The load balancer returns the DNS response to the SEA router.
 7. The SEA router returns the DNS response to the local router.
 8. The DNS client receives the DNS response from the local router.
@@ -46,22 +46,22 @@ See the following diagram:
 ![graphic](../../media/Anycast/anycast.png)
 
 Background processes: 
-- The SEA and LON load balancers monitor health of the DNS servers individually, and withdraw servers from the pool that are not healthy.
+- The SEA and LON load balancers monitor health of the DNS servers individually and withdraw servers from the pool that are not healthy.
 - The SEA and LON load balancers monitor health of their own local DNS services based on criteria specified in the load balancer configuration. If the service health drops below threshold, the 10.10.10.10 VIP is no longer announced as available, and the route is withdrawn, resulting in failover to the next closest VIP.
 
 ## Frequently asked questions
 
-Q: Is Anycast DNS a good solution to use in an on-premises DNS environment?
+Q: Is Anycast DNS a good solution to use in an on-premises DNS environment?<br>
 A: Anycast DNS works seamlessly with an on-premises DNS service. However, Anycast is not *required* for the DNS service to scale.
  
-Q: What is the impact of implementing Anycast DNS in an environment with a large number (ex: >50) of domain controllers? 
+Q: What is the impact of implementing Anycast DNS in an environment with a large number (ex: >50) of domain controllers? <br>
 A: There is no direct impact on functionality. If a load balancer is used then no additional configuration on domain controllers is required.
  
-Q: Is an Anycast DNS configuration supported by Microsoft customer service?
+Q: Is an Anycast DNS configuration supported by Microsoft customer service?<br>
 A: If you use a non-Microsoft load balancer to forward DNS queries, Microsoft will support issues related to the DNS Server service. Consult the load balancer vendor for issues related to DNS forwarding. 
  
-Q: What is the best practice for Anycast DNS with a large number (ex: >50) of domain controllers?
+Q: What is the best practice for Anycast DNS with a large number (ex: >50) of domain controllers?<br>
 A: The best practice is to use a load balancer at each geographical location, similar to the diagram shown in this article. Load balancers are typically provided by an external vendor. 
 
-Q: Do Anycast DNS and Azure DNS have similar functionality?
+Q: Do Anycast DNS and Azure DNS have similar functionality?<br>
 A: Azure DNS uses Anycast. To use Anycast with Azure DNS, configure your load balncer to forward requests to the Azure DNS server. 
