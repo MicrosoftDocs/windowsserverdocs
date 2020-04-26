@@ -27,6 +27,8 @@ Anycast DNS works by using routing protocols such as Border Gateway Protocol (BG
 
 DNS servers that exist in multiple geographical locations each advertise a single, identical IP address called a <i>virtual IP address (VIP)</i> from their local gateway (router). When a DNS client query is initiated, the client's gateway evaluates which of the available routes to the destination is the shortest, and sends the DNS query to that location.
 
+Note that routing preferences can also be adjusted to prefer one location over another irrespective of geographical location.
+
 ### Example of Anycast DNS
 
 Following is an example of how Anycast DNS works.
