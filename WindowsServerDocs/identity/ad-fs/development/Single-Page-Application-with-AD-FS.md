@@ -155,6 +155,7 @@ Change the appsettings as below:
         <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
         <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
     </appSettings>
+    ```
 
 ## Running the solution
 Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
