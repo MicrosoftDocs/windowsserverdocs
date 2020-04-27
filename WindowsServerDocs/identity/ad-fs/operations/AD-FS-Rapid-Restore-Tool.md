@@ -4,7 +4,7 @@ title: AD FS Rapid Restore Tool
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/02/2019
+ms.date: 04/24/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
@@ -220,10 +220,21 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
+### Version 1.0.82.3
+Release: April 2020
+
+**Fixed issues:**
+
+
+- Added support for CNG based certificates
+
+
 ### Version 1.0.82.0
 Release: July 2019
 
 **Fixed issues:**
+
+
 - Bug fix for AD FS service account names that contain LDAP escape characters
 
 
