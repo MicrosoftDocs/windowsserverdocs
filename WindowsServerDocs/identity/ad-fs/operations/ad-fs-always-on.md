@@ -50,10 +50,11 @@ The following table describes the differences in supported features between a WI
 | Category      | Feature       | Supported by WID  | Supported by SQL |
 | ------------------ |:-------------:| :---:|:---: |
 | AD FS Features     | Federation server farm deployment | Yes  | Yes |
-| AD FS Features     | SAML artifact resolution. Note: This is not common for SAML applications     |   No | No  |
-| AD FS Features | SAML/WS-Federation token replay detection. Note: only required when AD FS receives tokens from external IDPs. This is not required if AD FS is not acting as an IDP.      |    No  | Yes |
+| AD FS Features     | SAML artifact resolution. Note: This is not common for SAML applications     |   No | Yes  |
+| AD FS Features | SAML/WS-Federation token replay detection. Note: only required when AD FS receives tokens from external IDPs. This is not required if AD FS is not acting as a federation partner.      |    No  | Yes |
 | Database Features     |   Basic database redundancy using pull replication, where one or more servers hosting a read-only copy of the database request changes that are made on a source server host a read/write copy of the database    |   No | No  |
 | Database Features | Database redundancy using high Availability solutions, such as clustering or mirroring (at the database layer)      |    No  | Yes |
+| Additional Features | OAuth Authcode Scenario     |   Yes  | Yes |
 
 If you are a large organization with more than 100 trust relationships that need to provide both their internal users and external users with single-sign on access to federation applications or services, SQL is the recommended option.
 
