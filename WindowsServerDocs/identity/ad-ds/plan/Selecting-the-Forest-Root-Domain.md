@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
 ---
+
 # Selecting the Forest Root Domain
 
 > Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -62,7 +63,7 @@ To select a suffix for the forest root domain:
 We recommend that you use DNS names that are registered with an Internet authority in the Active Directory namespace. Only registered names are guaranteed to be globally unique. If another organization later registers the same DNS domain name (or if your organization merges with, acquires, or is acquired by another company that uses the same DNS name), the two infrastructures cannot interact with one another.
 
 > [!CAUTION]
-> Do not use single-label DNS names. For more information, see ([Deployment and operation of Active Directory domains that are configured by using single-label DNS names](https://go.microsoft.com/fwlink/?LinkId=106631)). Also, we do not recommend using unregistered suffixes, such as .local .
+> Do not use single-label DNS names. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](https://support.microsoft.com/help/300684/). Also, we do not recommend using unregistered suffixes, such as .local .
 
 ### Selecting a prefix
 
@@ -72,14 +73,14 @@ If you selected a regional domain to function as a forest root domain, you might
 
 The following table lists the rules for selecting a prefix for a registered DNS name.
 
-|Rule|Explanation|
-|--------|---------------|
-|Select a prefix that is not likely to become outdated.|Avoid names such as a product line or operating system that might change in the future. We recommend using generic names such as corp or ds.|
-|Select a prefix that includes Internet standard characters only.|A-Z, a-z, 0-9, and (-), but not entirely numerical.|
-|Include 15 characters or less in the prefix.|If you choose a prefix length of 15 characters or less, the NetBIOS name is the same as the prefix.|
+| Rule     | Explanation |
+| -------- | --------------- |
+| Select a prefix that is not likely to become outdated. | Avoid names such as a product line or operating system that might change in the future. We recommend using generic names such as corp or ds.|
+| Select a prefix that includes Internet standard characters only. | A-Z, a-z, 0-9, and (-), but not entirely numerical. |
+| Include 15 characters or less in the prefix. | If you choose a prefix length of 15 characters or less, the NetBIOS name is the same as the prefix. |
 
 It is important for the Active Directory DNS owner to work with the DNS owner for the organization to obtain ownership of the name that will be used for the Active Directory namespace. For more information about designing a DNS infrastructure to support AD DS, see [Creating a DNS Infrastructure Design](../../ad-ds/plan/Creating-a-DNS-Infrastructure-Design.md).
 
 ## Documenting the forest root domain name
 
-Document the DNS prefix and suffix that you select for the forest root domain. At this point, identify what domain will be the forest root. You can add the forest root domain name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains and your domain names. To open it, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://www.microsoft.com/download/details.aspx?id=9608) and open "Domain Planning" (DSSLOGI_5.doc).
+Document the DNS prefix and suffix that you select for the forest root domain. At this point, identify what domain will be the forest root. You can add the forest root domain name information to the "Domain Planning" worksheet that you created to document your plan for new and upgraded domains and your domain names. To open it, download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip from [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608) and open "Domain Planning" (DSSLOGI_5.doc).

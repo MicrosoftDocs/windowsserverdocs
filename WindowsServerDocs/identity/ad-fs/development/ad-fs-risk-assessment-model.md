@@ -86,8 +86,8 @@ The following procedure will walk you through building a sample plug-in dll.
    b.    From the **Properties** page, click **Signing**, on the left, and then check the checkbox marked **Sign the assembly**. From the **Choose a strong name key file**: pull down menu, select **<New...>**</br>
    ![model](media/ad-fs-risk-assessment-model/risk7.png)
 
-   c.    In the **Create Strong Name Key dialogue**, type a name (you can choose any name) for the key, uncheck the checkbox **Protect my key file with password**. Then, click **OK**.
-   ![model](media/ad-fs-risk-assessment-model/risk8.png)</br>
+   c.    In the **Create Strong Name Key dialogue**, type a name (you can choose any name) for the key, uncheck the checkbox **Protect my key file with password**. Then, click **OK**.</br>
+   ![model](media/ad-fs-risk-assessment-model/risk8.png)
  
    d.    Save the project as shown below</br>
    ![model](media/ad-fs-risk-assessment-model/risk9.png)
