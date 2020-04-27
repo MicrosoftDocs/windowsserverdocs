@@ -27,7 +27,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 *Date published: 04/28/2020*
 
-Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNM), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNO), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vuSV)
 
 - Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
   - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.
