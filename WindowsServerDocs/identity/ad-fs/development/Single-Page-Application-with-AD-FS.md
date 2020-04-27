@@ -103,7 +103,7 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
             //cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
         },
         $httpProvider
-        );
+    );
 
 |Configuration|Description|
 |--------|--------|
@@ -118,25 +118,26 @@ Open the **Startup.Auth.cs** file in the sample and add the following at the beg
 
 remove:
 
-                app.UseWindowsAzureActiveDirectoryBearerAuthentication(
-    new WindowsAzureActiveDirectoryBearerAuthenticationOptions
-    {
-    Audience = ConfigurationManager.AppSettings["ida:Audience"],
-    Tenant = ConfigurationManager.AppSettings["ida:Tenant"]
-    });
+    app.UseWindowsAzureActiveDirectoryBearerAuthentication(
+        new WindowsAzureActiveDirectoryBearerAuthenticationOptions
+        {
+            Audience = ConfigurationManager.AppSettings["ida:Audience"],
+            Tenant = ConfigurationManager.AppSettings["ida:Tenant"]
+        }
+    );
 
 and add:
 
     app.UseActiveDirectoryFederationServicesBearerAuthentication(
-    new ActiveDirectoryFederationServicesBearerAuthenticationOptions
-    {
-    MetadataEndpoint = ConfigurationManager.AppSettings["ida:AdfsMetadataEndpoint"],
-    TokenValidationParameters = new TokenValidationParameters()
-    {
-    ValidAudience = ConfigurationManager.AppSettings["ida:Audience"],
-    ValidIssuer = ConfigurationManager.AppSettings["ida:Issuer"]
-    }
-    }
+        new ActiveDirectoryFederationServicesBearerAuthenticationOptions
+        {
+            MetadataEndpoint = ConfigurationManager.AppSettings["ida:AdfsMetadataEndpoint"],
+            TokenValidationParameters = new TokenValidationParameters()
+            {
+                ValidAudience = ConfigurationManager.AppSettings["ida:Audience"],
+                ValidIssuer = ConfigurationManager.AppSettings["ida:Issuer"]
+            }
+        }
     );
 
 |Parameter|Description|
@@ -147,12 +148,13 @@ and add:
 
 ## Add application configuration for AD FS
 Change the appsettings as below:
-
+```xml
     <appSettings>
-    <add key="ida:Audience" value="https://localhost:44326/" />
-    <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
-    <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
-      </appSettings>
+        <add key="ida:Audience" value="https://localhost:44326/" />
+        <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
+        <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
+    </appSettings>
+    ```
 
 ## Running the solution
 Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
