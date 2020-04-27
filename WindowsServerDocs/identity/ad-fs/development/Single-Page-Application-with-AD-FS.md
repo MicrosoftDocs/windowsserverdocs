@@ -149,7 +149,7 @@ and add:
 
 ## Add application configuration for AD FS
 Change the appsettings as below:
-
+```xml
     <appSettings>
         <add key="ida:Audience" value="https://localhost:44326/" />
         <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
