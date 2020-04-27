@@ -38,7 +38,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 - When you exit full screen, the session window will return to its original location when you first entered full screen.
 - The background refresh for Workspaces has been changed to every four hours instead of every hour. A refresh now happens automatically when launching the client.
 - Resetting your user data from the About page now redirects to the Connection Center when completed instead of closing the client.
-- The items in the system menu for desktop connections were re-ordered and the help topic now points to the client documentation.
+- The items in the system menu for desktop connections were reordered and the Help topic now points to the client documentation.
 - Addressed some accessibility issues with tab navigation and screen readers.
 - Fixed an issue where the Azure Active Directory authentication dialog appeared behind the session window.
 - Fixed a flickering and shrinking issue when dragging a desktop session window between displays of different scale factors.
