@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Lists the available realm flags that can be reported by **ksetup**. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Lists the available realm flags that can be reported by **ksetup**.
 
 ## Syntax
 

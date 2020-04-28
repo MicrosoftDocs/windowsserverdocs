@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete.
 
 ## Syntax
 

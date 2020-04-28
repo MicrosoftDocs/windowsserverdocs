@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to specify a name for a computer running the Windows operating system so that the changes made by using **ksetup** will update the target computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to specify a name for a computer running the Windows operating system so that the changes made by using **ksetup** will update the target computer.
 
 ## Syntax
 

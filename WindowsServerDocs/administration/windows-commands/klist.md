@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Displays a list of currently cached Kerberos tickets. This information applies to Windows Server 2012. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Displays a list of currently cached Kerberos tickets. This information applies to Windows Server 2012.
 
 ## Syntax
 

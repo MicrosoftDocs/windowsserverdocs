@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to generate a rollback template for a specified configuration template. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to generate a rollback template for a specified configuration template.
 
 ## Syntax
 

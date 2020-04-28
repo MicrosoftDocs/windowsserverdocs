@@ -18,7 +18,7 @@ ms.date: 08/06/2018
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Manages the protection methods used for the BitLocker encryption key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Manages the protection methods used for the BitLocker encryption key.
 ## Syntax
 ```
 manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup}] <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]

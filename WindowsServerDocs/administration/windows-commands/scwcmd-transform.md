@@ -26,7 +26,7 @@ Domain administrator credentials are needed to complete the transform operation.
 > [!IMPORTANT]
 > Internet Information Services (IIS) security policy settings cannot be deployed by using Group Policy.</br>> Firewall policies that list approved applications should not be deployed to servers unless the Windows Firewall service started automatically when the server was last started.
 
-For examples of how this command can be used, see [Examples](#BKMK_Examples).
+
 
 ## Syntax
 

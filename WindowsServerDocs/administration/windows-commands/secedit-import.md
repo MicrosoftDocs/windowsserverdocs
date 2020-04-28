@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Imports security settings stored in an inf file previously exported from the database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Imports security settings stored in an inf file previously exported from the database configured with security templates.
 
 ## Syntax
 

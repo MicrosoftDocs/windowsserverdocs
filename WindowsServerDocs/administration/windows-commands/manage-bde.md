@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Used to turn on or turn off BitLocker, specify unlock mechanisms, update recovery methods, and unlock BitLocker-protected data drives. This command-line tool can be used in place of the **BitLocker Drive Encryption** Control Panel item. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Used to turn on or turn off BitLocker, specify unlock mechanisms, update recovery methods, and unlock BitLocker-protected data drives. This command-line tool can be used in place of the **BitLocker Drive Encryption** Control Panel item.
 
 ## Syntax
 

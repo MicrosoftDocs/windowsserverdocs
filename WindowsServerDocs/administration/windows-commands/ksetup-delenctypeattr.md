@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Removes the encryption type attribute for the domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Removes the encryption type attribute for the domain.
 
 ## Syntax
 

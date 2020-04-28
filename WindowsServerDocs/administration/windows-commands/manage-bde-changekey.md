@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Modifies the startup key for an operating system drive. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Modifies the startup key for an operating system drive.
 
 ## Syntax
 

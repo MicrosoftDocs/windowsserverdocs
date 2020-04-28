@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Removes realm flags from the specified realm.  For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Removes realm flags from the specified realm. 
 
 ## Syntax
 

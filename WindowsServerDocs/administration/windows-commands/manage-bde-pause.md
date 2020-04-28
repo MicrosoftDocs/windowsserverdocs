@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Pauses BitLocker encryption or decryption. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Pauses BitLocker encryption or decryption.
 
 ## Syntax
 

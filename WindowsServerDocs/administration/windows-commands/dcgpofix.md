@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # dcgpofix
 
-Recreates the default Group Policy Objects (GPOs) for a domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Recreates the default Group Policy Objects (GPOs) for a domain.
 
 ## Syntax
 

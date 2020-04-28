@@ -20,7 +20,7 @@ ms.date: 10/16/2017
 
 
 
-Generates a key package for a drive. The key package can be used in conjunction with the repair tool to repair corrupted drives. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Generates a key package for a drive. The key package can be used in conjunction with the repair tool to repair corrupted drives.
 
 ## Syntax
 

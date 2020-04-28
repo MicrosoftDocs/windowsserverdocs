@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Displays the current state of realm settings for all realms that are defined on the computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Displays the current state of realm settings for all realms that are defined on the computer.
 
 ## Syntax
 

@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Adds the encryption type attribute to the list of possible types for the domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Adds the encryption type attribute to the list of possible types for the domain.
 
 ## Syntax
 

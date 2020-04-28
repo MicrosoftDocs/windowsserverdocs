@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Maps the name of a Kerberos principal to an account. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Maps the name of a Kerberos principal to an account.
 
 ## Syntax
 

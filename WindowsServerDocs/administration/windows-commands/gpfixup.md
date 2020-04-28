@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Fix domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Fix domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation.
 
 ## Syntax
 

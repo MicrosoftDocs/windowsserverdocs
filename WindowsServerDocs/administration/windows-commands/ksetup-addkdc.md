@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Adds a Key Distribution Center (KDC) address for the given Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Adds a Key Distribution Center (KDC) address for the given Kerberos realm.
 
 ## Syntax
 

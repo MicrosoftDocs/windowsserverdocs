@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Adds additional realm flags to the specified realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Adds additional realm flags to the specified realm.
 
 ## Syntax
 

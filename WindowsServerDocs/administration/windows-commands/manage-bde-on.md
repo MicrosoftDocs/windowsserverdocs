@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Encrypts the drive and turns on BitLocker. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Encrypts the drive and turns on BitLocker.
 
 ## Syntax
 

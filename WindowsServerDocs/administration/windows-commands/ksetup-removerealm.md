@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Deletes all information for the specified realm from the registry. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Deletes all information for the specified realm from the registry.
 
 ## Syntax
 

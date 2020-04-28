@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the Used Space Only encryption method provides the same level of protection as the Full Volume Encryption encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the Used Space Only encryption method provides the same level of protection as the Full Volume Encryption encryption method.
 
 ## Syntax
 

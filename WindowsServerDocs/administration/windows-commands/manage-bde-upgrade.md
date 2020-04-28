@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Upgrades the BitLocker version. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Upgrades the BitLocker version.
 
 ## Syntax
 

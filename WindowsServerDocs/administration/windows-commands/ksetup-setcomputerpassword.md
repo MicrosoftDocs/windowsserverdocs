@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Sets the password for the local computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets the password for the local computer.
 
 ## Syntax
 

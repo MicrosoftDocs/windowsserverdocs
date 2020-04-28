@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Adds a Kerberos password (Kpasswd) server address for a realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Adds a Kerberos password (Kpasswd) server address for a realm.
 
 ## Syntax
 

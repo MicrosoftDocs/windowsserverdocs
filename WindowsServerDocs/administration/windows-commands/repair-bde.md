@@ -28,7 +28,7 @@ The following limitations exist for the Repair-bde command-line tool:
 -   Repair-bde cannot repair a drive that failed during the encryption or decryption process.
 -   Repair-bde assumes that if the drive has any encryption, then the drive has been fully encrypted.
 
-For examples of how this command can be used, see [Examples](#BKMK_Examples).
+
 
 ## Syntax
 

@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # tpmvscmgr
 
-The Tpmvscmgr command-line tool allows users with Administrative credentials to create and delete TPM virtual smart cards on a computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+The Tpmvscmgr command-line tool allows users with Administrative credentials to create and delete TPM virtual smart cards on a computer.
 
 ## Syntax
 

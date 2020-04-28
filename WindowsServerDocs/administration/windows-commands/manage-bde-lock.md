@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided.
 
 ## Syntax
 

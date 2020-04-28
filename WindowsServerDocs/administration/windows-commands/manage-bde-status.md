@@ -30,7 +30,7 @@ Provides the following information about all drives on the computer; whether or 
 -   Identification field
 -   Key protectors
 
-For examples of how this command can be used, see [Examples](#BKMK_Examples).
+
 
 ## Syntax
 

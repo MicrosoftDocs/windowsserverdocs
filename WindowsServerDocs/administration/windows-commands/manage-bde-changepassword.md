@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Modifies the password for a data drive. The user is prompted for a new password. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Modifies the password for a data drive. The user is prompted for a new password.
 
 ## Syntax
 

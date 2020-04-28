@@ -20,7 +20,7 @@ ms.date: 10/16/2017
 > 
 > [!IMPORTANT]
 > This command is not supported for use on computers running Windows 8,  Windows Server 2012  or later operating systems. For those computers, you can use the [TPM Management cmdlets for Windows PowerShell](https://docs.microsoft.com/powershell/module/trustedplatformmodule/).
-> if you are using this command on computer running Windows 7 or Windows Server 2008, you can still configure the computer's Trusted Platform Module (TPM) using this command. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+> if you are using this command on computer running Windows 7 or Windows Server 2008, you can still configure the computer's Trusted Platform Module (TPM) using this command.
 > ## Syntax
 > ```
 > manage-bde -tpm [-turnon] [-takeownership <OwnerPassword>] [-computername <Name>] [{-?|/?}] [{-help|-h}]

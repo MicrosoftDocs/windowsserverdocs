@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user.
 
 ## Syntax
 

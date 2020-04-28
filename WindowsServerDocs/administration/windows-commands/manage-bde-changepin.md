@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN.
 
 ## Syntax
 

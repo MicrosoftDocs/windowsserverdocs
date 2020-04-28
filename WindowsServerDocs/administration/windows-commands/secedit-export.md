@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Exports security settings stored in a database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Exports security settings stored in a database configured with security templates.
 
 ## Syntax
 

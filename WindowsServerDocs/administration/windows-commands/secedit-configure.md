@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to configure the current system settings using security settings stored in a database. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to configure the current system settings using security settings stored in a database.
 
 ## Syntax
 

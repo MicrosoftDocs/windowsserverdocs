@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Manages the automatic unlocking of BitLocker-protected data drives. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Manages the automatic unlocking of BitLocker-protected data drives.
 
 ## Syntax
 

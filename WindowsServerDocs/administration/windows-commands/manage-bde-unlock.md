@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Unlocks a BitLocker-protected drive by using a recovery password or a recovery key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Unlocks a BitLocker-protected drive by using a recovery password or a recovery key.
 
 ## Syntax
 

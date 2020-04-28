@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Resumes BitLocker encryption or decryption after it has been paused. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Resumes BitLocker encryption or decryption after it has been paused.
 
 ## Syntax
 

@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Validates the security settings stored in a security template (.inf file). For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Validates the security settings stored in a security template (.inf file).
 
 ## Syntax
 
