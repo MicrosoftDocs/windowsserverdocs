@@ -11,7 +11,7 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil wim
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
 
 Provides functions to discover and manage Windows Image (WIM)-backed files.
 
@@ -24,7 +24,7 @@ fsutil wim [queryfile] <filename>
 fsutil wim [removewim] <drive name> <data source>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
@@ -66,6 +66,6 @@ fsutil wim removewims C: 2
 ```
 
 ### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

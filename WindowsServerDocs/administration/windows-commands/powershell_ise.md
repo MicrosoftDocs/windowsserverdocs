@@ -1,12 +1,12 @@
 ---
 title: PowerShell_ise
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 32c41b5b-a210-47d9-bd8c-91eb9830b4f0
 author: coreyp-at-msft

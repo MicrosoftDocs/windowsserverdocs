@@ -1,12 +1,12 @@
 ---
 title: extract
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 20dab03e-f6e1-4eb8-b8a1-fd6f1d97ee83
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ EXTRACT [/Y] source [newname]
 EXTRACT [/Y] /C source destination
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,6 +42,6 @@ EXTRACT [/Y] /C source destination
 |/L dir|Location to place extracted files (default is current directory).|
 |/Y|Do not prompt before overwriting an existing file.|
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

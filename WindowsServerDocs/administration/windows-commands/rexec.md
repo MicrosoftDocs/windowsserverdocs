@@ -1,12 +1,12 @@
 ---
 title: rexec
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7c637fb3-c92f-40bf-ad06-6330daaa3b5f
 author: coreyp-at-msft

@@ -1,12 +1,12 @@
 ---
 title: doskey
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4874fd43-d5ea-45f3-ae24-388ae925ed76
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Calls Doskey.exe (which recalls previously entered command-line commands), edits command lines, and creates macros.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/insert | /overstrike] [/exename=<ExeName>] [/macrofile=<FileName>] [<MacroName>=[<Text>]]
 ```
 
-## Parameters
+### Parameters
 
 |       Parameter        |                                                                                                                          Description                                                                                                                           |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -138,7 +138,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
   doskey <MacroName> =
   ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 The **/macros** and **/history** command-line options are useful for creating batch programs to save macros and commands. For example, to store all current **doskey** macros, type:
 ```
@@ -191,6 +191,6 @@ To delete a macro called vlist, type:
 doskey vlist =
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

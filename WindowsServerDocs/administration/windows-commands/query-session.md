@@ -1,12 +1,12 @@
 ---
 title: query session
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: abc0ace8-0b74-4b6e-a937-a78bb4b61a1f
 author: coreyp-at-msft
@@ -16,18 +16,18 @@ ms.date: 10/16/2017
 ---
 # query session
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about sessions on a Remote Desktop Session Host (rd Session Host) server.
 The list includes information not only about active sessions but also about other sessions that the server runs.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
 > [!NOTE]
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 > ## Syntax
 > ```
 > query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
 > ```
-> ## Parameters
+> ### Parameters
 > 
 > |      Parameter       |                                                      Description                                                      |
 > |----------------------|-----------------------------------------------------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >                                   5 idle
 >   ```
 >   The greater than (>) symbol indicates the current session. SESSIONNAME specifies the name assigned to the session. USERNAME indicates the user name of the user connected to the session. STATE provides information about the current state of the session. TYPE indicates the session type. DEVICE, which is not present for the console or network-connected sessions, is the device name assigned to the session. The comment following session information is from the session profile. Any sessions in which the initial state is configured as DISABLED do not show up in the **query session** list until they are enabled.
->   ## <a name="BKMK_examples"></a>Examples
+>   ## Examples
 > - To display information about all active sessions on server SERver2, type:
 >   ```
 >   query session /server:SERver2
@@ -64,7 +64,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 >   ```
 >   query session modeM02
 >   ```
->   #### additional references
->   [Command-Line Syntax Key](command-line-syntax-key.md)
+>   ## Additional References
+>   - [Command-Line Syntax Key](command-line-syntax-key.md)
 >   [query](query.md)
->   [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+>   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

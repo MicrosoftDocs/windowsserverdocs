@@ -1,12 +1,12 @@
 ---
 title: prnport
 description: Learn how to create, delete, and list printer ports.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6a0ec638-a21e-4a34-be5c-bd0f7ca89ffe
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # prnport
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
 
@@ -28,7 +28,7 @@ cscript prnport {-a | -d | -l | -g | -t | -?} [-r <PortName>]
 [-i <SNMPIndex>] [-y <CommunityName>] -2{e | -d}
 ```
 
-## Parameters
+### Parameters
 
 |          Parameter           |                                                                                                                                                                                                                                                                                                     Description                                                                                                                                                                                                                                                                                                      |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -80,6 +80,6 @@ To add a standard TCP/IP printing port on the local computer that connects to a 
 cscript prnport -a -r IP_10.2.3.4 -h 10.2.3.4
 ```
 
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 [print Command Reference](print-command-reference.md)

@@ -1,12 +1,12 @@
 ---
 title: Sc delete
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2fe94fb3-e4d1-47b5-b999-39995ecbb644
 author: coreyp-at-msft
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#examples).
 sc [<ServerName>] delete [<ServiceName>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -48,6 +48,6 @@ To delete the service subkey **NewServ** from the registry on the local computer
 sc delete newserv
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

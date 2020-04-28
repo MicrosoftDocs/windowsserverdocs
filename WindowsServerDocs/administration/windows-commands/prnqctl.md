@@ -1,12 +1,12 @@
 ---
 title: prnqctl
 description: Print a test page, pause or resume a printer.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8df9dfa7-984c-4276-bb7d-e7675e7c399e jpjofre
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 07/11/2018
 ---
 # prnqctl
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Prints a test page, pauses or resumes a printer, and clears a printer queue.  
 
@@ -25,7 +25,7 @@ Prints a test page, pauses or resumes a printer, and clears a printer queue.
 cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
 [-p <printerName>] [-u <UserName>] [-w <Password>]  
 ```  
-## Parameters  
+### Parameters  
 
 |Parameter|Description|  
 |-------|--------|  
@@ -59,6 +59,6 @@ To cancel all print jobs on the Laserprinter1 printer on the local computer, typ
 cscript Prnqctl -x -p Laserprinter1  
 ```  
 
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
 [print Command Reference](print-command-reference.md)  

@@ -1,12 +1,12 @@
 ---
 title: logman import | export
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman import | export
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 import a Data Collector Set from an XML file, or export a Data Collector Set to an XML file.  
 
@@ -25,7 +25,7 @@ import a Data Collector Set from an XML file, or export a Data Collector Set to 
 logman import <[-n] <name>> <-xml <name>> [options]  
 logman export <[-n] <name>> <-xml <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |        Parameter        |                                                                        Description                                                                        |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,10 +38,10 @@ logman export <[-n] <name>> <-xml <name>> [options]
 | -[-]u <user [password]> | User to Run As. Entering a \* for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
 |           -y            |                                                      Answer yes to all questions without prompting.                                                       |
 
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 The following command imports the XML file c:\windows\perf_log.xml from the computer server_1 as a data collector set called perf_log.  
 ```  
-logman import perf_log -s server_1 -xml "c:\windows\perf_log.xml"  
+logman import perf_log -s server_1 -xml c:\windows\perf_log.xml  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

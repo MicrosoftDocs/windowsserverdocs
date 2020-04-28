@@ -1,15 +1,10 @@
 ---
 title: copy
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for copy, which copies one or more files from one location to another.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -18,11 +13,9 @@ ms.date: 10/16/2017
 
 # copy
 
-
-
 Copies one or more files from one location to another.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a | /b] [+ ...]] [<Destination> [/a | /b]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -108,7 +101,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <Source> [/a | /b] [+<Source> [/a 
     To copy all of a directory's files and subdirectories, use the **xcopy** command.
 -   The **copy** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To copy a file called Memo.doc to Letter.doc in the current drive and ensure that an end-of-file character (CTRL+Z) is at the end of the copied file, type:
 ```
@@ -149,6 +142,6 @@ To combine all files with the .txt extension, and then combine all files with th
 copy *.txt + *.ref Combined.doc
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

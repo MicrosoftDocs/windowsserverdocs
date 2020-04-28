@@ -1,12 +1,8 @@
 ---
 title: create volume raid
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for create volume raid, which creates a RAID-5 volume using three or more specified dynamic disks.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
 author: coreyp-at-msft
@@ -16,22 +12,20 @@ ms.date: 10/16/2017
 ---
 # create volume raid
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates a RAID\-5 volume using three or more specified dynamic disks.  
-  
+Creates a RAID-5 volume using three or more specified dynamic disks.  
+
 > [!IMPORTANT]  
-> This DiskPart command is not available in any edition of Windows Vista.  
-  
-  
-  
+> This DiskPart command is not available in any edition of Windows Vista.
+
 ## Syntax  
   
 ```  
 create volume raid [size=<n>] disk=<n>,<n>,<n>[,<n>,...] [align=<n>] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |           Parameter           |                                                                                                                                                                                                                                              Description                                                                                                                                                                                                                                              |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,15 +38,15 @@ create volume raid [size=<n>] disk=<n>,<n>,<n>[,<n>,...] [align=<n>] [noerr]
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 To create a RAID\-5 volume of 1000 megabytes in size, using disks 1, 2 and 3, type:  
   
 ```  
 create volume raid size=1000 disk=1,2,3  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

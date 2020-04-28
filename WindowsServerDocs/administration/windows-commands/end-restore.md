@@ -1,12 +1,12 @@
 ---
 title: End restore
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 67ce83ec-a51e-4d1f-a182-d84ded999dc3
 author: coreyp-at-msft
@@ -27,6 +27,6 @@ Ends a restore session and issues a **PostRestore** event to involved writers.
 end restore
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

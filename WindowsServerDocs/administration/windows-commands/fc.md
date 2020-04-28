@@ -1,12 +1,12 @@
 ---
 title: fc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 485fc3d8-b7c5-496d-87be-0011112f27d5
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Compares two files or sets of files and displays the differences between them.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +30,7 @@ fc /a [/c] [/l] [/lb<N>] [/n] [/off[line]] [/t] [/u] [/w] [/<NNNN>] [<Drive1>:][
 fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 ```
 
-## Parameters
+### Parameters
 
 |            Parameter             |                                                                                                                                     Description                                                                                                                                      |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -80,7 +80,7 @@ fc /b [<Drive1:>][<Path1>]<FileName1> [<Drive2:>][<Path2>]<FileName2>
 
     When comparing binary files that are larger than the available memory, **fc** compares both files completely, overlaying the portions in memory with the next portions from the disk. The output is the same as that for files that fit completely in memory.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To make an ASCII comparison of two text files, Monthly.rpt and Sales.rpt, and display the results in abbreviated format, type:
 ```
@@ -119,6 +119,6 @@ To compare each batch file in the root directory on drive C to the file with the
 fc c:*.bat d:*.bat
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: telnet unset
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for telnet unset, which turns off previously set options.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09 vhorne
 author: coreyp-at-msft
@@ -16,14 +12,15 @@ ms.date: 10/16/2017
 ---
 # telnet: unset
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Turns off previously set options.   
+
 ## Syntax  
 ```  
 u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |bsasdel|Sends **Backspace** as a **Backspace**.|  
@@ -34,10 +31,10 @@ u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]
 |logging|Turns off logging.|  
 |ntlm|Turns off NTLM authentication.|  
 |?|Displays help for this command.|  
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 Turn off logging.  
 ```  
 u logging  
 ```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

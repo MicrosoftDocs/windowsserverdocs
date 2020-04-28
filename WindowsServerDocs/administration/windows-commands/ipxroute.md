@@ -1,12 +1,12 @@
 ---
 title: ipxroute
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3a30304f-655e-43d2-a4ac-7568abf8975c
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # ipxroute
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays and modifies information about the routing tables used by the IPX protocol. Used without parameters,  **ipxroute** displays the default settings for packets that are sent to unknown, broadcast, and multicast addresses.   
 ## Syntax  
@@ -28,7 +28,7 @@ ipxroute resolve {guid | name} {GUID | <AdapterName>}
 ipxroute board= N [def] [gbr] [mbr] [remove=xxxxxxxxxxxx]  
 ipxroute config  
 ```  
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |servers[ /type=X]|Displays the Service Access Point (SAP) table for the specified server type.  **X** must be an integer. For example, **/type=4** displays all file servers. If you do not specify **/type**, **ipxroute servers** displays all types of servers, listing them by server name.|  
@@ -41,10 +41,10 @@ ipxroute config
 |remove= *xxxxxxxxxxxx*|removes the given node address from the source routing table.|  
 |config|Displays information about all of the bindings for which IPX is configured.|  
 |/?|Displays help at the command prompt.|  
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 To display the network segments that the workstation is attached to, the workstation node address, and frame type being used, type:  
 ```  
 ipxroute config  
 ```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

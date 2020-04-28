@@ -1,12 +1,12 @@
 ---
 title: netcfg
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7 vhorne
 author: coreyp-at-msft
@@ -16,14 +16,14 @@ ms.date: 10/16/2017
 ---
 # netcfg
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
 ## Syntax
 ```
 netcfg [/v] [/e] [/winpe] [/l ] /c /i
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/v|Run in **verbose** (detailed) mode|
@@ -32,11 +32,11 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/l|Provides the **location** of INF|
 |/c|Provides the **class** of the component to be installed; protocol, Service, or client|
 |/i|Provides the component **ID**|
-|/s|Provides the type of components to **show**.<br /><br />\ta = adapters, n = net components|
+|/s|Provides the type of components to **show**.<p>\ta = adapters, n = net components|
 |/b|Displays the **binding paths**, when followed by a string containing the name of the path.|
 |/?|Displays **help** at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 To install the protocol *example* using c:\oemdir\example.inf:
 ```
@@ -66,5 +66,5 @@ To display binding paths containing *MS_TCPIP*:
 ```
 netcfg /b ms_tcpip
 ```
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

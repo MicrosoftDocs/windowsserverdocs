@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil file
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Finds a file by user name (if Disk Quotas are enabled), queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, or creates a new file.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -36,7 +36,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
@@ -55,9 +55,9 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 |/R|If <filename> is a reparse point, open it rather than its target.|
 |\<startingvcn>|Specifies first VCN to query. If omitted, start at VCN 0.|
 |\<numvcns>|Number of VCNs to query. If omitted or 0, query until EOF.|
-|queryfileid|Queries the file ID of a file on an NTFS volume.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|queryfileid|Queries the file ID of a file on an NTFS volume.<p>This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |\<volume>|Specifies the volume as drive name followed by a colon.|
-|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|queryfilenamebyid|Displays a random link name for a specified file ID on an NTFS volume. Since a file can have more than one link name pointing to that file, it is not guaranteed which file link will be provided as a result of the query for the file name.<p>This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |\<fileid>|Specifies the ID of the file on an NTFS volume.|
 |queryoptimizemetadata|Queries the metadata state of a file.|
 |queryvaliddata|Queries the valid data length for a file.|
@@ -130,8 +130,8 @@ To set a range of a file on an NTFS volume to zeros to empty it, type:
 fsutil file setzerodata offset=100 length=150 c:\temp\sample.txt  
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

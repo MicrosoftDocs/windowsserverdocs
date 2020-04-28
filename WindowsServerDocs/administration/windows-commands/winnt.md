@@ -1,12 +1,12 @@
 ---
 title: winnt
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for winnt, which is deprecated, and is not guaranteed to be supported in future releases of Windows.
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3bf6e792-befb-435c-8fa3-940a45a98adb
 author: coreyp-at-msft

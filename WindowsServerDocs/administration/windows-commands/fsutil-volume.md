@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil volume
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Dismounts a volume, or queries the hard disk drive to determine how much free space is currently available on the hard disk drive or which file is using a particular cluster.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -28,7 +28,7 @@ fsutil volume [list]
 fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
@@ -39,7 +39,7 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |filelayout|Displays NTFS metadata for the given file.|
 |\<fileid>|Specifies the file id.|
 |list|Lists all of the volumes on the system.|
-|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<br /><br />This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
+|querycluster|Finds which file is using a specified cluster. You can specify multiple clusters with the **querycluster** parameter.<p>This parameter applies to:  Windows Server 2008 R2  and  Windows 7 .|
 |\<cluster>|Specifies the logical cluster number (LCN).|
 
 ## <a name="BKMK_examples"></a>Examples
@@ -81,8 +81,8 @@ To find the file(s) that are using the clusters, specified by the logical cluste
 fsutil volume querycluster C: 50 0x2000
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

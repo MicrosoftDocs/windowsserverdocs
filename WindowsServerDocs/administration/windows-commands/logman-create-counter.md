@@ -1,12 +1,12 @@
 ---
 title: logman create counter
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # logman create counter
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 create a counter data collector.  
 
@@ -25,7 +25,7 @@ create a counter data collector.
 ```  
 logman create counter <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                    Parameter                     |                                                                               Description                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -55,14 +55,14 @@ logman create counter <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 The following command creates a counter called perf_log using the % Processor time counter from the Processor(_Total) counter category.  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time"  
+logman create counter perf_log -c \Processor(_Total)\% Processor time  
 ```  
 The following command creates a counter called perf_log using the % Processor time counter from the Processor(_Total) counter category, creating a log file with a maximum size of 10 MB and collecting data for 1 minute and 0 seconds.  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time" -max 10 -rf 01:00  
+logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -rf 01:00  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

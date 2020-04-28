@@ -1,12 +1,8 @@
 ---
 title: convert gpt
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for convert gpt, which converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b3b1b747-0a7a-4be2-8487-2c4be16ee190
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # convert gpt
-
-
 
 Converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.
 
@@ -29,7 +23,7 @@ For instructions regarding how to use this command, see [Change a Master Boot Re
 convert gpt [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,14 +36,14 @@ convert gpt [noerr]
 > -   The required minimum disk size for conversion to GPT is 128 megabytes.
 > -   A basic MBR disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To convert a basic disc from MBR partition style to GPT partition style, type:
 ```
 convert gpt
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

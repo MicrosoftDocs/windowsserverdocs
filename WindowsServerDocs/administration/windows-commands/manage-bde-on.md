@@ -1,12 +1,12 @@
 ---
 title: manage-bde on
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f6a12814-df74-416c-a04a-62ea8512263e
 author: coreyp-at-msft
@@ -30,7 +30,7 @@ manage-bde –on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey 
 [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -59,30 +59,30 @@ manage-bde –on <Drive> {[-recoveryPassword <NumericalPassword>]|[-recoverykey 
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
-The following example illustrates using the **-on** command to turn on BitLocker for drive C and add a recovery password to the drive.
+To illustrates using the **-on** command to turn on BitLocker for drive C and add a recovery password to the drive.
 ```
 manage-bde –on C: -recoverypassword
 ```
-The following example illustrates using the **-on** command to turn on BitLocker for drive C, add a recovery password to the drive, and save a recovery key to drive E.
+To illustrates using the **-on** command to turn on BitLocker for drive C, add a recovery password to the drive, and save a recovery key to drive E.
 ```
 manage-bde –on C: -recoverykey E:\ -recoverypassword
 ```
-The following example illustrates using the **-on** command to turn on BitLocker for drive C by using an external key protector (such as a USB key) to unlock the operating system drive. This method is required if you are using BitLocker with computers that do not have a TPM.
+To illustrates using the **-on** command to turn on BitLocker for drive C by using an external key protector (such as a USB key) to unlock the operating system drive. This method is required if you are using BitLocker with computers that do not have a TPM.
 ```
 manage-bde -on C: -startupkey E:\
 ```
-The following example illustrates using the **-on** command to turn on BitLocker for data drive E and add a password key protector. Manage-bde will prompt you to enter the password after this command has been entered.
+To illustrates using the **-on** command to turn on BitLocker for data drive E and add a password key protector. Manage-bde will prompt you to enter the password after this command has been entered.
 ```
 manage-bde –on E: -pw
 ```
-The following example illustrates using the **-on** command to turn on BitLocker for operating system drive C and use hardware-based encryption.
+To illustrates using the **-on** command to turn on BitLocker for operating system drive C and use hardware-based encryption.
 ```
 manage-bde –on C: -fet Hardware
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

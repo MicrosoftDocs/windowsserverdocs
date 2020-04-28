@@ -1,12 +1,12 @@
 ---
 title: manage-bde changepassword
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b174e152-8442-4fba-8b33-56a81ff4f547
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Modifies the password for a data drive. The user is prompted for a new password.
 manage-bde -changepassword [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,14 +37,14 @@ manage-bde -changepassword [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
-The following example illustrates using the **-changepassword** command to change the password used to unlock BitLocker on data drive D.
+To illustrates using the **-changepassword** command to change the password used to unlock BitLocker on data drive D.
 ```
 manage-bde –changepassword D:
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

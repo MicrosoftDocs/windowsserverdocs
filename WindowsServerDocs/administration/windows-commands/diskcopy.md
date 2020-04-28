@@ -1,12 +1,8 @@
 ---
 title: diskcopy
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for diskcopy, which copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fd21efa-52cc-4e70-a7fe-35125a435106
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 05/07/2018
 
 # diskcopy
 
-
-
 Copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive. If used without parameters, **diskcopy** uses the current drive for the source disk and the destination disk.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 > [!NOTE]
 > This command isn't included in Windows 10.
@@ -32,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 diskcopy [<Drive1>: [<Drive2>:]] [/v]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -79,9 +73,11 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 > [!NOTE]
 > You cannot use **xcopy** to copy a startup disk.
-> -   Understanding **diskcopy** exit codes
 
-    The following table explains each exit code.  
+### Understanding **diskcopy** exit codes
+
+    The following table explains each exit code.
+	
     |Exit code|Description|
     |---------|-----------|
     |0|Copy operation was successful|
@@ -91,7 +87,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
     To process the exit codes that are returned by **diskcomp**, you can use the *ERRORLEVEL* environment variable on the **if** command line in a batch program.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To copy the disk in drive B to the disk in drive A, type:
 ```
@@ -101,6 +97,6 @@ To use floppy disk drive A to copy one floppy disk to another, first switch to t
 
 diskcopy a: a:
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

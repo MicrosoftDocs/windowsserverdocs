@@ -1,12 +1,12 @@
 ---
 title: manage-bde setidentifier
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7092d18f-4ac9-4c73-a20f-1246ca60e75e
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Sets the drive identifier field on the drive to the value specified in the **Pro
 manage-bde –setidentifier <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,15 +37,15 @@ manage-bde –setidentifier <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
-The following example illustrates using the **-setidentifier** command to set BitLocker drive identifier field for C.
+To illustrates using the **-setidentifier** command to set BitLocker drive identifier field for C.
 ```
 manage-bde –setidentifier C:
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)
 -   [Using Data Recovery Agents with BitLocker](https://technet.microsoft.com/library/dd875560(WS.10).aspx)

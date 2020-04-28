@@ -1,12 +1,12 @@
 ---
 title: import
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4b9d2751-7637-4738-83b0-8c578eb28f27
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Imports a foreign disk group into the disk group of the local computer.
 import [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -38,14 +38,14 @@ import [noerr]
 -   The import command imports every disk that is in the same group as the disk with focus.
 -   A dynamic disk in a foreign disk group must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To import every disk that is in the same disk group as the disk with focus into the disk group of the local computer, type:
 ```
 import
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

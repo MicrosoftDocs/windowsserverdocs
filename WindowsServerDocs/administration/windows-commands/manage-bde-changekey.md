@@ -1,12 +1,12 @@
 ---
 title: manage-bde changekey
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 69463db9-7e03-47ff-b233-a95d5055725f
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Modifies the startup key for an operating system drive. For examples of how this
 manage-bde -changekey [<Drive>] [<PathToExternalKeyDirectory>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -38,14 +38,14 @@ manage-bde -changekey [<Drive>] [<PathToExternalKeyDirectory>] [-computername <N
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
-The following example illustrates using the **-changekey** command to create a new startup key on drive E to use with BitLocker encryption on drive C.
+To illustrates using the **-changekey** command to create a new startup key on drive E to use with BitLocker encryption on drive C.
 ```
-manage-bde –changekey C: E:\
+manage-bde -changekey C: E:\
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

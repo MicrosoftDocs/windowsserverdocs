@@ -1,12 +1,12 @@
 ---
 title: inactive
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f4fb4695-4e66-4166-b4ab-2c86a4605580
 author: coreyp-at-msft
@@ -34,13 +34,13 @@ inactive
 > -   After you mark the system partition or boot partition as inactive, your computer starts from the next option specified in the BIOS, such as the CD-ROM drive or a Pre-Boot eXecution Environment (PXE).
 > -   An active system or boot partition must be selected for this operation to succeed. Use the **select partition** command to select the active partition and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 ```
 inactive
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

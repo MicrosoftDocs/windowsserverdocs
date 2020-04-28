@@ -1,12 +1,12 @@
 ---
 title: nslookup set vc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: e9232c92-cd8d-4eff-8ae5-0647bd03bdcb
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Specifies to use or not use a virtual circuit when sending requests to the serve
 set [no]vc
 ```
 
-## Parameters
+### Parameters
 
 | Parameter |                                              Description                                               |
 |-----------|--------------------------------------------------------------------------------------------------------|
@@ -35,6 +35,6 @@ set [no]vc
 |  **vc**   |             Specifies to always use a virtual circuit when sending requests to the server.             |
 |   {help   |                                                   ?}                                                   |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: compact
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for compact, which displays or alters the compression of files or directories on NTFS partitions.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 429b3752-df0a-43a4-a210-df2f3ad03c3b
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 10/16/2017
 
 # compact
 
-
-
 Displays or alters the compression of files or directories on NTFS partitions. If used without parameters, **compact** displays the compression state of the current directory and the files it contains.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 compact [/c | /u] [/s[:<Dir>]] [/a] [/i] [/f] [/q] [<FileName>[...]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -49,7 +43,7 @@ compact [/c | /u] [/s[:<Dir>]] [/a] [/i] [/f] [/q] [<FileName>[...]]
 -   You cannot use **compact** to read, write, or mount volumes that have been compressed using DriveSpace or DoubleSpace.
 -   You cannot use **compact** to compress file allocation table (FAT) or FAT32 partitions.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To set the compression state of the current directory, its subdirectories, and existing files, type:
 ```
@@ -80,6 +74,6 @@ To remove the compressed attribute from the directory C:\Tmp, without changing t
 compact /u c:\tmp
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

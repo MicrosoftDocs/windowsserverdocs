@@ -1,12 +1,8 @@
 ---
 title: comp
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for comp, which compares the contents of two files or sets of files byte-by-byte.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40319d23-704d-4da1-be93-8259547275d0
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 10/16/2017
 
 # comp
 
-
-
 Compares the contents of two files or sets of files byte-by-byte. If used without parameters, **comp** prompts you to enter the files to compare.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -86,7 +80,7 @@ comp [<Data1>] [<Data2>] [/d] [/a] [/l] [/n=<Number>] [/c]
 
     To compare more files, press Y. The **comp** command prompts you for the locations and names of the new files. To stop the comparisons, press N. When you press Y, **comp** prompts you for command-line options to use. If you do not specify any command-line options, **comp** uses the ones you specified before.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To compare the contents of the directory C:\Reports with the backup directory \\\\Sales\Backup\April, type:
 ```
@@ -97,6 +91,6 @@ To compare the first ten lines of the text files in the \Invoice directory and d
 comp \invoice\*.txt \invoice\backup\*.txt /n=10 /d
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

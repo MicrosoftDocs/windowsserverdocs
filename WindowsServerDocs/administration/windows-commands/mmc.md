@@ -1,12 +1,12 @@
 ---
 title: mmc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7bfa4030-ce42-40fb-922f-2f5145a80872
 author: coreyp-at-msft
@@ -16,14 +16,14 @@ ms.date: 10/16/2017
 ---
 # mmc
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Using mmc command-line options, you can open a specific **mmc** console, open **mmc** in author mode, or specify that the 32-bit or 64-bit version of **mmc** is opened.
 ## Syntax
 ```
 mmc <path>\<filename>.msc [/a] [/64] [/32]
 ```
-### Parameters
+#### Parameters
 
 |       Parameter        |                                                                                                 Description                                                                                                 |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,6 +40,6 @@ mmc <path>\<filename>.msc [/a] [/64] [/32]
   When consoles are opened with this option, they are opened in author mode, regardless of their default mode. This does not permanently change the default mode setting for files; when you omit this option, mmc opens console files according to their default mode settings.
 - After you open **mmc** or a console file in author mode, you can open any existing console by clicking **Open** on the **Console** menu.
 - You can use the command line to create shortcuts for opening **mmc** and saved consoles. A command-line command works with the **Run** command on the **start** menu, in any command-prompt window, in shortcuts, or in any batch file or program that calls the command.
-  ## additional references
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+  ## Additional References
+- - [Command-Line Syntax Key](command-line-syntax-key.md)
 

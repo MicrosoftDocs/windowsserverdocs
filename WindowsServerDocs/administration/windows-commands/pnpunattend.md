@@ -1,12 +1,12 @@
 ---
 title: pnpunattend
 description: Learn how to audit the device drivers on a computer, as well as perform silent driver installations.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8 britw
 author: coreyp-at-msft
@@ -25,7 +25,7 @@ Audits a computer for device drivers, and perform unattended driver installation
 PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -47,7 +47,7 @@ Preliminary preparation is required. Prior to using this command, you must compl
 
 ## Examples
 
-The following example command shows how to use the **PNPUnattend.exe** to audit a computer for possible driver updates, and then report the findings to the command prompt.
+To command shows how to use the **PNPUnattend.exe** to audit a computer for possible driver updates, and then report the findings to the command prompt.
 
 ```
 pnpunattend auditsystem /s /l 
@@ -55,4 +55,4 @@ pnpunattend auditsystem /s /l
 
 ## Additional references
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

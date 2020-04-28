@@ -1,12 +1,12 @@
 ---
 title: logman update api
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6f322e52-0f9f-42b1-bd64-8b8f8fe086fc britw
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman update api
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update the properties of an existing API tracing data collector.  
 
@@ -24,7 +24,7 @@ Update the properties of an existing API tracing data collector.
 ```  
 logman update api <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                    Parameter                     |                                                                               Description                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,11 +57,11 @@ logman update api <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 The following command updates the existing API trace counter called trace_notepad for the executable file c:\windows\notepad.exe by excluding the API call TlsGetValue produced by the module kernel32.dll.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  
 [logman create api](logman-create-api.md)  

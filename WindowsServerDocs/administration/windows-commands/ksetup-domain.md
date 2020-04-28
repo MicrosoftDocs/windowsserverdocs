@@ -1,12 +1,12 @@
 ---
 title: ksetup:domain
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2ef766e3-6071-44f2-946b-22ea5b61a508
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Sets the domain name for all Kerberos operations. For examples of how this comma
 ksetup /domain <DomainName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,7 +37,7 @@ ksetup /domain <DomainName>
 
 None.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 Establish a connection to a valid domain, such as Microsoft by using the /mapuser subcommand:
 ```
@@ -45,7 +45,7 @@ ksetup /mapuser principal@realm domain-user /domain domain-name
 ```
 When the connection is successful, you will receive a new TGT or an existing TGT will be refreshed.
 
-#### Additional references
+## Additional References
 
 -   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

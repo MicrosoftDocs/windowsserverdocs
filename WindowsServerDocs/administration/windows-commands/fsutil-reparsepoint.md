@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil reparsepoint
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
 
 Queries or deletes reparse points.  The **fsutil reparsepoint** command is typically used by support professionals.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -24,7 +24,7 @@ fsutil reparsepoint [query] <FileName>
 fsutil reparsepoint [delete] <FileName>
 ```
 
-## Parameters
+### Parameters
 
 | Parameter  |                                                                Description                                                                |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------|
@@ -53,8 +53,8 @@ To delete a reparse point from a specified file or directory, use the following 
 fsutil reparsepoint delete c:\server
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

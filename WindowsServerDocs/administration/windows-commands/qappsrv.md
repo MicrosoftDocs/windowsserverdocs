@@ -1,12 +1,12 @@
 ---
 title: qappsrv
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 7df68283-2484-418c-a8f0-d273884919ad
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # qappsrv
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays a list of all Remote Desktop Session Host (RD Session Host) servers on the network.
 
@@ -26,7 +26,7 @@ Displays a list of all Remote Desktop Session Host (RD Session Host) servers on 
 ## Remarks
 This command is the same as the **query termserver** command.
 
-#### additional references
+## Additional References
 [query termserver](query-termserver.md)
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

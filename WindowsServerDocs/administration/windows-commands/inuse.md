@@ -1,12 +1,12 @@
 ---
 title: inuse
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 62ff1af0-adba-4beb-8e3c-d1c87e0b38f3
 

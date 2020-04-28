@@ -1,12 +1,12 @@
 ---
 title: more
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ded14f6a-d82f-4aeb-a2d8-7ec1c94dfb8f
 
@@ -22,7 +22,7 @@ ms.date: 07/26/2019
 
 Displays one screen of output at a time.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -32,7 +32,7 @@ more [[/c] [/p] [/s] [/t<N>] [+<N>]] < [<Drive>:][<Path>]<FileName>
 more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 ```
 
-## Parameters
+### Parameters
 
 |           Parameter            |                               Description                               |
 |--------------------------------|-------------------------------------------------------------------------|
@@ -64,7 +64,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 -   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**\|**), you can use such commands as **dir**, **sort**, and **type**.
 -   The **more** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To view the first screen of information of a file named Clients.new, type one of the following commands:
 ```
@@ -110,6 +110,6 @@ The following examples can be used at the **more** prompt (`-- More --`).
   ```  
   Type the number of lines to skip, and then press ENTER. **More** skips the specified number of lines and displays the next screen of information.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

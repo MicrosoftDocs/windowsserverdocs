@@ -1,12 +1,8 @@
 ---
 title: chcp
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for chcp, which changes the active console code page.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 10/16/2017
 
 # chcp
 
-
-
 Changes the active console code page. If used without parameters, **chcp** displays the number of the active console code page.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 chcp [<NNN>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -59,7 +53,7 @@ The following table lists each supported code page and its country/region or lan
 -   You do not need to prepare code pages (as in MS-DOS).
 -   Programs that you start after you assign a new code page use the new code page. However, programs (except Cmd.exe) that you start before you assign the new code page use the original code page.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To view the active code page setting, type:
 ```
@@ -77,6 +71,6 @@ If the specified code page is invalid, the following error message appears:
 
 `Invalid code page`
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

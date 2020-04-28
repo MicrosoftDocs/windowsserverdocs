@@ -1,6 +1,6 @@
 ---
 title: Windows Commands
-description: Windows Commands 
+description: Reference 
 ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
@@ -616,7 +616,6 @@ Z)
 - [winnt32](winnt32.md)
 - [winpop](winpop.md)
 - [winrs](winrs.md)
-- [wlbs](wlbs_1.md)
 - [wmic](wmic.md)
 - [wscript](wscript.md)
 

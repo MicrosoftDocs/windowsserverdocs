@@ -1,12 +1,8 @@
 ---
 title: diskcomp
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for diskcomp, which compares the contents of two floppy disks.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
 author: coreyp-at-msft
@@ -17,9 +13,9 @@ ms.date: 10/16/2017
 
 # diskcomp
 
+Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.
 
 
-Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -27,7 +23,7 @@ Compares the contents of two floppy disks. If used without parameters, **diskcom
 diskcomp [<Drive1>: [<Drive2>:]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -102,7 +98,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
   To process exit codes that are returned by **diskcomp**, you can use the ERRORLEVEL environment variable on the **if** command line in a batch program.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 If your computer has only one floppy disk drive (for example, drive A), and you want to compare two disks, type:
 ```
@@ -110,7 +106,7 @@ diskcomp a: a:
 ```
 **Diskcomp** prompts you to insert each disk, as needed.
 
-The following example illustrates how to process a **diskcomp** exit code in a batch program that uses the ERRORLEVEL environment variable on the **if** command line:
+To illustrates how to process a **diskcomp** exit code in a batch program that uses the ERRORLEVEL environment variable on the **if** command line:
 ```
 rem Checkout.bat compares the disks in drive A and B 
 echo off 
@@ -126,7 +122,7 @@ goto exit
 echo ERROR: An irrecoverable error occurred 
 goto exit 
 :break 
-echo "You just pressed CTRL+C" to stop the comparison 
+echo You just pressed CTRL+C to stop the comparison 
 goto exit 
 :no_compare 
 echo Disks are not the same 
@@ -137,6 +133,6 @@ goto exit
 :exit
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

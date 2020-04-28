@@ -1,12 +1,12 @@
 ---
 title: list providers
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 844b4036-c0b9-449d-8347-7d58ef9bf16d
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Lists shadow copy providers that are currently registered on the system.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 list providers
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To list the currently registered shadow copy providers, type:
 ```
@@ -45,6 +45,6 @@ Output that is similar to the following displays:
 1 provider registered.
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

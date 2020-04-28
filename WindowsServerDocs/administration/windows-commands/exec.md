@@ -1,12 +1,12 @@
 ---
 title: exec
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 364e8baf-576f-401b-a431-7d3c06621614
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Executes a file on the local computer. The file can be a **cmd** script.
 exec <ScriptFile.cmd>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -38,6 +38,6 @@ exec <ScriptFile.cmd>
 -   This command is used to duplicate or restore data as part of a backup or restore sequence.
 -   If the script fails, an error is returned and DiskShadow quits.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: mqtgsvc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a6f78ffa-ad38-475b-8ed5-f5404b1658ab
 author: coreyp-at-msft
@@ -27,10 +27,10 @@ Monitors a queue for incoming messages and performs an action, in the form of an
 Mqtgsvc.exe
 ```
 
-### Parameters
+#### Parameters
 
 None
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: time
 description: Learn how to set and display the system time.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1276a257-7283-41da-ae80-fb4cfb311f9d
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Displays or sets the system time. If used without parameters, **time** displays the current system time and prompts you to enter a new time.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -62,6 +62,6 @@ Enter the new time:
 ```
 To keep the current time and return to the command prompt, press ENTER. To change the current time, type the new time and then press ENTER.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

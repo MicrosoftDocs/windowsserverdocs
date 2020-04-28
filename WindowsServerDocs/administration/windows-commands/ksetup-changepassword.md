@@ -1,12 +1,12 @@
 ---
 title: ksetup:changepassword
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 283078e7-a88f-4875-90e6-f8605e6b7ea7
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Uses the Key Distribution Center (KDC) password (kpasswd) value to change the pa
 ksetup /changepassword <OldPasswd> <NewPasswd>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -46,7 +46,7 @@ If you want to force a password change at next logon, this command allows the us
 
 The output of the command informs you of the success or failure status.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 Change the password of a user who is currently logged on to this computer in this domain:
 ```
@@ -61,6 +61,6 @@ Force the currently logged on user to change the password at the next logon:
 ksetup /changepassword Pas$w0rd *
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

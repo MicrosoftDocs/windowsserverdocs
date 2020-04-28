@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Vssadmin delete shadows
 
->Applies to: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Deletes a specified volume's shadow copies.
 
@@ -21,7 +21,7 @@ Deletes a specified volume's shadow copies.
 vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID>] [/quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---|---|

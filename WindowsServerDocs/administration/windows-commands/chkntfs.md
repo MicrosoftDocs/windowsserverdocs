@@ -1,12 +1,8 @@
 ---
 title: chkntfs
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for chkntfs, which displays or modifies automatic disk checking when the computer is started. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
 author: coreyp-at-msft
@@ -17,14 +13,12 @@ ms.date: 10/16/2017
 
 # chkntfs
 
-
-
 Displays or modifies automatic disk checking when the computer is started. If used without options, **chkntfs** displays the file system of the specified volume. If automatic file checking is scheduled to run, **chkntfs** displays whether the specified volume is dirty or is scheduled to be checked the next time the computer is started.
 
 > [!NOTE]
 > To run **chkntfs**, you must be a member of the Administrators group.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -36,7 +30,7 @@ chkntfs [/x <Volume> [...]]
 chkntfs [/c <Volume> [...]]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -47,7 +41,7 @@ chkntfs [/c <Volume> [...]]
 |/c \<Volume> [...]|Schedules one or more volumes to be checked when the computer is started, and runs **chkdsk** on those that are dirty.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display the type of file system for drive C, type:
 ```
@@ -90,6 +84,6 @@ chkntfs /x c: d: e:
 chkntfs /c d:
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

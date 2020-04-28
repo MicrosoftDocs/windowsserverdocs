@@ -1,12 +1,12 @@
 ---
 title: mode
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
 
@@ -30,7 +30,7 @@ You can use **mode** to perform the following tasks—each task uses a different
 -   [To change the size of the command prompt screen buffer](#BKMK_5)
 -   [To set the keyboard typematic rate](#BKMK_6)
 
-## <a name="BKMK_1"></a>To configure a serial communications port
+## <a name=BKMK_1></a>To configure a serial communications port
 
 ### Syntax
 
@@ -38,7 +38,7 @@ You can use **mode** to perform the following tasks—each task uses a different
 mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon={on|off}] [odsr={on|off}] [octs={on|off}] [dtr={on|off|hs}] [rts={on|off|hs|tg}] [idsr={on|off}]
 ```
 
-### Parameters
+#### Parameters
 
 |  Parameter  |                                                                                                                                                                                     Description                                                                                                                                                                                     |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 |  idsr={on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
 |     /?      |                                                                                                                                                                        Displays help at the command prompt.                                                                                                                                                                         |
 
-## <a name="BKMK_2"></a>To display the status of all devices or of a single device
+## <a name=BKMK_2></a>To display the status of all devices or of a single device
 
 ### Syntax
 
@@ -64,7 +64,7 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 mode [<Device>] [/status]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -76,7 +76,7 @@ mode [<Device>] [/status]
 
 If used without parameters, **mode** displays the status of all devices that are installed on your system.
 
-## <a name="BKMK_3"></a>To redirect output from a parallel port to a serial communications port
+## <a name=BKMK_3></a>To redirect output from a parallel port to a serial communications port
 
 ### Syntax
 
@@ -84,7 +84,7 @@ If used without parameters, **mode** displays the status of all devices that are
 mode lpt<N>[:]=com<M>[:]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -111,7 +111,7 @@ mode lpt1
 ```
 This command prevents the redirection the file from LPT1 to COM1.
 
-## <a name="BKMK_4"></a>To select, refresh, or display the numbers of the code pages for the console
+## <a name=BKMK_4></a>To select, refresh, or display the numbers of the code pages for the console
 
 ### Syntax
 
@@ -120,7 +120,7 @@ mode <Device> codepage select=<YYY>
 mode <Device> codepage [/status]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -131,7 +131,7 @@ mode <Device> codepage [/status]
 |/status|Displays the numbers of the current code pages selected for the specified device. You can abbreviate **/status** to **/sta**. Whether or not you specify **/status**, **mode codepage** displays the numbers of the code pages that are selected for the specified device.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_5"></a>To change the size of the command prompt screen buffer
+## <a name=BKMK_5></a>To change the size of the command prompt screen buffer
 
 ### Syntax
 
@@ -139,7 +139,7 @@ mode <Device> codepage [/status]
 mode con[:] [cols=<C>] [lines=<N>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -148,7 +148,7 @@ mode con[:] [cols=<C>] [lines=<N>]
 |lines=\<N>|Specifies the number of lines in the command prompt screen buffer.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_6"></a>To set the keyboard typematic rate
+## <a name=BKMK_6></a>To set the keyboard typematic rate
 
 ### Syntax
 
@@ -156,7 +156,7 @@ mode con[:] [cols=<C>] [lines=<N>]
 mode con[:] [rate=<R> delay=<D>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -175,6 +175,6 @@ mode con[:] [rate=<R> delay=<D>]
 
   Valid values for *D* are 1, 2, 3, and 4 (representing 0.25, 0.50, 0.75, and 1 second). The default value is 2. If you set the delay, you must also set the rate.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

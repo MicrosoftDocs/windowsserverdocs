@@ -1,12 +1,12 @@
 ---
 title: logman update cfg
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9da4e8b4-3be5-42d3-b0b4-c429630c35c4 britw
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman update cfg
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update the properties of an existing configuration data collector.  
 
@@ -24,7 +24,7 @@ Update the properties of an existing configuration data collector.
 ```  
 logman update cfg <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                    Parameter                     |                                                                               Description                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -55,11 +55,11 @@ logman update cfg <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 The following command updates the existing configuration data collector cfg_log to collect the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\\.  
 ```  
-logman update cfg cfg_log -reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\"  
+logman update cfg cfg_log -reg HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  
 [logman create cfg](logman-create-cfg.md)  

@@ -1,12 +1,12 @@
 ---
 title: endlocal
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 765fae3c-0c0a-4639-99a4-cf613489b949
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Ends localization of environment changes in a batch file, and restores environment variables to their values before the corresponding **setlocal** command was run.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 endlocal
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,7 +44,7 @@ endlocal
 > [!NOTE]
 > For more information about enabling and disabling command extensions, see [Cmd](cmd.md).
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 You can localize environment variables in a batch file. For example, the following program starts the superapp batch program on the network, directs the output to a file, and displays the file in Notepad:
 ```
@@ -56,6 +56,6 @@ endlocal
 start notepad c:\superapp.out
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

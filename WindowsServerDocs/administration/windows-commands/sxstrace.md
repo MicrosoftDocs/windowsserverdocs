@@ -1,12 +1,12 @@
 ---
 title: sxstrace
 description: Learn how to diagnose side-by-side problems.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: fcd26eeb-fbd9-4a86-b6a9-dfa5e9c6e4fc
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # sxstrace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Diagnoses side-by-side problems.    
 
@@ -26,7 +26,7 @@ Diagnoses side-by-side problems.
 sxstrace [{[trace -logfile:<FileName> [-nostop]|[parse -logfile:<FileName> -outfile:<ParsedFile>  [-filter:<AppName>]}]  
 ```  
 
-### Parameters  
+#### Parameters  
 |Parameter|Description|  
 |-------|--------|  
 |trace|Enables tracing for sxs (side-by-side)|  
@@ -52,5 +52,5 @@ sxstrace parse -logfile:sxstrace.etl -outfile:sxstrace.txt
 ```  
 
 ## Additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  
   

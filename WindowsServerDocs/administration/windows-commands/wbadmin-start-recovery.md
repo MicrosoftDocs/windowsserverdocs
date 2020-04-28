@@ -1,12 +1,8 @@
 ---
 title: wbadmin start recovery
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for wbadmin start recovery, which runs a recovery operation based on the parameters that you specify. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52381316-a0fa-459f-b6a6-01e31fb21612
 author: coreyp-at-msft
@@ -43,7 +39,7 @@ wbadmin start recovery
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -68,7 +64,7 @@ wbadmin start recovery
 >     [!NOTE]
 >     Before using **wbadmin** to perform an install from media operation, you should consider using the **ntdsutil** command because **ntdsutil** only copies the minimum amount of data needed, and it uses a more secure data transport method.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 To run a recovery of the backup from March 31, 2013, taken at 9:00 A.M., of volume d:, type:
 ```
@@ -92,9 +88,9 @@ To run a recovery of the backup from April 30, 2013, taken at 9:00 A.M., of the 
 wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Start-WBFileRecovery](https://technet.microsoft.com/library/jj902457.aspx) cmdlet
 -   [Start-WBHyperVRecovery](https://technet.microsoft.com/library/jj902463.aspx) cmdlet

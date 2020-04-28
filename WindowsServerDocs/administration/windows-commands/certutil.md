@@ -1,12 +1,8 @@
 ---
 title: certutil
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
 author: coreyp-at-msft
@@ -17,216 +13,188 @@ ms.date: 10/16/2017
 
 # certutil
 
-Certutil.exe is a command-line program that is installed as part of Certificate Services. You can use Certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
+Certutil.exe is a command-line program, installed as part of Certificate Services. You can use certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
 
-When certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. When certutil is run on a non-certification authority, the command defaults to running the certutil [-dump](#-dump) verb.
+If certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. If certutil is run on a non-certification authority, the command defaults to running the `certutil [-dump]` command.
 
-> [!WARNING]
-> Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running the commands shown in the [Syntax notations](#syntax-notations) section.
+> [!IMPORTANT]
+> Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
-## Menu
+## Parameters
 
-The major sections in this document are:
+| -resubmit | Resubmit a pending certificate request. |
+| -setattributes | Set attributes for a pending certificate request. |
+| -setextension | Set an extension for a pending certificate request. |
+| -revoke | Revoke a certificate. |
+| -isvalid | Display the disposition of the current certificate. |
+| -getconfig | Get the default configuration string. |
+| -ping | Attempt to contact the Active Directory Certificate Services Request interface. |
+| -pingadmin | Attempt to contact the Active Directory Certificate Services Admin interface. |
+| -cainfo | Display information about the certification authority. |
+| -ca.cert | Retrieve the certificate for the certification authority. |
+| -ca.chain | Retrieve the certificate chain for the certification authority. |
+| -getcrl | Get a certificate revocation list (CRL). |
+| -crl | Publish new certificate revocation lists (CRLs) or delta CRLs. |
+| -shutdown | Shutdown Active Directory Certificate Services. |
+| -installcert | Install a certification authority certificate. |
+| -renewcert | Renew a certification authority certificate. |
+| -schema | Dump the schema for the certificate. |
+| -view | Dump the certificate view. |
+| -db | Dump the raw database. |
+| -deleterow | Delete a row from the server database. |
+| -backup | Backup Active Directory Certificate Services. |
+| -backupdb | Backup the Active Directory Certificate Services database. |
+| -backupkey | Backup the Active Directory Certificate Services certificate and private key. |
+| -restore | Restore Active Directory Certificate Services. |
+| -restoredb | Restore the Active Directory Certificate Services database. |
+| -restorekey | Restore the Active Directory Certificate Services certificate and private key. |
+| -importpfx | Import certificate and private key. |
+| -dynamicfilelist | Display a dynamic file list. |
+| -databaselocations | Display database locations. |
+| -hashfile | Generate and display a cryptographic hash over a file. |
+| -store | Dump the certificate store. |
+| -addstore | Add a certificate to the store. |
+| -delstore | Delete a certificate from the store. |
+| -verifystore | Verify a certificate in the store. |
+| -repairstore | Repair a key association or update certificate properties or the key security descriptor. |
+| -viewstore | Dump the certificates store. |
+| -viewdelstore | Delete a certificate from the store. |
+| -dspublish | Publish a certificate or certificate revocation list (CRL) to Active Directory. |
+| -adtemplate | Display Active Directory templates. |
+| -template | Display certificate templates. |
+| -templatecas | Display the certification authorities (CAs) for a certificate template. |
+| -catemplates | Display templates for CA. |
+| -setcasites | Manage site names for CAs. |
+| -enrollmentserverURL | Display, add or delete enrollment server URLs associated with a CA. |
+| -adca | Display Active Directory CAs. |
+| -ca | Display Enrollment Policy CAs. |
+| -policy | Display Enrollment Policy. |
+| -policycache | Display or delete Enrollment Policy Cache entries. |
+| -credstore | Display, add or delete Credential Store entries. |
+| -installdefaulttemplates | Install default certificate templates. |
+| -URLcache | Display or delete URL cache entries. |
+| -pulse | Pulse auto enrollment events. |
+| -machineinfo | Display information about the Active Directory machine object. |
+| -dcinfo | Display information about the domain controller. |
+| -entinfo | Display information about an enterprise CA. |
+| -tcainfo | Display information about the CA. |
+| -scinfo | Display information about the smart card. |
+| -scroots | Manage smart card root certificates. |
+| -verifykeys | Verify a public or private key set. |
+| -verify | Verify a certificate, certificate revocation list (CRL), or certificate chain. |
+| -verifyCTL | Verify AuthRoot or Disallowed Certificates CTL. |
+| -sign | Re-sign a certificate revocation list (CRL) or certificate. |
+| -vroot | Create or delete web virtual roots and file shares. |
+| -vocsproot | Create or delete web virtual roots for an OCSP web proxy. |
+| -addEnrollmentServer | Add an Enrollment Server application. |
+| -deleteEnrollmentServer | Delete an Enrollment Server application. |
+| -addPolicyServer | Add a Policy Server application. |
+| -deletePolicyServer | Delete a Policy Server application. |
+| -oid | Display the object identifier or set a display name. |
+| -error | Display the message text associated with an error code. |
+| -getreg | Display a registry value. |
+| -setreg | Set a registry value. |
+| -delreg | Delete a registry value. |
+| -importKMS | Import user keys and certificates into the server database for key archival. |
+| -importcert | Import a certificate file into the database. |
+| -getkey | Retrieve an archived private key recovery blob. |
+| -recoverkey | Recover an archived private key. |
+| -mergePFX | Merge PFX files. |
+| -convertEPF | Convert a PFX file into an EPF file. |
+| -? | Displays the list of parameters. |
+| -`<parameter>` -? | Displays help for the specified parameter. |
+| -? -v | Displays a full list of parameters and options. |
 
-- [Verbs](#verbs)
-- [Syntax notations](#syntax-notations)
-- [Options](#options)
-- [Additional certutil examples](#additional-certutil-examples)
+## Parameters
 
-## Verbs
+### -dump
 
-The following table describes the verbs that can be used with the certutil command.
+Dump configuration information or files.
 
-|Verbs|Description|
-|-----|-----------|
-|[-dump](#-dump)|Dump configuration information or files|
-|[-asn](#-asn)|Parse ASN.1 file|
-|[-decodehex](#-decodehex)|Decode hexadecimal-encoded file|
-|[-decode](#-decode)|Decode a Base64-encoded file|
-|[-encode](#-encode)|Encode a file to Base64|
-|[-deny](#-deny)|Deny a pending certificate request|
-|[-resubmit](#-resubmit)|Resubmit a pending certificate request|
-|[-setattributes](#-setattributes)|Set attributes for a pending certificate request|
-|[-setextension](#-setextension)|Set an extension for a pending certificate request|
-|[-revoke](#-revoke)|Revoke a certificate|
-|[-isvalid](#-isvalid)|Display the disposition of the current certificate|
-|[-getconfig](#-getconfig)|Get the default configuration string|
-|[-ping](#-ping)|Attempt to contact the Active Directory Certificate Services Request interface|
-|-pingadmin|Attempt to contact the Active Directory Certificate Services Admin interface|
-|[-CAInfo](#-cainfo)|Display information about the certification authority|
-|[-ca.cert](#-cacert)|Retrieve the certificate for the certification authority|
-|[-ca.chain](#-cachain)|Retrieve the certificate chain for the certification authority|
-|[-GetCRL](#-getcrl)|Get a certificate revocation list (CRL)|
-|[-CRL](#-crl)|Publish new certificate revocation lists (CRLs) [or only delta CRLs]|
-|[-shutdown](#-shutdown)|Shutdown Active Directory Certificate Services|
-|[-installCert](#-installcert)|Install a certification authority certificate|
-|[-renewCert](#-renewcert)|Renew a certification authority certificate|
-|[-schema](#-schema)|Dump the schema for the certificate|
-|[-view](#-view)|Dump the certificate view|
-|[-db](#-db)|Dump the raw database|
-|[-deleterow](#-deleterow)|Delete a row from the server database|
-|[-backup](#-backup)|Backup Active Directory Certificate Services|
-|[-backupDB](#-backupdb)|Backup the Active Directory Certificate Services database|
-|[-backupKey](#-backupkey)|Backup the Active Directory Certificate Services certificate and private key|
-|[-restore](#-restore)|Restore Active Directory Certificate Services|
-|[-restoreDB](#-restoredb)|Restore the Active Directory Certificate Services database|
-|[-restoreKey](#-restorekey)|Restore the Active Directory Certificate Services certificate and private key|
-|[-importPFX](#-importpfx)|Import certificate and private key|
-|[-dynamicfilelist](#-dynamicfilelist)|Display a dynamic file list|
-|[-databaselocations](#-databaselocations)|Display database locations|
-|[-hashfile](#-hashfile)|Generate and display a cryptographic hash over a file|
-|[-store](#-store)|Dump the certificate store|
-|[-addstore](#-addstore)|Add a certificate to the store|
-|[-delstore](#-delstore)|Delete a certificate from the store|
-|[-verifystore](#-verifystore)|Verify a certificate in the store|
-|[-repairstore](#-repairstore)|Repair a key association or update certificate properties or the key security descriptor|
-|[-viewstore](#-viewstore)|Dump the certificates store|
-|[-viewdelstore](#-viewdelstore)|Delete a certificate from the store|
-|[-dsPublish](#-dspublish)|Publish a certificate or certificate revocation list (CRL) to Active Directory|
-|[-ADTemplate](#-adtemplate)|Display AD templates|
-|[-Template](#-template)|Display certificate templates|
-|[-TemplateCAs](#-templatecas)|Display the certification authorities (CAs) for a certificate template|
-|[-CATemplates](#-catemplates)|Display templates for CA|
-|[-SetCASites](#-setcasites)|Manage Site Names for CAs|
-|[-enrollmentServerURL](#-enrollmentserverurl)|Display, add or delete enrollment server URLs associated with a CA|
-|[-ADCA](#-adca)|Display AD CAs|
-|[-CA](#-ca)|Display Enrollment Policy CAs|
-|[-Policy](#-policy)|Display Enrollment Policy|
-|[-PolicyCache](#-policycache)|Display or delete Enrollment Policy Cache entries|
-|[-CredStore](#-credstore)|Display, add or delete Credential Store entries|
-|[-InstallDefaultTemplates](#-installdefaulttemplates)|Install default certificate templates|
-|[-URLCache](#-urlcache)|Display or delete URL cache entries|
-|[-pulse](#-pulse)|Pulse auto enrollment events|
-|[-MachineInfo](#-machineinfo)|Display information about the Active Directory machine object|
-|[-DCInfo](#-dcinfo)|Display information about the domain controller|
-|[-EntInfo](#-entinfo)|Display information about an enterprise CA|
-|[-TCAInfo](#-tcainfo)|Display information about the CA|
-|[-SCInfo](#-scinfo)|Display information about the smart card|
-|[-SCRoots](#-scroots)|Manage smart card root certificates|
-|[-verifykeys](#-verifykeys)|Verify a public or private key set|
-|[-verify](#-verify)|Verify a certificate, certificate revocation list (CRL), or certificate chain|
-|[-verifyCTL](#-verifyctl)|Verify AuthRoot or Disallowed Certificates CTL|
-|[-sign](#-sign)|Re-sign a certificate revocation list (CRL) or certificate|
-|[-vroot](#-vroot)|Create or delete web virtual roots and file shares|
-|[-vocsproot](#-vocsproot)|Create or delete web virtual roots for an OCSP web proxy|
-|[-addEnrollmentServer](#-addenrollmentserver)|Add an Enrollment Server application|
-|[-deleteEnrollmentServer](#-deleteenrollmentserver)|Delete an Enrollment Server application|
-|[-addPolicyServer](#-addpolicyserver)|Add a Policy Server application|
-|[-deletePolicyServer](#-deletepolicyserver)|Delete a Policy Server application|
-|[-oid](#-oid)|Display the object identifier or set a display name|
-|[-error](#-error)|Display the message text associated with an error code|
-|[-getreg](#-getreg)|Display a registry value|
-|[-setreg](#-setreg)|Set a registry value|
-|[-delreg](#-delreg)|Delete a registry value|
-|[-ImportKMS](#-importkms)|Import user keys and certificates into the server database for key archival|
-|[-ImportCert](#-importcert)|Import a certificate file into the database|
-|[-GetKey](#-getkey)|Retrieve an archived private key recovery blob|
-|[-RecoverKey](#-recoverkey)|Recover an archived private key|
-|[-MergePFX](#-mergepfx)|Merge PFX files|
-|[-ConvertEPF](#-convertepf)|Convert a PFX file into an EPF file|
-|-?|Displays the list of verbs|
-|-*\<verb>* -?|Displays help for the verb specified.|
-|-? -v|Displays a full list of verbs and|
+```
+certutil [options] [-dump]
+certutil [options] [-dump] file
+```
 
-Return to [Menu](#menu)
-
-## Syntax notations
-
-- For basic command line syntax, run `certutil -?`
-- For the syntax on using certutil with a specific verb, run **certutil** *\<verb>* **-?**
-- To send all of the certutil syntax into a text file, run the following commands:  
-  - `certutil -v -? > certutilhelp.txt`
-  - `notepad certutilhelp.txt`
-
-The following table describes the notation used to indicate command-line syntax.
-
-
-|            Notation             |                  Description                  |
-|---------------------------------|-----------------------------------------------|
-| Text without brackets or braces |         Items you must type as shown          |
-|  \<Text inside angle brackets>  | Placeholder for which you must supply a value |
-|  [Text inside square brackets]  |                Optional items                 |
-|      {Text inside braces}       |       Set of required items; choose one       |
-|         Vertical bar (          |                       )                       |
-|          Ellipsis (…)           |          Items that can be repeated           |
-
-Return to [Menu](#menu)
-
-## -dump
-
-CertUtil [Options] [-dump]
-
-CertUtil [Options] [-dump] File
-
-Dump configuration information or files
-
-[-f] [-silent] [-split] [-p Password] [-t Timeout]
-
-Return to [Menu](#menu)
+```
+[-f] [-silent] [-split] [-p password] [-t timeout]
+```
 
 ## -asn
 
-CertUtil [Options] -asn File [type]
+Parse the ASN.1 file.
 
-Parse ASN.1 file
+```
+certutil [options] -asn file [type]
+```
 
-type: numeric CRYPT\_STRING\_\* decoding type
-
-Return to [Menu](#menu)
+`[type]`: numeric CRYPT_STRING_* decoding type
 
 ## -decodehex
 
-CertUtil [Options] -decodehex InFile OutFile [type]
+Decode hexadecimal-encoded file.
 
-type: numeric CRYPT\_STRING\_\* encoding type
+```
+certutil [options] -decodehex infile outfile [type]
+```
 
+`[type]`: numeric CRYPT_STRING_* encoding type
+
+```
 [-f]
-
-Return to [Menu](#menu)
+```
 
 ## -decode
 
-CertUtil [Options] -decode InFile OutFile
+Decode Base64-encoded file.
 
-Decode Base64-encoded file
+```
+certutil [options] -decode infile outfile
+```
 
+```
 [-f]
-
-Return to [Menu](#menu)
+```
 
 ## -encode
 
-CertUtil [Options] -encode InFile OutFile
+Encode file to Base64.
 
-Encode file to Base64
+```
+certutil [options] -encode infile outfile
+```
 
-[-f] [-UnicodeText]
-
-Return to [Menu](#menu)
+```
+[-f] [-unicodetext]
+```
 
 ## -deny
 
-CertUtil [Options] -deny RequestId
+Deny pending request.
 
-Deny pending request
+```
+certutil [options] -deny requestID
+```
 
+```
 [-config Machine\CAName]
-
-Return to [Menu](#menu)
+```
 
 ## -resubmit
 
-CertUtil [Options] -resubmit RequestId
+Resubmit pending request.
 
-Resubmit pending request
+```
+certutil [options] -resubmit requestId
+```
 
+```
 [-config Machine\CAName]
-
-Return to [Menu](#menu)
+```
 
 ## -setattributes
 
-CertUtil [Options] -setattributes RequestId AttributeString
+certutil [options] -setattributes RequestId AttributeString
 
 Set attributes for pending request
 
@@ -236,8 +204,8 @@ AttributeString -- Request Attribute name and value pairs
 
 - Names and values are colon separated.
 - Multiple name, value pairs are newline separated.
-- Example: "CertificateTemplate:User\nEMail:User@Domain.com"
-- Each "\n" sequence is converted to a newline separator.
+- Example: CertificateTemplate:User\nEMail:User@Domain.com
+- Each \n sequence is converted to a newline separator.
 
 [-config Machine\CAName]
 
@@ -245,7 +213,7 @@ Return to [Menu](#menu)
 
 ## -setextension
 
-CertUtil [Options] -setextension RequestId ExtensionName Flags {Long | Date | String | \@InFile}
+certutil [options] -setextension RequestId ExtensionName Flags {Long | Date | String | \@Infile}
 
 Set extension for pending request
 
@@ -269,7 +237,7 @@ Return to [Menu](#menu)
 
 ## -revoke
 
-CertUtil [Options] -revoke SerialNumber [Reason]
+certutil [options] -revoke SerialNumber [Reason]
 
 Revoke Certificate
 
@@ -293,7 +261,7 @@ Return to [Menu](#menu)
 
 ## -isvalid
 
-CertUtil [Options] -isvalid SerialNumber | CertHash
+certutil [options] -isvalid SerialNumber | CertHash
 
 Display current certificate disposition
 
@@ -303,7 +271,7 @@ Return to [Menu](#menu)
 
 ## -getconfig
 
-CertUtil [Options] -getconfig
+certutil [options] -getconfig
 
 Get default configuration string
 
@@ -313,7 +281,7 @@ Return to [Menu](#menu)
 
 ## -ping
 
-CertUtil [Options] -ping [MaxSecondsToWait | CAMachineList]
+certutil [options] -ping [MaxSecondsToWait | CAMachineList]
 
 Ping Active Directory Certificate Services Request interface
 
@@ -328,11 +296,11 @@ Return to [Menu](#menu)
 
 ## -CAInfo
 
-CertUtil [Options] -CAInfo [InfoName [Index | ErrorCode]]
+certutil [options] -CAInfo [InfoName [Index | ErrorCode]]
 
 Display CA Information
 
-InfoName -- indicates the CA property to display (see below). Use "\*" for all properties.
+InfoName -- indicates the CA property to display (see below). Use \* for all properties.
 
 Index -- optional zero-based property index
 
@@ -342,7 +310,7 @@ ErrorCode -- numeric error code
 
 InfoName argument syntax:
 
-- file: File version
+- file: file version
 - product: Product version
 - exitcount: Exit module count
 - exit [Index]: Exit module description
@@ -395,11 +363,11 @@ Return to [Menu](#menu)
 
 ## -ca.cert
 
-CertUtil [Options] -ca.cert OutCACertFile [Index]
+certutil [options] -ca.cert OutCACertfile [Index]
 
 Retrieve the CA's certificate
 
-OutCACertFile: output file
+OutCACertfile: output file
 
 Index: CA certificate renewal index (defaults to most recent)
 
@@ -409,11 +377,11 @@ Return to [Menu](#menu)
 
 ## -ca.chain
 
-CertUtil [Options] -ca.chain OutCACertChainFile [Index]
+certutil [options] -ca.chain OutCACertChainfile [Index]
 
 Retrieve the CA's certificate chain
 
-OutCACertChainFile: output file
+OutCACertChainfile: output file
 
 Index: CA certificate renewal index (defaults to most recent)
 
@@ -423,7 +391,7 @@ Return to [Menu](#menu)
 
 ## -GetCRL
 
-CertUtil [Options] -GetCRL OutFile [Index] [delta]
+certutil [options] -GetCRL Outfile [Index] [delta]
 
 Get CRL
 
@@ -437,7 +405,7 @@ Return to [Menu](#menu)
 
 ## -CRL
 
-CertUtil [Options] -CRL [dd:hh | republish] [delta]
+certutil [options] -CRL [dd:hh | republish] [delta]
 
 Publish new CRLs [or delta CRLs only]
 
@@ -453,7 +421,7 @@ Return to [Menu](#menu)
 
 ## -shutdown
 
-CertUtil [Options] -shutdown
+certutil [options] -shutdown
 
 Shutdown Active Directory Certificate Services
 
@@ -463,7 +431,7 @@ Return to [Menu](#menu)
 
 ## -installCert
 
-CertUtil [Options] -installCert [CACertFile]
+certutil [options] -installCert [CACertfile]
 
 Install Certification Authority certificate
 
@@ -473,7 +441,7 @@ Return to [Menu](#menu)
 
 ## -renewCert
 
-CertUtil [Options] -renewCert [ReuseKeys] [Machine\ParentCAName]
+certutil [options] -renewCert [ReuseKeys] [Machine\ParentCAName]
 
 Renew Certification Authority certificate
 
@@ -485,7 +453,7 @@ Return to [Menu](#menu)
 
 ## -schema
 
-CertUtil [Options] -schema [Ext | Attrib | CRL]
+certutil [options] -schema [Ext | Attrib | CRL]
 
 Dump Certificate Schema
 
@@ -503,7 +471,7 @@ Return to [Menu](#menu)
 
 ## -view
 
-CertUtil [Options] -view [Queue | Log | LogFail | Revoked | Ext | Attrib | CRL] [csv]
+certutil [options] -view [Queue | Log | LogFail | Revoked | Ext | Attrib | CRL] [csv]
 
 Dump Certificate View
 
@@ -525,19 +493,19 @@ csv: Output as Comma Separated Values
 
 To display the StatusCode column for all entries: -out StatusCode
 
-To display all columns for the last entry: -restrict "RequestId==$"
+To display all columns for the last entry: -restrict RequestId==$
 
-To display RequestId and Disposition for three requests: -restrict "RequestId>=37,RequestId\<40" -out "RequestId,Disposition"
+To display RequestId and Disposition for three requests: -restrict RequestId>=37,RequestId\<40 -out RequestId,Disposition
 
-To display Row Ids and CRL Numbers for all Base CRLs: -restrict "CRLMinBase=0" -out "CRLRowId,CRLNumber" CRL
+To display Row Ids and CRL Numbers for all Base CRLs: -restrict CRLMinBase=0 -out CRLRowId,CRLNumber CRL
 
-To display Base CRL Number 3: -v -restrict "CRLMinBase=0,CRLNumber=3" -out "CRLRawCRL" CRL
+To display Base CRL Number 3: -v -restrict CRLMinBase=0,CRLNumber=3 -out CRLRawCRL CRL
 
 To display the entire CRL table: CRL
 
-Use "Date[+|-dd:hh]" for date restrictions
+Use Date[+|-dd:hh] for date restrictions
 
-Use "now+dd:hh" for a date relative to the current time
+Use now+dd:hh for a date relative to the current time
 
 [-silent] [-split] [-config Machine\CAName] [-restrict RestrictionList] [-out ColumnList]
 
@@ -545,7 +513,7 @@ Return to [Menu](#menu)
 
 ## -db
 
-CertUtil [Options] -db
+certutil [options] -db
 
 Dump Raw Database
 
@@ -555,7 +523,7 @@ Return to [Menu](#menu)
 
 ## -deleterow
 
-CertUtil [Options] -deleterow RowId | Date [Request | Cert | Ext | Attrib | CRL]
+certutil [options] -deleterow RowId | Date [Request | Cert | Ext | Attrib | CRL]
 
 Delete server database row
 
@@ -583,7 +551,7 @@ Return to [Menu](#menu)
 
 ## -backup
 
-CertUtil [Options] -backup BackupDirectory [Incremental] [KeepLog]
+certutil [options] -backup BackupDirectory [Incremental] [KeepLog]
 
 Backup Active Directory Certificate Services
 
@@ -599,7 +567,7 @@ Return to [Menu](#menu)
 
 ## -backupDB
 
-CertUtil [Options] -backupDB BackupDirectory [Incremental] [KeepLog]
+certutil [options] -backupDB BackupDirectory [Incremental] [KeepLog]
 
 Backup Active Directory Certificate Services database
 
@@ -615,7 +583,7 @@ Return to [Menu](#menu)
 
 ## -backupKey
 
-CertUtil [Options] -backupKey BackupDirectory
+certutil [options] -backupKey BackupDirectory
 
 Backup Active Directory Certificate Services certificate and private key
 
@@ -627,7 +595,7 @@ Return to [Menu](#menu)
 
 ## -restore
 
-CertUtil [Options] -restore BackupDirectory
+certutil [options] -restore BackupDirectory
 
 Restore Active Directory Certificate Services
 
@@ -639,7 +607,7 @@ Return to [Menu](#menu)
 
 ## -restoreDB
 
-CertUtil [Options] -restoreDB BackupDirectory
+certutil [options] -restoreDB BackupDirectory
 
 Restore Active Directory Certificate Services database
 
@@ -651,13 +619,13 @@ Return to [Menu](#menu)
 
 ## -restoreKey
 
-CertUtil [Options] -restoreKey BackupDirectory | PFXFile
+certutil [options] -restoreKey BackupDirectory | PFXfile
 
 Restore Active Directory Certificate Services certificate and private key
 
 BackupDirectory: directory containing PFX file to be restored
 
-PFXFile: PFX file to be restored
+PFXfile: PFX file to be restored
 
 [-f] [-config Machine\CAName] [-p Password]
 
@@ -665,13 +633,13 @@ Return to [Menu](#menu)
 
 ## -importPFX
 
-CertUtil [Options] -importPFX [CertificateStoreName] PFXFile [Modifiers]
+certutil [options] -importPFX [CertificateStoreName] PFXfile [Modifiers]
 
 Import certificate and private key
 
 CertificateStoreName: Certificate store name.  See [-store](#-store).
 
-PFXFile: PFX file to be imported
+PFXfile: PFX file to be imported
 
 Modifiers: Comma separated list of one or more of the following:
 
@@ -692,7 +660,7 @@ Return to [Menu](#menu)
 
 ## -dynamicfilelist
 
-CertUtil [Options] -dynamicfilelist
+certutil [options] -dynamicfilelist
 
 Display dynamic file List
 
@@ -702,7 +670,7 @@ Return to [Menu](#menu)
 
 ## -databaselocations
 
-CertUtil [Options] -databaselocations
+certutil [options] -databaselocations
 
 Display database locations
 
@@ -712,7 +680,7 @@ Return to [Menu](#menu)
 
 ## -hashfile
 
-CertUtil [Options] -hashfile InFile [HashAlgorithm]
+certutil [options] -hashfile Infile [HashAlgorithm]
 
 Generate and display cryptographic hash over a file
 
@@ -720,23 +688,23 @@ Return to [Menu](#menu)
 
 ## -store
 
-CertUtil [Options] -store [CertificateStoreName [CertId [OutputFile]]]
+certutil [options] -store [CertificateStoreName [CertId [Outputfile]]]
 
 Dump certificate store
 
 CertificateStoreName: Certificate store name. Examples:
 
-- "My", "CA" (default), "Root",
-- "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
-- "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
-- "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
-- "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
+- My, CA (default), Root,
+- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
+- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
 - ldap: (AD computer object certificates)
 - -user ldap: (AD user object certificates)
 
 CertId: Certificate or CRL match token.  This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
 
-OutputFile: file to save matching cert
+Outputfile: file to save matching cert
 
 Use -user to access a user store instead of a machine store.
 
@@ -759,13 +727,13 @@ Return to [Menu](#menu)
 
 ## -addstore
 
-CertUtil [Options] -addstore CertificateStoreName InFile
+certutil [options] -addstore CertificateStoreName Infile
 
 Add certificate to store
 
 CertificateStoreName: Certificate store name.  See [-store](#-store).
 
-InFile: Certificate or CRL file to add to store.
+Infile: Certificate or CRL file to add to store.
 
 [-f] [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
 
@@ -773,7 +741,7 @@ Return to [Menu](#menu)
 
 ## -delstore
 
-CertUtil [Options] -delstore CertificateStoreName CertId
+certutil [options] -delstore CertificateStoreName CertId
 
 Delete certificate from store
 
@@ -787,7 +755,7 @@ Return to [Menu](#menu)
 
 ## -verifystore
 
-CertUtil [Options] -verifystore CertificateStoreName [CertId]
+certutil [options] -verifystore CertificateStoreName [CertId]
 
 Verify certificate in store
 
@@ -801,7 +769,7 @@ Return to [Menu](#menu)
 
 ## -repairstore
 
-CertUtil [Options] -repairstore CertificateStoreName CertIdList [PropertyInfFile | SDDLSecurityDescriptor]
+certutil [options] -repairstore CertificateStoreName CertIdList [PropertyInffile | SDDLSecurityDescriptor]
 
 Repair key association or update certificate properties or key security descriptor
 
@@ -809,29 +777,29 @@ CertificateStoreName: Certificate store name.  See [-store](#-store).
 
 CertIdList: comma separated list of Certificate or CRL match tokens. See [-store](#-store) CertId description.
 
-PropertyInfFile -- INF file containing external properties:
+PropertyInffile -- INF file containing external properties:
 
 ```
 [Properties]
      19 = Empty ; Add archived property, OR:
      19 =       ; Remove archived property
 
-     11 = "{text}Friendly Name" ; Add friendly name property
+     11 = {text}Friendly Name ; Add friendly name property
 
-     127 = "{hex}" ; Add custom hexadecimal property
-         _continue_ = "00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f"
-         _continue_ = "10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f"
+     127 = {hex} ; Add custom hexadecimal property
+         _continue_ = 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+         _continue_ = 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
 
-     2 = "{text}" ; Add Key Provider Information property
-       _continue_ = "Container=Container Name&"
-       _continue_ = "Provider=Microsoft Strong Cryptographic Provider&"
-       _continue_ = "ProviderType=1&"
-       _continue_ = "Flags=0&"
-       _continue_ = "KeySpec=2"
+     2 = {text} ; Add Key Provider Information property
+       _continue_ = Container=Container Name&
+       _continue_ = Provider=Microsoft Strong Cryptographic Provider&
+       _continue_ = ProviderType=1&
+       _continue_ = Flags=0&
+       _continue_ = KeySpec=2
 
-     9 = "{text}" ; Add Enhanced Key Usage property
-       _continue_ = "1.3.6.1.5.5.7.3.2,"
-       _continue_ = "1.3.6.1.5.5.7.3.1,"
+     9 = {text} ; Add Enhanced Key Usage property
+       _continue_ = 1.3.6.1.5.5.7.3.2,
+       _continue_ = 1.3.6.1.5.5.7.3.1,
 ```
 
 [-f] [-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-csp Provider]
@@ -840,23 +808,23 @@ Return to [Menu](#menu)
 
 ## -viewstore
 
-CertUtil [Options] -viewstore [CertificateStoreName [CertId [OutputFile]]]
+certutil [options] -viewstore [CertificateStoreName [CertId [Outputfile]]]
 
 Dump certificate store
 
 CertificateStoreName: Certificate store name. Examples:
 
-- "My", "CA" (default), "Root",
-- "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
-- "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
-- "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
-- "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
+- My, CA (default), Root,
+- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
+- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
 - ldap: (AD machine object certificates)
 - -user ldap: (AD user object certificates)
 
 CertId: Certificate or CRL match token. This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
 
-OutputFile: file to save matching cert
+Outputfile: file to save matching cert
 
 Use -user to access a user store instead of a machine store.
 
@@ -879,23 +847,23 @@ Return to [Menu](#menu)
 
 ## -viewdelstore
 
-CertUtil [Options] -viewdelstore [CertificateStoreName [CertId [OutputFile]]]
+certutil [options] -viewdelstore [CertificateStoreName [CertId [Outputfile]]]
 
 Delete certificate from store
 
 CertificateStoreName: Certificate store name. Examples:
 
-- "My", "CA" (default), "Root",
-- "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
-- "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
-- "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
-- "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
+- My, CA (default), Root,
+- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
+- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
+- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
+- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
 - ldap: (AD machine object certificates)
 - -user ldap: (AD user object certificates)
 
 CertId: Certificate or CRL match token. This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
 
-OutputFile: file to save matching cert
+Outputfile: file to save matching cert
 
 Use -user to access a user store instead of a machine store.
 
@@ -918,13 +886,13 @@ Return to [Menu](#menu)
 
 ## -dsPublish
 
-CertUtil [Options] -dsPublish CertFile [NTAuthCA | RootCA | SubCA | CrossCA | KRA | User | Machine]
+certutil [options] -dsPublish Certfile [NTAuthCA | RootCA | SubCA | CrossCA | KRA | User | Machine]
 
-CertUtil [Options] -dsPublish CRLFile [DSCDPContainer [DSCDPCN]]
+certutil [options] -dsPublish CRLfile [DSCDPContainer [DSCDPCN]]
 
 Publish certificate or CRL to Active Directory
 
-CertFile: certificate file to publish
+Certfile: certificate file to publish
 
 NTAuthCA: Publish cert to DS Enterprise store
 
@@ -940,7 +908,7 @@ User: Publish cert to User DS object
 
 Machine: Publish cert to Machine DS object
 
-CRLFile: CRL file to publish
+CRLfile: CRL file to publish
 
 DSCDPContainer: DS CDP container CN, usually the CA machine name
 
@@ -954,7 +922,7 @@ Return to [Menu](#menu)
 
 ## -ADTemplate
 
-CertUtil [Options] -ADTemplate [Template]
+certutil [options] -ADTemplate [Template]
 
 Display AD templates
 
@@ -962,7 +930,7 @@ Display AD templates
 
 ## -Template
 
-CertUtil [Options] -Template [Template]
+certutil [options] -Template [Template]
 
 Display Enrollment Policy templates
 
@@ -972,7 +940,7 @@ Return to [Menu](#menu)
 
 ## -TemplateCAs
 
-CertUtil [Options] -TemplateCAs Template
+certutil [options] -TemplateCAs Template
 
 Display CAs for template
 
@@ -982,7 +950,7 @@ Return to [Menu](#menu)
 
 ## -CATemplates
 
-CertUtil [Options] -CATemplates [Template]
+certutil [options] -CATemplates [Template]
 
 Display templates for CA
 
@@ -992,11 +960,11 @@ Return to [Menu](#menu)
 
 ## -SetCASites
 
-CertUtil [Options] -SetCASites [set] [SiteName]
+certutil [options] -SetCASites [set] [SiteName]
 
-CertUtil [Options] -SetCASites verify [SiteName]
+certutil [options] -SetCASites verify [SiteName]
 
-CertUtil [Options] -SetCASites delete
+certutil [options] -SetCASites delete
 
 Set, Verify or Delete CA site names
 
@@ -1014,9 +982,9 @@ Return to [Menu](#menu)
 
 ## -enrollmentServerURL
 
-CertUtil [Options] -enrollmentServerURL [URL AuthenticationType [Priority] [Modifiers]]
+certutil [options] -enrollmentServerURL [URL AuthenticationType [Priority] [Modifiers]]
 
-CertUtil [Options] -enrollmentServerURL URL delete
+certutil [options] -enrollmentServerURL URL delete
 
 Display, add or delete enrollment server URLs associated with a CA
 
@@ -1042,7 +1010,7 @@ Return to [Menu](#menu)
 
 ## -ADCA
 
-CertUtil [Options] -ADCA [CAName]
+certutil [options] -ADCA [CAName]
 
 Display AD CAs
 
@@ -1052,7 +1020,7 @@ Return to [Menu](#menu)
 
 ## -CA
 
-CertUtil [Options] -CA [CAName | TemplateName]
+certutil [options] -CA [CAName | TemplateName]
 
 Display Enrollment Policy CAs
 
@@ -1070,7 +1038,7 @@ Return to [Menu](#menu)
 
 ## -PolicyCache
 
-CertUtil [Options] -PolicyCache [delete]
+certutil [options] -PolicyCache [delete]
 
 Display or delete Enrollment Policy Cache entries
 
@@ -1084,11 +1052,11 @@ Return to [Menu](#menu)
 
 ## -CredStore
 
-CertUtil [Options] -CredStore [URL]
+certutil [options] -CredStore [URL]
 
-CertUtil [Options] -CredStore URL add
+certutil [options] -CredStore URL add
 
-CertUtil [Options] -CredStore URL delete
+certutil [options] -CredStore URL delete
 
 Display, add or delete Credential Store entries
 
@@ -1106,7 +1074,7 @@ Return to [Menu](#menu)
 
 ## -InstallDefaultTemplates
 
-CertUtil [Options] -InstallDefaultTemplates
+certutil [options] -InstallDefaultTemplates
 
 Install default certificate templates
 
@@ -1116,7 +1084,7 @@ Return to [Menu](#menu)
 
 ## -URLCache
 
-CertUtil [Options] -URLCache [URL | CRL | \* [delete]]
+certutil [options] -URLCache [URL | CRL | \* [delete]]
 
 Display or delete URL cache entries
 
@@ -1136,7 +1104,7 @@ Return to [Menu](#menu)
 
 ## -pulse
 
-CertUtil [Options] -pulse
+certutil [options] -pulse
 
 Pulse autoenrollment events
 
@@ -1146,7 +1114,7 @@ Return to [Menu](#menu)
 
 ## -MachineInfo
 
-CertUtil [Options] -MachineInfo DomainName\MachineName$
+certutil [options] -MachineInfo DomainName\MachineName$
 
 Display Active Directory computer object information
 
@@ -1154,7 +1122,7 @@ Return to [Menu](#menu)
 
 ## -DCInfo
 
-CertUtil [Options] -DCInfo [Domain] [Verify | DeleteBad | DeleteAll]
+certutil [options] -DCInfo [Domain] [Verify | DeleteBad | DeleteAll]
 
 Display domain controller information
 
@@ -1171,7 +1139,7 @@ Return to [Menu](#menu)
 
 ## -EntInfo
 
-CertUtil [Options] -EntInfo DomainName\MachineName$
+certutil [options] -EntInfo DomainName\MachineName$
 
 [-f] [-user]
 
@@ -1179,7 +1147,7 @@ Return to [Menu](#menu)
 
 ## -TCAInfo
 
-CertUtil [Options] -TCAInfo [DomainDN | -]
+certutil [options] -TCAInfo [DomainDN | -]
 
 Display CA information
 
@@ -1189,7 +1157,7 @@ Return to [Menu](#menu)
 
 ## -SCInfo
 
-CertUtil [Options] -SCInfo [ReaderName [CRYPT_DELETEKEYSET]]
+certutil [options] -SCInfo [ReaderName [CRYPT_DELETEKEYSET]]
 
 Display smart card information
 
@@ -1201,13 +1169,13 @@ Return to [Menu](#menu)
 
 ## -SCRoots
 
-CertUtil [Options] -SCRoots update [+][InputRootFile] [ReaderName]
+certutil [options] -SCRoots update [+][InputRootfile] [ReaderName]
 
-CertUtil [Options] -SCRoots save \@OutputRootFile [ReaderName]
+certutil [options] -SCRoots save \@OutputRootfile [ReaderName]
 
-CertUtil [Options] -SCRoots view [InputRootFile | ReaderName]
+certutil [options] -SCRoots view [InputRootfile | ReaderName]
 
-CertUtil [Options] -SCRoots delete [ReaderName]
+certutil [options] -SCRoots delete [ReaderName]
 
 Manage smart card root certificates
 
@@ -1217,13 +1185,13 @@ Return to [Menu](#menu)
 
 ## -verifykeys
 
-CertUtil [Options] -verifykeys [KeyContainerName CACertFile]
+certutil [options] -verifykeys [KeyContainerName CACertfile]
 
 Verify public/private key set
 
 KeyContainerName: key container name of the key to verify. Defaults to machine keys.  Use -user for user keys.
 
-CACertFile: signing or encryption certificate file
+CACertfile: signing or encryption certificate file
 
 If no arguments are specified, each signing CA cert is verified against its private key.
 
@@ -1235,45 +1203,45 @@ Return to [Menu](#menu)
 
 ## -verify
 
-CertUtil [Options] -verify CertFile [ApplicationPolicyList | - [IssuancePolicyList]]
+certutil [options] -verify Certfile [ApplicationPolicyList | - [IssuancePolicyList]]
 
-CertUtil [Options] -verify CertFile [CACertFile [CrossedCACertFile]]
+certutil [options] -verify Certfile [CACertfile [CrossedCACertfile]]
 
-CertUtil [Options] -verify CRLFile CACertFile [IssuedCertFile]
+certutil [options] -verify CRLfile CACertfile [IssuedCertfile]
 
-CertUtil [Options] -verify CRLFile CACertFile [DeltaCRLFile]
+certutil [options] -verify CRLfile CACertfile [DeltaCRLfile]
 
 Verify certificate, CRL or chain
 
-CertFile: Certificate to verify
+Certfile: Certificate to verify
 
 ApplicationPolicyList: optional comma separated list of required Application Policy ObjectIds
 
 IssuancePolicyList: optional comma separated list of required Issuance Policy ObjectIds
 
-CACertFile: optional issuing CA certificate to verify against
+CACertfile: optional issuing CA certificate to verify against
 
-CrossedCACertFile: optional certificate cross-certified by CertFile
+CrossedCACertfile: optional certificate cross-certified by Certfile
 
-CRLFile: CRL to verify
+CRLfile: CRL to verify
 
-IssuedCertFile: optional issued certificate covered by CRLFile
+IssuedCertfile: optional issued certificate covered by CRLfile
 
-DeltaCRLFile: optional delta CRL
+DeltaCRLfile: optional delta CRL
 
 If ApplicationPolicyList is specified, chain building is restricted to chains valid for the specified Application Policies.
 
 If IssuancePolicyList is specified, chain building is restricted to chains valid for the specified Issuance Policies.
 
-If CACertFile is specified, fields in CACertFile are verified against CertFile or CRLFile.
+If CACertfile is specified, fields in CACertfile are verified against Certfile or CRLfile.
 
-If CACertFile is not specified, CertFile is used to build and verify a full chain.
+If CACertfile is not specified, Certfile is used to build and verify a full chain.
 
-If CACertFile and CrossedCACertFile are both specified, fields in CACertFile and CrossedCACertFile are verified against CertFile.
+If CACertfile and CrossedCACertfile are both specified, fields in CACertfile and CrossedCACertfile are verified against Certfile.
 
-If IssuedCertFile is specified, fields in IssuedCertFile are verified against CRLFile.
+If IssuedCertfile is specified, fields in IssuedCertfile are verified against CRLfile.
 
-If DeltaCRLFile is specified, fields in DeltaCRLFile are verified against CRLFile.
+If DeltaCRLfile is specified, fields in DeltaCRLfile are verified against CRLfile.
 
 [-f] [-enterprise] [-user] [-silent] [-split] [-urlfetch] [-t Timeout]
 
@@ -1281,7 +1249,7 @@ Return to [Menu](#menu)
 
 ## -verifyCTL
 
-CertUtil [Options] -verifyCTL CTLObject [CertDir] [CertFile]
+certutil [options] -verifyCTL CTLObject [CertDir] [Certfile]
 
 Verify AuthRoot or Disallowed Certificates CTL
 
@@ -1289,13 +1257,13 @@ CTLObject: Identifies the CTL to verify:
 
 - AuthRootWU: read AuthRoot CAB and matching certificates from the URL cache. Use -f to download from Windows Update instead.
 - DisallowedWU: read Disallowed Certificates CAB and disallowed certificate store file from the URL cache.  Use -f to download from Windows Update instead.
-- AuthRoot: read registry cached AuthRoot CTL.  Use with -f and a             CertFile that is not already trusted to force updating the registry cached AuthRoot and Disallowed Certificate CTLs.
+- AuthRoot: read registry cached AuthRoot CTL.  Use with -f and a             Certfile that is not already trusted to force updating the registry cached AuthRoot and Disallowed Certificate CTLs.
 - Disallowed: read registry cached Disallowed Certificates CTL. -f has the same behavior as with AuthRoot.
-- CTLFileName: file or http: path to CTL or CAB
+- CTLfileName: file or http: path to CTL or CAB
 
 CertDir: folder containing certificates matching CTL entries. An http: folder path must end with a path separator. If a folder is not specified with AuthRoot or Disallowed, multiple locations will be searched for matching certificates: local certificate stores, crypt32.dll resources and the local URL cache. Use -f to download from Windows Update when necessary. Otherwise defaults to the same folder or web site as the CTLObject.
 
-CertFile: file containing certificate(s) to verify. Certificates will be matched against CTL entries, and match results displayed. Suppresses most of the default output.
+Certfile: file containing certificate(s) to verify. Certificates will be matched against CTL entries, and match results displayed. Suppresses most of the default output.
 
 [-f] [-user] [-split]
 
@@ -1303,33 +1271,33 @@ Return to [Menu](#menu)
 
 ## -sign
 
-CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [StartDate+dd:hh] [+SerialNumberList | -SerialNumberList | -ObjectIdList | \@ExtensionFile]
+certutil [options] -sign InfileList|SerialNumber|CRL OutfileList [StartDate+dd:hh] [+SerialNumberList | -SerialNumberList | -ObjectIdList | \@Extensionfile]
 
-CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [#HashAlgorithm] [+AlternateSignatureAlgorithm | -AlternateSignatureAlgorithm]
+certutil [options] -sign InfileList|SerialNumber|CRL OutfileList [#HashAlgorithm] [+AlternateSignatureAlgorithm | -AlternateSignatureAlgorithm]
 
 Re-sign CRL or certificate
 
-InFileList: comma separated list of Certificate or CRL files to modify and re-sign
+InfileList: comma separated list of Certificate or CRL files to modify and re-sign
 
 SerialNumber: Serial number of certificate to create. Validity period and other options must not be present.
 
 CRL: Create an empty CRL. Validity period and other options must not be present.
 
-OutFileList: comma separated list of modified Certificate or CRL output files. The number of files must match InFileList.
+OutfileList: comma separated list of modified Certificate or CRL output files. The number of files must match InfileList.
 
-StartDate+dd:hh: new validity period: optional date plus; optional days and hours validity period; If both are specified, use a plus sign (+) separator. Use "now[+dd:hh]" to start at the current time. Use "never" to have no expiration date (for CRLs only).
+StartDate+dd:hh: new validity period: optional date plus; optional days and hours validity period; If both are specified, use a plus sign (+) separator. Use now[+dd:hh] to start at the current time. Use never to have no expiration date (for CRLs only).
 
 SerialNumberList: comma separated serial number list to add or remove
 
 ObjectIdList: comma separated extension ObjectId list to remove
 
-\@ExtensionFile: INF file containing extensions to update or remove:
+\@Extensionfile: INF file containing extensions to update or remove:
 
 ```
 [Extensions]
      2.5.29.31 = ; Remove CRL Distribution Points extension
-     2.5.29.15 = "{hex}" ; Update Key Usage extension
-     _continue_="03 02 01 86"
+     2.5.29.15 = {hex} ; Update Key Usage extension
+     _continue_=03 02 01 86
 ```
 
 HashAlgorithm: Name of the hash algorithm preceded by a # sign
@@ -1344,7 +1312,7 @@ Return to [Menu](#menu)
 
 ## -vroot
 
-CertUtil [Options] -vroot [delete]
+certutil [options] -vroot [delete]
 
 Create/delete web virtual roots and file shares
 
@@ -1352,7 +1320,7 @@ Return to [Menu](#menu)
 
 ## -vocsproot
 
-CertUtil [Options] -vocsproot [delete]
+certutil [options] -vocsproot [delete]
 
 Create/delete web virtual roots for OCSP web proxy
 
@@ -1360,7 +1328,7 @@ Return to [Menu](#menu)
 
 ## -addEnrollmentServer
 
-CertUtil [Options] -addEnrollmentServer Kerberos | UserName | ClientCertificate [AllowRenewalsOnly] [AllowKeyBasedRenewal]
+certutil [options] -addEnrollmentServer Kerberos | UserName | ClientCertificate [AllowRenewalsOnly] [AllowKeyBasedRenewal]
 
 Add an Enrollment Server application
 
@@ -1378,7 +1346,7 @@ Return to [Menu](#menu)
 
 ## -deleteEnrollmentServer
 
-CertUtil [Options] -deleteEnrollmentServer Kerberos | UserName | ClientCertificate
+certutil [options] -deleteEnrollmentServer Kerberos | UserName | ClientCertificate
 
 Delete an Enrollment Server application
 
@@ -1394,7 +1362,7 @@ Return to [Menu](#menu)
 
 ## -addPolicyServer
 
-CertUtil [Options] -addPolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
+certutil [options] -addPolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
 
 Add a Policy Server application
 
@@ -1409,7 +1377,7 @@ Return to [Menu](#menu)
 
 ## -deletePolicyServer
 
-CertUtil [Options] -deletePolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
+certutil [options] -deletePolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
 
 Delete a Policy Server application
 
@@ -1424,11 +1392,11 @@ Return to [Menu](#menu)
 
 ## -oid
 
-CertUtil [Options] -oid ObjectId [DisplayName | delete [LanguageId [Type]]]
+certutil [options] -oid ObjectId [DisplayName | delete [LanguageId [Type]]]
 
-CertUtil [Options] -oid GroupId
+certutil [options] -oid GroupId
 
-CertUtil [Options] -oid AlgId | AlgorithmName [GroupId]
+certutil [options] -oid AlgId | AlgorithmName [GroupId]
 
 Display ObjectId or set display name
 
@@ -1448,7 +1416,7 @@ Return to [Menu](#menu)
 
 ## -error
 
-CertUtil [Options] -error ErrorCode
+certutil [options] -error ErrorCode
 
 Display error code message text
 
@@ -1456,7 +1424,7 @@ Return to [Menu](#menu)
 
 ## -getreg
 
-CertUtil [Options] -getreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
+certutil [options] -getreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
 
 Display registry value
 
@@ -1478,15 +1446,15 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name\*" to prefix match)
+RegistryValueName: registry value name (use Name\* to prefix match)
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
 
-If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
+Use chain\ChainCacheResyncfiletime \@now to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1494,7 +1462,7 @@ Return to [Menu](#menu)
 
 ## -setreg
 
-CertUtil [Options] -setreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]]RegistryValueName Value
+certutil [options] -setreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]]RegistryValueName Value
 
 Set registry value
 
@@ -1516,15 +1484,15 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name\*" to prefix match)
+RegistryValueName: registry value name (use Name\* to prefix match)
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
 
-If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
+Use chain\ChainCacheResyncfiletime \@now to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1532,7 +1500,7 @@ Return to [Menu](#menu)
 
 ## -delreg
 
-CertUtil [Options] -delreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
+certutil [options] -delreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
 
 Delete registry value
 
@@ -1554,15 +1522,15 @@ PolicyServers: Use Policy Servers registry key
 
 ProgId: Use policy or exit module's ProgId (registry subkey name)
 
-RegistryValueName: registry value name (use "Name\*" to prefix match)
+RegistryValueName: registry value name (use Name\* to prefix match)
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
 
-If the value starts with "\@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime \@now" to effectively flush cached CRLs.
+Use chain\ChainCacheResyncfiletime \@now to effectively flush cached CRLs.
 
 [-f] [-user] [-GroupPolicy] [-config Machine\CAName]
 
@@ -1570,11 +1538,11 @@ Return to [Menu](#menu)
 
 ## -ImportKMS
 
-CertUtil [Options] -ImportKMS UserKeyAndCertFile [CertId]
+certutil [options] -ImportKMS UserKeyAndCertfile [CertId]
 
 Import user keys and certificates into server database for key archival
 
-UserKeyAndCertFile -- Data file containing user private keys and certificates to be archived.  This can be any of the following:
+UserKeyAndCertfile -- Data file containing user private keys and certificates to be archived.  This can be any of the following:
 
 - Exchange Key Management Server (KMS) export file
 - PFX file
@@ -1589,7 +1557,7 @@ Return to [Menu](#menu)
 
 ## -ImportCert
 
-CertUtil [Options] -ImportCert Certfile [ExistingRow]
+certutil [options] -ImportCert Certfile [ExistingRow]
 
 Import a certificate file into the database
 
@@ -1605,11 +1573,11 @@ Return to [Menu](#menu)
 
 ## -GetKey
 
-CertUtil [Options] -GetKey SearchToken [RecoveryBlobOutFile]
+certutil [options] -GetKey SearchToken [RecoveryBlobOutfile]
 
-CertUtil [Options] -GetKey SearchToken script OutputScriptFile
+certutil [options] -GetKey SearchToken script OutputScriptfile
 
-CertUtil [Options] -GetKey SearchToken retrieve | recover OutputFileBaseName
+certutil [options] -GetKey SearchToken retrieve | recover OutputfileBaseName
 
 Retrieve archived private key recovery blob, generate a recovery script, or recover archived keys
 
@@ -1630,11 +1598,11 @@ Can be any of the following:
 5. Requester Name (domain\user)
 6. UPN (user\@domain)
 
-RecoveryBlobOutFile: output file containing a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
+RecoveryBlobOutfile: output file containing a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 
-OutputScriptFile: output file containing a batch script to retrieve and recover private keys.
+OutputScriptfile: output file containing a batch script to retrieve and recover private keys.
 
-OutputFileBaseName: output file base name. For retrieve, any extension is truncated and a certificate-specific string and the .rec extension are appended for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates. For recover, any extension is truncated and the .p12 extension is appended.  Contains the recovered certificate chains and associated private keys, stored as a PFX file.
+OutputfileBaseName: output file base name. For retrieve, any extension is truncated and a certificate-specific string and the .rec extension are appended for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates. For recover, any extension is truncated and the .p12 extension is appended.  Contains the recovered certificate chains and associated private keys, stored as a PFX file.
 
 [-f] [-UnicodeText] [-silent] [-config Machine\CAName] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
 
@@ -1642,7 +1610,7 @@ Return to [Menu](#menu)
 
 ## -RecoverKey
 
-CertUtil [Options] -RecoverKey RecoveryBlobInFile [PFXOutFile [RecipientIndex]]
+certutil [options] -RecoverKey RecoveryBlobInfile [PFXOutfile [RecipientIndex]]
 
 Recover archived private key
 
@@ -1652,15 +1620,15 @@ Return to [Menu](#menu)
 
 ## -MergePFX
 
-CertUtil [Options] -MergePFX PFXInFileList PFXOutFile [ExtendedProperties]
+certutil [options] -MergePFX PFXInfileList PFXOutfile [ExtendedProperties]
 
-PFXInFileList: Comma separated PFX input file list
+PFXInfileList: Comma separated PFX input file list
 
-PFXOutFile: PFX output file
+PFXOutfile: PFX output file
 
 ExtendedProperties: Include extended properties
 
-The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "\*", the user will be prompted for the output file password.
+The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is \*, the user will be prompted for the output file password.
 
 [-f] [-user] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
 
@@ -1668,11 +1636,11 @@ Return to [Menu](#menu)
 
 ## -ConvertEPF
 
-CertUtil [Options] -ConvertEPF PFXInFileList EPFOutFile [cast | cast-] [V3CACertId][,Salt]
+certutil [options] -ConvertEPF PFXInfileList EPFOutfile [cast | cast-] [V3CACertId][,Salt]
 
 Convert PFX files to EPF file
 
-PFXInFileList: Comma separated PFX input file list
+PFXInfileList: Comma separated PFX input file list
 
 EPF: EPF output file
 
@@ -1684,7 +1652,7 @@ V3CACertId: V3 CA Certificate match token.  See [-store](#-store) CertId descrip
 
 Salt: EPF output file salt string
 
-The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "\*", the user will be prompted for the output file password.
+The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is \*, the user will be prompted for the output file password.
 
 [-f] [-silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
 
@@ -1721,7 +1689,7 @@ This section defines the options that you can specify with the command.
 |-UserName UserName|Use named account for SSL credentials. For selection U/I, use -UserName.|
 |-Cert CertId|Signing certificate|
 |-dc DCName|Target a specific Domain Controller|
-|-restrict RestrictionList|Comma separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. Examples:</br>"RequestId = 47"</br>"+RequesterName >= a, RequesterName < b"</br>"-RequesterName > DOMAIN, Disposition = 21"|
+|-restrict RestrictionList|Comma separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. Examples:</br>RequestId = 47</br>+RequesterName >= a, RequesterName < b</br>-RequesterName > DOMAIN, Disposition = 21|
 |-out ColumnList|Comma separated Column List|
 |-p Password|Password|
 |-ProtectTo SAMNameAndSIDList|Comma separated SAM Name/SID List|
@@ -1737,7 +1705,7 @@ For some examples of how to use this command, see
 
 1. [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
 2. [Certutil tasks for managing certificates](https://technet.microsoft.com/library/cc772898.aspx)
-3. [Binary Request Export Using the CertUtil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
+3. [Binary Request Export Using the certutil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
 4. [Root CA certificate renewal](https://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
 5. [Certutil](https://msdn.microsoft.com/subscriptions/cc773087.aspx)
 

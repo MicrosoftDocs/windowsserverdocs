@@ -1,12 +1,12 @@
 ---
 title: online disk
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 author: coreyp-at-msft
@@ -35,7 +35,7 @@ For instructions regarding how to use this command, see [Reactivate a Missing or
 online disk [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -50,14 +50,14 @@ online disk [noerr]
 -   If the group of a selected disk contains mirrored or RAID-5 volumes, this command also resynchronizes these volumes.
 -   A disk must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To bring the disk with focus online, type:
 ```
 online disk
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

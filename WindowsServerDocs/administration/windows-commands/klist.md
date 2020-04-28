@@ -1,12 +1,12 @@
 ---
 title: klist
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Displays a list of currently cached Kerberos tickets. This information applies t
 klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | sessions | kcd_cache | get | add_bind | query_bind | purge_bind
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -113,7 +113,7 @@ The parameters display the following information:
 **Other considerations**
 -   Klist.exe is available in Windows Server 2012 and Windows 8, and it requires no special installation.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 1. When you are diagnosing an Event ID 27 while processing a ticket-granting service (TGS) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
    ```
@@ -161,6 +161,6 @@ The parameters display the following information:
    klist purge_bind
    ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

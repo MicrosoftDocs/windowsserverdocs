@@ -1,12 +1,12 @@
 ---
 title: ftp literal_1
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14 vhorne
 author: coreyp-at-msft
@@ -16,14 +16,14 @@ ms.date: 10/16/2017
 ---
 # ftp: literal_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.   
 
 ## Syntax  
 ```  
 literal <Argument> [ ]  
 ```  
-### Parameters  
+#### Parameters  
 
 | Parameter  |                    Description                    |
 |------------|---------------------------------------------------|
@@ -31,11 +31,11 @@ literal <Argument> [ ]
 
 ## Remarks  
 The **literal** command is identical to the **quote** command.  
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 Send a **quit** command to the remote ftp server.  
 ```  
 literal quit  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: quote](ftp-quote.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

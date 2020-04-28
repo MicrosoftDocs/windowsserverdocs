@@ -1,12 +1,8 @@
 ---
 title: wbadmin enable backup
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for wbadmin enable backup, which creates and enables a daily backup schedule or modifies an existing backup schedule.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0e57f8a-70fa-4c60-9754-e762e8ad8772
 author: coreyp-at-msft
@@ -73,7 +69,7 @@ wbadmin enable backup
 [-allowDeleteOldBackups]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -98,7 +94,7 @@ wbadmin enable backup
 
 To view the disk identifier value for your disks, type **wbadmin get disks**.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 The following examples show how the **wbadmin enable backup** command can be used in different backup scenarios:
 
@@ -124,7 +120,7 @@ Scenario #1
   wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
   ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

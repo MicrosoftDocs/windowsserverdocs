@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil quota
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Manages disk quotas on NTFS volumes to provide more precise control of network-based storage.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -28,7 +28,7 @@ fsutil quota [track] <VolumePath>
 fsutil quota [violations]
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                                                    Description                                                                                    |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,8 +62,8 @@ To list existing disk quotas for a disk volume that is specified with the drive 
 Fsutil quota query C:
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

@@ -1,12 +1,12 @@
 ---
 title: logman create api
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2ecc0a75-2613-464a-8616-c5dc404bb736
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # logman create api
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 create an API tracing data collector.  
 
@@ -25,7 +25,7 @@ create an API tracing data collector.
 ```  
 logman create api <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                    Parameter                     |                                                                               Description                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,7 +58,7 @@ logman create api <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 The following command creates an API trace counter called trace_notepad for the executable file c:\windows\notepad.exe and outputs the results to the file c:\notepad.etl.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -o c:\notepad.etl  
@@ -71,5 +71,5 @@ The following command creates an API trace counter called trace_notepad for the 
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  

@@ -1,12 +1,12 @@
 ---
 title: graftabl
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b08351d4-3d24-490c-86f6-1252da11d923
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Enables Windows operating systems to display an extended character set in graphics mode. If used without parameters, **graftabl** displays the previous and the current code page.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +30,7 @@ graftabl <CodePage>
 graftabl /status
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -49,7 +49,7 @@ graftabl /status
     |2|A file error occurred.|
 -   You can use the ERRORLEVEL environment variable in a batch program to process exit codes that are returned by **graftabl**.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To view the current code page used by **graftabl**, type:
 ```
@@ -64,9 +64,9 @@ To load the graphics character set for code page 850 (multilingual) into memory,
 graftabl 850
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Freedisk](freedisk.md)
 

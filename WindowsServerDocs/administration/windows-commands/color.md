@@ -1,12 +1,8 @@
 ---
 title: color
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for color, which changes the foreground and background colors in the Command Prompt window for the current session.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f5b67131-d196-45ec-a3f9-b5d9f091fd86
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 10/16/2017
 
 # color
 
-
-
 Changes the foreground and background colors in the Command Prompt window for the current session. If used without parameters, **color** restores the default Command Prompt window foreground and background colors.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 color [[<B>]<F>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -65,7 +59,7 @@ color [[<B>]<F>]
 -   To set the default Command Prompt window color, click the upper-left corner of the Command Prompt window, click **Defaults**, click the **Colors** tab, and then click the colors that you want to use for the **Screen Text** and **Screen Background**.
 -   If *B* and *F* are the same, the **color** command sets ERRORLEVEL to 1, and no change is made to either the foreground or the background color.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To change the Command Prompt window background color to gray and the foreground color to red, type:
 ```
@@ -79,6 +73,6 @@ color e
 > [!NOTE]
 > In this example, the background is set to the default color because only one hexadecimal digit is specified.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

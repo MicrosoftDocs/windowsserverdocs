@@ -1,12 +1,8 @@
 ---
 title: convert dynamic
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for convert dynamic, which converts a basic disk into a dynamic disk.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # convert dynamic
-
-
 
 Converts a basic disk into a dynamic disk.
 
@@ -29,7 +23,7 @@ For instructions regarding how to use this command, see [Change a Basic Disk int
 convert dynamic [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -40,14 +34,14 @@ convert dynamic [noerr]
 -   Any existing partitions on the basic disk become simple volumes.
 -   A basic disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To convert a basic disk into a dynamic disk, type:
 ```
 convert dynamic
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

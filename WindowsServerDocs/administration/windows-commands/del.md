@@ -1,12 +1,8 @@
 ---
 title: del
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for del, which deletes one or more files.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 346eede2-2085-44f5-9936-6877b5d5a833
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 10/16/2017
 
 # del
 
-
-
 Deletes one or more files. This command is the same as the **erase** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +24,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -46,7 +40,8 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 
 > [!CAUTION]
 > If you use **del** to delete a file from your disk, you cannot retrieve it.
-> -   If you use **/p**, **del** displays the name of a file and sends the following message:
+
+-   If you use **/p**, **del** displays the name of a file and sends the following message:
 
     `FileName, Delete (Y/N)?`
 
@@ -68,9 +63,10 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 
 > [!NOTE]
 > Before you use wildcard characters with the **del** command, use the same wildcard characters with the **dir** command to list all the files that will be deleted.
-> -   The **del** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+-   The **del** command, with different parameters, is available from the Recovery Console.
+
+## Examples
 
 To delete all the files in a folder named Test on drive C, type either of the following:
 ```
@@ -86,6 +82,6 @@ To delete all read-only files in the current directory, type:
 del /a:r *.*
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

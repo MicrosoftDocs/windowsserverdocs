@@ -1,12 +1,8 @@
 ---
 title: wevtutil
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for wevtutil, which lets you retrieve information about event logs and publishers.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822 vhorne
 author: coreyp-at-msft
@@ -19,7 +15,7 @@ ms.date: 10/16/2017
 
 
 
-Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs. 
 
 ## Syntax
 
@@ -35,7 +31,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 [{cl | clear-log} <Logname> [/bu:<Backup>]] [/r:<Remote>] [/u:<Username>] [/p:<Password>] [/a:<Auth>] [/uni:<Unicode>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -82,7 +78,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |   /bu:\<Backup>    |                                                                                                                                                                                                      Specifies the path to a file where the cleared events will be stored. Include the .evtx extension in the name of the backup file.                                                                                                                                                                                                       |
 |    /r:\<Remote>    |                                                                                                                                                                                            Runs the command on a remote computer. \<Remote> is the name of the remote computer. The **im** and **um** parameters do not support remote operation.                                                                                                                                                                                            |
 |   /u:\<Username>   |                                                                                                                                                                          Specifies a different user to log on to a remote computer. \<Username> is a user name in the form domain\user or user. This option is only applicable when the **/r** option is specified.                                                                                                                                                                          |
-|   /p:\<Password>   |                                                                                                                                               Specifies the password for the user. If the **/u** option is used and this option is not specified or \<Password> is "*", the user will be prompted to enter a password. This option is only applicable when the \*\*/u*\* option is specified.                                                                                                                                                |
+|   /p:\<Password>   |                                                                                                                                               Specifies the password for the user. If the **/u** option is used and this option is not specified or \<Password> is *, the user will be prompted to enter a password. This option is only applicable when the \*\*/u*\* option is specified.                                                                                                                                                |
 |     /a:\<Auth>     |                                                                                                                                                                                             Defines the authentication type for connecting to a remote computer. \<Auth> can be Default, Negotiate, Kerberos or NTLM. The default is Negotiate.                                                                                                                                                                                              |
 |  /uni:\<Unicode>   |                                                                                                                                                                                                             Displays the output in Unicode. \<Unicode> can be true or false. If <Unicode> is true then the output is in Unicode.                                                                                                                                                                                                             |
 
@@ -90,11 +86,11 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 
 -   Using a configuration file with the sl parameter
 
-    The configuration file is an XML file with the same format as the output of wevtutil gl \<Logname> /f:xml. The following example shows the format of a configuration file that enables retention, enables autobackup, and sets the maximum log size on the Application log:  
+    The configuration file is an XML file with the same format as the output of wevtutil gl \<Logname> /f:xml. To shows the format of a configuration file that enables retention, enables autobackup, and sets the maximum log size on the Application log:  
     ```
-    <?xml version="1.0" encoding="UTF-8"?>
-    <channel name="Application" isolation="Application"
-    xmlns="https://schemas.microsoft.com/win/2004/08/events">
+    <?xml version=1.0 encoding=UTF-8?>
+    <channel name=Application isolation=Application
+    xmlns=https://schemas.microsoft.com/win/2004/08/events>
     <logging>
     <retention>true</retention>
     <autoBackup>true</autoBackup>
@@ -105,7 +101,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
     </channel>
     ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 List the names of all logs:
 ```
@@ -150,4 +146,4 @@ wevtutil cl Application /bu:C:\admin\backups\a10306.evtx
 
 #### Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: logman update trace
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b7111f7f-4162-4d1a-8e53-d766db0ede1f britw
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman update trace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update the properties of an existing event trace data collector.  
 
@@ -24,7 +24,7 @@ Update the properties of an existing event trace data collector.
 ```  
 logman update trace <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                         Parameter                          |                                                                                                                                                                                                                                                                                                                                Description                                                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,15 +57,15 @@ logman update trace <[-n] <name>> [options]
 |                           -[-]ul                           |                                                                                                                                                                                                                                                                                                                 Run the Event Trace Session in user mode.                                                                                                                                                                                                                                                                                                                 |
 |                        -bs <value>                         |                                                                                                                                                                                                                                                                                                           Specifies the Event Trace Session buffer size in kb.                                                                                                                                                                                                                                                                                                            |
 |                       -nb <min max>                        |                                                                                                                                                                                                                                                                                                           Specifies the number of Event Trace Session buffers.                                                                                                                                                                                                                                                                                                            |
-| -mode <globalsequence&#124;localsequence&#124;pagedmemory> | Specifies the event trace session logger mode.<br /><br />**Globalsequence** specifies that the event tracer add a sequence number to every event it receives irrespective of which trace session received the event.<br /><br />**Localsequence** specifies that the event tracer add sequence numbers for events received at a specific trace session. When the **localsequence** option is used, duplicate sequence numbers can exist across all sessions but will be unique within each trace session.<br /><br />**Pagedmemory** specifies that the event tracer use paged memory rather than the default non-paged memory pool for its internal buffer allocations. |
+| -mode <globalsequence&#124;localsequence&#124;pagedmemory> | Specifies the event trace session logger mode.<p>**Globalsequence** specifies that the event tracer add a sequence number to every event it receives irrespective of which trace session received the event.<p>**Localsequence** specifies that the event tracer add sequence numbers for events received at a specific trace session. When the **localsequence** option is used, duplicate sequence numbers can exist across all sessions but will be unique within each trace session.<p>**Pagedmemory** specifies that the event tracer use paged memory rather than the default non-paged memory pool for its internal buffer allocations. |
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 The following command updates the existing data collector perf_log, changing the maximum log size to 10 MB, updating the log file format to CSV, and appending file versioning in the format mmddhhmm.  
 ```  
 logman update perf_log -max 10 -f csv -v mmddhhmm  
 ```  
-#### additional references  
+## Additional References  
 [logman](logman.md)  
 [logman create trace](logman-create-trace.md)  

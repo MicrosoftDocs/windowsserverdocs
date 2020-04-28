@@ -1,12 +1,12 @@
 ---
 title: logman create alert
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 93e6fc2b-5bf5-413b-84b4-be8b9dd3a57d
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # logman create alert
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 create an alert data collector.  
 
@@ -25,7 +25,7 @@ create an alert data collector.
 ```  
 logman create alert <[-n] <name>> [options]  
 ```  
-## Parameters  
+### Parameters  
 
 |                 Parameter                  |                                                                               Description                                                                               |
 |--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,12 +57,12 @@ logman create alert <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 The following command creates an alert called new_alert that fires when the performance counter % Processor time in the Processor(_Total) counter group exceeds the counter value of 50.  
 ```  
-logman create alert new_alert -th "\Processor(_Total)\% Processor time>50"  
+logman create alert new_alert -th \Processor(_Total)\% Processor time>50  
 ```  
 > [!NOTE]
 > The threshold value defined is based on the value collected by the counter, so in this example, the value of 50 equates to 50% Processor time.  
-> #### additional references  
+> ## Additional References  
 > [logman](logman.md)  

@@ -1,12 +1,8 @@
 ---
 title: dfsdiag
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for dfsdiag, which provides diagnostic information for DFS Namespaces.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0891e67-0187-4f18-923d-5623e6127f90
 author: coreyp-at-msft
@@ -17,9 +13,7 @@ ms.date: 10/16/2017
 
 # dfsdiag
 
-
-
-The `Dfsdiag` command provides diagnostic information for DFS Namespaces.
+Provides diagnostic information for DFS Namespaces.
 
 ## Syntax
 
@@ -28,7 +22,7 @@ dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| 
 
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -39,6 +33,6 @@ dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| 
 |[Dfsdiag TestReferral](dfsdiag-testreferral.md)|Checks referral responses.|
 |/?|Displays help at the command prompt.|
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

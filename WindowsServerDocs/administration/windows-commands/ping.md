@@ -1,12 +1,12 @@
 ---
 title: ping
 description: Use ping to verify network connectivity. 
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 49272671-2eec-4fa5-881f-65c24cfbef52
 author: coreyp-at-msft
@@ -16,7 +16,7 @@ ms.date: 07/11/2018
 ---
 # ping
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The **ping** command verifies IP-level connectivity to another TCP/IP computer by sending Internet Control Message Protocol (ICMP) echo Request messages. The receipt of corresponding echo Reply messages are displayed, along with round-trip times. ping is the primary TCP/IP command used to troubleshoot connectivity, reachability, and name resolution. Used without parameters,  **ping** displays help.
 
@@ -26,7 +26,7 @@ The **ping** command verifies IP-level connectivity to another TCP/IP computer b
 ping [/t] [/a] [/n <Count>] [/l <Size>] [/f] [/I <TTL>] [/v <TOS>] [/r <Count>] [/s <Count>] [{/j <Hostlist> | /k <Hostlist>}] [/w <timeout>] [/R] [/S <Srcaddr>] [/4] [/6] <TargetName>
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |-------|--------|
@@ -56,7 +56,7 @@ ping [/t] [/a] [/n <Count>] [/l <Size>] [/f] [/I <TTL>] [/v <TOS>] [/r <Count>] 
 
 ## <a name="BKMK_Examples"></a>Examples
 
-The following example shows **ping** command output:
+To shows **ping** command output:
 
 ```
 C:\>ping example.microsoft.com       
@@ -91,5 +91,5 @@ To ping the destination 10.0.99.221 and specify the loose source route of 10.12.
 ping /j 10.12.0.1 10.29.3.1 10.1.44.1 10.0.99.221
 ```
 
-## additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)

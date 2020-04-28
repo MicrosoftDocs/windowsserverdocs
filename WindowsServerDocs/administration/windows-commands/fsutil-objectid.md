@@ -11,14 +11,14 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil objectid
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Manages object identifiers (OIDs), which are internal objects used by the Distributed Link Tracking (DLT) Client service and File Replication Service (FRS) to track other objects such as files, directories, and links. Object identifiers are invisible to most programs and should never be modified.
 
 > [!CAUTION]
 > Do not delete, set, or otherwise modify an object identifier. Deleting or setting an object identifier can result in the loss of data from portions of a file, up to and including entire volumes of data. In addition, you might cause adverse behavior in the Distributed Link Tracking (DLT) Client service and File Replication Service (FRS).
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ fsutil objectid [query] <FileName>
 fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <FileName>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
@@ -64,8 +64,8 @@ To set an object identifier, type:
 
 `fsutil objectid set 40dff02fc9b4d4118f120090273fa9fc f86ad6865fe8d21183910008c709d19e 40dff02fc9b4d4118f120090273fa9fc 00000000000000000000000000000000 c:\temp\sample.txt`
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

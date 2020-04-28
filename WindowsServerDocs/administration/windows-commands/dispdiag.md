@@ -1,12 +1,8 @@
 ---
 title: dispdiag
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for dispdiag, which logs display information to a file.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5079e1dd-b57c-44ed-970f-e6b409369e03
 author: coreyp-at-msft
@@ -17,8 +13,6 @@ ms.date: 10/16/2017
 
 # dispdiag
 
-
-
 Logs display information to a file.
 
 ## Syntax
@@ -27,7 +21,7 @@ Logs display information to a file.
 dispdiag [-testacpi] [-d] [-delay <Seconds>] [-out <FilePath>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|

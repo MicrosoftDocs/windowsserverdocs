@@ -1,12 +1,12 @@
 ---
 title: offline volume
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
 author: coreyp-at-msft
@@ -30,7 +30,7 @@ Takes the online volume with focus to the offline state.
 offline volume [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -40,14 +40,14 @@ offline volume [noerr]
 
 -   A volume must be selected for this to succeed. Use the **select volume** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To take the disk with focus offline, type:
 ```
 offline volume
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

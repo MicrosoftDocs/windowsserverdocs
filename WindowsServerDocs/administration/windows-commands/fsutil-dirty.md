@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil dirty
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Queries or sets a volume's dirty bit. When a volume's dirty bit is set, **autochk** automatically checks the volume for errors the next time the computer is restarted.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -23,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 fsutil dirty {query | set} <VolumePath>
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter   |                                                 Description                                                  |
 |---------------|--------------------------------------------------------------------------------------------------------------|
@@ -64,8 +64,8 @@ To set the dirty bit on drive C, type:
 fsutil dirty set C:
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

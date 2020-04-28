@@ -1,12 +1,12 @@
 ---
 title: path
 description: Learn how to set the PATH environment variable.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1bfa1349-e79a-472b-a9e6-d7a91149ae8f
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Sets the command path in the PATH environment variable (the set of directories used to search for executable files). If used without parameters, **path** displays the current command path.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +30,7 @@ path [[<Drive>:]<Path>[;...][;%PATH%]]
 path ;
 ```
 
-## Parameters
+### Parameters
 
 |     Parameter     |                                                                                                     Description                                                                                                      |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -55,6 +55,6 @@ To search the paths C:\User\Taxes, B:\User\Invest, and B:\Bin for external comma
 
 `path c:\user\taxes;b:\user\invest;b:\bin`
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

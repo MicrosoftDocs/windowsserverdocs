@@ -1,12 +1,8 @@
 ---
 title: create volume mirror
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for create volume mirror, which creates a volume mirror by using the two specified dynamic disks. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 48776917-783a-47ff-8da4-1cab77cea34b
 author: coreyp-at-msft
@@ -16,22 +12,20 @@ ms.date: 10/16/2017
 ---
 # create volume mirror
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-creates a volume mirror by using the two specified dynamic disks.  
+Creates a volume mirror by using the two specified dynamic disks.  
   
 > [!NOTE]  
-> This command is only available in Windows 7 and Windows Server 2008 R2.  
-  
-  
-  
+> This command is only available in Windows 7 and Windows Server 2008 R2.
+
 ## Syntax  
   
 ```  
 create volume mirror [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr] [noerr]  
 ```  
   
-## Parameters  
+### Parameters  
   
 |         Parameter         |                                                                                                                                     Description                                                                                                                                     |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,15 +38,15 @@ create volume mirror [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr] [noer
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name="BKMK_examples"></a>Examples  
+## Examples  
 To create a mirrored volume of 1000 megabytes in size, on disks 1 and 2, type:  
   
 ```  
 create volume mirror size=1000 disk=1,2  
 ```  
   
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References  
+- [Command-Line Syntax Key](command-line-syntax-key.md)  
   
 
   

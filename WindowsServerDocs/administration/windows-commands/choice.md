@@ -1,12 +1,8 @@
 ---
 title: choice
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for choice, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c65a9119-410b-4dcf-9fa7-4e07d2a7238b
 author: coreyp-at-msft
@@ -17,28 +13,26 @@ ms.date: 10/16/2017
 
 # choice
 
-
-
 Prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice. If used without parameters, **choice** displays the default choices **Y** and **N**.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
 ```
-choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m <"Text">]
+choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m <Text>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
-|/c \<Choice1><Choice2><…>|Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is "YN", which is displayed as `[Y,N]?`.|
+|/c \<Choice1><Choice2><…>|Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is YN, which is displayed as `[Y,N]?`.|
 |/n|Hides the list of choices, although the choices are still enabled and the message text (if specified by **/m**) is still displayed.|
 |/cs|Specifies that the choices are case-sensitive. By default, the choices are not case-sensitive.|
 |/t \<Timeout>|Specifies the number of seconds to pause before using the default choice specified by **/d**. Acceptable values are from **0** to **9999**. If **/t** is set to **0**, **choice** does not pause before returning the default choice.|
 |/d \<Choice>|Specifies the default choice to use after waiting the number of seconds specified by **/t**. The default choice must be in the list of choices specified by **/c**.|
-|/m <"Text">|Specifies a message to display before the list of choices. If **/m** is not specified, only the choice prompt is displayed.|
+|/m <Text>|Specifies a message to display before the list of choices. If **/m** is not specified, only the choice prompt is displayed.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
@@ -48,7 +42,7 @@ choice [/c [<Choice1><Choice2><…>]] [/n] [/cs] [/t <Timeout> /d <Choice>] [/m 
 > [!NOTE]
 > When you use ERRORLEVEL values in a batch program, list them in decreasing order.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To present the choices Y, N, and C, type the following line in a batch file:
 ```
@@ -58,9 +52,9 @@ The following prompt appears when the batch file runs the **choice** command:
 ```
 [Y,N,C]?
 ```
-To hide the choices Y, N, and C, but display the text "Yes, No, or Continue", type the following line in a batch file:
+To hide the choices Y, N, and C, but display the text Yes, No, or Continue, type the following line in a batch file:
 ```
-choice /c ync /n /m "Yes, No, or Continue?"
+choice /c ync /n /m Yes, No, or Continue?
 ```
 The following prompt appears when the batch file runs the **choice** command:
 ```
@@ -72,7 +66,7 @@ Yes, No, or Continue?
 
 To show both the text and the options used in the previous examples, type the following line in a batch file:
 ```
-choice /c ync /m "Yes, No, or Continue"
+choice /c ync /m Yes, No, or Continue
 ```
 The following prompt appears when the batch file runs the **choice** command:
 ```
@@ -90,6 +84,6 @@ The following prompt appears when the batch file runs the **choice** command:
 > [!NOTE]
 > In this example, if the user does not press a key within five seconds, **choice** selects **N** by default and returns an error value of 2. Otherwise, **choice** returns the value corresponding to the user's choice.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: msg
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9501cf3e-568e-4982-9987-8daecc6c17ff
 author: coreyp-at-msft
@@ -16,10 +16,10 @@ ms.date: 10/16/2017
 ---
 # msg
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends a message to a user on a Remote Desktop Session Host (rd Session Host) server.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
 > [!NOTE]
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 
@@ -28,7 +28,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<ServerName>] [/time:<Seconds>] [/v] [/w] [<Message>]
 ```
 
-## Parameters
+### Parameters
 
 |      Parameter       |                                                                                                                               Description                                                                                                                               |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,8 +48,8 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
 -   if you do not specify a user or a session, **msg** displays an error message. When specifying a session, it must be an active one.
 -   The user must have Message special access permission to send a message.
 
-## <a name="BKMK_examples"></a>Examples
--   To send the message entitled "Let's meet at 1PM today" to all sessions for User1, type:
+## Examples
+-   To send the message entitled Let's meet at 1PM today to all sessions for User1, type:
     ```
     msg User1 Let's meet at 1PM today
     ```
@@ -74,6 +74,6 @@ msg {<UserName> | <SessionName> | <SessionID>| @<FileName> | *} [/server:<Server
     msg * /time:10 Let's meet at 1PM today
     ```
 
-#### additional references
--  [Command-Line Syntax Key](command-line-syntax-key.md)
--  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+## Additional References
+-  - [Command-Line Syntax Key](command-line-syntax-key.md)
+-  [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

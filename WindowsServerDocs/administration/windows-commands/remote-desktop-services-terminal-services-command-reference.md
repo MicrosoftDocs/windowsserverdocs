@@ -1,12 +1,12 @@
 ---
 title: Remote Desktop Services (Terminal Services) Command Reference
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2f371848-5c48-470c-908c-afbc95d3a805
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # Remote Desktop Services (Terminal Services) Command Reference
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following is a list of Remote Desktop Services command-line tools.
 > [!NOTE]

@@ -1,12 +1,12 @@
 ---
 title: fveupdate
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: f2603607-9421-4e8d-b9bf-c5519814b39f
 author: coreyp-at-msft

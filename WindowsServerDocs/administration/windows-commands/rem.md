@@ -1,12 +1,12 @@
 ---
 title: rem
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1a45b585-a83c-4ff6-badd-ff40f34cec23
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Records comments (remarks) in a batch file or CONFIG.SYS. If no comment is specified, **rem** adds vertical spacing.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 rem [<Comment>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,9 +42,9 @@ rem [<Comment>]
 -   You cannot use a redirection character (**<** or **>**) or pipe (**|**) in a batch file comment.
 -   Although you can use **rem** without a comment to add vertical spacing to a batch file, you can also use blank lines. Blank lines are ignored when a batch program is processed.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example shows a batch file that uses remarks for comments and for vertical spacing:
+To shows a batch file that uses remarks for comments and for vertical spacing:
 ```
 @echo off
 rem  This batch program formats and checks new disks.
@@ -60,6 +60,6 @@ rem Set prompt to indicate current directory
 prompt $p$g
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

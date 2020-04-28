@@ -1,12 +1,12 @@
 ---
 title: expose
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9b0a21cf-3bef-4ade-b8f1-ac42f9203947
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Exposes a persistent shadow copy as a drive letter, share, or mount point.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -42,13 +42,13 @@ expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 
 -   You can use an existing alias or an environment variable in place of *ShadowID*. Use **add** without parameters to see existing aliases.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To expose the persistent shadow copy associated with the VSS_SHADOW_1 environment variable as drive X, type:
 ```
 expose %vss_shadow_1% x:
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

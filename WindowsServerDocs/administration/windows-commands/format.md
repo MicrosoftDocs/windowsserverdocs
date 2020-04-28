@@ -2,20 +2,20 @@
 title: Format
 ms.prod: windows-server
 manager: dongill
-ms.author: JGerend
+ms.author: jgerend
 ms.technology: storage
 ms.topic: article
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
-author: JasonGerend
+author: jasongerend
 ms.date: 10/16/2017
 ---
 
 # Format
-> Applies To: Windows 10, Windows Server 2016
+> Applies to: Windows 10, Windows Server 2016
 
 Formats a disk to accept Windows files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -27,7 +27,7 @@ format <Volume> [/v:<Label>] [/q] [/p:<Passes>]
 format <Volume> [/q]
 ```
 
-## Parameters
+### Parameters
 
 |   Parameter    |                                                                                                                                                                                                                    Description                                                                                                                                                                                                                     |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -119,6 +119,6 @@ To format a floppy disk in drive A and assign it the volume label "DATA," type:
 format a: /v:DATA
 ```
 
-#### Additional references
+## Additional References
 
 [Command-Line Syntax Key](https://technet.microsoft.com/library/cc771080.aspx)

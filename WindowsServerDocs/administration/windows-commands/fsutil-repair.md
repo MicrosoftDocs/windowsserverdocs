@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil repair
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Administers and monitors NTFS self-healing repair operations.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -28,7 +28,7 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------------|---------------|
@@ -39,10 +39,10 @@ fsutil repair [wait][<WaitType>] <VolumePath>
 |\<FileReference>|Specifies the NTFS volume-specific file ID (file reference number). The file reference includes the segment number of the file.|
 |query|Queries the self-healing state of the NTFS volume.|
 |set|Sets the self-healing state of the volume.|
-|\<Flags>|Specifies the repair method to be used when setting the self-healing state of the volume.<br /><br />The **Flags** parameter can be set to three values:<br /><br />-   **0x01**: Enables general repair.<br />-   **0x09**: Warns about potential data loss without repair.<br />-   **0x00**: Disables NTFS self-healing repair operations.|
+|\<Flags>|Specifies the repair method to be used when setting the self-healing state of the volume.<p>The **Flags** parameter can be set to three values:<p>-   **0x01**: Enables general repair.<br />-   **0x09**: Warns about potential data loss without repair.<br />-   **0x00**: Disables NTFS self-healing repair operations.|
 |state|Queries the corruption state of the system or for a given volume.|
 |wait|Waits for repair(s) to complete. If NTFS has detected a problem on a volume on which it is performing repairs, this option allows the system to wait until the repair is complete before it runs any pending scripts.|
-|[WaitType {0&#124;1}]|Indicates whether to wait for the current repair to complete or to wait for all repairs to complete. *WaitType* can be set to the following values:<br /><br />-   **0**: Waits for all repairs to complete. (default value)<br />-   **1**: Waits for the current repair to complete.|
+|[WaitType {0&#124;1}]|Indicates whether to wait for the current repair to complete or to wait for all repairs to complete. *WaitType* can be set to the following values:<p>-   **0**: Waits for all repairs to complete. (default value)<br />-   **1**: Waits for the current repair to complete.|
 
 ## Remarks
 
@@ -68,8 +68,8 @@ To disable self-healing repair on drive C, type:
 fsutil repair set c: 0
 ```
 
-#### Additional references
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

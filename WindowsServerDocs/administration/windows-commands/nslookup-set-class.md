@@ -1,12 +1,12 @@
 ---
 title: nslookup set class
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: ed826400-40da-42b6-b7f0-95db73790723
 author: coreyp-at-msft
@@ -27,13 +27,13 @@ Changes the query class. The class specifies the protocol group of the informati
 set class=<Class>
 ```
 
-## Parameters
+### Parameters
 
 | Parameter |                                                                                                                                    Description                                                                                                                                    |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | \<Class>  | The default class is IN. The following lists the valid values for this command.</br>- IN: Specifies the Internet class.</br>- CHAOS: Specifies the Chaos class.</br>- HESIOD: Specifies the MIT Athena Hesiod class.</br>- ANY: Specifies any of the previously listed wildcards. |
 |   {help   |                                                                                                                                        ?}                                                                                                                                         |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

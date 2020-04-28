@@ -1,12 +1,8 @@
 ---
 title: convert
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for convert, which converts file allocation table (FAT) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 96e437c0-1aa3-46ab-9078-a7b8cdaf3792
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 10/16/2017
 
 # convert
 
-
-
 Converts file allocation table (FAT) and FAT32 volumes to the NTFS file system, leaving existing files and directories intact. Volumes converted to the NTFS file system cannot be converted back to FAT or FAT32.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 convert [<Volume>] /fs:ntfs [/v] [/cvtarea:<FileName>] [/nosecurity] [/x]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -50,13 +44,13 @@ convert [<Volume>] /fs:ntfs [/v] [/cvtarea:<FileName>] [/nosecurity] [/x]
 
     Volume conversion from FAT or FAT32 to NTFS leaves the files intact, but the volume might lack some performance benefits compared to volumes initially formatted with NTFS. For example, the MFT might become fragmented on converted volumes. In addition, on converted boot volumes, **convert** applies the same default security that is applied during Windows Setup.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To convert the volume on drive E to NTFS and display all messages during the conversion process, type:
 ```
 convert e: /fs:ntfs /v
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: ftp get
-description: "Windows Commands topic for ftp get"
-ms.custom: na
+description: Reference topic for ftp get
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d70355c4-58ef-43e0-916b-c7ecf77e6ee4 vhorne
 author: coreyp-at-msft
@@ -16,14 +16,14 @@ ms.date: 10/16/2017
 ---
 # ftp: get
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies a remote file to the local computer using the current file transfer type.   
 ## Syntax  
 ```  
 get <remoteFile> [<LocalFile>]  
 ```  
-### Parameters  
+#### Parameters  
 
 |   Parameter   |                                                              Description                                                               |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ get <remoteFile> [<LocalFile>]
 
 ## Remarks  
 The **get** command is identical to the **recv** command.  
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 copy **test.txt** to the local computer using the current file transfer type.  
 ```  
 get test.txt  
@@ -41,7 +41,7 @@ copy **test.txt** to the local computer as **test1.txt** using the current file 
 ```  
 Get test.txt test1.txt  
 ```  
-## additional references  
+## Additional References  
 -   [ftp: ascii](ftp-ascii.md)  
 -   [ftp: binary](ftp-binary.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+-   - [Command-Line Syntax Key](command-line-syntax-key.md)  

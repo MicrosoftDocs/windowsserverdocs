@@ -1,12 +1,8 @@
 ---
-title: Cmd
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: cmd
+description: Reference topic for cmd, which starts a new instance of the command interpreter, Cmd.exe. 
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
 author: coreyp-at-msft
@@ -15,7 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Cmd
+# cmd
 
 Starts a new instance of the command interpreter, Cmd.exe. If used without parameters, **cmd** displays the version and copyright information of the operating system.
 
@@ -25,7 +21,7 @@ Starts a new instance of the command interpreter, Cmd.exe. If used without param
 cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}] [/v:{on|off}] [<String>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -74,7 +70,7 @@ The following table lists valid hexadecimal digits that you can use as the value
     To use multiple commands for \<String>, separate them by the command separator **&&** and enclose them in quotation marks. For example:
 
     ```
-    "<Command>&&<Command>&&<Command>"
+    <Command>&&<Command>&&<Command>
     ``` 
  
 -   Processing quotation marks
@@ -161,10 +157,10 @@ File and directory name completion correctly processes file names that contain w
 
 The following special characters require quotation marks: & < > [ ] { } ^ = ; ! ' + , ` ~ [white space].
 
-If the information that you supply contains spaces, use quotation marks around the text (for example, "Computer Name").
+If the information that you supply contains spaces, use quotation marks around the text (for example, Computer Name).
 
 If you process file and directory name completion from within *String*, any part of the *Path* to the right of the cursor is discarded (at the point in *String* where the completion was processed).
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

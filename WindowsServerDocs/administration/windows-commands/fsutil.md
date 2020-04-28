@@ -12,11 +12,11 @@ ms.date: 08/21/2018
 ---
 # Fsutil
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Performs tasks that are related to file allocation table (FAT) and NTFS file systems, such as managing reparse points, managing sparse files, or dismounting a volume. If it is used without parameters, **Fsutil** displays a list of supported subcommands. 
 
-> [!Note] 
+> [!NOTE] 
 > You must be logged on as an administrator or a member of the Administrators group to use Fsutil. The Fsutil command is quite powerful and should be used only by advanced users who have a thorough knowledge of Windows operating systems.
 >
 >You have to enable Windows Subsystem for Linux before you can run **Fsutil**. Run the following command as Administrator in PowerShell to enable this optional feature:
@@ -26,7 +26,7 @@ Performs tasks that are related to file allocation table (FAT) and NTFS file sys
 >```
 > You'll be prompted to restart your computer once it's installed. After your computer restarts, you'll be able to run **Fsutil** as an administrator.
 
-## Parameters
+### Parameters
 
 |Subcommand |Description|
 |---|---|
@@ -49,4 +49,4 @@ Performs tasks that are related to file allocation table (FAT) and NTFS file sys
 |[Fsutil wim](fsutil-wim.md)|Provides functions to discover and manage WIM-backed files.|
 
 ## See also
-[Command-Line Syntax Key](Command-Line-Syntax-Key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
