@@ -11,7 +11,7 @@ ms.prod: windows-server
 
 ms.technology: identity-adfs
 ---
-# Configure AD FS to authenticate users stored in LDAP directories in Windows Server 2016,2019.(2012R2 is not supported)
+# Configure AD FS to authenticate users stored in LDAP directories in Windows Server 2016 or later
 
 The following topic describes the configuration required to enable your AD FS infrastructure to authenticate users whose identities are stored in Lightweight Directory Access Protocol (LDAP) v3-compliant directories.
 
@@ -92,5 +92,4 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
 
 ## See Also
 [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
-
 
