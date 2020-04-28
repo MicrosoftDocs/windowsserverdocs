@@ -1,7 +1,6 @@
 ---
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
 title: AD FS 2016 Single Sign On Settings
-description:
 author: billmath
 ms.author: billmath
 manager: femila

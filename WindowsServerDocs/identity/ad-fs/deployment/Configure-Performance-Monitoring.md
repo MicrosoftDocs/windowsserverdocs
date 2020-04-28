@@ -1,13 +1,11 @@
 ---
 ms.assetid: 67d8a8d7-2fbd-4ed7-bb41-75769f942024
 title: Configure Performance Monitoring
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

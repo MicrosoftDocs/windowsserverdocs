@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 4d8454c9-701b-471e-9c34-caf1b90bfeba
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Virtual Private Networking (VPN)
 

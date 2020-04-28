@@ -26,7 +26,6 @@ Adds a new subkey or entry to the registry.
 reg add <KeyName> [{/v ValueName | /ve}] [/t DataType] [/s Separator] [/d Data] [/f]
 ```
 
-
 ### Parameters
 
 |      Parameter      |                                                                                                                                                                                                                                                                   Description                                                                                                                                                                                                                                                                   |

@@ -7,11 +7,10 @@ ms.author:  billmath
 manager: mtillman
 ms.date: 04/17/2019
 ms.topic: article
-ms.custom: it-pro
+
 ms.prod: windows-server
 ms.technology: identity-adfs
 ---
-
 # AD FS Frequently Asked Questions (FAQ)
 
 
@@ -24,14 +23,14 @@ You can upgrade AD FS using one of the following:
 
 
 - Windows Server 2012 R2 AD FS to Windows Server 2016 AD FS or higher. Note that the methodology is the same if you are upgrading from Windows Server 2016 AD FS to Windows Server 2019 AD FS. 
-	- [Upgrading to AD FS in Windows Server 2016 using a WID database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
-	- [Upgrading to AD FS in Windows Server 2016 using a SQL database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
+    - [Upgrading to AD FS in Windows Server 2016 using a WID database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
+    - [Upgrading to AD FS in Windows Server 2016 using a SQL database](../deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)
 - Windows Server 2012 AD FS to Windows Server 2012 R2 AD FS
-	- [Migrate to AD FS on Windows Server 2012 R2](https://technet.microsoft.com/library/dn486815.aspx)
+    - [Migrate to AD FS on Windows Server 2012 R2](https://technet.microsoft.com/library/dn486815.aspx)
 - AD FS 2.0 to Windows Server 2012 AD FS
-	- [Migrate to AD FS on Windows Server 2012](https://technet.microsoft.com/library/jj647765.aspx)
+    - [Migrate to AD FS on Windows Server 2012](https://technet.microsoft.com/library/jj647765.aspx)
 - AD FS 1.x to AD FS 2.0
-	- [Upgrade from AD FS 1.x to AD FS 2.0](https://technet.microsoft.com/library/ff678035.aspx)
+    - [Upgrade from AD FS 1.x to AD FS 2.0](https://technet.microsoft.com/library/ff678035.aspx)
 
 If you need to upgrade from AD FS 2.0 or 2.1 (Windows Server 2008 R2 or Windows Server 2012), you must use the in-box scripts (located in C:\Windows\ADFS).
 
@@ -100,8 +99,8 @@ To ensure your AD FS and WAP servers negotiate only TLS cipher suites that suppo
 
 ## Developer
 
-### When generating an id_token with ADFS for a user authenticated against AD, how is the “sub” claim generated in the id_token?
-The value of “sub” claim is the hash of client ID + anchor claim value.
+### When generating an id_token with ADFS for a user authenticated against AD, how is the "sub" claim generated in the id_token?
+The value of "sub" claim is the hash of client ID + anchor claim value.
 
 ### What is the lifetime of the refresh token/access token when the user logs in via a remote claims provider trust over WS-Fed/SAML-P?
 The lifetime of refresh token will be the lifetime of the token that ADFS got from remote claims provider trust. The lifetime of the access token will be the token lifetime of the relying party for which access token is being issued.
@@ -114,11 +113,11 @@ A special ValueType("<http://www.w3.org/2001/XMLSchema#json>" ) and escape chara
 
 Sample issuance rule:
 
-	=> issue(Type = "array_in_json", ValueType = "http://www.w3.org/2001/XMLSchema#json", Value = "{\x22Items\x22:[{\x22Name\x22:\x22Apple\x22,\x22Price\x22:12.3},{\x22Name\x22:\x22Grape\x22,\x22Price\x22:3.21}],\x22Date\x22:\x2221/11/2010\x22}");
+    => issue(Type = "array_in_json", ValueType = "http://www.w3.org/2001/XMLSchema#json", Value = "{\x22Items\x22:[{\x22Name\x22:\x22Apple\x22,\x22Price\x22:12.3},{\x22Name\x22:\x22Grape\x22,\x22Price\x22:3.21}],\x22Date\x22:\x2221/11/2010\x22}");
 
 Claim issued in Access token:
 
-	"array_in_json":{"Items":[{"Name":"Apple","Price":12.3},{"Name":"Grape","Price":3.21}],"Date":"21/11/2010"}
+    "array_in_json":{"Items":[{"Name":"Apple","Price":12.3},{"Name":"Grape","Price":3.21}],"Date":"21/11/2010"}
 
 ### Can I pass resource value as part of the scope value like how requests are done against Azure AD?
 With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example  
@@ -176,7 +175,7 @@ If you don't have Access control policies based on device on ADFS or Windows Hel
 
 ### How long are AD FS tokens valid?
 
-Often this question means ‘how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?'  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
+Often this question means 'how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?'  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/ad-fs-2016-single-sign-on-settings).
 
 The default lifetimes of the various cookies and tokens are listed below (as well as the parameters that govern the lifetimes):
 
@@ -227,14 +226,14 @@ This event is logged usually for an invalid resource access on AD FS for resourc
 
 ### Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
 This group is only created when a Windows 2016 Domain Controller with the FSMO PDC role exists in the Domain. To resolve the error, you can create the Group manually and follow the below to give the required permission after adding the service account as member of the group.
-1.	Open **Active Directory Users and Computers**.
-2.	**Right-click** your domain name from the navigation pane and **click** Properties.
-3.	**Click** Security (if the Security tab is missing, turn on Advanced Features from the View menu).
-4.	**Click** Advanced. **Click** Add. **Click** Select a principal.
-5.	The Select User, Computer, Service Account, or Group dialog box appears.  In the Enter the object name to select text box, type Key Admin Group.  Click OK.
-6.	In the Applies to list box, select **Descendant User objects**.
-7.	Using the scroll bar, scroll to the bottom of the page and **click** Clear all.
-8.	In the **Properties** section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCredentialLink**.
+1.    Open **Active Directory Users and Computers**.
+2.    **Right-click** your domain name from the navigation pane and **click** Properties.
+3.    **Click** Security (if the Security tab is missing, turn on Advanced Features from the View menu).
+4.    **Click** Advanced. **Click** Add. **Click** Select a principal.
+5.    The Select User, Computer, Service Account, or Group dialog box appears.  In the Enter the object name to select text box, type Key Admin Group.  Click OK.
+6.    In the Applies to list box, select **Descendant User objects**.
+7.    Using the scroll bar, scroll to the bottom of the page and **click** Clear all.
+8.    In the **Properties** section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCredentialLink**.
 
 ### Why does modern authentication from Android devices fail if the server does not send all the intermediate certificates in the chain with the SSL cert?
 
@@ -308,3 +307,11 @@ After an upgrade to Windows Server 2019, the configuration version of the Web Ap
 
 ### Can I estimate the size of the ADFSArtifactStore before enabling ESL?
 With ESL enabled, AD FS tracks the account activity and known locations for users in the ADFSArtifactStore database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the ADFSArtifactStore database to grow at a rate of up to 1GB per 100,000 users. If the AD FS farm is using the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data. To prevent filling this drive, ensure you have a minimum of 5GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to an additional 1GB of RAM for user populations of 500,000 or less.
+
+### I am seeing Event 570 (Active Directory trust enumeration was unable to enumerate one of more domains due to the following error. Enumeration will continue but the Active Directory identifier list may not be correct. Validate that all expected Active Directory identifiers are present by running Get-ADFSDirectoryProperties) on AD FS 2019. What is the mitigation for this event?
+This event occurs when forests are not trusted when AD FS attempts to enumerate all the forests in a chain of trusted forests and connect across all the forests. For example, if the AD FS Forest A and Forest B are trusted, and Forest B and Forest C are trusted, AD FS will enumerate all three forests and attempt to find a trust between Forest A and C. If users from the failing forest should be authenticated by AD FS, set up a trust between the AD FS forest and the failing forest. If the users from the failing forest should not be authenticated by AD FS, this error should be ignored.
+
+### I am seeing an "Event ID 364: Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Authentication of the presented token failed. Token Binding claim in token must match the binding provided by the channel." What should I do to resolve this?
+In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
+
+`Set-AdfsProperties -IgnoreTokenBinding $true`

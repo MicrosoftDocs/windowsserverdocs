@@ -4,10 +4,9 @@ description: NPS server processing of connection requests that are sent by the V
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: 
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 08/30/2018
 ---
 

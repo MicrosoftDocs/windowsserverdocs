@@ -21,7 +21,7 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 
 ## How does Windows Admin Center work?
 
-Windows Admin Center runs in a web browser and manages Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10, and more through the **Windows Admin Center gateway** installed on Windows Server or Windows 10. The gateway manages servers by using Remote PowerShell and WMI over WinRM. The gateway is included with Windows Admin Center in a single lightweight .msi package that you can [download](https://aka.ms/windowsadmincenter).
+Windows Admin Center runs in a web browser and manages Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10, and more through the **Windows Admin Center gateway** installed on Windows Server or domain-joined Windows 10. The gateway manages servers by using Remote PowerShell and WMI over WinRM. The gateway is included with Windows Admin Center in a single lightweight .msi package that you can [download](https://aka.ms/windowsadmincenter).
 
 The Windows Admin Center gateway, when published to DNS and given access through corresponding corporate firewalls, lets you securely connect to, and manage, your servers from anywhere with Microsoft Edge or Google Chrome.
 

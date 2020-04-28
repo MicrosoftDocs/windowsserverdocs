@@ -1,12 +1,10 @@
 ---
 title: Developing for Nano Server
-description: "PowerShell remoting and CIM sessions"
+description: PowerShell remoting and CIM sessions
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
 ms.date: 09/06/2017
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 57079470-a1c1-4fdc-af15-1950d3381860
 author: jaimeo
@@ -35,14 +33,14 @@ To manage Nano Server with Windows PowerShell remoting, you need to add the IP a
   
 To add the Nano Server to the list of trusted hosts, run this command at an elevated Windows PowerShell prompt:  
   
-`Set-Item WSMan:\localhost\Client\TrustedHosts "<IP address of Nano Server>"`  
+`Set-Item WSMan:\localhost\Client\TrustedHosts <IP address of Nano Server>`  
   
 To start the remote Windows PowerShell session, start an elevated local Windows PowerShell session, and then run these commands:  
   
   
 ```  
-$ip = "\<IP address of Nano Server>"  
-$user = "$ip\Administrator"  
+$ip = \<IP address of Nano Server>  
+$user = $ip\Administrator  
 Enter-PSSession -ComputerName $ip -Credential $user  
 ```  
   
@@ -61,7 +59,7 @@ Start the CIM session by running these commands in a Windows PowerShell prompt:
   
   
 ```  
-$ip = "<IP address of the Nano Server\>"  
+$ip = <IP address of the Nano Server\>  
 $ip\Administrator  
 $cim = New-CimSession -Credential $user -ComputerName $ip  
 ```  
@@ -72,7 +70,7 @@ With the session established, you can run various WMI commands, for example:
   
 ```  
 Get-CimInstance -CimSession $cim -ClassName Win32_ComputerSystem | Format-List *  
-Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name LIKE 'p%'"  
+Get-CimInstance -CimSession $Cim -Query SELECT * from Win32_Process WHERE name LIKE 'p%'  
 ```  
   
   

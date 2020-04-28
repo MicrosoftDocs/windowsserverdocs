@@ -1,5 +1,5 @@
 ---
-title: Deploy Folder Redirection with Offline Files
+title: Deploy Folder Redirection with Offline FilesDeploy Folder Redirection with Offline Files
 description: How to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 ms.prod: windows-server 
 ms.topic: article 
@@ -24,7 +24,7 @@ For a list of recent changes to this topic, see [Change history](#change-history
 
 ### Hardware requirements
 
-Folder Redirection requires an x64-based or x86-based computer; it is not supported by Windows® RT.
+Folder Redirection requires an x64-based or x86-based computer; it is not supported by Windows&reg; RT.
 
 ### Software requirements
 
@@ -93,7 +93,7 @@ Here's how to create a file share on Windows Server 2019, Windows Server 2016, a
 | System     | Full control        |    This folder, subfolders and files     |
 | Administrators     | Full Control       | This folder only        |
 | Creator/Owner     |   Full Control      |   Subfolders and files only      |
-| Security group of users needing to put data on share (Folder Redirection Users)     |   List folder / read data *(Advanced permissions)* <br /><br />Create folders / append data *(Advanced permissions)* <br /><br />Read attributes *(Advanced permissions)* <br /><br />Read extended attributes *(Advanced permissions)* <br /><br />Read permissions *(Advanced permissions)*      |  This folder only       |
+| Security group of users needing to put data on share (Folder Redirection Users)     |   List folder / read data *(Advanced permissions)* <p>Create folders / append data *(Advanced permissions)* <p>Read attributes *(Advanced permissions)* <p>Read extended attributes *(Advanced permissions)* <p>Read permissions *(Advanced permissions)*      |  This folder only       |
 | Other groups and accounts     |  None (remove)       |         |
 
 ## Step 3: Create a GPO for Folder Redirection

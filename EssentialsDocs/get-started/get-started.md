@@ -1,11 +1,7 @@
 ---
 title: "Get started with Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
-ms.prod: windows-server-2019-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs

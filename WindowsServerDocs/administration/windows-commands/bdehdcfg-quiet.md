@@ -21,7 +21,7 @@ Informs the bdehdcfg command-line tool that all actions and errors are not to be
 bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge} -quiet
 ```
 
-### Parameters
+#### Parameters
 
 This command has no additional parameters.
 

@@ -1,18 +1,16 @@
 ---
 ms.assetid: 1a6740e6-5b6d-41f8-9ec4-32cdbee3e1bb
-title: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
-description:
+title: Name Resolution for Perimeter and Internet Clients
 author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 04/13/2020
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
-# Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
+# Name Resolution for Perimeter and Internet Clients
 
 
 So that name resolution can work successfully for a federation server proxy in an Active Directory Federation Services \(AD FS\) scenario in which one or more Domain Name System \(DNS\) zones serve both the perimeter network and Internet clients, the following tasks must be completed:  
@@ -48,7 +46,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 So that Internet client requests can be processed successfully by the federation server proxy and reach the federation server after they are resolved by the Internet DNS zone, you must create a host \(A\) resource record in the perimeter DNS zone. This resource record resolves the host name of the account federation server \(for example, fs. fabrikam.com\) to the IP address of the account federation server \(for example, 192.168.1.4\) in the corporate network.  
   
 > [!NOTE]  
-> It is assumed that you are using a DNS server running Windows 2000 Server, Windows Server 2003,  Windows Server 2008 , or Windows Server® 2012 with the DNS Server service to control the perimeter DNS zone.  
+> It is assumed that you are using a DNS server running Windows 2000 Server, Windows Server 2003,  Windows Server 2008 , or Windows Server&reg; 2012 with the DNS Server service to control the perimeter DNS zone.  
   
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).   
   

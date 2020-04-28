@@ -5,9 +5,9 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 45217fce-bfb9-47e8-9814-88ffdb3c7b7d
-manager: brianlic
-ms.author: pashort
-author: shortpatti
+manager: dcscontentpm
+ms.author: v-tea
+author: Teresa-Motiv
 ---
 
 # Network Subsystem Performance Tuning

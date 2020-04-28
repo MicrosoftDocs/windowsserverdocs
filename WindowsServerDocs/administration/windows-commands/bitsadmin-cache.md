@@ -16,6 +16,8 @@ ms.date: 10/16/2017
 
 Contains a list of the bitsadmin /cache switches.
 
+Contains a list of the bitsadmin /cache switches.
+
 ## Syntax
 
 ```

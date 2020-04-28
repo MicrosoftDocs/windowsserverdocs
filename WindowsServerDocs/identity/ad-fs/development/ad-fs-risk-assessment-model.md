@@ -1,14 +1,11 @@
 ---
 title: Build Plug-ins with AD FS 2019 Risk Assessment Model
-description:
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.reviewer: 
 ms.date: 04/16/2019
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -25,11 +22,11 @@ The model allows to plug-in code at any of three stages of AD FS authentication 
 
 ![model](media/ad-fs-risk-assessment-model/risk1.png)
 
-1.	**Request Received Stage** – Enables building plug-ins to allow or block request when AD FS receives the authentication request i.e. before user enters credentials. You can use the request context (eg, client IP, Http method, proxy server DNS, etc.) available at this stage to perform the risk assessment. For eg, you can build a plug-in to read the IP from the request context and block the authentication request if the IP is in the pre-defined list of risky IPs. 
+1.    **Request Received Stage** – Enables building plug-ins to allow or block request when AD FS receives the authentication request i.e. before user enters credentials. You can use the request context (eg, client IP, Http method, proxy server DNS, etc.) available at this stage to perform the risk assessment. For eg, you can build a plug-in to read the IP from the request context and block the authentication request if the IP is in the pre-defined list of risky IPs. 
 
-2.	**Pre-Authentication Stage** – Enables building plug-ins to allow or block request at the point where user provides the credentials but before AD FS evaluates them. At this stage, in addition to the request context you also have information on the security context (eg, user token, user identifier, etc) and the protocol context (eg, authentication protocol, clientid, resourceid, etc) to use in your risk assessment logic. For eg, you can build a plug-in to prevent password spray attacks by reading the user password from the user token and blocking the authentication request if the password is in the pre-defined list of risky passwords. 
+2.    **Pre-Authentication Stage** – Enables building plug-ins to allow or block request at the point where user provides the credentials but before AD FS evaluates them. At this stage, in addition to the request context you also have information on the security context (eg, user token, user identifier, etc) and the protocol context (eg, authentication protocol, clientid, resourceid, etc) to use in your risk assessment logic. For eg, you can build a plug-in to prevent password spray attacks by reading the user password from the user token and blocking the authentication request if the password is in the pre-defined list of risky passwords. 
 
-3.	**Post-Authentication** – Enables building plug-in to assess risk after user has provided credentials and AD FS has performed authentication. At this stage, in addition to the request context, security context, and protocol context, you also have information on the authentication result (Success or Failure). The plug-in can evaluate the risk score based on the available information and pass the risk score to claim and policy rules for further evaluation. 
+3.    **Post-Authentication** – Enables building plug-in to assess risk after user has provided credentials and AD FS has performed authentication. At this stage, in addition to the request context, security context, and protocol context, you also have information on the authentication result (Success or Failure). The plug-in can evaluate the risk score based on the available information and pass the risk score to claim and policy rules for further evaluation. 
 
 To better understand how to build a risk assessment plug-in and run it in line with AD FS process, let's build a sample plug-in that blocks the requests coming from certain **extranet** IPs identified as risky, register the plug-in with AD FS and finally test the functionality. 
 
@@ -68,31 +65,31 @@ The following procedure will walk you through building a sample plug-in dll.
 
 5. Add reference to the `Microsoft.IdentityServer.dll` of your AD FS as shown below
 
-   a.	Right click on **References** in **Solutions Explorer** and select **Add Reference…**</br> 
+   a.    Right click on **References** in **Solutions Explorer** and select **Add Reference…**</br> 
    ![model](media/ad-fs-risk-assessment-model/risk3.png)
    
-   b.	On the **Reference Manager** window select **Browse**. In the **Select the files to reference…** dialogue, select `Microsoft.IdentityServer.dll` from your AD FS installation folder (in my case **C:\Windows\ADFS**) and click **Add**.
+   b.    On the **Reference Manager** window select **Browse**. In the **Select the files to reference…** dialogue, select `Microsoft.IdentityServer.dll` from your AD FS installation folder (in my case **C:\Windows\ADFS**) and click **Add**.
    
    >[!NOTE]
    >In my case I am building the plug-in on the AD FS server itself. If your development environment is on a different server, copy the `Microsoft.IdentityServer.dll` from your AD FS installation folder on AD FS server on to your development box.</br> 
    
    ![model](media/ad-fs-risk-assessment-model/risk4.png)
    
-   c.	Click **OK** on the **Reference Manager** window after making sure `Microsoft.IdentityServer.dll` checkbox is selected</br>
+   c.    Click **OK** on the **Reference Manager** window after making sure `Microsoft.IdentityServer.dll` checkbox is selected</br>
    ![model](media/ad-fs-risk-assessment-model/risk5.png)
  
 6. All the classes and references are now in place to do a build.   However, since the output of this project is a dll,  it will have to be installed into the **Global Assembly Cache**, or GAC, of the AD FS server and the dll needs to be signed first. This can be done as follows:
 
-   a.	**Right-click** on the name of the project, ThreatDetectionModule. From the menu, click **Properties**.</br>
+   a.    **Right-click** on the name of the project, ThreatDetectionModule. From the menu, click **Properties**.</br>
    ![model](media/ad-fs-risk-assessment-model/risk6.png)
    
-   b.	From the **Properties** page, click **Signing**, on the left, and then check the checkbox marked **Sign the assembly**. From the **Choose a strong name key file**: pull down menu, select **<New...>**</br>
+   b.    From the **Properties** page, click **Signing**, on the left, and then check the checkbox marked **Sign the assembly**. From the **Choose a strong name key file**: pull down menu, select **<New...>**</br>
    ![model](media/ad-fs-risk-assessment-model/risk7.png)
 
-   c.	In the **Create Strong Name Key dialogue**, type a name (you can choose any name) for the key, uncheck the checkbox **Protect my key file with password**. Then, click **OK**.
-   ![model](media/ad-fs-risk-assessment-model/risk8.png)</br>
+   c.    In the **Create Strong Name Key dialogue**, type a name (you can choose any name) for the key, uncheck the checkbox **Protect my key file with password**. Then, click **OK**.</br>
+   ![model](media/ad-fs-risk-assessment-model/risk8.png)
  
-   d.	Save the project as shown below</br>
+   d.    Save the project as shown below</br>
    ![model](media/ad-fs-risk-assessment-model/risk9.png)
 
 7. Build the project by clicking **Build** and then **Rebuild Solution** as shown below</br>
@@ -115,16 +112,16 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
 2. Start the **Developer Command Prompt** for Visual Studio and go to the directory containing the **sn.exe** (In my case the directory is **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
    ![model](media/ad-fs-risk-assessment-model/risk12.png)
 
-3. Run the **SN** command with the **-T** parameter and the location of the file (In my case `SN -T “C:\extensions\ThreatDetectionModule.dll”`)
+3. Run the **SN** command with the **-T** parameter and the location of the file (In my case `SN -T "C:\extensions\ThreatDetectionModule.dll"`)
    ![model](media/ad-fs-risk-assessment-model/risk13.png)</br>
    The command will provide you the public key token (For me, the **Public Key Token is 714697626ef96b35**)
 
 4. Add the dll to the **Global Assembly Cache** of the AD FS server
    Our best practice would be that you create a proper installer for your project and use the installer to add the file to the GAC. Another solution is to use **Gacutil.exe** (more information on **Gacutil.exe** available [here](https://docs.microsoft.com/dotnet/framework/tools/gacutil-exe-gac-tool)) on your development machine.  Since I have my visual studio on the same server as AD FS, I will be using **Gacutil.exe** as follows
 
-   a.	On Developer Command Prompt for Visual Studio and go to the directory containing the **Gacutil.exe** (In my case the directory is **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
+   a.    On Developer Command Prompt for Visual Studio and go to the directory containing the **Gacutil.exe** (In my case the directory is **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
 
-   b.	Run the **Gacutil** command (In my case `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`)
+   b.    Run the **Gacutil** command (In my case `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`)
    ![model](media/ad-fs-risk-assessment-model/risk14.png)
  
    >[!NOTE]
@@ -132,11 +129,11 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
 
 5. Open **Windows PowerShell** and run the following command to register the dll
    ```
-   Register-AdfsThreatDetectionModule -Name "<Add a name>" -TypeName "<class name that implements interface>, <dll name>, Version=10.0.0.0, Culture=neutral, PublicKeyToken=< Add the Public Key Token from Step 2. above>" -ConfigurationFilePath "<path of the .csv file>”
+   Register-AdfsThreatDetectionModule -Name "<Add a name>" -TypeName "<class name that implements interface>, <dll name>, Version=10.0.0.0, Culture=neutral, PublicKeyToken=< Add the Public Key Token from Step 2. above>" -ConfigurationFilePath "<path of the .csv file>"
    ```
    In my case, the command is: 
    ```
-   Register-AdfsThreatDetectionModule -Name "IPBlockPlugin" -TypeName "ThreatDetectionModule.UserRiskAnalyzer, ThreatDetectionModule, Version=10.0.0.0, Culture=neutral, PublicKeyToken=714697626ef96b35" -ConfigurationFilePath "C:\extensions\authconfigdb.csv”
+   Register-AdfsThreatDetectionModule -Name "IPBlockPlugin" -TypeName "ThreatDetectionModule.UserRiskAnalyzer, ThreatDetectionModule, Version=10.0.0.0, Culture=neutral, PublicKeyToken=714697626ef96b35" -ConfigurationFilePath "C:\extensions\authconfigdb.csv"
    ```
  
    >[!NOTE]
@@ -308,10 +305,16 @@ The method returns the [Risk Score](https://docs.microsoft.com/dotnet/api/micros
 **A:** These plug-ins not only provide you additional capability to secure your environment from attacks such as password spray attacks, but also give you the flexibility to build your own risk assessment logic based on your requirements. 
 
 **Where are the logs captured?**</br>
-**A:** You can write error logs to “AD FS/Admin” event log using WriteAdminLogErrorMessage method, audit logs to “AD FS Auditing” security log using WriteAuditMessage method and debug logs to “AD FS Tracing” debug log using WriteDebugMessage method. 
+**A:** You can write error logs to "AD FS/Admin" event log using WriteAdminLogErrorMessage method, audit logs to "AD FS Auditing" security log using WriteAuditMessage method and debug logs to "AD FS Tracing" debug log using WriteDebugMessage method. 
 
 **Can adding these plug-ins increase AD FS authentication process latency?**</br>
 **A:** Latency impact will be determined by the time taken to execute the risk assessment logic you implement. We recommend evaluating the latency impact before deploying the plug-in in production enviroment. 
 
 **Why can't AD FS suggest the list of risky IPs, users, etc?**</br>
 **A:** Though not currently available, we are working on building the intelligence to suggest risky IPs, users, etc. in the Pluggable Risk Assessment Model. We will share the launch dates soon. 
+
+**What other sample plug-ins are available?**</br>
+**A:** The following sample plug-in(s) are available:
+|Name|Description| 
+|-----|-----|
+|[Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)|Sample plug-in that blocks authentication or enforces MFA based on user risk level determined by Azure AD Identity Protection.| 

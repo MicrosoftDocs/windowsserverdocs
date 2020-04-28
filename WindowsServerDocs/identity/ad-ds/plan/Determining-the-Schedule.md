@@ -1,14 +1,12 @@
 ---
 ms.assetid: 28ecaf5c-9131-406c-b211-a230162e462e
 title: Determining the Schedule
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

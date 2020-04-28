@@ -1,14 +1,13 @@
 ---
 title: SDN Technologies
 description: The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2016.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
-ms.service: virtual-network
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
-ms.author: pashort
-author: shortpatti 
+ms.author: anpaul
+author: AnirbanPaul 
 ms.date: 02/14/2019
 ---
 # SDN Technologies

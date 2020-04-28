@@ -2,16 +2,12 @@
 title: Step 2 Prepare Cluster Servers
 description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 2 Prepare Cluster Servers
 
@@ -21,7 +17,7 @@ Before you can configure a cluster deployment, you prepare additional servers to
   
 |Task|Description|  
 |----|--------|  
-|[2.1 Configure the Remote Access infrastructure](#BKMK_config)|On each server you want to add to the cluster, configure the server topology, IP addressing, routing, and forwarding. If you configure a load balanced cluster of virtual machines, you must configure the virtual machines to use MAC address spoofing.<br /><br />In addition, join each server to the same domain, and connect all the servers to the same subnet.|  
+|[2.1 Configure the Remote Access infrastructure](#BKMK_config)|On each server you want to add to the cluster, configure the server topology, IP addressing, routing, and forwarding. If you configure a load balanced cluster of virtual machines, you must configure the virtual machines to use MAC address spoofing.<p>In addition, join each server to the same domain, and connect all the servers to the same subnet.|  
 |[2.2 Install the Remote Access role](#BKMK_Install)|On each additional server you want to add to the cluster, install the Remote Access role|  
 |[2.3 Install NLB](#BKMK_NLB)|On the deployed Remote Access server and on each additional server you want to add to the cluster, install the NLB feature. Note that this step is not required when using an External Load Balancer.|  
   

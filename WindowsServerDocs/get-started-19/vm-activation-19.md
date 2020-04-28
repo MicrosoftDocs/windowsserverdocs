@@ -1,13 +1,9 @@
-﻿---
+---
 title: Automatic virtual machine activation
 TOCTitle: Automatic VM Activation
 description: How to activate VMs in Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
@@ -77,18 +73,18 @@ The virtual machine will automatically activate the license against the virtuali
 
 The following AVMA keys can be used for Windows Server 2019.
 
-|Edition|	AVMA key|
+|Edition|    AVMA key|
 |-|-|
-|Datacenter|	H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
-|Standard|	TNK62-RXVTB-4P47B-2D623-4GF74|
-|Essentials|	2CTP7-NHT64-BP62M-FV6GG-HFV28|
+|Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
+|Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
+|Essentials|    2CTP7-NHT64-BP62M-FV6GG-HFV28|
  
 The following AVMA keys can be used for Windows Server, versions 1909, 1903, and 1809.
 
-|Edition|	AVMA key|
+|Edition|    AVMA key|
 |-|-|
-|Datacenter|	H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
-|Standard|	TNK62-RXVTB-4P47B-2D623-4GF74|
+|Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
+|Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
 
 The following AVMA keys can be used for Windows Server, version 1803 and 1709.
 

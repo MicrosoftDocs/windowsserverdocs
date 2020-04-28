@@ -24,7 +24,7 @@ Specifies the size of the system partition when a new system drive is being crea
 bdehdcfg -target {default|unallocated|<drive_letter> shrink} -size <size_in_mb>
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

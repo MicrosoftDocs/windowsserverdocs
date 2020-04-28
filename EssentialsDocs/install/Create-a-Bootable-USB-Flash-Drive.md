@@ -1,12 +1,8 @@
 ---
 title: "Create a Bootable USB Flash Drive"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 05/04/2018
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs

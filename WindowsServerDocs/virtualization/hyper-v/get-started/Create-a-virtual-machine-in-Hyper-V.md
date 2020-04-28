@@ -1,14 +1,12 @@
 ---
 title: Create a virtual machine in Hyper-V
-description: "Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell"
+description: Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
 ---
@@ -103,13 +101,13 @@ The following table lists the options you can pick when you create a virtual mac
 
 |Page|Default for Windows Server 2016 and Windows 10|Other options|  
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
-|**Specify Name and Location**|Name:  New Virtual Machine.<br /><br />Location:  **C:\ProgramData\Microsoft\Windows\Hyper-V\\**.|You can also enter your own name and choose another location for the virtual machine.<br /><br />This is where the virtual machine configuration files will be stored.|  
+|**Specify Name and Location**|Name:  New Virtual Machine.<p>Location:  **C:\ProgramData\Microsoft\Windows\Hyper-V\\**.|You can also enter your own name and choose another location for the virtual machine.<p>This is where the virtual machine configuration files will be stored.|  
 |**Specify Generation**|Generation 1|You can also choose to create a Generation 2 virtual machine. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?.](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)|  
-|**Assign Memory**|Startup memory: 1024 MB<br /><br />Dynamic memory: **not selected**|You can set the startup memory from 32MB to 5902MB.<br /><br />You can also choose to use Dynamic Memory. For more information, see [Hyper-V Dynamic Memory Overview](https://technet.microsoft.com/library/hh831766.aspx).|  
+|**Assign Memory**|Startup memory: 1024 MB<p>Dynamic memory: **not selected**|You can set the startup memory from 32MB to 5902MB.<p>You can also choose to use Dynamic Memory. For more information, see [Hyper-V Dynamic Memory Overview](https://technet.microsoft.com/library/hh831766.aspx).|  
 |**Configure Networking**|Not connected|You can select a network connection for the virtual machine to use from a list of existing virtual switches. See [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md).|  
-|**Connect Virtual Hard Disk**|Create a virtual hard disk<br /><br />Name: <*vmname*>.vhdx<br /><br />**Location**: **C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\\**<br /><br />**Size**: 127GB|You can also choose to use an existing virtual hard disk or wait and attach a virtual hard disk later.|  
+|**Connect Virtual Hard Disk**|Create a virtual hard disk<p>Name: <*vmname*>.vhdx<p>**Location**: **C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\\**<p>**Size**: 127GB|You can also choose to use an existing virtual hard disk or wait and attach a virtual hard disk later.|  
 |**Installation Options**|Install an operating system later|These options change the boot order of the virtual machine so that you can install from an .iso file, bootable floppy disk or a network installation service, like Windows Deployment Services (WDS).|  
-|**Summary**|Displays the options that you have chosen, so that you can verify they are correct.<br /><br />-   Name<br />-   Generation<br />-   Memory<br />-   Network<br />-   Hard Disk<br />-   Operating System|**Tip:** You can copy the summary from the page and paste it into e-mail or somewhere else to help you keep track of your virtual machines.|  
+|**Summary**|Displays the options that you have chosen, so that you can verify they are correct.<p>-   Name<br />-   Generation<br />-   Memory<br />-   Network<br />-   Hard Disk<br />-   Operating System|**Tip:** You can copy the summary from the page and paste it into e-mail or somewhere else to help you keep track of your virtual machines.|  
 
 ## See also  
 

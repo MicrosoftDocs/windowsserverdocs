@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrading to AD FS in Windows Server 2016
-description:
 author: billmath
 manager: femila
 ms.date: 04/09/2018
@@ -51,6 +50,9 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
 > [!NOTE]
 > Before you can move to AD FS in Windows Server 2019 FBL, you must remove all of the Windows Server 2016 or 2012 R2 nodes. You cannot just upgrade a Windows Server 2016 or 2012 R2 OS to Windows Server 2019 and have it become a 2019 node. You will need to remove it and replace it with a new 2019 node.
+
+> [!NOTE]
+> If AlwaysOnAvailability groups or merge replication are configured in AD FS, remove all replication of any ADFS databases prior to upgrade and point all nodes to the Primary SQL database. After performing this, perform the farm upgrade as documented. After upgrade, add AlwaysOnAvailability groups or merge replication to the new databases.
 
 ##### To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level
 

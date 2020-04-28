@@ -4,10 +4,9 @@ description: In this optional step, you can fine-tune how authorized VPN users a
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 06/28/2019
 ms.reviewer: deverette
 ---

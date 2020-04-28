@@ -16,7 +16,6 @@ ms.date: 10/16/2017
 Redirects the command output from the command line to the Windows clipboard. You can then paste this text output into other programs.
 
 
-
 ## Syntax
 
 ```

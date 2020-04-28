@@ -1,6 +1,5 @@
 ---
 title: Storage
-description: 
 author: JasonGerend
 manager: elizapo
 layout: LandingPage

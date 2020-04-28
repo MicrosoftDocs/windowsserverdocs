@@ -1,12 +1,8 @@
 ---
 title: "Restore a full system from an existing client computer backup"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108
 author: nnamuhcs
@@ -86,7 +82,7 @@ manager: dongill
  Backing up redundant array of independent disks (RAID) and dynamic disks is not supported.  
   
 ##  <a name="BKMK_HowDoes"></a> How does the system restore environment work?  
- The system restore media supplied with  Windows ServerÂ® 2012 Essentials installs Windows Preinstallation Environment (Windows PE) on the computer. Windows PE replaces the MS-DOS environment and contains the core program files for Windows. In Windows Server Essentials, there are two supported ways to restore a system: using the client restore service, which uses a network and does not rely on media, or using the USB flash drive.  
+ The system restore media supplied with  Windows ServerÂ&reg; 2012 Essentials installs Windows Preinstallation Environment (Windows PE) on the computer. Windows PE replaces the MS-DOS environment and contains the core program files for Windows. In Windows Server Essentials, there are two supported ways to restore a system: using the client restore service, which uses a network and does not rely on media, or using the USB flash drive.  
   
 > [!NOTE]
 >  Windows PE does not support wireless connections. Because of this, the computer being restored must be physically connected to the small business network.  

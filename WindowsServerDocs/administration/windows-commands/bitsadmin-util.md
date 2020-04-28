@@ -16,6 +16,8 @@ ms.date: 10/16/2017
 
 Lists the **/util** switches.
 
+Lists the **util** switches.
+
 ## Syntax
 
 ```

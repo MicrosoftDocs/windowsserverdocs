@@ -37,7 +37,7 @@ certreq –enroll –cert certId [options] renew [reusekeys]
 
 ### Parameters
 
-| Paramter | Description |
+| Parameter | Description |
 | -------- | ----------- |
 | -submit | Submits a request to a certificate authority. |
 | -retrieve `<requestid>` | Retrieves a response to a previous request from a certificate authority. |

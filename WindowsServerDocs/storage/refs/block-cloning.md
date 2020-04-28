@@ -1,7 +1,6 @@
 ---
 ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
-description:
 author: gawatu
 ms.author: gawatu
 manager: gawatu

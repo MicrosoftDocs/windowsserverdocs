@@ -4,11 +4,10 @@ description: Resolve vRSS issues if you do not see vRSS load balancing traffic t
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: 
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/04/2018
 ---
 

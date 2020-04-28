@@ -1,12 +1,8 @@
 ---
 title: "Overview of the Launchpad in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
@@ -72,7 +68,7 @@ The Windows Server Essentials Launchpad is a small application that is installed
  Alerts that appear on the Launchpad provide a quick status as to the immediate health of the computer. To view information about a health alert, click an alert indicator to open the alert viewer. Health alerts appear in the viewer based on level of severity. The most severe alerts appear first in the list; less severe alerts appear later in the list. For more information about computer health alerts, see [Manage System Health](Manage-System-Health-in-Windows-Server-Essentials.md).  
   
 ##  <a name="BKMK_Mac"></a> Use the Launchpad with a Mac computer  
- You can connect a Mac® computer running Mac OS X® 10.5 or later to  Windows Server Essentials,  Windows Server Essentials, or  Windows Server 2012 R2 or by downloading and installing the connector software. When you finish installing the connector software, you can choose to automatically start the Launchpad at startup.  
+ You can connect a Mac&reg; computer running Mac OS X&reg; 10.5 or later to  Windows Server Essentials,  Windows Server Essentials, or  Windows Server 2012 R2 or by downloading and installing the connector software. When you finish installing the connector software, you can choose to automatically start the Launchpad at startup.  
   
  The Launchpad is a small application that provides authenticated users with access to key features of the server, including shared files and media, add-ins, and Remote Web Access. The Launchpad also provides real-time information and notifications about the health of the computer.  
   

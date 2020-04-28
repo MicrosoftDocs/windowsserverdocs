@@ -1,6 +1,5 @@
 ---
 title: The Role of the Claim Rule Language
-description:
 author: billmath
 ms.author: billmath
 manager: femila

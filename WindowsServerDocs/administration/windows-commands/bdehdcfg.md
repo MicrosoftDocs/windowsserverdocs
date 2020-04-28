@@ -34,7 +34,7 @@ Prepares a hard drive with the partitions necessary for BitLocker Drive Encrypti
 bdehdcfg [–driveinfo <drive_letter>] [-target {default|unallocated|<drive_letter> shrink|<drive_letter> merge}] [–newdriveletter] [–size <size_in_mb>] [-quiet]
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- |----------- |

@@ -1,13 +1,11 @@
 ---
 ms.assetid: e33673ff-ea1c-4476-a549-3bf5899a47dd
 title: Install the Federation Service Role Service
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

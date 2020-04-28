@@ -16,6 +16,8 @@ ms.date: 10/16/2017
 
 Lists the /peercaching switches.
 
+Lists the /peercaching switches.
+
 ## Syntax
 
 ```

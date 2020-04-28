@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Enables or disables the automount feature. When enabled (the default), Windows automatically mounts the file system for a new basic or dynamic volume when it is added to the system, and then assigns a drive letter to the volume.
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 > [!IMPORTANT]
 > In storage area network (SAN) configurations, disabling automount prevents Windows from automatically mounting or assigning drive letters to any new basic volumes that are visible to the system.

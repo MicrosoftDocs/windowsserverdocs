@@ -1,8 +1,7 @@
 ---
 title: Step 1 - Install the WSUS Server Role
-description: "Windows Server Update Service (WSUS) topic - Describes how to install the server role using Server Manager"
+description: Windows Server Update Service (WSUS) topic - Describes how to install the server role using Server Manager
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: fabc8619-350e-403b-96f8-116424931300
@@ -13,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Step 1: Install the WSUS Server Role
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The next step in the deployment of your WSUS server is to install the WSUS server role. The following procedure describes how to install the WSUS server role by using Server Manager.
 

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
 title: Federation Server Farm Using WID
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

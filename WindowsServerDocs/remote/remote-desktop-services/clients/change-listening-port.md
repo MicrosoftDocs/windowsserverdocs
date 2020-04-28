@@ -1,12 +1,8 @@
 ---
 title: Change the listening port in Remote Desktop
 description: Learn how to change the listening port for Remote Desktop client.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo

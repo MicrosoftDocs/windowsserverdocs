@@ -1,14 +1,12 @@
 ---
 ms.assetid: 62708b2e-4090-4cf7-8ae6-a557f31f561f
 title: Understanding the Active Directory Logical Model
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

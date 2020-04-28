@@ -21,7 +21,7 @@ Prepares a partition for use as a system drive by BitLocker and Windows Recovery
 bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge}
 ```
 
-### Parameters
+#### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |

@@ -1,6 +1,10 @@
 ---
 title: get
+<<<<<<< HEAD
 description: Reference topic for get, which retrieves properties or attributes about the specified object. 
+=======
+description: Windows Commands topic for get, which retrieves properties or attributes about the specified object. 
+>>>>>>> c5f9bb0d7e4d9789589756e91f6ee5c9f82c6b20
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

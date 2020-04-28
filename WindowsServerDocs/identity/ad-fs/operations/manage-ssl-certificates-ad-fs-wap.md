@@ -8,7 +8,6 @@ manager: samueld
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

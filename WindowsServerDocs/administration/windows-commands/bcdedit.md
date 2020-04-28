@@ -99,7 +99,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 | /dbgsettings | Specifies or displays the global debugger settings for the system. This command does not enablepose. To set an individual global debugger setting, use the **bcdedit /set** `<dbgsettings> <type> <value>` command. |
 | /debug | Enables or disables the kernel debugger for a specified boot entry. |
 
-## Examples
+## Additional References
 
 For examples of how to use BCDEdit, see the [BCDEdit Options Reference](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
 

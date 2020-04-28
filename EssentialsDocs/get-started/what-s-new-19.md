@@ -1,11 +1,7 @@
 ---
 title: "What's New in Windows Server 2019 Essentials"
 description: "Describes what's changed in Windows Server Essentials 2019"
-ms.custom: na
-ms.prod: windows-server-2019-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: coreyp-at-msft
@@ -23,8 +19,8 @@ The Windows Server Essentials Experience Role has been removed from all server S
 
 With Server Essentials Experience Role deprecation, the following features are no longer available:
 
--	Client backup 
--	Remote web access 
+-    Client backup 
+-    Remote web access 
 
 ## Microsoft 365 Business: The modern small business solution 
 

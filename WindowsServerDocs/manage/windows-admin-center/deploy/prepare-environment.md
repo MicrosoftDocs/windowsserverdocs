@@ -16,7 +16,6 @@ ms.prod: windows-server
 There are some Server versions that need additional preparation before they are ready to manage with Windows Admin Center:
 
 - [Windows Server 2012 and 2012 R2](#prepare-windows-server-2012-and-2012-r2)
-- [Windows Server 2008 R2](#prepare-windows-server-2008-r2)
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
 - [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
@@ -32,27 +31,6 @@ Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
 If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/setup/install-configure).
-
-## Prepare Windows Server 2008 R2
-
-### Install WMF version 5.1 or higher
-
-Windows Admin Center requires PowerShell features that are not included by default in Windows Server 2008 R2. To manage Windows Server 2008 R2 with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers. 
-
-Ensure that [.NET Framework 4.5.2 or later](https://docs.microsoft.com/dotnet/framework/install/on-windows-7) is already installed on your computer.
-
-Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher.
-
-If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/setup/install-configure).
-
-Run `Enable-PSRemoting –force` in a PowerShell console to enable Powershell remote connection. 
-
-### Enable Remote Desktop
-
-To use Remote Desktop within Windows Admin Center, you will need to enable Remote Desktop on your Windows Server 2008 R2 server.
-
-From **Server Manager**, go to **Configure Remote Desktop**. Enable Remote Desktop to "Allow connections from computers running any version of Remote Desktop."
 
 ## Prepare Microsoft Hyper-V Server 2016
 

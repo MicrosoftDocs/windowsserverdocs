@@ -1,13 +1,11 @@
 ---
 ms.assetid: 4ae26970-e42e-4e69-887a-b16d2f8d0695
 title: Configure Client Computers to Trust the Account Federation Server
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

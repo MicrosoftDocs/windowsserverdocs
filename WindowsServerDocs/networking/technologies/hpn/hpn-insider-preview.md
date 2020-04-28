@@ -1,17 +1,16 @@
 ---
-ms.assetid: 
 title: Insider Preview for HPN features in Windows Server 2019
 description: Learn about the new High-Performance Networking features in Windows Server 2019.
 manager: dougkim
-author: shortpatti
-ms.author: pashort
+author: eross-msft
+ms.author: lizross
 ms.date: 09/12/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
 ---
 
-# Insider Preview
+# New HPN Features in Windows Server 2019
 
 
 ## Dynamic vRSS and VMMQ

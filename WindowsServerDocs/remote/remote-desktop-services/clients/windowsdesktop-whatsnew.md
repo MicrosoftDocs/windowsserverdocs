@@ -1,17 +1,13 @@
 ---
 title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/10/2020
+ms.date: 04/28/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -24,14 +20,36 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.675  |
-|Insider    |1.2.787  |
+|Public     |1.2.945  |
+|Insider    |1.2.945  |
 
-## Updates for version 1.2.787
+## Updates for version 1.2.945
 
-*Date published: 03/10/2020*
+*Date published: 04/28/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qZVh), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qXhC), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qRVA)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNM), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNO), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vuSV)
+
+- Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
+  - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.
+  - We now only show available settings when a display configuration is selected.
+  - In Select display mode, a new **Maximize to current displays** option allows you to dynamically change the displays used for the session without reconnecting. When enabled, maximizing the session causes it to go full screen on all displays touched by the session window.
+  - We've added a new **Single display when windowed** option for all displays and select displays modes. This option switches your session automatically to a single display when you exit full screen mode, and automatically returns to multiple displays when you maximize the window.
+- We've added a new **Display settings** group to the system menu that appears when you right-click the title bar of a windowed desktop session. This will let you change some settings dynamically during a session. For example, you can change the new **Single display mode when windowed** and **Maximize to current displays** settings.
+- When you exit full screen, the session window will return to its original location when you first entered full screen.
+- The background refresh for Workspaces has been changed to every four hours instead of every hour. A refresh now happens automatically when launching the client.
+- Resetting your user data from the About page now redirects to the Connection Center when completed instead of closing the client.
+- The items in the system menu for desktop connections were reordered and the Help topic now points to the client documentation.
+- Addressed some accessibility issues with tab navigation and screen readers.
+- Fixed an issue where the Azure Active Directory authentication dialog appeared behind the session window.
+- Fixed a flickering and shrinking issue when dragging a desktop session window between displays of different scale factors.
+- Fixed an error that occurred when redirecting cameras.
+- Fixed multiple crashes to improve reliability.
+
+## Updates for version 1.2.790
+
+*Date published: 03/24/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSh), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSi), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4sllb)
 
 - Renamed the "Update" action for Workspaces to "Refresh" for consistency with other Remote Desktop clients.
 - You can now refresh a Workspace directly from its context menu.

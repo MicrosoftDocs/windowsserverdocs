@@ -1,12 +1,10 @@
 ---
 title: Nano Server Quick Start
-description: "Steps to quickly deploy a basic Nano Server on physical or virtual machines"
+description: Steps to quickly deploy a basic Nano Server on physical or virtual machines
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
 ms.date: 09/05/2017
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 author: jaimeo
 ms.author: jaimeo
@@ -58,7 +56,7 @@ Follow these steps to create a Nano Server VHD that will run in a virtual machin
   
 5. Boot the virtual machine and in Hyper-V Manager connect to the virtual machine.  
   
-6. Log on to the Recovery Console (see the "Nano Server Recovery Console" section in this guide), using the administrator and password you supplied while running the script in Step 3.  
+6. Log on to the Recovery Console (see the Nano Server Recovery Console section in this guide), using the administrator and password you supplied while running the script in Step 3.  
    > [!NOTE]  
    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported.
   
@@ -66,7 +64,7 @@ Follow these steps to create a Nano Server VHD that will run in a virtual machin
   
 **Nano Server on a physical computer**  
   
-You can also create a VHD that will run Nano Server on a physical computer, using the pre-installed device drivers. If your hardware requires a driver that is not already provided in order to boot or connect to a network, follow the steps in the "Adding Additional Drivers" section of this guide.  
+You can also create a VHD that will run Nano Server on a physical computer, using the pre-installed device drivers. If your hardware requires a driver that is not already provided in order to boot or connect to a network, follow the steps in the Adding Additional Drivers section of this guide.  
   
 ## To quickly deploy Nano Server on a physical computer  
   
@@ -105,7 +103,7 @@ You can also create a VHD that will run Nano Server on a physical computer, usin
   
 6. Boot the physical computer into the Nano Server VHD.  
   
-7. Log on to the Recovery Console (see the "Nano Server Recovery Console" section in this guide), using the administrator and password you supplied while running the script in Step 3.
+7. Log on to the Recovery Console (see the Nano Server Recovery Console section in this guide), using the administrator and password you supplied while running the script in Step 3.
    > [!NOTE]  
    > The Recovery Console only supports basic keyboard functions. Keyboard lights, 10-key sections, and keyboard layout switching such as caps lock and number lock are not supported. 
   

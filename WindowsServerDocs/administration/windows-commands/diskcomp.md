@@ -16,7 +16,6 @@ ms.date: 10/16/2017
 Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.
 
 
-
 ## Syntax
 
 ```

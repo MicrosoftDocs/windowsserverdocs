@@ -1,14 +1,12 @@
 ---
 ms.assetid: 1ca6f87f-7272-4767-b609-3e295ac7d32f
 title: Add Privacy Link 
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

@@ -3,7 +3,7 @@ title: Storage Spaces Direct Hardware Requirements
 ms.prod: windows-server
 description: Minimum hardware requirements for testing Storage Spaces Direct.
 ms.author: eldenc
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen

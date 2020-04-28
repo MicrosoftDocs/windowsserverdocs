@@ -1,12 +1,10 @@
 ---
 title: Securing Privileged Access Reference Material
 description: Operational security controls for Windows Server Active Directory Domains 
-
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 22ee9a77-4872-4c54-82d9-98fc73a378c0
 ms.date: 02/14/2019
-
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
@@ -589,7 +587,7 @@ For web authentication, use the reference from the table below:
 
 |Connection method|Logon type|Reusable credentials on destination|Comments|
 |-----------|-------|--------------------|------|
-|IIS "Basic Authentication"|NetworkCleartext<br />(IIS 6.0+)<br /><br />Interactive<br />(prior to IIS 6.0)|v||
+|IIS "Basic Authentication"|NetworkCleartext<br />(IIS 6.0+)<p>Interactive<br />(prior to IIS 6.0)|v||
 |IIS "Integrated Windows Authentication"|Network|-|NTLM and Kerberos Providers.|
 
 Column Definitions:

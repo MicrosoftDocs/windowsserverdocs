@@ -16,6 +16,8 @@ ms.date: 10/16/2017
 
 Lists the available /peers switches.
 
+Lists the available /peers switches.
+
 ```
 bitsadmin /peers /help
 bitsadmin /peers /discover

@@ -1,12 +1,8 @@
 ---
 title: "Set up or customize server backup"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
 author: nnamuhcs
@@ -22,7 +18,7 @@ manager: dongill
   
  See the following sections to set up or customize server backup:  
   
--   [Set up or change server backup settings](Set-up-or-customize-server-backup.md#BKMK_1)  
+-   [Set up or change server backup settings](Set-up-or-customize-server-backup.md#BKMK_1)  &reg;
   
 -   [Server backup schedule](Set-up-or-customize-server-backup.md#BKMK_2)  
   

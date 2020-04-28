@@ -1,13 +1,9 @@
 ---
 title: Tasks for deploying MultiPoint Services
 description: Lists all the tasks involved in deploying MultiPoint Services, along with links to instructions
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e08c5784-5b3e-4028-86c1-96deaee41f09
 author: evaseydl

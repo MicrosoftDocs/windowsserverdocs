@@ -17,7 +17,6 @@ ms.date: 10/16/2017
 Scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 
 
-
 ## Syntax
 ```
 sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir=<offline windows directory> /offbootdir=<offline boot directory>]

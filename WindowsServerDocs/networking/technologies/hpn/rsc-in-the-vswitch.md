@@ -5,9 +5,8 @@ manager: dougkim
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: 
 ms.author: dacuo 
-author: shortpatti
+author: dcuomo
 ms.date: 09/07/2018 
 ---
 

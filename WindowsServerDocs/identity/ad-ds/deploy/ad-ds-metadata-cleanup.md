@@ -7,7 +7,6 @@ manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Clean up Active Directory Domain Controller server metadata
@@ -23,7 +22,7 @@ There are three options to clean up server metadata:
 - Clean up server metadata by using a script
 
 > [!NOTE]
-> If you receive an “Access is denied” error when you use any of these methods to perform metadata cleanup, make sure that the computer object and the NTDS Settings object for the domain controller are not protected against accidental deletion. To verify this right-click the computer object or the NTDS Settings object, click **Properties**, click **Object**, and clear the **Protect object from accidental deletion** check box. In Active Directory Users and Computers, the **Object** tab of an object appears if you click **View** and then click **Advanced Features**.
+> If you receive an "Access is denied" error when you use any of these methods to perform metadata cleanup, make sure that the computer object and the NTDS Settings object for the domain controller are not protected against accidental deletion. To verify this right-click the computer object or the NTDS Settings object, click **Properties**, click **Object**, and clear the **Protect object from accidental deletion** check box. In Active Directory Users and Computers, the **Object** tab of an object appears if you click **View** and then click **Advanced Features**.
 
 ## Clean up server metadata using GUI tools
 
