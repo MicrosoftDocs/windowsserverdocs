@@ -53,6 +53,6 @@ cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}]
 -   You can set properties for individual scripts. See [additional References](#BKMK_references) for more information.
 -   Windows Script Host can use .wsf script files. Each .wsf file can use multiple scripting engines and perform multiple jobs.
 
-#### <a name=BKMK_references></a>Additional references
+####  Additional references
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

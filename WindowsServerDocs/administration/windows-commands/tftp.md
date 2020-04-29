@@ -40,7 +40,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 -   The tftp protocol does not support any authentication or encryption mechanism, and as such can introduce a security risk when present. Installing the tftp client is not recommended for systems connected to the Internet.  
 -   The tftp client is optional software, and marked as deprecated on Windows Vista and later versions of the Windows operating system. A tftp server service is no longer provided by Microsoft for security reasons.  
 
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 Copy the file **boot.img** from the remote computer **Host1**.  
 ```  
 tftp  -i Host1 get boot.img  

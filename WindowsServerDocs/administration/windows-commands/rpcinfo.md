@@ -34,7 +34,7 @@ rpcinfo [/p [<Node>]] [/b <Program version>] [/t <Node Program> [<version>]] [/u
 |/u \<Node Program> [\<version>]|Uses the UDP transport protocol to call the specified program. You must specify both a node (computer) name and a program name. If you do not specify a version, the program calls all versions.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 To list all programs registered with the port mapper, type:
 ```
 rpcinfo /p [<Node>]

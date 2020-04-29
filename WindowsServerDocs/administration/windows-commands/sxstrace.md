@@ -41,7 +41,7 @@ sxstrace [{[trace -logfile:<FileName> [-nostop]|[parse -logfile:<FileName> -outf
 |stoptrace|Stop the trace if it is not stopped before.|  
 |-?|Displays help at the command prompt.|  
 
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 Enable tracing and save trace file to **sxstrace.etl**:  
 ```  
 sxstrace trace -logfile:sxstrace.etl  

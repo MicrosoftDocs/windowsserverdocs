@@ -47,7 +47,7 @@ route [/f] [/p] [<Command> [<Destination>] [mask <Netmask>] [<Gateway>] [metric 
 - The **/p** parameter is only supported on the route command for Windows NT 4.0, Windows 2000, Windows Millennium edition, Windows XP, and Windows Server 2003. This parameter is not supported by the **route** command for Windows 95 or Windows 98.  
 - This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.  
 
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 To display the entire contents of the IP routing table, type:  
 ```  
 route print  

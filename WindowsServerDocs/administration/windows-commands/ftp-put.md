@@ -33,7 +33,7 @@ put <LocalFile> [<remoteFile>]
 ## Remarks
 - The **put** command is identical to the **send** command.
 - if *remoteFile* is not specified, the file is given the *LocalFile* name.
-  ## <a name="BKMK_Examples"></a>Examples
+  ## Examples
   copy the local file **test.txt** and name it **test1.txt** on the remote computer.
   ```
   put test.txt test1.txt

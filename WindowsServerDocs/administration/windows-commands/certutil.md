@@ -26,31 +26,19 @@ If certutil is run on a certification authority without additional parameters, i
 | -pingadmin | Attempt to contact the Active Directory Certificate Services Admin interface. |
 
 
-| -restoredb | Restore the Active Directory Certificate Services database. |
-| -restorekey | Restore the Active Directory Certificate Services certificate and private key. |
-| -importpfx | Import certificate and private key. |
-| -dynamicfilelist | Display a dynamic file list. |
-| -databaselocations | Display database locations. |
-| -hashfile | Generate and display a cryptographic hash over a file. |
-| -store | Dump the certificate store. |
-| -addstore | Add a certificate to the store. |
-| -delstore | Delete a certificate from the store. |
-| -verifystore | Verify a certificate in the store. |
-| -repairstore | Repair a key association or update certificate properties or the key security descriptor. |
-| -viewstore | Dump the certificates store. |
-| -viewdelstore | Delete a certificate from the store. |
-| -dspublish | Publish a certificate or certificate revocation list (CRL) to Active Directory. |
-| -adtemplate | Display Active Directory templates. |
-| -template | Display certificate templates. |
-| -templatecas | Display the certification authorities (CAs) for a certificate template. |
-| -catemplates | Display templates for CA. |
-| -setcasites | Manage site names for CAs. |
-| -enrollmentserverURL | Display, add or delete enrollment server URLs associated with a CA. |
-| -adca | Display Active Directory CAs. |
-| -ca | Display Enrollment Policy CAs. |
-| -policy | Display Enrollment Policy. |
-| -policycache | Display or delete Enrollment Policy Cache entries. |
-| -credstore | Display, add or delete Credential Store entries. |
+| -viewdelstore | Deletes a certificate from the store. |
+| -dspublish | Publishes a certificate or certificate revocation list (CRL) to Active Directory. |
+| -adtemplate | Displays Active Directory templates. |
+| -template | Displays certificate templates. |
+| -templatecas | Displays the certification authorities (CAs) for a certificate template. |
+| -catemplates | Displays templates for CA. |
+| -setcasites | Manages site names for CAs. |
+| -enrollmentserverURL | Displays, adds, or deletes enrollment server URLs associated with a CA. |
+| -adca | Displays Active Directory CAs. |
+| -ca | Displays Enrollment Policy CAs. |
+| -policy | Displays Enrollment Policy. |
+| -policycache | Displays or delete Enrollment Policy Cache entries. |
+| -credstore | Displays, adds, or deletes Credential Store entries. |
 | -installdefaulttemplates | Install default certificate templates. |
 | -URLcache | Display or delete URL cache entries. |
 | -pulse | Pulse auto enrollment events. |
@@ -670,301 +658,374 @@ Where:
 
 ### -restoredb
 
-certutil [options] -restoreDB BackupDirectory
+Restores the Active Directory Certificate Services database.
 
-Restore Active Directory Certificate Services database
+```
+certutil [options] -restoredb backupdirectory
+```
 
-BackupDirectory: directory containing database files to be restored
+Where:
 
+- **backupdirectory** is the directory containing the database files to be restored.
+
+```
 [-f] [-config Machine\CAName]
+```
 
+### -restorekey
 
-### -restoreKey
+Restores the Active Directory Certificate Services certificate and private key.
 
-certutil [options] -restoreKey BackupDirectory | PFXfile
+```
+certutil [options] -restorekey backupdirectory | pfxfile
+```
 
-Restore Active Directory Certificate Services certificate and private key
+Where:
 
-BackupDirectory: directory containing PFX file to be restored
+- **backupdirectory** is the directory containing PFX file to be restored.
 
-PFXfile: PFX file to be restored
+```
+[-f] [-config Machine\CAName] [-p password]
+```
 
-[-f] [-config Machine\CAName] [-p Password]
+### -importpfx
 
+Import the certificate and private key. For more info, see the `-store` parameter in this article.
 
-### -importPFX
+```
+certutil [options] -importpfx [certificatestorename] pfxfile [modifiers]
+```
 
-certutil [options] -importPFX [CertificateStoreName] PFXfile [Modifiers]
+Where:
 
-Import certificate and private key
+- **certificatestorename** is the name of the certificate store.
 
-CertificateStoreName: Certificate store name.  See [-store](#-store).
+- **modifiers** are the comma-separated list, which can include one or more of the following:
 
-PFXfile: PFX file to be imported
+  1. **AT_SIGNATURE** - Changes the keyspec to signature
+  
+  2. **AT_KEYEXCHANGE** - Changes the keyspec to key exchange
+  
+  3. **NoExport** - Makes the private key non-exportable
+  
+  4. **NoCert** - Doesn't import the certificate
+  
+  5. **NoChain** - Doesn't import the certificate chain
+  
+  6. **NoRoot** - Doesn't import the root certificate
+  
+  7. **Protect** - Protects keys by using a password
+  
+  8. **NoProtect** - Doesn't password protect keys by using a password
 
-Modifiers: Comma separated list of one or more of the following:
+```
+[-f] [-user] [-p password] [-csp provider]
+```
 
-1. AT_SIGNATURE: Change the KeySpec to Signature
-2. AT_KEYEXCHANGE: Change the KeySpec to Key Exchange
-3. NoExport: Make the private key non-exportable
-4. NoCert: Do not import the certificate
-5. NoChain: Do not import the certificate chain
-6. NoRoot: Do not import the root certificate
-7. Protect: Protect keys with password
-8. NoProtect: Do not password protect keys
+#### Remarks
 
-Defaults to personal machine store.
-
-[-f] [-user] [-p Password] [-csp Provider]
-
+- Defaults to personal machine store.
 
 ### -dynamicfilelist
 
+Displays a dynamic file list.
+
+```
 certutil [options] -dynamicfilelist
+```
 
-Display dynamic file List
-
+```
 [-config Machine\CAName]
-
+```
 
 ### -databaselocations
 
+Displays database locations.
+
+```
 certutil [options] -databaselocations
+```
 
-Display database locations
-
+```
 [-config Machine\CAName]
-
+```
 
 ### -hashfile
 
-certutil [options] -hashfile Infile [HashAlgorithm]
+Generates and displays a cryptographic hash over a file.
 
-Generate and display cryptographic hash over a file
-
+```
+certutil [options] -hashfile infile [hashalgorithm]
+```
 
 ### -store
 
-certutil [options] -store [CertificateStoreName [CertId [Outputfile]]]
+Dumps the certificate store.
 
-Dump certificate store
+```
+certutil [options] -store [certificatestorename [certID [outputfile]]]
+```
 
-CertificateStoreName: Certificate store name. Examples:
+Where:
 
-- My, CA (default), Root,
-- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
-- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
-- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
-- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
-- ldap: (AD computer object certificates)
-- -user ldap: (AD user object certificates)
+- **certificatestorename** is the certificate store name. For example:
 
-CertId: Certificate or CRL match token.  This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
+  - `My, CA (default), Root,`
+  
+  - `ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)`
+  
+  - `ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)`
+  
+  - `ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)`
+  
+  - `ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)`
+  
+  - `ldap: (AD computer object certificates)`
+  
+  - `-user ldap: (AD user object certificates)`
 
-Outputfile: file to save matching cert
+- **certID** is the certificate or CRL match token. This can be a serial number, a SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
 
-Use -user to access a user store instead of a machine store.
+- **outputfile** is the file used to save the matching certificates.
 
-Use -enterprise to access a machine enterprise store.
+```
+[-f] [-user] [-enterprise] [-service] [-grouppolicy] [-silent] [-split] [-dc DCName]
+```
 
-Use -service to access a machine service store.
+#### Options
 
-Use -grouppolicy to access a machine group policy store.
+- The `-user` option accesses a user store instead of a machine store.
 
-Examples:
+- The `-enterprise` option accesses a machine enterprise store.
 
-- -enterprise NTAuth
-- -enterprise Root 37
-- -user My 26e0aaaf000000000004
-- CA .11
+- The `-service` option accesses a machine service store.
 
-[-f] [-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-dc DCName]
+- The `-grouppolicy` option accesses a machine group policy store.
 
+For example:
+
+- `-enterprise NTAuth`
+
+- `-enterprise Root 37`
+
+- `-user My 26e0aaaf000000000004`
+
+- `CA .11`
 
 ### -addstore
 
-certutil [options] -addstore CertificateStoreName Infile
+Adds a certificate to the store. For more info, see the `-store` parameter in this article.
 
-Add certificate to store
+```
+certutil [options] -addstore certificatestorename infile
+```
 
-CertificateStoreName: Certificate store name.  See [-store](#-store).
+Where:
 
-Infile: Certificate or CRL file to add to store.
+- **certificatestorename** is the certificate store name.
 
-[-f] [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
+- **infile** is the certificate or CRL file you want to add to store.
 
+```
+[-f] [-user] [-enterprise] [-grouppolicy] [-dc DCName]
+```
 
 ### -delstore
 
-certutil [options] -delstore CertificateStoreName CertId
+Deletes a certificate from the store. For more info, see the `-store` parameter in this article.
 
-Delete certificate from store
+```
+certutil [options] -delstore certificatestorename certID
+```
 
-CertificateStoreName: Certificate store name.  See [-store](#-store).
+Where:
 
-CertId: Certificate or CRL match token.  See [-store](#-store).
+- **certificatestorename** is the certificate store name.
 
-[-enterprise] [-user] [-GroupPolicy] [-dc DCName]
+- **certID** is the certificate or CRL match token.
 
+```
+[-enterprise] [-user] [-grouppolicy] [-dc DCName]
+```
 
 ### -verifystore
 
-certutil [options] -verifystore CertificateStoreName [CertId]
+Verifies a certificate in the store. For more info, see the `-store` parameter in this article.
 
-Verify certificate in store
+```
+certutil [options] -verifystore certificatestorename [certID]
+```
 
-CertificateStoreName: Certificate store name.  See [-store](#-store).
+Where:
 
-CertId: Certificate or CRL match token.  See [-store](#-store).
+- **certificatestorename** is the certificate store name.
 
-[-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-dc DCName] [-t Timeout]
+- **certID** is the certificate or CRL match token.
 
+```
+[-enterprise] [-user] [-grouppolicy] [-silent] [-split] [-dc DCName] [-t timeout]
+```
 
 ### -repairstore
 
-certutil [options] -repairstore CertificateStoreName CertIdList [PropertyInffile | SDDLSecurityDescriptor]
-
-Repair key association or update certificate properties or key security descriptor
-
-CertificateStoreName: Certificate store name.  See [-store](#-store).
-
-CertIdList: comma separated list of Certificate or CRL match tokens. See [-store](#-store) CertId description.
-
-PropertyInffile -- INF file containing external properties:
+Repairs a key association or update certificate properties or the key security descriptor. For more info, see the `-store` parameter in this article.
 
 ```
-[Properties]
-     19 = Empty ; Add archived property, OR:
-     19 =       ; Remove archived property
-
-     11 = {text}Friendly Name ; Add friendly name property
-
-     127 = {hex} ; Add custom hexadecimal property
-         _continue_ = 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
-         _continue_ = 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
-
-     2 = {text} ; Add Key Provider Information property
-       _continue_ = Container=Container Name&
-       _continue_ = Provider=Microsoft Strong Cryptographic Provider&
-       _continue_ = ProviderType=1&
-       _continue_ = Flags=0&
-       _continue_ = KeySpec=2
-
-     9 = {text} ; Add Enhanced Key Usage property
-       _continue_ = 1.3.6.1.5.5.7.3.2,
-       _continue_ = 1.3.6.1.5.5.7.3.1,
+certutil [options] -repairstore certificatestorename certIDlist [propertyinffile | SDDLsecuritydescriptor]
 ```
 
-[-f] [-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-csp Provider]
+Where:
 
+- **certificatestorename** is the certificate store name.
+
+- **certIDlist** is the comma-separated list of certificate or CRL match tokens. For more info, see the `-store certID` description in this article.
+
+- **propertyinffile** is the INF file containing external properties, including:
+
+  ```
+  [Properties]
+      19 = Empty ; Add archived property, OR:
+      19 =       ; Remove archived property
+
+      11 = {text}Friendly Name ; Add friendly name property
+
+      127 = {hex} ; Add custom hexadecimal property
+          _continue_ = 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+          _continue_ = 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
+
+      2 = {text} ; Add Key Provider Information property
+        _continue_ = Container=Container Name&
+        _continue_ = Provider=Microsoft Strong Cryptographic Provider&
+        _continue_ = ProviderType=1&
+        _continue_ = Flags=0&
+        _continue_ = KeySpec=2
+
+      9 = {text} ; Add Enhanced Key Usage property
+        _continue_ = 1.3.6.1.5.5.7.3.2,
+        _continue_ = 1.3.6.1.5.5.7.3.1,
+  ```
+
+```
+[-f] [-enterprise] [-user] [-grouppolicy] [-silent] [-split] [-csp provider]
+```
 
 ### -viewstore
 
-certutil [options] -viewstore [CertificateStoreName [CertId [Outputfile]]]
+Dumps the certificates store. For more info, see the `-store` parameter in this article.
 
-Dump certificate store
+```
+certutil [options] -viewstore [certificatestorename [certID [outputfile]]]
+```
 
-CertificateStoreName: Certificate store name. Examples:
+Where:
 
-- My, CA (default), Root,
-- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
-- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
-- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
-- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
-- ldap: (AD machine object certificates)
-- -user ldap: (AD user object certificates)
+- **certificatestorename** is the certificate store name.
 
-CertId: Certificate or CRL match token. This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
+- **certID** is the certificate or CRL match token.
 
-Outputfile: file to save matching cert
+- **outputfile** is the file used to save the matching certificates.
 
-Use -user to access a user store instead of a machine store.
+```
+[-f] [-user] [-enterprise] [-service] [-grouppolicy] [-dc DCName]
+```
 
-Use -enterprise to access a machine enterprise store.
+#### Options
 
-Use -service to access a machine service store.
+- The `-user` option accesses a user store instead of a machine store.
 
-Use -grouppolicy to access a machine group policy store.
+- The `-enterprise` option accesses a machine enterprise store.
 
-Examples:
+- The `-service` option accesses a machine service store.
 
-1. -enterprise NTAuth
-2. -enterprise Root 37
-3. -user My 26e0aaaf000000000004
-4. CA .11
+- The `-grouppolicy` option accesses a machine group policy store.
 
-[-f] [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
+For example:
 
+- `-enterprise NTAuth`
+
+- `-enterprise Root 37`
+
+- `-user My 26e0aaaf000000000004`
+
+- `CA .11`
 
 ### -viewdelstore
 
-certutil [options] -viewdelstore [CertificateStoreName [CertId [Outputfile]]]
+Deletes a certificate from the store.
 
-Delete certificate from store
+```
+certutil [options] -viewdelstore [certificatestorename [certID [outputfile]]]
+```
 
-CertificateStoreName: Certificate store name. Examples:
+Where:
 
-- My, CA (default), Root,
-- ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)
-- ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)
-- ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)
-- ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)
-- ldap: (AD machine object certificates)
-- -user ldap: (AD user object certificates)
+- **certificatestorename** is the certificate store name.
 
-CertId: Certificate or CRL match token. This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
+- **certID** is the certificate or CRL match token.
 
-Outputfile: file to save matching cert
+- **outputfile** is the file used to save the matching certificates.
 
-Use -user to access a user store instead of a machine store.
+```
+[-f] [-user] [-enterprise] [-service] [-grouppolicy] [-dc DCName]
+```
 
-Use -enterprise to access a machine enterprise store.
+#### Options
 
-Use -service to access a machine service store.
+- The `-user` option accesses a user store instead of a machine store.
 
-Use -grouppolicy to access a machine group policy store.
+- The `-enterprise` option accesses a machine enterprise store.
 
-Examples:
+- The `-service` option accesses a machine service store.
 
-1. -enterprise NTAuth
-2. -enterprise Root 37
-3. -user My 26e0aaaf000000000004
-4. CA .11
+- The `-grouppolicy` option accesses a machine group policy store.
 
-[-f] [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
+For example:
 
+- `-enterprise NTAuth`
 
-### -dsPublish
+- `-enterprise Root 37`
 
-certutil [options] -dsPublish Certfile [NTAuthCA | RootCA | SubCA | CrossCA | KRA | User | Machine]
+- `-user My 26e0aaaf000000000004`
 
-certutil [options] -dsPublish CRLfile [DSCDPContainer [DSCDPCN]]
+- `CA .11`
 
-Publish certificate or CRL to Active Directory
+### -dspublish
 
-Certfile: certificate file to publish
+Publishes a certificate or certificate revocation list (CRL) to Active Directory.
 
-NTAuthCA: Publish cert to DS Enterprise store
+```
+certutil [options] -dspublish certfile [NTAuthCA | RootCA | SubCA | CrossCA | KRA | User | Machine]
+```
 
-RootCA: Publish cert to DS Trusted Root store
+```
+certutil [options] -dspublish CRLfile [DSCDPContainer [DSCDPCN]]
+```
 
-SubCA: Publish CA cert to DS CA object
+Where:
 
-CrossCA: Publish cross cert to DS CA object
+- **certfile** is the certificate file to publish.
 
-KRA: Publish cert to DS Key Recovery Agent object
+**NTAuthCA** publishes the certificate to the DS Enterprise store.
 
-User: Publish cert to User DS object
+**RootCA**: Publish cert to DS Trusted Root store
 
-Machine: Publish cert to Machine DS object
+**SubCA**: Publish CA cert to DS CA object
 
-CRLfile: CRL file to publish
+**CrossCA**: Publish cross cert to DS CA object
 
-DSCDPContainer: DS CDP container CN, usually the CA machine name
+**KRA**: Publish cert to DS Key Recovery Agent object
 
-DSCDPCN: DS CDP object CN, usually based on the sanitized CA short name and key index
+**User**: Publish cert to User DS object
 
-Use -f to create DS object.
+**Machine**: Publish cert to Machine DS object
+
+**CRLfile**: CRL file to publish
+
+**DSCDPContainer**: DS CDP container CN, usually the CA machine name
+
+**DSCDPCN**: DS CDP object CN, usually based on the sanitized CA short name and key index
+
+Use `-f` to create DS object.
 
 [-f] [-user] [-dc DCName]
 
@@ -1705,7 +1766,6 @@ This section defines the options that you can specify with the command.
 |-csp Provider|Provider|
 |-t Timeout|URL fetch timeout in milliseconds|
 |-symkeyalg SymmetricKeyAlgorithm[,KeyLength]|Name of Symmetric Key Algorithm with optional key length, example: AES,128 or 3DES|
-
 
 ### Additional certutil examples
 
