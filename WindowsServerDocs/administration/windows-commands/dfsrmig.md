@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 
 Migrates SYSvol replication from File Replication Service (FRS) to Distributed File System (DFS) Replication, provides information about the progress of the migration, and modifies active directory Domain Services (AD DS) objects to support the migration.
 
-For examples of how to use this command, see the [Examples](#BKMK_examples) section later in this document.
+
 
 ## Syntax
 

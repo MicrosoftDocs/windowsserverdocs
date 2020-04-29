@@ -26,27 +26,6 @@ If certutil is run on a certification authority without additional parameters, i
 | -pingadmin | Attempt to contact the Active Directory Certificate Services Admin interface. |
 
 
-| -viewdelstore | Deletes a certificate from the store. |
-| -dspublish | Publishes a certificate or certificate revocation list (CRL) to Active Directory. |
-| -adtemplate | Displays Active Directory templates. |
-| -template | Displays certificate templates. |
-| -templatecas | Displays the certification authorities (CAs) for a certificate template. |
-| -catemplates | Displays templates for CA. |
-| -setcasites | Manages site names for CAs. |
-| -enrollmentserverURL | Displays, adds, or deletes enrollment server URLs associated with a CA. |
-| -adca | Displays Active Directory CAs. |
-| -ca | Displays Enrollment Policy CAs. |
-| -policy | Displays Enrollment Policy. |
-| -policycache | Displays or delete Enrollment Policy Cache entries. |
-| -credstore | Displays, adds, or deletes Credential Store entries. |
-| -installdefaulttemplates | Install default certificate templates. |
-| -URLcache | Display or delete URL cache entries. |
-| -pulse | Pulse auto enrollment events. |
-| -machineinfo | Display information about the Active Directory machine object. |
-| -dcinfo | Display information about the domain controller. |
-| -entinfo | Display information about an enterprise CA. |
-| -tcainfo | Display information about the CA. |
-| -scinfo | Display information about the smart card. |
 | -scroots | Manage smart card root certificates. |
 | -verifykeys | Verify a public or private key set. |
 | -verify | Verify a certificate, certificate revocation list (CRL), or certificate chain. |
@@ -1003,276 +982,345 @@ certutil [options] -dspublish CRLfile [DSCDPContainer [DSCDPCN]]
 
 Where:
 
-- **certfile** is the certificate file to publish.
+- **certfile** is the name of the certificate file to publish.
 
-**NTAuthCA** publishes the certificate to the DS Enterprise store.
+- **NTAuthCA** publishes the certificate to the DS Enterprise store.
 
-**RootCA**: Publish cert to DS Trusted Root store
+- **RootCA** publishes the certificate to the DS Trusted Root store.
 
-**SubCA**: Publish CA cert to DS CA object
+- **SubCA** publishes the CA certificate to the DS CA object.
 
-**CrossCA**: Publish cross cert to DS CA object
+- **CrossCA** publishes the cross-certificate to the DS CA object.
 
-**KRA**: Publish cert to DS Key Recovery Agent object
+- **KRA** publishes the certificate to the DS Key Recovery Agent object.
 
-**User**: Publish cert to User DS object
+- **User** publishes the certificate to the User DS object.
 
-**Machine**: Publish cert to Machine DS object
+- **Machine** publishes the certificate to the Machine DS object.
 
-**CRLfile**: CRL file to publish
+- **CRLfile** is the name of the CRL file to publish.
 
-**DSCDPContainer**: DS CDP container CN, usually the CA machine name
+- **DSCDPContainer** is the DS CDP container CN, usually the CA machine name.
 
-**DSCDPCN**: DS CDP object CN, usually based on the sanitized CA short name and key index
+- **DSCDPCN** is the DS CDP object CN, usually based on the sanitized CA short name and key index.
 
-Use `-f` to create DS object.
+- Use `-f` to create a new DS object.
 
+```
 [-f] [-user] [-dc DCName]
+```
 
+### -adtemplate
 
-### -ADTemplate
+Displays Active Directory templates.
 
-certutil [options] -ADTemplate [Template]
+```
+certutil [options] -adtemplate [template]
+```
 
-Display AD templates
-
+```
 [-f] [-user] [-ut] [-mt] [-dc DCName]
+```
 
-### -Template
+### -template
 
-certutil [options] -Template [Template]
+Displays the certificate templates.
 
-Display Enrollment Policy templates
+```
+certutil [options] -template [template]
+```
 
-[-f] [-user] [-silent] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
+```
+[-f] [-user] [-silent] [-policyserver URLorID] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
+### -templatecas
 
-### -TemplateCAs
+Displays the certification authorities (CAs) for a certificate template.
 
-certutil [options] -TemplateCAs Template
+```
+certutil [options] -templatecas template
+```
 
-Display CAs for template
-
+```
 [-f] [-user] [-dc DCName]
+```
 
+### -catemplates
 
-### -CATemplates
+Displays templates for the Certificate Authority.
 
-certutil [options] -CATemplates [Template]
+```
+certutil [options] -catemplates [template]
+```
 
-Display templates for CA
-
+```
 [-f] [-user] [-ut] [-mt] [-config Machine\CAName] [-dc DCName]
+```
 
+### -setcasites
 
-### -SetCASites
+Manages site names, including setting, verifying, and deleting Certificate Authority site names
 
-certutil [options] -SetCASites [set] [SiteName]
+```
+certutil [options] -setcasites [set] [sitename]
+certutil [options] -setcasites verify [sitename]
+certutil [options] -setcasites delete
+```
 
-certutil [options] -SetCASites verify [SiteName]
+Where:
 
-certutil [options] -SetCASites delete
+- **sitename** is allowed only when targeting a single Certificate Authority.
 
-Set, Verify or Delete CA site names
-
-- Use the -config option to target a single CA (Default is all CAs)
-- *SiteName* is allowed only when targeting a single CA
-- Use -f to override validation errors for the specified *SiteName*
-- Use -f to delete all CA site names
-
+```
 [-f] [-config Machine\CAName] [-dc DCName]
+```
+
+#### Remarks
+
+- The `-config` option targets a single Certificate Authority (Default is all CAs).
+
+- The `-f` option can be used to override validation errors for the specified **sitename** or to delete all CA sitenames.
 
 > [!NOTE]
-> For more information on configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](https://social.technet.microsoft.com/wiki/contents/articles/14106.ad-ds-site-awareness-for-ad-cs-and-pki-clients.aspx).
+> For more information about configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](https://social.technet.microsoft.com/wiki/contents/articles/14106.ad-ds-site-awareness-for-ad-cs-and-pki-clients.aspx).
 
+### -enrollmentserverURL
 
-### -enrollmentServerURL
+Displays, adds, or deletes enrollment server URLs associated with a CA.
 
-certutil [options] -enrollmentServerURL [URL AuthenticationType [Priority] [Modifiers]]
+```
+certutil [options] -enrollmentServerURL [URL authenticationtype [priority] [modifiers]]
+certutil [options] -enrollmentserverURL URL delete
+```
 
-certutil [options] -enrollmentServerURL URL delete
+Where:
 
-Display, add or delete enrollment server URLs associated with a CA
+- **authenticationtype** specifies one of the following client authentication methods, while adding a URL:
 
-AuthenticationType: Specify one of the following client authentication methods while adding a URL
+  1. **kerberos** - Use Kerberos SSL credentials.
 
-1. Kerberos: Use Kerberos SSL credentials
-2. UserName: Use named account for SSL credentials
-3. ClientCertificate: Use X.509 Certificate SSL credentials
-4. Anonymous: Use anonymous SSL credentials
+  2. **username** - Use a named account for SSL credentials.
 
-delete: deletes the specified URL associated with the CA
+  3. **clientcertificate**: - Use X.509 Certificate SSL credentials.
 
-Priority: defaults to '1' if not specified when adding a URL
+  4. **anonymous** - Use anonymous SSL credentials.
 
-Modifiers -- Comma separated list of one or more of the following:
+- **delete** deletes the specified URL associated with the CA.
 
-1. AllowRenewalsOnly: Only renewal requests can be submitted to this CA via this URL
-2. AllowKeyBasedRenewal: Allows use of a certificate that has no associated account in the AD. This applies only with ClientCertificate and AllowRenewalsOnly Mode
+- **priority** defaults to `1` if not specified when adding a URL.
 
+- **modifiers** is a comma-separated list, which includes one or more of the following:
+
+1. **allowrenewalsonly** - Only renewal requests can be submitted to this CA via this URL.
+
+2. **allowkeybasedrenewal** - Allows use of a certificate that has no associated account in the AD. This applies only with clientcertificate and allowrenewalsonly Mode
+
+```
 [-config Machine\CAName] [-dc DCName]
+```
 
+### -adca
 
-### -ADCA
+Displays Active Directory Certificate Authorities.
 
-certutil [options] -ADCA [CAName]
+```
+certutil [options] -adca [CAName]
+```
 
-Display AD CAs
-
+```
 [-f] [-split] [-dc DCName]
+```
 
+### -ca
 
-### -CA
+Displays enrollment policy Certificate Authorities.
 
-certutil [options] -CA [CAName | TemplateName]
+```
+certutil [options] -CA [CAName | templatename]
+```
 
-Display Enrollment Policy CAs
+```
+[-f] [-user] [-silent] [-split] [-policyserver URLorID] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
-[-f] [-user] [-silent] [-split] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
+### -policy
 
+Displays the enrollment policy.
 
-### -Policy
+```
+[-f] [-user] [-silent] [-split] [-policyserver URLorID] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
-Display Enrollment Policy
+### -policycache
 
-[-f] [-user] [-silent] [-split] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
+Displays or deletes enrollment policy cache entries.
 
+```
+certutil [options] -policycache [delete]
+```
 
-### -PolicyCache
+Where:
 
-certutil [options] -PolicyCache [delete]
+- **delete** deletes the policy server cache entries.
 
-Display or delete Enrollment Policy Cache entries
+- **-f** deletes all cache entries
 
-delete: delete Policy Server cache entries
+```
+[-f] [-user] [-policyserver URLorID]
+```
 
--f: use -f to delete all cache entries
+### -credstore
 
-[-f] [-user] [-PolicyServer URLOrId]
+Displays, adds, or deletes Credential Store entries.
 
+```
+certutil [options] -credstore [URL]
+certutil [options] -credstore URL add
+certutil [options] -credstore URL delete
+```
 
-### -CredStore
+Where:
 
-certutil [options] -CredStore [URL]
+- **URL** is the target URL. You can also use `*` to match all entries or `https://machine*` to match a URL prefix.
 
-certutil [options] -CredStore URL add
+- **add** adds a credential store entry. Using this option also requires the use of SSL credentials.
 
-certutil [options] -CredStore URL delete
+- **delete** deletes credential store entries.
 
-Display, add or delete Credential Store entries
+- **-f** overwrites a single entry or deletes multiple entries.
 
-URL: target URL.  Use \* to match all entries. Use https://machine\* to match a URL prefix.
+```
+[-f] [-user] [-silent] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
-add: add a Credential Store entry. SSL credentials must also be specified.
+### -installdefaulttemplates
 
-delete: delete Credential Store entries
+Installs default certificate templates.
 
--f: use -f to overwrite an entry or to delete multiple entries.
+```
+certutil [options] -installdefaulttemplates
+```
 
-[-f] [-user] [-silent] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
-
-
-### -InstallDefaultTemplates
-
-certutil [options] -InstallDefaultTemplates
-
-Install default certificate templates
-
+```
 [-dc DCName]
+```
 
+### -URLcache
 
-### -URLCache
+Displays or deletes URL cache entries.
 
-certutil [options] -URLCache [URL | CRL | \* [delete]]
+```
+certutil [options] -URLcache [URL | CRL | * [delete]]
+```
 
-Display or delete URL cache entries
+Where:
 
-URL: cached URL
+- **URL** is the cached URL.
 
-CRL: operate on all cached CRL URLs only
+- **CRL** runs on all cached CRL URLs only.
 
-\*: operate on all cached URLs
+- **&#42;** operates on all cached URLs.
 
-delete: delete relevant URLs from the current user's local cache
+- **delete** deletes relevant URLs from the current user's local cache.
 
-Use -f to force fetching a specific URL and updating the cache.
+- **-f** forces fetching a specific URL and updating the cache.
 
+```
 [-f] [-split]
-
+```
 
 ### -pulse
 
+Pulses auto enrollment events.
+
+```
 certutil [options] -pulse
+```
 
-Pulse autoenrollment events
-
+```
 [-user]
+```
 
+### -machineinfo
 
-### -MachineInfo
+Displays information about the Active Directory machine object.
 
-certutil [options] -MachineInfo DomainName\MachineName$
-
-Display Active Directory computer object information
-
+```
+certutil [options] -machineinfo domainname\machinename$
+```
 
 ### -DCInfo
 
-certutil [options] -DCInfo [Domain] [Verify | DeleteBad | DeleteAll]
+Displays information about the domain controller. The default displays DC certificates without verification.
 
-Display domain controller information
+```
+certutil [options] -DCInfo [domain] [verify | deletebad | deleteall]
+```
 
-Default is to display DC certs without verification
-
-[-f] [-user] [-urlfetch] [-dc DCName] [-t Timeout]
+```
+[-f] [-user] [-urlfetch] [-dc DCName] [-t timeout]
+```
 
 > [!TIP]
-> The ability to specify an Active Directory Domain Services (AD DS) domain **[Domain]** and to specify a domain controller (**-dc**) was added in Windows Server 2012. To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:</br>> 1.  If a domain is not specified and a specific domain controller is not specified, this option returns a list of domain controllers to process from the default domain controller.</br>> 2.  If a domain is not specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.</br>> 3.  If a domain is specified, but a domain controller is not specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.</br>> 4.  If the domain and domain controller are specified, a list of domain controllers is generated from the targeted domain controller. A report of the certificates for each domain controller in the list is also generated.
+> The ability to specify an Active Directory Domain Services (AD DS) domain **[Domain]** and to specify a domain controller (**-dc**) was added in Windows Server 2012. To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:<ol><li>1. If a domain is not specified and a specific domain controller is not specified, this option returns a list of domain controllers to process from the default domain controller.</li><li>2. If a domain is not specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.</li><li>3. If a domain is specified, but a domain controller is not specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.</li><li>4. If the domain and domain controller are specified, a list of domain controllers is generated from the targeted domain controller. A report of the certificates for each domain controller in the list is also generated.</li></ol>
+>
+>For example, assume there is a domain named CPANDL with a domain controller named CPANDL-DC1. You can run the following command to a retrieve a list of domain controllers and their certificates that from CPANDL-DC1: `certutil -dc cpandl-dc1 -DCInfo cpandl`
 
-For example, assume there is a domain named CPANDL with a domain controller named CPANDL-DC1. You could run the following command to a retrieve a list of domain controllers and their certificates that from CPANDL-DC1: certutil -dc cpandl-dc1 -dcinfo cpandl
+### -entinfo
 
+Displays information about an enterprise Certificate Authority.
 
-### -EntInfo
+```
+certutil [options] -entinfo domainname\machinename$
+```
 
-certutil [options] -EntInfo DomainName\MachineName$
-
+```
 [-f] [-user]
+```
 
+### -tcainfo
 
-### -TCAInfo
+Displays information about the Certificate Authority.
 
-certutil [options] -TCAInfo [DomainDN | -]
+```
+certutil [options] -tcainfo [domainDN | -]
+```
 
-Display CA information
+```
+[-f] [-enterprise] [-user] [-urlfetch] [-dc DCName] [-t timeout]
+```
 
-[-f] [-enterprise] [-user] [-urlfetch] [-dc DCName] [-t Timeout]
+### -scinfo
 
+Displays information about the smart card.
 
-### -SCInfo
+```
+certutil [options] -scinfo [readername [CRYPT_DELETEKEYSET]]
+```
 
-certutil [options] -SCInfo [ReaderName [CRYPT_DELETEKEYSET]]
+Where:
 
-Display smart card information
+- **CRYPT_DELETEKEYSET** deletes all keys on the smart card.
 
-CRYPT_DELETEKEYSET: Delete all keys on the smart card
+```
+[-silent] [-split] [-urlfetch] [-t timeout]
+```
 
-[-silent] [-split] [-urlfetch] [-t Timeout]
+### -scroots
 
+Manages smart card root certificates.
 
-### -SCRoots
+```
+certutil [options] -scroots update [+][inputrootfile] [readername]
+certutil [options] -scroots save \@in\\outputrootfile [readername]
+certutil [options] -scroots view [inputrootfile | readername]
+certutil [options] -scroots delete [readername]
+```
 
-certutil [options] -SCRoots update [+][InputRootfile] [ReaderName]
-
-certutil [options] -SCRoots save \@OutputRootfile [ReaderName]
-
-certutil [options] -SCRoots view [InputRootfile | ReaderName]
-
-certutil [options] -SCRoots delete [ReaderName]
-
-Manage smart card root certificates
-
+```
 [-f] [-split] [-p Password]
-
+```
 
 ### -verifykeys
 

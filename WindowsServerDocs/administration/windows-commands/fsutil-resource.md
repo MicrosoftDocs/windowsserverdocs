@@ -23,8 +23,6 @@ Creates a Secondary Transactional Resource Manager, starts or stops a Transactio
 
 -   The characteristics of a running Transactional Resource Manager
 
-For examples of how to use this command, see [Examples](#BKMK_examples) .
-
 ## Syntax
 
 ```
