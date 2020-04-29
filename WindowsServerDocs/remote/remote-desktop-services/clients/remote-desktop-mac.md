@@ -8,7 +8,7 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 08/27/2019
+ms.date: 04/30/2020
 ms.localizationpriority: medium
 ---
 # Get started with the macOS client
