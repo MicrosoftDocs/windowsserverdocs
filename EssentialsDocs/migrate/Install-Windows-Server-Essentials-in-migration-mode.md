@@ -1,5 +1,5 @@
 ---
-title: "Install Windows Server Essentials in migration mode1"
+title: "Install Windows Server Essentials in migration mode"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 04/29/2020
 ms.prod: windows-server
@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 ---
 
-# Install Windows Server Essentials in migration mode1
+# Install Windows Server Essentials in migration mode
 
 > Applies To: Windows Server 2012 Essentials
 
