@@ -7,15 +7,32 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/03/2020
+ms.date: 04/29/2020
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
 
 We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), adding new features and fixing issues. You'll find the latest updates on this page.
 
->[!IMPORTANT]
->We're committed to making this app the best Remote Desktop client for iOS and value your feedback. You can report any issues at **Help** > **Report an Issue**.
+## How to report issues
+
+We're committed to making this app the best Remote Desktop client for iOS and value your feedback. You can report any issues at **Help** > **Report an Issue**.
+
+## Updates for version 10.0.6
+
+*Date published: 3/31/2020*
+
+It's time for a quick update with some bug fixes. Here’s what is included in this release:
+
+- Fixed a number of VoiceOver accessibility issues.
+- Fixed an issue where users couldn't connect with Turkish credentials.
+- Sessions displayed in the switcher UI are now ordered by when they were launched.
+- Selecting the Back button in the Connection Center now takes you back to the last active session.
+- Swiftpoint mice are now released when switching away from the client to another app.
+- Improved interoperability with the Windows Virtual Desktop service.
+- Fixed crashes that were showing up in error reporting.
+
+We appreciate all the comments sent to us through the App Store, in-app feedback, and email. In addition, special thanks to everyone who worked with us to diagnose issues.
 
 ## Updates for version 10.0.5
 
