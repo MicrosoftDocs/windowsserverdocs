@@ -15,8 +15,6 @@ ms.date: 10/16/2017
 
 The **typeperf** command writes performance data to the command window or to a log file. To stop **typeperf**, press CTRL+C.
 
-For examples of how to use **typeperf**, see [Examples](#BKMK_EXAMPLES).
-
 ## Syntax
 
 ```

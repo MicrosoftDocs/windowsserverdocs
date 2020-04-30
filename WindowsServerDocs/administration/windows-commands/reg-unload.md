@@ -1,12 +1,8 @@
-\---
+---
 title: reg unload
-description: Reference topic for **** - 
-
+description: Reference topic for the reg unload command, which removes a section of the registry loaded using the reg load operation. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 1d07791d-ca27-454e-9797-27d7e84c5048
 author: coreyp-at-msft
@@ -58,3 +54,5 @@ REG UNLOAD HKLM\TempHive
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [reg load command](reg-load.md)

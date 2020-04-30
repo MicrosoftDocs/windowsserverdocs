@@ -13,13 +13,9 @@ ms.date: 10/16/2017
 
 # wbadmin start recovery
 
-
-
 Runs a recovery operation based on the parameters that you specify.
 
 To perform a recovery with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt, click **Start**, right-click **Command Prompt**, and then click **Run as administrator**.)
-
-For examples of how to use this subcommand, see [Examples](#BKMK_Examples).
 
 ## Syntax
 
@@ -90,7 +86,7 @@ wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\shar
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Start-WBFileRecovery](https://technet.microsoft.com/library/jj902457.aspx) cmdlet
 -   [Start-WBHyperVRecovery](https://technet.microsoft.com/library/jj902463.aspx) cmdlet
