@@ -20,38 +20,6 @@ If certutil is run on a certification authority without additional parameters, i
 > [!IMPORTANT]
 > Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
-### Parameters
-
-
-| -pingadmin | Attempt to contact the Active Directory Certificate Services Admin interface. |
-
-
-| -scroots | Manage smart card root certificates. |
-| -verifykeys | Verify a public or private key set. |
-| -verify | Verify a certificate, certificate revocation list (CRL), or certificate chain. |
-| -verifyCTL | Verify AuthRoot or Disallowed Certificates CTL. |
-| -sign | Re-sign a certificate revocation list (CRL) or certificate. |
-| -vroot | Create or delete web virtual roots and file shares. |
-| -vocsproot | Create or delete web virtual roots for an OCSP web proxy. |
-| -addEnrollmentServer | Add an Enrollment Server application. |
-| -deleteEnrollmentServer | Delete an Enrollment Server application. |
-| -addPolicyServer | Add a Policy Server application. |
-| -deletePolicyServer | Delete a Policy Server application. |
-| -oid | Display the object identifier or set a display name. |
-| -error | Display the message text associated with an error code. |
-| -getreg | Display a registry value. |
-| -setreg | Set a registry value. |
-| -delreg | Delete a registry value. |
-| -importKMS | Import user keys and certificates into the server database for key archival. |
-| -importcert | Import a certificate file into the database. |
-| -getkey | Retrieve an archived private key recovery blob. |
-| -recoverkey | Recover an archived private key. |
-| -mergePFX | Merge PFX files. |
-| -convertEPF | Convert a PFX file into an EPF file. |
-| -? | Displays the list of parameters. |
-| -`<parameter>` -? | Displays help for the specified parameter. |
-| -? -v | Displays a full list of parameters and options. |
-
 ## Parameters
 
 ### -dump
@@ -177,6 +145,10 @@ Where:
 
 - **flags** sets the priority of the extension. `0` is recommended, while `1` sets the extension to critical, `2` disables the extension, and `3` does both.
 
+```
+[-config Machine\CAName]
+```
+
 #### Remarks
 
 - If the last parameter is numeric, it's taken as a **Long**.
@@ -186,11 +158,6 @@ Where:
 - If the last parameter starts with `\@`, the rest of the token is taken as the filename with binary data or an ascii-text hex dump.
 
 - If the last parameter is anything else, it's taken as a String.
-
-
-```
-[-config Machine\CAName]
-```
 
 ### -revoke
 
@@ -281,53 +248,101 @@ Where:
 - **infoname** indicates the CA property to display, based on the following infoname argument syntax:
 
   - **file** - File version
+  
   - **product** - Product version
+  
   - **exitcount** - Exit module count
+  
   - **exit `[index]`** - Exit module description
+  
   - **policy** - Policy module description
+  
   - **name** - CA name
+  
   - **sanitizedname** - Sanitized CA name
+  
   - **dsname** - Sanitized CA short name (DS name)
+  
   - **sharedfolder** - Shared folder
+  
   - **error1 ErrorCode** - Error message text
+  
   - **error2 ErrorCode** - Error message text and error code
+  
   - **type** - CA type
+  
   - **info** - CA info
+  
   - **parent** - Parent CA
+  
   - **certcount** - CA cert count
+  
   - **xchgcount** - CA exchange cert count
+  
   - **kracount** - KRA cert count
+  
   - **kraused** - KRA cert used count
+  
   - **propidmax** - Maximum CA PropId
+  
   - **certstate `[index]`** - CA cert
+  
   - **certversion `[index]`** - CA cert version
+  
   - **certstatuscode `[index]`** - CA cert verify status
+  
   - **crlstate `[index]`** - CRL
+  
   - **krastate `[index]`** - KRA cert
+  
   - **crossstate+ `[index]`** - Forward cross cert
+  
   - **crossstate- `[index]`** - Backward cross cert
+  
   - **cert `[index]`** - CA cert
+  
   - **certchain `[index]`** - CA cert chain
+  
   - **certcrlchain `[index]`** - CA cert chain with CRLs
+  
   - **xchg `[index]`** - CA exchange cert
+  
   - **xchgchain `[index]`** - CA exchange cert chain
+
   - **xchgcrlchain `[index]`** - CA exchange cert chain with CRLs
+  
   - **kra `[index]`** - KRA cert
+  
   - **cross+ `[index]`** - Forward cross cert
+  
   - **cross- `[index]`** - Backward cross cert
+  
   - **CRL `[index]`** - Base CRL
+  
   - **deltacrl `[index]`** - Delta CRL
+  
   - **crlstatus `[index]`** - CRL Publish Status
+  
   - **deltacrlstatus `[index]`** - Delta CRL Publish Status
+  
   - **dns** - DNS Name
+  
   - **role** - Role Separation
+  
   - **ads** - Advanced Server
+  
   - **templates** - Templates
+  
   - **csp `[index]`** - OCSP URLs
+  
   - **aia `[index]`** - AIA URLs
+  
   - **cdp `[index]`** - CDP URLs
+  
   - **localename** - CA locale name
+  
   - **subjecttemplateoids** - Subject Template OIDs
+  
   - **&#42;** - Displays all properties
 
 - **index** is the optional zero-based property index.
@@ -1324,504 +1339,671 @@ certutil [options] -scroots delete [readername]
 
 ### -verifykeys
 
-certutil [options] -verifykeys [KeyContainerName CACertfile]
+Verifies a public or private key set.
 
-Verify public/private key set
+```
+certutil [options] -verifykeys [keycontainername cacertfile]
+```
 
-KeyContainerName: key container name of the key to verify. Defaults to machine keys.  Use -user for user keys.
+Where:
 
-CACertfile: signing or encryption certificate file
+- **keycontainername** is the key container name for the key to verify. This option defaults to machine keys. To switch to user keys, use `-user`.
 
-If no arguments are specified, each signing CA cert is verified against its private key.
+- **cacertfile** signs or encrypts certificate files.
 
-This operation can only be performed against a local CA or local keys.
-
+```
 [-f] [-user] [-silent] [-config Machine\CAName]
+```
 
+#### Remarks
+
+- If no arguments are specified, each signing CA certificate is verified against its private key.
+
+- This operation can only be performed against a local CA or local keys.
 
 ### -verify
 
-certutil [options] -verify Certfile [ApplicationPolicyList | - [IssuancePolicyList]]
+Verifies a certificate, certificate revocation list (CRL), or certificate chain.
 
-certutil [options] -verify Certfile [CACertfile [CrossedCACertfile]]
+```
+certutil [options] -verify certfile [applicationpolicylist | - [issuancepolicylist]]
+certutil [options] -verify certfile [cacertfile [crossedcacertfile]]
+certutil [options] -verify CRLfile cacertfile [issuedcertfile]
+certutil [options] -verify CRLfile cacertfile [deltaCRLfile]
+```
 
-certutil [options] -verify CRLfile CACertfile [IssuedCertfile]
+Where:
 
-certutil [options] -verify CRLfile CACertfile [DeltaCRLfile]
+- **certfile** is the name of the certificate to verify.
 
-Verify certificate, CRL or chain
+- **applicationpolicylist** is the optional comma-separated list of required Application Policy ObjectIds.
 
-Certfile: Certificate to verify
+- **issuancepolicylist** is the optional comma-separated list of required Issuance Policy ObjectIds.
 
-ApplicationPolicyList: optional comma separated list of required Application Policy ObjectIds
+- **cacertfile** is the optional issuing CA certificate to verify against.
 
-IssuancePolicyList: optional comma separated list of required Issuance Policy ObjectIds
+- **crossedcacertfile** is the optional certificate cross-certified by **certfile**.
 
-CACertfile: optional issuing CA certificate to verify against
+- **CRLfile** is the CRL file used to verify the **cacertfile**.
 
-CrossedCACertfile: optional certificate cross-certified by Certfile
+- **issuedcertfile** is the optional issued certificate covered by the CRLfile.
 
-CRLfile: CRL to verify
+- **deltaCRLfile** is the optional delta CRL file.
 
-IssuedCertfile: optional issued certificate covered by CRLfile
+```
+[-f] [-enterprise] [-user] [-silent] [-split] [-urlfetch] [-t timeout]
+```
 
-DeltaCRLfile: optional delta CRL
+#### Remarks
 
-If ApplicationPolicyList is specified, chain building is restricted to chains valid for the specified Application Policies.
+- Using **applicationpolicylist** restricts chain building to only chains valid for the specified Application Policies.
 
-If IssuancePolicyList is specified, chain building is restricted to chains valid for the specified Issuance Policies.
+- Using **issuancepolicylist** restricts chain building to only chains valid for the specified Issuance Policies.
 
-If CACertfile is specified, fields in CACertfile are verified against Certfile or CRLfile.
+- Using **cacertfile**  verifies the fields in the file against **certfile** or **CRLfile**.
 
-If CACertfile is not specified, Certfile is used to build and verify a full chain.
+- Using **issuedcertfile** verifies the fields in the file against **CRLfile**.
 
-If CACertfile and CrossedCACertfile are both specified, fields in CACertfile and CrossedCACertfile are verified against Certfile.
+- Using deltaCRLfile verifies the fields in the file against **certfile**.
 
-If IssuedCertfile is specified, fields in IssuedCertfile are verified against CRLfile.
+- If **cacertfile** isn't specified, the full chain is built and verified against **certfile**.
 
-If DeltaCRLfile is specified, fields in DeltaCRLfile are verified against CRLfile.
-
-[-f] [-enterprise] [-user] [-silent] [-split] [-urlfetch] [-t Timeout]
-
+- If **cacertfile** and **crossedcacertfile** are both specified, the fields in both files are verified against **certfile**.
 
 ### -verifyCTL
 
-certutil [options] -verifyCTL CTLObject [CertDir] [Certfile]
+Verifies the AuthRoot or Disallowed Certificates CTL.
 
-Verify AuthRoot or Disallowed Certificates CTL
+```
+certutil [options] -verifyCTL CTLobject [certdir] [certfile]
+```
 
-CTLObject: Identifies the CTL to verify:
+Where:
 
-- AuthRootWU: read AuthRoot CAB and matching certificates from the URL cache. Use -f to download from Windows Update instead.
-- DisallowedWU: read Disallowed Certificates CAB and disallowed certificate store file from the URL cache.  Use -f to download from Windows Update instead.
-- AuthRoot: read registry cached AuthRoot CTL.  Use with -f and a             Certfile that is not already trusted to force updating the registry cached AuthRoot and Disallowed Certificate CTLs.
-- Disallowed: read registry cached Disallowed Certificates CTL. -f has the same behavior as with AuthRoot.
-- CTLfileName: file or http: path to CTL or CAB
+- **CTLobject** identifies the CTL to verify, including:
 
-CertDir: folder containing certificates matching CTL entries. An http: folder path must end with a path separator. If a folder is not specified with AuthRoot or Disallowed, multiple locations will be searched for matching certificates: local certificate stores, crypt32.dll resources and the local URL cache. Use -f to download from Windows Update when necessary. Otherwise defaults to the same folder or web site as the CTLObject.
+  - **AuthRootWU** - Reads the AuthRoot CAB and matching certificates from the URL cache. Use `-f` to download from Windows Update instead.
 
-Certfile: file containing certificate(s) to verify. Certificates will be matched against CTL entries, and match results displayed. Suppresses most of the default output.
+  - **DisallowedWU** - Reads the Disallowed Certificates CAB and disallowed certificate store file from the URL cache. Use `-f` to download from Windows Update instead.
 
+  - **AuthRoot** - Reads the registry-cached AuthRoot CTL. Use with `-f` and an untrusted **certfile** to force the registry cached AuthRoot and Disallowed Certificate CTLs to update.
+
+  - **Disallowed** - Reads the registry-cached Disallowed Certificates CTL. Use with `-f` and an untrusted **certfile** to force the registry cached AuthRoot and Disallowed Certificate CTLs to update.
+
+- **CTLfilename** specifies the file or http path to the CTL or CAB file.
+
+- **certdir** specifies the folder containing certificates matching the CTL entries. Defaults to the same folder or website as the **CTLobject**. Using an http folder path requires a path separator at the end. If you don't specify **AuthRoot** or **Disallowed**, multiple locations will be searched for matching certificates, including local certificate stores, crypt32.dll resources and the local URL cache. Use `-f` to download from Windows Update, as needed.
+
+- **certfile** specifies the certificate(s) to verify. Certificates are matched against CTL entries, displaying the results. This option suppresses most of the default output.
+
+```
 [-f] [-user] [-split]
-
+```
 
 ### -sign
 
-certutil [options] -sign InfileList|SerialNumber|CRL OutfileList [StartDate+dd:hh] [+SerialNumberList | -SerialNumberList | -ObjectIdList | \@Extensionfile]
-
-certutil [options] -sign InfileList|SerialNumber|CRL OutfileList [#HashAlgorithm] [+AlternateSignatureAlgorithm | -AlternateSignatureAlgorithm]
-
-Re-sign CRL or certificate
-
-InfileList: comma separated list of Certificate or CRL files to modify and re-sign
-
-SerialNumber: Serial number of certificate to create. Validity period and other options must not be present.
-
-CRL: Create an empty CRL. Validity period and other options must not be present.
-
-OutfileList: comma separated list of modified Certificate or CRL output files. The number of files must match InfileList.
-
-StartDate+dd:hh: new validity period: optional date plus; optional days and hours validity period; If both are specified, use a plus sign (+) separator. Use now[+dd:hh] to start at the current time. Use never to have no expiration date (for CRLs only).
-
-SerialNumberList: comma separated serial number list to add or remove
-
-ObjectIdList: comma separated extension ObjectId list to remove
-
-\@Extensionfile: INF file containing extensions to update or remove:
+Re-signs a certificate revocation list (CRL) or certificate.
 
 ```
-[Extensions]
-     2.5.29.31 = ; Remove CRL Distribution Points extension
-     2.5.29.15 = {hex} ; Update Key Usage extension
-     _continue_=03 02 01 86
+certutil [options] -sign infilelist | serialnumber | CRL outfilelist [startdate+dd:hh] [+serialnumberlist | -serialnumberlist | -objectIDlist | \@extensionfile]
+certutil [options] -sign infilelist | serialnumber | CRL outfilelist [#hashalgorithm] [+alternatesignaturealgorithm | -alternatesignaturealgorithm]
 ```
 
-HashAlgorithm: Name of the hash algorithm preceded by a # sign
+Where:
 
-AlternateSignatureAlgorithm: alternate Signature algorithm specifier
+- **infilelist** is the comma-separated list of certificate or CRL files to modify and re-sign.
 
-A minus sign causes serial numbers and extensions to be removed. A plus sign causes serial numbers to be added to a CRL. When removing items from a CRL, the list may contain both serial numbers and ObjectIds. A minus sign before AlternateSignatureAlgorithm causes the legacy signature format to be used. A plus sign before AlternateSignatureAlgorithm causes the alternature signature format to be used. If AlternateSignatureAlgorithm is not specified then the signature format in the certificate or CRL is used.
+- **serialnumber** is the serial number of the certificate to create. The validity period and other options can't be present.
 
-[-nullsign] [-f] [-silent] [-Cert CertId]
+- **CRL** creates an empty CRL. The validity period and other options can't be present.
 
+- **outfilelist** is the comma-separated list of modified certificate or CRL output files. The number of files must match infilelist.
+
+- **startdate+dd:hh** is the new validity period for the certificate or CRL files, including:
+
+  - optional date plus
+
+  - optional days and hours validity period
+  
+  If both are specified, you must use a plus sign (+) separator. Use `now[+dd:hh]` to start at the current time. Use `never` to have no expiration date (for CRLs only).
+
+- **serialnumberlist** is the comma-separated serial number list of the files to add or remove.
+
+- **objectIDlist** is the comma-separated extension ObjectId list of the files to remove.
+
+- **\@extensionfile** is the INF file that contains the extensions to update or remove. For example:
+
+  ```
+  [Extensions]
+      2.5.29.31 = ; Remove CRL Distribution Points extension
+      2.5.29.15 = {hex} ; Update Key Usage extension
+      _continue_=03 02 01 86
+  ```
+
+- **hashalgorithm** is the name of the hash algorithm. This must only be the text preceded by the `#` sign.
+
+- **alternatesignaturealgorithm** is the alternate signature algorithm specifier.
+
+```
+[-nullsign] [-f] [-silent] [-cert certID]
+```
+
+#### Remarks
+
+- Using the minus sign (-) removes serial numbers and extensions.
+
+- Using the plus sign (+) adds serial numbers to a CRL.
+
+- You can use a list to remove both serial numbers and ObjectIDs from a CRL at the same time.
+
+- Using the minus sign before **alternatesignaturealgorithm** allows you to use the legacy signature format. Using the plus sign allows you to use the alternate signature format. If you don't specify **alternatesignaturealgorithm**, the signature format in the certificate or CRL is used.
 
 ### -vroot
 
+Creates or deletes web virtual roots and file shares.
+
+```
 certutil [options] -vroot [delete]
-
-Create/delete web virtual roots and file shares
-
+```
 
 ### -vocsproot
 
+Creates or deletes web virtual roots for an OCSP web proxy.
+
+```
 certutil [options] -vocsproot [delete]
+```
 
-Create/delete web virtual roots for OCSP web proxy
+### -addenrollmentserver
 
+Add an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command does not install binaries or packages.
 
-### -addEnrollmentServer
+```
+certutil [options] -addenrollmentserver kerberos | username | clientcertificate [allowrenewalsonly] [allowkeybasedrenewal]
+```
 
-certutil [options] -addEnrollmentServer Kerberos | UserName | ClientCertificate [AllowRenewalsOnly] [AllowKeyBasedRenewal]
+Where:
 
-Add an Enrollment Server application
+- **addenrollmentserver** requires you to use an authentication method for the client connection to the Certificate Enrollment Server, including:
 
-Add an Enrollment Server application and application pool if necessary, for the specified CA. This command does not install binaries or packages. One of the following authentication methods with which the client connects to a Certificate Enrollment Server.
+  - **kerberos** uses Kerberos SSL credentials.
+  
+  - **username** uses named account for SSL credentials.
 
-- Kerberos: Use Kerberos SSL credentials
-- UserName: Use named account for SSL credentials
-- ClientCertificate: Use X.509 Certificate SSL credentials
-- AllowRenewalsOnly: Only renewal requests can be submitted to this CA via this URL
-- AllowKeyBasedRenewal -- Allows use of a certificate that has no associated account in the AD. This applies only with ClientCertificate and AllowRenewalsOnly mode.
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
 
+- **allowrenewalsonly** allows only renewal request submissions to the Certificate Authority through the URL.
+
+- **allowkeybasedrenewal** allows use of a certificate with no associated account in Active Directory. This applies when used with **clientcertificate** and **allowrenewalsonly** mode.
+
+```
 [-config Machine\CAName]
+```
 
+### -deleteenrollmentserver
 
-### -deleteEnrollmentServer
+Deletes an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command does not install binaries or packages.
 
-certutil [options] -deleteEnrollmentServer Kerberos | UserName | ClientCertificate
+```
+certutil [options] -deleteenrollmentserver kerberos | username | clientcertificate
+```
 
-Delete an Enrollment Server application
+Where:
 
-Delete an Enrollment Server application and application pool if necessary, for the specified CA. This command does not remove binaries or packages. One of the following authentication methods with which the client connects to a Certificate Enrollment Server.
+- **deleteenrollmentserver** requires you to use an authentication method for the client connection to the Certificate Enrollment Server, including:
 
-1. Kerberos: Use Kerberos SSL credentials
-2. UserName: Use named account for SSL credentials
-3. ClientCertificate: Use X.509 Certificate SSL credentials
+  - **kerberos** uses Kerberos SSL credentials.
+  
+  - **username** uses named account for SSL credentials.
 
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
+
+```
 [-config Machine\CAName]
+```
 
+### -addpolicyserver
 
-### -addPolicyServer
+Add a Policy Server application and application pool, if necessary. This command does not install binaries or packages.
 
-certutil [options] -addPolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
+```
+certutil [options] -addpolicyserver kerberos | username | clientcertificate [keybasedrenewal]
+```
 
-Add a Policy Server application
+Where:
 
-Add a Policy Server application and application pool if necessary. This command does not install binaries or packages. One of the following authentication methods with which the client connects to a Certificate Policy Server:
+- **addpolicyserver** requires you to use an authentication method for the client connection to the Certificate Policy Server, including:
 
-- Kerberos: Use Kerberos SSL credentials
-- UserName: Use named account for SSL credentials
-- ClientCertificate: Use X.509 Certificate SSL credentials
-- KeyBasedRenewal: Only policies that contain KeyBasedRenewal templates are returned to the client. This flag applies only for UserName and ClientCertificate authentication.
+  - **kerberos** uses Kerberos SSL credentials.
+  
+  - **username** uses named account for SSL credentials.
 
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
 
-### -deletePolicyServer
+- **keybasedrenewal** allows use of policies returned to the client containing keybasedrenewal templates. This option applies only for **username** and **clientcertificate** authentication.
 
-certutil [options] -deletePolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
+### -deletepolicyserver
 
-Delete a Policy Server application
+Deletes a Policy Server application and application pool, if necessary. This command does not remove binaries or packages.
 
-Delete a Policy Server application and application pool if necessary. This command does not remove binaries or packages. One of the following authentication methods with which the client connects to a Certificate Policy Server:
+certutil [options] -deletePolicyServer kerberos | username | clientcertificate [keybasedrenewal]
 
-1. Kerberos: Use Kerberos SSL credentials
-2. UserName: Use named account for SSL credentials
-3. ClientCertificate: Use X.509 Certificate SSL credentials
-4. KeyBasedRenewal: KeyBasedRenewal policy server
+Where:
 
+- **deletepolicyserver** requires you to use an authentication method for the client connection to the Certificate Policy Server, including:
+
+  - **kerberos** uses Kerberos SSL credentials.
+  
+  - **username** uses named account for SSL credentials.
+
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
+
+- **keybasedrenewal** allows use of a KeyBasedRenewal policy server.
 
 ### -oid
 
-certutil [options] -oid ObjectId [DisplayName | delete [LanguageId [Type]]]
+Displays the object identifier or set a display name.
 
-certutil [options] -oid GroupId
+```
+certutil [options] -oid objectID [displayname | delete [languageID [type]]]
+certutil [options] -oid groupID
+certutil [options] -oid agID | algorithmname [groupID]
+```
 
-certutil [options] -oid AlgId | AlgorithmName [GroupId]
+Where:
 
-Display ObjectId or set display name
+- **objectID** displays or to adds the display name.
 
-- ObjectId -- ObjectId to display or to add display name
-- GroupId -- decimal GroupId number for ObjectIds to enumerate
-- AlgId -- hexadecimal AlgId for ObjectId to look up
-- AlgorithmName -- Algorithm Name for ObjectId to look up
-- DisplayName -- Display Name to store in DS
-- delete -- delete display name
-- LanguageId -- Language Id (defaults to current: 1033)
-- Type -- DS object type to create: 1 for Template (default), 2 for Issuance Policy, 3 for Application Policy
-- Use -f to create DS object.
+- **groupID** is the groupID number (decimal) that objectIDs enumerate.
 
-[-f]
+- **algID** is the hexadecimal ID that objectID looks up.
 
+- **algorithmname** is the algorithm name that objectID looks up.
+
+- **displayname** displays the name to store in DS.
+
+- **delete** deletes the display name.
+
+- **LanguageId** is the language ID value (defaults to current: 1033).
+
+- **Type** is the type of DS object to create, including:
+
+  - `1` - Template (default)
+  
+  - `2` - Issuance Policy
+
+  - `3` - Application Policy
+
+- `-f` creates a DS object.
 
 ### -error
 
-certutil [options] -error ErrorCode
+Displays the message text associated with an error code.
 
-Display error code message text
-
+```
+certutil [options] -error errorcode
+```
 
 ### -getreg
 
-certutil [options] -getreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
+Displays a registry value.
 
-Display registry value
+```
+certutil [options] -getreg [{ca | restore | policy | exit | template | enroll |chain | policyservers}\[progID\]][registryvaluename]
+```
 
-ca: Use CA's registry key
+Where:
 
-restore: Use CA's restore registry key
+- **ca** uses a Certificate Authority's registry key.
 
-policy: Use policy module's registry key
+- **restore** uses Certificate Authority's restore registry key.
 
-exit: Use first exit module's registry key
+- **policy** uses the policy module's registry key.
 
-template: Use template registry key (use -user for user templates)
+- **exit** uses the first exit module's registry key.
 
-enroll: Use enrollment registry key (use -user for user context)
+- **template** uses the template registry key (use `-user` for user templates).
 
-chain: Use chain configuration registry key
+- **enroll** uses the enrollment registry key (use `-user` for user context).
 
-PolicyServers: Use Policy Servers registry key
+- **chain** uses the chain configuration registry key.
 
-ProgId: Use policy or exit module's ProgId (registry subkey name)
+- **policyservers** uses the Policy Servers registry key.
 
-RegistryValueName: registry value name (use Name\* to prefix match)
+- **progID** uses the policy or exit module's ProgID (registry subkey name).
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
+- **registryvaluename** uses the registry value name (use `Name*` to prefix match).
 
-If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
+- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
-If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
+```
+[-f] [-user] [-grouppolicy] [-config Machine\CAName]
+```
 
-Use chain\ChainCacheResyncfiletime \@now to effectively flush cached CRLs.
+#### Remarks
 
-[-f] [-user] [-GroupPolicy] [-config Machine\CAName]
+- If a string value starts with `+` or `-`, and the existing value is a `REG_MULTI_SZ` value, the string is added to or removed from the existing registry value. To force creation of a `REG_MULTI_SZ` value, add `\n` to the end of the string value.
 
+- If the value starts with `\@`, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it doesn't refer to a valid file, it's instead parsed as `[Date][+|-][dd:hh]` - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
+
+- Use `chain\chaincacheresyncfiletime \@now` to effectively flush cached CRLs.
 
 ### -setreg
 
-certutil [options] -setreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]]RegistryValueName Value
+Sets a registry value.
 
-Set registry value
+```
+certutil [options] -setreg [{ca | restore | policy | exit | template | enroll |chain | policyservers}\[progID\]]registryvaluename value
+```
 
-ca: Use CA's registry key
+Where:
 
-restore: Use CA's restore registry key
+- **ca** uses a Certificate Authority's registry key.
 
-policy: Use policy module's registry key
+- **restore** uses Certificate Authority's restore registry key.
 
-exit: Use first exit module's registry key
+- **policy** uses the policy module's registry key.
 
-template: Use template registry key (use -user for user templates)
+- **exit** uses the first exit module's registry key.
 
-enroll: Use enrollment registry key (use -user for user context)
+- **template** uses the template registry key (use `-user` for user templates).
 
-chain: Use chain configuration registry key
+- **enroll** uses the enrollment registry key (use `-user` for user context).
 
-PolicyServers: Use Policy Servers registry key
+- **chain** uses the chain configuration registry key.
 
-ProgId: Use policy or exit module's ProgId (registry subkey name)
+- **policyservers** uses the Policy Servers registry key.
 
-RegistryValueName: registry value name (use Name\* to prefix match)
+- **progID** uses the policy or exit module's ProgID (registry subkey name).
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
+- **registryvaluename** uses the registry value name (use `Name*` to prefix match).
 
-If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
+- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
-If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
+```
+[-f] [-user] [-grouppolicy] [-config Machine\CAName]
+```
 
-Use chain\ChainCacheResyncfiletime \@now to effectively flush cached CRLs.
+#### Remarks
 
-[-f] [-user] [-GroupPolicy] [-config Machine\CAName]
+- If a string value starts with `+` or `-`, and the existing value is a `REG_MULTI_SZ` value, the string is added to or removed from the existing registry value. To force creation of a `REG_MULTI_SZ` value, add `\n` to the end of the string value.
 
+- If the value starts with `\@`, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it doesn't refer to a valid file, it's instead parsed as `[Date][+|-][dd:hh]` - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
+
+- Use `chain\chaincacheresyncfiletime \@now` to effectively flush cached CRLs.
 
 ### -delreg
 
-certutil [options] -delreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
+Deletes a registry value.
 
-Delete registry value
+```
+certutil [options] -delreg [{ca | restore | policy | exit | template | enroll |chain | policyservers}\[progID\]][registryvaluename]
+```
 
-ca: Use CA's registry key
+Where:
 
-restore: Use CA's restore registry key
+- **ca** uses a Certificate Authority's registry key.
 
-policy: Use policy module's registry key
+- **restore** uses Certificate Authority's restore registry key.
 
-exit: Use first exit module's registry key
+- **policy** uses the policy module's registry key.
 
-template: Use template registry key (use -user for user templates)
+- **exit** uses the first exit module's registry key.
 
-enroll: Use enrollment registry key (use -user for user context)
+- **template** uses the template registry key (use `-user` for user templates).
 
-chain: Use chain configuration registry key
+- **enroll** uses the enrollment registry key (use `-user` for user context).
 
-PolicyServers: Use Policy Servers registry key
+- **chain** uses the chain configuration registry key.
 
-ProgId: Use policy or exit module's ProgId (registry subkey name)
+- **policyservers** uses the Policy Servers registry key.
 
-RegistryValueName: registry value name (use Name\* to prefix match)
+- **progID** uses the policy or exit module's ProgID (registry subkey name).
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with + or -, the bits specified in the new value are set or cleared in the existing registry value.
+- **registryvaluename** uses the registry value name (use `Name*` to prefix match).
 
-If a string value starts with + or -, and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a \n to the end of the string value.
+- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
-If the value starts with \@, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use now+dd:hh for a date relative to the current time.
+```
+[-f] [-user] [-grouppolicy] [-config Machine\CAName]
+```
 
-Use chain\ChainCacheResyncfiletime \@now to effectively flush cached CRLs.
+#### Remarks
 
-[-f] [-user] [-GroupPolicy] [-config Machine\CAName]
+- If a string value starts with `+` or `-`, and the existing value is a `REG_MULTI_SZ` value, the string is added to or removed from the existing registry value. To force creation of a `REG_MULTI_SZ` value, add `\n` to the end of the string value.
 
+- If the value starts with `\@`, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it doesn't refer to a valid file, it's instead parsed as `[Date][+|-][dd:hh]` - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
 
-### -ImportKMS
+- Use `chain\chaincacheresyncfiletime \@now` to effectively flush cached CRLs.
 
-certutil [options] -ImportKMS UserKeyAndCertfile [CertId]
+### -importKMS
 
-Import user keys and certificates into server database for key archival
+Imports user keys and certificates into the server database for key archival.
 
-UserKeyAndCertfile -- Data file containing user private keys and certificates to be archived.  This can be any of the following:
+```
+certutil [options] -importKMS userkeyandcertfile [certID]
+```
 
-- Exchange Key Management Server (KMS) export file
-- PFX file
+Where:
 
-CertId: KMS export file decryption certificate match token.  See [-store](#-store).
+- **userkeyandcertfile** is a data file with user private keys and certificates that are to be archived. This file can be:
 
-Use -f to import certificates not issued by the CA.
+  - An Exchange Key Management Server (KMS) export file.
 
-[-f] [-silent] [-split] [-config Machine\CAName] [-p Password] [-symkeyalg SymmetricKeyAlgorithm[,KeyLength]]
+  - A PFX file.
 
+- certID is a KMS export file decryption certificate match token. For more info, see the `-store` parameter in this article.
 
-### -ImportCert
+- `-f` imports certificates not issued by the Certificate Authority.
 
-certutil [options] -ImportCert Certfile [ExistingRow]
+```
+[-f] [-silent] [-split] [-config Machine\CAName] [-p password] [-symkeyalg symmetrickeyalgorithm[,keylength]]
+```
 
-Import a certificate file into the database
+### -importcert
 
-Use ExistingRow to import the certificate in place of a pending request for the same key.
+Imports a certificate file into the database.
 
-Use -f to import certificates not issued by the CA.
+```
+certutil [options] -importcert certfile [existingrow]
+```
 
-The CA may also need to be configured to support foreign certificate import: certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN
+Where:
 
+- **existingrow** imports the certificate in place of a pending request for the same key.
+
+- `-f` imports certificates not issued by the Certificate Authority.
+
+```
 [-f] [-config Machine\CAName]
+```
+
+#### Remarks
+
+The Certificate Authority may also need to be configured to support foreign certificates. To do this, type `import - certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
+
+### -getkey
+
+Retrieves an archived private key recovery blob, generates a recovery script, or recovers archived keys.
+
+```
+certutil [options] -getkey searchtoken [recoverybloboutfile]
+certutil [options] -getkey searchtoken script outputscriptfile
+certutil [options] -getkey searchtoken retrieve | recover outputfilebasename
+```
+
+Where:
+
+- **script** generates a script to retrieve and recover keys (default behavior if multiple matching recovery candidates are found, or if the output file is not specified).
+
+- **retrieve** retrieves one or more Key Recovery Blobs (default behavior if exactly one matching recovery candidate is found, and if the output file is specified). Using this option truncates any extension and appends the certificate-specific string and the .rec extension for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
+
+- **recover** retrieves and recovers private keys in one step (requires Key Recovery Agent certificates and private keys). Using this option truncates any extension and appends the .p12 extension.  Each file contains the recovered certificate chains and associated private keys, stored as a PFX file.
+
+- **searchtoken** selects the keys and certificates to be recovered, including:
+
+  - 1. Certificate Common Name
+  
+  - 2. Certificate Serial Number
+  
+  - 3. Certificate SHA-1 hash (thumbprint)
+  
+  - 4. Certificate KeyId SHA-1 hash (Subject Key Identifier)
+  
+  - 5. Requester Name (domain\user)
+  
+  - 6. UPN (user\@domain)
+
+- **recoverybloboutfile** outputs a file with a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
+
+- **outputscriptfile** outputs a file with a batch script to retrieve and recover private keys.
+
+- **outputfilebasename** outputs a file base name.
+
+```
+[-f] [-unicodetext] [-silent] [-config Machine\CAName] [-p password] [-protectto SAMnameandSIDlist] [-csp provider]
+```
+
+### -recoverkey
+
+Recover an archived private key.
+
+```
+certutil [options] -recoverkey recoveryblobinfile [PFXoutfile [recipientindex]]
+```
+
+```
+[-f] [-user] [-silent] [-split] [-p password] [-protectto SAMnameandSIDlist] [-csp provider] [-t timeout]
+```
+
+### -mergePFX
+
+Merges PFX files.
+
+```
+certutil [options] -mergePFX PFXinfilelist PFXoutfile [extendedproperties]
+```
+
+Where:
+
+- **PFXinfilelist** is a comma-separated list of PFX input files.
+
+- **PFXoutfile** is the name of the PFX output file.
+
+- **extendedproperties** includes any extended properties.
+
+```
+[-f] [-user] [-split] [-p password] [-protectto SAMnameAndSIDlist] [-csp provider]
+```
+
+#### Remarks
+
+- The password specified on the command line must be a comma-separated password list.
+
+- If more than one password is specified, the last password is used for the output file. If only one password is provided or if the last password is `*`, the user will be prompted for the output file password.
+
+### -convertEPF
+
+Converts a PFX file into an EPF file.
+
+```
+certutil [options] -convertEPF PFXinfilelist PFXoutfile [cast | cast-] [V3CAcertID][,salt]
+```
+
+Where:
 
 
-### -GetKey
+- **PFXinfilelist** is a comma-separated list of PFX input files.
 
-certutil [options] -GetKey SearchToken [RecoveryBlobOutfile]
+- **PFXoutfile** is the name of the PFX output file.
 
-certutil [options] -GetKey SearchToken script OutputScriptfile
+- **EPF** is the name of the EPF output file.
 
-certutil [options] -GetKey SearchToken retrieve | recover OutputfileBaseName
+- **cast** uses CAST 64 encryption.
 
-Retrieve archived private key recovery blob, generate a recovery script, or recover archived keys
+- **cast-** uses CAST 64 encryption (export)
 
-script: generate a script to retrieve and recover keys (default behavior if multiple matching recovery candidates are found, or if the output file is not specified).
+- **V3CAcertID** is the V3 CA certificate match token. For more info, see the `-store` parameter in this article.
 
-retrieve: retrieve one or more Key Recovery Blobs (default behavior if exactly one matching recovery candidate is found, and if the output file is specified)
+- **salt** is the EPF output file salt string.
 
-recover: retrieve and recover private keys in one step (requires Key Recovery Agent certificates and private keys)
+```
+[-f] [-silent] [-split] [-dc DCName] [-p password] [-csp provider]
+```
 
-SearchToken: Used to select the keys and certificates to be recovered.
+#### Remarks
 
-Can be any of the following:
+- The password specified on the command line must be a comma-separated password list.
 
-1. Certificate Common Name
-2. Certificate Serial Number
-3. Certificate SHA-1 hash (thumbprint)
-4. Certificate KeyId SHA-1 hash (Subject Key Identifier)
-5. Requester Name (domain\user)
-6. UPN (user\@domain)
+- If more than one password is specified, the last password is used for the output file. If only one password is provided or if the last password is `*`, the user will be prompted for the output file password.
 
-RecoveryBlobOutfile: output file containing a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
+### -?
 
-OutputScriptfile: output file containing a batch script to retrieve and recover private keys.
+Displays the list of parameters.
 
-OutputfileBaseName: output file base name. For retrieve, any extension is truncated and a certificate-specific string and the .rec extension are appended for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates. For recover, any extension is truncated and the .p12 extension is appended.  Contains the recovered certificate chains and associated private keys, stored as a PFX file.
+``` 
+certutil -?
+certutil <name_of_parameter> -?
+certutil -? -v
+```
 
-[-f] [-UnicodeText] [-silent] [-config Machine\CAName] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
+Where:
 
+- **-?** displays the full list of parameters
 
-### -RecoverKey
+- **-`<name_of_parameter>` -?** displays help content for the specified parameter.
 
-certutil [options] -RecoverKey RecoveryBlobInfile [PFXOutfile [RecipientIndex]]
+- **-? -v** displays a full list of parameters and options.
 
-Recover archived private key
+## Options
 
-[-f] [-user] [-silent] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider] [-t Timeout]
+This section defines all of the options you're able to specify, based on the command. Each parameter includes information about which options are valid for use.
 
+| Options | Description |
+| ------- | ----------- |
+| -nullsign | Use the hash of the data as a signature. |
+| -f | Force overwrite. |
+| -enterprise | Use the local machine enterprise registry certificate store. |
+| -user | Use the HKEY_CURRENT_USER keys or certificate store. |
+| -GroupPolicy | Use the group policy certificate store. |
+| -ut | Display user templates. |
+| -mt | Display machine templates. |
+| -Unicode | Write redirected output in Unicode. |
+| -UnicodeText | Write output file in Unicode. |
+| -gmt | Display times using GMT. |
+| -seconds | Display times using seconds and milliseconds. |
+| -silent | Use the `silent` flag to acquire crypt context. |
+| -split | Split embedded ASN.1 elements, and save to files. |
+| -v | Provide more detailed (verbose) information. |
+| -privatekey | Display password and private key data. |
+| -pin PIN | Smart card PIN. |
+| -urlfetch | Retrieve and verify AIA Certs and CDP CRLs. |
+| -config Machine\CAName | Certificate Authority and computer name string. |
+| -policyserver URLorID | Policy Server URL or ID. For selection U/I, use `-policyserver`. For all Policy Servers, use `-policyserver *`|
+| -anonymous | Use anonymous SSL credentials. |
+| -kerberos | Use Kerberos SSL credentials. |
+| -clientcertificate clientcertID | Use X.509 Certificate SSL credentials. For selection U/I, use `-clientcertificate`. |
+| -username username | Use named account for SSL credentials. For selection U/I, use `-username`. |
+| -cert certID | Signing certificate. |
+| -dc DCName | Target a specific Domain Controller. |
+| -restrict restrictionlist | Comma-separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. For example: `requestID = 47`, `+requestername >= a, requestername`, or `-requestername > DOMAIN, Disposition = 21` |
+| -out columnlist | Comma-separated column list. |
+| -p password | Password |
+| -protectto SAMnameandSIDlist | Comma-separated SAM name/SID list. |
+| -csp provider | Provider |
+| -t timeout | URL fetch timeout in milliseconds. |
+| -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES` |
 
-### -MergePFX
+### Additional References
 
-certutil [options] -MergePFX PFXInfileList PFXOutfile [ExtendedProperties]
+For some more examples about how to use this command, see
 
-PFXInfileList: Comma separated PFX input file list
+- [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
 
-PFXOutfile: PFX output file
+- [Certutil tasks for managing certificates](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
-ExtendedProperties: Include extended properties
+- [Binary Request Export Using the certutil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
 
-The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is \*, the user will be prompted for the output file password.
+- [Root CA certificate renewal](https://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
 
-[-f] [-user] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
-
-
-### -ConvertEPF
-
-certutil [options] -ConvertEPF PFXInfileList EPFOutfile [cast | cast-] [V3CACertId][,Salt]
-
-Convert PFX files to EPF file
-
-PFXInfileList: Comma separated PFX input file list
-
-EPF: EPF output file
-
-cast: Use CAST 64 encryption
-
-cast-: Use CAST 64 encryption (export)
-
-V3CACertId: V3 CA Certificate match token.  See [-store](#-store) CertId description.
-
-Salt: EPF output file salt string
-
-The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is \*, the user will be prompted for the output file password.
-
-[-f] [-silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
-
-
-### Options
-
-This section defines the options that you can specify with the command.
-
-|Options|Description|
-|-------|-----------|
-|-nullsign|Use hash of data as signature|
-|-f|Force overwrite|
-|-enterprise|Use local machine Enterprise registry certificate store|
-|-user|Use HKEY_CURRENT_USER keys or certificate store|
-|-GroupPolicy|Use Group Policy certificate store|
-|-ut|Display user templates|
-|-mt|Display machine templates|
-|-Unicode|Write redirected output in Unicode|
-|-UnicodeText|Write output file in Unicode|
-|-gmt|Display times as GMT|
-|-seconds|Display times with seconds and milliseconds|
-|-silent|Use silent flag to acquire crypt context|
-|-split|Split embedded ASN.1 elements, and save to files|
-|-v|Verbose operation|
-|-privatekey|Display password and private key data|
-|-pin PIN|Smart Card PIN|
-|-urlfetch|Retrieve and verify AIA Certs and CDP CRLs|
-|-config Machine\CAName|CA and computer name string|
-|-PolicyServer URLOrId|Policy Server URL or Id. For selection U/I, use -PolicyServer. For all Policy Servers, use -PolicyServer \*|
-|-Anonymous|Use anonymous SSL credentials|
-|-Kerberos|Use Kerberos SSL credentials|
-|-ClientCertificate ClientCertId|Use X.509 Certificate SSL credentials. For selection U/I, use -clientCertificate.|
-|-UserName UserName|Use named account for SSL credentials. For selection U/I, use -UserName.|
-|-Cert CertId|Signing certificate|
-|-dc DCName|Target a specific Domain Controller|
-|-restrict RestrictionList|Comma separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. Examples:</br>RequestId = 47</br>+RequesterName >= a, RequesterName < b</br>-RequesterName > DOMAIN, Disposition = 21|
-|-out ColumnList|Comma separated Column List|
-|-p Password|Password|
-|-ProtectTo SAMNameAndSIDList|Comma separated SAM Name/SID List|
-|-csp Provider|Provider|
-|-t Timeout|URL fetch timeout in milliseconds|
-|-symkeyalg SymmetricKeyAlgorithm[,KeyLength]|Name of Symmetric Key Algorithm with optional key length, example: AES,128 or 3DES|
-
-### Additional certutil examples
-
-For some examples of how to use this command, see
-
-1. [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
-2. [Certutil tasks for managing certificates](https://technet.microsoft.com/library/cc772898.aspx)
-3. [Binary Request Export Using the certutil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
-4. [Root CA certificate renewal](https://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
-5. [Certutil](https://msdn.microsoft.com/subscriptions/cc773087.aspx)
-
+- [certutil command](certutil.md)
