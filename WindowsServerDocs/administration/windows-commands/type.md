@@ -16,8 +16,6 @@ In the Windows Command shell, **type** is a built in command which displays the 
 
 In PowerShell, **type** is a built-in alias to the **[Get-Content](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content)** cmdlet which also displays the contents of a file, but with a different syntax.
 
-For examples of how to use this command within the Windows Command shell (Cmd.exe), see [Examples](#BKMK_examples).
-
 ## Syntax
 
 ```

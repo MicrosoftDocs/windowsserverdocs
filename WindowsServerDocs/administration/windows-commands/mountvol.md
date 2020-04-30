@@ -21,8 +21,6 @@ ms.date: 10/16/2017
 
 Creates, deletes, or lists a volume mount point.
 
-For examples of how to use this command see [Examples](#BKMK_examples).
-
 ## Syntax
 
 ```

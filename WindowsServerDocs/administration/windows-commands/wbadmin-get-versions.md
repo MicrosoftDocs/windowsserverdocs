@@ -19,8 +19,6 @@ Lists details about the available backups that are stored on the local computer 
 
 To get details about available backups using this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt **Command Prompt** and then click **Run as administrator**.)
 
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
-
 ## Syntax
 
 ```

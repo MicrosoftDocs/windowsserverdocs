@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Adds a driver group to the server. For examples of how you can use this command, see [Examples](#BKMK_examples).
+Adds a driver group to the server.
 
 ## Syntax
 ```

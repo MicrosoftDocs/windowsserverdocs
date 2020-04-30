@@ -13,13 +13,9 @@ ms.date: 10/16/2017
 
 # wbadmin start backup
 
-
-
 Creates a backup using specified parameters. If no parameters are specified and you have created a scheduled daily backup, this subcommand creates the backup by using the settings for the scheduled backup. If parameters are specified, it creates a Volume Shadow Copy Service (VSS) copy backup and will not update the history of the files that are being backed up.
 
 To create a one-time backup with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt** and then click **Run as administrator**.)
-
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 

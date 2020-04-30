@@ -19,8 +19,6 @@ Creates and enables a daily backup schedule or modifies an existing backup sched
 
 To configure or modify a daily backup schedule, you must be a member of either the **Administrators** or **Backup Operators** group. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt** and then click **Run as administrator**.)
 
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
-
 ## Syntax
 
 Syntax for Windows Server 2008:

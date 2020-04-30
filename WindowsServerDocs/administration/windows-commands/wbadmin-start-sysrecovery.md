@@ -22,8 +22,6 @@ Performs a system recovery (bare metal recovery) using the parameters that you s
 
 To perform a system recovery with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions.
 
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
-
 ## Syntax
 
 ```

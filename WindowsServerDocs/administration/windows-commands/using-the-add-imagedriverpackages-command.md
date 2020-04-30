@@ -15,7 +15,6 @@ ms.date: 10/16/2017
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds driver packages from the driver store to a boot image. The image version must be Windows 7 or Windows Server 2008 R2 or later.
-for examples of how you can use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 ```

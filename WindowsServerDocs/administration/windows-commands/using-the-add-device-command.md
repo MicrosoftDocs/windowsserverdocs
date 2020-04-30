@@ -15,7 +15,6 @@ ms.date: 10/16/2017
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Prestages a computer in active directory Domain Services. Prestaged computers are also called known computers. This allows you to configure properties to control the installation for the client. For example, you can configure the network boot program and the unattend file that the client should receive, as well as the server from which the client should download the network boot program.
-for examples of how you can use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 ```

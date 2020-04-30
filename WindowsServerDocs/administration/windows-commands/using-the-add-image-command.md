@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Adds images to a Windows Deployment Services server. For examples of how you can use this command, see [Examples](#BKMK_examples).
+Adds images to a Windows Deployment Services server.
 
 ## Syntax
 for boot images, use the following syntax:

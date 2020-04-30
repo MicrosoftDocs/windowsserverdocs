@@ -19,8 +19,7 @@ diskshadow.exe is a tool that exposes the functionality offered by the volume sh
 > [!NOTE]  
 > Membership in the local Administrators group, or equivalent, is the minimum required to run diskshadow.  
   
-For examples of how to use diskshadow commands, see [Examples](#BKMK_examples).  
-  
+
 ## Syntax  
 for interactive mode, type the following at the command prompt to start the diskshadow command interpreter:  
   
@@ -34,7 +33,7 @@ for script mode, type the following, where *script.txt* is a script file contain
 diskshadow -s script.txt  
 ```  
   
-## diskshadow commands  
+### Parameters  
 You can run the following commands in the diskshadow command interpreter or through a script file:  
   
 |Parameter|Description|  
