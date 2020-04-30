@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/29/2020
+ms.date: 04/30/2020
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -16,13 +16,19 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 ## How to report issues
 
-We're committed to making this app the best Remote Desktop client for iOS and value your feedback. You can report any issues at **Help** > **Report an Issue**.
+We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
+
+## Updates for version 10.0.7
+
+*Date published: 4/29/2020*
+
+In this update we've added the ability to sort the PC list view (available on iPhone) by name or time last connected.
 
 ## Updates for version 10.0.6
 
 *Date published: 3/31/2020*
 
-It's time for a quick update with some bug fixes. Here’s what is included in this release:
+It's time for a quick update with some bug fixes. Here’s what's new for this release:
 
 - Fixed a number of VoiceOver accessibility issues.
 - Fixed an issue where users couldn't connect with Turkish credentials.
