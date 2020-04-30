@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS
 author: billmath
 ms.author:  billmath
 manager: mtillman
-ms.date: 04/17/2019
+ms.date: 04/29/2020
 ms.topic: article
 
 ms.prod: windows-server
@@ -67,6 +67,9 @@ AD FS supports multiple multi-forest configuration and relies on the underlying 
 
 >[!NOTE]  
 >If elective authentication is used with a 2-way trust configuration, ensure the caller user is granted the "allow to authenticate" permission on the target service account. 
+
+### Does AD FS Extranet Smart Lockout support IPv6?
+Yes, IPv6 addresses are considered for familiar/unknown locations.
 
 
 ## Design
