@@ -1,6 +1,6 @@
 ---
 title: dfsutil
-description: Windows Commands topic for dfsutil, which manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
+description: Reference topic for dfsutil, which manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # dfsutil
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The dfsutil command manages DFS Namespaces, servers and clients.
 

@@ -19,7 +19,7 @@ ms.date: 07/11/2018
 
 Renames files or directories. This command is the same as the **rename** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

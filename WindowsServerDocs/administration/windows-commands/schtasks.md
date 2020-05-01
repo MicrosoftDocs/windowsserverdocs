@@ -1,6 +1,6 @@
 ---
 title: schtasks
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -339,7 +339,7 @@ In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modif
 
 #### To schedule a task that runs every day
 
-The following example schedules the MyApp program to run once a day, every day, at 8:00 A.M. until December 31, 2002. Because it omits the **/mo** parameter, the default interval of 1 is used to run the command every day.
+To schedules the MyApp program to run once a day, every day, at 8:00 A.M. until December 31, 2002. Because it omits the **/mo** parameter, the default interval of 1 is used to run the command every day.
 
 In this example, because the local computer system is set to the **English (United Kingdom)** option in **Regional and Language Options** in **Control Panel**, the format for the end date is DD/MM/YYYY (31/12/2002)
 ```
@@ -348,7 +348,7 @@ schtasks /create /tn My App /tr c:\apps\myapp.exe /sc daily /st 08:00 /ed 31/12/
 
 #### To schedule a task that runs every 12 days
 
-The following example schedules the MyApp program to run every twelve days at 1:00 P.M. (13:00) beginning on December 31, 2002. The command uses the **/mo** parameter to specify an interval of two (2) days and the **/sd** and **/st** parameters to specify the date and time.
+To schedules the MyApp program to run every twelve days at 1:00 P.M. (13:00) beginning on December 31, 2002. The command uses the **/mo** parameter to specify an interval of two (2) days and the **/sd** and **/st** parameters to specify the date and time.
 
 In this example, because the system is set to the **English (Zimbabwe)** option in **Regional and Language Options** in **Control Panel**, the format for the end date is MM/DD/YYYY (12/31/2002)
 ```

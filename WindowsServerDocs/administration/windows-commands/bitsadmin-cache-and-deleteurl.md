@@ -1,6 +1,6 @@
 ---
-title: bitsadmin cache and deleteurl
-description: Windows Commands topic for **bitsadmin cache and deleteurl**, which deletes all cache entries for the given URL.
+title: bitsadmin cache and deleteURL
+description: Reference topic for the bitsadmin cache and deleteURL command, which deletes all cache entries for the given URL.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -11,30 +11,32 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# bitsadmin cache and deleteurl
+# bitsadmin cache and deleteURL
 
 Deletes all cache entries for the given URL.
 
 ## Syntax
 
 ```
-bitsadmin /deleteURL url
+bitsadmin /deleteURL URL
 ```
 
 ### Parameters
 
 | Parameter | Description |
 | -------------- | -------------- |
-| url | The Uniform Resource Locator that identifies a remote file. |
+| URL | The Uniform Resource Locator that identifies a remote file. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example deletes all cache entries for `https://www.contoso.com/en/us/default.aspx`
+To delete all cache entries for `https://www.contoso.com/en/us/default.aspx`:
 
 ```
-C:\>bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx 
+bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx 
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin cache command](bitsadmin-cache.md)

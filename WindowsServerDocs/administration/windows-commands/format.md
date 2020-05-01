@@ -11,11 +11,11 @@ ms.date: 10/16/2017
 ---
 
 # Format
-> Applies To: Windows 10, Windows Server 2016
+> Applies to: Windows 10, Windows Server 2016
 
 Formats a disk to accept Windows files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

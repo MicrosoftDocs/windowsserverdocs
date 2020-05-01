@@ -1,6 +1,6 @@
 ---
 title: Export-Image
-description: Windows Commands topic for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file. 
+description: Reference topic for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Export-Image
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Exports an existing image from the image store to another Windows Image (.wim) file.
 
@@ -49,7 +49,7 @@ mediatype:{Boot &#124; Install}|Specifies the type of image to be exported.|
 |[/Filename:<Filename>]|if the image cannot be uniquely identified by name, the file name must be specified.|
 |/DestinationImage|Specifies the settings for the destination image. You can specify these settings using the following options:<p>-   /Filepath:<File path and name> - Specifies the full file path for the new image.<br />-   [/Name:<Name>] - Sets the display name of the image. If no name is specified, the display name of the source image will be used.<br />-   [/Description: <Description>] - Sets the description of the image.|
 |[/Overwrite:{Yes &#124; No &#124; append}]|Determines whether the file specified in the **/DestinationImage** option will be overwritten if an existing file with that name already exists at the /Filepath.<p>-   **Yes** causes the existing file to be overwritten.<br />-   **No** (the default option) causes an error to occur if a file with the same name already exists.<br />-   **append** causes the generated image to be appended as a new image within the existing .wim file.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To export a boot image, type one of the following:
 ```
 wdsutil /Export-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86 /DestinationImage /Filepath:C:\temp\boot.wim

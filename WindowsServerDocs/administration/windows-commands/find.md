@@ -1,6 +1,6 @@
 ---
 title: find
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Searches for a string of text in a file or files, and displays lines of text that contain the specified string.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -65,7 +65,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <String> [[<Drive>:][<Path>]<FileName>[...
 
     The **find** command does not recognize carriage returns. When you use **find** to search for text in a file that includes carriage returns, you must limit the search string to text that can be found between carriage returns (that is, a string that is not likely to be interrupted by a carriage return). For example, **find** does not report a match for the string tax file if a carriage return occurs between the words tax and file.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display all lines from Pencil.ad that contain the string Pencil Sharpener, type:
 ```

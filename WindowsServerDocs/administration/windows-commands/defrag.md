@@ -1,6 +1,6 @@
 ---
 title: defrag
-description: Windows Commands topic for defrag, which locates and consolidates fragmented files on local volumes to improve system performance.
+description: Reference topic for defrag, which locates and consolidates fragmented files on local volumes to improve system performance.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # defrag
 
->Applies To: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 
@@ -63,7 +63,7 @@ defrag <volume> [/<Parameter>]*
 - To interrupt the defragmentation process, at the command line, press **CTRL+C**.
 - Running the **defrag** command and Disk defragmenter are mutually exclusive. If you are using Disk defragmenter to defragment a volume and you run the **defrag** command at a command-line, the **defrag** command fails. Conversely, if you run the **defrag** command and open Disk defragmenter, the defragmentation options in Disk defragmenter are unavailable.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To defragment the volume on drive C while providing progress and verbose output, type:
 ```
 defrag C: /U /V

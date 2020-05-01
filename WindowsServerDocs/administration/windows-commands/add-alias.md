@@ -1,6 +1,6 @@
 ---
 title: add alias
-description: Windows Commands topic for **add alias**, which adds aliases to the alias environment.
+description: Reference topic for the add alias command, which adds aliases to the alias environment.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,9 +13,7 @@ ms.date: 10/16/2017
 
 # add alias
 
-Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt. Aliases are saved in the metadata file and will be loaded with the **load metadata** command.
 
 ## Syntax
 
@@ -25,17 +23,13 @@ add alias <AliasName> <AliasValue>
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|`<AliasName>`|Specifies the name of the alias.|
-|`<AliasValue>`|Specifies the value of the alias.|
-|`/?`|Displays help at the command prompt.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<AliasName>` | Specifies the name of the alias. |
+| `<AliasValue>` | Specifies the value of the alias. |
+| `/?` | Displays help at the command prompt. |
 
-## Remarks
-
--   Aliases are saved in the metadata file and will be loaded with the **load metadata** command.
-
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To list all shadows, including their aliases, type:
 
@@ -65,3 +59,5 @@ add alias System1 {ff47165a-1946-4a0c-b7f4-80f46a309278}
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [load metadata command](load-metadata.md)

@@ -1,6 +1,6 @@
 ---
 title: detail partition
-description: Windows Commands topic for detail partition, which displays the properties of the selected partition.
+description: Reference topic for detail partition, which displays the properties of the selected partition.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -25,7 +25,7 @@ detail partition
 
 -   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To see the properties of the selected partition, type:
 ```

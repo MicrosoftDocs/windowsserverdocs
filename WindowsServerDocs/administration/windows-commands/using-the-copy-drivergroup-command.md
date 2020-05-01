@@ -1,6 +1,6 @@
 ---
 title: copy-DriverGroup
-description: Windows Commands topic for copy-DriverGroup, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status. 
+description: Reference topic for copy-DriverGroup, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -29,7 +29,7 @@ WDSUTIL /Copy-DriverGroup [/Server:<Server name>] /DriverGroup:<Source Group Nam
 |/DriverGroup:\<Source Group Name>|Specifies the name of the source driver group.|
 |/GroupName:\<New Group Name>|Specifies the name of the new driver group.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To copy a driver group, type one of the following:
 ```

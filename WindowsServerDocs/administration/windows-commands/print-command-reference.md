@@ -1,6 +1,6 @@
 ---
 title: print Command Reference
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # print Command Reference
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following is a list of print command-line tools.
 

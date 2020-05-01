@@ -1,6 +1,6 @@
 ---
 title: mqbkup
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # mqbkup
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Backs up MSMQ message files and registry settings to a storage device and restores previously-stored messages and settings.   
 Both the backup and the restore operation will stop the local MSMQ service. If the MSMQ service was started beforehand, the utility will attempt to restart the MSMQ service at the end of the backup or the restore operation. If the service was already stopped before running the utility, no attempt to restart the service is made.  
@@ -33,7 +33,7 @@ mqbkup {/b | /r} <folder path_to_storage_device>
 |/r|Specifies restore operation|  
 |<folder path_to_storage\_device>|Specifies the path where the MSMQ message files and registry settings are stored|  
 |/?|Displays help at the command prompt.|  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 To backup all MSMQ message files and registry settings and store them in the *Msmqbkup* folder on your C: drive.  
 ```  
 mqbkup /b c:\msmqbkup  

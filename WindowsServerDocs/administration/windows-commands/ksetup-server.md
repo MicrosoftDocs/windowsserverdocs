@@ -1,6 +1,6 @@
 ---
 title: ksetup:server
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to specify a name for a computer running the Windows operating system so that the changes made by using **ksetup** will update the target computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to specify a name for a computer running the Windows operating system so that the changes made by using **ksetup** will update the target computer.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ There is no way to remove the targeted server name; you can only change it back 
 
 The target server name is stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\LSA\Kerberos**. It is not reported by using **ksetup**.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Make your **ksetup** configurations effective on the IPops897 computer that is connected on the Contoso domain:
 ```

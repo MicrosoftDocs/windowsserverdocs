@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getpriority
-description: Windows Commands topic for **bitsadmin getpriority**, which retrieves the priority of the specified job.
+description: Reference topic for the bitsadmin getpriority command, which retrieves the priority of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -26,9 +26,9 @@ bitsadmin /getpriority <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## Remarks
+#### Output
 
-The priority for this command can be:
+The returned priority for this command can be:
 
 - **FOREGROUND**
 
@@ -40,14 +40,16 @@ The priority for this command can be:
 
 - **UNKNOWN**
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the priority for the job named *myDownloadJob*.
+To retrieve the priority for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getpriority myDownloadJob
+bitsadmin /getpriority myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

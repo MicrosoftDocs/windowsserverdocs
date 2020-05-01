@@ -1,6 +1,6 @@
 ---
 title: diskcopy
-description: Windows Commands topic for diskcopy, which copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive.
+description: Reference topic for diskcopy, which copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 05/07/2018
 
 Copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive. If used without parameters, **diskcopy** uses the current drive for the source disk and the destination disk.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 > [!NOTE]
 > This command isn't included in Windows 10.
@@ -87,7 +87,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
     To process the exit codes that are returned by **diskcomp**, you can use the *ERRORLEVEL* environment variable on the **if** command line in a batch program.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To copy the disk in drive B to the disk in drive A, type:
 ```

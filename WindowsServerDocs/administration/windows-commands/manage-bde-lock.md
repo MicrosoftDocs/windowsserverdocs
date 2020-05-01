@@ -1,6 +1,6 @@
 ---
 title: manage-bde lock
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided.
 
 ## Syntax
 
@@ -37,9 +37,9 @@ manage-bde -lock [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-lock** command to lock data drive D.
+To illustrates using the **-lock** command to lock data drive D.
 ```
 manage-bde –lock D:
 ```

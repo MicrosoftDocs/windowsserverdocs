@@ -1,6 +1,6 @@
 ---
 title: msinfo32
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # msinfo32
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer. 
 ## Syntax
@@ -41,7 +41,7 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/show
 
 ## Remarks
 Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx).
-## <a name=BKMK_Examples></a>Examples
+## Examples
 To list the available category IDs, type:
 ```
 msinfo32 /showcategories

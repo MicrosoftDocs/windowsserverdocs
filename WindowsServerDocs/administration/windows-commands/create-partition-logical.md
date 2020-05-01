@@ -1,6 +1,6 @@
 ---
 title: create partition logical
-description: Windows Commands topic for create partition logical, which creates a logical partition in an existing extended partition.
+description: Reference topic for create partition logical, which creates a logical partition in an existing extended partition.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # create partition logical
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a logical partition in an existing extended partition. You can only use this command on master boot record (MBR) disks.
 
@@ -40,7 +40,7 @@ create partition logical [size=<n>] [offset=<n>] [align=<n>] [noerr]
   
 -   A basic MBR disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To create a logical partition of 1000 megabytes in size, in the extended partition of the selected disk, type:  
   
 ```  

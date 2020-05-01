@@ -1,6 +1,6 @@
 ---
 title: ftp binary
-description: Windows Commands topic for ftp binary
+description: Reference topic for ftp binary
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: binary
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the file transfer type to binary.   
 ## Syntax  
@@ -27,7 +27,7 @@ binary
 none  
 ## Remarks <optional section>  
 **ftp** supports both ASCII and binary image file transfer types. Use binary when transferring executable files. In binary mode, files are transferred in one-byte units. For more information about ASCII file transfer, see  **ftp: ascii** in additional references.  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 Set the file transfer type to binary.  
 ```  
 binary  

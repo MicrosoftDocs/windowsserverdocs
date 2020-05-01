@@ -1,6 +1,6 @@
 ---
 title: doskey
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Calls Doskey.exe (which recalls previously entered command-line commands), edits command lines, and creates macros.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -138,7 +138,7 @@ doskey [/reinstall] [/listsize=<Size>] [/macros:[all | <ExeName>] [/history] [/i
   doskey <MacroName> =
   ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The **/macros** and **/history** command-line options are useful for creating batch programs to save macros and commands. For example, to store all current **doskey** macros, type:
 ```

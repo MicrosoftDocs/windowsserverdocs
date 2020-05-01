@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getaclflags
-description: Windows Commands topic for **bitsadmin getaclflags**, which retrieves the access control list (ACL) propagations flags.
+description: Reference topic for the bitsadmin getaclflags command, which retrieves the access control list (ACL) propagations flags.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -27,9 +27,9 @@ bitsadmin /getaclflags <job>
 | --------- | ----------- |
 | job | The job's display name or GUID. |
 
-## Remarks
+### Remarks
 
-Displays one or more of the following flag values:
+Returns one or more of the following flag values:
 
 - **o** - Copy owner information with file.
 
@@ -39,14 +39,16 @@ Displays one or more of the following flag values:
 
 - **s** - Copy system access control list (SACL) information with file.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the access control list propagation flags for the job named *myDownloadJob*.
+To retrieve the access control list propagation flags for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getaclflags myDownloadJob
+bitsadmin /getaclflags myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

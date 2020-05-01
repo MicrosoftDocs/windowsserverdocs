@@ -1,6 +1,6 @@
 ---
 title: Diskpart Scripts and Examples
-description: Windows Commands topic for Diskpart scripts and examples about how to automate disk-related tasks, such as creating volumes or converting disks to dynamic disks.
+description: Reference topic for Diskpart scripts and examples about how to automate disk-related tasks, such as creating volumes or converting disks to dynamic disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Diskpart scripts and examples
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Use Diskpart `/s` to run scripts that automate disk-related tasks, such as creating volumes or converting disks to dynamic disks. Scripting these tasks is useful if you deploy Windows by using unattended Setup or the Sysprep tool, which do not support creating volumes other than the boot volume.  
   

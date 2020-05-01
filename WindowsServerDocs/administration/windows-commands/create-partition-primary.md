@@ -1,6 +1,6 @@
 ---
 title: create partition primary
-description: Windows Commands topic for create partition primary, which creates a primary partition on the basic disk with focus. 
+description: Reference topic for create partition primary, which creates a primary partition on the basic disk with focus. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # create partition primary
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a primary partition on the basic disk with focus.  
   
@@ -40,7 +40,7 @@ create partition primary [size=<n>] [offset=<n>] [id={ <byte> | <guid> }] [align
   
 -   A basic disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To create a primary partition of 1000 megabytes in size, type:  
   
 ```  

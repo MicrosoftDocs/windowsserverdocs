@@ -1,6 +1,6 @@
 ---
 title: ftp bye
-description: Windows Commands topic for ftp bye
+description: Reference topic for ftp bye
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: bye
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends the ftp session with the remote computer and exits.   
 ## Syntax  
@@ -27,7 +27,7 @@ bye
 none  
 ## Remarks  
 **Bye** and **quit** both end the ftp session with the remote computer and exits.  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 End the ftp session with the remote computer and exit.  
 ```  
 bye  

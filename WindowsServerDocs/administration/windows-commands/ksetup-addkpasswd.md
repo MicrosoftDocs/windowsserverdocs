@@ -1,6 +1,6 @@
 ---
 title: ksetup:addkpasswd
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Adds a Kerberos password (Kpasswd) server address for a realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Adds a Kerberos password (Kpasswd) server address for a realm.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ Run the command **ksetup** to verify the KDC name. If **kpasswd =** does not app
 
 You can add additional KDC names one at a time.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Configure the realm, CORP.CONTOSO.COM, so that it uses the non-Windows KDC server, mitkdc.contoso.com, as the password server:
 ```

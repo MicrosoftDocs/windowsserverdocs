@@ -1,6 +1,6 @@
 ---
 title: telnet open
-description: Windows Commands topic for telnet open, which connects to a telnet server.
+description: Reference topic for telnet open, which connects to a telnet server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 s.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # telnet: open
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Connects to a telnet server.    
 
@@ -27,7 +27,7 @@ o[pen] <hostname> [<Port>]
 | <hostname> |                         Specifies the computer name or IP address.                         |
 |  [<Port>]  | Specifies the TCP port that the telnet server is listening on. The default is TCP port 23. |
 
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 Connect to a telnet server at telnet.microsoft.com.  
 ```  
 o telnet.microsoft.com  

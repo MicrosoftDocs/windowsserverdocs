@@ -1,6 +1,6 @@
 ---
 title: manage-bde unlock
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Unlocks a BitLocker-protected drive by using a recovery password or a recovery key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Unlocks a BitLocker-protected drive by using a recovery password or a recovery key.
 
 ## Syntax
 
@@ -45,9 +45,9 @@ manage-bde -unlock {-recoverypassword <Password>|-recoverykey <PathToExternalKey
 |-? or /?||Displays brief Help at the command prompt.|
 |-help or -h||Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-unlock** command to unlock drive E with a recovery key file that has been saved to a backup folder on another drive.
+To illustrates using the **-unlock** command to unlock drive E with a recovery key file that has been saved to a backup folder on another drive.
 ```
 manage-bde –unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
 ```

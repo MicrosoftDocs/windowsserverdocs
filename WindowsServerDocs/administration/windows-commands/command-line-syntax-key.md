@@ -1,6 +1,6 @@
 ---
 title: Command-line syntax key
-description: Windows Commands topic for the command-line syntax key, which describes the notation used to indicate command-line syntax. 
+description: Reference topic for the command-line syntax key, which describes the notation used to indicate command-line syntax. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -19,7 +19,7 @@ The following table describes the notation used to indicate command-line syntax.
 | -------- | ----------- |
 | Text without brackets or braces | Items you must type as shown. |
 | `<Text inside angle brackets>` | Placeholder for which you must supply a value. |
-| `[Text inside square brackets]` | Optional items |
+| `[Text inside square brackets]` | Optional items. |
 | `{Text inside braces}` | Set of required items. You must choose one. |
 | Vertical bar `(|)`| Separator for mutually exclusive items. You must choose one. |
 | Ellipsis `(…)` | Items that can be repeated and used multiple times. |

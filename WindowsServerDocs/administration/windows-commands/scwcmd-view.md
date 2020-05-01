@@ -1,6 +1,6 @@
 ---
 title: Scwcmd view
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Scwcmd: view
 
-> Applies To: Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2012 R2, Windows Server 2012
 
 Renders an .xml file by using a specified .xsl transform. This command can be useful for displaying Security Configuration Wizard (SCW) .xml files by using different views.
 
@@ -39,7 +39,7 @@ scwcmd view /x:<Xmlfile.xml> [/s:<Xslfile.xsl>]
 
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 To view Policyfile.xml by using the Policyview.xsl transform, type:
 ```
