@@ -304,13 +304,13 @@ Following are examples of Priority assignment.
 ### Create QoS Policy
 
 ```
-PS C:\> New-NetQosPolicy -Name "SMB Policy" -PriorityValue8021Action 4
+PS C:\> New-NetQosPolicy -Name "SMB Policy" -SMB -PriorityValue8021Action 4
 
 Name           : SMB Policy
 Owner          : Group Policy (Machine)
 NetworkProfile : All
 Precedence     : 127
-JobObject      :
+Template       : SMB
 PriorityValue  : 4
 
 ```
@@ -381,6 +381,7 @@ Name           : SMB Policy
 Owner          : Group Policy (Machine)
 NetworkProfile : All
 Precedence     : 127
+Template       : SMB
 JobObject      :
 PriorityValue  : 4
 
