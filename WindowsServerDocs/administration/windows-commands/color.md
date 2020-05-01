@@ -31,26 +31,26 @@ color [[<b>]<f>]
 
 Where:
 
-- The following table lists valid hexadecimal digits that you can use as the values for `<b>` and `<f>`:
+The following table lists valid hexadecimal digits that you can use as the values for `<b>` and `<f>`:
 
-    | Value | Color |
-    | ----- | ----- |
-    | 0 | Black |
-    | 1 | Blue |
-    | 2 | Green |
-    | 3 | Aqua |
-    | 4 | Red |
-    | 5 | Purple |
-    | 6 | Yellow |
-    | 7 | White |
-    | 8 | Gray |
-    | 9 | Light blue |
-    | a | Light green |
-    | b | Light aqua |
-    | c | Light red |
-    | d | Light purple |
-    | e | Light yellow |
-    | f | Bright white |
+| Value | Color |
+| ----- | ----- |
+| 0 | Black |
+| 1 | Blue |
+| 2 | Green |
+| 3 | Aqua |
+| 4 | Red |
+| 5 | Purple |
+| 6 | Yellow |
+| 7 | White |
+| 8 | Gray |
+| 9 | Light blue |
+| a | Light green |
+| b | Light aqua |
+| c | Light red |
+| d | Light purple |
+| e | Light yellow |
+| f | Bright white |
 
 #### Remarks
 

@@ -18,7 +18,7 @@ Converts an empty dynamic disk to a basic disk. A dynamic disk must be selected 
 > [!IMPORTANT]
 > The disk must be empty to convert it to a basic disk. Back up your data, and then delete all partitions or volumes before converting the disk.
 
->[!NOTE]
+> [!NOTE]
 > For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755238(v=ws.11))).
 
 ## Syntax
