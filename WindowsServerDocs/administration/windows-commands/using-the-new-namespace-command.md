@@ -1,6 +1,6 @@
 ---
 title: new-Namespace
-description: Windows Commands topic for new-Namespace, which creates and configures a new namespace.
+description: Reference topic for new-Namespace, which creates and configures a new namespace.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # new-Namespace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates and configures a new namespace. You should use this option when you have only the Transport Server role service installed. If you have both the Deployment Server role service and the Transport Server role service installed (which is the default), use [Using the new-MulticastTransmission Command](using-the-new-multicasttransmission-command.md). Note that you must register the content provider before you use this option.
 ## Syntax
@@ -37,7 +37,7 @@ wdsutil [Options] /New-Namespace [/Server:<Server name>]
 |/ContentProvider:<Name>]|Specifies the name of the content provider that will provide content for the namespace.|
 |[/ConfigString:<Configuration string>]|Specifies the configuration string for the content provider.|
 |/Namespacetype: {AutoCast &#124; ScheduledCast}|Specifies the settings for the transmission. You specify the settings using the following options:<p>-   [/time: <time>] - Sets the time that the transmission should start by using the following format: YYYY/MM/DD:hh:mm. This option applies only to Scheduled-Cast transmissions.<br />-   [/Clients: <Number of clients>] - Sets the minimum number of clients to wait for before the transmission starts. This option applies only to Scheduled-Cast transmissions.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To create an Auto-Cast namespace, type:
 ```
 wdsutil /New-Namespace /FriendlyName:Custom AutoCast Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider /Namespacetype:AutoCast

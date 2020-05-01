@@ -16,7 +16,7 @@ ms.date: 03/30/2020
 ---
 # ftp: put
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies a local file to the remote computer using the current file transfer type.
 ## Syntax
@@ -33,7 +33,7 @@ put <LocalFile> [<remoteFile>]
 ## Remarks
 - The **put** command is identical to the **send** command.
 - if *remoteFile* is not specified, the file is given the *LocalFile* name.
-  ## <a name="BKMK_Examples"></a>Examples
+  ## Examples
   copy the local file **test.txt** and name it **test1.txt** on the remote computer.
   ```
   put test.txt test1.txt

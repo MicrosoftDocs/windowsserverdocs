@@ -1,6 +1,6 @@
 ---
 title: enable-Server
-description: Windows Commands topic for enable-Server, which enables all services for Windows Deployment Services. 
+description: Reference topic for enable-Server, which enables all services for Windows Deployment Services. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # enable-Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables all services for Windows Deployment Services.
 
@@ -24,7 +24,7 @@ wdsutil [Options] /Enable-Server [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To enable the services on the server, run one of the following:
 ```
 wdsutil /Enable-Server

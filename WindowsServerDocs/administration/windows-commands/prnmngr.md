@@ -16,7 +16,7 @@ ms.date: 07/11/2018
 ---
 # prnmngr
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds, deletes, and lists printers or printer connections, in addition to setting and displaying the default printer.
 

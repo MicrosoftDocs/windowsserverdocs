@@ -1,6 +1,6 @@
 ---
 title: unlodctr
-description: Windows Commands topic for unlodctr, which removes Performance counter names and Explain text for a service or device driver from the system registry
+description: Reference topic for unlodctr, which removes Performance counter names and Explain text for a service or device driver from the system registry
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # unlodctr
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Removes **Performance counter** names and **Explain** text for a service or device driver from the system registry.   
 
@@ -32,7 +32,7 @@ Unlodctr <DriverName>
 
 If the information that you supply contains spaces, use quotation marks around the text (for example, <DriverName>).  
 
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 To remove the current Performance registry settings and counter Explain text for the Simple Mail Transfer Protocol (SMTP) service:  
 ```  
 unlodctr SMTPSVC  

@@ -1,6 +1,6 @@
 ---
 title: mask
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Removes hardware shadow copies that were imported by using the **import** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -39,7 +39,7 @@ mask <ShadowSetID>
 
 -   You can use an existing alias or an environment variable in place of *ShadowSetID*. Use **add** without parameters to see existing aliases.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To remove the imported shadow copy %Import_1%, type:
 ```

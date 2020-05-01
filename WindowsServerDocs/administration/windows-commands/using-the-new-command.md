@@ -1,6 +1,6 @@
 ---
 title: New
-description: Windows Commands topic for New, which creates capture and discover images, multicast transmissions, and namespaces. 
+description: Reference topic for New, which creates capture and discover images, multicast transmissions, and namespaces. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # New
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates capture and discover images, multicast transmissions, and namespaces.
 

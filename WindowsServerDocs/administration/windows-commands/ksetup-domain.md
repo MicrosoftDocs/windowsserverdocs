@@ -1,6 +1,6 @@
 ---
 title: ksetup:domain
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Sets the domain name for all Kerberos operations. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets the domain name for all Kerberos operations.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ ksetup /domain <DomainName>
 
 None.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Establish a connection to a valid domain, such as Microsoft by using the /mapuser subcommand:
 ```

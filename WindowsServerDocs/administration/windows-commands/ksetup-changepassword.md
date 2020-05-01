@@ -1,6 +1,6 @@
 ---
 title: ksetup:changepassword
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user.
 
 ## Syntax
 
@@ -46,7 +46,7 @@ If you want to force a password change at next logon, this command allows the us
 
 The output of the command informs you of the success or failure status.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Change the password of a user who is currently logged on to this computer in this domain:
 ```

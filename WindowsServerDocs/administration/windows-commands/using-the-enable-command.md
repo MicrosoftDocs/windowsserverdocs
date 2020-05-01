@@ -1,6 +1,6 @@
 ---
 title: Enable
-description: Windows Commands topic for Enable, which enables all services for Windows Deployment Services.
+description: Reference topic for Enable, which enables all services for Windows Deployment Services.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Enable
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables all services for Windows Deployment Services.
 

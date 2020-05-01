@@ -1,6 +1,6 @@
 ---
 title: help
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Provides online information about system commands (that is, non-network commands). If used without parameters, **help** lists and briefly describes every system command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -36,7 +36,7 @@ help [<Command>]
 |---------|-----------|
 |\<Command>|Specifies the name of the command that you want information about.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view information about the **robocopy** command, type either of the following:
 ```

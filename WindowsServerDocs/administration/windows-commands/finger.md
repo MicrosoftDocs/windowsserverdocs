@@ -1,6 +1,6 @@
 ---
 title: finger
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # finger
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about a user or users on a specified remote computer (typically a computer running UNIX) that is running the finger service or daemon. The remote computer specifies the format and output of the user information display. Used without parameters, **finger** displays help. 
 ## Syntax
@@ -37,7 +37,7 @@ Multiple User@Host parameters can be specified.
 You must prefix **finger** parameters with a hyphen (-) rather than a slash (/).
 This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 The Windows Server 2003 does not provide a finger service.
-## <a name=BKMK_Examples></a>Examples
+## Examples
 To display information for user1 on the computer users.microsoft.com, type:
 ```
 finger user1@users.microsoft.com

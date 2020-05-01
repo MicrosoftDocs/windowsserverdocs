@@ -1,6 +1,6 @@
 ---
 title: sfc
-description: Windows Commands topic for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
+description: Reference topic for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,11 +12,10 @@ ms.date: 10/16/2017
 ---
 # sfc
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 ```
@@ -42,7 +41,7 @@ sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir
 -   for more information about **sfc** on Windows Server 2003, see [article 310747](https://go.microsoft.com/fwlink/?LinkId=227069) in the Microsoft Knowledge Base.
 -   for more information about **sfc** on  Windows Server  2008 , and  Windows Server  2008 R2 , see [System File Checker](https://go.microsoft.com/fwlink/?LinkId=227071).
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To verify the **kernel32.dll file**, type:
 ```
 sfc /verifyfile=c:\windows\system32\kernel32.dll

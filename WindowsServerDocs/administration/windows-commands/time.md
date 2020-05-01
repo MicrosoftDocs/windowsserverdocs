@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Displays or sets the system time. If used without parameters, **time** displays the current system time and prompts you to enter a new time.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

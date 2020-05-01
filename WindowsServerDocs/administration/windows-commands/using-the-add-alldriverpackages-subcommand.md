@@ -1,6 +1,6 @@
 ---
 title: Using the add-AllDriverPackages subcommand
-description: Windows Commands topic for add-AllDriverPackages, which adds all driver packages that are stored in a folder to a server. 
+description: Reference topic for add-AllDriverPackages, which adds all driver packages that are stored in a folder to a server. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -30,7 +30,7 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 |     [/Architecture:{x86      |                                                                 ia64                                                                  |
 | [/DriverGroup:\<Group Name>] |                             Specifies the name of the driver group to which the packages should be added.                             |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To add driver packages, type one of the following:
 ```

@@ -1,6 +1,6 @@
 ---
 title: get-Namespace
-description: Windows Commands topic for get-Namespace, which displays information about a custom namespace. 
+description: Reference topic for get-Namespace, which displays information about a custom namespace. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # get-Namespace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about a custom namespace.
 
@@ -33,7 +33,7 @@ wdsutil /Get-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/det
 |        [/Server:<Server name>]        |                                                                                                             Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.                                                                                                              |
 | [/Show:Clients] or [/details:Clients] |                                                                                                                                                  Displays information about client computers that are connected to the specified namespace.                                                                                                                                                  |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To view information about a namespace, type:
 ```
 wdsutil /Get-Namespace /Namespace:Custom Auto 1

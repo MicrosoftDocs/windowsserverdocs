@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-ImageGroup
-description: Windows Commands topic for Subcommand set-ImageGroup, which changes the attributes of an image group.
+description: Reference topic for Subcommand set-ImageGroup, which changes the attributes of an image group.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: set-ImageGroup
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the attributes of an image group.
 
@@ -27,7 +27,7 @@ mediaGroup:<Image group name>|Specifies the name of the image group.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If not specified, the local server will be used.|
 |[/Name:<New image group name>]|Specifies the new name of the image group.|
 |[/Security:<SDDL>]|Specifies the new Security Descriptor of the image group, in security descriptor definition language (SDDL) format.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To set the name for an image group, type:
 ```
 wdsutil /Set-ImageGroumediaGroup:ImageGroup1 /Name:New Image Group Name

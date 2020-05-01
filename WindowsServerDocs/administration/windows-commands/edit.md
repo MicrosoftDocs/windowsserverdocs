@@ -1,6 +1,6 @@
 ---
 title: edit
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Starts MS-DOS Editor, which creates and changes ASCII text files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -46,7 +46,7 @@ edit [/b] [/h] [/r] [/s] [/<NNN>] [[<Drive>:][<Path>]<FileName> [<FileName2> [..
 -   For additional help, open MS-DOS Editor, and then press the F1 key.
 -   Some monitors do not support the display of shortcut keys by default. If your monitor does not display shortcut keys, use **/b**.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To open MS-DOS Editor, type:
 ```

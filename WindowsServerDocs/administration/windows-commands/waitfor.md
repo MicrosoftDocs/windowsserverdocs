@@ -1,6 +1,6 @@
 ---
 title: waitfor
-description: Windows Commands topic for waitfor, which sends or waits for a signal on a system. **Waitfor** is used to synchronize computers across a network.
+description: Reference topic for waitfor, which sends or waits for a signal on a system. **Waitfor** is used to synchronize computers across a network.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 Sends or waits for a signal on a system. **Waitfor** is used to synchronize computers across a network.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -48,7 +48,7 @@ waitfor [/t <Timeout>] <SignalName>
 -   Computers can only receive signals if they are in the same domain as the computer sending the signal.
 -   You can use **waitfor** when you test software builds. For example, the compiling computer can send a signal to several computers running **waitfor** after the compile has completed successfully. On receipt of the signal, the batch file that includes **waitfor** can instruct the computers to immediately start installing software or running tests on the compiled build.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To wait until the espresso\build007 signal is received, type:
 ```

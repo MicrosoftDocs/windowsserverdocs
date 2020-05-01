@@ -1,6 +1,6 @@
 ---
 title: disable-Server
-description: Windows Commands topic for disable-Server, which disables all services for a Windows Deployment Services server. 
+description: Reference topic for disable-Server, which disables all services for a Windows Deployment Services server. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -27,7 +27,7 @@ WDSUTIL [Options] /Disable-Server [/Server:<Server name>]
 |---------|-----------|
 |[/Server:\<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To disable the server, run one of the following:
 ```

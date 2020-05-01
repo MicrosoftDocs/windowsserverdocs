@@ -1,6 +1,6 @@
 ---
 title: get
-description: Windows Commands topic for get, which retrieves properties or attributes about the specified object. 
+description: Reference topic for get, which retrieves properties or attributes about the specified object. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # get
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves properties or attributes about the specified object.
 

@@ -1,6 +1,6 @@
 ---
 title: Approve-AutoaddDevices
-description: Windows Commands topic for Approve-AutoaddDevices, which approves computers that are pending administrative approval. 
+description: Reference topic for Approve-AutoaddDevices, which approves computers that are pending administrative approval. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Approve-AutoaddDevices
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Approves computers that are pending administrative approval. When the Auto-add policy is enabled, administrative approval is required before unknown computers (those that are not prestaged) can install an image. You can enable this policy using the **PXE Response** tab of the server s properties page.
 
@@ -35,7 +35,7 @@ wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<R
 |[/BootProgram:<Relative path>]|Specifies the relative path from the remoteInstall folder to the network boot program that this computer should receive. For example: **boot\x86\pxeboot.com**.|
 |[/WdsClientUnattend:<Relative path>]|Specifies the relative path from the remoteInstall folder to the unattend file that automates the Windows Deployment Services client.|
 |[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that this computer should receive.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To approve the computer with a RequestId of 12, type:
 ```
 wdsutil /Approve-AutoaddDevices /RequestId:12

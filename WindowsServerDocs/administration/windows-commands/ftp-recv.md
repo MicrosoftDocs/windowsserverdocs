@@ -1,6 +1,6 @@
 ---
 title: ftp recv
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: recv
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies a remote file to the local computer using the current file transfer type.   
 ## Syntax  
@@ -33,7 +33,7 @@ recv <remoteFile> [<LocalFile>]
 ## Remarks  
 - The **recv** command is identical to the **get** command.  
 - if *LocalFile* is not specified, the file is given the *remoteFile* name.  
-  ## <a name=BKMK_Examples></a>Examples  
+  ## Examples  
   copy **test.txt** to the local computer using the current file transfer type.  
   ```  
   recv test.txt  

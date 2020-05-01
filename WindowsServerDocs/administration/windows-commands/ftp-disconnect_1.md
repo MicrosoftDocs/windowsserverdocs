@@ -1,6 +1,6 @@
 ---
 title: ftp disconnect_1
-description: Windows Commands topic for ftp disconnect_1
+description: Reference topic for ftp disconnect_1
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: disconnect_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disconnects from the remote computer and retains the **ftp>** prompt.   
 ## Syntax  
@@ -25,7 +25,7 @@ disconnect
 ```  
 #### Parameters  
 none  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 Disconnect from the remote computer and retain the **ftp>** prompt.  
 ```  
 disconnect  

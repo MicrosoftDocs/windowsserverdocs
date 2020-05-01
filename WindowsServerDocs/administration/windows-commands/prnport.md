@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # prnport
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
 

@@ -1,6 +1,6 @@
 ---
 title: reg delete
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Deletes a subkey or entries from the registry.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -49,7 +49,7 @@ The following table lists the return values for the **reg delete** operation.
 |0|Success|
 |1|Failure|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To delete the registry key Timeout and its all subkeys and values, type:
 ```

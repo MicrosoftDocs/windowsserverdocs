@@ -1,6 +1,6 @@
 ---
 title: copy-Image
-description: Windows Commands topic for copy-Image, which copies images that are within the same image group. 
+description: Reference topic for copy-Image, which copies images that are within the same image group. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,10 +12,9 @@ ms.date: 10/16/2017
 ---
 # copy-Image
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies images that are within the same image group. To copy images between image groups, use the [Using the Export-Image Command](using-the-export-image-command.md) command and then the [Using the add-Image Command](using-the-add-image-command.md) command.
-for examples of how you can use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 ```
@@ -37,7 +36,7 @@ mediatype:Install|Specifies the type of image to be copied. This option must be 
 |\mediaGroup:<Image group name>]|Specifies the image group that contains the image to be copied. If no image group is specified and only one group exists on the server, that image group will be used by default. If more than one image group exists on the server, you must specify the image group.|
 |[/Filename:<Filename>]|Specifies the file name of the image to be copied. If the source image cannot be uniquely identified by name, you must specify the file name.|
 |/DestinationImage|Specifies the settings for the destination image, as described in the following table.<p>-   /Name:<Name> - Sets the display name of the image to be copied.<br />-   /Filename:<Filename> - Sets the name of the destination image file that will contain the image copy.<br />-   [/Description: <Description>] - Sets the description of the image copy.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To create a copy of the specified image and name it WindowsVista.wim, type:
 ```
 wdsutil /copy-Imagmedia:Windows Vista with Officemediatype:Install /DestinationImage /Name:copy of Windows Vista with Office /Filename:WindowsVista.wim

@@ -1,6 +1,6 @@
 ---
 title: ftp rename
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: rename
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 renames remote files.   
 ## Syntax  
@@ -30,7 +30,7 @@ rename <FileName> <NewFileName>
 |  <FileName>   | Specifies the file that you want to rename. |
 | <NewFileName> |        Specifies the new file name.         |
 
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 rename the remote file **example.txt** to **example1.txt**  
 ```  
 rename example.txt example1.txt  

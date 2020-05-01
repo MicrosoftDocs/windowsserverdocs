@@ -1,6 +1,6 @@
 ---
 title: extend
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # extend
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 extends the volume or partition with focus and its file system into free \(unallocated\) space on a disk.  
   
@@ -52,7 +52,7 @@ extend filesystem [noerr]
   
 -   The partition must have an associated volume before it can be extended.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To extend the volume or partition with focus by 500 megabytes, on disk 3, type:  
   
 ```  

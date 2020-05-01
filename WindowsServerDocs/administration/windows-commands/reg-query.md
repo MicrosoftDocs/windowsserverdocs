@@ -1,6 +1,6 @@
 ---
 title: reg query
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Returns a list of the next tier of subkeys and entries that are located under a specified subkey in the registry.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -56,7 +56,7 @@ The following table lists the return values for the **reg query** operation.
 |0|Success|
 |1|Failure|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the value of the name value Version in the HKLM\Software\Microsoft\ResKit key, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: manage-bde forcerecovery
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Forces a BitLocker-protected drive into recovery mode on restart. This command deletes all Trusted Platform Module (TPM)-related key protectors from the drive. When the computer restarts, only a recovery password or recovery key can be used to unlock the drive. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Forces a BitLocker-protected drive into recovery mode on restart. This command deletes all Trusted Platform Module (TPM)-related key protectors from the drive. When the computer restarts, only a recovery password or recovery key can be used to unlock the drive.
 
 ## Syntax
 
@@ -37,9 +37,9 @@ manage-bde –forcerecovery <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-forcerecovery** command to cause BitLocker to start in recovery mode on drive C.
+To illustrates using the **-forcerecovery** command to cause BitLocker to start in recovery mode on drive C.
 ```
 manage-bde –forcerecovery C:
 ```

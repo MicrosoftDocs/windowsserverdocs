@@ -1,6 +1,6 @@
 ---
 title: mstsc
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,10 +16,10 @@ ms.date: 10/16/2017
 ---
 # mstsc
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 creates connections to Remote Desktop Session Host (rd Session Host) servers or other remote computers, edits an existing Remote Desktop Connection (.rdp) configuration file, and migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
 > [!NOTE]
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
 
@@ -50,7 +50,7 @@ mstsc.exe /migrate
 -   Default.rdp is stored for each user as a hidden file in the user's Documents folder. User created .rdp files are saved by default in the user's Documents folder but can be saved anywhere.
 -   To span across monitors, the monitors must use the same resolution and must be aligned horizontally (that is, side by side). There is currently no support for spanning multiple monitors vertically on the client system.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 -   To connect to a session in full-screen mode, type:
     ```
     mstsc /f

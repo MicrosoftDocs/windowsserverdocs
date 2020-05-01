@@ -1,6 +1,6 @@
 ---
 title: label
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Creates, changes, or deletes the volume label (that is, the name) of a disk. If used without parameters, the **label** command changes the current volume label or deletes the existing label.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -54,7 +54,7 @@ label [/mp] [<Volume>] [<Label>]
   ```  
   Press Y to delete the label, or press N to keep the label.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To label a disk in drive A that contains sales information for July, type:
 ```

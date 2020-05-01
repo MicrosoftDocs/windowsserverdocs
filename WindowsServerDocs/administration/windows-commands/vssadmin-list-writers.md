@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Vssadmin list writers
 
->Applies to: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Lists subscribed volume shadow copy writers.
 

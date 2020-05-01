@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setaclflag
-description: Windows Commands topic for **bitsadmin setaclflag**, which sets the access control list (ACL) propagations flags.
+description: Reference topic for the bitsadmin setaclflag command, which sets the access control list (ACL) propagations flags.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -28,18 +28,16 @@ bitsadmin /setaclflag <job> <flags>
 | job | The job's display name or GUID. |
 | flags | Specify one or more of the values, including:<ul><li>**o** - Copy owner information with file.</li><li>**g** - Copy group information with file.</li><li>**d** - Copy discretionary access control list (DACL) information with file.</li><li>**s** - Copy system access control list (SACL) information with file.</li></ul> |
 
-## Remarks
-
-The /setaclflag switch is used to maintain owner and access control list information when a job is downloading data from a Windows (SMB) share.
-
 ## Examples
 
-The following example sets the access control list propagation flags for the job named *myDownloadJob* to maintain the owner and group information with the downloaded files.
+To set the access control list propagation flags for the job named *myDownloadJob*, so it maintains the owner and group information with the downloaded files.
 
 ```
-C:\>bitsadmin /setaclflags myDownloadJob og
+bitsadmin /setaclflags myDownloadJob og
 ```
 
 ## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)&reg;'    
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

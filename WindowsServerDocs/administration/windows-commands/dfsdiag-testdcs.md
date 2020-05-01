@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestDCs
-description: Windows Commands topic for dfsdiag TestDCs, which checks the configuration of domain controllers in the specified domain.
+description: Reference topic for dfsdiag TestDCs, which checks the configuration of domain controllers in the specified domain.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # dfsdiag TestDCs
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:  
   
@@ -38,7 +38,7 @@ dfsdiag /TestDCs [/Domain:<Domain name>]
 
 /Domain is an optional parameter. The default value is the local domain that the local host is joined to.  
   
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 To verify the configuration of domain controllers in the Contoso.com domain, type:  
   
 ```  

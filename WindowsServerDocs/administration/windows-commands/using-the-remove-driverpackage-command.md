@@ -1,6 +1,6 @@
 ---
 title: remove-DriverPackage
-description: Windows Commands topic for remove-DriverPackage, which removes a driver package from a server. 
+description: Reference topic for remove-DriverPackage, which removes a driver package from a server. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # remove-DriverPackage
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 
 
 Removes a driver package from a server.
 
@@ -28,7 +28,7 @@ wdsutil /remove-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package N
 | [/DriverPackage:<Name>] |                                                        Specifies the name of the driver package to remove.                                                         |
 |    [/PackageId:<ID>]    | Specifies the Windows Deployment Services ID of the driver package to remove. You must specify the ID if the driver package cannot be uniquely identified by name. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To view information about the images, type one of the following:
 ```
 wdsutil /remove-DriverPackage /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
