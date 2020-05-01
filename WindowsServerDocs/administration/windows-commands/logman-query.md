@@ -1,6 +1,6 @@
 ---
 title: logman query
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman query
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 query data collector or data collector set properties.  
 
@@ -34,7 +34,7 @@ logman query [providers|Data Collector Set name] [options]
 |    [-n] <name>     |                          Name of the target object.                          |
 |        -ets        | Send commands to Event Trace Sessions directly without saving or scheduling. |
 
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 The following command lists all Data Collector Sets configured on the target system.  
 ```  
 logman query  

@@ -1,6 +1,6 @@
 ---
 title: manage-bde autounlock
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Manages the automatic unlocking of BitLocker-protected data drives. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Manages the automatic unlocking of BitLocker-protected data drives.
 
 ## Syntax
 
@@ -41,9 +41,9 @@ manage-bde -autounlock [{-enable|-disable|-clearallkeys}] <Drive> [-computername
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-autounlock** command to enable automatic unlocking of data drive E.
+To illustrates using the **-autounlock** command to enable automatic unlocking of data drive E.
 ```
 manage-bde –autounlock -enable E:
 ```

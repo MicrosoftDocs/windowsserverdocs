@@ -1,6 +1,6 @@
 ---
 title: cscript
-description: Windows Commands topic for cscript, which starts a script so that it runs in a command-line environment.
+description: Reference topic for cscript, which starts a script so that it runs in a command-line environment.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # cscript
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Starts a script so that it runs in a command-line environment.
 
@@ -50,9 +50,9 @@ cscript <Scriptname.extension> [/B] [/D] [/E:<Engine>] [{/H:cscript|/H:wscript}]
 -   You can set properties for individual scripts. See Related Topics for more information.
 -   Windows Script Host can use .wsf script files. Each .wsf file can use multiple scripting engines and perform multiple jobs.
 -   if you double-click a script file with an extension that has no association, the **Open With** dialog box appears. select wscript or cscript, and then select **Always use this program to open this file type**. This registers wscript.exe or cscript as the default script host for files of this file type.
--   You can set properties for individual scripts. See [additional References](#BKMK_references) for more information.
+-   You can set properties for individual scripts.
 -   Windows Script Host can use .wsf script files. Each .wsf file can use multiple scripting engines and perform multiple jobs.
 
-#### <a name=BKMK_references></a>Additional references
+####  Additional references
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

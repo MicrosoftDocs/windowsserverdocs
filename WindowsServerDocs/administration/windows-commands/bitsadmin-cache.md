@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache
-description: Windows Commands topic for **bitsadmin cache**, which contains a list of the bitsadmin cache switches.
+description: Reference topic for the bitsadmin cache command, which contains a list of the bitsadmin cache switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,9 @@ ms.date: 10/16/2017
 ---
 # bitsadmin cache
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Contains a list of the bitsadmin /cache switches.
 
 Contains a list of the bitsadmin /cache switches.
 
@@ -20,7 +22,7 @@ Contains a list of the bitsadmin /cache switches.
 
 ```
 bitsadmin /cache /help
-bitsadmin /cache /Clear
+bitsadmin /cache /clear
 bitsadmin /cache /delete
 bitsadmin /cache /deleteURL
 bitsadmin /cache /list
@@ -38,7 +40,7 @@ bitsadmin /cache /setexpirationtime
 | [bitsadmin cache and help](bitsadmin-cache-and-help.md) | Displays the command-line usage for the /cache switches. |
 | [bitsadmin cache and clear](bitsadmin-cache-clear.md) | Purges the local cache. |
 | [bitsadmin cache and delete](bitsadmin-cache-and-delete.md) | Deletes a cache entry. |
-| [bitsadmin cache and deleteurl](bitsadmin-cache-and-deleteurl.md) | Deletes all cache entries for the given URL. |
+| [bitsadmin cache and deleteURL](bitsadmin-cache-and-deleteurl.md) | Deletes all cache entries for the given URL. |
 | [bitsadmin cache and list](bitsadmin-cache-and-list.md) | Lists all cache entries. |
 | [bitsadmin cache and info](bitsadmin-cache-and-info.md) | Dumps a specific cache entry. |
 | [bitsadmin cache and getlimit](bitsadmin-cache-and-getlimit.md) | Retrieves the cache limit. |
@@ -49,3 +51,5 @@ bitsadmin /cache /setexpirationtime
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

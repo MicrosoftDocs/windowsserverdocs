@@ -1,6 +1,6 @@
 ---
 title: rem
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -27,7 +27,7 @@ Provides a way to add comments to a script.
 rem
 ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 In this example script, **rem** is used to provide a comment about what the script does:
 ```

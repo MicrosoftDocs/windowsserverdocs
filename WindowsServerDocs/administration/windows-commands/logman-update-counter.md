@@ -1,6 +1,6 @@
 ---
 title: logman update counter
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman update counter
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update an existing counter data collector's properties.  
 
@@ -54,7 +54,7 @@ logman update counter <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 The following command updates the data collector perf_log, changing the sample interval to 10 and the log format to CSV and adding versioning to the log file name in the format mmddhhmm.  
 ```  
 logman update perf_log -si 10 -f csv -v mmddhhmm  

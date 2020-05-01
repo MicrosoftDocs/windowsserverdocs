@@ -1,6 +1,6 @@
 ---
 title: sort
-description: Windows Commands topic for sort, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
+description: Reference topic for sort, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -66,7 +66,7 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 
     If the sort fits within the maximum memory size (as set by default or as specified by the **/m** parameter), the sort is performed in a single pass. Otherwise, the sort is performed in two separate sort and merge passes, and the amounts of memory used for both passes are equal. When two passes are performed, the partially sorted data is stored in a temporary file on disk. If there is not enough memory to perform the sort in two passes, a run-time error is issued. If the **/m** command-line option is used to specify more memory than is truly available, performance degradation or a run-time error can occur.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 **Sorting a file**
 

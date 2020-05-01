@@ -1,6 +1,6 @@
 ---
 title: Sc query
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Obtains and displays information about the specified service, driver, type of service, or type of driver.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -57,7 +57,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
   sc query bufsize= 1822 ri= 79
   ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display information for active services only, type either of the following commands:
 ```

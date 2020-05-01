@@ -1,6 +1,6 @@
 ---
 title: ksetup:setcomputerpassword
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Sets the password for the local computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets the password for the local computer.
 
 ## Syntax
 
@@ -41,7 +41,7 @@ You must restart the computer for the password change to take effect.
 
 The computer account password is not displayed in the registry or as output from the **ksetup** command.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Change the computer account password on the local computer from IPops897 to IPop$897!.
 ```

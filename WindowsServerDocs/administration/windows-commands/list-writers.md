@@ -1,6 +1,6 @@
 ---
 title: list writers
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Lists writers that are on the system. If used without parameters, **list** displays the output for **list metadata** by default.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -37,7 +37,7 @@ list writers [metadata | detailed | status]
 |detailed|Lists the same information as **metadata**, but **detailed** includes the full file list for all components.|
 |status|Lists only the identity and status of registered writers.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To list only the identity and status of writers, type:
 ```

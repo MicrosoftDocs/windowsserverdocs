@@ -1,6 +1,6 @@
 ---
 title: get-MulticastTransmission
-description: Windows Commands topic for get-MulticastTransmission, which displays information about the multicast transmission for a specified image.
+description: Reference topic for get-MulticastTransmission, which displays information about the multicast transmission for a specified image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # get-MulticastTransmission
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about the multicast transmission for a specified image.
 
@@ -51,7 +51,7 @@ mediatype:Install|Specifies the image type. Note that this option must be set to
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the boot image that is associated with the transmission. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure                                   that the correct image is used.|
 |[/Filename:<File name>]|Specifies the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
 |[/Show:Clients]<p>or<p>[/details:Clients]|Displays information about client computers that are connected to the multicast transmission.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 **Windows Server 2008**
 To view information about the transmission for an image named  Vista with Office, type one of the following:
 ```

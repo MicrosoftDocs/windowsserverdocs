@@ -1,6 +1,6 @@
 ---
 title: ftp:debug
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp:debug
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Toggles Debugging mode.   
 ## Syntax  
@@ -28,7 +28,7 @@ none
 ## Remarks  
 - By default, debugging is off.  
 - When debugging is on, each command that is sent to the remote computer is displayed, preceded by the greater than (>) character.  
-  ## <a name=BKMK_Examples></a>Examples  
+  ## Examples  
   Toggle debug mode on and off.  
   ```  
   debug  

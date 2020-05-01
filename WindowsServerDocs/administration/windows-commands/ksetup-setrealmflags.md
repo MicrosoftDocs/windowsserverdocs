@@ -1,6 +1,6 @@
 ---
 title: ksetup:setrealmflags
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Sets realm flags for the specified realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets realm flags for the specified realm.
 
 ## Syntax
 
@@ -52,7 +52,7 @@ Realm flags are stored in the registry under **HKEY_LOCAL_MACHINE\SYSTEM\Current
 
 You can see what realm flags are available and set by viewing the output of **ksetup**.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 List the available and set realm flags for the realm CONTOSO:
 ```

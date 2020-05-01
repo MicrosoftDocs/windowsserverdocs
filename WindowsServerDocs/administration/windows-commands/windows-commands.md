@@ -1,6 +1,6 @@
 ---
 title: Windows Commands
-description: Windows Commands 
+description: Reference 
 ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc

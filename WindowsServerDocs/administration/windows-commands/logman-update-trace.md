@@ -1,6 +1,6 @@
 ---
 title: logman update trace
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman update trace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update the properties of an existing event trace data collector.  
 
@@ -61,7 +61,7 @@ logman update trace <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 The following command updates the existing data collector perf_log, changing the maximum log size to 10 MB, updating the log file format to CSV, and appending file versioning in the format mmddhhmm.  
 ```  
 logman update perf_log -max 10 -f csv -v mmddhhmm  

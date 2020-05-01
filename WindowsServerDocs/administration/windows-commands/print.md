@@ -1,6 +1,6 @@
 ---
 title: print
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Sends a text file to a printer.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -50,7 +50,7 @@ Print [/d:<PrinterName>] [<Drive>:][<Path>]<FileName>[ ...]
     -   Displaying the status of a printer
     -   Preparing a printer for code page switching
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To send the file Report.txt in the current directory to a printer connected to LPT2 on the local computer, type:
 ```

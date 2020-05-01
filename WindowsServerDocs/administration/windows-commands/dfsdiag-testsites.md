@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestSites
-description: Windows Commands topic for dfsdiag TestSites, which checks the configuration of active directory Domain Services (AD DS) sites by verifying that servers that act as namespace servers or folder (link) targets have the same site associations on all domain controllers. 
+description: Reference topic for dfsdiag TestSites, which checks the configuration of active directory Domain Services (AD DS) sites by verifying that servers that act as namespace servers or folder (link) targets have the same site associations on all domain controllers. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # dfsdiag TestSites
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks the configuration of active directory Domain Services (AD DS) sites by verifying that servers that act as namespace servers or folder (link) targets have the same site associations on all domain controllers.
 
@@ -31,7 +31,7 @@ dfsdiag /TestSites </Machine:<server name>| /DFSpath:<namespace root or DFS fold
 |\/Recurse|Enumerates and verifies the site associations for all folder targets under the specified namespace root.|  
 |\/Full|verifies that AD DS and the registry of the server contain the same site association information.|  
   
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
   
 ```  
 dfsdiag /TestSites /Machine:MyServer  

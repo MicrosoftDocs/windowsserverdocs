@@ -1,12 +1,8 @@
 ---
 title: rundll32 printui.dll,PrintUIEntry
-description: Windows Commands topic for **** - 
-
+description: Reference topic for the rundll32 printui.dll,PrintUIEntry command, which automates many printer configuration tasks.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84 jpjofre
 author: coreyp-at-msft
@@ -14,26 +10,35 @@ ms.author: coreyp
 manager: dongill
 ms.date: 05/25/2018
 ---
+
 # rundll32 printui.dll,PrintUIEntry
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Automates many printer configuration tasks. printui.dll is the executable file that contains the functions used by the printer configuration dialog boxes. These functions can also be called from within a script or a command-line batch file, or they can be run interactively from the command prompt. For examples of how this command can be used, see [Examples](#BKMK_Examples).  
+Automates many printer configuration tasks. printui.dll is the executable file that contains the functions used by the printer configuration dialog boxes. These functions can also be called from within a script or a command-line batch file, or they can be run interactively from the command prompt.
+
 ## Syntax  
+
 ```  
 rundll32 printui.dll PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
 ```  
+
 You can also use the following alternate syntaxes, although the examples in this topic use the previous syntax:  
+
 ```  
 rundll32 printui.dll,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
-```  
+```
+
 ```  
 rundll32 printui PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
-```  
+```
+
 ```  
 rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
-```  
-### Parameters  
+```
+
+### Parameters
+
 There are two types of parameters: base parameters and modification parameters. Base parameters specify the function that the command is to perform. Only one of these parameters can appear in a given command line. Then, you can modify the base parameter by using one or more of the modification parameters if they are applicable to the base parameter (not all modification parameters are supported by all base parameters).  
 
 |     Base Parameters     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -92,8 +97,8 @@ There are two types of parameters: base parameters and modification parameters. 
 
 ## Remarks  
 - The **PrintUIEntry** keyword is case sensitive, and you must enter the syntax for this command with the exact capitalization shown in the examples in this topic.  
-- See [Examples](#BKMK_Examples) in this document for the syntax for some common tasks. For more examples, at a command prompt type: **rundll32 printui.dll,PrintUIEntry /?**  
-  ## <a name=BKMK_Examples></a>Examples  
+- For more examples, at a command prompt type: **rundll32 printui.dll,PrintUIEntry /?**  
+  ## Examples  
   To add a new remote printer, printer1, for a computer, Client1, which is visible for the user account where this command is run, type:  
   ```  
   rundll32 printui.dll PrintUIEntry /in /n\\client1\printer1  

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setcredentials
-description: Windows Commands topic for **bitsadmin setcredentials**, which adds credentials to a job.
+description: Reference topic for the bitsadmin setcredentials command, which adds credentials to a job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -36,12 +36,14 @@ bitsadmin /setcredentials <job> <target> <scheme> <username> <password>
 
 ## Examples
 
-The following example adds credentials to the job named *myDownloadJob*.
+To add credentials to the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setcredentials myDownloadJob SERVER BASIC Edward password20
+bitsadmin /setcredentials myDownloadJob SERVER BASIC Edward password20
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 Enables an administrator to recover access to a file that previously was denied, by making the administrator the owner of the file.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

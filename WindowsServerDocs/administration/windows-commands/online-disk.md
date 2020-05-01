@@ -1,6 +1,6 @@
 ---
 title: online disk
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -50,7 +50,7 @@ online disk [noerr]
 -   If the group of a selected disk contains mirrored or RAID-5 volumes, this command also resynchronizes these volumes.
 -   A disk must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To bring the disk with focus online, type:
 ```

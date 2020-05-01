@@ -1,6 +1,6 @@
 ---
 title: ftp mput_1
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: mput_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies local files to the remote computer using the current file transfer type.   
 ## Syntax  
@@ -29,7 +29,7 @@ mput <LocalFile>[ ]
 |-------------|----------------------------------------------------------|
 | <LocalFile> | Specifies the local file to copy to the remote computer. |
 
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 copy **Program1.exe** and **Program2.exe** to the remote computer using the current file transfer type.  
 ```  
 mput Program1.exe Program2.exe  

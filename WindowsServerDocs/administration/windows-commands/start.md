@@ -1,6 +1,6 @@
 ---
 title: start
-description: Windows Commands topic for start, which starts a separate Command Prompt window to run a specified program or command.
+description: Reference topic for start, which starts a separate Command Prompt window to run a specified program or command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Starts a separate Command Prompt window to run a specified program or command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -53,7 +53,7 @@ start [<Title>] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
   Note that the syntax is the same as the PATH variable, with semicolons separating each extension.
 - When it searches for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To start the Myapp program at the command prompt and retain use of the current Command Prompt window, type:
 ```

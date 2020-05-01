@@ -1,6 +1,6 @@
 ---
 title: reg export
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Copies the specified subkeys, entries, and values of the local computer into a file for transfer to other servers.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -47,7 +47,7 @@ The following table lists the return values for the **reg export** operation.
 |0|Success|
 |1|Failure|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To export the contents of all subkeys and values of the key MyApp to the file AppBkUp.reg, type:
 ```

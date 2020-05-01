@@ -1,6 +1,6 @@
 ---
 title: regsvr32
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Registers .dll files as command components in the registry.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -40,7 +40,7 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <DllName>
 |\<DllName>|The name of the .dll file that will be registered.|
 |/?|Displays help at the command prompt.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To register the .dll for the Active Directory Schema, type:
 ```

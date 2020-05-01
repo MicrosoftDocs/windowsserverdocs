@@ -1,6 +1,6 @@
 ---
 title: delete
-description: Windows Commands topic for delete, which deletes a partition or a volume.
+description: Reference topic for delete, which deletes a partition or a volume.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

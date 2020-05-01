@@ -1,6 +1,6 @@
 ---
 title: wdsutil
-description: Windows Commands topic for wdsutil, which is a command-line utility used for managing your Windows Deployment Services server.
+description: Reference topic for wdsutil, which is a command-line utility used for managing your Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # wdsutil
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 wdsutil is a command-line utility used for managing your Windows Deployment Services server. To run these commands, click **start**, right-click **Command prompt**, and click **Run as administrator**.  
 ## Commands  

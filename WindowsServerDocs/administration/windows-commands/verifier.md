@@ -1,6 +1,6 @@
 ---
 title: verifier
-description: Windows Commands topic for verifier, which runs the Driver verifier manager.
+description: Reference topic for verifier, which runs the Driver verifier manager.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 ---
 # verifier
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Driver verifier manager.  
 

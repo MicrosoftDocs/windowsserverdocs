@@ -1,6 +1,6 @@
 ---
 title: ksetup:setrealm
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Sets the name of a Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Sets the name of a Kerberos realm.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ The DNS domain name parameter should be entered in uppercase letters. Otherwise,
 
 Setting the Kerberos realm on a domain controller is not supported. Attempting to do so will cause a warning and a command failure.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Set the realm for this computer to a specific domain name to restrict access by a non-domain controller just to the CONTOSO Kerberos realm:
 ```

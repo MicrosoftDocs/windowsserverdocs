@@ -1,6 +1,6 @@
 ---
 title: wevtutil
-description: Windows Commands topic for wevtutil, which lets you retrieve information about event logs and publishers.
+description: Reference topic for wevtutil, which lets you retrieve information about event logs and publishers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 
 
-Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs. 
 
 ## Syntax
 
@@ -86,7 +86,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 
 -   Using a configuration file with the sl parameter
 
-    The configuration file is an XML file with the same format as the output of wevtutil gl \<Logname> /f:xml. The following example shows the format of a configuration file that enables retention, enables autobackup, and sets the maximum log size on the Application log:  
+    The configuration file is an XML file with the same format as the output of wevtutil gl \<Logname> /f:xml. To shows the format of a configuration file that enables retention, enables autobackup, and sets the maximum log size on the Application log:  
     ```
     <?xml version=1.0 encoding=UTF-8?>
     <channel name=Application isolation=Application
@@ -101,7 +101,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
     </channel>
     ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 List the names of all logs:
 ```
