@@ -170,7 +170,7 @@
 ### [cacls](cacls.md)
 ### [call](call.md)
 ### [cd](cd.md)
-### [certreq](certreq.md)
+### [certreq](certreq_1.md)
 ### [certutil](certutil.md)
 ### [change](change.md)
 #### [change logon](change-logon.md)
