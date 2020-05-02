@@ -1,6 +1,6 @@
 ---
 title: sysocmgr
-description: Windows Commands topic for sysocmgr, which has been deprecated and is not guaranteed to be supported in future releases of Windows.
+description: Reference topic for sysocmgr, which has been deprecated and is not guaranteed to be supported in future releases of Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

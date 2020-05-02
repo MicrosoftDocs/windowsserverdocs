@@ -1,6 +1,6 @@
 ---
 title: new-DiscoverImage
-description: Windows Commands topic for new-DiscoverImage, which creates a new discover image from an existing boot image.
+description: Reference topic for new-DiscoverImage, which creates a new discover image from an existing boot image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -40,7 +40,7 @@ WDSUTIL [Options] /New-DiscoverImage [/Server:<Server name>]
 | [/Filename:\<File name>] |                                                                                                                                                                                                                                                                                                                                                                         If the image cannot be uniquely identified by name, you must use this option to specify the file name.                                                                                                                                                                                                                                                                                                                                                                          |
 |    /DestinationImage     | Specifies the settings for the destination image. You can specify the settings using the following options:</br>-   /FilePath:< File path and name> - Sets full file path for the new image.</br>-   [/Name:\<Name>] - Sets the display name of the image. If no display name is specified, the display name of the source image will be used.</br>-   [/Description: \<Description>] - Sets the description of the image.</br>-   [/WDSServer: \<Server name>] - Specifies the name of the server that all clients who boot from the specified image should contact to download the install image. By default, all clients who boot this image will discover a valid Windows Deployment Services server. Using this option bypasses the discovery functionality and forces the booted client to contact the specified server.</br>-   [/Overwrite:{Yes |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To create a discover image out of boot image, and name it WinPEDiscover.wim, type:
 ```

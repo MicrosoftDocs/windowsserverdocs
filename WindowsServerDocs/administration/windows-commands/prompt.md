@@ -21,7 +21,7 @@ ms.date: 07/11/2018
 
 Changes the Cmd.exe command prompt. If used without parameters, **prompt** resets the command prompt to the default setting, which is the current drive letter and directory followed by the greater than symbol (**>**).
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

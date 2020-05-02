@@ -1,6 +1,6 @@
 ---
 title: telnet
-description: Windows Commands topic for telnet, which communicates with a computer running the telnet Server service. 
+description: Reference topic for telnet, which communicates with a computer running the telnet Server service. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # telnet
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Communicates with a computer running the telnet Server service.
  
@@ -35,7 +35,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 -   You must install the telnet client software before you can run this command. For more information, see [Installing telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx).
 -   You can run telnet without parameters to enter the telnet context, indicated by the telnet prompt (**Microsoft telnet>**). From the telnet prompt, you can use telnet commands to manage the computer running the telnet client.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 Use telnet to connect to the computer running the telnet Server Service at telnet.microsoft.com.
 ```
 telnet telnet.microsoft.com

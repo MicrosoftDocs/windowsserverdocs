@@ -1,6 +1,6 @@
 ---
 title: Evntcmd
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # Evntcmd
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Configures the translation of events to traps, trap destinations, or both based on information in a configuration file.   
 ## Syntax  
@@ -59,7 +59,7 @@ evntcmd [/s <computerName>] [/v <verbosityLevel>] [/n] <FileName>
   - The parameter *delete_TRAP_DEST* specifies that you do not want trap messages to be sent to a specified host within a community.  
   - The parameter *CommunityName* specifies, by name, the community in which trap messages are sent.  
   - The parameter *HostID* specifies, by name or IP address, the host to which you do not want trap messages to be sent.  
-    ## <a name=BKMK_Examples></a>Examples  
+    ## Examples  
     The following examples illustrate entries in the configuration file for the **evntcmd** command. They are not designed to be typed at a command prompt.  
     To send a trap message if the Event Log service is restarted, type:  
     ```  

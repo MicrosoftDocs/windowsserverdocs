@@ -1,6 +1,6 @@
 ---
 title: dfsdiag
-description: Windows Commands topic for dfsdiag, which provides diagnostic information for DFS Namespaces.
+description: Reference topic for dfsdiag, which provides diagnostic information for DFS Namespaces.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

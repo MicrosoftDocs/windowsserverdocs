@@ -1,6 +1,6 @@
 ---
 title: import
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Imports a transportable shadow copy from a loaded metadata file into the system.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -34,7 +34,7 @@ import
 -   Transportable shadow copies are not stored on the system immediately. Their details are stored in a Backup Components Document XML file, which DiskShadow automatically requests and saves in a .cab metadata file in the working directory. You can change the path and name of this file using the **set metadata** command.
 -   Before you can use **import**, you must load a DiskShadow metadata file using the **load metadata** command.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following is a sample DiskShadow script that demonstrates the use of the **import** command:
 ```

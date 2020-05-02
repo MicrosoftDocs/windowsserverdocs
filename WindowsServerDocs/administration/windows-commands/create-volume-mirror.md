@@ -1,6 +1,6 @@
 ---
 title: create volume mirror
-description: Windows Commands topic for create volume mirror, which creates a volume mirror by using the two specified dynamic disks. 
+description: Reference topic for create volume mirror, which creates a volume mirror by using the two specified dynamic disks. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # create volume mirror
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a volume mirror by using the two specified dynamic disks.  
   
@@ -38,7 +38,7 @@ create volume mirror [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr] [noer
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To create a mirrored volume of 1000 megabytes in size, on disks 1 and 2, type:  
   
 ```  

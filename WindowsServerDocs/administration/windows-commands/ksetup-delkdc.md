@@ -1,6 +1,6 @@
 ---
 title: ksetup:delkdc
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Deletes instances of Key Distribution Center (KDC) names for the Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Deletes instances of Key Distribution Center (KDC) names for the Kerberos realm.
 
 ## Syntax
 
@@ -42,7 +42,7 @@ On computers running Windows 2000 Server with Service Pack 1 (SP1) and earlier, 
 
 To verify the default realm name for the computer, or to verify that this command worked as intended, run **ksetup** at the command prompt and verify that the KDC that was removed does not exist in the list.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 The security requirements for this computer have changed so the link between the Windows realm and the non-Windows realm must be removed. First, determine which association to remove and produce the output of existing associations:
 ```

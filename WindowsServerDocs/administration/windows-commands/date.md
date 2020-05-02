@@ -1,6 +1,6 @@
 ---
 title: date
-description: Windows Commands topic for date, which displays or sets the system date. If used without parameters,
+description: Reference topic for date, which displays or sets the system date. If used without parameters,
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Displays or sets the system date. If used without parameters, **date** displays the current system date setting and prompts you to enter a new date.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -39,7 +39,7 @@ date [/t | <Month-Day-Year>]
 -   Valid *Day* values are 1 through 31.
 -   Valid *Year* values are either 00 through 99, or 1980 through 2099. If you use two digits, the values 80 through 99 correspond to the years 1980 through 1999.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 If command extensions are enabled, to display the current system date, type:
 ```

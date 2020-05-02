@@ -1,6 +1,6 @@
 ---
 title: detail vdisk
-description: Windows Commands topic for detail disk, which displays the properties of the selected virtual hard disk (VHD).
+description: Reference topic for detail disk, which displays the properties of the selected virtual hard disk (VHD).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # detail vdisk
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the properties of the selected virtual hard disk (VHD).  
   
@@ -26,7 +26,7 @@ detail vdisk
   
 -   A VHD must be selected for this operation to succeed. Use the **select vdisk** command to select a vdisk and shift the focus to it.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To see details about the selected VHD, type:  
   
 ```  

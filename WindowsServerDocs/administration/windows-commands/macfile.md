@@ -1,6 +1,6 @@
 ---
 title: macfile
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # macfile
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Manages File Server for Macintosh servers, volumes, directories, and files. You can automate administrative tasks by including a series of commands in batch files and starting them manually or at predetermined times. 
 -   [To modify directories in Macintosh-accessible volumes](#BKMK_Moddirs)
@@ -64,8 +64,8 @@ macfile directory[/server:\\<computerName>] /path:<directory> [/owner:<OwnerName
 ### Remarks
 - if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, ****<em>computer Name</em>****).
 - Use **macfiledirectory** to make an existing directory in a Macintosh-accessible volume available to Macintosh users. The **macfiledirectory** command does not create directories. Use File Manager, the command prompt, or the **macintosh new folder** command to create a directory in a Macintosh-accessible volume before you use the **macfile directory** command.
-  ### <a name=BKMK_Examples></a>Examples
-  The following example changes the permissions of the subdirectory May sales, in the Macintosh-accessible volume Statistics, on the E drive of the local server. The example assigns See Files, See Folders, and Make changes permissions to the owner and See Files and See Folders permissions to all other users, while preventing the directory from being renamed, moved, or deleted.
+  ### Examples
+  To change the permissions of the subdirectory May sales, in the Macintosh-accessible volume Statistics, on the E drive of the local server. The example assigns See Files, See Folders, and Make changes permissions to the owner and See Files and See Folders permissions to all other users, while preventing the directory from being renamed, moved, or deleted.
   ```
   macfile directory /path:e:\statistics\may sales /permissions:11111011000
   ```

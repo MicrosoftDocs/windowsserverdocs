@@ -1,6 +1,6 @@
 ---
 title: ksetup:addhosttorealmmap
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Adds a service principal name (SPN) mapping between the stated host and the realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Adds a service principal name (SPN) mapping between the stated host and the realm.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ This command allows you to map a host or multiple hosts that are sharing the sam
 
 The mapping is recorded in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 As part of configuring the realm CONTOSO, map the host computer IPops897 to the realm:
 ```

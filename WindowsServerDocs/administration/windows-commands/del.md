@@ -1,6 +1,6 @@
 ---
 title: del
-description: Windows Commands topic for del, which deletes one or more files.
+description: Reference topic for del, which deletes one or more files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Deletes one or more files. This command is the same as the **erase** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -66,7 +66,7 @@ erase [/p] [/f] [/s] [/q] [/a[:]<Attributes>] <Names>
 
 -   The **del** command, with different parameters, is available from the Recovery Console.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To delete all the files in a folder named Test on drive C, type either of the following:
 ```

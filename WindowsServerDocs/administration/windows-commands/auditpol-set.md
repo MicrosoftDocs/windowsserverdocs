@@ -1,6 +1,6 @@
 ---
 title: auditpol set
-description: Windows Commands topic for **auditpol set**, which sets the per-user audit policy, system audit policy, or auditing options.
+description: Reference topic for the auditpol set command, which sets the per-user audit policy, system audit policy, or auditing options.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,9 +12,11 @@ ms.date: 10/16/2017
 ---
 # auditpol set
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the per-user audit policy, system audit policy, or auditing options.
+
+To perform *set* operations on the *per-user* and *system* policies, you must have **Write** or **Full Control** permission for that object set in the security descriptor. You can also perform *set* operations if you have the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the overall *set* operations.
 
 ## Syntax
 
@@ -43,11 +45,7 @@ auditpol /set
 | /sd | Sets the security descriptor used to delegate access to the audit policy. The security descriptor must be specified by using the Security Descriptor Definition Language (SDDL). The security descriptor must have a discretionary access control list (DACL). |
 | /? | Displays help at the command prompt. |
 
-## Remarks
-
-For all set operations for the per-user policy and system policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform set operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the set operation.
-
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To set the per-user audit policy for all subcategories under the detailed Tracking category for the user mikedan so that all the user's successful attempts will be audited, type:
 
@@ -91,3 +89,5 @@ auditpol /set /option:CrashOnAuditFail /value:enable
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [auditpol commands](auditpol.md)

@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # rwinsta
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to reset (delete) a session on a Remote Desktop Session Host (rd Session Host) server.
 

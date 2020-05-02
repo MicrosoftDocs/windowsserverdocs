@@ -1,6 +1,6 @@
 ---
 title: tsecimp
-description: Windows Commands topic for tsecimp, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
+description: Reference topic for tsecimp, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

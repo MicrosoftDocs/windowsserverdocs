@@ -1,6 +1,6 @@
 ---
 title: ksetup:removerealm
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Deletes all information for the specified realm from the registry. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Deletes all information for the specified realm from the registry.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ The realm name is stored in two places in the registry: **HKEY_LOCAL_MACHINE\SYS
 
 You cannot remove the default realm name from the domain controller because this will reset its DNS information, and removing it might make the domain controller unusable.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Mistakenly set the realm name by misspelling .COM on the local computer to CORP.CONTOSO.CON
 ```

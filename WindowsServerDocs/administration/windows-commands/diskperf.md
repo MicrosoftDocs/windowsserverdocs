@@ -1,6 +1,6 @@
 ---
 title: diskperf
-description: Windows Commands topic for diskperf, which can be used to remotely enable or disable physical or logical disk performance counters on computers running Windows 2000.
+description: Reference topic for diskperf, which can be used to remotely enable or disable physical or logical disk performance counters on computers running Windows 2000.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

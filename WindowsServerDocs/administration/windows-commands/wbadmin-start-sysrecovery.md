@@ -1,6 +1,6 @@
 ---
 title: wbadmin start sysrecovery
-description: Windows Commands topic for wbadmin start sysrecovery, which performs a system recovery (bare metal recovery) using the parameters that you specify. 
+description: Reference topic for wbadmin start sysrecovery, which performs a system recovery (bare metal recovery) using the parameters that you specify. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -21,8 +21,6 @@ Performs a system recovery (bare metal recovery) using the parameters that you s
 > This subcommand can be run only from the Windows Recovery Environment, and it is not listed by default in the usage text of **Wbadmin**. For more information, see [Windows Recovery Environment (Windows RE) Overview](https://technet.microsoft.com/library/hh825173.aspx).
 
 To perform a system recovery with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions.
-
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -51,7 +49,7 @@ wbadmin start sysrecovery
 |-skipBadClusterCheck|Skips checking your recovery disks for bad cluster information. If you are restoring to an alternate server or hardware, we recommend that you do not use this parameter. You can manually run **chkdsk /b** on your recovery disks at any time to check them for bad clusters, and then update the file system information accordingly.</br>Warning: Until you run **chkdsk** as described, the bad clusters reported on your recovered system may not be accurate.|
 |-quiet|Runs the command with no prompts to the user.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To start recovering the information from the backup that was run on March 31, 2013 at 9:00 A.M., located on drive d:, type:
 ```

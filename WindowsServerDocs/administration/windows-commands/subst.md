@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

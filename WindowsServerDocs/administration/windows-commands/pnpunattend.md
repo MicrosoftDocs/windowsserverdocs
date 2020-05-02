@@ -47,7 +47,7 @@ Preliminary preparation is required. Prior to using this command, you must compl
 
 ## Examples
 
-The following example command shows how to use the **PNPUnattend.exe** to audit a computer for possible driver updates, and then report the findings to the command prompt.
+To command shows how to use the **PNPUnattend.exe** to audit a computer for possible driver updates, and then report the findings to the command prompt.
 
 ```
 pnpunattend auditsystem /s /l 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin removecredentials
-description: Windows Commands topic for bitsadmin **removecredentials**, which removes credentials from a job.
+description: Reference topic for the bitsadmin removecredentials command, which removes credentials from a job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -34,12 +34,14 @@ bitsadmin /removecredentials <job> <target> <scheme>
 
 ## Examples
 
-The following example removes credentials from the job named *myDownloadJob*.
+To remove credentials from the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /removecredentials myDownloadJob SERVER BASIC
+bitsadmin /removecredentials myDownloadJob SERVER BASIC
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

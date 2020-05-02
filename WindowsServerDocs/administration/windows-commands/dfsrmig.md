@@ -1,6 +1,6 @@
 ---
 title: dfsrmig
-description: Windows Commands topic for dfsrmig, which migrates SYSvol replication from File Replication Service (FRS) to Distributed File System (DFS) Replication, provides information about the progress of the migration, and modifies active directory Domain Services (AD DS) objects to support the migration.
+description: Reference topic for dfsrmig, which migrates SYSvol replication from File Replication Service (FRS) to Distributed File System (DFS) Replication, provides information about the progress of the migration, and modifies active directory Domain Services (AD DS) objects to support the migration.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,11 +12,11 @@ ms.date: 10/16/2017
 ---
 # dfsrmig
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Migrates SYSvol replication from File Replication Service (FRS) to Distributed File System (DFS) Replication, provides information about the progress of the migration, and modifies active directory Domain Services (AD DS) objects to support the migration.
 
-For examples of how to use this command, see the [Examples](#BKMK_examples) section later in this document.
+
 
 ## Syntax
 
@@ -44,7 +44,7 @@ dfsrmig [/SetGlobalState <state> | /GetGlobalState | /GetMigrationState | /creat
 - You can run the **dfsrmig** command on any domain controller, but operations that create or manipulate AD DS objects are only allowed on read-write capable domain controllers (not on read-only domain controllers).
 - Running **dfsrmig** without any options displays help at the command prompt.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To set the global migration state to prepared (**1**) and initiate migration to or rollback from the Prepared state, type:
  ```
  dfsrmig /SetGlobalState 1

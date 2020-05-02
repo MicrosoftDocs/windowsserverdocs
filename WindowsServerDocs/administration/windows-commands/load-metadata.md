@@ -1,6 +1,6 @@
 ---
 title: Load metadata
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore. If used without parameters, **load metadata** displays help at the command prompt.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -41,7 +41,7 @@ load metadata [<Drive>:][<Path>]<MetaData.cab>
 -   You can use the **import** command to import a transportable shadow copy based on the metadata specified by **load metadata**.
 -   This command is needed before the **begin restore** command to load the selected writers and components for the restore.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To load a metadata file called metafile.cab from the default location, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: wecutil
-description: Windows Commands topic for wecutil, which lets you create and manage subscriptions to events that are forwarded from remote computers.
+description: Reference topic for wecutil, which lets you create and manage subscriptions to events that are forwarded from remote computers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ manager: dansimps
 
 
 
-Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol. 
 
 
 ## Syntax
@@ -86,7 +86,7 @@ wecutil  [{es | enum-subscription}]
 > [!IMPORTANT]
 > If you receive the message, “The RPC server is unavailable? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 
-- The following example shows the contents of a configuration file:  
+- To shows the contents of a configuration file:  
   ```
   <Subscription xmlns=https://schemas.microsoft.com/2006/03/windows/events/subscription>
   <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
@@ -113,7 +113,7 @@ wecutil  [{es | enum-subscription}]
   </Subscription>
   ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 Output configuration information for a subscription named sub1:
 ```

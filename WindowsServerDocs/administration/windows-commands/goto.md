@@ -1,6 +1,6 @@
 ---
 title: goto
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Directs cmd.exe to a labeled line in a batch program. Within a batch program, **goto** directs command processing to a line that is identified by a label. When the label is found, processing continues starting with the commands that begin on the next line.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -57,7 +57,7 @@ goto <Label>
 
     You can use **goto** with other commands to perform conditional operations. For more information about using **goto** for conditional operations, see the [If](if.md) command reference.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following batch program formats a disk in drive A as a system disk. If the operation is successful, the **goto** command directs processing to the **:end** label:
 ```

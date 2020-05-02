@@ -1,6 +1,6 @@
 ---
 title: dir
-description: Windows Commands topic for dir, which displays a list of a directory's files and subdirectories.
+description: Reference topic for dir, which displays a list of a directory's files and subdirectories.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

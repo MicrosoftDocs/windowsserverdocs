@@ -1,6 +1,6 @@
 ---
 title: reg load
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Writes saved subkeys and entries into a different subkey in the registry. Intended for use with temporary files that are used for troubleshooting or editing registry entries.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -46,7 +46,7 @@ The following table lists the return values for the **reg load** operation.
 |0|Success|
 |1|Failure|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To load the file named TempHive.hiv to the key HKLM\TempHive, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: create volume simple
-description: Windows Commands topic for create volume simple, which creates a simple volume on the specified dynamic disk.
+description: Reference topic for create volume simple, which creates a simple volume on the specified dynamic disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # create volume simple
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a simple volume on the specified dynamic disk.  
   
@@ -38,7 +38,7 @@ create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]
   
 -   After you create the volume, the focus automatically shifts to the new volume.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To create a volume of 1000 megabytes in size, on disk 1, type:  
   
 ```  

@@ -1,6 +1,6 @@
 ---
 title: expose
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Exposes a persistent shadow copy as a drive letter, share, or mount point.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -42,7 +42,7 @@ expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 
 -   You can use an existing alias or an environment variable in place of *ShadowID*. Use **add** without parameters to see existing aliases.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To expose the persistent shadow copy associated with the VSS_SHADOW_1 environment variable as drive X, type:
 ```

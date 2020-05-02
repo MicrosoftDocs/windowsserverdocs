@@ -1,6 +1,6 @@
 ---
 title: create partition msr
-description: Windows Commands topic for create partition msr, which creates a Microsoft Reserved (MSR) partition on a GUID partition table (gpt) disk.
+description: Reference topic for create partition msr, which creates a Microsoft Reserved (MSR) partition on a GUID partition table (gpt) disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # create partition msr
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a Microsoft Reserved (MSR) partition on a GUID partition table (gpt) disk.
   
@@ -44,7 +44,7 @@ create partition msr [size=<n>] [offset=<n>] [noerr]
   
 -   A basic gpt disk must be selected for this operation to succeed. Use the **select disk** command to select a basic gpt disk and shift the focus to it.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To create a Microsoft Reserved partition of 1000 megabytes in size, type:  
   
 ```  

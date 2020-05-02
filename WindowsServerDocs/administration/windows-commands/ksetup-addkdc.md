@@ -1,6 +1,6 @@
 ---
 title: ksetup:addkdc
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Adds a Key Distribution Center (KDC) address for the given Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Adds a Key Distribution Center (KDC) address for the given Kerberos realm.
 
 ## Syntax
 
@@ -42,7 +42,7 @@ The computer must be restarted before the new realm setting will be used.
 
 To verify the default realm name for the computer, or to verify that this command worked as intended, run **ksetup** at the command prompt and verify the output for the added KDC.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Configure a non-Windows KDC server and the realm that the workstation should use:
 ```
