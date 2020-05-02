@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/28/2020
+ms.date: 05/13/2020
 ms.localizationpriority: medium
 ---
 # Supported Remote Desktop RDP file settings
@@ -64,7 +64,7 @@ The table also highlights which settings are supported as custom properties with
 | RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | use multimon:i:value | Determines whether the remote session will use one or multiple displays from the local computer. | - 0: Don't enable multiple display support</br>- 1: Enable multiple display support | 0 | X |
-| selectedmonitors:s:value | Specifies which local displays to use from the remote session. The selected displays must be contiguous. Requires use multimon to be set to 1.</br></br>Only available on the Windows Inbox (MSTSC) and Windows Desktop (MSRDC) clients. | Coma separated list of display IDs. IDs can be retrieved by calling mstsc.exe /l. The first ID listed will be set as the primary display in the session. | All displays | X |
+| selectedmonitors:s:value | Specifies which local displays to use from the remote session. The selected displays must be contiguous. Requires use multimon to be set to 1.</br></br>Only available on the Windows Inbox (MSTSC) and Windows Desktop (MSRDC) clients. | Coma separated list of machine-specific display IDs. IDs can be retrieved by calling mstsc.exe /l. The first ID listed will be set as the primary display in the session. | All displays | X |
 | maximizetocurrentdisplays:i:value | Determines which display the remote session goes full screen on when maximizing. Requires use multimon to be set to 1.</br></br>Only available on the Windows Desktop (MSRDC) client. | - 0: Session goes full screen on the displays initially selected when maximizing</br>- 1: Session dynamically goes full screen on the displays touched by the session window when maximizing | 0 | X |
 | singlemoninwindowedmode:i:value | Determines whether a multi display remote session automatically switches to single display when exiting full screen. Requires use multimon to be set to 1.</br></br>Only available on the Windows Desktop (MSRDC) client. | - 0: Session retains all displays when exiting full screen</br>- 1: Session switches to single display when exiting full screen | 0 | X |
 | screen mode id:i:value | Determines whether the remote session window appears full screen when you launch the connection. | - 1: The remote session will appear in a window</br>- 2: The remote session will appear full screen | 2 | X |
@@ -73,7 +73,7 @@ The table also highlights which settings are supported as custom properties with
 | desktop size id:i:value | Specifies the dimensions of the remote session desktop from a set of pre-defined options. This setting is overridden if either desktopheight or desktopwidth are specified.| -0: 640×480</br>- 1: 800×600</br>- 2: 1024×768</br>- 3: 1280×1024</br>- 4: 1600×1200 | 0 | X |
 | desktopheight:i:value | Specifies the resolution height (in pixels) of the remote session. | Numerical value between 200 and 2048 | Match the local computer | X |
 | desktopwidth:i:value | Specifies the resolution width (in pixels) of the remote session. | Numerical value between 200 and 4096 | Match the local computer | X |
-| desktopscalefactor:i:value | Specifies the scale factor of the remote session to make the content appear larger. | Numerical value between 100 and 500 | 100 | X |
+| desktopscalefactor:i:value | Specifies the scale factor of the remote session to make the content appear larger. | Numerical value from the following list: 100, 125, 150, 175, 200, 250, 300, 400, 500 | 100 | X |
 
 ## RemoteApp
 
