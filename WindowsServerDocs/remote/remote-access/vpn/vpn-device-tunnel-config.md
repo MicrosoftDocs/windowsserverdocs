@@ -24,7 +24,7 @@ Unlike _user tunnel_, which only connects after a user logs on to the device or 
 
 User tunnel is supported on domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. It is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
 
-Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel.
+Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel. Device tunnel does not support using the Name Resolution Policy table (NRPT).
 
 
 ## Device Tunnel Requirements and Features
