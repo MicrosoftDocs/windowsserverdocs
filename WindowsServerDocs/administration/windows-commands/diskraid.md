@@ -1,6 +1,6 @@
 ---
 title: diskraid
-description: Windows Commands topic for diskraid, which is a command-line tool that enables you to configure and manage redundant array of independent (or inexpensive) disks (RAID) storage subsystems. 
+description: Reference topic for diskraid, which is a command-line tool that enables you to configure and manage redundant array of independent (or inexpensive) disks (RAID) storage subsystems. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -134,7 +134,7 @@ For use with the **ports** parameter. Specifies the controller ports to set acti
 
 #### Example
 
-The following example shows how to associate and add ports to a LUN that uses a VDS 1.1 provider:
+To shows how to associate and add ports to a LUN that uses a VDS 1.1 provider:
 ```
 DISKRAID> SEL LUN 5
 LUN 5 is now the selected LUN.

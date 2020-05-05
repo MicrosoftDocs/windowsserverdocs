@@ -1,6 +1,6 @@
 ---
 title: ftp get
-description: Windows Commands topic for ftp get
+description: Reference topic for ftp get
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: get
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies a remote file to the local computer using the current file transfer type.   
 ## Syntax  
@@ -32,7 +32,7 @@ get <remoteFile> [<LocalFile>]
 
 ## Remarks  
 The **get** command is identical to the **recv** command.  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 copy **test.txt** to the local computer using the current file transfer type.  
 ```  
 get test.txt  

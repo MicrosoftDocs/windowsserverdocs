@@ -1,6 +1,6 @@
 ---
 title: for
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Runs a specified command for each file in a set of files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -160,7 +160,7 @@ for {%%|%}<Variable> in (<Set>) do <Command> [<CommandLineOptions>]
 
   You can use the **for /f** command to parse the output of a command by placing a back-quoted *\<command\>* between the parentheses. It is treated as a command line, which is passed to a child Cmd.exe. The output is captured into memory and parsed as if it is a file.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To use **for** in a batch file, use the following syntax:
 ```
@@ -180,7 +180,7 @@ This command parses each line in Myfile.txt. It ignores lines that begin with a 
 
 **%i** is explicitly declared in the **for** statement. **%j** and **%k** are implicitly declared by using **tokens=**. You can use **tokens=** to specify up to 26 tokens, provided that it does not cause an attempt to declare a variable higher than the letter z or Z.
 
-The following example enumerates the environment variable names in the current environment. To parse the output of a command by placing *Set* between the parentheses, type:
+To enumerates the environment variable names in the current environment. To parse the output of a command by placing *Set* between the parentheses, type:
 ```
 for /f usebackq delims== %i in ('set') do @echo %i 
 ```

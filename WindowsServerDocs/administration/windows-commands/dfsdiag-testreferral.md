@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestReferral
-description: Windows Commands topic for dfsdiag TestReferral, which checks Distributed File System (DFS) referrals.
+description: Reference topic for dfsdiag TestReferral, which checks Distributed File System (DFS) referrals.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # dfsdiag TestReferral
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks Distributed File System (DFS) referrals by performing the following tests:
 
@@ -39,7 +39,7 @@ dfsdiag /TestReferral /DFSpath:<DFS path for getting referrals> [/Full]
 | /DFSpath:<path for getting referrals>|This DFS path can be one of the following:<p>-   \(blank\): Tests trusted domains.<br />-   \\\\Domain: Domain controller referrals.<br />-   \\\\Domain\\SYSvol: SYSvol referrals.<br />-   \\\\Doma in\\NETLOGON: NETLOGON referrals.<br />-   \\\\<Domain or server>\\<Namespace Root>: Namespace root referrals.<br />-   \\\\<Domain or server>\\<Namespace root>\\<DFS folder>: DFS folder \(link\) referrals.|
 |/Full|Applied only to Domain and Root  referrals. verifies the consistency of site association information between the registry and active directory Domain Services \(AD DS\).|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 ```
 dfsdiag /TestReferral /DFSpath:\\Contoso.com\MyNamespace

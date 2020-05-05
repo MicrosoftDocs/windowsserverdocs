@@ -1,6 +1,6 @@
 ---
 title: ksetup:getenctypeattr
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Retrieves the encryption type attribute for the domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Retrieves the encryption type attribute for the domain.
 
 ## Syntax
 
@@ -41,7 +41,7 @@ If the command succeeds or fails, a status message is displayed upon successful 
 
 To set the domain that you want to connect to and use, run the **ksetup /domain \<DomainName>** command.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Verify the encryption type attribute for the domain:
 ```

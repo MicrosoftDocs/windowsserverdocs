@@ -1,6 +1,6 @@
 ---
 title: tscon
-description: Windows Commands topic for tscon, which connects to another session on a Remote Desktop Session Host (rd Session Host) server.
+description: Reference topic for tscon, which connects to another session on a Remote Desktop Session Host (rd Session Host) server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,11 +12,11 @@ ms.date: 10/16/2017
 ---
 # tscon
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Connects to another session on a Remote Desktop Session Host server.  
 
-For examples of how to use this command, see [Examples](#BKMK_examples).  
+  
 
 > [!NOTE]  
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
@@ -43,7 +43,7 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
 -   if you do not specify a password in the <*Password*> parameter, and the target session belongs to a user other than the current one, **tscon** fails.  
 -   You cannot connect to the console session.  
 
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 - To connect to session 12 on the current rd Session Host server and disconnect the current session, type:  
   ```  
   tscon 12  

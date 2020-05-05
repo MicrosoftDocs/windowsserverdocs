@@ -1,6 +1,6 @@
 ---
 title: wmic
-description: Windows Commands topic for wmic, which displays WMI information inside an interactive command shell. 
+description: Reference topic for wmic, which displays WMI information inside an interactive command shell. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 Displays WMI information inside an interactive command shell.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -36,7 +36,7 @@ The following sub-commands are available at all times:
 |context|Displays the current values of all global switches.|
 |[quit \| exit]|Exits the WMIC command shell.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the current values of all global switches, type:
 ```

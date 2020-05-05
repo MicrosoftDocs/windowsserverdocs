@@ -13,7 +13,7 @@ ms.assetid: 84eaba2c-c0af-49e1-bbbd-2ed2928e5e4b
 ---
 # Fsutil behavior
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Queries or sets NTFS volume behavior, which includes:
 
@@ -31,7 +31,7 @@ Queries or sets NTFS volume behavior, which includes:
 
 -   File-delete notification (also known as trim or unmap)
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

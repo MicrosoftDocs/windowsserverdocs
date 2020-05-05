@@ -1,6 +1,6 @@
 ---
 title: detail
-description: Windows Commands topic for detail, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
+description: Reference topic for detail, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

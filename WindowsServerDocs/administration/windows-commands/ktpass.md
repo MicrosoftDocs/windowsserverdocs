@@ -1,6 +1,6 @@
 ---
 title: ktpass
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ktpass
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Configures the server principal name for the host or service in active directory Domain Services (AD DS) and generates a .keytab file that contains the shared secret key of the service. The .keytab file is based on the Massachusetts Institute of Technology (MIT) implementation of the Kerberos authentication protocol. The ktpass command-line tool allows non-Windows services that support Kerberos authentication to use the interoperability features provided by the Kerberos Key Distribution Center (KDC) service. This topic applies to the operating system versions designated in the **Applies To** list at the beginning of the topic.  
 
@@ -69,8 +69,8 @@ The /princ parameter is not evaluated by ktpass and is used as provided. There i
 ```  
 ldifde /f keytab_user.ldf /d CN=Keytab User,OU=UserAccounts,DC=contoso,DC=corp,DC=microsoft,DC=com /p base /l samaccountname,userprincipalname  
 ```  
-## <a name=BKMK_examples></a>Examples  
-The following example illustrates how to create a Kerberos .keytab file, machine.keytab, in the current directory for the user Sample1. (You will merge this file with the Krb5.keytab file on a host computer that is not running the Windows operating system.) The Kerberos .keytab file will be created for all supported encryption types for the general principal type.  
+## Examples  
+To illustrates how to create a Kerberos .keytab file, machine.keytab, in the current directory for the user Sample1. (You will merge this file with the Krb5.keytab file on a host computer that is not running the Windows operating system.) The Kerberos .keytab file will be created for all supported encryption types for the general principal type.  
 To generate a .keytab file for a host computer that is not running the Windows operating system, use the following steps to map the principal to the account and set the host principal password:  
 1.  Use the active directory User and computers snap-in to create a user account for a service on a computer that is not running the Windows operating system. For example, create an account with the name Sample1.  
 2.  Use ktpass to set up an identity mapping for the user account by typing the following at a command prompt:  

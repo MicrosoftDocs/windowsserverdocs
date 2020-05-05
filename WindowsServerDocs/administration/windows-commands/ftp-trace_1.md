@@ -1,6 +1,6 @@
 ---
 title: ftp trace_1
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -35,7 +35,7 @@ none
 
 **Trace** displays the series of internal FTP function calls when running an **ftp** command.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Toggle tracing on and off.
 ```

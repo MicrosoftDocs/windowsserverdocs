@@ -1,6 +1,6 @@
 ---
 title: ktmutil
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -22,7 +22,7 @@ ms.date: 10/16/2017
 
 Starts the Kernel Transaction Manager utility. If used without parameters, **ktmutil** displays available subcommands.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -41,7 +41,7 @@ ktmutil forget
 
 ## Remarks
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To force an Indoubt transaction with GUID 311a9209-03f4-11dc-918f-00188b8f707b to commit, type:
 ```

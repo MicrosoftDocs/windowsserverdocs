@@ -1,6 +1,6 @@
 ---
 title: prndrvr
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # prndrvr
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Use the **prndrvr** command to add, delete, and list printer drivers.
 
@@ -55,7 +55,7 @@ cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}]
 - The -x option deletes all additional printer drivers (drivers installed for use on clients running alternate versions of Windows), even if the primary driver is in use. If the fax component is installed, this option also deletes fax drivers. The primary fax driver is deleted if it is not in use (that is, if there is no queue using it). If the primary fax driver is deleted, the only way to re-enable fax is to reinstall the fax component.
 - Used without parameters, **prndrvr** displays command-line help for the **prndrvr** command.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To list all drivers on the \\\printServer1 server, type:
 ```

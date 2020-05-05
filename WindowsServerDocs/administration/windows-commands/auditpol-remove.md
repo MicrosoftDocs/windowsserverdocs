@@ -1,6 +1,6 @@
 ---
 title: auditpol remove
-description: Windows Commands topic for **auditpol remove**, which removes the per-user audit policy for a specified account or all accounts.
+description: Reference topic for the auditpol remove command, which removes the per-user audit policy for a specified account or all accounts.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,9 +12,11 @@ ms.date: 10/16/2017
 ---
 # auditpol remove
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Removes the per-user audit policy for a specified account or all accounts.
+
+To perform *remove* operations on the *per-user* policy, you must have **Write** or **Full Control** permissions for that object set in the security descriptor. You can also perform *remove* operations if you have the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the overall *remove* operations.
 
 ## Syntax
 
@@ -31,11 +33,7 @@ auditpol /remove [/user[:<username>|<{SID}>]]
 | /allusers | Removes the per-user audit policy for all users. |
 | /? | Displays help at the command prompt. |
 
-## Remarks
-
-For remove operations for the per-user policy, you must have Write or Full Control permission on that object set in the security descriptor. You can also perform remove operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the remove operation.
-
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To remove the per-user audit policy for user mikedan by name, type:
 
@@ -58,3 +56,5 @@ auditpol /remove /allusers
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [auditpol commands](auditpol.md)

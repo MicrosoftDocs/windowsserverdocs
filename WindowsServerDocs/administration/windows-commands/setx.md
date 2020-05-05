@@ -1,6 +1,6 @@
 ---
 title: setx
-description: Windows Commands topic for setx, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting. 
+description: Reference topic for setx, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Creates or modifies environment variables in the user or system environment, without requiring programming or scripting. The **Setx** command also retrieves the values of registry keys and writes them to text files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -55,7 +55,7 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 -   REG_DWORD registry values are extracted and used in hexadecimal mode.
 -   File mode supports the parsing of carriage return and line feed (CRLF) text files only.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To set the MACHINE environment variable in the local environment to the value Brand1, type:
 ```

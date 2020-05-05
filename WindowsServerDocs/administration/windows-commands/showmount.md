@@ -1,6 +1,6 @@
 ---
 title: showmount
-description: Windows Commands topic for showmount, which displays mounted directories. 
+description: Reference topic for showmount, which displays mounted directories. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # showmount
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use **showmount** to display mounted directories.  
   

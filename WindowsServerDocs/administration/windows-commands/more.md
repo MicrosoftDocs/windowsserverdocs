@@ -1,6 +1,6 @@
 ---
 title: more
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -22,7 +22,7 @@ ms.date: 07/26/2019
 
 Displays one screen of output at a time.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -64,7 +64,7 @@ more [/c] [/p] [/s] [/t<N>] [+<N>] [<Files>]
 -   When using the redirection character (**<**), you must specify a file name as the source. When using the pipe (**\|**), you can use such commands as **dir**, **sort**, and **type**.
 -   The **more** command, with different parameters, is available from the Recovery Console.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view the first screen of information of a file named Clients.new, type one of the following commands:
 ```

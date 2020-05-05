@@ -1,6 +1,6 @@
 ---
 title: add-Image
-description: Windows Commands topic for add-Image, which adds images to a Windows Deployment Services server.
+description: Reference topic for add-Image, which adds images to a Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,9 +12,9 @@ ms.date: 10/16/2017
 ---
 # add-Image
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Adds images to a Windows Deployment Services server. For examples of how you can use this command, see [Examples](#BKMK_examples).
+Adds images to a Windows Deployment Services server.
 
 ## Syntax
 for boot images, use the following syntax:
@@ -48,7 +48,7 @@ mediatype:{Boot&#124;Install}|Specifies the type of images to be added.|
 |\mediaGroup:<Image group name>]|Specifies the name of the image group in which the images are to be added. If more than one image group exists on the server, the image group must be specified. If this is not specified and an image group does not already exist, a new image group will be created. Otherwise, the existing image group will be used.|
 |[/SingleImage:<Single image name>] [/Name:<Name>] [/Description:<Description>]|Copies the specified single image out of a .wim file, and sets the image's display name and description.|
 |[/UnattendFile:<Unattend file path>]|Specifies the full path to the unattended installation file to be associated with the images that are being added. If **/SingleImage** is not specified, the same unattend file will be associated with all of the images in the .wim file.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To add a boot image, type:
 ```
 wdsutil /add-ImagmediaFile:C:\MyFolder\Boot.wimmediatype:Boot

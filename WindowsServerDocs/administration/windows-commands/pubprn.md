@@ -1,6 +1,6 @@
 ---
 title: pubprn
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # pubprn
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Publishes a printer to the active directory Domain Services.
 
@@ -41,7 +41,7 @@ LDAP://CN=<Container>,DC=<Container>
     ```
 -   if the information that you supply contains spaces, use quotation marks around the text (for example, `computer Name`).
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To publish all printers on the \\\Server1 computer to the MyContainer container in the MyDomain.company.Com domain, type:
 ```
 cscript Ppubprn Server1 LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com

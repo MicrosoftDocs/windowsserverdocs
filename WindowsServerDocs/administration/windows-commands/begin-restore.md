@@ -1,6 +1,6 @@
 ---
 title: begin restore
-description: Windows Commands topic for **begin restore**, which starts a restore session and issues a PreRestore event to involved writers.
+description: Reference topic for the begin restore command, which starts a restore session and issues a PreRestore event to involved writers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -11,7 +11,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Begin restore
+# begin restore
+
+> Applies To: Windows Server 2012 R2, Windows Server 2012
 
 Starts a restore session and issues a **PreRestore** event to involved writers.
 
@@ -24,3 +26,7 @@ begin restore
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [begin backup command](begin-backup.md)
+
+- [Prepare for restore](https://docs.microsoft.com/windows/win32/vss/overview-of-preparing-for-restore)

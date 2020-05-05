@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestDFSIntegrity
-description: Windows Commands topic for **dfsdiag TestDFSIntegrity**, which checks the integrity of the Distributed File System (DFS) namespace.
+description: Reference topic for **dfsdiag TestDFSIntegrity**, which checks the integrity of the Distributed File System (DFS) namespace.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # dfsdiag TestDFSIntegrity
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks the integrity of the Distributed File System (DFS) namespace by performing the following tests:
 
@@ -36,7 +36,7 @@ dfsdiag /TestDFSIntegrity /DFSRoot: <DFS root path> [/Recurse] [/Full]
 | /Recurse | Performs the testing including the namespace interlinks. |
 | /Full | Verifies the consistency of share and NTFS Acls and client side configuration on all folder targets. It also verifies that the online property is set. |
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 ```
 dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full

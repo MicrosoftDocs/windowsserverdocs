@@ -1,6 +1,6 @@
 ---
 title: logman create counter
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # logman create counter
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 create a counter data collector.  
 
@@ -55,7 +55,7 @@ logman create counter <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 The following command creates a counter called perf_log using the % Processor time counter from the Processor(_Total) counter category.  
 ```  
 logman create counter perf_log -c \Processor(_Total)\% Processor time  

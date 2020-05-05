@@ -1,6 +1,6 @@
 ---
 title: manage-bde KeyPackage
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -20,7 +20,7 @@ ms.date: 10/16/2017
 
 
 
-Generates a key package for a drive. The key package can be used in conjunction with the repair tool to repair corrupted drives. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Generates a key package for a drive. The key package can be used in conjunction with the repair tool to repair corrupted drives.
 
 ## Syntax
 
@@ -40,9 +40,9 @@ manage-bde -KeyPackage [<Drive>] [-ID <KeyProtectoryID>] [-path <PathToExternalK
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-KeyPackage** command to create a key package for drive C  based off the key protector identified by the GUID and to save the key package to F:\Folder.
+To illustrates using the **-KeyPackage** command to create a key package for drive C  based off the key protector identified by the GUID and to save the key package to F:\Folder.
 ```
 manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path f:\Folder
 ```

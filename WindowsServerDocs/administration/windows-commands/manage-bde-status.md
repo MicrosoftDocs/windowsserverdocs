@@ -1,6 +1,6 @@
 ---
 title: manage-bde status
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -30,7 +30,7 @@ Provides the following information about all drives on the computer; whether or 
 -   Identification field
 -   Key protectors
 
-For examples of how this command can be used, see [Examples](#BKMK_Examples).
+
 
 ## Syntax
 
@@ -49,9 +49,9 @@ manage-bde -status [<Drive>] [-protectionaserrorlevel] [-computername <Name>] [{
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-status** command to display the status of drive C.
+To illustrates using the **-status** command to display the status of drive C.
 ```
 manage-bde –status C:
 ```

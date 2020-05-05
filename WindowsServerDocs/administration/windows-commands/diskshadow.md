@@ -1,6 +1,6 @@
 ---
 title: diskshadow
-description: Windows Commands topic for diskshadow, which is a tool that exposes the functionality offered by the volume shadow copy Service (VSS).
+description: Reference topic for diskshadow, which is a tool that exposes the functionality offered by the volume shadow copy Service (VSS).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,15 +12,14 @@ ms.date: 10/16/2017
 ---
 # diskshadow
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service (VSS). By default, diskshadow uses an interactive command interpreter similar to that of diskraid or DiskPart. diskshadow also includes a scriptable mode.  
   
 > [!NOTE]  
 > Membership in the local Administrators group, or equivalent, is the minimum required to run diskshadow.  
   
-For examples of how to use diskshadow commands, see [Examples](#BKMK_examples).  
-  
+
 ## Syntax  
 for interactive mode, type the following at the command prompt to start the diskshadow command interpreter:  
   
@@ -34,7 +33,7 @@ for script mode, type the following, where *script.txt* is a script file contain
 diskshadow -s script.txt  
 ```  
   
-## diskshadow commands  
+### Parameters  
 You can run the following commands in the diskshadow command interpreter or through a script file:  
   
 |Parameter|Description|  
@@ -65,7 +64,7 @@ You can run the following commands in the diskshadow command interpreter or thro
   
 -   At a minimum, only **add** and **create** are necessary to create a shadow copy. However, this will forfeit the context and option settings, will be a copy backup, and will only create a shadow copy with no backup execution script.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 This is a sample sequence of commands that will create a shadow copy for backup. It can be saved to file as script.dsh, and executed with diskshadow \/s script.dsh  
   
 Assume the following:  

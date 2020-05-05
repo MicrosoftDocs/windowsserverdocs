@@ -1,6 +1,6 @@
 ---
 title: add-ImageDriverPackage
-description: Windows Commands topic for add-ImageDriverPackage, which adds a driver package that is in the driver store to an existing boot image on the server.
+description: Reference topic for add-ImageDriverPackage, which adds a driver package that is in the driver store to an existing boot image on the server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # add-ImageDriverPackage
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds a driver package that is in the driver store to an existing boot image on the server. The image version must be Windows 7 or Windows Server 2008 R2 or later.
 
@@ -35,7 +35,7 @@ wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype
 |           [/DriverPackage:<Name>           |                                                                                                                                                                                   Specifies the name of the driver package to add to the image.                                                                                                                                                                                    |
 |             [/PackageId:<ID>]              | Specifies the Windows Deployment Services ID of the driver package. You must specify this option if the driver package cannot be uniquely identified by name. To find the Package ID, click the driver group that the package is in (or the **All Packages** node), right-click the package, and then click **Properties**. The Package ID is listed on the **General** tab. For example:  {DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To add a driver package to a boot image, type one of the following:
 ```
 wdsutil /add-ImageDriverPackagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /DriverPackage:XYZ

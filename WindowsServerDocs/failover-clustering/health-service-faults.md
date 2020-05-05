@@ -10,6 +10,7 @@ ms.date: 10/05/2017
 ---
 
 # Health Service faults
+
 > Applies to: Windows Server 2019, Windows Server 2016
 
 ## What are faults
@@ -70,8 +71,7 @@ This returns any faults that affect only the specific volume or file share. Most
 
 In order to query the Health Service, you will need to establish a **CimSession** with the cluster. To do so, you will need some things that are only available in full .NET, meaning you cannot readily do this directly from a web or mobile app. These code samples will use C\#, the most straightforward choice for this data access layer.
 
-``` 
-...
+```
 using System.Security;
 using Microsoft.Management.Infrastructure;
 
@@ -133,7 +133,6 @@ These are the same objects you get in PowerShell using cmdlets like **Get-Storag
 You can access all the same properties, documented at [Storage Management API Classes](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx).
 
 ```
-...
 using System.Diagnostics;
 
 foreach (CimInstance Node in Nodes)

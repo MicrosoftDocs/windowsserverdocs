@@ -21,7 +21,7 @@ ms.date: 07/11/2018
 
 Replaces files. If used with the **/a** option, **replace** adds new files to a directory instead of replacing existing files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

@@ -1,6 +1,6 @@
 ---
 title: ksetup:delrealmflags
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Removes realm flags from the specified realm.  For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Removes realm flags from the specified realm. 
 
 ## Syntax
 
@@ -51,7 +51,7 @@ Realm flags are stored in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentCon
 
 You can see what realm flags are available and set by viewing the output of **ksetup** or **ksetup /dumpstate**.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 List the available realm flags for the realm CONTOSO:
 ```

@@ -1,6 +1,6 @@
 ---
 title: logman delete
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # logman delete
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 delete an existing data collector.  
 
@@ -36,7 +36,7 @@ logman delete <[-n] <name>> [options]
 |          -ets           |                                              Send commands to Event Trace Sessions directly without saving or scheduling.                                               |
 | -[-]u <user [password]> | Specifies the user to Run As. Entering a \* for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
 
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 The following command deletes the data collector perf_log.  
 ```  
 logman delete perf_log  
