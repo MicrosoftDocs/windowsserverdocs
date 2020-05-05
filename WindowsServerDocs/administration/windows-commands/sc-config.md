@@ -1,5 +1,5 @@
 ---
-title: Sc config
+title: Sc.exe config
 description: Reference topic for **** - 
 
 ms.prod: windows-server
@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 06/05/2018
 ---
 
-# Sc config
+# Sc.exe config
 
 
 
@@ -26,7 +26,7 @@ Modifies the value of a service's entries in the registry and in the Service Con
 ## Syntax
 
 ```
-sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys | rec | adapt | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto}] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
+sc.exe [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys | rec | adapt | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto}] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
 ```
 
 ### Parameters
@@ -56,7 +56,7 @@ sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys 
 
 To specify a binary path for the NEWSERVICE service, type:
 ```
-sc config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
+sc.exe config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
 ```
 
 ## Additional References
