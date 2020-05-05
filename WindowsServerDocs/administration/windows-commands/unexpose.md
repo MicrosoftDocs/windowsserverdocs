@@ -1,6 +1,6 @@
 ---
 title: unexpose
-description: Windows Commands topic for unexpose, which unexposes a shadow copy that was exposed by using the expose command. 
+description: Reference topic for unexpose, which unexposes a shadow copy that was exposed by using the expose command. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Unexposes a shadow copy that was exposed by using the **expose** command. The exposed shadow copy can be specified by its Shadow ID, drive letter, share, or mount point.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -36,7 +36,7 @@ unexpose {<ShadowID> | <Drive:> | <Share> | <MountPoint>}
 
 -   You can use an existing alias or an environment variable in place of *ShadowID*. Use **add** without parameters to see existing aliases.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To unexpose the shadow copy associated with Drive P, type:
 ```

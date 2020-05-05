@@ -1,6 +1,6 @@
 ---
 title: exit
-description: Windows Commands topic for exit, which exits the DiskPart command interpreter.
+description: Reference topic for exit, which exits the DiskPart command interpreter.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

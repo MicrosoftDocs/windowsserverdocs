@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util
-description: Windows Commands topic for **bitsadmin util**, which lists the Util switches.
+description: Reference topic for the bitsadmin util command, which lists the Util switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,9 @@ ms.date: 10/16/2017
 ---
 # bitsadmin util
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Lists the **/util** switches.
 
 Lists the **util** switches.
 
@@ -39,3 +41,5 @@ bitsadmin /util /version
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

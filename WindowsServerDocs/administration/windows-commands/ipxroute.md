@@ -1,6 +1,6 @@
 ---
 title: ipxroute
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # ipxroute
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays and modifies information about the routing tables used by the IPX protocol. Used without parameters,  **ipxroute** displays the default settings for packets that are sent to unknown, broadcast, and multicast addresses.   
 ## Syntax  
@@ -41,7 +41,7 @@ ipxroute config
 |remove= *xxxxxxxxxxxx*|removes the given node address from the source routing table.|  
 |config|Displays information about all of the bindings for which IPX is configured.|  
 |/?|Displays help at the command prompt.|  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 To display the network segments that the workstation is attached to, the workstation node address, and frame type being used, type:  
 ```  
 ipxroute config  

@@ -1,6 +1,6 @@
 ---
 title: diskcomp
-description: Windows Commands topic for diskcomp, which compares the contents of two floppy disks.
+description: Reference topic for diskcomp, which compares the contents of two floppy disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,6 @@ ms.date: 10/16/2017
 
 Compares the contents of two floppy disks. If used without parameters, **diskcomp** uses the current drive to compare both disks.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -98,7 +97,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
   To process exit codes that are returned by **diskcomp**, you can use the ERRORLEVEL environment variable on the **if** command line in a batch program.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 If your computer has only one floppy disk drive (for example, drive A), and you want to compare two disks, type:
 ```
@@ -106,7 +105,7 @@ diskcomp a: a:
 ```
 **Diskcomp** prompts you to insert each disk, as needed.
 
-The following example illustrates how to process a **diskcomp** exit code in a batch program that uses the ERRORLEVEL environment variable on the **if** command line:
+To illustrates how to process a **diskcomp** exit code in a batch program that uses the ERRORLEVEL environment variable on the **if** command line:
 ```
 rem Checkout.bat compares the disks in drive A and B 
 echo off 

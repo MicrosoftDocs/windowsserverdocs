@@ -1,6 +1,6 @@
 ---
 title: ftp
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Transfers files to and from a computer running a File Transfer Protocol (ftp) server service. **ftp** can be used interactively or in batch mode by processing ASCII text files. 
 ## Syntax
@@ -48,7 +48,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 - This command is available only if the **Internet Protocol (TCP/IP)** protocol is installed as a component in the properties of a network adapter in Network Connections.
 - **ftp** can be used interactively. After it is started, **ftp** creates a sub-environment in which you can use **ftp** commands. You can return to the command prompt by typing the **quit** command. When the **ftp** sub-environment is running, it is indicated by the **ftp >** command prompt. For more information see the **ftp** commands.
 - **ftp** supports the use of IPv6 when the IPv6 protocol is installed. For more information, see [additional references](ftp.md#BKMK_additionalRef).
-  ## <a name=BKMK_Examples></a>Examples
+  ## Examples
   To log on to the ftp server named ftp.example.microsoft.com, type:
   ```
   ftp ftp.example.microsoft.com

@@ -1,6 +1,6 @@
 ---
 title: ftp mget
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: mget
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies remote files to the local computer using the current file transfer type.   
 ## Syntax  
@@ -29,7 +29,7 @@ mget <remoteFile>[ ]
 |--------------|-----------------------------------------------------------|
 | <remoteFile> | Specifies the remote files to copy to the local computer. |
 
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 copy remote files **a.exe** and **b.exe** to the local computer using the current file transfer type.  
 ```  
 mget a.exe b.exe  

@@ -1,6 +1,6 @@
 ---
 title: mountvol
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -20,8 +20,6 @@ ms.date: 10/16/2017
 
 
 Creates, deletes, or lists a volume mount point.
-
-For examples of how to use this command see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -56,7 +54,7 @@ mountvol <Drive>: /s
 -   Volumes that are dismounted by using **/p** are listed in the volumes list as NOT MOUNTED UNTIL A VOLUME MOUNT POINT IS CREATED. If the volume has more than one mount point, use **/d** to remove the additional mount points before using **/p**. You can make the basic volume mountable again by assigning a volume mount point.
 -   If you need to expand your volume space without reformatting or replacing a hard drive, you can add a mount path to another volume. The benefit of using one volume with several mount paths is that you can access all local volumes by using a single drive letter (such as `C:`). You do not need to remember which volume corresponds to which drive letter—although you can still mount local volumes and assign them drive letters.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To create a mount point, type:
 ```

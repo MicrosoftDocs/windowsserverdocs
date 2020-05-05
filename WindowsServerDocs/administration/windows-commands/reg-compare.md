@@ -1,6 +1,6 @@
 ---
 title: reg compare
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Compares specified registry subkeys or entries.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -63,7 +63,7 @@ The following table lists the symbols displayed in the results.
 |<|*KeyName1* data is less than *KeyName2* data.|
 |>|*KeyName1* data is greater than *KeyName2* data.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To compare all values under the key **MyApp** with all values under the key **SaveMyApp**, type:
 

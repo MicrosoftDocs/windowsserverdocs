@@ -1,6 +1,6 @@
 ---
 title: dfsdiag TestDFSConfig
-description: Windows Commands topic for dfsdiag TestDFSConfig, which checks the configuration of a Distributed File System (DFS) namespace.
+description: Reference topic for dfsdiag TestDFSConfig, which checks the configuration of a Distributed File System (DFS) namespace.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # dfsdiag TestDFSConfig
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks the configuration of a Distributed File System (DFS) namespace by performing the following actions:  
   
@@ -40,7 +40,7 @@ dfsdiag /TestDFSConfig /DFSRoot:<namespace>
 |-----------------------|-----------------------------------------|
 | /DFSRoot:`<namespace>` | The namespace (DFS root) to diagnose. |
   
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
   
 ```  
 dfsdiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace  

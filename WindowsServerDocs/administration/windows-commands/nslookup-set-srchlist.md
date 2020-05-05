@@ -1,6 +1,6 @@
 ---
 title: nslookup set srchlist
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # nslookup set srchlist
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the default Domain Name System (DNS) domain name and search list.
 
@@ -33,8 +33,8 @@ Set srchlist=<DomainName>[/...]
 
 ## Remarks
 - The **set srchlist**command overrides the default DNS domain name and search list of the **set domain** command. Use the **set all** command to display the list.
-  ## <a name=BKMK_examples></a>Examples
-  The following example sets the DNS domain to mfg.widgets.com and the search list to the three names:
+  ## Examples
+  To set the DNS domain to mfg.widgets.com and the search list to the three names:
   ```
   set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
   ```

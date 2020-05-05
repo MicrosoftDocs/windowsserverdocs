@@ -1,6 +1,6 @@
 ---
 title: logman update alert
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman update alert
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Update the properties of an existing alert data collector.  
 
@@ -56,8 +56,8 @@ logman update alert <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name=BKMK_examples></a>Examples  
-The following example updates the existing data collector new_alert, setting the threshold value for the counter % Processor time in the Processor(_Total) counter group to 40%.  
+## Examples  
+To updates the existing data collector new_alert, setting the threshold value for the counter % Processor time in the Processor(_Total) counter group to 40%.  
 ```  
 logman update alert new_alert -th \Processor(_Total)\% Processor time>40  
 ```  

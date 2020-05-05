@@ -1,6 +1,6 @@
 ---
 title: repair
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # repair
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 repairs the RAID\-5 volume with focus by replacing the failed disk region with the specified dynamic disk.  
   
@@ -42,7 +42,7 @@ repair disk=<n> [align=<n>] [noerr]
   
 -   A volume in a RAID\-5 array must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To replace the volume with focus by replacing it with dynamic disk 4, type:  
   
 ```  

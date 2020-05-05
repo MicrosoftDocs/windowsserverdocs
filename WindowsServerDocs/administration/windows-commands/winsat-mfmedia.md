@@ -1,6 +1,6 @@
 ---
 title: winsat mfmedia
-description: Windows Commands for winsat mfmedia, which measures the performance of video decoding (playback) using the Media Foundation framework.
+description: Reference for winsat mfmedia, which measures the performance of video decoding (playback) using the Media Foundation framework.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 Measures the performance of video decoding (playback) using the Media Foundation framework.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -43,9 +43,9 @@ winsat mfmedia <parameters>
 |-icn|Include the local computer name in the XML output file.|
 |-eef|Enumerate extra system information in the XML output file.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-- The following example runs the assessment with the input file that is used during a **winsat formal** assessment, without employing the Media Foundation Protected Media Pipeline (MFPMP), on a computer where c:\windows is the location of the Windows folder.  
+- To runs the assessment with the input file that is used during a **winsat formal** assessment, without employing the Media Foundation Protected Media Pipeline (MFPMP), on a computer where c:\windows is the location of the Windows folder.  
   ```
   winsat mfmedia -input c:\windows\performance\winsat\winsat.wmv -nopmp
   ```

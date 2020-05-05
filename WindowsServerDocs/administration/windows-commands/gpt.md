@@ -1,6 +1,6 @@
 ---
 title: gpt
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # gpt
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 On basic GUID partition table (gpt) disks, assigns the gpt attribute(s) to the partition with focus.  gpt partition attributes give additional information about the use of the partition. Some attributes are specific to the partition type GUID.
 
@@ -40,7 +40,7 @@ gpt attributes=<n>
 - The EFI System partition contains only those binaries necessary to start the operating system. This makes it easy for OEM binaries or binaries specific to an operating system to be placed in other partitions.
 - A basic gpt partition must be selected for this operation to succeed. Use the **select partition** command to select a basic gpt partition and shift the focus to it.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
   If you are moving a gpt disk to a new computer and would like to prevent that computer from automatically assigning a drive letter to the partition with focus, type:
   ```

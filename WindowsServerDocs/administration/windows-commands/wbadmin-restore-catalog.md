@@ -1,6 +1,6 @@
 ---
 title: wbadmin restore catalog
-description: Windows Commands topic for wbadmin restore catalog, which recovers a backup catalog for the local computer from a storage location that you specify.
+description: Reference topic for wbadmin restore catalog, which recovers a backup catalog for the local computer from a storage location that you specify.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,13 +13,9 @@ ms.date: 10/16/2017
 
 # wbadmin restore catalog
 
-
-
 Recovers a backup catalog for the local computer from a storage location that you specify.
 
 To recover a backup catalog with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt**, and then click **Run as administrator**.)
-
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -42,7 +38,7 @@ wbadmin restore catalog
 
 If the location (disk, DVD, or remote shared folder) where you store your backups is damaged or lost and cannot be used to restore the backup catalog, use **wbadmin delete catalog** to delete the corrupted catalog. In this case, you should create a new backup once your backup catalog is deleted.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To restore a catalog from a backup stored on disk d:, type:
 ```

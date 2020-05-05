@@ -1,6 +1,6 @@
 ---
 title: create
-description: Windows Commands topic for create, which starts the shadow copy creation process, using the current context and option settings.
+description: Reference topic for create, which starts the shadow copy creation process, using the current context and option settings.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: ksetup:delkpasswd
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,9 +16,9 @@ ms.date: 10/16/2017
 ---
 # ksetup:delkpasswd
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-removes a Kerberos password server (Kpasswd) for a realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+removes a Kerberos password server (Kpasswd) for a realm.
 ## Syntax
 ```
 ksetup /delkpasswd <RealmName> <KpasswdName>
@@ -32,7 +32,7 @@ ksetup /delkpasswd <RealmName> <KpasswdName>
 
 ## Remarks
 Run the command **ksetup** to verify the KDC name. If **kpasswd =** does not appear in the output, then the mapping has not been configured. Multiple mappings will be listed, if set.
-## <a name=BKMK_Examples></a>Examples
+## Examples
 verify the realm CORP.CONTOSO.COM uses the non-Windows KDC server mitkdc.contoso.com as the password server:
 ```
 ksetup /delkpasswd CORP.CONTOSO.COM mitkdc.contoso.com

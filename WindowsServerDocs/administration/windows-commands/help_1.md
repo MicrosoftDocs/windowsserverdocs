@@ -1,6 +1,6 @@
 ---
 title: help
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # help
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays a list of the available commands or detailed help information on a specified command.  
   
@@ -38,7 +38,7 @@ help [<command>]
   
 -   if no command is specified, **help** will display all possible commands.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To display a list of all commands available in DiskPart, type:  
   
 ```  

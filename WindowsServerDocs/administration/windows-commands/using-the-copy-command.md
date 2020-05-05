@@ -1,6 +1,6 @@
 ---
 title: copy
-description: Windows Commands topic for copy, which copies an image or a driver group.
+description: Reference topic for copy, which copies an image or a driver group.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # copy
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies an image or a driver group.
 

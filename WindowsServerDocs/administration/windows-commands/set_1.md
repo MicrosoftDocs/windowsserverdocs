@@ -1,6 +1,6 @@
 ---
 title: set
-description: Windows Commands topic for set, which displays, sets, or removes CMD.EXE environment variables. 
+description: Reference topic for set, which displays, sets, or removes CMD.EXE environment variables. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Displays, sets, or removes CMD.EXE environment variables. If used without parameters, **set** displays the current environment variable settings.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -94,7 +94,7 @@ set /a <Variable>=<Expression>
 
   The **set** command, with different parameters, is available from the Recovery Console.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To set an environment variable named TEST^1, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin sethelpertoken
-description: Windows Commands topic for **bitsadmin sethelpertoken**, which sets the current command prompt's primary token (or an arbitrary local user account's token, if specified) as a BITS transfer job's helper token.
+description: Reference topic for the bitsadmin sethelpertoken command, which sets the current command prompt's primary token (or an arbitrary local user account's token, if specified) as a BITS transfer job's helper token.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -33,3 +33,5 @@ bitsadmin /sethelpertoken <job> [<user_name@domain> <password>]
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: logman create trace
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # logman create trace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 create an event trace data collector.  
 
@@ -62,8 +62,8 @@ logman create trace <[-n] <name>> [options]
 
 ## Remarks  
 Where [-] is listed, an extra - negates the option.  
-## <a name=BKMK_examples></a>Examples  
-The following example creates an event trace data collector called trace_log using no fewer than 16 and no more than 256 buffers, each buffer 64kb in size, and outputs the results to the location c:\logfile.  
+## Examples  
+To creates an event trace data collector called trace_log using no fewer than 16 and no more than 256 buffers, each buffer 64kb in size, and outputs the results to the location c:\logfile.  
 ```  
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile  
 ```  

@@ -1,6 +1,6 @@
 ---
 title: reset session
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,10 +16,10 @@ ms.date: 07/11/2018
 ---
 # reset session
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to reset (delete) a session on a Remote Desktop Session Host (rd Session Host) server.  
-for examples of how to use this command, see [Examples](#BKMK_examples).  
+  
 
 > [!NOTE]  
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
@@ -45,7 +45,7 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   You should reset a session only when it malfunctions or appears to have stopped responding.  
 -   The **/server** parameter is required only if you use **reset session** from a remote server.  
 
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 - To reset the session designated rdp-tcp#6, type:  
   ```  
   reset session rdp-tcp#6  

@@ -1,6 +1,6 @@
 ---
 title: telnet display
-description: Windows Commands topic for telnet display, which displays operating parameters.
+description: Reference topic for telnet display, which displays operating parameters.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # telnet: display
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays operating parameters.   
 
@@ -22,7 +22,7 @@ d[isplay]
 ```  
 #### Parameters  
 none  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 Display operating parameters.  
 ```  
 d  

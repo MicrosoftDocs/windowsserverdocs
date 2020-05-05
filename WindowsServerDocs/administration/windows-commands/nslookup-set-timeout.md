@@ -1,6 +1,6 @@
 ---
 title: nslookup set timeout
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # nslookup set timeout
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 changes the initial number of seconds to wait for a reply to a lookup request.
 ## Syntax
@@ -32,8 +32,8 @@ set timeout=<Number>
 
 ## Remarks
 - When a reply to a request is not received within the specified time period, the time-out is doubled and the request is sent again. You can use the **set retry** command to control the number of retries.
-  ## <a name=BKMK_examples></a>Examples
-  The following example sets the timeout for getting a response to 2 seconds:
+  ## Examples
+  To set the timeout for getting a response to 2 seconds:
   ```
   set timeout=2
   ```

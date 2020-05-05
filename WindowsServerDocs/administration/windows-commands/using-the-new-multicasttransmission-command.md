@@ -1,6 +1,6 @@
 ---
 title: new-MulticastTransmission
-description: Windows Commands topic for new-MulticastTransmission, which creates a new multicast transmission for an image. 
+description: Reference topic for new-MulticastTransmission, which creates a new multicast transmission for an image. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # new-MulticastTransmission
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a new multicast transmission for an image. This command is equivalent to creating a transmission by using the Windows Deployment Services mmc snap-in (right-click the **Multicast Transmissions** node, and then click **create Multicast Transmission**). You should use this command when you have both the Deployment Server role service and the Transport Server role service installed (which is the default installation). If you have only the Transport Server role service installed, use [Using the new-Namespace Command](using-the-new-namespace-command.md).
 ## Syntax
@@ -55,7 +55,7 @@ mediatype:{Boot&#124;Install}|Specifies the type of image to be transmitted usin
 |/Transmissiontype:{AutoCast &#124; ScheduledCast}|Specifies whether to start the transmission automatically (AutoCast) or based on the specified start criteria (ScheduledCast).<p><ul><li>**Auto-Cast**. This transmission type indicates that as soon as an applicable client requests an install image, a multicast transmission of the selected image begins. As other clients request the same image, they are joined to the transmission that is already started.</li><li>**Scheduled-Cast**. This transmission type sets the start criteria for the transmission based on the number of clients that are requesting an image and/or a specific day and time. You can specify the following options:<p><ul><li>[/time: <time>] - Sets the time that the transmission should start by using the following format: YYYY/MM/DD:hh:mm.</li><li>[/Clients: <Number of clients>] - Sets the minimum number of clients to wait for before the transmission starts.</li></ul></li></ul>|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the boot image to transmit using multicasting. Because it is possible to have the same name for boot images of different architectures, you should specify the architecture to ensure the correct image is used.|
 |[/Filename:<File name>]|Specifies the file name. If the source image cannot be uniquely identified by name, you must specify the file name.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To create an Auto-Cast transmission of a boot image in Windows Server 2008 R2, type:
 ```
 wdsutil /New-MulticastTransmission /FriendlyName:WDS Boot Transmission

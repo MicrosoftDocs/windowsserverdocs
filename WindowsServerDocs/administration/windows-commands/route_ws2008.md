@@ -16,7 +16,7 @@ ms.date: 07/11/2018
 ---
 # route_ws2008
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays and modifies the entries in the local IP routing table. Used without parameters, **route** displays help.   
 
@@ -47,7 +47,7 @@ route [/f] [/p] [<Command> [<Destination>] [mask <Netmask>] [<Gateway>] [metric 
 - The **/p** parameter is only supported on the route command for Windows NT 4.0, Windows 2000, Windows Millennium edition, Windows XP, and Windows Server 2003. This parameter is not supported by the **route** command for Windows 95 or Windows 98.  
 - This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.  
 
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 To display the entire contents of the IP routing table, type:  
 ```  
 route print  

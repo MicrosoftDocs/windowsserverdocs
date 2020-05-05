@@ -1,6 +1,6 @@
 ---
 title: Sc config
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 06/05/2018
 
 Modifies the value of a service's entries in the registry and in the Service Control Manager database.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -52,7 +52,7 @@ sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys 
 -   For each command-line option (parameter), the equal sign is part of the option name.
 -   A space is required between an option and its value (for example, **type= own**. If the space is omitted, the operation will fail.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To specify a binary path for the NEWSERVICE service, type:
 ```

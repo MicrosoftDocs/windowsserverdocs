@@ -1,6 +1,6 @@
 ---
 title: forfiles
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 08/21/2018
 
 Selects and executes a command on a file or set of files. This command is useful for batch processing.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -67,7 +67,7 @@ forfiles [/p <Path>] [/m <SearchMask>] [/s] [/c <Command>] [/d [{+|-}][{<Date>|<
     -   Include special characters in the command line by using the hexadecimal code for the character, in 0x*HH* format (for example, 0x09 for a tab).
 -   **Forfiles** works by implementing the **recurse subdirectories** flag on tools that are designed to process only a single file.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To list all of the batch files on drive C, type:
 ```

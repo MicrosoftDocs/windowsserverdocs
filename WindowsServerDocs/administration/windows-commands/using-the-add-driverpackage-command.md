@@ -1,6 +1,6 @@
 ---
 title: add-DriverPackage
-description: Windows Commands topic for add-DriverPackage, which adds a driver package to the server. 
+description: Reference topic for add-DriverPackage, which adds a driver package to the server. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -31,7 +31,7 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 | [/DriverGroup:\<Group Name>] |                             Specifies the name of the driver group to which the package should be added.                              |
 |   [/Name:\<Friendly Name>]   |                                           States the friendly name for the driver package.                                            |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To add a driver package, type one of the following:
 ```
