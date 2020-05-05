@@ -1,6 +1,6 @@
 ---
 title: delete partition
-description: Reference topic for delete partition, which deletes the partition with focus.
+description: Reference topic for the delete partition command, which deletes the partition with focus.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -17,6 +17,8 @@ Deletes the partition with focus. Before you begin, you must select a partition 
 
 > [!WARNING]
 > Deleting a partition on a dynamic disk can delete all dynamic volumes on the disk, destroying any data and leaving the disk in a corrupt state.
+>
+> You can't delete the system partition, boot partition, or any partition that contains the active paging file or crash dump information.
 
 ## Syntax
 
@@ -33,9 +35,9 @@ delete partition [noerr] [override]
 
 #### Remarks
 
-- You can't delete the system partition, boot partition, or any partition that contains the active paging file or crash dump information.
+- To delete a dynamic volume, always use the [delete volume](delete-volume.md) command instead.
 
-- To delete a dynamic volume, always use the [delete volume](delete-volume.md) command instead. Partitions can be deleted from dynamic disks, but they shouldn't be created. For example, it's possible to delete an unrecognized GUID Partition Table (GPT) partition on a dynamic GPT disk. Deleting such a partition doesn't cause the resulting free space to become available. Instead, This command is intended to allow you to reclaim space on a corrupted offline dynamic disk in an emergency situation where the [clean](clean.md) command in DiskPart can't be used.
+- Partitions can be deleted from dynamic disks, but they shouldn't be created. For example, it's possible to delete an unrecognized GUID Partition Table (GPT) partition on a dynamic GPT disk. Deleting such a partition doesn't cause the resulting free space to become available. Instead, This command is intended to allow you to reclaim space on a corrupted offline dynamic disk in an emergency situation where the [clean](clean.md) command in DiskPart can't be used.
 
 ## Examples
 
