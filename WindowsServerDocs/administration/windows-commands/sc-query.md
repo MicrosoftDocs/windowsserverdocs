@@ -1,6 +1,6 @@
 ---
 title: Sc.exe query
-description: Reference topic for **** - 
+description: Learn how to obtain information about services, drivers, type of services, or type of drivers using the sc.exe utility
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -14,8 +14,6 @@ ms.date: 10/16/2017
 # Sc.exe query
 
 Obtains and displays information about the specified service, driver, type of service, or type of driver.
-
-
 
 ## Syntax
 
