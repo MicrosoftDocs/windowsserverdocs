@@ -1,5 +1,5 @@
 ---
-title: Sc create
+title: Sc.exe create
 description: Reference topic for **** - 
 
 ms.prod: windows-server
@@ -15,18 +15,14 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Sc create
-
-
+# Sc.exe create
 
 Creates a subkey and entries for a service in the registry and in the Service Control Manager database.
-
-
 
 ## Syntax
 
 ```
-sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto }] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
+sc.exe [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto }] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
 ```
 
 ### Parameters
@@ -54,10 +50,10 @@ sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys 
 
 ## Examples
 
-The following examples show how you can use the **sc create** command:
+The following examples show how you can use the **sc.exe create** command:
 ```
-sc \\myserver create NewService binpath= c:\windows\system32\NewServ.exe
-sc create NewService binpath= c:\windows\system32\NewServ.exe type= share start= auto depend= +TDI NetBIOS
+sc.exe \\myserver create NewService binpath= c:\windows\system32\NewServ.exe
+sc.exe create NewService binpath= c:\windows\system32\NewServ.exe type= share start= auto depend= +TDI NetBIOS
 ```
 
 ## Additional References
