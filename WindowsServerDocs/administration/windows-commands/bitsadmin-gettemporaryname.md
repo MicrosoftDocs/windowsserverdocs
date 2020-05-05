@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gettemporaryname
-description: Windows Commands topic for **bitsadmin gettemporaryname**, which reports the temporary filename of the given file within the job.
+description: Reference topic for the bitsadmin gettemporaryname command, which reports the temporary filename of the given file within the job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -28,14 +28,16 @@ bitsadmin /gettemporaryname <job> <file_index>
 | job | The job's display name or GUID. |
 | file_index | Starts from 0. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example reports the temporary filename of file 2 for the job named *myDownloadJob*.
+To report the temporary filename of file 2 for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /gettemporaryname myDownloadJob 1
+bitsadmin /gettemporaryname myDownloadJob 1
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

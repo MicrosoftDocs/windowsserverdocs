@@ -1,6 +1,6 @@
 ---
 title: DiskPart
-description: Windows Commands topic for **DiskPart**, which helps you manage your computer's drives.
+description: Reference topic for **DiskPart**, which helps you manage your computer's drives.
 ms.prod: windows-server
 ms.technology: storage
 author: jasongerend
@@ -10,7 +10,7 @@ ms.author: jgerend
 
 # DiskPart
 
->Applies To: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
 DiskPart commands help you manage your computer's drives (disks, partitions, volumes, or virtual hard disks).
 

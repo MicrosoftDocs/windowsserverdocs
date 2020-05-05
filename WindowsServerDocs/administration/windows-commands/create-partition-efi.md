@@ -1,6 +1,6 @@
 ---
 title: create partition efi
-description: Windows Commands topic for create partition efi, which creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (gpt) disk on Itanium-based computers.
+description: Reference topic for create partition efi, which creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (gpt) disk on Itanium-based computers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # create partition efi
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 On Itanium-based computers, creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (gpt) disk.
 
@@ -37,7 +37,7 @@ create partition efi [size=<n>] [offset=<n>] [noerr]
   
 -   A gpt disk must be selected for this operation to succeed. Use the **select disk** command to select a disk and shift the focus to it.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To create an EFI partition of 1000 megabytes on the selected disk, type:  
   
 ```  

@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Fsutil 8dot3name
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Queries or changes the settings for short name (8dot3 name) behavior, which include:
 
@@ -24,7 +24,7 @@ Queries or changes the settings for short name (8dot3 name) behavior, which incl
 
 -   Remove the short names for all files within a directory
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

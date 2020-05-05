@@ -1,6 +1,6 @@
 ---
 title: dispdiag
-description: Windows Commands topic for dispdiag, which logs display information to a file.
+description: Reference topic for dispdiag, which logs display information to a file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

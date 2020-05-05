@@ -1,6 +1,6 @@
 ---
 title: telnet close
-description: Windows Commands topic for telnet close, which closes the current telnet connection.
+description: Reference topic for telnet close, which closes the current telnet connection.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # telnet: close
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Closes the current connection.    
 
@@ -22,7 +22,7 @@ c[lose]
 ```  
 #### Parameters  
 none  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 Close the current connection.  
 ```  
 c  

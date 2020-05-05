@@ -1,6 +1,6 @@
 ---
 title: verify
-description: Windows Commands topic for verify, which tells **cmd** whether to verify that your files are written correctly to a disk. 
+description: Reference topic for verify, which tells **cmd** whether to verify that your files are written correctly to a disk. 
 
 ms.prod: windows-server
 
@@ -22,7 +22,7 @@ ms.date: 10/16/2017
 
 Tells **cmd** whether to verify that your files are written correctly to a disk. If used without parameters, **verify** displays the current setting.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -37,7 +37,7 @@ verify [on | off]
 |[on \| off]|Switches the **verify** setting on or off.|
 |/?|Displays help at the command prompt.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the current **verify** setting, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: new-CaptureImage
-description: Windows Commands topic for new-CaptureImage, which creates a new capture image from an existing boot image. 
+description: Reference topic for new-CaptureImage, which creates a new capture image from an existing boot image. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -40,7 +40,7 @@ WDSUTIL [Options] /New-CaptureImage [/Server:<Server name>]
 | [/Filename: \<Filename>] |                                                                                                                                                                            If the image cannot be uniquely identified by name, you must use this option to specify the file name.                                                                                                                                                                            |
 |    /DestinationImage     | Specifies the settings for the destination image. You specify the settings using the following options:</br>-   /FilePath: \<File path and name> Sets the full file path for the new capture image.</br>-   [/Name: \<Name>] - Sets the display name of the image. If no display name is specified, the display name of the source image will be used.</br>-   [/Description: \<Description>] - Sets the description of the image.</br>-   [/Overwrite: {Yes |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To create a capture image and name it WinPECapture.wim, type:
 ```

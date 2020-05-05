@@ -1,6 +1,6 @@
 ---
 title: if
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Performs conditional processing in batch programs.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -63,7 +63,7 @@ if defined <Variable> <Command> [else <Expression>]
     -   **%cmdextversion%** expands into the string representation of the current value of **cmdextversion**. This assumes that there is not an existing environment variable with the name CMDEXTVERSION—if there is, you will get the CMDEXTVERSION value instead.
 -   You must use the **else** clause on the same line as the command after the **if**.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the message Cannot find data file if the file Product.dat cannot be found, type:
 ```

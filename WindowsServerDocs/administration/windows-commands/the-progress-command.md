@@ -1,6 +1,6 @@
 ---
 title: progress
-description: Windows Commands topic for progress, which displays progress while a command is running.
+description: Reference topic for progress, which displays progress while a command is running.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

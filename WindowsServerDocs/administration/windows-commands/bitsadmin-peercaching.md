@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching
-description: Windows Commands topic for **bitsadmin peercaching**, which lists the /peercaching switches.
+description: Reference topic for the bitsadmin peercaching command, which lists the /peercaching switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,10 +12,12 @@ ms.date: 10/16/2017
 ---
 # bitsadmin peercaching
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists the /peercaching switches.
-g
+
+Lists the /peercaching switches.
+
 ## Syntax
 
 ```
@@ -35,3 +37,5 @@ bitsadmin /peercaching /getconfigurationflags
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

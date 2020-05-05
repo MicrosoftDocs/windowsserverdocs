@@ -1,6 +1,6 @@
 ---
 title: bitsadmin removeclientcertificate
-description: Windows Commands topic for **bitsadmin removeclientcertificate**, which removes the client certificate from the job.
+description: Reference topic for the bitsadmin removeclientcertificate command, which removes the client certificate from the job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -29,12 +29,14 @@ bitsadmin /removeclientcertificate <job>
 
 ## Examples
 
-The following example removes the client certificate from the job named *myDownloadJob*.
+To remove the client certificate from the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /removeclientcertificate myDownloadJob 
+bitsadmin /removeclientcertificate myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

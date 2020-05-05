@@ -1,6 +1,6 @@
 ---
 title: klist
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Displays a list of currently cached Kerberos tickets. This information applies to Windows Server 2012. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Displays a list of currently cached Kerberos tickets. This information applies to Windows Server 2012.
 
 ## Syntax
 
@@ -113,7 +113,7 @@ The parameters display the following information:
 **Other considerations**
 -   Klist.exe is available in Windows Server 2012 and Windows 8, and it requires no special installation.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 1. When you are diagnosing an Event ID 27 while processing a ticket-granting service (TGS) request for the target server, the account did not have a suitable key to generate a Kerberos ticket. You can use Klist to query the Kerberos ticket cache to determine if any tickets are missing, if the target server or account is in error, or if the encryption type is not supported.  
    ```

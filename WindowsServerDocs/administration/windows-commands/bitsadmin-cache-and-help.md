@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and help
-description: Windows Commands topic for **bitsadmin cache and help**, which displays the command-line usage for the **Cache** switches.
+description: Reference topic for the bitsadmin cache and help command, which displays the command-line usage for the **cache** switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -21,9 +21,9 @@ Displays the command-line usage for the **cache** switches.
 bitsadmin /cache /help
 ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following command displays the command-line help for the **cache** switches.
+To show the command-line help for the **cache** switches.
 
 ```
 bitsadmin /cache /help
@@ -32,3 +32,5 @@ bitsadmin /cache /help
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin cache command](bitsadmin-cache.md)

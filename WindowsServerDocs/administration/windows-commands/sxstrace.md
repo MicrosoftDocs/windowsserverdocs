@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 ---
 # sxstrace
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Diagnoses side-by-side problems.    
 
@@ -41,7 +41,7 @@ sxstrace [{[trace -logfile:<FileName> [-nostop]|[parse -logfile:<FileName> -outf
 |stoptrace|Stop the trace if it is not stopped before.|  
 |-?|Displays help at the command prompt.|  
 
-## <a name="BKMK_Examples"></a>Examples  
+## Examples  
 Enable tracing and save trace file to **sxstrace.etl**:  
 ```  
 sxstrace trace -logfile:sxstrace.etl  

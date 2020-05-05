@@ -1,6 +1,6 @@
 ---
 title: eventcreate
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Enables an administrator to create a custom event in a specified event log. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables an administrator to create a custom event in a specified event log. 
 
 ## Syntax
 
@@ -45,7 +45,7 @@ eventcreate [/s <Computer> [/u <Domain\User> [/p <Password>]] {[/l {APPLICATION|
 
 -   Custom events cannot be written to the security log.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following examples show how you can use the eventcreate command:
 ```

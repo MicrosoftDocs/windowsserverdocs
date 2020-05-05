@@ -1,6 +1,6 @@
 ---
 title: manage-bde changepin
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN.
 
 ## Syntax
 
@@ -37,9 +37,9 @@ manage-bde -changepin [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-changepin** command to change the PIN used with BitLocker on drive C.
+To illustrates using the **-changepin** command to change the PIN used with BitLocker on drive C.
 ```
 manage-bde –changepin C:
 ```

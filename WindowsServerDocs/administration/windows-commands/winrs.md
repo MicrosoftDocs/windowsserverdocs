@@ -1,6 +1,6 @@
 ---
 title: winrs
-description: Windows Commands topic for winrs, which allows you to manage and execute programs remotely.
+description: Reference topic for winrs, which allows you to manage and execute programs remotely.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # winrs
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows remote Management allows you to manage and execute programs remotely.   
 ## Syntax  
@@ -42,7 +42,7 @@ winrs [/<parameter>[:<value>]] <command>
 -   To terminate the **/remote** command, the user can type **Ctrl-C** or **Ctrl-break**, which will be sent to the remote shell. The second **Ctrl-C** will force termination of **winrs.exe**.  
 -   To manage active remote shells or winrs configuration, use the WinRM tool.  The URI alias to manage active shells is **shell/cmd**.  The URI alias for winrs configuration is **winrm/config/winrs**.  
 
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 ```  
 winrs /r:https://contoso.com command  
 ```  

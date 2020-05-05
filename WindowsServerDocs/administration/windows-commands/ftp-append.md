@@ -1,6 +1,6 @@
 ---
 title: ftp append
-description: Windows Commands topic for ftp append 
+description: Reference topic for ftp append 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: append
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 appends a local file to a file on the remote computer using the current file type setting.   
 ## Syntax  
@@ -32,7 +32,7 @@ append <LocalFile> [remoteFile]
 
 ## Remarks  
 if *remoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 append file1.txt to file2.txt on the remote computer.  
 ```  
 append file1.txt file2.txt  

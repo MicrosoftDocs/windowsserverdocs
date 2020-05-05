@@ -1,6 +1,6 @@
 ---
 title: lpr
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # lpr
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.  
 
@@ -41,7 +41,7 @@ lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o |
 ## Remarks  
 - To find the name of the printer, open the printers folder.  
 - The **-S**, **-P**, **-C**, and **-J** parameters are case sensitive and must be typed in upper-case letters.  
-  ## <a name=BKMK_examples></a>Examples  
+  ## Examples  
   This example shows how to print the Document.txt text file to the Laserprinter1 printer queue on an LPD host at 10.0.0.45:  
   ```  
   lpr -S 10.0.0.45 -P Laserprinter1 -o Document.txt  

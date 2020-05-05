@@ -1,6 +1,6 @@
 ---
 title: manage-bde off
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete.
 
 ## Syntax
 
@@ -37,9 +37,9 @@ manage-bde -off [<Volume>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-off** command to turn off BitLocker on drive C.
+To illustrates using the **-off** command to turn off BitLocker on drive C.
 ```
 manage-bde –off C:
 ```

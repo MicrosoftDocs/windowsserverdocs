@@ -1,6 +1,6 @@
 ---
 title: perfmon
-description: Windows Commands topic for perfmon 
+description: Reference topic for perfmon 
 
 ms.prod: windows-server
 

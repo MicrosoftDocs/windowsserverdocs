@@ -1,6 +1,6 @@
 ---
 title: driverquery
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Enables an administrator to display a list of installed device drivers and their properties. If used without parameters, **driverquery** runs on the local computer.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -42,7 +42,7 @@ driverquery [/s <System> [/u [<Domain>\]<Username> [/p <Password>]]] [/fo {table
 |            /si            |                                                                                                                          Provides information about signed drivers.                                                                                                                          |
 |            /?             |                                                                                                                             Displays help at the command prompt.                                                                                                                             |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display a list of installed device drivers on the local computer, type:
 ```

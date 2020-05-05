@@ -1,6 +1,6 @@
 ---
 title: lodctr
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # lodctr
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows you to register or save performance counter name and registry settings in a file and designate trusted services.
 ## Syntax
@@ -36,7 +36,7 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 
 ## Remarks
 If the information that you supply contains spaces, use quotation marks around the text (for example, <filename>).
-## <a name=BKMK_Examples></a>Examples
+## Examples
 To save the current Performance registry settings and counter Explain text to file **perf backup1.txt**:
 ```
 lodctr /s:perf backup1.txt

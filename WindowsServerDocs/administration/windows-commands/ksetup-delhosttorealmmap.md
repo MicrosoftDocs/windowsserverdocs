@@ -1,6 +1,6 @@
 ---
 title: ksetup:delhosttorealmmap
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Removes a service principal name (SPN) mapping between the stated host and the realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Removes a service principal name (SPN) mapping between the stated host and the realm.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ When a host to realm (or multiple hosts to realm) mapping exists, this command r
 
 The mapping is recorded in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**. You should verify the mapping in the registry after using this command.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Altering the configuration of the realm CONTOSO, delete the mapping of the host computer IPops897 to the realm:
 ```

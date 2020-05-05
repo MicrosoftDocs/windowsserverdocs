@@ -11,7 +11,7 @@ ms.topic: article
 ms.date: 10/16/2017
 ---
 # Fsutil resource
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
 
 Creates a Secondary Transactional Resource Manager, starts or stops a Transactional Resource Manager, or displays information about a Transactional Resource Manager and modifies the following behavior:
 
@@ -22,8 +22,6 @@ Creates a Secondary Transactional Resource Manager, starts or stops a Transactio
 -   The specified Transaction Resource Manager to prefer availability over consistency
 
 -   The characteristics of a running Transactional Resource Manager
-
-For examples of how to use this command, see [Examples](#BKMK_examples) .
 
 ## Syntax
 

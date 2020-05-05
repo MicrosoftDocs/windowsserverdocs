@@ -1,6 +1,6 @@
 ---
 title: tree
-description: Windows Commands topic for tree, which displays the directory structure of a path, or of the disk in a drive, graphically.
+description: Reference topic for tree, which displays the directory structure of a path, or of the disk in a drive, graphically.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Displays the directory structure of a path or of the disk in a drive graphically.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -37,7 +37,7 @@ tree [<Drive>:][<Path>] [/f] [/a]
 
 The structure displayed by **tree** depends upon the parameters that you specify at the command prompt. If you do not specify a drive or path, **tree** displays the tree structure beginning with the current directory of the current drive.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the names of all the subdirectories on the disk in your current drive, type:
 ```

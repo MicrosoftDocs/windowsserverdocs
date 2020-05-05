@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setpriority
-description: Windows Commands topic for **bitsadmin setpriority**, which sets the priority of the specified job.
+description: Reference topic for the bitsadmin setpriority command, which sets the priority of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -30,12 +30,14 @@ bitsadmin /setpriority <job> <priority>
 
 ## Examples
 
-The following example sets the priority for the job named *myDownloadJob* to normal.
+To set the priority for the job named *myDownloadJob* to normal:
 
 ```
-C:\>bitsadmin /setpriority myDownloadJob NORMAL
+bitsadmin /setpriority myDownloadJob NORMAL
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

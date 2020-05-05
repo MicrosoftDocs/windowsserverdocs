@@ -1,6 +1,6 @@
 ---
 title: graftabl
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Enables Windows operating systems to display an extended character set in graphics mode. If used without parameters, **graftabl** displays the previous and the current code page.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -49,7 +49,7 @@ graftabl /status
     |2|A file error occurred.|
 -   You can use the ERRORLEVEL environment variable in a batch program to process exit codes that are returned by **graftabl**.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view the current code page used by **graftabl**, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin transfer
-description: Windows Commands topic for **bitsadmin transfer**, which transfers one or more files.
+description: Reference topic for the bitsadmin transfer command, which transfers one or more files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,12 @@ ms.date: 10/16/2017
 
 # bitsadmin transfer
 
-Transfers one or more files.
+Transfers one or more files. By default, the BITSAdmin service creates a download job that runs at **NORMAL** priority and updates the command window with progress information until the transfer is complete or until a critical error occurs,
+
+The service completes the job if it successfully transfers all the files and cancels the job if a critical error occurs. The service does not create the job if it is unable to add files to the job or if you specify an invalid value for *type* or *job_priority*. To transfer more than one file, specify multiple `<RemoteFileName>-<LocalFileName>` pairs. The pairs must be space-delimited.
+
+> [!NOTE]
+> The BITSAdmin command continues to run if a transient error occurs. To end the command, press CTRL+C.
 
 ## Syntax
 
@@ -33,23 +38,16 @@ bitsadmin /transfer <name> [<type>] [/priority <job_priority>] [/ACLflags <flags
 | remotefilename | The name of the file after it's transferred to the server. |
 | localfilename | The name of the file that resides locally. |
 
-## Remarks
-
-By default, the BITSAdmin service creates a download job that runs at **NORMAL** priority and updates the command window with progress information until the transfer is complete or until a critical error occurs,
-
-The service completes the job if it successfully transfers all the files and cancels the job if a critical error occurs. The service does not create the job if it is unable to add files to the job or if you specify an invalid value for *type* or *job_priority*. To transfer more than one file, specify multiple `<RemoteFileName>-<LocalFileName>` pairs. The pairs must be space-delimited.
-
-> [!NOTE]
-> The BITSAdmin command continues to run if a transient error occurs. To end the command, press CTRL+C.
-
 ## Examples
 
-The following example starts a transfer job with named *myDownloadJob*.
+To start a transfer job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /transfer myDownloadJob http://prodserver/audio.wma c:\downloads\audio.wma
+bitsadmin /transfer myDownloadJob http://prodserver/audio.wma c:\downloads\audio.wma
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
