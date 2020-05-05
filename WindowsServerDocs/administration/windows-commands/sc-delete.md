@@ -1,5 +1,5 @@
 ---
-title: Sc delete
+title: Sc.exe delete
 description: Reference topic for **** - 
 
 ms.prod: windows-server
@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Sc delete
+# Sc.exe delete
 
 
 
@@ -26,7 +26,7 @@ For examples of how to use this command, see [Examples](#examples).
 ## Syntax
 
 ```
-sc [<ServerName>] delete [<ServiceName>]
+sc.exe [<ServerName>] delete [<ServiceName>]
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ Use **Add or Remove Programs** on **Control Panel** to delete DHCP, DNS, or any 
 
 To delete the service subkey **NewServ** from the registry on the local computer, type:
 ```
-sc delete newserv
+sc.exe delete newserv
 ```
 
 ## Additional References
