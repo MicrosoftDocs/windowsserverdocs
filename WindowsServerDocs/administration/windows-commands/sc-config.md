@@ -1,12 +1,8 @@
 ---
 title: Sc.exe config
-description: Reference topic for **** - 
-
+description: Learn how to change service configurations using the sc.exe utility 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
 author: coreyp-at-msft
@@ -17,11 +13,7 @@ ms.date: 06/05/2018
 
 # Sc.exe config
 
-
-
 Modifies the value of a service's entries in the registry and in the Service Control Manager database.
-
-
 
 ## Syntax
 
