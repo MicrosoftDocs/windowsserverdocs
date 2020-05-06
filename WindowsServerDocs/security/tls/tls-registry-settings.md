@@ -304,16 +304,22 @@ A supported (D)TLS or SSL protocol version can exist in one of the following sta
 
 The system administrator can override the default (D)TLS and SSL protocol version settings by creating DWORD registry values "Enabled" and "DisabledByDefault". 
 These registry values are configured separately for the protocol client and server roles under the registry subkeys named using the following format: 
-<SSL/TLS/DTLS> <major version number>.<minor version number>\<Client\Server>
+<SSL/TLS/DTLS> \<major version number\>.\<minor version number\>\<Client\Server>
 
-These version-specific subkeys can be created under the following registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
-E.g., here are some valid registry paths with version-specific subkeys:
+These version-specific subkeys can be created under the following registry path: 
+
+HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
+
+For example, here are some valid registry paths with version-specific subkeys:
+
 HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client
+
 HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server
+
 HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client
 
-In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" 
-with a non-zero value, and a DWORD registry value named "DisabledByDefault" with a value of zero, under the corresponding version-specific subkey. 
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with a non-zero value, and a DWORD registry value named "DisabledByDefault" with a value of zero, under the corresponding version-specific subkey. 
+
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
 ![TLS 1.0 client enabled](images/tls10-client-enabled.png)
