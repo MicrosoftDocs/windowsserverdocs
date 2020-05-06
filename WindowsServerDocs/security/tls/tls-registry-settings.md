@@ -304,6 +304,7 @@ A supported (D)TLS or SSL protocol version can exist in one of the following sta
 
 The system administrator can override the default (D)TLS and SSL protocol version settings by creating DWORD registry values "Enabled" and "DisabledByDefault". 
 These registry values are configured separately for the protocol client and server roles under the registry subkeys named using the following format: 
+
 <SSL/TLS/DTLS> \<major version number\>.\<minor version number\>\<Client\Server>
 
 These version-specific subkeys can be created under the following registry path: 
