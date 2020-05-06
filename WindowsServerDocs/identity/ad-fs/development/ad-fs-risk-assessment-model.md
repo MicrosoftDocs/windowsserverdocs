@@ -3,7 +3,7 @@ title: Build Plug-ins with AD FS 2019 Risk Assessment Model
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/16/2019
+ms.date: 05/05/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
@@ -315,6 +315,7 @@ The method returns the [Risk Score](https://docs.microsoft.com/dotnet/api/micros
 
 **What other sample plug-ins are available?**</br>
 **A:** The following sample plug-in(s) are available:
+
 |Name|Description| 
 |-----|-----|
 |[Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)|Sample plug-in that blocks authentication or enforces MFA based on user risk level determined by Azure AD Identity Protection.| 
