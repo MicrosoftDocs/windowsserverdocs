@@ -1,6 +1,6 @@
 ---
 title: dir
-description: Reference topic for dir, which displays a list of a directory's files and subdirectories.
+description: Reference topic for the dir command, which displays a list of a directory's files and subdirectories.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -50,25 +50,25 @@ dir [<Drive>:][<Path>][<FileName>] [...] [/p] [/q] [/w] [/d] [/a[[:]<Attributes>
 - To use multiple *FileName* parameters, separate each file name with a space, comma, or semicolon.
 - You can use wildcard characters (**&#42;** or **?**), to represent one or more characters of a file name and to display a subset of files or subdirectories.
 
-  **Asterisk (\*):** Use the asterisk as a substitute for any string of characters, for example:  
+  **Asterisk (\*):** Use the asterisk as a substitute for any string of characters, for example:
   - **dir \*.txt** lists all files in the current directory with extensions that begin with .txt, such as .txt, .txt1, .txt_old.
   - **dir read\*.txt** lists all files in the current directory that begin with read and with extensions that begin with .txt, such as .txt, .txt1, or .txt_old.
   - **dir read\*.\*** lists all files in the current directory that begin with read with any extension.
 
-  The asterisk wildcard always uses short file name mapping, so you might get unexpected results. For example, the following directory contains two files (t.txt2 and t97.txt): 
- 
+  The asterisk wildcard always uses short file name mapping, so you might get unexpected results. For example, the following directory contains two files (t.txt2 and t97.txt):
+
   ```
   C:\test>dir /x
   Volume in drive C has no label.
   Volume Serial Number is B86A-EF32
-    
+
   Directory of C:\test
-    
+
   11/30/2004  01:40 PM <DIR>  .
   11/30/2004  01:40 PM <DIR> ..
   11/30/2004  11:05 AM 0 T97B4~1.TXT t.txt2
   11/30/2004  01:16 PM 0 t97.txt
-  ```  
+  ```
 
   You might expect that typing **dir t97\\*** would return the file t97.txt. However, typing **dir t97\\*** returns both files, because the asterisk wildcard matches the file t.txt2 to t97.txt by using its short name map T97B4~1.TXT. Similarly, typing **del t97\\*** would delete both files.
 
