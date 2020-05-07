@@ -10,7 +10,7 @@ ms.author: coreyp
 manager: dongill
 ---
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 # Step 1: Prepare your Source Server for Windows Server Essentials migration
 
