@@ -219,13 +219,13 @@ Host: https://webapi.com
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q... 
  ```
 
-### Refresh the access token 
- 
+### Refresh Token Grant Flow
+ 
 Access_tokens are short lived, and you must refresh them after they expire to continue accessing resources. You can do so by submitting another POST request to the `/token` endpoint, this time providing the refresh_token instead of the code. Refresh tokens are valid for all permissions that your client has already received access token for. 
  
 Refresh tokens do not have specified lifetimes. Typically, the lifetimes of refresh tokens are relatively long. However, in some cases, refresh tokens expire, are revoked, or lack sufficient privileges for the desired action. Your application needs to expect and handle errors returned by the token issuance endpoint correctly.  
  
-Although refresh tokens aren't revoked when used to acquire new access tokens, you are expected to discard the old refresh token. The OAuth 2.0 spec says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." 
+Although refresh tokens aren't revoked when used to acquire new access tokens, you are expected to discard the old refresh token. As per the OAuth 2.0 spec says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." To view AD FS refresh token lifetimes, visit [AD FS Single Sign On Settings](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings).
  
 ```
 // Line breaks for legibility only 
