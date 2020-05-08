@@ -1,6 +1,6 @@
 ---
-title: DiskPart
-description: Reference topic for the DiskPart command interpreter, which helps you manage your computer's drives.
+title: diskpart
+description: Reference topic for the diskpart command interpreter, which helps you manage your computer's drives.
 ms.prod: windows-server
 ms.technology: storage
 author: jasongerend
@@ -8,13 +8,13 @@ manager: elizapo
 ms.author: jgerend
 ---
 
-# DiskPart
+# diskpart
 
 > Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
-DiskPart commands help you manage your computer's drives (disks, partitions, volumes, or virtual hard disks).
+The diskpart command interpreter helps you manage your computer's drives (disks, partitions, volumes, or virtual hard disks).
 
-Before you can use DiskPart commands, you must first list, and then select an object to give it focus. After an object has focus, any DiskPart commands that you type will act on that object.
+Before you can use **diskpart** commands, you must first list, and then select an object to give it focus. After an object has focus, any diskpart commands that you type will act on that object.
 
 ## List available objects
 
@@ -28,7 +28,7 @@ You can list the available objects and determine an object's number or drive let
 
 - `list vdisk` - Displays all the virtual disks on the computer.
 
-When you use the **list** commands, an asterisk (*) appears next to the object with focus.
+After you run the **list** commands, an asterisk (*) appears next to the object with focus.
 
 ## Determine focus
 
@@ -36,18 +36,18 @@ When you select an object, the focus remains on that object until you select a d
 
 Some commands automatically change the focus. For example, when you create a new partition, the focus automatically switches to the new partition.
 
-You can only give focus to a partition on the selected disk. When a partition has focus, the related volume (if any) also has focus. When a volume has focus, the related disk and partition also have focus if the volume maps to a single specific partition. If this is not the case, focus on the disk and partition is lost.
+You can only give focus to a partition on the selected disk. After a partition has focus, the related volume (if any) also has focus. After a volume has focus, the related disk and partition also have focus if the volume maps to a single specific partition. If this isn't the case, focus on the disk and partition is lost.
 
 ## Syntax
 
-To start the DiskPart command interpreter, at the command prompt type:
+To start the diskpart command interpreter, at the command prompt type:
 
 ```
 diskpart <parameter>
 ```
 
 > [!IMPORTANT]
-> You must be in your local **Administrators** group, or a group with similar permissions, to run DiskPart.
+> You must be in your local **Administrators** group, or a group with similar permissions, to run diskpart.
 
 ### Parameters
 
@@ -69,7 +69,7 @@ You can run the following commands from the Diskpart command interpreter:
 | [delete](delete.md) | Deletes a partition or a volume. |
 | [detach vdisk](detach-vdisk.md) | Stops the selected virtual hard disk (VHD) from appearing as a local hard disk drive on the host computer. |
 | [detail](detail.md) | Displays information about the selected disk, partition, volume, or virtual hard disk (VHD). |
-| [exit](exit.md) | Exits the DiskPart command interpreter. |
+| [exit](exit.md) | Exits the diskpart command interpreter. |
 | [expand vdisk](expand-vdisk.md) | Expands a virtual hard disk (VHD) to the size that you specify. |
 | [extend](extend.md) | Extends the volume or partition with focus, along with its file system, into free (unallocated) space on a disk. |
 | [filesystems](filesystems.md) | Displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume. |

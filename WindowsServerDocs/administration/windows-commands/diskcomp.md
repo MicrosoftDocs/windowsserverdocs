@@ -84,7 +84,7 @@ diskcomp [<drive1>: [<drive2>:]]
 
   This type of error can occur even if the files on the disks are identical. Although **copy** duplicates information, it doesn't necessarily place it in the same location on the destination disk.
 
-- Understanding **diskcomp** exit codes:
+- **diskcomp** exit codes:
 
   | Exit code | Description |
   | --------- | ----------- |
