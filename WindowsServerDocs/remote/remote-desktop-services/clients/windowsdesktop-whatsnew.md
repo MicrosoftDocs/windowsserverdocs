@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/28/2020
+ms.date: 05/12/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -21,7 +21,25 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.945  |
-|Insider    |1.2.945  |
+|Insider    |1.2.1009  |
+
+## Updates for version 1.2.1009
+
+*Date published: 05/12/2020*
+
+Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+
+- Added a new **Connection information** dialog that provides client, network and server details for desktop and apps sessions. You can access the dialog from the connection bar in full screen or the system menu when windowed.
+- Desktop sessions launched in windowed mode now always maximize instead of going full screen when maximizing the window. Use the **Full screen** option from the system menu to enter full screen.
+- The Unsubscribe prompt now displays a warning icon, and shows the Workspace names as a bulleted list.
+- Added the details section to additional error dialogs to help diagnose issues.
+- Added a timestamp to the details section of error dialogs.
+- Fixed an issue where the RDP file setting **desktop size id** didn't work properly.
+- Fixed an issue where the **Update the resolution on resize** display setting didn't apply after launching the session.
+- Fixed localization issues in the desktop settings panel.
+- Fixed the size of the focus box when tabbing through controls on the desktop settings panel.
+- Fixed an issue causing the resource names to be difficult to read in high contrast mode.
+- Fixed an issue causing the update notification in the action center to be shown more than once a day.
 
 ## Updates for version 1.2.945
 
