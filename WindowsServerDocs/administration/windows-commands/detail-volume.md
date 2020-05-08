@@ -35,4 +35,4 @@ detail volume
 
 - [select volume](select-volume.md)
 
-- [detail command](detail-command.md)
+- [detail command](detail.md)
