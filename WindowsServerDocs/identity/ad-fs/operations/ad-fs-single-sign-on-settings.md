@@ -196,6 +196,10 @@ IF:
  - [x] Admin has enabled the KMSI feature [AND]
  - [x] User clicks the KMSI check box on the forms login page
  
+  
+ADFS issues a new refresh token only if the validity of the newer refresh token is longer than the previous token. The maximum lifetime of a token is is 84 days, but AD FS keeps the token valid on a 14 day sliding window. If the refresh token is valid for 8 hours, which is the regular SSO time, a new refresh token will not be issued. 
+ 
+ 
 **Good to Know:** <br>
 Federated users who do not have the **LastPasswordChangeTimestamp** attribute synced are issued session cookies and refresh tokens that have a **Max Age value of 12 hours**.<br>
 This occurs because Azure AD cannot determine when to revoke tokens that are related to an old credential (such as a password that has been changed). Therefore, Azure AD must check more frequently to make sure that the user and associated tokens are still in good standing.
