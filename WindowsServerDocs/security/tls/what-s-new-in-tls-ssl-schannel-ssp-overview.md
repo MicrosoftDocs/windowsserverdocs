@@ -62,6 +62,8 @@ In Windows Server 2012 and Windows 8, changes were made to the underlying authen
 
 -   Compatibility to previous versions of Windows operating systems is preserved.
 
+Also note that if System Mapper is enabled by the client application and you have configured SendTrustedIssuers that system mapper will add CN=NT Authority to the issuers list.
+
 **What value does this add?**
 
 Beginning with  Windows Server 2012 , the use of the CTL has been replaced with a certificate store-based implementation. This allows for more familiar manageability through the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as certutil.exe.
