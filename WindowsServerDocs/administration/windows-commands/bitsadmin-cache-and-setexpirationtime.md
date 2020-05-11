@@ -11,9 +11,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # bitsadmin cache and setexpirationtime
+
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the cache expiration time.
 
