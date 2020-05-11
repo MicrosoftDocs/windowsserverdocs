@@ -21,13 +21,13 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.945  |
-|Insider    |1.2.1009  |
+|Insider    |1.2.1009 |
 
 ## Updates for version 1.2.1009
 
 *Date published: 05/12/2020*
 
-Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wseE), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wnf3), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wCIB)
 
 - Added a new **Connection information** dialog that provides client, network and server details for desktop and apps sessions. You can access the dialog from the connection bar in full screen or the system menu when windowed.
 - Desktop sessions launched in windowed mode now always maximize instead of going full screen when maximizing the window. Use the **Full screen** option from the system menu to enter full screen.
