@@ -10,9 +10,10 @@ ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
 ---
->Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 # Migrating the WSUS Database from WID to SQL
+
+> Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 Use the following steps to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server.
 
