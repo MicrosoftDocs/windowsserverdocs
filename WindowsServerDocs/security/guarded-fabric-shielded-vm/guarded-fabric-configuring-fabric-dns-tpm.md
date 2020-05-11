@@ -10,11 +10,11 @@ ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
-
-[!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
-
 # Next step
+
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+
+[!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)]
 
 > [!div class="nextstepaction"]
 > [Configure HTTPS](guarded-fabric-configure-hgs-https.md)

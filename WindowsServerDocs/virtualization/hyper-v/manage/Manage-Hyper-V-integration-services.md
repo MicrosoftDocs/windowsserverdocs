@@ -8,13 +8,12 @@ manager: dongill
 ms.date: 12/20/2016
 ms.topic: article
 ms.prod: windows-server
-
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 ---
 
->Applies To: Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
-
 # Manage Hyper-V Integration Services
+
+> Applies To: Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
 
 Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as "integration components". You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
 
@@ -26,9 +25,9 @@ For details about each integration service, see [Hyper-V Integration Services](h
 ## Turn an integration service on or off using Hyper-V Manager
 
 1. From the center pane, right-click the virtual machine and click **Settings**.
-  
+
 2. From the left pane of the **Settings** window, under **Management**, click **Integration Services**.
-  
+
 The Integration Services pane lists all integration services available on the Hyper-V host, and whether the host has enabled the virtual machine to use them.
 
 ### Turn an integration service on or off using PowerShell
@@ -38,7 +37,7 @@ To do this in PowerShell, use [Enable-VMIntegrationService](https://technet.micr
 The following examples demonstrate turning the guest file copy integration service on and off for a virtual machine named "demovm".
 
 1. Get a list of running integration services:
-  
+
     ``` PowerShell
     Get-VMIntegrationService -VMName "DemoVM"
     ```
@@ -65,15 +64,15 @@ The following examples demonstrate turning the guest file copy integration servi
 1. Verify that Guest Service Interface is enabled:
 
    ```
-   Get-VMIntegrationService -VMName "DemoVM" 
-   ``` 
+   Get-VMIntegrationService -VMName "DemoVM"
+   ```
 
 1. Turn off Guest Service Interface:
 
     ```
     Disable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
     ```
-   
+
 ## Checking the guest's integration services version
 Some features may not work correctly or at all if the guest's integration services are not current. To get the version information for a Windows, log on to the guest operating system, open a command prompt, and run this command:
 
@@ -95,9 +94,9 @@ In order for an integration service to be fully functional, its corresponding se
 
 1. Open Services manager by running ```services.msc``` as an Administrator or by double-clicking the Services icon in Control Panel.
 
-    ![Screen shot that shows the Windows Services pane](media/HVServices.png) 
+    ![Screen shot that shows the Windows Services pane](media/HVServices.png)
 
-1. Find the services that start with "Hyper-V". 
+1. Find the services that start with "Hyper-V".
 
 1. Right-click the service you want start or stop. Click the desired action.
 
@@ -130,7 +129,7 @@ In order for an integration service to be fully functional, its corresponding se
     Stop-Service -Name vmicvmsession
     ```
 
-## Start and stop an integration service from a Linux guest 
+## Start and stop an integration service from a Linux guest
 
 Linux integration services are generally provided through the Linux kernel. The Linux integration services driver is named **hv_utils**.
 
@@ -138,10 +137,10 @@ Linux integration services are generally provided through the Linux kernel. The 
 
    ``` BASH
    lsmod | grep hv_utils
-   ``` 
-  
-2. The output should look similar to this:  
-  
+   ```
+
+2. The output should look similar to this:
+
     ``` BASH
     Module                  Size   Used by
     hv_utils               20480   0
@@ -149,13 +148,13 @@ Linux integration services are generally provided through the Linux kernel. The 
     ```
 
 3. To find out if the required daemons are running, use this command.
-  
+
     ``` BASH
     ps -ef | grep hv
     ```
-  
-4. The output should look similar to this: 
-  
+
+4. The output should look similar to this:
+
     ```BASH
     root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
     root       237     2  0 Jul11 ?        00:00:00 [hv_vmbus_ctl]
@@ -164,7 +163,7 @@ Linux integration services are generally provided through the Linux kernel. The 
     root      1286     1  0 Jul11 ?        00:01:11 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
     root      9333     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
     root      9365     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_vss_daemon
-    scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
+    scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv
     ```
 
 5. To see what daemons are available, run:
@@ -172,22 +171,22 @@ Linux integration services are generally provided through the Linux kernel. The 
     ``` BASH
     compgen -c hv_
     ```
-  
+
 6. The output should look similar to this:
-  
+
     ``` BASH
     hv_vss_daemon
     hv_get_dhcp_info
     hv_get_dns_info
     hv_set_ifconfig
     hv_kvp_daemon
-    hv_fcopy_daemon     
+    hv_fcopy_daemon
     ```
-  
-   Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).  
+
+   Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).
    - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
    - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
-   - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.  
+   - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.
 
 ### Examples
 
@@ -209,7 +208,7 @@ These examples demonstrate stopping and starting the KVP daemon, named `hv_kvp_d
 
     ``` BASH
     sudo hv_kvp_daemon
-    ``` 
+    ```
 
 1. To verify that the `hv_kvp_daemon` process is listed with a new process ID, run:
 
@@ -298,16 +297,16 @@ For more details about Linux guests, see [Supported Linux and FreeBSD virtual ma
 ## Install or update integration services
 
 > [!NOTE]
-> For hosts earlier than Windows Server 2016 and Windows 10, you'll need to **manually install or update** the integration services in the guest operating systems. 
+> For hosts earlier than Windows Server 2016 and Windows 10, you'll need to **manually install or update** the integration services in the guest operating systems.
 
 Procedure to manually Install or update the integration services:
 
-1.  Open Hyper-V Manager. From the Tools menu of Server Manager, click **Hyper-V Manager**.  
-  
-2.  Connect to the virtual machine. Right-click the virtual machine and click **Connect**.  
-  
-3.  From the Action menu of Virtual Machine Connection, click **Insert Integration Services Setup Disk**. This action loads the setup disk in the virtual DVD drive. Depending on the guest operating system, you might need to start the installation manually.  
-  
+1.  Open Hyper-V Manager. From the Tools menu of Server Manager, click **Hyper-V Manager**.
+
+2.  Connect to the virtual machine. Right-click the virtual machine and click **Connect**.
+
+3.  From the Action menu of Virtual Machine Connection, click **Insert Integration Services Setup Disk**. This action loads the setup disk in the virtual DVD drive. Depending on the guest operating system, you might need to start the installation manually.
+
 4.  After the installation finishes, all integration services are available for use.
 
 > [!NOTE]
