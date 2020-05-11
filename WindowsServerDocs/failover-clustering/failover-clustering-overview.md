@@ -26,7 +26,7 @@ Failover Clustering has many practical applications, including:
 | **Understand**                                                               |  **Planning**                          |  **Deployment**       |
 | -------------                                                                |  --------------                        | --------------------- |
 | [What's new in Failover Clustering](whats-new-in-failover-clustering.md)    | [Planning Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md)  | [Creating a Failover Cluster](create-failover-cluster.md) |
-| [Scale-Out File Server for application data](sofs-overview.md)               | [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md) | [Deploy a two-node file server](../storage/storage-spaces/storage-spaces-direct-in-vm.md) |
+| [Scale-Out File Server for application data](sofs-overview.md)               | [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md) | [Deploy a two-node file server](deploy-two-node-clustered-file-server.md) |
 |  [Cluster and pool quorum](../storage/storage-spaces/understand-quorum.md)   |  [Using guest virtual machine clusters with Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Prestage cluster computer objects in Active Directory Domain Services](prestage-cluster-adds.md) |
 | [Fault domain awareness](fault-domains.md)                                 |                                 | [Configuring cluster accounts in Active Directory](configure-ad-accounts.md) |
 | [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md) |                       | [Manage the quorum and witnesses](manage-cluster-quorum.md) |
