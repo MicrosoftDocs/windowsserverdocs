@@ -1,5 +1,5 @@
 ---
-title: Network guidance
+title: Network guidelines
 description: Bandwidth recommendations for Remote Desktop deployments.
 ms.prod: windows-server
 ms.technology: remote-desktop-services
@@ -9,7 +9,7 @@ ms.topic: article
 author: Heidilohr
 manager: lizross
 ---
-# Network guidance
+# Network guidelines
 
 When using a remote Windows session, your network's available bandwidth greatly impacts the quality of your experience. Different applications and display resolutions require different network configurations, so it's important to make sure your network is configured to meet your needs.
 
