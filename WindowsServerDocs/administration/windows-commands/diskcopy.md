@@ -88,7 +88,9 @@ diskcopy b: a:
 
 To use floppy disk drive A to copy one floppy disk to another, first switch to the C drive and then type:
 
+```
 diskcopy a: a:
+```
 
 ## Additional References
 
