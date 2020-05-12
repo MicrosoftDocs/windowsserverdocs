@@ -86,7 +86,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets. 
 
 > [!NOTE]
-> Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. 
+> Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. Basic disks do not include Storage Spaces.
 
 ### Backup target
 
