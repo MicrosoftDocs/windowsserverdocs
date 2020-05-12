@@ -35,35 +35,30 @@ diskshadow -s script.txt
 
 ### Parameters
 
-You can run the following commands in the Diskshadow command interpreter or through a script file:
+You can run the following commands in the Diskshadow command interpreter or through a script file. At a minimum, only **add** and **create** are necessary to create a shadow copy. However, this forfeits the context and option settings, will be a copy backup, and creates a shadow copy with no backup execution script.
 
-| Parameter | Description |
+| Command | Description |
 | --------- | ----------- |
-| [set_2](set_2.md)                   | Sets the context, options, verbose mode, and metadata file for creating shadow copies.                                           |
-|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [Load metadata](load-metadata.md)   | Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore. |
-| [writer](writer.md)                 | verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.          |
-| [add](add.md)                       | adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.                       |
-| [create_1](create_1.md)             | starts the shadow copy creation process, using the current context and option settings.                                          |
-| [exec](exec.md)                     | executes a file on the local computer.                                                                                           |
-| [Begin backup](begin-backup.md)     | starts a full backup session.                                                                                                    |
-| [End backup](end-backup.md)         | Ends a full backup session and issues a **Backupcomplete** event with the appropriate writer state, if needed.                   |
-| [Begin restore](begin-restore.md)   | starts a restore session and issues a **PreRestore** event to involved writers.                                                  |
-| [End restore](end-restore.md)       | Ends a restore session and issues a **PostRestore** event to involved writers.                                                   |
-| [reset](reset.md)                   | resets Diskshadow to the default state.                                                                                          |
-| [list](list.md)                     | lists writers, shadow copies, or currently registered shadow copy providers that are on the system.                              |
-| [delete shadows](delete-shadows.md) | deletes shadow copies.                                                                                                           |
-| [import](import.md)                 | imports a transportable shadow copy from a loaded metadata file into the system.                                                 |
-| [mask](mask.md)                     | removes hardware shadow copies that were imported by using the **import** command.                                               |
-| [expose](expose.md)                 | exposes a persistent shadow copy as a drive letter, share, or mount point.                                                       |
-| [unexpose](unexpose.md)             | unexposes a shadow copy that was exposed by using the **expose** command.                                                        |
-| [break_2](break_2.md)               | Disassociates a shadow copy volume from VSS.                                                                                     |
-| [revert](revert.md)                 | reverts a volume back to a specified shadow copy.                                                                                |
-| [exit_1](exit_1.md)                 | exits Diskshadow.                                                                                                                |
-
-#### Remarks
-
--   At a minimum, only **add** and **create** are necessary to create a shadow copy. However, this will forfeit the context and option settings, will be a copy backup, and will only create a shadow copy with no backup execution script.
+| [set command](set_2.md) | Sets the context, options, verbose mode, and metadata file for creating shadow copies. |
+| [load metadata command](load-metadata.md) | Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore. |
+| [writer command](writer.md) | verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure. |
+| [add command](add.md) | Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. |
+| [create command](create.md) | Starts the shadow copy creation process, using the current context and option settings. |
+| [exec command](exec.md) | Executes a file on the local computer. |
+| [begin backup command](begin-backup.md) | Starts a full backup session. |
+| [end backup command](end-backup.md) | Ends a full backup session and issues a **backupcomplete** event with the appropriate writer state, if needed. |
+| [begin restore command](begin-restore.md) | Starts a restore session and issues a **prerestore** event to involved writers. |
+| [end restore command](end-restore.md) | Ends a restore session and issues a **postrestore** event to involved writers. |
+| [reset command](reset.md) | Resets Diskshadow to the default state. |
+| [list command](list.md) | Lists writers, shadow copies, or currently registered shadow copy providers that are on the system. |
+| [delete shadows command](delete-shadows.md) | Deletes shadow copies. |
+| [import command](import.md) | Imports a transportable shadow copy from a loaded metadata file into the system. |
+| [mask command](mask.md) | Removes hardware shadow copies that were imported by using the **import** command. |
+| [expose command](expose.md) | Exposes a persistent shadow copy as a drive letter, share, or mount point. |
+| [unexpose command](unexpose.md) | Unexposes a shadow copy that was exposed by using the **expose** command. |
+| [break command](break_2.md) | Disassociates a shadow copy volume from VSS. |
+| [revert command](revert.md) | Reverts a volume back to a specified shadow copy. |
+| [exit command](exit.md) | Exits the command interpreter or script. |
 
 ## Examples
 
