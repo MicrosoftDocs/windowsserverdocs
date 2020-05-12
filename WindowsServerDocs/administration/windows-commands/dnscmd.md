@@ -29,7 +29,7 @@ dnscmd <servername> <command> [<command parameters>]
 | --------- | ----------- |
 | `<servername>` | The IP address or host name of a remote or local DNS server. |
 
-### Commands
+## Commands
 
 |   Command   |     Description      |
 | ----------- | -------------------- |
@@ -73,25 +73,25 @@ dnscmd <servername> <command> [<command parameters>]
 | [dnscmd /zoneupdatefromds](#BKMK_36) | Updates an active directory integrated zone with data from active directory Domain Services (AD DS). |
 | [dnscmd /zonewriteback](#BKMK_37) | Saves zone data to a file. |
 
-### <a name=BKMK_1></a>dnscmd /ageallrecords
+## dnscmd /ageallrecords command
 
 Sets the current time on a time stamp on resource records at a specified zone or node on a DNS server.
 
-#### Syntax
+### Syntax
 
 ```
-dnscmd [<ServerName>] /ageallrecords <ZoneName>[<NodeName>] | [/tree]|[/f]
+dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 ```
 
-##### Parameters
+#### Parameters
 
 | Partameter | Description |
 | ---------- | ----------- |
-| `<ServerName>` | Specifies the DNS server that the administrator plans to manage, represented by IP address, fully qualified domain name (FQDN), or Host name. If this parameter is omitted, the local server is used. |
-| `<ZoneName>` | Specifies the FQDN of the zone. |
-| `<NodeName>` | Specifies a specific node or subtree in the zone. **NodeName** specifies the node or subtree in the zone using the following:<p>- @ for root zone or FQDN<p>- The FQDN of a node (the name with a period (.) at the end)<p>- A single label for the name relative to the zone root. |
-| `/tree` | Specifies that all child nodes also receive the time stamp. |
-| `/f` | Runs the command without asking for confirmation. |
+| `<servername>` | Specifies the DNS server that the administrator plans to manage, represented by IP address, fully qualified domain name (FQDN), or Host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the FQDN of the zone. |
+| `<nodename>` | Specifies a specific node or subtree in the zone, using the following:<ul><li>**@** for root zone or FQDN</li><li>The FQDN of a node (the name with a period (.) at the end)</li><li>A single label for the name relative to the zone root.</li></ul> |
+| /tree | Specifies that all child nodes also receive the time stamp. |
+| /f | Runs the command without asking for confirmation. |
 
 #### Remarks
 
