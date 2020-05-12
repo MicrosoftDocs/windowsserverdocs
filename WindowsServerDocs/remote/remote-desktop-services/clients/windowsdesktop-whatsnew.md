@@ -29,9 +29,9 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wseE), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wnf3), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wCIB)
 
-- Added a new **Connection information** dialog that provides client, network and server details for desktop and apps sessions. You can access the dialog from the connection bar in full screen or the system menu when windowed.
+- Added a new **Connection information** dialog that provides client, network, and server details for desktop and app sessions. You can access the dialog from the connection bar in full screen mode or from the System menu when windowed.
 - Desktop sessions launched in windowed mode now always maximize instead of going full screen when maximizing the window. Use the **Full screen** option from the system menu to enter full screen.
-- The Unsubscribe prompt now displays a warning icon, and shows the Workspace names as a bulleted list.
+- The Unsubscribe prompt now displays a warning icon and shows the workspace names as a bulleted list.
 - Added the details section to additional error dialogs to help diagnose issues.
 - Added a timestamp to the details section of error dialogs.
 - Fixed an issue where the RDP file setting **desktop size id** didn't work properly.
