@@ -1,6 +1,6 @@
 ---
 title: dispdiag
-description: Reference topic for dispdiag, which logs display information to a file.
+description: Reference topic for the dispdiag command, which logs display information to a file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,15 +18,19 @@ Logs display information to a file.
 ## Syntax
 
 ```
-dispdiag [-testacpi] [-d] [-delay <Seconds>] [-out <FilePath>]
+dispdiag [-testacpi] [-d] [-delay <seconds>] [-out <filepath>]
 ```
 
 #### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|- testacpi|Runs hotkey diagnostics test. Displays the key name, code and scan code for any key pressed during the test.|
-|-d|Generates a dump file with test results.|
-|-delay \<Seconds>|Delays the collection of data by specified time in *seconds*.|
-|-out \<FilePath>|Specifies path and filename to save collected data. This must be the last parameter.|
-|-?|Displays available command parameters and provides help for using them.|
+| Parameter | Description |
+| --------- | ----------- |
+| - testacpi | Runs hotkey diagnostics test. Displays the key name, code and scan code for any key pressed during the test. |
+| -d | Generates a dump file with test results. |
+| -delay `<seconds>` | Delays the collection of data by specified time in *seconds*. |
+| -out `<filepath>`  | Specifies path and filename to save collected data. This must be the last parameter. |
+| -? | Displays available command parameters and provides help for using them. |
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
