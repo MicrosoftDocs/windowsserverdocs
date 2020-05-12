@@ -21,6 +21,9 @@ ms.date: 10/16/2017
 
 Displays or modifies file types that are used in file name extension associations. If used without an assignment operator (**=**), **ftype** displays the current open command string for the specified file type. If used without parameters, **ftype** displays the file types that have open command strings defined.
 
+> [!NOTE]
+> This command is only supported within CMD.EXE and is not available from PowerShell.  
+> Though you can use `cmd /c ftype` as a workaround.
 
 
 ## Syntax
