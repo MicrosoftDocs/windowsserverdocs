@@ -9,8 +9,6 @@ ms.topic: article
 ms.prod: windows-server
 ---
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
 
 > Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
