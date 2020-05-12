@@ -1,6 +1,6 @@
 ---
 title: dnscmd
-description: Reference topic for the dnscmd command, which is a command-line interface for managing DNS servers.
+description: Reference topic for dnscmd, which is a command-line interface for managing DNS servers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -10,7 +10,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-
 # Dnscmd
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -18,16 +17,16 @@ ms.date: 10/16/2017
 A command-line interface for managing DNS servers. This utility is useful in scripting batch files to help automate routine DNS management tasks, or to perform simple unattended setup and configuration of new DNS servers on your network.
 
 ## Syntax
-
 ```
-dnscmd <servername> <command> [<command parameters>]
+dnscmd <ServerName> <command> [<command parameters>]
 ```
 
 ### Parameters
 
-| Parameter | Description |
-| --------- | ----------- |
-| `<servername>` | The IP address or host name of a remote or local DNS server. |
+|  Parameter   |     Description      |
+|--------------|--------------------------------------------------------------|
+| `<ServerName>` | The IP address or host name of a remote or local DNS server. |
+
 
 ## Commands
 
@@ -73,25 +72,25 @@ dnscmd <servername> <command> [<command parameters>]
 | [dnscmd /zoneupdatefromds](#BKMK_36) | Updates an active directory integrated zone with data from active directory Domain Services (AD DS). |
 | [dnscmd /zonewriteback](#BKMK_37) | Saves zone data to a file. |
 
-## dnscmd /ageallrecords command
+### <a name=BKMK_1></a>dnscmd /ageallrecords
 
 Sets the current time on a time stamp on resource records at a specified zone or node on a DNS server.
 
-### Syntax
+#### Syntax
 
 ```
-dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
+dnscmd [<ServerName>] /ageallrecords <ZoneName>[<NodeName>] | [/tree]|[/f]
 ```
 
-#### Parameters
+##### Parameters
 
 | Partameter | Description |
 | ---------- | ----------- |
-| `<servername>` | Specifies the DNS server that the administrator plans to manage, represented by IP address, fully qualified domain name (FQDN), or Host name. If this parameter is omitted, the local server is used. |
-| `<zonename>` | Specifies the FQDN of the zone. |
-| `<nodename>` | Specifies a specific node or subtree in the zone, using the following:<ul><li>**@** for root zone or FQDN</li><li>The FQDN of a node (the name with a period (.) at the end)</li><li>A single label for the name relative to the zone root.</li></ul> |
-| /tree | Specifies that all child nodes also receive the time stamp. |
-| /f | Runs the command without asking for confirmation. |
+| `<ServerName>` | Specifies the DNS server that the administrator plans to manage, represented by IP address, fully qualified domain name (FQDN), or Host name. If this parameter is omitted, the local server is used. |
+| `<ZoneName>` | Specifies the FQDN of the zone. |
+| `<NodeName>` | Specifies a specific node or subtree in the zone. **NodeName** specifies the node or subtree in the zone using the following:<p>- @ for root zone or FQDN<p>- The FQDN of a node (the name with a period (.) at the end)<p>- A single label for the name relative to the zone root. |
+| `/tree` | Specifies that all child nodes also receive the time stamp. |
+| `/f` | Runs the command without asking for confirmation. |
 
 #### Remarks
 
