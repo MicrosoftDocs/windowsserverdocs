@@ -32,6 +32,11 @@ sections:
     columns: 3
     items:
     
+    - href: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/optimize-windows-monthly-update-deployment-for-remote-devices/ba-p/1309917
+      html: Get tips and best practices >
+      image: 
+        src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
+      title: Optimize Windows monthly update deployment for remote devices
     - href: https://aka.ms/blog/1709lifecycle
       html: Learn more about this lifecycle change and affected editions >
       image: 
@@ -42,11 +47,6 @@ sections:
       image: 
         src: https://docs.microsoft.com/media/common/i_subscription.svg
       title: Still have devices running Windows 7 in your enterprise?
-    - href: https://www.microsoft.com/en-us/microsoft-365/blog/2020/01/14/windows-7-support-ends-today-and-windows-10-is-better-than-ever/
-      html: Find out what you need to know >
-      image: 
-        src: https://docs.microsoft.com/media/common/i_alert.svg
-      title: Windows 7 has reached end of support
 - items:
   - type: markdown
     text: "
