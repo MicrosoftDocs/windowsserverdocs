@@ -63,7 +63,7 @@ dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 
 ### Examples
 
-[Dnscmd Examples](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10))
+[Example 1: Set the current time on a time stamp to resource records](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-1-set-the-current-time-on-a-time-stamp-to-resource-records)
 
 ## dnscmd /clearcache command
 
@@ -344,7 +344,9 @@ dnscmd [<servername>] /enumzones [/primary | /secondary | /forwarder | /stub | /
 
 #### Examples
 
-[Dnscmd Examples](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10))
+- [Example 2: Display a complete list of zones on a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-2-display-a-complete-list-of-zones-on-a-dns-server))
+
+- [Example 3: Display a list of autocreated zones on a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-3-display-a-list-of-autocreated-zones-on-a-dns-server)
 
 ## dnscmd /exportsettings command
 
@@ -364,7 +366,7 @@ dnscmd [<servername>] /exportsettings
 
 ## dnscmd /info command
 
-Displays settings from the DNS section of the registry of the specified server **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters**. To display zone-level registry settings, use the `dnscmd zoneinfo` command.
+Displays settings from the DNS section of the registry of the specified server `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters`. To display zone-level registry settings, use the `dnscmd zoneinfo` command.
 
 ### Syntax
 
@@ -381,7 +383,9 @@ dnscmd [<servername>] /info [<settings>]
 
 #### Example
 
-[Dnscmd Examples](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10))
+- [Example 4: Display the IsSlave setting from a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-4-display-the-isslave-setting-from-a-dns-server)
+
+- [Example 5: Display the RecursionTimeout setting from a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-5-display-the-recursiontimeout-setting-from-a-dns-server)
 
 ## dnscmd /ipvalidate command
 
@@ -431,7 +435,7 @@ dnscmd [<servername>] /nodedelete <zonename> <nodename> [/tree] [/f]
 
 #### Example
 
-[Dnscmd Examples](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10))
+[Example 6: Delete the records from a node](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-6-delete-the-records-from-a-node)
 
 ## dnscmd /recordadd command
 
@@ -454,7 +458,7 @@ dnscmd [<servername>] /recordadd <zonename> <nodename> <rrtype> <rrdata>
 | `<rrdata>` | Specifies the type of data that is expected. |
 
 > [!NOTE]
-> When you add a record, make sure that you use the correct data type and data format. For a list of resource record types and the appropriate data types, see [Dnscmd Examples](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)).
+> After you add a record, make sure that you use the correct data type and data format. For a list of resource record types and the appropriate data types, see [Dnscmd Examples](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)).
 
 #### Examples
 
@@ -490,14 +494,619 @@ dnscmd [<servername>] /recorddelete <zonename> <nodename> <rrtype> <rrdata> [/f]
 dnscmd /recorddelete test.contoso.com test MX 10 mailserver.test.contoso.com
 ```
 
+## dnscmd /resetforwarders command
+
+Selects or resets the IP addresses to which the DNS server forwards DNS queries when it cannot resolve them locally.
+
+### Syntax
+
+```
+dnscmd [<servername>] /resetforwarders <IPaddress> [,<IPaddress>]...][/timeout <timeout>] [/slave | /noslave]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<IPaddress>` | Lists the IP addresses to which the DNS server forwards unresolved queries. |
+| /timeout `<timeout>` | Sets the number of seconds that the DNS server waits for a response from the forwarder. By default, this value is five seconds. |
+| /slave | Prevents the DNS server from performing its own iterative queries if the forwarder fails to resolve a query. |
+| /noslave | Allows the DNS server to perform its own iterative queries if the forwarder fails to resolve a query. This is the default setting. |
+| /f | Executes the command without asking for confirmation. Because nodes can have more than one resource record, this command requires you to be very specific about the type of resource record that you want to delete. If you specify a data type and you do not specify a type of resource record data, all records with that specific data type for the specified node are deleted. |
+
+##### Remarks
+
+- By default, a DNS server performs iterative queries when it cannot resolve a query.
+
+- Setting IP addresses by using the **resetforwarders** command causes the DNS server to perform recursive queries to the DNS servers at the specified IP addresses. If the forwarders don't resolve the query, the DNS server can then perform its own iterative queries.
+
+- If the **/slave** parameter is used, the DNS server does not perform its own iterative queries. This means that the DNS server forwards unresolved queries only to the DNS servers in the list, and it does not attempt iterative queries if the forwarders do not resolve them. It is more efficient to set one IP address as a forwarder for a DNS server. You can use the **resetforwarders** command for internal servers in a network to forward their unresolved queries to one DNS server that has an external connection.
+
+- Listing a forwarder's IP address twice causes the DNS server to attempt to forward to that server twice.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /resetforwarders 10.0.0.1 /timeout 7 /slave
+dnscmd dnssvr1.contoso.com /resetforwarders /noslave
+```
+
+## dnscmd /resetlistenaddresses command
+
+Specifies the IP addresses on a server that listens for DNS client requests. By default, all IP addresses on a DNS server listen for client DNS requests.
+
+### Syntax
+
+```
+dnscmd [<servername>] /resetlistenaddresses <listenaddress>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<listenaddress>` | Specifies an IP address on the DNS server that listens for DNS client requests. If no listen address is specified, all IP addresses on the server listen for client requests. |
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /resetlistenaddresses 10.0.0.1
+```
+
+## dnscmd /startscavenging command
+
+Tells a DNS server to attempt an immediate search for stale resource records in a specified DNS server.
+
+### Syntax
+
+```
+dnscmd [<servername>] /startscavenging
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+
+##### Remarks
+
+- Successful completion of this command starts a scavenge immediately. If the scavenge fails, no warning message appears.
+
+- Although the command to start the scavenge appears to complete successfully, the scavenge does not start unless the following preconditions are met:
+
+    - Scavenging is enabled for both the server and the zone.
+
+    - The zone is started.
+
+    - The resource records have a time stamp.
+
+- For information about how to enable scavenging for the server, see the **scavenginginterval** parameter under **Server-level syntax** in the **/config** section.
+
+- For information about how to enable scavenging for the zone, see the **aging** parameter under **Zone-level syntax** in the **/config** section.
+
+- For information about how to restart a paused zone, see the **zoneresume** parameter in this article.
+
+- For information about how to check resource records for a time stamp, see the **ageallrecords** parameter in this article.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /startscavenging
+```
+
+## dnscmd /statistics command
+
+Displays or clears data for a specified DNS server.
+
+### Syntax
+
+```
+dnscmd [<servername>] /statistics [<statid>] [/clear]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<statid>` | Specifies which statistic or combination of statistics to display. The **statistics** command displays counters that begin on the DNS server when it is started or resumed. An identification number is used to identify a statistic. If no statistic ID number is specified, all statistics display. The numbers that can be specified, along with the corresponding statistic that displays, can include:<ul><li>**00000001** - Time</li><li>**00000002** - Query</li><li>**00000004** - Query2</li><li>**00000008** - Recurse</li><li>**00000010** - Master</li><li>**00000020** - Secondary</li><li>**00000040** - WINS</li><li>**00000100** - Update</li><li>**00000200** - SkwanSec</li><li>**00000400** - Ds</li><li>**00010000** - Memory</li><li>**00100000** - PacketMem</li><li>**00040000** - Dbase</li><li>**00080000** - Records</li><li>**00200000** - NbstatMem</li><li>**/clear** - Resets the specified statistics counter to zero.</li></ul> |
+
+#### Examples
+
+- [Example 7: ](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-7-display-time-statistics-for-a-dns-server)
+
+- [Example 8: Display NbstatMem statistics for a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-8-display-nbstatmem-statistics-for-a-dns-server)
+
+## dnscmd /unenlistdirectorypartition command
+
+Removes the DNS server from the specified directory partition's replica set.
+
+### Syntax
+
+```
+dnscmd [<servername>] /unenlistdirectorypartition <partitionFQDN>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<partitionFQDN>` | The FQDN of the DNS application directory partition that will be removed. |
+
+## dnscmd /writebackfiles command
+
+Checks the DNS server memory for changes, and writes them to persistent storage. The **writebackfiles** command updates all dirty zones or a specified zone. A zone is dirty when there are changes in memory that haven't yet been written to persistent storage. This is a server-level operation that checks all zones. You can specify one zone in this operation or you can use the **zonewriteback** operation.
+
+### Syntax
+
+```
+dnscmd [<servername>] /writebackfiles <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to be updated. |
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /writebackfiles
+```
+
+## dnscmd /zoneadd command
+
+Adds a zone to the DNS server.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneadd <zonename> <zonetype> [/dp <FQDN> | {/domain | enterprise | legacy}]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone. |
+| `<zonetype>` | Specifies the type of zone to create. Specifying a zone type of **/forwarder** or **/dsforwarder** creates a zone that performs conditional forwarding. Each zone type has different required parameters:<ul><li>**/dsprimary** - Creates an active directory integrated zone.</li><li>**/primary /file `<filename>`** - Creates a standard primary zone, and specifies the name of the file that will store the zone information.</li><li>**/secondary `<masterIPaddress> [<masterIPaddress>...]`** - Creates a standard secondary zone.</li><li>**/stub `<masterIPaddress> [<masterIPaddress>...]` /file `<filename>`** - Creates a file-backed stub zone.</li><li>**/dsstub `<masterIPaddress> [<masterIPaddress>...]`** - Creates an active directory integrated stub zone.</li><li>**/forwarder `<masterIPaddress> [<masterIPaddress>]`... /file `<filename>`** - Specifies that the created zone forwards unresolved queries to another DNS server.</li><li>**/dsforwarder** - Specifies that the created active directory integrated zone forwards unresolved queries to another DNS server.</li></ul> |
+| `<FQDN>` | Specifies FQDN of the directory partition. |
+| /domain | Stores the zone on the domain directory partition. |
+| /enterprise | Stores the zone on the enterprise directory partition. |
+| /legacy | Stores the zone on a legacy directory partition. |
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zoneadd test.contoso.com /dsprimary
+dnscmd dnssvr1.contoso.com /zoneadd secondtest.contoso.com /secondary 10.0.0.2
+```
+
+## dnscmd /zonechangedirectorypartition command
+
+Changes the directory partition on which the specified zone resides.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zonechangedirectorypartition <zonename> {[<newpartitionname>] | [<zonetype>]}
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | The FQDN of the current directory partition on which the zone resides. |
+| `<newpartitionname>` | The FQDN of the directory partition that the zone will be moved to. |
+| `<zonetype>` | Specifies the type of directory partition that the zone will be moved to. |
+| /domain | Moves the zone to the built-in domain directory partition. |
+| /forest | Moves the zone to the built-in forest directory partition. |
+| /legacy | Moves the zone to the directory partition that is created for pre active directory domain controllers. These directory partitions are not necessary for native mode. |
+
+## dnscmd /zonedelete command
+
+Deletes a specified zone.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zonedelete <zonename> [/dsdel] [/f]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to be deleted. |
+| /dsdel | Deletes the zone from Azure Directory Domain Services (AD DS). |
+| /f | Runs the command without asking for confirmation. |
+
+#### Examples
+
+- [Example 9: Delete a zone from a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-9-delete-a-zone-from-a-dns-server)
+
+## dnscmd /zoneexport command
+
+Creates a text file that lists the resource records of a specified zone. The **zoneexport** operation creates a file of resource records for an active directory integrated zone for troubleshooting purposes. By default, the file that this command creates is placed in the DNS directory, which is by default the `%systemroot%/System32/Dns` directory.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneexport <zonename> <zoneexportfile>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone. |
+| `<zoneexportfile>` | Specifies the name of the file to create. |
+
+#### Examples
+
+- [Example 10: Export zone resource records list to a file](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-10-export-zone-resource-records-list-to-a-file)
+
+## dnscmd /zoneinfo
+
+Displays settings from the section of the registry of the specified zone: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\<zonename>`
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneinfo <zonename> [<setting>]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone. |
+| `<setting>` | You can individually specify any setting that the **zoneinfo** command returns. If you don't specify a setting, all settings are returned. |
+
+##### Remarks
+
+- To display server-level registry settings, use the **/info** command.
+
+- To see a list of settings that you can display with this command, see the **/config** command.
+
+#### Examples
+
+- [Example 11: Display RefreshInterval setting from the registry](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-11-display-refreshinterval-setting-from-the-registry)
+
+- [Example 12: Display Aging setting from the registry](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-12-display-aging-setting-from-the-registry)
+
+## dnscmd /zonepause command
+
+Pauses the specified zone, which then ignores query requests.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zonepause <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to be paused. |
+
+##### Remarks
+
+- To resume a zone and make it available after it has been paused, use the **/zoneresume** command.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zonepause test.contoso.com
+```
+
+## dnscmd /zoneprint command
+
+Lists the records in a zone.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneprint <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to be listed. |
 
 
 
 
 
-## <a name=BKMK_16></a>dnscmd /resetforwarders<br/>selects or resets the IP addresses to which the DNS server forwards DNS queries when it cannot resolve them locally.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /resetforwarders [&lt;IPaddress&gt; [,&lt;IPaddress&gt;]...][/timeout &lt;timeOut&gt;] [/slave|/noslave]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<IPaddress>**<br/>lists the IP addresses to which the DNS server forwards unresolved queries.<br/>**/timeout <timeOut>**<br/>Sets the number of seconds that the DNS server waits for a response from the forwarder. By default, this value is five seconds.<br/>**/slave|/noslave**<br/>Determines whether the DNS server performs its own iterative queries if the forwarder fails to resolve a query:<br/>**/slave**<br/>Prevents the DNS server from performing its own iterative queries if the forwarder fails to resolve a query.<br/>**/noslave**<br/>Allows the DNS server to perform its own iterative queries if the forwarder fails to resolve a query. This is the default setting.<br/>#### Remarks<br/>-   By default, a DNS server performs iterative queries when it cannot resolve a query.<br/>-   Setting IP addresses by using the **resetforwarders** command causes the DNS server to perform recursive queries to the DNS servers at the specified IP addresses. If the forwarders do not resolve the query, the DNS server can then perform its own iterative queries.<br/>-   if the **/slave** parameter is used, the DNS server does not perform its own iterative queries. This means that the DNS server forwards unresolved queries only to the DNS servers in the list, and it does not attempt iterative queries if the forwarders do not resolve them. It is more efficient to set one IP address as a forwarder for a DNS server. You can use the **resetforwarders** command for internal servers in a network to forward their unresolved queries to one DNS server that has an external connection.<br/>-   listing a forwarder s IP address twice causes the DNS server to attempt to forward to that server twice.<br/>#### Sample usage<br/><pre>dnscmd dnssvr1.contoso.com /resetforwarders 10.0.0.1 /timeout 7 /slave
-dnscmd dnssvr1.contoso.com /resetforwarders /noslave</pre><br/>### <a name=BKMK_17></a>dnscmd /resetlistenaddresses<br/>Specifies the IP addresses on a server that listens for DNS client requests.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /resetlistenaddresses [&lt;listenaddress&gt;]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<listenaddress>**<br/>Specifies an IP address on the DNS server that listens for DNS client requests. If no listen address is specified, all IP addresses on the server listen for client requests.<br/>#### Remarks<br/>-   By default, all IP addresses on a DNS server listen for client DNS requests.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /resetlistenaddresses 10.0.0.1</code><br/>### <a name=BKMK_18></a>dnscmd /startscavenging<br/>Tells a DNS server to attempt an immediate search for stale resource records in a specified DNS server.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /startscavenging</code><br/>#### Parameter<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>#### Remarks<br/>-   Successful completion of this command starts a scavenge immediately.<br/>-   Although the command to start the scavenge appears to complete successfully, the scavenge does not start unless the following preconditions are met:<br/>    -   Scavenging is enabled for both the server and the zone.<br/>    -   The zone is started.<br/>    -   The resource records have a time stamp.<br/>-   for information about how to enable scavenging for the server, see the **scavenginginterval** parameter under Server-level syntax in the <a href=#BKMK_3 data-raw-source=[config](#BKMK_3)>config</a> section.<br/>-   for information about how to enable scavenging for the zone, see the **aging** parameter under Zone-level syntax in the <a href=#BKMK_3 data-raw-source=[config](#BKMK_3)>config</a> section.<br/>-   for information about how to start a zone that is paused, see the <a href=#BKMK_35 data-raw-source=[zoneresume](#BKMK_35)>zoneresume</a> section.<br/>-   for information about how to check resource records for a time stamp, see the <a href=#BKMK_1 data-raw-source=[ageallrecords](#BKMK_1)>ageallrecords</a> section.<br/>-   if the scavenge fails, no warning message appears.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /startscavenging</code><br/>### <a name=BKMK_19></a>dnscmd /statistics<br/>Displays or clears data for a specified DNS server.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /statistics [&lt;StatID&gt;] [/clear]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<StatID>**<br/>Specifies which statistic or combination of statistics to display. An identification number is used to identify a statistic. If no statistic ID number is specified, all statistics display.<br/>The following is a list of numbers that can be specified and the corresponding statistic that displays:<br/>**00000001**<br/>time<br/>**00000002**<br/>query<br/>**00000004**<br/>query2<br/>**00000008**<br/>Recurse<br/>**00000010**<br/>Master<br/>**00000020**<br/>Secondary<br/>**00000040**<br/>WINS<br/>**00000100**<br/>Update<br/>**00000200**<br/>SkwanSec<br/>**00000400**<br/>Ds<br/>**00010000**<br/>Memory<br/>**00100000**<br/>PacketMem<br/>**00040000**<br/>Dbase<br/>**00080000**<br/>Records<br/>**00200000**<br/>NbstatMem<br/>**/clear**<br/>resets the specified statistics counter to zero.<br/>#### Remarks<br/>-   The **statistics** command displays counters that begin on the DNS server when it is started or resumed.<br/>#### Examples<br/>See <a href=https://technet.microsoft.com/library/cc784399(v=ws.10).aspx data-raw-source=[Example 7: Display time statistics for a DNS server](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)>Example 7: Display time statistics for a DNS server</a> or <a href=https://technet.microsoft.com/library/cc784399(v=ws.10).aspx data-raw-source=[Example 8: Display NbstatMem statistics for a DNS server](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)>Example 8: Display NbstatMem statistics for a DNS server</a>.<br/>### <a name=BKMK_20></a>dnscmd /unenlistdirectorypartition<br/>removes the DNS server from the specified directory partition&#39;s replica set.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /unenlistdirectorypartition &lt;PartitionFQDN&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<PartitionFQDN>**<br/>The FQDN of the DNS application directory partition that will be removed.<br/>### <a name=BKMK_21></a>dnscmd /writebackfiles<br/>Checks the DNS server memory for changes, and writes them to persistent storage.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /writebackfiles [&lt;ZoneName&gt;]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to be updated.<br/>#### Remarks<br/>-   The **writebackfiles** command updates all dirty zones or a specified zone. A zone is dirty when there are changes in memory that have not yet been written to persistent storage. This is a server-level operation that checks all zones. You can specify one zone in this operation or you can use the <a href=#BKMK_37 data-raw-source=[zonewriteback](#BKMK_37)>zonewriteback</a> operation.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /writebackfiles</code><br/>### <a name=BKMK_22></a>dnscmd /zoneadd<br/>adds a zone to the DNS server.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zoneadd &lt;ZoneName&gt; &lt;Zonetype&gt; [/dp &lt;FQDN&gt;| {/domain|/enterprise|/legacy}]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone.<br/>**<Zonetype>**<br/>Specifies the type of zone to create. Each zone type has different required parameters:<br/>**/dsprimary**<br/>creates an active directory integrated zone.<br/>**/primary /file <FileName>**<br/>creates a standard primary zone, and specifies the name of the file that will store the zone information.<br/>**/secondary <MasterIPaddress> [<MasterIPaddress>...]**<br/>creates a standard secondary zone.<br/>**/stub <MasterIPaddress> [<MasterIPaddress>...] /file <FileName>**<br/>creates a file-backed stub zone.<br/>**/dsstub <MasterIPaddress> [<MasterIPaddress>...]**<br/>creates an active directory integrated stub zone.<br/>**/forwarder <MasterIPaddress> [<MasterIPaddress>]... /file <FileName>**<br/>Specifies that the created zone forwards unresolved queries to another DNS server.<br/>**/dsforwarder**<br/>Specifies that the created active directory integrated zone forwards unresolved queries to another DNS server.<br/>**/dp <FQDN> {/domain | /enterprise | /legacy}**<br/>Specifies the directory partition on which to store the zone.<br/>**<FQDN>**<br/>Specifies FQDN of the directory partition.<br/>**/domain**<br/>Stores the zone on the domain directory partition.<br/>**/enterprise**<br/>Stores the zone on the enterprise directory partition.<br/>**/legacy**<br/>Stores the zone on a legacy directory partition.<br/>#### Remarks<br/>-   Specifying a zone type of **/forwarder** or **/dsforwarder** creates a zone that performs conditional forwarding.<br/>#### Sample usage<br/><pre>dnscmd dnssvr1.contoso.com /zoneadd test.contoso.com /dsprimary
-dnscmd dnssvr1.contoso.com /zoneadd secondtest.contoso.com /secondary 10.0.0.2</pre><br/>### <a name=BKMK_23></a>dnscmd /zonechangedirectorypartition<br/>changes the directory partition on which the specified zone resides.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zonechangedirectorypartition &lt;ZoneName&gt;] {[&lt;NewPartitionName&gt;] | [&lt;Zonetype&gt;] }</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>The FQDN of the current directory partition on which the zone resides.<br/>**<NewPartitionName>**<br/>The FQDN of the directory partition that the zone will be moved to.<br/>**<Zonetype>**<br/>Specifies the type of directory partition that the zone will be moved to.<br/>**/domain**<br/>moves the zone to the built-in domain directory partition.<br/>**/forest**<br/>moves the zone to the built-in forest directory partition.<br/>**/legacy**<br/>moves the zone to the directory partition that is created for pre active directory domain controllers. These directory partitions are not necessary for native mode.<br/>### <a name=BKMK_24></a>dnscmd /zonedelete<br/>deletes a specified zone.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zonedelete &lt;ZoneName&gt; [/dsdel] [/f]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to be deleted.<br/>**/dsdel**<br/>deletes the zone from AD DS.<br/>**/f**<br/>Runs the command without asking for confirmation.<br/>#### Example<br/>See <a href=https://technet.microsoft.com/library/cc784399(v=ws.10).aspx data-raw-source=[Example 9: delete a zone from a DNS server](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)>Example 9: delete a zone from a DNS server</a>.<br/>### <a name=BKMK_25></a>dnscmd /zoneexport<br/>creates a text file that lists the resource records of a specified zone.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zoneexport &lt;ZoneName&gt; &lt;ZoneExportFile&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone.<br/>**<ZoneExportFile>**<br/>Specifies the name of the file to create.<br/>#### Remarks<br/>-   The **zoneexport** operation creates a file of resource records for an active directory integrated zone for troubleshooting purposes. By default, the file that this command creates is placed in the DNS directory, which is by default the %systemroot%/System32/Dns directory.<br/>#### Example<br/>See <a href=https://technet.microsoft.com/library/cc784399(v=ws.10).aspx data-raw-source=[Example 10: Export zone resource records list to a file](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)>Example 10: Export zone resource records list to a file</a>.<br/>### <a name=BKMK_26></a>dnscmd /zoneinfo<br/>Displays settings from the section of the registry of the specified zone: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\<ZoneName>**<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zoneinfo &lt;ZoneName&gt;  [&lt;Setting&gt;]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone.<br/>**<Setting>**<br/>You can individually specify any setting that the **zoneinfo** command returns. If you do not specify a setting, all settings are returned.<br/>#### Remarks<br/>-   The **zoneinfo** command displays registry settings that are at the DNS zone level at **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters\Zones\<ZoneName>**.<br/>-   To display server-level registry settings, use the <a href=#BKMK_12 data-raw-source=[info](#BKMK_12)>info</a> command.<br/>-   To see a list of settings that you can display with this command, see the <a href=#BKMK_3 data-raw-source=[config](#BKMK_3)>config</a> command.<br/>#### Example<br/>See <a href=https://technet.microsoft.com/library/cc784399(v=ws.10).aspx data-raw-source=[Example 11: Display RefreshInterval setting from the registry](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)>Example 11: Display RefreshInterval setting from the registry</a> or <a href=https://technet.microsoft.com/library/cc784399(v=ws.10).aspx data-raw-source=[Example 12: Display Aging setting from the registry](https://technet.microsoft.com/library/cc784399(v=ws.10).aspx)>Example 12: Display Aging setting from the registry</a>.<br/>### <a name=BKMK_27></a>dnscmd /zonepause<br/>pauses the specified zone, which then ignores query requests.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zonepause &lt;ZoneName&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to be paused.<br/>#### Remarks<br/>-   To resume a zone and make it available after it has been paused, use the <a href=#BKMK_35 data-raw-source=[zoneresume](#BKMK_35)>zoneresume</a> command.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /zonepause test.contoso.com</code><br/>### <a name=BKMK_28></a>dnscmd /zoneprint<br/>lists the records in a zone.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zoneprint &lt;ZoneName&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Identifies the zone to be listed.<br/>### <a name=BKMK_30></a>dnscmd /zonerefresh<br/>forces a secondary DNS zone to update from the master zone.<br/>#### Syntax<br/><code>dnscmd &lt;ServerName&gt; /zonerefresh &lt;ZoneName&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to be refreshed.<br/>#### Remarks<br/>-   The **zonerefresh** command forces a check of the version number in the master server s start of authority (SOA) resource record. If the version number on the master server is higher than the secondary server&#39;s version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.<br/>-   The forced check occurs by default every 15 minutes. To change the default, use the **dnscmd config refreshinterval** command.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /zonerefresh test.contoso.com</code><br/>### <a name=BKMK_31></a>dnscmd /zonereload<br/>Copies zone information from its source.<br/>#### Syntax<br/><code>dnscmd &lt;ServerName&gt; /zonereload &lt;ZoneName&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to be reloaded.<br/>#### Remarks<br/>-   if the zone is active directory integrated, it reloads from AD DS.<br/>-   if the zone is a standard file-backed zone, it reloads from a file.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /zonereload test.contoso.com</code><br/>### <a name=BKMK_32></a>dnscmd /zoneresetmasters<br/>resets the IP addresses of the master server that provides zone transfer information to a secondary zone.<br/>#### Syntax<br/><code>dnscmd &lt;ServerName&gt; /zoneresetmasters &lt;ZoneName&gt; [/local] [&lt;IPaddress&gt; [&lt;IPaddress&gt;]...]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to be reloaded.<br/>**/local**<br/>Sets a local master list. This parameter is used for active directory integrated zones.<br/>**<IPaddress>**<br/>The IP addresses of the master servers of the secondary zone.<br/>#### Remarks<br/>-   This value is originally set when the secondary zone is created. Use the **zoneresetmasters** command on the secondary server. This value has no effect if it is set on the master DNS server.<br/>#### Sample usage<br/><pre>dnscmd dnssvr1.contoso.com /zoneresetmasters test.contoso.com 10.0.0.1
-dnscmd dnssvr1.contoso.com /zoneresetmasters test.contoso.com /local</pre><br/>### <a name=BKMK_33></a>dnscmd /zoneresetscavengeservers<br/>changes the IP addresses of the servers that can scavenge the specified zone.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zoneresetscavengeservers &lt;ZoneName&gt; [&lt;IPaddress&gt; [&lt;IPaddress&gt;]...]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Identifies the zone to scavenge.<br/>**<IPaddress>**<br/>lists the IP addresses of the servers that can perform the scavenge. If this parameter is omitted, all servers that host this zone can scavenge it.<br/>#### Remarks<br/>-   By default, all servers that host a zone can scavenge that zone.<br/>-   if a zone is hosted on more than one DNS server, you can use this command to reduce the number of times a zone is scavenged.<br/>-   Scavenging must be enabled on the DNS server and zone that is affected by this command.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /zoneresetscavengeservers test.contoso.com 10.0.0.1 10.0.0.2</code><br/>### <a name=BKMK_34></a>dnscmd /zoneresetsecondaries<br/>Specifies a list of IP addresses of secondary servers to which a master server responds when it is asked for a zone transfer.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zoneresetsecondaries &lt;ZoneName&gt; {/noxfr | /nonsecure | /securens | /securelist &lt;SecurityIPaddresses&gt;} {/nonotify | /notify | /notifylist &lt;NotifyIPaddresses&gt;}</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If the is parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone that will have its secondary servers reset.<br/>**/noxfr | /nonsecure | /securens | /securelist <SecurityIPaddresses>**<br/>Specifies whether all or only some of the secondary servers requesting an update get an update.<br/>**/noxfr**<br/>Specifies that no zone transfers are allowed.<br/>**/nonsecure**<br/>Specifies that all zone transfer requests are granted.<br/>**/securens**<br/>Specifies that only the server that is listed in the name server (NS) resource record for the zone is granted a transfer.<br/>**/securelist**<br/>Specifies that zone transfers are granted only to the list of servers. This parameter must be followed by an IP address or addresses that the master server uses.<br/>**<SecurityIPaddresses>**<br/>lists the IP addresses that receive zone transfers from the master server. This parameter is used only with the **/securelist** parameter.<br/>**/nonotify | /notify | /notifylist <NotifyIPaddresses>**<br/>Specifies that a change notification is sent only to certain secondary servers:<br/>**/nonotify**<br/>Specifies that no change notifications are sent to secondary servers.<br/>**/notify**<br/>Specifies that change notifications are sent to all secondary servers.<br/>**/notifylist**<br/>Specifies that change notifications are sent to only the list of servers. This command must be followed by an IP address or addresses that the master server uses.<br/>**<NotifyIPaddresses>**<br/>Specifies the IP address or addresses of the secondary server or servers to which change notifications are sent. This list is used only with the **/notifylist** parameter.<br/>#### Remarks<br/>-   Use the **zoneresetsecondaries** command on the master server to specify how it responds to zone transfer requests from secondary servers.<br/>#### Sample usage<br/><pre>dnscmd dnssvr1.contoso.com /zoneresetsecondaries test.contoso.com /noxfr /nonotify
-dnscmd dnssvr1.contoso.com /zoneresetsecondaries test.contoso.com /securelist 11.0.0.2</pre><br/>### <a name=BKMK_29></a>dnscmd /zoneresettype<br/>changes the type of the zone.<br/>#### Syntax<br/><code>dnscmd [&lt;ServerName&gt;] /zoneresettype &lt;ZoneName&gt; &lt;Zonetype&gt; [/overwrite_mem | /overwrite_ds]</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Identifies the zone on which the type will be changed.<br/>**<Zonetype>**<br/>Specifies the type of zone to create. Each type has different required parameters:<br/>**/dsprimary**<br/>creates an active directory integrated zone.<br/>**/primary /file <FileName>**<br/>creates a standard primary zone.<br/>**/secondary <MasterIPaddress> [,<MasterIPaddress>...]**<br/>creates a standard secondary zone.<br/>**/stub <MasterIPaddress>[,<MasterIPaddress>...] /file <FileName>**<br/>creates a file-backed stub zone.<br/>**/dsstub <MasterIPaddress>[,<MasterIPaddress>...]**<br/>creates an active directory integrated stub zone.<br/>**/forwarder &lt;MasterIPaddress[,<MasterIPaddress>]... /file<FileName>**<br/>Specifies that the created zone forwards unresolved queries to another DNS server.<br/>**/dsforwarder**<br/>Specifies that the created active directory integrated zone forwards unresolved queries to another DNS server.<br/>**/overwrite_mem | /overwrite_ds**<br/>Specifies how to overwrite existing data:<br/>**/overwrite_mem**<br/>Overwrites DNS data from data in AD DS.<br/>**/overwrite_ds**<br/>Overwrites existing data in AD DS.<br/>#### Remarks<br/>-   Setting the zone type as **/dsforwarder** creates a zone that performs conditional forwarding.<br/>#### Sample usage<br/><pre>dnscmd dnssvr1.contoso.com /zoneresettype test.contoso.com /primary /file test.contoso.com.dns
-dnscmd dnssvr1.contoso.com /zoneresettype second.contoso.com /secondary 10.0.0.2</pre><br/>### <a name=BKMK_35></a>dnscmd /zoneresume<br/>starts a specified zone that was previously paused.<br/>#### Syntax<br/><code>dnscmd &lt;ServerName&gt; /zoneresume &lt;ZoneName&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to resume.<br/>#### Remarks<br/>-   You can use this operation to reverse the <a href=#BKMK_27 data-raw-source=[zonepause](#BKMK_27)>zonepause</a> operation.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /zoneresume test.contoso.com</code><br/>### <a name=BKMK_36></a>dnscmd /zoneupdatefromds<br/>Updates the specified active directory integrated zone from AD DS.<br/>#### Syntax<br/><code>dnscmd &lt;ServerName&gt; /zoneupdatefromds &lt;ZoneName&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to update.<br/>#### Remarks<br/>-   active directory integrated zones perform this update by default every five minutes. To change this parameter, use the **dnscmd config dspollinginterval** command.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /zoneupdatefromds</code><br/>### <a name=BKMK_37></a>dnscmd /zonewriteback<br/>Checks DNS server memory for changes that are relevant to a specified zone, and writes them to persistent storage.<br/>#### Syntax<br/><code>dnscmd &lt;ServerName&gt; /zonewriteback &lt;ZoneName&gt;</code><br/>##### Parameters<br/>**<ServerName>**<br/>Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used.<br/>**<ZoneName>**<br/>Specifies the name of the zone to update.<br/>#### Remarks<br/>-   This is a zone-level operation. You can update all zones on a DNS server with the <a href=#BKMK_21 data-raw-source=[writebackfiles](#BKMK_21)>writebackfiles</a> operation.<br/>#### Sample usage<br/><code>dnscmd dnssvr1.contoso.com /zonewriteback test.contoso.com</code>
+
+
+## dnscmd /zonerefresh command
+
+Forces a secondary DNS zone to update from the master zone.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zonerefresh <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to be refreshed. |
+
+##### Remarks
+
+- The **zonerefresh** command forces a check of the version number in the master server s start of authority (SOA) resource record. If the version number on the master server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.
+
+- The forced check occurs by default every 15 minutes. To change the default, use the `dnscmd config refreshinterval` command.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zonerefresh test.contoso.com
+```
+
+## dnscmd /zonereload command
+
+Copies zone information from its source.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zonereload <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to be reloaded. |
+
+##### Remarks
+
+- If the zone is active directory integrated, it reloads from Active Directory Domain Services (AD DS).
+
+- If the zone is a standard file-backed zone, it reloads from a file.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zonereload test.contoso.com
+```
+
+## dnscmd /zoneresetmasters command
+
+Resets the IP addresses of the master server that provides zone transfer information to a secondary zone.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneresetmasters <zonename> [/local] [<IPaddress> [<IPaddress>]...]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to be reset. |
+| /local | Sets a local master list. This parameter is used for active directory integrated zones. |
+| `<IPaddress>` | The IP addresses of the master servers of the secondary zone. |
+
+##### Remarks
+
+- This value is originally set when the secondary zone is created. Use the **zoneresetmasters** command on the secondary server. This value has no effect if it is set on the master DNS server.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zoneresetmasters test.contoso.com 10.0.0.1
+dnscmd dnssvr1.contoso.com /zoneresetmasters test.contoso.com /local
+```
+
+## dnscmd /zoneresetscavengeservers command
+
+Changes the IP addresses of the servers that can scavenge the specified zone.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneresetscavengeservers <zonename> [/local] [<IPaddress> [<IPaddress>]...]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the zone to scavenge. |
+| /local | Sets a local master list. This parameter is used for active directory integrated zones. |
+| `<IPaddress>` | Lists the IP addresses of the servers that can perform the scavenge. If this parameter is omitted, all servers that host this zone can scavenge it. |
+
+##### Remarks
+
+- By default, all servers that host a zone can scavenge that zone.
+
+- If a zone is hosted on more than one DNS server, you can use this command to reduce the number of times a zone is scavenged.
+
+- Scavenging must be enabled on the DNS server and zone that is affected by this command.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zoneresetscavengeservers test.contoso.com 10.0.0.1 10.0.0.2
+```
+
+## dnscmd /zoneresetsecondaries command
+
+Specifies a list of IP addresses of secondary servers to which a master server responds when it is asked for a zone transfer.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneresetsecondaries <zonename> {/noxfr | /nonsecure | /securens | /securelist <securityIPaddresses>} {/nonotify | /notify | /notifylist <notifyIPaddresses>}
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone that will have its secondary servers reset. |
+| /local | Sets a local master list. This parameter is used for active directory integrated zones. |
+| /noxfr | Specifies that no zone transfers are allowed. |
+| /nonsecure | Specifies that all zone transfer requests are granted. |
+| /securens | Specifies that only the server that is listed in the name server (NS) resource record for the zone is granted a transfer. |
+| /securelist | Specifies that zone transfers are granted only to the list of servers. This parameter must be followed by an IP address or addresses that the master server uses. |
+| `<securityIPaddresses>` | Lists the IP addresses that receive zone transfers from the master server. This parameter is used only with the **/securelist** parameter. |
+| /nonotify | Specifies that no change notifications are sent to secondary servers. |
+| /notify | Specifies that change notifications are sent to all secondary servers. |
+| /notifylist | Specifies that change notifications are sent to only the list of servers. This command must be followed by an IP address or addresses that the master server uses. |
+| `<notifyIPaddresses>` | Specifies the IP address or addresses of the secondary server or servers to which change notifications are sent. This list is used only with the **/notifylist** parameter. |
+
+##### Remarks
+
+- Use the **zoneresetsecondaries** command on the master server to specify how it responds to zone transfer requests from secondary servers.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zoneresetsecondaries test.contoso.com /noxfr /nonotify
+dnscmd dnssvr1.contoso.com /zoneresetsecondaries test.contoso.com /securelist 11.0.0.2
+```
+
+## dnscmd /zoneresettype command
+
+Changes the type of the zone.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneresettype <zonename> <zonetype> [/overwrite_mem | /overwrite_ds]
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Identifies the zone on which the type will be changed. |
+| `<zonetype>` | Specifies the type of zone to create. Each type has different required parameters, including:<ul><li>**/dsprimary** - Creates an active directory integrated zone.</li><li>**/primary /file `<filename>`** - Creates a standard primary zone.</li><li>**/secondary `<masterIPaddress> [,<masterIPaddress>...]`** - Creates a standard secondary zone.</li><li>**/stub `<masterIPaddress>[,<masterIPaddress>...]` /file `<filename>`** - Creates a file-backed stub zone.</li><li>**/dsstub `<masterIPaddress>[,<masterIPaddress>...]`** - Creates an active directory integrated stub zone.</li><li>**/forwarder `<masterIPaddress[,<masterIPaddress>]`... /file`<filename>`** - Specifies that the created zone forwards unresolved queries to another DNS server.</li><li>**/dsforwarder** - Specifies that the created active directory integrated zone forwards unresolved queries to another DNS server.</li></ul> |
+| /overwrite_mem | Overwrites DNS data from data in AD DS. |
+| /overwrite_ds | Overwrites existing data in AD DS. |
+
+##### Remarks
+
+- Setting the zone type as **/dsforwarder** creates a zone that performs conditional forwarding.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zoneresettype test.contoso.com /primary /file test.contoso.com.dns
+dnscmd dnssvr1.contoso.com /zoneresettype second.contoso.com /secondary 10.0.0.2
+```
+
+## dnscmd /zoneresume command
+
+Starts a specified zone that was previously paused.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneresume <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to resume. |
+
+##### Remarks
+
+- You can use this operation to restart from the **/zonepause** operation.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zoneresume test.contoso.com
+```
+
+## dnscmd /zoneupdatefromds command
+
+Updates the specified active directory integrated zone from AD DS.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zoneupdatefromds <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to update. |
+
+##### Remarks
+
+- Active directory integrated zones perform this update by default every five minutes. To change this parameter, use the `dnscmd config dspollinginterval` command.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zoneupdatefromds
+```
+
+## dnscmd /zonewriteback command
+
+Checks DNS server memory for changes that are relevant to a specified zone, and writes them to persistent storage.
+
+### Syntax
+
+```
+dnscmd [<servername>] /zonewriteback <zonename>
+```
+
+#### Parameters
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<zonename>` | Specifies the name of the zone to update. |
+
+##### Remarks
+
+- This is a zone-level operation. You can update all zones on a DNS server by using the **/writebackfiles** operation.
+
+#### Examples
+
+```
+dnscmd dnssvr1.contoso.com /zonewriteback test.contoso.com
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
