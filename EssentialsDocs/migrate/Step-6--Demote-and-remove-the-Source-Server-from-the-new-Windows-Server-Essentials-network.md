@@ -12,7 +12,7 @@ manager: dongill
 
 # Step 6: Demote and remove the Source Server from the new Windows Server Essentials network
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 After you finish installing  Windows Server Essentials and you complete the migration, you must perform the following tasks:  
   

@@ -12,7 +12,7 @@ manager: dongill
 
 # Step 3: Join computers to the new Windows Server Essentials server
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 The next step in the migration process is to connect client computers to the new server running  Windows Server Essentials.  
   
