@@ -1,17 +1,17 @@
 ---
-title: Fsutil behavior
+title: fsutil behavior
+description: Reference topic for the fsutil behavior command, which queries or sets NTFS volume behavior.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
 ms.technology: storage
-audience: "IT Pro"
 ms.topic: article
 ms.date: 10/16/2017
 ms.assetid: 84eaba2c-c0af-49e1-bbbd-2ed2928e5e4b
-
 ---
-# Fsutil behavior
+
+# fsutil behavior
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 

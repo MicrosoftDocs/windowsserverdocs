@@ -1,11 +1,11 @@
 ﻿---
 title: Vssadmin resize shadowstorage
 description: A description of the vssadmin resize shadowstorage command.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+ms.technology: storage
 ms.date: 03/05/2020
 ms.localizationpriority: medium
 ---
@@ -42,7 +42,7 @@ vssadmin Resize ShadowStorage /For=C: /On=D: /MaxSize=UNBOUNDED
 vssadmin Resize ShadowStorage /For=C: /On=C: /MaxSize=20%
 ```
 
-## Additional references
+## Additional References
 
 * [Command-line syntax key](https://docs.microsoft.com/windows-server/administration/windows-commands/command-line-syntax-key)
 * [Vssadmin](vssadmin.md)

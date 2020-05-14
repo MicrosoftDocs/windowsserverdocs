@@ -1,6 +1,6 @@
 ---
 title: query session
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -28,7 +28,7 @@ The list includes information not only about active sessions but also about othe
 > query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
 > ```
 > ### Parameters
-> 
+>
 > |      Parameter       |                                                      Description                                                      |
 > |----------------------|-----------------------------------------------------------------------------------------------------------------------|
 > |    <SessionName>     |                               Specifies the name of the session that you want to query.                               |
@@ -40,8 +40,8 @@ The list includes information not only about active sessions but also about othe
 > |       /connect       |                                          Displays current connect settings.                                           |
 > |       /counter       | Displays current counters information, including the total number of sessions created, disconnected, and reconnected. |
 > |          /?          |                                         Displays help at the command prompt.                                          |
-> 
-> ## Remarks
+>
+>#### Remarks
 > - A user can always query the session to which the user is currently logged on. To query other sessions, the user must have query Information special access permission.
 > - if you do not specify a session by using <*SessionName*>, <*UserName*>, or <*SessionID*>, **query session** displays information about all active sessions in the system.
 > - When **query session** returns information, a greater than (>) symbol is displayed before the current session. Following is sample output for **query session**:

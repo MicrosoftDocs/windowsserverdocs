@@ -47,10 +47,10 @@ fsutil transaction [rollback] <GUID>
 To display transaction information for file c:\test.txt, type:
 
 ```
-fsutil transaction fileinfo c:\test.txt  
+fsutil transaction fileinfo c:\test.txt
 ```
 
-### Additional references
+### Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

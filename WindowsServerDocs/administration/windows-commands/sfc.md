@@ -51,6 +51,6 @@ To setup offline repair of the **kernel32.dll** file with an offline boot direct
 sfc /scanfile=d:\windows\system32\kernel32.dll /offbootdir=d:\ /offwindir=d:\windows
 ```
 
-## Additional references
+## Additional References
 -   - [Command-Line Syntax Key](command-line-syntax-key.md)
 

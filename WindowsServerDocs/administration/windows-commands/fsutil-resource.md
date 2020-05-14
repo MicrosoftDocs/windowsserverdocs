@@ -75,10 +75,10 @@ fsutil resource setlog growth 2 percent c:test
 To specify that the default Transactional Resource Manager will clean the transactional metadata on the next mount on drive C, type:
 
 ```
-fsutil resource setautoreset true c:\  
+fsutil resource setautoreset true c:\
 ```
 
-### Additional references
+### Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

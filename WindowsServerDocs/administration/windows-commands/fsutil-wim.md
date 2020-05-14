@@ -65,7 +65,7 @@ To remove the WIM from backing files for volume C: and data source 2, type:
 fsutil wim removewims C: 2
 ```
 
-### Additional references
+### Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

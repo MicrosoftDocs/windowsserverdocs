@@ -1,30 +1,29 @@
 ---
-ms.assetid: a0c6dbfe-d898-496d-9356-825f7fbd90ec
-title: Fsutil 8dot3name
+title: fsutil 8dot3name
+description: Reference topic for the fsutil 8dot3name command, which queries or changes the settings for short name (8dot3 name) behavior.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
 ms.technology: storage
-audience: "IT Pro"
+ms.assetid: a0c6dbfe-d898-496d-9356-825f7fbd90ec
 ms.topic: article
 ms.date: 10/16/2017
 ---
-# Fsutil 8dot3name
+
+# fsutil 8dot3name
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Queries or changes the settings for short name (8dot3 name) behavior, which include:
 
--   Query the current setting for the short name behavior
+- Query the current setting for the short name behavior
 
--   Scan the specified directory path for registry keys that might be impacted if short names were stripped from the specified directory path
+- Scan the specified directory path for registry keys that might be impacted if short names were stripped from the specified directory path
 
--   Change the setting that controls the short name behavior. This setting can be applied to a specified volume or to the default volume setting.
+- Change the setting that controls the short name behavior. This setting can be applied to a specified volume or to the default volume setting.
 
--   Remove the short names for all files within a directory
-
-
+- Remove the short names for all files within a directory
 
 ## Syntax
 
@@ -69,7 +68,7 @@ To remove 8dot3 file names in the *D:\MyData* directory and all subdirectories, 
 fsutil 8dot3name strip /l mylogfile.log /s d:\MyData
 ```
 
-### Additional references
+### Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

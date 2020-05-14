@@ -1,6 +1,6 @@
 ---
 title: mklink
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -46,7 +46,7 @@ mklink /h \MyFile.file \User1\Documents\example.file
 rd \MyFolder
 del \MyFile.file
 ```
-## Additional references
+## Additional References
 -   [New-Item](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
 -   [del](https://docs.microsoft.com/windows-server/administration/windows-commands/del)
 -   [rmdir](https://docs.microsoft.com/windows-server/administration/windows-commands/rd)

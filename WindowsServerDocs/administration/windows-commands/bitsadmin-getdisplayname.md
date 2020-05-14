@@ -35,7 +35,7 @@ To retrieve the display name for the job named *myDownloadJob*:
 bitsadmin /getdisplayname myDownloadJob
 ```
 
-## Additional references
+## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
