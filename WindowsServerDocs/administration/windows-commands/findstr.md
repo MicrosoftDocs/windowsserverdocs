@@ -1,12 +1,8 @@
 ---
 title: findstr
-description: Reference topic for **** - 
-
+description: Reference topic for the findstr command, which searches for patterns of text in files.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: c2d803fb-4cd2-46a1-a1b7-6f5e0249c418
 author: coreyp-at-msft
@@ -19,12 +15,10 @@ ms.date: 10/16/2017
 
 Searches for patterns of text in files.
 
-For examples of how to use this command, see [Examples](#examples).
-
 ## Syntax
 
 ```
-findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] [/c:<String>] [/g:<File>] [/d:<DirList>] [/a:<ColorAttribute>] [/off[line]] <Strings> [<Drive>:][<Path>]<FileName>[ ...]
+findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] [/c:<string>] [/g:<file>] [/d:<dirlist>] [/a:<colorattribute>] [/off[line]] <strings> [<drive>:][<path>]<filename>[ ...]
 ```
 
 ### Parameters
@@ -58,7 +52,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 - All **findstr** command-line options must precede *Strings* and *FileName* in the command string.
 - Regular expressions use both literal characters and metacharacters to find patterns of text, rather than exact strings of characters. A literal character is a character that does not have a special meaning in the regular-expression syntax—it matches an occurrence of that character. For example, letters and numbers are literal characters. A metacharacter is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
 
-  The following table lists the metacharacters that **findstr** accepts.  
+  The following table lists the metacharacters that **findstr** accepts.
 
   |Metacharacter|Value|
   |-------------|-----|
@@ -77,9 +71,9 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<File>] 
 
   ```
   .*
-  ``` 
+  ```
 
-  Use the following expression as part of a larger expression to match any string beginning with b and ending with ing: 
+  Use the following expression as part of a larger expression to match any string beginning with b and ending with ing:
 
   ```
   b.*ing
@@ -92,37 +86,37 @@ Use spaces to separate multiple search strings unless the argument is prefixed w
 To search for hello or there in file x.y, type:
 
 ```
-findstr hello there x.y 
+findstr hello there x.y
 ```
 
 To search for hello there in file x.y, type:
 
 ```
-findstr /c:hello there x.y 
+findstr /c:hello there x.y
 ```
 
 To find all occurrences of the word Windows (with an initial capital letter W) in the file Proposal.txt, type:
 
 ```
-findstr Windows proposal.txt 
+findstr Windows proposal.txt
 ```
 
 To search every file in the current directory and all subdirectories that contained the word Windows, regardless of the letter case, type:
 
 ```
-findstr /s /i Windows *.* 
+findstr /s /i Windows *.*
 ```
 
 To find all occurrences of lines that begin with FOR and are preceded by zero or more spaces (as in a computer program loop), and to display the line number where each occurrence is found, type:
 
 ```
-findstr /b /n /r /c:^ *FOR *.bas 
+findstr /b /n /r /c:^ *FOR *.bas
 ```
 
 To search for multiple strings in a set of files, create a text file that contains each search criterion on a separate line. You can also list the exact files that you want to search in a text file. For example, to use the search criteria in the file Stringlist.txt, search the files listed in Filelist.txt, and then store the results in the file Results.out, type:
 
 ```
-findstr /g:stringlist.txt /f:filelist.txt > results.out 
+findstr /g:stringlist.txt /f:filelist.txt > results.out
 ```
 
 To list every file containing the word computer within the current directory and all subdirectories, regardless of case, type:
