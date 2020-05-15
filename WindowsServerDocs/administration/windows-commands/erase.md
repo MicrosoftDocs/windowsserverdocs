@@ -68,7 +68,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
   > [!NOTE]
   > Before you use wildcard characters with the **erase** command, use the same wildcard characters with the **dir** command to list all the files that will be deleted.
 
-## Examples
+### Examples
 
 To delete all the files in a folder named Test on drive C, type either of the following:
 
