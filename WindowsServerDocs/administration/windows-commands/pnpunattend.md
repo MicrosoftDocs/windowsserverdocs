@@ -50,9 +50,9 @@ Preliminary preparation is required. Prior to using this command, you must compl
 To command shows how to use the **PNPUnattend.exe** to audit a computer for possible driver updates, and then report the findings to the command prompt.
 
 ```
-pnpunattend auditsystem /s /l 
+pnpunattend auditsystem /s /l
 ```
 
-## Additional references
+## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: query process
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -28,7 +28,7 @@ You can use this command to find out which programs a specific user is running, 
 > query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <ProgramName>] [/server:<ServerName>]
 > ```
 > ### Parameters
-> 
+>
 > |      Parameter       |                                                                 Description                                                                  |
 > |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 > |          \*          |                                                    lists the processes for all sessions.                                                     |
@@ -39,8 +39,8 @@ You can use this command to find out which programs a specific user is running, 
 > |    <ProgramName>     |                     Specifies the name of the program whose processes you want to query. The .exe extension is required.                     |
 > | /server:<ServerName> | Specifies the rd Session Host server whose processes you want to list. If unspecified, the server where you are currently logged on is used. |
 > |          /?          |                                                     Displays help at the command prompt.                                                     |
-> 
-> ## Remarks
+>
+>#### Remarks
 > - Administrators have full access to all **query process** functions.
 > - if you do not specify the <*UserName*>, <*SessionName*>, **/id:**<*nn*>, <*ProgramName*>, or **\\*** parameters, **query process** displays only the processes that belong to the current user.
 > - if a session is specified, it must identify an active session.

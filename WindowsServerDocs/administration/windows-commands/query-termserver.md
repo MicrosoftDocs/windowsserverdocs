@@ -1,6 +1,6 @@
 ---
 title: query termserver
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -27,7 +27,7 @@ Displays a list of all Remote Desktop Session Host (rd Session Host) servers on 
 > query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
 > ```
 > ### Parameters
-> 
+>
 > |    Parameter     |                                                                        Description                                                                         |
 > |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > |   <ServerName>   |                                               Specifies the name that identifies the rd Session Host server.                                               |
@@ -35,8 +35,8 @@ Displays a list of all Remote Desktop Session Host (rd Session Host) servers on 
 > |     /address     |                                                  Displays the network and node addresses for each server.                                                  |
 > |    /continue     |                                              Prevents pausing after each screen of information is displayed.                                               |
 > |        /?        |                                                            Displays help at the command prompt.                                                            |
-> 
-> ## Remarks
+>
+>#### Remarks
 > - **query termserver** searches the network for all attached rd Session Host servers and returns the following information:
 >   - The name of the server
 >   - The network (and node address if the /address option is used)
