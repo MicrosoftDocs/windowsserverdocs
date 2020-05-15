@@ -23,7 +23,7 @@ Manages NTFS transactions.
 fsutil transaction [commit] <GUID>
 fsutil transaction [fileinfo] <filename>
 fsutil transaction [list]
-fsutil transaction [query] [{files|all}] <GUID>
+fsutil transaction [query] [{files | all}] <GUID>
 fsutil transaction [rollback] <GUID>
 ```
 
