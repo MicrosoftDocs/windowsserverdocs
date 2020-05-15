@@ -38,15 +38,15 @@ You can use the **PowerShell.exe** command-line tool to start a Windows PowerShe
     ```
     PowerShell.exe -NoProfile
     ```
-  
+
 - To start a session , use the **ExecutionPolicy** parameter.
 
     ```
     PowerShell.exe -ExecutionPolicy Restricted
     ```
-  
-- To see the PowerShell.exe help file, use the following command format.  
-    
+
+- To see the PowerShell.exe help file, use the following command format.
+
     ```
     PowerShell.exe -help, -?, /?
     ```
@@ -63,7 +63,7 @@ For information about other ways to start Windows PowerShell, see [Starting Wind
 
 Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, features that require a graphic user interface, such as the [Windows PowerShell Integrated Scripting Environment (ISE)](https://technet.microsoft.com/library/hh849182), and the [Out-GridView](https://go.microsoft.com/fwlink/?LinkID=113364) and [Show-Command](https://go.microsoft.com/fwlink/?LinkID=217448) cmdlets, do not run on Server Core installations.
 
-## Additional references
+## Additional References
 
 [about_PowerShell.Exe](https://go.microsoft.com/fwlink/?LinkID=113439)
 [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)

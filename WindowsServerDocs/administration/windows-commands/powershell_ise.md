@@ -1,6 +1,6 @@
 ---
 title: PowerShell_ise
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -28,26 +28,26 @@ The **PowerShell_ISE.exe** tool starts a Windows PowerShell ISE session. When yo
 ## Using PowerShell_ISE.exe
 
 You can use **PowerShell_ISE.exe** to start and end a Windows PowerShell session as follows:
-- To start a Windows PowerShell ISE session, in a Command Prompt window, in Windows PowerShell, or at the Start menu, type:  
+- To start a Windows PowerShell ISE session, in a Command Prompt window, in Windows PowerShell, or at the Start menu, type:
   ```
   PowerShell_Ise
-  ```  
-- To open a script (.ps1), script module (.psm1), module manifest (.psd1), XML file, or any other supported file in Windows PowerShell ISE, use the following command format:  
+  ```
+- To open a script (.ps1), script module (.psm1), module manifest (.psd1), XML file, or any other supported file in Windows PowerShell ISE, use the following command format:
   ```
   PowerShell_Ise <FilePath>
-  ```  
-  In Windows PowerShell 3.0, you can use the optional **File** parameter as follows:  
+  ```
+  In Windows PowerShell 3.0, you can use the optional **File** parameter as follows:
   ```
   PowerShell_Ise -File <FilePath>
-  ```  
-- To start a Windows PowerShell ISE session without your Windows PowerShell profiles, use the **NoProfile** parameter. (The **NoProfile** parameter is introduced in Windows PowerShell 3.0.)  
+  ```
+- To start a Windows PowerShell ISE session without your Windows PowerShell profiles, use the **NoProfile** parameter. (The **NoProfile** parameter is introduced in Windows PowerShell 3.0.)
   ```
   PowerShell_Ise -NoProfile
-  ```  
-- To see the **PowerShell_ISE.exe** Help file in a Command Prompt window, use the following command format:  
+  ```
+- To see the **PowerShell_ISE.exe** Help file in a Command Prompt window, use the following command format:
   ```
   PowerShell_Ise -help, -?, /?
-  ```  
+  ```
   For a complete list of the **PowerShell_ISE.exe** command-line parameters, see [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512).
 
 ## Start Windows PowerShell ISE in other ways
@@ -58,7 +58,7 @@ For information about other ways to start Windows PowerShell ISE, see [Starting 
 
 Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, because Windows PowerShell ISE requires a graphic user interface, it does not run on Server Core installations.
 
-## Additional references
+## Additional References
 
 [about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)
 [about_PowerShell.exe](https://go.microsoft.com/fwlink/?LinkID=113439)

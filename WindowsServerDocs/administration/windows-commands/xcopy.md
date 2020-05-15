@@ -1,6 +1,6 @@
 ---
 title: xcopy
-description: Reference topic for xcopy, which copies files and directories, including subdirectories. 
+description: Reference topic for xcopy, which copies files and directories, including subdirectories.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -45,8 +45,8 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/k|Copies files and retains the read-only attribute on *Destination* files if present on the *Source* files. By default, **xcopy** removes the read-only attribute.|
 |/r|Copies read-only files.|
 |/h|Copies files with hidden and system file attributes. By default, **xcopy** does not copy hidden or system files|
-|/a|Copies only *Source* files that have their archive file attributes set. **/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Additional references](#additional-references).|
-|/m|Copies *Source* files that have their archive file attributes set. Unlike **/a**, **/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Additional references](#additional-references).|
+|/a|Copies only *Source* files that have their archive file attributes set. **/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Additional References](#additional-references).|
+|/m|Copies *Source* files that have their archive file attributes set. Unlike **/a**, **/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Additional References](#additional-references).|
 |/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the *Destination* file system. The *Destination* file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
@@ -83,17 +83,17 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 - Specifying whether *Destination* is a file or directory
 
   If *Destination* does not contain an existing directory and does not end with a backslash (\), the following message appears:
-  
+
   ```
   Does <Destination> specify a file name or directory name on the target(F = file, D = directory)?
-  ```  
-  
+  ```
+
 Press F if you want the file or files to be copied to a file. Press D if you want the file or files to be copied to a directory.
 
   You can suppress this message by using the **/i** command-line option, which causes **xcopy** to assume that the destination is a directory if the source is more than one file or a directory.
 - Using the **xcopy** command to set archive attribute for *Destination* files
 
-  The **xcopy** command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Additional references](#additional-references).
+  The **xcopy** command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Additional References](#additional-references).
 
 - Comparing **xcopy** and **diskcopy**
 
@@ -101,7 +101,7 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 
 - Exit codes for **xcopy**
 
-  To process exit codes returned by **xcopy**, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Additional references](#additional-references). The following table lists each exit code and a description.  
+  To process exit codes returned by **xcopy**, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Additional References](#additional-references). The following table lists each exit code and a description.
 
   |Exit code|Description|
   |---------|-----------|
@@ -116,7 +116,7 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 **1.** To copy all the files and subdirectories (including any empty subdirectories) from drive A to drive B, type:
 
 ```
-xcopy a: b: /s /e 
+xcopy a: b: /s /e
 ```
 
 **2.** To include any system or hidden files in the previous example, add the<strong>/h</strong> command-line option as follows:
@@ -175,7 +175,7 @@ goto exit
 :abort
 echo You pressed CTRL+C to end the copy operation.
 goto exit
-:exit 
+:exit
 ```
 
 To use the preceding batch program to copy all files in the C:\Prgmcode directory and its subdirectories to drive B, type:
