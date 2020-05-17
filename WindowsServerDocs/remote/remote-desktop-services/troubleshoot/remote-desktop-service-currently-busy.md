@@ -47,24 +47,5 @@ To resolve this issue, apply the following updates to the RDSH servers:
   - Windows Server 2012 R2: KB 4343891, [August 30, 2018—KB4343891 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4343891/windows-81-update-kb4343891)
   - Windows Server 2016: KB 4343884, [August 30, 2018—KB4343884 (OS Build 14393.2457)](https://support.microsoft.com/help/4343884/windows-10-update-kb4343884)
 
-## Check the connection limit policy
 
-You can set the limit on the number of simultaneous remote desktop connections at the individual computer level or by configuring a group policy object (GPO). By default, the limit is not set.
-
-To check the current settings and identify any existing GPOs on the RDSH server, open a command prompt window as an administrator and enter the following command:
-  
-```cmd
-gpresult /H c:\gpresult.html
-```
-   
-After this command finishes, open **gpresult.html**. In **Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections**, find the **Limit number of connections** policy.
-
-  - If the setting for this policy is **Disabled**, then group policy is not limiting RDP connections.
-  - If the setting for this policy is **Enabled**, then check **Winning GPO**. If you need to remove or change the connection limit, edit this GPO.
-
-To enforce policy changes, open a command prompt window on the affected computer, and enter the following command:
-  
-```cmd
-gpupdate /force
-```
   
