@@ -1,40 +1,48 @@
 ---
 title: ftp mget
-description: Reference topic for **** - 
-
+description: Reference topic for the ftp mget command, which copies remote files to the local computer using the current file transfer type.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
-ms.assetid: 6c85ae96-ec51-48a9-a227-7f02c7332c69 vhorne
+ms.assetid: 6c85ae96-ec51-48a9-a227-7f02c7332c69
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: mget
+
+# ftp mget
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Copies remote files to the local computer using the current file transfer type.   
-## Syntax  
-```  
-mget <remoteFile>[ ]  
-```  
-#### Parameters  
+Copies remote files to the local computer using the current file transfer type.
 
-|  Parameter   |                        Description                        |
-|--------------|-----------------------------------------------------------|
-| <remoteFile> | Specifies the remote files to copy to the local computer. |
+## Syntax
 
-## Examples  
-copy remote files **a.exe** and **b.exe** to the local computer using the current file transfer type.  
-```  
-mget a.exe b.exe  
-```  
-## Additional References  
--   [ftp: ascii](ftp-ascii.md)  
--   [ftp: binary](ftp-binary.md)  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+```
+mget <remotefile>[ ]
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<remotefile>` | Specifies the remote files to copy to the local computer. |
+
+### Examples
+
+To copy remote files *a.exe* and *b.exe* to the local computer using the current file transfer type.
+
+```
+mget a.exe b.exe
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ftp ascii command](ftp-ascii.md)
+
+- [ftp binary command](ftp-binary.md)
+
+- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

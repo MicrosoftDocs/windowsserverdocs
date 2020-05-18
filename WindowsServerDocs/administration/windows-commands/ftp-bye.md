@@ -1,37 +1,40 @@
 ---
 title: ftp bye
-description: Reference topic for ftp bye
-
+description: Reference topic for the ftp bye command, which ends the ftp session on the remote computer, and then exits.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
-ms.assetid: f20e2bf2-7d12-4606-942a-8ed555eb8e90 vhorne
+ms.assetid: f20e2bf2-7d12-4606-942a-8ed555eb8e90
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: bye
+
+# ftp bye
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Ends the ftp session with the remote computer and exits.   
-## Syntax  
-```  
-bye  
-```  
-#### Parameters  
-none  
-## Remarks  
-**Bye** and **quit** both end the ftp session with the remote computer and exits.  
-## Examples  
-End the ftp session with the remote computer and exit.  
-```  
-bye  
-```  
-## Additional References  
--   [ftp: quit](ftp-quit.md)  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+Ends the ftp session on the remote computer, and then exits. You can also use the [quit command](ftp-quit.md) to perform the same tasks.
+
+## Syntax
+
+```
+bye
+```
+
+### Examples
+
+To end the ftp session with the remote computer and exit.
+
+```
+bye
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [quit command](ftp-quit.md)
+
+- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
