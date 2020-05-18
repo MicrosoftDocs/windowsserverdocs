@@ -62,7 +62,9 @@ In Windows Server 2012 and Windows 8, changes were made to the underlying authen
 
 -   Compatibility to previous versions of Windows operating systems is preserved.
 
-Also note that if System Mapper is enabled by the client application and you have configured SendTrustedIssuers that system mapper will add CN=NT Authority to the issuers list.
+> [!NOTE]
+> If System Mapper is enabled by the client application and you have configured `SendTrustedIssuers`, that system mapper will add `CN=NT Authority` to the issuers list.
+
 
 **What value does this add?**
 
@@ -141,6 +143,5 @@ In the Schannel SSP for Windows Server 2012 and Windows 8, there are no deprecat
 
 ## See also
 -   [Private Cloud Security Model - Wrapper Functionality](https://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)
-
 
 
