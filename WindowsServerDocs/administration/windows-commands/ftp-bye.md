@@ -15,7 +15,10 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Ends the ftp session on the remote computer, and then exits. You can also use the [quit command](ftp-quit.md) to perform the same tasks.
+Ends the ftp session on the remote computer, and then exits.
+
+> [!NOTE]
+> This command is the same as the [ftp quit command](ftp-quit.md).
 
 ## Syntax
 
@@ -35,6 +38,6 @@ bye
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [quit command](ftp-quit.md)
+- [ftp quit command](ftp-quit.md)
 
 - [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

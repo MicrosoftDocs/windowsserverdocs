@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 Copies a remote file to the local computer using the current file transfer type.
 
 > [!NOTE]
-> This command is the same as the [recv command](ftp-recv.md).
+> This command is the same as the [ftp recv command](ftp-recv.md).
 
 ## Syntax
 

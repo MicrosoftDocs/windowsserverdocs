@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.
 
 > [!NOTE]
-> This command is the same as the [quote command](ftp-quote.md).
+> This command is the same as the [ftp quote command](ftp-quote.md).
 
 ## Syntax
 
@@ -28,8 +28,8 @@ literal <argument> [ ]
 
 ### Parameters
 
-| Parameter  |                    Description                    |
-|------------|---------------------------------------------------|
+| Parameter | Description |
+| --------- | ----------- |
 | `<argument>` | Specifies the argument to send to the ftp server. |
 
 ### Examples
