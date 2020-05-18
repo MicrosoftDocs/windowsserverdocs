@@ -11,14 +11,14 @@ ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---
 
-# Managing Hyper-V Hypervisor Scheduler Types
+# Managing Hyper-V hypervisor scheduler types
 
 >Applies To: Windows 10, Windows Server 2016, Windows Server, version 1709, Windows Server, version 1803, Windows Server 2019
 
 This article describes new modes of virtual processor scheduling logic first introduced in Windows Server 2016. These modes, or scheduler types, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can select hypervisor scheduler types that are best suited for the guest virtual machines (VMs) and configure the VMs to take advantage of the scheduling logic.
 
->[!NOTE]
->Updates are required to use the hypervisor scheduler features described in this document. For details, see [Required updates](#required-updates).
+> [!NOTE]
+> Updates are required to use the hypervisor scheduler features described in this document. For details, see [Required updates](#required-updates).
 
 ## Background
 
@@ -52,10 +52,6 @@ Before considering hypervisor scheduler types, it's also helpful to understand t
 ## Hypervisor scheduler types
 
 Starting with Windows Server 2016, the Hyper-V hypervisor supports several modes of scheduler logic, which determine how the hypervisor schedules virtual processors on the underlying logical processors. These scheduler types are:
-
-- [The classic, fair-share scheduler](#the-classic-scheduler)
-- [The core scheduler](#the-core-scheduler)
-- [The root scheduler](#the-root-scheduler)
 
 ### The classic scheduler
 
@@ -117,11 +113,11 @@ To enable SMT in a guest virtual machine, open a PowerShell window with sufficie
 Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
 ```
 
-Where <n> is the number of SMT threads per core the guest VM sees.  
+Where <n> is the number of SMT threads per core the guest VM sees.
 Note that <n> = 0 sets the HwThreadCountPerCore value to match the host's SMT thread count per core value.
 
->[!NOTE] 
->Setting HwThreadCountPerCore = 0 is supported beginning with Windows Server 2019.
+> [!NOTE]
+> Setting HwThreadCountPerCore = 0 is supported beginning with Windows Server 2019.
 
 Below is an example of System Information taken from the guest operating system running in a virtual machine with 2 virtual processors and SMT enabled. The guest operating system is detecting 2 logical processors belonging to the same core.
 
@@ -131,8 +127,8 @@ Below is an example of System Information taken from the guest operating system 
 
 Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by default. The hypervisor can be optionally configured to use the core scheduler, to increase security by restricting guest VPs to run on corresponding physical SMT pairs, and to support the use of virtual machines with SMT scheduling for their guest VPs.
 
->[!NOTE]
->Microsoft recommends that all customers running Windows Server 2016 Hyper-V select the core scheduler to ensure their virtualization hosts are optimally protected against potentially malicious guest VMs.
+> [!NOTE]
+> Microsoft recommends that all customers running Windows Server 2016 Hyper-V select the core scheduler to ensure their virtualization hosts are optimally protected against potentially malicious guest VMs.
 
 ## Windows Server 2019 Hyper-V defaults to using the core scheduler
 
@@ -140,8 +136,8 @@ To help ensure Hyper-V hosts are deployed in the optimal security configuration,
 
 ### Required updates
 
->[!NOTE]
->The following updates are required to use the hypervisor scheduler features described in this document. These updates include changes to support the new 'hypervisorschedulertype' BCD option, which is necessary for host configuration.
+> [!NOTE]
+> The following updates are required to use the hypervisor scheduler features described in this document. These updates include changes to support the new `hypervisorschedulertype` BCD option, which is necessary for host configuration.
 
 | Version | Release  | Update Required | KB Article |
 |--------------------|------|---------|-------------:|
@@ -156,8 +152,8 @@ The hypervisor scheduler configuration is controlled via the hypervisorscheduler
 
 To select a scheduler type, open a command prompt with administrator privileges:
 
-``` command
-     bcdedit /set hypervisorschedulertype type
+```
+bcdedit /set hypervisorschedulertype type
 ```
 
 Where `type` is one of:
@@ -168,8 +164,8 @@ Where `type` is one of:
 
 The system must be rebooted for any changes to the hypervisor scheduler type to take effect.
 
->[!NOTE]
->The hypervisor root scheduler is not supported on Windows Server Hyper-V at this time. Hyper-V administrators should not attempt to configure the root scheduler for use with server virtualization scenarios.
+> [!NOTE]
+> The hypervisor root scheduler is not supported on Windows Server Hyper-V at this time. Hyper-V administrators should not attempt to configure the root scheduler for use with server virtualization scenarios.
 
 ## Determining the current scheduler type
 
@@ -177,13 +173,13 @@ You can determine the current hypervisor scheduler type in use by examining the 
 
 Hypervisor launch event ID 2 denotes the hypervisor scheduler type, where:
 
-    1 = Classic scheduler, SMT disabled
+- 1 = Classic scheduler, SMT disabled
 
-    2 = Classic scheduler
+- 2 = Classic scheduler
 
-    3 = Core scheduler
+- 3 = Core scheduler
 
-    4 = Root scheduler
+- 4 = Root scheduler
 
 ![Screen shot showing hypervisor launch event ID 2 details](media/Hyper-V-CoreScheduler-EventID2-Details.png)
 
