@@ -47,7 +47,7 @@ After you've collected all of your Windows Server-related information, we highly
 
 5. Setup checks your device configuration, you must wait for it to finish, and then select **Next**.
 
-6. Depending on the distribution channel that you received Windows Server media from (Retail, Volume License, OEM, ODM, etc.) and the license for the server, you may be prompted to enter a licensing key to continue.
+6. Depending on the distribution channel that you received Windows Server media from (Retail, Volume License, OEM, ODM, and so on) and the license for the server, you may be prompted to enter a licensing key to continue.
 
 7. Select the Windows Server 2019 edition you want to install, and then select **Next**.
 
