@@ -23,14 +23,14 @@ forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | 
 
 ### Parameters
 
-|     Parameter     | Description |
-| ----------------- | ----------- |
-| /P `<pathname>`   | Specifies the path from which to start the search. By default, searching starts in the current working directory. |
+| Parameter | Description |
+| --------- | ----------- |
+| /P `<pathname>` | Specifies the path from which to start the search. By default, searching starts in the current working directory. |
 | /M `<searchmask>` | Searches files according to the specified search mask. The default searchmask is `*`. |
-| /S                | Instructs the **forfiles** command to search in subdirectories recursively. |
-| /C `<command>`    | Runs the specified command on each file. Command strings should be wrapped in double quotes. The default command is `"cmd /c echo @file"`. |
+| /S | Instructs the **forfiles** command to search in subdirectories recursively. |
+| /C `<command>` | Runs the specified command on each file. Command strings should be wrapped in double quotes. The default command is `"cmd /c echo @file"`. |
 | /D `[{+\|-}][{<date> | <days>}]` | Selects files with a last modified date within the specified time frame:<ul><li>Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *date* is in the format MM/DD/YYYY.</li><li>Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</li><li>Valid values for *days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.</li></ul> |
-| /?                | Displays the help text in the cmd window. |
+| /? | Displays the help text in the cmd window. |
 
 #### Remarks
 
