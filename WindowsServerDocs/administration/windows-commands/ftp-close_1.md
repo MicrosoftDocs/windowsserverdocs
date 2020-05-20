@@ -25,7 +25,7 @@ close
 
 ### Examples
 
-To end the ftp session with the remote server and remain at the `ftp>` prompt.
+To end the ftp session with the remote server and remain at the `ftp>` prompt, type:
 
 ```
 close

@@ -25,7 +25,7 @@ binary
 
 ### Examples
 
-To set the file transfer type to binary.
+To set the file transfer type to binary, type:
 
 ```
 binary

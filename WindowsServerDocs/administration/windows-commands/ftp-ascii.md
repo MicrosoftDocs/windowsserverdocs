@@ -25,7 +25,7 @@ ascii
 
 ### Examples
 
-To set the file transfer type to ASCII.
+To set the file transfer type to ASCII, type:
 
 ```
 ascii

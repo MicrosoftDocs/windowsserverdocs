@@ -25,7 +25,7 @@ hash
 
 ### Examples
 
-To toggle number sign (#) printing for each data block that is transferred.
+To toggle number sign (#) printing for each data block that is transferred, type:
 
 ```
 hash

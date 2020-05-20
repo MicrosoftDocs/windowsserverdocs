@@ -25,7 +25,7 @@ bell
 
 ### Examples
 
-To toggle an audible sound to occur after each file transfer command is completed.
+To toggle an audible sound to occur after each file transfer command is completed, type:
 
 ```
 bell

@@ -31,13 +31,13 @@ cd <remotedirectory>
 
 ### Examples
 
-To change the directory on the remote computer to *Docs*.
+To change the directory on the remote computer to *Docs*, type:
 
 ```
 cd Docs
 ```
 
-To change the directory on the remote computer to *May Videos*.
+To change the directory on the remote computer to *May Videos*, type:
 
 ```
 cd  May Videos

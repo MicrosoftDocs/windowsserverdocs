@@ -33,7 +33,7 @@ user <username> [<password>] [<account>]
 
 ### Examples
 
-To specify *User1* with the password *Password1*.
+To specify *User1* with the password *Password1*, type:
 
 ```
 user User1 Password1

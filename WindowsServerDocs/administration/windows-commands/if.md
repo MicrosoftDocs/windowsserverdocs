@@ -65,7 +65,7 @@ if defined <variable> <command> [else <expression>]
 
 ### Examples
 
-To display the message **Cannot find data file if the file Product.dat cannot be found**.
+To display the message **Cannot find data file if the file Product.dat cannot be found**, type:
 
 ```
 if not exist product.dat echo Cannot find data file
@@ -113,7 +113,7 @@ goto end
 echo Done!
 ```
 
-To go to the okay label if the value of the ERRORLEVEL environment variable is less than or equal to 1.
+To go to the okay label if the value of the ERRORLEVEL environment variable is less than or equal to 1, type:
 
 ```
 if %errorlevel% LEQ 1 goto okay

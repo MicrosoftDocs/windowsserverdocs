@@ -35,13 +35,13 @@ get <remotefile> [<localfile>]
 
 ### Examples
 
-To copy *test.txt* to the local computer using the current file transfer.
+To copy *test.txt* to the local computer using the current file transfer, type:
 
 ```
 get test.txt
 ```
 
-To copy *test.txt* to the local computer as *test1.txt* using the current file transfer.
+To copy *test.txt* to the local computer as *test1.txt* using the current file transfer, type:
 
 ```
 get test.txt test1.txt

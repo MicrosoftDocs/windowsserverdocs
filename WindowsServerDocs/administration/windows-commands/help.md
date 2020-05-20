@@ -31,7 +31,7 @@ help [<command>]
 
 ### Examples
 
-To view information about the **robocopy** command, type either of the following:
+To view information about the **robocopy** command, type:
 
 ```
 help robocopy

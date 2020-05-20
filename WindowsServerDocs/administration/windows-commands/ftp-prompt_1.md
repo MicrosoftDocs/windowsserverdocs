@@ -28,7 +28,7 @@ prompt
 
 ### Examples
 
-To toggle Prompt mode on and off.
+To toggle Prompt mode on and off, type:
 
 ```
 prompt

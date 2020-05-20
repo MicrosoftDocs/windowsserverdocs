@@ -32,13 +32,13 @@ ls [<remotedirectory>] [<localfile>]
 
 ### Examples
 
-To display an abbreviated list of files and subdirectories from the remote computer.
+To display an abbreviated list of files and subdirectories from the remote computer, type:
 
 ```
 ls
 ```
 
-To get an abbreviated directory listing of *dir1* on the remote computer and save it in a local file called *dirlist.txt*
+To get an abbreviated directory listing of *dir1* on the remote computer and save it in a local file called *dirlist.txt*, type:
 
 ```
 ls dir1 dirlist.txt

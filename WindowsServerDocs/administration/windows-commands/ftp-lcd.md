@@ -31,7 +31,7 @@ lcd [<directory>]
 
 ### Examples
 
-To change the working directory on the local computer to *c:\dir1*
+To change the working directory on the local computer to *c:\dir1*, type:
 
 ```
 lcd c:\dir1

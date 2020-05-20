@@ -32,13 +32,13 @@ mdir <remotefile>[...] <localfile>
 
 ### Examples
 
-To display a directory listing of *dir1* and *dir2* on the screen.
+To display a directory listing of *dir1* and *dir2* on the screen, type:
 
 ```
 mdir dir1 dir2 -
 ```
 
-To save the combined directory listing of *dir1* and *dir2* in a local file called *dirlist.txt*.
+To save the combined directory listing of *dir1* and *dir2* in a local file called *dirlist.txt*, type:
 
 ```
 mdir dir1 dir2 dirlist.txt

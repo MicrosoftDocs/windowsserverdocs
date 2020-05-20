@@ -25,7 +25,7 @@ trace
 
 ### Examples
 
-Toggle tracing on and off.
+Toggle tracing on and off, type:
 
 ```
 trace

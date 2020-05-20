@@ -28,7 +28,7 @@ bye
 
 ### Examples
 
-To end the ftp session with the remote computer and exit.
+To end the ftp session with the remote computer and exit, type:
 
 ```
 bye

@@ -32,7 +32,7 @@ import [noerr]
 
 ### Examples
 
-To import every disk that is in the same disk group as the disk with focus into the disk group of the local computer.
+To import every disk that is in the same disk group as the disk with focus into the disk group of the local computer, type:
 
 ```
 import

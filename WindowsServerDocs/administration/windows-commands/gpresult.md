@@ -52,23 +52,23 @@ gpresult [/s <system> [/u <username> [/p [<password>]]]] [/user [<targetdomain>\
 
 ### Examples
 
-To retrieve RSoP data for only the remote user, *maindom\hiropln* with the password *p@ssW23*, who's on the computer *srvmain*.
+To retrieve RSoP data for only the remote user, *maindom\hiropln* with the password *p@ssW23*, who's on the computer *srvmain*, type:
 
 ```
 gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope user /r
 ```
 
-To save all available information about Group Policy to a file named, *policy.txt*, for only the remote user *maindom\hiropln* with the password *p@ssW23*, on the computer *srvmain*.
+To save all available information about Group Policy to a file named, *policy.txt*, for only the remote user *maindom\hiropln* with the password *p@ssW23*, on the computer *srvmain*, type:
 
-  ```
-  gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt
-  ```
+```
+gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt
+```
 
-To display RSoP data for the logged on user, *maindom\hiropln* with the password *p@ssW23*, for the computer *srvmain*.
+To display RSoP data for the logged on user, *maindom\hiropln* with the password *p@ssW23*, for the computer *srvmain*, type:
 
-  ```
-  gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
-  ```
+```
+gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
+```
 
 ## Additional References
 

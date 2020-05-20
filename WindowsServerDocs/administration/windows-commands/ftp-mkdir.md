@@ -31,7 +31,7 @@ mkdir <directory>
 
 ### Examples
 
-To create a directory called *dir1* on the remote computer.
+To create a directory called *dir1* on the remote computer, type:
 
 ```
 mkdir dir1

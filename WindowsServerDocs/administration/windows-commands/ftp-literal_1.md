@@ -34,7 +34,7 @@ literal <argument> [ ]
 
 ### Examples
 
-To send a **quit** command to the remote ftp server.
+To send a **quit** command to the remote ftp server, type:
 
 ```
 literal quit

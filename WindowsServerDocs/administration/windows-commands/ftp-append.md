@@ -32,7 +32,7 @@ append <localfile> [remotefile]
 
 ### Examples
 
-To append *file1.txt* to *file2.txt* on the remote computer.
+To append *file1.txt* to *file2.txt* on the remote computer, type:
 
 ```
 append file1.txt file2.txt

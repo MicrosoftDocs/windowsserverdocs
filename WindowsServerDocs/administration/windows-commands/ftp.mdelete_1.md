@@ -30,7 +30,7 @@ mdelete <remotefile>[...]
 
 ### Examples
 
-To delete remote files *a.exe* and *b.exe*.
+To delete remote files *a.exe* and *b.exe*, type:
 
 ```
 mdelete a.exe b.exe

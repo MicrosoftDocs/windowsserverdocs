@@ -25,7 +25,7 @@ debug
 
 ### Examples
 
-To toggle debug mode on and off.
+To toggle debug mode on and off, type:
 
 ```
 debug

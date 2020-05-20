@@ -34,7 +34,7 @@ quote <argument>[ ]
 
 ### Examples
 
-Send a **quit** command to the remote ftp server.
+To send a **quit** command to the remote ftp server, type:
 
 ```
 quote quit

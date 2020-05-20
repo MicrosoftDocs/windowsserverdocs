@@ -25,7 +25,7 @@ verbose
 
 ### Examples
 
-To toggle Verbose mode on and off.
+To toggle Verbose mode on and off, type:
 
 ```
 verbose

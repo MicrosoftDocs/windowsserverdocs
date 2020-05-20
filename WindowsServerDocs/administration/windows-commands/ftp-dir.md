@@ -32,13 +32,13 @@ dir [<remotedirectory>] [<localfile>]
 
 ### Examples
 
-To display a directory listing for *dir1* on the remote computer.
+To display a directory listing for *dir1* on the remote computer, type:
 
 ```
 dir dir1
 ```
 
-To save a list of the current directory on the remote computer in the local file *dirlist.txt*.
+To save a list of the current directory on the remote computer in the local file *dirlist.txt*, type:
 
 ```
 dir . dirlist.txt

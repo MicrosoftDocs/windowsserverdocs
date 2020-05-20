@@ -46,7 +46,7 @@ graftabl /status
 
 ### Examples
 
-To view the current code page used by **graftabl**.
+To view the current code page used by **graftabl**, type:
 
 ```
 graftabl /status

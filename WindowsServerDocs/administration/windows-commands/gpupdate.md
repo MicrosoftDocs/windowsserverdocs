@@ -35,7 +35,7 @@ gpupdate [/target:{computer | user}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 
 ### Examples
 
-To force a background update of all Group Policy settings, regardless of whether they've changed.
+To force a background update of all Group Policy settings, regardless of whether they've changed, type:
 
 ```
 gpupdate /force

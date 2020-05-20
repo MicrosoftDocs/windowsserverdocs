@@ -25,7 +25,7 @@ glob
 
 ### Examples
 
-To toggle whether to allow wildcard expansion of local file names.
+To toggle whether to allow wildcard expansion of local file names, type:
 
 ```
 glob

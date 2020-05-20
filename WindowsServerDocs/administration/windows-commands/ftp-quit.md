@@ -28,7 +28,7 @@ quit
 
 ### Examples
 
-To end the ftp session with the remote computer and return to the operating system command prompt.
+To end the ftp session with the remote computer and return to the operating system command prompt, type:
 
 ```
 quit

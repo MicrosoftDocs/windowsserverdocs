@@ -35,13 +35,13 @@ type [<typename>]
 
 ### Examples
 
-To set the file transfer type to ASCII.
+To set the file transfer type to ASCII, type:
 
 ```
 type ascii
 ```
 
-To set the transfer file type to binary.
+To set the transfer file type to binary, type:
 
 ```
 type binary

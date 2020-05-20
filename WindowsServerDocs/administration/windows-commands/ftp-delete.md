@@ -31,7 +31,7 @@ delete <remotefile>
 
 ### Examples
 
-To delete the *test.txt* file on the remote computer.
+To delete the *test.txt* file on the remote computer, type:
 
 ```
 delete test.txt

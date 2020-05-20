@@ -31,7 +31,7 @@ rmdir <directory>
 
 ### Examples
 
-To delete the *pictures* remote directory.
+To delete the *pictures* remote directory, type:
 
 ```
 rmdir pictures

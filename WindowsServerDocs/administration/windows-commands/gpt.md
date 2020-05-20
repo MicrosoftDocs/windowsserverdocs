@@ -40,7 +40,7 @@ gpt attributes=<n>
 
 ### Examples
 
-To prevent the computer from automatically assigning a drive letter to the partition with focus, while moving a gpt disk.
+To prevent the computer from automatically assigning a drive letter to the partition with focus, while moving a gpt disk, type:
 
 ```
 gpt attributes=0x8000000000000000

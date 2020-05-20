@@ -25,7 +25,7 @@ status
 
 ### Examples
 
-To display the current status of ftp connections.
+To display the current status of ftp connections, type:
 
 ```
 status

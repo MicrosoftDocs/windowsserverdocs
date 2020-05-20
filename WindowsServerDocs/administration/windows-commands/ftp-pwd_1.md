@@ -25,7 +25,7 @@ pwd
 
 ### Examples
 
-To display the current remote computer directory.
+To display the current remote computer directory, type:
 
 ```
 pwd

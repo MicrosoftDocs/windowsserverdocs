@@ -31,7 +31,7 @@ mget <remotefile>[ ]
 
 ### Examples
 
-To copy remote files *a.exe* and *b.exe* to the local computer using the current file transfer type.
+To copy remote files *a.exe* and *b.exe* to the local computer using the current file transfer type, type:
 
 ```
 mget a.exe b.exe

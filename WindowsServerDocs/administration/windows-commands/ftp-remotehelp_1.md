@@ -31,13 +31,13 @@ remotehelp [<command>]
 
 ### Examples
 
-To display a list of remote commands.
+To display a list of remote commands, type:
 
 ```
 remotehelp
 ```
 
-To display the syntax for the *feat* remote command.
+To display the syntax for the *feat* remote command, type:
 
 ```
 remotehelp feat

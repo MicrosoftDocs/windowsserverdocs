@@ -31,7 +31,7 @@ mput <localfile>[ ]
 
 ### Examples
 
-To copy *Program1.exe* and *Program2.exe* to the remote computer using the current file transfer type.
+To copy *Program1.exe* and *Program2.exe* to the remote computer using the current file transfer type, type:
 
 ```
 mput Program1.exe Program2.exe

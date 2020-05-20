@@ -35,12 +35,13 @@ put <localfile> [<remotefile>]
 
 ### Examples
 
-To copy the local file *test.txt* and name it *test1.txt* on the remote computer.
+To copy the local file *test.txt* and name it *test1.txt* on the remote computer, type:
+
 ```
 put test.txt test1.txt
 ```
 
-To copy the local file *program.exe* to the remote computer.
+To copy the local file *program.exe* to the remote computer, type:
 
 ```
 put program.exe

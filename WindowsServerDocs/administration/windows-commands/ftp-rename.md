@@ -32,7 +32,7 @@ rename <filename> <newfilename>
 
 ### Examples
 
-To rename the remote file *example.txt* to *example1.txt*.
+To rename the remote file *example.txt* to *example1.txt*, type:
 
 ```
 rename example.txt example1.txt

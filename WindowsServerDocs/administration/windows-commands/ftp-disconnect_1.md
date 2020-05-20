@@ -25,7 +25,7 @@ disconnect
 
 ### Examples
 
-To disconnect from the remote computer and remains at the `ftp>` prompt.
+To disconnect from the remote computer and remains at the `ftp>` prompt, type:
 
 ```
 disconnect

@@ -32,13 +32,13 @@ mls <remotefile>[ ] <localfile>
 
 ### Examples
 
-To display an abbreviated list of files and subdirectories for *dir1* and *dir2*.
+To display an abbreviated list of files and subdirectories for *dir1* and *dir2*, type:
 
 ```
 mls dir1 dir2 -
 ```
 
-To save an abbreviated list of files and subdirectories for *dir1* and *dir2* in the local file *dirlist.txt*.
+To save an abbreviated list of files and subdirectories for *dir1* and *dir2* in the local file *dirlist.txt*, type:
 
 ```
 mls dir1 dir2 dirlist.txt
