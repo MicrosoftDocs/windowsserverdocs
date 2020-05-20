@@ -19,7 +19,7 @@ A directory is a hierarchical structure that stores information about objects on
 
 Active Directory stores information about objects on the network and makes this information easy for administrators and users to find and use. Active Directory uses a structured data store as the basis for a logical, hierarchical organization of directory information.
 
-This data store, also known as the directory, contains information about Active Directory objects. These objects typically include shared resources such as servers, volumes, printers, and the network user and computer accounts. For more information about the Active Directory data store, see [Directory data store](https://technet.microsoft.com/library/cc736627(v=ws.10).aspx).
+This data store, also known as the directory, contains information about Active Directory objects. These objects typically include shared resources such as servers, volumes, printers, and the network user and computer accounts. For more information about the Active Directory data store, see [Directory data store](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736627(v=ws.10)).
 
 Security is integrated with Active Directory through logon authentication and access control to objects in the directory. With a single network logon, administrators can manage directory data and organization throughout their network, and authorized network users can access resources anywhere on the network. Policy-based administration eases the management of even the most complex network. For more information about Active Directory security, see [Security overview](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
@@ -38,15 +38,15 @@ Active Directory also includes:
 ## Understanding Active Directory
  This section provides links to core Active Directory concepts:
  
-* [Active Directory Structure and Storage Technologies](https://technet.microsoft.com/library/cc759186(v=ws.10).aspx)
-* [Domain Controller Roles](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
+* [Active Directory Structure and Storage Technologies](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759186(v=ws.10))
+* [Domain Controller Roles](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786438(v=ws.10)) 
 * [Active Directory Schema](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771796(v=ws.10))
 * [Understanding Trusts](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771568(v=ws.10)) 
-* [Active Directory Replication Technologies](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
-* [Active Directory Search and Publication Technologies](https://technet.microsoft.com/library/cc775686(v=ws.10).aspx) 
+* [Active Directory Replication Technologies](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc776877(v=ws.10)) 
+* [Active Directory Search and Publication Technologies](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc775686(v=ws.10)) 
 * [Interoperating with DNS and Group Policy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197486(v=ws.10))
-* [Understanding Schema](https://technet.microsoft.com/library/cc759402(v=ws.10).aspx) 
+* [Understanding Schema](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)) 
 
-For a detailed list of Active Directory concepts, see [Understanding Active Directory](https://technet.microsoft.com/library/cc781408(v=ws.10).aspx). 
+For a detailed list of Active Directory concepts, see [Understanding Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781408(v=ws.10)). 
 
 
