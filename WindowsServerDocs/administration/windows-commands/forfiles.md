@@ -40,15 +40,15 @@ forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | 
 
     | Variable | Description |
     | -------- | ----------- |
-    | @FILE    | File name.  |
-    | @FNAME   | File name without extension. |
-    | @EXT     | File name extension. |
-    | @PATH    | Full path of the file. |
+    | @FILE | File name. |
+    | @FNAME | File name without extension. |
+    | @EXT | File name extension. |
+    | @PATH | Full path of the file. |
     | @RELPATH | Relative path of the file. |
-    | @ISDIR   | Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE. |
-    | @FSIZE   | File size, in bytes. |
-    | @FDATE   | Last modified date stamp on the file. |
-    | @FTIME   | Last modified time stamp on the file. |
+    | @ISDIR | Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE. |
+    | @FSIZE | File size, in bytes. |
+    | @FDATE | Last modified date stamp on the file. |
+    | @FTIME | Last modified time stamp on the file. |
 
 - The **forfiles** command lets you run a command on or pass arguments to multiple files. For example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file (*.bat) on drive C, with the file name Myinput.txt as the first argument.
 
