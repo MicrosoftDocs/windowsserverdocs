@@ -8,7 +8,7 @@ ms.assetid: 43f6b004-446d-4fdd-91c5-5653613524a4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 08/21/2018
+ms.date: 05/20/2020
 ---
 
 # forfiles
@@ -18,37 +18,37 @@ Selects and runs a command on a file or set of files. This command is most commo
 ## Syntax
 
 ```
-forfiles [/p <path>] [/m <searchmask>] [/s] [/c <command>] [/d [{+|-}][{<date> | <days>}]]
+forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | <days>}]]
 ```
 
 ### Parameters
 
-| Parameter | Description |
-| --------- | ----------- |
-| /p `<path>` | Specifies the path from which to start the search. By default, searching starts in the current working directory. |
-| /m `<searchmask>` | Searches files according to the specified search mask. The default search mask is `*`. |
-| /s | Instructs the **forfiles** command to search into subdirectories recursively. |
-| /c `<command>` | Runs the specified command on each file. Command strings should be enclosed in quotation marks. The default command is `cmd /c echo @file`. |
-| `/d[{+\|-}][{<date> | <days>}]` | Selects files with a last modified date within the specified time frame:<ul><li>Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *date* is in the format MM/DD/YYYY.</li><li>Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</li><li>Valid values for *days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.</li></ul> |
-| /? | Displays help at the command prompt. |
+|     Parameter     | Description |
+| ----------------- | ----------- |
+| /P `<pathname>`   | Specifies the path from which to start the search. By default, searching starts in the current working directory. |
+| /M `<searchmask>` | Searches files according to the specified search mask. The default searchmask is `*`. |
+| /S                | Instructs the **forfiles** command to search in subdirectories recursively. |
+| /C `<command>`    | Runs the specified command on each file. Command strings should be wrapped in double quotes. The default command is `"cmd /c echo @file"`. |
+| /D `[{+\|-}][{<date> | <days>}]` | Selects files with a last modified date within the specified time frame:<ul><li>Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *date* is in the format MM/DD/YYYY.</li><li>Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</li><li>Valid values for *days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.</li></ul> |
+| /?                | Displays the help text in the cmd window. |
 
 #### Remarks
 
-- The `forfiles /s` command is similar to `dir /s`.
+- The `forfiles /S` command is similar to `dir /S`.
 
-- You can use the following variables in the command string as specified by the **/c** command-line option:
+- You can use the following variables in the command string as specified by the **/C** command-line option:
 
     | Variable | Description |
     | -------- | ----------- |
-    | @FILE | File name. |
-    | @FNAME | File name without extension. |
-    | @EXT | File name extension. |
-    | @PATH | Full path of the file. |
+    | @FILE    | File name.  |
+    | @FNAME   | File name without extension. |
+    | @EXT     | File name extension. |
+    | @PATH    | Full path of the file. |
     | @RELPATH | Relative path of the file. |
-    | @ISDIR | Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE. |
-    | @FSIZE | File size, in bytes. |
-    | @FDATE | Last modified date stamp on the file. |
-    | @FTIME | Last modified time stamp on the file. |
+    | @ISDIR   | Evaluates to TRUE if a file type is a directory. Otherwise, this variable evaluates to FALSE. |
+    | @FSIZE   | File size, in bytes. |
+    | @FDATE   | Last modified date stamp on the file. |
+    | @FTIME   | Last modified time stamp on the file. |
 
 - The **forfiles** command lets you run a command on or pass arguments to multiple files. For example, you could run the **type** command on all files in a tree with the .txt file name extension. Or you could execute every batch file (*.bat) on drive C, with the file name Myinput.txt as the first argument.
 
@@ -69,31 +69,31 @@ forfiles [/p <path>] [/m <searchmask>] [/s] [/c <command>] [/d [{+|-}][{<date> |
 To list all of the batch files on drive C, type:
 
 ```
-forfiles /p c:\ /s /m *.bat /c cmd /c echo @file is a batch file
+forfiles /P c:\ /S /M *.bat /C "cmd /c echo @file is a batch file"
 ```
 
 To list all of the directories on drive C, type:
 
 ```
-forfiles /p c:\ /s /m *.* /c cmd /c if @isdir==TRUE echo @file is a directory
+forfiles /P c:\ /S /M *.* /C "cmd /c if @isdir==TRUE echo @file is a directory"
 ```
 
 To list all of the files in the current directory that are at least one year old, type:
 
 ```
-forfiles /s /m *.* /d -365 /c cmd /c echo @file is at least one year old.
+forfiles /S /M *.* /D -365 /C "cmd /c echo @file is at least one year old."
 ```
 
 To display the text *file* is outdated for each of the files in the current directory that are older than January 1, 2007, type:
 
 ```
-forfiles /s /m *.* /d -01/01/2007 /c cmd /c echo @file is outdated.
+forfiles /S /M *.* /D -01/01/2007 /C "cmd /c echo @file is outdated."
 ```
 
 To list the file name extensions of all the files in the current directory in column format, and add a tab before the extension, type:
 
 ```
-forfiles /s /m *.* /c cmd /c echo The extension of @file is 0x09@ext
+forfiles /S /M *.* /C "cmd /c echo The extension of @file is 0x09@ext"
 ```
 
 ## Additional References
