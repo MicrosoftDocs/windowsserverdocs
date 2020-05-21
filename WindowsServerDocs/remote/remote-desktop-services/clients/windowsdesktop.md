@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/28/2020
+ms.date: 05/26/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -50,14 +50,28 @@ Get the list of managed resources you can access, such as apps and desktops, by 
 
 ### Subscribe to a Workspace
 
-1. From the main page of the client, also known as the Connection Center, tap **Subscribe**.
-2. Sign in with your user account when prompted.
-3. The resources will appear in the Connection Center grouped by Workspace.
-
-You can launch resources with one of the following methods:
+There are two ways you can subscribe to a Workspace. The client can try to discover the resources available to you from your work or school account or you can directly specify the URL where your resources are for cases where the client is unable to find them. Once you've subscribed to a Workspace, you can launch resources with one of the following methods:
 
 - Go to the Connection Center and double-click a resource to launch it.
 - You can also go to the Start menu and look for a folder with the Workspace name or enter the resource name in the search bar.
+
+#### Subscribe with a user account
+
+1. From the main page of the client, tap **Subscribe**.
+2. Sign in with your user account when prompted.
+3. The resources will appear in the Connection Center grouped by Workspace.
+
+#### Subscribe with URL
+
+1. From the main page of the client, tap **Subscribe with URL**.
+2. Enter the Workspace URL or your email address:
+   - If you use the **Workspace URL**, use the one your admin gave you. If accessing resources from Windows Virtual Desktop, you can use one of the following URL:
+     - Windows Virtual Desktop Fall 2019: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
+     - Windows Virtual Desktop Spring 2020: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
+   - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery).
+3. Tap **Next**.
+4. Sign in with your user account when prompted.
+5. The resources will appear in the Connection Center grouped by Workspace.
 
 ### Workspace details
 
