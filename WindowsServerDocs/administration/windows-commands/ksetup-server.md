@@ -1,6 +1,6 @@
 ---
 title: ksetup:server
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -49,4 +49,4 @@ ksetup /server IPops897.corp.contoso.com
 ## Additional References
 
 -   [Ksetup](ksetup.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

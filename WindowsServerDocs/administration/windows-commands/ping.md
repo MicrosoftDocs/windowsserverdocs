@@ -1,6 +1,6 @@
 ---
 title: ping
-description: Use ping to verify network connectivity. 
+description: Use ping to verify network connectivity.
 
 ms.prod: windows-server
 
@@ -59,11 +59,11 @@ ping [/t] [/a] [/n <Count>] [/l <Size>] [/f] [/I <TTL>] [/v <TOS>] [/r <Count>] 
 To shows **ping** command output:
 
 ```
-C:\>ping example.microsoft.com       
-         pinging example.microsoft.com [192.168.239.132] with 32 bytes of data:       
-         Reply from 192.168.239.132: bytes=32 time=101ms TTL=124       
-         Reply from 192.168.239.132: bytes=32 time=100ms TTL=124       
-         Reply from 192.168.239.132: bytes=32 time=120ms TTL=124       
+C:\>ping example.microsoft.com
+         pinging example.microsoft.com [192.168.239.132] with 32 bytes of data:
+         Reply from 192.168.239.132: bytes=32 time=101ms TTL=124
+         Reply from 192.168.239.132: bytes=32 time=100ms TTL=124
+         Reply from 192.168.239.132: bytes=32 time=120ms TTL=124
          Reply from 192.168.239.132: bytes=32 time=120ms TTL=124
 ```
 
@@ -92,4 +92,4 @@ ping /j 10.12.0.1 10.29.3.1 10.1.44.1 10.0.99.221
 ```
 
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

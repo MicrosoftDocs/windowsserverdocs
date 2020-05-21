@@ -1,6 +1,6 @@
 ---
 title: ksetup:delhosttorealmmap
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -52,4 +52,4 @@ After running this command, you can verify in the registry that the mapping is a
 
 -   [Ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
 -   [Ksetup](ksetup.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

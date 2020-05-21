@@ -36,7 +36,7 @@ ipxroute config
 | def | Sends packets to the ALL ROUTES broadcast. If a packet is transmitted to a unique Media Access Card (MAC) address that is not in the source routing table, **ipxroute** sends the packet to the SINGLE ROUTES broadcast by default. |
 | gbr | Sends packets to the ALL ROUTES broadcast. If a packet is transmitted to the broadcast address (FFFFFFFFFFFF), **ipxroute** sends the packet to the SINGLE ROUTES broadcast by default. |
 | mbr | Sends packets to the ALL ROUTES broadcast. If a packet is transmitted to a multicast address (C000xxxxxxxx), **ipxroute** sends the packet to the SINGLE ROUTES broadcast by default. |
-| remove= *xxxxxxxxxxxx* | removes the given node address from the source routing table. |
+| remove=*xxxxxxxxxxxx* | removes the given node address from the source routing table. |
 | config | Displays information about all of the bindings for which IPX is configured. |
 | /? | Displays help at the command prompt. |
 

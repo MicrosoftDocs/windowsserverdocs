@@ -14,18 +14,18 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays status information.   
+Displays status information.
 
-## Syntax  
-```  
-st[atus]  
-```  
-#### Parameters  
-none  
-## Examples  
-Display status information.  
-```  
-st  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+```
+st[atus]
+```
+#### Parameters
+none
+## Examples
+Display status information.
+```
+st
+```
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

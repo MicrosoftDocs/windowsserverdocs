@@ -1,6 +1,6 @@
 ---
 title: manage-bde
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -24,7 +24,7 @@ Used to turn on or turn off BitLocker, specify unlock mechanisms, update recover
 ## Syntax
 
 ```
-manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unlock] [–autounlock] [–protectors] [–tpm] 
+manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unlock] [–autounlock] [–protectors] [–tpm]
 [–SetIdentifier] [-ForceRecovery] [–changepassword] [–changepin] [–changekey] [-KeyPackage] [–upgrade] [-WipeFreeSpace] [{-?|/?}] [{-help|-h}]
 ```
 
@@ -70,5 +70,5 @@ manage-bde –unlock E: -recoverypassword 111111-222222-333333-444444-555555-666
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Enabling BitLocker by Using the Command Line](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)

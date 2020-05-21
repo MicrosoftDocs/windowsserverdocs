@@ -1,6 +1,6 @@
 ---
 title: manage-bde setidentifier
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -46,6 +46,6 @@ manage-bde –setidentifier C:
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)
 -   [Using Data Recovery Agents with BitLocker](https://technet.microsoft.com/library/dd875560(WS.10).aspx)

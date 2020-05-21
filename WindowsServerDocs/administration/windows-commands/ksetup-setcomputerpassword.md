@@ -1,6 +1,6 @@
 ---
 title: ksetup:setcomputerpassword
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -51,4 +51,4 @@ ksetup /setcomputerpassword IPop$897!
 ## Additional References
 
 -   [Ksetup](ksetup.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

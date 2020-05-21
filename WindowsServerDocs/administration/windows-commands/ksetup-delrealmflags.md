@@ -1,6 +1,6 @@
 ---
 title: ksetup:delrealmflags
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Removes realm flags from the specified realm. 
+Removes realm flags from the specified realm.
 
 ## Syntax
 
@@ -68,4 +68,4 @@ Run the **ksetup** command to verify that the realm flag is set by viewing the o
 -   [Ksetup:listrealmflags](ksetup-listrealmflags.md)
 -   [Ksetup:setrealmflags](ksetup-setrealmflags.md)
 -   [Ksetup:addrealmflags](ksetup-addrealmflags.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

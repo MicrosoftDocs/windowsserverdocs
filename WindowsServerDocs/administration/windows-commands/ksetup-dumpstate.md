@@ -1,6 +1,6 @@
 ---
 title: ksetup:dumpstate
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -54,4 +54,4 @@ ksetup /dumpstate
 ## Additional References
 
 -   [Ksetup](ksetup.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

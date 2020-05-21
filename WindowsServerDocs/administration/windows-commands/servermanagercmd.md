@@ -1,6 +1,6 @@
 ---
 title: Servermanagercmd
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 07/11/2018
 > [!IMPORTANT]
 > This command is available only on servers that are running  Windows Server 2008  or  Windows Server 2008 R2 . **Servermanagercmd.exe** has been deprecated, and is not available in  Windows Server 2012. For information about how to install or remove roles, role services, and features in  Windows Server 2012 , see [Install or uninstall roles, role services, and features](https://go.microsoft.com/fwlink/?LinkID=239563) on Microsoft TechNet.
 
-Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer. For additional information about the roles, role services, and features that you can specify by using this tool, see the [Server Manager help](https://go.microsoft.com/fwlink/?LinkID=137387). 
+Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer. For additional information about the roles, role services, and features that you can specify by using this tool, see the [Server Manager help](https://go.microsoft.com/fwlink/?LinkID=137387).
 
 ## Syntax
 ```
@@ -68,4 +68,4 @@ servermanagercmd -inputpath install.xml -whatif
 ## Additional References
 -   for a complete list of the role, role service, or feature identifiers you can specify for the *Id* parameter, or more information about using an XML answer file with **Servermanagercmd**, see the [Server Manager help](https://go.microsoft.com/fwlink/?LinkID=137387). (https://go.microsoft.com/fwlink/?LinkID=137387).
 -   See [Server Manager cmdlets](https://go.microsoft.com/fwlink/?LinkID=137653) for a listing of Windows PowerShell cmdlets that are available for Server Manager.
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

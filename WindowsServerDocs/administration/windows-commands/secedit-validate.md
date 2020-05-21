@@ -1,6 +1,6 @@
 ---
 title: secedit:validate
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -24,7 +24,7 @@ Validates the security settings stored in a security template (.inf file).
 ## Syntax
 
 ```
-Secedit /validate <configuration file name>  
+Secedit /validate <configuration file name>
 
 ```
 
@@ -55,4 +55,4 @@ Secedit /validate secRBKcontoso.inf
 
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

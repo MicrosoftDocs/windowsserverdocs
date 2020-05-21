@@ -1,6 +1,6 @@
 ---
-title: ksetup:changepassword
-description: Reference topic for **** - 
+title: ksetup changepassword
+description: Reference topic for the ksetup changepassword command, which uses the Key Distribution Center (KDC) password (Kpasswd) value to change the password of the logged-on user.
 
 ms.prod: windows-server
 
@@ -63,4 +63,4 @@ ksetup /changepassword Pas$w0rd *
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

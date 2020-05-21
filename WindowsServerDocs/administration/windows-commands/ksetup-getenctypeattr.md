@@ -1,6 +1,6 @@
 ---
 title: ksetup:getenctypeattr
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -24,7 +24,7 @@ Retrieves the encryption type attribute for the domain.
 ## Syntax
 
 ```
-ksetup /getenctypeattr <DomainName> 
+ksetup /getenctypeattr <DomainName>
 ```
 
 #### Parameters
@@ -55,4 +55,4 @@ ksetup /getenctypeattr mit.contoso.com
 -   [Ksetup:addenctypeattr](ksetup-addenctypeattr.md)
 -   [Ksetup:setenctypeattr](ksetup-setenctypeattr.md)
 -   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

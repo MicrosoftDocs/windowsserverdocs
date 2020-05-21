@@ -1,6 +1,6 @@
 ---
 title: ksetup:setrealmflags
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -69,4 +69,4 @@ Run the **ksetup** command to verify that the realm flag is set by viewing the o
 -   [Ksetup:listrealmflags](ksetup-listrealmflags.md)
 -   [Ksetup:addrealmflags](ksetup-addrealmflags.md)
 -   [Ksetup:delrealmflags](ksetup-delrealmflags.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

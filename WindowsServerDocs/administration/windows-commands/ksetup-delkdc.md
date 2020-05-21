@@ -1,6 +1,6 @@
 ---
 title: ksetup:delkdc
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -56,4 +56,4 @@ Ksetup /delkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ## Additional References
 
 -   [Ksetup](ksetup.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

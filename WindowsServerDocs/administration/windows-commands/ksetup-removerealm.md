@@ -1,6 +1,6 @@
 ---
 title: ksetup:removerealm
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -55,4 +55,4 @@ Verify the removal by running **ksetup** and review the output.
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:setrealm](ksetup-setrealm.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

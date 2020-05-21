@@ -1,6 +1,6 @@
 ---
 title: ksetup:delkpasswd
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -41,4 +41,4 @@ To verify the command worked as intended, run **ksetup** on the Windows computer
 ## Additional References
 -   [ksetup](ksetup.md)
 -   [ksetup:delkpasswd](ksetup-delkpasswd.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

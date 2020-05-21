@@ -1,6 +1,6 @@
 ---
 title: ksetup:mapuser
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -54,7 +54,7 @@ ksetup /mapuser mike@corp.CONTOSO.COM guest
 ```
 Remove the mapping of Mike Danseglio's account to the guest account on this computer to prevent him from authenticating to this computer with his credentials from CONTOSO:
 ```
-ksetup /mapuser mike@corp.CONTOSO.COM 
+ksetup /mapuser mike@corp.CONTOSO.COM
 ```
 Map Mike Danseglio's account within the CONTOSO Kerberos realm to any existing account on this computer. (if only the standard user and guest accounts are active on this computer, Mike's privileges will be set to those):
 ```
@@ -67,5 +67,5 @@ ksetup /mapuser * *
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Ksetup](ksetup.md)
