@@ -83,6 +83,15 @@ W32tm /query /computer:contosoW1 /configuration
 
 The output of this command is a list of configuration parameters that are set for the Windows Time client.
 
+> [!IMPORTANT]  
+> [Windows Server 2016 has improved the time synchronization algorithms](https://aka.ms/WS2016Time) to align with RFC specifications. Therefore, if you want to set the local Windows Time client to point to multiple peers, it is highly recommended that you prepare three or more different time servers.
+>  
+> If you have only two time servers, you should specify the **UseAsFallbackOnly** flag (0x2) to de-prioritize one of them. For instance, if you want to prioritize ntpserver.contoso.com over clock.adatum.com, run the following command.
+> ```cmd
+> w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0xa" /syncfromflags:manual /update
+> ```
+> For the meaning of the specified flag, see ["HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters" subkey entries](#parameters).
+
 ## Using Group Policy to configure the Windows Time service
 
 The Windows Time service stores a number of configuration properties as registry entries. You can use Group Policy Objects to configure most of this information. For example, you can use GPOs to configure a computer to be an NTPServer or NTPClient, configure the time synchronization mechanism, or configure a computer to be a reliable time source.  
