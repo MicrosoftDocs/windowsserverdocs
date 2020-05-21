@@ -21,7 +21,7 @@ The following sections provide information about new features and changes in fun
 
 ## DHCP Subnet Selection Options
 
-DHCP now supports options 118 and 82 \(sub-option 5\). You can use these options to allow DHCP proxy clients and relay agents to request an IP address for a specific subnet, and from a specific IP address range and scope.
+DHCP now supports option 82 \(sub-option 5\). You can use this option to allow DHCP proxy clients and relay agents to request an IP address for a specific subnet.
 
 
 If you are using a DHCP relay agent that is configured with DHCP option 82, sub\-option 5, the relay agent can request an IP address lease for DHCP clients from a specific IP address range.
