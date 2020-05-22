@@ -56,13 +56,13 @@ ksetup
 | [ksetup setrealm](ksetup-setrealm.md) | Makes this computer a member of a Kerberos realm. |
 | [ksetup addkdc](ksetup-addkdc.md) | Defines a KDC entry for the given realm. |
 | [ksetup delkdc](ksetup-delkdc.md) | Deletes a KDC entry for the realm. |
-| [ksetup addkpasswd](ksetup-addkpasswd.md) | Adds a Kpasswd server address for a realm. |
-| [ksetup delkpasswd](ksetup-delkpasswd.md) | Deletes a Kpasswd server address for a realm. |
+| [ksetup addkpasswd](ksetup-addkpasswd.md) | Adds a kpasswd server address for a realm. |
+| [ksetup delkpasswd](ksetup-delkpasswd.md) | Deletes a kpasswd server address for a realm. |
 | [ksetup server](ksetup-server.md) | Allows you to specify the name of a Windows computer on which to apply the changes. |
 | [ksetup setcomputerpassword](ksetup-setcomputerpassword.md) | Sets the password for the computer's domain account (or host principal). |
 | [ksetup removerealm](ksetup-removerealm.md) | Deletes all information for the specified realm from the registry. |
 | [ksetup domain](ksetup-domain.md) | Allows you to specify a domain (if the `<domainname>` hasn't already been set by the **/domain** parameter). |
-| [ksetup changepassword](ksetup-changepassword.md) | Allows you to use the Kpasswd to change the logged on user's password. |
+| [ksetup changepassword](ksetup-changepassword.md) | Allows you to use the kpasswd to change the logged on user's password. |
 | [ksetup listrealmflags](ksetup-listrealmflags.md) | Lists the available realm flags that **ksetup** can detect. |
 | [ksetup setrealmflags](ksetup-setrealmflags.md) | Sets realm flags for a specific realm. |
 | [ksetup addrealmflags](ksetup-addrealmflags.md) | Adds additional realm flags to a realm. |

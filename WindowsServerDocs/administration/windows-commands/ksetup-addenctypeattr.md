@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # ksetup addenctypeattr
 
-Adds the encryption type attribute to the list of possible types for the domain.
+Adds the encryption type attribute to the list of possible types for the domain. A status message is displayed upon successful or failed completion.
 
 ## Syntax
 
@@ -31,8 +31,6 @@ ksetup /addenctypeattr <domainname> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | 
 #### Remarks
 
 - You can set or add multiple encryption types by separating the encryption types in the command with a space. However, you can only do so for one domain at a time.
-
-- If the command succeeds or fails, a status message is displayed.
 
 ### Examples
 
@@ -71,6 +69,8 @@ ksetup /getenctypeattr corp.contoso.com
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
 - [klist command](klist.md)
+
+- [ksetup command](ksetup.md)
 
 - [ksetup domain command](ksetup-domain.md)
 

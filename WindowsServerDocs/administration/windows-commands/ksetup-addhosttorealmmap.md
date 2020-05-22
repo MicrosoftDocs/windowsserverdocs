@@ -46,4 +46,4 @@ Check the registry to make sure the mapping occurred as intended.
 
 - [ksetup command](ksetup.md)
 
-- [ksetup delhosttorealmmap](ksetup-delhosttorealmmap.md)
+- [ksetup delhosttorealmmap command](ksetup-delhosttorealmmap.md)

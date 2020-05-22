@@ -30,8 +30,8 @@ ksetup /addkdc <realmname> [<KDCname>]
 
 | Parameter | Description |
 | --------- | ----------- |
-| `<realmname>` | The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and is listed as the default realm when **ksetup** is run. It's to this realm that you are attempting to add the other KDC. |
-| `<KDCname>` | The KDC name is stated as a case insensitive fully qualified domain name, such as mitkdc.microsoft.com. If the KDC name is omitted, DNS will locate KDCs. |
+| `<realmname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM. This value also appears as the default realm when **ksetup** is run, and is the realm to which you want to add the other KDC. |
+| `<KDCname>` | Specifies the case-insensitive, fully-qualified domain name, such as mitkdc.contoso.com. If the KDC name is omitted, DNS will locate KDCs. |
 
 ### Examples
 
@@ -60,4 +60,4 @@ Check the registry to make sure the mapping occurred as intended.
 
 - [ksetup command](ksetup.md)
 
-- [ksetup setcomputerpassword](ksetup-setcomputerpassword.md)
+- [ksetup setcomputerpassword command](ksetup-setcomputerpassword.md)

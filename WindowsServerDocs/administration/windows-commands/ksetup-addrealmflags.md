@@ -25,7 +25,7 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 
 | Parameter | Description |
 | --------- | ----------- |
-| `<realmname>` | The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM. |
+| `<realmname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM. |
 
 #### Remarks
 
@@ -41,7 +41,7 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 | 0x08 | ncsupported | This realm supports name canonicalization, which allows for DNS and Realm naming standards. |
 | 0x80 | rc4 | This realm supports RC4 encryption to enable cross-realm trust, which allows for the use of TLS. |
 
-- Realm flags are stored in the Registry under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\<realmname>`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the Registry.
+- Realm flags are stored in the registry under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\<realmname>`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
 
 - You can see the available and set realm flags by viewing the output of **ksetup** or `ksetup /dumpstate`.
 
@@ -65,7 +65,7 @@ To add one more flag that is not currently in the set, type:
 ksetup /addrealmflags CONTOSO SendAddress
 ```
 
-To verify the realm flag is set, type `ksetup` and then view the output, looking for **Realm flags =**. If you don't see it, it means that the flag hasn't been set.
+To verify the realm flag is set, type `ksetup` and then view the output, looking for the text, **Realm flags =**. If you don't see the text, it means that the flag hasn't been set.
 
 ## Additional References
 
@@ -73,8 +73,10 @@ To verify the realm flag is set, type `ksetup` and then view the output, looking
 
 - [ksetup command](ksetup.md)
 
-- [ksetup listrealmflags](ksetup-listrealmflags.md)
+- [ksetup listrealmflags command](ksetup-listrealmflags.md)
 
-- [ksetup setrealmflags](ksetup-setrealmflags.md)
+- [ksetup setrealmflags command](ksetup-setrealmflags.md)
 
-- [ksetup delrealmflags](ksetup-delrealmflags.md)
+- [ksetup delrealmflags command](ksetup-delrealmflags.md)
+
+- [ksetup dumpstate command](ksetup-dumpstate.md)

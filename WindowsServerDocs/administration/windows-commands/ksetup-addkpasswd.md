@@ -1,6 +1,6 @@
 ---
 title: ksetup addkpasswd
-description: Reference topic for the ksetup addkpasswd command, which adds a Kerberos password (Kpasswd) server address for a realm.
+description: Reference topic for the ksetup addkpasswd command, which adds a Kerberos password (kpasswd) server address for a realm.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -25,8 +25,8 @@ ksetup /addkpasswd <realmname> [<kpasswdname>]
 
 | Parameter | Description |
 | --------- | ----------- |
-| `<realmname>` | The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and is listed as the default realm or **Realm=** when **ksetup** is run. |
-| `<kpasswdname>` | The KDC name that is to be used as the Kerberos password server is stated as a case insensitive fully qualified domain name, such as mitkdc.microsoft.com. If the KDC name is omitted, DNS might be used to locate KDCs. |
+| `<realmname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM, and is listed as the default realm or **Realm=** when **ksetup** is run. |
+| `<kpasswdname>` | Specifies the Kerberos password server. It's stated as a case-insensitive, fully-qualified domain name, such as mitkdc.contoso.com. If the KDC name is omitted, DNS might be used to locate KDCs. |
 
 #### Remarks
 
@@ -42,7 +42,7 @@ To configure the CORP.CONTOSO.COM realm to use the non-Windows KDC server, mitkd
 ksetup /addkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 
-To verify the the KDC name is set, type `ksetup` and then view the output, looking for **kpasswd =**. If you don't see it, it means the mapping hasn't been configured.
+To verify the KDC name is set, type `ksetup` and then view the output, looking for the text, **kpasswd =**. If you don't see the text, it means the mapping hasn't been configured.
 
 ## Additional References
 
@@ -50,4 +50,4 @@ To verify the the KDC name is set, type `ksetup` and then view the output, looki
 
 - [ksetup command](ksetup.md)
 
-- [ksetup delkpasswd](ksetup-delkpasswd.md)
+- [ksetup delkpasswd command](ksetup-delkpasswd.md)
