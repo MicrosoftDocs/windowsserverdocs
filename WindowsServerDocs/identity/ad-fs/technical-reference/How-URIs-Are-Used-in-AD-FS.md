@@ -52,7 +52,8 @@ For example, if the relying party identifier in the AD FS configuration database
   
 -   If URI1 has a fragment, it must match exactly to a URI2 fragment  
   
- [!NOTE] Query strings parameters are not supported and will be ignored in relying party identifiers.
+ >[!NOTE]
+ > Query string parameters are not supported and will be ignored in relying party identifiers.
   
 The following table provides additional examples. 
 
