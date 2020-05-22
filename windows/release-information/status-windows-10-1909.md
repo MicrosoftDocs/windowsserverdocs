@@ -1,106 +1,58 @@
-﻿### YamlMime:YamlDocument
-
-documentType: LandingData
+﻿---
 title: Windows 10, version 1909 and Windows Server, version 1909
-metadata:
-  title: Windows 10, version 1909 and Windows Server, version 1909
-  description: View announcements and review known issues and fixes for Windows 10 version 1909 and Windows Server 1909
-  keywords: Windows 10, issues, fixes, announcements, Windows Server, advisories
-  ms.localizationpriority: high
-  author: greg-lindsay
-  ms.author: greglin
-  manager: dougkim
-  ms.topic: article
-  ms.devlang: na
+description: View announcements and review known issues and fixes for Windows 10 version 1909 and Windows Server 1909
+keywords: Windows 10, issues, fixes, announcements, Windows Server, advisories
+ms.prod: w10
+ms.topic: article
+ms.mktglfcycl: deploy
+ms.sitesec: library
+author: greglin
+ms.author: greglin
+ms.localizationpriority: high
+layout: LandingPage
+---
 
-sections:
-- items:
-  - type: markdown
-    text: "
-      Find information on known issues and the status of the rollout for Windows 10, version 1909 and Windows Server, version 1909. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).
-      
+# Windows 10, version 1909 and Windows Server, version 1909
+
+Find information on known issues and the status of the rollout for Windows 10, version 1909 and Windows Server, version 1909. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).
+
+
  <table border = '0' class='box-info has-overflow-hidden'><tr>
-<td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of April 14, 2020 </strong></div><div>Windows 10, version 1909 is available for any user on a recent version of Windows 10 who manually selects “Check for updates” via Windows Update. The recommended servicing status is Semi-Annual Channel.</div><div><br></div><div>We are temporarily pausing automatically initiating feature updates for devices running Windows 10, version 1809 (the October 2018 Update) Home and Pro editions, as we are delaying the scheduled end of service date for version 1809 to keep those devices supported and receiving the monthly updates that are critical to device security and ecosystem health.&nbsp;The rollout process restart for devices running on Windows 10, version 1809 will be dramatically slowed and closely monitored in advance of the delayed November 10, 2020 end of service date to provide adequate time for a smooth update process.&nbsp;For more information on Windows 10, version 1809 see the <a href=\"https://docs.microsoft.com/windows/release-information/windows-message-center#410\" rel=\"noopener noreferrer\" target=\"_blank\">Message Center</a>.</div><div>&nbsp;</div><div>For information on how users running Windows 10, version 1903 can update to&nbsp;Windows 10, version 1909 in a new, streamlined way, see&nbsp;<a href=\"https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-version-1909-delivery-options/ba-p/1002660\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>this post</strong></a>.</div><div>&nbsp;</div><div><strong>Note&nbsp;</strong>follow&nbsp;<a href=\"https://twitter.com/windowsupdate\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>@WindowsUpdate</strong></a>&nbsp;on Twitter to find out when new content is published to the release information dashboard.</div>
+<td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of April 14, 2020 </strong></div><div>Windows 10, version 1909 is available for any user on a recent version of Windows 10 who manually selects “Check for updates” via Windows Update. The recommended servicing status is Semi-Annual Channel.</div><div><br></div><div>We are temporarily pausing automatically initiating feature updates for devices running Windows 10, version 1809 (the October 2018 Update) Home and Pro editions, as we are delaying the scheduled end of service date for version 1809 to keep those devices supported and receiving the monthly updates that are critical to device security and ecosystem health.&nbsp;The rollout process restart for devices running on Windows 10, version 1809 will be dramatically slowed and closely monitored in advance of the delayed November 10, 2020 end of service date to provide adequate time for a smooth update process.&nbsp;For more information on Windows 10, version 1809 see the <a href="https://docs.microsoft.com/windows/release-information/windows-message-center#410" rel="noopener noreferrer" target="_blank">Message Center</a>.</div><div>&nbsp;</div><div>For information on how users running Windows 10, version 1903 can update to&nbsp;Windows 10, version 1909 in a new, streamlined way, see&nbsp;<a href="https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-version-1909-delivery-options/ba-p/1002660" rel="noopener noreferrer" target="_blank"><strong>this post</strong></a>.</div><div>&nbsp;</div><div><strong>Note&nbsp;</strong>follow&nbsp;<a href="https://twitter.com/windowsupdate" rel="noopener noreferrer" target="_blank"><strong>@WindowsUpdate</strong></a>&nbsp;on Twitter to find out when new content is published to the release information dashboard.</div>
 </td></tr></table>
 
-      " 
+|               |               |               |               |               |
+| ------------- | ------------- | ------------- | ------------- |
+| ![Optimize Windows monthly update deployment for remote devices](https://docs.microsoft.com/office/media/icons/trend-graph-blue.png) | **[Optimize Windows monthly update deployment for remote devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/optimize-windows-monthly-update-deployment-for-remote-devices/ba-p/1309917)** <br/> Get tips and best practices >| ![Revised end of service date for Windows 10, version 1709](https://docs.microsoft.com/office/media/icons/whats-new-megaphone-blue.png) | **[Revised end of service date for Windows 10, version 1709](https://aka.ms/blog/1709lifecycle)** <br/> Learn more about this lifecycle change and affected editions >| ![Still have devices running Windows 7 in your enterprise?](https://docs.microsoft.com/office/media/icons/lock-protected-blue.png) | **[Still have devices running Windows 7 in your enterprise?](https://aka.ms/Windows7ESU)** <br/> Stay protected with Extended Security Updates >|
+<div align='right' style='font-size:0.87rem'><a class='is-size-7' href='https://docs.microsoft.com/windows/release-information/windows-message-center'>See all messages ></a></div><hr class='cardsM'>
 
-- items:
-  - type: list
-    style: cards
-    className: cardsM
-    columns: 3
-    items:
-    
-    - href: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/optimize-windows-monthly-update-deployment-for-remote-devices/ba-p/1309917
-      html: Get tips and best practices >
-      image: 
-        src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
-      title: Optimize Windows monthly update deployment for remote devices
-    - href: https://aka.ms/blog/1709lifecycle
-      html: Learn more about this lifecycle change and affected editions >
-      image: 
-        src: https://docs.microsoft.com/media/common/i_alert.svg
-      title: Revised end of service date for Windows 10, version 1709
-    - href: https://aka.ms/Windows7ESU
-      html: Stay protected with Extended Security Updates >
-      image: 
-        src: https://docs.microsoft.com/media/common/i_subscription.svg
-      title: Still have devices running Windows 7 in your enterprise?
-- items:
-  - type: markdown
-    text: "
-      <div align='right' style='font-size:0.87rem'><a class='is-size-7' href='https://docs.microsoft.com/windows/release-information/windows-message-center'>See all messages ></a></div>
-      "
-- items:
-  - type: markdown
-    text: "
-        <hr class='cardsM'>
-      "
-
-- title: Known issues
-- items:
-  - type: markdown
-    text: "<div>This table offers a summary of current active issues and those issues that have been resolved in the last 30 days.</div><br>
-      <table border ='0'><tr><td width='65%'>Summary</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>Last updated</td></tr>
+## Known issues
+<div>This table offers a summary of current active issues and those issues that have been resolved in the last 30 days.</div><br>
+<table border ='0'><tr><td width='65%'>Summary</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>Last updated</td></tr>
       <tr><td><div id='400msg'></div><b>Social media reports related to issues with KB4549951</b><br>Reported issues include Bluetooth, stop error with blue screen and other related issues.<br><br><a href = '#400msgdesc'>See details ></a></td><td>OS Build 18363.778<br><br>April 14, 2020<br><a href ='https://support.microsoft.com/help/4549951' target='_blank'>KB4549951</a></td><td>Investigating<br><a href = '' target='_blank'></a></td><td>April 24, 2020 <br>01:17 PM PT</td></tr>
       <tr><td><div id='393msg'></div><b>“Reset this PC” feature might fail</b><br>“Reset this PC” feature is also called “Push Button Reset” or PBR.<br><br><a href = '#393msgdesc'>See details ></a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>February 15, 2020 <br>01:22 AM PT</td></tr>
       <tr><td><div id='392msg'></div><b>You might encounter issues with KB4524244</b><br>You might encounter issues trying to install or after installing KB4524244<br><br><a href = '#392msgdesc'>See details ></a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>February 15, 2020 <br>01:22 AM PT</td></tr>
       <tr><td><div id='322msg'></div><b>Issues with some older versions of Avast and AVG anti-virus products</b><br>Microsoft and Avast has identified compatibility issues with some versions of Avast and AVG Antivirus.<br><br><a href = '#322msgdesc'>See details ></a></td><td>N/A <br><br><a href ='' target='_blank'></a></td><td>Mitigated External<br></td><td>November 25, 2019 <br>05:25 PM PT</td></tr>
       </table>
-      "
 
-- title: Issue details
-- items:
-  - type: markdown
-    text: "
-        <div>
-        </div> 
-      "
-- title: April 2020
-- items:
-  - type: markdown
-    text: "
-      <table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
+## Issue details
+
+
+## April 2020
+<table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
       <tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;'><div id='400msgdesc'></div><b>Social media reports related to issues with KB4549951</b><div>We have seen social media reports related to <a href='https://support.microsoft.com/help/4549951' target='_blank'>KB4549951</a> that mention Bluetooth, stop error with blue screen and other related issues.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 1909; Windows 10, version 1903</li><li>Server: None</li></ul><div></div><div><strong>Next steps: </strong> To date, we have not seen these issues reflected in telemetry, support data or customer feedback channels. We continuously investigate all customer feedback and are closely monitoring this situation.&nbsp;<strong>Note</strong> If you experience any issues we'd like to know. Please provide feedback using the keyboard shortcut&nbsp;<strong>Windows + F&nbsp;</strong>or go to the Start menu and select <strong>Feedback Hub&nbsp;</strong>so that we can investigate.</div><br><a href ='#400msg'>Back to top</a></td><td>OS Build 18363.778<br><br>April 14, 2020<br><a href ='https://support.microsoft.com/help/4549951' target='_blank'>KB4549951</a></td><td>Investigating<br><a href = '' target='_blank'></a></td><td>Last updated:<br>April 24, 2020 <br>01:17 PM PT<br><br>Opened:<br>April 24, 2020 <br>12:47 PM PT</td></tr>
-      </table>
-      "
+</table>
 
-- title: February 2020
-- items:
-  - type: markdown
-    text: "
-      <table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
+
+## February 2020
+<table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
       <tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;'><div id='393msgdesc'></div><b>“Reset this PC” feature might fail</b><div>Using the “Reset this PC” feature, also called “Push Button Reset” or PBR, might fail.&nbsp;You might restart into recovery with “Choose an option” at the top of the screen with various options or you might restart to your desktop and receive the error “There was a problem resetting your PC”.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 1909; Windows 10, version 1903; Windows 10, version 1809; Windows 10 Enterprise LTSC 2019; Windows 10, version 1803; Windows 10, version 1709; Windows 10 Enterprise LTSC 2016; Windows 10, version 1607</li><li>Server: Windows Server, version 1909; Windows Server, version 1903; Windows Server, version 1809; Windows Server 2019; Windows Server, version 1803; Windows Server, version 1709 ; Windows Server 2016</li></ul><div></div><div><strong>Workaround: </strong>The standalone security update, <a href='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a> has been removed and will not re-offered from Windows Update, Windows Server Update Services (WSUS) or Microsoft Update Catalog.&nbsp;<strong>Note</strong> This does not affect any other update, including Latest Cumulative Update (LCU), Monthly Rollup or Security Only update.</div><div><br></div><div>If you have installed this update and are experiencing this issue, the following steps should allow you to reset your device:</div><ol><li>Select the start button or Windows Desktop Search and type <strong>update history </strong>and select <strong>View your Update history</strong>.</li><li>On the <strong>Settings/View update history</strong> dialog window, Select <strong>Uninstall Updates</strong>.</li><li>On the <strong>Installed Updates</strong> dialog window, find and select <a href='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a> and select the <strong>Uninstall</strong> button.</li><li>Restart your device.</li><li>Upon restart use the “Reset this PC” feature and you should not encounter this issue.</li></ol><div><br></div><div><strong>Next steps: </strong>We are working on an improved version of this update in coordination with our partners and will release it in a future update.</div><br><a href ='#393msg'>Back to top</a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>Last updated:<br>February 15, 2020 <br>01:22 AM PT<br><br>Opened:<br>February 15, 2020 <br>12:02 AM PT</td></tr>
       <tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;'><div id='392msgdesc'></div><b>You might encounter issues with KB4524244</b><div>You might encounter issues trying to install or after installing <a href='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a>.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 1909; Windows 10, version 1903; Windows 10, version 1809; Windows 10 Enterprise LTSC 2019; Windows 10, version 1803; Windows 10, version 1709; Windows 10 Enterprise LTSC 2016; Windows 10, version 1607; Windows 10 Enterprise LTSC 2015; Windows 8.1</li><li>Server: Windows Server, version 1909; Windows Server, version 1903; Windows Server, version 1809; Windows Server 2019; Windows Server, version 1803; Windows Server, version 1709 ; Windows Server 2016; Windows Server 2012 R2; Windows Server 2012</li></ul><div></div><div><strong>Workaround: </strong>To help a sub-set of affected devices, the standalone security update (<a href='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a>) has been removed and will not re-offered from Windows Update, Windows Server Update Services (WSUS) or Microsoft Update Catalog.&nbsp;<strong>Note</strong> This does not affect any other update, including Latest Cumulative Updates (LCUs), Monthly Rollups or Security Only updates.</div><div><br></div><div>If this update is installed and you are experiencing issues, you can uninstall this update.</div><ol><li>Select the start button or Windows Desktop Search and type <strong>update history </strong>and select <strong>View your Update history</strong>.</li><li>On the <strong>Settings/View update history</strong> dialog window, Select <strong>Uninstall Updates</strong>.</li><li>On the <strong>Installed Updates</strong> dialog window, find and select <a href='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a> and select the <strong>Uninstall</strong> button.</li><li>Restart your device.</li></ol><div>&nbsp;</div><div><strong>Next steps: </strong>We are working on an improved version of this update in coordination with our partners and will release it in a future update.</div><br><a href ='#392msg'>Back to top</a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>Last updated:<br>February 15, 2020 <br>01:22 AM PT<br><br>Opened:<br>February 15, 2020 <br>12:02 AM PT</td></tr>
-      </table>
-      "
+</table>
 
-- title: November 2019
-- items:
-  - type: markdown
-    text: "
-      <table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
-      <tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;'><div id='322msgdesc'></div><b>Issues with some older versions of Avast and AVG anti-virus products</b><div>Microsoft and Avast has identified compatibility issues with some older versions of Avast Antivirus and AVG Antivirus that might still be installed by a small number of users. Any application from Avast or AVG that contains Antivirus version 19.5.4444.567 or earlier is affected.</div><div><br></div><div>To safeguard your upgrade experience, we have applied a hold on devices with affected Avast and AVG Antivirus from being offered or installing Windows 10, version 1903 or Windows 10, version 1909, until&nbsp;the application is updated.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 1909; Windows 10, version 1903</li><li>Server: Windows Server, version 1909; Windows Server, version 1903</li></ul><div></div><div><strong>Workaround: </strong>Before updating to Windows 10, version 1903 or Windows 10, version 1909, you will need to download and install an updated version of your Avast or AVG application. Guidance for Avast and AVG customers can be found in the following support articles:</div><ul><li><a href=\"https://support.avast.com/en-ww/article/253?p_pro=131&amp;p_ves=1&amp;p_lng=en&amp;p_lid=en-us&amp;p_vbd=2022&amp;cid=9632b01a-b7ec-4366-95d6-996c79ff9420\" rel=\"noopener noreferrer\" target=\"_blank\">Avast support KB article</a></li><li><a href=\"https://support.avg.com/SupportArticleView?supportType=home&amp;urlName=AVG-Antivirus-Windows-10-update&amp;cid=9632b01a-b7ec-4366-95d6-996c79ff9420&amp;l=en\" rel=\"noopener noreferrer\" target=\"_blank\">AVG support KB article</a></li></ul><div></div><div><strong>Note</strong>&nbsp;We recommend that you do not attempt to manually update using the&nbsp;<strong>Update now</strong>&nbsp;button or the Media Creation Tool until a new version of your Avast or AVG application has been installed and the Windows 10, version 1903 or Windows 10, version 1909 feature update has been automatically offered to you.</div><br><a href ='#322msg'>Back to top</a></td><td>N/A <br><br><a href ='' target='_blank'></a></td><td>Mitigated External<br></td><td>Last updated:<br>November 25, 2019 <br>05:25 PM PT<br><br>Opened:<br>November 22, 2019 <br>04:10 PM PT</td></tr>
-      </table>
-      "
+
+## November 2019
+<table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
+      <tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;'><div id='322msgdesc'></div><b>Issues with some older versions of Avast and AVG anti-virus products</b><div>Microsoft and Avast has identified compatibility issues with some older versions of Avast Antivirus and AVG Antivirus that might still be installed by a small number of users. Any application from Avast or AVG that contains Antivirus version 19.5.4444.567 or earlier is affected.</div><div><br></div><div>To safeguard your upgrade experience, we have applied a hold on devices with affected Avast and AVG Antivirus from being offered or installing Windows 10, version 1903 or Windows 10, version 1909, until&nbsp;the application is updated.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 1909; Windows 10, version 1903</li><li>Server: Windows Server, version 1909; Windows Server, version 1903</li></ul><div></div><div><strong>Workaround: </strong>Before updating to Windows 10, version 1903 or Windows 10, version 1909, you will need to download and install an updated version of your Avast or AVG application. Guidance for Avast and AVG customers can be found in the following support articles:</div><ul><li><a href="https://support.avast.com/en-ww/article/253?p_pro=131&amp;p_ves=1&amp;p_lng=en&amp;p_lid=en-us&amp;p_vbd=2022&amp;cid=9632b01a-b7ec-4366-95d6-996c79ff9420" rel="noopener noreferrer" target="_blank">Avast support KB article</a></li><li><a href="https://support.avg.com/SupportArticleView?supportType=home&amp;urlName=AVG-Antivirus-Windows-10-update&amp;cid=9632b01a-b7ec-4366-95d6-996c79ff9420&amp;l=en" rel="noopener noreferrer" target="_blank">AVG support KB article</a></li></ul><div></div><div><strong>Note</strong>&nbsp;We recommend that you do not attempt to manually update using the&nbsp;<strong>Update now</strong>&nbsp;button or the Media Creation Tool until a new version of your Avast or AVG application has been installed and the Windows 10, version 1903 or Windows 10, version 1909 feature update has been automatically offered to you.</div><br><a href ='#322msg'>Back to top</a></td><td>N/A <br><br><a href ='' target='_blank'></a></td><td>Mitigated External<br></td><td>Last updated:<br>November 25, 2019 <br>05:25 PM PT<br><br>Opened:<br>November 22, 2019 <br>04:10 PM PT</td></tr>
+</table>
+
