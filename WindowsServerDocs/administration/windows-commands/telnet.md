@@ -1,6 +1,6 @@
 ---
 title: telnet
-description: Reference topic for telnet, which communicates with a computer running the telnet Server service. 
+description: Reference topic for telnet, which communicates with a computer running the telnet Server service.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Communicates with a computer running the telnet Server service.
- 
+
 ## Syntax
 ```
 telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 | ansi | vtnt}] [<Host> [<Port>]] [/?]
@@ -48,4 +48,4 @@ telnet /f telnetlog.txt telnet.microsoft.com 44
 ## Additional References
 -   [Installing telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx)
 -   [telnet Technical Reference](https://technet.microsoft.com/library/cc754987(v=ws.10).aspx)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

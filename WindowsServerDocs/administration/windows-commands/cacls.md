@@ -1,6 +1,6 @@
 ---
 title: cacls
-description: Reference topic for the cacls command, which displays or modifies discretionary access control lists (DACL) on specified files.
+description: Reference topic for the cacls command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -14,14 +14,14 @@ ms.date: 10/16/2017
 # cacls
 
 >[!IMPORTANT]
-> This command has been deprecated. Please use [icacls](icacls.md) instead.  
+> This command has been deprecated. Please use [icacls](icacls.md) instead.
 
-Displays or modifies discretionary access control lists (DACL) on specified files.  
+Displays or modifies discretionary access control lists (DACL) on specified files.
 
 ## Syntax
 
-```  
-cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]  
+```
+cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]
 ```
 
 ### Parameters
@@ -58,7 +58,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 
 - You can use wildcards (**?** and **&#42;**) to specify multiple files.
 
-- You can specify more than one user.  
+- You can specify more than one user.
 
 ## Additional References
 

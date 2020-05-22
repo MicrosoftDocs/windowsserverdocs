@@ -78,5 +78,5 @@ winrs /r:myserver /ad /u:administrator /p:$%fgh7 dir \\anotherserver\share
 ```
 
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

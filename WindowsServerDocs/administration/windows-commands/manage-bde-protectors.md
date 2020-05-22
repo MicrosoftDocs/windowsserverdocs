@@ -1,6 +1,6 @@
 ---
 title: manage-bde protectors
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -43,8 +43,8 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 ### <a name=BKMK_addprotectors></a>-add syntax and parameters
 ```
 manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
-[-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin] 
-[-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>] 
+[-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin]
+[-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>]
 [{-?|/?}] [{-help|-h}]
 ```
 
@@ -72,7 +72,7 @@ manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <Nume
 
 ### <a name=BKMK_deleteprotectors></a>-delete syntax and parameters
 ```
-manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
+manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}]
 [-id <KeyProtectorID>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
@@ -132,5 +132,5 @@ To illustrates using the **-protectors** command to back up all recovery informa
 manage-bde  -protectors  -adbackup C:
 ```
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [manage-bde](manage-bde.md)
