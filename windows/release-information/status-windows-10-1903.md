@@ -29,6 +29,7 @@ Find information on known issues and the status of the rollout for Windows 10, v
 ## Known issues
 <div>This table offers a summary of current active issues and those issues that have been resolved in the last 30 days.</div><br>
 <table border ='0'><tr><td width='65%'>Summary</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>Last updated</td></tr>
+      <tr><td><div id='423msg'></div><b>Unable to access internet when using certain WWAN LTE modems</b><br>Internet might show as connected but be unreachable when using certain WWAN LTE modems.<br><br><a href = '#423msgdesc'>See details ></a></td><td>OS Build 18362.693<br><br>February 27, 2020<br><a href ='https://support.microsoft.com/help/4535996' target='_blank'>KB4535996</a></td><td>Investigating<br><a href = '' target='_blank'></a></td><td>May 22, 2020 <br>12:47 PM PT</td></tr>
       <tr><td><div id='400msg'></div><b>Social media reports related to issues with KB4549951</b><br>Reported issues include Bluetooth, stop error with blue screen and other related issues.<br><br><a href = '#400msgdesc'>See details ></a></td><td>OS Build 18362.778<br><br>April 14, 2020<br><a href ='https://support.microsoft.com/help/4549951' target='_blank'>KB4549951</a></td><td>Investigating<br><a href = '' target='_blank'></a></td><td>April 24, 2020 <br>01:17 PM PT</td></tr>
       <tr><td><div id='393msg'></div><b>“Reset this PC” feature might fail</b><br>“Reset this PC” feature is also called “Push Button Reset” or PBR.<br><br><a href = '#393msgdesc'>See details ></a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>February 15, 2020 <br>01:22 AM PT</td></tr>
       <tr><td><div id='392msg'></div><b>You might encounter issues with KB4524244</b><br>You might encounter issues trying to install or after installing KB4524244<br><br><a href = '#392msgdesc'>See details ></a></td><td>N/A <br>February 11, 2020<br><a href ='https://support.microsoft.com/help/4524244' target='_blank'>KB4524244</a></td><td>Mitigated<br><a href = '' target='_blank'></a></td><td>February 15, 2020 <br>01:22 AM PT</td></tr>
@@ -37,6 +38,12 @@ Find information on known issues and the status of the rollout for Windows 10, v
       </table>
 
 ## Issue details
+
+
+## May 2020
+<table border ='0'><tr><td width='65%'>Details</td><td width='15%'>Originating update</td><td width='10%'>Status</td><td width='10%'>History</td></tr>
+      <tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;'><div id='423msgdesc'></div><b>Unable to access internet when using certain WWAN LTE modems</b><div>After installing <a href='https://support.microsoft.com/help/4535996' target='_blank'>KB4535996</a> on a Windows 10 device with a wireless wide area network&nbsp;(WWAN) LTE modems, you might be unable to reach the internet even though the Network Connectivity Status Indicator (NCSI) in the notification area shows as connected to the internet.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 1909; Windows 10, version 1903</li><li>Server: Windows Server, version 1909; Windows Server, version 1903</li></ul><div></div><div><strong>Next steps: </strong>We are working on a resolution and estimate a solution will be available in mid-July.</div><br><a href ='#423msg'>Back to top</a></td><td>OS Build 18362.693<br><br>February 27, 2020<br><a href ='https://support.microsoft.com/help/4535996' target='_blank'>KB4535996</a></td><td>Investigating<br><a href = '' target='_blank'></a></td><td>Last updated:<br>May 22, 2020 <br>12:47 PM PT<br><br>Opened:<br>May 22, 2020 <br>12:47 PM PT</td></tr>
+</table>
 
 
 ## April 2020
