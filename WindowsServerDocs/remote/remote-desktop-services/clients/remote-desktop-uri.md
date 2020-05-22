@@ -43,9 +43,10 @@ This command launches the client and starts the subscription process.
 **Command name:** subscribe
 
 **Command parameters:**
-| Parameter | Description | Values |
-|-----------|-------------|---|
-| url       | Specifies the Workspace URL. | A valid URL, such as `https://contoso.com`. |
+
+| Parameter | Description                  | Values |
+|-----------|------------------------------|--------|
+| url       | Specifies the Workspace URL. | A valid URL, such as <https://contoso.com>. |
 
 ## Legacy rdp URI scheme
 
