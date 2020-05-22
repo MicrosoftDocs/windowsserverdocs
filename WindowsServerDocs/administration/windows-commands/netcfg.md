@@ -1,6 +1,6 @@
 ---
 title: netcfg
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -67,4 +67,4 @@ To display binding paths containing *MS_TCPIP*:
 netcfg /b ms_tcpip
 ```
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -47,4 +47,4 @@ tftp  -i Host1 get boot.img
 ```
 
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

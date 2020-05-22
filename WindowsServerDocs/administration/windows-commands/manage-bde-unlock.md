@@ -1,6 +1,6 @@
 ---
 title: manage-bde unlock
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -54,5 +54,5 @@ manage-bde –unlock E: -recoverykey F:\Backupkeys\recoverykey.bek
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

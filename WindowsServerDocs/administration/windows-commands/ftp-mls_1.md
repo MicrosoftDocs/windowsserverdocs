@@ -1,48 +1,51 @@
 ---
-title: ftp mls_1
-description: Reference topic for **** - 
-
+title: ftp mls
+description: Reference topic for the ftp mls command, which displays an abbreviated list of files and subdirectories in a remote directory.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
-ms.assetid: 4738fd49-0e80-4bdf-a773-0f973db3a710 vhorne
+ms.assetid: 4738fd49-0e80-4bdf-a773-0f973db3a710
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: mls_1
+
+# ftp mls
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays an abbreviated list of files and subdirectories in a remote directory.   
-## Syntax  
-```  
-mls <remoteFile>[ ] <LocalFile>  
-```  
-#### Parameters  
+Displays an abbreviated list of files and subdirectories in a remote directory.
 
-|  Parameter   |                       Description                       |
-|--------------|---------------------------------------------------------|
-| <remoteFile> | Specifies the file for which you want to see a listing. |
-| <LocalFile>  |  Specifies a local file in which to store the listing.  |
+## Syntax
 
-## Remarks  
-- Specifying *remoteFiles*  
-  type a hyphen (**-**) to use the current working directory on the remote computer.  
-- Specifying *LocalFile*  
-  type a hyphen (**-**) to display the listing on the screen.  
-  ## Examples  
-  Display an abbreviated list of files and subdirectories for **dir1** and **dir2**.  
-  ```  
-  mls dir1 dir2 -  
-  ```  
-  Save an abbreviated list of files and subdirectories for **dir1** and **dir2** in the local file **dirlist.txt**  
-  ```  
-  mls dir1 dir2 dirlist.txt   
-  ```  
-  ## Additional References  
-- - [Command-Line Syntax Key](command-line-syntax-key.md)  
+```
+mls <remotefile>[ ] <localfile>
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<remotefile>` | Specifies the file for which you want to see a listing. When specifying *remotefiles*, use a hyphen to represent the current working directory on the remote computer. |
+| `<localfile>` | Specifies a local file in which to store the listing. When specifying *localfile*, use a hyphen to display the listing on the screen. |
+
+### Examples
+
+To display an abbreviated list of files and subdirectories for *dir1* and *dir2*, type:
+
+```
+mls dir1 dir2 -
+```
+
+To save an abbreviated list of files and subdirectories for *dir1* and *dir2* in the local file *dirlist.txt*, type:
+
+```
+mls dir1 dir2 dirlist.txt
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

@@ -1,39 +1,40 @@
 ---
-title: ftp mdelete
-description: Reference topic for the ftp mdelete command, which deletes files on the remote computer.
+title: ftp rmdir
+description: Reference topic for the ftp rmdir command, which deletes a root directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 8a80a8f5-e880-40a8-abc9-29a41836844f
+ms.assetid: cf4778a4-9534-49c7-a061-850dc3504a67
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
 
-# ftp mdelete
+# ftp rmdir
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Deletes files on the remote computer.
+Deletes a remote directory.
 
 ## Syntax
+
 ```
-mdelete <remotefile>[...]
+rmdir <directory>
 ```
 
 ### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |
-| `<remotefile>` | Specifies the remote file to delete. |
+| `<directory>` | Specifies the name of the remote directory to delete. |
 
 ### Examples
 
-To delete remote files *a.exe* and *b.exe*, type:
+To delete the *pictures* remote directory, type:
 
 ```
-mdelete a.exe b.exe
+rmdir pictures
 ```
 
 ## Additional References

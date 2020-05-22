@@ -1,6 +1,6 @@
 ---
 title: set
-description: Reference topic for set, which displays, sets, or removes CMD.EXE environment variables. 
+description: Reference topic for set, which displays, sets, or removes cmd.exe environment variables.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # set
 
-Displays, sets, or removes CMD.EXE environment variables. If used without parameters, **set** displays the current environment variable settings.
+Displays, sets, or removes cmd.exe environment variables. If used without parameters, **set** displays the current environment variable settings.
 
 
 
@@ -58,7 +58,7 @@ set /a <Variable>=<Expression>
   If you specify only a variable and an equal sign (without *String*) for the **set** command, the *String* value associated with the variable is cleared (as if the variable is not there).
 - Using **/a**
 
-  The following table lists the operators supported for **/a** in descending order of precedence.  
+  The following table lists the operators supported for **/a** in descending order of precedence.
 
   |        Operator         | Operation performed  |
   |-------------------------|----------------------|
@@ -134,7 +134,7 @@ set
 ```
 To display a list of all of the environment variables that begin with the letter P, type:
 ```
-set p 
+set p
 ```
 
 > [!NOTE]

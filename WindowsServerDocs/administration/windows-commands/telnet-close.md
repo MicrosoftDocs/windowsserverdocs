@@ -14,18 +14,18 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Closes the current connection.    
+Closes the current connection.
 
-## Syntax  
-```  
-c[lose]  
-```  
-#### Parameters  
-none  
-## Examples  
-Close the current connection.  
-```  
-c  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+```
+c[lose]
+```
+#### Parameters
+none
+## Examples
+Close the current connection.
+```
+c
+```
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

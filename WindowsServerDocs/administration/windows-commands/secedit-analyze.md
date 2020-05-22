@@ -1,6 +1,6 @@
 ---
 title: secedit:analyze
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -59,4 +59,4 @@ Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /over
 ## Additional References
 
 -   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
