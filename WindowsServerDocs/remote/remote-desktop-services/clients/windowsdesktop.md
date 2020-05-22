@@ -65,10 +65,10 @@ There are two ways you can subscribe to a Workspace. The client can try to disco
 
 1. From the main page of the client, tap **Subscribe with URL**.
 2. Enter the Workspace URL or your email address:
-   - If you use the **Workspace URL**, use the one your admin gave you. If accessing resources from Windows Virtual Desktop, you can use one of the following URL:
+   - If you use the **Workspace URL**, use the one your admin gave you. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs:
      - Windows Virtual Desktop Fall 2019: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
      - Windows Virtual Desktop Spring 2020: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
-   - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery).
+   - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery.md).
 3. Tap **Next**.
 4. Sign in with your user account when prompted.
 5. The resources will appear in the Connection Center grouped by Workspace.
