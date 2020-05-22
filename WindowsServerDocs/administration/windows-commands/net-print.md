@@ -1,12 +1,8 @@
 ---
-title: Net print
-description: Reference topic for **** -
-
+title: net print
+description: Reference topic for the net print command, which displays information about a specified printer queue or print job.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: f59b2015-4698-415d-9a74-09566c466f40
 author: coreyp-at-msft
@@ -14,14 +10,17 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Net print
+
+# net print
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about a specified printer queue or a specified print job, or controls a specified print job.
+
 > [!NOTE]
 > This command has been deprecated in  Windows 7  and  Windows Server 2008 R2 . However, you can perform many of the same tasks using prnjobs, Windows Management Instrumentation (WMI), or Windows PowerShell cmdlets. For more information, see [prnjobs](prnjobs.md), [Windows Management Instrumentation](https://go.microsoft.com/fwlink/?LinkID=29991) (https://go.microsoft.com/fwlink/?LinkID=29991), [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=128426) (https://go.microsoft.com/fwlink/?LinkID=128426), and the [TechNet Script Center Gallery](https://go.microsoft.com/fwlink/?LinkId=164635) (https://go.microsoft.com/fwlink/?LinkId=164635).
-> ## Syntax
+
+## Syntax
 > ```
 > Net print {\\<computerName>\<Sharename> |
 > \\<computerName> <JobNumber> [/hold | /release | /delete]} [help]

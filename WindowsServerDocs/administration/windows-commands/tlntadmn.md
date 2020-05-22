@@ -60,4 +60,4 @@ tlntadmn -s
 
 ## Additional References
 -   [telnet Operations Guide](https://technet.microsoft.com/library/cc753164(v=ws.10).aspx)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

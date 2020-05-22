@@ -1,6 +1,6 @@
 ---
 title: manage-bde KeyPackage
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -52,5 +52,5 @@ manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path f:\Folder
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)

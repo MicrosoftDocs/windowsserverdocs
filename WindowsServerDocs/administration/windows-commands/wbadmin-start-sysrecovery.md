@@ -1,6 +1,6 @@
 ---
 title: wbadmin start sysrecovery
-description: Reference topic for wbadmin start sysrecovery, which performs a system recovery (bare metal recovery) using the parameters that you specify. 
+description: Reference topic for wbadmin start sysrecovery, which performs a system recovery (bare metal recovery) using the parameters that you specify.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -62,6 +62,6 @@ wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\s
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get-WBBareMetalRecovery](https://technet.microsoft.com/library/jj902461.aspx) cmdlet

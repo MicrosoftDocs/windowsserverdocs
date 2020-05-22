@@ -1,6 +1,6 @@
 ---
 title: msinfo32
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer. 
+Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 ## Syntax
 ```
 msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/showcategories] [/category <CategoryID>] [/categories {+<CategoryID>(+<CategoryID>)|+all(-<CategoryID>)}]
@@ -59,5 +59,5 @@ To display resource conflict information and create an .nfo file called conflict
 msinfo32 /nfo conflicts.nfo /categories    +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware
 ```
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

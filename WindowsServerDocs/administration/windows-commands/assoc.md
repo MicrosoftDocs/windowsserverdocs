@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
 
 > [!NOTE]
-> This command is only supported within CMD.EXE and is not available from PowerShell.
+> This command is only supported within cmd.exe and is not available from PowerShell.
 
 ## Syntax
 
@@ -51,7 +51,7 @@ assoc .txt
 To remove the file type association for the file name extension .bak, type:
 
 ```
-assoc .bak= 
+assoc .bak=
 ```
 
 > [!NOTE]

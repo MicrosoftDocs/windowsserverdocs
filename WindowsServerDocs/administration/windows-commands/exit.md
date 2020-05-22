@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Exits the the command interpreter or the current batch script.
+Exits the command interpreter or the current batch script.
 
 ## Syntax
 

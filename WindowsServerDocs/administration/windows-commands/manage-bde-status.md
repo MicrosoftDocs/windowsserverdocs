@@ -1,6 +1,6 @@
 ---
 title: manage-bde status
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -58,5 +58,5 @@ manage-bde –status C:
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Manage-bde](manage-bde.md)
