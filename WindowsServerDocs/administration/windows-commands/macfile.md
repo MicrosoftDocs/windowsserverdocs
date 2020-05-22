@@ -1,6 +1,6 @@
 ---
 title: macfile
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Manages File Server for Macintosh servers, volumes, directories, and files. You can automate administrative tasks by including a series of commands in batch files and starting them manually or at predetermined times. 
+Manages File Server for Macintosh servers, volumes, directories, and files. You can automate administrative tasks by including a series of commands in batch files and starting them manually or at predetermined times.
 -   [To modify directories in Macintosh-accessible volumes](#BKMK_Moddirs)
 -   [To join a Macintosh file's data and resource forks](#BKMK_Joinforks)
 -   [To change the logon message and limit sessions](#BKMK_LogonLimit)
@@ -170,4 +170,4 @@ macfile volume /remove /name:Sales Reports
 ```
 
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

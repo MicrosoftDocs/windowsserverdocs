@@ -1,6 +1,6 @@
 ---
 title: Scwcmd register
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -54,4 +54,4 @@ scwcmd register /d /kbname:MyApp /kb:\\kbserver\kb
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

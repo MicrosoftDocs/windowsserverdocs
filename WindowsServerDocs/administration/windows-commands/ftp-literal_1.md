@@ -1,41 +1,49 @@
 ---
-title: ftp literal_1
-description: Reference topic for **** - 
-
+title: ftp literal
+description: Reference topic for the ftp literal command, which sends verbatim arguments to the remote ftp server.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
-ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14 vhorne
+ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: literal_1
+
+# ftp literal
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.   
 
-## Syntax  
-```  
-literal <Argument> [ ]  
-```  
-#### Parameters  
+Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.
 
-| Parameter  |                    Description                    |
-|------------|---------------------------------------------------|
-| <Argument> | Specifies the argument to send to the ftp server. |
+> [!NOTE]
+> This command is the same as the [ftp quote command](ftp-quote.md).
 
-## Remarks  
-The **literal** command is identical to the **quote** command.  
-## Examples  
-Send a **quit** command to the remote ftp server.  
-```  
-literal quit  
-```  
-## Additional References  
--   [ftp: quote](ftp-quote.md)  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+
+```
+literal <argument> [ ]
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<argument>` | Specifies the argument to send to the ftp server. |
+
+### Examples
+
+To send a **quit** command to the remote ftp server, type:
+
+```
+literal quit
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ftp quote command](ftp-quote.md)
+
+- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

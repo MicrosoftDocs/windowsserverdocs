@@ -59,11 +59,11 @@ wbadmin enable backup
 [-nonRecurseExclude:<ItemsToExclude>][-systemState]
 [-hyperv:<HyperVComponentsToExclude>]
 [-allCritical]
-[-systemState] 
+[-systemState]
 [-vssFull | -vssCopy]
 [-user:<UserName>]
 [-password:<Password>]
-[-quiet] 
+[-quiet]
 [-allowDeleteOldBackups]
 ```
 
@@ -120,5 +120,5 @@ Scenario #1
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

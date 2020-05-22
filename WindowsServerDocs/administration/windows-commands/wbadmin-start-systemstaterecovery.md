@@ -65,17 +65,17 @@ wbadmin start systemstaterecovery
 
 ## Examples
 
-- To perform a system state recovery of the backup from 03/31/2013 at 9:00 A.M., type:  
+- To perform a system state recovery of the backup from 03/31/2013 at 9:00 A.M., type:
   ```
   wbadmin start systemstaterecovery -version:03/31/2013-09:00
-  ```  
-- To perform a system state recovery of the backup from 04/30/2013 at 9:00 A.M. that is stored on the shared resource \\\\servername\share for server01, type:  
+  ```
+- To perform a system state recovery of the backup from 04/30/2013 at 9:00 A.M. that is stored on the shared resource \\\\servername\share for server01, type:
   ```
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet
