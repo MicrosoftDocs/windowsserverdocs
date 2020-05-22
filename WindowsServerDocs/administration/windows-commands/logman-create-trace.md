@@ -32,7 +32,7 @@ logman create trace <[-n] <name>> [options]
 | -ets | Sends commands to Event Trace Sessions directly without saving or scheduling. |
 | [-n] `<name>` | Name of the target object. |
 | -f `<bin|bincirc>` | Specifies the log format for the data collector. |
-| -[-]u `<user [password]>` | Specifies the user to Run As. Entering a `*` for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
+| -[-]u `<user [password]>` | Specifies the user to Run As. Entering an `*` for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
 | -m `<[start] [stop] [[start] [stop] [...]]>` | Changes to manual start or stop instead of a scheduled begin or end time. |
 | -rf `<[[hh:]mm:]ss>` | Runs the data collector for the specified period of time. |
 | -b `<M/d/yyyy h:mm:ss[AM|PM]>` | Begins collecting data at the specified time. |
