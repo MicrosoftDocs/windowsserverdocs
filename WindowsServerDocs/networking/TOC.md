@@ -93,6 +93,12 @@
 #### [DHCP subnet selection options](technologies/dhcp/dhcp-subnet-options.md)
 #### [DHCP logging events for DNS record registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
+### [Troubleshoot DHCP issues](../troubleshoot/troubleshoot-dhcp-issue.md)
+#### [Dynamic Host Configuration Protocol (DHCP) Basics](../troubleshoot/dynamic-host-configuration-protocol-basics.md)
+#### [General guidance to troubleshoot DHCP](../troubleshoot/general-guidance-to-troubleshoot-dhcp.md)
+##### [How to use automatic TCP/IP addressing without a DHCP server](../troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh.md)
+#### [Troubleshoot problems on the DHCP client](../troubleshoot/troubleshoot-problems-on-dhcp-client.md)
+#### [Troubleshoot problems on the DHCP server](../troubleshoot/troubleshoot-problems-on-dhcp-server.md)
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 ### [Network offload and optimization technologies](technologies/hpn/network-offload-and-optimization.md)
