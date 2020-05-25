@@ -43,11 +43,11 @@ Check the following settings:
 
 Check the System and DHCP Server service event logs (**Applications and Services Logs** \> **Microsoft** \> **Windows** \> **DHCP-Server**) for reported issues that are related to the observed problem.  
 Depending on the kind of issue, an event is logged to one of the following event channels:  
-[DHCP Server Operational Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
-[DHCP Server Administrative Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
-[DHCP Server System Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
-[DHCP Server Filter Notification Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
-[DHCP Server Audit Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))
+[DHCP Server Operational Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
+[DHCP Server Administrative Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
+[DHCP Server System Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
+[DHCP Server Filter Notification Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))  
+[DHCP Server Audit Events](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn800668\(v=ws.11\))
 
 ## Data collection
 
@@ -75,5 +75,5 @@ A correlating network trace may indicate what the DHCP server was doing at the t
 
 4.  After the event is triggered, the tool creates a folder that is named C:\\MS\_DATA. This folder will contain some useful output files that provide general information about the network and domain configuration of the computer.  
     The most interesting file in this folder is %Computername%\_date\_time\_packetcapture\_InternetClient\_dbg.etl.
-    By using the [Network Monitor](https://www.microsoft.com/en-us/download/4865) application, you can load the file, and set the display filter on the “DHCP or
+    By using the [Network Monitor](https://www.microsoft.com/download/4865) application, you can load the file, and set the display filter on the “DHCP or
     DNS” protocol to examine what is going on behind the scenes.
