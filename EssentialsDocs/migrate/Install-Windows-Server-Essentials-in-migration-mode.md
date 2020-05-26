@@ -1,6 +1,6 @@
 ---
-title: "Install Windows Server Essentials in migration mode"
-description: "Describes how to use Windows Server Essentials"
+title: Install Windows Server Essentials in migration mode
+description: Describes how to use Windows Server Essentials
 ms.date: 04/29/2020
 ms.prod: windows-server
 ms.topic: article
