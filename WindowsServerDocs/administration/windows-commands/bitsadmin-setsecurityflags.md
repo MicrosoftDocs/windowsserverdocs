@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setsecurityflags
-description: Windows Commands topic for **bitsadmin setsecurityflags**, which sets security flags for HTTP to determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request.
+description: Reference topic for the bitsadmin setsecurityflags command, which sets security flags for HTTP to determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -30,12 +30,14 @@ bitsadmin /setsecurityflags <job> <value>
 
 ## Examples
 
-The following example sets the security flags to enable a CRL check for the job named *myDownloadJob*.
+To set the security flags to enable a CRL check for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setsecurityflags myDownloadJob 0x0001
+bitsadmin /setsecurityflags myDownloadJob 0x0001
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

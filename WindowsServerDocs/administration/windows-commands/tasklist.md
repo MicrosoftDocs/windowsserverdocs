@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 Displays a list of currently running processes on the local computer or on a remote computer. **Tasklist** replaces the **tlist** tool.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

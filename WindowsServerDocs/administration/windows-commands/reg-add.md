@@ -1,6 +1,6 @@
 ---
 title: reg add
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -25,7 +25,6 @@ Adds a new subkey or entry to the registry.
 ```
 reg add <KeyName> [{/v ValueName | /ve}] [/t DataType] [/s Separator] [/d Data] [/f]
 ```
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ### Parameters
 
@@ -52,7 +51,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 
 -   For the REG_EXPAND_SZ key type, use the caret symbol ( **^** ) with **%** inside the /d parameter
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To add the key HKLM\Software\MyCo on remote computer ABC, type:
 ```

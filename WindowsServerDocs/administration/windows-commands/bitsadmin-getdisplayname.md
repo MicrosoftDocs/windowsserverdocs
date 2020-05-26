@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getdisplayname
-description: Windows Commands topic for **bitsadmin getdisplayname**, which retrieves the display name of the specified job.
+description: Reference topic for the bitsadmin getdisplayname command, which retrieves the display name of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -27,14 +27,16 @@ bitsadmin /getdisplayname <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the display name for the job named *myDownloadJob*.
+To retrieve the display name for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getdisplayname myDownloadJob
+bitsadmin /getdisplayname myDownloadJob
 ```
 
-## Additional references
+## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: reg restore
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Writes saved subkeys and entries back to the registry.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -47,7 +47,7 @@ Reg restore <KeyName> <FileName>
 |0|Success|
 |1|Failure|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To restore the file named NTRKBkUp.hiv into the key HKLM\Software\Microsoft\ResKit, and overwrite the existing contents of the key, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: ksetup:delenctypeattr
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Removes the encryption type attribute for the domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Removes the encryption type attribute for the domain.
 
 ## Syntax
 
@@ -41,7 +41,7 @@ A status message is displayed upon successful or failed completion.
 
 To set the domain that you want to connect to and use, run the **ksetup /domain \<DomainName>** command.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Determine the current encryption types that are set on this computer:
 ```

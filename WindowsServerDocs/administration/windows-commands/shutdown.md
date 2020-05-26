@@ -1,6 +1,6 @@
 ---
 title: shutdown
-description: Windows Commands topic for shutdown, which enables you to shut down or restart local or remote computers one at a time.
+description: Reference topic for shutdown, which enables you to shut down or restart local or remote computers one at a time.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Enables you to shut down or restart local or remote computers one at a time.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -52,7 +52,7 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t 
 -   If you specify major and minor reason codes, you must first define these reason codes on each computer where you plan to use the reasons. If the reason codes are not defined on the target computer, Shutdown Event Tracker cannot log the correct reason text.
 -   Remember to indicate that a shutdown is planned by using the **p:** parameter. Omitting **p:** indicates that a shutdown is unplanned. If you type **p:** followed by the reason code for an unplanned shutdown, the command will not carry out the shutdown. Conversely, if you omit **p:** and type in the reason code for a planned shutdown, the command will not carry out the shutdown.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To force applications to close and restart the local computer after a one-minute delay with the reason Application: Maintenance (Planned) and the comment Reconfiguring myapp.exe type:
 ```

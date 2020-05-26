@@ -1,6 +1,6 @@
 ---
 title: pause
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -23,7 +23,7 @@ Suspends the processing of a batch program and displays the following prompt:
 ```
 Press any key to continue . . .
 ```
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -50,7 +50,7 @@ pause
   If you press Y (for yes) in response to this message, the batch program ends and control returns to the operating system.
 - You can insert the **pause** command before a section of the batch file that you might not want to process. When **pause** suspends processing of the batch program, you can press CTRL+C and then press Y to stop the batch program.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To create a batch program that prompts the user to change disks in one of the drives, type:
 ```

@@ -1,6 +1,6 @@
 ---
 title: rpcping
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -16,9 +16,9 @@ ms.date: 10/16/2017
 ---
 # rpcping
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Confirms the RPC connectivity between the computer running Microsoft Exchange Server and any of the supported Microsoft Exchange Client workstations on the network. This utility can be used to check if the Microsoft Exchange Server services are responding to RPC requests from the client workstations via the network. 
+Confirms the RPC connectivity between the computer running Microsoft Exchange Server and any of the supported Microsoft Exchange Client workstations on the network. This utility can be used to check if the Microsoft Exchange Server services are responding to RPC requests from the client workstations via the network.
 
 ## Syntax
 ```
@@ -70,11 +70,11 @@ rpcping [/t <protseq>] [/s <server_addr>] [/e <endpoint>
 |                /p                |                                                                                                                                                                                                                                                                                                                      Specifies to prompt for credentials if authentication fails.                                                                                                                                                                                                                                                                                                                       |
 |                /?                |                                                                                                                                                                                                                                                                                                                                  Displays help at the command prompt.                                                                                                                                                                                                                                                                                                                                   |
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 To find out if your Exchange server that you connect through RPC/HTTP is accessible, type:
 ```
 rpcping /t ncacn_http /s exchange_server /o RpcProxy=front_end_proxy /P username,domain,* /H Basic /u NTLM /a connect /F 3
 ```
 
-## Additional references
+## Additional References
 -   - [Command-Line Syntax Key](command-line-syntax-key.md)

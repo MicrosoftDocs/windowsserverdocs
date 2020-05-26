@@ -1,6 +1,6 @@
 ---
 title: telnet set
-description: Windows Commands topic for telnet set, which sets options.
+description: Reference topic for telnet set, which sets options.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # telnet: set
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets options.   
 
@@ -39,7 +39,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 ## Remarks  
 1. You can use the **unset** command to turn off an option that was previously set.  
 2. On non-English versions of telnet, the **codeset** <option> is available. **Codeset** <option> sets the current code set to an option, which can be any one of the following: **shift JIS**, **Japanese EUC**, **JIS Kanji**, **JIS Kanji (78)**, **DEC Kanji**, **NEC Kanji**. You should set the same code set on the remote computer.  
-   ## <a name=BKMK_Examples></a>Examples  
+   ## Examples  
    Set the log file and begin logging to the local file tnlog.txt  
    ```  
    set logfile tnlog.txt  

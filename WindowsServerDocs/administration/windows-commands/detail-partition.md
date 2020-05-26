@@ -1,6 +1,6 @@
 ---
 title: detail partition
-description: Windows Commands topic for detail partition, which displays the properties of the selected partition.
+description: Reference topic for the detail partition command, which displays the properties of the selected partition.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 # detail partition
 
-Displays the properties of the selected partition.
+Displays the properties of the selected partition. Before you begin, you must select a partition for this operation to succeed. Use the [select partition](select-partition.md) command to select a partition and shift the focus to it.
 
 ## Syntax
 
@@ -21,13 +21,10 @@ Displays the properties of the selected partition.
 detail partition
 ```
 
-## Remarks
-
--   A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.
-
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To see the properties of the selected partition, type:
+
 ```
 detail partition
 ```
@@ -36,3 +33,4 @@ detail partition
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
+- [detail command](detail.md)

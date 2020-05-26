@@ -1,6 +1,6 @@
 ---
 title: inuse
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -22,4 +22,4 @@ ms.date: 10/16/2017
 
 Inuse is deprecated, and is not guaranteed to be supported in future releases of Windows.
 
-This tool is included in Windows Server 2003 . For more information see [Inuse](https://technet.microsoft.com/library/dd996699(v=ws.10).aspx).
+This tool is included in Windows Server 2003 . For more information, see [Inuse](https://technet.microsoft.com/library/dd996699(v=ws.10).aspx).

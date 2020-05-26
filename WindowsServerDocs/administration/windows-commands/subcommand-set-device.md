@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-Device
-description: Windows Commands topic for Subcommand set-Device, which changes the attributes of a prestaged computer. 
+description: Reference topic for Subcommand set-Device, which changes the attributes of a prestaged computer. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: set-Device
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the attributes of a prestaged computer. A prestaged computer is a computer that has been linked to a computer account object in active directory Domain Servers (AD DS). Prestaged clients are also called known computers. You can configure properties on the computer account to control the installation for the client. For example, you can configure the network boot program and the unattend file that the client should receive, as well as the server from which the client should download the network boot program.
 
@@ -35,7 +35,7 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 |[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that the computer will use.|
 |[/Domain:<Domain>]|Specifies the domain to be searched for the prestaged computer. The default value is the local domain.|
 |[/resetAccount]|resets the permissions on the specified computer so that anyone with the appropriate permissions can join the domain by using this account.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To set the network boot program and referral server for a computer, type:
 ```
 wdsutil /Set-Device /Device:computer1 /ReferralServer:MyWDSServer

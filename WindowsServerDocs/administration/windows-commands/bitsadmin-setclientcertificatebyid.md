@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setclientcertificatebyid
-description: Windows Commands topic for **bitsadmin setclientcertificatebyid**, which specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request
+description: Reference topic for the bitsadmin setclientcertificatebyid command, which specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -32,12 +32,14 @@ bitsadmin /setclientcertificatebyid <job> <store_location> <store_name> <hexadec
 
 ## Examples
 
-The following example specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request for the job named *myDownloadJob*.
+To specify the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setclientcertificatebyid myDownloadJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD
+bitsadmin /setclientcertificatebyid myDownloadJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

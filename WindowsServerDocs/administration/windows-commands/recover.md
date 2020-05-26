@@ -1,6 +1,6 @@
 ---
 title: recover
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Recovers readable information from a bad or defective disk.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -43,7 +43,7 @@ recover [<Drive>:][<Path>]<FileName>
 -   Because all data in bad sectors is lost when you recover a file, you should recover only one file at a time.
 -   You cannot use wildcard characters (**&#42;** and **?**) with the **recover** command. You must specify a file (and the location of the file if it is not in the current directory).
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To recover the file Story.txt in the \Fiction directory on drive D, type:
 ```

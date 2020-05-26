@@ -1,6 +1,6 @@
 ---
 title: ftp open_1
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # ftp: open_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Connects to the specified ftp server.   
 ## Syntax  
@@ -32,7 +32,7 @@ open <computer> [<Port>]
 
 ## Remarks  
 You can use an IP address or computer name (in which case a DNS server or Hosts file must be available) to specify **computer**.  
-## <a name=BKMK_Examples></a>Examples  
+## Examples  
 Connect to the ftp server at **ftp.microsoft.com**.  
 ```  
 Open ftp.microsoft.com  

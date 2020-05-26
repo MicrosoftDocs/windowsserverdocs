@@ -1,6 +1,6 @@
 ---
 title: select vdisk
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # select vdisk
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 selects the specified virtual hard disk \(VHD\) and shifts the focus to it.  
   
@@ -36,7 +36,7 @@ select vdisk file=<full path> [noerr]
 |file\=<full path>|Specifies the full path and file name of an existing VHD file.|  
 |noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To shift the focus to the VHD named Test.vhd, type:  
   
 ```  

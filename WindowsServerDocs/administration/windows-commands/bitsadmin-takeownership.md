@@ -1,6 +1,6 @@
 ---
 title: bitsadmin takeownership
-description: Windows Commands topic for **bitsadmin takeownership**, which lets a user with administrative privileges take ownership of the specified job.
+description: Reference topic for the bitsadmin takeownership command, which lets a user with administrative privileges take ownership of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -25,16 +25,18 @@ bitsadmin /takeownership <job>
 
 | Parameter | Description |
 | --------- | ---------- |
-| Job | The job's display name or GUID. |
+| job | The job's display name or GUID. |
 
 ## Examples
 
-The following example takes ownership of the job named *myDownloadJob*.
+To take ownership of the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /takeownership myDownloadJob
+bitsadmin /takeownership myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

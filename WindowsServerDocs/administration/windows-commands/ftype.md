@@ -1,6 +1,6 @@
 ---
 title: ftype
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -21,7 +21,10 @@ ms.date: 10/16/2017
 
 Displays or modifies file types that are used in file name extension associations. If used without an assignment operator (**=**), **ftype** displays the current open command string for the specified file type. If used without parameters, **ftype** displays the file types that have open command strings defined.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+> [!NOTE]
+> This command is only supported within CMD.EXE and is not available from PowerShell.  
+> Though you can use `cmd /c ftype` as a workaround.
+
 
 ## Syntax
 
@@ -48,7 +51,7 @@ The following table describes how **ftype** substitutes variables within an open
 |%2, %3, ...|Gets the first parameter (%2), the second parameter (%3), and so on.|
 |%~\<N>|Gets all of the remaining parameters starting with the *N*th parameter, where *N* can be any number from 2 to 9.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the current file types that have open command strings defined, type:
 ```

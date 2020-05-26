@@ -1,6 +1,6 @@
 ---
 title: manage-bde protectors
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,9 +16,9 @@ ms.date: 08/06/2018
 ---
 # manage-bde: protectors
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Manages the protection methods used for the BitLocker encryption key. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Manages the protection methods used for the BitLocker encryption key.
 ## Syntax
 ```
 manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup}] <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
@@ -110,24 +110,24 @@ manage-bde  -protectors  -disable <Drive> [-RebootCount <integer 0 - 15>] [-comp
 |   -? or /?    |                                                                                                                                                                                                    Displays brief help at the command prompt.                                                                                                                                                                                                    |
 |  -help or -h  |                                                                                                                                                                                                  Displays complete help at the command prompt.                                                                                                                                                                                                   |
 
-## <a name=BKMK_Examples></a>Examples
-The following example illustrates using the **-protectors** command to add a certificate key protector identified by a certificate file to drive E.
+## Examples
+To illustrates using the **-protectors** command to add a certificate key protector identified by a certificate file to drive E.
 ```
 manage-bde  -protectors  -add E: -certificate  -cf c:\File Folder\Filename.cer
 ```
-The following example illustrates using the **-protectors** command to add an **adaccountorgroup** key protector identified by domain and user name to drive E.
+To illustrates using the **-protectors** command to add an **adaccountorgroup** key protector identified by domain and user name to drive E.
 ```
 manage-bde  -protectors  -add E: -sid DOMAIN\user
 ```
-The following example illustrates using the **protectors** command to disable protection until the computer has rebooted 3 times.
+To illustrates using the **protectors** command to disable protection until the computer has rebooted 3 times.
 ```
 manage-bde  -protectors  -disable C: -rc 3
 ```
-The following example illustrates using the **-protectors** command to delete all TPM and startup key based key protectors on drive C.
+To illustrates using the **-protectors** command to delete all TPM and startup key based key protectors on drive C.
 ```
 manage-bde  -protectors -delete C: -type tpmandstartupkey
 ```
-The following example illustrates using the **-protectors** command to back up all recovery information for drive C to AD DS.
+To illustrates using the **-protectors** command to back up all recovery information for drive C to AD DS.
 ```
 manage-bde  -protectors  -adbackup C:
 ```

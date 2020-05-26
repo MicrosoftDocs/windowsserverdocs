@@ -1,6 +1,6 @@
 ---
 title: bcdboot
-description: Windows Commands topic for **bcdboot**, which quickly set up a system partition, or repair the boot environment located on the system partition.
+description: Reference topic for the bcdboot command, which quickly set up a system partition, or repair the boot environment located on the system partition.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -29,7 +29,7 @@ bcdboot <source> [/l] [/s]
 | /l | Specifies the locale. The default locale is US English. |
 | /s | Specifies the volume letter of the system partition. The default is the system partition identified by the firmware. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 For information about where to find BCDboot and examples of how to use this command, see the [BCDboot Command-Line Options](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)x) topic.
 

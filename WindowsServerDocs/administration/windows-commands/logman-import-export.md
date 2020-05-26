@@ -1,6 +1,6 @@
 ---
 title: logman import | export
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # logman import | export
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 import a Data Collector Set from an XML file, or export a Data Collector Set to an XML file.  
 
@@ -38,7 +38,7 @@ logman export <[-n] <name>> <-xml <name>> [options]
 | -[-]u <user [password]> | User to Run As. Entering a \* for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
 |           -y            |                                                      Answer yes to all questions without prompting.                                                       |
 
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 The following command imports the XML file c:\windows\perf_log.xml from the computer server_1 as a data collector set called perf_log.  
 ```  
 logman import perf_log -s server_1 -xml c:\windows\perf_log.xml  

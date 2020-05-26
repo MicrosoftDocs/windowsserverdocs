@@ -1,6 +1,6 @@
 ---
 title: manage-bde upgrade
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Upgrades the BitLocker version. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Upgrades the BitLocker version.
 
 ## Syntax
 
@@ -37,9 +37,9 @@ manage-bde -upgrade [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 |-? or /?|Displays brief Help at the command prompt.|
 |-help or -h|Displays complete Help at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-The following example illustrates using the **-upgrade** command to upgrade BitLocker encryption on drive C.
+To illustrates using the **-upgrade** command to upgrade BitLocker encryption on drive C.
 ```
 manage-bde –upgrade C:
 ```

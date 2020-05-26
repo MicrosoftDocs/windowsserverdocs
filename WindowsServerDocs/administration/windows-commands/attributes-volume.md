@@ -1,6 +1,6 @@
 ---
 title: attributes volume
-description: Windows Commands topic for **attributes volume**, which displays, sets, or clears the attributes of a volume.
+description: Reference topic for the attributes volume command, which displays, sets, or clears the attributes of a volume.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # attributes volume
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays, sets, or clears the attributes of a volume.
 
@@ -34,7 +34,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
 | shadowcopy | Specifies that the volume is a shadow copy volume. |  
 | noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |  
   
-## Remarks  
+### Remarks  
   
 - On basic master boot record (MBR) disks, the **hidden**, **readonly**, and **nodefaultdriveletter** parameters apply to all volumes on the disk.  
   
@@ -42,7 +42,7 @@ attributes volume [{set | clear}] [{hidden | readonly | nodefaultdriveletter | s
   
 - A volume must be selected for the **attributes volume** command to succeed. Use the **select volume** command to select a volume and shift the focus to it.  
   
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the current attributes on the selected volume, type:  
   
@@ -65,3 +65,5 @@ attributes volume clear hidden readonly
 ## Additional References  
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [select volume command](select-volume.md)

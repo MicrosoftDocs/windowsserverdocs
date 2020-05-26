@@ -1,6 +1,6 @@
 ---
 title: select disk
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # select disk
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 selects the specified disk and shifts the focus to it.  
   
@@ -40,7 +40,7 @@ select disk={ <n> | <disk path> | system | next }
 |   system    |                                 On BIOS computers, specifies that disk 0 receives focus. On EFI computers, the disk containing the EFI system partition \(ESP\) that is used for the current boot  receives focus. On EFI computers, the command will fail if there is no ESP, if there is more than one ESP, or the computer is booted from Windows Preinstallation Environment \(Windows PE\).                                  |
 |    next     |                                                                                                                                     Once a disk is selected, this command iterates over all disks in the disk list. When you run this command, the next disk in the list will receive focus.                                                                                                                                      |
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To shift the focus to disk 1, type:  
   
 ```  

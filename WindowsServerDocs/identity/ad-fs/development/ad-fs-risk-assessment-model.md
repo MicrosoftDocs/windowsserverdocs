@@ -3,7 +3,7 @@ title: Build Plug-ins with AD FS 2019 Risk Assessment Model
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/16/2019
+ms.date: 05/05/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
@@ -31,9 +31,12 @@ The model allows to plug-in code at any of three stages of AD FS authentication 
 To better understand how to build a risk assessment plug-in and run it in line with AD FS process, let's build a sample plug-in that blocks the requests coming from certain **extranet** IPs identified as risky, register the plug-in with AD FS and finally test the functionality. 
 
 >[!NOTE]
->This walkthrough is only to show you how you can create a sample plug-in. By no means is the solution we are creating an enterprise ready solution.  
+>Alternatively, you can build [Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection), a sample plug-in that leverages user risk level determined by Azure AD Identity Protection to block authentication or enforce multi-factor authentication (MFA). Steps to build Risky User Plug-in are available [here](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)
 
 ## Building a sample plug-in
+
+>[!NOTE]
+>This walkthrough is only to show you how you can create a sample plug-in. By no means is the solution we are creating an enterprise ready solution. 
 
 ### Pre-requisites
 Following is the list of pre-requisites required to build this sample plug-in
@@ -315,6 +318,7 @@ The method returns the [Risk Score](https://docs.microsoft.com/dotnet/api/micros
 
 **What other sample plug-ins are available?**</br>
 **A:** The following sample plug-in(s) are available:
+
 |Name|Description| 
 |-----|-----|
 |[Risky User Plug-in](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)|Sample plug-in that blocks authentication or enforces MFA based on user risk level determined by Azure AD Identity Protection.| 

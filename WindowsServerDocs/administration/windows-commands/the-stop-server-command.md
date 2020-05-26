@@ -1,6 +1,6 @@
 ---
 title: stop-server
-description: Windows Commands topic for stop-server, which stops services for Windows Deployment Services.
+description: Reference topic for stop-server, which stops services for Windows Deployment Services.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -11,7 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 # stop-server
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops services for Windows Deployment Services.
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcompletiontime
-description: Windows Commands topic for **bitsadmin getcompletiontime**, which retrieves the time that the job finished transferring data.
+description: Reference topic for the bitsadmin getcompletiontime command, which retrieves the time that the job finished transferring data.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -27,14 +27,16 @@ bitsadmin /getcompletiontime <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the time that the job named *myDownloadJob* finished transferring data.
+To retrieve the time that the job named *myDownloadJob* finished transferring data:
 
 ```
-C:\>bitsadmin /getcompletiontime myDownloadJob
+bitsadmin /getcompletiontime myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

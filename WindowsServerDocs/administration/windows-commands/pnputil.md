@@ -46,7 +46,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 -   pnputil.exe -d oem0.inf  Deletes the specified.
 -   pnputil.exe -f -d oem0.inf  Forces the deletion of the specified INF file.
 
-## Additional references
+## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

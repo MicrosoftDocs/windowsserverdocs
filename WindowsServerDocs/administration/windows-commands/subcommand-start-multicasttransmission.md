@@ -1,6 +1,6 @@
 ---
 title: Subcommand start-MulticastTransmission
-description: Windows Commands topic for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
+description: Reference topic for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: start-MulticastTransmission
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Starts a Scheduled-Cast transmission of an image.
 
@@ -47,7 +47,7 @@ mediatype:{Install&#124;Boot}|Specifies the image type. Note that this option mu
 |/Architecture:{x86 &#124; ia64 &#124; x64}|The architecture of the boot image that is associated with the transmission to start. Since it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure that the correct transmission is used.|
 |\mediaGroup:<Image group name>]|Specifies the image group of the image. If no image group name is specified and only one image group exists on the server, that image group will be used. If more than one image group exists on the server, you must use this option to specify the image group name.|
 |[/Filename:<File name>]|Specifies the name of the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To start a multicast transmission, type one of the following:
 ```
 wdsutil /start-MulticastTransmissiomedia:Vista with Office

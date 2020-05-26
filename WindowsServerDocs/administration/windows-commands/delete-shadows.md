@@ -1,6 +1,6 @@
 ---
 title: delete shadows
-description: Windows Commands topic for delete shadows, which deletes shadow copies.
+description: Reference topic for the delete shadows command, which deletes shadow copies.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,7 +18,7 @@ Deletes shadow copies.
 ## Syntax
 
 ```
-delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <ShadowID> | exposed {<Drive> | <MountPoint>}]
+delete shadows [all | volume <volume> | oldest <volume> | set <setID> | id <shadowID> | exposed {<drive> | <mountpoint>}]
 ```
 
 ### Parameters
@@ -26,12 +26,14 @@ delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <Shad
 | Parameter | Description |
 | ---- | ---- |
 | all | Deletes all shadow copies. |
-| volume \<Volume> | Deletes all shadow copies of the given volume. |
-| oldest \<Volume> | Deletes the oldest shadow copy of the given volume. |
-| set \<SetID> | Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
-| id \<ShadowID> | Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
-| exposed {\<Drive> | <MountPoint>} |
+| volume `<volume>` | Deletes all shadow copies of the given volume. |
+| oldest `<volume>` | Deletes the oldest shadow copy of the given volume. |
+| set `<setID>` | Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
+| id `<shadowID>` | Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
+| exposed {`<drive> | <mountpoint>} |
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [delete command](delete.md)

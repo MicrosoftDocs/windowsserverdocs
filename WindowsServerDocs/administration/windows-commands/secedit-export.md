@@ -1,6 +1,6 @@
 ---
 title: secedit:export
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Exports security settings stored in a database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Exports security settings stored in a database configured with security templates.
 
 ## Syntax
 
@@ -46,7 +46,7 @@ If the path for the log file is not provided, the default log file, (*systemroot
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Export the security database and the domain security policies to an inf file and then import that file to a different database in order to replicate the security policy settings on another computer.
 ```

@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 Enables an administrator to recover access to a file that previously was denied, by making the administrator the owner of the file.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -45,7 +45,7 @@ takeown [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <File n
 -   This command is typically used in batch files.
 -   If the **/a** parameter is not specified, file ownership is given to the user who is currently logged on to the computer.
 -   Mixed patterns using (**?** and **&#42;**) are not supported by **takeown** command.
--   After deleting the lock with **takeown**, you might have to use Windows Explorer or the **cacls** command to give yourself full permissions to the files and directories before you can delete them. For more information about **cacls**, see "Additional references" at the end of this topic.
+-   After deleting the lock with **takeown**, you might have to use Windows Explorer or the **cacls** command to give yourself full permissions to the files and directories before you can delete them. For more information about **cacls**, see "Additional References" at the end of this topic.
 
 ## <a name="BKMK_examples"></a>Examples
 
