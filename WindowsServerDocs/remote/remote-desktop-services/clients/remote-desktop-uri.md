@@ -24,11 +24,15 @@ This document defines the format of Uniform Resource Identifiers (URIs) for Remo
 
 The ms-rd URI provides the option to specify a command for the client and a set of parameters specific to the command using the following format:
 
-`ms-rd:command?parameters`
+```
+ms-rd:command?parameters
+```
 
 Parameters uses the query string format of key=value pair separated by & to provide additional information for the given command:
 
-`param1=value1&param2=value2&…`
+```
+param1=value1&param2=value2&…
+```
 
 ### Commands and parameters
 

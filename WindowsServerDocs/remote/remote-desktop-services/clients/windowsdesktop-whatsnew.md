@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/26/2020
+ms.date: 05/27/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -20,14 +20,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.1024 |
-|Insider    |1.2.1024 |
+|Public     |1.2.1026 |
+|Insider    |1.2.1026 |
 
-## Updates for version 1.2.1024
+## Updates for version 1.2.1026
 
-*Date published: 05/12/2020*
+*Date published: 05/27/2020*
 
-Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xsGB), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xd8P), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xq7m)
 
 - When subscribing, you can now choose your account instead of typing your email address.
 - Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to WVD Spring 2020 Update Workspaces.
