@@ -1,6 +1,6 @@
 ---
 title: nbtstat
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays NetBIOS over TCP/IP (NetBT) protocol statistics, NetBIOS name tables for both the local computer and remote computers, and the NetBIOS name cache. **nbtstat** allows a refresh of the NetBIOS name cache and the names registered with Windows Internet Name Service (WINS). Used without parameters, **nbtstat** displays help. 
+Displays NetBIOS over TCP/IP (NetBT) protocol statistics, NetBIOS name tables for both the local computer and remote computers, and the NetBIOS name cache. **nbtstat** allows a refresh of the NetBIOS name cache and the names registered with Windows Internet Name Service (WINS). Used without parameters, **nbtstat** displays help.
 
 ## Syntax
 
@@ -124,6 +124,6 @@ nbtstat /S 5
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

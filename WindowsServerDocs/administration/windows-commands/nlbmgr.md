@@ -1,6 +1,6 @@
 ---
 title: nlbmgr
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -34,5 +34,5 @@ nlbmgr [/help] [/noping] [/hostlist <filename>] [/autorefresh <interval>]
 |           /?            |                                                                                                                                                                                   Displays help at the command prompt.                                                                                                                                                                                    |
 
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

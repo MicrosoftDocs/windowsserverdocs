@@ -1,39 +1,45 @@
 ---
 title: ftp rename
-description: Reference topic for **** - 
-
+description: Reference topic for the ftp rename command, which renames remote files.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
-ms.assetid: 977b7c95-6428-4980-80ec-79c3ae7e8c4d vhorne
+ms.assetid: 977b7c95-6428-4980-80ec-79c3ae7e8c4d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: rename
+
+# ftp rename
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-renames remote files.   
-## Syntax  
-```  
-rename <FileName> <NewFileName>  
-```  
-#### Parameters  
+Renames remote files.
 
-|   Parameter   |                 Description                 |
-|---------------|---------------------------------------------|
-|  <FileName>   | Specifies the file that you want to rename. |
-| <NewFileName> |        Specifies the new file name.         |
+## Syntax
 
-## Examples  
-rename the remote file **example.txt** to **example1.txt**  
-```  
-rename example.txt example1.txt  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+```
+rename <filename> <newfilename>
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<filename>` | Specifies the file that you want to rename. |
+| `<newfilename>` | Specifies the new file name. |
+
+### Examples
+
+To rename the remote file *example.txt* to *example1.txt*, type:
+
+```
+rename example.txt example1.txt
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

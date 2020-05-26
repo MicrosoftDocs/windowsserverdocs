@@ -208,4 +208,4 @@ In the preceding example, this particular source parameter value **.\\toc\*.yml*
 -   [Attrib](attrib.md)
 -   [Diskcopy](diskcopy.md)
 -   [If](if.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

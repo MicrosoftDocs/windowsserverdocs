@@ -1,6 +1,6 @@
 ---
 title: serverweroptin
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -44,5 +44,5 @@ To automatically send summary reports, type
 serverweroptin /summary
 ```
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

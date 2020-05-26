@@ -1,6 +1,6 @@
 ---
 title: secedit:generaterollback
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -57,4 +57,4 @@ Secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcont
 ## Additional References
 
 -   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

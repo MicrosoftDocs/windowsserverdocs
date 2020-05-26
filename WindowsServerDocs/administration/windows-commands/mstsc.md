@@ -1,6 +1,6 @@
 ---
 title: mstsc
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -61,5 +61,5 @@ mstsc.exe /migrate
     ```
 
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

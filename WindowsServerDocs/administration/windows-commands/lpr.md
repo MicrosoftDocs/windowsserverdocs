@@ -1,6 +1,6 @@
 ---
 title: lpr
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -18,13 +18,13 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.  
+Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
 
-## Syntax  
-```  
-lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o | -o l] [-x] [-d] <filename>  
-```  
-### Parameters  
+## Syntax
+```
+lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o | -o l] [-x] [-d] <filename>
+```
+### Parameters
 
 |     Parameter      |                                                                                                           Description                                                                                                           |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,19 +38,19 @@ lpr [-S <ServerName>] -P <printerName> [-C <BannerContent>] [-J <JobName>] [-o |
 |     <FileName>     |                                                                                      Specifies (by name) the file to be printed. Required.                                                                                      |
 |         /?         |                                                                                              Displays help at the command prompt.                                                                                               |
 
-## Remarks  
-- To find the name of the printer, open the printers folder.  
-- The **-S**, **-P**, **-C**, and **-J** parameters are case sensitive and must be typed in upper-case letters.  
-  ## Examples  
-  This example shows how to print the Document.txt text file to the Laserprinter1 printer queue on an LPD host at 10.0.0.45:  
-  ```  
-  lpr -S 10.0.0.45 -P Laserprinter1 -o Document.txt  
-  ```  
-  This example shows how to print the PostScript_file.ps Adobe PostScript file to the Laserprinter1 printer queue on an LPD host at 10.0.0.45:  
-  ```  
-  lpr -S 10.0.0.45 -P Laserprinter1 -o l PostScript_file.ps  
-  ```  
+## Remarks
+- To find the name of the printer, open the printers folder.
+- The **-S**, **-P**, **-C**, and **-J** parameters are case sensitive and must be typed in upper-case letters.
+  ## Examples
+  This example shows how to print the Document.txt text file to the Laserprinter1 printer queue on an LPD host at 10.0.0.45:
+  ```
+  lpr -S 10.0.0.45 -P Laserprinter1 -o Document.txt
+  ```
+  This example shows how to print the PostScript_file.ps Adobe PostScript file to the Laserprinter1 printer queue on an LPD host at 10.0.0.45:
+  ```
+  lpr -S 10.0.0.45 -P Laserprinter1 -o l PostScript_file.ps
+  ```
 
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
--   [print Command Reference](print-command-reference.md)  
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+-   [print Command Reference](print-command-reference.md)
