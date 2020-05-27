@@ -14,12 +14,11 @@ layout: LandingPage
 
 # Windows Server 2008 SP2
 
-Find information on known issues for Windows Server 2008 SP2. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).
-
+Find information on known issues for Windows Server 2008 SP2. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).<p><table border = "0" class="box-info has-overflow-hidden"><tr><td class="alert is-success"><div>The Windows release health dashboard is always evolving. <a href=" https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRwd7AYyoiC5Ovm9mXkcWyfRUNlZLSFdNMjRNQTdZTllHNUFBWERLSDFISi4u" target="_blank">Take our short survey</a> and let us know how we can improve.</div></td></tr></table></p>
 
 |               |               |               |               |               |
-| ------------- | ------------- | ------------- | ------------- |
-| ![Optimize Windows monthly update deployment for remote devices](https://docs.microsoft.com/office/media/icons/trend-graph-blue.png) | **[Optimize Windows monthly update deployment for remote devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/optimize-windows-monthly-update-deployment-for-remote-devices/ba-p/1309917)** <br/> Get tips and best practices >| ![Revised end of service date for Windows 10, version 1709](https://docs.microsoft.com/office/media/icons/whats-new-megaphone-blue.png) | **[Revised end of service date for Windows 10, version 1709](https://aka.ms/blog/1709lifecycle)** <br/> Learn more about this lifecycle change and affected editions >| ![Still have devices running Windows 7 in your enterprise?](https://docs.microsoft.com/office/media/icons/lock-protected-blue.png) | **[Still have devices running Windows 7 in your enterprise?](https://aka.ms/Windows7ESU)** <br/> Stay protected with Extended Security Updates >|
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| ![Windows 10, version 2004 is now available](https://docs.microsoft.com/en-us/office/media/icons/whats-new-megaphone-blue.png) | **[Windows 10, version 2004 is now available](https://aka.ms/how-to-get-2004)** <br/> Find out how to get the update >| ![What’s new for IT pros](https://docs.microsoft.com/en-us/office/media/icons/education-tutorial-blue.png) | **[What’s new for IT pros](https://aka.ms/whats-new-2004)** <br/> Explore the latest features and and servicing innovations in Windows 10 >| ![Wondering how to deploy feature updates remotely?](https://docs.microsoft.com/en-us/office/media/icons/migration-blue.png) | **[Wondering how to deploy feature updates remotely?](https://aka.ms/RemoteFeatureUpdates)** <br/> Get tips and best practices >|
 <div align='right' style='font-size:0.87rem'><a class='is-size-7' href='https://docs.microsoft.com/windows/release-information/windows-message-center'>See all messages ></a></div><hr class='cardsM'>
 
 ## Known issues
