@@ -18,11 +18,11 @@ To learn about the latest features in Windows, see [What's New in Windows Server
 
 ## Server Core container improvements
 
-We've reduced the overall size of Server Core container images for improved download speeds. We've included the following improvements:
+We've reduced the overall size of Server Core container images for improved download speeds and performance. We've included the following improvements:
 
-- Smaller NGEN images compared to previous releases.
-- Smaller .NET Framework runtime images.
-- The .NET team has ensured there's only one copy of each NGEN image, to save space.
+- Removed most NGEN images from Server Core container image to make the image size smaller. 
+- .NET Framework runtime images built on Server Core container image are now optimized for ASP.NET apps and Windows PowerShell script performance.
+- The .NET team has also ensured there's only one copy of each NGEN image, resulting a smaller size for .NET Framework images.
 
 To give you a better idea of the size of these containers, the following table compares the current version of the container with previous versions.
 
