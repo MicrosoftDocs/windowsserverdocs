@@ -1,5 +1,8 @@
 # [Windows 10 release information](index.md)
 # [Message center](windows-message-center.md)
+# Version 2004
+## [Known issues and notifications](status-windows-10-2004.md)
+## [Resolved issues](resolved-issues-windows-10-2004.md)
 # Version 1909
 ## [Known issues and notifications](status-windows-10-1909.md)
 ## [Resolved issues](resolved-issues-windows-10-1909.md)
