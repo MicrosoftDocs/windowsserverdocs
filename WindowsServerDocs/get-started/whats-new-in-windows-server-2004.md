@@ -30,6 +30,6 @@ To give you a better idea of the size of these containers, the following table c
 |---|---|---|
 | Windows Server, version 1903 | 2.311 GB | 5.1 GB |
 | Windows Server, version 1909 | 2.257 GB | 4.97 GB |
-| Windows Server, version 2004 | 1.865 GB | 4.05 GB |
+| Windows Server, version 2004 | 1.830 GB | 3.98 GB |
 
 For more information about the Windows Server, version 2004 update, see [our blog post](https://techcommunity.microsoft.com/t5/containers/windows-server-version-2004-now-available/ba-p/1419194). To learn more about Windows container updates in general, see [Update Windows Server containers](/virtualization/windowscontainers/deploy-containers/update-containers/).
