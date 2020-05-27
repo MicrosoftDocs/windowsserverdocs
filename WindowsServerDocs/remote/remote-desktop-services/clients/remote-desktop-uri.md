@@ -1,30 +1,63 @@
 ---
-title: Remote Desktop clients URI scheme
+title: Remote Desktop URI scheme
 description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 06/11/2018
+author: heidilohr
+manager: lizross
+ms.author: helohr
+ms.date: 05/26/2020
 ms.localizationpriority: medium
 ---
-
-# Remote Desktop client Universal Resource Identifier (URI) scheme support
+# Remote Desktop URI scheme
 
 > Applies to: Windows Server, version 1803, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-Enabling a Uniform Resource Identifier (URI) scheme gives IT professionals and developers a way to integrate features of the Remote Desktop clients across platforms and enriches the user experience by allowing:
+This document defines the format of Uniform Resource Identifiers (URIs) for Remote Desktop. These URI schemes allow for Remote Desktop clients to be invoked with various commands.
 
-- Third-party applications to launch Microsoft Remote Desktop and start remote sessions with predefined settings (provided as part of the URI string).
-- End users to start remote connections using pre-configured URLs.
+## ms-rd URI scheme
 
-> [!NOTE]
-> Using a URI to connect to the RD client is NOT supported for Windows operating systems - use the URI with MacOS, iOS, and Android devices.
+>[!NOTE]
+> The ms-rd URI scheme is currently only supported with the Windows Desktop client (MSRDC).
 
-Microsoft Remote Desktop uses the URI scheme rdp://query_string to store pre-configured attribute settings that are used when launching the client. The query strings represent a single or set of RDP attributes provided in the URL.
+The ms-rd URI provides the option to specify a command for the client and a set of parameters specific to the command using the following format:
+
+```
+ms-rd:command?parameters
+```
+
+Parameters uses the query string format of key=value pair separated by & to provide additional information for the given command:
+
+```
+param1=value1&param2=value2&…
+```
+
+### Commands and parameters
+
+Here is the list of currently supported commands and their corresponding parameters.
+
+Using `ms-rd:` without any commands launches the client.
+
+#### Subscribe
+
+This command launches the client and starts the subscription process.
+
+**Command name:** subscribe
+
+**Command parameters:**
+
+| Parameter | Description                  | Values |
+|-----------|------------------------------|--------|
+| url       | Specifies the Workspace URL. | A valid URL, such as <https://contoso.com>. |
+
+## Legacy rdp URI scheme
+
+>[!NOTE]
+> The following URI scheme is only supported with the clients for macOS, iOS, and Android devices. It is being replaced by the new ms-rd URI above.
+
+Microsoft Remote Desktop uses the URI scheme rdp://query_string to store preconfigured attribute settings that are used when launching the client. The query strings represent a single or set of RDP attributes provided in the URL.
 
 The RDP attributes are separated by the ampersand symbol (&). For example, when connecting to a PC, the string is:
 
