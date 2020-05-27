@@ -20,11 +20,11 @@ To learn about the latest features in Windows, see [What's New in Windows Server
 
 We've reduced the overall size of Server Core container images for improved download speeds and performance. We've included the following improvements:
 
-- Removed most NGEN images from Server Core container image to make the image size smaller. 
-- .NET Framework runtime images built on Server Core container image are now optimized for ASP.NET apps and Windows PowerShell script performance.
+- Removed most NGEN images from Server Core container image to make the image size smaller.
+- .NET Framework runtime images built on Server Core container images are now optimized for ASP.NET apps and Windows PowerShell script performance.
 - The .NET team has also ensured there's only one copy of each NGEN image, resulting a smaller size for .NET Framework images.
 
-To give you a better idea of the size of these containers, the following table compares the current version of the container with previous versions.
+To give you a better idea of the size of these containers, the following table compares the current version of the container as of [the May 2020 monthly security update](https://support.microsoft.com/help/4561769/windows-server-containers-for-may-2020) (also known as the "5B" update) with previous versions.
 
 | Container version | Download size | Size on disk |
 |---|---|---|
@@ -32,4 +32,4 @@ To give you a better idea of the size of these containers, the following table c
 | Windows Server, version 1909 | 2.257 GB | 4.97 GB |
 | Windows Server, version 2004 | 1.865 GB | 4.05 GB |
 
-To learn more about Windows container updates, see [Update Windows Server containers](/virtualization/windowscontainers/deploy-containers/update-containers/).
+For more information about the Windows Server, version 2004 update, see [our blog post](https://techcommunity.microsoft.com/t5/containers/windows-server-version-2004-now-available/ba-p/1419194). To learn more about Windows container updates in general, see [Update Windows Server containers](/virtualization/windowscontainers/deploy-containers/update-containers/).
