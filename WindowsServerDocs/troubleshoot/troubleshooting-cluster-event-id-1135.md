@@ -237,7 +237,7 @@ Check if you encounter any of the following issues.
 
     ![Add Counters](media/troubleshooting-cluster-event-id-1135/18652.png)
 
-    If you are experiencing network packet lost on VmWare virtualization platform, see the [Cluster installed in the VmWare virtualization platform](#cluster-installed-in-the-VmWare-virtualization-platform) section.
+    If you are experiencing network packet lost on VmWare virtualization platform, see the "Cluster installed in the VmWare virtualization platform" section.
 
 2. Upgrade the NIC drivers
 
