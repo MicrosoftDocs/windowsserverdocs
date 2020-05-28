@@ -81,4 +81,6 @@ logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman update api command](logman-update-api.md)
+
+- [logman command](logman.md)

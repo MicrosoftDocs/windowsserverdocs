@@ -8,7 +8,7 @@ ms.prod: windows-server
 ms.technology: manage-windows-commands
 
 ms.topic: article
-ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818 vhorne
+ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

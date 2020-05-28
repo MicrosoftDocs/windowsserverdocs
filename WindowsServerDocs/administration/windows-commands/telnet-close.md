@@ -4,7 +4,7 @@ description: Reference topic for telnet close, which closes the current telnet c
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 9330a5e0-bdb5-446b-8c25-c2c460df8b6b vhorne
+ms.assetid: 9330a5e0-bdb5-446b-8c25-c2c460df8b6b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
