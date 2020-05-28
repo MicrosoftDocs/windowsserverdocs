@@ -15,7 +15,7 @@ This article introduce how to resolve the problems in which nodes are removed fr
 
 When the issue occurs, you are seeing events like this logged in your System Event Log:
 
-:::image type="content" source="media/problem-nodes-failover-cluster/1135-1.png" alt-text="Event 1135" border="false":::
+![Event 1135](media/problem-nodes-failover-cluster/1135-1.png)
 
 This event will be logged on all nodes in the Cluster except for the node that was removed. The reason for this event is because one of the nodes in the Cluster marked that node as down. It then notifies all of the other nodes of the event. When the nodes are notified, they discontinue and tear down their heartbeat connections to the downed node.
 
@@ -23,7 +23,7 @@ This event will be logged on all nodes in the Cluster except for the node that w
 
 All nodes in a Windows 2008 or 2008 R2 Failover Cluster talk to each other over the networks that are set to Allow cluster network communication on this network. The nodes will send out heartbeat packets across these networks to all of the other nodes. These packets are supposed to be received by the other nodes and then a response is sent back. Each node in the Cluster has its own heartbeats that it is going to monitor to ensure the network is up and the other nodes are up. The example below should help clarify this:
 
-:::image type="content" source="media/problem-nodes-failover-cluster/Node2.png" alt-text="Nodes":::
+![Nodes](media/problem-nodes-failover-cluster/Node2.png)
 
 If any one of these packets is not returned, then the specific heartbeat is considered failed. For example, W2K8-R2-NODE2 sends a request and receives a response from W2K8-R2-NODE1 to a heartbeat packet so it determines the network and the node is up.  If W2K8-R2-NODE1 sends a request to W2K8-R2-NODE2 and W2K8-R2-NODE1 does not get the response, it is considered a lost heartbeat and W2K8-R2-NODE1 keeps track of it.  This missed response can have W2K8-R2-NODE1 show the network as down until another heartbeat request is received.
 

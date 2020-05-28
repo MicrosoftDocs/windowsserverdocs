@@ -66,8 +66,8 @@ There are three typical scenarios:
 
 You are looking at all the Events and all the nodes in the cluster are indicating that NODE A had lost communication.
 
-:::image type="content" source="media/troubleshooting-cluster-event-id-1135/18647.png" alt-text="SCENARIO A" border="false":::
-:::image type="content" source="media/troubleshooting-cluster-event-id-1135/18648.png" alt-text="SCENARIO A" border="false":::
+![Scenario A](media/troubleshooting-cluster-event-id-1135/18647.png)
+![Scenario A](media/troubleshooting-cluster-event-id-1135/18648.png)
 
 It could be possible that when you are seeing the system logs on NODE A, it has events for all the remaining nodes in the cluster.
 
@@ -81,11 +81,11 @@ You should review and validate the Network configuration and communication issue
 
 You are looking at the Events on the nodes and let us say that your cluster is dispersed across two sites. NODE A, NODE B, and NODE C at Site 1 and NODE D & NODE E at Site 2.
 
-:::image type="content" source="media/troubleshooting-cluster-event-id-1135/18649.png" alt-text="SCENARIO B" border="false":::
+![Scenario B](media/troubleshooting-cluster-event-id-1135/18649.png)
 
 On Nodes A,B, and C, you see that the events that are logged are for connectivity to Nodes D & E. Similarly, when you see the events on Nodes D & E, the events suggest that we lost communication with A, B, and C.
 
-:::image type="content" source="media/troubleshooting-cluster-event-id-1135/18650.png" alt-text="SCENARIO B" border="false":::
+![Scenario B](media/troubleshooting-cluster-event-id-1135/18650.png)
 
 #### Solution
 
@@ -102,7 +102,7 @@ You are looking at the Events on the nodes and you see that the names of the nod
 - On Node E: You see events for Nodes B, C, D.
 - Or any other combinations.
 
-:::image type="content" source="media/troubleshooting-cluster-event-id-1135/18651.png" alt-text="SCENARIO C" border="false":::
+![Scenario C](media/troubleshooting-cluster-event-id-1135/18651.png)
 
 #### Solution
 
@@ -186,12 +186,12 @@ Follow these instructions:
 
 1. Run the Cluster Validation report for any errors or warnings. For more information, see [Understanding Cluster Validation Tests: Network](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771323(v=ws.11)?redirectedfrom=MSDN)
 
-    :::image type="content" source="media/troubleshooting-cluster-event-id-1135/18653.png" alt-text="subhatt1" border="false":::
+    ![subhatt1](media/troubleshooting-cluster-event-id-1135/18653.png)
 
 2. Verify for warnings and errors for Networks. For more information, see [Understanding Cluster Validation Tests: Network](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771323(v=ws.11)?redirectedfrom=MSDN).
 
-    :::image type="content" source="media/troubleshooting-cluster-event-id-1135/18654.png" alt-text="Results by Category" border="false":::
-    :::image type="content" source="media/troubleshooting-cluster-event-id-1135/18655.png" alt-text="Network" border="false":::
+    ![Results by Category](media/troubleshooting-cluster-event-id-1135/18654.png)
+    ![Network](media/troubleshooting-cluster-event-id-1135/18655.png)
 
 #### Check the List Network Binding Order
 
@@ -235,7 +235,7 @@ Check if you encounter any of the following issues.
 
     If the packet is lost on the wire somewhere between the nodes, then the heartbeats will fail. We can easily find out if this is a problem by using Performance Monitor to look at the "Network Interface\Packets Received Discarded" counter. Once you have added this counter, look at the Average, Minimum, and Maximum numbers and if they are any value higher than zero, then the receive buffer needs to be adjusted up for the adapter.
 
-    :::image type="content" source="media/troubleshooting-cluster-event-id-1135/18652.png" alt-text="Add Counters" border="false":::
+    ![Add Counters](media/troubleshooting-cluster-event-id-1135/18652.png)
 
     If you are experiencing network packet lost on VmWare virtualization platform, see the [Cluster installed in the VmWare virtualization platform](##cluster-installed-in-the-VmWare-virtualization-platform) section.
 
