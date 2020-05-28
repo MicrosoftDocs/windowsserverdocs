@@ -14,13 +14,13 @@ This article provides information about resolving
 Event ID 1135 indicates that one or more Cluster nodes were removed from the active failover cluster membership. It may be accompanied by the following symptoms:
 
 - Cluster Failover\nodes being removed from active Failover Cluster membership:
- [http://blogs.technet.com/b/askcore/archive/2012/02/08/having-a-problem-with-nodes-being-removed-from-active-failover-cluster-membership.aspx](http://blogs.technet.com/b/askcore/archive/2012/02/08/having-a-problem-with-nodes-being-removed-from-active-failover-cluster-membership.aspx)
+ [Having a problem with nodes being removed from active Failover Cluster membership](/problem-nodes-failover-cluster.md)
 - Event ID 1069
- [https://technet.microsoft.com/library/cc756225(v=ws.10).aspx](https://technet.microsoft.com/library/cc756225%28v=ws.10%29.aspx)
+ [Event ID 1069 — Clustered Service or Application Availability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756225(v=ws.10))
 - Event ID 1177 for Quorum loss
- [https://technet.microsoft.com/library/cc773498(v=ws.10).aspx](https://technet.microsoft.com/library/cc773498%28v=ws.10%29.aspx)
+ [Event ID 1177 — Quorum and Connectivity Needed for Quorum](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc773498(v=ws.10))
 - Event ID 1006 for Cluster service halted:
- [https://technet.microsoft.com/library/cc773418(v=WS.10).aspx](https://technet.microsoft.com/library/cc773418%28v=WS.10%29.aspx)
+ [Event ID 1006 — Cluster Service Startup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc773418(v=ws.10))
 
 A validation and the network tests would be recommended as one of the initial troubleshooting steps to ensure there are no configuration issues that might be a cause for problems.
 
@@ -28,9 +28,9 @@ A validation and the network tests would be recommended as one of the initial tr
 
 The Cluster service is the essential software component that controls all aspects of failover cluster operation and manages the cluster configuration database. If you see the event ID 1135, Microsoft recommends you to install the fixes mentioned in the below KB articles and reboot all the nodes of the cluster, then observe if issue reoccurs.
 
-- [Hotfix for Windows Server 2012 R2](https://support.microsoft.com/kb/2920151)
-- [Hotfix for Windows Server 2012](https://support.microsoft.com/kb/2784261)
-- [Hotfix for Windows Server 2008 R2](https://support.microsoft.com/kb/2545685)
+- [Hotfix for Windows Server 2012 R2](https://support.microsoft.com/help/2920151)
+- [Hotfix for Windows Server 2012](https://support.microsoft.com/help/2784261)
+- [Hotfix for Windows Server 2008 R2](https://support.microsoft.com/help/2545685)
 
 ### Check if the cluster service running on all the nodes
 
@@ -237,7 +237,7 @@ Check if you encounter any of the following issues.
 
     ![Add Counters](media/troubleshooting-cluster-event-id-1135/18652.png)
 
-    If you are experiencing network packet lost on VmWare virtualization platform, see the [Cluster installed in the VmWare virtualization platform](##cluster-installed-in-the-VmWare-virtualization-platform) section.
+    If you are experiencing network packet lost on VmWare virtualization platform, see the [Cluster installed in the VmWare virtualization platform](#cluster-installed-in-the-VmWare-virtualization-platform) section.
 
 2. Upgrade the NIC drivers
 
