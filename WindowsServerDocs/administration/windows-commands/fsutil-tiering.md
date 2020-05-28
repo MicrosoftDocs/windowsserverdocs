@@ -44,7 +44,7 @@ fsutil tiering [tierlist] <volume>
 To query the flags on volume C, type:
 
 ```
-fsutil tiering clearflags C:
+fsutil tiering queryflags C:
 ```
 
 To set the flags on volume C, type:
