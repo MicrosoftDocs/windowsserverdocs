@@ -8,7 +8,7 @@ ms.prod: windows-server
 ms.technology: manage-windows-commands
 
 ms.topic: article
-ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8 britw
+ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

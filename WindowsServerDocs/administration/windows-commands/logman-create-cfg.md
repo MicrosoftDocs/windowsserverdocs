@@ -73,4 +73,6 @@ logman create cfg cfg_log -mgt root\wmi:select * FROM MSNdis_Vendordriverversion
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman update cfg command](logman-update-cfg.md)
+
+- [logman command](logman.md)
