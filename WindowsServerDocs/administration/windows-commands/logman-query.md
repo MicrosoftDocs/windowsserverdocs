@@ -57,4 +57,4 @@ logman query providers
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman command](logman.md)

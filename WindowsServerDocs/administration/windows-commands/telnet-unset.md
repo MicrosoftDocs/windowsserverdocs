@@ -4,7 +4,7 @@ description: Reference topic for telnet unset, which turns off previously set op
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09 vhorne
+ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

@@ -4,7 +4,7 @@ description: Reference topic for tlntadmn, which administers a local or remote c
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8 vhorne
+ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

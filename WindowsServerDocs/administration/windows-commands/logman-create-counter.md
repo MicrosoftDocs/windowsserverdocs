@@ -73,4 +73,6 @@ logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -r
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman update counter command](logman-update-counter.md)
+
+- [logman command](logman.md)

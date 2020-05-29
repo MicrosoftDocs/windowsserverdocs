@@ -36,3 +36,5 @@ logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [logman command](logman.md)
