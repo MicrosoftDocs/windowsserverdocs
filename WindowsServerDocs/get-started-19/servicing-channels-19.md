@@ -1,6 +1,6 @@
 ---
 title: Windows Server servicing channels
-description: Explanation of Windows Server service channels: LTSC and SAC
+description: Explanation of Windows Server service channels – LTSC and SAC
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
