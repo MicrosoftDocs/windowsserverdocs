@@ -168,12 +168,8 @@ State   :     Installed
 
 ## See also
 
-[Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md)
-
-[Windows Server support lifecycle](https://support.microsoft.com/lifecycle)
-
-[Determining whether Server Core is running](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)
-
-[GetProductInfo function](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
-
-[Software Inventory Logging Cmdlets](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
+- [Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md)
+- [Windows Server support lifecycle](https://support.microsoft.com/lifecycle)
+- [Determining whether Server Core is running](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)
+- [GetProductInfo function](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
+- [Software Inventory Logging Cmdlets](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
