@@ -114,74 +114,93 @@ To change the file creator to *Microsoft Word 5.1*, for the file *Word.txt* in t
 macfile forkize /server:\\ServerA /creator:MSWD /type:TEXT /targetfile:d:\Word documents\Group files\Word.txt
 ```
 
-## Change the logon message and limit sessions
+## Change the sign-in message and limit sessions
+
+To change the sign on message that appears when a user signs in to the File Server for Macintosh server and to limit the number of users who can simultaneously use File and print Servers for Macintosh.
 
 ### Syntax
 
 ```
-macfile server [/server:\\<computerName>] [/maxsessions:{Number | unlimited}] [/loginmessage:<Message>]
+macfile server [/server:\\<computername>] [/maxsessions:{number | unlimited}] [/loginmessage:<message>]
 ```
 
 #### Parameters
 
-|               Parameter                |                                                                                                                                                                           Description                                                                                                                                                                            |
-|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|       /server:\\\\<computerName>       |                                                                                                                        Specifies the server on which to change parameters. If omitted, the operation is performed on the local computer.                                                                                                                         |
-| /maxsessions:{Number &#124; unlimited} |                                                                                         Specifies the maximum number of users who can simultaneously use File and print Servers for Macintosh. If omitted, the **maxsessions** setting for the server remains unchanged.                                                                                         |
-|        /loginmessage:<Message>         | changes the message Macintosh users see when logging on to the File Server for Macintosh server. The maximum number of characters for the logon message is 199. If omitted, the **loginmessage** message for the server remains unchanged. To remove an existing logon message, include the **/loginmessage** parameter, but leave the *Message* variable blank. |
-|                   /?                   |                                                                                                                                                               Displays help at the command prompt.                                                                                                                                                               |
+| Parameter | Description |
+| --------- |------------ |
+| /server:`\\<computername>` | Specifies the server on which to change parameters. If omitted, the operation is performed on the local computer. |
+| /maxsessions:`{number | unlimited}` | Specifies the maximum number of users who can simultaneously use File and print Servers for Macintosh. If omitted, the **maxsessions** setting for the server remains unchanged. |
+| /loginmessage:`<message>` | Changes the message Macintosh users see when signing in to the File Server for Macintosh server. The maximum number of characters for the sign-in message is 199. If omitted, the **loginmessage** message for the server remains unchanged. To remove an existing sign-in message, include the **/loginmessage** parameter, but leave the *message* variable blank. |
+| /? | Displays help at the command prompt. |
 
-### Remarks
-- if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, ****<em>computer Name</em>****).
+##### Remarks
 
-### Examples
-To change the number of File and print Server for Macintosh sessions that are permitted on the local server from the current setting to five sessions, and to add the logon message Log off from Server for Macintosh when you are finished., type:
+- If the information that you supply contains spaces or special characters, use quotation marks around the text (for example, "`<computer name>`").
+
+#### Examples
+
+To change the number of permitted File and print Server for Macintosh sessions on the local server to five sessions, and to add the sign-in message "Sign off from Server for Macintosh when you are finished", type:
+
 ```
-macfile server /maxsessions:5 /loginmessage:Log off from Server for Macintosh when you are finished.
+macfile server /maxsessions:5 /loginmessage:Sign off from Server for Macintosh when you are finished
 ```
 
-## <a name=BKMK_addvol></a>To add, change, or remove Macintosh-accessible volumes
+## Add, change, or remove Macintosh-accessible volumes
+
+To add, change, or remove a Macintosh-accessible volume.
+
 ### Syntax
+
 ```
-macfile volume {/add|/set} [/server:\\<computerName>] /name:<volumeName>/path:<directory>[/readonly:{true | false}] [/guestsallowed:{true | false}] [/password:<Password>] [/maxusers:{<Number>>|unlimited}]
-macfile volume /remove[/server:\\<computerName>] /name:<volumeName>
+macfile volume {/add|/set} [/server:\\<computername>] /name:<volumename>/path:<directory>[/readonly:{true | false}] [/guestsallowed:{true | false}] [/password:<password>] [/maxusers:{<number>>|unlimited}]
+macfile volume /remove[/server:\\<computername>] /name:<volumename>
 ```
 
 #### Parameters
 
-|              Parameter               |                                                                                                                                                                       Description                                                                                                                                                                        |
-|--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|          {/add &#124; /set}          |                                                                                                                      Required when you are adding or changing a Macintosh-accessible volume. adds or changes the specified volume.                                                                                                                       |
-|      /server:\\\\<computerName>      |                                                                                                             Specifies the server on which to add, change, or remove a volume. If omitted, the operation is performed on the local computer.                                                                                                              |
-|          /name:<volumeName>          |                                                                                                                                          Required. Specifies the volume name to be added, changed, or removed.                                                                                                                                           |
-|          /path:<directory>           |                                                                                                                Required and valid only when you are adding a volume. Specifies the path to the root directory of the volume to be added.                                                                                                                 |
-|    /readonly:{true &#124; false}     | Specifies whether users can change files in the volume. type true to specify that users cannot change files in the volume. type false to specify that users can change files in the volume. If omitted when adding a volume, changes to files are allowed. If omitted when changing a volume, the **readonly** setting for the volume remains unchanged. |
-|  /guestsallowed:{true &#124; false}  |      Specifies whether users who log on as guests can use the volume. type true to specify that guests can use the volume. type false to specify that guests cannot use the volume. If omitted when adding a volume, guests can use the volume. If omitted when changing a volume, the **guestsallowed** setting for the volume remains unchanged.       |
-|         /password:<Password>         |                                                                               Specifies a password that will be required to access the volume. If omitted when adding a volume, no password is created. If omitted when changing a volume, the password remains unchanged.                                                                               |
-| /maxusers:{<Number>>&#124;unlimited} |                                                 Specifies the maximum number of users who can simultaneously use the files on the volume. If omitted when adding a volume, an unlimited number of users can use the volume. If omitted when changing a volume, the **maxusers** value remains unchanged.                                                 |
-|               /remove                |                                                                                                                                Required when you are removing a Macintosh-accesible volume. removes the specified volume.                                                                                                                                |
-|                  /?                  |                                                                                                                                                           Displays help at the command prompt.                                                                                                                                                           |
+| Parameter | Description |
+| --------- | ----------- |
+| `{/add | /set}` | Required when adding or changing a Macintosh-accessible volume. Adds or changes the specified volume. |
+| /server:`\\<computername>` | Specifies the server on which to add, change, or remove a volume. If omitted, the operation is performed on the local computer. |
+| /name:`<volumename>` | Required. Specifies the volume name to be added, changed, or removed. |
+| /path:`<directory>` | Required and valid only when you are adding a volume. Specifies the path to the root directory of the volume to be added. |
+| /readonly:`{true | false}` | Specifies whether users can change files in the volume. Use **True** to specify that users can't change files in the volume. Use **False** to specify that users can change files in the volume. If omitted when adding a volume, changes to files are allowed. If omitted when changing a volume, the **readonly** setting for the volume remains unchanged. |
+| /guestsallowed:`{true | false}` | Specifies whether users who log on as guests can use the volume. Use **True** to specify that guests can use the volume. Use **False** to specify that guests can't use the volume. If omitted when adding a volume, guests can use the volume. If omitted when changing a volume, the **guestsallowed** setting for the volume remains unchanged. |
+| /password:`<password>` | Specifies a password that will be required to access the volume. If omitted when adding a volume, no password is created. If omitted when changing a volume, the password remains unchanged. |
+| /maxusers:`{<number>> | unlimited}` | Specifies the maximum number of users who can simultaneously use the files on the volume. If omitted when adding a volume, an unlimited number of users can use the volume. If omitted when changing a volume, the **maxusers** value remains unchanged.                                                 |
+| /remove | Required when you are removing a Macintosh-accessible volume. removes the specified volume. |
+| /? | Displays help at the command prompt. |
 
-### Remarks
-- if the information that you supply contains spaces or special characters, use quotation marks around the text (for example, ****<em>computer Name</em>****).
+##### Remarks
 
-### Examples
-To create a volume called US Marketing Statistics on the local server, using the Stats directory in the E drive, and to specify that the volume cannot be accessed by guests, type:
+- If the information that you supply contains spaces or special characters, use quotation marks around the text (for example, "`<computer name>`").
+
+#### Examples
+
+To create a volume called *US Marketing Statistics* on the local server, using the *Stats* directory in the E drive, and to specify that the volume cannot be accessed by guests, type:
+
 ```
 macfile volume /add /name:US Marketing Statistics /guestsallowed:false /path:e:\Stats
 ```
-To change the volume created above to be read-only and to require a password, and to set the number of maximum users to five, type:
+
+To change the volume created above to be read-only, to require a password, and to set the number of maximum users to five, type:
+
 ```
 macfile volume /set /name:US Marketing Statistics /readonly:true /password:saturn /maxusers:5
 ```
-To add a volume called Landscape Design, on the server \\\Magnolia, using the trees directory in the E drive, and to specify that the volume can be accessed by guests, type:
+
+To add a volume called *Landscape Design*, on the server *\\Magnolia*, using the *trees* directory in the E drive, and to specify that the volume can be accessed by guests, type:
+
 ```
 macfile volume /add /server:\\Magnolia /name:Landscape Design /path:e:\trees
 ```
-To remove the volume called Sales Reports on the local server, type:
+
+To remove the volume called *Sales Reports* on the local server, type:
+
 ```
 macfile volume /remove /name:Sales Reports
 ```
 
 ## Additional References
+
 - [Command-Line Syntax Key](command-line-syntax-key.md)
