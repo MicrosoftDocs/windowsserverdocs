@@ -27,16 +27,16 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 Follow these steps to get started with Remote Desktop on your Windows 10 device:
 
-1. Download the Remote Desktop client from [Microsoft Store](https://www.microsoft.com/store/p/microsoft-remote-desktop/9wzdncrfj3ps). 
+1. Download the Remote Desktop client from [Microsoft Store](https://www.microsoft.com/store/p/microsoft-remote-desktop/9wzdncrfj3ps).
 2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
-3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or virtual desktop published by your admin. 
+3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or virtual desktop published by your admin.
 4. Pin items so you can get to Remote Desktop quickly.
 
 ### Add a Remote Desktop connection
 
 To create a Remote Desktop connection:
 
-1. In the Connection Center tap **+ Add**, and then tap **Desktop**.
+1. In the Connection Center, tap **+ Add**, and then tap **Desktop**.
 2. Enter the following information for the computer you want to connect to:
    - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
    - **User account** – The user account to use to access the remote PC. Tap **+** to add a new account or select an existing account. You can use the following formats for the username: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for a user name and password during the connection by selecting **Ask me every time**.
