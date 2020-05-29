@@ -29,7 +29,7 @@ Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activatio
 
 This tool will try to activate Windows. If it returns an activation error code, the tool will display targeted solutions for known error codes.
 
-The following error codes are supported: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008.
+The following error codes are supported: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008, 0x8007007b, 0xC004C003, 0x8007232B.
 
 ## Summary of error codes
 

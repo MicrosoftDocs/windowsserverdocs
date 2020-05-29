@@ -8,7 +8,7 @@ ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/26/2020
+ms.date: 06/01/2020
 ms.localizationpriority: medium
 ---
 # Remote Desktop URI scheme
@@ -51,6 +51,8 @@ This command launches the client and starts the subscription process.
 | Parameter | Description                  | Values |
 |-----------|------------------------------|--------|
 | url       | Specifies the Workspace URL. | A valid URL, such as <https://contoso.com>. |
+
+**Example:** ms-rd:subscribe?url=https://contoso.com
 
 ## Legacy rdp URI scheme
 
