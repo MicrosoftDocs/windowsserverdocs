@@ -49,4 +49,4 @@ logman import perf_log -s server_1 -xml c:\windows\perf_log.xml
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman command](logman.md)

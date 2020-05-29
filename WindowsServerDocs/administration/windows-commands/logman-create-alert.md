@@ -72,4 +72,6 @@ logman create alert new_alert -th \Processor(_Total)\% Processor time>50
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman update alert command](logman-update-alert.md)
+
+- [logman command](logman.md)
