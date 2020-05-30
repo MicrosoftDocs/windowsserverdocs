@@ -1,12 +1,8 @@
 ---
 title: "Automate Installation of Add-Ins During Setup"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2e6ff6e4-8d68-4d49-9e38-8088bc8bf95e
 author: nnamuhcs
@@ -64,13 +60,13 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
   
  A customized uninstall step can be used for any of the following:  
   
--   Replace the built-in confirmation dialog.  
+- Replace the built-in confirmation dialog.  
   
--   Populate customized dialogs before uninstallation.  
+- Populate customized dialogs before uninstallation.  
   
--   Perform certain tasks before uninstallation.  
+- Perform certain tasks before uninstallation.  
   
- To implement an uninstall step, add the following contents in addin.xml (directly under Package):  
+  To implement an uninstall step, add the following contents in addin.xml (directly under Package):  
   
 ```  
 <Package xmlns="https://schemas.microsoft.com/WindowsServerSolutions/2010/03/Addins" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
@@ -98,19 +94,19 @@ C:\Program Files\Windows Server\bin\Installaddin.exe <full path to wssx file> -q
   
  The exefile can perform following tasks in this phase:  
   
--   Pops up some dialogs for user interaction.  
+- Pops up some dialogs for user interaction.  
   
--   Perform some background tasks.  
+- Perform some background tasks.  
   
- The exit code of this exe file determines how the uninstall process moves forward:  
+  The exit code of this exe file determines how the uninstall process moves forward:  
   
--   0: the uninstall process continues without populating the built-in confirmation dialog, just as user has already confirmed. (this approach can be used to replace the built-in confirmation dialog);  
+- 0: the uninstall process continues without populating the built-in confirmation dialog, just as user has already confirmed. (this approach can be used to replace the built-in confirmation dialog);  
   
--   1: the uninstall process is canceled, and finally a canceled message will be shown to user. Everything stays unchanged;  
+- 1: the uninstall process is canceled, and finally a canceled message will be shown to user. Everything stays unchanged;  
   
--   Other: the uninstall process continues with built-in confirmation dialog, just like the customized uninstall step is not present.  
+- Other: the uninstall process continues with built-in confirmation dialog, just like the customized uninstall step is not present.  
   
- Any failure invoking the exefile will lead to the same behavior as the exefile returns a code other than 0 or 1.  
+  Any failure invoking the exefile will lead to the same behavior as the exefile returns a code other than 0 or 1.  
   
 ## See Also  
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   

@@ -1,12 +1,12 @@
 ---
 title: secedit:export
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** -
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 49a8b241-aa8c-45b7-844d-67a29fab708e
 author: coreyp-at-msft
@@ -19,16 +19,15 @@ ms.date: 10/16/2017
 
 
 
-Exports security settings stored in a database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Exports security settings stored in a database configured with security templates.
 
 ## Syntax
 
 ```
 Secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
-
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -43,11 +42,11 @@ Secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration fil
 
 You can use this command to backup your security policies on a local computer in addition to importing the settings to another computer.
 
-If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) is used.
+If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 Export the security database and the domain security policies to an inf file and then import that file to a different database in order to replicate the security policy settings on another computer.
 ```
@@ -58,8 +57,8 @@ Import that file to a different database on another computer.
 Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg SecContoso.inf /log C:\Security\FY11\SecAnalysisContosoFY12.log /quiet
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit:import](secedit-import.md)
 -   [Secedit](secedit.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

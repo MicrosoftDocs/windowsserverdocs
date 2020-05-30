@@ -1,12 +1,8 @@
 ---
 title: Set Up a Station
 description: Learn how to set up a a station in MultiPoint Services
-ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dce05b6c-795e-43b2-9920-026550b873c5
 author: lizap
@@ -51,7 +47,7 @@ The procedures in this section describe how to connect MultiPoint Services stati
   
 6.  Turn on the computer.  
   
-7.  MultiPoint Services starts. Follow the instructions that appear on the new station’s video monitor to associate the devices to the new station.  
+7.  MultiPoint Services starts. Follow the instructions that appear on the new station's video monitor to associate the devices to the new station.  
   
 ### To set up a station with a multifunction hub  
   
@@ -73,7 +69,7 @@ The procedures in this section describe how to connect MultiPoint Services stati
   
 6.  Turn on the computer.  
   
-7.  MultiPoint Services starts. If prompted, follow the instructions that appear on the new station’s video monitor to *associate* the devices to the new station.  
+7.  MultiPoint Services starts. If prompted, follow the instructions that appear on the new station's video monitor to *associate* the devices to the new station.  
   
 ## See Also  
 [End a User Session](End-a-User-Session.md)  

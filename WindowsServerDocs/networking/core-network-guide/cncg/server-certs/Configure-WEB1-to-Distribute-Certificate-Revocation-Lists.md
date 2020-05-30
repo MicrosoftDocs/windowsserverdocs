@@ -4,10 +4,10 @@ description: This topic is part of the guide Deploy Server Certificates for 802.
 manager: brianlic
 ms.topic: article
 ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
 

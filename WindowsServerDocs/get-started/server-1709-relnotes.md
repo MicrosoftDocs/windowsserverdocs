@@ -1,13 +1,9 @@
 ---
 title: Release Notes - Important Issues in Windows Server, version 1709
-description: "Summarizes critical issues requiring workaround to avoid crash, hang, installation failure, data loss."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Summarizes critical issues requiring workaround to avoid crash, hang, installation failure, data loss.
+ms.prod: windows-server
 ms.date: 04/23/2018
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f
 author: jaimeo
@@ -25,7 +21,7 @@ This document is continuously updated. As critical issues requiring a workaround
   
 ## Storage Spaces Direct
 [comment]: # (ID: unknown; Submitter: stevenek; state: signed off)  
-Storage Spaces Direct is not included in Windows Server, version 1709. If you call *Enable-ClusterStorageSpacesDirect* or its alias *Enable-ClusterS2D*,  on a server running Windows Server, version 1709, you will receive an error with the message "The requested operation is not supported".
+Storage Spaces Direct is not included in Windows Server, version 1709. If you call *Enable-ClusterStorageSpacesDirect* or its alias *Enable-ClusterS2D*,  on a server running Windows Server, version 1709, you will receive an error with the message The requested operation is not supported.
 
 It is also not supported to introduce servers running Windows Server, version 1709 into a Windows Server 2016 Storage Spaces Direct deployment.
 
@@ -35,4 +31,4 @@ The Semi-Annual Channel of Windows Server is focused on containers and applicati
 
 Storage Spaces Direct was introduced in Windows Server 2016 and is the foundation for our hyper-converged platform. We have been thrilled by the positive adoption of the Microsoft hyper-converged platform and we are committed to our customers.
 
-We've been listening to your feedback and are working to deliver the [next set of innovations](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/) for our hyper-converged platform. These features are available today in [Windows Insiders](https://insider.windows.com/for-business/) builds, and we would love for you to try them and share your feedback. For customers looking for a validated hyper-converged solution, we recommend the [Windows Server Software Defined](http://microsoft.com/wssd) program.
+We've been listening to your feedback and are working to deliver the [next set of innovations](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/) for our hyper-converged platform. These features are available today in [Windows Insiders](https://insider.windows.com/for-business/) builds, and we would love for you to try them and share your feedback. For customers looking for a validated hyper-converged solution, we recommend the [Windows Server Software Defined](https://microsoft.com/wssd) program.

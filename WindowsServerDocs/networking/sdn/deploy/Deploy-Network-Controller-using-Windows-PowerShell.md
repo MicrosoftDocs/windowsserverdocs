@@ -1,17 +1,13 @@
 ---
 title: Deploy Network Controller using Windows PowerShell
 description: This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016.
-manager: dougkim
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
+manager: grcusanz
 ms.date: 08/23/2018
 ---
 # Deploy Network Controller using Windows PowerShell
@@ -25,19 +21,19 @@ This topic provides instructions on using Windows PowerShell to deploy Network C
 
 This topic contains the following sections.
 
-- [Install the Network Controller server role](#bkmk_role)
+- [Install the Network Controller server role](#install-the-network-controller-server-role)
 
-- [Configure the Network Controller cluster](#bkmk_configure)
+- [Configure the Network Controller cluster](#configure-the-network-controller-cluster)
 
-- [Configure the Network Controller application](#bkmk_app)
+- [Configure the Network Controller application](#configure-the-network-controller-application)
 
-- [Network Controller deployment validation](#bkmk_validation)
+- [Network Controller deployment validation](#network-controller-deployment-validation)
 
-- [Additional Windows PowerShell commands for Network Controller](#bkmk_ps)
+- [Additional Windows PowerShell commands for Network Controller](#additional-windows-powershell-commands-for-network-controller)
 
-- [Sample Network Controller configuration script](#bkmk_script)
+- [Sample Network Controller configuration script](#sample-network-controller-configuration-script)
 
-- [Post-Deployment Steps for Non-Kerberos Deployments](#bkmk_nonkerb)
+- [Post-Deployment Steps for Non-Kerberos Deployments](#post-deployment-steps-for-non-kerberos-deployments)
 
 ## Install the Network Controller server role
 
@@ -223,7 +219,7 @@ Install-NetworkControllerCluster -Node @($a,$b,$c)  -ClusterAuthentication Kerbe
 Install-NetworkController -Node @($a,$b,$c) -ClientAuthentication Kerberos -ClientSecurityGroup Contoso\NCRESTClients -ServerCertificate $cert -RestIpAddress 10.0.0.1/24
 ```
 
-## Post-deployment steps For non-Kerberos deployments
+## Post-deployment steps for non-Kerberos deployments
 
 If you are not using Kerberos with your Network Controller deployment, you must deploy certificates.
 

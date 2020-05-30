@@ -1,13 +1,9 @@
 ---
 title: Hardware Requirements and Performance Recommendations
 description: Provides hardware and performance requirements and recommendations for MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
 author: evaseydl
@@ -23,7 +19,7 @@ The performance of your MultiPoint Services system will be directly affected by 
 ### Applications and Internet content  
 Because MultiPoint Services is a shared resource computing solution, the type and number of applications that are running on the stations can impact the performance of your MultiPoint Services system. It is important to consider the types of programs that are used regularly when you are planning your system. For example, a graphics-intensive application requires a more powerful computer than an application such as a word processor. Overloading the computer with graphics-intensive applications will likely cause lag problems throughout the entire system.  
   
-The type of content that is accessed by applications also affects the system’s performance. If multiple stations are using web browsers to access multimedia content, such as full-motion video, fewer stations can be connected before adversely affecting the system performance. Conversely, if the multiple stations are using web browsers to access static web content, more stations can be connected without a significant effect on performance.  
+The type of content that is accessed by applications also affects the system's performance. If multiple stations are using web browsers to access multimedia content, such as full-motion video, fewer stations can be connected before adversely affecting the system performance. Conversely, if the multiple stations are using web browsers to access static web content, more stations can be connected without a significant effect on performance.  
   
 ### Hardware recommendations  
 To achieve good performance with your MultiPoint Services system under various loads, use the guidelines in the following table when you are planning and testing your system. These are the basic requirements forMultiPoint Services . The actual configuration sizing depends on your system configuration, the workload you are running, and the hardware capability. You should always validate by testing your applications and hardware.  
@@ -35,9 +31,9 @@ To achieve good performance with your MultiPoint Services system under various l
   
 |Application Scenario|Up to 5 Stations|6-8 Stations|9-12 Stations|13-16 Stations|17-20 Stations|21-24 Stations|  
 |------------------------|----------------------|-------------------|------------------|-------------------|-------------------|-----------------|  
-|**Productivity**<br /><br />Office, web browsing, line-of-business applications|CPU: 2C<br /><br />RAM: 2 GB|CPU: 2C<br /><br />RAM: 4 GB|CPU: 4C<br /><br />RAM: 6 GB|CPU: 4C<br /><br />RAM: 8 GB|CPU: 4C+MT or 6C<br /><br />RAM: 10 GB| CPU: 6C+MT<br /><br />RAM: 12 GB|
-|**Mixed**<br /><br />Office, web browsing, line-of-business applications,  and occasional video use by some users|CPU: 2C<br /><br />RAM: 2 GB|CPU: 2C<br /><br />RAM: 4 GB|CPU: 4C<br /><br />RAM: 6 GB|CPU: 4C+MT or 6C<br /><br />RAM: 8 GB|CPU: 6C+MT<br /><br />RAM: 10 GB| CPU: 6C+MT<br /><br />RAM: 12 GB| 
-|**Video intensive**<br /><br />Office, web browsing, line-of-business applications,  and frequent video use by all users **Note:** Video testing was performed using 360p H.264 video at native resolution.|CPU: 4C+MT<br /><br />RAM: 2 GB|CPU: 6C+MT<br /><br />RAM: 4 GB|CPU: 8C+MT<br /><br />RAM: 6 GB|CPU: 12C+MT<br /><br />RAM: 8 GB|CPU: 16C+MT<br /><br />RAM: 10 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended| CPU: 20C+MT<br /><br />RAM: 12 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended|   
+|**Productivity**<p>Office, web browsing, line-of-business applications|CPU: 2C<p>RAM: 2 GB|CPU: 2C<p>RAM: 4 GB|CPU: 4C<p>RAM: 6 GB|CPU: 4C<p>RAM: 8 GB|CPU: 4C+MT or 6C<p>RAM: 10 GB| CPU: 6C+MT<p>RAM: 12 GB|
+|**Mixed**<p>Office, web browsing, line-of-business applications,  and occasional video use by some users|CPU: 2C<p>RAM: 2 GB|CPU: 2C<p>RAM: 4 GB|CPU: 4C<p>RAM: 6 GB|CPU: 4C+MT or 6C<p>RAM: 8 GB|CPU: 6C+MT<p>RAM: 10 GB| CPU: 6C+MT<p>RAM: 12 GB| 
+|**Video intensive**<p>Office, web browsing, line-of-business applications,  and frequent video use by all users **Note:** Video testing was performed using 360p H.264 video at native resolution.|CPU: 4C+MT<p>RAM: 2 GB|CPU: 6C+MT<p>RAM: 4 GB|CPU: 8C+MT<p>RAM: 6 GB|CPU: 12C+MT<p>RAM: 8 GB|CPU: 16C+MT<p>RAM: 10 GB<p>-   Thin Client: RemoteFX<br />-   USB video not recommended| CPU: 20C+MT<p>RAM: 12 GB<p>-   Thin Client: RemoteFX<br />-   USB video not recommended|   
   
 ## Minimum recommended hardware for running full Windows 10 virtual desktops  
 Running a full virtual operating system instance for each station is more compute resource-intensive than running the default MultiPoint desktop sessions, so the host hardware requirements per station are higher:  

@@ -1,12 +1,8 @@
 ---
-title: bitsadmin cache clear
-description: "Windows Commands topic for **bitsadmin cache clear** - Purges the local cache."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+title: bitsadmin cache and clear
+description: Reference topic for the bitsadmin cache and clear command, which purges the local cache.
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 125426bc-5f90-4cdb-ba14-24be428c66c7
 author: coreyp-at-msft
@@ -15,25 +11,26 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# bitsadmin cache clear
-
-
+# bitsadmin cache and clear
 
 Purges the local cache.
 
 ## Syntax
 
 ```
-bitsadmin /Cache /Clear 
+bitsadmin /cache /clear
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example purges the local cache.
+To purge the local cache:
+
 ```
-C:\>bitsadmin /Cache /Clear 
+bitsadmin /cache /clear
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin cache command](bitsadmin-cache.md)

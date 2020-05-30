@@ -1,23 +1,18 @@
 ---
 title: Upgrading your Remote Desktop Services deployments to Windows Server 2016 
 description: This article describes how to upgrade your existing Remote Desktop Services deployments to Windows Server 2016.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 03/20/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
 author: spatnaik
 manager: scottman
-notes: https://social.technet.microsoft.com/wiki/contents/articles/22069.remote-desktop-services-upgrade-guidelines-for-windows-server-2012-r2.aspx
 ---
 # Upgrading your Remote Desktop Services deployments to Windows Server 2016
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 ## Supported OS upgrades with RDS role installed
 Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016.

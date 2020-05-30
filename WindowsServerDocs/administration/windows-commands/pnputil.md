@@ -1,12 +1,12 @@
 ---
 title: pnputil
 description: Learn how to manage the driver store with the pnputil.exe utility.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 author: coreyp-at-msft
@@ -25,7 +25,7 @@ Pnputil.exe is a command line utility that you can use to manage the driver stor
 pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -46,8 +46,8 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 -   pnputil.exe -d oem0.inf  Deletes the specified.
 -   pnputil.exe -f -d oem0.inf  Forces the deletion of the specified INF file.
 
-## Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Popd](popd.md)

@@ -1,7 +1,7 @@
 ﻿---
-Title: 'DFS Replication: Frequently Asked Questions (FAQ)'
+title: DFS Replication - Frequently Asked Questions (FAQ)
 ms.date: 06/18/2014
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
@@ -11,21 +11,21 @@ ms.author: jgerend
 # DFS Replication: Frequently Asked Questions (FAQ)
 
 
-Updated: October 9, 2013
+Updated: April 30, 2019
 
 Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 This FAQ answers questions about Distributed File System (DFS) Replication (also known as DFS-R or DFSR) for Windows Server.
 
-For information about DFS Namespaces, see [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/en-us/library/ee404780).
+For information about DFS Namespaces, see [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780).
 
 For information about what's new in DFS Replication, see the following topics:
 
-  - [DFS Namespaces and DFS Replication Overview](http://technet.microsoft.com/en-us/library/jj127250) (in Windows Server 2012)  
+  - [DFS Namespaces and DFS Replication Overview](https://technet.microsoft.com/library/jj127250) (in Windows Server 2012)  
       
-  - [What's New in Distributed File System](https://technet.microsoft.com/en-us/library/ee307957) topic in [Changes in Functionality from Windows Server 2008 to Windows Server 2008 R2](https://technet.microsoft.com/en-us/library/dd391932)  
+  - [What's New in Distributed File System](https://technet.microsoft.com/library/ee307957) topic in [Changes in Functionality from Windows Server 2008 to Windows Server 2008 R2](https://technet.microsoft.com/library/dd391932)  
       
-  - [Distributed File System](https://technet.microsoft.com/en-us/library/cc753479) topic in [Changes in Functionality from Windows Server 2003 with SP1 to Windows Server 2008](https://technet.microsoft.com/en-us/library/cc753208)  
+  - [Distributed File System](https://technet.microsoft.com/library/cc753479) topic in [Changes in Functionality from Windows Server 2003 with SP1 to Windows Server 2008](https://technet.microsoft.com/library/cc753208)  
       
 
 For a list of recent changes to this topic, see the [Change History](#change-history) section of this topic.
@@ -42,15 +42,15 @@ No. DFS Replication does not communicate with File Replication Service (FRS). DF
 
 Yes, DFS Replication can replace FRS for SYSVOL replication on servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. Servers running Windows Server 2003 R2 do not support using DFS Replication to replicate the SYSVOL folder.
 
-For more information about replicating SYSVOL by using DFS Replication, see the [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://technet.microsoft.com/en-us/library/dd640019).
+For more information about replicating SYSVOL by using DFS Replication, see the [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://technet.microsoft.com/library/dd640019).
 
 ### Can I upgrade from FRS to DFS Replication without losing configuration settings?
 
 Yes. To migrate replication from FRS to DFS Replication, see the following documents:
 
-  - To migrate replication of folders other than the SYSVOL folder, see [DFS Operations Guide: Migrating from FRS to DFS Replication](http://go.microsoft.com/fwlink/?linkid=192776) and [FRS2DFSR – An FRS to DFSR Migration Utility](http://go.microsoft.com/fwlink/?linkid=195437) (http://go.microsoft.com/fwlink/?LinkID=195437).  
+  - To migrate replication of folders other than the SYSVOL folder, see [DFS Operations Guide: Migrating from FRS to DFS Replication](https://go.microsoft.com/fwlink/?linkid=192776) and [FRS2DFSR – An FRS to DFSR Migration Utility](https://go.microsoft.com/fwlink/?linkid=195437) (https://go.microsoft.com/fwlink/?LinkID=195437).  
       
-  - To migrate replication of the SYSVOL folder to DFS Replication, see [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://technet.microsoft.com/en-us/library/dd640019).  
+  - To migrate replication of the SYSVOL folder to DFS Replication, see [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://technet.microsoft.com/library/dd640019).  
       
 
 ### Can I use DFS Replication in a mixed Windows/UNIX environment?
@@ -69,7 +69,7 @@ Yes. DFS Replication is supported on Volume Shadow Copy Service (VSS) volumes an
 
 No, using Windows Backup (Ntbackup.exe) on a computer running Windows Server 2003 or earlier to back up the contents of a replicated folder on a computer running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 is not supported.
 
-To back up files that are stored in a replicated folder, use Windows Server Backup or Microsoft® System Center Data Protection Manager. For information about Backup and Recovery functionality in Windows Server 2008 R2 and Windows Server 2008, see [Backup and Recovery](https://technet.microsoft.com/en-us/library/Cc754097). For more information, see [System Center Data Protection Manager](http://go.microsoft.com/fwlink/?linkid=182261) (http://go.microsoft.com/fwlink/?LinkId=182261).
+To back up files that are stored in a replicated folder, use Windows Server Backup or Microsoft&reg; System Center Data Protection Manager. For information about Backup and Recovery functionality in Windows Server 2008 R2 and Windows Server 2008, see [Backup and Recovery](https://technet.microsoft.com/library/Cc754097). For more information, see [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261) (https://go.microsoft.com/fwlink/?LinkId=182261).
 
 ### Do file system policies impact DFS Replication?
 
@@ -96,7 +96,7 @@ The following are best practices for implementing file screens or quotas:
 
 ### Is DFS Replication cluster aware?
 
-Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](http://go.microsoft.com/fwlink/?linkid=155085) (http://go.microsoft.com/fwlink/?LinkId=155085). The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 is not designed to coordinate with a failover cluster, and the service will not fail over to another node.
+Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](https://go.microsoft.com/fwlink/?linkid=155085) (https://go.microsoft.com/fwlink/?LinkId=155085). The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 is not designed to coordinate with a failover cluster, and the service will not fail over to another node.
 
 
 > [!NOTE]
@@ -120,17 +120,17 @@ Do not use DFS Replication with Offline Files in a multi-user environment becaus
 
 ### What antivirus applications are compatible with DFS Replication?
 
-Antivirus applications can cause excessive replication if their scanning activities alter the files in a replicated folder. For more information, [Testing Antivirus Application Interoperability with DFS Replication](http://go.microsoft.com/fwlink/?linkid=73990) (http://go.microsoft.com/fwlink/?LinkId=73990).
+Antivirus applications can cause excessive replication if their scanning activities alter the files in a replicated folder. For more information, [Testing Antivirus Application Interoperability with DFS Replication](https://go.microsoft.com/fwlink/?linkid=73990) (https://go.microsoft.com/fwlink/?LinkId=73990).
 
 ### What are the benefits of using DFS Replication instead of Windows SharePoint Services?
 
-Windows® SharePoint® Services provides tight coherency in the form of file check-out functionality that DFS Replication does not. If you are concerned about multiple people editing the same file, we recommend using Windows SharePoint Services. Windows SharePoint Services 2.0 with Service Pack 2 is available as part of Windows Server 2003 R2. Windows SharePoint Services can be downloaded from the Microsoft Web site; it is not included in newer versions of Windows Server. However, if you are replicating data across multiple sites and users will not edit the same files at the same time, DFS Replication provides greater bandwidth and simpler management.
+Windows&reg; SharePoint&reg; Services provides tight coherency in the form of file check-out functionality that DFS Replication does not. If you are concerned about multiple people editing the same file, we recommend using Windows SharePoint Services. Windows SharePoint Services 2.0 with Service Pack 2 is available as part of Windows Server 2003 R2. Windows SharePoint Services can be downloaded from the Microsoft Web site; it is not included in newer versions of Windows Server. However, if you are replicating data across multiple sites and users will not edit the same files at the same time, DFS Replication provides greater bandwidth and simpler management.
 
 ## Limitations and requirements
 
 ### Can DFS Replication replicate between branch offices without a VPN connection?
 
-Yes—assuming that there is a private Wide Area Network (WAN) link (not the Internet) connecting the branch offices. However, you must open the proper ports in external firewalls. DFS Replication uses the RPC Endpoint Mapper (port 135) and a randomly assigned ephemeral port above 1024. You can use the **Dfsrdiag** command line tool to specify a static port instead of the ephemeral port. For more information about how to specify the RPC Endpoint Mapper, see [article 154596](http://go.microsoft.com/fwlink/?linkid=73991) in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkId=73991).
+Yes—assuming that there is a private Wide Area Network (WAN) link (not the Internet) connecting the branch offices. However, you must open the proper ports in external firewalls. DFS Replication uses the RPC Endpoint Mapper (port 135) and a randomly assigned ephemeral port above 1024. You can use the **Dfsrdiag** command line tool to specify a static port instead of the ephemeral port. For more information about how to specify the RPC Endpoint Mapper, see [article 154596](https://go.microsoft.com/fwlink/?linkid=73991) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=73991).
 
 ### Can DFS Replication replicate files encrypted with the Encrypting File System?
 
@@ -140,14 +140,14 @@ No. DFS Replication will not replicate files or folders that are encrypted using
 
 DFS Replication can safely replicate Microsoft Outlook personal folder files (.pst) and Microsoft Access files only if they are stored for archival purposes and are not accessed across the network by using a client such as Outlook or Access (to open .pst or Access files, first copy the files to a local storage device). The reasons for this are as follows:
 
-  - Opening .pst files over network connections could lead to data corruption in the .pst files. For more information about why .pst files cannot be safely accessed from across a network, see [article 297019](http://go.microsoft.com/fwlink/?linkid=125363) in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkId=125363).  
+  - Opening .pst files over network connections could lead to data corruption in the .pst files. For more information about why .pst files cannot be safely accessed from across a network, see [article 297019](https://go.microsoft.com/fwlink/?linkid=125363) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=125363).  
       
   - .pst and Access files tend to stay open for long periods of time while being accessed by a client such as Outlook or Office Access. This prevents DFS Replication from replicating these files until they are closed.  
       
 
 ### Can I use DFS Replication in a workgroup?
 
-No. DFS Replication relies on Active Directory® Domain Services for configuration. It will only work in a domain.
+No. DFS Replication relies on Active Directory&reg; Domain Services for configuration. It will only work in a domain.
 
 ### Can more than one folder be replicated on a single server?
 
@@ -163,7 +163,7 @@ No. DFS Replication does not explicitly require time synchronization between ser
 
 ### Does DFS Replication support replicating an entire volume?
 
-Yes. However, you must first install Windows Server 2003 Service Pack 2 or the hotfix. For more information, see [article 920335](http://go.microsoft.com/fwlink/?linkid=76776) in the Microsoft Knowledge Base (http://go.microsoft.com/fwlink/?LinkId=76776). Additionally, replicating an entire volume can cause the following problems:
+Yes. However, you must first install Windows Server 2003 Service Pack 2 or the hotfix. For more information, see [article 920335](https://go.microsoft.com/fwlink/?linkid=76776) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=76776). Additionally, replicating an entire volume can cause the following problems:
 
   - If the volume contains a Windows paging file, replication fails and logs DFSR event 4312 in the system event log.  
       
@@ -192,15 +192,15 @@ Yes. You can replicate sparse files. The **Sparse** attribute is preserved on th
 
 No. DFS Replication is a service that runs under the local system account, so you do not need to log in as administrator to replicate. However, you must be a domain administrator or local administrator of the affected file servers to make changes to the DFS Replication configuration.
 
-For more information, see "DFS Replication security requirements and delegation" in the [Delegate the Ability to Manage DFS Replication](http://go.microsoft.com/fwlink/?linkid=182294) (http://go.microsoft.com/fwlink/?LinkId=182294).
+For more information, see "DFS Replication security requirements and delegation" in the [Delegate the Ability to Manage DFS Replication](https://go.microsoft.com/fwlink/?linkid=182294) (https://go.microsoft.com/fwlink/?LinkId=182294).
 
 ### How can I upgrade or replace a DFS Replication member?
 
-To upgrade or replace a DFS Replication member, see this blog post on the Ask the Directory Services Team blog: [Replacing DFSR Member Hardware or OS](http://blogs.technet.com/b/askds/archive/2010/09/10/series-wrap-up-and-downloads-replacing-dfsr-member-hardware-or-os.aspx).
+To upgrade or replace a DFS Replication member, see this blog post on the Ask the Directory Services Team blog: [Replacing DFSR Member Hardware or OS](https://blogs.technet.com/b/askds/archive/2010/09/10/series-wrap-up-and-downloads-replacing-dfsr-member-hardware-or-os.aspx).
 
 ### Is DFS Replication suitable for replicating roaming profiles?
 
-Yes. Certain scenarios are supported when replicating roaming user profiles. For information about the supported scenarios, see [Microsoft’s Support Statement Around Replicated User Profile Data](http://go.microsoft.com/fwlink/?linkid=201282) (http://go.microsoft.com/fwlink/?LinkId=201282).
+Yes. Certain scenarios are supported when replicating roaming user profiles. For information about the supported scenarios, see [Microsoft's Support Statement Around Replicated User Profile Data](https://go.microsoft.com/fwlink/?linkid=201282) (https://go.microsoft.com/fwlink/?LinkId=201282).
 
 ### Is there a file character limit or limit to the folder depth?
 
@@ -212,7 +212,7 @@ No. Replication groups can span across domains within a single forest but not ac
 
 ### What are the supported limits of DFS Replication?
 
-The following list provides a set of scalability guidelines that have been tested by Microsoft on Windows Server 2012 R2:
+The following list provides a set of scalability guidelines that have been tested by Microsoft and apply to Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019
 
   - Size of all replicated files on a server: 100 terabytes.  
       
@@ -223,7 +223,7 @@ The following list provides a set of scalability guidelines that have been teste
 
 
 > [!IMPORTANT]
-> When creating replication groups with a large number or size of files we recommend exporting a database clone and using pre-seeding techniques to minimize the duration of initial replication. For more information, see <A href="http://blogs.technet.com/b/filecab/archive/2013/08/21/dfs-replication-initial-sync-in-windows-server-2012-r2-attack-of-the-clones.aspx">DFS Replication Initial Sync in Windows Server 2012 R2: Attack of the Clones</A>. 
+> When creating replication groups with a large number or size of files we recommend exporting a database clone and using pre-seeding techniques to minimize the duration of initial replication. For more information, see [DFS Replication Initial Sync in Windows Server 2012 R2: Attack of the Clones](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/DFS-Replication-Initial-Sync-in-Windows-Server-2012-R2-Attack-of/ba-p/424877). 
 <br>
 
 
@@ -242,7 +242,7 @@ The following list provides a set of scalability guidelines that have been teste
 <br>
 
 
-For a list of scalability guidelines that have been tested by Microsoft for Windows Server 2003 R2, see [DFS Replication scalability guidelines](http://go.microsoft.com/fwlink/?linkid=75043) (http://go.microsoft.com/fwlink/?LinkId=75043).
+For a list of scalability guidelines that have been tested by Microsoft for Windows Server 2003 R2, see [DFS Replication scalability guidelines](https://go.microsoft.com/fwlink/?linkid=75043) (https://go.microsoft.com/fwlink/?LinkId=75043).
 
 ### When should I not use DFS Replication?
 
@@ -252,7 +252,7 @@ When multiple users need to modify the same files at the same time on different 
 
 ### Why is a schema update required for DFS Replication?
 
-DFS Replication uses new objects in the domain-naming context of Active Directory Domain Services to store configuration information. These objects are created when you update the Active Directory Domain Services schema. For more information, see [Review Requirements for DFS Replication](http://go.microsoft.com/fwlink/?linkid=182264) (http://go.microsoft.com/fwlink/?LinkId=182264).
+DFS Replication uses new objects in the domain-naming context of Active Directory Domain Services to store configuration information. These objects are created when you update the Active Directory Domain Services schema. For more information, see [Review Requirements for DFS Replication](https://go.microsoft.com/fwlink/?linkid=182264) (https://go.microsoft.com/fwlink/?LinkId=182264).
 
 ## Monitoring and management tools
 
@@ -260,7 +260,7 @@ DFS Replication uses new objects in the domain-naming context of Active Director
 
 Yes. There are three ways to automate health reports:
 
-  - Use the DFSR Windows PowerShell module included in Windows Server 2012 R2 or DfsrAdmin.exe in conjunction with Scheduled Tasks to regularly generate health reports. For more information, see [Automating DFS Replication Health Reports](http://go.microsoft.com/fwlink/?linkid=74010) (http://go.microsoft.com/fwlink/?LinkId=74010).  
+  - Use the DFSR Windows PowerShell module included in Windows Server 2012 R2 or DfsrAdmin.exe in conjunction with Scheduled Tasks to regularly generate health reports. For more information, see [Automating DFS Replication Health Reports](https://go.microsoft.com/fwlink/?linkid=74010) (https://go.microsoft.com/fwlink/?LinkId=74010).  
       
   - Use the DFS Replication Management Pack for System Center Operations Manager to create alerts that are based on specified conditions.  
       
@@ -269,17 +269,17 @@ Yes. There are three ways to automate health reports:
 
 ### Can I use Microsoft System Center Operations Manager to monitor DFS Replication?
 
-Yes. For more information, see the [DFS Replication Management Pack for System Center Operations Manager 2007](http://go.microsoft.com/fwlink/?linkid=182265) in the Microsoft Download Center (http://go.microsoft.com/fwlink/?LinkId=182265).
+Yes. For more information, see the [DFS Replication Management Pack for System Center Operations Manager 2007](https://go.microsoft.com/fwlink/?linkid=182265) in the Microsoft Download Center (https://go.microsoft.com/fwlink/?LinkId=182265).
 
 ### Does DFS Replication support remote management?
 
 Yes. DFS Replication supports remote management using the DFS Management console and the **Add Replication Group** command. For example, on server A, you can connect to a replication group defined in the forest with servers A and B as members.
 
-DFS Management is included with Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, and Windows Server 2003 R2. To manage DFS Replication from other versions of Windows, use Remote Desktop or the [Remote Server Administration Tools for Windows 7](https://technet.microsoft.com/en-us/library/Ee449475).
+DFS Management is included with Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, and Windows Server 2003 R2. To manage DFS Replication from other versions of Windows, use Remote Desktop or the [Remote Server Administration Tools for Windows 7](https://technet.microsoft.com/library/Ee449475).
 
 
 > [!IMPORTANT]
-> To view or manage replication groups that contain read-only replicated folders or members that are failover clusters, you must use the version of DFS Management that is included with Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, the <a href="http://go.microsoft.com/fwlink/p/?linkid=238560">Remote Server Administration Tools for Windows 8</a>, or the <a href="https://technet.microsoft.com/en-us/library/ee449475">Remote Server Administration Tools for Windows 7</a>. 
+> To view or manage replication groups that contain read-only replicated folders or members that are failover clusters, you must use the version of DFS Management that is included with Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, the <a href="https://go.microsoft.com/fwlink/p/?linkid=238560">Remote Server Administration Tools for Windows 8</a>, or the <a href="https://technet.microsoft.com/library/ee449475">Remote Server Administration Tools for Windows 7</a>. 
 <br>
 
 
@@ -289,7 +289,7 @@ No. DFS Replication has its own set of monitoring and diagnostics tools. Ultraso
 
 ### How can files be recovered from the ConflictAndDeleted or PreExisting folders?
 
-To recover lost files, restore the files from the file system folder or shared folder using File History, the **Restore previous versions** command in File Explorer, or by restoring the files from backup. To recover files directly from the ConflictAndDeleted or PreExisting folder, use the `Get-DfsrPreservedFiles` and `Restore-DfsrPreservedFiles` Windows PowerShell cmdlets (included with the DFSR module in Windows Server 2012 R2), or the [RestoreDFSR](http://code.msdn.microsoft.com/restoredfsr) sample script from the MSDN Code Gallery. This script is intended only for disaster recovery and is provided AS-IS, without warranty.
+To recover lost files, restore the files from the file system folder or shared folder using File History, the **Restore previous versions** command in File Explorer, or by restoring the files from backup. To recover files directly from the ConflictAndDeleted or PreExisting folder, use the `Get-DfsrPreservedFiles` and `Restore-DfsrPreservedFiles` Windows PowerShell cmdlets (included with the DFSR module in Windows Server 2012 R2), or the [RestoreDFSR](https://code.msdn.microsoft.com/restoredfsr) sample script from the MSDN Code Gallery. This script is intended only for disaster recovery and is provided AS-IS, without warranty.
 
 ### Is there a way to know the state of replication?
 
@@ -299,7 +299,7 @@ Yes. There are a number of ways to monitor replication:
       
   - DFS Management has an in-box diagnostic report for the replication backlog, replication efficiency, and the number of files and folders in a given replication group.  
       
-  - The DFSR Windows PowerShell module in Windows Server 2012 R2 contains cmdlets for starting propagation tests and writing propagation and health reports. For more information, see [Distributed File System Replication Cmdlets in Windows PowerShell](http://technet.microsoft.com/library/dn296601.aspx).  
+  - The DFSR Windows PowerShell module in Windows Server 2012 R2 contains cmdlets for starting propagation tests and writing propagation and health reports. For more information, see [Distributed File System Replication Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn296601.aspx).  
       
   - Dfsrdiag.exe is a command-line tool that can generate a backlog count or trigger a propagation test. Both show the state of replication. Propagation shows you if files are being replicated to all nodes. Backlog shows you how many files still need to replicate before two computers are in sync. The backlog count is the number of updates that a replication group member has not processed. On computers running Windows Server 2012 R2, Windows Server 2012 or Windows Server 2008 R2, Dfsrdiag.exe can also display the updates that DFS Replication is currently replicating.  
       
@@ -326,7 +326,7 @@ No. DFS Replication uses the topology defined by the administrator, which is ind
 
 ### How can I improve replication performance?
 
-To learn about different methods of tuning replication performance, see [Tuning Replication Performance in DFSR](http://blogs.technet.com/b/askds/archive/2010/03/31/tuning-replication-performance-in-dfsr-especially-on-win2008-r2.aspx) on the [Ask the Directory Services Team blog](http://blogs.technet.com/b/askds/).
+To learn about different methods of tuning replication performance, see [Tuning Replication Performance in DFSR](https://blogs.technet.com/b/askds/archive/2010/03/31/tuning-replication-performance-in-dfsr-especially-on-win2008-r2.aspx) on the [Ask the Directory Services Team blog](https://blogs.technet.com/b/askds/).
 
 ### How does DFS Replication avoid saturating a connection?
 
@@ -334,11 +334,11 @@ In DFS Replication you set the maximum bandwidth you want to use on a connection
 
 Nonetheless, the bandwidth throttling is not 100% accurate and DFS Replication can saturate the link for short periods of time. This is because DFS Replication throttles bandwidth by throttling RPC calls. Because this process relies on various buffers in lower levels of the network stack, including RPC, the replication traffic tends to travel in bursts which may at times saturate the network links.
 
-DFS Replication in Windows Server 2008 includes several performance enhancements, as discussed in [Distributed File System](https://technet.microsoft.com/en-us/library/Cc753479), a topic in [Changes in Functionality from Windows Server 2003 with SP1 to Windows Server 2008](https://technet.microsoft.com/en-us/library/cc753208).
+DFS Replication in Windows Server 2008 includes several performance enhancements, as discussed in [Distributed File System](https://technet.microsoft.com/library/Cc753479), a topic in [Changes in Functionality from Windows Server 2003 with SP1 to Windows Server 2008](https://technet.microsoft.com/library/cc753208).
 
 ### How does DFS Replication performance compare with FRS?
 
-DFS Replication is much faster than FRS, particularly when small changes are made to large files and RDC is enabled. For example, with RDC, a small change to a 2 MB PowerPoint® presentation can result in only 60 kilobytes (KB) being sent across the network—a 97 percent savings in bytes transferred.
+DFS Replication is much faster than FRS, particularly when small changes are made to large files and RDC is enabled. For example, with RDC, a small change to a 2 MB PowerPoint&reg; presentation can result in only 60 kilobytes (KB) being sent across the network—a 97 percent savings in bytes transferred.
 
 RDC is not used on files smaller than 64 KB and might not be beneficial on high-speed LANs where network bandwidth is not contended. RDC can be disabled on a per-connection basis using DFS Management.
 
@@ -426,9 +426,9 @@ To use cross-file RDC, one member of the replication connection must be running 
 <tbody>
 <tr class="even">
 <td><p>Windows Server 2012 R2</p></td>
-<td><p>Yes*</p></td>
+<td><p>Yes<em></p></td>
 <td><p>Not available</p></td>
-<td><p>Yes*</p></td>
+<td><p>Yes</em></p></td>
 </tr>
 <tr class="odd">
 <td><p>Windows Server 2012</p></td>
@@ -469,9 +469,9 @@ No. If you need to change the path of a replicated folder, you must delete it in
 
 No, you cannot configure which file attributes that DFS Replication replicates.
 
-For a list of attribute values and their descriptions, see [File Attributes](http://go.microsoft.com/fwlink/?linkid=182268) on MSDN (http://go.microsoft.com/fwlink/?LinkId=182268).
+For a list of attribute values and their descriptions, see [File Attributes](https://go.microsoft.com/fwlink/?linkid=182268) on MSDN (https://go.microsoft.com/fwlink/?LinkId=182268).
 
-The following attribute values are set by using the `SetFileAttributes dwFileAttributes` function, and they are replicated by DFS Replication. Changes to these attribute values trigger replication of the attributes. The contents of the file are not replicated unless the contents change as well. For more information, see [SetFileAttributes Function](http://go.microsoft.com/fwlink/?linkid=182269) in the MSDN library (http://go.microsoft.com/fwlink/?LinkId=182269).
+The following attribute values are set by using the `SetFileAttributes dwFileAttributes` function, and they are replicated by DFS Replication. Changes to these attribute values trigger replication of the attributes. The contents of the file are not replicated unless the contents change as well. For more information, see [SetFileAttributes Function](https://go.microsoft.com/fwlink/?linkid=182269) in the MSDN library (https://go.microsoft.com/fwlink/?LinkId=182269).
 
   - FILE\_ATTRIBUTE\_HIDDEN  
       
@@ -524,13 +524,13 @@ Yes. You can choose a topology when you create a replication group. Or you can s
 
 Yes. DFS Replication supports copying files to a replication group member before the initial replication. This "prestaging" can dramatically reduce the amount of data replicated during the initial replication.
 
-The initial replication does not need to replicate contents when files differ only by real attributes or time stamps. A real attribute is an attribute that can be set by the Win32 function `SetFileAttributes`. For more information, see [SetFileAttributes Function](http://go.microsoft.com/fwlink/?linkid=182269) in the MSDN library (http://go.microsoft.com/fwlink/?LinkId=182269). If two files differ by other attributes, such as compression, then the contents of the file are replicated.
+The initial replication does not need to replicate contents when files differ only by real attributes or time stamps. A real attribute is an attribute that can be set by the Win32 function `SetFileAttributes`. For more information, see [SetFileAttributes Function](https://go.microsoft.com/fwlink/?linkid=182269) in the MSDN library (https://go.microsoft.com/fwlink/?LinkId=182269). If two files differ by other attributes, such as compression, then the contents of the file are replicated.
 
 To prestage a replication group member, copy the files to the appropriate folder on the destination server(s), create the replication group, and then choose a primary member. Choose the member that has the most up-to-date files that you want to replicate because the primary member's content is considered "authoritative." This means that during initial replication, the primary member's files will always overwrite other versions of the files on other members of the replication group.
 
-For information about pre-seeding and cloning the DFSR database, see [DFS Replication Initial Sync in Windows Server 2012 R2: Attack of the Clones](http://blogs.technet.com/b/filecab/archive/2013/08/21/dfs-replication-initial-sync-in-windows-server-2012-r2-attack-of-the-clones.aspx).
+For information about pre-seeding and cloning the DFSR database, see [DFS Replication Initial Sync in Windows Server 2012 R2: Attack of the Clones](https://blogs.technet.com/b/filecab/archive/2013/08/21/dfs-replication-initial-sync-in-windows-server-2012-r2-attack-of-the-clones.aspx).
 
-For more information about the initial replication, see [Create a Replication Group](https://technet.microsoft.com/en-us/library/cc725893).
+For more information about the initial replication, see [Create a Replication Group](https://technet.microsoft.com/library/cc725893).
 
 ### Does DFS Replication overcome common File Replication Service issues?
 
@@ -557,7 +557,7 @@ If an application opens a file and creates a file lock on it (preventing it from
       
   - Microsoft does not support creating NTFS hard links to or from files in a replicated folder – doing so can cause replication issues with the affected files. Hard link files are ignored by DFS Replication and are not replicated. Junction points also are not replicated, and DFS Replication logs event 4406 for each junction point it encounters.  
       
-  - The only reparse points replicated by DFS Replication are those that use the IO\_REPARSE\_TAG\_SYMLINK tag; however, DFS Replication does not guarantee that the target of a symlink is also replicated. For more information, see the [Ask the Directory Services Team blog](http://blogs.technet.com/b/askds/archive/2011/09/30/friday-mail-sack-super-slo-mo-edition.aspx).  
+  - The only reparse points replicated by DFS Replication are those that use the IO\_REPARSE\_TAG\_SYMLINK tag; however, DFS Replication does not guarantee that the target of a symlink is also replicated. For more information, see the [Ask the Directory Services Team blog](https://blogs.technet.com/b/askds/archive/2011/09/30/friday-mail-sack-super-slo-mo-edition.aspx).  
       
   - Files with the IO\_REPARSE\_TAG\_DEDUP, IO\_REPARSE\_TAG\_SIS, or IO\_REPARSE\_TAG\_HSM reparse tags are replicated as normal files. The reparse tag and reparse data buffers are not replicated to other servers because the reparse point only works on the local system. As such, DFS Replication can replicate folders on volumes that use Data Deduplication in Windows Server 2012, or Single Instance Storage (SIS), however, data deduplication information is maintained separately by each server on which the role service is enabled.  
       
@@ -590,11 +590,11 @@ No. The DFS Replication service uses remote procedure calls (RPC) over TCP to re
 
 For more information, see the following Microsoft Web sites:
 
-  - [RPC Technical Reference](http://go.microsoft.com/fwlink/?linkid=182278)  
+  - [RPC Technical Reference](https://go.microsoft.com/fwlink/?linkid=182278)  
       
-  - [About Remote Differential Compression](http://go.microsoft.com/fwlink/?linkid=182279)  
+  - [About Remote Differential Compression](https://go.microsoft.com/fwlink/?linkid=182279)  
       
-  - [Authentication-Level Constants](http://go.microsoft.com/fwlink/?linkid=182280)  
+  - [Authentication-Level Constants](https://go.microsoft.com/fwlink/?linkid=182280)  
       
 
 ### How are simultaneous replications handled?
@@ -605,7 +605,7 @@ By default, a maximum of 16 (four in Windows Server 2003 R2) concurrent downlo
 
 ### How do I force replication or polling?
 
-You can force replication immediately by using DFS Management, as described in [Edit Replication Schedules](https://technet.microsoft.com/en-us/library/Cc732278). You can also force replication by using the `Sync-DfsReplicationGroup` cmdlet, included in the DFSR PowerShell module introduced with Windows Server 2012 R2, or the **Dfsrdiag SyncNow** command. You can force polling by using the `Update-DfsrConfigurationFromAD` cmdlet, or the **Dfsrdiag PollAD** command.
+You can force replication immediately by using DFS Management, as described in [Edit Replication Schedules](https://technet.microsoft.com/library/Cc732278). You can also force replication by using the `Sync-DfsReplicationGroup` cmdlet, included in the DFSR PowerShell module introduced with Windows Server 2012 R2, or the **Dfsrdiag SyncNow** command. You can force polling by using the `Update-DfsrConfigurationFromAD` cmdlet, or the **Dfsrdiag PollAD** command.
 
 ### Is it possible to configure a quiet time between replications for files that change frequently?
 
@@ -613,7 +613,7 @@ No. If the schedule is open, DFS Replication will replicate changes as it notice
 
 ### Is it possible to configure one-way replication with DFS Replication?
 
-Yes. If you are using Windows Server 2012 or Windows Server 2008 R2, you can create a read-only replicated folder that replicates content through a one-way connection. For more information, see [Make a Replicated Folder Read-Only on a Particular Member](http://go.microsoft.com/fwlink/?linkid=156740) (http://go.microsoft.com/fwlink/?LinkId=156740).
+Yes. If you are using Windows Server 2012 or Windows Server 2008 R2, you can create a read-only replicated folder that replicates content through a one-way connection. For more information, see [Make a Replicated Folder Read-Only on a Particular Member](https://go.microsoft.com/fwlink/?linkid=156740) (https://go.microsoft.com/fwlink/?LinkId=156740).
 
 We do not support creating a one-way replication connection with DFS Replication in Windows Server 2008 or Windows Server 2003 R2. Doing so can cause numerous problems including health-check topology errors, staging issues, and problems with the DFS Replication database.
 
@@ -634,7 +634,7 @@ During initial replication, the primary member's files will always take preceden
 
 If the initial replication fails or the DFS Replication service restarts during the replication, the primary member sees the primary member designation in the local DFS Replication database and retries the initial replication. If the primary member's DFS Replication database is lost after clearing the primary designation in Active Directory Domain Services, but before all members of the replication group complete the initial replication, all members of the replication group fail to replicate the folder because no server is designated as the primary member. If this happens, use the **Dfsradmin membership /set /isprimary:true** command on the primary member server to restore the primary member designation manually.
 
-For more information about initial replication, see [Create a Replication Group](https://technet.microsoft.com/en-us/library/cc725893).
+For more information about initial replication, see [Create a Replication Group](https://technet.microsoft.com/library/cc725893).
 
 
 > [!WARNING]

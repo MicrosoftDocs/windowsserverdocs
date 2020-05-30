@@ -1,13 +1,11 @@
 ---
 ms.assetid: 5f733510-c96e-4d3a-85d2-4407de95926e
 title: Publishing Applications using AD FS Preauthentication
-description:
-author: kgremban
-manager: femila
+ms.author: kgremban
+author: eross-msft
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: web-app-proxy
 ---
 
@@ -124,7 +122,7 @@ This procedure describes how to publish a claims-based application, such as a Sh
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -206,7 +204,7 @@ This procedure describes how to publish an application that uses Integrated Wind
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -306,7 +304,7 @@ The following procedure explains how to publish HTTP basic applications.
   
 8.  On the **Results** page, make sure that the application published successfully, and then click **Close**.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -381,7 +379,7 @@ This procedure describes how to publish an application for OAuth2. This type of 
   
 -   Verified that a certificate on the Web Application Proxy server is suitable for the application you want to publish.  
   
-#### To publish and OAuth2 app  
+#### To publish an OAuth2 app  
   
 1.  On the Web Application Proxy server, in the Remote Access Management console, in the **Navigation** pane, click **Web Application Proxy**, and then in the **Tasks** pane, click **Publish**.  
   

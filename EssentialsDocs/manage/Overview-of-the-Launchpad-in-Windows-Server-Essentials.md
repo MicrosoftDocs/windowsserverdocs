@@ -1,12 +1,8 @@
 ---
 title: "Overview of the Launchpad in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
@@ -24,20 +20,20 @@ The Windows Server Essentials Launchpad is a small application that is installed
   
  The following Windows operating systems support the use of the Windows Server Essentials Launchpad:  
   
--   **Windows 8**: All editions.  
+- **Windows 8**: All editions.  
   
--   **Windows 7**: All editions.  
--   **Windows 10**: All editions. 
+- **Windows 7**: All editions.  
+- **Windows 10**: All editions. 
   
- The following operating systems do not support the use of the Windows Server Essentials Launchpad:  
+  The following operating systems do not support the use of the Windows Server Essentials Launchpad:  
   
--   **Additional servers**: You cannot run the Windows Server Essentials Launchpad on any additional computers that run a Windows Server operating system.  
+- **Additional servers**: You cannot run the Windows Server Essentials Launchpad on any additional computers that run a Windows Server operating system.  
   
- In this topic:  
+  In this topic:  
   
--   [Use the Launchpad](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
+- [Use the Launchpad](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
   
--   [Use the Launchpad with a Mac computer](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
+- [Use the Launchpad with a Mac computer](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
   
 ##  <a name="BKMK_Launchpad"></a> Use the Launchpad  
  The following links and information are available on the Windows Server Essentials Launchpad.  
@@ -45,13 +41,13 @@ The Windows Server Essentials Launchpad is a small application that is installed
 ### Backup  
  Click **Backup** to open the **Backup Properties** for the computer. On the **Backup Properties** page, you can:  
   
--   Start or stop a backup.  
+- Start or stop a backup.  
   
--   View the status and details for the most recent backup.  
+- View the status and details for the most recent backup.  
   
--   Specify how to manage computer power when backup runs.  
+- Specify how to manage computer power when backup runs.  
   
- For information about how to use Launchpad to back up your computer, see [Manage Client Backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md).  
+  For information about how to use Launchpad to back up your computer, see [Manage Client Backup](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md).  
   
 ### Remote Web Access  
  Click **Remote Web Access** to open the web browser to the Remote Web Access site. The Remote Web Access site enables you to connect to other computers and to access some of the network resources from within the office or from any remote location with an Internet-enabled computer. For more information about Remote Web Access, see [Manage Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md).  
@@ -72,7 +68,7 @@ The Windows Server Essentials Launchpad is a small application that is installed
  Alerts that appear on the Launchpad provide a quick status as to the immediate health of the computer. To view information about a health alert, click an alert indicator to open the alert viewer. Health alerts appear in the viewer based on level of severity. The most severe alerts appear first in the list; less severe alerts appear later in the list. For more information about computer health alerts, see [Manage System Health](Manage-System-Health-in-Windows-Server-Essentials.md).  
   
 ##  <a name="BKMK_Mac"></a> Use the Launchpad with a Mac computer  
- You can connect a Mac® computer running Mac OS X® 10.5 or later to  Windows Server Essentials,  Windows Server Essentials, or  Windows Server 2012 R2 or by downloading and installing the connector software. When you finish installing the connector software, you can choose to automatically start the Launchpad at startup.  
+ You can connect a Mac&reg; computer running Mac OS X&reg; 10.5 or later to  Windows Server Essentials,  Windows Server Essentials, or  Windows Server 2012 R2 or by downloading and installing the connector software. When you finish installing the connector software, you can choose to automatically start the Launchpad at startup.  
   
  The Launchpad is a small application that provides authenticated users with access to key features of the server, including shared files and media, add-ins, and Remote Web Access. The Launchpad also provides real-time information and notifications about the health of the computer.  
   

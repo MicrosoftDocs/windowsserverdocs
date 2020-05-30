@@ -4,10 +4,10 @@ description: This topic is part of the guide Deploy Server Certificates for 802.
 manager: dougkim
 ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 07/19/2018
 ---
 # Copy the CA Certificate and CRL to the Virtual Directory
@@ -24,6 +24,8 @@ To perform this procedure you must be a member of **Domain Admins**.
   
     - Type `certutil -crl`, and then press ENTER.  
 
+    - To copy the CA1 certificate to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`, and then press ENTER.  
+    
     - To copy the certificate revocation lists to the file share on your Web server, type `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, and then press ENTER.  
   
 2.  To verify that your CDP and AIA extension locations are correctly configured, type `pkiview.msc`, and then press ENTER. The pkiview Enterprise PKI MMC opens.  

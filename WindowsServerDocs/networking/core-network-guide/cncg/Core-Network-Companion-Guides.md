@@ -3,11 +3,11 @@ title: Core Network Companion Guides
 description: This topic provides an overview of the companion guides to the Windows Server 2016 Core Network Guide
 manager: brianlic
 ms.technology: networking
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Core network companion guidance

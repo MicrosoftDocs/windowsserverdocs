@@ -1,14 +1,14 @@
 ---
 title: Plan the Use of vRSS
 description: You can use this topic to prepare your virtual machine and Hyper-V host for using vRSS in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 695e6192-5e84-4ab4-b33e-8ebf6b8f5cbb
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/04/2018
 ---
 

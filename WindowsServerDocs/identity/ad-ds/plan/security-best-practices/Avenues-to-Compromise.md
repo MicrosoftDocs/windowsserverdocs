@@ -1,14 +1,12 @@
 ---
 ms.assetid: d7a4d2e1-217d-4ffc-93f0-817149bd9e7f
 title: Avenues to Compromise
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 
@@ -56,7 +54,7 @@ It is important not only to ensure that your systems are protected with current,
 ### Incomplete Patching  
 *Law Number Three: If you don't keep up with security fixes, your network won't be yours for long.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
   
-Microsoft releases security bulletins on the second Tuesday of each month, although on rare occasions security updates are released between the monthly security updates (these are also known as "out-of-band" updates) when the vulnerability is determined to pose an urgent risk to customer systems. Whether a small business configures its Windows computers to use Windows Update to manage system and application patching or a large organization uses management software such as System Center Configuration Manager (SCCM) to deploy patches according to detailed, hierarchical plans, many customers patch their Windows infrastructures in a relatively timely manner.  
+Microsoft releases security bulletins on the second Tuesday of each month, although on rare occasions security updates are released between the monthly security updates (these are also known as "out-of-band" updates) when the vulnerability is determined to pose an urgent risk to customer systems. Whether a small business configures its Windows computers to use Windows Update to manage system and application patching or a large organization uses management software such as Microsoft Endpoint Configuration Manager to deploy patches according to detailed, hierarchical plans, many customers patch their Windows infrastructures in a relatively timely manner.  
   
 However, few infrastructures include only Windows computers and Microsoft applications, and in compromised environments, it is common to find that the organization's patch management strategy contains gaps. Windows systems in these environments are inconsistently patched. Non-Windows operating systems are patched sporadically, if at all. Commercial off-the-shelf (COTS) applications contain vulnerabilities for which patches exist, but have not been applied. Networking devices are often configured with factory-default credentials and no firmware updates years after their installation. Applications and operating systems that are no longer supported by their vendors are often kept running, despite the fact that they can no longer be patched against vulnerabilities. Each of these unpatched systems represents another potential entry point for attackers.  
   

@@ -1,6 +1,6 @@
 ---
 title: Health Service in Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
@@ -11,7 +11,7 @@ ms.date: 02/09/2018
 ---
 # Health Service in Windows Server
 
-> Applies to Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
 
@@ -86,7 +86,7 @@ The Health Service provides an enforcement mechanism to restrict the components 
 
 ### Usage  
 
-The Supported Components Document uses an XML-inspired syntax. We recommend using your favorite text editor, such as the free [Visual Studio Code](http://code.visualstudio.com/) or Notepad, to create an XML document which you can save and reuse.
+The Supported Components Document uses an XML-inspired syntax. We recommend using your favorite text editor, such as the free [Visual Studio Code](https://code.visualstudio.com/) or Notepad, to create an XML document which you can save and reuse.
 
 #### Sections
 

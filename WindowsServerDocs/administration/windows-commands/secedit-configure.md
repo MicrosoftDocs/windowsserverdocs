@@ -1,12 +1,12 @@
 ---
 title: secedit:configure
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** -
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3
 author: coreyp-at-msft
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to configure the current system settings using security settings stored in a database. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to configure the current system settings using security settings stored in a database.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ Allows you to configure the current system settings using security settings stor
 Secedit /configure /db <database file name> [/cfg <configuration file name>] [/overwrite] [/areas SECURITYPOLICY | GROUP_MGMT | USER_RIGHTS | REGKEYS | FILESTORE | SERVICES] [/log <log file name>] [/quiet]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -40,23 +40,23 @@ Secedit /configure /db <database file name> [/cfg <configuration file name>] [/o
 
 ## Remarks
 
-If the path for the log file is not provided, the default log file, (*systemroot*\Users \*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) is used.
+If the path for the log file is not provided, the default log file, (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
 
 Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 Perform the analysis for the security parameters on the security database, SecDbContoso.sdb, you created using the Security Configuration and Analysis snap-in. Direct the output to the file SecAnalysisContosoFY11 with prompting so you can verify the command ran correctly.
 ```
 Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /log C:\Security\FY11\SecAnalysisContosoFY11.log
 ```
-Let’s say that the analysis revealed some inadequacies so the security template, SecContoso.inf, was modified. Run the command again to incorporate the changes, directing the output to the existing file SecAnalysisContosoFY11 with no prompting.
+Let's say that the analysis revealed some inadequacies so the security template, SecContoso.inf, was modified. Run the command again to incorporate the changes, directing the output to the existing file SecAnalysisContosoFY11 with no prompting.
 ```
 Secedit /configure /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /overwrite /log C:\Security\FY11\SecAnalysisContosoFY11.xml /quiet
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit](secedit.md)
 -   [Secedit:analyze](secedit-analyze.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,12 @@
 ---
 title: reg query
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0e6a0d7c-ed9b-4318-833d-33f265a81f39
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Returns a list of the next tier of subkeys and entries that are located under a specified subkey in the registry.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 reg query <KeyName> [{/v <ValueName> | /ve}] [/s] [/se <Separator>] [/f <Data>] [{/k | /d}] [/c] [/e] [/t <Type>] [/z]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -56,7 +56,7 @@ The following table lists the return values for the **reg query** operation.
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display the value of the name value Version in the HKLM\Software\Microsoft\ResKit key, type:
 ```
@@ -83,6 +83,6 @@ To display the value and data for value names of null (default) under HKLM\SOFTW
 REG QUERY HKLM\SOFTWARE /ve
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

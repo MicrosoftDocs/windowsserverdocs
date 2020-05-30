@@ -1,12 +1,11 @@
 ---
 title: Single log-out for OpenID Connect with AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 11/17/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 

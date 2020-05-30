@@ -1,11 +1,11 @@
 ---
 title: Deploy shielded VMs
-ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
@@ -35,8 +35,8 @@ The following topics describe how a tenant can work with shielded VMs.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Create a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
+> [!div class="nextstepaction"]
+> [Create a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
 
 ## See also
 

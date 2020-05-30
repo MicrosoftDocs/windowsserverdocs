@@ -1,12 +1,8 @@
 ---
 title: Schannel Security Support Provider Technical Reference
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Windows Server Security
+ms.prod: windows-server
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5bf9c4a5-cdc1-49eb-bf9a-8bf987410b63
 author: coreyp-at-msft

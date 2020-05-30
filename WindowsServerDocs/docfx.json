@@ -8,6 +8,7 @@
         ],
         "exclude": [
           "**/obj/**",
+          "**/includes/**",
           "windows-server/**"
         ]
       }
@@ -30,22 +31,22 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-        "uhfHeaderId": "MSDocsHeader-WindowsIT", 
-		"breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
-    "extendBreadcrumb":  true,
-	    "feedback_system": "GitHub",
-        "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
-        "feedback_product_url": "https://windowsserver.uservoice.com/forums/295047-general-feedback",
-		"_op_documentIdPathDepotMapping": {
-			"./": {
-			  "depot_name": "WS.WindowsServerDocs"
-			}
-		}
-	},
+      "breadcrumb_path": "/windows-server/breadcrumbs/toc.json",
+      "extendBreadcrumb": true,
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/windowsserverdocs",
+      "feedback_product_url": "https://windowsserver.uservoice.com/forums/295047-general-feedback",
+      "_op_documentIdPathDepotMapping": {
+          "manage/windows-admin-center/license/": {
+            "depot_name": "MSDN.WindowsServerDocs-pr",
+            "folder_relative_path_in_docset": "licensing/" 
+           }
+        }
+    },
     "fileMetadata": {
       "feedback_product_url": {
-        "manage/windows-admin-center/*.md": "http://aka.ms/wacfeedback",
-        "manage/windows-admin-center/**/*.md": "http://aka.ms/wacfeedback" 
+        "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
+        "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
       }
     },
     "template": [

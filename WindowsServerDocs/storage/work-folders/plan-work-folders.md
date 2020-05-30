@@ -1,7 +1,7 @@
 ---
 ms.assetid: a7c39656-81ee-4c2b-80ef-4d017dd11b07
 title: Planning a Work Folders deployment
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 author: JasonGerend
@@ -16,17 +16,17 @@ description: How to plan a Work Folders deployment including system requirements
 
 This topic explains the design process for a Work Folders implementation, and assumes that you have the following background:  
   
--   Have a basic understanding of Work Folders (as described in [Work Folders](work-folders-overview.md))  
+- Have a basic understanding of Work Folders (as described in [Work Folders](work-folders-overview.md))  
   
--   Have a basic understanding of Active Directory Domain Services (AD DS) concepts  
+- Have a basic understanding of Active Directory Domain Services (AD DS) concepts  
   
--   Have a basic understanding of Windows file sharing and related technologies  
+- Have a basic understanding of Windows file sharing and related technologies  
   
--   Have a basic understanding of SSL certificate usage  
+- Have a basic understanding of SSL certificate usage  
   
--   Have a basic understanding of enabling web access to internal resources via a web reverse proxy  
+- Have a basic understanding of enabling web access to internal resources via a web reverse proxy  
   
- The following sections will help you design your Work Folders implementation. Deploying Work Folders is discussed in the next topic, [Deploying Work Folders](deploy-work-folders.md).  
+  The following sections will help you design your Work Folders implementation. Deploying Work Folders is discussed in the next topic, [Deploying Work Folders](deploy-work-folders.md).  
   
 ##  <a name="BKMK_SOFT"></a> Software requirements  
 
@@ -113,16 +113,16 @@ Work Folders has the following software requirements for client computers:
 ###  <a name="GroupPolicy"></a> Group Policy  
  If you have Windows 7 PCs in your environment, we recommend the following:  
   
--   Use Group Policy to control password policies for all domain-joined PCs that use Work Folders.  
+- Use Group Policy to control password policies for all domain-joined PCs that use Work Folders.  
   
--   Use the Work Folders **Automatically lock screen, and require a password** policy on PCs that aren't joined to your domain.  
+- Use the Work Folders **Automatically lock screen, and require a password** policy on PCs that aren't joined to your domain.  
   
- You can also use Group Policy to specify a Work Folders server to domain-joined PCs. This simplifies Work Folders setup a little bit– users would otherwise need to enter their work email address to lookup the settings (assuming that Work Folders is set up properly), or enter the Work Folders URL that you explicitly provided them via email or another means of communication.  
+  You can also use Group Policy to specify a Work Folders server to domain-joined PCs. This simplifies Work Folders setup a little bit– users would otherwise need to enter their work email address to lookup the settings (assuming that Work Folders is set up properly), or enter the Work Folders URL that you explicitly provided them via email or another means of communication.  
   
- You can also use Group Policy to forcibly set up Work Folders on a per-user or per-computer basis, though doing so causes Work Folders to sync on every PC a user signs in to (when using the per-user policy setting), and prevents users from specifying an alternate location for Work Folders on their PC (such as on a microSD card to conserve space on the primary drive). We suggest carefully evaluating your user's needs before forcing automatic setup.  
+  You can also use Group Policy to forcibly set up Work Folders on a per-user or per-computer basis, though doing so causes Work Folders to sync on every PC a user signs in to (when using the per-user policy setting), and prevents users from specifying an alternate location for Work Folders on their PC (such as on a microSD card to conserve space on the primary drive). We suggest carefully evaluating your user's needs before forcing automatic setup.  
   
 ### Windows Intune  
- Windows Intune also provides a layer of security and manageability for non-domain-joined devices that would not otherwise be present. You can use Windows Intune to configure and manage users' personal devices such as tablets that connect to Work Folders from across the Internet. Windows Intune can provide devices with the sync server URL to use – otherwise users must enter their work email address to lookup the settings (if you publish a public Work Folders URL in the form of https://workfolders.*contoso.com*), or enter the sync server URL directly.  
+ Windows Intune also provides a layer of security and manageability for non-domain-joined devices that would not otherwise be present. You can use Windows Intune to configure and manage users' personal devices such as tablets that connect to Work Folders from across the Internet. Windows Intune can provide devices with the sync server URL to use – otherwise users must enter their work email address to lookup the settings (if you publish a public Work Folders URL in the form of https://workfolders.<em>contoso.com</em>), or enter the sync server URL directly.  
   
  Without a Windows Intune deployment, users must configure external devices manually, which can result in increased demands on a customer's help desk staff.  
   
@@ -143,13 +143,13 @@ Work Folders supports using Web Application Proxy, Azure AD Application Proxy or
 ### Number of Sync Servers  
  It is possible for a customer to operate multiple sync servers in an environment. This can be a desirable configuration for several reasons:  
   
--   Geographic distribution of users – for example, branch office files servers or regional datacenters  
+- Geographic distribution of users – for example, branch office files servers or regional datacenters  
   
--   Data storage requirements – certain business departments might have specific data storage or handling requirements that are easier with a dedicated server  
+- Data storage requirements – certain business departments might have specific data storage or handling requirements that are easier with a dedicated server  
   
--   Load balancing – in large environments, storing user data on multiple servers can increase server performance and uptime.  
+- Load balancing – in large environments, storing user data on multiple servers can increase server performance and uptime.  
   
- For information on Work Folders server scaling and performance, see [Performance Considerations for Work Folders Deployments](http://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx).  
+  For information on Work Folders server scaling and performance, see [Performance Considerations for Work Folders Deployments](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx).  
   
 > [!NOTE]
 >  When using multiple sync servers, we recommend setting up automatic server discovery for users. This process relies upon the configuration of an attribute on each user account in AD DS. The attribute is named **msDS-SyncServerURL** and becomes available on user accounts after a Windows Server 2012 R2 domain controller is added to the domain or the Active Directory schema updates are applied. This attribute should be set for each user to ensure that users connect to the appropriate sync server. By using automatic server discovery, organizations can publish Work Folders behind a "friendly" URL such as *https://workfolders.contoso.com*, regardless of the number of sync servers in operation.  
@@ -249,5 +249,5 @@ The following set of design questions is intended to aid customers in designing 
   
 |Content type|References|  
 |------------------|----------------|  
-|**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](http://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (blog post)|  
-|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />-   [Performance Considerations for Work Folders Deployments](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](http://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)|
+|**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](https://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (blog post)|  
+|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />-   [Performance Considerations for Work Folders Deployments](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](https://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)|

@@ -2,12 +2,12 @@
 title: Wireless Access Deployment Overview
 description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: shortpatti
-ms.author: pashort
+author: eross-msft
+ms.author: lizross
 ---
 # Wireless Access Deployment Overview
 

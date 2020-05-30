@@ -1,19 +1,16 @@
 ---
 ms.assetid: 61b6c115-1082-45d5-b0b1-ed24d06fcdce
 title: AD FS user sign-in customization
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # AD FS user sign-in customization
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 AD FS provides a number of options for administrators to customize and tailor the end-user experience to meet their corporate needs.  The following page will serve as a central location for customization.  You can use the table below to quickly find your customization option.
 

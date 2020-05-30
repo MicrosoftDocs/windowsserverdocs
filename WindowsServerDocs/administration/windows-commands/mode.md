@@ -1,12 +1,12 @@
 ---
 title: mode
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
 
@@ -30,7 +30,7 @@ You can use **mode** to perform the following tasks—each task uses a different
 -   [To change the size of the command prompt screen buffer](#BKMK_5)
 -   [To set the keyboard typematic rate](#BKMK_6)
 
-## <a name="BKMK_1"></a>To configure a serial communications port
+## <a name=BKMK_1></a>To configure a serial communications port
 
 ### Syntax
 
@@ -38,25 +38,25 @@ You can use **mode** to perform the following tasks—each task uses a different
 mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon={on|off}] [odsr={on|off}] [octs={on|off}] [dtr={on|off|hs}] [rts={on|off|hs|tg}] [idsr={on|off}]
 ```
 
-### Parameters
+#### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Com\<M>[:]|Specifies the number of the async Prncnfg.vbshronous communications port.|
-|baud=\<B>|Specifies the transmission rate in bits per second. The following table lists valid abbreviations for *B* and their related rates.</br>-   **11** = 110 baud</br>-   **15** = 150 baud</br>-   **30** = 300 baud</br>-   **60** = 600 baud</br>-   **12** = 1200 baud</br>-   **24** = 2400 baud</br>-   **48** = 4800 baud</br>-   **96** = 9600 baud</br>-   **19** = 19,200 baud|
-|parity=\<P>|Specifies how the system uses the parity bit to check for transmission errors. The following table lists valid values for *P*. The default value is **e**. Not all computers support the values **m** and **s**.</br>-   **n** = none</br>-   **e** = even</br>-   **o** = odd</br>-   **m** = mark</br>-   **s** = space|
-|data=\<D>|Specifies the number of data bits in a character. Valid values for **d** are in the range 5 through 8. The default value is 7. Not all computers support the values 5 and 6.|
-|stop=\<S>|Specifies the number of stop bits that define the end of a character: 1, 1.5, or 2. If the baud rate is 110, the default value is 2. Otherwise, the default value is 1. Not all computers support the value 1.5.|
-|to={on | off}|Specifies whether infinite time-out processing is on or off. The default is off.|
-|xon={on | off}|Specifies whether the xon or xoff protocol for data-flow control is on or off.|
-|odsr={on | off}|Specifies whether output handshaking that uses the Data Set Ready (DSR) circuit is on or off.|
-|octs={on | off}|Specifies whether output handshaking that uses the Clear To Send (CTS) circuit is on or off.|
-|dtr={on | off | hs}|Specifies whether the Data Terminal Ready (DTR) circuit is on or off or set to handshake.|
-|rts={on | off | hs | tg}|Specifies whether the Request To Send (RTS) circuit is set to on, off, handshake, or toggle.|
-|idsr={on | off}|Specifies whether the DSR circuit sensitivity is on or off.|
-|/?|Displays help at the command prompt.|
+|  Parameter  |                                                                                                                                                                                     Description                                                                                                                                                                                     |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Com\<M>[:]  |                                                                                                                                                      Specifies the number of the async Prncnfg.vbshronous communications port.                                                                                                                                                      |
+|  baud=\<B>  | Specifies the transmission rate in bits per second. The following table lists valid abbreviations for *B* and their related rates.</br>-   **11** = 110 baud</br>-   **15** = 150 baud</br>-   **30** = 300 baud</br>-   **60** = 600 baud</br>-   **12** = 1200 baud</br>-   **24** = 2400 baud</br>-   **48** = 4800 baud</br>-   **96** = 9600 baud</br>-   **19** = 19,200 baud |
+| parity=\<P> |                              Specifies how the system uses the parity bit to check for transmission errors. The following table lists valid values for *P*. The default value is **e**. Not all computers support the values **m** and **s**.</br>-   **n** = none</br>-   **e** = even</br>-   **o** = odd</br>-   **m** = mark</br>-   **s** = space                              |
+|  data=\<D>  |                                                                                                    Specifies the number of data bits in a character. Valid values for **d** are in the range 5 through 8. The default value is 7. Not all computers support the values 5 and 6.                                                                                                     |
+|  stop=\<S>  |                                                                                  Specifies the number of stop bits that define the end of a character: 1, 1.5, or 2. If the baud rate is 110, the default value is 2. Otherwise, the default value is 1. Not all computers support the value 1.5.                                                                                   |
+|   to={on    |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|   xon={on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|  odsr={on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|  octs={on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|   dtr={on   |                                                                                                                                                                                         off                                                                                                                                                                                         |
+|   rts={on   |                                                                                                                                                                                         off                                                                                                                                                                                         |
+|  idsr={on   |                                                                                                                                                                                        off}                                                                                                                                                                                         |
+|     /?      |                                                                                                                                                                        Displays help at the command prompt.                                                                                                                                                                         |
 
-## <a name="BKMK_2"></a>To display the status of all devices or of a single device
+## <a name=BKMK_2></a>To display the status of all devices or of a single device
 
 ### Syntax
 
@@ -64,7 +64,7 @@ mode com<M>[:] [baud=<B>] [parity=<P>] [data=<D>] [stop=<S>] [to={on|off}] [xon=
 mode [<Device>] [/status]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -76,7 +76,7 @@ mode [<Device>] [/status]
 
 If used without parameters, **mode** displays the status of all devices that are installed on your system.
 
-## <a name="BKMK_3"></a>To redirect output from a parallel port to a serial communications port
+## <a name=BKMK_3></a>To redirect output from a parallel port to a serial communications port
 
 ### Syntax
 
@@ -84,7 +84,7 @@ If used without parameters, **mode** displays the status of all devices that are
 mode lpt<N>[:]=com<M>[:]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -111,7 +111,7 @@ mode lpt1
 ```
 This command prevents the redirection the file from LPT1 to COM1.
 
-## <a name="BKMK_4"></a>To select, refresh, or display the numbers of the code pages for the console
+## <a name=BKMK_4></a>To select, refresh, or display the numbers of the code pages for the console
 
 ### Syntax
 
@@ -120,7 +120,7 @@ mode <Device> codepage select=<YYY>
 mode <Device> codepage [/status]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -131,7 +131,7 @@ mode <Device> codepage [/status]
 |/status|Displays the numbers of the current code pages selected for the specified device. You can abbreviate **/status** to **/sta**. Whether or not you specify **/status**, **mode codepage** displays the numbers of the code pages that are selected for the specified device.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_5"></a>To change the size of the command prompt screen buffer
+## <a name=BKMK_5></a>To change the size of the command prompt screen buffer
 
 ### Syntax
 
@@ -139,7 +139,7 @@ mode <Device> codepage [/status]
 mode con[:] [cols=<C>] [lines=<N>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -148,7 +148,7 @@ mode con[:] [cols=<C>] [lines=<N>]
 |lines=\<N>|Specifies the number of lines in the command prompt screen buffer.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_6"></a>To set the keyboard typematic rate
+## <a name=BKMK_6></a>To set the keyboard typematic rate
 
 ### Syntax
 
@@ -156,7 +156,7 @@ mode con[:] [cols=<C>] [lines=<N>]
 mode con[:] [rate=<R> delay=<D>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -167,14 +167,14 @@ mode con[:] [rate=<R> delay=<D>]
 
 ### Remarks
 
--   The typematic rate is the rate at which a character repeats when you hold down the key for that character. The typematic rate has two components, the rate and the delay. Some keyboards do not recognize this command.
--   Using **rate=***R*
+- The typematic rate is the rate at which a character repeats when you hold down the key for that character. The typematic rate has two components, the rate and the delay. Some keyboards do not recognize this command.
+- Using **rate=**<em>R</em>
 
-    Valid values are in the range 1 through 32. These values are equal to approximately 2 to 30 characters per second. The default value is 20 for IBM AT-compatible keyboards, and 21 for IBM PS/2-compatible keyboards. If you set the rate, you must also set the delay.
--   Using **delay**=*D*
+  Valid values are in the range 1 through 32. These values are equal to approximately 2 to 30 characters per second. The default value is 20 for IBM AT-compatible keyboards, and 21 for IBM PS/2-compatible keyboards. If you set the rate, you must also set the delay.
+- Using **delay**=*D*
 
-    Valid values for *D* are 1, 2, 3, and 4 (representing 0.25, 0.50, 0.75, and 1 second). The default value is 2. If you set the delay, you must also set the rate.
+  Valid values for *D* are 1, 2, 3, and 4 (representing 0.25, 0.50, 0.75, and 1 second). The default value is 2. If you set the delay, you must also set the rate.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

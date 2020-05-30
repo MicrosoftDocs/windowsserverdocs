@@ -1,12 +1,12 @@
 ---
 title: Get Started with User Access Logging
 desctription: Describes the User Access Logging feature and how to start using it.
-ms.custom: na
-ms.prod: windows-server-threshold
+
+ms.prod: windows-server
 ms.technology: manage-user-access-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+
+
+
 ms.topic: article
 ms.assetid: 5c395b8b-3b35-4042-b9cc-07e438f86d50
 author: brentfor
@@ -70,7 +70,7 @@ The following server roles and services can be supported by UAL:
 -   Web Server (IIS)  
   
     > [!WARNING]  
-    > To use UAL with IIS, you must use iisual.exe. For more information, see [Analyzing Client Usage Data with IIS User Access Logging](http://www.iis.net/learn/manage/configuring-security/analyzing-client-usage-data-with-iis-user-access-logging).  
+    > To use UAL with IIS, you must use iisual.exe. For more information, see [Analyzing Client Usage Data with IIS User Access Logging](https://www.iis.net/learn/manage/configuring-security/analyzing-client-usage-data-with-iis-user-access-logging).  
   
 -   Microsoft Message Queue (MSMQ) Services  
   
@@ -92,7 +92,7 @@ The following table describes key functions of UAL and their potential value.
   
 |Functionality|Value|  
 |-----------------|---------|  
-|Collect and aggregate client request event data in near real-time.|Up to three years of data can be saved. **Important:** Administrators need to enforce compliance of the data collected and data retention periods with the organization’s privacy policy and local regulations.|  
+|Collect and aggregate client request event data in near real-time.|Up to three years of data can be saved. **Important:** Administrators need to enforce compliance of the data collected and data retention periods with the organization's privacy policy and local regulations.|  
 |Query UAL by using WMI or Windows PowerShell interfaces to retrieve client request data on a local or remote server.|UAL enables a single view of ongoing usage data. Server and enterprise administrators can retrieve this data and coordinate with business administrators to optimize use of their volume software licenses.|  
 |Enabled by default.|Server administrators do not need to configure or otherwise set up this feature for all core functionality to be available and working.|  
   

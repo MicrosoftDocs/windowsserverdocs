@@ -2,17 +2,12 @@
 title: Step 1 Configure the Basic DirectAccess Infrastructure
 description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
 manager: brianlic
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-da
-ms.tgt_pltfrm: na
+ms.prod: windows-server
+ms.technology: networking-da
 ms.topic: article
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 1 Configure the Basic DirectAccess Infrastructure
 
@@ -116,7 +111,7 @@ You must manually configure a DNS entry for the network location server website 
   
 5.  Click **Done**.  
   
-![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -178,7 +173,7 @@ The Remote Access server and all DirectAccess client computers must be joined to
   
 9. On the **System Properties** dialog box, click Close. Click **Restart Now** when prompted.  
   
-![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)****Windows PowerShell equivalent commands****  
+![Windows PowerShell](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***  
   
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.  
   
@@ -203,7 +198,10 @@ To create a Group policy object, see [Create and Edit a Group Policy Object](htt
 > 4.  If the linking to OU has not been done before running the DirectAccess wizard, after the configuration is complete, the administrator can link the DirectAccess Group Policy Objects to the required Organizational Units. The link to the domain can be removed. Steps for linking a Group policy object to an Organization Unit can be found [here](https://technet.microsoft.com/library/cc732979.aspx)  
   
 > [!NOTE]  
-> If a Group policy object was created manually, it is possible during the DirectAccess configuration that the Group policy object will not be available. The Group policy object may not have been replicated to the closest Domain Controller to the management computer. In this event, the administrator can wait for replication to complete, or force the replication.  
+> If a Group policy object was created manually, it is possible during the DirectAccess configuration that the Group policy object will not be available. The Group policy object may not have been replicated to the closest Domain Controller to the management computer. In this event, the administrator can wait for replication to complete, or force the replication.
+
+> [!Warning]
+> Using any means other than the DirectAccess Setup Wizard to configure DirectAccess, such as modifying DirectAccess Group Policy Objects directly or manually modifying the default policy settings on the server or client, is not supported.
   
 ## <a name="ConfigSGs"></a>Configure security groups  
 The DirectAccess settings contained in the client computer Group policy objects are applied only to computers that are members of the security groups that you specify when configuring Remote Access.  

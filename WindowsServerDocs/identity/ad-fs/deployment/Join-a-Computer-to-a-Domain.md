@@ -1,20 +1,16 @@
 ---
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
 title: Join a Computer to a Domain
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Join a Computer to a Domain
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 For Active Directory Federation Services \(AD FS\) to function, each computer that functions as a federation server must be joined to a domain. federation server proxies may be joined to a domain, but this is not a requirement.  
   

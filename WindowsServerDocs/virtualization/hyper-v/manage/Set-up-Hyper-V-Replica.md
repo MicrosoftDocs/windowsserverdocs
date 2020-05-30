@@ -1,13 +1,12 @@
 ---
 title: Set up Hyper-V Replica
 ms.technology: compute-hyper-v
-description: "Gives instructions for setting up Replica, testing failover, and doing a first replication."
-ms.prod: windows-server-threshold
-ms.service: na
+description: Gives instructions for setting up Replica, testing failover, and doing a first replication.
+ms.prod: windows-server
 manager: dongill
 ms.topic: article
 ms.assetid: eea9e996-bfec-4065-b70b-d8f66e7134ac
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/10/2016
 ---
@@ -29,7 +28,7 @@ Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your 
 
     ||Test|Planned|Unplanned|  
     |-|--------|-----------|-------------|  
-    |When should I run?|Verify that a virtual machine can fail over and start in the secondary site<br /><br />Useful for testing and training|During planned downtime and outages|During unexpected events|  
+    |When should I run?|Verify that a virtual machine can fail over and start in the secondary site<p>Useful for testing and training|During planned downtime and outages|During unexpected events|  
     |Is a duplicate virtual machine created?|Yes|No|No|  
     |Where is it initiated?|On the replica virtual machine|Initiated on primary and completed on secondary|On the replica virtual machine|  
     |How often should I run?|We recommend once a month for testing|Once every six months or in accordance with compliance requirements|Only in case of disaster when the primary virtual machine is unavailable|  
@@ -111,7 +110,7 @@ Do the following on each virtual machine you want to replicate:
 ## Run a failover  
 After completing these deployment steps your replicated environment is up and running. Now you can run failovers as needed.  
 
-**Test failover**:  If you want to run a test failover right-click the primary virtual machine and select **Replication** > **Test Failover**. Pick the latest or other recovery point if configured. A new test virtual machine will be created and started on the secondary site. After you've finished testing, select  **Stop Test Failover** on the replica virtual machine to clean up it up. Note that for a virtual machine you can only run one test failover at a time. [Read more](https://blogs.technet.com/b/virtualization/archive/2012/07/26/types-of-failover-operations-in-hyper-v-replica.aspx).  
+**Test failover**:  If you want to run a test failover right-click the primary virtual machine and select **Replication** > **Test Failover**. Pick the latest or other recovery point if configured. A new test virtual machine will be created and started on the secondary site. After you've finished testing, select  **Stop Test Failover** on the replica virtual machine to clean it up. Note that for a virtual machine you can only run one test failover at a time. [Read more](https://blogs.technet.com/b/virtualization/archive/2012/07/26/types-of-failover-operations-in-hyper-v-replica.aspx).  
 
 **Planned failover**: To run a planned failover right-click the primary virtual machine and select **Replication** > **Planned Failover**. Planned failover performs prerequisites checks to ensure zero data loss. It checks that the primary virtual machine is shut down before beginning the failover. After the virtual machine is failed over, it starts replicating the changes back to the primary site when it's available. Note that for this to work the  primary server should be configured to recive replication from the secondary server or from the Hyper-V Replica Broker in the case of a primary cluster. Planned failover sends the last set of tracked changes. [Read more](https://blogs.technet.com/b/virtualization/archive/2012/07/31/types-of-failover-operations-in-hyper-v-replica-part-ii-planned-failover.aspx).  
 

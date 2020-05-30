@@ -1,12 +1,12 @@
 ---
 title: replace
 description: Learn how to use the replace command to replace files.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6143661e-d90f-4812-b265-6669b567dd1f
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 07/11/2018
 
 Replaces files. If used with the **/a** option, **replace** adds new files to a directory instead of replacing existing files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +30,7 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/a] [/p] [/r] [/w]
 replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] [/u] 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -46,25 +46,25 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] 
 
 ## Remarks
 
--   As **replace** adds or replaces files, the file names are displayed on the screen. After **replace** is finished, a summary line is displayed in one of the following formats:  
-    ```
-    nnn files added
-    nnn files replaced
-    no file added
-    no file replaced
-    ```  
--   If you are using floppy disks and you need to switch disks during the **replace** operation, you can specify the **/w** command-line option so that **replace** will wait for you to switch the disks.
--   You cannot use **replace** to update hidden files or system files.
--   The following table shows each exit code and a brief description of its meaning:  
-    |Exit code|Description|
-    |---------|-----------|
-    |0|The **replace** command successfully replaced or added the files.|
-    |1|The **replace** command encountered an incorrect version of MS-DOS.|
-    |2|The **replace** command could not find the source files.|
-    |3|The **replace** command could not find the source or destination path.|
-    |5|The user does not have access to the files that you want to replace.|
-    |8|There is insufficient system memory to carry out the command.|
-    |11|The user used the wrong syntax on the command line.|
+- As **replace** adds or replaces files, the file names are displayed on the screen. After **replace** is finished, a summary line is displayed in one of the following formats:  
+  ```
+  nnn files added
+  nnn files replaced
+  no file added
+  no file replaced
+  ```  
+- If you are using floppy disks and you need to switch disks during the **replace** operation, you can specify the **/w** command-line option so that **replace** will wait for you to switch the disks.
+- You cannot use **replace** to update hidden files or system files.
+- The following table shows each exit code and a brief description of its meaning:  
+  |Exit code|Description|
+  |---------|-----------|
+  |0|The **replace** command successfully replaced or added the files.|
+  |1|The **replace** command encountered an incorrect version of MS-DOS.|
+  |2|The **replace** command could not find the source files.|
+  |3|The **replace** command could not find the source or destination path.|
+  |5|The user does not have access to the files that you want to replace.|
+  |8|There is insufficient system memory to carry out the command.|
+  |11|The user used the wrong syntax on the command line.|
 
 > [!NOTE]
 > You can use the ERRORLEVEL parameter on the **if** command line in a batch program to process exit codes that are returned by **replace**.
@@ -75,6 +75,6 @@ To update all the versions of a file named Phones.cli (which appear in multiple 
 
 `replace a:\phones.cli c:\ /s`
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

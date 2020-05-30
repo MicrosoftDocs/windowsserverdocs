@@ -1,11 +1,8 @@
 ---
 title: Get started with Windows Server Update Services (WSUS)
-description: "Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications"
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications
+ms.prod: windows-server
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
 author: coreyp-at-msft
@@ -51,7 +48,7 @@ Windows Server Update Services is a built-in server role that includes the follo
 -   Provides client and server separation: versions of the Windows Update Agent (WUA) can ship independently of WSUS
 
 ### Using Windows PowerShell to manage WSUS
-for system administrators to automate their operations, they need coverage through command-line automation. The main goal is to facilitate WSUS administration by allowing system administrators to automate their day-to-day operations.
+For system administrators to automate their operations, they need coverage through command-line automation. The main goal is to facilitate WSUS administration by allowing system administrators to automate their day-to-day operations.
 
 **What value does this change add?**
 

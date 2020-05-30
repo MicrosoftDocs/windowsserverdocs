@@ -1,17 +1,13 @@
 ---
 title: Use network virtual appliances on a virtual network
 description: In this topic, you learn how to deploy network virtual appliances on tenant virtual networks. You can add network virtual appliances to networks that perform user-defined routing and port mirroring functions.
-manager: dougkim
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+manager: grcusanz
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/30/2018
 ---
 # Use network virtual appliances on a virtual network
@@ -35,7 +31,7 @@ To deploy a network virtual appliance, you must first create a VM that contains 
 
 Some appliances require multiple virtual network adapters. Usually, one network adapter dedicated to the appliance management while additional adapters process traffic.  If your appliance requires multiple network adapters, you must create each network interface in Network Controller. You must also assign an interface ID on each host for each of the additional adapters that are on different virtual subnets.
 
-Once you’ve deployed the network virtual appliance, you can use the appliance for defined routing, porting mirroring, or both. 
+Once you've deployed the network virtual appliance, you can use the appliance for defined routing, porting mirroring, or both. 
 
 
 ## Example: User-defined routing
@@ -89,7 +85,7 @@ As soon as you apply the routing table to the virtual network, traffic gets forw
 
 ## Example: Port mirroring
 
-In this example, you configure the traffic for MyVM_Ethernet1 to mirror Appliance_Ethernet1.  We assume that you’ve deployed two VMs, one as the appliance and the other as the VM to monitor with mirroring. 
+In this example, you configure the traffic for MyVM_Ethernet1 to mirror Appliance_Ethernet1.  We assume that you've deployed two VMs, one as the appliance and the other as the VM to monitor with mirroring. 
 
 The appliance must have a second network interface for management. After you enable mirroring as a destination on Appliciance_Ethernet1, it no longer receives traffic destined for the IP interface configured there.
 

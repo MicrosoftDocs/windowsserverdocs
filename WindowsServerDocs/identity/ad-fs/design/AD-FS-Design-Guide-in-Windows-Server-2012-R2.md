@@ -1,24 +1,20 @@
 ---
 ms.assetid: a8558c9d-0606-4881-93b2-f2d2716b18e7
 title: AD FS Design Guide in Windows Server 2012 R2
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# AD FS Design Guide in Windows Server 2012 R2
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
+# AD FS Design Guide in Windows Server 
 
 Active Directory Federation Services \(AD FS\) provides simplified, secured identity federation and Web single sign\-on \(SSO\) capabilities for end users who want to access applications within an AD FS\-secured enterprise, in federation partner organizations, or in the cloud.  
   
-In Windows Server® 2012 R2, AD FS includes a federation service role service that acts as an identity provider \(authenticates users to provide security tokens to applications that trust AD FS\) or as a federation provider \(consumes tokens from other identity providers and then provides security tokens to applications that trust AD FS\).  
+In Windows Server&reg; 2012 R2, AD FS includes a federation service role service that acts as an identity provider \(authenticates users to provide security tokens to applications that trust AD FS\) or as a federation provider \(consumes tokens from other identity providers and then provides security tokens to applications that trust AD FS\).  
   
 The function of providing extranet access to applications and services that are secured by AD FS in Windows Server 2012 R2 is now performed by a new Remote Access role service called Web Application Proxy. This is a departure from the prior versions of Windows Server in which this function was handled by an AD FS federation server proxy. Web Application Proxy is a server role designed to provide access for the AD FS\-related extranet scenario and other extranet scenarios. For more information on Web Application Proxy, see [Web Application Proxy Walkthrough Guide](https://technet.microsoft.com/library/dn280944.aspx).  
   

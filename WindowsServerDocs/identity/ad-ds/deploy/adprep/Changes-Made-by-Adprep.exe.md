@@ -4,12 +4,8 @@ title: Changes Made by Adprep.exe
 ms.custom: it-pro
 ms.author: joflore
 ms.date: 05/31/2017
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: 
-ms.suite: na
+ms.prod: windows-server
 ms.technology: active-directory-domain-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: Femila
 ---

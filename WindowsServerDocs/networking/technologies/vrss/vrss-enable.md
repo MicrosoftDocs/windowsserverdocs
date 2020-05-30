@@ -1,15 +1,15 @@
 ---
 title: Enable vRSS on a Virtual Network Adapter
 description: In this topic, you learn how to enable vRSS in Windows Server by using either Device Manager or Windows PowerShell.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: cb48315c-0204-4927-aa24-64f6789c2e20
 manager: dougkim
 ms.localizationpriority: medium
 ms.date: 09/05/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Enable vRSS on a Virtual Network Adapter

@@ -6,7 +6,7 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -21,15 +21,15 @@ If you want to configure AD FS in a Windows Server 2012 R2 migrated farm for ext
   
 To plan Web Application Proxy deployment, you can review the information in the following topics:  
   
--   [Plan the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383648.aspx)  
+- [Plan the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383648.aspx)  
   
--   [Plan the Web Application Proxy Server](https://technet.microsoft.com/library/dn383647.aspx)  
+- [Plan the Web Application Proxy Server](https://technet.microsoft.com/library/dn383647.aspx)  
   
- To deploy Web Application proxy, you can follow the procedures in the following topics:  
+  To deploy Web Application proxy, you can follow the procedures in the following topics:  
   
--   [Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx)  
+- [Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx)  
   
--   [Install and Configure the Web Application Proxy Server](https://technet.microsoft.com/library/dn383662.aspx)  
+- [Install and Configure the Web Application Proxy Server](https://technet.microsoft.com/library/dn383662.aspx)  
   
 ## Next Steps
  [Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   

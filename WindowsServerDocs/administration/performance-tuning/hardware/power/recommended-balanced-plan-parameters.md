@@ -1,10 +1,10 @@
 ---
 title: Recommended Balanced Power Plan Parameters for Quick Response Times
 description: Recommended Balanced Power Plan Parameters for Quick Response Time
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author:  Qizha;TristanB
+ms.author:  qizha;tristanb
 author: phstee
 ms.date: 10/16/2017
 ---

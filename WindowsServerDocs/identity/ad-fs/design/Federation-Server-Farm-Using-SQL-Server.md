@@ -1,20 +1,16 @@
 ---
 ms.assetid: e983d2ab-4153-41e7-b243-12cf7d71a552
 title: Federation Server Farm Using SQL Server
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Federation Server Farm Using SQL Server
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 This topology for Active Directory Federation Services \(AD FS\) differs from the federation server farm using Windows Internal Database \(WID\) deployment topology in that it does not replicate the data to each federation server in the farm. Instead, all federation servers in the farm can read and write data into a common database that is stored on a server running Microsoft SQL Server that is located in the corporate network.  
   
@@ -63,7 +59,7 @@ The following illustration shows how the fictional Contoso Pharmaceuticals compa
   
 ![server farm using SQL](media/SQLFarmADFSBlue.gif)  
   
-For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](https://technet.microsoft.com/library/dn383648.aspx).  
+For more information about how to configure your networking environment for use with federation servers or web application proxies, see "Name Resolution Requirements" section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](https://technet.microsoft.com/library/dn383648.aspx).  
   
 ## High Availability Options for SQL Server Farms  
 In Windows Server 2012 R2, AD FS there are two new options to support high availability in AD FS farms using SQL Server.  
@@ -111,7 +107,7 @@ The following diagram shows an AD FS SQL Server Farm with AlwaysOn Availability 
   
 **Key Deployment Considerations**  
   
-If you plan to use AlwaysOn Availability groups in combination with SQL Server merge replication, please take note of the issues described under “Key Deployment Considerations for using AD FS with SQL Server Merge Replication” below.  In particular, when an AlwaysOn availability group containing a database that is a replication subscriber fails over, the replication subscription fails. To resume replication, a replication administrator must manually reconfigure the subscriber.  See the SQL Server description of specific issue at [Replication Subscribers and AlwaysOn Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/hh882436.aspx) and overall support statements for AlwaysOn Availability groups with replication options at [Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/hh403414.aspx).  
+If you plan to use AlwaysOn Availability groups in combination with SQL Server merge replication, please take note of the issues described under "Key Deployment Considerations for using AD FS with SQL Server Merge Replication" below.  In particular, when an AlwaysOn availability group containing a database that is a replication subscriber fails over, the replication subscription fails. To resume replication, a replication administrator must manually reconfigure the subscriber.  See the SQL Server description of specific issue at [Replication Subscribers and AlwaysOn Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/hh882436.aspx) and overall support statements for AlwaysOn Availability groups with replication options at [Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/hh403414.aspx).  
   
 **Configuring AD FS to use an AlwaysOn Availability group**  
   
@@ -121,13 +117,13 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
   
 2.  Once the AD FS databases have been created, assign them to AlwaysOn Availability groups and create the common TCPIP listener using SQL Server tools and process at [Creation and Configuration of Availability Groups \(SQL Server\)](https://technet.microsoft.com/library/ff878265.aspx).  
   
-3.  Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group’s listener.  
+3.  Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group's listener.  
   
     Example PSH commands to update the SQL connection string for the AD FS configuration database:  
   
     ```  
     PS:\>$temp= Get-WmiObject -namespace root/ADFS -class SecurityTokenService  
-    PS:\>$temp.ConfigurationdatabaseConnectionstring=”data source=<SQLCluster\SQLInstance>; initial catalog=adfsconfiguration;integrated security=true”  
+    PS:\>$temp.ConfigurationdatabaseConnectionstring="data source=<SQLCluster\SQLInstance>; initial catalog=adfsconfiguration;integrated security=true"  
     PS:\>$temp.put()  
   
     ```  
@@ -135,7 +131,7 @@ Configuring an AD FS farm with AlwaysOn Availability groups requires a slight mo
 4.  Example PSH commands to update the SQL connection string for the AD FS artifact resolution service database:  
   
     ```  
-    PS:\> Set-AdfsProperties –artifactdbconnection ”Data source=<SQLCluster\SQLInstance >;Initial Catalog=AdfsArtifactStore;Integrated Security=True”  
+    PS:\> Set-AdfsProperties –artifactdbconnection "Data source=<SQLCluster\SQLInstance >;Initial Catalog=AdfsArtifactStore;Integrated Security=True"  
     ```  
   
 ### SQL Server Merge Replication  

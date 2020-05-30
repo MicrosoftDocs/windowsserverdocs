@@ -1,12 +1,12 @@
 ---
 title: reg copy
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3fe74213-39ec-4b2d-ba3d-086243eac997
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Copies a registry entry to a specified location on the local or remote computer.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 reg copy <KeyName1> <KeyName2> [/s] [/f]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -49,7 +49,7 @@ reg copy <KeyName1> <KeyName2> [/s] [/f]
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To copy all subkeys and values under the key MyApp to the key SaveMyApp, type:
 ```
@@ -60,6 +60,6 @@ To copy all values under the key MyCo on the computer named ZODIAC to the key My
 REG COPY \\ZODIAC\HKLM\Software\MyCo HKLM\Software\MyCo1
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: "Join computers to the new Windows Server Essentials server1"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
@@ -26,7 +22,7 @@ manager: dongill
   
  The process to connect a client computer to the server is the same for domain-joined or non-domain-joined computers.  
   
--   Browse to **http://***destination-servername***/connect** and install the Windows Server Connector software as if this was a new computer.  
+- Browse to **http://**<em>destination-servername</em>**/connect** and install the Windows Server Connector software as if this was a new computer.  
   
 > [!NOTE]
 >  The Windows Server Connector software does not support computers that are running Windows XP or Windows Vista. If you have computers running Windows XP or Windows Vista that are already joined to the domain, you can skip this step.  

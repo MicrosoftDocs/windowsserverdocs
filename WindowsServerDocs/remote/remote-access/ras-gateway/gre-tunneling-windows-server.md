@@ -2,12 +2,12 @@
 title: GRE Tunneling in Windows Server 2016
 description: You can use this topic to gain an understanding of updates to Generic Routing Encapsulation (GRE) tunnel capability for RAS Gateway in Windows Server 2016. 
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # GRE Tunneling in Windows Server 2016
 

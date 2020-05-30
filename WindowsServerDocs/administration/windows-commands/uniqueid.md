@@ -1,12 +1,8 @@
 ---
 title: uniqueid
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for uniqueid, which displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64235a4a-b91c-46da-b9b0-68ee90571c2a
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # uniqueid
-
-
 
 Displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
 
@@ -30,19 +24,19 @@ Displays or sets the GUID partition table (GPT) identifier or master boot record
 uniqueid disk [id={<dword> | <GUID>}] [noerr]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|id={\<dword> | <GUID>}|For MBR disks, specifies a four-byte (DWORD) value in hexadecimal form for the signature.</br>For GPT disks, specifies a GUID for the identifier.|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+|  Parameter   |                                                                                             Description                                                                                              |
+|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id={\<dword> |                                                                                               <GUID>}                                                                                                |
+|    noerr     | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
 ## Remarks
 
 -   This command works on basic and dynamic disks.
 -   A disk must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display the signature of the MBR disk with focus, type:
 ```
@@ -57,5 +51,5 @@ To set the identifier of the GPT disk with focus to baf784e7-6bbd-4cfb-aaac-e86c
 uniqueid disk id=baf784e7-6bbd-4cfb-aaac-e86c96e166ee
 ```
 
-#### Additional references
+## Additional References
 

@@ -1,16 +1,11 @@
 ---
 title: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
-keywords: privacy, GDPR
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-security
-ms.tgt_pltfrm: na
+ms.technology: techgroup-security
 ms.topic: article
 ms.date: 09/25/2017
 ms.author: nirb
+author: nirb-ms
 ---
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 
@@ -28,7 +23,7 @@ Microsoft and our customers are now on a journey to achieve the privacy goals of
 
 We have outlined our commitment to the GDPR and how we are supporting our customers within the [Get GDPR compliant with the Microsoft Cloud](https://blogs.microsoft.com/on-the-issues/2017/02/15/get-gdpr-compliant-with-the-microsoft-cloud/#hv52B68OZTwhUj2c.99) blog post by our Chief Privacy Officer [Brendon Lynch](https://blogs.microsoft.com/on-the-issues/author/brendonlynch/) and the [Earning your trust with contractual commitments to the General Data Protection Regulation](https://blogs.microsoft.com/on-the-issues/2017/04/17/earning-trust-contractual-commitments-general-data-protection-regulation/#6QbqoGWXCLavGM63.99)” blog post by [Rich Sauer](https://blogs.microsoft.com/on-the-issues/author/rsauer/) - Microsoft Corporate Vice President & Deputy General Counsel.
 
-Although your journey to GDPR-compliance may seem challenging, we're here to help you. For specific information about the GDPR, our commitments and how to begin your journey, please visit the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr).
+Although your journey to GDPR-compliance may seem challenging, we're here to help you. For specific information about the GDPR, our commitments and how to begin your journey, please visit the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trustcenter/privacy/gdpr).
 
 ## GDPR and its implications
 The GDPR is a complex regulation that may require significant changes in how you gather, use and manage personal data. Microsoft has a long history of helping our customers comply with complex regulations, and when it comes to preparing for the GDPR, we are your partner on this journey.
@@ -48,7 +43,7 @@ As part of your effort to comply with the GDPR, you will need to understand how 
 
 The GDPR considers personal data to be any information related to an identified or identifiable natural person. That can include both direct identification (such as, your legal name) and indirect identification (such as, specific information that makes it clear it is you the data references). The GDPR also makes clear that the concept of personal data includes online identifiers (such as, IP addresses, mobile device IDs) and location data.
 
-The GDPR introduces specific definitions for genetic data (such as, an individual’s gene sequence) and biometric data. Genetic data and biometric data along with other sub categories of personal data (personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership: data concerning health; or data concerning a person’s sex life or sexual orientation) are treated as sensitive personal data under the GDPR. Sensitive personal data is afforded enhanced protections and generally requires an individual’s explicit consent where these data are to be processed.
+The GDPR introduces specific definitions for genetic data (such as, an individual's gene sequence) and biometric data. Genetic data and biometric data along with other sub categories of personal data (personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership: data concerning health; or data concerning a person's sex life or sexual orientation) are treated as sensitive personal data under the GDPR. Sensitive personal data is afforded enhanced protections and generally requires an individual's explicit consent where these data are to be processed.
 
 ### Examples of info relating to an identified or identifiable natural person (data subject)
 This list provides examples of several types of info that will be regulated through GDPR. This is not an exhaustive list.
@@ -80,12 +75,12 @@ Given how much is involved to become GDPR-compliant, we strongly recommend that 
 
     ![Diagram about how the 4 key GDPR steps work together](../media/GDPR-Windows-Server-Overview/gdpr-steps-diagram.png)
 
-For each of the steps, we've outlined example tools, resources, and features in various Microsoft solutions, which can be used to help you address the requirements of that step. While this article isn't a comprehensive “how-to” guide, we've included links for you to find out more details, and more info is available in the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr).
+For each of the steps, we've outlined example tools, resources, and features in various Microsoft solutions, which can be used to help you address the requirements of that step. While this article isn't a comprehensive “how-to” guide, we've included links for you to find out more details, and more info is available in the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trustcenter/privacy/gdpr).
 
 ## Windows Server security and privacy
 The GDPR requires you to implement appropriate technical and organizational security measures to protect personal data and processing systems. In the context of the GDPR, your physical and virtual server environments are potentially processing personal and sensitive data. Processing can mean any operation or set of operations, such as data collection, storage, and retrieval.
 
-Your ability to meet this requirement and to implement appropriate technical security measures must reflect the threats you face in today’s increasingly hostile IT environment. Today’s security threat landscape is one of aggressive and tenacious threats. In previous years, malicious attackers mostly focused on gaining community recognition through their attacks or the thrill of temporarily taking a system offline. Since then, attacker’s motives have shifted toward making money, including holding devices and data hostage until the owner pays the demanded ransom.
+Your ability to meet this requirement and to implement appropriate technical security measures must reflect the threats you face in today's increasingly hostile IT environment. Today's security threat landscape is one of aggressive and tenacious threats. In previous years, malicious attackers mostly focused on gaining community recognition through their attacks or the thrill of temporarily taking a system offline. Since then, attacker's motives have shifted toward making money, including holding devices and data hostage until the owner pays the demanded ransom.
 
 Modern attacks increasingly focus on large-scale intellectual property theft; targeted system degradation that can result in financial loss; and now even cyberterrorism that threatens the security of individuals, businesses, and national interests all over the world. These attackers are typically highly trained individuals and security experts, some of whom are in the employ of nation states that have large budgets and seemingly unlimited human resources. Threats like these require an approach that can meet this challenge.
 
@@ -105,13 +100,13 @@ Two key principles have guided and continue to guide the development of Windows:
 
 - **Privacy.** Users should be in control of how their data is used. Policies for information use should be clear to the user. Users should be in control of when and if they receive information to make best use of their time. It should be easy for users to specify appropriate use of their information including controlling the use of email they send.
 
-Microsoft has remained steadfast against these principles as recently noted by Microsoft’s CEO, Satya Nadella, 
+Microsoft has remained steadfast against these principles as recently noted by Microsoft's CEO, Satya Nadella, 
 
-> “_As the world continues to change and business requirements evolve, some things are consistent: a customer’s demand for security and privacy._”
+> “_As the world continues to change and business requirements evolve, some things are consistent: a customer's demand for security and privacy._”
 
 As you work to comply with the GDPR, understanding the role of your physical and virtual servers in creating, accessing, processing, storing and managing data that may qualify as personal and potentially sensitive data under the GDPR is important. Windows Server provides capabilities that will help you comply with the GDPR requirements to implement appropriate technical and organizational security measures to protect personal data.
 
-The security posture of Windows Server 2016 isn’t a bolt-on; it’s an architectural principle. And, it can be best understood in four principals:
+The security posture of Windows Server 2016 isn't a bolt-on; it's an architectural principle. And, it can be best understood in four principals:
 
 - **Protect.** Ongoing focus and innovation on preventative measures; block known attacks and known malware.
 
@@ -139,7 +134,7 @@ The chip includes multiple physical security mechanisms to make it tamper resist
 
 -   Generate, store, and limit the use of cryptographic keys.
 
--   Use TPM technology for platform device authentication by using the TPM’s unique RSA key, which is burned into itself.
+-   Use TPM technology for platform device authentication by using the TPM's unique RSA key, which is burned into itself.
 
 -   Help to ensure platform integrity by taking and storing security measurements.
 
@@ -148,7 +143,7 @@ Additional advanced device protection relevant to your operating without data br
 ## Windows Server: Supporting your GDPR compliance journey
 Key features within Windows Server can help you to efficiently and effectively implement the security and privacy mechanisms the GDPR requires for compliance. While the use of these features will not guarantee your compliance, they will support your efforts to do so.
 
-The server operating system sits at a strategic layer in an organization’s infrastructure, affording new opportunities to create layers of protection from attacks that could steal data and interrupt your business. Key aspects of the GDPR such as Privacy by Design, Data Protection, and Access Control need to be addressed within your IT infrastructure at the server level.
+The server operating system sits at a strategic layer in an organization's infrastructure, affording new opportunities to create layers of protection from attacks that could steal data and interrupt your business. Key aspects of the GDPR such as Privacy by Design, Data Protection, and Access Control need to be addressed within your IT infrastructure at the server level.
 
 Working to help protect the identity, operating system, and virtualization layers, Windows Server 2016 helps block the common attack vectors used to gain illicit access to your systems: stolen credentials, malware, and a compromised virtualization fabric. In addition to reducing business risk, the security components built into Windows Server 2016 help address compliance requirements for key government and industry security regulations. 
 
@@ -160,7 +155,7 @@ Control over access to personal data, and the systems that process that data, is
 As a general access control principle and in-line with the GDPR, you need to protect these privileged identities from compromise by potential attackers. First, it's important to understand how identities are compromised; then you can plan to prevent attackers from gaining access to these privileged identities.
 
 #### How do privileged identities get compromised?
-Privileged identities can get compromised when organizations don’t have guidelines to protect them. The following are examples:
+Privileged identities can get compromised when organizations don't have guidelines to protect them. The following are examples:
 
 - **More privileges than are necessary.** One of the most common issues is that users have more privileges than are necessary to perform their job function. For example, a user who manages DNS might be an AD administrator. Most often, this is done to avoid the need to configure different administration levels. However, if such an account is compromised, the attacker automatically has elevated privileges.
 
@@ -181,13 +176,13 @@ Every account with unnecessary domain admin-level privileges increases your expo
 
 Using Just Enough Administration and Just-in-Time Administration, administrators can request the specific privileges they need for the exact window of time required. For a DNS administrator, for example, using PowerShell to enable Just Enough Administration lets you create a limited set of commands that are available for DNS management.
 
-If the DNS administrator needs to make an update to one of her servers, she would request access to manage DNS using Microsoft Identity Manager 2016. The request workflow can include an approval process such as two-factor authentication, which could call the administrator’s mobile phone to confirm her identity before granting the requested privileges. Once granted, those DNS privileges provide access to the PowerShell role for DNS for a specific time span.
+If the DNS administrator needs to make an update to one of her servers, she would request access to manage DNS using Microsoft Identity Manager 2016. The request workflow can include an approval process such as two-factor authentication, which could call the administrator's mobile phone to confirm her identity before granting the requested privileges. Once granted, those DNS privileges provide access to the PowerShell role for DNS for a specific time span.
 
-Imagine this scenario if the DNS admin’s credentials were stolen. First, since the credentials have no admin privileges attached to them, the attacker wouldn’t be able to gain access to the DNS server – or any other systems – to make any changes. If the attacker tried to request privileges for the DNS server, second-factor authentication would ask them to confirm their identity. Since it isn’t likely that the attacker has the DNS admin’s mobile phone, authentication would fail. This would lock the attacker out of the system, and alert the IT organization that the credentials might be compromised.
+Imagine this scenario if the DNS admin's credentials were stolen. First, since the credentials have no admin privileges attached to them, the attacker wouldn't be able to gain access to the DNS server – or any other systems – to make any changes. If the attacker tried to request privileges for the DNS server, second-factor authentication would ask them to confirm their identity. Since it isn't likely that the attacker has the DNS admin's mobile phone, authentication would fail. This would lock the attacker out of the system, and alert the IT organization that the credentials might be compromised.
 
-In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](http://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
+In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](https://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
 
-As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54095), 
+As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/confirmation.aspx?id=54095), 
 
 > “_the tools and techniques criminals use to carry out credential theft and reuse attacks improve, malicious attackers are finding it easier to achieve their goals. Credential theft often relies on operational practices or user credential exposure, so effective mitigations require a holistic approach that addresses people, processes, and technology. In addition, these attacks rely on the attacker stealing credentials after compromising a system to expand or persist access, so organizations must contain breaches rapidly by implementing strategies that prevent attackers from moving freely and undetected in a compromised network._”
 
@@ -217,7 +212,7 @@ You can use Windows Defender Credential Guard to help protect privileged identit
 #### Windows Defender Remote Credential Guard
 Windows Defender Remote Credential Guard on Windows Server 2016 and Windows 10 Anniversary Update also helps protect credentials for users with remote desktop connections. Previously, anyone using Remote Desktop Services would have to log on to their local machine and then be required to log on again when they performed a remote connection to their target machine. This second login would pass credentials to the target machine, exposing them to Pass-the-Hash or Pass-the-Ticket attacks.
 
-With Windows Defender Remote Credential Guard, Windows Server 2016 implements single sign-on for Remote Desktop sessions, eliminating the requirement to re-enter your username and password. Instead, it leverages the credentials that you’ve already used to log on to your local machine. To use Windows Defender Remote Credential Guard, the Remote Desktop client and server must meet the following requirements:
+With Windows Defender Remote Credential Guard, Windows Server 2016 implements single sign-on for Remote Desktop sessions, eliminating the requirement to re-enter your username and password. Instead, it leverages the credentials that you've already used to log on to your local machine. To use Windows Defender Remote Credential Guard, the Remote Desktop client and server must meet the following requirements:
 
 - Must be joined to an Active Directory domain and be in the same domain or a domain with a trust relationship.
 
@@ -233,7 +228,7 @@ You can enable Windows Defender Remote Credential Guard by using a registry sett
 Preventing cyber threats also requires finding and blocking malware and attacks that seek to gain control by subverting the standard operating practices of your infrastructure. If attackers can get an operating system or application to run in a non-predetermined, non-viable way, they are likely using that system to take malicious actions. Windows Server 2016 provides layers of protection that block external attackers running malicious software or exploiting vulnerabilities. The operating system takes an active role in protecting infrastructure and applications by alerting administrators to activity that indicates a system has been breached.
 
 #### Windows Defender Device Guard
-Windows Server 2016 includes Windows Defender Device Guard to ensure that only trusted software can be run on the server. Using virtualization-based security, it can limit what binaries can run on the system based on the organization’s policy. If anything, other than the specified binaries tries to run, Windows Server 2016 blocks it and logs the failed attempt so that administrators can see that there has been a potential breach. Breach notification is a critical part of the requirements for GDPR compliance.
+Windows Server 2016 includes Windows Defender Device Guard to ensure that only trusted software can be run on the server. Using virtualization-based security, it can limit what binaries can run on the system based on the organization's policy. If anything, other than the specified binaries tries to run, Windows Server 2016 blocks it and logs the failed attempt so that administrators can see that there has been a potential breach. Breach notification is a critical part of the requirements for GDPR compliance.
 
 Windows Defender Device Guard is also integrated with PowerShell so that you can authorize which scripts can run on your system. In earlier versions of Windows Server, administrators could bypass code integrity enforcement by simply deleting the policy from the code file. With Windows Server 2016, you can configure a policy that is signed by your organization so that only a person with access to the certificate that signed the policy can change the policy.
 
@@ -268,7 +263,7 @@ Windows Server 2016 actively alerts administrators to potential breach attempts 
 
 New event categories include:
 
-- **Audit Group Membership.** Allows you to audit the group membership information in a user’s login token. Events are generated when group memberships are enumerated or queried on the PC where the login session was created. 
+- **Audit Group Membership.** Allows you to audit the group membership information in a user's login token. Events are generated when group memberships are enumerated or queried on the PC where the login session was created. 
  
 - **Audit PnP Activity.** Allows you to audit when plug and play detects an external device – which could contain malware. PnP events can be used to track down changes in system hardware. A list of hardware vendor IDs is included in the event.
 
@@ -291,7 +286,7 @@ Alongside Shielded VMs, the Host Guardian Service is an essential component for 
 
 The first, and most secure, is hardware-trusted attestation. This solution requires that your Shielded VMs are running on hosts that have TPM 2.0 chips and UEFI 2.3.1. This hardware is required to provide the measured boot and operating system kernel integrity information required by the Host Guardian Service to ensure the Hyper-V host has not been tampered with.
 
-IT organizations have the alternative of using Admin-trusted attestation, which may be desirable if TPM 2.0 hardware is not in use in your organization. This attestation model is easy to deploy because hosts are simply placed into a security group and the Host Guardian Service is configured to allow Shielded VMs to run on hosts that are members of the security group. With this method, there is no complex measurement to ensure that the host machine hasn’t been tampered with. However, you do eliminate the possibility of unencrypted VMs walking out the door on USB drives or that the VM will run on an unauthorized host. This is because the VM files won't run on any machine other than those in the designated group. If you do not yet have TPM 2.0 hardware, you can start with Admin-trusted attestation and switch to hardware-trusted attestation when your hardware is upgraded.
+IT organizations have the alternative of using Admin-trusted attestation, which may be desirable if TPM 2.0 hardware is not in use in your organization. This attestation model is easy to deploy because hosts are simply placed into a security group and the Host Guardian Service is configured to allow Shielded VMs to run on hosts that are members of the security group. With this method, there is no complex measurement to ensure that the host machine hasn't been tampered with. However, you do eliminate the possibility of unencrypted VMs walking out the door on USB drives or that the VM will run on an unauthorized host. This is because the VM files won't run on any machine other than those in the designated group. If you do not yet have TPM 2.0 hardware, you can start with Admin-trusted attestation and switch to hardware-trusted attestation when your hardware is upgraded.
 
 #### Virtual Machine Trusted Platform Module
 Windows Server 2016 supports TPM for virtual machines, which allows you to support advanced security technologies such as BitLocker® Drive Encryption in virtual machines. You can enable TPM support on any Generation 2 Hyper-V virtual machine by using Hyper-V Manager or the Enable-VMTPM Windows PowerShell cmdlet.
@@ -299,10 +294,10 @@ Windows Server 2016 supports TPM for virtual machines, which allows you to suppo
 You can protect virtual TPM (vTPM) by using the local crypto keys stored on the host or stored in the Host Guardian Service. So, while the Host Guardian Service requires more infrastructure, it also provides more protection.
 
 #### Distributed network firewall using software-defined networking
-One way to improve protection in virtualized environments is to segment the network in a way that allows VMs to talk only to the specific systems required to function. For example, if your application doesn’t need to connect with the Internet, you can partition it off, eliminating those systems as targets from external attackers. The software-defined networking (SDN) in Windows Server 2016 includes a distributed network firewall that allows you to dynamically create the security policies that can protect your applications from attacks coming from inside or outside a network. This distributed network firewall adds layers to your security by enabling you to isolate your applications in the network. Policies can be applied anywhere across your virtual network infrastructure, isolating VM-to-VM traffic, VM-to-host traffic, or VM-to-Internet traffic where necessary – either for individual systems that may have been compromised or programmatically across multiple subnets. Windows Server 2016 software-defined networking capabilities also enable you to route or mirror incoming traffic to non-Microsoft virtual appliances. For example, you could choose to send all your email traffic through a Barracuda virtual appliance for additional spam filtering protection. This allows you to easily layer in additional security both on-premises or in the cloud.
+One way to improve protection in virtualized environments is to segment the network in a way that allows VMs to talk only to the specific systems required to function. For example, if your application doesn't need to connect with the Internet, you can partition it off, eliminating those systems as targets from external attackers. The software-defined networking (SDN) in Windows Server 2016 includes a distributed network firewall that allows you to dynamically create the security policies that can protect your applications from attacks coming from inside or outside a network. This distributed network firewall adds layers to your security by enabling you to isolate your applications in the network. Policies can be applied anywhere across your virtual network infrastructure, isolating VM-to-VM traffic, VM-to-host traffic, or VM-to-Internet traffic where necessary – either for individual systems that may have been compromised or programmatically across multiple subnets. Windows Server 2016 software-defined networking capabilities also enable you to route or mirror incoming traffic to non-Microsoft virtual appliances. For example, you could choose to send all your email traffic through a Barracuda virtual appliance for additional spam filtering protection. This allows you to easily layer in additional security both on-premises or in the cloud.
 
 ### Other GDPR considerations for servers
-The GDPR includes explicit requirements for breach notification where a personal data breach means, “_a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed._”  Obviously, you can’t begin to move forward to meet the stringent GDPR notification requirements within 72 hours if you cannot detect the breach in the first place.
+The GDPR includes explicit requirements for breach notification where a personal data breach means, “_a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed._”  Obviously, you can't begin to move forward to meet the stringent GDPR notification requirements within 72 hours if you cannot detect the breach in the first place.
 
 As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](http://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
 
@@ -317,7 +312,7 @@ By applying a combination of automated and manual processes, machine learning an
 
 ![Microsoft Intelligence Security Graph](../media/GDPR-Windows-Server-Overview/gdpr-intelligent-security-graph.png)
 
-The scope of Microsoft’s threat intelligence spans, literally, billions of data points: 35 billion messages scanned monthly, 1 billion customers across enterprise and consumer segments accessing 200+ cloud services, and 14 billion authentications performed daily. All this data is pulled together on your behalf by Microsoft to create the Intelligent Security Graph that can help you protect your front door in a dynamic way to stay secure, remain productive and meet the requirements of the GDPR.
+The scope of Microsoft's threat intelligence spans, literally, billions of data points: 35 billion messages scanned monthly, 1 billion customers across enterprise and consumer segments accessing 200+ cloud services, and 14 billion authentications performed daily. All this data is pulled together on your behalf by Microsoft to create the Intelligent Security Graph that can help you protect your front door in a dynamic way to stay secure, remain productive and meet the requirements of the GDPR.
 
 #### Detecting attacks and forensic investigation
 Even the best endpoint defenses may be breached eventually, as cyberattacks become more sophisticated and targeted. Two capabilities can be used to help with potential breach detection - Windows Defender Advanced Threat Protection (ATP) and Microsoft Advanced Threat Analytics (ATA).
@@ -334,7 +329,7 @@ Among the key benefits of Windows Defender ATP are the following:
 
 - **Power of the Microsoft graph.** Leverages the Microsoft Intelligence Security Graph to integrate detection and exploration with Office 365 ATP subscription, to track back and respond to attacks.
 
-Read more at [What’s new in the Windows Defender ATP Creators Update preview](https://blogs.microsoft.com/microsoftsecure/2017/03/13/whats-new-in-the-windows-defender-atp-creators-update-preview/).
+Read more at [What's new in the Windows Defender ATP Creators Update preview](https://blogs.microsoft.com/microsoftsecure/2017/03/13/whats-new-in-the-windows-defender-atp-creators-update-preview/).
 
 ATA is an on-premises product that helps detect identity compromise in an organization. ATA can capture and parse network traffic for authentication, authorization, and information gathering protocols (such as Kerberos, DNS, RPC, NTLM, and other protocols). ATA uses this data to build a behavioral profile about users and other entities on a network so that it can detect anomalies and known attack patterns. The following table lists the attack types detected by ATA.
 
@@ -357,12 +352,12 @@ You can use ATA to help detect attackers attempting to compromise privileged ide
 
 - **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
 
-- **Control Flow Guard:** https://msdn.microsoft.com/en-us/library/windows/desktop/mt637065(v=vs.85).aspx
+- **Control Flow Guard:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
 
 - **Security and Assurance:** https://docs.microsoft.com/windows-server/security/security-and-assurance
 
 ## Disclaimer
-This article is a commentary on the GDPR, as Microsoft interprets it, as of the date of publication. We’ve spent a lot of time with GDPR and like to think we’ve been thoughtful about its intent and meaning. But the application of GDPR is highly fact-specific, and not all aspects and interpretations of GDPR are well-settled.
+This article is a commentary on the GDPR, as Microsoft interprets it, as of the date of publication. We've spent a lot of time with GDPR and like to think we've been thoughtful about its intent and meaning. But the application of GDPR is highly fact-specific, and not all aspects and interpretations of GDPR are well-settled.
 
 As a result, this article is provided for informational purposes only and should not be relied upon as legal advice or to determine how GDPR might apply to you and your organization. We encourage you to work with a legally-qualified professional to discuss GDPR, how it applies specifically to your organization, and how best to ensure compliance.
 

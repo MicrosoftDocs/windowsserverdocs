@@ -1,21 +1,13 @@
 ---
 title: Active Directory Federation Services in Azure | Microsoft Docs
 description: In this document you will learn how to deploy AD FS in Azure for high availablity.
-services: active-directory
-documentationcenter: ''
 author: billmath
 manager: mtillman
-editor: ''
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: get-started-article
 ms.date: 10/28/2018
-ms.component: hybrid
+ms.subservice: hybrid
 ms.author: billmath
-ms.custom: H1Hack27Feb2017
 ---
 # Deploying Active Directory Federation Services in Azure
 AD FS provides simplified, secured identity federation and Web single sign-on (SSO) capabilities. Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. As a result, it becomes important to have a highly available AD FS infrastructure to ensure access to resources both on-premises and in the cloud. Deploying AD FS in Azure can help achieve the high availability required with minimal efforts.
@@ -91,7 +83,7 @@ We will need a connection to on-premises in order to deploy the domain controlle
 * Virtual Network Site-to-site
 * ExpressRoute
 
-It is recommended to use ExpressRoute. ExpressRoute lets you create private connections between Azure datacenters and infrastructure that’s on your premises or in a co-location environment. ExpressRoute connections do not go over the public Internet. They offer more reliability, faster speeds, lower latencies and higher security than typical connections over the Internet.
+It is recommended to use ExpressRoute. ExpressRoute lets you create private connections between Azure datacenters and infrastructure that's on your premises or in a co-location environment. ExpressRoute connections do not go over the public Internet. They offer more reliability, faster speeds, lower latencies and higher security than typical connections over the Internet.
 While it is recommended to use ExpressRoute, you may choose any connection method best suited for your organization. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](https://aka.ms/Azure/ExpressRoute).
 
 ### 2. Create storage accounts
@@ -155,7 +147,7 @@ To deploy an ILB, select Load Balancers in the Azure portal and click on add (+)
 ![Browse load balancer](./media/how-to-connect-fed-azure-adfs/browseloadbalancer.png)
 
 * **Name**: Give any suitable name to the load balancer
-* **Scheme**: Since this load balancer will be placed in front of the AD FS servers and is meant for internal network connections ONLY, select “Internal”
+* **Scheme**: Since this load balancer will be placed in front of the AD FS servers and is meant for internal network connections ONLY, select "Internal"
 * **Virtual Network**: Choose the virtual network where you are deploying your AD FS
 * **Subnet**: Choose the internal subnet here
 * **IP Address assignment**: Static
@@ -220,7 +212,7 @@ This will ensure that all communication regarding fs.contoso.com end up at the I
 ### 7. Configuring the Web Application Proxy server
 **7.1. Configuring the Web Application Proxy servers to reach AD FS servers**
 
-In order to ensure that Web Application Proxy servers are able to reach the AD FS servers behind the ILB, create a record in the %systemroot%\system32\drivers\etc\hosts for the ILB. Note that the distinguished name (DN) should be the federation service name, for example fs.contoso.com. And the IP entry should be that of the ILB’s IP address (10.3.0.8 as in the example).
+In order to ensure that Web Application Proxy servers are able to reach the AD FS servers behind the ILB, create a record in the %systemroot%\system32\drivers\etc\hosts for the ILB. Note that the distinguished name (DN) should be the federation service name, for example fs.contoso.com. And the IP entry should be that of the ILB's IP address (10.3.0.8 as in the example).
 
 **7.2. Installing the Web Application Proxy role**
 
@@ -285,11 +277,6 @@ Overall, you need the following rules to efficiently secure your internal subnet
 
 ![INT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsg_int.png)
 
-<!--
-[comment]: <> (![INT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgintinbound.png))
-[comment]: <> (![INT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgintoutbound.png))
--->
-
 **9.2. Securing the DMZ subnet**
 
 | Rule | Description | Flow |
@@ -298,11 +285,6 @@ Overall, you need the following rules to efficiently secure your internal subnet
 | DenyInternetOutbound |Anything except HTTPS to internet is blocked |Outbound |
 
 ![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsg_dmz.png)
-
-<!--
-[comment]: <> (![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzinbound.png))
-[comment]: <> (![EXT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzoutbound.png))
--->
 
 > [!NOTE]
 > If client user certificate authentication (clientTLS authentication using X509 user certificates) is required, then AD FS requires TCP port 49443 be enabled for inbound access.

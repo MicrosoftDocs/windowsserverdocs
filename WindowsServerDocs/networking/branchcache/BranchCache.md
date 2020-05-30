@@ -2,16 +2,12 @@
 title: BranchCache
 description: This topic provides an overview of BranchCache in Windows Server 2016
 manager: brianlic
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server
 ms.technology: networking-bc
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # BranchCache
 
@@ -130,7 +126,7 @@ These file servers use Server Message Block (SMB) to exchange information betwee
 
 Supported application servers include computers that are running Windows Server 2016,  Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2 with Background Intelligent Transfer Service (BITS) installed and enabled. 
 
-In addition, the application server must have the BranchCache feature installed. As examples of application servers, you can deploy Microsoft Windows Server Update Services (WSUS) and Microsoft System Center Configuration Manager Branch Distribution Point servers as BranchCache content servers.
+In addition, the application server must have the BranchCache feature installed. As examples of application servers, you can deploy Microsoft Windows Server Update Services (WSUS) and Microsoft Endpoint Configuration Manager Branch Distribution Point servers as BranchCache content servers.
 
 ## <a name="BKMK_3a"></a>BranchCache and the cloud
 

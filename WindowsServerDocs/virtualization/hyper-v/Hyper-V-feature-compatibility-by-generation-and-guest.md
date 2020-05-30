@@ -1,14 +1,12 @@
 ---
 title: Hyper-V feature compatibility by generation and guest
-description: "Lists the generations and operating systems that are compatible with key Hyper-V features"
-ms.prod: windows-server-threshold
-ms.service: na
+description: Lists the generations and operating systems that are compatible with key Hyper-V features
+ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 12/05/2016
 ---
@@ -43,7 +41,7 @@ Virtual NUMA | 1 and 2 | Any supported guest
 ## Development and test  
 Feature  | Generation | Guest operating system  
 ------------- | ------------- | -----------  
-COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#BKMK_Debug). | Any supported guest  
+COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging). | Any supported guest  
   
 ## Mobility  
   

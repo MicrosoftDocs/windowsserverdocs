@@ -1,20 +1,16 @@
 ---
 ms.assetid: bb9b9e18-bf2f-4115-be77-9a165944db41
 title: Planning Your Deployment
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Planning Your Deployment
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 When you plan for cross\-organizational \(federation\-based\) collaboration using Active Directory Federation Services \(AD FS\), first determine if your organization will host a Web resource to be accessed by other organizations across the Internet or if you will provide access to the Web resource for employees in your organization. This determination affects how you deploy AD FS, and it is fundamental in the planning of your AD FS infrastructure.  
   

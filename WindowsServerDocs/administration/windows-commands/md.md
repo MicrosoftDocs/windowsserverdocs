@@ -1,12 +1,12 @@
 ---
 title: Md
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 82162d00-cc34-4776-9e55-4b4836dbd6a9
 author: coreyp-at-msft
@@ -24,7 +24,7 @@ Creates a directory or subdirectory.
 > [!NOTE]
 > This command is the same as the **mkdir** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -33,7 +33,7 @@ md [<Drive>:]<Path>
 mkdir [<Drive>:]<Path>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -45,7 +45,7 @@ mkdir [<Drive>:]<Path>
 
 Command extensions, which are enabled by default, allow you to use a single **md** command to create intermediate directories in a specified path.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To create a directory named Directory1 within the current directory, type:
 ```
@@ -58,14 +58,12 @@ md \Taxes\Property\Current
 To create the directory tree Taxes\Property\Current within the root directory as in the previous example, but with command extensions disabled, type the following sequence of commands:
 ```
 md \Taxes
-cd \Taxes 
-md Property
-cd Property
-md Current
+md \Taxes\Property
+md \Taxes\Property\Current
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 [Cmd](cmd.md)

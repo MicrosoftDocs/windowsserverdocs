@@ -1,28 +1,25 @@
 ---
 ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: The Role of the AD FS Configuration Database
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # The Role of the AD FS Configuration Database
-The AD FS configuration database stores all the configuration data that represents a single instance of Active Directory Federation Services \(AD FS\) \(that is, the Federation Service\). The AD FS configuration database defines the set of parameters that a Federation Service requires to identify partners, certificates, attribute stores, claims, and various data about these associated entities. You can store this configuration data in either a Microsoft SQL Server® database or the Windows Internal Database \(WID\) feature that is included with Windows Server® 2008, Windows Server 2008 R2 and Windows Server® 2012.  
+The AD FS configuration database stores all the configuration data that represents a single instance of Active Directory Federation Services \(AD FS\) \(that is, the Federation Service\). The AD FS configuration database defines the set of parameters that a Federation Service requires to identify partners, certificates, attribute stores, claims, and various data about these associated entities. You can store this configuration data in either a Microsoft SQL Server&reg; database or the Windows Internal Database \(WID\) feature that is included with Windows Server&reg; 2008, Windows Server 2008 R2 and Windows Server&reg; 2012.  
   
 > [!NOTE]  
 > The entire contents of the AD FS configuration database can be stored either in an instance of WID or in an instance of the SQL database, but not both. This means that you cannot have some federation servers using WID and others using a SQL Server database for the same instance of the AD FS configuration database.  
   
 You can use the following information in this topic along with the content provided in [AD FS Deployment Topology Considerations](https://technet.microsoft.com/library/gg982489.aspx) to learn about the advantages and disadvantages of choosing either WID or SQL Server to store the AD FS configuration database:  
   
-WID uses a relational data store and does not have its own management user interface \(UI\). Instead, administrators can modify the contents of the AD FS configuration database by using either the AD FS Management snap\-in, Fsconfig.exe, or Windows PowerShell™ cmdlets.  
+WID uses a relational data store and does not have its own management user interface \(UI\). Instead, administrators can modify the contents of the AD FS configuration database by using either the AD FS Management snap\-in, Fsconfig.exe, or Windows PowerShell&trade; cmdlets.  
   
 ## Using WID to store the AD FS configuration database  
 You can create the AD FS configuration database using WID as the store by using either the Fsconfig.exe command\-line tool or the AD FS Federation Server Configuration Wizard. When you use either of these tools, you can choose any of the following options to create your federation server topology. Each of these options uses WID for storing the AD FS configuration database:  
@@ -46,7 +43,7 @@ If you select the add a federation server option, WID is configured to replicate
 This section describes important concepts that describe how the WID federation server farm replicates data between a primary federation server and secondary federation servers. .  
   
 #### Primary federation server  
-A primary federation server is a computer running Windows Server 2008, Windows Server 2008 R2 or Windows Server® 2012 that has been configured in the federation server role with the AD FS Federation Server Configuration Wizard and that has a read/write copy of the AD FS configuration database. The primary federation server is always created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm, also known as secondary federation servers, must synchronize changes that are made on the primary federation server to a copy of the AD FS configuration database that is stored locally.  
+A primary federation server is a computer running Windows Server 2008, Windows Server 2008 R2 or Windows Server&reg; 2012 that has been configured in the federation server role with the AD FS Federation Server Configuration Wizard and that has a read/write copy of the AD FS configuration database. The primary federation server is always created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm, also known as secondary federation servers, must synchronize changes that are made on the primary federation server to a copy of the AD FS configuration database that is stored locally.  
   
 #### Secondary federation servers  
 Secondary federation servers store a copy of the AD FS configuration database from the primary federation server, but these copies are read\-only. Secondary federation servers connect to and synchronize the data with the primary federation server in the farm by polling it at regular intervals to check whether data has changed. The secondary federation servers exist to provide fault tolerance for the primary federation server while acting to load\-balance access requests that are made in different sites throughout your network environment.  
@@ -77,7 +74,7 @@ You can create the AD FS configuration database using a single SQL Server data
   
 -   It provides feature support of SAML artifact resolution and SAML/WS\-Federation token replay detection \(described below\).  
   
-The term “primary federation server” does not apply when the AD FS configuration database is stored in a SQL database instance because all federation servers can equally read and write to the AD FS configuration database that is using the same clustered SQL Server instance, as shown in the following illustration.  
+The term "primary federation server" does not apply when the AD FS configuration database is stored in a SQL database instance because all federation servers can equally read and write to the AD FS configuration database that is using the same clustered SQL Server instance, as shown in the following illustration.  
   
 ![AD FS roles](media/adfs2_SQL.png)  
   

@@ -1,12 +1,8 @@
 ---
 title: "Create the Oobe.xml File Including Logo and EULA"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 8a7b3cc1-21bb-4344-8110-f5d5959b370d
 author: nnamuhcs
@@ -24,41 +20,41 @@ You can add your own End User License Agreement (EULA) to Initial Configuration 
   
 #### To add your company EULA and logo  
   
-1.  Open the Oobe.xml file in a text editor, such as Notepad.  
+1. Open the Oobe.xml file in a text editor, such as Notepad.  
   
-2.  Within the <logopath\></logopath\> tags, enter the absolute path to your logo file. This file should contain a 32-bit portable network graphics (.png) file that is 240x 100 pixels.  
+2. Within the <logopath\></logopath\> tags, enter the absolute path to your logo file. This file should contain a 32-bit portable network graphics (.png) file that is 240x 100 pixels.  
   
-3.  Within the <eulafilename\></eulafilename\> tags, enter the absolute path to the EULA file. The EULA file must be a rich-text format (.rtf) file.  
+3. Within the <eulafilename\></eulafilename\> tags, enter the absolute path to the EULA file. The EULA file must be a rich-text format (.rtf) file.  
   
-4.  Within the <name\></name\> tags, enter your company name.  
+4. Within the <name\></name\> tags, enter your company name.  
   
-     The following example shows the tags in an Oobe.xml file:  
+    The following example shows the tags in an Oobe.xml file:  
   
-    ```  
+   ```  
   
-    <FirstExperience>  
-       <oobe>  
-          <oem>  
-             <name>Fabrikam</name>  
-             <logopath>c:\fabrikam\fabrikam.png</logopath>  
-             <eulafilename>c:\fabrikam\fabrikam_eula.rtf</eulafilename>  
-          </oem>  
-       </oobe>  
-    </FirstExperience>  
+   <FirstExperience>  
+      <oobe>  
+         <oem>  
+            <name>Fabrikam</name>  
+            <logopath>c:\fabrikam\fabrikam.png</logopath>  
+            <eulafilename>c:\fabrikam\fabrikam_eula.rtf</eulafilename>  
+         </oem>  
+      </oobe>  
+   </FirstExperience>  
   
-    ```  
+   ```  
   
-5.  Save the file.  
+5. Save the file.  
   
-6.  Place the Oobe.xml file in one of the following locations:  
+6. Place the Oobe.xml file in one of the following locations:  
   
-    |Oobe.xml Location|Condition for determining location|  
-    |-----------------------|----------------------------------------|  
-    |%windir%\system32\oobe\info\|The server is shipping in a single country/region and a single language system.|  
-    |%windir%\system32\oobe\info\default\\<language\>|The server is shipping in a single country/region and multiple languages system.|  
-    |%windir%\system32\oobe\info\\<country/region>\ and %windir%\system32\oobe\info\\<country/region>\\<language\>\|The server is shipping to more than one country/region and the settings require customizations on a per-country/region basis, each with a single language. Where <country/region> is the decimal version of the geographical location identifier (GeoID) of the country or region where the server is being deployed, and <language\> is the decimal version of the locale identifier (LCID).|  
+   |Oobe.xml Location|Condition for determining location|  
+   |-----------------------|----------------------------------------|  
+   |%windir%\system32\oobe\info\|The server is shipping in a single country/region and a single language system.|  
+   |%windir%\system32\oobe\info\default\\<language\>|The server is shipping in a single country/region and multiple languages system.|  
+   |%windir%\system32\oobe\info\\<country/region>\ and %windir%\system32\oobe\info\\<country/region>\\<language\>\|The server is shipping to more than one country/region and the settings require customizations on a per-country/region basis, each with a single language. Where <country/region> is the decimal version of the geographical location identifier (GeoID) of the country or region where the server is being deployed, and <language\> is the decimal version of the locale identifier (LCID).|  
   
- If you have an alternative company logo with white text, it may display better in the setup flow due to the blue background.  You can optionally specify this logo by setting a registry key and value.  
+   If you have an alternative company logo with white text, it may display better in the setup flow due to the blue background.  You can optionally specify this logo by setting a registry key and value.  
   
 #### To specify a company logo by setting the OEM registry key  
   

@@ -1,13 +1,9 @@
 ---
 title: Update and install device drivers if needed
 description: Learn how to check and update device drivers in MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16be3ef9-a05b-4621-a431-5806b567e997
 author: evaseydl
@@ -15,7 +11,7 @@ manager: scottman
 ms.author: evas
 ---
 # Update and install device drivers if needed
-If you are using USB zero clients or peripherals that require drivers, you should install the drivers at this time. It’s a good idea also to check **Device Manager** for any driver alerts, and install drivers for those devices.  
+If you are using USB zero clients or peripherals that require drivers, you should install the drivers at this time. It's a good idea also to check **Device Manager** for any driver alerts, and install drivers for those devices.  
   
 Generally, the most current drivers are required for following types of devices:  
   

@@ -1,12 +1,8 @@
 ---
-title: Using the get-DriverPackageFile Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+title: get-DriverPackageFile
+description: Reference topic for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains. 
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f01a2c67-7e9c-4aad-b625-383f5a1fca25
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the get-DriverPackageFile Command
-
-
+# get-DriverPackageFile
 
 Displays information about a driver package, including the drivers and files it contains.
 
@@ -27,21 +21,21 @@ Displays information about a driver package, including the drivers and files it 
 WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/InfFile:\<Inf File path>|Specifies the full path and file name of the driver package .inf file.|
-|[/Architecture:{x86 | ia64 | x64}]|Specifies the architecture of the driver package.|
-|[/Show: {Drivers | Files | All}]|Indicates the package information to display. If **/Show** is not specified, the default is to return only the driver package metadata. **Drivers** displays the list of drivers in the package. **Files** displays the list of files in the package. **All** displays drivers and files.|
+|         Parameter         |                              Description                               |
+|---------------------------|------------------------------------------------------------------------|
+| /InfFile:\<Inf File path> | Specifies the full path and file name of the driver package .inf file. |
+|    [/Architecture:{x86    |                                  ia64                                  |
+|     [/Show: {Drivers      |                                 Files                                  |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To view information about a driver file, type:
 ```
-WDSUTIL /Get-DriverPackageFile /InfFile:"C:\temp\1394.inf" /Architecture:x86
+WDSUTIL /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

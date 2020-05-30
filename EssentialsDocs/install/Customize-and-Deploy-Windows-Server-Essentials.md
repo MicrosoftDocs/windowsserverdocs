@@ -1,19 +1,14 @@
 ---
 title: "Customize and Deploy Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
-ms.date: 09/2013/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 09/13/2016
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: d1c70cf2-0db8-4b75-af46-73620b9e81c8
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ---
-
 # Customize and Deploy Windows Server Essentials
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials

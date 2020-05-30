@@ -1,12 +1,8 @@
 ---
 title: "Manage Devices in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
@@ -61,13 +57,13 @@ manager: dongill
   
 #### To view the status of network computers  
   
-1.  Open the Windows Server Essentials Dashboard.  
+1. Open the Windows Server Essentials Dashboard.  
   
-2.  On the navigation bar, click **Devices**.  
+2. On the navigation bar, click **Devices**.  
   
-3.  View the status of all the computers in the network in the list pane.  
+3. View the status of all the computers in the network in the list pane.  
   
- The following table describes the various computer and backup tasks that are available in the Windows Server Essentials Dashboard. Some of the tasks are computer-specific, and they are only visible when you select a computer in the list.  
+   The following table describes the various computer and backup tasks that are available in the Windows Server Essentials Dashboard. Some of the tasks are computer-specific, and they are only visible when you select a computer in the list.  
   
 ### Computer tasks in the Dashboard  
   
@@ -137,7 +133,7 @@ manager: dongill
 7.  Click **Finish** to implement the Group Policy settings.  
   
 ##  <a name="BKMK_7"></a> Connect to a network computer by using a Remote Desktop session  
- To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization „¢s Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
+ To remotely access your Windows Server Essentials network computer when you are away from your office, use your Web browser to log on to your organization's Remote Web Access website, and on the **Computers** tab, click the name of the computer.  
   
  The **Status** column shows you if you can connect to a computer on your network, and can contain the following values:  
   

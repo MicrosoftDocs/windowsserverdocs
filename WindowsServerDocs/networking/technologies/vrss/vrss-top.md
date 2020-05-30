@@ -1,15 +1,15 @@
 ---
 title: Virtual Receive Side Scaling (vRSS)
 description: Learn about Virtual Receive Side Scaling (vRSS) in Windows Server and how to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM. You can also configure mulitple physical cores for a host virtual Network Interface Card (vNIC).
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 9be477b3-f81d-4e84-a6b0-ac4c1ea97715
 ms.date: 09/05/2018
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Virtual Receive Side Scaling \(vRSS\)
@@ -73,7 +73,7 @@ Because of this, Anthony decides to add processors to the VM for use by vRSS.  H
 
 Sandra, a network administrator, is setting up a single high-performance VM on one of her systems to act as a software load balancer. She has assigned all available logical processors to this single VM.
 
-After installing Windows Server, she uses vRSS to get parallel network traffic processing on multiple logical processors in the VM. Because Windows Server enables vRSS, Sandra doesn’t have to make any configuration changes.
+After installing Windows Server, she uses vRSS to get parallel network traffic processing on multiple logical processors in the VM. Because Windows Server enables vRSS, Sandra doesn't have to make any configuration changes.
 
 
 ## Related topics

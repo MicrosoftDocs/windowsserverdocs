@@ -6,8 +6,7 @@ ms.author: joflore
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 # Clean up Active Directory Domain Controller server metadata
@@ -23,13 +22,13 @@ There are three options to clean up server metadata:
 - Clean up server metadata by using a script
 
 > [!NOTE]
-> If you receive an “Access is denied” error when you use any of these methods to perform metadata cleanup, make sure that the computer object and the NTDS Settings object for the domain controller are not protected against accidental deletion. To verify this right-click the computer object or the NTDS Settings object, click **Properties**, click **Object**, and clear the **Protect object from accidental deletion** check box. In Active Directory Users and Computers, the **Object** tab of an object appears if you click **View** and then click **Advanced Features**.
+> If you receive an "Access is denied" error when you use any of these methods to perform metadata cleanup, make sure that the computer object and the NTDS Settings object for the domain controller are not protected against accidental deletion. To verify this right-click the computer object or the NTDS Settings object, click **Properties**, click **Object**, and clear the **Protect object from accidental deletion** check box. In Active Directory Users and Computers, the **Object** tab of an object appears if you click **View** and then click **Advanced Features**.
 
 ## Clean up server metadata using GUI tools
 
-When you use Remote Server Administration Tools (RSAT) or the Active Directory Users and Computers console (Dsa.msc) that is included with Windows Server to delete a domain controller computer account from the Domain Controllers organizational unit (OU), the cleanup of server metadata is performed automatically. Previos to Windows Server 2008 you had to perform a separate metadata cleanup procedure.
+When you use Remote Server Administration Tools (RSAT) or the Active Directory Users and Computers console (Dsa.msc) that is included with Windows Server to delete a domain controller computer account from the Domain Controllers organizational unit (OU), the cleanup of server metadata is performed automatically. Before Windows Server 2008, you had to perform a separate metadata cleanup procedure.
 
-You can also use the Active Directory Sites and Services console (Dssite.msc) to delete a domain controller’s computer account, which also completes metadata cleanup automatically. However, Active Directory Sites and Services removes the metadata automatically only when you first delete the NTDS Settings object below the computer account in Dssite.msc.
+You can also use the Active Directory Sites and Services console (Dssite.msc) to delete a domain controller's computer account, which also completes metadata cleanup automatically. However, Active Directory Sites and Services removes the metadata automatically only when you first delete the NTDS Settings object below the computer account in Dssite.msc.
 
 As long as you are using the Windows Server 2008 or newer RSAT versions of Dsa.msc or Dssite.msc, you can clean up metadata automatically for domain controllers running earlier versions of Windows operating systems.
 

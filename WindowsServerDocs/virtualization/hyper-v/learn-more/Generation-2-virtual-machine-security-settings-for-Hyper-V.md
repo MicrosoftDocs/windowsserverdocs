@@ -1,11 +1,9 @@
 ---
 title: Generation 2 virtual machine security settings for Hyper-V
-description: "Describes the security settings available in Hyper-V Manager for generation 2 virtual machines"
-ms.prod: windows-server-threshold
-ms.service: na
+description: Describes the security settings available in Hyper-V Manager for generation 2 virtual machines
+ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
 author: larsiwer

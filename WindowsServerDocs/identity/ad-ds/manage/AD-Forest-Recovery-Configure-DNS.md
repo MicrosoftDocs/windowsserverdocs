@@ -1,12 +1,11 @@
 ---
 title: AD Forest Recovery - Configure DNS Server service
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 # AD Forest Recovery - Configuring the DNS Server service

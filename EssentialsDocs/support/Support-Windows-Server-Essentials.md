@@ -1,12 +1,8 @@
 ---
 title: "Support Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
@@ -22,7 +18,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 ##  <a name="BKMK_Top"></a> Top support solutions and updates  
   
--   [Top support solutions for Windows Server 2012 R2 and Windows Server 2012](http://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
+-   [Top support solutions for Windows Server 2012 R2 and Windows Server 2012](https://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
   
 -   [Update for the Windows Server Essentials Migration Preparation Tool](https://support.microsoft.com/kb/2908176) (December 2013)  
   
@@ -111,7 +107,7 @@ This topic provides support and troubleshooting options for Windows Server Essen
   
 -   [Support for small businesses](https://smallbusiness.support.microsoft.com/contact)  
   
--   [Windows Server Essentials and Small Business Server Blog](http://blogs.technet.com/b/sbs/)  
+-   [Windows Server Essentials and Small Business Server Blog](https://blogs.technet.com/b/sbs/)  
   
 ## End-to-end solution guides  
   

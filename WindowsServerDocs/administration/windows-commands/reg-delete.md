@@ -1,12 +1,12 @@
 ---
 title: reg delete
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: cee05071-1607-4ab1-b8ab-65caebeb85c3
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Deletes a subkey or entries from the registry.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -49,7 +49,7 @@ The following table lists the return values for the **reg delete** operation.
 |0|Success|
 |1|Failure|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To delete the registry key Timeout and its all subkeys and values, type:
 ```
@@ -60,6 +60,6 @@ To delete the registry value MTU under HKLM\Software\MyCo on the computer named 
 REG DELETE \\ZODIAC\HKLM\Software\MyCo /v MTU
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

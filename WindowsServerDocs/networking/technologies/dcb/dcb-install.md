@@ -1,13 +1,13 @@
 ---
 title: Install Data Center Bridging (DCB) in Windows Server or Client
 description: This topic provides you with instructions on how to install Data Center Bridging in Windows Server or Windows Client.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: b89213d8-143a-45f3-a609-bc6a7027204c
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Install Data Center Bridging \(DCB\) in Windows Server 2016 or Windows 10

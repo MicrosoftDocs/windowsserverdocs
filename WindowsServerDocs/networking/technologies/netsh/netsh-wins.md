@@ -1,13 +1,13 @@
 ---
 title: Network Shell (Netsh) Example Batch File
 description: You can use this topic to learn how to create a batch file that performs multiple tasks using Netsh in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: c94e37a4-3637-4613-9eb5-ed604e831eca
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Network Shell \(Netsh\) Example Batch File

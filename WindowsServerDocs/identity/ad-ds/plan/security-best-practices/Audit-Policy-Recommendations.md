@@ -1,14 +1,12 @@
 ---
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 title: Audit Policy Recommendations
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 
@@ -61,7 +59,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 **Audit Policy**  
 
-|Audit Policy Category or Subcategory|Windows Default<br /><br />Success    Failure|Baseline Recommendation<br /><br />Success    Failure|Stronger Recommendation<br /><br />Success    Failure|  
+|Audit Policy Category or Subcategory|Windows Default<p>Success    Failure|Baseline Recommendation<p>Success    Failure|Stronger Recommendation<p>Success    Failure|  
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**Account Logon**||||  
 |Audit Credential Validation|No    No|Yes    No|Yes    Yes|  
@@ -139,7 +137,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 
 **Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings Recommendations**  
 
-|Audit Policy Category or Subcategory|Windows Default<br /><br />Success    Failure|Baseline Recommendation<br /><br />Success    Failure|Stronger Recommendation<br /><br />Success    Failure|  
+|Audit Policy Category or Subcategory|Windows Default<p>Success    Failure|Baseline Recommendation<p>Success    Failure|Stronger Recommendation<p>Success    Failure|  
 |----------------------------------------|------------------------------------------|--------------------------------------------------|--------------------------------------------------|  
 |**Account Logon**||||  
 |Audit Credential Validation|No    No|Yes    Yes|Yes    Yes|  
@@ -281,13 +279,13 @@ Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-
 ## Additional Information for Monitoring Active Directory Domain Services  
 Review the following links for additional information about monitoring AD DS:  
   
--   [Global Object Access Auditing is Magic](http://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) - Provides information about configuring and using Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2.  
+-   [Global Object Access Auditing is Magic](https://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) - Provides information about configuring and using Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2.  
 
--   [Introducing Auditing Changes in Windows 2008](http://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) - Introduces the auditing changes made in Windows 2008.  
+-   [Introducing Auditing Changes in Windows 2008](https://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) - Introduces the auditing changes made in Windows 2008.  
 
--   [Cool Auditing Tricks in Vista and 2008](http://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) - Explains interesting new features of auditing in Windows Vista and Windows Server 2008 that can be used for troubleshooting problems or seeing what's happening in your environment.  
+-   [Cool Auditing Tricks in Vista and 2008](https://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) - Explains interesting new features of auditing in Windows Vista and Windows Server 2008 that can be used for troubleshooting problems or seeing what's happening in your environment.  
 
--   [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](http://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) - Contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
+-   [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](https://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) - Contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
 
 -   [AD DS Auditing Step-by-Step Guide](https://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) - Describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
 

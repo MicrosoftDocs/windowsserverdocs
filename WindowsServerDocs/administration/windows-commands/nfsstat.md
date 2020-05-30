@@ -1,12 +1,12 @@
 ---
 title: nfsstat
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: da7a9768-44bd-404b-97ee-c388d00dc395
 author: coreyp-at-msft

@@ -1,14 +1,14 @@
 ---
 title: rsh
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** -
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
-ms.assetid: 9e3b2b29-208d-4257-8379-0b4738274146 vhorne
+ms.assetid: 9e3b2b29-208d-4257-8379-0b4738274146
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

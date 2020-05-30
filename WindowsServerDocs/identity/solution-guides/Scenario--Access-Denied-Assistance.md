@@ -1,14 +1,12 @@
 ---
 ms.assetid: aae907eb-11cf-4a87-a046-8680872ed0b1
 title: Scenario Access-Denied Assistance
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 

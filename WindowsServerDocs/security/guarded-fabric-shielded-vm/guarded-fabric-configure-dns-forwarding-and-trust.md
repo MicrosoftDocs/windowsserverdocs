@@ -1,10 +1,10 @@
 ---
 title: Configure DNS forwarding and domain trust 
-ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
@@ -32,5 +32,5 @@ Use the following steps to set up DNS forwarding and establish a one-way trust w
 
 ## Next step 
 
->[!div class="nextstepaction"]
-[Configure HTTPS](guarded-fabric-configure-hgs-https.md)
+> [!div class="nextstepaction"]
+> [Configure HTTPS](guarded-fabric-configure-hgs-https.md)

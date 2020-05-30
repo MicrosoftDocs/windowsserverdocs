@@ -1,12 +1,12 @@
 ---
 title: online volume
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
 author: coreyp-at-msft
@@ -33,7 +33,7 @@ Brings volumes that are currently offline to an online state
 online volume [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,14 +44,14 @@ online volume [noerr]
 -   This command operates on volumes that have failed, are failing, or are in failed redundancy state.
 -   A volume must be selected for this command to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To bring the volume with focus online, type:
 ```
 online volume
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

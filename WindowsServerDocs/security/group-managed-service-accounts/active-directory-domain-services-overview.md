@@ -1,16 +1,10 @@
 ---
 title: Active Directory Domain Services Overview
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.service: na
-ms.suite: na
+description: Windows Server Security
+ms.prod: windows-server
 ms.technology: security-auditing
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

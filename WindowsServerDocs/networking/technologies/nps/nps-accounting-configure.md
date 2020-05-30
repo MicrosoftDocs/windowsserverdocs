@@ -2,12 +2,12 @@
 title: Configure Network Policy Server Accounting
 description: This topic provides information about text file and SQL Server logging for Network Policy Server in Windows Server 2016.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ms.date: 05/25/2018
 ---
 
@@ -70,7 +70,7 @@ Membership in the **Domain Admins** group is the minimum required to perform thi
 5. In **Logging failure action**, select **If logging fails, discard connection requests** if you want NPS to stop processing Access-Request messages when log files are full or unavailable for some reason. If you want NPS to continue processing connection requests if logging fails, do not select this check box.
 6. In the **Log File Properties** dialog box, click the **Log File** tab.
 7. On the **Log File** tab, in **Directory**, type the location where you want to store NPS log files. The default location is the systemroot\System32\LogFiles folder.<br>If you do not supply a full path statement in **Log File Directory**, the default path is used. For example, if you type **NPSLogFile** in **Log File Directory**, the file is located at %systemroot%\System32\NPSLogFile.
-8. In **Format**, click **DTS Compliant**. If you prefer, you can instead select a legacy file format, such as **ODBC \(Legacy\)** or **IAS \(Legacy\)**.<br>**ODBC** and **IAS** legacy file types contain a subset of the information that NPS sends to its SQL Server database. The **DTS Compliant** file type’s XML format is identical to the XML format that NPS uses to import data into its SQL Server database. Therefore, the **DTS Compliant** file format provides a more efficient and complete transfer of data into the standard SQL Server database for NPS.
+8. In **Format**, click **DTS Compliant**. If you prefer, you can instead select a legacy file format, such as **ODBC \(Legacy\)** or **IAS \(Legacy\)**.<br>**ODBC** and **IAS** legacy file types contain a subset of the information that NPS sends to its SQL Server database. The **DTS Compliant** file type's XML format is identical to the XML format that NPS uses to import data into its SQL Server database. Therefore, the **DTS Compliant** file format provides a more efficient and complete transfer of data into the standard SQL Server database for NPS.
 9. In **Create a new log file**, to configure NPS to start new log files at specified intervals, click the interval that you want to use:
 	- For heavy transaction volume and logging activity, click **Daily**.
 	- For lesser transaction volumes and logging activity, click **Weekly** or **Monthly**.

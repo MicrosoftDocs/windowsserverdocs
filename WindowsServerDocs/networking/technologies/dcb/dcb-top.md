@@ -1,13 +1,13 @@
 ---
 title: Data Center Bridging (DCB)
 description: You can use this topic for introductory information about Data Center Bridging in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Data Center Bridging \(DCB\)
@@ -41,7 +41,7 @@ standards
 
 The DCBX protocol allows you to configure DCB on a switch, which can then automatically configure an end device, such as a computer running Windows Server 2016.
 
-If you prefer to manage DCB from a switch, you don’t need to install DCB as a feature in Windows Server 2016, however this approach includes some limitations.
+If you prefer to manage DCB from a switch, you don't need to install DCB as a feature in Windows Server 2016, however this approach includes some limitations.
 
 Because DCBX can only inform the host network adapter of ETS class sizes and PFC enablement, however, Windows Server hosts usually require that DCB is installed so that traffic is mapped to ETS classes.
 

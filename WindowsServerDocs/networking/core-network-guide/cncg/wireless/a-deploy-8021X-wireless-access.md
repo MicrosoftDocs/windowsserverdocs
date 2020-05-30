@@ -2,12 +2,12 @@
 title: Deploy Password-Based 802.1X Authenticated Wireless Access
 description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access
@@ -245,11 +245,11 @@ When you configure your 802.1X wireless access points as RADIUS clients in NPS, 
 
 Successful mutual PEAP\-MS\-CHAP v2 authentication has two main parts:
 
-1.  The client authenticates the NPS.  During this phase of mutual authentication, the NPS sends its server certificate to the client computer so that the client can verify the NPS's identity with the certificate. To successfully authenticate the NPS, the client computer must trust the CA that issued the NPS certificate. The client trusts this CA when the CA’s certificate is present in the Trusted Root Certification Authorities certificate store on the client computer.
+1.  The client authenticates the NPS.  During this phase of mutual authentication, the NPS sends its server certificate to the client computer so that the client can verify the NPS's identity with the certificate. To successfully authenticate the NPS, the client computer must trust the CA that issued the NPS certificate. The client trusts this CA when the CA's certificate is present in the Trusted Root Certification Authorities certificate store on the client computer.
 
     If you deploy your own private CA, the CA certificate is automatically installed in the Trusted Root Certification Authorities certificate store for the Current User and for the Local Computer when Group Policy is refreshed on the domain member client computer. If you decide to deploy server certificates from a public CA, ensure that the public CA certificate is already in the Trusted Root Certification Authorities certificate store.  
 
-2.  The NPS authenticates the user. After the client successfully authenticates the NPS, the client sends the user’s password\-based credentials to the NPS, which verifies the user’s credentials against the user accounts database in Active Directory Doman Services \(AD DS\).
+2.  The NPS authenticates the user. After the client successfully authenticates the NPS, the client sends the user's password\-based credentials to the NPS, which verifies the user's credentials against the user accounts database in Active Directory Doman Services \(AD DS\).
 
 If the credentials are valid and authentication succeeds, the NPS begins the authorization phase of processing the connection request. If the credentials are not valid and authentication fails, NPS sends an Access Reject message and the connection request is denied.  
 
@@ -259,7 +259,7 @@ The server running NPS performs authorization as follows:
 
 1. NPS checks for restrictions in the user or computer account dial\-in properties in AD DS. Every user and computer account in Active Directory Users and Computers includes multiple properties, including those found on the **Dial\-in** tab. On this tab, in **Network Access Permission**, if the value is **Allow access**, the user or computer is authorized to connect to the network. If the value is **Deny access**, the user or computer is not authorized to connect to the network. If the value is **Control access through NPS Network Policy**, NPS evaluates the configured network policies to determine whether the user or computer is authorized to connect to the network. 
 
-2. NPS then processes its network policies to find a policy that matches the connection request. If a matching policy is found, NPS either grants or denies the connection based on that policy’s configuration.  
+2. NPS then processes its network policies to find a policy that matches the connection request. If a matching policy is found, NPS either grants or denies the connection based on that policy's configuration.  
 
 If both authentication and authorization are successful, and if the matching network policy grants access, NPS grants access to the network, and the user and computer can connect to network resources for which they have permissions.  
 

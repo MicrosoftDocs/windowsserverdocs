@@ -1,7 +1,7 @@
 ---
 title: Set up email discovery to subscribe to your RDS feed
 description: Learn how to integrate Azure AD Domain Services into your RDS deployment.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 3/27/2018
@@ -32,4 +32,4 @@ Now, use these steps to set up email discovery:
 
    The names of the DNS records fields vary by domain name registrar, but this process will result in a TXT record named _msradc.\<domain_name\> (such as _msradc.contoso.com) that has a value of the full RD Web feed.
 
-That’s it! Now, launch the Remote Desktop application on your device and subscribe yourself!
+That's it! Now, launch the Remote Desktop application on your device and subscribe yourself!

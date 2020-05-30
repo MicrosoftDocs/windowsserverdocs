@@ -1,12 +1,12 @@
 ---
 title: mapadmin
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: b17332c7-8622-4223-9c43-2fb9cf4d992d
 author: coreyp-at-msft
@@ -48,13 +48,13 @@ In addition to specific command arguments, **mapadmin** accepts the following ar
 Specifies the remote computer running the User Name Mapping service that you want to administer. You can specify the computer using a Windows Internet Name Service (WINS) name or a Domain Name System (DNS) name, or by Internet Protocol (IP) address.
 
 -u &lt;user&gt;
-Specifies the user name of the user whose credentials are to be used. It might be necessary to add the domain name to the user name in the form *domain***\\***user name*.
+Specifies the user name of the user whose credentials are to be used. It might be necessary to add the domain name to the user name in the form <em>domain</em>**\\**<em>user name</em>.
 
 -p &lt;password&gt;
 Specifies the password of the user. If you specify the **-u** option but omit the **-p** option, you are prompted for the user's password.
 The specific action that **mapadmin** performs depends on the command argument you specify:
 
-## Parameters
+### Parameters
 ### start
 starts the User Name Mapping service.
 
@@ -133,5 +133,5 @@ Specifies general settings for User Name Mapping. The following options are avai
 -   for UNIX users, use the form &lt;NISdomain&gt;\\&lt;user name&gt;, &lt;user name&gt;@&lt;NISdomain&gt;, user &lt;name&gt;@PCNFS, or PCNFS\\&lt;user name&gt;
 -   for UNIX groups, use the form &lt;NISdomain&gt;\\&lt;groupname&gt;, &lt;groupname&gt;@&lt;NISdomain&gt;, &lt;groupname&gt;@PCNFS, or PCNFS\\&lt;groupname&gt;
 
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

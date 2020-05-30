@@ -1,21 +1,16 @@
 ---
 ms.assetid: cf32926a-2083-408b-a264-2cad179ed18a
 title: Distribute Certificates to Client Computers by Using Group Policy
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.author: billmath
 ms.author: billmath
 ---
 
 # Distribute Certificates to Client Computers by Using Group Policy
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 You can use the following procedure to push down the appropriate Secure Sockets Layer \(SSL\) certificates \(or equivalent certificates that chain to a trusted root\) for account federation servers, resource federation servers, and Web servers to each client computer in the account partner forest by using Group Policy.  

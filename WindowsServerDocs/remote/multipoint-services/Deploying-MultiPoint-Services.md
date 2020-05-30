@@ -1,13 +1,9 @@
 ---
 title: Deploying MultiPoint Services
 description: Overview of the MultiPoint Services deployment process
-ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
 author: evaseydl
@@ -31,7 +27,7 @@ The deployment information is organized in the following way. At a minimum, you 
   
 -   [Prepare your MultiPoint Services system for users](Prepare-your-MultiPoint-services-system-for-users.md)  
   
-    Plan and create user accounts; restrict users’ access to the server; for open access, configure stations for automatic logon; allow multiple sessions for shared user accounts; implement file sharing for users.  
+    Plan and create user accounts; restrict users' access to the server; for open access, configure stations for automatic logon; allow multiple sessions for shared user accounts; implement file sharing for users.  
   
 -   [System administration in MultiPoint Services](System-administration-in-MultiPoint-services.md)  
   

@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 06/07/2018
 ---
 
@@ -21,7 +21,7 @@ Migrating from DirectAccess to Always On VPN requires a specific process to migr
 
 1.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you will deploy the VPN infrastructure side by side with the existing DirectAccess infrastructure.  
 
-2.  **Deploy certificates and configuration to the clients.**  Once the VPN infrastructure is ready, you create and publish the required certificates to the client. When the clients have received the certificates, you deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft System Center Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
+2.  **Deploy certificates and configuration to the clients.**  Once the VPN infrastructure is ready, you create and publish the required certificates to the client. When the clients have received the certificates, you deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft Endpoint Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
 
 3.  [!INCLUDE [remove-da-security-group-shortdesc-include](../includes/remove-da-security-group-shortdesc-include.md)]
 
@@ -70,7 +70,7 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 3.  **Identify users who have received a VPN authentication certificate.** You are migrating from DirectAccess, so you will need to add a method for identifying when a client has received the required certificate and is ready to receive the VPN configuration information. Run the **GetUsersWithCert.ps1** script to add users who are currently issued nonrevoked certificates originating from the specified template name to a specified AD DS security group. For example, after running the **GetUsersWithCert.ps1** script, any user issued a valid  certificate from the VPN Authentication Certificate template is added to the VPN Deployment Ready group.
 
     >[!NOTE] 
-    >If you do not have a method to identify when a client has received the required certificate, you could deploy the VPN configuration before the certificate has been issued to the user, causing the VPN connection to fail. To avoid this situation, run the **GetUsersWithCert.ps1** script on the certification authority or on a schedule to synchronize users who have received the certificate to the VPN Deployment Ready group. You will then use that security group to target your VPN configuration deployment in System Center Configuration Manager or Intune, which ensures that the managed client does not receive the VPN configuration before it has received the certificate.
+    >If you do not have a method to identify when a client has received the required certificate, you could deploy the VPN configuration before the certificate has been issued to the user, causing the VPN connection to fail. To avoid this situation, run the **GetUsersWithCert.ps1** script on the certification authority or on a schedule to synchronize users who have received the certificate to the VPN Deployment Ready group. You will then use that security group to target your VPN configuration deployment in Microsoft Endpoint Configuration Manager or Intune, which ensures that the managed client does not receive the VPN configuration before it has received the certificate.
     
     ### GetUsersWithCert.ps1
     
@@ -117,13 +117,13 @@ You must ensure that the **VPN_Profile.ps1** comes _after_ the certificate has b
 
 | If you are using...  | Then... |
 | ---- | ---- |
-| System Center Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](../../media/DA-to-AlwaysOnVPN/b38723b3ffcfacd697b83dd41a177f66.png)!|
+| Configuration Manager | Create a user collection based on that security group's membership.<br><br>![](../../media/DA-to-AlwaysOnVPN/b38723b3ffcfacd697b83dd41a177f66.png)!|
 | Intune | Simply target the security group directly once it is synchronized. |
 |
     
-Each time you run the **GetUsersWithCert.ps1** configuration script, you must also run an AD DS discovery rule to update the security group membership in System Center Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
+Each time you run the **GetUsersWithCert.ps1** configuration script, you must also run an AD DS discovery rule to update the security group membership in Configuration Manager. Also, ensure that the membership update for the deployment collection frequently occurs enough (aligned with the script and discovery rule).
 
-For additional information about using System Center Configuration Manager or Intune to deploy Always On VPN to Windows clients, see [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md). Be sure, however, to incorporate these migration-specific tasks.
+For additional information about using Configuration Manager or Intune to deploy Always On VPN to Windows clients, see [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md). Be sure, however, to incorporate these migration-specific tasks.
 
 >[!NOTE] 
 >Incorporating these migration-specific tasks is a critical difference between a simple Always On VPN deployment and migration from DirectAccess to Always On VPN. Be sure to properly define the collection to target the security group rather than using the method in the deployment guide.
@@ -131,7 +131,7 @@ For additional information about using System Center Configuration Manager or In
 
 ## Remove devices from the DirectAccess security group
 
-As users receive the authentication certificate and the **VPN_Profile.ps1** configuration script, you see corresponding successful VPN configuration script deployments in either System Center Configuration Manager or Intune. After each deployment, remove that user's device from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and System Center Configuration Manager contains user device assignment information to help you determine each user's device.
+As users receive the authentication certificate and the **VPN_Profile.ps1** configuration script, you see corresponding successful VPN configuration script deployments in either Configuration Manager or Intune. After each deployment, remove that user's device from the DirectAccess security group so that you can later remove DirectAccess. Both Intune and Configuration Manager contain user device assignment information to help you determine each user's device.
 
 >[!NOTE] 
 >If you are applying DirectAccess GPOs through organizational units (OUs) rather than computer groups, move the user's computer object out of the OU.

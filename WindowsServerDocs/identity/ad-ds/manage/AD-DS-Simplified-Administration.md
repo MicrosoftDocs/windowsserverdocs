@@ -1,14 +1,12 @@
 ---
 ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS Simplified Administration
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 # AD DS Simplified Administration
@@ -190,19 +188,19 @@ There is no need to run these cmdlets, ordinarily; they already automatically ex
 
 ||||  
 |-|-|-|  
-|Test Name|Protocols<br /><br />used|Explanation and notes|  
-|VerifyAdminTrusted<br /><br />ForDelegationProvider|LDAP|Validates that you have the "Enable computer and user accounts to be trusted for delegation" (SeEnableDelegationPrivilege) privilege on the existing partner domain controller. This requires access to your constructed tokenGroups attribute.<br /><br />Not used when contacting Windows Server 2003 domain controllers. You must manually confirm this privilege prior to promotion|  
-|VerifyADPrep<br /><br />Prerequisites (forest)|LDAP|Discovers and contacts the Schema Master using the rootDSE namingContexts attribute and Schema naming context fsmoRoleOwner attribute. Determines which preparatory operations (forestprep, domainprep, or rodcprep) are required for AD DS installation. Validates the schema objectVersion is expected and if it requires further extension.|  
-|VerifyADPrep<br /><br />Prerequisites (domain and RODC)|LDAP|Discovers and contacts the Infrastructure Master using the rootDSE namingContexts attribute and the Infrastructure container fsmoRoleOwner attribute. In the case of an RODC installation, this test discovers the domain naming master and make sure it is online.|  
-|CheckGroup<br /><br />Membership|LDAP,<br /><br />RPC over SMB (LSARPC)|Validate the user is a member of Domain Admins or Enterprise Admins group, depending on the operation (DA for adding or demoting a domain controller, EA for adding or removing a domain)|  
-|CheckForestPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB (LSARPC)|Validate the user is a member of Schema Admins and Enterprise Admins groups and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
-|CheckDomainPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB (LSARPC)|Validate the user is a member of Domain Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
-|CheckRODCPrep<br /><br />GroupMembership|LDAP,<br /><br />RPC over SMB (LSARPC)|Validate the user is a member of Enterprise Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
-|VerifyInitSync<br /><br />AfterReboot|LDAP|Validate that the Schema Master has replicated at least once since it restarted by setting a dummy value on rootDSE attribute becomeSchemaMaster|  
-|VerifySFUHotFix<br /><br />Applied|LDAP|Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<br /><br />([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732))|  
-|VerifyExchange<br /><br />SchemaFixed|LDAP, WMI, DCOM, RPC|Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))|  
-|VerifyWin2KSchema<br /><br />Consistency|LDAP|Validate the existing forest schema has consistent (not incorrectly modified by a third party) core attributes and classes.|  
-|DCPromo|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB (SAMR)|Validate the command-line syntax passed to the promotion code and test promotion. Validate the forest or domain does not already exist if creating new.|  
-|VerifyOutbound<br /><br />ReplicationEnabled|LDAP, DRSR over SMB, RPC over SMB (LSARPC)|Validate the existing domain controller specified as the replication partner has outbound replication enabled by checking the NTDS Settings object's options attribute for NTDSDSA_OPT_DISABLE_OUTBOUND_REPL (0x00000004)|  
-|VerifyMachineAdmin<br /><br />Password|DRSR over RPC,<br /><br />LDAP,<br /><br />DNS<br /><br />RPC over SMB (SAMR)|Validate the safe mode password set for DSRM meets domain complexity requirements.|  
+|Test Name|Protocols<p>used|Explanation and notes|  
+|VerifyAdminTrusted<p>ForDelegationProvider|LDAP|Validates that you have the "Enable computer and user accounts to be trusted for delegation" (SeEnableDelegationPrivilege) privilege on the existing partner domain controller. This requires access to your constructed tokenGroups attribute.<p>Not used when contacting Windows Server 2003 domain controllers. You must manually confirm this privilege prior to promotion|  
+|VerifyADPrep<p>Prerequisites (forest)|LDAP|Discovers and contacts the Schema Master using the rootDSE namingContexts attribute and Schema naming context fsmoRoleOwner attribute. Determines which preparatory operations (forestprep, domainprep, or rodcprep) are required for AD DS installation. Validates the schema objectVersion is expected and if it requires further extension.|  
+|VerifyADPrep<p>Prerequisites (domain and RODC)|LDAP|Discovers and contacts the Infrastructure Master using the rootDSE namingContexts attribute and the Infrastructure container fsmoRoleOwner attribute. In the case of an RODC installation, this test discovers the domain naming master and make sure it is online.|  
+|CheckGroup<p>Membership|LDAP,<p>RPC over SMB (LSARPC)|Validate the user is a member of Domain Admins or Enterprise Admins group, depending on the operation (DA for adding or demoting a domain controller, EA for adding or removing a domain)|  
+|CheckForestPrep<p>GroupMembership|LDAP,<p>RPC over SMB (LSARPC)|Validate the user is a member of Schema Admins and Enterprise Admins groups and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
+|CheckDomainPrep<p>GroupMembership|LDAP,<p>RPC over SMB (LSARPC)|Validate the user is a member of Domain Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
+|CheckRODCPrep<p>GroupMembership|LDAP,<p>RPC over SMB (LSARPC)|Validate the user is a member of Enterprise Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers|  
+|VerifyInitSync<p>AfterReboot|LDAP|Validate that the Schema Master has replicated at least once since it restarted by setting a dummy value on rootDSE attribute becomeSchemaMaster|  
+|VerifySFUHotFix<p>Applied|LDAP|Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<p>([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732))|  
+|VerifyExchange<p>SchemaFixed|LDAP, WMI, DCOM, RPC|Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649))|  
+|VerifyWin2KSchema<p>Consistency|LDAP|Validate the existing forest schema has consistent (not incorrectly modified by a third party) core attributes and classes.|  
+|DCPromo|DRSR over RPC,<p>LDAP,<p>DNS<p>RPC over SMB (SAMR)|Validate the command-line syntax passed to the promotion code and test promotion. Validate the forest or domain does not already exist if creating new.|  
+|VerifyOutbound<p>ReplicationEnabled|LDAP, DRSR over SMB, RPC over SMB (LSARPC)|Validate the existing domain controller specified as the replication partner has outbound replication enabled by checking the NTDS Settings object's options attribute for NTDSDSA_OPT_DISABLE_OUTBOUND_REPL (0x00000004)|  
+|VerifyMachineAdmin<p>Password|DRSR over RPC,<p>LDAP,<p>DNS<p>RPC over SMB (SAMR)|Validate the safe mode password set for DSRM meets domain complexity requirements.|  
 |VerifySafeModePassword|*N/A*|Validate the local Administrator password set meets computer security policy complexity requirements.|  

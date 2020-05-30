@@ -1,12 +1,8 @@
 ---
 title: "Configure Server Storage"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: ef7ddcdd-3a74-40ca-9487-c3a6fc5155a5
 author: nnamuhcs
@@ -30,7 +26,7 @@ manager: dongill
 |Medium|- Three physical disks<br /><br /> - Configured as a RAID 5 set that contains the following:<br /><br /> - C: volume  ? 60 GB<br /><br /> - D: volume  ? 1500 GB|  
 |High|- Five or more total physical disks<br /><br /> - Two disks in a RAID 1 mirrored set that contains the C: volume  ? 100 GB<br /><br /> - All remaining disks in a RAID 5 set that contains the following:<br /><br /> - D: volume  ? 1500 GB<br /><br /> - E: volume  ? 1500 GB|  
   
- These recommendations take into account the size of the installed operating system, the average size of the data storage that the server uses, and the expected data storage growth over the lifetime of the server. The volumes can be partitions on a single physical disk or they can be placed on separate physical disks. Because the server stores important data for your customer, it is recommended that you use multiple physical disks and help protect your customer „¢s data by using hardware RAID or Storage Spaces.  
+ These recommendations take into account the size of the installed operating system, the average size of the data storage that the server uses, and the expected data storage growth over the lifetime of the server. The volumes can be partitions on a single physical disk or they can be placed on separate physical disks. Because the server stores important data for your customer, it is recommended that you use multiple physical disks and help protect your customer's data by using hardware RAID or Storage Spaces.  
   
 ## Configuring your server backup  
  In addition to the internal hard disks on the server, customers should consider using external USB hard disks for backups. Ideally, the customer would have at least two external hard disks with enough capacity to back up all of the data on the server. If external hard disks are used, the customer can take one disk off-site each night to further protect the data.  

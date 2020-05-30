@@ -6,7 +6,7 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/12/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -14,7 +14,7 @@ ms.technology: identity-adfs
 AD FS has a lot of moving pieces, touches many different things and has many different dependencies.  Naturally, this can give rise to various issues.  This document is designed to get you started on troubleshooting these issues.  This document will introduce you to the typical areas that you should focus on, how to enable features for additional information, and various tools that can be used to track down problems.  
 
 >[!NOTE]
->For additional information see [ADFS Help](http://adfshelp.microsoft.com) which provides effective tools in one place that makes it easier for users and administrators to resolve authentication issues at a quicker pace. 
+>For additional information see [ADFS Help](https://adfshelp.microsoft.com) which provides effective tools in one place that makes it easier for users and administrators to resolve authentication issues at a quicker pace. 
 
 
 ## What to Check First
@@ -22,7 +22,7 @@ Before you dive into in-depth troubleshooting, there are a few things that you s
 - **DNS Configuration** - can you resolve the name of the federation service?  This should resolve to either the load balancer's IP address or the IP address of one of the AD FS servers in your farm.  For more information see [AD FS Troubleshooting - DNS](ad-fs-tshoot-dns.md).
 - **AD FS Endpoints** - can you browse to the AD FS endpoints?  By browsing to this you can determine whether or not your AD FS web server is responding to requests.  If you can get to this file, then you know that AD FS is servicing requests over 443 just fine.  For more information see [AD FS Troubleshooting - Endpoints](ad-fs-tshoot-endpoints.md).
 - **Idp-Initiated Sign On** - can you log in and authenticate via the Idp-Initiated Sign On page?  You need to ensure that this page was enabled because it is disabled by default.  Use `Set-AdfsProperties -EnableIdPInitiatedSignOn $true` to enable the page.  If you can sign in and authenticate then you know that AD FS is working in this area.  For more information see [AD FS Troubleshooting - SignOn](ad-fs-tshoot-initiatedsignon.md).
-##  Common Troubleshooting Areas
+  ##  Common Troubleshooting Areas
 
 |Name|Description|
 |-----|-----|

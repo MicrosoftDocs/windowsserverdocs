@@ -1,15 +1,10 @@
 ---
 title: where
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for where, which displays the location of files that match the given search pattern. 
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0b3486a5-896b-4d92-84b8-e463a0b76487
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -22,7 +17,7 @@ ms.date: 10/16/2017
 
 Displays the location of files that match the given search pattern.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +25,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...] 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -46,7 +41,7 @@ where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...]
 -   If you do not specify a file name extension, the extensions listed in the PATHEXT environment variable are appended to the pattern by default.
 -   **Where** can run recursive searches, display file information such as date or size, and accept environment variables in place of paths on local computers.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To find all files named Test in drive C of the current computer and its subdirectories, type:
 ```
@@ -61,6 +56,6 @@ To find all files named Notepad in drive C of the remote computer, Computer1, an
 where /r \\computer1\c notepad.*
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,13 +1,12 @@
 ---
 ms.assetid: c248b41f-0de3-4247-9a25-b4b08e50ebf0
 title: Identity and Access
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 03/16/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.localizationpriority: medium
 ms.technology: identity-adds
 ---

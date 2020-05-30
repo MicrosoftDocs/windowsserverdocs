@@ -1,19 +1,15 @@
 ---
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
 title: AD FS Rapid Restore Tool
-description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/19/2018
+ms.date: 04/24/2019
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 ## Overview
 Today AD FS is made highly available by setting up an AD FS farm. Some organizations would like a way to have a single server AD FS deployment, eliminating the need for multiple AD FS servers and network load balancing infrastructure, while still having some assurance that service can be restored quickly if there is a problem.
@@ -23,13 +19,19 @@ The new AD FS Rapid Restore tool provides a way to restore AD FS data without re
 The AD FS Rapid Restore tool can be used in the following scenarios:
 
 1. Quickly restore AD FS functionality after a problem
-	- Use the tool to create a cold standby installation of AD FS that can be quickly deployed in place of the online AD FS server
+    - Use the tool to create a cold standby installation of AD FS that can be quickly deployed in place of the online AD FS server
 2. Deploy identical test and production environments
-	- Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
+    - Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
+3. Migrate from a SQL based configuration to WID and vice versa
+    - Use the tool to move from a SQL based farm configuration to WID or vice versa. 
+
+
+>[!NOTE] 
+>If you are using SQL Merge Replication or Always on Availablity Groups, the Rapid Restore tool is not supported. We recommend using SQL based backups and a backup of the SSL certificate as an alternative.
 
 ## What is backed up
 The tool backs up the following AD FS configuration
-	
+    
 - AD FS configuration database (SQL or WID)
 - Configuration file (located in AD FS folder)
 - Automatically generated token signing and decrypting certificates and private keys (from the Active Directory DKM container)
@@ -62,7 +64,7 @@ To backup the Active Directory DKM container (required in the default AD FS conf
 
 The backup will be named according to the pattern "adfsBackup_ID_Date-Time". It will contain the version number, date and time that the backup was done.
 The cmdlet takes the following parameters:
-	
+    
 Parameter Sets
 
 ![AD FS Rapid Restore Tool](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
@@ -75,7 +77,7 @@ Parameter Sets
 "FileSystem" indicates that the user wants to store it in a folder locally or in the network
 "Azure" indicates the user wants to store it in the Azure Storage Container
 When the user performs the backup, they select the backup location, either the File System or in the cloud. 
-For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn’t exist, it is created during the backup. 
+For Azure to be used, Azure Storage Credentials should be passed to the cmdlet. The storage credentials contains the account name and key. In addition to this, a container name must also be passed in. If the container doesn't exist, it is created during the backup. 
 For the file system to be used, a storage path must be given. In that directory, a new directory will be created for each backup. Each directory created will contain the backed up files. 
 
 - **EncryptionPassword &lt;string&gt;** - The password that is going to be used to encrypt all the backed up files before storing it
@@ -114,7 +116,7 @@ Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorage
 
 ### Backup the AD FS configuration without the DKM to the File System
 
-```powershell 	
+```powershell     
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
 ```
 
@@ -169,36 +171,36 @@ Restore-ADFS -StorageType "Azure" -AzureConnectionCredential $cred -DecryptionPa
 ### Restore the AD FS configuration without the DKM from the File System
  
 ```powershell
-Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password"
+Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -DecryptionPassword "password"
 ```
 
 ### Restore the AD FS configuration with the DKM to the File System 
  
 ```powershell
-Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -RestoreDKM
+Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -DecryptionPassword "password" -RestoreDKM
 ```
 
 ### Restore the AD FS Configuration to WID
 
 ```powershell
-Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "WID"
+Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "WID"
 ``` 
 
 ### Restore the AD FS Configuration to SQL
 
 ```powershell
-Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "Data Source=TESTMACHINE\SQLEXPRESS; Integrated Security=True"
+Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -DecryptionPassword "password" -DBConnectionString "Data Source=TESTMACHINE\SQLEXPRESS; Integrated Security=True"
 ```
 
 ### Restores the AD FS Configuration with the specified GMSA
 
 ```powershell
-Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -GroupServiceAccountIdentifier "mangupd1\adfsgmsa$"
+Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -DecryptionPassword "password" -GroupServiceAccountIdentifier "mangupd1\adfsgmsa$"
 ```
 ### Restore the AD FS Configuration with the specified service account creds
 
 ```powershell
-Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\uSERS\administrator\testExport\" -DecryptionPassword "password" -ServiceAccountCredential $cred
+Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -DecryptionPassword "password" -ServiceAccountCredential $cred
 ```
 
 ## Encryption information
@@ -218,6 +220,34 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
+### Version 1.0.82.3
+Release: April 2020
+
+**Fixed issues:**
+
+
+- Added support for CNG based certificates
+
+
+### Version 1.0.82.0
+Release: July 2019
+
+**Fixed issues:**
+
+
+- Bug fix for AD FS service account names that contain LDAP escape characters
+
+
+### Version: 1.0.81.0
+Release: April 2019
+
+**Fixed issues:**
+
+
+- Bug fixes for certificate backup and restore
+- Additional trace information to the log file
+
+
 ### Version: 1.0.75.0
 Release: August 2018
 
@@ -229,10 +259,10 @@ Release: August 2018
 
 **Fixed issues:**
 * Update the encryption algorithms so that the application is FIPS compliant
-	
-	>[!NOTE]
-	> Old backups will not work with the new version due to changes in encryption algorithms as per FIPS compliance
-	
+    
+    >[!NOTE]
+    > Old backups will not work with the new version due to changes in encryption algorithms as per FIPS compliance
+    
 * Add support for SQL clusters that use merge replication
 
 ### Version: 1.0.72.0
@@ -247,7 +277,7 @@ Release: July 2018
 
 **Fixed issues:**
 
-   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&’)
+   - Bug fix: handle service account passwords that have special characters in them (ie, '&')
    - Bug fix: restoration fails because Microsoft.IdentityServer.Servicehost.exe.config is being used by another process
 
 

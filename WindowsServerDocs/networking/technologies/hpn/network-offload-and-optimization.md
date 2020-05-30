@@ -1,13 +1,13 @@
 ---
 title: Network offload and optimization technologies
 description: This topic provides an overview of the Offload and Optimization Technologies in Windows Server 2016, and includes links to additional guidance about these technologies.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ms.date: 09/20/2018 
 ---
 

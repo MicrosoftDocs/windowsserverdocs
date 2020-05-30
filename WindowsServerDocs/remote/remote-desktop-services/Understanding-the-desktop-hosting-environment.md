@@ -1,21 +1,17 @@
 ---
 title: Understanding the desktop hosting environment
-description: Overview of an RDS deployhment using Azure IaaS.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Overview of an RDS deployment using Azure IaaS.
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016  
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
 ---
 # Understanding the desktop hosting environment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 The following information describes the components of the desktop hosting service.  
   

@@ -1,12 +1,12 @@
 ---
 title: rundll32
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 46d9cd64-8186-4cd4-a500-44700340fe81
 author: coreyp-at-msft
@@ -37,8 +37,8 @@ Rundll32 <DLLname>
 
 ## Remarks
 
-Rundll32 can only call functions from a DLL that are explicitly written to be called by Rundll32. For more information about Rundll32 requirements see [article 164787](https://go.microsoft.com/fwlink/?LinkID=165773) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkID=165773).
+Rundll32 can only call functions from a DLL explicitly written to be called by Rundll32.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

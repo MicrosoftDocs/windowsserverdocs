@@ -1,10 +1,10 @@
 ---
 title: Guarded Fabric and Shielded VMs overview
-ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
@@ -84,9 +84,9 @@ The following figure shows the shielding data file and related configuration ele
 
 Guarded fabrics are capable of running VMs in one of three possible ways:
 
-1.	A normal VM offering no protections above and beyond previous versions of Hyper-V
-2.	An encryption-supported VM whose protections can be configured by a fabric admin
-3.	A shielded VM whose protections are all switched on and cannot be disabled by a fabric admin
+1.    A normal VM offering no protections above and beyond previous versions of Hyper-V
+2.    An encryption-supported VM whose protections can be configured by a fabric admin
+3.    A shielded VM whose protections are all switched on and cannot be disabled by a fabric admin
 
 Encryption-supported VMs are intended for use where the fabric administrators are fully trusted.  For example, an enterprise might deploy a guarded fabric in order to ensure VM disks are encrypted at-rest for compliance purposes. Fabric administrators can continue to use convenient management features, such VM console connections, PowerShell Direct, and other day-to-day management and troubleshooting tools.
 

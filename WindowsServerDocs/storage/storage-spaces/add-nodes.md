@@ -1,9 +1,9 @@
 ---
 ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosdar
-ms.manager: dongill
+manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
@@ -115,7 +115,7 @@ For this, you will need to update your **StorageTier** templates to have both *P
 
 #### Option 3
 
-You may find it easiest to simply remove the existing tier template and create the two new ones. This will not affect any pre-existing volumes which were created by refering the tier template: it's just a template.
+You may find it easiest to simply remove the existing tier template and create the two new ones. This will not affect any pre-existing volumes which were created by referring the tier template: it's just a template.
 
 ```PowerShell
 Remove-StorageTier -FriendlyName Capacity

@@ -1,13 +1,13 @@
 ---
 title: QoS Frequently Asked Questions
 description: This topic provides answers to questions about Quality of Service (QoS) Policy in Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 74c97a14-b957-4568-b48e-8963a674fdb3
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # QoS Policy Frequently Asked Questions

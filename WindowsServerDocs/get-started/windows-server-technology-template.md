@@ -1,18 +1,11 @@
 ---
 title: Technology in Windows Server 2016
 description: Provides an overview of technology.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-ms.author: 
-ms.date:   
-ms.tgt_pltfrm: na
+ms.prod: windows-server
+ms.author: daveba
+ms.date: 10/17/2017
 ms.topic: article
-ms.assetid: 
-author: 
-manager: 
+author: daveba
 ---
 # Technology in Windows Server 2016 
 
@@ -37,7 +30,7 @@ manager:
 ### Link to article about sub-technology
 
 ## Sub-technology
-
+    
 ### Link to article about sub-technology
 
 ### Link to article about sub-technology
@@ -50,3 +43,4 @@ manager:
 ### Link to article about sub-technology
 
 ### Link to article about sub-technology
+    

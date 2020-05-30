@@ -1,20 +1,16 @@
 ---
 ms.assetid: f0464182-56a2-4bfa-a8c8-7e39c1bd62d3
 title: Federation Server Farm Using WID and Proxies
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Federation Server Farm Using WID and Proxies
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 This deployment topology for Active Directory Federation Services \(AD FS\) is identical to the federation server farm with Windows Internal Database \(WID\) topology, but it adds proxy computers to the perimeter network to support external users. These proxies redirect client authentication requests that come from outside your corporate network to the federation server farm. In previous versions of AD FS, these proxies were called federation server proxies.  
   
@@ -59,7 +55,7 @@ The following illustration shows the existing federation server farm with WID to
   
 ![WID Farm and Proxies](media/WIDFarmADFSBlue.gif)  
   
-For more information about how to configure your networking environment for use with federation servers or web application proxies, see “Name Resolution Requirements” section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](https://technet.microsoft.com/library/dn383648.aspx).  
+For more information about how to configure your networking environment for use with federation servers or web application proxies, see "Name Resolution Requirements" section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](https://technet.microsoft.com/library/dn383648.aspx).  
   
 ## See Also  
 [Plan Your AD FS Deployment Topology](Plan-Your-AD-FS-Deployment-Topology.md)  

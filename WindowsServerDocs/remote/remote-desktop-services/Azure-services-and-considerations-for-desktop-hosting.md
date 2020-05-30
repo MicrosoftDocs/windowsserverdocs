@@ -1,22 +1,18 @@
 ---
 title: Azure services and considerations for desktop hosting
 description: Learn about considerations unique to Azure with a Remote Desktop hosting solution.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 07/06/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
 author: heidilohr
-manager: dougkim
+manager: lizross
 ---
 # Azure services and considerations for desktop hosting
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 The following sections describe Azure Infrastructure Services.
   

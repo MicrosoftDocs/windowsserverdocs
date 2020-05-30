@@ -2,12 +2,12 @@
 title: Core network components
 description: This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Core network components
 
@@ -277,11 +277,11 @@ Example configuration items for AD DS are provided in the following table.
 
 |Configuration items:|Example values:|
 |------------------------|-------------------|
-|Full DNS name|Examples:<br /><br />-   corp.contoso.com<br />-   example.com|
+|Full DNS name|Examples:<p>-   corp.contoso.com<br />-   example.com|
 |Forest functional level|-    Windows Server 2008 <br />-    Windows Server 2008 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2012 R2 <br />-    Windows Server 2016|
-|Active Directory Domain Services Database folder location|E:\Configuration\\<br /><br />Or accept the default location.|
-|Active Directory Domain Services Log files folder location|E:\Configuration\\<br /><br />Or accept the default location.|
-|Active Directory Domain Services SYSVOL folder location|E:\Configuration\\<br /><br />Or accept the default location|
+|Active Directory Domain Services Database folder location|E:\Configuration\\<p>Or accept the default location.|
+|Active Directory Domain Services Log files folder location|E:\Configuration\\<p>Or accept the default location.|
+|Active Directory Domain Services SYSVOL folder location|E:\Configuration\\<p>Or accept the default location|
 |Directory Restore Mode Administrator Password|**J\*p2leO4$F**|
 |Answer file name (optional)|**AD DS_AnswerFile**|
 
@@ -406,7 +406,7 @@ Additional example configuration items for AD DS and DNS are provided in the fol
 |Network Connect Bindings|Ethernet|
 |DNS Server Settings|DC1.corp.contoso.com|
 |Preferred DNS server IP address|10.0.0.2|
-|Add Scope dialog box values<br /><br />1.  Scope Name<br />2.  Starting IP Address<br />3.  Ending IP Address<br />4.  Subnet Mask<br />5.  Default Gateway (optional)<br />6.  Lease duration|1.  Primary Subnet<br />2.  10.0.0.1<br />3.  10.0.0.254<br />4.  255.255.255.0<br />5.  10.0.0.1<br />6.  8 days|
+|Add Scope dialog box values<p>1.  Scope Name<br />2.  Starting IP Address<br />3.  Ending IP Address<br />4.  Subnet Mask<br />5.  Default Gateway (optional)<br />6.  Lease duration|1.  Primary Subnet<br />2.  10.0.0.1<br />3.  10.0.0.254<br />4.  255.255.255.0<br />5.  10.0.0.1<br />6.  8 days|
 |IPv6 DHCP Server Operation Mode|Not enabled|
 
 ## <a name="BKMK_deployment"></a>Core Network Deployment
@@ -555,11 +555,11 @@ Membership in **Administrators** is the minimum required to perform this procedu
 
 When installation has successfully completed, the following message is displayed in Windows PowerShell.
 
-    
-    Success Restart Needed 	Exit Code  	Feature Result
-    ------- -------------- 	---------  	--------------
-    True	No 				Success		{Active Directory Domain Services, Group P...
-    
+
+    Success Restart Needed  Exit Code   Feature Result
+    ------- --------------  ---------   --------------
+    True    No              Success     {Active Directory Domain Services, Group P...
+
 
 - In Windows PowerShell, type the following command, replacing the text **corp.contoso.com** with your domain name, and then press ENTER:
 
@@ -569,19 +569,21 @@ Install-ADDSForest -DomainName "corp.contoso.com"
 
 - During the installation and configuration process, which is visible at the top of the Windows PowerShell window, the following prompt appears. After it appears, type a password and then press ENTER.
 
-	**SafeModeAdministratorPassword:**
+    **SafeModeAdministratorPassword:**
 
 - After you type a password and press ENTER, the following confirmation prompt appears. Type the same password and then press ENTER.
 
-	**Confirm SafeModeAdministratorPassword:**
+    **Confirm SafeModeAdministratorPassword:**
 
 - When the following prompt appears, type the letter **Y** and then press ENTER.
 
-    
-    The target server will be configured as a domain controller and restarted when this operation is complete.
-    Do you want to continue with this operation?
-    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
-    
+
+~~~
+The target server will be configured as a domain controller and restarted when this operation is complete.
+Do you want to continue with this operation?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+~~~
+
 - If you want to, you can read the warning messages that are displayed during normal, successful installation of AD DS and DNS. These messages are normal and are not an indication of install failure.
 
 - After installation succeeds, a message appears stating that you are about to be logged off of the computer so that the computer can restart. If you click **Close**, you are immediately logged off the computer, and the computer restarts. If you do not click **Close**, the computer restarts after a default period of time.
@@ -1429,9 +1431,9 @@ Configuration items for the Windows Server Core Network deployment procedure [In
 |-----------------------|------------------|----------|
 |Full DNS name|corp.contoso.com||
 |Forest functional level|Windows Server 2003||
-|Active Directory Domain Services database folder location|E:\Configuration\\<br /><br />Or accept the default location.||
-|Active Directory Domain Services log files folder location|E:\Configuration\\<br /><br />Or accept the default location.||
-|Active Directory Domain Services SYSVOL folder location|E:\Configuration\\<br /><br />Or accept the default location||
+|Active Directory Domain Services database folder location|E:\Configuration\\<p>Or accept the default location.||
+|Active Directory Domain Services log files folder location|E:\Configuration\\<p>Or accept the default location.||
+|Active Directory Domain Services SYSVOL folder location|E:\Configuration\\<p>Or accept the default location||
 |Directory Restore Mode Administrator password|J*p2leO4$F||
 |Answer file name (optional)|AD DS_AnswerFile||
 
@@ -1440,10 +1442,10 @@ Configuration items for the Windows Server Core Network deployment procedure [In
 |Configuration items|Example values|Values|
 |-----------------------|------------------|----------|
 |Zone type:|-   Primary zone<br />-   Secondary zone<br />-   Stub zone||
-|Zone type<br /><br />**Store the zone in Active Directory**|-   Selected<br />-   Not selected||
+|Zone type<p>**Store the zone in Active Directory**|-   Selected<br />-   Not selected||
 |Active Directory zone replication scope|-   To all DNS servers in this forest<br />-   To all DNS servers in this domain<br />-   To all domain controllers in this domain<br />-   To all domain controllers specified in the scope of this directory partition||
-|Reverse lookup zone name<br /><br />(IP type)|-   IPv4 Reverse Lookup Zone<br />-   IPv6 Reverse Lookup Zone||
-|Reverse lookup zone name<br /><br />(network ID)|10.0.0||
+|Reverse lookup zone name<p>(IP type)|-   IPv4 Reverse Lookup Zone<br />-   IPv6 Reverse Lookup Zone||
+|Reverse lookup zone name<p>(network ID)|10.0.0||
 
 ### <a name="BKMK_FndtnPrep_InstallDHCP"></a>Installing DHCP
 The tables in this section list configuration items for pre-installation and installation of DHCP.
@@ -1501,16 +1503,16 @@ Configuration items for the Windows Server Core Network deployment procedure [Cr
 |-----------------------|------------------|----------|
 |New scope name|Corp2||
 |Scope description|Main office subnet 2||
-|(IP address range)<br /><br />Start IP address|10.0.1.1||
-|(IP address range)<br /><br />End IP address|10.0.1.254||
+|(IP address range)<p>Start IP address|10.0.1.1||
+|(IP address range)<p>End IP address|10.0.1.254||
 |Length|8||
 |Subnet mask|255.255.255.0||
 |(Exclusion range) Start IP address|10.0.1.1||
 |Exclusion range end IP address|10.0.1.15||
-|Lease duration<br /><br />Days<br /><br />Hours<br /><br />Minutes|-   8<br />-   0<br />-   0||
-|Router (default gateway)<br /><br />IP address|10.0.1.1||
+|Lease duration<p>Days<p>Hours<p>Minutes|-   8<br />-   0<br />-   0||
+|Router (default gateway)<p>IP address|10.0.1.1||
 |DNS parent domain|corp.contoso.com||
-|DNS server<br /><br />IP address|10.0.0.2||
+|DNS server<p>IP address|10.0.0.2||
 
 ### <a name="BKMK_FndtnPrep_InstallNPS"></a>Installing Network Policy Server (optional)
 The tables in this section list configuration items for pre-installation and installation of NPS.

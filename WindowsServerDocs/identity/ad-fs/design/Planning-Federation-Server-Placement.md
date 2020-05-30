@@ -1,20 +1,16 @@
 ---
 ms.assetid: 2e751308-1c86-4d4f-88e4-6a78d3ca4696
 title: Planning Federation Server Placement
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Planning Federation Server Placement
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The most critical component of an Active Directory Federation Services \(AD FS\) deployment is the federation server. Therefore, it is important that you plan your federation server placement strategy carefully, including when and where to deploy federation servers. The information in the following topics can help you determine when and where to create a federation server or federation server farm and whether to use that federation server in the account partner role, the resource partner role, or both:  
   

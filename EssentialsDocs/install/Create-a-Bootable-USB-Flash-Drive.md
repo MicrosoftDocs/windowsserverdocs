@@ -1,12 +1,8 @@
 ---
 title: "Create a Bootable USB Flash Drive"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 05/04/2018
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
@@ -45,9 +41,9 @@ You can create a bootable USB flash drive to use to deploy  Windows Server Essen
   
 6.  Type `clean`, and the click ENTER. This command deletes all data from the USB flash drive.  
   
-7.  To create a new primary partition on the USB flash drive, type `create part pri`, and then click ENTER.  
+7.  To create a new primary partition on the USB flash drive, type `create partition primary`, and then click ENTER.  
   
-8.  To select the partition that you just created, type `select part 1`, and then click ENTER.  
+8.  To select the partition that you just created, type `select partition 1`, and then click ENTER.  
   
 9. To format the partition, type `format fs=ntfs quick`, and then click ENTER.  
   

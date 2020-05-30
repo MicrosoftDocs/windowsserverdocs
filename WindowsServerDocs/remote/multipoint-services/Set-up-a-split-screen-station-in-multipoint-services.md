@@ -1,13 +1,9 @@
 ---
 title: Set up a split-screen station
 description: Describes how to set up MultiPoint Services so two users can share a single system
-ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35d1d434-79b2-4e0a-835f-d94ed8ee6b21
 author: evaseydl
@@ -66,7 +62,7 @@ Use the following procedures to add a second hub for a split-screen station and 
   
 3.  Under **Selected Item Tasks**, click **Split station**.  
   
-    The original screen moves to the left half of the monitor, and a new station’s screen is created on the right half of the same monitor.  
+    The original screen moves to the left half of the monitor, and a new station's screen is created on the right half of the same monitor.  
   
 4.  Create the new station by pressing the specified letter on the newly added keyboard as indicated when the **Create a MultiPoint Server Station** screen appears on the right half of the monitor.  
   

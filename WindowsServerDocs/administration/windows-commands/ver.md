@@ -1,15 +1,10 @@
 ---
 title: ver
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for ver, which displays the operating system version number. 
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -24,7 +19,7 @@ Displays the operating system version number.
 
 This command is supported in the Windows Command prompt (Cmd.exe), but not in PowerShell.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -32,13 +27,13 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ver
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To obtain the version number of the operating system from the Command shell (cmd.exe), type:
 
@@ -53,6 +48,6 @@ $PSVersionTable.BuildVersion
 ````
 
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

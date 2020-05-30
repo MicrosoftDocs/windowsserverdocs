@@ -1,18 +1,15 @@
 ---
 ms.assetid: 204f5fe9-3611-4da0-b057-a386004b4598
 title: Understanding Key Active Directory Federation Services Concepts
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # Understanding Key AD FS Concepts
 It is recommended that you learn about the important concepts for Active Directory Federation Services and become familiar with its feature set.  
@@ -33,9 +30,9 @@ It is recommended that you learn about the important concepts for Active Directo
 |Federation metadata|The data format for communicating configuration information between a claims provider and a relying party to facilitate proper configuration of claims provider trusts and relying party trusts. The data format is defined in Security Assertion Markup Language \(SAML\) 2.0, and it is extended in WS\-Federation.|  
 |Federation server|A Windows Server that has been configured using the AD FS Federation Server Configuration Wizard to act in the federation server role. A federation server issues tokens and serves as part of a Federation Service.|  
 |Federation server proxy|A Windows Server that has been configured using the AD FS Federation Server Proxy Configuration Wizard to act as an intermediary proxy service between an Internet client and a Federation Service that is located behind a firewall on a corporate network.|  
-|Primary federation server|A Windows Server that has been configured in the federation server role using the AD FS Federation Server Configuration Wizard and has a read\/write copy of the AD FS configuration database. </br></br> The primary federation server is created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm must replicate changes made on the primary federation server to a read\-only copy of the AD FS configuration database that is stored locally. The term “primary federation server” does not apply when the AD FS configuration database is stored in an SQL database as all federation servers can equally read and write to a configuration database stored on a SQL Server.|  
+|Primary federation server|A Windows Server that has been configured in the federation server role using the AD FS Federation Server Configuration Wizard and has a read\/write copy of the AD FS configuration database. </br></br> The primary federation server is created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm must replicate changes made on the primary federation server to a read\-only copy of the AD FS configuration database that is stored locally. The term "primary federation server" does not apply when the AD FS configuration database is stored in an SQL database as all federation servers can equally read and write to a configuration database stored on a SQL Server.|  
 |Relying party|The organization that receives and processes claims. See resource partner organization.|  
-|Relying party trust|In the AD FS Management snap\-in, relying party trusts are trust objects typically created in:<br /><br />-   Account partner organizations to represent the organization in the trust relationship whose accounts will be accessing resources in the resource partner organization.<br />-   Resource partner organizations to represent the trust between the Federation Service and a single web\-based application.<br /><br />A relying party trust object consists of a variety of identifiers, names, and rules that identify this partner or web\-application to the local Federation Service.|  
+|Relying party trust|In the AD FS Management snap\-in, relying party trusts are trust objects typically created in:<p>-   Account partner organizations to represent the organization in the trust relationship whose accounts will be accessing resources in the resource partner organization.<br />-   Resource partner organizations to represent the trust between the Federation Service and a single web\-based application.<p>A relying party trust object consists of a variety of identifiers, names, and rules that identify this partner or web\-application to the local Federation Service.|  
 |Resource federation server|The federation server in the resource partner organization. The resource federation server typically issues security tokens to users based on a security token that is issued by an account federation server. The server receives the security token, verifies the signature, applies claim rule logic to the unpackaged claims to produce the desired outgoing claims, generates a new security token \(with the outgoing claims\) based on information in the incoming security token, and signs the new token to return to the user and ultimately to the Web application.|  
 |Resource partner organization|A federation partner that is represented by a relying party trust in the Federation Service. The resource partner issues claims\-based security tokens that contains published Web\-based applications that users in the account partner can access.|  
   

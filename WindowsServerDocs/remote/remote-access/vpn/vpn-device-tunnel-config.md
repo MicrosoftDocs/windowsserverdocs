@@ -1,18 +1,18 @@
 ---
 title: Configure the VPN device tunnel in Windows 10
 description: Learn how to create a VPN device tunnel in Windows 10.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 11/05/2018
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium 
 ---
 # Configure VPN device tunnels in Windows 10
 
->Applies To: Windows 10 version 1709
+>Applies to: Windows 10 version 1709
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
 
@@ -31,8 +31,8 @@ Device tunnel can only be configured on domain-joined devices running Windows 10
 You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections. 
 
 ```PowerShell
-$VPNRootCertAuthority = “Common Name of trusted root certification authority”
-$RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like “*$VPNRootCertAuthority*” })
+$VPNRootCertAuthority = "Common Name of trusted root certification authority"
+$RootCACert = (Get-ChildItem -Path cert:LocalMachine\root | Where-Object {$_.Subject -Like "*$VPNRootCertAuthority*" })
 Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateNameToAccept $RootCACert -PassThru
 ```
 
@@ -40,9 +40,9 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 ## VPN Device Tunnel Configuration
 
-The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and System Center Configuration Manager (SCCM) update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
+The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and Microsoft Endpoint Configuration Manager update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
 
-For server-initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote SCCM update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  If in the device tunnel profile you turn on traffic filters, then the Device Tunnel denies inbound traffic.  This limitation is going to be removed in future releases.
+For server-initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote Configuration Manager update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  If in the device tunnel profile you turn on traffic filters, then the Device Tunnel denies inbound traffic.  This limitation is going to be removed in future releases.
 
 
 ### Sample VPN profileXML
@@ -86,22 +86,23 @@ Following is the sample VPN profileXML.
 Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
 
 ```
- <!-- inside/outside detection --> 
-  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection> 
+ <!-- inside/outside detection -->
+  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection>
 ```
 
 ## Deployment and Testing
 
-You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation \(WMI\) bridge. The Always On VPN device tunnel must be configured in the context of the **LOCAL SYSTEM** account. To accomplish this, it will be necessary to use [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), one of the [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) included in the [Sysinternals](https://docs.microsoft.com/sysinternals/) suite of utilities.
+You can configure device tunnels by using a Windows PowerShell script and using the Windows Management Instrumentation (WMI) bridge. The Always On VPN device tunnel must be configured in the context of the **LOCAL SYSTEM** account. To accomplish this, it will be necessary to use [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), one of the [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) included in the [Sysinternals](https://docs.microsoft.com/sysinternals/) suite of utilities.
 
-For guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider). 
+For guidelines on how to deploy a per device `(.\Device)` vs. a per user `(.\User)` profile, see [Using PowerShell scripting with the WMI Bridge Provider](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
 Run the following Windows PowerShell command to verify that you have successfully deployed a device profile:
 
-    `Get-VpnConnection -AllUserConnection`
+  ```powershell
+  Get-VpnConnection -AllUserConnection
+  ```
 
 The output displays a list of the device\-wide VPN profiles that are deployed on the device.
-
 
 ### Example Windows PowerShell Script
 
@@ -160,19 +161,19 @@ Write-Host "$Message"
 
 ## Additional Resources
 
-Following are additional resources to assist with your VPN deployment.
+The following are additional resources to assist with your VPN deployment.
 
 ### VPN client configuration resources
 
-These are VPN client configuration resources.
+The following are VPN client configuration resources.
 
-- [How to Create VPN profiles in System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
+- [How to Create VPN profiles in Configuration Manager](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles)
 - [Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [VPN profile options](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 
-### Remote Access Server \(RAS\) Gateway resources
+### Remote Access Server Gateway resources
 
-Following are RAS Gateway resources.
+The following are Remote Access Server (RAS) Gateway resources.
 
 - [Configure RRAS with a Computer Authentication Certificate](https://technet.microsoft.com/library/dd458982.aspx)
 - [Troubleshooting IKEv2 VPN Connections](https://technet.microsoft.com/library/dd941612.aspx)
@@ -181,4 +182,3 @@ Following are RAS Gateway resources.
 >[!IMPORTANT]
 >When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the **Allow machine certificate authentication for IKEv2** authentication method as described [here](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the **Set-VpnAuthProtocol** PowerShell cmdlet, along with the **RootCertificateNameToAccept** optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the **Trusted Root Certification Authorities** store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
 
----

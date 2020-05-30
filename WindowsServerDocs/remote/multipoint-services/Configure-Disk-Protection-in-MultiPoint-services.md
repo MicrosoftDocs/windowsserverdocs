@@ -1,12 +1,8 @@
 ---
 title: Configure Disk Protection in MultiPoint Services
 description: Learn how to set up disk protection for MultiPoint Services
-ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd9bf5b9-e481-499b-9c15-7ee5a4f470c4
 author: evaseydl
@@ -50,7 +46,7 @@ If Windows is configured to automatically install Windows Updates, Disk Protecti
   
 3.  Select the **Run Windows Update** check box.  
   
-4.  If your organization runs its own update script, select the **Run the following program** check box, and specify the location of your organization’s update script.  
+4.  If your organization runs its own update script, select the **Run the following program** check box, and specify the location of your organization's update script.  
   
 5.  Select a maximum time to allow updates to run.  
   

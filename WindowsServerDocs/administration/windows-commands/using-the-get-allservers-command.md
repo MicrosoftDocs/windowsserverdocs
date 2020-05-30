@@ -1,12 +1,8 @@
 ---
-title: Using the get-AllServers Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+title: get-AllServers
+description: Reference topic for get-AllServers, which retrieves information about all Windows Deployment Services servers. 
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fe2e3c69-8f2e-457d-af55-d249ebf70f53
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the get-AllServers Command
-
-
+# get-AllServers
 
 Retrieves information about all Windows Deployment Services servers.
 
@@ -30,15 +24,15 @@ Retrieves information about all Windows Deployment Services servers.
 WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Forest:{Yes | No}]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/Show:{Config | Images | All}|Specifies what type of information to return.</br>-   **Config** returns server configuration information.</br>-   **Images** returns information about image groups, boot images, and installation images on the server.</br>-   **All** returns server configuration and image information.|
-|[/Detailed]|When used in conjunction with the **/Show:Images** or **/Show:All**, returns all image metadata from each image. If the **/Detailed** option is not specified, the default behavior is to return the image name, description, and file name.|
-|[/Forest:{Yes | No}]|Specifies whether to return information for the entire forest or the local domain. If a value for this option is not specified, the default behavior is to return the servers in the local domain.|
+|   Parameter   |                                                                                                                 Description                                                                                                                  |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /Show:{Config |                                                                                                                    Images                                                                                                                    |
+|  [/Detailed]  | When used in conjunction with the **/Show:Images** or **/Show:All**, returns all image metadata from each image. If the **/Detailed** option is not specified, the default behavior is to return the image name, description, and file name. |
+| [/Forest:{Yes |                                                                                                                     No}]                                                                                                                     |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To view information about all servers, type:
 ```
@@ -49,6 +43,6 @@ To view detailed information about all servers, type:
 WDSUTIL /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

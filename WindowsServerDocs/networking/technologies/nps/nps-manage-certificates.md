@@ -2,12 +2,12 @@
 title: Manage Certificates Used with NPS
 description: This topic provides information about using server certificates with Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 204a4ef4-9d78-4a62-9940-43cc0e1c39d0
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Manage Certificates Used with NPS

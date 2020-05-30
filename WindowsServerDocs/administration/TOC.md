@@ -2,8 +2,7 @@
 ## [Use Windows Admin Center to manage your environment (New!)](../manage/windows-admin-center/overview.md)
 ## Manage Windows Server systems and environments
 ### [Manage Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-overview.md)
-#### [Deploy Windows Server Hybrid Cloud Print with Pre-Authentication](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
-#### [Deploy Windows Server Hybrid Cloud Print with Passthrough Auth](hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md)
+#### [Deploy Windows Server Hybrid Cloud Print](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
 ### [What is the Server Core installation option?](server-core/what-is-server-core.md)
 #### [What's included in the Server Core installation option?](server-core/server-core-roles-and-services.md)
 #### [Basic administration tasks in Server Core](server-core/server-core-administer.md)
@@ -71,13 +70,3 @@
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
 ### [Windows Commands](windows-commands/windows-commands.md)
-
-
-<!--
-#### [A-Z list](windows-commands/a-z-list.md)
-#### [Command-Line Syntax Key](windows-commands/command-line-syntax-key.md)
-#### [Commands by Server Role](windows-commands/commands-by-server-role.md)
-##### [Print Command Reference](windows-commands/print-command-reference.md)
-##### [Services for Network File System Command Reference](windows-commands/services-for-network-file-system-command-reference.md)
-##### [Remote Desktop Services (Terminal Services) Command Reference](windows-commands/remote-desktop-services-terminal-services-command-reference.md)
-##### [Windows Server Backup Command Reference](windows-commands/windows-server-backup-command-reference.md) -->

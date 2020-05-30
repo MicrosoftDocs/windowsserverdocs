@@ -1,14 +1,12 @@
 ---
 ms.assetid: ad3f0480-99f7-428a-ab33-6d165a440840
 title: Scenario Get Insight into Your Data by Using Classification
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 

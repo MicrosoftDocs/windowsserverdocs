@@ -2,12 +2,12 @@
 title: Getting Started with Network Policy Server
 description: This topic provides links to introductory topics for Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 29976baf-b0e2-4c01-ab4d-f2940e2bc327
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Getting Started with Network Policy Server

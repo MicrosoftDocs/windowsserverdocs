@@ -1,12 +1,8 @@
 ---
 title: "Step 6: Demote and remove the Source Server from the new Windows Server Essentials network"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
@@ -16,7 +12,7 @@ manager: dongill
 
 # Step 6: Demote and remove the Source Server from the new Windows Server Essentials network
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 After you finish installing  Windows Server Essentials and you complete the migration, you must perform the following tasks:  
   
@@ -71,17 +67,17 @@ After you finish installing  Windows Server Essentials and you complete the migr
   
 #### To force a Group Policy update on a client computer  
   
-1.  Sign in to the client computer as an administrator.  
+1. Sign in to the client computer as an administrator.  
   
-2.  Open a Command Prompt window as an administrator.  
+2. Open a Command Prompt window as an administrator.  
   
-3.  At the command prompt, type **gpupdate /force**, and then press ENTER.  
+3. At the command prompt, type **gpupdate /force**, and then press ENTER.  
   
-4.  The process may require you to log off and log on again to finish. Click **Yes** to confirm.  
+4. The process may require you to log off and log on again to finish. Click **Yes** to confirm.  
   
- If you are migrating from Windows Server Essentials or its previous versions, to demote the server, see [Remove Active Directory Domain Services](https://technet.microsoft.com/library/hh472163.aspx). After you add the Source Server as a member of a workgroup and disconnect it from the network, you must remove it from AD DS on the Destination Server.  
+   If you are migrating from Windows Server Essentials or its previous versions, to demote the server, see [Remove Active Directory Domain Services](https://technet.microsoft.com/library/hh472163.aspx). After you add the Source Server as a member of a workgroup and disconnect it from the network, you must remove it from AD DS on the Destination Server.  
   
- If you are migrating from  Windows Server Essentials, use Server Manager to remove the Active Directory Domain Services role, thereby demoting the domain controller on the Source Server using the following procedure:  
+   If you are migrating from  Windows Server Essentials, use Server Manager to remove the Active Directory Domain Services role, thereby demoting the domain controller on the Source Server using the following procedure:  
   
 #### To remove the Source Server from Active Directory  
   

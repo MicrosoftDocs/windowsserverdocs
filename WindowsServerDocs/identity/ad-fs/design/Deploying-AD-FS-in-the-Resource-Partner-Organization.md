@@ -1,20 +1,16 @@
 ---
 ms.assetid: 41d6b897-1e72-4522-aad6-eece1154a154
 title: Deploying AD FS in the Resource Partner Organization
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Deploying AD FS in the Resource Partner Organization
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 The resource partner organization in Active Directory Federation Services \(AD FS\) represents the organization whose Web servers may be protected by a resource\-side federation server. The federation server at the resource partner uses the security tokens that are produced by the account partner to provide claims to the Web servers that are located in the resource partner.  
   

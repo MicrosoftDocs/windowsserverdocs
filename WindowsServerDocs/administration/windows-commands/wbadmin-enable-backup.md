@@ -1,12 +1,8 @@
 ---
 title: wbadmin enable backup
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for wbadmin enable backup, which creates and enables a daily backup schedule or modifies an existing backup schedule.
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0e57f8a-70fa-4c60-9754-e762e8ad8772
 author: coreyp-at-msft
@@ -22,8 +18,6 @@ ms.date: 10/16/2017
 Creates and enables a daily backup schedule or modifies an existing backup schedule. With no parameters specified, it displays the currently scheduled backup settings.
 
 To configure or modify a daily backup schedule, you must be a member of either the **Administrators** or **Backup Operators** group. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt** and then click **Run as administrator**.)
-
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -65,16 +59,15 @@ wbadmin enable backup
 [-nonRecurseExclude:<ItemsToExclude>][-systemState]
 [-hyperv:<HyperVComponentsToExclude>]
 [-allCritical]
-[-systemState] 
+[-systemState]
 [-vssFull | -vssCopy]
 [-user:<UserName>]
 [-password:<Password>]
-[-quiet] 
+[-quiet]
 [-allowDeleteOldBackups]
-
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -99,33 +92,33 @@ wbadmin enable backup
 
 To view the disk identifier value for your disks, type **wbadmin get disks**.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 The following examples show how the **wbadmin enable backup** command can be used in different backup scenarios:
 
 Scenario #1
--   Schedule backups of hard disk drives e:, d:\mountpoint, and \\\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
--   Save the files to the disk DiskID
--   Run backups daily at 9:00 A.M. and 6:00 P.M.
-```
-wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
-```
-Scenario #2
--   Schedule backups of the folder d:\documents to the network location \\\\backupshare\backup1
--   Use the network credentials for the backup administrator Aaren Ekelund (aekel), who is a member of the domain CONTOSOEAST to authenticate access to the network share. Aaren’s password is *$3hM9^5lp*.
--   Run backups daily at 12:00 A.M. and 7:00 P.M.
-```
-wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
-```
-Scenario #3
--   Schedule backups of volume t: and folder d:\documents to the drive h:, but exclude the folder d:\documents\~tmp
--   Perform a full backup using the Volume Shadow Copy Service.
--   Run backups daily at 1:00 A.M.
-```
-wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
-```
+- Schedule backups of hard disk drives e:, d:\mountpoint, and \\\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+- Save the files to the disk DiskID
+- Run backups daily at 9:00 A.M. and 6:00 P.M.
+  ```
+  wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+  ```
+  Scenario #2
+- Schedule backups of the folder d:\documents to the network location \\\\backupshare\backup1
+- Use the network credentials for the backup administrator Aaren Ekelund (aekel), who is a member of the domain CONTOSOEAST to authenticate access to the network share. Aaren's password is *$3hM9^5lp*.
+- Run backups daily at 12:00 A.M. and 7:00 P.M.
+  ```
+  wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
+  ```
+  Scenario #3
+- Schedule backups of volume t: and folder d:\documents to the drive h:, but exclude the folder d:\documents\~tmp
+- Perform a full backup using the Volume Shadow Copy Service.
+- Run backups daily at 1:00 A.M.
+  ```
+  wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
+  ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

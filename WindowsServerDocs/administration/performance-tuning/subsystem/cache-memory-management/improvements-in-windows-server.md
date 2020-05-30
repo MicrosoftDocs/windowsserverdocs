@@ -1,10 +1,10 @@
 ---
 title: Cache and Memory Manager Improvements
 description: Cache and Memory Manager Improvements in Windows Server 2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Pavel; ATales
+ms.author: pavel; atales
 author: phstee
 ms.date: 10/16/2017
 ---

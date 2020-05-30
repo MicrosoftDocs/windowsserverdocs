@@ -1,20 +1,16 @@
 ---
 ms.assetid: 95e82190-68c5-4e40-87b1-f1bd816ef4e9
 title: Service Communications Certificates
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Service Communications Certificates
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A federation server requires the use of service communication certificates for scenarios in which WCF message security is used.  
   

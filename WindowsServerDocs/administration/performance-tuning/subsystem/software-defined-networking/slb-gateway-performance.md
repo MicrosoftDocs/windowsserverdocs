@@ -1,10 +1,10 @@
 ---
 title: SLB Gateway Performance Tuning in Software Defined Networks  
 description: SLB Gateway performance tuning guidelines on SDN networks 
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: grcusanz; AnPaul
+ms.author: grcusanz; anpaul
 author: phstee
 ms.date: 10/16/2017
 ---

@@ -1,12 +1,12 @@
 ---
 title: nslookup set port
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4dab7a09-d400-4062-b863-2d32c191c3bd
 author: coreyp-at-msft
@@ -27,13 +27,13 @@ Changes the default TCP/UDP Domain Name System (DNS) name server port to the val
 set port=<Port>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Port>|Specifies the new value for the default TCP/UDP DNS name server port. The default port is 53.|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter |                                          Description                                          |
+|-----------|-----------------------------------------------------------------------------------------------|
+|  \<Port>  | Specifies the new value for the default TCP/UDP DNS name server port. The default port is 53. |
+|   {help   |                                              ?}                                               |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

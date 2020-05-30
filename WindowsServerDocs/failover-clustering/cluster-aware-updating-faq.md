@@ -2,8 +2,8 @@
 ms.assetid: 6416d125-bcaf-433d-971a-2f0283bca2c2
 title: Cluster-Aware Updating - Frequently Asked Questions
 ms.topic: article
-ms.prod: windows-server-threshold
-manager: dongill
+ms.prod: windows-server
+manager: lizross
 ms.author: jgerend
 author: JasonGerend
 ms.date: 04/28/2017
@@ -11,7 +11,7 @@ description: Answers to frequently asked questions about Cluster-Aware Updating 
 ---
 # Cluster-Aware Updating: Frequently Asked Questions
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 [Cluster-Aware Updating](cluster-aware-updating.md) \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.x file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.
 
@@ -51,7 +51,7 @@ Yes. CAU supports the following updating modes, both of which allow updates to b
 ## Can I schedule updates to apply during a backup?  
 Yes. CAU doesn't impose any constraints in this regard. However, performing software updates on a server \(with the associated potential restarts\) while a server backup is in progress is not an IT best practice. Be aware that CAU relies only on clustering APIs to determine resource failovers and failbacks; thus, CAU is unaware of the server backup status.  
   
-## Can CAU work with System Center Configuration Manager?  
+## Can CAU work with Configuration Manager?  
 CAU is a tool that coordinates software updates on a cluster node, and Configuration Manager also performs server software updates. It's important to configure these tools so that they don't have overlapping coverage of the same servers in any datacenter deployment, including using different Windows Server Update Services servers. This ensures that the objective behind using CAU is not inadvertently defeated, because Configuration Manager\-driven updating doesn't incorporate cluster awareness.  
   
 ## Do I need administrative credentials to run CAU?  

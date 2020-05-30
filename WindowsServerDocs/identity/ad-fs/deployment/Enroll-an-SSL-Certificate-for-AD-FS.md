@@ -1,20 +1,16 @@
 ---
 ms.assetid: 3095e6a7-b562-4c6a-bf29-13b32c133cac
 title: Enroll an SSL Certificate for AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Enroll an SSL Certificate for AD FS
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 Active Directory Federation Services \(AD FS\) requires a certificate for Secure Socket Layer \(SSL\) server authentication on each federation server in your federation server farm. The same certificate can be used on each federation server in a farm. You must have both the certificate and its private key available. For example, if you have the certificate and its private key in a .pfx file, you can import the file directly into the Active Directory Federation Services Configuration Wizard. This SSL certificate must contain the following:  
   

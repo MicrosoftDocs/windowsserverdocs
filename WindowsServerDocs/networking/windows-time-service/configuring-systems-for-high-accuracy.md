@@ -2,11 +2,11 @@
 ms.assetid: 
 title: Configuring Systems for High Accuracy
 description: Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
-author: shortpatti
+author: dcuomo
 ms.author: dacuo
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ---
 
@@ -86,7 +86,6 @@ For example: Consider a time sync hierarchy with a highly accurate source, two i
 - Time server A and the Source
 
 This measurement can be obtained using the inbox w32tm.exe tool.  To do this:
-<!-- Use PowerShell to import the CSV then average the RTT Column -->
 
 1. Perform the calculation from the target and time server B.
     

@@ -1,17 +1,12 @@
 ---
-title: "Manage Online Accounts for Windows Server Essentials Users"
-description: "Describes how to use Windows Server Essentials"
-ms.custom: na
+title: Manage Online Accounts for Windows Server Essentials Users
+description: Describes how to use Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: c09f4cf6-4d12-49fe-9ae4-e6cb14027b9d
-8author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+author: nnamuhcs
+ms.author: daveba
 ---
 
 # Manage Online Accounts for Windows Server Essentials Users

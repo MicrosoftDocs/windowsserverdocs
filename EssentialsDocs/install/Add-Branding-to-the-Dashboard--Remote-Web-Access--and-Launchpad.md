@@ -1,12 +1,8 @@
 ---
 title: "Add Branding to the Dashboard, Remote Web Access, and Launchpad"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 04/10/2014
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 166262f8-b2a5-4b1c-a4a7-a141e1c54f10
 author: nnamuhcs

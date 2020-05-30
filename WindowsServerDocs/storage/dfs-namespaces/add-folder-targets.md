@@ -1,9 +1,9 @@
 ---
 title: Add Folder Targets
 description: This topic describes how to add folder targets (UNC paths)
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
-ms.manager: brianlic
+manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend

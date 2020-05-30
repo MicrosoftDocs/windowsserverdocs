@@ -1,20 +1,17 @@
 ---
 ms.assetid: ef91f1d8-2991-4d90-b687-5fa189737c88
 title: Planning for AD FS Server Capacity
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Planning for AD FS Server Capacity
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
 > [!NOTE]  
@@ -24,7 +21,7 @@ Capacity planning for Active Directory Federation Services \(AD FS\) is the pr
   
 This section describes deployment guidelines for both the federation server and federation server proxy roles and is based on lab testing that was performed by the AD FS product team at Microsoft. The purpose of this content is to help you:  
   
--   Closely estimate the hardware needs for your organization’s specific AD FS deployment, such as the number of AD FS servers.  
+-   Closely estimate the hardware needs for your organization's specific AD FS deployment, such as the number of AD FS servers.  
   
 -   Accurately project the expected peak usage for sign\-in requests, plan for growth, and ensure that your AD FS deployment is capable of handling that expected peak usage.  
   
@@ -33,7 +30,7 @@ Before you proceed with reading this capacity planning content, we recommend tha
 |Recommended task|Description|Reference|  
 |--------------------|---------------|-------------|  
 |Understand the requirements for deploying AD FS federation servers and federation server proxies|Review important hardware and software requirements necessary for deploying federation server and federation server proxies.|[Appendix A: Reviewing AD FS Requirements](Appendix-A--Reviewing-AD-FS-Requirements.md)|  
-|Select the type of AD FS configuration database that you will deploy in your organization|Before you can begin using capacity planning data in this section, you first have to determine which AD FS configuration database type you will deploy, either Windows Internal Database \(WID\) or a Structured Query Language \(SQL\) database.|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md);<br /><br />[AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md)|  
+|Select the type of AD FS configuration database that you will deploy in your organization|Before you can begin using capacity planning data in this section, you first have to determine which AD FS configuration database type you will deploy, either Windows Internal Database \(WID\) or a Structured Query Language \(SQL\) database.|[The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md);<p>[AD FS Deployment Topology Considerations](AD-FS-Deployment-Topology-Considerations.md)|  
 |Determine the type of topology layout to use with your new AD FS configuration database selection|Once you have decided on the type of AD FS configuration database to use in your deployment, you will need to consider which deployment topology most closely matches where you will need to place federation servers and federation server proxies within your production environment.|[Determine Your AD FS Deployment Topology](Determine-Your-AD-FS-Deployment-Topology.md)|  
 |Understand key AD FS–related capacity planning terms|Review the definitions of common capacity planning terms that are used throughout the AD FS capacity planning discussion.|See the section titled [AD FS capacity planning terms](Planning-for-AD-FS-Server-Capacity.md#bk_terms) in this topic|  
   
@@ -69,7 +66,7 @@ This section describes the configuration environment that the AD FS product team
 -   Gigabit Network  
   
 > [!NOTE]  
-> Although 16 GB’s of RAM was used on the federation server during testing, a more moderate memory size, such as 4 GB’s of RAM per federation server can be used for most AD FS deployments. The recommendations that are provided in this AD FS Capacity Planning content along with the results provided by the AD FS Capacity Planning Spreadsheet are based on assumptions that each federation server will use approximately 4GB’s of RAM for most AD FS production environments.  
+> Although 16 GB's of RAM was used on the federation server during testing, a more moderate memory size, such as 4 GB's of RAM per federation server can be used for most AD FS deployments. The recommendations that are provided in this AD FS Capacity Planning content along with the results provided by the AD FS Capacity Planning Spreadsheet are based on assumptions that each federation server will use approximately 4GB's of RAM for most AD FS production environments.  
   
 The product team used the following configuration to gather performance and scalability data for the federation server proxy testing:  
   

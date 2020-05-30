@@ -1,11 +1,9 @@
 ---
 title: Supported Oracle Linux virtual machines on Hyper-V
-description: "Lists the Linux integration services and features included in each version"
-ms.prod: windows-server-threshold
-ms.service: na
+description: Lists the Linux integration services and features included in each version
+ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 author: shirgall
@@ -14,15 +12,15 @@ ms.date: 06/01/2017
 ---
 # Supported Oracle Linux virtual machines on Hyper-V
 
->Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 The following feature distribution map indicates the features that are present in each version. The known issues and workarounds for each distribution are listed after the table.
 
 In this section:
 
-* [Red Hat Compatible Kernel Series](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_rhc)
+* [Features of Oracle Linux Releases with the Red Hat compatible Kernel](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_rhc)
 
-* [Unbreakable Enterprise Kernel Series](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_uek)
+* [Oracle Linux Releases with the Unbreakable Enterprise Kernel (UEK)](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_uek)
 
 * [Notes](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_notes)
 
@@ -34,91 +32,92 @@ In this section:
 
 * (*blank*) - Feature not available
 
-* **UEK R\*x QU\*y** - Unbreakable Enterprise Kernel (UEK) where *x* is the release number and *y* is the quarterly update.
+* **UEK RxUy** - Unbreakable Enterprise Kernel (UEK) where x is the release number and y is the quarterly update.
 
-## <a name="BKMK_rhc"></a>Red Hat Compatible Kernel Series
+## <a name="BKMK_rhc"></a>Features of Oracle Linux Releases with the Red Hat compatible Kernel
 
 The 32-bit kernel for the 6.x series is PAE enabled. There is no built-in LIS support for Oracle Linux RHCK 6.0-6.3. Oracle Linux 7.x kernels are 64-bit only.
 
-|**Feature**|**Windows server version**|**6.4-6.8 and 7.0-7.3**|**6.4-6.8 and 7.0-7.2**|**RHCK 7.0-7.2**|**RHCK 6.8**|**RHCK 6.6, 6.7**|**RHCK 6.5**|**RHCK6.4**|
-|-|-|-|-|-|-|-|-|-|
-|**Availability**||[LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106)|[LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612)|Built in|Built in|Built in|Built in|Built in|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2016|||||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004; (Note 1 for 6.4-6.8)|&#10004; (Note 1 for 6.4-6.8)|&#10004;|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|&#10004; Note 1|
-|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Static IP Injection|2016, 2012 R2, 2012|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|vRSS|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
-|SR-IOV|2016||||||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
-|VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
-|Virtual Fibre Channel|2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2||
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4|&#10004; Note 3, 4|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 11|&#10004; Note 3, 4, 5, 11|&#10004; Note 3, 4, 5, 11|
-|TRIM support|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||||
-|SCSI WWN|2016, 2012 R2|&#10004;|&#10004;||||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|&#10004; (6.x only)|&#10004; (6.x only)|N/A|&#10004;|&#10004;|&#10004;|&#10004;|
-|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9|&#10004; Note 6, 7, 8, 9||
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9|&#10004; Note 6, 8, 9, 10|
-|Runtime Memory Resize|2016||||||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
-|Hyper-V-specific video device|2016,2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;||
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
-|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|&#10004; Note 12|
-|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|File copy from host to guest|2016, 2012 R2|&#10004;|&#10004;||&#10004;||||
-|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||||||
-|Hyper-V Sockets|2016|&#10004;|&#10004;||||||
-|PCI Passthrough/DDA|2016||||||||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
-|Boot using UEFI|2016, 2012 R2|&#10004; Note 13|&#10004; Note 13|&#10004; Note 13|&#10004; Note 13||||
-|Secure boot|2016||||||||
+| **Feature**                                                                                                                                  | **Windows server version**         | **7.5-7.6**        | **7.4**             | **6.4-6.8 and 7.0-7.3**                                             | **6.4-6.8 and 7.0-7.2**                                             | **OL with RHCK 7.0-7.2**         | **OL with RHCK 6.8**             | **OL with RHCK 6.6, 6.7**        | **OL with RHCK 6.5**              | **OL with RHCK6.4**               |
+|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|--------------------|---------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|--------------------------|--------------------------|--------------------------|---------------------------|---------------------------|
+| **Availability**                                                                                                                             |                                    | Built in           | Built in            | [LIS 4.2](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.1](https://www.microsoft.com/download/details.aspx?id=51612) | Built in                 | Built in                 | Built in                 | Built in                  | Built in                  |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  |                           |
+| Windows Server 2016 Accurate Time                                                                                                            | 2019, 2016                         |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                                       |                                    |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| Jumbo frames                                                                                                                                 | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  | &#10004;                  |
+| VLAN tagging and trunking                                                                                                                    | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;           | &#10004;            | &#10004; (Note 1 for 6.4-6.8)                                       | &#10004; (Note 1 for 6.4-6.8)                                       | &#10004;                 | &#10004; Note 1          | &#10004; Note 1          | &#10004; Note 1           | &#10004; Note 1           |
+| Live Migration                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  | &#10004;                  |
+| Static IP Injection                                                                                                                          | 2019, 2016, 2012 R2, 2012          | &#10004; Note 14   | &#10004; Note 14    | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  | &#10004;                  |
+| vRSS                                                                                                                                         | 2019, 2016, 2012 R2                | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 |                           |                           |
+| TCP Segmentation and Checksum Offloads                                                                                                       | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 |                           |                           |
+| SR-IOV                                                                                                                                       | 2019, 2016                         | &#10004;           | &#10004;            |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                    |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| VHDX resize                                                                                                                                  | 2019, 2016, 2012 R2                | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  |                           |
+| Virtual Fibre Channel                                                                                                                        | 2019, 2016, 2012 R2                | &#10004; Note 2    | &#10004; Note 2     | &#10004; Note 2                                                     | &#10004; Note 2                                                     | &#10004; Note 2          | &#10004; Note 2          | &#10004; Note 2          | &#10004; Note 2           |                           |
+| Live virtual machine backup                                                                                                                  | 2019, 2016, 2012 R2                | &#10004; Note 11,3 | &#10004; Note 11, 3 | &#10004; Note 3, 4                                                  | &#10004; Note 3, 4                                                  | &#10004; Note 3, 4, 11   | &#10004; Note 3, 4, 11   | &#10004; Note 3, 4, 11   | &#10004; Note 3, 4, 5, 11 | &#10004; Note 3, 4, 5, 11 |
+| TRIM support                                                                                                                                 | 2019, 2016, 2012 R2                | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 |                          |                           |                           |
+| SCSI WWN                                                                                                                                     | 2019, 2016, 2012 R2                | &#10004;           |                     | &#10004;                                                            | &#10004;                                                            |                          |                          |                          |                           |                           |
+| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                    |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| PAE Kernel Support                                                                                                                           | 2019, 2016, 2012 R2, 2012, 2008 R2 | N/A                | N/A                 | &#10004; (6.x only)                                                 | &#10004; (6.x only)                                                 | N/A                      | &#10004;                 | &#10004;                 | &#10004;                  | &#10004;                  |
+| Configuration of MMIO gap                                                                                                                    | 2019, 2016, 2012 R2                | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  | &#10004;                  |
+| Dynamic Memory - Hot-Add                                                                                                                     | 2019, 2016, 2012 R2, 2012          | &#10004; Note 8, 9 | &#10004; Note 8, 9  | &#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)                      | &#10004; Note 7, 8, 9, 10 (Note 6 for 6.4-6.7)                      | &#10004; Note 6, 7, 8, 9 | &#10004; Note 6, 7, 8, 9 | &#10004; Note 6, 7, 8, 9 | &#10004; Note 6, 7, 8, 9  |                           |
+| Dynamic Memory - Ballooning                                                                                                                  | 2019, 2016, 2012 R2, 2012          | &#10004; Note 8, 9 | &#10004; Note 8, 9  | &#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)                         | &#10004; Note 7, 9, 10 (Note 6 for 6.4-6.7)                         | &#10004; Note 6, 8, 9    | &#10004; Note 6, 8, 9    | &#10004; Note 6, 8, 9    | &#10004; Note 6, 8, 9     | &#10004; Note 6, 8, 9, 10 |
+| Runtime Memory Resize                                                                                                                        | 2019, 2016                         |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                    |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| Hyper-V-specific video device                                                                                                                | 2019, 2016,2012 R2, 2012, 2008 R2  | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  |                           |
+| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                    |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| Key-Value Pair                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004; Note 12         | &#10004; Note 12         | &#10004; Note 12         | &#10004; Note 12          | &#10004; Note 12          |
+| Non-Maskable Interrupt                                                                                                                       | 2019, 2016, 2012 R2                | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            | &#10004;                 | &#10004;                 | &#10004;                 | &#10004;                  | &#10004;                  |
+| File copy from host to guest                                                                                                                 | 2019, 2016, 2012 R2                | &#10004;           | &#10004;            | &#10004;                                                            | &#10004;                                                            |                          | &#10004;                 |                          |                           |                           |
+| lsvmbus command                                                                                                                              | 2019, 2016, 2012 R2, 2012, 2008 R2 |                    |                     | &#10004;                                                            | &#10004;                                                            |                          |                          |                          |                           |                           |
+| Hyper-V Sockets                                                                                                                              | 2019, 2016                         |                    |                     | &#10004;                                                            | &#10004;                                                            |                          |                          |                          |                           |                           |
+| PCI Passthrough/DDA                                                                                                                          | 2019, 2016                         | &#10004;           | &#10004;            |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |                                    |                    |                     |                                                                     |                                                                     |                          |                          |                          |                           |                           |
+| Boot using UEFI                                                                                                                              | 2019, 2016, 2012 R2                | &#10004; Note 13   | &#10004; Note 13    | &#10004; Note 13                                                    | &#10004; Note 13                                                    | &#10004; Note 13         | &#10004; Note 13         |                          |                           |                           |
+| Secure boot                                                                                                                                  | 2019, 2016                         | &#10004;           | &#10004;            |                                                                     |                                                                     |                          |                          |                          |                           |                           |
 
-## <a name="BKMK_uek"></a>Unbreakable Enterprise Kernel Series
 
-The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS support built-in.
+## <a name="BKMK_uek"></a>Oracle Linux Releases with the Unbreakable Enterprise Kernel (UEK)
 
-|**Feature**|**Windows server version**|**UEK R4**|**UEK R3 QU3**|**UEK R3 QU2**|**UEK R3 QU1**|
-|-|-|-|-|-|-|
-|**Availability**||Built in|Built in|Built in|Built in|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016 Accurate Time|2016|||||
-|**[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||
-|Jumbo frames|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|VLAN tagging and trunking|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Live Migration|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Static IP Injection|2016, 2012 R2, 2012|&#10004;|&#10004;|&#10004;||
-|vRSS|2016, 2012 R2|&#10004;||||
-|TCP Segmentation and Checksum Offloads|2016, 2012 R2, 2012, 2008 R2|&#10004;||||
-|SR-IOV|2016|||||
-|**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||||||
-|VHDX resize|2016, 2012 R2|&#10004;|&#10004;|&#10004;||
-|Virtual Fibre Channel|2016, 2012 R2|&#10004;|&#10004;|&#10004;||
-|Live virtual machine backup|2016, 2012 R2|&#10004; Note 3, 4, 5, 11|&#10004; Note 3, 4, 5, 11|&#10004; Note 3, 4, 5, 11||
-|TRIM support|2016, 2012 R2|&#10004;||||
-|SCSI WWN|2016, 2012 R2|||||
-|**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
-|PAE Kernel Support|2016, 2012 R2, 2012, 2008 R2|N/A|N/A|N/A|N/A|
-|Configuration of MMIO gap|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2016, 2012 R2, 2012|&#10004;||||
-|Dynamic Memory - Ballooning|2016, 2012 R2, 2012|&#10004;||||
-|Runtime Memory Resize|2016|||||
-|**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||||
-|Hyper-V-specific video device|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||
-|**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||
-|Key-Value Pair|2016, 2012 R2, 2012, 2008 R2|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12|
-|Non-Maskable Interrupt|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|File copy from host to guest|2016, 2012 R2|&#10004; Note 11|&#10004; Note 11|&#10004; Note 11|&#10004; Note 11|
-|lsvmbus command|2016, 2012 R2, 2012, 2008 R2|||||
-|Hyper-V Sockets|2016|||||
-|PCI Passthrough/DDA|2016|||||
-|**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
-|Boot using UEFI|2016, 2012 R2|&#10004;||||
-|Secure boot|2016|&#10004;||||
+Oracle Linux with the Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS support built-in. 
+
+| **Feature**                                                                                                                                  | **Windows server version**         | **R5**                | **R4**                | **R3 QU3**            | **R3 QU2**            | **R3 QU1**       |
+|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|----------------------|
+| **Availability**                                                                                                                             |                                    | Built in                  | Built in                  | Built in                  | Built in                  | Built in             |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;             |
+| Windows Server 2016 Accurate Time                                                                                                            | 2019, 2016                         |                           |                           |                           |                           |                      |
+| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**                                       |                                    |                           |                           |                           |                           |                      |
+| Jumbo frames                                                                                                                                 | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;             |
+| VLAN tagging and trunking                                                                                                                    | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;             |
+| Live Migration                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;             |
+| Static IP Injection                                                                                                                          | 2019, 2016, 2012 R2, 2012          | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  |                      |
+| vRSS                                                                                                                                         | 2019, 2016, 2012 R2                | &#10004;                  | &#10004;                  |                           |                           |                      |
+| TCP Segmentation and Checksum Offloads                                                                                                       | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;                  | &#10004;                  |                           |                           |                      |
+| SR-IOV                                                                                                                                       | 2019, 2016                         |                           |                           |                           |                           |                      |
+| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**                                             |                                    |                           |                           |                           |                           |                      |
+| VHDX resize                                                                                                                                  | 2019, 2016, 2012 R2                | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  |                      |
+| Virtual Fibre Channel                                                                                                                        | 2019, 2016, 2012 R2                | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  |                      |
+| Live virtual machine backup                                                                                                                  | 2019, 2016, 2012 R2                | &#10004; Note 3, 4, 5, 11 | &#10004; Note 3, 4, 5, 11 | &#10004; Note 3, 4, 5, 11 | &#10004; Note 3, 4, 5, 11 |                      |
+| TRIM support                                                                                                                                 | 2019, 2016, 2012 R2                | &#10004;                  | &#10004;                  |                           |                           |                      |
+| SCSI WWN                                                                                                                                     | 2019, 2016, 2012 R2                |                           |                           |                           |                           |                      |
+| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**                                               |                                    |                           |                           |                           |                           |                      |
+| PAE Kernel Support                                                                                                                           | 2019, 2016, 2012 R2, 2012, 2008 R2 | N/A                       | N/A                       | N/A                       | N/A                       | N/A                  |
+| Configuration of MMIO gap                                                                                                                    | 2019, 2016, 2012 R2                | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;             |
+| Dynamic Memory - Hot-Add                                                                                                                     | 2019, 2016, 2012 R2, 2012          | &#10004;                  | &#10004;                  |                           |                           |                      |
+| Dynamic Memory - Ballooning                                                                                                                  | 2019, 2016, 2012 R2, 2012          | &#10004;                  | &#10004;                  |                           |                           |                      |
+| Runtime Memory Resize                                                                                                                        | 2019, 2016                         |                           |                           |                           |                           |                      |
+| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**                                                 |                                    |                           |                           |                           |                           |                      |
+| Hyper-V-specific video device                                                                                                                | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  |                      |
+| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**                                 |                                    |                           |                           |                           |                           |                      |
+| Key-Value Pair                                                                                                                               | 2019, 2016, 2012 R2, 2012, 2008 R2 | &#10004; Note 11, 12      | &#10004; Note 11, 12      | &#10004; Note 11, 12      | &#10004; Note 11, 12      | &#10004; Note 11, 12 |
+| Non-Maskable Interrupt                                                                                                                       | 2019, 2016, 2012 R2                | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;                  | &#10004;             |
+| File copy from host to guest                                                                                                                 | 2019, 2016, 2012 R2                | &#10004; Note 11          | &#10004; Note 11          | &#10004; Note 11          | &#10004; Note 11          | &#10004; Note 11     |
+| lsvmbus command                                                                                                                              | 2019, 2016, 2012 R2, 2012, 2008 R2 |                           |                           |                           |                           |                      |
+| Hyper-V Sockets                                                                                                                              | 2019, 2016                         |                           |                           |                           |                           |                      |
+| PCI Passthrough/DDA                                                                                                                          | 2019, 2016                         |                           |                           |                           |                           |                      |
+| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |                                    |                           |                           |                           |                           |                      |
+| Boot using UEFI                                                                                                                              | 2019, 2016, 2012 R2                | &#10004;                  | &#10004;                  |                           |                           |                      |
+| Secure boot                                                                                                                                  | 2019, 2016                         | &#10004;                  | &#10004;                  |                           |                           |                      |
 
 ## <a name="BKMK_notes"></a>Notes
 
@@ -130,7 +129,7 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
 
 4. Live backup operations can fail silently if the virtual machine has an attached iSCSI device or direct-attached storage (also known as a pass-through disk).
 
-5. Live backup support for Oracle Linux 6.4/6.5/UEKR3 QU2 and QU3 is available through [Hyper-V Backup Essentials for Linux](https://github.com/LIS/backupessentials/tree/1.0).
+5. Live backup support for Oracle Linux 6 Update 4 and Oracle Linux 6 Update 5 with UEK R3Q2 and UEK R3Q3 is available through [Hyper-V Backup Essentials for Linux](https://github.com/LIS/backupessentials/tree/1.0).
 
 6. Dynamic memory support is only available on 64-bit virtual machines.
 
@@ -160,12 +159,14 @@ The Oracle Linux Unbreakable Enterprise Kernel (UEK) is 64-bit only and has LIS 
 
 13. OnWindows Server 2012 R2Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
     The Linux Integration Services download can be applied to existing Generation 2 VMs but does not impart Generation 2 capability.
+
+14. Static IP injection may not work if Network Manager has been configured for a given synthetic network adapter on the virtual machine. For smooth functioning of static IP injection please make sure that either Network Manager is either turned off completely or has been turned off for a specific network adapter through its ifcfg-ethX file.
+
 
 See Also
 

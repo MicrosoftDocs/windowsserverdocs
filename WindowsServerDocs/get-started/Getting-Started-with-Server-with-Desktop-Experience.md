@@ -1,13 +1,9 @@
 ---
 title: Install Server with Desktop Experience
-description: "Explains how to obtain and install a Server with Desktop Experience installation " 
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Explains how to obtain and install a Server with Desktop Experience installation  
+ms.prod: windows-server
 ms.date: 01/18/2017
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 author: jaimeo
@@ -23,11 +19,11 @@ When you install Windows Server 2016 using the Setup wizard, you can choose betw
 
 The Server with Desktop Experience option installs the standard user interface and all tools, including client experience features that required a separate installation in Windows Server 2012 R2. Server roles and features are installed with Server Manager or by other methods. Compared with the Server Core option, it requires more space on disk,and has higher servicing requirements, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you feel you can work without the additional elements, see [Install Server Core](Getting-Started-with-Server-Core.md). For an even more lightweight option, see [Install Nano Server](Getting-Started-with-Nano-Server.md).
 
->[!NOTE]
+> [!NOTE]
 >
->Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. If you install Server with Desktop Experience and later decide to use Server Core, you should do a fresh installation.
+> Unlike some previous releases of Windows Server, you cannot convert between Server Core and Server with Desktop Experience after installation. If you install Server with Desktop Experience and later decide to use Server Core, you should do a fresh installation.
 
-**User interface:** standard graphical user interface ("Server Graphical Shell"). The Server Graphical Shell includes the new Windows 10 shell. The specific Windows features installed by default with this option are User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation and Desktop Experience. While these features do appear in Server Manager in this release, uninstalling them is not supported and they will not be available in future releases.
+**User interface:** standard graphical user interface (Server Graphical Shell). The Server Graphical Shell includes the new Windows 10 shell. The specific Windows features installed by default with this option are User-Interfaces-Infra, Server-GUI-Shell, Server-GUI-Mgmt-Infra, InkAndHandwritingServices, ServerMediaFoundation and Desktop Experience. While these features do appear in Server Manager in this release, uninstalling them is not supported and they will not be available in future releases.
 
 **Install, configure, uninstall server roles locally:** with Server Manager or with Windows PowerShell
 
@@ -88,19 +84,19 @@ The ability to migrate varies among different server roles. The follwogin grid e
 
 |Server Role|Upgradeable from Windows Server 2012 R2?|Upgradeable from Windows Server 2012?|Migration Supported?|Can migration be completed without downtime?|  
 |-------------------|----------|--------------|--------------|----------|  
-|Active Directory Certificate Services|	Yes|	Yes|	Yes|	No|
-|Active Directory Domain Services|	Yes|	Yes|	Yes|	Yes|
-|Active Directory Federation Services|	No|	No|	Yes|	No (new nodes need to be added to the farm)|
-|Active Directory Lightweight Directory Services|	Yes|	Yes|	Yes|	Yes|
-|Active Directory Rights Management Services|	Yes|	Yes|	Yes|	No|
-|Failover Cluster|Yes with [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade) process which includes node Pause-Drain, Evict, upgrade to Windows Server 2016 and rejoin the original cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.|Not while the server is part of a cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.	|Yes|No for Windows Server 2012 Failover Clusters. Yes for Windows Server 2012 R2 Failover Clusters with Hyper-V VMs or Windows Server 2012 R2 Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
-|File and Storage Services|	Yes|	Yes|	Varies by sub-feature|	No|
-|Print and Fax Services|	No|	No|	Yes (Printbrm.exe)|	No|
-|Remote Desktop Services|	Yes, for all sub-roles, but mixed mode farm is not supported|	Yes, for all sub-roles, but mixed mode farm is not supported|	Yes|	No|
-|Web Server (IIS)|	Yes|	Yes|	Yes|	No|
-|Windows Server Essentials Experience|	Yes|	N/A – new feature|	Yes|	No|
-|Windows Server Update Services|	Yes|	Yes|	Yes|	No|
-|Work Folders|	Yes|	Yes|	Yes|	Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
+|Active Directory Certificate Services|    Yes|    Yes|    Yes|    No|
+|Active Directory Domain Services|    Yes|    Yes|    Yes|    Yes|
+|Active Directory Federation Services|    No|    No|    Yes|    No (new nodes need to be added to the farm)|
+|Active Directory Lightweight Directory Services|    Yes|    Yes|    Yes|    Yes|
+|Active Directory Rights Management Services|    Yes|    Yes|    Yes|    No|
+|Failover Cluster|Yes with [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade) process which includes node Pause-Drain, Evict, upgrade to Windows Server 2016 and rejoin the original cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.|Not while the server is part of a cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.    |Yes|No for Windows Server 2012 Failover Clusters. Yes for Windows Server 2012 R2 Failover Clusters with Hyper-V VMs or Windows Server 2012 R2 Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
+|File and Storage Services|    Yes|    Yes|    Varies by sub-feature|    No|
+|Print and Fax Services|    No|    No|    Yes (Printbrm.exe)|    No|
+|Remote Desktop Services|    Yes, for all sub-roles, but mixed mode farm is not supported|    Yes, for all sub-roles, but mixed mode farm is not supported|    Yes|    No|
+|Web Server (IIS)|    Yes|    Yes|    Yes|    No|
+|Windows Server Essentials Experience|    Yes|    N/A – new feature|    Yes|    No|
+|Windows Server Update Services|    Yes|    Yes|    Yes|    No|
+|Work Folders|    Yes|    Yes|    Yes|    Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
 
 > [!IMPORTANT]  
 > Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016 by using Windows Update or other update methods.

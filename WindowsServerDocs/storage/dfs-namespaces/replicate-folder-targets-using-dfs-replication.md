@@ -2,7 +2,7 @@
 title: Replicate Folder Targets using DFS Replication
 description: This article describes how to replicate folder targets using DFS Replication
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
@@ -32,4 +32,4 @@ To do so from a Windows PowerShell session, use the [Update-DfsrConfigurationFro
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
--   [Replication](https://technet.microsoft.com/library/cc770278(v=ws.11).aspx)
+-   [DFS Replication](../dfs-replication/dfsr-overview.md)

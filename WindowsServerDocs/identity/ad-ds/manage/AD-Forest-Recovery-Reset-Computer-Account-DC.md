@@ -1,12 +1,11 @@
 ---
 title: AD Forest Recovery - Resetting the computer account on the DC
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 ms.technology: identity-adds
 ---

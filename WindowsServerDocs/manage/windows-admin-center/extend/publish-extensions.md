@@ -7,7 +7,7 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 # Publishing Extensions
 
@@ -75,7 +75,7 @@ Here's an example .nuspec file and the list of required or recommended propertie
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="https://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <packageTypes>
       <packageType name="WindowsAdminCenterExtension" />
@@ -134,7 +134,7 @@ Your extension package is now ready for testing! Upload the .nupkg file to a NuG
 
 ## Publishing your extension to the Windows Admin Center feed
 
-By publishing to the Windows Admin Center feed, you can make your extension available to any Windows Admin Center user. Since the Windows Admin Center SDK is still in preview, we’d like to work closely with you to help resolve development issues, and, make sure you are able to deliver a quality product and experience to your users.
+By publishing to the Windows Admin Center feed, you can make your extension available to any Windows Admin Center user. Since the Windows Admin Center SDK is still in preview, we'd like to work closely with you to help resolve development issues, and, make sure you are able to deliver a quality product and experience to your users.
 
 Before releasing the initial version of your extension, we recommend that you submit an extension review request to Microsoft at least 2-3 weeks before release to ensure we have sufficient time to review and for you to make any changes to your extension if necessary. Once your extension is ready to be published, you'll need to send it to us for review, and if approved, we'll publish it to the feed for you.
 

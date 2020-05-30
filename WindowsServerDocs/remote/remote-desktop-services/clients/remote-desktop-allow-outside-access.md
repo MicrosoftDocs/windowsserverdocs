@@ -1,12 +1,8 @@
 ---
 title: Remote Desktop - Allow access to your PC from outside your network
 description: Learn about your options for remotely accessing your PC from outside the PC's network
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+ms.prod: windows-server
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: haley-rowland
 manager: dongill
@@ -16,7 +12,7 @@ ms.localizationpriority: medium
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network
 
->Applies To: Windows 10,  Windows Server 2016
+>Applies to: Windows 10,  Windows Server 2016
 
 When you connect to your PC by using a Remote Desktop client, you're creating a peer-to-peer connection. This means you need direct access to the PC (sometimes called "the host"). If you need to connect to your PC from outside of the network your PC is running on, you need to enable that access. You have a couple of options: use port forwarding or set up a VPN.
 

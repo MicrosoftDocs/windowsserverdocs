@@ -1,13 +1,13 @@
 ---
 title: Troubleshooting Converged NIC Configurations
 description: This topic is part of the Converged NIC Configuration Guide for Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 
@@ -61,7 +61,7 @@ As an additional step to verify your RDMA configuration, run the following Windo
 
 ### Get-SmbClientNetworkInterface expected results
 
-The host vNIC should appear as RDMA capable from SMB’s perspective as well.
+The host vNIC should appear as RDMA capable from SMB's perspective as well.
 
 ![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
@@ -106,7 +106,7 @@ You can use the following Windows PowerShell command to verify that the remote n
 
 ### Get-SmbMultiChannelConnection expected results
 
-Remote node’s IP address is shown as RDMA capable.
+Remote node's IP address is shown as RDMA capable.
 
 ![RDMA capable remote node IP address](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-05.jpg)
 

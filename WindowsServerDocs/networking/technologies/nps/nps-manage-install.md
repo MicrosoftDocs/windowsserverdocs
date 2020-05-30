@@ -2,12 +2,12 @@
 title: Install Network Policy Server
 description: You can use this topic to install Network Policy Server (NPS) by using either Windows PowerShell or the Add Roles and Features Wizard in Windows Server 2016
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4842a4ab-70bb-4744-bea7-70f2ac892ad1
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Install Network Policy Server

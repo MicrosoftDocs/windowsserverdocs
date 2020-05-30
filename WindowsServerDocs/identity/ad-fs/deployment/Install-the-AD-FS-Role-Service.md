@@ -1,20 +1,16 @@
 ---
 ms.assetid: c28a1b8b-5bec-4eed-8c95-a1a29cfc957c
 title: Install the AD FS Role Service
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Install the AD FS Role Service
-
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 You can use the following procedure to install the AD FS role service on a computer that is running  Windows Server 2012 R2  to become the first federation server in a federation server farm or a federation server in an existing federation server farm.  
   

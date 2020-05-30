@@ -1,12 +1,8 @@
 ---
 title: "Manage Anywhere Access in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: c369c317-f94d-4179-a735-e74bf6f62692
 author: nnamuhcs

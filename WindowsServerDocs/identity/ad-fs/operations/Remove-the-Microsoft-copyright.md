@@ -1,19 +1,17 @@
 ---
 ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
 title: Remove the Microsoft copyright
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Remove the Microsoft copyright 
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+
  
 By default, the AD FS pages contain the Microsoft copyright. To remove this copyright from your customized pages, you can use the following procedure. 
 

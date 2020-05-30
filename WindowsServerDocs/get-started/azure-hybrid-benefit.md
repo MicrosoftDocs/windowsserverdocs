@@ -5,8 +5,8 @@ ms.prod: windows-server
 ms.date: 11/10/2017
 ms.technology: server-general
 ms.topic: article
-author: greg-lindsay
-ms.author: greg-lindsay
+author: eross-msft
+ms.author: chrisrin
 ms.localizationpriority: high
 ---
 
@@ -71,18 +71,18 @@ Add the column “Azure Hybrid Benefit” in the list view of the virtual machin
     foreach ($vm in $vms) {"VM Name: " + $vm.Name, "   Azure Hybrid Benefit for Windows Server: "+ $vm.LicenseType}
     ```
 
-3.	Look at your Microsoft Azure bill to determine how many virtual machines with Azure Hybrid Benefit for Windows Server you are running. The information about the number of instances with the benefit shows under ‘Additional Info’:
+3.	Look at your Microsoft Azure bill to determine how many virtual machines with Azure Hybrid Benefit for Windows Server you are running. The information about the number of instances with the benefit shows under ‘Additional Info':
 
     ```
     "{"ImageType":"WindowsServerBYOL","ServiceType":"Standard_A1","VMName":"","UsageType":"ComputeHR"}" 
     ```
 
-Please note that billing does not apply in real time, i.e. there will be a few hours delay from the time you’ve activated a VM with the hybrid benefit before it shows on the bill.
+Please note that billing does not apply in real time, i.e. there will be a few hours delay from the time you've activated a VM with the hybrid benefit before it shows on the bill.
 You can then populate the results in the **Azure Hybrid Benefit for Windows Server SA Count Tool** below to get to the number of WS licenses covered with SA or Subscriptions that are required.
 
 Be sure to perform an inventory in each subscription that you own to generate a comprehensive view of your licensing position.
 
-[Azure Hybrid Benefit WS SA Count Tool](http://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
+[Azure Hybrid Benefit WS SA Count Tool](https://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
 
 If you performed the above and confirmed you are fully licensed for the number of Azure Hybrid Benefit instances you are running, there is no need for any further action. If you discovered you can cover incremental VMs with the benefit, you may want to optimize your costs further by switching to running instances with the benefit vs full cost.
 
@@ -99,7 +99,7 @@ Microsoft reserves the right to audit end customer at any time to verify eligibi
 
 ## Deployment guidance 
 
-We have enabled pre-built gallery images availability for all our customers who have eligible licenses, irrespective of where they bought them, as well as enabled partners to be able to perform the deployments on customers’ behalf. 
+We have enabled pre-built gallery images availability for all our customers who have eligible licenses, irrespective of where they bought them, as well as enabled partners to be able to perform the deployments on customers' behalf. 
 
 Please find the instructions for all available deployment options [here](https://azure.microsoft.com/pricing/hybrid-use-benefit/), including: 
 -	Detailed video highlighting the new deployment experience utilizing pre-built gallery images

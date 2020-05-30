@@ -1,12 +1,12 @@
 ---
 title: nslookup set all
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 04b695cb-38b2-4adf-aa55-9d1b628eb8ac
 author: coreyp-at-msft
@@ -27,16 +27,16 @@ Prints the current values of the configuration settings.
 set all 
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter | Description |
+|-----------|-------------|
+|   {help   |     ?}      |
 
 ## Remarks
 
 -   **Set all** also prints information about the default server and computer (that is, the host).
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

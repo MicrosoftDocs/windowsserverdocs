@@ -1,7 +1,6 @@
 ---
-title: What’s New in Kerberos Authentication
-ms.custom: na
-ms.prod: windows-server-threshold
+title: What's New in Kerberos Authentication
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
 manager: alanth
@@ -52,6 +51,8 @@ After you have created the entry, change the DWORD value to 1.
 If not configured, IP address hostnames are not attempted.
 
 If the SPN is registered in Active Directory, then authentication succeeds with Kerberos. 
+
+For more information check out the document [Configuring Kerberos for IP Addresses](configuring-kerberos-over-ip.md).
 
 ## KDC support for Key Trust account mapping
 

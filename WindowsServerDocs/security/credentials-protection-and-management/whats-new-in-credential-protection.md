@@ -1,13 +1,8 @@
-
 ---
 title: What's new in Credential Protection
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Windows Server Security
+ms.prod: windows-server
 ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f297
 author: gitmichiko
@@ -45,7 +40,7 @@ Domain protections require an Active Directory domain.
 
 Beginning with Windows 10 version 1507 and Windows Server 2016, if a domain-joined device is able to register its bound public key with a Windows Server 2016 domain controller (DC), then the device can authenticate with the public key using Kerberos PKINIT authentication to a Windows Server 2016 DC.
 
-Beginning with Windows Server 2016, KDCs support authentication using Kerberos key trust.  
+Beginning with Windows Server 2016, KDCs support authentication using Kerberos key trust.  
 
 [Learn more about public key support for domain-joined devices & Kerberos key trust](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
 
@@ -59,7 +54,7 @@ Beginning with Windows Server 2016, KDCs can support the PKInit freshness extens
 
 ### Rolling public key only user's NTLM secrets
 
-Beginning with Windows Server 2016 domain functional level (DFL), DCs can support rolling a public key only user's NTLM secrets. This feature is unavailble in lower DFLs.
+Beginning with Windows Server 2016 domain functional level (DFL), DCs can support rolling a public key only user's NTLM secrets. This feature is unavailble in lower DFLs.
 
 > [!WARNING] 
 > Adding a domain controller to a domain with rolling NTLM secrets enabled before the DC has been updated with at least the November 8, 2016 servicing runs the risk of the DC crashing. 
@@ -69,7 +64,7 @@ Configuration: For new domains, this feature is enabled by default. For existing
 1. From the Active Directory Administrative center, right-click the domain on the left pane and select **Properties**.
 
     ![Domain properties](../media/Credentials-Protection-And-Management/domain-properties.png)
-    
+
 2. Select **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Microsoft Passport or smart card for interactive logon**.
 
     ![Autoroll expiring NTLM secrets](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)

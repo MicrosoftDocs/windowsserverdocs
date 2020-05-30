@@ -1,14 +1,12 @@
 ---
 ms.assetid: eafdddc3-40d7-4a75-8f4f-a45294aabfc8
 title: Implementing Secure Administrative Hosts
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adds
 ---
 
@@ -80,7 +78,7 @@ Although the specific configuration will vary depending on the architecture of y
 You should allow interactive logons by authorized users and should remove or even block other logon types that are not needed for server access.  
   
 ### Patch and Configuration Management  
-Smaller organizations may rely on offerings such as Windows Update or [Windows Server Update Services](https://technet.microsoft.com/windowsserver/bb332157) (WSUS) to manage deployment of updates to Windows systems, while larger organizations may implement enterprise patch and configuration management software such as System Center Configuration Manager. Regardless of the mechanisms you use to deploy updates to your general server and workstation population, you should consider separate deployments for highly secure systems such as domain controllers, certification authorities, and administrative hosts. By segregating these systems from the general management infrastructure, if your management software or service accounts are compromised, the compromise cannot be easily extended to the most secure systems in your infrastructure.  
+Smaller organizations may rely on offerings such as Windows Update or [Windows Server Update Services](https://technet.microsoft.com/windowsserver/bb332157) (WSUS) to manage deployment of updates to Windows systems, while larger organizations may implement enterprise patch and configuration management software such as Microsoft Endpoint Configuration Manager. Regardless of the mechanisms you use to deploy updates to your general server and workstation population, you should consider separate deployments for highly secure systems such as domain controllers, certification authorities, and administrative hosts. By segregating these systems from the general management infrastructure, if your management software or service accounts are compromised, the compromise cannot be easily extended to the most secure systems in your infrastructure.  
   
 Although you should not implement manual update processes for secure systems, you should configure a separate infrastructure for updating secure systems. Even in very large organizations, this infrastructure can usually be implemented via dedicated WSUS servers and GPOs for secured systems.  
   

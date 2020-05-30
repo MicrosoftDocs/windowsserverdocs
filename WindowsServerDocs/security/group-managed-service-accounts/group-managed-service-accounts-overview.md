@@ -1,12 +1,8 @@
 ---
 title: Group Managed Service Accounts Overview
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Windows Server Security
+ms.prod: windows-server
 ms.technology: security-gmsa
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
 author: coreyp-at-msft
@@ -54,14 +50,14 @@ The following table provides links to additional resources related to Managed Se
 
 |Content type|References|
 |--------|-------|
-|**Product evaluation**|[What's New for Managed Service Accounts](what-s-new-for-managed-service-accounts.md)<br /><br />[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<br /><br />[Service Accounts Step\-by\-Step Guide](https://technet.microsoft.com/library/dd548356(v=ws.10).aspx)|
+|**Product evaluation**|[What's New for Managed Service Accounts](what-s-new-for-managed-service-accounts.md)<p>[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<p>[Service Accounts Step\-by\-Step Guide](https://technet.microsoft.com/library/dd548356(v=ws.10).aspx)|
 |**Planning**|Not yet available|
 |**Deployment**|Not yet available|
 |**Operations**|[Managed Service Accounts in Active Directory](https://technet.microsoft.com/library/dd378925(v=ws.10).aspx)|
 |**Troubleshooting**|Not yet available|
 |**Evaluation**|[Getting Started with Group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)|
 |**Tools and settings**|[Managed Service Accounts in Active Directory Domain Services](https://technet.microsoft.com/library/dd378925(v=WS.10).aspx)|
-|**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](http://blogs.technet.com/b/askds/archive/2009/09/10/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)|
+|**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](https://blogs.technet.com/b/askds/archive/2009/09/10/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)|
 |**Related technologies**|[Active Directory Domain Services Overview](active-directory-domain-services-overview.md)|
 
 

@@ -2,17 +2,12 @@
 title: NIC Teaming
 description: In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
 manager: dougkim
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-nict
-ms.tgt_pltfrm: na
+ms.prod: windows-server
+ms.technology: networking-nict
 ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/10/2018
 ---
 # NIC Teaming
@@ -21,8 +16,8 @@ ms.date: 09/10/2018
 
 In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.  
   
->[!IMPORTANT]
->You must install NIC Team member network adapters in the same physical host computer. 
+> [!IMPORTANT]
+> You must install NIC Team member network adapters in the same physical host computer. 
 
 > [!TIP]  
 > A NIC team that contains only one network adapter cannot provide load balancing and failover. However, with one network adapter, you can use NIC Teaming for separation of network traffic when you are also using virtual Local Area Networks (VLANs).  
@@ -37,9 +32,9 @@ Also, you can connect your teamed NICs to the same switch or different switches.
   
 ## Availability  
 NIC Teaming is available in all versions of Windows Server 2016. You can use a variety of tools to manage NIC Teaming from computers running a client operating system, such as:
-•	Windows PowerShell cmdlets
-•	Remote Desktop
-•	Remote Server Administration Tools  
+*    Windows PowerShell cmdlets
+*    Remote Desktop
+*    Remote Server Administration Tools  
   
 ## Supported and Unsupported NICs   
 You can use any Ethernet NIC that has passed the Windows Hardware Qualification and Logo test (WHQL tests) in a NIC Team in Windows Server 2016.  
@@ -115,9 +110,9 @@ When a team connects to a Hyper-V Virtual Switch, all VLAN segregation must be d
 
 Plan to use VLANs in a VM configured with a NIC Team using the following guidelines:
   
--	The preferred method of supporting multiple VLANs in a VM is to configure the VM with multiple ports on the Hyper-V Virtual Switch and associate each port with a VLAN. Never team these ports in the VM because doing so causes network communication problems.  
+-    The preferred method of supporting multiple VLANs in a VM is to configure the VM with multiple ports on the Hyper-V Virtual Switch and associate each port with a VLAN. Never team these ports in the VM because doing so causes network communication problems.  
 
--	If the VM has multiple SR-IOV Virtual Functions (VFs), ensure that they are on the same VLAN before teaming them in the VM. It's easily possible to configure the different VFs to be on different VLANs and doing so causes network communication problems.  
+-    If the VM has multiple SR-IOV Virtual Functions (VFs), ensure that they are on the same VLAN before teaming them in the VM. It's easily possible to configure the different VFs to be on different VLANs and doing so causes network communication problems.  
  
   
 ### Manage network interfaces and VLANs 
@@ -143,7 +138,7 @@ If you are configuring a NIC Team in a VM, you must select a **Teaming mode** of
   
   
 ## SR-IOV-Capable Network Adapters  
-A NIC team in or under the Hyper-V host cannot protect SR-IOV traffic because it doesn’t go through the Hyper-V Switch.  With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
+A NIC team in or under the Hyper-V host cannot protect SR-IOV traffic because it doesn't go through the Hyper-V Switch.  With the VM NIC Teaming option, you can configure two external Hyper-V Virtual Switches, each connected to its own SR-IOV-capable NIC.  
   
 ![NIC Teaming with SR-IOV-Capable Network Adapters](../../media/NIC-Teaming-in-Virtual-Machines--VMs-/nict_in_vm.jpg)  
   

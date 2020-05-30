@@ -1,12 +1,8 @@
 ---
 title: Windows Authentication Concepts
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Windows Server Security
+ms.prod: windows-server
 ms.technology: security-windows-auth
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 29d1db15-cae0-4e3d-9d8e-241ac206bb8b
 author: coreyp-at-msft

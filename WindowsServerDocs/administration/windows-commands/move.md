@@ -1,12 +1,12 @@
 ---
 title: move
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: fde290a8-d385-450f-8987-ee837fed667d
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Moves one or more files from one directory to another directory.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 move [{/y | /-y}] [<Source>] [<Target>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,13 +44,13 @@ move [{/y | /-y}] [<Source>] [<Target>]
 -   The **/y** command-line option might be preset in the COPYCMD environment variable. You can override this with **/-y** on the command line. The default is to prompt before overwriting files unless the **copy** command is run from within a batch script.
 -   Moving encrypted files to a volume that does not support Encrypting File System (EFS) results in an error. Decrypt the files first or move the files to a volume that supports EFS.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To move all files with the .xls extension from the \Data directory to the \Second_Q\Reports directory, type:
 ```
 move \data\*.xls \second_q\reports\ 
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

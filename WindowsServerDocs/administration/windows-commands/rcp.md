@@ -1,14 +1,14 @@
 ---
 title: rcp
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** -
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
-ms.assetid: 83ad713c-63c9-458c-8ad8-39a6ddeb1690 vhorne
+ms.assetid: 83ad713c-63c9-458c-8ad8-39a6ddeb1690
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

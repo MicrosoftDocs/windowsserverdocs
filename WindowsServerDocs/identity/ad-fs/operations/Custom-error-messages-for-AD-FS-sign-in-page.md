@@ -1,20 +1,17 @@
 ---
 ms.assetid: 1df78c2a-5054-4b54-8310-c48ea62e6e0b
 title: Custom error messages for AD FS sign-in page 
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Custom error messages for AD FS sign-in page  
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 You can configure custom error messages that can be tailored to your organization. The following illustration shows a customized error page description and a generic error message. Use the following Windows PowerShell cmdlets to customize your error messages.  
   
@@ -62,7 +59,7 @@ You can configure a relying party authorization error message in AD FS.
   
 To customize the relying party error message, use the following Windows PowerShell cmdlet and syntax.  
 
-    Set-AdfsRelyingPartyWebContent -Name fedpassive -ErrorPageAuthorizationErrorMessage "<p> You need to be a member of Security Auditors to access this site. Click <A href='http://accessrequest/'>here</A> for more information.</p>“  
+    Set-AdfsRelyingPartyWebContent -Name fedpassive -ErrorPageAuthorizationErrorMessage "<p> You need to be a member of Security Auditors to access this site. Click <A href='http://accessrequest/'>here</A> for more information.</p>"  
 
 
 ## Additional references 

@@ -1,19 +1,17 @@
 ---
 ms.assetid: 80b5335b-fa02-4944-900c-5fe4f5c6111d
 title: Improved interoperability with SAML 2.0
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Improved interoperability with SAML 2.0
 
->Applies To: Windows Server 2016
+
 
   
 AD FS in Windows Server 2016 contains additional SAML protocol support, including support for importing trusts based on metadata that contains multiple entities.  This enables you to configure AD FS to participate in confederations such as InCommon Federation and other implementations conforming to the eGov 2.0 standard.   

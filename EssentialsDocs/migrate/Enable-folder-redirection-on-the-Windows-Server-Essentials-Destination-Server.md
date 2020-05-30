@@ -1,12 +1,8 @@
 ---
 title: "Enable folder redirection on the Windows Server Essentials Destination Server1"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 H1: Enable folder redirection on the Windows Server Essentials Destination Server
 ms.assetid: f67d195e-36f6-495a-8361-6d5faa889441
@@ -37,14 +33,14 @@ You can perform this task if folder redirection is enabled on the Source Server.
   
 ### To delete the old Folder Redirection Group Policy setting  
   
-1.  On the Destination Server, open the **Group Policy Management** administrative tool.  
+1. On the Destination Server, open the **Group Policy Management** administrative tool.  
   
-2.  In **Group Policy Management**, expand **Forest:***YourNetworkDomainName*, expand **Domains**, expand *YourNetworkDomainName*, and then expand **Group Policy Objects**.  
+2. In **Group Policy Management**, expand **Forest:**<em>YourNetworkDomainName</em>, expand **Domains**, expand *YourNetworkDomainName*, and then expand **Group Policy Objects**.  
   
-3.  Right-click **W7PVP Folder Redirection**, and then click **Delete**.  
+3. Right-click **W7PVP Folder Redirection**, and then click **Delete**.  
   
-4.  Read the warning, and then click **Yes**.  
+4. Read the warning, and then click **Yes**.  
   
-5.  Close **Group Policy Management**.  
+5. Close **Group Policy Management**.  
   
- To apply the change to folder redirection, network users must log off their computer, and then log back on. This ensures the transfer of all redirected folders to the Destination Server.
+   To apply the change to folder redirection, network users must log off their computer, and then log back on. This ensures the transfer of all redirected folders to the Destination Server.

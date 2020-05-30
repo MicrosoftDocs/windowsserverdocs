@@ -2,12 +2,12 @@
 title: Wireless Access Deployment Planning
 description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Wireless Access Deployment Planning
 
@@ -28,7 +28,7 @@ When you design your wireless network access solution, you must do the following
 2. Determine the coverage areas where you want to provide wireless service
 3. Determine where you want to locate wireless APs
 
-Additionally, you must plan an IP address scheme for your wireless AP’s and wireless clients. See the section **Plan the configuration of wireless AP’s in NPS** below for related information.
+Additionally, you must plan an IP address scheme for your wireless AP's and wireless clients. See the section **Plan the configuration of wireless AP's in NPS** below for related information.
 
 ### Verify wireless AP support for standards
 For the purposes of consistency and ease of deployment and AP management, it is recommended that you deploy wireless APs of the same brand and model.
@@ -72,7 +72,7 @@ Refer to your AP manufacturer for information about sources that might cause wir
 ### Determine where to install wireless APs
 On the architectural drawings, locate your wireless APs close enough together to provide ample wireless coverage but far enough apart that they do not interfere with each other.
 
-The necessary distance between APs depends upon the type of AP and AP antenna, aspects of the building that block wireless signals, and other sources of interference. You can mark wireless AP placements so that each wireless AP is not more than 300 feet from any adjacent wireless AP. See the wireless AP manufacturer’s documentation for AP specifications and guidelines for placement.
+The necessary distance between APs depends upon the type of AP and AP antenna, aspects of the building that block wireless signals, and other sources of interference. You can mark wireless AP placements so that each wireless AP is not more than 300 feet from any adjacent wireless AP. See the wireless AP manufacturer's documentation for AP specifications and guidelines for placement.
 
 Temporarily install wireless APs in the locations specified on your architectural drawings. Then, using a laptop equipped with an 802.11 wireless adapter and the site survey software that is commonly supplied with wireless adapters, determine the signal strength within each coverage area.
 
@@ -111,10 +111,10 @@ The following list summarizes items commonly configured on 802.1X\-capable wirel
 
     In cases in which multiple wireless APs are deployed as part of the same wireless network, configure each wireless AP with the same SSID. In cases in which multiple wireless APs are deployed as part of the same wireless network, configure each wireless AP with the same SSID.  
 
-    In cases where you have a need to deploy different wireless networks to meet specific business needs, your wireless AP’s on one network should broadcast a different SSID than the SSID your other network\(s\). For example, if you need a separate wireless network for your employees and guests, you could configure your wireless APs for the business network with the SSID set to broadcast **ExampleWLAN**. For your guest network, you could then set each wireless AP’s SSID to broadcast **GuestWLAN**. In this way your employees and guests can connect to the intended network without unnecessary confusion.  
+    In cases where you have a need to deploy different wireless networks to meet specific business needs, your wireless AP's on one network should broadcast a different SSID than the SSID your other network\(s\). For example, if you need a separate wireless network for your employees and guests, you could configure your wireless APs for the business network with the SSID set to broadcast **ExampleWLAN**. For your guest network, you could then set each wireless AP's SSID to broadcast **GuestWLAN**. In this way your employees and guests can connect to the intended network without unnecessary confusion.  
 
     > [!TIP]  
-    > Some wireless AP’s have the ability to broadcast multiple SSID’s to accommodate multi\-network deployments. Wireless AP’s that can broadcast multiple SSID’s can reduce deployment and operational maintenance costs.  
+    > Some wireless AP's have the ability to broadcast multiple SSID's to accommodate multi\-network deployments. Wireless AP's that can broadcast multiple SSID's can reduce deployment and operational maintenance costs.  
 
 - **Wireless authentication and encryption**.
 

@@ -1,12 +1,8 @@
 ---
 title: "Step 5: Enable folder redirection on the Destination Server for Windows Server Essentials migration"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
@@ -16,7 +12,7 @@ manager: dongill
 
 # Step 5: Enable folder redirection on the Destination Server for Windows Server Essentials migration
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 If folder redirection is enabled on the Source Server, you can enable folder redirection on the Destination Server, and then delete the old Folder Redirection Group Policy setting.  
   
@@ -36,17 +32,17 @@ If folder redirection is enabled on the Source Server, you can enable folder red
   
 ### To delete the old Folder Redirection Group Policy setting  
   
-1.  On the Destination Server, open the **Group Policy Management** administrative tool.  
+1. On the Destination Server, open the **Group Policy Management** administrative tool.  
   
-2.  In **Group Policy Management**, expand **Forest:***YourNetworkDomainName*, expand **Domains**, expand *YourNetworkDomainName*, and then expand **Group Policy Objects**.  
+2. In **Group Policy Management**, expand **Forest:**<em>YourNetworkDomainName</em>, expand **Domains**, expand *YourNetworkDomainName*, and then expand **Group Policy Objects**.  
   
-3.  Right-click the policy that you want to delete, and then click **Delete**.  
+3. Right-click the policy that you want to delete, and then click **Delete**.  
   
-4.  Read the warning, and then click **Yes**.  
+4. Read the warning, and then click **Yes**.  
   
-5.  Close **Group Policy Management**.  
+5. Close **Group Policy Management**.  
   
- To apply the change for the folder redirection, network users must log off their computers, and then log back on. This ensures the transfer of all redirected folders to the Destination Server.  
+   To apply the change for the folder redirection, network users must log off their computers, and then log back on. This ensures the transfer of all redirected folders to the Destination Server.  
   
 ## Next steps  
  You have enabled folder redirection on the Destination Server. Now go to [Step 6: Demote and remove the Source Server from the new Windows Server Essentials network](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md).  

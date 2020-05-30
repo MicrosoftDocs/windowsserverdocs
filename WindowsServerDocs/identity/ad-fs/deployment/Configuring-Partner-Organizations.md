@@ -1,20 +1,16 @@
 ---
 ms.assetid: 4d002764-58b4-4137-9c86-1e55b02e07ce
 title: Configuring Partner Organizations
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Configuring Partner Organizations
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 To deploy a new partner organization in Active Directory Federation Services \(AD FS\), complete the tasks in either [Checklist: Configuring the Resource Partner Organization](Checklist--Configuring-the-Resource-Partner-Organization.md) or [Checklist: Configuring the Account Partner Organization](Checklist--Configuring-the-Account-Partner-Organization.md), depending on your AD FS design.  
   

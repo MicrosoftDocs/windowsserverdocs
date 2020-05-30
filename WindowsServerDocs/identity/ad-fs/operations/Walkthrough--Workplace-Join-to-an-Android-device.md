@@ -1,19 +1,16 @@
 ---
 ms.assetid: a33bd54c-e6db-4b58-8264-c0f34bd8ba39
 title: Walkthrough - Workplace Join to an Android device
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Walkthrough: Workplace Join to an Android device
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
 
 
 ## Join your device with Workplace Join

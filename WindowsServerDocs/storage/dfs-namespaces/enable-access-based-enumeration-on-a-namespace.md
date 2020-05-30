@@ -2,7 +2,7 @@
 title: Enable Access-based Enumeration on a Namespace
 description: This article describes how to enable access-based enumeration on a namespace.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
@@ -72,15 +72,15 @@ You can control which users and groups can view individual DFS folders either by
 
 ## To control folder visibility by using a command line
 
-1.  Open a Command Prompt window on a server that has the **Distributed File System** role service or **Distributed File System Tools** feature installed.
+1. Open a Command Prompt window on a server that has the **Distributed File System** role service or **Distributed File System Tools** feature installed.
 
-2.  Type the following command, where *&lt;DFSPath&gt;* is the path of the DFS folder (link), *<DOMAIN\\Account>* is the name of the group or user account, and *(...)* is replaced with additional Access Control Entries (ACEs):
+2. Type the following command, where *&lt;DFSPath&gt;* is the path of the DFS folder (link), *<DOMAIN\\Account>* is the name of the group or user account, and *(...)* is replaced with additional Access Control Entries (ACEs):
 
-    ```
-    dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
-    ```
+   ```
+   dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
+   ```
 
-    For example, to replace existing permissions with permissions that allows the Domain Admins and CONTOSO\\Trainers groups Read (R) access to the \\contoso.office\public\training folder, type the following command:
+   For example, to replace existing permissions with permissions that allows the Domain Admins and CONTOSO\\Trainers groups Read (R) access to the \\contoso.office\public\training folder, type the following command:
 
    ```
    dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 

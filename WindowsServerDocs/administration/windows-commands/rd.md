@@ -1,12 +1,12 @@
 ---
 title: rd
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** - 
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 42e672f6-5bc2-4c16-af25-18e7ed2dd555
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Deletes a directory. This command is the same as the **rmdir** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,14 +30,14 @@ rd [<Drive>:]<Path> [/s [/q]]
 rmdir [<Drive>:]<Path> [/s [/q]]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[\<Drive>:]<Path>|Specifies the location and the name of the directory that you want to delete. *Path* is required.|
-|/s|Deletes a directory tree (the specified directory and all its subdirectories, including all files).|
-|/q|Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. (Note that **/q** works only if **/s** is specified.)|
-|/?|Displays help at the command prompt.|
+|     Parameter     |                                                                 Description                                                                  |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| [\<Drive>:]<Path> |                      Specifies the location and the name of the directory that you want to delete. *Path* is required.                       |
+|        /s         |                     Deletes a directory tree (the specified directory and all its subdirectories, including all files).                      |
+|        /q         | Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. (Note that **/q** works only if **/s** is specified.) |
+|        /?         |                                                     Displays help at the command prompt.                                                     |
 
 ## Remarks
 
@@ -54,7 +54,7 @@ rmdir [<Drive>:]<Path> [/s [/q]]
     If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then use **rd** (specify *Path* if necessary).
 -   The **rd** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 You cannot delete the directory that you are currently working in. You must change to a directory that is not within the current directory. For example, to change to the parent directory, type:
 ```
@@ -74,6 +74,6 @@ rd /s /q test
 > [!CAUTION]
 > When you run **rd /s** in quiet mode, the entire directory tree is deleted without confirmation. Ensure that important files are moved or backed up before using the **/q** command-line option.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

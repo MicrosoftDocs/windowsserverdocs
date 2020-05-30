@@ -1,14 +1,14 @@
 ---
 title: Example of generated C# code for the top level IPAM & Subnet object
-description:
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 
 # Example of C# generated code 
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
 
 ```C#
 /* 

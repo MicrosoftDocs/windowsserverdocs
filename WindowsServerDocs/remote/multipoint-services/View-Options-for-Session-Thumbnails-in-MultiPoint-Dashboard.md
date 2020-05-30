@@ -1,12 +1,8 @@
 ---
 title: View Options for Session Thumbnails in MultiPoint Dashboard
 description: Learn how to customize your view options for MultiPoint Services
-ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 288a6504-418c-4489-acc6-930410c47cdb
 author: lizap
@@ -19,7 +15,7 @@ An easy way to monitor user activities on individual desktops is to view thumbna
   
 Using MultiPoint Dashboard, you can do the following:  
   
-- View a user’s desktop more closely by enlarging its view in the dashboard.  
+- View a user's desktop more closely by enlarging its view in the dashboard.  
 - Change the size of the thumbnail images that are displayed in the dashboard. Three sizes are available for view: small, medium, or large. Medium is the default setting.  
 - View all desktops on the MultiPoint Services system, or choose a filtered view that shows active desktops.  
   
@@ -27,7 +23,7 @@ Using MultiPoint Dashboard, you can do the following:
   
 1.  Click the **Home** tab, and then click the desktop you want to enlarge.  
   
-2.  On the **Home** tab, click **Enlarge Selected**. The user’s desktop opens in the dashboard.  
+2.  On the **Home** tab, click **Enlarge Selected**. The user's desktop opens in the dashboard.  
   
 3.  When you are finished with the enlarged view, click Return to Desktops View.  
   

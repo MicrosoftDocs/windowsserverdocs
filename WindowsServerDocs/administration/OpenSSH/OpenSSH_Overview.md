@@ -1,8 +1,9 @@
 ---
-ms.date:  08/14/2018 
-contributor:  JKeithB
-keywords:  OpenSSH, SSH, Win32-OpenSSH
-title:  Open
+ms.date:  01/07/2019
+contributor:  damaerteMSFT
+author: maertendmsft
+title:  OpenSSH in Windows
+ms.product: windows-server
 ---
 # OpenSSH in Windows
 
@@ -27,5 +28,5 @@ Documentation in this section focuses on how OpenSSH is used on Windows, includi
 Additional detailed documentation for common OpenSSH features is available online at [OpenSSH.com](https://www.openssh.com/manual.html). 
 
 The master [OpenSSH open source project](https://www.openssh.com) is managed by developers at the OpenBSD Project. 
-The Microsoft fork of this project is in [Github](https://github.com/PowerShell/openssh-portable).
-Feedback on Windows OpenSSH is welcomed and can be provided by creating Github issues in our [OpenSSG Github repo](https://github.com/PowerShell/openssh-portable). 
+The Microsoft fork of this project is in [GitHub](https://github.com/PowerShell/openssh-portable).
+Feedback on Windows OpenSSH is welcomed and can be provided by creating GitHub issues in our [OpenSSH GitHub repo](https://github.com/PowerShell/openssh-portable). 

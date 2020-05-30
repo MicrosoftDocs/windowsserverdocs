@@ -1,12 +1,8 @@
 ---
 title: "Step 4: Move settings and data to the Destination Server for Windows Server Essentials migration"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
@@ -16,7 +12,7 @@ manager: dongill
 
 # Step 4: Move settings and data to the Destination Server for Windows Server Essentials migration
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 This section provides information about migrating data and settings from the Source Server. Move settings and data to the Destination Server as follows:  
   
@@ -41,41 +37,41 @@ This section provides information about migrating data and settings from the Sou
   
 #### To copy data from the Source Server to the Destination Server  
   
-1.  Sign in to the Destination Server as a domain administrator, and then open a Command Prompt window or a Windows PowerShell command prompt.  
+1. Sign in to the Destination Server as a domain administrator, and then open a Command Prompt window or a Windows PowerShell command prompt.  
   
-2.  If you use the Command Prompt window, type the following command, and then press ENTER:  
+2. If you use the Command Prompt window, type the following command, and then press ENTER:  
   
-    `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
+   `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
   
-     Where:  
+    Where:  
   
-    -   \<SourceServerName\> is the name of the Source Server  
+   - \<SourceServerName\> is the name of the Source Server  
   
-    -   \<SharedSourceFolderName\> is the name of the shared folder on the Source Server  
+   - \<SharedSourceFolderName\> is the name of the shared folder on the Source Server  
   
-    -   \<PathOfTheDestination\> is the absolute path where you want to move the folder  
+   - \<PathOfTheDestination\> is the absolute path where you want to move the folder  
   
-    -   \<SharedDestinationFolderName\> is the folder on the Destination Server to which the data will be copied  
+   - \<SharedDestinationFolderName\> is the folder on the Destination Server to which the data will be copied  
   
      For example,  `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
   
-3.  If you use Windows PowerShell, type the following command, and then press ENTER.  
+3. If you use Windows PowerShell, type the following command, and then press ENTER.  
   
-     `Add-Wssfolder  Path \ -Name  -KeepPermission`  
+    `Add-Wssfolder  Path \ -Name  -KeepPermission`  
   
-4.  Repeat this process for each shared folder that you are migrating from the Source Server.  
+4. Repeat this process for each shared folder that you are migrating from the Source Server.  
   
 ##  <a name="BKMK_Network"></a> Configure the network  
   
 #### To configure the network  
   
-1.  On the Destination Server, open the Dashboard.  
+1. On the Destination Server, open the Dashboard.  
   
-2.  On the Dashboard **Home** page, click **Setup**, click **Set up Anywhere Access**, and then choose the **Click to configure Anywhere Access** option.  
+2. On the Dashboard **Home** page, click **Setup**, click **Set up Anywhere Access**, and then choose the **Click to configure Anywhere Access** option.  
   
-3.  The Set up Anywhere Access Wizard appears. Complete the instructions in the wizard to configure your router and domain names.  
+3. The Set up Anywhere Access Wizard appears. Complete the instructions in the wizard to configure your router and domain names.  
   
- If your router does not support the UPnP framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
+   If your router does not support the UPnP framework, or if the UPnP framework is disabled, a yellow warning icon may appear next to the router name. Ensure that the following ports are open and that they are directed to the IP address of the Destination Server:  
   
 -   Port 80: HTTP Web traffic  
   

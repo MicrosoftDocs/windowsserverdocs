@@ -1,20 +1,16 @@
 ---
 ms.assetid: c4d83dd3-2846-4658-8b9c-93901ee69766
 title: Deploying Federation Servers
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 
 # Deploying Federation Servers
-
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 To deploy federation servers in Active Directory Federation Services \(AD FS\), complete each of the tasks in [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md).  
   

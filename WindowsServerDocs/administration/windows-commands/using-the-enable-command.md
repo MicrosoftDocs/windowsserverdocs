@@ -1,12 +1,8 @@
 ---
-title: Using the Enable Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+title: Enable
+description: Reference topic for Enable, which enables all services for Windows Deployment Services.
+ms.prod: windows-server
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aafebfb2-fff0-41c9-a095-8884acf49f50
 author: coreyp-at-msft
@@ -14,11 +10,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the Enable Command
+# Enable
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables all services for Windows Deployment Services.
+
 ## Subcommands
 |Subommand|Description|
 |-------|--------|

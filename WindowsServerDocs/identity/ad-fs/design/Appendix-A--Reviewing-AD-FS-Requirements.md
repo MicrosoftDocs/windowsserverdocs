@@ -1,20 +1,16 @@
 ---
 ms.assetid: 39ecc468-77c5-4938-827e-48ce498a25ad
 title: Appendix A - Reviewing AD FS Requirements
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Appendix A: Reviewing AD FS Requirements
-
->Applies To: Windows Server 2012
 
 So that the organizational partners in your Active Directory Federation Services (AD FS) deployment can collaborate successfully, you must first make sure that your corporate network infrastructure is configured to support AD FS requirements for accounts, name resolution, and certificates. AD FS has the following types of requirements:  
   
@@ -31,7 +27,7 @@ The following minimum and recommended hardware requirements apply to the federat
 |Disk space|50 MB|100 MB|  
   
 ## Software requirements  
-AD FS relies on server functionality that is built into the Windows Server® 2012 operating system.  
+AD FS relies on server functionality that is built into the Windows Server&reg; 2012 operating system.  
   
 > [!NOTE]  
 > The Federation Service and Federation Service Proxy role services cannot coexist on the same computer.  
@@ -44,7 +40,7 @@ Federation servers require the certificates in the following table.
   
 |Certificate type|Description|What you need to know before deploying|  
 |--------------------|---------------|------------------------------------------|  
-|Secure Sockets Layer (SSL) certificate|This is a standard Secure Sockets Layer (SSL) certificate that is used for securing communications between federation servers and clients.|This certificate must be bound to the Default Web Site in Internet Information Services (IIS) for a Federation Server or a Federation Server Proxy.  For a Federation Server Proxy, the binding must be configured in IIS prior to running the Federation Server Proxy Configuration Wizard successfully.<br /><br />**Recommendation:** Because this certificate must be trusted by clients of AD FS, use a server authentication certificate that is issued by a public (third-party) certification authority (CA), for example, VeriSign. **Tip:** The Subject name of this certificate is used to represent the Federation Service name for each instance of AD FS that you deploy. For this reason, you may want to consider choosing a Subject name on any new CA-issued certificates that best represents the name of your company or organization to partners.|  
+|Secure Sockets Layer (SSL) certificate|This is a standard Secure Sockets Layer (SSL) certificate that is used for securing communications between federation servers and clients.|This certificate must be bound to the Default Web Site in Internet Information Services (IIS) for a Federation Server or a Federation Server Proxy.  For a Federation Server Proxy, the binding must be configured in IIS prior to running the Federation Server Proxy Configuration Wizard successfully.<p>**Recommendation:** Because this certificate must be trusted by clients of AD FS, use a server authentication certificate that is issued by a public (third-party) certification authority (CA), for example, VeriSign. **Tip:** The Subject name of this certificate is used to represent the Federation Service name for each instance of AD FS that you deploy. For this reason, you may want to consider choosing a Subject name on any new CA-issued certificates that best represents the name of your company or organization to partners.|  
 |Service communication certificate|This certificate enables WCF message security for securing communications between federation servers.|By default, the SSL certificate is used as the service communications certificate.  This can be changed using the AD FS Management console.|  
 |Token-signing certificate|This is a standard X509 certificate that is used for securely signing all tokens that the federation server issues.|The token-signing certificate must contain a private key, and it should chain to a trusted root in the Federation Service. By default, AD FS creates a self-signed certificate. However, you can change this later to a CA-issued certificate by using the AD FS Management snap-in, depending on the needs of your organization.|  
 |Token-decryption certificate|This is a standard SSL certificate that is used to decrypt any incoming tokens that are encrypted by a partner federation server. It is also published in federation metadata.|By default, AD FS creates a self-signed certificate. However, you can change this later to a CA-issued certificate by using the AD FS Management snap-in, depending on the needs of your organization.|  
@@ -59,7 +55,7 @@ Federation server proxies require the certificates in the following table.
   
 |Certificate type|Description|What you need to know before deploying|  
 |--------------------|---------------|------------------------------------------|  
-|Server authentication certificate|This is a standard Secure Sockets Layer (SSL) certificate that is used for securing communications between a federation server proxy and Internet client computers.|This certificate must be bound to the Default Web Site in Internet Information Services (IIS) before you can run the AD FS Federation Server Proxy Configuration Wizard successfully.<br /><br />**Recommendation:** Because this certificate must be trusted by clients of AD FS, use a server authentication certificate that is issued by a public (third-party) certification authority (CA), for example, VeriSign.<br /><br />**Tip:** The Subject name of this certificate is used to represent the Federation Service name for each instance of AD FS that you deploy. For this reason, you may want to consider choosing a Subject name that best represents the name of your company or organization to partners.|  
+|Server authentication certificate|This is a standard Secure Sockets Layer (SSL) certificate that is used for securing communications between a federation server proxy and Internet client computers.|This certificate must be bound to the Default Web Site in Internet Information Services (IIS) before you can run the AD FS Federation Server Proxy Configuration Wizard successfully.<p>**Recommendation:** Because this certificate must be trusted by clients of AD FS, use a server authentication certificate that is issued by a public (third-party) certification authority (CA), for example, VeriSign.<p>**Tip:** The Subject name of this certificate is used to represent the Federation Service name for each instance of AD FS that you deploy. For this reason, you may want to consider choosing a Subject name that best represents the name of your company or organization to partners.|  
   
 For more information about the certificates that federation server proxies use, see [Certificate Requirements for Federation Server Proxies](Certificate-Requirements-for-Federation-Server-Proxies.md).  
   

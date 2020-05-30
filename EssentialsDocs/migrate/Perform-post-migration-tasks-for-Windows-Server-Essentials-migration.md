@@ -1,12 +1,8 @@
 ---
 title: "Perform post-migration tasks for Windows Server Essentials migration1"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 author: nnamuhcs
@@ -100,21 +96,21 @@ The following tasks help you finish setting up your Destination Server with some
   
 #### To give the built-in Administrators group the right to log on as a batch job  
   
-1.  On the Destination Server, open the **Group Policy Management** administrative tool.  
+1. On the Destination Server, open the **Group Policy Management** administrative tool.  
   
-2.  In the **Group Policy Management** Console tree, expand **Forest:** *<ServerName\>*, expand Domains, and then expand your server.  
+2. In the **Group Policy Management** Console tree, expand **Forest:** *<ServerName\>*, expand Domains, and then expand your server.  
   
-3.  Expand **Domain Controllers**, right-click **Default Domain Controllers Policy**, and then click **Edit**.  
+3. Expand **Domain Controllers**, right-click **Default Domain Controllers Policy**, and then click **Edit**.  
   
-4.  In **Group Policy Management Editor**, click **Default Domain Controllers Policy***<ServerName\>***Policy**, and then expand **Computer Configuration**.  
+4. In **Group Policy Management Editor**, click **Default Domain Controllers Policy**<em><ServerName\></em>**Policy**, and then expand **Computer Configuration**.  
   
-5.  Expand **Policies**, expand **Windows Settings**, and then expand **Security Settings**.  
+5. Expand **Policies**, expand **Windows Settings**, and then expand **Security Settings**.  
   
-6.  In the **Security Settings** tree, expand **Local Policies**, and then click **User Rights Assignment**.  
+6. In the **Security Settings** tree, expand **Local Policies**, and then click **User Rights Assignment**.  
   
-7.  In the results pane, right-click **Log on as a batch job**, and then click Properties.  
+7. In the results pane, right-click **Log on as a batch job**, and then click Properties.  
   
-8.  In the **Log on as a batch job Properties** page, click **Add User or Group**.  
+8. In the **Log on as a batch job Properties** page, click **Add User or Group**.  
   
 9. In the **Add User or Group** dialog box, click **Browse**.  
   

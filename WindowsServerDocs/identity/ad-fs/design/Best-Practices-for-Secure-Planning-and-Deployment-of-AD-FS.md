@@ -1,26 +1,28 @@
 ---
 ms.assetid: 963a3d37-d5f1-4153-b8d5-2537038863cb
 title: Best Practices for Secure Planning and Deployment of AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
+ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Best Practices for Secure Planning and Deployment of AD FS
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides best-practice information to help you plan and evaluate security when you design your Active Directory Federation Services (AD FS) deployment. This topic is a starting point for reviewing and assessing considerations that affect the overall security of your use of AD FS. The information in this topic is meant to compliment and extend your existing security planning and other design best practices.  
   
 ## Core security best practices for AD FS  
 The following core best practices are common to all AD FS installations where you want to improve or extend the security of your design or deployment:  
-  
+
+-   **Secure AD FS as a "Tier 0" system** 
+
+    AD FS is, fundamentally, an authentication system.  Thus, it should be treated as a "Tier 0" system like other identity system on your network.  [Microsoft Docs](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material) has more information on the Active Directory administrative tier model. 
+
+
 -   **Use the Security Configuration Wizard to apply AD FS-specific security best practices to federation servers and federation server proxy computers**  
   
     The Security Configuration Wizard (SCW) is a tool that comes preinstalled on all Windows Server 2008, Windows Server 2008 R2 and  Windows Server 2012  computers. You can use it to apply security best practices that can help reduce the attack surface for a server, based on the server roles that you are installing.  
@@ -98,15 +100,15 @@ The following core best practices are common to all AD FS installations where yo
     -   If you revise the path to the log file, be sure to specify an absolute path for the log file location, which should be outside of the Web host virtual root (vroot) public directory to prevent it from being accessed by an external party using a Web browser.  
 
 -   **AD FS Extranet Soft Lockout and AD FS Extranet Smart Lockout Protection**  
-	
-	In case of an attack in the form of authentication requests with invalid(bad) passwords that come through the Web Application Proxy, AD FS extranet lockout enables you to protect your users from an AD FS account lockout. In addition to protecting your users from an AD FS account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.  
+    
+    In case of an attack in the form of authentication requests with invalid(bad) passwords that come through the Web Application Proxy, AD FS extranet lockout enables you to protect your users from an AD FS account lockout. In addition to protecting your users from an AD FS account lockout, AD FS extranet lockout also protects against brute force password guessing attacks.  
     
     For Extranet Soft Lockout for AD FS on Windows Server 2012 R2 see [AD FS Extranet Soft Lockout Protection](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md).  
 
-	 For Extranet Smart Lockout for AD FS on Windows Server 2016 see [AD FS Extranet Smart Lockout Protection](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md).  
+     For Extranet Smart Lockout for AD FS on Windows Server 2016 see [AD FS Extranet Smart Lockout Protection](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md).  
   
 ## SQL Server–specific security best practices for AD FS  
-The following security best practices are specific to the use of Microsoft SQL Server® or Windows Internal Database (WID) when these database technologies are used to manage data in AD FS design and deployment.  
+The following security best practices are specific to the use of Microsoft SQL Server&reg; or Windows Internal Database (WID) when these database technologies are used to manage data in AD FS design and deployment.  
   
 > [!NOTE]  
 > These recommendations are meant to extend, but not replace, SQL Server product security guidance. For more information about planning a secure SQL Server installation, see [Security Considerations for a Secure SQL Installation](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831).  

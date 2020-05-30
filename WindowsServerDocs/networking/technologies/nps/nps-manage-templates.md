@@ -2,12 +2,12 @@
 title: Manage NPS Templates
 description: This topic provides instructions on how to create, apply, export, and import NPS templates for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 989b00c5-4767-4081-ace5-6321f8b2c55e
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Manage NPS Templates

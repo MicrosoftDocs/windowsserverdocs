@@ -6,7 +6,7 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ---
 
 # Deploy Windows Admin Center with high availability
@@ -21,7 +21,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 
 - A failover cluster of 2 or more nodes on Windows Server 2016 or 2019. [Learn more about deploying a Failover Cluster](../../../failover-clustering/failover-clustering-overview.md).
 - A cluster shared volume (CSV) for Windows Admin Center to store persistent data that can be accessed by all the nodes in the cluster. 10 GB will be sufficient for your CSV.
-- High-availability deployment script from [Windows Admin Center HA Script zip file](http://aka.ms/WACHAScript). Download the .zip file containing the script to your local machine and then copy the script as needed based on the guidance below.
+- High-availability deployment script from [Windows Admin Center HA Script zip file](https://aka.ms/WACHAScript). Download the .zip file containing the script to your local machine and then copy the script as needed based on the guidance below.
 - Recommended, but optional: a signed certificate .pfx & password. You don't need to have already installed the certificate on the cluster nodes - the script will do that for you. If you don't supply one, the installation script generates a self-signed certificate, which expires after 60 days.
 
 ## Install Windows Admin Center on a failover cluster
@@ -69,7 +69,7 @@ When a new version of Windows Admin Center is released, simply run the ```Instal
 
 ### Update the certificate used by Windows Admin Center
 
-You can update the certificate used by a HA deployment of Windows Admin Center at any time by providing the new certificate's .pfx file and and password.
+You can update the certificate used by a HA deployment of Windows Admin Center at any time by providing the new certificate's .pfx file and password.
 
 ```powershell
 $certPassword = Read-Host -AsSecureString

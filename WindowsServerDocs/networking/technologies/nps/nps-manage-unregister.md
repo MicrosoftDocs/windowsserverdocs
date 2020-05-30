@@ -2,12 +2,12 @@
 title: Unregister an NPS from an Active Directory Domain
 description: You can use this topic to register a server running Network Policy Server in Windows Server 2016 in the NPS default domain or in another domain.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 68a94616-3c29-45bd-bd33-e4c578f119e1
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Unregister an NPS from an Active Directory Domain

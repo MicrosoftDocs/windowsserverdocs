@@ -1,16 +1,16 @@
 ---
 title: Health Service reports
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid:
 author: cosmosdarwin
 ms.date: 10/05/2017
 ---
 # Health Service reports
-> Applies to Windows Server 2016
+
+> Applies to: Windows Server 2019, Windows Server 2016
 
 ## What are reports  
 
@@ -44,8 +44,7 @@ Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 
 In order to query the Health Service, you will need to establish a **CimSession** with the cluster. To do so, you will need some things that are only available in full .NET, meaning you cannot readily do this directly from a web or mobile app. These code samples will use C\#, the most straightforward choice for this data access layer.
 
-``` 
-...
+```
 using System.Security;
 using Microsoft.Management.Infrastructure;
 
@@ -104,10 +103,9 @@ public void DiscoverObjects(CimSession Session)
 
 These are the same objects you get in PowerShell using cmdlets like **Get-StorageSubSystem**, **Get-StorageNode**, and **Get-Volume**.
 
-You can access all the same properties, documented at [Storage Management API Classes](https://msdn.microsoft.com/en-us/library/windows/desktop/hh830612(v=vs.85).aspx).
+You can access all the same properties, documented at [Storage Management API Classes](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx).
 
 ```
-...
 using System.Diagnostics;
 
 foreach (CimInstance Node in Nodes)
@@ -125,7 +123,7 @@ The complete list of metrics available at each scope in Windows Server 2016 is d
 
 ### IObserver.OnNext()
 
-This sample code uses the [Observer Design Pattern](https://msdn.microsoft.com/en-us/library/ee850490(v=vs.110).aspx) to implement an Observer whose **OnNext()** method will be invoked when each new sample of metrics arrives. Its **OnCompleted()** method will be called if/when streaming ends. For example, you might use it to reinitiate streaming, so it continues indefinitely.
+This sample code uses the [Observer Design Pattern](https://msdn.microsoft.com/library/ee850490(v=vs.110).aspx) to implement an Observer whose **OnNext()** method will be invoked when each new sample of metrics arrives. Its **OnCompleted()** method will be called if/when streaming ends. For example, you might use it to reinitiate streaming, so it continues indefinitely.
 
 ```
 class MetricsObserver<T> : IObserver<T>

@@ -1,12 +1,12 @@
 ---
 title: mklink
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
+description: Reference topic for **** -
+
+ms.prod: windows-server
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0ce4df22-2dbc-48fc-9c16-b721ae85f857
 author: coreyp-at-msft
@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 # mklink
 Creates a symbolic link.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -26,7 +26,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 mklink [[/d] | [/h] | [/j]] <Link> <Target>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -37,9 +37,16 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 |\<Target>|Specifies the path (relative or absolute) that the new symbolic link refers to.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-To create a symbolic link named MyDocs from the root directory to the \Users\User1\Documents directory, type:
+To demonstrates the creation and removal of a symbolic link named MyFolder and MyFile.file from the root directory to the \Users\User1\Documents directory and a example.file located within the directory:
 ```
-mklink /d \MyDocs \Users\User1\Documents
+mklink /d \MyFolder \Users\User1\Documents
+mklink /h \MyFile.file \User1\Documents\example.file
+rd \MyFolder
+del \MyFile.file
 ```
+## Additional References
+-   [New-Item](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+-   [del](https://docs.microsoft.com/windows-server/administration/windows-commands/del)
+-   [rmdir](https://docs.microsoft.com/windows-server/administration/windows-commands/rd)
