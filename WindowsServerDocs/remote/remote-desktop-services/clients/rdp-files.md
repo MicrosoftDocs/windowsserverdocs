@@ -10,6 +10,7 @@ ms.author: helohr
 ms.date: 05/08/2020
 ms.localizationpriority: medium
 ---
+
 # Supported Remote Desktop RDP file settings
 
 The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients.
@@ -81,7 +82,7 @@ The table also highlights which settings are supported as custom properties with
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | remoteapplicationcmdline:s:value | Optional command-line parameters for the RemoteApp. | Valid command line parameters. | | |
 | remoteapplicationexpandcmdline:i:value | Determines whether environment variables contained in the RemoteApp command line parameter should be expanded locally or remotely. | - 0: Environment variables should be expanded to the values of the local computer</br>- 1: Environment variables should be expanded to the values of the remote computer | 1 | |
-| remoteapplicationexpandworkingdir | Determines whether environment variables contained in the RemoteApp working directory parameter should be expanded locally or remotely. | - 0: Environment variables should be expanded to the values of the local computer</br> - 1: Environment variables should be expanded to the values of the remote computer.</br>The RemoteApp working directory is specified through the shell working directory parameter. | 1 | |
+| remoteapplicationexpandworkingdir:i:value | Determines whether environment variables contained in the RemoteApp working directory parameter should be expanded locally or remotely. | - 0: Environment variables should be expanded to the values of the local computer</br> - 1: Environment variables should be expanded to the values of the remote computer.</br>The RemoteApp working directory is specified through the shell working directory parameter. | 1 | |
 | remoteapplicationfile:s:value | Specifies a file to be opened on the remote computer by the RemoteApp.</br>For local files to be opened, you must also enable drive redirection for the source drive. | Valid file path. | | |
 | remoteapplicationicon:s:value | Specifies the icon file to be displayed in the client UI while launching a RemoteApp. If no file name is specified, the client will use the standard Remote Desktop icon. Only ".ico" files are supported. | Valid file path. | | |
 | remoteapplicationmode:i:value | Determines whether a connection is launched as a RemoteApp session. | - 0: Don't launch a RemoteApp session</br>- 1: Launch a RemoteApp session | 1 | |
