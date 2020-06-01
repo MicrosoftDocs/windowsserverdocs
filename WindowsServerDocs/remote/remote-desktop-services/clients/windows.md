@@ -8,7 +8,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/29/2020
+ms.date: 06/01/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Store client
@@ -156,7 +156,7 @@ When you start a remote desktop connection, there are tools available that you c
 
 The connection bar gives you access to additional navigation controls. By default, the connection bar is placed in the middle at the top of the screen. Tap and drag the bar to the left or right to move it.
 
-- **Pan Control** - The pan control enables the screen to be enlarged and moved around. Note that pan control is only available on touch-enabled devices and using the direct touch mode.
+- **Pan Control** - The pan control enables the screen to be enlarged and moved around. Pan control is only available on touch-enabled devices and using the direct touch mode.
    - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control and zoom the screen. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
    - To use the pan control, tap and hold the pan control and then drag in the direction you want to move the screen.
    - To move the pan control, double-tap and hold the pan control to move the control on the screen.

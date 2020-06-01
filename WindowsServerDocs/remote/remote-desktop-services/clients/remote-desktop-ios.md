@@ -8,7 +8,7 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: lizross
 ms.author: helohr
-date: 05/29/2020
+date: 06/01/2020
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client
@@ -45,7 +45,7 @@ To add a PC:
 1. In the Connection Center, tap **+**, then tap **Add PC**.
 2. Enter the following information:
    - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-   - **User name** – The user name you'll use use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or `user_name@domain.com`. You can also select **Ask when required** to be prompted for a user name and password when necessary.
+   - **User name** – The user name you'll use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or `user_name@domain.com`. You can also select **Ask when required** to be prompted for a user name and password when necessary.
 3. You can also set the following additional options:
    - **Friendly name (optional)** – An easy-to-remember name for the PC you're connecting to. You can use any string, but if you don't specify a friendly name, the PC name is displayed instead.
    - **Gateway (optional)** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
@@ -117,13 +117,13 @@ This section describes tools you can use to help navigate your Remote Desktop se
 ### Start a Remote Desktop connection
 
 1. Tap the remote desktop connection to start the remote desktop session.
-2. If you are asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don't ask me again for connections to this computer** toggle to **ON**.
+2. If you're asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don't ask me again for connections to this computer** toggle to **ON**.
 
 ### Connection bar
 
 The connection bar gives you access to additional navigation controls.
 
-- **Pan Control**: The pan control enables the screen to be enlarged and moved around. Note that pan control is only available using direct touch.
+- **Pan Control**: The pan control enables the screen to be enlarged and moved around. Pan control is only available using direct touch.
    - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control and zoom the screen. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
    - To use the pan control, tap and hold the pan control and then drag in the direction you want to move the screen.
    - To move the pan control, double-tap and hold the pan control to move the control on the screen.
@@ -165,7 +165,7 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Supported input devices
 
-Basic [Bluetooth mouse support](https://support.apple.com/HT210546) is available in iOS 13 and iPadOS as an accessibility feature. Deeper mouse integration in the RD Client is available by using the Swiftpoint GT and ProPoint mice. In addition, external keyboards that are compatible with iOS and iPadOS are also supported.
+Basic [Bluetooth mouse support](https://support.apple.com/HT210546) is available in iOS 13 and iPadOS as an accessibility feature. Deeper mouse integration in the RD Client is available by using the Swiftpoint GT and ProPoint mice. Also, external keyboards that are compatible with iOS and iPadOS are also supported.
 
 For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
