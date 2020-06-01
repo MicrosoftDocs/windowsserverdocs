@@ -38,14 +38,14 @@ To create a Remote Desktop connection:
 
 1. In the Connection Center, tap **+ Add**, and then tap **Desktop**.
 2. Enter the following information for the computer you want to connect to:
-   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
+   - **PC name** – the name of the computer. The PC name can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
    - **User account** – The user account to use to access the remote PC. Tap **+** to add a new account or select an existing account. You can use the following formats for the username: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for a user name and password during the connection by selecting **Ask me every time**.
 3. You can also set additional options by tapping on **Show more**:
    - **Display name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
    - **Group** – Specify a group to make it easier to find your connections later. You can add a new group by tapping **+** or select one from the list.
    - **Gateway** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
    - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
-   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
+   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. Swapping mouse buttons is necessary if the remote PC is configured for a left-handed user but you use a right-handed mouse.
    - **Set my remote session resolution to:** – Select the resolution you want to use in the session. **Choose for me** will set the resolution based on the size of the client.
    - **Change the size of the display:** – When selecting a high static resolution for the session, you have the option to make items on the screen appear larger to improve readability. This setting only applies when connecting to Windows 8.1 or later.
    - **Update the remote session resolution on resize** – When enabled, the client will dynamically update the session resolution based on the size of the client. This setting only applies when connecting to Windows 8.1 or later.
@@ -94,8 +94,8 @@ To set up a new gateway:
       >You can also add a gateway when you add a new connection.
 
 3. Enter the following information:
-   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-   - **User account** - Select or add a user account to use with the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials as those used for the remote desktop connection.
+   - **Server name** – The name of the computer you want to use as a gateway. The server name can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
+   - **User account** - Select or add a user account to use with the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials that you used for the remote desktop connection.
 4. Tap **Save**.  
 
 ## Global app settings
@@ -104,7 +104,7 @@ You can set the following global settings in your client by tapping **Settings**
 
 ### Managed items
 
-- **User account** - Allows you to add, edit, and delete user accounts saved in the client. This is a good way to update the password for an account after it has changed.
+- **User account** - Allows you to add, edit, and delete user accounts saved in the client. You can also update the password for an account after it's changed.
 - **Gateway** - Allows you to add, edit, and delete gateway servers saved in the client.
 - **Group** - Allows you to add, edit, and delete groups saved in the client. These allow you to easily group connections.
 
@@ -119,7 +119,7 @@ You can set the following global settings in your client by tapping **Settings**
 ### App settings
 
 - **Show Desktop Previews** - Lets you see a preview of a desktop in the Connection Center before you connect to it. This setting is on by default.
-- **Help improve Remote Desktop** - Sends anonymous data to Microsoft. We use this data to improve the client. To learn more about how we treat this anonymous, private data, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). This setting is on by default.
+- **Help improve Remote Desktop** - Sends anonymous data to Microsoft. We use this data to improve the client. To learn more about how we treat this anonymous and private data, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). This setting is on by default.
 
 ### Manage your user accounts
 
@@ -131,7 +131,7 @@ To create a new user account:
 2. Next to User account, tap **+** to add a new user account.
 3. Enter the following information:
    - **Username** - The name of the user to save for use with a remote connection. You can enter the user name in any of the following formats: user_name, domain\user_name, or user_name@domain.com.
-   - **Password** - The password for the user you specified. This can be left blank to be prompted for a password during the connection.
+   - **Password** - The password for the user you specified. This field can be left blank to be prompted for a password during the connection.
 4. Tap **Save**.
 
 To delete a user account:
@@ -150,7 +150,7 @@ When you start a remote desktop connection, there are tools available that you c
 
 1. Tap the Remote Desktop connection to start the session.
 2. If you haven't saved credentials for the connection, you will be prompted to provide a **Username** and **Password**.
-3. If you are asked to verify the certificate for the remote desktop, review the information and ensure this is a PC you trust before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
+3. If you are asked to verify the certificate for the remote desktop, review the information and ensure you trust this PC before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
 
 ### Connection bar
 
@@ -168,13 +168,10 @@ The connection bar gives you access to additional navigation controls. By defaul
 Tap the **...** on the connection bar to display the command bar on the right side of the screen.
 
 - **Home** - Use the Home button to return to the connection center from the command bar.
-  - Alternatively you can use the back button for the same action.
-  - Your active session will not be disconnected.
-  - This allows you to launch additional connections.
-- **Disconnect** - Use the Disconnect button to terminate the connection.
-  - Your apps will remain active as long as the session is not terminated on the remote PC.
+  - Alternatively you can use the back button for the same action. Your active session won't be disconnected, allowing you to launch additional connections.
+- **Disconnect** - Use the Disconnect button to terminate the connection. Your apps will remain active as long as the session is not terminated on the remote PC.
 - **Full-screen** - Enters or exits full screen mode.
-- **Touch or Mouse** -  You can switch between the mouse modes (Direct Touch and Mouse Pointer).
+- **Touch or Mouse** - You can switch between the mouse modes (Direct Touch and Mouse Pointer).
 
 ### Use direct touch gestures and mouse modes in a remote session
 
