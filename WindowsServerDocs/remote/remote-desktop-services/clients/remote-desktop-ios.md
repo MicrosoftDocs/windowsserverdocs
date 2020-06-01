@@ -65,7 +65,7 @@ To get a list of managed resources you can access on your iOS, add a workspace b
 To add a workspace:
 
 1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
-2. In the Feed URL field, enter the URL for the feed you want to add. This can be either a URL or an email address.
+2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
    - If you use a URL, use the one your admin gave you. This URL is usually <https://rdweb.wvd.microsoft.com>.
    - If you use an email address, enter your email address. Entering your email address tells the client ot search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
@@ -117,19 +117,19 @@ This section describes tools you can use to help navigate your Remote Desktop se
 ### Start a Remote Desktop connection
 
 1. Tap the remote desktop connection to start the remote desktop session.
-2. If you're asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don't ask me again for connections to this computer** toggle to **ON**.
+2. If you're asked to verify the certificate for the remote desktop, tap **Accept**. To accept by default, set  **Don't ask me again for connections to this computer** to **On**.
 
 ### Connection bar
 
 The connection bar gives you access to additional navigation controls.
 
 - **Pan Control**: The pan control enables the screen to be enlarged and moved around. Pan control is only available using direct touch.
-   - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control and zoom the screen. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
-   - To use the pan control, tap and hold the pan control and then drag in the direction you want to move the screen.
+   - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control. The screen will zoom in while the pan control is active. the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
+   - To use the pan control, tap and hold the pan control. While holding, drag your fingers in the direction you want to move the screen.
    - To move the pan control, double-tap and hold the pan control to move the control on the screen.
 - **Connection name**: The current connection name is displayed. Tap the connection name to display the session selection bar.
 - **Keyboard**: Tap the keyboard icon to display or hide the keyboard. The pan control is displayed automatically when the keyboard is displayed.
-- **Move the connection bar**: Tap and hold the connection bar, and then drag and drop to a new location at the top of the screen.
+- **Move the connection bar**: Tap and hold the connection bar. While holding the bar, drag it over to its new location. Let go of the bar to place it at the new location.
 
 ### Session selection
 
@@ -137,13 +137,13 @@ You can have multiple connections open to different PCs at the same time. Tap th
 
 Here's what you can do with the session selection bar:
 
-- Switch between apps in an open remote resource session by tapping the expander menu and choosing from the list of available items.
-- Start a new session by tapping **Start New**, then choosing a session from the list of available items.
-- Disconnect from a session by tapping the **X** icon on the left side of the session tile.
+- To switch between apps in an open remote resource session, tap the expander menu and choose an app from the list.
+- Tap **Start New** to start a new session, then choose a session from the list of available sessions.
+- Tap the **X** icon on the left side of the session tile to disconnect from your session.
 
 ### Command bar
 
-The command bar replaced the Utility bar starting in version 8.0.1. You can switch between the mouse modes and return to the connection center from the command bar.
+The command bar replaced the Utility bar starting in version 8.0.1. You can use the command bar to switch between mouse modes and return to the connection center.
 
 ## Use touch gestures and mouse modes in a remote session
 
@@ -165,7 +165,7 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Supported input devices
 
-Basic [Bluetooth mouse support](https://support.apple.com/HT210546) is available in iOS 13 and iPadOS as an accessibility feature. Deeper mouse integration in the RD Client is available by using the Swiftpoint GT and ProPoint mice. Also, external keyboards that are compatible with iOS and iPadOS are also supported.
+The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS. 
 
 For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 

@@ -39,15 +39,15 @@ To create a Remote Desktop connection:
 1. In the Connection Center, tap **+ Add**, and then tap **Desktop**.
 2. Enter the following information for the computer you want to connect to:
    - **PC name** – the name of the computer. The PC name can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-   - **User account** – The user account to use to access the remote PC. Tap **+** to add a new account or select an existing account. You can use the following formats for the username: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for a user name and password during the connection by selecting **Ask me every time**.
+   - **User account** – The user account to use to access the remote PC. Tap **+** to add a new account or select an existing account. You can use the following formats for the username: *user_name*, *domain\user_name*, or <em>user_name@domain.com</em>. You can also specify whether to prompt for credentials during the connection by selecting **Ask me every time**.
 3. You can also set additional options by tapping on **Show more**:
-   - **Display name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
+   - **Display name** – An easy-to-remember name for the PC you're connecting to. You can use any string, but if you don't specify a friendly name, the PC name is displayed.
    - **Group** – Specify a group to make it easier to find your connections later. You can add a new group by tapping **+** or select one from the list.
    - **Gateway** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
    - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
-   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. Swapping mouse buttons is necessary if the remote PC is configured for a left-handed user but you use a right-handed mouse.
+   - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. Swapping mouse buttons is necessary when you use a PC configured for a left-handed user but you only have a right-handed mouse.
    - **Set my remote session resolution to:** – Select the resolution you want to use in the session. **Choose for me** will set the resolution based on the size of the client.
-   - **Change the size of the display:** – When selecting a high static resolution for the session, you have the option to make items on the screen appear larger to improve readability. This setting only applies when connecting to Windows 8.1 or later.
+   - **Change the size of the display:** – When selecting a high static resolution for the session, you can use this setting to make items on the screen appear larger to improve readability. This setting only applies when connecting to Windows 8.1 or later.
    - **Update the remote session resolution on resize** – When enabled, the client will dynamically update the session resolution based on the size of the client. This setting only applies when connecting to Windows 8.1 or later.
    - **Clipboard** – When enabled, allows you to copy text and images to/from the remote PC.
    - **Audio Playback** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote PC, or not at all.
@@ -95,7 +95,7 @@ To set up a new gateway:
 
 3. Enter the following information:
    - **Server name** – The name of the computer you want to use as a gateway. The server name can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-   - **User account** - Select or add a user account to use with the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials that you used for the remote desktop connection.
+   - **User account** - Select or add a user account to use with the Remote Desktop Gateway you're connecting to. You can also select **Use desktop user account** to use the same credentials that you used for the remote desktop connection.
 4. Tap **Save**.  
 
 ## Global app settings
@@ -106,7 +106,7 @@ You can set the following global settings in your client by tapping **Settings**
 
 - **User account** - Allows you to add, edit, and delete user accounts saved in the client. You can also update the password for an account after it's changed.
 - **Gateway** - Allows you to add, edit, and delete gateway servers saved in the client.
-- **Group** - Allows you to add, edit, and delete groups saved in the client. These allow you to easily group connections.
+- **Group** - Allows you to add, edit, and delete groups saved in the client. You can also group connections here.
 
 ### Session settings
 
@@ -114,7 +114,7 @@ You can set the following global settings in your client by tapping **Settings**
 - **Start each connection in a new window** - When enabled, each connection is launched in a separate window, allowing you to place them on different monitors and switch between them using the taskbar.
 - **When resizing the app:** - Allows you control over what happens when the client window is resized. Defaults to **Stretch the content, preserving aspect ratio**.
 - **Use keyboard commands with:** - Lets you specify where keyboard commands like *WIN* or *ALT+TAB* are used. The default is to only send them to the session when the connection is in full screen.
-- **Prevent the screen from timing out** - Allows you to keep the screen from timing out when a session is active. This is helpful when the connection does not require any interaction for long periods of time.
+- **Prevent the screen from timing out** - Allows you to keep the screen from timing out when a session is active. Preventing timeout is helpful when the connection doesn't need interaction for long periods of time.
 
 ### App settings
 
@@ -123,7 +123,7 @@ You can set the following global settings in your client by tapping **Settings**
 
 ### Manage your user accounts
 
-When you connect to a desktop or remote resources, you can save the user accounts to select from again. You can also define user accounts in the client itself, as opposed to saving the user data when you connect to a desktop.
+When you connect to a desktop or remote resources, you can save the account's information to connect to it later. You can also define user accounts within the client instead of saving the user data when you connect to a desktop.
 
 To create a new user account:
 
@@ -149,15 +149,15 @@ When you start a remote desktop connection, there are tools available that you c
 ### Start a Remote Desktop connection
 
 1. Tap the Remote Desktop connection to start the session.
-2. If you haven't saved credentials for the connection, you will be prompted to provide a **Username** and **Password**.
-3. If you are asked to verify the certificate for the remote desktop, review the information and ensure you trust this PC before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
+2. If you haven't saved credentials for the connection, you'll be prompted to provide a **Username** and **Password**.
+3. If you're asked to verify the certificate for the remote desktop, review the information and ensure you trust this PC before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
 
 ### Connection bar
 
 The connection bar gives you access to additional navigation controls. By default, the connection bar is placed in the middle at the top of the screen. Tap and drag the bar to the left or right to move it.
 
 - **Pan Control** - The pan control enables the screen to be enlarged and moved around. Pan control is only available on touch-enabled devices and using the direct touch mode.
-   - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control and zoom the screen. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
+   - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control. The screen will zoom in while the pan control is active. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
    - To use the pan control, tap and hold the pan control and then drag in the direction you want to move the screen.
    - To move the pan control, double-tap and hold the pan control to move the control on the screen.
 - **Additional options** - Tap the additional options icon to display the session selection bar and command bar.
@@ -168,8 +168,8 @@ The connection bar gives you access to additional navigation controls. By defaul
 Tap the **...** on the connection bar to display the command bar on the right side of the screen.
 
 - **Home** - Use the Home button to return to the connection center from the command bar.
-  - Alternatively you can use the back button for the same action. Your active session won't be disconnected, allowing you to launch additional connections.
-- **Disconnect** - Use the Disconnect button to terminate the connection. Your apps will remain active as long as the session is not terminated on the remote PC.
+  - You can also use the back button for the same action. If you use the back button, your active session won't be disconnected, allowing you to launch additional connections.
+- **Disconnect** - Use the Disconnect button to disconnect from the session. Your apps will remain active as long as the session is still active on the remote PC.
 - **Full-screen** - Enters or exits full screen mode.
 - **Touch or Mouse** - You can switch between the mouse modes (Direct Touch and Mouse Pointer).
 
