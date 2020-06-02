@@ -24,7 +24,7 @@ The Storage Migration Service contains event logs for the Orchestrator service a
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService-Proxy
 
-If you need to gather these logs for offline viewing or to send to Microsoft Support, there is an open source PowerShell script available on GitHub:
+If you need to gather these logs for offline viewing or to send to Microsoft Support, there is an open-source PowerShell script available on GitHub:
 
  [Storage Migration Service Helper](https://aka.ms/smslogs) 
 
@@ -260,7 +260,7 @@ After installing [KB4512534](https://support.microsoft.com/help/4512534/windows-
   
 This error is caused by a code defect in Storage Migration Service when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The Storage Migration Service orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
 
-To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
+To work around this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
 
 ## Error "ServiceError0x9006" or "The proxy isn't currently available." when migrating to a Windows Server failover cluster
 
@@ -289,7 +289,7 @@ When attempting to run inventory with the Storage Migration Service and targetin
     DLL not found
     [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
 
-To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
+To work around this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
 
 ## Error "There are no more endpoints available from the endpoint mapper" when running inventory against a Windows Server 2003 source computer
 
