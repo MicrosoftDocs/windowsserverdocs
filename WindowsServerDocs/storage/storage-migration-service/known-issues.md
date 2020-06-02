@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 02/10/2020
+ms.date: 06/02/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -24,7 +24,7 @@ The Storage Migration Service contains event logs for the Orchestrator service a
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService-Proxy
 
-If you need to gather these logs for offline viewing or to send to Microsoft Support, there is an open source PowerShell script available on GitHub:
+If you need to gather these logs for offline viewing or to send to Microsoft Support, there is an open-source PowerShell script available on GitHub:
 
  [Storage Migration Service Helper](https://aka.ms/smslogs) 
 
@@ -130,7 +130,7 @@ To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Bui
 
 ## DFSR hashes mismatch when using Storage Migration Service to preseed data
 
-When using the Storage Migration Service to transfer files to a new destination, then configuring the DFS Replication (DFSR) to replicate that data with an existing DFSR server through preseeded replication or DFSR database cloning, all files experience a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using SMS to transfer them. Examining the files with ICACLS or the DFSR Database cloning debug log reveals:
+When using the Storage Migration Service to transfer files to a new destination, then configuring DFS Replication to replicate that data with an existing server through preseeded replication or DFS Replication database cloning, all files experience a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using Storage Migration Service to transfer them. Examining the files with ICACLS or the DFS Replication database cloning debug log reveals:
 
 Source file:
 
@@ -260,7 +260,7 @@ After installing [KB4512534](https://support.microsoft.com/help/4512534/windows-
   
 This error is caused by a code defect in Storage Migration Service when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The Storage Migration Service orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
 
-To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
+To work around this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
 
 ## Error "ServiceError0x9006" or "The proxy isn't currently available." when migrating to a Windows Server failover cluster
 
@@ -289,7 +289,7 @@ When attempting to run inventory with the Storage Migration Service and targetin
     DLL not found
     [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
 
-To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
+To work around this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
 
 ## Error "There are no more endpoints available from the endpoint mapper" when running inventory against a Windows Server 2003 source computer
 
@@ -299,9 +299,9 @@ When attempting to run inventory with the Storage Migration Service orchestrator
 
 This issue is resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update.
 
-## Uninstalling a cumulutative update prevents Storage Migration Service from starting
+## Uninstalling a cumulative update prevents Storage Migration Service from starting
 
-Uninstalling Windows Server cumulative updates may prevent the Storage Migration Service from starting. To resolve this issue, you can backup and delete the Storage Migration Service database:
+Uninstalling Windows Server cumulative updates may prevent the Storage Migration Service from starting. To resolve this issue, you can back up and delete the Storage Migration Service database:
 
 1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
@@ -341,11 +341,11 @@ When attempting to run cut over of a Windows Server 2008 R2 cluster source, the 
        at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
        at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
 
-This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the the destination cluster netname and IP address to match the original source. 
+This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the destination cluster netname and IP address to match the original source. 
 
-## Cutover hangs on "38% Mapping network interfaces on the source computer..." when using DHCP 
+## Cutover hangs on "38% Mapping network interfaces on the source computer..." when using static IPs 
 
-When attempting to run cut over of a source computer, having set the source computer to use a new static (not DHCP) IP address on one or more network interfaces, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
+When attempting to run cut over of a source computer, having set the source computer to use a new static (not DHCP) IP address on one or more network interfaces, the cut over gets stuck at phase "38% Mapping network interfaces on the source computer..." and you receive the following error in the Storage Migration Service event log:
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
@@ -370,9 +370,13 @@ When attempting to run cut over of a source computer, having set the source comp
 
 Examining the source computer shows that the original IP address fails to change. 
 
-This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address, subnet, and gateway. 
+This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address. 
 
-This issue is resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update.
+There are two solutions for this issue: 
+
+1. This issue was first resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update. That earlier code defect prevented all use of static IP addresses.
+
+2. If you have not specified a default gateway IP address on the source computer's network interfaces, this issue will occur even with the KB4537818 update. To work around this issue, set a valid default IP address on the network interfaces using the Network Connections applet (NCPA.CPL) or Set-NetRoute Powershell cmdlet.   
 
 ## Slower than expected re-transfer performance
 
@@ -387,7 +391,7 @@ After starting the transfer from or to a domain controller:
  1. No data is migrated and no shares are created on the destination.
  2. There is a red error symbol shown in Windows Admin Center with no error message
  3. One or more AD users and Domain Local groups have their name and/or pre-Windows 2000 logon attribute changed
- 4. You see event 3509 on the SMS orchestrator:
+ 4. You see event 3509 on the Storage Migration Service orchestrator:
  
         Log Name:      Microsoft-Windows-StorageMigrationService/Admin
         Source:        Microsoft-Windows-StorageMigrationService
@@ -413,13 +417,13 @@ This is expected behavior if you attempted to migrate from or to a domain contro
 
 If you have already run transfer one ore more times:
 
- 1. Use the following AD PowerShell command against a DC to locate any modified users or groups (changing SearchBase to match your domain dinstringuished name): 
+ 1. Use the following AD PowerShell command against a DC to locate any modified users or groups (changing SearchBase to match your domain distinguished name): 
 
     ```PowerShell
     Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
     ```
    
- 2. For any users returned with their original name, edit their "User Logon Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service, so that this user can logon.
+ 2. For any users returned with their original name, edit their "User Logon Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service, so that this user can log on.
  3. For any groups returned with their original name, edit their "Group Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service.
  4. For any disabled users or groups with names that now contain a suffix added by Storage Migration Service, you can delete these accounts. You can confirm that user accounts were added later because they will only contain the Domain Users group and will have a created date/time matching the Storage Migration Service transfer start time.
  
@@ -486,7 +490,7 @@ At this stage, Storage Migration Service orchestrator is attempting remote regis
  
  ## Cutover hangs on "38% Mapping network interfaces on the source computer..." 
 
-When attempting to run cut over of a source computer, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
+When attempting to run cut over of a source computer, the cut over gets stuck at phase "38% Mapping network interfaces on the source computer..." and you receive the following error in the Storage Migration Service event log:
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
@@ -521,7 +525,7 @@ It can also be set using Group Policy Preferences with a custom registry setting
 
 The Storage Migration Service temporarily enables the [LocalAccountTokenFilterPolicy](https://support.microsoft.com/help/951016/description-of-user-account-control-and-remote-restrictions-in-windows) as part of the cut over process, then removes it when done. When Group Policy applies a conflicting Group Policy Object (GPO), it overrides the Storage Migration Service and prevents cut over.
 
-To workaround this issue, use one of the following options:
+To work around this issue, use one of the following options:
 
 1. Temporarily move the source computer from the Active Directory OU that applies this conflicting GPO. 
 2. Temporarily disable the GPO that applies this conflicting policy.

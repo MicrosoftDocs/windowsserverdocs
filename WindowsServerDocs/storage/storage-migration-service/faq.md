@@ -4,7 +4,7 @@ description: Frequently asked questions about Storage Migration Service, such as
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
-ms.date: 08/19/2019
+ms.date: 06/02/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -32,7 +32,7 @@ The Storage Migration Service doesn't allow migrating between Active Directory d
 
 ## Are clusters supported as sources or destinations?
 
-The Storage Migration Service supports migrating from and to clusters after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. This includes migrating from a source cluster to a destination cluster as well as migrating from a standalone source server to a destination cluster for device consolidation purposes. 
+The Storage Migration Service supports migrating from and to clusters after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. This includes migrating from a source cluster to a destination cluster as well as migrating from a standalone source server to a destination cluster for device consolidation purposes. You cannot, however, migrate a cluster to a standalone server. 
 
 ## Do local groups and local users migrate?
 
@@ -93,11 +93,21 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
     
     FileTransferThreadCount
 
-   The valid range is 1 to 128 in Windows Server 2019. After changing you must restart the Storage Migration Service Proxy service on all computers participating in a migration. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings.
+   The valid range is 1 to 512 in Windows Server 2019. You don't need to restart the service to start using this setting as long as you create a new job. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings.
+
+- **Alter default parallel share threads.** The Storage Migration Service Proxy service copies from 8 shares simultaneously in a given job. You can increase the number of simultaneous share threads by adjusting the following registry REG_DWORD value name in decimal on the Storage Migration Service orchestrator server:
+
+    HKEY_Local_Machine\Software\Microsoft\SMS
+    
+    EndpointFileTransferTaskCount 
+
+   The valid range is 1 to 512 in Windows Server 2019. You don't need to restart the service to start using this setting as long as you create a new job. Use caution with this setting; setting it higher may require additional cores, storage performance, and network bandwidth. Setting it too high may lead to reduced performance compared to default settings. 
+   
+    The sum of FileTransferThreadCount and EndpointFileTransferTaskCount is how many files the Storage Migration Service can simultaneously copy from one source node in a job. To add more parallel source nodes, create and run more simultaneous jobs.
 
 - **Add cores and memory.**  We strongly recommend that the source, orchestrator, and destination computers have at least two processor cores or two vCPUs, and more can significantly aid inventory and transfer performance, especially when combined with FileTransferThreadCount (above). When transferring files that are larger than the usual Office formats (gigabytes or greater) transfer performance will benefit from more memory than the default 2GB minimum.
 
-- **Create multiple job.** When creating a job with multiple server sources, each server is contacted in serial fashion for inventory, transfer, and cutover. This means that each server must complete its phase before another server starts. To run more servers in parallel, simply create multiple jobs, with each job containing only one servers. SMS supports up to 100 simultaneously running jobs, meaning a single orchestrator can parallelize many Windows Server 2019 destination computers. We do not recommend running multiple parallel jobs if your destination computers are Windows Server 2016 or Windows Server 2012 R2 as without the SMS proxy service running on the destination, the orchestrator must perform all transfers itself and could become a bottleneck. The ability for servers to run in parallel inside a single job is a feature we plan to add in a later version of SMS.
+- **Create multiple jobs.** When creating a job with multiple server sources, each server is contacted in serial fashion for inventory, transfer, and cutover. This means that each server must complete its phase before another server starts. To run more servers in parallel, simply create multiple jobs, with each job containing only one server. SMS supports up to 100 simultaneously running jobs, meaning a single orchestrator can parallelize many Windows Server 2019 destination computers. We do not recommend running multiple parallel jobs if your destination computers are Windows Server 2016 or Windows Server 2012 R2 as without the SMS proxy service running on the destination, the orchestrator must perform all transfers itself and could become a bottleneck. The ability for servers to run in parallel inside a single job is a feature we plan to add in a later version of SMS.
 
 - **Use SMB 3 with RDMA networks.** If transferring from a Windows Server 2012 or later source computer, SMB 3.x supports SMB Direct mode and RDMA networking. RDMA moves most CPU cost of transfer from the motherboard CPUs to onboard NIC processors, reducing latency and server CPU utilization. In addition, RDMA networks like ROCE and iWARP typically have substantially higher bandwidth than typical TCP/ethernet, including 25, 50, and 100Gb speeds per interface. Using SMB Direct typically moves the transfer speed limit from the network down to the storage itself.   
 
@@ -134,7 +144,7 @@ The Storage Migration Service uses an extensible storage engine (ESE) database t
 
     HKEY_Local_Machine\Software\Microsoft\SMS
     DatabasePath = *path to the new database folder on a different volume*
-. 
+    
 6. Ensure that SYSTEM has full control to all files and subfolders of that folder
 7. Remove your own accounts permissions.
 8. Start the "Storage Migration Service" service.
