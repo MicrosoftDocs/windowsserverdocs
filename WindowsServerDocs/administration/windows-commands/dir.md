@@ -20,7 +20,7 @@ The **dir** command can also run from the Windows Recovery Console, using differ
 ## Syntax
 
 ```
-dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>]][/o[[:]<sortorder>]] [/t[[:]<timefield>]] [/s] [/b] [/l] [/n] [/x] [/c] [/4]
+dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>]][/o[[:]<sortorder>]] [/t[[:]<timefield>]] [/s] [/b] [/l] [/n] [/x] [/c] [/4] [/r]
 ```
 
 ### Parameters
@@ -43,6 +43,7 @@ dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>
 | /x | Displays the short names generated for non-8dot3 file names. The display is the same as the display for **/n**, but the short name is inserted before the long name. |
 | /c | Displays the thousand separator in file sizes. This is the default behavior. Use **/c** to hide separators. |
 | /4 | Displays years in four-digit format. |
+| /r | Display alternate data streams of the file. |
 | /? | Displays help at the command prompt. |
 
 #### Remarks
