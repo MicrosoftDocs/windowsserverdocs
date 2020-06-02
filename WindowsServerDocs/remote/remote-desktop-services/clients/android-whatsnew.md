@@ -11,7 +11,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 06/02/2020
+ms.date: 06/04/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Android client
