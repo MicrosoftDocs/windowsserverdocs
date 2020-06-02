@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 02/10/2020
+ms.date: 06/02/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -130,7 +130,7 @@ To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Bui
 
 ## DFSR hashes mismatch when using Storage Migration Service to preseed data
 
-When using the Storage Migration Service to transfer files to a new destination, then configuring the DFS Replication (DFSR) to replicate that data with an existing DFSR server through preseeded replication or DFSR database cloning, all files experience a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using SMS to transfer them. Examining the files with ICACLS or the DFSR Database cloning debug log reveals:
+When using the Storage Migration Service to transfer files to a new destination, then configuring the DFS Replication (DFSR) to replicate that data with an existing DFSR server through preseeded replication or DFSR database cloning, all files experience a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using Storage Migration Service to transfer them. Examining the files with ICACLS or the DFSR Database cloning debug log reveals:
 
 Source file:
 
@@ -343,9 +343,9 @@ When attempting to run cut over of a Windows Server 2008 R2 cluster source, the 
 
 This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the the destination cluster netname and IP address to match the original source. 
 
-## Cutover hangs on "38% Mapping network interfaces on the source computer..." when using Static IP 
+## Cutover hangs on "38% Mapping network interfaces on the source computer..." when using static IPs 
 
-When attempting to run cut over of a source computer, having set the source computer to use a new static (not DHCP) IP address on one or more network interfaces, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
+When attempting to run cut over of a source computer, having set the source computer to use a new static (not DHCP) IP address on one or more network interfaces, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the Storage Migration Service event log:
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
@@ -391,7 +391,7 @@ After starting the transfer from or to a domain controller:
  1. No data is migrated and no shares are created on the destination.
  2. There is a red error symbol shown in Windows Admin Center with no error message
  3. One or more AD users and Domain Local groups have their name and/or pre-Windows 2000 logon attribute changed
- 4. You see event 3509 on the SMS orchestrator:
+ 4. You see event 3509 on the Storage Migration Service orchestrator:
  
         Log Name:      Microsoft-Windows-StorageMigrationService/Admin
         Source:        Microsoft-Windows-StorageMigrationService
@@ -490,7 +490,7 @@ At this stage, Storage Migration Service orchestrator is attempting remote regis
  
  ## Cutover hangs on "38% Mapping network interfaces on the source computer..." 
 
-When attempting to run cut over of a source computer, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
+When attempting to run cut over of a source computer, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the Storage Migration Service event log:
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
