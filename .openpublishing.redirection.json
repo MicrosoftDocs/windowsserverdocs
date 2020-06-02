@@ -8641,7 +8641,7 @@
  {
   "source_path": "WindowsServerDocs/windows-server.md",
   "redirect_url": "/windows-server/index",
-  "redirect_document_id": true
+  "redirect_document_id": false
  },
  {
   "source_path": "WindowsServerDocs/azure-stack-hci/index.md",

@@ -9,7 +9,7 @@ ms.author: delhan
 ---
 # Having a problem with nodes being removed from active Failover Cluster membership
 
-This article introduce how to resolve the problems in which nodes are removed from active failover cluster membership randomly.
+This article introduces how to resolve the problems in which nodes are removed from active failover cluster membership randomly.
 
 ## Symptoms
 

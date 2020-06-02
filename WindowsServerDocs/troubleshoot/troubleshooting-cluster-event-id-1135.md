@@ -7,8 +7,6 @@ ms.date: 05/28/2020
 
 This article helps you diagnose and resolve Event ID 1135, which may be logged during the startup of the Cluster service in Failover Clustering environment.
 
-This article provides information about resolving
-
 ## Start Page
 
 Event ID 1135 indicates that one or more Cluster nodes were removed from the active failover cluster membership. It may be accompanied by the following symptoms:
