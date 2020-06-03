@@ -50,12 +50,13 @@ For example, if the relying party identifier in the AD FS configuration database
   
 -   URI1 cannot have more path sections than URI2  
   
--   If URI1 has a query string, it must match exactly to a URI2 query string  
-  
 -   If URI1 has a fragment, it must match exactly to a URI2 fragment  
   
-The following table provides additional examples.  
+ >[!NOTE]
+ > Query string parameters are not supported and will be ignored in relying party identifiers.
   
+The following table provides additional examples. 
+
 |Relying party identifier in AD FS configuration database|Relying party identifier in request message|Request identifier matches the configuration identifier?|Reason|  
 |------------------------------------------------------------|-----------------------------------------------|------------------------------------------------------------|----------|  
 |http:\/\/contoso.com|http:\/\/contoso.com|TRUE|Exact match|  
@@ -63,11 +64,9 @@ The following table provides additional examples.
 |http:\/\/contoso.com|http:\/\/contoso.com\/|TRUE|Trailing slashes are ignored|  
 |http:\/\/contoso.com|http:\/\/contoso.com\/hr|TRUE|URI1 has no path and matches scheme and authority to URI2|  
 |http:\/\/contoso.com\/hr|http:\/\/contoso.com\/hr\/web|TRUE|First path sections match, URI1 has no second path section|  
-|http:\/\/contoso.com\/hr|http:\/\/contoso.com\/hr\/web\/?m\=t|TRUE|Same reasons as above, query string doesn't change anything|  
 |http:\/\/contoso.com\/hr\/|http:\/\/contoso.com\/hrw\/main|FALSE|URI1 path section 1 does not match URI2 path section 1|  
 |http:\/\/contoso.com\/hr|http:\/\/contoso.com|FALSE|URI1 has more path sections than URI2|  
 |http:\/\/contoso.com\/hr|http:\/\/contoso.com\/hrweb|FALSE|First path sections do not match|  
-|http:\/\/contoso.com\/?m\=t|http:\/\/contoso.com\/?m\=f|FALSE|Query string parts do not match|  
 |https:\/\/contoso.com|http:\/\/contoso.com|FALSE|Scheme parts do not match|  
 |http:\/\/sts.contoso.com|http:\/\/contoso.com|FALSE|Authority parts do not match|  
 |http:\/\/contoso.com|http:\/\/sts.contoso.com|FALSE|Authority parts do not match|  
