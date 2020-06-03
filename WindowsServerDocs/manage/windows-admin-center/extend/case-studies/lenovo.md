@@ -32,4 +32,14 @@ The tool extension for failover clusters and hyper-converged clusters provides a
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-4.png)
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-5.png)
 
+The solution extension and tool extensions for Windows servers and clusters provide the rolling (cluster-aware) server update functions. This can prevent any workload interruption during server update. Currently, the extensions support individual firmware update and compliance policy firmare update for any Lenovo servers, or best recipe firmware/driver update for Lenovo ThinkAgile MX HCI cluster servers.
+
+![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-6-fwupdate.png)
+
+The tool extension for hyper-converged clusters provides the disk/storage pool management functions for Lenovo ThinkAgile MX HCI cluster servers, which provides the server rear/front graphic view to present server and disk status. It makes the the operations much easier with the help of wizard and graphic view, such as adding a disk to the storage pool, removing a disk from the storage pool, replacing a disk, or locating a server/disk by lighting on the server/disk location LEDs.
+
+![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-7-diskmgr.png)
+
+In the version 2.1, Lenovo extensions introduced the role-based access control capabilities if Lenovo XClarity Administrator is applied for hardware management.
+
 Learn more about the Lenovo XClarity Integrator offerings for Windows Admin Center on the [Lenovo website](https://support.lenovo.com/us/en/solutions/ht507549).
