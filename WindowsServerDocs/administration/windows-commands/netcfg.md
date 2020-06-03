@@ -1,6 +1,6 @@
 ---
 title: netcfg
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -8,7 +8,7 @@ ms.prod: windows-server
 ms.technology: manage-windows-commands
 
 ms.topic: article
-ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7 vhorne
+ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # netcfg
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
 ## Syntax
@@ -36,7 +36,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/b|Displays the **binding paths**, when followed by a string containing the name of the path.|
 |/?|Displays **help** at the command prompt.|
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 To install the protocol *example* using c:\oemdir\example.inf:
 ```
@@ -67,4 +67,4 @@ To display binding paths containing *MS_TCPIP*:
 netcfg /b ms_tcpip
 ```
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: where
-description: Windows Commands topic for where, which displays the location of files that match the given search pattern. 
+description: Reference topic for where, which displays the location of files that match the given search pattern. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 Displays the location of files that match the given search pattern.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -41,7 +41,7 @@ where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...]
 -   If you do not specify a file name extension, the extensions listed in the PATHEXT environment variable are appended to the pattern by default.
 -   **Where** can run recursive searches, display file information such as date or size, and accept environment variables in place of paths on local computers.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To find all files named Test in drive C of the current computer and its subdirectories, type:
 ```

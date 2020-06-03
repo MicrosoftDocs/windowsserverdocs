@@ -1,6 +1,6 @@
 ---
 title: nbtstat
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -16,9 +16,9 @@ ms.date: 10/16/2017
 ---
 # nbtstat
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays NetBIOS over TCP/IP (NetBT) protocol statistics, NetBIOS name tables for both the local computer and remote computers, and the NetBIOS name cache. **nbtstat** allows a refresh of the NetBIOS name cache and the names registered with Windows Internet Name Service (WINS). Used without parameters, **nbtstat** displays help. 
+Displays NetBIOS over TCP/IP (NetBT) protocol statistics, NetBIOS name tables for both the local computer and remote computers, and the NetBIOS name cache. **nbtstat** allows a refresh of the NetBIOS name cache and the names registered with Windows Internet Name Service (WINS). Used without parameters, **nbtstat** displays help.
 
 ## Syntax
 
@@ -79,7 +79,7 @@ nbtstat [/a <remoteName>] [/A <IPaddress>] [/c] [/n] [/r] [/R] [/RR] [/s] [/S] [
 
 -   This command is available only if the Internet Protocol (TCP/IP) protocol is installed as a component in the properties of a network adapter in Network Connections.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 To display the NetBIOS name table of the remote computer with the NetBIOS computer name of CORP07, type:
 
 ```
@@ -124,6 +124,6 @@ nbtstat /S 5
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
 

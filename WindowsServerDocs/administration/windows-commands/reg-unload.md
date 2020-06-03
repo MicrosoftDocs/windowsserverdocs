@@ -1,12 +1,8 @@
 ---
 title: reg unload
-description: Windows Commands topic for **** - 
-
+description: Reference topic for the reg unload command, which removes a section of the registry loaded using the reg load operation. 
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 1d07791d-ca27-454e-9797-27d7e84c5048
 author: coreyp-at-msft
@@ -21,7 +17,7 @@ ms.date: 10/16/2017
 
 Removes a section of the registry that was loaded using the **reg load** operation.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -45,7 +41,7 @@ The following table lists the return values for the **reg unload** option.
 |0|Success|
 |1|Failure|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To unload the hive TempHive in the file HKLM, type:
 ```
@@ -58,3 +54,5 @@ REG UNLOAD HKLM\TempHive
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [reg load command](reg-load.md)

@@ -1,6 +1,6 @@
 ---
 title: systeminfo
-description: Windows Commands topic for systeminfo, which displays detailed configuration information about a computer and its operating system, including operating system configuration, security information, product ID, and hardware properties (such as RAM, disk space, and network cards).
+description: Reference topic for systeminfo, which displays detailed configuration information about a computer and its operating system, including operating system configuration, security information, product ID, and hardware properties (such as RAM, disk space, and network cards).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Displays detailed configuration information about a computer and its operating system, including operating system configuration, security information, product ID, and hardware properties (such as RAM, disk space, and network cards).
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -34,7 +34,7 @@ Systeminfo [/s <Computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE 
 |/nh|Suppresses column headers in the output. Valid when the **/fo** parameter is set to TABLE or CSV.|
 |/?|Displays help at the command prompt.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view configuration information for a computer named Srvmain, type:
 

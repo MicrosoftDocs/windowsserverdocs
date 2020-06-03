@@ -1,6 +1,6 @@
 ---
 title: wbadmin get disks
-description: Windows Commands topic for wbadmin get disks, which lists the internal and external disks that are currently online for the local computer.
+description: Reference topic for wbadmin get disks, which lists the internal and external disks that are currently online for the local computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -31,6 +31,6 @@ This subcommand has no parameters.
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Get-WBDisk](https://technet.microsoft.com/library/jj902446.aspx) cmdlet

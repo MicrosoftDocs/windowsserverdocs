@@ -1,6 +1,6 @@
 ---
 title: wbadmin stop job
-description: Windows Commands topic for wbadmin stop job, which cancels the backup or recovery operation that is currently running. Canceled operations cannot be restarted—you must rerun a canceled backup or recovery operation from the beginning.
+description: Reference topic for wbadmin stop job, which cancels the backup or recovery operation that is currently running. Canceled operations cannot be restarted—you must rerun a canceled backup or recovery operation from the beginning.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -34,5 +34,5 @@ wbadmin stop job
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

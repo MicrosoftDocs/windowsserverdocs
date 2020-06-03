@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getdescription
-description: Windows Commands topic for **bitsadmin getdescription**, which retrieves the description of the specified job.
+description: Reference topic for the bitsadmin getdescription command, which retrieves the description of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -27,14 +27,16 @@ bitsadmin /getdescription <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the description for the job named *myDownloadJob*.
+To retrieve the description for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getdescription myDownloadJob
+bitsadmin /getdescription myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

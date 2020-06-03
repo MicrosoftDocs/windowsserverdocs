@@ -1,6 +1,6 @@
 ---
 title: wbadmin disable backup
-description: Windows Commands topic for wbadmin disable backup, which stops running the existing scheduled daily backups.
+description: Reference topic for wbadmin disable backup, which stops running the existing scheduled daily backups.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -34,5 +34,5 @@ wbadmin disable backup
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

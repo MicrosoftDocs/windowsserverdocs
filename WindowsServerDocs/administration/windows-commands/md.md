@@ -1,6 +1,6 @@
 ---
 title: Md
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -24,7 +24,7 @@ Creates a directory or subdirectory.
 > [!NOTE]
 > This command is the same as the **mkdir** command.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -45,7 +45,7 @@ mkdir [<Drive>:]<Path>
 
 Command extensions, which are enabled by default, allow you to use a single **md** command to create intermediate directories in a specified path.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To create a directory named Directory1 within the current directory, type:
 ```

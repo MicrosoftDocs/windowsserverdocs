@@ -1,10 +1,10 @@
 ---
 title: wevtutil
-description: Windows Commands topic for wevtutil, which lets you retrieve information about event logs and publishers.
+description: Reference topic for wevtutil, which lets you retrieve information about event logs and publishers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822 vhorne
+ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -15,19 +15,19 @@ ms.date: 10/16/2017
 
 
 
-Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs.
 
 ## Syntax
 
 ```
 wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
-[{sl | set-log} <Logname> [/e:<Enabled>] [/i:<Isolation>] [/lfn:<Logpath>] [/rt:<Retention>] [/ab:<Auto>] [/ms:<MaxSize>] [/l:<Level>] [/k:<Keywords>] [/ca:<Channel>] [/c:<Config>]] 
-[{ep | enum-publishers}] 
-[{gp | get-publisher} <Publishername> [/ge:<Metadata>] [/gm:<Message>] [/f:<Format>]] [{im | install-manifest} <Manifest>] 
-[{um | uninstall-manifest} <Manifest>] [{qe | query-events} <Path> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/bm:<Bookmark>] [/sbm:<Savebm>] [/rd:<Direction>] [/f:<Format>] [/l:<Locale>] [/c:<Count>] [/e:<Element>]] 
-[{gli | get-loginfo} <Logname> [/lf:<Logfile>]] 
-[{epl | export-log} <Path> <Exportfile> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/ow:<Overwrite>]] 
-[{al | archive-log} <Logpath> [/l:<Locale>]] 
+[{sl | set-log} <Logname> [/e:<Enabled>] [/i:<Isolation>] [/lfn:<Logpath>] [/rt:<Retention>] [/ab:<Auto>] [/ms:<MaxSize>] [/l:<Level>] [/k:<Keywords>] [/ca:<Channel>] [/c:<Config>]]
+[{ep | enum-publishers}]
+[{gp | get-publisher} <Publishername> [/ge:<Metadata>] [/gm:<Message>] [/f:<Format>]] [{im | install-manifest} <Manifest>]
+[{um | uninstall-manifest} <Manifest>] [{qe | query-events} <Path> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/bm:<Bookmark>] [/sbm:<Savebm>] [/rd:<Direction>] [/f:<Format>] [/l:<Locale>] [/c:<Count>] [/e:<Element>]]
+[{gli | get-loginfo} <Logname> [/lf:<Logfile>]]
+[{epl | export-log} <Path> <Exportfile> [/lf:<Logfile>] [/sq:<Structquery>] [/q:<Query>] [/ow:<Overwrite>]]
+[{al | archive-log} <Logpath> [/l:<Locale>]]
 [{cl | clear-log} <Logname> [/bu:<Backup>]] [/r:<Remote>] [/u:<Username>] [/p:<Password>] [/a:<Auth>] [/uni:<Unicode>]
 ```
 
@@ -86,7 +86,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 
 -   Using a configuration file with the sl parameter
 
-    The configuration file is an XML file with the same format as the output of wevtutil gl \<Logname> /f:xml. The following example shows the format of a configuration file that enables retention, enables autobackup, and sets the maximum log size on the Application log:  
+    The configuration file is an XML file with the same format as the output of wevtutil gl \<Logname> /f:xml. To shows the format of a configuration file that enables retention, enables autobackup, and sets the maximum log size on the Application log:
     ```
     <?xml version=1.0 encoding=UTF-8?>
     <channel name=Application isolation=Application
@@ -101,7 +101,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
     </channel>
     ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 List the names of all logs:
 ```
@@ -133,7 +133,7 @@ wevtutil qe Application /c:3 /rd:true /f:text
 ```
 Display the status of the Application log:
 ```
-wevtutil gli Application 
+wevtutil gli Application
 ```
 Export events from System log to C:\backup\system0506.evtx:
 ```

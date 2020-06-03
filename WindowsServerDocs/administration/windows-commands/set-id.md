@@ -1,6 +1,6 @@
 ---
 title: Set ID
-description: Windows Commands topic for the Diskpart Set ID, which changes the partition type field for the partition with focus.
+description: Reference topic for the Diskpart Set ID, which changes the partition type field for the partition with focus.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Set ID
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Diskpart Set ID command changes the partition type field for the partition with focus.  
   
@@ -42,7 +42,7 @@ set id={ <byte> | <GUID> } [override] [noerr]
   
 -   This command does not work on dynamic disks or on Microsoft Reserved partitions.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To set the type field to 0x07 and force the file system to dismount, type:  
   
 ```  

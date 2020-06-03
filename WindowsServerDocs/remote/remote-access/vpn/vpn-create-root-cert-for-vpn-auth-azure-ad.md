@@ -37,8 +37,9 @@ The VPN client then sends the certificate issues by Azure AD to the VPN for cred
 
 1. Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
 2. On the left menu, click **Azure Active Directory**.
-3. On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
-4. On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
+3. On the **Azure Active Directory** page, in the **Manage** section, click **Security**.
+4. On the **Security** page, in the **Protect** section, click **Conditional Access**.
+5. On the **Conditional Access | Policies** page, in the **Manage** section, click **VPN Connectivity**.
 5. On the **VPN connectivity** page, click **New certificate**.
 6. On the **New** page, perform the following steps:
    a. For **Select duration**, select either 1, 2 or 3 years.

@@ -1,6 +1,6 @@
 ---
 title: pushprinterconnections
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -8,7 +8,7 @@ ms.prod: windows-server
 ms.technology: manage-windows-commands
 
 ms.topic: article
-ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818 vhorne
+ms.assetid: c30afb97-b149-478f-a4b9-2cbc25361818
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -40,5 +40,5 @@ This utility is for use in machine startup or user logon scripts, and should not
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Deploy Printers by Using Group Policy](https://go.microsoft.com/fwlink/?LinkId=230627)

@@ -1,6 +1,6 @@
 ---
 title: mqtgsvc
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -33,4 +33,4 @@ None
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

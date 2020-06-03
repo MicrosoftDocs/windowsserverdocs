@@ -1,6 +1,6 @@
 ---
 title: get-Server
-description: Windows Commands topic for get-Server, which retrieves information from the specified Windows Deployment Services server. 
+description: Reference topic for get-Server, which retrieves information from the specified Windows Deployment Services server. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # get-Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information from the specified Windows Deployment Services server.
 
@@ -26,7 +26,7 @@ wdsutil [Options] /Get-Server [/Server:<Server name>] /Show:{Config | Images | A
 |[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |/Show:{Config &#124; Images &#124; All}|Specifies the type of information to return.<p>-   **Config** returns configuration information.<br />-   **Images** returns information about image groups, boot images, and install images.<br />-   **All** returns configuration information and image information.|
 |[/detailed]|You can use this option with **/Show:Images** or **/Show:All** to indicate that all image metadata from each image should be returned. If the **/detailed** option is not used, the default behavior is to return the image name, description, and file name.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To view information about the server, type:
 ```
 wdsutil /Get-Server /Show:Config

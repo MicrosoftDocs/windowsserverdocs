@@ -9,9 +9,9 @@ ms.service: windows-10-hyperv
 ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
 ---
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
-
 # Virtual Machine Resource Controls
+
+> Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article describes Hyper-V resource and isolation controls for virtual machines.  These capabilities, which we'll refer to as Virtual Machine CPU Groups, or just "CPU groups", were introduced in Windows Server 2016.  CPU groups allow Hyper-V administrators to better manage and allocate the host's CPU resources across guest virtual machines.  Using CPU groups, Hyper-V administrators can:
 
@@ -25,7 +25,7 @@ This article describes Hyper-V resource and isolation controls for virtual machi
 
 CPU groups are managed through the Hyper-V Host Compute Service, or HCS. A great description of the HCS, its genesis, links to the HCS APIs, and more is available on the Microsoft Virtualization team's blog in the posting [Introducing the Host Compute Service (HCS)](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/).
 
->[!NOTE] 
+>[!NOTE]
 >Only the HCS may be used to create and manage CPU groups; the Hyper-V Manager applet, WMI and PowerShell management interfaces don't support CPU groups.
 
 Microsoft provides a command line utility, cpugroups.exe, on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=865968) which uses the HCS interface to manage CPU groups.  This utility can also display the CPU topology of a host.
@@ -46,7 +46,7 @@ For example, consider a CPU group configured with 4 logical processors (LPs), an
     G = 4 * 50%
     G = 2 LP's worth of CPU time for the entire group
 
-In this example, the CPU group G is allocated 2 LP's worth of CPU time.  
+In this example, the CPU group G is allocated 2 LP's worth of CPU time.
 
 Note that the group cap applies regardless of the number of virtual machines or virtual processors bound to the group, and regardless of the state  (e.g., shutdown or started) of the virtual machines assigned to the CPU group. Therefore, each VM bound to the same CPU group will receive a fraction of the group's total CPU allocation, and this will change with the number of VMs bound to the CPU group. Therefore, as VMs are bound or unbound VMs from a CPU group, the overall CPU group cap must be readjusted and set to maintain the resulting per-VM cap desired. The VM host administrator or virtualization management software layer is responsible for managing group caps as necessary to achieve the desired per-VM CPU resource allocation.
 
@@ -115,7 +115,7 @@ For more information about the "minroot" configuration, see [Hyper-V Host CPU Re
 
 Let's look at some examples of how to use the CpuGroups tool.
 
->[!NOTE] 
+>[!NOTE]
 >Command line parameters for the CpuGroups tool are passed using only spaces as delimiters. No '/' or '-' characters should proceed the desired command line switch.
 
 ### Discovering the CPU Topology

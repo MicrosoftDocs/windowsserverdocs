@@ -1,6 +1,6 @@
 ---
 title: get-DriverPackage
-description: Windows Commands topic for get-DriverPackage, which displays information about a driver package on the server.
+description: Reference topic for get-DriverPackage, which displays information about a driver package on the server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -30,7 +30,7 @@ WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name
 |    [/PackageId:\<ID>]    | Specifies the Windows Deployment Services ID of the driver package to show. You must specify the ID if the driver package cannot be uniquely identified by name. |
 |     [/Show: {Drivers     |                                                                              Files                                                                               |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view information about a driver package, type one of the following:
 ```

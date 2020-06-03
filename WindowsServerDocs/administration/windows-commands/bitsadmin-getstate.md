@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getstate
-description: Windows Commands topic for **bitsadmin getstate**, which retrieves the state of the specified job.
+description: Reference topic for the bitsadmin getstate command, which retrieves the state of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -27,9 +27,9 @@ bitsadmin /getstate <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## Output
+#### Output
 
-The output values include:
+The returned output values can be:
 
 | State | Description |
 | --------------- | ----------- |
@@ -43,14 +43,16 @@ The output values include:
 | Acknowledged | The job completed. |
 | Canceled | The job was canceled. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the state for the job named *myDownloadJob*.
+To retrieve the state for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getstate myDownloadJob
+bitsadmin /getstate myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

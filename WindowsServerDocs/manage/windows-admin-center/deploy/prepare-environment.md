@@ -9,6 +9,7 @@ ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ---
+
 # Prepare your environment for Windows Admin Center
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
@@ -30,7 +31,7 @@ Windows Admin Center requires PowerShell features that are not included by defau
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/wmf/setup/install-configure).
+If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure).
 
 ## Prepare Microsoft Hyper-V Server 2016
 
@@ -87,9 +88,9 @@ To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, there are 
 Windows Admin Center requires PowerShell features that are not included by default in Microsoft Hyper-V Server 2012 R2. To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, you will need to install WMF version 5.1 or higher.
 
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher. 
+and that the version is 5.1 or higher.
 
-If it is not installed, you can [download WMF 5.1](https://docs.microsoft.com/powershell/wmf/setup/install-configure).
+If it is not installed, you can [download WMF 5.1](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure).
 
 ### Step 2: Enable Remote Management
 

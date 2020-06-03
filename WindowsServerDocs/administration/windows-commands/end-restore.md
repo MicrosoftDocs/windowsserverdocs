@@ -1,12 +1,8 @@
 ---
-title: End restore
-description: Windows Commands topic for **** - 
-
+title: end restore
+description: Reference topic for the end restore command, which ends a restore session and issues a **PostRestore** event to involved writers.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 67ce83ec-a51e-4d1f-a182-d84ded999dc3
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# End restore
-
-
+# end restore
 
 Ends a restore session and issues a **PostRestore** event to involved writers.
 

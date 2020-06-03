@@ -1,6 +1,6 @@
 ---
 title: begin backup
-description: Windows Commands topic for **begin backup**, which starts a full backup session.
+description: Reference topic for the begin backup command, which starts a full backup session.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -11,9 +11,11 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Begin backup
+# begin backup
 
-Starts a full backup session.
+> Applies To: Windows Server 2012 R2, Windows Server 2012
+
+Starts a full backup session. This command overrides the default copy backup setting.
 
 ## Syntax
 
@@ -21,10 +23,8 @@ Starts a full backup session.
 begin backup
 ```
 
-## Remarks
-
-This command overrides the default copy backup setting.
-
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+  
+- [begin restore command](begin-restore.md)

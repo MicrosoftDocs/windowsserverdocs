@@ -1,6 +1,6 @@
 ---
 title: query
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -14,16 +14,18 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # query
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about processes, sessions, and Remote Desktop Session Host (RD Session Host) servers.
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)) in the Microsoft Docs Windows Server Library.
 
 ## Syntax
+
 ```
 query process
 query session
@@ -32,6 +34,7 @@ query user
 ```
 
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
 |[query process](query-process.md)|Displays information about processes that are running on an rd Session Host server.|
@@ -40,5 +43,6 @@ query user
 |[query user](query-user.md)|Displays information about user sessions on an rd Session Host server.|
 
 ## Additional References
+
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+- [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

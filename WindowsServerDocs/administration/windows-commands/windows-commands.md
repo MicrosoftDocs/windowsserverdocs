@@ -1,6 +1,6 @@
 ---
 title: Windows Commands
-description: Windows Commands 
+description: Reference
 ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
@@ -19,30 +19,30 @@ This set of documentation describes the Windows Commands you can use to automate
 To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
 [A](#a) |
-[B](#b) | 
-[C](#c) | 
-[D](#d) | 
-[E](#e) | 
-[F](#f) | 
-[G](#g) | 
-[H](#h) | 
+[B](#b) |
+[C](#c) |
+[D](#d) |
+[E](#e) |
+[F](#f) |
+[G](#g) |
+[H](#h) |
 [I](#i) |
-[J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n) | 
-[O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r) | 
-[S](#s) | 
-[T](#t) | 
-[U](#u) | 
-[V](#v) | 
-[W](#w) | 
-[X](#x) | 
-Y | 
+[J](#j) |
+[K](#k) |
+[L](#l) |
+[M](#m) |
+[N](#n) |
+[O](#o) |
+[P](#p) |
+[Q](#q) |
+[R](#r) |
+[S](#s) |
+[T](#t) |
+[U](#u) |
+[V](#v) |
+[W](#w) |
+[X](#x) |
+Y |
 Z
 
 ## Prerequisites
@@ -53,7 +53,7 @@ The information that is contained in this topic applies to:
 -   Windows Server (Semi-Annual Channel)
 -   Windows Server 2016
 -   Windows Server 2012 R2
--   Windows Server 2012 
+-   Windows Server 2012
 -   Windows Server 2008 R2
 -   Windows Server 2008
 -   Windows 10
@@ -67,18 +67,18 @@ Windows has two command shells: The Command shell and [PowerShell](https://docs.
 
 PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run Windows Commands and PowerShell cmdlets in Powershell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
 
-For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation. 
+For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 > [!NOTE]
->You can also download and install [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell. 
+>You can also download and install [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
 
 > [!NOTE]
 > To enable or disable file and directory name completion in the Command shell on a computer or user logon session, run **regedit.exe** and set the following **reg_DWOrd value**:
-> 
+>
 > HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\completionChar\reg_DWOrd
-> 
+>
 > To set the **reg_DWOrd** value, use the hexadecimal value of a control character for a particular function (for example, **0 9** is Tab and **0 08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
 ## Command-line reference A-Z
@@ -86,30 +86,30 @@ For the most robust, up-to-date Windows automation, we recommend using PowerShel
 To find information about a specific Windows Command, in the following A-Z menu, click the letter that the Command starts with, and then click the Command name.
 
 [A](#a) |
-[B](#b) | 
-[C](#c) | 
-[D](#d) | 
-[E](#e) | 
-[F](#f) | 
-[G](#g) | 
-[H](#h) | 
+[B](#b) |
+[C](#c) |
+[D](#d) |
+[E](#e) |
+[F](#f) |
+[G](#g) |
+[H](#h) |
 [I](#i) |
-[J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n) | 
-[O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r) | 
-[S](#s) | 
-[T](#t) | 
-[U](#u) | 
-[V](#v) | 
-[W](#w) | 
-[X](#x) | 
-Y | 
+[J](#j) |
+[K](#k) |
+[L](#l) |
+[M](#m) |
+[N](#n) |
+[O](#o) |
+[P](#p) |
+[Q](#q) |
+[R](#r) |
+[S](#s) |
+[T](#t) |
+[U](#u) |
+[V](#v) |
+[W](#w) |
+[X](#x) |
+Y |
 Z)
 
 ### A
@@ -349,14 +349,14 @@ Z)
   -   [ksetup:setenctypeattr](ksetup-setenctypeattr.md)
   -   [ksetup:getenctypeattr](ksetup-getenctypeattr.md)
   -   [ksetup:addenctypeattr](ksetup-addenctypeattr.md)
-  -   [ksetup:delenctypeattr](ksetup-delenctypeattr.md) 
+  -   [ksetup:delenctypeattr](ksetup-delenctypeattr.md)
 - [ktmutil](ktmutil.md)
 - [ktpass](ktpass.md)
 
 ### L
 - [label](label.md)
 - [lodctr](lodctr.md)
-- [logman](logman.md)
+- [logman command](logman.md)
   -   [logman create](logman-create.md)
   -   [logman query](logman-query.md)
   -   [logman start &124; stop](logman-start-stop.md)
@@ -525,7 +525,7 @@ Z)
 - [scwcmd](Scwcmd.md)
   -   [scwcmd: analyze](scwcmd-analyze.md)
   -   [scwcmd: configure](scwcmd-configure.md)
-  -   [scwcmd: register](scwcmd-register.md) 
+  -   [scwcmd: register](scwcmd-register.md)
   -   [scwcmd: rollback](scwcmd-rollback.md) 
   -   [scwcmd: transform](scwcmd-transform.md) 
   -   [scwcmd: view](scwcmd-view.md) 
@@ -587,7 +587,7 @@ Z)
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
--   [vssadmin](vssadmin.md)- 
+-   [vssadmin](vssadmin.md)-
 
 ### W
 - [waitfor](waitfor.md)

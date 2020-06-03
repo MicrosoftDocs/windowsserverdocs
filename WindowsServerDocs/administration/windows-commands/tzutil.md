@@ -1,6 +1,6 @@
 ---
 title: tzutil
-description: Windows Commands topic for tzutil, which displays the Windows Time Zone utility. 
+description: Reference topic for tzutil, which displays the Windows Time Zone utility.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,9 +12,9 @@ ms.date: 10/16/2017
 ---
 # tzutil
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the Windows Time Zone utility. 
+Displays the Windows Time Zone utility.
 
 ## Syntax
 ```
@@ -31,7 +31,7 @@ tzutil [/?] [/g] [/s <timeZoneID>[_dstoff]] [/l]
 ## Remarks
 An exit code of **0** indicates the command completed successfully.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 To display the current time zone ID, type:
 ```
 tzutil /g
@@ -45,5 +45,5 @@ To set the current time zone to Pacific Standard time and disable Daylight Savin
 tzutil /s Pacific Standard time_dstoff
 ```
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

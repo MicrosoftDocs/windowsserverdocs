@@ -16,9 +16,9 @@ ms.date: 07/11/2018
 ---
 # tapicfg
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Creates, removes, or displays a TAPI application directory partition, or sets a default TAPI application directory partition. TAPI 3.1 clients can use the information in this application directory partition with the directory service locator service to find and communicate with TAPI directories.You can also use **tapicfg** to create or remove service connection points, which enable TAPI clients to efficiently locate TAPI application directory partitions in a domain. For more information, see remarks. To view the command syntax, click a command. 
+Creates, removes, or displays a TAPI application directory partition, or sets a default TAPI application directory partition. TAPI 3.1 clients can use the information in this application directory partition with the directory service locator service to find and communicate with TAPI directories.You can also use **tapicfg** to create or remove service connection points, which enable TAPI clients to efficiently locate TAPI application directory partitions in a domain. For more information, see remarks. To view the command syntax, click a command.
 -   [tapicfg install](#BKMK_install)
 -   [tapicfg remove](#BKMK_remove)
 -   [tapicfg publishscp](#BKMK_publishscp)
@@ -102,7 +102,7 @@ Sets the default TAPI application directory partition for the domain.
 
 ### Syntax
 ```
-tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]  
+tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]
 ```
 #### Parameters
 |Parameter|Description|
@@ -130,5 +130,5 @@ To display the name of the default TAPI application directory partition for the 
 ```
 tapicfg show /defaultonly
 ```
-## Additional references
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

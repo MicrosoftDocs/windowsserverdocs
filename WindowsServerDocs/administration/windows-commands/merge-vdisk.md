@@ -1,6 +1,6 @@
 ---
 title: Merge vdisk
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # Merge vdisk
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD. The parent VHD will be modified to include the modifications from the differencing VHD.
 > [!NOTE]
@@ -26,15 +26,15 @@ Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD.
 > merge vdisk depth=<n>
 > ```
 > #### Parameters
-> 
+>
 > | Parameter |                                                                                    Description                                                                                    |
 > |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > | depth=<n> | Indicates the number of parent VHD files to merge together. For example, **depth=1** indicates that the differencing VHD will be merged with one level of the differencing chain. |
-> 
-> ## Remarks
+>
+>#### Remarks
 > - A VHD must be selected and detached for this operation to succeed. Use the **select vdisk** command to select a VHD and shift the focus to it.
 > - This parameter modifies the parent VHD. As a result, other differencing VHDs that are dependent on the parent will no longer be valid.
->   ## <a name=BKMK_Examples></a>Examples
+>   ## Examples
 >   To merge a differencing VHD with its parent VHD, type:
 >   ```
 >   merge vdisk depth=1

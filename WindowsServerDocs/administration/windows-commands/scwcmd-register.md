@@ -1,6 +1,6 @@
 ---
 title: Scwcmd register
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Scwcmd: register
 
-> Applies To: Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2012 R2, Windows Server 2012
 
 Extends or customizes the Security Configuration Wizard (SCW) Security Configuration Database by registering a Security Configuration Database file that contains role, task, service, or port definitions.
 
@@ -41,7 +41,7 @@ scwcmd register /kbname:<MyApp> [/kbfile:<kb.xml>] [/kb:<path>] [/d]
 
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 To register the Security Configuration Database file named SCWKBForMyApp.xml under the name MyApp in the location \\\\kbserver\kb, type:
 ```
@@ -54,4 +54,4 @@ scwcmd register /d /kbname:MyApp /kb:\\kbserver\kb
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

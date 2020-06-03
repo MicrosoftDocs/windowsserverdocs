@@ -17,10 +17,10 @@ ms.date: 07/11/2018
 
 # popd
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the current directory to the directory that was most recently stored by the **pushd** command.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 ```
@@ -39,7 +39,7 @@ popd
 -   When command extensions are enabled, the **popd** command removes any drive-letter assignations created by **pushd**.
 
 ## <a name="BKMK_examples"></a>Examples
-The following example shows how you can use the **pushd** command and the **popd** command in a batch program to change the current directory from the one in which the batch program was run and then change it back:
+To shows how you can use the **pushd** command and the **popd** command in a batch program to change the current directory from the one in which the batch program was run and then change it back:
 
 ```
 @echo off
@@ -53,5 +53,5 @@ echo All text files deleted in the %1 directory
 
 ## Additional References
 -   [pushd](pushd.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

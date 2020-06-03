@@ -1,6 +1,6 @@
 ---
 title: wbadmin enable backup
-description: Windows Commands topic for wbadmin enable backup, which creates and enables a daily backup schedule or modifies an existing backup schedule.
+description: Reference topic for wbadmin enable backup, which creates and enables a daily backup schedule or modifies an existing backup schedule.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,8 +18,6 @@ ms.date: 10/16/2017
 Creates and enables a daily backup schedule or modifies an existing backup schedule. With no parameters specified, it displays the currently scheduled backup settings.
 
 To configure or modify a daily backup schedule, you must be a member of either the **Administrators** or **Backup Operators** group. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt** and then click **Run as administrator**.)
-
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -61,11 +59,11 @@ wbadmin enable backup
 [-nonRecurseExclude:<ItemsToExclude>][-systemState]
 [-hyperv:<HyperVComponentsToExclude>]
 [-allCritical]
-[-systemState] 
+[-systemState]
 [-vssFull | -vssCopy]
 [-user:<UserName>]
 [-password:<Password>]
-[-quiet] 
+[-quiet]
 [-allowDeleteOldBackups]
 ```
 
@@ -94,7 +92,7 @@ wbadmin enable backup
 
 To view the disk identifier value for your disks, type **wbadmin get disks**.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 The following examples show how the **wbadmin enable backup** command can be used in different backup scenarios:
 
@@ -122,5 +120,5 @@ Scenario #1
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

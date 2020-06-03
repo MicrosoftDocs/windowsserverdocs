@@ -1,6 +1,6 @@
 ---
 title: wbadmin delete catalog
-description: Windows Commands topic for wbadmin delete catalog, which deletes the backup catalog that is stored on the local computer.
+description: Reference topic for wbadmin delete catalog, which deletes the backup catalog that is stored on the local computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -38,6 +38,6 @@ If you delete the backup catalog for a computer, you will not be able to access 
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Remove-WBCatalog](https://technet.microsoft.com/library/jj902445.aspx)

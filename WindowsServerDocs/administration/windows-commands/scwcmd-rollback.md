@@ -1,6 +1,6 @@
 ---
 title: Scwcmd rollback
-description: Windows Commands topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Scwcmd: rollback
 
-> Applies To: Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2012 R2, Windows Server 2012
 
 Applies the most recent rollback policy available, and then deletes that rollback policy.
 
@@ -40,7 +40,7 @@ scwcmd rollback /m:<ComputerName> [/u:<UserName>] [/pw:<Password>]
 
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 To roll back the security policy on a computer at IP address 172.16.0.0, type:
 ```
@@ -49,4 +49,4 @@ scwcmd rollback /m:172.16.0.0
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

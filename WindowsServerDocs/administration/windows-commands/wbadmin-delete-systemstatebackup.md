@@ -1,6 +1,6 @@
 ---
 title: wbadmin delete systemstatebackup
-description: Windows Commands topic for wbadmin delete systemstatebackup, which deletes the system state backups that you specify.
+description: Reference topic for wbadmin delete systemstatebackup, which deletes the system state backups that you specify.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -22,7 +22,7 @@ Deletes the system state backups that you specify. If the specified volume conta
 
 To delete a system state backup with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt**, and then click **Run as administrator**.)
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -48,7 +48,7 @@ wbadmin delete systemstatebackup
 |-machine|Specifies the computer whose system state backup you want to delete. Useful when multiple computers were backed up to the same location. Should be used when the **-backupTarget** parameter is specified.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To delete the system state backup created on March 31, 2013 at 10:00 AM, type:
 ```
@@ -65,5 +65,5 @@ wbadmin delete systemstatebackup -backupTarget:f -deleteOldest
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

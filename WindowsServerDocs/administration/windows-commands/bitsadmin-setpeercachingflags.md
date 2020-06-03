@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setpeercachingflags
-description: Windows Commands topic for **bitsadmin setpeercachingflags**, which sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers.
+description: Reference topic for the bitsadmin setpeercachingflags command, which sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -30,12 +30,14 @@ bitsadmin /setpeercachingflags <job> <value>
 
 ## Examples
 
-The following example sets flags for the job named *myDownloadJob*, allowing it to download content from peers.
+To allow the job named *myDownloadJob* to download content from peers:
 
 ```
-C:\>bitsadmin /setpeercachingflags myDownloadJob 1
+bitsadmin /setpeercachingflags myDownloadJob 1
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

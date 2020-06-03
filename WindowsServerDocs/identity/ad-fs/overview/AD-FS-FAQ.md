@@ -80,7 +80,7 @@ AD FS provides an extensible mechanism for 3rd party MFA providers to integrate.
 The list of vendors that have notified Microsoft are published at [MFA providers for AD FS](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md).  There may always be providers available that we do not know about and we will update the list as we learn about them.
 
 ### Are third party proxies supported with AD FS?
-Yes, third party proxies can be placed in front of the Web Application Proxy, but any third party proxy must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be used in place of the Web Application Proxy.
+Yes, third party proxies can be placed in front of AD FS, but any third party proxy must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be used in place of the Web Application Proxy.
 
 Below is a list of third party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
 

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin sethelpertokenflags
-description: Windows Commands topic for **bitsadmin sethelpertokenflags**, which sets the usage flags for a helper token that is associated with a BITS transfer job.
+description: Reference topic for the bitsadmin sethelpertokenflags command, which sets the usage flags for a helper token that is associated with a BITS transfer job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -33,3 +33,5 @@ bitsadmin /sethelpertokenflags <job> <flags>
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

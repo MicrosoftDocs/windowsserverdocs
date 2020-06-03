@@ -10,9 +10,10 @@ ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
 ---
->Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 # Migrating the WSUS Database from WID to SQL
+
+> Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 Use the following steps to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server.
 
@@ -62,7 +63,7 @@ From PowerShell (elevated), run:
 
 ### Copy the SUSDB files to the SQL Server
 
-1. Copy **SUSDB.mdf** and **SUSDB\_log.ldf** from the WID Data Folder (**%SystemDrive%**\**Windows\WID\Data**) to the SQL Instance Data Folder.
+1. Copy **SUSDB.mdf** and **SUSDB\_log.ldf** from the WID Data Folder (**%SystemDrive%**\\**Windows\\WID\\Data**) to the SQL Instance Data Folder.
 
 > [!TIP]
 > For example, if your SQL Instance Folder is **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL**, and the WID Data folder is **C:\Windows\WID\Data,** copy the SUSDB files from **C:\Windows\WID\Data** to **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data**

@@ -1,6 +1,6 @@
 ---
 title: wscript
-description: Windows Commands topic for wscript, which provides an environment in which users can execute scripts in a variety of languages that use a variety of object models to perform tasks.
+description: Reference topic for wscript, which provides an environment in which users can execute scripts in a variety of languages that use a variety of object models to perform tasks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -56,4 +56,4 @@ wscript [<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

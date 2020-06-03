@@ -1,6 +1,6 @@
 ---
 title: add-DriverGroupPackage
-description: Windows Commands topic for add-DriverGroupPackage, which adds a driver package to a driver group. 
+description: Reference topic for add-DriverGroupPackage, which adds a driver package to a driver group. 
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # add-DriverGroupPackage
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds a driver package to a driver group.
 
@@ -29,7 +29,7 @@ wdsutil /add-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>
 |   /DriverPackage:<Name>   |                                                                      Specifies the name of the driver package to be added to the group. You must specify this option if the driver package cannot be uniquely identified by name.                                                                       |
 |      /PackageId:<ID>      | Specifies the ID for a package. To find the Package ID, click the driver group that the package is in (or the **All Packages** node), right-click the package, and then click **Properties**. The Package ID is listed on the **General** tab, for example: **{DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}**. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To add a driver package, type one of the following:
 ```
 wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}

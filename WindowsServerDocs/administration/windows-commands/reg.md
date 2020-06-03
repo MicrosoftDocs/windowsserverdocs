@@ -1,6 +1,6 @@
 ---
 title: reg
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 

@@ -1,6 +1,6 @@
 ---
 title: winnt32
-description: Windows Commands topic for winnt32, which performs an installation of, or upgrade to, a product in Windows Server 2003.
+description: Reference topic for winnt32, which performs an installation of, or upgrade to, a product in Windows Server 2003.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # winnt32
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Performs an installation of or upgrade to a product in Windows Server 2003. You can run **winnt32** at the command prompt on a computer running Windows 95, Windows 98, Windows Millennium edition, Windows NT, Windows 2000, Windows XP, or a product in the Windows Server 2003. If you run **winnt32** on a computer running Windows NT version 4.0, you must first apply Service Pack 5 or later.
 ## Syntax
@@ -64,6 +64,6 @@ for more detailed information about using Dynamic Update and installing multiple
 for information about modifying boot settings, see the Windows Deployment and Resource Kits for Windows Server 2003. For more information, see [Using the Windows Deployment and Resource Kits](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
 Using the **/unattend** command-line option to automate setup affirms that you have read and accepted the Microsoft License Agreement for Windows Server 2003. Before using this command-line option to install Windows Server 2003 on behalf of an organization other than your own, you must confirm that the end user (whether an individual, or a single entity) has received, read, and accepted the terms of the Microsoft License Agreement for that product.  OEMs may not specify this key on machines being sold to end users.
 
-## Additional references
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,6 +1,6 @@
 ---
 title: select partition
-description: Windows Commands topic for **** - 
+description: Reference topic for **** - 
 
 ms.prod: windows-server
 
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 ---
 # select partition
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 selects the specified partition and shifts the focus to it. This command can also be used to display the partition that currently has the focus in the selected disk.  
   
@@ -44,7 +44,7 @@ select partition=<n>
   
 -   if a partition is selected with a corresponding volume, the volume will be automatically selected.  
   
-## <a name=BKMK_examples></a>Examples  
+## Examples  
 To shift the focus to partition 3, type:  
   
 ```  
