@@ -25,4 +25,4 @@ mqsvc.exe
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [MSMQ Powershell Reference](https://docs.microsoft.com/en-us/powershell/module/msmq/?view=win10-ps)
+- [MSMQ Powershell Reference](https://docs.microsoft.com/powershell/module/msmq/?view=win10-ps)

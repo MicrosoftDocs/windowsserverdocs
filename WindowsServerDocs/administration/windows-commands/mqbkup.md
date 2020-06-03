@@ -67,3 +67,5 @@ mqbkup /r c:\msmqbkup
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [MSMQ Powershell Reference](https://docs.microsoft.com/powershell/module/msmq/?view=win10-ps)
