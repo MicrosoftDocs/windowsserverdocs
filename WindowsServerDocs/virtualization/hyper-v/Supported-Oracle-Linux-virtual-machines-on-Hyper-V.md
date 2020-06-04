@@ -199,10 +199,8 @@ Windows Server 2016 Accurate Time
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
 
 </td>
 <td width="10%">
@@ -211,10 +209,8 @@ Windows Server 2016 Accurate Time
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
 
 </td>
 </tr>
@@ -225,30 +221,23 @@ Windows Server 2016 Accurate Time
 </td>
 <td width="20%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
-
-</td>
-<td width="10%">
-
-
-</td>
-<td width="10%">
-
 
 </td>
 </tr>
@@ -498,26 +487,20 @@ SR-IOV
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
-
-</td>
-<td width="10%">
-
-
-</td>
-<td width="10%">
-
 
 </td>
 </tr>
@@ -701,26 +684,20 @@ SCSI WWN
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
-
-</td>
-<td width="10%">
-
-
-</td>
-<td width="10%">
-
 
 </td>
 </tr>
@@ -891,7 +868,6 @@ Runtime Memory Resize
 </td>
 <td width="10%">
 
-
 </td>
 </tr>
 <tr height="50px">
@@ -901,30 +877,23 @@ Runtime Memory Resize
 </td>
 <td width="20%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
-
-</td>
-<td width="10%">
-
-
-</td>
-<td width="10%">
-
 
 </td>
 </tr>
@@ -969,30 +938,23 @@ Hyper-V specific video
 </td>
 <td width="20%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
-
-</td>
-<td width="10%">
-
-
-</td>
-<td width="10%">
-
 
 </td>
 </tr>
@@ -1207,30 +1169,23 @@ PCI Passthrough/DDA
 </td>
 <td width="20%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
+</td>
+<td width="10%">
 
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
 
-
 </td>
 <td width="10%">
-
-
-</td>
-<td width="10%">
-
-
-</td>
-<td width="10%">
-
 
 </td>
 </tr>
