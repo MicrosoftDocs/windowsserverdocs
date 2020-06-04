@@ -18,9 +18,9 @@ The following feature distribution map indicates the features that are present i
 
 In this section:
 
-* [Oracle Linux 8.x Series](#Oracle-Linux-8.x-Series)
-* [Oracle Linux 7.x Series](#Oracle-Linux-7.x-Series)
-* [Oracle Linux 6.x Series](#Oracle-Linux-6.x-Series)
+* [Oracle Linux 8.x Series](#Oracle-Linux-8x-Series)
+* [Oracle Linux 7.x Series](#Oracle-Linux-7x-Series)
+* [Oracle Linux 6.x Series](#Oracle-Linux-6x-Series)
  
    
 ## Table legend
