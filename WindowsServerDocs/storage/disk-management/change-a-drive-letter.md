@@ -1,7 +1,7 @@
 ---
 title: Change a drive letter
 description: How to change or assign a drive letter in Windows by using Disk Management.
-ms.date: 10/24/2018
+ms.date: 06/08/2020
 ms.prod: windows-server 
 ms.technology: storage 
 ms.topic: article 
@@ -11,7 +11,7 @@ ms.author: jgerend
 ---
 # Change a drive letter
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If you don't like the drive letter assigned to a drive, or if you've got a drive that doesn't yet have a drive letter, you can use Disk Management to change it.
 
@@ -21,8 +21,8 @@ If you don't like the drive letter assigned to a drive, or if you've got a drive
 Here's how to change the drive letter (to instead to mount the drive in an empty folder so that it appears as just another folder, see [Assign a mount point folder path to a drive](assign-a-mount-point-folder-path-to-a-drive.md)).
 
 1. Open Disk Management with administrator permissions. 
-    To do so, in the search box on the taskbar, type **Disk Management**, select and hold (or right-click) **Disk Management**, then select **Run as administrator** > **Yes**. If you can't open it as an administrator, type **Computer Management** instead, and then go to **Storage** > **Disk Management**.
-1. In Disk Management, right-click the drive for which you want to change or add a drive letter, and then select **Change Drive Letter and Paths**.
+    To do so, select and hold (or right-click) the Start button, and  then select **Disk Management**.
+1. In Disk Management, select and hold (or right-click) the volume for which you want to change or add a drive letter, and then select **Change Drive Letter and Paths**.
 
     ![Disk Management showing a drive](media/change-drive-letter.png)
     > [!TIP]
