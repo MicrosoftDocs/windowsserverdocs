@@ -56,7 +56,7 @@ For more information, see:
 
 - Our [announcement blog](https://techcommunity.microsoft.com/t5/networking-blog/top-10-networking-features-in-windows-server-2019-10-accurate/ba-p/339739/)
 
-- Validation Guide for the [IT Pro](https://github.com/Microsoft/SDN/blob/master/FeatureGuide/Validation%20Guide%20-%20RS5%20-%20Software%20Timestamping.docx)
+- [Validation Guides for Developers and IT Pros](https://github.com/microsoft/W32Time/tree/master/Leap%20Seconds)
 
 
 ---
