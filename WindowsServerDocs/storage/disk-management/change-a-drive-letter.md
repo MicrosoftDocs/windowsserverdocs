@@ -20,7 +20,7 @@ If you don't like the drive letter assigned to a drive, or if you've got a drive
 
 Here's how to change the drive letter (to instead to mount the drive in an empty folder so that it appears as just another folder, see [Assign a mount point folder path to a drive](assign-a-mount-point-folder-path-to-a-drive.md)).
 
-1. Open Disk Management with administrator permissions. 
+1. Open Disk Management with administrator permissions.
     To do so, select and hold (or right-click) the Start button, and  then select **Disk Management**.
 1. In Disk Management, select and hold (or right-click) the volume for which you want to change or add a drive letter, and then select **Change Drive Letter and Paths**.
 
