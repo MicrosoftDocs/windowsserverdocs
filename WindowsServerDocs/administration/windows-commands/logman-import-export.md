@@ -20,8 +20,8 @@ Imports a Data Collector Set from an XML file, or exports a Data Collector Set t
 ## Syntax
 
 ```
-logman import <[-n] <name>> <-xml <name>> [options]
-logman export <[-n] <name>> <-xml <name>> [options]
+logman import <[-n] <name> <-xml <name> [options]
+logman export <[-n] <name> <-xml <name> [options]
 ```
 
 ### Parameters
