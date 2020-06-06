@@ -13,12 +13,12 @@ ms.author: jgerend
 
 > **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-If you don't like the drive letter assigned to a drive, or if you've got a drive that doesn't yet have a drive letter, you can use Disk Management to change it.
+If you don't like the drive letter assigned to a drive, or if you've got a drive that doesn't yet have a drive letter, you can use Disk Management to change it. To instead to mount the drive in an empty folder so that it appears as just another folder, see [Mount a drive in a folder](assign-a-mount-point-folder-path-to-a-drive.md).
 
 > [!IMPORTANT]
 > If you change the drive letter of a drive where Windows or apps are installed, apps might have trouble running or finding that drive. For this reason we suggest that you don't change the drive letter of a drive on which Windows or apps are installed.
 
-Here's how to change the drive letter (to instead to mount the drive in an empty folder so that it appears as just another folder, see [Assign a mount point folder path to a drive](assign-a-mount-point-folder-path-to-a-drive.md)).
+Here's how to change the drive letter:
 
 1. Open Disk Management with administrator permissions.
     To do so, select and hold (or right-click) the Start button, and  then select **Disk Management**.
