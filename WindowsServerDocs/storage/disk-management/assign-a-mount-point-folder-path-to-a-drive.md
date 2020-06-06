@@ -33,9 +33,7 @@ You can use Disk Management to mount (make a drive accessible) in a folder rathe
 
 2.  At the **DISKPART** prompt, type `list volume`, making note of the volume number you want to assign the path to.
 
-3.  At the **DISKPART** prompt, type `select volume <volumenumber>`. 
-
-4. Select the simple volume *volumenumber* that you want to assign the path to.
+3.  At the **DISKPART** prompt, type `select volume <volumenumber>`, specifying the volume number that you want to assign the path to.
 
 5.  At the **DISKPART** prompt, type `assign [mount=<path>]`.
 
