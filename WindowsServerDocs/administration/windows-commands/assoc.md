@@ -8,7 +8,7 @@ ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 06/13/2020
 ---
 
 # assoc
@@ -16,7 +16,9 @@ ms.date: 10/16/2017
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
 
 > [!NOTE]
-> This command is only supported within cmd.exe and is not available from PowerShell.
+> This command is only supported within cmd.exe and is not available from PowerShell.<br>
+> <br>
+> The command interpreter [cmd.exe](cmd.md) does not recognize this command if Command Extensions are disabled.
 
 ## Syntax
 

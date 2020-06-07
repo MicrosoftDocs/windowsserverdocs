@@ -8,7 +8,7 @@ ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 06/13/2020
 ---
 
 # ftype
@@ -16,8 +16,10 @@ ms.date: 10/16/2017
 Displays or modifies file types that are used in file name extension associations. If used without an assignment operator (=), this command displays the current open command string for the specified file type. If used without parameters, this command displays the file types that have open command strings defined.
 
 > [!NOTE]
-> This command is only supported within cmd.exe and is not available from PowerShell.
-> Though you can use `cmd /c ftype` as a workaround.
+> This command is only supported within cmd.exe and is not available from PowerShell.<br>
+> Though you can use `cmd /c ftype` as a workaround.<br>
+> <br>
+> The command interpreter [cmd.exe](cmd.md) does not recognize this command if Command Extensions are disabled.
 
 ## Syntax
 

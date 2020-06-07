@@ -1,6 +1,6 @@
 ---
 title: cmd
-description: Reference topic for the cmd command, which starts a new instance of the command interpreter, Cmd.exe. 
+description: Reference topic for the cmd command, which starts a new instance of the command interpreter, Cmd.exe.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,7 +8,7 @@ ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 06/13/2020
 ---
 
 # cmd
@@ -32,7 +32,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 | /d | Disables execution of AutoRun commands. |
 | /a | Formats internal command output to a pipe or a file as American National Standards Institute (ANSI). |
 | /u | Formats internal command output to a pipe or a file as Unicode. |
-| /t:{`<b><f>` | `<f>`} | Sets the background (*b*) and foreground (*f*) colors. |
+| /t:{`<b><f> | <f>`} | Sets the background (*b*) and foreground (*f*) colors. |
 | /e:on | Enables command extensions. |
 | /e:off | Disables commands extensions. |
 | /f:on | Enables file and directory name completion. |
@@ -107,7 +107,8 @@ The following table lists valid hexadecimal digits that you can use as the value
     > [!CAUTION]
     > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
-    When you enable command extensions, the following commands are affected:  
+    When you enable command extensions, the following commands are affected:
+
     - **assoc**
 
     - **call**
@@ -115,6 +116,8 @@ The following table lists valid hexadecimal digits that you can use as the value
     - **chdir (cd)**
 
     - **color**
+
+    - **date**
 
     - **del (erase)**
 
@@ -143,6 +146,10 @@ The following table lists valid hexadecimal digits that you can use as the value
     - **shift**
 
     - **start** (also includes changes to external command processes)
+
+    - **time**
+
+    Another way to enable or disable Command Extensions, specifically in batch scripts, is by using the script commands **setlocal** and **endlocal**.
 
 - If you enable delayed environment variable expansion, you can use the exclamation point character to substitute the value of an environment variable at run time.
 

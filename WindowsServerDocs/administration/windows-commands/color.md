@@ -8,7 +8,7 @@ ms.assetid: f5b67131-d196-45ec-a3f9-b5d9f091fd86
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017
+ms.date: 06/13/2020
 ---
 
 # color
@@ -62,6 +62,10 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 - If `<b>` and `<f>` are the same color value, the ERRORLEVEL is set to `1`, and no change is made to either the foreground or the background color.
 
+- The command is not available from PowerShell, but the [BackgroundColor](https://docs.microsoft.com/dotnet/api/system.management.automation.host.pshostrawuserinterface.backgroundcolor) and [ForegroundColor](https://docs.microsoft.com/dotnet/api/system.management.automation.host.pshostrawuserinterface.foregroundcolor) properties of `$ExecutionContext.Host.UI.RawUI` can be set instead.
+
+- The command interpreter [cmd.exe](cmd.md) does not recognize this command if Command Extensions are disabled.
+
 ## Examples
 
 To change the Command Prompt window background color to gray and the foreground color to red, type:
@@ -77,7 +81,7 @@ color e
 ```
 
 > [!NOTE]
-> In this example, the background is set to the default color because only one hexadecimal digit is specified.
+> In this example, the background is set to the default color, because only one hexadecimal digit is specified.
 
 ## Additional References
 
