@@ -21,13 +21,13 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.1026 |
-|Insider    |1.2.1104 |
+|Insider    |1.2.1102 |
 
-## Updates for version 1.2.1104
+## Updates for version 1.2.1102
 
 *Date published: 06/09/2020*
 
-Download: [Windows 64-bit](), [Windows 32-bit](), [Windows ARM64]()
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4yo1A), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ytcu), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ytcm)
 
 - Updated the automatic discovery logic for the **Subscribe** option to support the Windows Virtual Desktop Spring 2020 update. Customers with only Spring Update resources should no longer need to provide consent for the Fall 2019 release.
 - Improved support for high-DPI devices with scale factor up to 400%.
