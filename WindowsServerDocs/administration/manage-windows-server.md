@@ -9,27 +9,28 @@ author: lizap
 ms.author: elizapo
 ms.localizationpriority: high
 ---
+
 # Management
 
 
->[!TIP]
+> [!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
-<hr />
+<HR />
 
-Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks. 
+Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks.
 
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
 
-Use the following table to determine which tools to use when.
+Use the following table to determine which tools to use when:
 
 | I am   | Install & run Windows Admin Center | Run Server Manager on Windows Server | Run Server Manager in RSAT on Windows 10 |
-|--------|----------------------|--------------------------------------|------------------------------------------|
-| Sitting at a Windows 10 PC | X  |                                      | X                                        |
+| ------ | : ---------------- : | : -------------------------------- : | : ------------------------------------ : |
+| Sitting at a Windows 10 PC | X  |                                    | X                                        |
 | Sitting at a Windows Server system running the desktop experience | X | X | X |
-| Sitting at a Windows Server system running Server Core |X (install on Windows 10, use to manage Server Core) | | X |
-| Sitting far away from my Windows Server system |X | | X |
-| Sitting far away from my Windows Server system but it DOES have desktop experience |X | Use RDS to remote into the server, then use Server Manager | X |
+| Sitting at a Windows Server system running Server Core | X (install on Windows 10, use to manage Server Core) | | X |
+| Sitting far away from my Windows Server system | X | | X |
+| Sitting far away from my Windows Server system but it DOES have desktop experience | X | Use RDS to remote into the server, then use Server Manager | X |
 
 In addition to the tools mentioned below, you can also use [Remote Desktop Services](../remote/remote-desktop-services/welcome-to-rds.md) to access on-premises, remote, and virtual servers. Then you can use Server Manager to perform management tasks.
 
@@ -114,7 +115,7 @@ In addition to the tools mentioned below, you can also use [Remote Desktop Servi
                     <div class="cardText">
                     <h3>Automate Windows Server management</h3>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-5.1">Windows PowerShell</a></h3>Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks. </p>
+                        <p><h3><a href="https://docs.microsoft.com/powershell/scripting/overview">Windows PowerShell</a></h3>Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks. </p>
 <HR />
                         <p><h3><a href="windows-commands/windows-commands.md">Windows Commands</a></h3>The Windows command-line tools are used to perform administrative tasks in Windows. You can use the command reference to familiarize yourself with the command-line tools, to learn about the command shell, and to automate command-line tasks by using batch files or scripting tools.</p>
                     </div>
