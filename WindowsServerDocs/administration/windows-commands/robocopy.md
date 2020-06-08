@@ -1,20 +1,15 @@
 ---
 title: robocopy
 description: Learn how to use the robocopy command in Windows and Windows Server to copy files
-
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: lizapo
-ms.date: 07/25/2018
+ms.date: 06/07/2020
 ---
-
 # robocopy
 
 Copies file data.
@@ -23,6 +18,12 @@ Copies file data.
 
 ```
 robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
+```
+
+For example, to copy a file named *yearly-report.mov* from c:\reports to a file share (*\\marketing\videos*) while enabling multi-threading for higher performance (with the /mt parameter) and the ability to restart the transfer in case it's interrupted (with the /z parameter), you'd use the following syntax:
+
+```dos
+robocopy C:\reports '\\marketing\videos' yearly-report.mov /mt /z
 ```
 
 ### Parameters
