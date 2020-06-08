@@ -51,7 +51,7 @@ Windows PowerShell and Server Manager remote management must be enabled on remot
 
 Starting with Windows 10 October 2018 Update, RSAT is included as a set of **Features on Demand** right from Windows 10. Now, instead of downloading an RSAT package you can just go to **Manage optional features** in **Settings** and click **Add a feature** to see the list of available RSAT tools. Select and install the specific RSAT tools you need. To see installation progress, click the **Back** button to view status on the **Manage optional features** page.
         
-See the [list of RSAT tools available via **Features on Demand**](https://docs.microsoft.co    /wi    dows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). In addition to installing via the graphical **Settings** app, you can also install specific RSAT tools via command line or automation using [**DISM /Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
+See the [list of RSAT tools available via **Features on Demand**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). In addition to installing via the graphical **Settings** app, you can also install specific RSAT tools via command line or automation using [**DISM /Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
 
 One benefit of Features on Demand is that installed features persist across Windows 10 version upgrades.        
         
