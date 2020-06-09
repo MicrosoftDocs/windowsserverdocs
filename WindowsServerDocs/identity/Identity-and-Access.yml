@@ -48,13 +48,13 @@ landingContent:
           - text: Manage Risk with Conditional Access Control
             url: https://technet.microsoft.com/library/dn280937.aspx                    
 
-  # Card
+ # Card
   - title: Older versions of Windows Server
     linkLists:
       - linkListType: overview
         links:
           - text: Windows previous versions documentation
-            url: /previous-versions/windows/
+            url: https://docs.microsoft.com/previous-versions/windows/
           - text: Search for specific information
-            url: /search/index?search=Windows+Server&dataSource=previousVersions
+            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
                      
