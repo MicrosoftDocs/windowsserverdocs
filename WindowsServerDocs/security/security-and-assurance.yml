@@ -146,12 +146,12 @@ landingContent:
           - text: Windows Defender compliance mapping whitepaper
             url: https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf
 
-  # Card
+ # Card
   - title: Older versions of Windows Server
     linkLists:
       - linkListType: overview
         links:
           - text: Windows previous versions documentation
-            url: /previous-versions/windows/
+            url: https://docs.microsoft.com/previous-versions/windows/
           - text: Search for specific information
-            url: /search/index?search=Windows+Server&dataSource=previousVersions
+            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
