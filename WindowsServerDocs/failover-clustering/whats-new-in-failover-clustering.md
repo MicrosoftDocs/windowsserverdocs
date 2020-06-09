@@ -170,13 +170,13 @@ In Windows Server 2016, virtual machine storage resiliency is aware and optimize
 
 To help diagnose issues with failover clusters, Windows Server 2016 includes the following:  
 
-- Several enhancements to cluster log files (such as Time Zone Information and DiagnosticVerbose log) that makes is easier to troubleshoot failover clustering issues. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](https://blogs.msdn.com/b/clustering/archive/2015/05/15/10614930.aspx). 
+- Several enhancements to cluster log files (such as Time Zone Information and DiagnosticVerbose log) that makes is easier to troubleshoot failover clustering issues. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Cluster Log](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372005). 
 
-- A new  a dump type of **Active memory dump**, which filters out most memory pages allocated to virtual machines, and therefore makes the memory.dmp much smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://blogs.msdn.com/b/clustering/archive/2015/05/18/10615526.aspx). 
+- A new  a dump type of **Active memory dump**, which filters out most memory pages allocated to virtual machines, and therefore makes the memory.dmp much smaller and easier to save or copy. For more information, see [Windows Server 2016 Failover Cluster Troubleshooting Enhancements - Active Dump](https://techcommunity.microsoft.com/t5/failover-clustering/windows-server-2016-failover-cluster-troubleshooting/ba-p/372008). 
 
 ### <a name="BKMK_SiteAware"></a>Site-aware Failover Clusters
 
-Windows Server 2016 includes site- aware failover clusters that enable group nodes in stretched clusters based on their physical location (site). Cluster site-awareness enhances key operations during the cluster lifecycle such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](https://blogs.msdn.com/b/clustering/archive/2015/08/19/10636304.aspx). 
+Windows Server 2016 includes site- aware failover clusters that enable group nodes in stretched clusters based on their physical location (site). Cluster site-awareness enhances key operations during the cluster lifecycle such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/site-aware-failover-clusters-in-windows-server-2016/ba-p/372060). 
 
 ### <a name="BKMK_multidomainclusters"></a>Workgroup and Multi-domain clusters
 
@@ -188,7 +188,7 @@ In  Windows Server 2012 R2  and previous versions, a cluster can only be created
 
 -   **Workgroup Clusters.** Clusters with nodes which are member servers / workgroup (not domain joined). 
 
-For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](https://blogs.msdn.com/b/clustering/archive/2015/08/17/10635825.aspx)
+For more information, see [Workgroup and Multi-domain clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/workgroup-and-multi-domain-clusters-in-windows-server-2016/ba-p/372059)
 
 ### <a name="BKMK_VMLoadBalancing"></a>Virtual Machine Load Balancing  
 
