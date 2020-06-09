@@ -1,12 +1,8 @@
 ---
 title: nslookup
-description: Reference topic for **** - 
-
+description: Reference topic for the nslookup command, which displays information that you can use to diagnose Domain Name System (DNS) infrastructure.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 41516932-7833-434a-aa92-b4cf0f9a7ef7
 author: coreyp-at-msft
@@ -14,47 +10,23 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # nslookup
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information that you can use to diagnose Domain Name System (DNS) infrastructure. Before using this tool, you should be familiar with how DNS works. The nslookup command-line tool is available only if you have installed the TCP/IP protocol.
+
 ## Syntax
 
 ```
-nslookup [<-SubCommand ...>] [{<computerTofind> | -<Server>}]
-nslookup /exit
-nslookup /finger [<UserName>] [{[>] <FileName>|[>>] <FileName>}]
-nslookup /{help | ?}
-nslookup /ls [<Option>] <DNSDomain> [{[>] <FileName>|[>>] <FileName>}]
-nslookup /lserver <DNSDomain> 
-nslookup /root 
-nslookup /server <DNSDomain>
-nslookup /set <KeyWord>[=<Value>]
-nslookup /set all 
-nslookup /set class=<Class>
-nslookup /set [no]d2
-nslookup /set [no]debug
-nslookup /set [no]defname
-nslookup /set domain=<DomainName>
-nslookup /set [no]ignore
-nslookup /set port=<Port>
-nslookup /set querytype=<ResourceRecordtype>
-nslookup /set [no]recurse
-nslookup /set retry=<Number>
-nslookup /set root=<RootServer>
-nslookup /set [no]search
-nslookup /set srchlist=<DomainName>[/...]
-nslookup /set timeout=<Number>
-nslookup /set type=<ResourceRecordtype>
-nslookup /set [no]vc
-nslookup /view <FileName>
+nslookup [exit | finger | help | ls | lserver | root | server | set | view] [options]
 ```
 
 ### Parameters
 
-|                       Parameter                       |                                                                                                         Description                                                                                                         |
-|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter | Description |
+| --------- | ----------- |
 |   [nslookup exit Command](nslookup-exit-command.md)   |                                                                                                     Exits **nslookup**.                                                                                                     |
 | [nslookup finger Command](nslookup-finger-command.md) |                                                                                  Connects with the finger server on the current computer.                                                                                   |
 |           [nslookup help](nslookup-help.md)           |                                                                                    Displays a short summary of **nslookup** subcommands.                                                                                    |
@@ -111,5 +83,7 @@ nslookup /view <FileName>
     #### Examples
     Each command-line option consists of a hyphen (-) followed immediately by the command name and, in some cases, an equal sign (=) and then a value. For example, to change the default query type to host (computer) information and the initial time-out to 10 seconds, type:
     **nslookup -querytype=hinfo -timeout=10**
-    ## See Also
-    - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
