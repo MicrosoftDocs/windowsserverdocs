@@ -97,4 +97,4 @@ landingContent:
           - text: Windows previous versions documentation
             url: https://docs.microsoft.com/previous-versions/windows/
           - text: Search for specific information
-            url: https://docs.microsoft.com/zh-cn/search/?search=Windows+Server&dataSource=previousVersions
+            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
