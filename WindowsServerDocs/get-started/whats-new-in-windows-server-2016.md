@@ -126,7 +126,7 @@ Device Guard provides kernel mode code integrity (KMCI) and user mode code integ
 Control Flow Guard (CFG) is a platform security feature that was created to combat memory corruption vulnerabilities. See [Control Flow Guard](https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx) for more information.
 
 
-## [Storage](../storage/storage.md)
+## [Storage](../storage/storage.yml)
 
 Storage in Windows Server 2016 includes new features and enhancements for software-defined storage, as well as for traditional file servers. Below are a few of the new features, for more enhancements and further details, see [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md).
 
