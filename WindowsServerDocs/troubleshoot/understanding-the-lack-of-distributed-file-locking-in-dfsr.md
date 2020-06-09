@@ -32,7 +32,7 @@ And if the application opening the file is really clever, like Word 2007, it mig
   
 ![File In Use](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/2.jpg) 
   
-DFSR does have a mechanism for locked files, but it is only within the server's own context. As I've discussed in a [previous post](../askds/top-10-common-causes-of-slow-replication-with-dfsr), DFSR will not replicate a file in or out if its local copy has an exclusive lock. But this doesn't prevent anyone on another server from modifying the file.  
+DFSR does have a mechanism for locked files, but it is only within the server's own context. DFSR will not replicate a file in or out if its local copy has an exclusive lock. But this doesn't prevent anyone on another server from modifying the file.  
   
 Back on topic, the issue of shared data being modified geographically *does* exist, and for some folks it's pretty gnarly. We're occasionally asked why DFSR doesn't handle this locking and take of everything with a wave of the magic wand. It turns out this is an interesting and difficult scenario to solve for a multi-master replication system. Let's explore.  
   
@@ -80,5 +80,5 @@ And then we're back to special client software for this scenario that better und
   
 ## More inforamtion
   
-Right now the easiest way to control this situation in DFSR is to use DFS Namespaces to guide users to predictable locations, with a consistent namespace. By correctly configuring your DFSN site topology and server links, you force users to all share the same local server and only allow them to access remote computers when their ‘main' server is down. For most environments, this works quite well. Alternative to DFSR, SharePoint is an option because of its check-out/check-in system. BranchCache (coming in Windows Server 2008 R2 and Windows 7) may be an option for you as it is designed for easing the reading of files in a branch scenario, but in the end the authoritative data will still live on one server only – more on this [here](https://technet.microsoft.com/en-us/network/dd425028.aspx). And again, those vendors have their solutions.
+Right now the easiest way to control this situation in DFSR is to use DFS Namespaces to guide users to predictable locations, with a consistent namespace. By correctly configuring your DFSN site topology and server links, you force users to all share the same local server and only allow them to access remote computers when their ‘main' server is down. For most environments, this works quite well. Alternative to DFSR, SharePoint is an option because of its check-out/check-in system. BranchCache (coming in Windows Server 2008 R2 and Windows 7) may be an option for you as it is designed for easing the reading of files in a branch scenario, but in the end the authoritative data will still live on one server only – more on this [here](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127252(v=ws.11)). And again, those vendors have their solutions.
 
