@@ -395,7 +395,7 @@ To identify why the hang happened, open the dum files. Then run the following qu
 
 ![Output of running log query 2](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 
-We can cross-examine this with the thread from the **memory.hdmp** file:
+We can cross-examine this with the thread from the **memory.dump** file:
 
 ```
 # 21  Id: 1d98.2718 Suspend: 0 Teb: 0000000b`f1f7b000 Unfrozen
