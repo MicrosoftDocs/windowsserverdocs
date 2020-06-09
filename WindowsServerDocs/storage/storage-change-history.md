@@ -14,7 +14,7 @@ description: New and updated topics in the on-premises storage documentation for
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-This topic lists new and updated topics in the [Storage](storage.md) documentation for Windows Server.
+This topic lists new and updated topics in the [Storage](storage.yml) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server, see [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619) or [Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
