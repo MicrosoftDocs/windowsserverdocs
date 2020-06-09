@@ -176,7 +176,7 @@ To help diagnose issues with failover clusters, Windows Server 2016 includes the
 
 ### <a name="BKMK_SiteAware"></a>Site-aware Failover Clusters
 
-Windows Server 2016 includes site- aware failover clusters that enable group nodes in stretched clusters based on their physical location (site). Cluster site-awareness enhances key operations during the cluster lifecycle such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/site-aware-failover-clusters-in-windows-server-2016/ba-p/372060). 
+Windows Server 2016 includes site-aware failover clusters that enable group nodes in stretched clusters, based on their physical location (site). Cluster site-awareness enhances key operations during the cluster lifecycle, such as failover behavior, placement policies, heartbeat between the nodes, and quorum behavior. For more information, see [Site-aware Failover Clusters in Windows Server 2016](https://techcommunity.microsoft.com/t5/failover-clustering/site-aware-failover-clusters-in-windows-server-2016/ba-p/372060).
 
 ### <a name="BKMK_multidomainclusters"></a>Workgroup and Multi-domain clusters
 
