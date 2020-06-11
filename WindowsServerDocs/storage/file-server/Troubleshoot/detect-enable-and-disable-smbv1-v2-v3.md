@@ -30,7 +30,7 @@ In Windows 7 and Windows Server 2008 R2, disabling SMBv2 deactivates the follow
 - Large MTU support - for full use of 10-gigabye (GB) Ethernet    
 - Improved energy efficiency - clients that have open files to a server can sleep    
 
-In Windows 8, Windows 8.1, Windows 10, Windows Server 2012, and Windows Server 2016, disabling SMBv3 deactivates the following functionality (and also the SMBv2 functionality that's described in the previous list): 
+In Windows 8, Windows 8.1, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019, disabling SMBv3 deactivates the following functionality (and also the SMBv2 functionality that's described in the previous list): 
  
 - Transparent Failover - clients reconnect without interruption to cluster nodes during maintenance or failover    
 - Scale Out – concurrent access to shared data on all file cluster nodes     
@@ -52,11 +52,11 @@ For more information about the capabilities of SMBv2 and SMBv3 capabilities, see
 
 [What's New in SMB](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10))  
 
-## How to gracefully remove SMB v1 in Windows 8.1, Windows 10, Windows 2012 R2, and Windows Server 2016
+## How to gracefully remove SMB v1 in Windows 8.1, Windows 10, Windows 2012 R2, Windows Server 2016, and Windows Server 2019
 
-#### Windows Server 2012 R2 & 2016: PowerShell methods
+#### PowerShell methods
 
-##### SMB v1
+##### SMB v1 (client and server)
 
 - Detect: 
 
@@ -76,27 +76,7 @@ For more information about the capabilities of SMBv2 and SMBv3 capabilities, see
   Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
-##### SMB v2/v3
-
-- Detect:
-  
-  ```PowerShell
-  Get-SmbServerConfiguration | Select EnableSMB2Protocol
-  ```
-
-- Disable:
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $false
-  ```
-
-- Enable:
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $true 
-  ```
-
-#### Windows Server 2012 R2 and Windows Server 2016: Server Manager method for disabling SMB
+#### Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: Server Manager method for disabling SMB
 
 ##### SMB v1
 
@@ -124,7 +104,7 @@ For more information about the capabilities of SMBv2 and SMBv3 capabilities, see
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-##### SMB v2/v3 Protocol
+##### SMB v2/v3 Protocol (only disables SMB v2/v3 Server)
 
 - Detect: 
   
@@ -201,7 +181,7 @@ For more information, see [Server storage at Microsoft](https://techcommunity.mi
 
 ### For Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008
 
-To enable or disable SMB protocols on an SMB Server that is runningWindows 7, Windows Server 2008 R2, Windows Vista, or Windows Server 2008, use Windows PowerShell or Registry Editor. 
+To enable or disable SMB protocols on an SMB Server that is running Windows 7, Windows Server 2008 R2, Windows Vista, or Windows Server 2008, use Windows PowerShell or Registry Editor. 
 
 #### PowerShell methods
 
