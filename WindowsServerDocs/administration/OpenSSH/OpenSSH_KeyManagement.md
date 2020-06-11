@@ -27,7 +27,7 @@ If you are unfamiliar with SSH key management, we strongly recommend you review 
 
 Key pairs refer to the public and private key files that are used by certain authentication protocols. 
 
-SSH public-key authentication uses asymmetric cryptographic algorithms to generate two key files – one "private" and the other "public". The private key files are the equivalent of a password, and should protected under all circumstances. If someone acquires your private key, they can log in as you to any SSH server you have access to. The public key is what is placed on the SSH server, and may be shared without compromising the private key.
+SSH public-key authentication uses asymmetric cryptographic algorithms to generate two key files – one "private" and the other "public". The private key files are the equivalent of a password, and should stay protected under all circumstances. If someone acquires your private key, they can log in as you to any SSH server you have access to. The public key is what is placed on the SSH server, and may be shared without compromising the private key.
 
 When using key authentication with an SSH server, the SSH server and client compare the public key for username  provided against the private key. If the public key cannot be validated against the client-side private key, authentication fails. 
 
