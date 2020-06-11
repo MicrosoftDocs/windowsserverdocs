@@ -92,7 +92,7 @@ To help the team responsible for investigating comprimised systems - sometimes k
 
 For more info, see [PowerShell ♥ the Blue Team](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/).
 
-## [Networking](../networking/Networking.md)  
+## [Networking](../networking/index.yml)  
 This area addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server 2016.  
 
 ### Software-Defined Networking
