@@ -35,7 +35,7 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 | /i | Provides the component ID. |
 | /s | Provides the type of components to show, including **\ta** for adapters or **n** for net components. |
 | /b | Displays the binding paths, when followed by a string containing the name of the path. |
-| /? | Displays help at the command prompt. |                                                    |
+| /? | Displays help at the command prompt. |
 
 ### Examples
 
