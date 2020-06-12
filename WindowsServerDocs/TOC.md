@@ -7,7 +7,7 @@
 ## [Failover Clustering](failover-clustering/failover-clustering-overview.md)
 ## [Identity and Access](identity/Identity-and-Access.md)
 ## [Networking](networking/Networking.md)
-## [Remote](remote/index.md)
+## [Remote](remote/index.yml)
 ## [Security and Assurance](security/security-and-assurance.md)
 ## [Storage](storage/storage.md)
 ## [Virtualization](virtualization/virtualization.md)
