@@ -237,7 +237,7 @@ As described in [Manually assign a KMS host to a KMS client](#manually-assign-a-
 - For domain-joined computers, the computer's domain as assigned by the DNS system (such as Active Directory Domain Services (AD DS) DNS).
 - For workgroup computers, the computer's domain as assigned by the Dynamic Host Configuration Protocol (DHCP). This domain name is defined by the option that has the code value of 15 as defined in Request for Comments (RFC) 2132.
 
-By default, a KMS host registers its SRV records in the DNS zone that corresponds to the domain of the KMS host computer. For example, assume that a KMS host joins the contoso.com domain. In this scenario, the KMS host registers its _vlmcs SRV record under the contoso.com DNS zone. Therefore, the record identifies the service as _VLMCS._TCP.CONTOSO.COM.
+By default, a KMS host registers its SRV records in the DNS zone that corresponds to the domain of the KMS host computer. For example, assume that a KMS host joins the contoso.com domain. In this scenario, the KMS host registers its `_vlmcs` SRV record under the contoso.com DNS zone. Therefore, the record identifies the service as `_VLMCS._TCP.CONTOSO.COM`.
 
 If the KMS host and KMS clients use different DNS zones, you must configure the KMS host to automatically publish its SRV records in multiple DNS domains. To do this, follow these steps:
 
