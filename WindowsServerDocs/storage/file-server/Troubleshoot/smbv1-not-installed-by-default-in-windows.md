@@ -25,7 +25,7 @@ SMBv1 has the following behavior in Windows 10 Fall Creators Update and Windows
 - In-place upgrades and Insider flights of the Windows 10 Enterprise and Windows 10 Education editions do not automatically remove SMBv1. An administrator must decide to uninstall SMBv1 in these managed environments. In Windows 10, version 1809 (RS5) and later versions, an administrator can activate automatic removal of SMBv1 by turning on the "SMB 1.0/CIFS Automatic Removal" feature.    
 - Automatic removal of SMBv1 after 15 days is a one-time operation. If an administrator re-installs SMBv1, no further attempts will be made to uninstall it.
 - The SMB version 2.02, 2.1, 3.0, 3.02, and 3.1.1 features are still fully supported and included by default as part of the SMBv2 binaries.    
-- Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Networkcan no longer display Windows computers through the legacy NetBIOS datagram browsing method.    
+- Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Network can no longer display Windows computers through the legacy NetBIOS datagram browsing method.    
 - SMBv1 can still be reinstalled in all editions of Windows 10 and Windows Server 2016.    
  
   > [!NOTE]
