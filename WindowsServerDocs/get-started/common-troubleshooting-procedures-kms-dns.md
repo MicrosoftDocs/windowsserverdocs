@@ -194,7 +194,7 @@ allow-update { any; };
 ```
 ## Manually assign a KMS host to a KMS client
 
-By default, the KMS clients use the automatic discovery process. According to this process, a KMS client queries DNS for a list of servers that have published _vlmcs SRV records within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the name of the KMS host and tries to use it for the next renewal attempt. If the session setup fails, the client randomly picks another KMS host. We highly recommend that you use the automatic discovery process.
+By default, the KMS clients use the automatic discovery process. According to this process, a KMS client queries DNS for a list of servers that have published `_vlmcs` SRV records within the membership zone of the client. DNS returns the list of KMS hosts in a random order. The client picks a KMS host and tries to establish a session on it. If this attempt works, the client caches the name of the KMS host and tries to use it for the next renewal attempt. If the session setup fails, the client randomly picks another KMS host. We highly recommend that you use the automatic discovery process.
 
 However, you can manually assign a KMS host to a particular KMS client. To do this, follow these steps.
 
@@ -233,7 +233,7 @@ However, you can manually assign a KMS host to a particular KMS client. To do th
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-As described in [Manually assign a KMS host to a KMS client](#manually-assign-a-kms-host-to-a-kms-client), KMS clients typically use the automatic discovery process to identify KMS hosts. This process requires that the _vlmcs SRV records must be available in the DNS zone of the KMS client computer. The DNS zone corresponds to either the primary DNS suffix of the computer or to one of the following:
+As described in [Manually assign a KMS host to a KMS client](#manually-assign-a-kms-host-to-a-kms-client), KMS clients typically use the automatic discovery process to identify KMS hosts. This process requires that the `_vlmcs` SRV records must be available in the DNS zone of the KMS client computer. The DNS zone corresponds to either the primary DNS suffix of the computer or to one of the following:
 - For domain-joined computers, the computer's domain as assigned by the DNS system (such as Active Directory Domain Services (AD DS) DNS).
 - For workgroup computers, the computer's domain as assigned by the Dynamic Host Configuration Protocol (DHCP). This domain name is defined by the option that has the code value of 15 as defined in Request for Comments (RFC) 2132.
 
