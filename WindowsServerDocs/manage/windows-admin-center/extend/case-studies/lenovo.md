@@ -36,7 +36,7 @@ The solution extension and tool extensions for Windows servers and clusters prov
 
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-6-fwupdate.png)
 
-The tool extension for hyper-converged clusters provides the disk/storage pool management functions for Lenovo ThinkAgile MX HCI cluster servers. These functions include the server rear/front graphic view to present server and disk status. With the help of both the wizard and graphic view, operations like adding a disk to the storage pool, removing a disk from the storage pool, replacing a disk, or locating a server/disk by lighting on the server/disk location LEDs become much easier.
+The tool extension for hyperconverged clusters provides the disk/storage pool management functions for Lenovo ThinkAgile MX HCI cluster servers. These functions include the server rear/front graphic view to present server and disk status. With the help of both the wizard and graphic view, operations like adding a disk to the storage pool, removing a disk from the storage pool, replacing a disk, or locating a server/disk by lighting on the server/disk location LEDs become much easier.
 
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-7-diskmgr.png)
 
