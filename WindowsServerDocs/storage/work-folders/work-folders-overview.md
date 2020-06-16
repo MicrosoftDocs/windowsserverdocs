@@ -7,7 +7,7 @@ ms.topic: article
 author: JasonGerend
 manager: dougkim
 ms.author: jgerend
-ms.date: 06/07/2019
+ms.date: 06/15/2020
 description: An overview of Work Folders - a server role in Windows Server that provides a consistent way for users to access work files from PCs and devices.
 ---
 # Work Folders overview
