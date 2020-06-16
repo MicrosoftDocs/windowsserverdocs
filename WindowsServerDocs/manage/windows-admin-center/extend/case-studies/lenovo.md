@@ -32,7 +32,7 @@ The tool extension for failover clusters and hyper-converged clusters provides a
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-4.png)
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-5.png)
 
-The solution extension and tool extensions for Windows servers and clusters provide the rolling (cluster-aware) server update functions. This can prevent any workload interruption during server updates. Currently, the extensions support individual firmware updates and compliance policy firmware updates for any Lenovo servers. They also support best recipe firmware/driver updates for Lenovo ThinkAgile MX HCI cluster servers.
+The solution extension and tool extensions for Windows servers and clusters provide the rolling (cluster-aware) server update functions. This can help prevent any workload interruption during server updates. Currently, the extensions support individual firmware updates and compliance policy firmware updates for any Lenovo servers. They also support best recipe firmware/driver updates for Lenovo ThinkAgile MX HCI cluster servers.
 
 ![Lenovo Extension](../../media/extend-case-study-lenovo/lenovo-6-fwupdate.png)
 
