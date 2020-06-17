@@ -26,7 +26,7 @@ You can use Windows Admin Center [version 1910](https://docs.microsoft.com/windo
 The cluster creation workflow in Windows Admin Center doesn't perform bare-metal operating system installation, so you need to install Windows Server on each server first. The supported versions are Windows Server 2016, Windows Server 2019, and Windows Server Insider Preview. You also need to join each server to the same Active Directory domain as where Windows Admin Center is running before you start the workflow.
 
 ### 2. Install Windows Admin Center
- 
+
 Follow the instructions to [download and install](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) the latest version of Windows Admin Center.
 
 ### 3. Install the Cluster Creation extension
@@ -205,9 +205,9 @@ If possible, include the following information to help us quickly reproduce and 
 - Step where you encountered the issue (example: *"3.2 Create cluster"*)
 - Version of the cluster creation extension. Go to **Settings** > **Extensions** > **Installed extensions** and see the **Version** column (example: *"1.0.30"*).
 - Error messages, whether on screen or in the browser console, which you can open by pressing **F12**.
-- Any other relevant information about your environment 
+- Any other relevant information about your environment
 
-## See also
+## Additional References
 
 - [Hello, Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center)
 - [Deploy Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/deploy-storage-spaces-direct)

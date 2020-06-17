@@ -33,7 +33,7 @@ Expiration is not always a desired action to be performed on files. File managem
 
 4.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Classification Management](classification-management.md)
 -   [File Management Tasks](file-management-tasks.md)

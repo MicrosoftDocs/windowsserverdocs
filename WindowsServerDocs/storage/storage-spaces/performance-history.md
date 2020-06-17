@@ -204,7 +204,7 @@ An error message like "*The term 'Get-ClusterPerf' is not recognized as the name
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
 
-### No data available 
+### No data available
 
 If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
@@ -220,6 +220,6 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 5. If the command in the previous step returns nothing, you can try restarting the Health Service (which collects performance history) by running `Stop-ClusterResource Health ; Start-ClusterResource Health` in PowerShell.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

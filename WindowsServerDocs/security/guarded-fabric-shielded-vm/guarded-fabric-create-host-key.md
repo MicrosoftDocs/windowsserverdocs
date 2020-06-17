@@ -24,7 +24,7 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
-    ``` 
+    ```
 
 3.    Generate a host key automatically, or select an existing certificate. If you are using a custom certificate, it should have at least a 2048-bit RSA key, Client Authentication EKU, and Digital Signature key usage.
 
@@ -32,7 +32,7 @@ This topic covers how to prepare Hyper-V hosts to become guarded hosts using hos
     Set-HgsClientHostKey
     ```
 
-    Alternatively, you can specify a thumbprint if you want to use your own certificate. 
+    Alternatively, you can specify a thumbprint if you want to use your own certificate.
     This can be useful if you want to share a certificate across multiple machines, or use a certificate bound to a TPM or an HSM. Here's an example of creating a TPM-bound certificate (which prevents it from having the private key stolen and used on another machine and requires only a TPM 1.2):
 
     ```powershell
@@ -54,13 +54,13 @@ This step is done on the HGS server and allows the host to run shielded VMs. It 
 
 ```powershell
 Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
-``` 
+```
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Confirm hosts can attest successfully](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
-## See also
+## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)

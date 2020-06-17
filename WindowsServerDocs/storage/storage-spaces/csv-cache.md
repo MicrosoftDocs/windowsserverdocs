@@ -63,6 +63,6 @@ Get-ClusterSharedVolume | ForEach {
 }
 ```
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

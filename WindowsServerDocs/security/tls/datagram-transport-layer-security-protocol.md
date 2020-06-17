@@ -23,9 +23,8 @@ Datagrams are common in streaming media, such as gaming or secured video confere
 
 The cipher suites that are available for configuration are patterned after those you can configure for TLS. RC4 is not permitted. Schannel continues to use Cryptography Next Generation (CNG). This takes advantage of FIPS 140 certification, which was introduced in Windows Vista.
 
-## See also
+## Additional References
 
 [IETF RFC 4347 Datagram Transport Layer Security](http://tools.ietf.org/html/rfc4347)
 
 
-                                        
