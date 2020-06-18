@@ -1,4 +1,4 @@
-# [Storage](storage.md)
+# [Storage](storage.yml)
 ## [What's new in Storage](whats-new-in-storage.md)
 ## [Data Deduplication](data-deduplication/overview.md)
 ### [What's new in Data Deduplication](data-deduplication/whats-new.md)
