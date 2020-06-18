@@ -1,6 +1,6 @@
 ---
 title: select vdisk
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -18,49 +18,49 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-selects the specified virtual hard disk \(VHD\) and shifts the focus to it.  
-  
-> [!NOTE]  
-> This command is only applicable to Windows 7 and Windows Server 2008 R2.  
-  
-## Syntax  
-  
-```  
-select vdisk file=<full path> [noerr]  
-```  
-  
-### Parameters  
-  
-|Parameter|Description|  
-|-------|--------|  
-|file\=<full path>|Specifies the full path and file name of an existing VHD file.|  
-|noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|  
-  
-## Examples  
-To shift the focus to the VHD named Test.vhd, type:  
-  
-```  
-select vdisk file=c:\test\test.vhd  
-```  
-  
-## Additional References  
-  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
-  
--   [attach vdisk](attach-vdisk.md)  
-  
--   [compact vdisk](compact-vdisk.md)  
-  
-  
-  
--   [Detach vdisk](detach-vdisk.md)  
-  
--   [detail vdisk](detail-vdisk.md)  
-  
--   [expand vdisk](expand-vdisk.md)  
-  
--   [Merge vdisk](merge-vdisk.md)  
-  
--   [list_1](list_1.md)  
-  
+selects the specified virtual hard disk \(VHD\) and shifts the focus to it.
+
+> [!NOTE]
+> This command is only applicable to Windows 7 and Windows Server 2008 R2.
+
+## Syntax
+
+```
+select vdisk file=<full path> [noerr]
+```
+
+### Parameters
+
+|Parameter|Description|
+|-------|--------|
+|file\=<full path>|Specifies the full path and file name of an existing VHD file.|
+|noerr|Used for scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+
+## Examples
+To shift the focus to the VHD named Test.vhd, type:
+
+```
+select vdisk file=c:\test\test.vhd
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+-   [attach vdisk](attach-vdisk.md)
+
+-   [compact vdisk](compact-vdisk.md)
+
+
+
+-   [Detach vdisk](detach-vdisk.md)
+
+-   [detail vdisk](detail-vdisk.md)
+
+-   [expand vdisk](expand-vdisk.md)
+
+-   [Merge vdisk](merge-vdisk.md)
+
+-   [list_1](list_1.md)
+
 

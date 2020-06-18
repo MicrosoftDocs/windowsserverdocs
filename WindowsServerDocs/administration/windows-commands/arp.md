@@ -48,13 +48,13 @@ To display the arp cache tables for all interfaces, type:
 arp /a
 ```
 
-To display the arp cache table for the interface that is assigned the IP address 10.0.0.99, type:
+To display the arp cache table for the interface that is assigned the IP address *10.0.0.99*, type:
 
 ```
 arp /a /n 10.0.0.99
 ```
 
-To add a static arp cache entry that resolves the IP address 10.0.0.80 to the physical address 00-AA-00-4F-2A-9C, type:
+To add a static arp cache entry that resolves the IP address *10.0.0.80* to the physical address *00-AA-00-4F-2A-9C*, type:
 
 ```
 arp /s 10.0.0.80 00-AA-00-4F-2A-9C

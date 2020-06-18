@@ -1,6 +1,6 @@
 ---
 title: Scwcmd transform
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -55,4 +55,4 @@ scwcmd transform /p:FileServerPolicy.xml /g:FileServerSecurity
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

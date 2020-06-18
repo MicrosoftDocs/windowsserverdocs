@@ -540,5 +540,5 @@ The following list provides additional resources about iSCSI Target Server and r
 
 - [iSCSI Target Boot Overview](iscsi-boot-overview.md)
 
-- [Storage in Windows Server](../storage.md)
+- [Storage in Windows Server](../storage.yml)
 

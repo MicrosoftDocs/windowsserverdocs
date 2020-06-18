@@ -113,7 +113,7 @@ SMB Direct has the following requirements:
 
 The following list provides additional resources on the web about SMB and related technologies in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
 
-* [Storage in Windows Server](../storage.md)
+* [Storage in Windows Server](../storage.yml)
 * [Scale-Out File Server for Application Data](../../failover-clustering/sofs-overview.md)
 * [Improve Performance of a File Server with SMB Direct](smb-direct.md)
 * [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)

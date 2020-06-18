@@ -71,7 +71,7 @@ If multiple jobs use *myDownloadJob* as their name, you must use the job's GUID 
 
 ## Complete the download job
 
-To complete the job after the the state changes to `TRANSFERRED`:
+To complete the job after the state changes to `TRANSFERRED`:
 
 ```
 bitsadmin /complete myDownloadJob
@@ -137,7 +137,7 @@ RETRY DELAY: 600 NO PROGRESS TIMEOUT: 1209600 ERROR COUNT: 0
 PROXY USAGE: PRECONFIG PROXY LIST: NULL PROXY BYPASS LIST: NULL
 ERROR FILE:    https://downloadsrv/10mb.zip -> c:\10mb.zip
 ERROR CODE:    0x80072ee7 - The server name or address could not be resolved
-ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being 
+ERROR CONTEXT: 0x00000005 - The error occurred while the remote file was being
 processed.
 DESCRIPTION:
 JOB FILES:

@@ -1,6 +1,6 @@
 ---
 title: repair-bde
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -75,4 +75,4 @@ repair-bde C: D: -pw
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

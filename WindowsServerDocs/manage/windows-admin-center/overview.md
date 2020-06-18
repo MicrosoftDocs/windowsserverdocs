@@ -181,4 +181,4 @@ Windows Admin Center is designed for managing a single server or cluster. It com
 
 ![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Follow us on Twitter](https://twitter.com/servermgmt)
 
-![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[Read our Blogs](https://blogs.technet.microsoft.com/servermanagement/)
+![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[Read our Blogs](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog)
