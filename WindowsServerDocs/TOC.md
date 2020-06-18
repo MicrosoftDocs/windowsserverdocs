@@ -6,7 +6,7 @@
 ## [Connect to Azure](azure-hybrid-services/index.md)
 ## [Failover Clustering](failover-clustering/failover-clustering-overview.md)
 ## [Identity and Access](identity/Identity-and-Access.md)
-## [Networking](networking/Networking.md)
+## [Networking](networking/index.yml)
 ## [Remote](remote/index.md)
 ## [Security and Assurance](security/security-and-assurance.md)
 ## [Storage](storage/storage.md)
