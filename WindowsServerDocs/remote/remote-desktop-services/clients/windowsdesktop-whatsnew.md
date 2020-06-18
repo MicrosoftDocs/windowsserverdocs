@@ -31,7 +31,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 - Updated the automatic discovery logic for the **Subscribe** option to support the Windows Virtual Desktop Spring 2020 update. Customers with only Spring Update resources should no longer need to provide consent for the Fall 2019 release.
 - Improved support for high-DPI devices with scale factor up to 400%.
-- Fixed an issue where the client was using 100% CPU.
 - Fixed an issue where the disconnect dialog didn't appear.
 - Fixed an issue where command bar tooltips would remain visible longer than expected.
 - Fixed a crash when you tried to subscribe immediately after a refresh.
