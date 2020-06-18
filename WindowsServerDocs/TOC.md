@@ -2,7 +2,7 @@
 ## [Windows Server Software-Defined Datacenter (SDDC)](sddc.md)
 ## [Upgrade Windows Server](upgrade/upgrade-overview.md)
 ## [Get Started](get-started/Server-Basics.md)
-## [Manage Windows Server](administration/manage-windows-server.md)
+## [Manage Windows Server](administration/manage-windows-server.yml)
 ## [Connect to Azure](azure-hybrid-services/index.md)
 ## [Failover Clustering](failover-clustering/failover-clustering-overview.md)
 ## [Identity and Access](identity/Identity-and-Access.md)
