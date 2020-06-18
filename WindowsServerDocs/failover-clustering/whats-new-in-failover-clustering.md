@@ -206,5 +206,5 @@ For more information, see [Simplified SMB Multichannel and Multi-NIC Cluster Net
 
 ## See Also
 
-* [Storage](../storage/storage.md)  
+* [Storage](../storage/storage.yml)  
 * [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md)  
