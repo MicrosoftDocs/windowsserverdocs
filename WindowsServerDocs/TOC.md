@@ -5,7 +5,7 @@
 ## [Manage Windows Server](administration/manage-windows-server.yml)
 ## [Connect to Azure](azure-hybrid-services/index.md)
 ## [Failover Clustering](failover-clustering/failover-clustering-overview.md)
-## [Identity and Access](identity/Identity-and-Access.md)
+## [Identity and Access](identity/Identity-and-Access.yml)
 ## [Networking](networking/index.yml)
 ## [Remote](remote/index.md)
 ## [Security and Assurance](security/security-and-assurance.md)
