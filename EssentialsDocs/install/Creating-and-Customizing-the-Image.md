@@ -27,11 +27,3 @@ This section describes aspects of the customization process that are specific to
   
 -   [Customize the Image](Customize-the-Image.md)
 
--   [Create a Simple Customized Image](../install/Create-a-Simple-Customized-Image.md)  
-  
--   [Create a Bootable USB Flash Drive](../install/Create-a-Bootable-USB-Flash-Drive.md)  
-  
--   [Create an Image By Using Answer Files](../install/Create-an-Image-By-Using-Answer-Files.md)  
-  
--   [Customize the Image](../install/Customize-the-Image.md)
-
