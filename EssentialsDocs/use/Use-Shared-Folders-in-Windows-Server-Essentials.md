@@ -90,17 +90,10 @@ manager: dongill
 -   [Manage Server Folders](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md)  
   
 -   [Manage Server Storage](../manage/Manage-Server-Storage-in-Windows-Server-Essentials.md)  
-  
 
 -   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
   
 -   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)
-
--   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)  
-  
--   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
-  
--   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 
