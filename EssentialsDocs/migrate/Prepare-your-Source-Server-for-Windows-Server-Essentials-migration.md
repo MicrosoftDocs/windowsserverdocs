@@ -17,7 +17,7 @@ manager: dongill
 Complete the following preliminary steps to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.  
   
 #### To prepare for migration  
-  
+
 
 1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
@@ -29,19 +29,9 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 5.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
-1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
-  
-2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
-  
-3.  [Evaluate the health of the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
-  
-4.  [Run the Migration Preparation Tool on the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
-  
-5.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
-
-  
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
+ 
   
 ##### To back up the Source Server  
   
