@@ -136,7 +136,7 @@ The following table discusses how various Microsoft sync technologies are positi
 | **Technology summary** | Syncs files that are stored on a file server with PCs and devices | Syncs files that are stored on a file server with PCs that have access to the corporate network (can be replaced by Work Folders) | Syncs files that are stored in Office 365 or in SharePoint with PCs and devices inside or outside a corporate network, and provides document collaboration functionality | Syncs personal files that are stored in OneDrive with PCs, Mac computers, and devices |
 | **Intended to provide user access to work files** | Yes | Yes | Yes | No |
 | **Cloud service** | None | None | Office 365 | Microsoft OneDrive |
-| **Internal network servers** | File servers running Windows Server 2012 R2 or Windows Server 2016 | File servers | SharePoint server (optional) | None |
+| **Internal network servers** | File servers running Windows Server 2012 R2, Windows Server 2016 and Windows Server 2019 | File servers | SharePoint server (optional) | None |
 | **Supported clients** | PCs, iOS, Android | PCs in a corporate network or connected through DirectAccess, VPNs, or other remote access technologies | PCs, iOS, Android, Windows Phone | PCs, Mac computers, Windows Phone, iOS, Android |
   
 > [!NOTE]
@@ -154,7 +154,7 @@ Work Folders is part of the File and Storage Services role. You can install Work
   
 ## Interoperability with Windows Azure virtual machines
 
- You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2 and Windows Server 2016.  
+ You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2, Windows Server 2016 and Windows Server 2019.  
   
 To learn about how to get started with Windows Azure virtual machines, visit the [Windows Azure web site](http://www.windowsazure.com/documentation/services/virtual-machines).  
   
