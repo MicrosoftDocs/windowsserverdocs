@@ -43,9 +43,6 @@ manager: dongill
 -   [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
   
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
-  
-
--   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
 
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
 

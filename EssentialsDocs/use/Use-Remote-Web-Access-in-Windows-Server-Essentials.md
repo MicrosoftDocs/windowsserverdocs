@@ -103,10 +103,6 @@ manager: dongill
   
 -   [Create, rename, move, delete, or copy files and folders in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
 
--   [Upload and download files in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)  
-  
--   [Create, rename, move, delete, or copy files and folders in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)  
-
   
 ###  <a name="BKMK_UploadRWA"></a> Upload and download files in Remote Web Access  
  On the Remote Web Access **Shared Folders** tab, you can do the following:  
@@ -290,11 +286,7 @@ manager: dongill
 
 -   [Use Remote Web Access from a mobile device](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
   
--   [Supported Web browsers for mobile devices](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
-
--   [Use Remote Web Access from a mobile device](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)  
-  
--   [Supported Web browsers for mobile devices](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)  
+-   [Supported Web browsers for mobile devices](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)   
 
   
 ###  <a name="BKMK_8"></a> Use Remote Web Access from a mobile device  
@@ -344,14 +336,9 @@ manager: dongill
   
 ## See also  
   
--   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)  
-  
+-   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)
 
--   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)  
+-   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
   
 -   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
-
--   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
-  
--   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
 
