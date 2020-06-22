@@ -53,7 +53,7 @@ Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to pro
 
 For more details and instructions for working with shielded virtual machines, see [Shielded VMs and Guarded Fabric Validation Guide for Windows Server 2016 (TPM)](https://aka.ms/shieldedvms).  
 
-## [Identity and Access](../identity/Identity-and-Access.md)  
+## [Identity and Access](../identity/Identity-and-Access.yml)  
 New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.  
 
 ### Active Directory Certificate Services  

@@ -1,0 +1,60 @@
+### YamlMime:Landing
+
+title: Identity and Access documentation
+summary: Access and Identity technologies enable secure Active Directory environments on-premises and in cloud-only and hybrid deployments where some applications and services are hosted in the cloud and others are hosted on premises.
+
+metadata:
+  title: Identity and Access documentation
+  description: Access and Identity technologies enable secure Active Directory environments on-premises and in cloud-only and hybrid deployments where some applications and services are hosted in the cloud and others are hosted on premises.
+  ms.topic: landing-page # Required
+  author: billmath 
+  ms.author: billmath
+  ms.date: 5/18/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About Identity and Access technologies
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: What's new?
+            url: ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md
+      - linkListType: overview
+        links:
+          - text: Privileged Access Management for Active Directory Domain Services & AD DS
+            url: https://technet.microsoft.com/library/dn903243.aspx
+          - text: 'Windows 10 for the enterprise: Ways to use devices for work'
+            url: https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1
+          - text: Active Directory Domain Services
+            url: ../identity/ad-ds/Active-Directory-Domain-Services.md
+          - text: Active Directory Federation Services
+            url: Active-Directory-Federation-Services.md
+
+  # Card
+  - title: Solutions and Scenario Guides
+    linkLists:            
+      - linkListType: how-to-guide
+        links:
+          - text: Secure access to company resources from any location on any device
+            url: https://technet.microsoft.com/library/dn550982.aspx
+          - text: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
+            url: https://technet.microsoft.com/library/dn280945.aspx
+          - text: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
+            url: https://technet.microsoft.com/library/dn280949.aspx
+          - text: Manage Risk with Conditional Access Control
+            url: https://technet.microsoft.com/library/dn280937.aspx                    
+
+ # Card
+  - title: Older versions of Windows Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows previous versions documentation
+            url: https://docs.microsoft.com/previous-versions/windows/
+          - text: Search for specific information
+            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
+                     
