@@ -23,6 +23,7 @@ User Certificate authentication is used mainly in 2 use cases
 4) If using AD FS in alternate certificate authentication mode, ensure that your AD FS and WAP servers have SSL certificates that contain the AD FS hostname prefixed with "certauth", for example "certauth.fs.contoso.com", and that traffic to this hostname is allowed through the firewall
 5) If using certificate authentication from the extranet, ensure that at least one AIA and at least one CDP or OCSP location from the list specified in your certificates are accessible from the internet.
 6) Also for Azure AD certificate authentication, for Exchange ActiveSync clients, the client certificate must have the users routable email address in Exchange online in either the Principal Name or the RFC822 Name value of the Subject Alternative Name field. (Azure Active Directory maps the RFC822 value to the Proxy Address attribute in the directory.)
+7) AD FS does not support Username Hints with SmartCard/Certificate based authentication. 
 
 
 ## Configure AD FS for user certificate authentication  

@@ -1,6 +1,6 @@
 ---
 title: rename
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -21,5 +21,5 @@ ms.date: 10/16/2017
 This is the same as the **ren** command.
 See [ren](ren.md) for syntax and parameters.
 ## Additional References
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

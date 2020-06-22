@@ -1,18 +1,21 @@
 ---
-title: "Install Windows Server Essentials in migration mode1"
-description: "Describes how to use Windows Server Essentials"
-ms.date: 10/03/2016
+title: Install Windows Server Essentials in migration mode
+description: Describes how to use Windows Server Essentials
+ms.date: 04/29/2020
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
+ms.custom:
+  - CI ID 117135
+  - CSSTroubleshoot
 ---
 
-# Install Windows Server Essentials in migration mode1
+# Install Windows Server Essentials in migration mode
 
->Applies To: Windows Server 2012 Essentials
+> Applies To: Windows Server 2012 Essentials
 
 You can have only one server on your network that is running  Windows Server Essentials, and that server must be a domain controller for the network.  
   

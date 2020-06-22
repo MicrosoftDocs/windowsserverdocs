@@ -1,6 +1,6 @@
 ---
 title: Scwcmd rollback
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -49,4 +49,4 @@ scwcmd rollback /m:172.16.0.0
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

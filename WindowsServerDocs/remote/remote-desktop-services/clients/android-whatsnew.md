@@ -11,12 +11,57 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/11/2019
+ms.date: 06/04/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Android client
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 8.1.80
+
+*Date Published: 05/26/2020*
+
+- Changed the client icon to distinguish it from the new client currently in preview.
+- Prepared the client to support settings and connections transfer to the new client.
+
+## Updates for version 8.1.79
+
+*Date published: 03/24/2020*
+
+- Fixed an issue where barcode scanners didn't work.
+
+## Updates for version 8.1.77
+
+*Date published: 02/11/2020*
+
+- Improved accessibility for users of keyboard-only navigation.
+
+## Updates for version 8.1.76
+
+*Date published: 01/09/2020*
+
+- Minor bug fixes and improvements.
+
+## Updates for version 8.1.75
+
+*Date published: 10/31/2019*
+
+- Fixed an issue where some Remote Resource Feed URL didn't load.
+- Improved accessibility for users of keyboard-only navigation and TalkBack.
+
+## Updates for version 8.1.74
+
+*Date published: 08/17/2019*
+
+- Fixed a crash when connecting to servers which send Proprietary Certificates.
+
+## Updates for version 8.1.73
+
+*Date published: 06/14/2019*
+
+- Added 64-bit support.
+- Addressed security issues described in CVE-2019-1108.
 
 ## Updates for version 8.1.71
 

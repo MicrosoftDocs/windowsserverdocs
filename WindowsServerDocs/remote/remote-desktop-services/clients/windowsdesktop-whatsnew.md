@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/12/2020
+ms.date: 06/18/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -20,15 +20,31 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.945  |
-|Insider    |1.2.1009 |
+|Public     |1.2.1026 |
+|Insider    |1.2.1102 |
 
-## Updates for version 1.2.1009
+## Updates for version 1.2.1102
 
-*Date published: 05/12/2020*
+*Date published: 06/09/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wseE), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wnf3), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4wCIB)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4yo1A), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ytcu), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ytcm)
 
+- Updated the automatic discovery logic for the **Subscribe** option to support the Windows Virtual Desktop Spring 2020 update. Customers with only Spring Update resources should no longer need to provide consent for the Fall 2019 release.
+- Improved support for high-DPI devices with scale factor up to 400%.
+- Fixed an issue where the disconnect dialog didn't appear.
+- Fixed an issue where command bar tooltips would remain visible longer than expected.
+- Fixed a crash when you tried to subscribe immediately after a refresh.
+- Fixed a crash from incorrect parsing of date and time in some languages.
+
+## Updates for version 1.2.1026
+
+*Date published: 05/27/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xsGB), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xd8P), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xq7m)
+
+- When subscribing, you can now choose your account instead of typing your email address.
+- Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to WVD Spring 2020 Update Workspaces.
+- Added support to subscribe to a Workspace using a new [URI scheme](remote-desktop-uri.md) that can be sent in an email to users or added to a support website.
 - Added a new **Connection information** dialog that provides client, network, and server details for desktop and app sessions. You can access the dialog from the connection bar in full screen mode or from the System menu when windowed.
 - Desktop sessions launched in windowed mode now always maximize instead of going full screen when maximizing the window. Use the **Full screen** option from the system menu to enter full screen.
 - The Unsubscribe prompt now displays a warning icon and shows the workspace names as a bulleted list.
@@ -81,8 +97,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 02/25/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qeak), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7h), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7g)
-
 - Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope properties has been modified.
 - When a Workspace is empty or has been removed, the Connection Center no longer appears to be empty.
 - Added the activity ID and error code on disconnect messages to improve troubleshooting. You can copy the dialog message with **Ctrl+C**.
@@ -93,8 +107,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.605
 
 *Date published: 01/29/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
 
 - You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select **Settings**.
 - Fixed an issue where the connection settings didn't display the correct available scale factors.
@@ -107,8 +119,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 12/04/2019*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
-
 - You can now access information about updates directly from the more options button on the command bar at the top of the client.
 - You can now report feedback from the command bar of the client.
 - The Feedback option is now only shown if the Feedback Hub is available.
@@ -119,8 +129,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.431
 
 *Date published: 11/12/2019*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
 
 - The 32-bit and ARM64 versions of the client are now available!
 - The client now saves any changes you make to the connection bar (such as its position, size, and pinned state) and applies those changes across sessions.
@@ -139,8 +147,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.247
 
 *Date published: 09/17/2019*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
 
 - Improved the fallback languages for localized version. (For example, FR-CA will properly display in French instead of English.)
 - When removing a subscription, the client now properly removes the saved credentials from Credential Manager.

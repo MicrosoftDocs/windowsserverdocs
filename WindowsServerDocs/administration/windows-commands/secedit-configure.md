@@ -1,6 +1,6 @@
 ---
 title: secedit:configure
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -59,4 +59,4 @@ Secedit /configure /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /ov
 
 -   [Secedit](secedit.md)
 -   [Secedit:analyze](secedit-analyze.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

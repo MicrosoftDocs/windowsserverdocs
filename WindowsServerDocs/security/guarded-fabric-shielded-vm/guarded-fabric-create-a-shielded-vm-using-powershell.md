@@ -68,6 +68,10 @@ New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Owner $Owner
 ```
     
 ## Provision shielded VM on a guarded host
+On a host that is running Windows Server 2016, you can monitor for the VM to shut down to signal completion of the provisioning task, and consult the Hyper-V event logs for error information if the provisioning is unsuccessful.
+
+You can also create a new template disk every time before creating new Shielded VM.
+
 Copy the template disk file (ServerOS.vhdx) and the PDK file (contoso.pdk) to the guarded host to get ready for deployment.
 
 On the guarded host, install the Guarded Fabric Tools PowerShell module, which contains the New-ShieldedVM cmdlet to simplify the provisioning process. If your guarded host has access to the Internet, run the following command:

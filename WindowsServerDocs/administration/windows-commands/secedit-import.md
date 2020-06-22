@@ -1,6 +1,6 @@
 ---
 title: secedit:import
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -64,4 +64,4 @@ Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Secedit:validate](secedit-validate.md)
 -   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: secedit:export
-description: Reference topic for **** - 
+description: Reference topic for **** -
 
 ms.prod: windows-server
 
@@ -61,4 +61,4 @@ Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg SecContoso.inf /log C
 
 -   [Secedit:import](secedit-import.md)
 -   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
