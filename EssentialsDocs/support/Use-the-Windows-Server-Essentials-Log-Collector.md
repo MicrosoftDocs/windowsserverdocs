@@ -25,15 +25,10 @@ When you are troubleshooting computer issues, a representative from Microsoft Cu
 >[Download the Windows Server Essentials Log Collector installation package](https://www.microsoft.com/download/details.aspx?id=34821).  
   
  To install and run the Log Collector, perform the steps in the following topics:  
-  
 
-1. [Install the Log Collector](Install-the-Windows-Server-Essentials-Log-Collector.md)  
+1. [Install the Log Collector](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
   
-2. [Run the Log Collector](Run-the-Windows-Server-Essentials-Log-Collector.md)  
-
-3. [Install the Log Collector](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
-  
-4. [Run the Log Collector](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
+2. [Run the Log Collector](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
 
 
 ## Environment information collected  
@@ -156,9 +151,6 @@ When you are troubleshooting computer issues, a representative from Microsoft Cu
 -   Library/Logs/DiagnosticReports/LaunchPad-<nnn\> (copy all of the LaunchPad-<nnn\>.crash files)  
   
 ## See also  
-  
-
--   [Troubleshoot Log Collector Errors](Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
 
 -   [Troubleshoot Log Collector Errors](../support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
 
