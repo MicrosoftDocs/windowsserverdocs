@@ -8653,5 +8653,10 @@
   "redirect_url": "https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan?view=sql-server-ver15",
   "redirect_document_id": true
  }
+ {
+  "source_path": "WindowsServerDocs/windows-server/networking/Networking.md",
+  "redirect_url": "https://docs.microsoft.com/en-us/windows-server/networking",
+  "redirect_document_id": true
+ }
   ]
 }
