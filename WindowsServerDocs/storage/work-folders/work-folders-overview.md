@@ -136,7 +136,7 @@ The following table discusses how various Microsoft sync technologies are positi
 | **Technology summary** | Syncs files that are stored on a file server with PCs and devices | Syncs files that are stored on a file server with PCs that have access to the corporate network (can be replaced by Work Folders) | Syncs files that are stored in Office 365 or in SharePoint with PCs and devices inside or outside a corporate network, and provides document collaboration functionality | Syncs personal files that are stored in OneDrive with PCs, Mac computers, and devices |
 | **Intended to provide user access to work files** | Yes | Yes | Yes | No |
 | **Cloud service** | None | None | Office 365 | Microsoft OneDrive |
-| **Internal network servers** | File servers running Windows Server 2012 R2 or Windows Server 2016 | File servers | SharePoint server (optional) | None |
+| **Internal network servers** | File servers running Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019 | File servers | SharePoint server (optional) | None |
 | **Supported clients** | PCs, iOS, Android | PCs in a corporate network or connected through DirectAccess, VPNs, or other remote access technologies | PCs, iOS, Android, Windows Phone | PCs, Mac computers, Windows Phone, iOS, Android |
 
 > [!NOTE]
@@ -154,13 +154,11 @@ Work Folders is part of the File and Storage Services role. You can install Work
 
 ## Interoperability with Windows Azure virtual machines
 
- You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2 and Windows Server 2016.
+ You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.
 
 To learn about how to get started with Windows Azure virtual machines, visit the [Windows Azure web site](http://www.windowsazure.com/documentation/services/virtual-machines).
 
-## Additional References
-
- For additional related information, see the following resources.
+## See also
 
 | Content type | References |
 | ------------------ | ---------------- |
@@ -168,10 +166,5 @@ To learn about how to get started with Windows Azure virtual machines, visit the
 | **Deployment** | -   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />- [Offline Files (CSC) to Work Folders Migration Guide](https://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/)<br />-   [Performance Considerations for Work Folders Deployments](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559) |
 | **Operations** | -   [Work Folders iPad app: FAQ](https://windows.microsoft.com/windows/work-folders-ipad-faq) (for users)<br />-   [Work Folders Certificate Management](https://blogs.technet.com/b/filecab/archive/2013/08/09/work-folders-certificate-management.aspx) (blog post)<br />-   [Monitoring Windows Server 2012 R2 Work Folders Deployments](https://blogs.technet.com/b/filecab/archive/2013/10/15/monitoring-windows-server-2012-r2-work-folders-deployments.aspx) (blog post)<br />-   [SyncShare (Work Folders) Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)<br />-   [Storage and File Services PowerShell Cmdlets Quick Reference Card For Windows Server 2012 R2 Preview Edition](https://blogs.technet.com/b/filecab/archive/2013/07/30/storage-and-file-services-powershell-cmdlets-quick-reference-card-for-windows-server-2012-r2-preview-edition.aspx) |
 | **Troubleshooting** | -   [Windows Server 2012 R2 – Resolving Port Conflict with IIS Websites and Work Folders](https://blogs.technet.com/b/filecab/archive/2013/10/15/windows-server-2012-r2-resolving-port-conflict-with-iis-websites-and-work-folders.aspx) (blog post)<br />-   [Common Errors in Work Folders](https://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx) |
-<<<<<<< HEAD
-| **Community resources** | -   [File Services and Storage Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [The Storage Team at Microsoft - File Cabinet Blog](https://blogs.technet.com/b/filecab/)<br />-   [Ask the Directory Services Team Blog](https://blogs.technet.com/b/askds/) |
-| **Related technologies** | -   [Storage in Windows Server 2016](../storage.md)<br>-   [File and Storage Services](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [File Server Resource Manager](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [Folder Redirection, Offline Files, and Roaming User Profiles](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [DFS Namespaces and DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |
-=======
 | **Community resources** | -   [File Services and Storage Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [The Storage Team at Microsoft - File Cabinet Blog](https://blogs.technet.com/b/filecab/)<br />-   [Ask the Directory Services Team Blog](https://blogs.technet.com/b/askds/) |
 | **Related technologies** | -   [Storage in Windows Server 2016](../storage.yml)<br>-   [File and Storage Services](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [File Server Resource Manager](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [Folder Redirection, Offline Files, and Roaming User Profiles](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [DFS Namespaces and DFS Replication](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |
->>>>>>> a87676ca5f9bb1a55609688ea78f124284c8ab17
