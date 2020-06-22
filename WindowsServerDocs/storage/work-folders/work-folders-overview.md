@@ -154,7 +154,7 @@ Work Folders is part of the File and Storage Services role. You can install Work
   
 ## Interoperability with Windows Azure virtual machines
 
- You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2, Windows Server 2016 and Windows Server 2019.  
+ You can run this Windows Server role service on a virtual machine in Windows Azure. This scenario has been tested with Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.  
   
 To learn about how to get started with Windows Azure virtual machines, visit the [Windows Azure web site](http://www.windowsazure.com/documentation/services/virtual-machines).  
   
