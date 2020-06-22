@@ -239,5 +239,5 @@ Storage Replica is a one-way replication technology.  It will only replicate fro
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)  
 
 ## See Also  
-- [Storage Overview](../storage.md)  
+- [Storage Overview](../storage.yml)  
 - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)  
