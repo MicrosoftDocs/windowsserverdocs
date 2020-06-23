@@ -24,10 +24,6 @@ The following guides provide information about how to migrate to Windows Server 
   
 -   [Transition to Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
 
--   [Migrate to Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
-  
--   [Transition to Windows Server 2012 R2 Standard](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
-
   
 ## Migrate to Windows Server Essentials  
  To avoid problems while migrating your existing server to  Windows Server Essentials, read the migration guide that applies to your business scenario before you begin the migration.  
@@ -48,22 +44,6 @@ The following guides provide information about how to migrate to Windows Server 
 -   [Migrate to New Hardware](Migrate-Windows-Server-Essentials-to-New-Hardware.md)  
   
 -   [Rules used by the Windows Server Essentials Best Practices Analyzer (BPA) Tool](Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
-
--   [Transition to Windows Server 2012 Standard](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
-  
--   [Migrate from Windows SBS 2011 Essentials](../migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md)  
-  
--   [Migrate from Windows SBS 2011 Standard](../migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md)  
-  
--   [Migrate from Windows SBS 2008](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
-  
--   [Migrate from Windows Server 2008 Foundation](../migrate/Migrate-Windows-Server-2008-Foundation-to-Windows-Server-Essentials.md)  
-  
--   [Migrate from Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
-  
--   [Migrate to New Hardware](../migrate/Migrate-Windows-Server-Essentials-to-New-Hardware.md)  
-  
--   [Rules used by the Windows Server Essentials Best Practices Analyzer (BPA) Tool](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
 
   
 ## End-to-end solution guides  
