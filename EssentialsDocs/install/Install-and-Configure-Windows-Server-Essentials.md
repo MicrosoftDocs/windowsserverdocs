@@ -27,10 +27,6 @@ manager: dongill
   
 2.  [Step 2: Configure the Windows Server Essentials operating system](Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
 
-1.  [Step 1: Install the Windows Server Essentials operating system](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_ManualInstallation) In this step, you install the operating system on your server.  
-  
-2.  [Step 2: Configure the Windows Server Essentials operating system](../install/Install-and-Configure-Windows-Server-Essentials.md#BKMK_Step2Configure) In this step, you complete the installation by providing information about your company, domain settings, and network administrator. This information is used to get the server ready for you to use.  
-
   
 ###  <a name="BKMK_ManualInstallation"></a> Step 1: Install the Windows Server Essentials operating system  
   
