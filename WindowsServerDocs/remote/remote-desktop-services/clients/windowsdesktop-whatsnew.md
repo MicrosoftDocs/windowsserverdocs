@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 06/18/2020
+ms.date: 06/23/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -20,14 +20,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.1026 |
-|Insider    |1.2.1102 |
+|Public     |1.2.1104 |
+|Insider    |1.2.1104 |
 
-## Updates for version 1.2.1102
+## Updates for version 1.2.1104
 
-*Date published: 06/09/2020*
+*Date published: 06/23/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4yo1A), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ytcu), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4ytcm)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
 
 - Updated the automatic discovery logic for the **Subscribe** option to support the Windows Virtual Desktop Spring 2020 update. Customers with only Spring Update resources should no longer need to provide consent for the Fall 2019 release.
 - Improved support for high-DPI devices with scale factor up to 400%.
@@ -82,8 +82,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.790
 
 *Date published: 03/24/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSh), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSi), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4sllb)
 
 - Renamed the "Update" action for Workspaces to "Refresh" for consistency with other Remote Desktop clients.
 - You can now refresh a Workspace directly from its context menu.
