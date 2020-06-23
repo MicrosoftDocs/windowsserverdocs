@@ -165,10 +165,7 @@ Before you install Windows Server Essentials or the Essentials Experience role, 
   
 1.  After the Windows Welcome page (depending on your system provider „¢s configuration), the **Before you begin** page provides an option to set up Windows Server Essentials as a virtual instance or on physical hardware. The availability of these options is predefined by your system provider and both options may not always be available. To install  Windows Server Essentials as a virtual machine, in **Install Windows Server Essentials**, select **Install as virtual instance**, and then click **Configure**.  
   
-2.  The wizard will provision a virtual machine which takes about five minutes.  
-  
-
-3.  Next, configure Windows Server Essentials as described earlier in the [Deploying Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
+2.  The wizard will provision a virtual machine which takes about five minutes.
 
 3.  Next, configure Windows Server Essentials as described earlier in the [Deploying Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.  
 
