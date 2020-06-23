@@ -8654,8 +8654,8 @@
   "redirect_document_id": true
  },
  {
-  "source_path": "WindowsServerDocs/windows-server/networking/Networking.md",
-  "redirect_url": "https://docs.microsoft.com/en-us/windows-server/networking",
+  "source_path": "WindowsServerDocs/networking/Networking.md",
+  "redirect_url": "https://docs.microsoft.com/windows-server/networking",
   "redirect_document_id": true
  }
   ]
