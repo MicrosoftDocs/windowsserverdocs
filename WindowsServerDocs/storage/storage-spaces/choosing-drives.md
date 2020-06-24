@@ -18,9 +18,17 @@ This topic provides guidance on how to choose drives for [Storage Spaces Direct]
 
 ## Drive types
 
-Storage Spaces Direct currently works with three types of drives:
+Storage Spaces Direct currently works with four types of drives:
 
 <table>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0; width:70px">
+			<img src="media/understand-the-cache/pmem-100px.png">
+		</td>
+		<td style="padding: 10px; border: 0;" valign="middle">
+			<b>PMem</b> refers to persistent memory, a new type of memory technology that delivers a unique combination of affordable large capacity and persistence.
+		</td>
+	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
 			<img src="media/understand-the-cache/NVMe-100px.png">
