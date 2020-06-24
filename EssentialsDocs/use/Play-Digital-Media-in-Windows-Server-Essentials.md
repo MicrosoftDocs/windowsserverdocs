@@ -33,20 +33,6 @@ Digital media refers to audio, video, and photo content that has been digitally 
 
 -   [View and browse shared digital media](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)
 
--   [Digital media overview](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_1)
-
--   [Play and share digital media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)
-
--   [Play shared digital media files from a remote location](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_3)
-
--   [Add digital media files to the server](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)
-
--   [Download format options](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_5)
-
--   [Easy File Upload tool](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6)
-
--   [View and browse shared digital media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)
-
 
 ##  <a name="BKMK_1"></a> Digital media overview
  Digital media refers to audio, video, and photo content that has been encoded (digitally compressed). Encoding content involves converting audio and video input to a digital media file such as a Windows Media file. After digital media is encoded, it can be easily manipulated, distributed, and played by computers, and it is easily transmitted over computer networks.
@@ -80,9 +66,6 @@ Digital media refers to audio, video, and photo content that has been digitally 
 
 -   [Send media files on Windows Server Essentials to Windows Media Player, Xbox 360, or to a networked digital media player in the network](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)
 
--   [Search for and play media files on Windows Server Essentials from a computer or digital media player on the network](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)
-
--   [Send media files on Windows Server Essentials to Windows Media Player, Xbox 360, or to a networked digital media player in the network](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)
 
 
 ###  <a name="BKMK_2.1"></a> Search for and play media files on Windows Server Essentials from a computer or digital media player on the network
@@ -101,17 +84,6 @@ Digital media refers to audio, video, and photo content that has been digitally 
 
 -   [Search for and play shared media by using Remote Web Access](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)
 
--   [Search for and play media files from a computer that is running Windows Media Center](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_WMC)
-
--   [Search for and play media files from a computer that is running Windows by using Windows Media Player](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_MWP)
-
--   [Search for and play media files by using Xbox 360](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Xbox)
-
--   [Search for and play media files by using other digital media players or receivers that are compatible with Windows Server Essentials](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Other)
-
--   [Search for and play media files by using the Shared Folders feature of the Launchpad](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)
-
--   [Search for and play shared media by using Remote Web Access](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)
 
 
 ####  <a name="BKMK_WMC"></a> Search for and play media files from a computer that is running Windows Media Center
@@ -291,9 +263,12 @@ Digital media refers to audio, video, and photo content that has been digitally 
 
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
 
+<<<<<<< HEAD
 -   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)
 
 -   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)
 
 -   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)
 
+=======
+>>>>>>> 97724df67237ac603cf9eb996732230bdb7c0b88

@@ -85,22 +85,15 @@ manager: dongill
 ##  <a name="BKMK_App"></a> Using My Server app for Windows 8
  You can access shared folders through Windows 8 by using the My Server app for Windows 8. You can download this app from the [Windows 8 App store](https://windows.microsoft.com/windows-8/apps).
 
-## Additional References
+## See also
 
 -   [Manage Server Folders](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md)
 
 -   [Manage Server Storage](../manage/Manage-Server-Storage-in-Windows-Server-Essentials.md)
-
 
 -   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)
 
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
 
 -   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)
-
--   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)
-
--   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)
-
--   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 

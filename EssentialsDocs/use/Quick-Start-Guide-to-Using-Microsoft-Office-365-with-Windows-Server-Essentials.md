@@ -81,12 +81,7 @@ manager: dongill
 
 -   [Manage Office 365](../manage/Manage-Office-365-in-Windows-Server-Essentials.md)
 
-
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
 
 -   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
-
--   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)
-
--   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
 

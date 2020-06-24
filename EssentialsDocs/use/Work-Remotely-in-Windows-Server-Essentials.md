@@ -19,7 +19,7 @@ manager: dongill
  The following topics can help you access your server resources remotely:
 
 
--      [Use Remote Web Access in Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)
+-   [Use Remote Web Access in Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)
 
 -   [Use VPN to connect to Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)
 
@@ -29,25 +29,12 @@ manager: dongill
 
 -   [Use Microsoft Office 365 with Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)
 
--   [Use Remote Web Access in Windows Server Essentials](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)
-
--   [Use VPN to connect to Windows Server Essentials](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)
-
--   [Use the My Server app to connect to Windows Server Essentials](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_App)
-
--   [Use the My Server app for Windows Phone](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2)
-
--   [Use Microsoft Office 365 with Windows Server Essentials](../use/Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)
-
-
 > [!NOTE]
 >  For information about configuring Anywhere Access on your server, see [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).
 
 ##  <a name="BKMA_RWA"></a> Use Remote Web Access in Windows Server Essentials
 
  Remote Web Access helps you stay connected to your Windows Server Essentials network when you are away. For more information, see the topic [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).
-
- Remote Web Access helps you stay connected to your Windows Server Essentials network when you are away. For more information, see the topic [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).
 
 
 ##  <a name="BKMK_3"></a> Use VPN to connect to Windows Server Essentials
@@ -89,23 +76,14 @@ manager: dongill
 
  Office 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. For more information, see the [Quick Start Guide to Using Microsoft Office 365](Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
 
- Office 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. For more information, see the [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
 
-
-## Additional References
+## See also
 
 -   [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)
-
 
 -   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)
 
 -   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)
 
 -   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)
-
--   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)
-
--   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)
-
--   [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 

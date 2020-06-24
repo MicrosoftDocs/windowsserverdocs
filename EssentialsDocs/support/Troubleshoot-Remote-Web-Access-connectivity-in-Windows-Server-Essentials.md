@@ -72,7 +72,7 @@ manager: dongill
 > [!TIP]
 >  Ensure that your router has the latest BIOS firmware installed. You can often update the BIOS firmware for your router from the configuration web page for the router. For more information, see the documentation for your router. After your router is updated, run the Set Up Anywhere Access Wizard.
 
-## Additional References
+## See also
 
 -   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)
 
@@ -81,9 +81,6 @@ manager: dongill
 -   [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)
 
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
-
-
--   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
 
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
 

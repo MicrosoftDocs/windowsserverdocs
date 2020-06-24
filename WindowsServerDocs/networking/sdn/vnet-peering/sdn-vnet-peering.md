@@ -43,8 +43,6 @@ Virtual network peering has a few requirements and constraints:
 
 - Since virtual network peering is between two virtual networks, there is no derived transitive relationship across peerings. For example, if you peer virtualNetworkA with virtualNetworkB and virtualNetworkB with virtualNetworkC, then virtualNetworkA does not get peered with virtualNetworkC.
 
-  [image here]
-
 ## Connectivity
 
 After you peer virtual networks, resources in either virtual network can directly connect with resources in the peered virtual network.

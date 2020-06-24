@@ -357,22 +357,6 @@ manager: dongill
 
 -   [How backup works with sleep and hibernate modes](Get-Connected-in-Windows-Server-Essentials.md#BKMK_Sleep)
 
--   [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)
-
--   [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10)
-
--   [Install the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_11)
-
--   [Move computer data and settings manually](Get-Connected-in-Windows-Server-Essentials.md#BKMK_12)
-
--   [Transfer multiple user profiles during computer deployment](Get-Connected-in-Windows-Server-Essentials.md#BKMK_Transfer)
-
--   [Uninstall the Connector software](Get-Connected-in-Windows-Server-Essentials.md#BKMK_13)
-
--   [Disconnect your computer from or reconnect your computer to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_14)
-
--   [How backup works with sleep and hibernate modes](Get-Connected-in-Windows-Server-Essentials.md#BKMK_Sleep)
-
 
 ###  <a name="BKMK_9"></a> Connect computers to the server
  When you connect a computer to a server that is running  Windows Server Essentials or  Windows Server 2012 R2 with the Windows Server Essentials Experience role installed, ensure that your client computer has a valid connection to the Internet.

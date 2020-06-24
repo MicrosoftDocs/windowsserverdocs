@@ -67,5 +67,3 @@ Windows Server 2016 is the cloud-ready operating system that supports your curre
 
 -   [Migrate Server Data to Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
 
--   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
-

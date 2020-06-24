@@ -103,10 +103,6 @@ manager: dongill
 
 -   [Create, rename, move, delete, or copy files and folders in Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)
 
--   [Upload and download files in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_UploadRWA)
-
--   [Create, rename, move, delete, or copy files and folders in Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_2)
-
 
 ###  <a name="BKMK_UploadRWA"></a> Upload and download files in Remote Web Access
  On the Remote Web Access **Shared Folders** tab, you can do the following:
@@ -243,6 +239,7 @@ manager: dongill
  You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move and copy files and folders, and to delete files and folders on your server.
 
 > [!NOTE]
+<<<<<<< HEAD
 >  To add new shared folders on a server that is running Windows Server Essentials, you must use the Dashboard. To connect to the server console from Remote Web Access, on the **Computers** tab, click the server name, click **Connect**, and then follow the instructions for logging on to the server. For information about how to create shared folders, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).
 
 ##### To create a new folder
@@ -355,3 +352,108 @@ manager: dongill
 
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
 
+=======
+>  To add new shared folders on a server that is running Windows Server Essentials, you must use the Dashboard. To connect to the server console from Remote Web Access, on the **Computers** tab, click the server name, click **Connect**, and then follow the instructions for logging on to the server. For information about how to create shared folders, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).
+
+##### To create a new folder
+
+1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
+
+2.  On the task bar, click **New Folder**.
+
+3.  Type a name for the folder, and then click **OK**.
+
+##### To rename a file or folder
+
+1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
+
+2.  Right-click the file or folder that you want to rename, and then click **Rename**.
+
+3.  Type a new name in the text box, and then click **OK**.
+
+##### To move files or folders
+
+1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
+
+2.  Select the check box next to the files or folders that you want to move, right-click one of the selected files or folders, and then click **Cut**.
+
+3.  Right-click the folder that you want to move the files or folders to, and then click **Paste**.
+
+##### To delete a file or folder
+
+1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
+
+2.  Select the check box next to the files or folders that you want to delete, right-click one of the selected files or folders, and then click **Delete**.
+
+3.  To confirm that you want to delete the selected files and folders, click **Yes**.
+
+##### To copy files or folders
+
+1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
+
+2.  Select the check box next to the files or folders that you want to copy, right-click one of the selected files or folders, and then click **Copy**.
+
+3.  Right-click the folder that you want to copy the files or folders to, and then click **Paste**.
+
+##  <a name="BKMK_ConnectMobile"></a> Connect from a mobile device
+
+
+-   [Use Remote Web Access from a mobile device](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)
+
+-   [Supported Web browsers for mobile devices](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)
+
+
+###  <a name="BKMK_8"></a> Use Remote Web Access from a mobile device
+ You can log on to Remote Web Access from your smart phone to view the files and folders in the shared folders on the server.
+
+> [!NOTE]
+>  You can also download and use the My Server app for Windows Server Essentials from the [Windows Phone Marketplace](http://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a) to access your shared folders and media files that are stored on the server.
+
+##### To log on to Remote Web Access from a mobile device
+
+1.  Open a Web browser and type **https://**_<YourDomainName\>_**/remote** in the address bar.  Make sure that you include the s in https.
+
+2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of Remote Web Access.
+
+##### To switch to the desktop version of Remote Web Access
+
+1.  Open a Web browser and type **https://**_<YourDomainName\>_**/remote** in the address bar.  Make sure that you include the s in https.
+
+2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, click **View desktop version**, and then click the arrow. You are logged on to the desktop version of Remote Web Access.
+
+##### To return to the mobile version of Remote Web Access
+
+1. Log off.
+
+2. Open a Web browser and type **https://**_<YourDomainName\>_**/remote/m** in the address bar. Make sure that you include the s in https.
+
+3. The mobile version of  Remote Web Access is displayed. On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of  Remote Web Access.
+
+   You can search for files and folders in the shared folders on the server.
+
+###  <a name="BKMK_9"></a> Supported Web browsers for mobile devices
+ Supported web browsers for mobile devices include:
+
+-   Internet Explorer Mobile 6.0 or later
+
+-   Safari
+
+-   Blackberry
+
+-   Symbian 6.0 or later
+
+-   Android
+
+-   Google Chrome
+
+-   Firefox
+
+## See also
+
+-   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)
+
+-   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
+
+-   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
+
+>>>>>>> 97724df67237ac603cf9eb996732230bdb7c0b88

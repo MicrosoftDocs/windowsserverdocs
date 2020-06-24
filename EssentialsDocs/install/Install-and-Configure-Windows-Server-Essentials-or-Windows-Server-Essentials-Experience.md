@@ -167,9 +167,6 @@ Before you install Windows Server Essentials or the Essentials Experience role, 
 
 2.  The wizard will provision a virtual machine which takes about five minutes.
 
-
-3.  Next, configure Windows Server Essentials as described earlier in the [Deploying Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.
-
 3.  Next, configure Windows Server Essentials as described earlier in the [Deploying Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) section.
 
 
@@ -207,7 +204,7 @@ Before you install Windows Server Essentials or the Essentials Experience role, 
 
     -   To get the immediate progress without the progress bar, run `Get-WssConfigurationStatus`.
 
-## Additional References
+## See also
 
 -   [What's New in Windows Server Essentials](../get-started/what-s-new.md)
 

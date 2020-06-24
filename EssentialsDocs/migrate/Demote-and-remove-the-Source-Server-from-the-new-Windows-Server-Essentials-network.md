@@ -27,16 +27,6 @@ After you finish installing  Windows Server Essentials and you complete the task
   
 5.  [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
-1.  [Uninstall Exchange Server 2003](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
-  
-2.  [Disconnect printers that are directly connected to the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect).  
-  
-3.  [Demote the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer).  
-  
-4.  [Move the DHCP Server role from the Source Server to the router](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole).  
-  
-5.  [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
-
   
 ###  <a name="BKMK_UninstallExchangeServer2003"></a> Uninstall Exchange Server 2003  
   
@@ -60,8 +50,6 @@ After you finish installing  Windows Server Essentials and you complete the task
    > [!NOTE]
    > 
    >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
-   > 
-   >  Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS 2003 settings and data to the Destination Server](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
 
   
 6. Click **Next**.  
@@ -120,9 +108,7 @@ After you finish installing  Windows Server Essentials and you complete the task
   
 > [!NOTE]
 > 
->  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
-> 
->  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
+>  If you already performed this task before you started the migration process, continue with the section [Remove and repurpose the Source Server](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).
 
   
  If your Source Server is running the DHCP role, perform the following steps to move the DHCP role to the router.  

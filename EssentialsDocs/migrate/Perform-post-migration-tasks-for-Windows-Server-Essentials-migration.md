@@ -25,14 +25,6 @@ The following tasks help you finish setting up your Destination Server with some
 
 -   [Give the built-in Administrators group the right to log on as a batch job](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)
 
--   [Delete DNS entries of the Source Server](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)
-
--   [Share line-of-business and other application data folders](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)
-
--   [Fix client computer issues after migrating](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)
-
--   [Give the built-in Administrators group the right to log on as a batch job](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)
-
 
 ##  <a name="BKMK_DeleteDNSEntries"></a> Delete DNS entries of the Source Server
  After you decommission the Source Server, the Domain Name Service (DNS) server may still contain entries that point to the Source Server. Delete these DNS entries.
@@ -118,14 +110,10 @@ The following tasks help you finish setting up your Destination Server with some
 
 11. Click **Check Names** to verify that the built-in Administrators group appears, and then click **OK** three times to save the setting.
 
-## Additional References
+## See also
 
 
 -   [Migrate from Windows SBS 2003](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)
 
 -   [Migrate Server Data to Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
-
--   [Migrate from Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)
-
--   [Migrate Server Data to Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

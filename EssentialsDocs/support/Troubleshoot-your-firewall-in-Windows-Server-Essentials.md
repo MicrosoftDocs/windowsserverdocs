@@ -34,7 +34,7 @@ manager: dongill
 |65532|Provider framework for server loopback communications|
 |6602|Provider framework for communication between the server and client computers|
 
-## Additional References
+## See also
 
 -   [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)
 
@@ -43,9 +43,6 @@ manager: dongill
 -   [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)
 
 -   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
-
-
--   [Support Windows Server Essentials](Support-Windows-Server-Essentials.md)
 
 -   [Support Windows Server Essentials](../support/Support-Windows-Server-Essentials.md)
 

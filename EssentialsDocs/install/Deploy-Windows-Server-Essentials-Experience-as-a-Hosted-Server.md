@@ -41,30 +41,6 @@ This document includes information that is specific to hosters who intend to dep
 
 -   [Support information](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)
 
--   [Windows Server Essentials Experience overview](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)
-
--   [Benefits of hosting Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)
-
--   [Supported deployment options](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)
-
--   [Supported network topologies](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)
-
--   [Customize the image of Windows Server Essentials Experience role](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)
-
--   [Automate the deployment of Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)
-
--   [Migrate data from Windows Small Business Server to Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)
-
--   [Perform common tasks by using Windows PowerShell](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)
-
--   [Email integration with Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_EmailIntegration)
-
--   [Monitor and manage by using native tools](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)
-
--   [Test scenarios](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)
-
--   [Support information](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)
-
 
 ##  <a name="BKMK_WSEEOverview"></a> Windows Server Essentials Experience overview
  The  Windows Server Essentials Experience is a server role that is available in the  Windows Server 2012 R2 Standard and  Windows Server 2012 R2 Datacenter. When the  Windows Server Essentials Experience role is installed on a server running  Windows Server 2012 R2, the customer can take advantage of all the features that are available in  Windows Server Essentials without the locks and limits. The  Windows Server Essentials Experience enables the following cross-premises solutions for small and midsize businesses:
