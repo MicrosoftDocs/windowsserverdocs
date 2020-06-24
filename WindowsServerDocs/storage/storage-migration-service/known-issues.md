@@ -429,7 +429,7 @@ If you have already run transfer one ore more times:
  
  If you wish to use Storage Migration Service with domain controllers for transfer purposes, ensure you always select "Don't transfer users and groups" on the transfer settings page in Windows Admin Center.
  
- ## Error 53, "failed to inventory all specified devices" when running inventory, 
+## Error 53, "failed to inventory all specified devices" when running inventory, 
 
 When attempting to run inventory, you receive:
 
@@ -488,7 +488,7 @@ At this stage, Storage Migration Service orchestrator is attempting remote regis
  - The source migration account does not have remote registry permissions to connect to the source computer.
  - The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
  
- ## Cutover hangs on "38% Mapping network interfaces on the source computer..." 
+## Cutover hangs on "38% Mapping network interfaces on the source computer..." 
 
 When attempting to run cut over of a source computer, the cut over gets stuck at phase "38% Mapping network interfaces on the source computer..." and you receive the following error in the Storage Migration Service event log:
 
@@ -530,6 +530,16 @@ To work around this issue, use one of the following options:
 1. Temporarily move the source computer from the Active Directory OU that applies this conflicting GPO. 
 2. Temporarily disable the GPO that applies this conflicting policy.
 3. Temporarily create a new GPO that sets this setting to Disabled and applies to specific OU of source servers, with a higher precedence than any other GPOs.
+
+## Inventory or transfer fail when using credentials from a different domain
+
+When attempting to run inventory or transfer with the Storage Migration Service and targeting a Windows Server while using migration credentials from a different domain than the targeted server, you receive the following errors 
+
+    The server was unable to process the request due to an internal error
+    
+    04/28/2020-11:31:01.169 [Erro] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
+
+This issue is caused by a code defect in the Storage Migration Service. To work around this issue, use migration credentials from the same domain that the source and destination computer belong to. For instance, if the source and destination computer belong to the "corp.contoso.com" domain in the "contoso.com" forest, use 'corp\myaccount' to perform the migration, not a 'contoso\myaccount' credential.
 
 ## See also
 
