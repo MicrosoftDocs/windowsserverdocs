@@ -35,7 +35,7 @@ In certain scenarios, it is possible that the client application does not have a
 
 ![Restrict](media/Custom-Id-Tokens-in-AD-FS/restrict2.png)
 
-With [KB4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) installed on your AD FS servers
+With [KB4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) or later security update installed on your AD FS servers
 1. `response_mode` is set as form_post
 2. Both public and confidential clients can get custom claims in ID token
 3. Assign scope `allatclaims` to the client – RP pair.
