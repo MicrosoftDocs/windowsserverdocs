@@ -615,6 +615,6 @@ The following table lists the minimum supported operating system versions for VS
 </tbody>
 </table>
 
-## See also
+## Additional References
 
 [Volume Shadow Copy Service in Windows Developer Center](https://docs.microsoft.com/windows/desktop/vss/volume-shadow-copy-service-overview)

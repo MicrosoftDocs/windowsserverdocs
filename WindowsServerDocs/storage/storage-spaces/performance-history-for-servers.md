@@ -86,6 +86,6 @@ Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverc
 Get-ClusterNode <Name> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

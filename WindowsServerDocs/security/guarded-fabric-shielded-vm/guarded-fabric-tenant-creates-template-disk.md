@@ -14,14 +14,14 @@ ms.date: 08/29/2018
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-To create a new shielded VM, you will need to use a specially prepared, signed template disk. Metadata from signed template disks helps ensure that the disks are not modified after they have been created and allows you as a tenant to restrict which disks can be used to create your shielded VMs. One way to provide this disk is for you, the tenant, to create it, as described in this topic. 
+To create a new shielded VM, you will need to use a specially prepared, signed template disk. Metadata from signed template disks helps ensure that the disks are not modified after they have been created and allows you as a tenant to restrict which disks can be used to create your shielded VMs. One way to provide this disk is for you, the tenant, to create it, as described in this topic.
 
 > [!IMPORTANT]
 > If you prefer, you can instead use a template disk provided by your hosting service provider. If you do this, it is important to deploy a test VM using that template disk and run your own tools (antivirus, vulnerability scanners, and so on) to validate the disk is, in fact, in a state that you trust.
 
 ## Prepare an operating system VHDX
 
-In order to create a shielded template disk, you need to first prepare an OS disk that will be run through the template disk wizard. This disk will be used as the OS disk in shielded VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs: 
+In order to create a shielded template disk, you need to first prepare an OS disk that will be run through the template disk wizard. This disk will be used as the OS disk in shielded VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs:
 
 | Requirement for VHDX | Reason |
 |-----------|----|
@@ -30,10 +30,10 @@ In order to create a shielded template disk, you need to first prepare an OS dis
 |The disk has at least two partitions. One partition must include the drive on which Windows is installed. This is the drive that BitLocker will encrypt. The other partition is the active partition, which contains the bootloader and remains unencrypted so that the computer can be started.|Needed for BitLocker|
 |File system is NTFS | Needed for BitLocker|
 |The operating system installed on the VHDX is one of the following:<br>- Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 <br>- Windows 10, Windows 8.1, Windows 8| Needed to support generation 2 virtual machines and the Microsoft Secure Boot template|
-|Operating system must be generalized (run sysprep.exe) | Template provisioning involves specializing VMs for a specific tenant's workload| 
+|Operating system must be generalized (run sysprep.exe) | Template provisioning involves specializing VMs for a specific tenant's workload|
 
 > [!NOTE]
-> Do not copy the template disk into the VMM library at this stage. 
+> Do not copy the template disk into the VMM library at this stage.
 
 ### Required packages to create a Nano Server template disk
 
@@ -79,14 +79,14 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
 8. Review your selections on the Review Settings page of the wizard. When you click **Generate**, the wizard will enable BitLocker on the template disk, compute the hash of the disk, and create the Volume Signature Catalog, which is stored in the VHDX metadata.
 
-    Wait until the signing process has finished before attempting to mount or move the template disk. This process may take a while to complete, depending on the size of your disk. 
+    Wait until the signing process has finished before attempting to mount or move the template disk. This process may take a while to complete, depending on the size of your disk.
 
 9. On the **Summary** page, information about the disk template, the certificate used to sign the template, and the certificate issuer is shown. Click **Close** to exit the wizard.
 
 
 Provide the shielded disk template to the hosting service provider, along with a shielding data file that you create, as described in [Creating shielding data to define a shielded VM](guarded-fabric-tenant-creates-shielding-data.md).
 
-## See also
+## Additional References
 
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

@@ -65,7 +65,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 > [!div class="nextstepaction"]
 > [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
-## See also
+## Additional References
 
 - [Deploy the Host Guardian Service (HGS)](guarded-fabric-deploying-hgs-overview.md)
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)

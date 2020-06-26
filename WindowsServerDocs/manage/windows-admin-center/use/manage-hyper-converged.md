@@ -81,7 +81,7 @@ You can configure your Hyper-Converged Infrastructure running Windows Server 201
 7. Run PowerShell with Admin privilege to deploy SDN:
 
 ```powershell
-    .\SDNExpress.ps1 -ConfigurationDataFile .\your_fabricconfig.PSD1 -verbose 
+    .\SDNExpress.ps1 -ConfigurationDataFile .\your_fabricconfig.PSD1 -verbose
 ```
 
 The deployment will take around 30 – 45 minutes.
@@ -280,7 +280,7 @@ It's all about your feedback! The most important benefit of frequent updates is 
 - [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Tweet to `@servermgmt`
 
-### See also
+### Additional References
 
 - [Windows Admin Center](../overview.md)
 - [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
