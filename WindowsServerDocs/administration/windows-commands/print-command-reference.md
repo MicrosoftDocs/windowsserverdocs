@@ -24,10 +24,10 @@ Information and links to each of the associated print command-line tools.
 | [Net print](net-print.md) | Displays information about a specified printer queue, displays information about a specified print job, or controls a specified print job. |
 | [print](print.md) | Sends a text file to a printer. |
 | [prncnfg](prncnfg.md) | Configures or displays configuration information about a printer. |
-| [prndrvr](prndrvr.md) | adds, deletes, and lists printer drivers. |
-| [prnjobs](prnjobs.md) | pauses, resumes, cancels, and lists print jobs. |
-| [prnmngr](prnmngr.md) | adds, deletes, and lists printers or printer connections, in addition to setting and displaying the default printer. |
-| [prnport](prnport.md) | creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration. |
-| [prnqctl](prnqctl.md) | prints a test page, pauses or resumes a printer, and clears a printer queue. |
+| [prndrvr](prndrvr.md) | Adds, deletes, and lists printer drivers. |
+| [prnjobs](prnjobs.md) | Pauses, resumes, cancels, and lists print jobs. |
+| [prnmngr](prnmngr.md) | Adds, deletes, and lists printers or printer connections, in addition to setting and displaying the default printer. |
+| [prnport](prnport.md) | Creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration. |
+| [prnqctl](prnqctl.md) | Prints a test page, pauses or resumes a printer, and clears a printer queue. |
 | [pubprn](pubprn.md) | Publishes a printer to the active directory directory service. |
 | [rundll32 printui.dll,printUIEntry](rundll32-printui.md) | Enables you to automate the installation and configuration of printers using scripts or the command prompt. |
