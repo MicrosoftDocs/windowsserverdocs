@@ -51,6 +51,6 @@ This topic describes the intermediate steps to prepare Hyper-V hosts to become g
 > [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
-## See also
+## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)

@@ -62,7 +62,7 @@ Folders with targets inherit client failback settings from the namespace root. I
 
 3.  On the **Referrals** tab, click the **Clients fail back to preferred targets** check box.
 
-## See also 
+## Additional References
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Review DFS Namespaces Client Requirements](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx)

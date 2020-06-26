@@ -36,7 +36,7 @@ This section includes the following topics:
 > [!Note]
 > To set e-mail notifications and certain reporting capabilities, you must first configure the general File Server Resource Manager options.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 

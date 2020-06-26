@@ -1,6 +1,6 @@
 ---
 title: Edit File Screen Template Properties
-description: This article describes how to edit file screen template properties 
+description: This article describes how to edit file screen template properties
 ms.date: 7/7/2017
 ms.prod: windows-server
 ms.technology: storage
@@ -38,7 +38,7 @@ When you make changes to a file screen template, you have the option of extendin
 
 7.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [File Screening Management](file-screening-management.md)
 -   [Create a File Screen Template](create-file-screen-template.md)

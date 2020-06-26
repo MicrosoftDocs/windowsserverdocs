@@ -166,7 +166,7 @@ Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
 State   :     Installed
 ````
 
-## See also
+## Additional References
 
 [Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md)
 

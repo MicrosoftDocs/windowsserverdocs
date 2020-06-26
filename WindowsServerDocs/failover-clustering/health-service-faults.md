@@ -15,9 +15,9 @@ ms.date: 10/05/2017
 
 ## What are faults
 
-The Health Service constantly monitors your Storage Spaces Direct cluster to detect problems and generate "faults". One new cmdlet displays any current faults, allowing you to easily verify the health of your deployment without looking at every entity or feature in turn. Faults are designed to be precise, easy to understand, and actionable.  
+The Health Service constantly monitors your Storage Spaces Direct cluster to detect problems and generate "faults". One new cmdlet displays any current faults, allowing you to easily verify the health of your deployment without looking at every entity or feature in turn. Faults are designed to be precise, easy to understand, and actionable.
 
-Each fault contains five important fields:  
+Each fault contains five important fields:
 
 -   Severity
 -   Description of the problem
@@ -25,45 +25,45 @@ Each fault contains five important fields:
 -   Identifying information for the faulting entity
 -   Its physical location (if applicable)
 
-For example, here is a typical fault:  
+For example, here is a typical fault:
 
 ```
-Severity: MINOR                                         
-Reason: Connectivity has been lost to the physical disk.                           
-Recommendation: Check that the physical disk is working and properly connected.    
-Part: Manufacturer Contoso, Model XYZ9000, Serial 123456789                        
+Severity: MINOR
+Reason: Connectivity has been lost to the physical disk.
+Recommendation: Check that the physical disk is working and properly connected.
+Part: Manufacturer Contoso, Model XYZ9000, Serial 123456789
 Location: Seattle DC, Rack B07, Node 4, Slot 11
 ```
 
  >[!NOTE]
- > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.  
+ > The physical location is derived from your fault domain configuration. For more information about fault domains, see [Fault Domains in Windows Server 2016](fault-domains.md). If you do not provide this information, the location field will be less helpful - for example, it may only show the slot number.
 
 ## Root cause analysis
 
-The Health Service can assess the potential causality among faulting entities to identify and combine faults which are consequences of the same underlying problem. By recognizing chains of effect, this makes for less chatty reporting. For example, if a server is down, it is expected than any drives within the server will also be without connectivity. Therefore, only one fault will be raised for the root cause - in this case, the server.  
+The Health Service can assess the potential causality among faulting entities to identify and combine faults which are consequences of the same underlying problem. By recognizing chains of effect, this makes for less chatty reporting. For example, if a server is down, it is expected than any drives within the server will also be without connectivity. Therefore, only one fault will be raised for the root cause - in this case, the server.
 
 ## Usage in PowerShell
 
 To see any current faults in PowerShell, run this cmdlet:
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Debug-StorageSubSystem  
+Get-StorageSubSystem Cluster* | Debug-StorageSubSystem
 ```
 
-This returns any faults which affect the overall Storage Spaces Direct cluster. Most often, these faults relate to hardware or configuration. If there are no faults, this cmdlet will return nothing.  
+This returns any faults which affect the overall Storage Spaces Direct cluster. Most often, these faults relate to hardware or configuration. If there are no faults, this cmdlet will return nothing.
 
 >[!NOTE]
 > In a non-production environment, and at your own risk, you can experiment with this feature by triggering faults yourself - for example, by removing one physical disk or shutting down one node. Once the fault has appeared, re-insert the physical disk or restart the node and the fault will disappear again.
 
-You can also view faults that are affecting only specific volumes or file shares with the following cmdlets:  
+You can also view faults that are affecting only specific volumes or file shares with the following cmdlets:
 
 ```PowerShell
-Get-Volume -FileSystemLabel <Label> | Debug-Volume  
+Get-Volume -FileSystemLabel <Label> | Debug-Volume
 
-Get-FileShare -Name <Name> | Debug-FileShare  
+Get-FileShare -Name <Name> | Debug-FileShare
 ```
 
-This returns any faults that affect only the specific volume or file share. Most often, these faults relate to capacity planning, data resiliency, or features like Storage Quality-of-Service or Storage Replica. 
+This returns any faults that affect only the specific volume or file share. Most often, these faults relate to capacity planning, data resiliency, or features like Storage Quality-of-Service or Storage Replica.
 
 ## Usage in .NET and C#
 
@@ -148,7 +148,7 @@ Invoke **Diagnose** to get any current faults scoped to the target **CimInstance
 
 The complete list of faults available at each scope in Windows Server 2016 is documented below.
 
-```       
+```
 public void GetFaults(CimSession Session, CimInstance Target)
 {
     // Set Parameters (None)
@@ -171,7 +171,7 @@ public void GetFaults(CimSession Session, CimInstance Target)
 
 It may make sense for you to construct and persist your own representation of faults. For example, this **MyFault** class stores several key properties of faults, including the **FaultId**, which can be used later to associate update or remove notifications, or to deduplicate in the event that the same fault is detected multiple times, for whatever reason.
 
-```       
+```
 public class MyFault {
     public String FaultId { get; set; }
     public String Reason { get; set; }
@@ -209,7 +209,7 @@ When Faults are created, removed, or updated, the Health Service generates WMI e
 
 First, subscribe to **MSFT\_StorageFaultEvent** events.
 
-```      
+```
 public void ListenForFaultEvents()
 {
     IObservable<CimSubscriptionResult> Events = Session.SubscribeAsync(
@@ -217,7 +217,7 @@ public void ListenForFaultEvents()
     // Subscribe the Observer
     FaultsObserver<CimSubscriptionResult> Observer = new FaultsObserver<CimSubscriptionResult>(this);
     IDisposable Disposeable = Events.Subscribe(Observer);
-}   
+}
 ```
 
 Next, implement an Observer whose **OnNext()** method will be invoked whenever a new event is generated.
@@ -236,7 +236,7 @@ class FaultsObserver : IObserver
 
         if (SubscriptionResult != null)
         {
-            // Unpack            
+            // Unpack
             CimKeyedCollection<CimProperty> Properties = SubscriptionResult.Instance.CimInstanceProperties;
             String ChangeType = Properties["ChangeType"].Value.ToString();
             String FaultId = Properties["FaultId"].Value.ToString();
@@ -327,7 +327,7 @@ ChangeType = { 0, 1, 2 } = { "Create", "Remove", "Update" }.
 
 ## Coverage
 
-In Windows Server 2016, the Health Service provides the following fault coverage:  
+In Windows Server 2016, the Health Service provides the following fault coverage:
 
 ### **PhysicalDisk (8)**
 
@@ -514,12 +514,12 @@ In Windows Server 2016, the Health Service provides the following fault coverage
 * Reason: *"One or more storage consumers (usually Virtual Machines) are using a non-existent policy with id {id}."*
 * RecommendedAction: *"Recreate any missing Storage QoS policies."*
 
-<sup>1</sup>  Indicates the volume has reached 80% full (minor severity) or 90% full (major severity).  
-<sup>2</sup> Indicates some .vhd(s) on the volume have not met their Minimum IOPS for over 10% (minor), 30% (major), or 50% (critical) of rolling 24-hour window.  
+<sup>1</sup>  Indicates the volume has reached 80% full (minor severity) or 90% full (major severity).
+<sup>2</sup> Indicates some .vhd(s) on the volume have not met their Minimum IOPS for over 10% (minor), 30% (major), or 50% (critical) of rolling 24-hour window.
 
 >[!NOTE]
-> The health of storage enclosure components such as fans, power supplies, and sensors is derived from SCSI Enclosure Services (SES). If your vendor does not provide this information, the Health Service cannot display it.  
+> The health of storage enclosure components such as fans, power supplies, and sensors is derived from SCSI Enclosure Services (SES). If your vendor does not provide this information, the Health Service cannot display it.
 
-## See also
+## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)

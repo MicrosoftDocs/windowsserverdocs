@@ -42,7 +42,7 @@ For example,**Dirquota.exe** includes a **template export** parameter to write q
 
 <br />
 
-## Additional considerations 
+## Additional considerations
 
 To manage remote resources with the command-line tools:
 
@@ -52,6 +52,6 @@ To manage remote resources with the command-line tools:
 -   The **Remote File Server Resource Manager Management** exception on the remote computer must be enabled. Enable this exception by using Windows Firewall in Control Panel.
 
 
-## See also
+## Additional References
 
 -   [Managing Remote Storage Resources](managing-remote-storage-resources.md)

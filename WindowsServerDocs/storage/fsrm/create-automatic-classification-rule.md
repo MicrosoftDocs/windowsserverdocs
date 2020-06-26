@@ -46,7 +46,7 @@ The following procedure guides you through the process of creating a classificat
 
 7.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Create a Classification Property](create-classification-property.md)
 -   [Classification Management](classification-management.md)

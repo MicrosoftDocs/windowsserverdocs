@@ -48,7 +48,7 @@ Similarly, you can grant all users from a certain domain permissions to access a
 ## Credentials
 A passport and possibly associated visas are the accepted credentials for a traveler. However, those credentials might not let a traveler enter or access all resources within a country. For instance, additional credentials are required to attend a conference. In Windows, credentials can be managed to make it possible for account holders to access resources over the network without repeatedly having to supply their credentials. This type of access lets users be authenticated one time by the system to access all applications and data sources that they are authorized to use without entering another account identifier or password. The Windows platform capitalizes on the ability to use a single user identity (maintained by Active Directory) across the network by locally caching user credentials in the operating system's Local Security Authority (LSA). When a user logs on to the domain, Windows authentication packages transparently use the credentials to provide single sign-on when authenticating the credentials to network resources. For more information about credentials, see [Credentials Processes in Windows Authentication](credentials-processes-in-windows-authentication.md).
 
-A form of multi-factor authentication for the traveler might be the requirement to carry and present multiple documents to authenticate his identity such as a passport and conference registration information. Windows implements this form or authentication through smart cards, virtual smart cards, and biometric technologies. 
+A form of multi-factor authentication for the traveler might be the requirement to carry and present multiple documents to authenticate his identity such as a passport and conference registration information. Windows implements this form or authentication through smart cards, virtual smart cards, and biometric technologies.
 
 ## Security principals and accounts
 In Windows, any user, service, group, or computer that can initiate action is a security principal. Security principals have accounts, which can be local to a computer or be domain-based. For example, Windows client domain-joined computers can participate in a network domain by communicating with a domain controller even when no human user is logged on. To initiate communications, the computer must have an active account in the domain. Before accepting communications from the computer, the local security authority on the domain controller authenticates the computer's identity, and then defines the computer's security context just as it would for a human security principal. This security context defines the identity and capabilities of a user or service on a particular computer or a user, service, group, or computer on a network. For example, it defines the resources, such as a file share or printer, that can be accessed and the actions, such as Read, Write, or Modify, that can be performed by a user, service, or computer on that resource. For more information, see [Security Principals](https://technet.microsoft.com/itpro/windows/keep-secure/security-principals).
@@ -97,7 +97,7 @@ Constrained delegation gives administrators the ability to specify and enforce a
 
 For more information about constrained delegation, see [Kerberos Constrained Delegation Overview](../kerberos/kerberos-constrained-delegation-overview.md).
 
-## See also
+## Additional References
 [Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn269029.aspx)
 
 

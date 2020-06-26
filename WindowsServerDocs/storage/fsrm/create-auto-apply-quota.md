@@ -34,7 +34,7 @@ For example, you can define an auto apply quota for subfolders that are created 
 > [!Note]
 > You can verify all automatically generated quotas by selecting the **Quotas** node and then selecting **Refresh**. An individual quota for each subfolder and the auto apply quota profile in the parent volume or folder are listed.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -   [Edit Auto Apply Quota Properties](edit-auto-apply-quota-properties.md)

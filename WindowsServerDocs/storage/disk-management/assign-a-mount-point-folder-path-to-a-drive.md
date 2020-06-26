@@ -1,13 +1,13 @@
 ---
 title: Assign a mount point folder path to a drive.
-description: This article describes how to assign a mount point folder path (rather than a drive letter) to a drive. 
+description: This article describes how to assign a mount point folder path (rather than a drive letter) to a drive.
 ms.date: 06/07/2020
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.prod: windows-server
+ms.technology: storage
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 # Mount a drive in a folder
 
@@ -59,5 +59,5 @@ To remove the mount point so that the drive is no longer accessible via a folder
 -   When assigning a mount point folder path to a drive, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors would be listed as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
 -   You can also create a mounted drive using the [mountvol](https://go.microsoft.com/fwlink/?linkid=64111) command.
 
-## See also
+## Additional References
 -   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)

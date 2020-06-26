@@ -24,7 +24,7 @@ For example, you can:
 
 -   Schedule a report that will run every Sunday at midnight, generating a list that includes the most recently accessed files from the previous two days. With this information, you can monitor weekend storage activity and plan server down-time that will have less impact on users who are connecting from home over the weekend.
 -   Run a report at any time to identify all duplicate files in a volume on a server so that disk space can be quickly reclaimed without losing any data.
--   Run a Files by File Group report to identify how storage resources are segmented across different file groups 
+-   Run a Files by File Group report to identify how storage resources are segmented across different file groups
 -   Run a Files by Owner report to analyze how individual users are using shared storage resources.
 
 This section includes the following topics:
@@ -35,7 +35,7 @@ This section includes the following topics:
 > [!Note]
 > To set e-mail notifications and certain reporting capabilities, you must first configure the general File Server Resource Manager options.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 

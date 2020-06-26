@@ -34,7 +34,7 @@ There are no additional hardware or software requirements for running DFS Manage
 
 A namespace server is a domain controller or member server that hosts a namespace. The number of namespaces you can host on a server is determined by the operating system running on the namespace server.
 
-Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace. 
+Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace.
 
 - Windows Server 2019
 - Windows Server 2016
@@ -110,7 +110,7 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; ho
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
 
-## See also
+## Additional References
 
 For additional related information, see the following resources.
 

@@ -54,7 +54,7 @@ The following table lists policy groups relevant to authentication and provides 
 |**Ctrl+Alt+Del Options**|Computer Configuration\Administrative Templates\Windows Components\Ctrl+Alt+Del Options|These policy settings affect the appearance of and accessibility to features on the logon UI (Secure Desktop), such as Task Manager and the keyboard lock of the computer.|
 |**Logon**|Computer Configuration\Administrative Templates\Windows Components\Logon|These policy settings determine if or which processes can run when the user logs on.|
 
-## See also
+## Additional References
 [Windows Authentication Technical Overview](windows-authentication-technical-overview.md)
 
 
