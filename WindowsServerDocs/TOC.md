@@ -10,6 +10,6 @@
 ## [Remote](remote/index.md)
 ## [Security and Assurance](security/security-and-assurance.md)
 ## [Storage](storage/storage.yml)
-## [Virtualization](virtualization/virtualization.md)
+## [Virtualization](virtualization/virtualization.yml)
 ## [Troubleshooting](troubleshoot/windows-server-troubleshooting.md)
 ## [Other Windows Server versions](windows-server-versions.md)
