@@ -23,8 +23,7 @@ RAW. If read-only, then data is still accessible.
 ### Quick automatic mode command line usage
 
 ```dos
-refsutil salvage -QA \<source volume\> \<working directory\> \<target
-directory\> \<options\>
+refsutil salvage -QA <source volume> <working directory> <target directory> <options>
 ```
 It will perform a Quick Scan Phase followed by a Copy Phase. This mode runs
 quicker as it assumes some critical structures of the volume are not corrupted
@@ -34,8 +33,7 @@ reduces the recovery of stale files/directories/volumes.
 ### Full automatic mode command line usage
 
 ```dos
-refsutil salvage -FA \<source volume\> \<working directory\> \<target
-directory\> \<options\>
+refsutil salvage -FA <source volume> <working directory> <target directory> <options>
 ```
 
 It will perform a Full Scan Phase followed by a Copy Phase. This mode may take a
@@ -47,7 +45,7 @@ files/directories/volumes.
 ### Diagnose phase command line usage
 
 ```dos
-refsutil salvage -D \<source volume\> \<working directory\> \<options\>
+refsutil salvage -D <source volume> <working directory> <options>
 ```
 
 First, try to determine if \<source volume\> is an ReFS volume and determine if
@@ -57,7 +55,7 @@ determined. This is a standalone phase.
 ### Quick Scan phase command line usage
 
 ```dos
-refsutil salvage -QS \<source volume\> \<working directory\> \<options\>
+refsutil salvage -QS <source volume> <working directory> <options>
 ```
 
 Quick Scan \<source volume\> for any recoverable files. This mode runs quicker
@@ -71,7 +69,7 @@ scan from where it left off.
 ### Full Scan phase command line usage
 
 ```dos
-refsutil salvage -FS \<source volume\> \<working directory\> \<options\>
+refsutil salvage -FS <source volume> <working directory> <options>
 ```
 
 Scan entire \<source volume\> for any recoverable files. This mode may take a
@@ -83,8 +81,8 @@ the -FS flag again will resume the scan from where it left off.
 ### Copy phase command line usage
 
 ```dos
-refsutil salvage -C \<source volume\> \<working directory\> \<target directory\>
-\<options\>
+refsutil salvage -C <source volume> <working directory> <target directory>
+<options>
 ```
 
 Copy all files described in "foundfiles.\<volume signature\>.txt" to \<target
@@ -95,8 +93,8 @@ signature\>.txt" may not have been written yet and so no file will be copied to
 ### Copy phase with list command line usage
 
 ```dos
-refsutil salvage -SL \<source volume\> \<working directory\> \<target
-directory\> \<file list\> \<options\>
+refsutil salvage -SL <source volume> <working directory> <target
+directory> <file list> <options>
 ```
 
 Copy all the files in \<file list\> from \<source volume\> to \<target
@@ -111,7 +109,7 @@ desired paths, extensions, or file names.
 ### Copy phase with interactive console
 
 ```dos
-refsutil salvage -IC \<source volume\> \<working directory\> \<options\>
+refsutil salvage -IC <source volume> <working directory> <options>
 ```
 
 Salvage files in an interactive console for advanced users. This mode also
