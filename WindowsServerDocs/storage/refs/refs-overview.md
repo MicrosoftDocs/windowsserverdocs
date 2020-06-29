@@ -166,4 +166,4 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
 - [ReFS block cloning](block-cloning.md)
 - [ReFS integrity streams](integrity-streams.md)
-- [Troubleshoot ReFS with ReFSUtil](../administration/windows-commands/refsutil.md)]
+- [Troubleshoot ReFS with ReFSUtil](../../administration/windows-commands/refsutil.md)
