@@ -22,15 +22,15 @@ To deploy DFS Namespaces, perform the following tasks:
 -   Review the concepts, and requirements of DFS Namespaces.
 [Overview of DFS Namespaces](dfs-overview.md)
 -   [Choose a namespace type](choose-a-namespace-type.md)
--   [Create a DFS namespace](create-a-dfs-namespace.md) 
--   Migrate existing domain-based namespaces to Windows Server 2008 mode domain-based namespaces. [Migrate a Domain-based Namespace to Windows Server 2008 mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md) 
+-   [Create a DFS namespace](create-a-dfs-namespace.md)
+-   Migrate existing domain-based namespaces to Windows Server 2008 mode domain-based namespaces. [Migrate a Domain-based Namespace to Windows Server 2008 mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md)
 -   Increase availability by adding namespace servers to a domain-based namespace. [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 -   Add folders to a namespace. [Create a Folder in a DFS Namespace](create-a-folder-in-a-dfs-namespace.md)
 -   Add folder targets to folders in a namespace. [Add Folder Targets](add-folder-targets.md)
 -   Replicate content between folder targets using DFS Replication (optional). [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
 
 
-## See also
+## Additional References
 
 -   [Namespaces](https://technet.microsoft.com/library/cc771914(v=ws.11).aspx)
 -   [Checklist: Tune a DFS Namespace](checklist-tune-a-dfs-namespace.md)

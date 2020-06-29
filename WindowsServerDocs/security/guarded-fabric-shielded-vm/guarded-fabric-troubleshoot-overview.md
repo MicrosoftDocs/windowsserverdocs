@@ -18,7 +18,7 @@ The following topics cover how to troubleshoot a guarded fabric:
 - [Troubleshooting Guarded Hosts](guarded-fabric-troubleshoot-hosts.md)
 - [Troubleshooting Shielded VMs](guarded-fabric-troubleshoot-shielded-vms.md)
 
-## See also
+## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
 - [Managing a guarded fabric](guarded-fabric-manage-overview.md)

@@ -74,6 +74,6 @@ Use the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter
 Get-NetAdapter <Name> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

@@ -19,7 +19,7 @@ This topic provides guidance on how to properly restart or shutdown servers with
 
 With Storage Spaces Direct, taking a server offline (bringing it down) also means taking offline portions of the storage that is shared across all servers in the cluster. Doing so requires pausing (suspending) the server you want to take offline, moving roles to other servers in the cluster, and verifying that all data is available on the other servers in the cluster so that the data remains safe and accessible throughout the maintenance.
 
-Use the following procedures to properly pause a server in a Storage Spaces Direct cluster before taking it offline. 
+Use the following procedures to properly pause a server in a Storage Spaces Direct cluster before taking it offline.
 
    > [!IMPORTANT]
    > To install updates on a Storage Spaces Direct cluster, use Cluster-Aware Updating (CAU), which automatically performs the procedures in this topic so you don't have to when installing updates. For more info, see [Cluster Aware Updating (CAU)](https://technet.microsoft.com/library/hh831694.aspx).
@@ -31,7 +31,7 @@ Before taking a server offline for maintenance, verify that all your volumes are
 To do so, open a PowerShell session with Administrator permissions and then run the following command to view volume status:
 
 ```PowerShell
-Get-VirtualDisk 
+Get-VirtualDisk
 ```
 
 Here's an example of what the output might look like:
@@ -82,7 +82,7 @@ Once the server has completed draining, it will show as **Paused** in Failover C
 You can now safely restart or shut it down, just like you would normally (for example, by using the Restart-Computer or Stop-Computer PowerShell cmdlets).
 
 ```PowerShell
-Get-VirtualDisk 
+Get-VirtualDisk
 
 FriendlyName ResiliencySettingName OperationalStatus HealthStatus IsManualAttach Size
 ------------ --------------------- ----------------- ------------ -------------- ----
@@ -138,7 +138,7 @@ The **BytesTotal** shows how much storage needs to resync. The **PercentComplete
    > [!WARNING]
    > It's not safe to take another server offline until these repair jobs finish.
 
-During this time, your volumes will continue to show as **Warning**, which is normal. 
+During this time, your volumes will continue to show as **Warning**, which is normal.
 
 For example, if you use the `Get-VirtualDisk` cmdlet, you might see the following output:
 ```
@@ -168,17 +168,17 @@ Use the following steps to path your Storage Spaces Direct system quickly. It in
 2. Take the virtual disks offline.
 3. Stop the cluster to take the storage pool offline. Run the  **Stop-Cluster** cmdlet or use Failover Cluster Manager to stop the cluster.
 4. Set the cluster service to **Disabled** in Services.msc on each node. This prevents the cluster service from starting up while being patched.
-5. Apply the Windows Server Cumulative Update and any required Servicing Stack Updates to all nodes. (You can update all nodes at the same time, no need to wait since the cluster is down).  
+5. Apply the Windows Server Cumulative Update and any required Servicing Stack Updates to all nodes. (You can update all nodes at the same time, no need to wait since the cluster is down).
 6. Restart the nodes, and ensure everything looks good.
 7. Set the cluster service back to **Automatic** on each node.
-8. Start the cluster. Run the **Start-Cluster** cmdlet or use Failover Cluster Manager. 
+8. Start the cluster. Run the **Start-Cluster** cmdlet or use Failover Cluster Manager.
 
    Give it a few minutes.  Make sure the storage pool is healthy.
 9. Bring the virtual disks back online.
 10. Monitor the status of the virtual disks by running the **Get-Volume** and **Get-VirtualDisk** cmdlets.
 
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Cluster Aware Updating (CAU)](https://technet.microsoft.com/library/hh831694.aspx)

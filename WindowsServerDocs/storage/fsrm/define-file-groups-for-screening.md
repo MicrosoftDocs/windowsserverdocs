@@ -39,7 +39,7 @@ A *file group* is used to define a namespace for a file screen, file screen exce
 
 5.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [File Screening Management](file-screening-management.md)
 -   [Create a File Screen](create-file-screen.md)

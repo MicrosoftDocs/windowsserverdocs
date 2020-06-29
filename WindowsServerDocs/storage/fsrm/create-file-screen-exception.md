@@ -39,7 +39,7 @@ You assign file groups to determine which file types will be allowed in the file
 
 5.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [File Screening Management](file-screening-management.md)
 -   [Define File Groups for Screening](define-file-groups-for-screening.md)

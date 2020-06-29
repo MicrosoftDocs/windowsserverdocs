@@ -25,6 +25,6 @@ Use the [Get-Cluster](https://docs.microsoft.com/powershell/module/failoverclust
 Get-Cluster | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

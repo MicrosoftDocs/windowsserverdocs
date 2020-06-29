@@ -51,7 +51,7 @@ If your environment does not support domain-based namespaces in Windows Server 
 
 The characteristics of each namespace type and mode are described in the following table.
 
-|Characteristic|Stand-Alone Namespace|Domain-based Namespace (Windows 2000 Server Mode) |Domain-based Namespace (Windows Server 2008 Mode) | 
+|Characteristic|Stand-Alone Namespace|Domain-based Namespace (Windows 2000 Server Mode) |Domain-based Namespace (Windows Server 2008 Mode) |
 |---|---|---|---|
 |Path to namespace|\\\ *ServerName\RootName* |\\\ *NetBIOSDomainName\RootName* <br />\\\ *DNSDomainName\RootName*|\\\ *NetBIOSDomainName\RootName* <br /> \\\ *DNSDomainName\RootName*|
 |Namespace information storage location|In the registry and in a memory cache on the namespace server|In AD DS and in a memory cache on each namespace server|In AD DS and in a memory cache on each namespace server|
@@ -63,7 +63,7 @@ The characteristics of each namespace type and mode are described in the followi
 |Supported methods to ensure namespace availability|Create a stand-alone namespace on a failover cluster.|Use multiple namespace servers to host the namespace. (The namespace servers must be in the same domain.)|Use multiple namespace servers to host the namespace. (The namespace servers must be in the same domain.)|
 |Support for using DFS Replication to replicate folder targets|Supported when joined to an AD DS domain|Supported|Supported|
 
-## See also
+## Additional References
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Migrate a Domain-based Namespace to Windows Server 2008 Mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md)

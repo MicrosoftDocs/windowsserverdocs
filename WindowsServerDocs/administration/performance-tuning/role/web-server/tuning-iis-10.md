@@ -405,6 +405,6 @@ The following issues can affect IIS performance:
 
     For performance reasons, the use of CGI applications to serve requests is not recommended with IIS. Frequently creating and deleting CGI processes involves significant overhead. Better alternatives include using FastCGI, ISAPI application scripts and ASP or ASP.NET scripts. Isolation is available for each of these options.
 
-## See also
-- [Web Server performance tuning](index.md) 
+## Additional References
+- [Web Server performance tuning](index.md)
 - [HTTP 1.1/2 tuning](http-performance.md)

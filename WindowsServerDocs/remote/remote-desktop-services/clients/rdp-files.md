@@ -7,12 +7,13 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/08/2020
+ms.date: 06/16/2020
 ms.localizationpriority: medium
 ---
+
 # Supported Remote Desktop RDP file settings
 
-The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients.
+The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients. When configuring settings, check [Client comparisons](./remote-desktop-app-compare.md) to see which redirections each client supports.
 
 The table also highlights which settings are supported as custom properties with Windows Virtual Desktop. You can refer to [this documentation](https://go.microsoft.com/fwlink/?linkid=2098243&clcid=0x409) detailing how to use PowerShell to customize RDP properties for Windows Virtual Desktop host pools.
 
@@ -25,7 +26,7 @@ The table also highlights which settings are supported as custom properties with
 | username:s:value | Specifies the name of the user account that will be used to sign in to the remote computer. | Any valid username. | | |
 | domain:s:value | Specifies the name of the domain in which the user account that will be used to sign in to the remote computer is located. | A valid domain name, such as "CONTOSO". | | |
 | gatewayhostname:s:value | Specifies the RD Gateway host name. | A valid name, IPv4 address, or IPv6 address. | | |
-| gatewaycredentialssource:i:value | Specifies the RD Gateway authentication method. | - 0: Ask for password (NTLM)</br>- 1: Use smart card</br>- 4: Allow user to select later | 0 | |
+| gatewaycredentialssource:i:value | Specifies the RD Gateway authentication method. | - 0: Ask for password (NTLM)</br>- 1: Use smart card</br>- 2: Use the credentials for the currently logged on user.</br>- 3: Prompt the user for their credentials and use basic authentication</br>- 4: Allow user to select later</br>- 5: Use cookie-based authentication | 0 | |
 | gatewayprofileusagemethod:i:value | Specifies whether to use default RD Gateway settings. | - 0: Use the default profile mode, as specified by the administrator</br>- 1: Use explicit settings, as specified by the user | 0 | |
 | gatewayusagemethod:i:value | Specifies when to use an RD Gateway for the connection. | - 0: Don't use an RD Gateway</br>- 1: Always use an RD Gateway</br>- 2: Use an RD Gateway if a direct connection cannot be made to the RD Session Host</br>- 3: Use the default RD Gateway settings</br>- 4: Don't use an RD Gateway, bypass gateway for local addresses</br>Setting this property value to 0 or 4 are effectively equivalent, but setting this property to 4 enables the option to bypass local addresses. | 0 | |
 | promptcredentialonce:i:value | Determines whether a user's credentials are saved and used for both the RD Gateway and the remote computer. | - 0: Remote session will not use the same credentials</br>- 1: Remote session will use the same credentials | 1 | |
@@ -81,7 +82,7 @@ The table also highlights which settings are supported as custom properties with
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | remoteapplicationcmdline:s:value | Optional command-line parameters for the RemoteApp. | Valid command line parameters. | | |
 | remoteapplicationexpandcmdline:i:value | Determines whether environment variables contained in the RemoteApp command line parameter should be expanded locally or remotely. | - 0: Environment variables should be expanded to the values of the local computer</br>- 1: Environment variables should be expanded to the values of the remote computer | 1 | |
-| remoteapplicationexpandworkingdir | Determines whether environment variables contained in the RemoteApp working directory parameter should be expanded locally or remotely. | - 0: Environment variables should be expanded to the values of the local computer</br> - 1: Environment variables should be expanded to the values of the remote computer.</br>The RemoteApp working directory is specified through the shell working directory parameter. | 1 | |
+| remoteapplicationexpandworkingdir:i:value | Determines whether environment variables contained in the RemoteApp working directory parameter should be expanded locally or remotely. | - 0: Environment variables should be expanded to the values of the local computer</br> - 1: Environment variables should be expanded to the values of the remote computer.</br>The RemoteApp working directory is specified through the shell working directory parameter. | 1 | |
 | remoteapplicationfile:s:value | Specifies a file to be opened on the remote computer by the RemoteApp.</br>For local files to be opened, you must also enable drive redirection for the source drive. | Valid file path. | | |
 | remoteapplicationicon:s:value | Specifies the icon file to be displayed in the client UI while launching a RemoteApp. If no file name is specified, the client will use the standard Remote Desktop icon. Only ".ico" files are supported. | Valid file path. | | |
 | remoteapplicationmode:i:value | Determines whether a connection is launched as a RemoteApp session. | - 0: Don't launch a RemoteApp session</br>- 1: Launch a RemoteApp session | 1 | |

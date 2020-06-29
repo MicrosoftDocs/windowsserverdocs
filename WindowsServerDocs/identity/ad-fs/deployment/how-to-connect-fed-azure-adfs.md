@@ -205,8 +205,13 @@ In order to effectively balance the traffic, the ILB should be configured with l
 
 **6.5. Update DNS with ILB**
 
-Go to your DNS server and create a CNAME for the ILB. The CNAME should be for the federation service with the IP address pointing to the IP address of the ILB. For example if the ILB DIP address is 10.3.0.8, and the federation service installed is fs.contoso.com, then create a CNAME for fs.contoso.com pointing to 10.3.0.8.
-This will ensure that all communication regarding fs.contoso.com end up at the ILB and are appropriately routed.
+Using your internal DNS server, create an A record for the ILB. The A record should be for the federation service with the IP address pointing to the IP address of the ILB. For example, if the ILB IP address is 10.3.0.8 and the federation service installed is fs.contoso.com, then create an A record for fs.contoso.com pointing to 10.3.0.8.
+This will ensure that all data trasmitted to fs.contoso.com end up at the ILB and are appropriately routed. 
+
+> [!NOTE]
+>If your deployment is also using IPv6, be sure to create a corresponding AAAA record.
+>
+>
 
 ### 7. Configuring the Web Application Proxy server
 **7.1. Configuring the Web Application Proxy servers to reach AD FS servers**

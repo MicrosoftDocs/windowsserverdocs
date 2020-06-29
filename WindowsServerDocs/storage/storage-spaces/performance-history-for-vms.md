@@ -69,6 +69,6 @@ Get-VM <Name> | Get-ClusterPerf
    > [!NOTE]
    > The Get-VM cmdlet only returns virtual machines on the local (or specified) server, not across the cluster.
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

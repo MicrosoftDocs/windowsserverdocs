@@ -1,10 +1,10 @@
 ---
-title: Power and performance Tuning
-description: Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
+title: Overview about power and performance tuning for the Windows Server
+description: Overview about Processor Power Management (PPM) tuning for the Windows Server.
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
-ms.topic: article
-ms.author:  qizha;tristanb
+ms.topic: conceptual
+ms.author: qizha;tristanb
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -113,7 +113,7 @@ In Windows Server 2016, the default value for Boost Mode is 3.
 | 3 (Efficient Enabled) | Efficient | Efficient Enabled |
 | 4 (Efficient Aggressive) | Efficient | Aggressive |
 
- 
+
 The following commands enable Processor Performance Boost Mode on the current power plan (specify the policy by using a GUID alias):
 
 ``` syntax
@@ -215,7 +215,8 @@ Powercfg -setacvalueindex scheme_current sub_processor DISTRIBUTEUTIL 0
 Powercfg -setactive scheme_current
 ```
 
-## See Also
+## Additional References
+
 - [Server Hardware Performance Considerations](../index.md)
 - [Server Hardware Power Considerations](../power.md)
 - [Processor Power Management Tuning](processor-power-management-tuning.md)

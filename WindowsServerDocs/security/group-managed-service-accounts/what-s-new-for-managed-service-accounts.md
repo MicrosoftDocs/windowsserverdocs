@@ -41,7 +41,7 @@ On computers running Windows Server 2012 or Windows 8, a group MSA can be create
 ### <a name="interoperability"></a>Removed or deprecated functionality
 For  Windows Server 2012 , the Windows PowerShell cmdlets default to managing the group Managed Service Accounts instead of the server Managed Service Accounts.
 
-## See also
+## Additional References
 
 -   [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md)
 
