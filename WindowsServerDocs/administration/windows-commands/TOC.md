@@ -532,6 +532,7 @@
 ### [rdpsign](rdpsign.md)
 ### [recover](recover.md)
 ### [recover disk group](recover_1.md)
+### [refsutil](refsutil.md)
 ### [reg](reg.md)
 #### [reg add](reg-add.md)
 #### [reg compare](reg-compare.md)
