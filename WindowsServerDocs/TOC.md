@@ -8,7 +8,7 @@
 ## [Identity and Access](identity/Identity-and-Access.yml)
 ## [Networking](networking/index.yml)
 ## [Remote](remote/index.yml)
-## [Security and Assurance](security/security-and-assurance.md)
+## [Security and Assurance](security/security-and-assurance.yml)
 ## [Storage](storage/storage.yml)
 ## [Virtualization](virtualization/virtualization.md)
 ## [Troubleshooting](troubleshoot/windows-server-troubleshooting.md)

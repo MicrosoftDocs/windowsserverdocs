@@ -70,11 +70,13 @@ manager: dongill
 ## Turn off  Windows Server Essentials features
  If you no longer need the  Windows Server Essentials Dashboard or other value-add features to manage the server, you can turn the features off and remove them from your server.
 
- The **Turn off Windows Server Essentials Features Wizard** helps you uninstall the features. It also cleans the server of files that were created by the  Windows Server Essentials server software.  Some cleaning operations are performed immediately, while others are initiated after the server restarts.
+ The **Turn off Windows Server Essentials Features Wizard:**
+ 
+- helps you uninstall the features. It also cleans the server of files that were created by the  Windows Server Essentials server software.  Some cleaning operations are performed immediately, while others are initiated after the server restarts.
 
- The **Turn off Windows Server Essentials Features Wizard** requires that you manually uninstall all add-ins before you can complete the wizard. To view a list of installed add-ins, open the Application page in the Dashboard. The wizard will alert you if it detects installed add-ins, and prompts you to uninstall them.
+- requires that you manually uninstall all add-ins before you can complete the wizard. To view a list of installed add-ins, open the Application page in the Dashboard. The wizard will alert you if it detects installed add-ins, and prompts you to uninstall them.
 
- The **Turn off Windows Server Essentials Features Wizard** allows you to choose whether to keep backup files for client computers after turning off the  Windows Server Essentials features.
+- allows you to choose whether to keep backup files for client computers after turning off the  Windows Server Essentials features.
 
  There are two ways to run the **Turn off Windows Server Essentials Features Wizard** from the Dashboard:
 
