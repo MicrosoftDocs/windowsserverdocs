@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 ![Icon showing a newspaper](media/whats-new.png) To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.
 
-## [Compute](../virtualization/virtualization.md)
+## [Compute](../virtualization/virtualization.yml)
 
 The Virtualization area includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.  
 
