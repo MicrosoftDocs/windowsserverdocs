@@ -37,7 +37,7 @@ Scheduled tasks:
 1. \Microsoft\XblGameSave\XblGameSaveTask
 2. \Microsoft\XblGameSave\XblGameSaveTaskLogon
 
-(You can also access the information on all services detailed in this article by viewing the attached Microsoft Excel spreadsheet: [Guidance on Disabling System Services on Windows Server 2016 with Desktop Experience](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx))
+You can also access the information on all services detailed in this article by viewing the attached Microsoft Excel spreadsheet: [Guidance on Disabling System Services on Windows Server 2016 with Desktop Experience](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx))
 
 
 ### Disabling services not installed by default
@@ -239,7 +239,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 | **Installation**   | Only with Desktop Experience
 | **Startup type**   | Manual
 | **Recommendation** | OK to disable
-| **Comments**       | OK to disable if not used. Another disabling mechanism: https://technet.microsoft.com/library/dd252791.aspx
+| **Comments**       | OK to disable if not used. Another disabling mechanism: [Disabling Bluetooth and Infrared Beaming](https://docs.microsoft.com/previous-versions/tn-archive/dd252791(v=technet.10))
 |||
 
 
@@ -1316,7 +1316,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 | **Installation**   | Always installed
 | **Startup type**   | Automatic
 | **Recommendation** | OK to disable if not a print server or a DC
-| **Comments**       | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory.  If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/
+| **Comments**       | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory.  If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. [Ask the performance team blog](https://techcommunity.microsoft.com/t5/ask-the-performance-team/bg-p/AskPerf).
 |||
 
 
