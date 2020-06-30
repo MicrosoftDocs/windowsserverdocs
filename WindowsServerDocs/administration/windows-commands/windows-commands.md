@@ -7,7 +7,7 @@ ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
 manager: dongill
-ms.date: 06/09/2020
+ms.date: 06/29/2020
 ms.prod: windows-server
 ---
 
@@ -694,6 +694,7 @@ Z)
 - [rdpsign](rdpsign.md)
 - [recover](recover.md)
 - [recover disk group](recover_1.md)
+- [refsutil](refsutil.md)
 - [reg](reg.md)
   - [reg add](reg-add.md)
   - [reg compare](reg-compare.md)

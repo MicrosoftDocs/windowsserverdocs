@@ -6,7 +6,7 @@ manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 06/17/2019
+ms.date: 06/29/2019
 ---
 # Resilient File System (ReFS) overview
 
@@ -166,3 +166,4 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
 - [ReFS block cloning](block-cloning.md)
 - [ReFS integrity streams](integrity-streams.md)
+- [Troubleshoot ReFS with ReFSUtil](../../administration/windows-commands/refsutil.md)
