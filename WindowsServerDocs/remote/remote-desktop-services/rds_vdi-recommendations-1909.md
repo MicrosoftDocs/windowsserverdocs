@@ -140,7 +140,7 @@ You might note that this document and the associated scripts on GitHub do not mo
 
 ### Universal Windows Platform (UWP) application cleanup
 
-One of the goals of a VDI image is to be as light as possible. One way to reduce the size of the image is to remove UWP applications that won't be used in the environment. With UWP apps, there are the main application files, also known as the payload. There is a small amount of data stored in each user's profile for application specific settings. There is also a small amount of data in the 'All User's' profile.
+One of the goals of a VDI image is to be as light as possible. One way to reduce the size of the image is to remove UWP applications that won't be used in the environment. With UWP apps, there are the main application files, also known as the payload. There is a small amount of data stored in each user's profile for application specific settings. There is also a small amount of data in the 'All Users' profile.
 
 Connectivity and timing are important factors when it comes to UWP app cleanup. If you deploy your base image to a device with no network connectivity, Windows 10 can't connect to the Microsoft Store and download apps and try to install them while you are trying to uninstall them. This might be a good strategy to allow you time to customize your image, and then update what remains at a later stage of the image creation process.
 
