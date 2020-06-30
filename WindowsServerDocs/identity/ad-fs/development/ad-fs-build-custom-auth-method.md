@@ -222,10 +222,10 @@ This walk-through uses Visual Studio 2012.  The project can be built using any d
          /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
          /// Note that although the property is an array, only the first element is currently used.
          /// MUST BE ONE OF THE FOLLOWING
-         /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
          /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
          /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
-         /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
+         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
          public string[] IdentityClaims
          {
          get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
@@ -465,12 +465,12 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 2. Next, configure global or relying-party-specific rules to trigger MFA:
 
-   Example 1: to create global rule to require MFA for External requests:`PS C:\>Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );'`
+   Example 1: to create global rule to require MFA for External requests:`PS C:\>Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'`
 
    Example 2: to create MFA rules to require MFA for external requests to a specific relying party.  (Note that individual providers cannot be connected to individual relying parties in AD FS in Windows Server 2012 R2).
 
        PS C:\>$rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
-       PS C:\>Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );'
+       PS C:\>Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
 
 ### Authenticate with MFA using your adapter
 
