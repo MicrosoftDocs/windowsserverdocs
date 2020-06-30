@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients. When configuring settings, check [Client comparisons](./remote-desktop-app-compare.md) to see which redirections each client supports.
 
-The table also highlights which settings are supported as custom properties with Windows Virtual Desktop. You can refer to [this documentation](https://go.microsoft.com/fwlink/?linkid=2098243&clcid=0x409) detailing how to use PowerShell to customize RDP properties for Windows Virtual Desktop host pools.
+The table also highlights which settings are supported as custom properties with Windows Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Windows Virtual Desktop host pools.
 
 ## Connection information
 
