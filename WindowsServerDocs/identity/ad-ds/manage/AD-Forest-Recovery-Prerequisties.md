@@ -1,6 +1,5 @@
 ---
 title: Prerequisites for planning for Active Directory Forest Recovery
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

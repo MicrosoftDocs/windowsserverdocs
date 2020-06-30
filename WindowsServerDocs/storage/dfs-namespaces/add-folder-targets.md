@@ -3,7 +3,7 @@ title: Add Folder Targets
 description: This topic describes how to add folder targets (UNC paths)
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: brianlic
+manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
@@ -33,7 +33,7 @@ To add a folder target by using DFS Management, use the following procedure:
 > [!NOTE]
 > Folders can contain folder targets or other DFS folders, but not both, at the same level in the folder hierarchy.
 
-## See also
+## Additional References
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)

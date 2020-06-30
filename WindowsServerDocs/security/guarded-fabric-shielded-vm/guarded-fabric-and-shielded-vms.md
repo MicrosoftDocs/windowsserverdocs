@@ -1,10 +1,10 @@
 ---
 title: Guarded Fabric and Shielded VMs overview
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
@@ -17,7 +17,7 @@ ms.date: 08/29/2018
 
 Virtualization security is a major investment area in Hyper-V. In addition to protecting hosts or other virtual machines from a virtual machine running malicious software, we also need to protect virtual machines from a compromised host. This is a fundamental danger for every virtualization platform today, whether it's Hyper-V, VMware or any other. Quite simply, if a virtual machine gets out of an organization (either maliciously or accidentally), that virtual machine can be run on any other system. Protecting high value assets in your organization, such as domain controllers, sensitive file servers, and HR systems, is a top priority.
 
-To help protect against compromised virtualization fabric, Windows Server 2016 Hyper-V introduced shielded VMs. A shielded VM is a generation 2 VM (supported on Windows Server 2012 and later) that has a virtual TPM, is encrypted using BitLocker, and can run only on healthy and approved hosts in the fabric. Shielded VMs and guarded fabric enable cloud service providers or enterprise private cloud administrators to provide a more secure environment for tenant VMs. 
+To help protect against compromised virtualization fabric, Windows Server 2016 Hyper-V introduced shielded VMs. A shielded VM is a generation 2 VM (supported on Windows Server 2012 and later) that has a virtual TPM, is encrypted using BitLocker, and can run only on healthy and approved hosts in the fabric. Shielded VMs and guarded fabric enable cloud service providers or enterprise private cloud administrators to provide a more secure environment for tenant VMs.
 
 A guarded fabric consists of:
 
@@ -29,7 +29,7 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 
 ![Guarded host fabric](../media/Guarded-Fabric-Shielded-VM/Guarded-Host-Overview-Diagram.png)
 
-## Video: Introduction to shielded virtual machines 
+## Video: Introduction to shielded virtual machines
 
 <iframe src="https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016/player" width="650" height="440" allowFullScreen frameBorder="0"></iframe>
 
@@ -44,10 +44,10 @@ TPM-trusted attestation is recommended because it offers stronger assurances, as
 
 | **Attestation mode you choose for hosts**                                            | **Host assurances** |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|**TPM-trusted attestation:** Offers the strongest possible protections but also requires more configuration steps. Host hardware and firmware must include TPM 2.0 and UEFI 2.3.1 with Secure Boot enabled. | Guarded hosts are approved based on their TPM identity, Measured Boot sequence, and code integrity policies to ensure they only run approved code.| 
-| **Host key attestation:** Intended to support existing host hardware where TPM 2.0 is not available. Requires fewer configuration steps and is compatible with commonplace server hardware. | Guarded hosts are approved based on possession of the key. | 
+|**TPM-trusted attestation:** Offers the strongest possible protections but also requires more configuration steps. Host hardware and firmware must include TPM 2.0 and UEFI 2.3.1 with Secure Boot enabled. | Guarded hosts are approved based on their TPM identity, Measured Boot sequence, and code integrity policies to ensure they only run approved code.|
+| **Host key attestation:** Intended to support existing host hardware where TPM 2.0 is not available. Requires fewer configuration steps and is compatible with commonplace server hardware. | Guarded hosts are approved based on possession of the key. |
 
-Another mode named **Admin-trusted attestation** is deprecated beginning with Windows Server 2019. This mode was based on guarded host membership in a designated Active Directory Domain Services (AD DS) security group. Host key attestation provide similar host identification and is easier to set up. 
+Another mode named **Admin-trusted attestation** is deprecated beginning with Windows Server 2019. This mode was based on guarded host membership in a designated Active Directory Domain Services (AD DS) security group. Host key attestation provide similar host identification and is easier to set up.
 
 ## Assurances provided by the Host Guardian Service
 
@@ -84,9 +84,9 @@ The following figure shows the shielding data file and related configuration ele
 
 Guarded fabrics are capable of running VMs in one of three possible ways:
 
-1.	A normal VM offering no protections above and beyond previous versions of Hyper-V
-2.	An encryption-supported VM whose protections can be configured by a fabric admin
-3.	A shielded VM whose protections are all switched on and cannot be disabled by a fabric admin
+1.    A normal VM offering no protections above and beyond previous versions of Hyper-V
+2.    An encryption-supported VM whose protections can be configured by a fabric admin
+3.    A shielded VM whose protections are all switched on and cannot be disabled by a fabric admin
 
 Encryption-supported VMs are intended for use where the fabric administrators are fully trusted.  For example, an enterprise might deploy a guarded fabric in order to ensure VM disks are encrypted at-rest for compliance purposes. Fabric administrators can continue to use convenient management features, such VM console connections, PowerShell Direct, and other day-to-day management and troubleshooting tools.
 
@@ -104,9 +104,9 @@ The following table summarizes the differences between encryption-supported and 
 |COM/Serial ports   | Supported                             | Disabled (cannot be enabled) |
 |Attach a debugger (to the VM process)<sup>1</sup>| Supported          | Disabled (cannot be enabled) |
 
-<sup>1</sup> Traditional debuggers that attach directly to a process, such as WinDbg.exe, are blocked for shielded VMs because the VM's worker process (VMWP.exe) is a protected process light (PPL). 
-Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked. 
-Unlike shielded VMs, the worker process for encryption supported VMs does not run as a PPL so traditional debuggers like WinDbg.exe will continue to function normally. 
+<sup>1</sup> Traditional debuggers that attach directly to a process, such as WinDbg.exe, are blocked for shielded VMs because the VM's worker process (VMWP.exe) is a protected process light (PPL).
+Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked.
+Unlike shielded VMs, the worker process for encryption supported VMs does not run as a PPL so traditional debuggers like WinDbg.exe will continue to function normally.
 
 Both shielded VMs and encryption-supported VMs continue to support commonplace fabric management capabilities, such as Live Migration, Hyper-V replica, VM checkpoints, and so on.
 
@@ -126,17 +126,17 @@ Both shielded VMs and encryption-supported VMs continue to support commonplace f
 
        - TPM-identifying information (its endorsement key)
        - Information about processes that were started during the most recent boot sequence (the TCG log)
-       - Information about the Code Integrity (CI) policy that was applied on the host. 
+       - Information about the Code Integrity (CI) policy that was applied on the host.
 
        Attestation happens when the host starts and every 8 hours thereafter. If for some reason a host doesn't have an attestation certificate when a VM tries to start, this also triggers attestation.
 
-    **Host key attestation**: Hyper-V host sends the public half of the key pair. HGS validates the host key is registered. 
-    
+    **Host key attestation**: Hyper-V host sends the public half of the key pair. HGS validates the host key is registered.
+
     **Admin-trusted attestation**: Hyper-V host sends a Kerberos ticket, which identifies the security groups that the host is in. HGS validates that the host belongs to a security group that was configured earlier by the trusted HGS admin.
 
 3. Attestation succeeds (or fails).
 
-    The attestation mode determines which checks are needed to successfully attest the host is healthy. With TPM-trusted attestation, the host's TPM identity, boot measurements, and code integrity policy are validated. With host key attestation, only registration of the host key is validated. 
+    The attestation mode determines which checks are needed to successfully attest the host is healthy. With TPM-trusted attestation, the host's TPM identity, boot measurements, and code integrity policy are validated. With host key attestation, only registration of the host key is validated.
 
 4. Attestation certificate sent to host.
 
@@ -173,7 +173,7 @@ Both shielded VMs and encryption-supported VMs continue to support commonplace f
 | Virtualization-based Security (VBS) | A Hyper-V based processing and storage environment that is protected from administrators. Virtual Secure Mode provides the system with the ability to store operating system keys that are not visible to an operating system administrator.|
 | virtual TPM | A virtualized version of a Trusted Platform Module (TPM). Beginning with Hyper-V in Windows Server 2016, you can provide a virtual TPM 2.0 device so that virtual machines can be encrypted, just as a physical TPM allows a physical machine to be encrypted.|
 
-## See also
+## Additional References
 
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
 - Blog: [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)

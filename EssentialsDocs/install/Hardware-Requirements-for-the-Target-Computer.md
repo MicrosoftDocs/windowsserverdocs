@@ -1,12 +1,8 @@
 ---
 title: "Hardware Requirements for the Target Computer"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: c20b06b9-ce0d-4c20-bf49-257c3f5dc01b
 author: nnamuhcs
@@ -39,7 +35,7 @@ This section provides hardware requirements for  Windows Server Essentials.
 |Component|Description|  
 |---------------|-----------------|  
 |Network adapter|Gigabit Ethernet adapter (10/100/1000baseT PHY/MAC)|  
-|Internet|Some functionality may require Internet access (fees may apply) or a Windows Live® ID Account|  
+|Internet|Some functionality may require Internet access (fees may apply) or a Windows Live&reg; ID Account|  
 |Supported Client Operating Systems|-   Windows 7<br />-   Windows 8<br />-   Macintosh OS X 10.5 to 10.8.<br /><br /> **Note:** Some features require professional or higher editions.<br /><br /> 1 GB of available hard drive space (a portion of this disk will be freed after installation)|  
 |Router|A router or firewall that supports IPv4 NAT|  
 |Additional requirements|DVD-ROM drive|  
@@ -57,10 +53,4 @@ This section provides hardware requirements for  Windows Server Essentials.
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-
- [Getting Started with the Windows Server Essentials ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)
 

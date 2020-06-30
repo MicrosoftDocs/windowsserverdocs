@@ -1,14 +1,13 @@
 ---
 ms.assetid: b7bf7579-ca53-49e3-a26a-6f9f8690762f
 title: Best Practices for securing AD FS and Web Application Proxy
-description: "This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy."
+description: Best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -79,7 +78,7 @@ Below is the list of endpoints that must be enabled on the proxy in these scenar
 |/adfs/services/trust/13/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint.
 |/adfs/oauth2|This one is used for any modern apps (on prem or in cloud) you have configured to authenticate directly to AD FS (i.e. not through AAD)
 |/adfs/services/trust/mex|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint.
-|/adfs/ls/federationmetadata/2007-06/federationmetadata.xml	|Requirement for any passive flows; and used by Office 365 / Azure AD to check AD FS certificates
+|/adfs/ls/federationmetadata/2007-06/federationmetadata.xml    |Requirement for any passive flows; and used by Office 365 / Azure AD to check AD FS certificates
 
 
 AD FS endpoints can be disabled on the proxy using the following PowerShell cmdlet:
@@ -105,17 +104,17 @@ The property is `ExtendedProtectionTokenCheck`.  The default setting is Allow, s
 The federation service proxy (part of the WAP) provides congestion control to protect the AD FS service from a flood of requests.  The Web Application Proxy will reject external client authentication requests if the federation server is overloaded as detected by the latency between the Web Application Proxy and the federation server.  This feature is configured by default with a recommended latency threshold level.
 
 #### To verify the settings, you can do the following:
-1.	On your Web Application Proxy computer, start an elevated command window.
-2.	Navigate to the ADFS directory, at %WINDIR%\adfs\config.
-3.	Change the congestion control settings from its default values to ‘<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'.
-4.	Save and close the file.
-5.	Restart the AD FS service by running ‘net stop adfssrv' and then ‘net start adfssrv'.
+1.    On your Web Application Proxy computer, start an elevated command window.
+2.    Navigate to the ADFS directory, at %WINDIR%\adfs\config.
+3.    Change the congestion control settings from its default values to '<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'.
+4.    Save and close the file.
+5.    Restart the AD FS service by running 'net stop adfssrv' and then 'net start adfssrv'.
 For your reference, guidance on this capability can be found [here](https://msdn.microsoft.com/library/azure/dn528859.aspx ).
 
 ### Standard HTTP request checks at the proxy
 The proxy also performs the following standard checks against all traffic:
 
-- The FS-P itself authenticates to AD FS via a short lived certificate.  In a scenario of suspected compromise of dmz servers, AD FS can “revoke proxy trust” so that it no longer trusts any incoming requests from potentially compromised proxies. Revoking the proxy trust revokes each proxy's own certificate so that it cannot successfully authenticate for any purpose to the AD FS server
+- The FS-P itself authenticates to AD FS via a short lived certificate.  In a scenario of suspected compromise of dmz servers, AD FS can "revoke proxy trust" so that it no longer trusts any incoming requests from potentially compromised proxies. Revoking the proxy trust revokes each proxy's own certificate so that it cannot successfully authenticate for any purpose to the AD FS server
 - The FS-P terminates all connections and creates a new HTTP connection to the AD FS service on the internal network. This provides a session-level buffer between external devices and the AD FS service. The external device never connects directly to the AD FS service.
 - The FS-P performs HTTP request validation that specifically filters out HTTP headers that are not required by AD FS service.
 
@@ -130,8 +129,8 @@ Information on installing Azure AD Connect Health for AD FS can be found [here](
 ## Additional security configurations
 The following additional capabilities can be configured optionally to provide additional protections to those offered in the default deployment.
 
-### Extranet “soft” lockout protection for accounts
-With the extranet lockout feature in Windows Server 2012 R2, an AD FS administrator can set a maximum allowed number of failed authentication requests (ExtranetLockoutThreshold) and an ‘observation window's time period (ExtranetObservationWindow). When this maximum number (ExtranetLockoutThreshold) of authentication requests is reached, AD FS stops trying to authenticate the supplied account credentials against AD FS for the set time period (ExtranetObservationWindow). This action protects this account from an AD account lockout, in other words, it protects this account from losing access to corporate resources that rely on AD FS for authentication of the user. These settings apply to all domains that the AD FS service can authenticate.
+### Extranet "soft" lockout protection for accounts
+With the extranet lockout feature in Windows Server 2012 R2, an AD FS administrator can set a maximum allowed number of failed authentication requests (ExtranetLockoutThreshold) and an 'observation window's time period (ExtranetObservationWindow). When this maximum number (ExtranetLockoutThreshold) of authentication requests is reached, AD FS stops trying to authenticate the supplied account credentials against AD FS for the set time period (ExtranetObservationWindow). This action protects this account from an AD account lockout, in other words, it protects this account from losing access to corporate resources that rely on AD FS for authentication of the user. These settings apply to all domains that the AD FS service can authenticate.
 
 You can use the following Windows PowerShell command to set the AD FS extranet lockout (example): 
 

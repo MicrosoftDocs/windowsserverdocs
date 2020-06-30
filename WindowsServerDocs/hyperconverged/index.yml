@@ -1,131 +1,68 @@
-### YamlMime:YamlDocument
+### YamlMime:Hub
 
-documentType: LandingData
-
-title: Hyper-converged infrastructure documentation
+title: Hyper-converged infrastructure documentation # < 60 chars
+summary: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. # < 160 chars
+# brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
+brand: windows
 
 metadata:
+  title: Hyper-converged infrastructure documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  author: coreyp-at-msft  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: coreyp #Required; microsoft alias of author; optional team alias.
+  ms.date: 06/10/2020 #Required; mm/dd/yyyy format.
 
-  document_id: 
-
-  title: Hyper-converged infrastructure documentation 
-
-  description: Hyper-converged infrastructure documentation
-
-  text: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization
-
-  
-  keywords: Windows Server, Windows Server 2016, hyper-v, sdn, storage spaces direct, wssd
-
-  ms.localizationpriority: high
-
-  author: coreyp-at-msft
-
-  ms.author: coreyp
-
-  ms.topic: article
-
-  ms.devlang: na
-
-sections:
-
-- title: 
-
-- items:
-
-  - type: markdown
-
-    text: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. 
-
-- items:
-
-  - type: list
-
-    style: cards
-
-    className: cardsI
-
-    columns: 2
-
-    items:
-
-    - href: ../virtualization/hyper-v/index.md
-
-      html: <p>Virtualizes server hardware, enabling you to run virtual machines across servers in a hyper-converged cluster</p>
-
-      image:
-
-        src: ../media/i-virtualize.svg
-      
-      title: Hyper-V
-
-    - href: ../storage/storage-spaces/storage-spaces-direct-overview.md
-
-      html: <p>Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.</p>
-
-      image:
-
-        src: ../media/i-store.svg
-
-      title: Storage Spaces Direct
-
-    - href: ../failover-clustering/failover-clustering-overview.md
-
-      html: <p>Groups multiple servers together so that workloads such as virtual machines can run on any server in the cluster, load-balancing and failing over gracefully between servers.</p>
-
-      image:
-
-        src: ../media/i-cluster.svg
-
-      title: Failover Clustering
-
-    - href: https://docs.microsoft.com/windows-server/networking/sdn/
-
-      html: <p>Virtualizes your network hardware, enabling you to dynamically create and manage networks and policies that abstract your workloads from underlying physical networks.</p>
-
-      image:
-
-        src: ../media/i-network.svg
-
-      title: Software Defined Networking
-
-    - href: ../manage/windows-admin-center/overview.md
-
-      html: <p>Manages your cluster and other Windows servers.</p>
-
-      image:
-
-        src: ../media/i-admin-center.svg
-
-      title: Windows Admin Center      
-      
-    - href: ../azure-hybrid-services.md
-
-      html: <p>Connects your cluster to Azure hybrid services for site recovery, monitoring, and more.</p>
-
-      image:
-
-        src: ../media/i-microsoft-azure.svg
-
-      title: Connect to Azure hybrid services      
-    
-    - href: ../azure-stack-hci
-
-      html: <p>Pairs Windows Server 2019 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.</p>
-
-      image:
-
-        src: ../media/i-azure-stack.svg
-
-      title: Azure Stack HCI     
-      
-    - href: https://www.microsoft.com/cloud-platform/software-defined-datacenter
-
-      html: <p>Pairs Windows Server 2016 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_data-collection.svg
-
-      title: Windows Server Software-Defined (WSSD)      
-
+# productDirectory section (optional)
+productDirectory:
+  items:
+    # Card
+    - title: Hyper-V
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-virtualize.svg
+      links:
+        - url: https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/
+          text: Virtualizes server hardware, enabling you to run virtual machines across servers in a hyper-converged cluster.
+    # Card
+    - title: Storage Spaces Direct
+      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-store.svg
+      links:
+        - url: https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview
+          text: Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.
+    # Card
+    - title: Failover Clustering
+      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-cluster.svg
+      links:
+        - url: https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-clustering-overview
+          text: Groups multiple servers together so that workloads such as virtual machines can run on any server in the cluster, load-balancing and failing over gracefully between servers.
+    # Card
+    - title: Software Defined Networking
+      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-network.svg
+      links:
+        - url: https://docs.microsoft.com/windows-server/networking/sdn/
+          text: Virtualizes your network hardware, enabling you to dynamically create and manage networks and policies that abstract your workloads from underlying physical networks.
+    # Card
+    - title: Windows Admin Center
+      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-admin-center.svg
+      links:
+        - url: https://docs.microsoft.com/en-us/windows-server/manage/windows-admin-center/overview
+          text: Virtualizes server hardware, enabling you to run virtual machines across servers in a hyper-converged cluster.
+    # Card
+    - title: Connect to Azure hybrid services
+      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-microsoft-azure.svg
+      links:
+        - url: https://docs.microsoft.com/en-us/windows-server/azure-hybrid-services
+          text: Connects your cluster to Azure hybrid services for site recovery, monitoring, and more.
+    # Card
+    - title: Azure Stack HCI
+      imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-azure-stack.svg
+      links:
+        - url: https://docs.microsoft.com/en-us/windows-server/azure-stack-hci
+          text: Pairs Windows Server 2019 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.
+    # Card
+    - title: Windows Server Software-Defined (WSSD)
+      imageSrc: https://docs.microsoft.com/media/common/i_data-collection.svg
+      links:
+        - url: https://www.microsoft.com/cloud-platform/software-defined-datacenter
+          text: Pairs Windows Server 2016 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.

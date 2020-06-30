@@ -1,13 +1,13 @@
 ---
 title: Contact the Datacenter and Cloud Networking Team
 description: This page is designed to inform customers on the best methods for reaching the SDN team in various contexts.
-manager: brianlic
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
-ms.author: pashort
-author: kallie-b
+ms.author: anpaul
+author: AnirbanPaul
 ---
 # Contact the Datacenter and Cloud Networking Team
 

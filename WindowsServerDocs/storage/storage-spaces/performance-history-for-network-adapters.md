@@ -1,12 +1,11 @@
 ---
 title: Performance history for network adapters
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
@@ -75,6 +74,6 @@ Use the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter
 Get-NetAdapter <Name> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

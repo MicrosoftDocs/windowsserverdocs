@@ -1,12 +1,12 @@
 ---
 title: rdpsign
 description: Learn how to digitally sign an RDP file.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4a6fa8ce-3d32-49a5-b056-bcc1a23391f5
 author: coreyp-at-msft
@@ -16,10 +16,10 @@ ms.date: 07/11/2018
 ---
 # rdpsign
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to digitally sign a Remote Desktop Protocol (.rdp) file.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 > [!NOTE]
 > In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
@@ -29,7 +29,7 @@ for examples of how to use this command, see [Examples](#BKMK_examples).
 rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |-------|--------|
@@ -66,5 +66,5 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
   rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
   ```
   ## See Also
-  [Command-Line Syntax Key](command-line-syntax-key.md)
-  [Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
+  [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

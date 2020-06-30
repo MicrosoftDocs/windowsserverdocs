@@ -1,9 +1,7 @@
 ---
 title: Linux Software Repository for Microsoft Products
 description: This document describes how to use and install Linux software packages for Microsoft products.
-ms.custom: na
 ms.prod: windows-server
-ms.service: na
 manager: szark
 ms.technology: compute
 ms.topic: article
@@ -34,54 +32,54 @@ Repositories can be configured automatically by installing the Linux package tha
 
  - Enterprise Linux 6 (EL6)
 
-		sudo rpm -Uvh https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
+        sudo rpm -Uvh https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
 
  - Enterprise Linux 7 (EL7)
 
-		sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+        sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 
 
 ### Ubuntu
 
  - Ubuntu 14.04 (Trusty)
 
-		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/14.04/prod
-		sudo apt-get update
+        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        sudo apt-add-repository https://packages.microsoft.com/ubuntu/14.04/prod
+        sudo apt-get update
 
  - Ubuntu 16.04 (Xenial)
 
-		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod
-		sudo apt-get update
+        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod
+        sudo apt-get update
 
  - Ubuntu 18.04 (Bionic)
 
- 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
-		sudo apt-get update
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+        sudo apt-get update
 
  - Ubuntu 18.10 (Cosmic)
 
- 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.10/prod
-		sudo apt-get update
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.10/prod
+        sudo apt-get update
 
  - Ubuntu 19.04 (Disco)
 
- 		curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-		sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
-		sudo apt-get update
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
+        sudo apt-get update
 
 ### SUSE Linux Enterprise 12
 
-		sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
+        sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 
 
 ## Manual Configuration
 The repository configuration files are available from [packages.microsoft.com/config](https://packages.microsoft.com/config/). The name and location of these files can be located using the following URI naming convention:
 
-		https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
+        https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
 
 **Package and Repository Signing Key**
 
@@ -93,23 +91,23 @@ The repository configuration files are available from [packages.microsoft.com/co
 
  - RHEL/CentOS 7
 
-		# Install repository configuration
-		curl https://packages.microsoft.com/config/rhel/7/prod.repo > ./microsoft-prod.repo
-		sudo cp ./microsoft-prod.repo /etc/yum.repos.d/
+        # Install repository configuration
+        curl https://packages.microsoft.com/config/rhel/7/prod.repo > ./microsoft-prod.repo
+        sudo cp ./microsoft-prod.repo /etc/yum.repos.d/
 
-		# Install Microsoft's GPG public key
-		curl https://packages.microsoft.com/keys/microsoft.asc > ./microsoft.asc
-		sudo rpm --import ./microsoft.asc
+        # Install Microsoft's GPG public key
+        curl https://packages.microsoft.com/keys/microsoft.asc > ./microsoft.asc
+        sudo rpm --import ./microsoft.asc
 
  - Ubuntu 16.04
 
-		# Install repository configuration
-		curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > ./microsoft-prod.list
-		sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
+        # Install repository configuration
+        curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > ./microsoft-prod.list
+        sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
 
-		# Install Microsoft GPG public key
-		curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-		sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
+        # Install Microsoft GPG public key
+        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+        sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
 
 
 

@@ -3,7 +3,7 @@ ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: Updating drive firmware
 ms.prod: windows-server
 ms.author: toklima
-ms.manager: dmoss
+manager: dmoss
 ms.technology: storage-spaces
 ms.topic: article
 author: toklima

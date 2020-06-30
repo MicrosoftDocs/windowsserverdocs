@@ -1,12 +1,8 @@
 ---
 title: "What's New in Windows Server 2016 Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: nnamuhcs
@@ -22,7 +18,7 @@ Following are new and enhanced features in Windows Server 2016 Essentials.
 
 ## [Integration with Azure Site Recovery Services](azure-site-recovery-services-integration.md)
 
-**What it does** -- When a virtual machine that is protected  fails, or the host server that the protected virtual machine runs on fails, failing-over with Azure Site Recovery Services  maintains business continuity until the on premises virtual machine or host server is repaired and available. 
+**What it does** --&reg;When a virtual machine that is protected  fails, or the host server that the protected virtual machine runs on fails, failing-over with Azure Site Recovery Services  maintains business continuity until the on premises virtual machine or host server is repaired and available. 
 
 **How it works** -- Azure Site Recovery Services, offered in Microsoft Azure, enables real-time replication of your virtual machines (VM) to a backup vault in Azure. In the event that your server or site goes down due to a hardware or other failure, you can fail-over with Azure Site Recovery Services so  that the VM image stored in your backup vault will be provisioned as a running VM in Azure. Combined with an Azure Virtual network, client PCs that previously connected to the on-premises server will transparently connect to the server running in Azure.     
                                                                                                                                                                                                                                                                                                                
@@ -48,3 +44,4 @@ See also
 --------
 
 [Get started with Windows Server Essentials](get-started.md)
+&copy;&reg;

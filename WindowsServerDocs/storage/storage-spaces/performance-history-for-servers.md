@@ -1,12 +1,11 @@
 ---
 title: Performance history for servers
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/05/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for servers
@@ -87,6 +86,6 @@ Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverc
 Get-ClusterNode <Name> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

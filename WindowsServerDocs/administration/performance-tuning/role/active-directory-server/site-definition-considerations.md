@@ -4,7 +4,7 @@ description: Site definition and domain controller placement considerations in A
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
+ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -62,7 +62,7 @@ Cross domain trust scenarios are an area that has been consistently a pain point
         > [!NOTE]
         > There is a practical limit of about 50 to the number of domain controllers the client can consume. These should be the most site-optimal and highest capacity domain controllers.
 
-    
+
     -  Consider placing domain controllers from trusted and trusting domains in the same physical location.
 
 For all trust scenarios, credentials are routed according to the domain specified in the authentication requests. This is also true for queries to the LookupAccountName and LsaLookupNames (as well as others, these are just the most commonly used) APIs. When the domain parameters for these APIs are passed a NULL value, the domain controller will attempt to find the account name specified in every trusted domain available.
@@ -71,9 +71,9 @@ For all trust scenarios, credentials are routed according to the domain specifie
 
 -   Disable passing authentication requests with NULL domain specified across all available trusts. [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/kb/923241/EN-US)
 
-## See also
+## Additional References
 - [Performance tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
-- [Troubleshooting ADDS performance](troubleshoot.md) 
+- [Troubleshooting ADDS performance](troubleshoot.md)
 - [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)

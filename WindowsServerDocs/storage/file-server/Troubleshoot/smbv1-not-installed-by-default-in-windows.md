@@ -3,7 +3,6 @@ title: SMBv1 is not installed by default in Windows 10 version 1709, Windows Ser
 description: Discusses the behavior of the SMBv1 protocol in Windows 10 Fall Creators Update and Windows Server, version 1709 and later versions.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -26,7 +25,7 @@ SMBv1 has the following behavior in Windows 10 Fall Creators Update and Windows
 - In-place upgrades and Insider flights of the Windows 10 Enterprise and Windows 10 Education editions do not automatically remove SMBv1. An administrator must decide to uninstall SMBv1 in these managed environments. In Windows 10, version 1809 (RS5) and later versions, an administrator can activate automatic removal of SMBv1 by turning on the "SMB 1.0/CIFS Automatic Removal" feature.    
 - Automatic removal of SMBv1 after 15 days is a one-time operation. If an administrator re-installs SMBv1, no further attempts will be made to uninstall it.
 - The SMB version 2.02, 2.1, 3.0, 3.02, and 3.1.1 features are still fully supported and included by default as part of the SMBv2 binaries.    
-- Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Networkcan no longer display Windows computers through the legacy NetBIOS datagram browsing method.    
+- Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Network can no longer display Windows computers through the legacy NetBIOS datagram browsing method.    
 - SMBv1 can still be reinstalled in all editions of Windows 10 and Windows Server 2016.    
  
   > [!NOTE]
@@ -141,7 +140,21 @@ All Windows devices within that subnet that have these settings will now appear 
 If you cannot use any of these workarounds, or if the application manufacturer cannot provide supported versions of SMB, you can re-enable SMBv1 manually by following the steps in [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](detect-enable-and-disable-smbv1-v2-v3.md).
 
 > [!IMPORTANT]
-> We strongly recommend that you do not reinstall SMBv1. This is because this older protocol has known security issues regarding ransomware and other malware.   
+> We strongly recommend that you don't reinstall SMBv1. This is because this older protocol has known security issues regarding ransomware and other malware.  
+
+#### Windows Server best practices analyzer messaging
+
+Windows Server 2012 and later server operation systems contain a best practices analyzer (BPA) for file servers. If you have followed the correct online guidance to uninstall SMB1, running this BPA will return a contradictory warning message:
+
+    Title: The SMB 1.0 file sharing protocol should be enabled
+    Severity: Warning
+    Date: 3/25/2020 12:38:47 PM
+    Category: Configuration
+    Problem: The Server Message Block 1.0 (SMB 1.0) file sharing protocol is disabled on this file server.
+    Impact: SMB not in a default configuration, which could lead to less than optimal behavior.
+    Resolution: Use Registry Editor to enable the SMB 1.0 protocol.
+
+You should ignore this specific BPA rule's guidance, it's deprecated. We repeat: don't enable SMB 1.0.
 
 ## References
 

@@ -1,4 +1,4 @@
-# [Identity and Access](Identity-and-Access.md)
+# [Identity and Access](Identity-and-Access.yml)
 
 ## [Solutions and Scenario Guides](solution-guides/Solutions-and-Scenario-Guides.md)
 ### [Dynamic Access Control: Scenario Overview](solution-guides/Dynamic-Access-Control--Scenario-Overview.md)
@@ -268,6 +268,7 @@
 #### [Best Practices for Securing AD FS](ad-fs/deployment/Best-Practices-Securing-AD-FS.md)
 #### [Plan Device-based Conditional Access on-Premises](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 #### [Required updates for AD FS and WAP](ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
+#### [Create an AD FS Farm without domain admin privileges](ad-fs/deployment/Install-AD-FS-Delegated-Admin.md)
 #### [Set up Geographic Redundancy with SQL Server Replication](ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
 #### [Set up the lab environment for AD FS in Windows Server 2012 R2](ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 #### [Upgrading to AD FS in Windows Server 2016 using a WID database](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server.md)

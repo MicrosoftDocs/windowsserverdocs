@@ -52,6 +52,6 @@ To limit which users can view a DFS folder, you must perform one of the followin
 
 4.  To change the inherited permissions for folders or namespace roots in a DFS namespace, use Windows Explorer or the **ICacls** command.
 
-## See also
+## Additional References
 
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)

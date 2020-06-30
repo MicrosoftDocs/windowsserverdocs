@@ -1,6 +1,6 @@
 ---
 title: TLS (Schannel SSP)
-ms.custom: na
+
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: ebd3c40c-b4c0-4f6d-a00c-f90eda4691df

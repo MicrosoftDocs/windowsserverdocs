@@ -1,6 +1,5 @@
 ---
 title: Multi-factor authentication and external authentication providers customization 
-description:
 author: billmath
 ms.author: billmath
 manager: femila

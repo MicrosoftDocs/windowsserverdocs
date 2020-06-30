@@ -5,7 +5,7 @@ ms.prod: windows-server
 ms.author: helohr
 ms.date: 11/01/2017
 ms.topic: article
-author: Heidilohr
+author: heidilohr
 ---
 # What is Server Core 2008?
 >Applies To: Windows Server 2008

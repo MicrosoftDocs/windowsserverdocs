@@ -2,7 +2,7 @@
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
-author: shortpatti
+author: dcuomo
 ms.author: dacuo
 ms.date: 05/08/2018
 ms.topic: article
@@ -41,7 +41,7 @@ Domain and Standalone configurations work differently.
 Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
 > [!NOTE] 
-> For more information about the domain hierarchy and scoring system, see the [“What is Windows Time Service?”](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/) blog post.
+> For more information about the domain hierarchy and scoring system, see the ["What is Windows Time Service?"](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/) blog post.
 
 > [!NOTE]
 > Stratum is a concept used in both the NTP and Hyper-V providers, and its value indicates the clocks location in the hierarchy.  Stratum 1 is reserved for the highest-level clock, and stratum 0 is reserved for the hardware assumed to be accurate and has little or no delay associated with it.  Stratum 2 talk to stratum 1 servers, stratum 3 to stratum 2 and so on.  While a lower stratum often indicates a more accurate clock, it is possible to find discrepancies.  Also, W32time only accepts time from stratum 15 or below.  To see the stratum of a client, use *w32tm /query /status*.
@@ -60,8 +60,8 @@ There are many different reasons you might need accurate time.  The typical case
 
 
 - Government Regulations like:
-	- 50 ms accuracy for FINRA in the US
-	- 1 ms ESMA (MiFID II) in the EU.
+    - 50 ms accuracy for FINRA in the US
+    - 1 ms ESMA (MiFID II) in the EU.
 - Cryptography Algorithms
 - Distributed systems like Cluster/SQL/Exchange and Document DBs
 - Blockchain framework for bitcoin transactions

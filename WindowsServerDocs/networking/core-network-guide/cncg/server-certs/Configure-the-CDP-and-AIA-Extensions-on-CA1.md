@@ -6,8 +6,8 @@ ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 07/26/2018
 ---
 # Configure the CDP and AIA Extensions on CA1

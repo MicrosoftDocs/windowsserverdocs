@@ -100,7 +100,7 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 <tr class="even">
 <td><p>Multiple active cluster nodes</p></td>
 <td><p>Supported</p></td>
-<td> 
+<td>
 <p>N/A</p></td>
 <td><p>Each active node in the failover cluster owns a different iSCSI Target Server clustered instance with other nodes acting as possible owner nodes.</p></td>
 </tr>
@@ -532,7 +532,7 @@ We've also tested the following iSCSI initiators performing a diskless boot from
 
   - CD or USB disk with iPXE
 
-## See also
+## Additional References
 
 The following list provides additional resources about iSCSI Target Server and related technologies.
 
@@ -540,5 +540,5 @@ The following list provides additional resources about iSCSI Target Server and r
 
 - [iSCSI Target Boot Overview](iscsi-boot-overview.md)
 
-- [Storage in Windows Server](../storage.md)
+- [Storage in Windows Server](../storage.yml)
 

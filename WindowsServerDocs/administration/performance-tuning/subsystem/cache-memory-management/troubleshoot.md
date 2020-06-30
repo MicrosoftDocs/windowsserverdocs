@@ -4,7 +4,7 @@ description: Troubleshoot Cache and Memory Manager Performance Issues on Windows
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Pavel; ATales
+ms.author: pavel; atales
 author: phstee
 ms.date: 10/16/2017
 ---

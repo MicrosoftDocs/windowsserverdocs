@@ -1,15 +1,13 @@
 ---
 title: Use local resources on Hyper-V virtual machine with VMConnect
-description: "Describes the requirements for using local resources with VMConnect"
+description: Describes the requirements for using local resources with VMConnect
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
-author: KBDAzure
-ms.author: kathyDav
+author: kbdazure
+ms.author: kathydav
 ms.date: 12/06/2016
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
@@ -91,6 +89,9 @@ You can easily edit your connection settings for VMConnect by running the follow
   
 `VMConnect.exe <ServerName> <VMName> /edit`  
   
+> [!Note]
+> An elevated command prompt may be required.
+  
 ## Requirements for using local resources
 
 To be able to use a computer's local resources on a virtual machine:  
@@ -135,6 +136,5 @@ You might want use a computer's local resources to:
 ## See Also  
 [Connect to a Virtual Machine](https://technet.microsoft.com/library/cc742407.aspx)  
 [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
-
 
 

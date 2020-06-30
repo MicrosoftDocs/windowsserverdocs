@@ -1,12 +1,8 @@
 ---
 title: Security Support Provider Interface Architecture
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-windows-auth
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
 author: coreyp-at-msft
@@ -91,7 +87,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 -   [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(v=ws.10).aspx) for Windows Vista
 
--   [Changes in Kerberos Authentication](https://technet.microsoft.com/library/dd560670(v=ws.10).aspx) for  Windows 7 
+-   [Changes in Kerberos Authentication](https://technet.microsoft.com/library/dd560670(v=ws.10).aspx) for  Windows 7
 
 -   [Kerberos Authentication Technical Reference](https://technet.microsoft.com/library/cc739058(v=ws.10).aspx)
 
@@ -116,7 +112,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 -   [MSV1_0 Authentication Package (Windows)](https://msdn.microsoft.com/library/aa378753(VS.85).aspx)
 
--   [Changes in NTLM Authentication](https://technet.microsoft.com/library/dd566199(v=ws.10).aspx) in  Windows 7 
+-   [Changes in NTLM Authentication](https://technet.microsoft.com/library/dd566199(v=ws.10).aspx) in  Windows 7
 
 -   [Microsoft NTLM (Windows)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)
 
@@ -278,7 +274,7 @@ The negotiate option can be used to allow the client and server to attempt to fi
 
     -   If the client computer does not support any of the listed protocols, the authentication exchange fails.
 
-## See also
+## Additional References
 [Windows Authentication Architecture](https://technet.microsoft.com/library/dn169024(v=ws.10).aspx)
 
 

@@ -4,7 +4,7 @@ description: Performance tuning recommmendations for IIS 10.0 web servers on Win
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: DavSo; Ericam; YaShi
+ms.author: davso; ericam; yashi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -405,6 +405,6 @@ The following issues can affect IIS performance:
 
     For performance reasons, the use of CGI applications to serve requests is not recommended with IIS. Frequently creating and deleting CGI processes involves significant overhead. Better alternatives include using FastCGI, ISAPI application scripts and ASP or ASP.NET scripts. Isolation is available for each of these options.
 
-## See also
-- [Web Server performance tuning](index.md) 
+## Additional References
+- [Web Server performance tuning](index.md)
 - [HTTP 1.1/2 tuning](http-performance.md)

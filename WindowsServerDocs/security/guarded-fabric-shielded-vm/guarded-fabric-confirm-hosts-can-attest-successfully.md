@@ -1,11 +1,11 @@
 ---
 title: Confirm guarded hosts can attest
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
 ---
@@ -65,7 +65,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 > [!div class="nextstepaction"]
 > [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
-## See also
+## Additional References
 
 - [Deploy the Host Guardian Service (HGS)](guarded-fabric-deploying-hgs-overview.md)
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)

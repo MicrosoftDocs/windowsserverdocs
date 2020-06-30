@@ -6,7 +6,7 @@ ms.technology: performance-tuning-guide
 ms.topic: article
 ms.assetid: 15a519fa-37cc-4d84-a9fe-097d33bb71ea
 author: phstee
-ms.author: Vshankar; DanLo; clausjor; StevenEk
+ms.author: vshankar; danlo; clausjor; stevenek
 ms.date: 4/14/2017
 ---
 # Performance tuning for Storage Spaces Direct
@@ -30,7 +30,7 @@ Note that caching over an SSD or NVMe device defaults to write caching, only. Th
 
 To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt634616.aspx) and [Set-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt763265.aspx) cmdlets. The `CacheModeHDD` and `CacheModeSSD` properties define how the cache operates on capacity media of the indicated type.
 
-## See also
+## Additional References
 
 - [Understanding Storage Spaces Direct](../../../../storage/storage-spaces/understand-storage-spaces-direct.md)
 - [Planning Storage Spaces Direct](../../../../storage/storage-spaces/plan-storage-spaces-direct.md)

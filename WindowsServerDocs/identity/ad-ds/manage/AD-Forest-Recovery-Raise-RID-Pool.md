@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Raising RID pools
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

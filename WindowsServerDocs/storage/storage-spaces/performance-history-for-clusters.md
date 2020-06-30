@@ -1,12 +1,11 @@
 ---
 title: Performance history for clusters
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
@@ -26,6 +25,6 @@ Use the [Get-Cluster](https://docs.microsoft.com/powershell/module/failoverclust
 Get-Cluster | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

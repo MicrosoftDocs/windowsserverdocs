@@ -1,12 +1,8 @@
 ---
 title: "Manage Domain Names and Domain Name Providers"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 96959b7a-0267-41fd-9c5b-33c3ac89c1ee
 author: nnamuhcs

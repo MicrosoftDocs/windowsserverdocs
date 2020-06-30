@@ -1,14 +1,12 @@
 ---
 ms.assetid: dc60ebc1-4363-4bb7-81ab-be4889292d55
 title: Active Directory Administrative Center
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

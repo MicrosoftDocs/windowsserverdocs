@@ -1,24 +1,23 @@
 ---
 title: Virtual Machine Resource Controls
 description: Using VM CPU Groups
-keywords: windows 10, hyper-v
 author: allenma
 ms.date: 06/18/2018
 ms.topic: article
-ms.prod: windows-10-hyperv
+ms.prod: windows-server
 ms.service: windows-10-hyperv
 ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
 ---
 
->Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
-
 # Virtual Machine Resource Controls
 
-This article describes Hyper-V resource and isolation controls for virtual machines.  These capabilities, which we'll refer to as Virtual Machine CPU Groups, or just “CPU groups”, were introduced in Windows Server 2016.  CPU groups allow Hyper-V administrators to better manage and allocate the host's CPU resources across guest virtual machines.  Using CPU groups, Hyper-V administrators can:
+> Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+
+This article describes Hyper-V resource and isolation controls for virtual machines.  These capabilities, which we'll refer to as Virtual Machine CPU Groups, or just "CPU groups", were introduced in Windows Server 2016.  CPU groups allow Hyper-V administrators to better manage and allocate the host's CPU resources across guest virtual machines.  Using CPU groups, Hyper-V administrators can:
 
 * Create groups of virtual machines, with each group having different allocations of the virtualization host's total CPU resources, shared across the entire group. This allows the host administrator to implement classes of service for different types of VMs.
 
-* Set CPU resource limits to specific groups. This “group cap” sets the upper bound for host CPU resources that the entire group may consume, effectively enforcing the desired class of service for that group.
+* Set CPU resource limits to specific groups. This "group cap" sets the upper bound for host CPU resources that the entire group may consume, effectively enforcing the desired class of service for that group.
 
 * Constrain a CPU group to run only on a specific set of the host system's processors. This can be used to isolate VMs belonging to different CPU groups from each other.
 
@@ -26,14 +25,14 @@ This article describes Hyper-V resource and isolation controls for virtual machi
 
 CPU groups are managed through the Hyper-V Host Compute Service, or HCS. A great description of the HCS, its genesis, links to the HCS APIs, and more is available on the Microsoft Virtualization team's blog in the posting [Introducing the Host Compute Service (HCS)](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/).
 
->[!NOTE] 
+>[!NOTE]
 >Only the HCS may be used to create and manage CPU groups; the Hyper-V Manager applet, WMI and PowerShell management interfaces don't support CPU groups.
 
 Microsoft provides a command line utility, cpugroups.exe, on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=865968) which uses the HCS interface to manage CPU groups.  This utility can also display the CPU topology of a host.
 
 ## How CPU Groups Work
 
-Allocation of host compute resources across CPU groups is enforced by the Hyper-V hypervisor, using a computed CPU group cap. The CPU group cap is a fraction of the total CPU capacity for a CPU group. The value of the group cap depends on the group class, or priority level assigned. The computed group cap can be thought of as “a number of LP's worth of CPU time”. This group budget is shared, so if only a single VM were active, it could use the entire group's CPU allocation for itself.
+Allocation of host compute resources across CPU groups is enforced by the Hyper-V hypervisor, using a computed CPU group cap. The CPU group cap is a fraction of the total CPU capacity for a CPU group. The value of the group cap depends on the group class, or priority level assigned. The computed group cap can be thought of as "a number of LP's worth of CPU time". This group budget is shared, so if only a single VM were active, it could use the entire group's CPU allocation for itself.
 
 The CPU group cap is calculated as G = *n* x *C*, where:
 
@@ -47,7 +46,7 @@ For example, consider a CPU group configured with 4 logical processors (LPs), an
     G = 4 * 50%
     G = 2 LP's worth of CPU time for the entire group
 
-In this example, the CPU group G is allocated 2 LP's worth of CPU time.  
+In this example, the CPU group G is allocated 2 LP's worth of CPU time.
 
 Note that the group cap applies regardless of the number of virtual machines or virtual processors bound to the group, and regardless of the state  (e.g., shutdown or started) of the virtual machines assigned to the CPU group. Therefore, each VM bound to the same CPU group will receive a fraction of the group's total CPU allocation, and this will change with the number of VMs bound to the CPU group. Therefore, as VMs are bound or unbound VMs from a CPU group, the overall CPU group cap must be readjusted and set to maintain the resulting per-VM cap desired. The VM host administrator or virtualization management software layer is responsible for managing group caps as necessary to achieve the desired per-VM CPU resource allocation.
 
@@ -55,9 +54,9 @@ Note that the group cap applies regardless of the number of virtual machines or 
 
 Let's look at some simple examples. To start with, assume the Hyper-V host administrator would like to support two tiers of service for guest VMs:
 
-1. A low-end “C” tier. We'll give this tier 10% of the entire host's compute resources.
+1. A low-end "C" tier. We'll give this tier 10% of the entire host's compute resources.
 
-1. A mid-range “B” tier. This tier is allocated 50% of the entire host's compute resources.
+1. A mid-range "B" tier. This tier is allocated 50% of the entire host's compute resources.
 
 At this point in our example we'll assert that no other CPU resource controls are in use, such as individual VM caps, weights, and reserves.
 However, individual VM caps are important, as we'll see a bit later.
@@ -70,28 +69,28 @@ To create the "B" tier, the host adminstartor sets the group cap to 50%:
     G = 8 * 50%
     G = 4 LP's worth of CPU time for the entire group
 
-The host administrator adds a single “B” tier VM.
-At this point, our “B” tier VM can use at most 50% worth of the host's CPU, or the equivalent of 4 LPs in our example system.
+The host administrator adds a single "B" tier VM.
+At this point, our "B" tier VM can use at most 50% worth of the host's CPU, or the equivalent of 4 LPs in our example system.
 
-Now, the admin adds a second “Tier B” VM. The CPU group's allocation—is divided evenly among all the VMs. We've got a total of 2 VMs in Group B, so each VM now gets half of Group B's total of 50%, 25% each, or the equivalent of 2 LPs worth of compute time.
+Now, the admin adds a second "Tier B" VM. The CPU group's allocation—is divided evenly among all the VMs. We've got a total of 2 VMs in Group B, so each VM now gets half of Group B's total of 50%, 25% each, or the equivalent of 2 LPs worth of compute time.
 
 ## Setting CPU Caps on Individual VMs
 
-In addition to the group cap, each VM can also have an individual “VM cap”. Per-VM CPU resource controls, including a CPU cap, weight, and reserve, have been a part of Hyper-V since its introduction.
+In addition to the group cap, each VM can also have an individual "VM cap". Per-VM CPU resource controls, including a CPU cap, weight, and reserve, have been a part of Hyper-V since its introduction.
 When combined with a group cap, a VM cap specifies the maximum amount of CPU that each VP can get, even if the group has CPU resources available.
 
-For example, the host administrator might want to place a 10% VM cap on “C” VMs.
-That way, even if most “C” VPs are idle, each VP could never get more than 10%.
-Without a VM cap, “C” VMs could opportunistically achieve performance beyond levels allowed by their tier.
+For example, the host administrator might want to place a 10% VM cap on "C" VMs.
+That way, even if most "C" VPs are idle, each VP could never get more than 10%.
+Without a VM cap, "C" VMs could opportunistically achieve performance beyond levels allowed by their tier.
 
 ## Isolating VM Groups to Specific Host Processors
 
 Hyper-V host administrators may also want the ability to dedicate compute resources to a VM.
-For example, imagine the administrator wanted to offer a premium “A” VM that has a class cap of 100%.
+For example, imagine the administrator wanted to offer a premium "A" VM that has a class cap of 100%.
 These premium VMs also require the lowest scheduling latency and jitter possible; that is, they may not be de-scheduled by any other VM.
 To achieve this separation, a CPU group can also be configured with a specific LP affinity mapping.
 
-For example, to fit an “A” VM on the host in our example, the administrator would create a new CPU group, and set the group's processor affinity to a subset of the host's LPs.
+For example, to fit an "A" VM on the host in our example, the administrator would create a new CPU group, and set the group's processor affinity to a subset of the host's LPs.
 Groups B and C would be affinitized to the remaining LPs.
 The administrator could create a single VM in Group A, which would then have exclusive access to all LPs in Group A, while the presumably lower tier groups B and C would share the remaining LPs.
 
@@ -102,10 +101,10 @@ These root VPs are strictly mapped 1:1 with the system LPs, and do not migrate �
 Guest VPs may be run on any available LP, and will share execution with root VPs.
 
 However, it may be desirable to completely separate root VP activity from guest VPs.
-Consider our example above where we implement a premium “A” tier VM.
-To ensure our “A” VM's VPs have the lowest possible latency and “jitter”, or scheduling variation, we'd like to run them on a dedicated set of LPs and ensure the root does not run on these LPs.
+Consider our example above where we implement a premium "A" tier VM.
+To ensure our "A" VM's VPs have the lowest possible latency and "jitter", or scheduling variation, we'd like to run them on a dedicated set of LPs and ensure the root does not run on these LPs.
 
-This can be accomplished using a combination of the “minroot” configuration, which limits the host OS partition to running on a subset of the total system logical processors, along with one or more affinitized CPU groups.
+This can be accomplished using a combination of the "minroot" configuration, which limits the host OS partition to running on a subset of the total system logical processors, along with one or more affinitized CPU groups.
 
 The virtualization host can be configured to restrict the host partition to specific LPs, with one or more CPU groups affinitized to the remaining LPs.
 In this manner, the root and guest partitions can run on dedicated CPU resources, and completely isolated, with no CPU sharing.
@@ -116,8 +115,8 @@ For more information about the "minroot" configuration, see [Hyper-V Host CPU Re
 
 Let's look at some examples of how to use the CpuGroups tool.
 
->[!NOTE] 
->Command line parameters for the CpuGroups tool are passed using only spaces as delimiters. No ‘/' or ‘-‘ characters should proceed the desired command line switch.
+>[!NOTE]
+>Command line parameters for the CpuGroups tool are passed using only spaces as delimiters. No '/' or '-' characters should proceed the desired command line switch.
 
 ### Discovering the CPU Topology
 

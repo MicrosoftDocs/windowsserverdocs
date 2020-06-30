@@ -1,14 +1,12 @@
 ---
 ms.assetid: 38eb3726-e97b-484e-9926-67e8a046b0c5
 title: Create a Rule to Send Claims Using a Custom Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

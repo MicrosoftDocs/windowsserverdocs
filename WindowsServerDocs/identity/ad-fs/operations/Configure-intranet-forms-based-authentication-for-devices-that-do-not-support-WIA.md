@@ -1,14 +1,12 @@
 ---
 ms.assetid: d562ef46-f240-48be-bbd4-fd88fc6bbbdc
 title: Configuring intranet forms-based authentication for devices that do not support WIA
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -34,7 +32,7 @@ The command above will ensure that AD FS only covers the following use cases for
 User Agents|Use cases|
 -----|-----|
 MSIE 6.0|IE 6.0|
-MSIE 7.0; Windows NT|IE 7, IE in intranet zone. The “Windows NT” fragment is sent by desktop operation system.|
+MSIE 7.0; Windows NT|IE 7, IE in intranet zone. The "Windows NT" fragment is sent by desktop operation system.|
 MSIE 8.0|IE 8.0 (no devices send this, so need to make more specific)|
 MSIE 9.0|IE 9.0 (no devices send this, so no need to make this more specific)|
 MSIE 10.0; Windows NT 6|IE 10.0 for Windows XP and newer versions of desktop operating system</br></br>Windows Phone 8.0 devices (with preference set to mobile) are excluded because they send</br></br>User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 920)|

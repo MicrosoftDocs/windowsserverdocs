@@ -1,12 +1,12 @@
 ---
 redirect_url: guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md
 title: Shielded VMs for tenants - Creating a new shielded VM on-premises and moving it to a guarded fabric
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0ca1efa0-01f9-4b6f-87d4-c66db00d7d70
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
@@ -69,9 +69,9 @@ For an illustration showing the Key Protector, which is an element in a shieldin
 1. On a tenant Hyper-V host, to create a new generation 2 virtual machine, run the following command.
 
    For &lt;ShieldedVMname&gt;, specify a name for the VM, for example: **ShieldVM1**
-    
+
    For &lt;VHDPath&gt;, specify a location to store the VHDX of the VM, for example: **C:\\VMs\\ShieldVM1\\ShieldVM1.vhdx**
-    
+
    For &lt;nnGB&gt;, specify a size for the VHDX, for example: **60GB**
 
        New-VM -Generation 2 -Name "<ShieldedVMname>" -NewVHDPath <VHDPath>.vhdx -NewVHDSizeBytes <nnGB>
@@ -125,7 +125,7 @@ For an illustration showing the Key Protector, which is an element in a shieldin
 
     Import the shielded VM using the Hyper-V Manager or Windows PowerShell. You must import the VM configuration file from the VM owner in order to start the VM. This is because the key protector and the VM's virtual TPM are stored in the configuration file. If the VM is configured to run on the guarded fabric, it should be able to start successfully.
 
-## See also
+## Additional References
 
 - [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

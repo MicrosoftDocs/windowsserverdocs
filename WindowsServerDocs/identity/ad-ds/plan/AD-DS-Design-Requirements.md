@@ -1,14 +1,12 @@
 ---
 ms.assetid: f6e76ef0-2217-4cdb-980f-22a780a85ebb
 title: AD DS Design Requirements
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

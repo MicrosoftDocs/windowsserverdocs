@@ -4,7 +4,7 @@ description: Storage i/o performance considerations in Hyper-V performance tunin
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -265,7 +265,7 @@ Only Hyper-V-specific SCSI, enlightened IDE, and Virtual Fibre Channel controlle
 
 For these reasons, we recommend that you use VHDX files attached to a SCSI controller when not using Virtual Fibre Channel disks.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

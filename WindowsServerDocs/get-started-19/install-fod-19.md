@@ -1,6 +1,6 @@
 ---
 title: Server Core App Compatibility Feature on Demand (FOD)
-description: "How to install Windows Server Features on Demand"
+description: How to install Windows Server Features on Demand
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -119,7 +119,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 4. Run the following command, using the `$package_path` variable to enter the path to the Internet Explorer cab file:
 
     ```PowerShell
-    $package_path = "D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
+    $package_path = D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab
 
     Add-WindowsPackage -Online -PackagePath $package_path
     ```
@@ -146,7 +146,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
   - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017).
   - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017).
 
-## <a id="add-capabilities"> Adding capabilities and optional packages to an offline WIM Server Core image
+## <a id=add-capabilities> Adding capabilities and optional packages to an offline WIM Server Core image
 
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
@@ -166,7 +166,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 Use the `$install_wim_path` variable to enter the path to the Install.wim file, located inside the \Sources folder of the ISO file.
 
    ```PowerShell
-   $install_wim_path = "C:\SetupFiles\WindowsServer\sources\install.wim"
+   $install_wim_path = C:\SetupFiles\WindowsServer\sources\install.wim
 
    Get-WindowsImage -ImagePath $install_wim_path
    ```
@@ -177,8 +177,8 @@ Use the `$install_wim_path` variable to enter the path to the Install.wim file, 
    - `$mount_folder variable` - Specify the folder to use when accessing the contents of the Install.wim file.
 
    ```PowerShell
-   $image_name = "Windows Server Datacenter"
-   $mount_folder = "c:\test\offline"
+   $image_name = Windows Server Datacenter
+   $mount_folder = c:\test\offline
 
    Mount-WindowsImage -ImagePath $install_wim_path -Name $image_name -path $mount_folder
    ```
@@ -190,9 +190,9 @@ Use the `$install_wim_path` variable to enter the path to the Install.wim file, 
    - `$fod_drive` - Specify the drive letter of the mounted Server FOD image.
 
    ```PowerShell
-   $capability_name = "ServerCore.AppCompatibility~~~~0.0.1.0"
-   $package_path = "D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
-   $fod_drive = "d:\"
+   $capability_name = ServerCore.AppCompatibility~~~~0.0.1.0
+   $package_path = D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab
+   $fod_drive = d:\
 
    Add-WindowsCapability -Path $mount_folder -Name $capability_name -Source $fod_drive -LimitAccess
    Add-WindowsPackage -Path $mount_folder -PackagePath $package_path

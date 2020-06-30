@@ -8,18 +8,21 @@ author: lizap
 ms.localizationpriority: medium
 ms.date: 02/20/2018
 ---
+
 # What is the Server Core installation option in Windows Server?
 
 > Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
 
-The Server Core option is a minimal installation option that is available when you are deploying the Standard or Datacenter edition of Windows Server. Server Core includes most but not all server roles. Server Core has a smaller disk footprint, and therefore a smaller attack surface due to a smaller code base. 
+The Server Core option is a minimal installation option that is available when you are deploying the Standard or Datacenter edition of Windows Server. Server Core includes most but not all server roles. Server Core has a smaller disk footprint, and therefore a smaller attack surface due to a smaller code base.
 
-## Server (Core) vs Server with Desktop Experience 
-When you install Windows Server, you install only the server roles that you choose - this helps reduce the overall footprint for Windows Server. However, the Server with Desktop Experience installation option still installs many services and other components that are often not needed for a particular usage scenario. 
+## Server (Core) vs Server with Desktop Experience
 
-That's where Server Core comes into play: the Server Core installation eliminates any services and other features that are not essential for the support of certain commonly used server roles. For example, a Hyper-V server doesn't need a graphical user interface (GUI), because you can manage virtually all aspects of Hyper-V either from the command line using Windows PowerShell or remotely using the Hyper-V Manager. 
+When you install Windows Server, you install only the server roles that you choose - this helps reduce the overall footprint for Windows Server. However, the Server with Desktop Experience installation option still installs many services and other components that are often not needed for a particular usage scenario.
+
+That's where Server Core comes into play: the Server Core installation eliminates any services and other features that are not essential for the support of certain commonly used server roles. For example, a Hyper-V server doesn't need a graphical user interface (GUI), because you can manage virtually all aspects of Hyper-V either from the command line using Windows PowerShell or remotely using the Hyper-V Manager.
 
 ## The Server Core difference - core capabilities without the frills
+
 When you finish installing Server Core on a system and sign in for the first time, you're in for a bit of a surprise. The main difference between the Server with Desktop Experience installation option and Server Core is that Server Core does not include the following GUI shell packages:
 
 - Microsoft-Windows-Server-Shell-Package
@@ -38,15 +41,15 @@ In addition to no UI, Server Core also differs from the Server with Desktop Expe
 The following table shows which applications are available *locally* on Server Core vs Server with Desktop Experience. **Important**: In most cases, applications that are listed as "not available" below can be run remotely from a Windows client computer and used to manage your Server Core installation.
 
 > [!NOTE]
-> This list is intended for quick reference - it isn't intended to be a complete list.
+> This list is intended for quick reference - it is not intended to be a complete list.
 
 
-| Application                     | Server Core     | Server with Desktop Experience |
+| Application                        | Server Core     | Server with Desktop Experience |
 |------------------------------------|-----------------|--------------------------------|
 | Command prompt                     | available       | available                      |
 | Windows PowerShell/ Microsoft .NET | available       | available                      |
-| Perfmon.exe                        | not available  | available                      |
-| Windbg (GUI)                         | supported       | supported                      |
+| Perfmon.exe                        | not available   | available                      |
+| Windbg (GUI)                       | supported       | supported                      |
 | Resmon.exe                         | not available   | available                      |
 | Regedit                            | available       | available                      |
 | Fsutil.exe                         | available       | available                      |
@@ -54,13 +57,13 @@ The following table shows which applications are available *locally* on Server C
 | Diskpart.exe                       | available       | available                      |
 | Diskmgmt.msc                       | not available   | available                      |
 | Devmgmt.msc                        | not available   | available                      |
-| Server Manager                     | not available  | available                      |
+| Server Manager                     | not available   | available                      |
 | Mmc.exe                            | not available   | available                      |
-| Eventvwr                           | not available  | available                      |
+| Eventvwr                           | not available   | available                      |
 | Wevtutil (Event queries)           | available       | available                      |
 | Services.msc                       | not available   | available                      |
 | Control Panel                      | not available   | available                      |
-| Windows Update (GUI)                 | not available | available                      |
+| Windows Update (GUI)               | not available   | available                      |
 | Windows Explorer                   | not available   | available                      |
 | Taskbar                            | not available   | available                      |
 | Taskbar notifications              | not available   | available                      |
@@ -74,15 +77,19 @@ The following table shows which applications are available *locally* on Server C
 | PowerShell IME                     | available       | available                      |
 | Mstsc.exe                          | not available   | available                      |
 | Remote Desktop Services            | available       | available                      |
-| Hyper-V Manager                    | not available  | available                      |
+| Hyper-V Manager                    | not available   | available                      |
+| WordPad\*                          | not available   | available                      |
 
 
 For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
 
+\* To read .RTF  files locally stored on a Server Core SKU, users can copy the file(s) to a different Windows computer where WordPad is present.
+
 ## Get started using Server Core
+
 Use the following information to install, configure, and manage the Server Core installation option of Windows Server.
 
-Server Core installation: 
+Server Core installation:
 - [Roles, Role Services, and Features included in Server Core](server-core-roles-and-services.md)
 - [Roles, Role Services, and Features not in Server Core](server-core-removed-roles.md)
 - [Install the Server Core installation option](../../get-started/getting-started-with-server-core.md)

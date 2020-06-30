@@ -1,14 +1,12 @@
 ---
 ms.assetid: 6f50476c-a1f1-48fb-999b-76c4c3816496
 title: Planning for Compromise
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

@@ -1,12 +1,8 @@
 ---
 title: Getting Started with Group Managed Service Accounts
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-gmsa
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
 author: coreyp-at-msft
@@ -243,11 +239,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Get-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword**
+    **Get-ADServiceAccount [-Identity] &lt;string&gt; -Properties PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Set-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Set-ADServiceAccount [-Identity] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
 |-------|-----|------|
@@ -259,11 +255,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 For example, to add member hosts type the following commands, and then press ENTER.
 
 ```PowerShell
-Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
+Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 ```PowerShell
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
+Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
 ```
 
 ## <a name="BKMK_Update_gMSA"></a>Updating the group Managed Service Account properties
@@ -301,11 +297,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Get-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword**
+    **Get-ADServiceAccount [-Identity] &lt;string&gt; -Properties PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Set-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Set-ADServiceAccount [-Identity] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
 |-------|-----|------|
@@ -317,11 +313,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 For example, to remove member hosts type the following commands, and then press ENTER.
 
 ```PowerShell
-Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
+Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 ```PowerShell
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
+Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
 ```
 
 ### <a name="BKMK_RemoveGMSA"></a>Step 2: Removing a group Managed Service Account from the system

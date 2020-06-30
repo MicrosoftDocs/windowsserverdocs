@@ -1,12 +1,8 @@
 ---
 title: Datagram Transport Layer Security protocol
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 57b8873a-ad9c-4f2c-93e0-a2af352c6965
 author: coreyp-at-msft
@@ -27,7 +23,7 @@ Datagrams are common in streaming media, such as gaming or secured video confere
 
 The cipher suites that are available for configuration are patterned after those you can configure for TLS. RC4 is not permitted. Schannel continues to use Cryptography Next Generation (CNG). This takes advantage of FIPS 140 certification, which was introduced in Windows Vista.
 
-## See also
+## Additional References
 
 [IETF RFC 4347 Datagram Transport Layer Security](http://tools.ietf.org/html/rfc4347)
 

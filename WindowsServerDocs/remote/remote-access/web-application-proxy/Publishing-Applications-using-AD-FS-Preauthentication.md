@@ -1,13 +1,11 @@
 ---
 ms.assetid: 5f733510-c96e-4d3a-85d2-4407de95926e
 title: Publishing Applications using AD FS Preauthentication
-description:
-author: kgremban
-manager: femila
+ms.author: kgremban
+author: eross-msft
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: web-app-proxy
 ---
 

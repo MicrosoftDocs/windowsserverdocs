@@ -1,12 +1,8 @@
 ---
 title: "Prepare your Source Server for Windows Server Essentials migration1"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
@@ -21,7 +17,7 @@ manager: dongill
 Complete the following preliminary steps to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.  
   
 #### To prepare for migration  
-  
+
 
 1.  [Back up your Source Server](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
@@ -33,19 +29,9 @@ Complete the following preliminary steps to ensure that the settings and data on
   
 5.  [Create a plan to migrate line-of-business applications](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
-1.  [Back up your Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
-  
-2.  [Install the most recent service packs](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
-  
-3.  [Evaluate the health of the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
-  
-4.  [Run the Migration Preparation Tool on the Source Server](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
-  
-5.  [Create a plan to migrate line-of-business applications](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
-
-  
 ###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Back up your Source Server  
  Back up your Source Server before you begin the migration process. Making a backup helps protect your data from accidental loss if an unrecoverable error occurs during migration.  
+ 
   
 ##### To back up the Source Server  
   
@@ -76,7 +62,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 #### Run the Windows Server Solutions Best Practices Analyzer  
  You can run the Windows Server Solutions Best Practices Analyzer (BPA) to verify that there are no issues on your server, network, or domain before you start the migration process. The BPA collects configuration information from the following sources:  
   
--   Active Directory® Windows Management Instrumentation (WMI)  
+-   Active Directory&reg; Windows Management Instrumentation (WMI)  
   
 -   The registry  
   

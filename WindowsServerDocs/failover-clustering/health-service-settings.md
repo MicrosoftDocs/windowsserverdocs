@@ -5,11 +5,11 @@ manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid:
 author: cosmosdarwin
 ms.date: 08/14/2017
 ---
 # Health Service settings
+
 > Applies to: Windows Server 2019, Windows Server 2016
 
 The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
@@ -21,7 +21,7 @@ Use the following PowerShell cmdlet to set or modify settings.
 ### Usage
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>  
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>
 ```
 
 #### Example
@@ -93,7 +93,7 @@ See the previous section.
 "System.LogLevel" = 4
 ```
 
-## See also
+## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)
 - [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)

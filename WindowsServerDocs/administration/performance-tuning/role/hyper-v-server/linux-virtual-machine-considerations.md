@@ -1,10 +1,10 @@
 ---
 title: Linux Virtual Machine Considerations
-description: Linux and BSD virtual machine 
+description: Linux and BSD virtual machine
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -52,7 +52,7 @@ Some best practices, like the following, are listed on [Best Practices for Runni
 
 Similar to networking, Linux guest performance with storage benefits the most from multiple queues with enough depth to keep the host busy. Microbenchmarking storage performance is probably best with the fio benchmark tool with the libaio engine.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

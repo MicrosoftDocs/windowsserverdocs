@@ -1,21 +1,13 @@
 ---
 title: Active Directory Federation Services in Azure | Microsoft Docs
 description: In this document you will learn how to deploy AD FS in Azure for high availablity.
-services: active-directory
-documentationcenter: ''
 author: billmath
 manager: mtillman
-editor: ''
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
-ms.service: active-directory
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: get-started-article
 ms.date: 10/28/2018
 ms.subservice: hybrid
 ms.author: billmath
-ms.custom: H1Hack27Feb2017
 ---
 # Deploying Active Directory Federation Services in Azure
 AD FS provides simplified, secured identity federation and Web single sign-on (SSO) capabilities. Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. As a result, it becomes important to have a highly available AD FS infrastructure to ensure access to resources both on-premises and in the cloud. Deploying AD FS in Azure can help achieve the high availability required with minimal efforts.
@@ -155,7 +147,7 @@ To deploy an ILB, select Load Balancers in the Azure portal and click on add (+)
 ![Browse load balancer](./media/how-to-connect-fed-azure-adfs/browseloadbalancer.png)
 
 * **Name**: Give any suitable name to the load balancer
-* **Scheme**: Since this load balancer will be placed in front of the AD FS servers and is meant for internal network connections ONLY, select “Internal”
+* **Scheme**: Since this load balancer will be placed in front of the AD FS servers and is meant for internal network connections ONLY, select "Internal"
 * **Virtual Network**: Choose the virtual network where you are deploying your AD FS
 * **Subnet**: Choose the internal subnet here
 * **IP Address assignment**: Static
@@ -192,7 +184,6 @@ In the ILB settings panel, select Health probes.
    e. **Interval**: 5 (default value) – this is the interval at which ILB will probe the machines in the backend pool
    f. **Unhealthy threshold limit**: 2 (default value) – this is the threshold of consecutive probe failures after which ILB will declare a machine in the backend pool non-responsive and stop sending traffic to it.
 
-![Configure ILB probe](./media/how-to-connect-fed-azure-adfs/ilbdeployment4.png)
 
 We are using the /adfs/probe endpoint that was created explictly for health checks in an AD FS environment where a full HTTPS path check cannot happen.  This is substantially better than a basic port 443 check, which does not accurately reflect the status of a modern AD FS deployment.  More information on this can be found at https://blogs.technet.microsoft.com/applicationproxyblog/2014/10/17/hardware-load-balancer-health-checks-and-web-application-proxy-ad-fs-2012-r2/.
 
@@ -214,8 +205,13 @@ In order to effectively balance the traffic, the ILB should be configured with l
 
 **6.5. Update DNS with ILB**
 
-Go to your DNS server and create a CNAME for the ILB. The CNAME should be for the federation service with the IP address pointing to the IP address of the ILB. For example if the ILB DIP address is 10.3.0.8, and the federation service installed is fs.contoso.com, then create a CNAME for fs.contoso.com pointing to 10.3.0.8.
-This will ensure that all communication regarding fs.contoso.com end up at the ILB and are appropriately routed.
+Using your internal DNS server, create an A record for the ILB. The A record should be for the federation service with the IP address pointing to the IP address of the ILB. For example, if the ILB IP address is 10.3.0.8 and the federation service installed is fs.contoso.com, then create an A record for fs.contoso.com pointing to 10.3.0.8.
+This will ensure that all data trasmitted to fs.contoso.com end up at the ILB and are appropriately routed. 
+
+> [!NOTE]
+>If your deployment is also using IPv6, be sure to create a corresponding AAAA record.
+>
+>
 
 ### 7. Configuring the Web Application Proxy server
 **7.1. Configuring the Web Application Proxy servers to reach AD FS servers**

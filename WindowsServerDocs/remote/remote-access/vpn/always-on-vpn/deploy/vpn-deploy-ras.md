@@ -4,10 +4,9 @@ description: RRAS is designed to perform well as both a router and a remote acce
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: 
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 08/30/2018
 ms.reviewer: deverette
 ---

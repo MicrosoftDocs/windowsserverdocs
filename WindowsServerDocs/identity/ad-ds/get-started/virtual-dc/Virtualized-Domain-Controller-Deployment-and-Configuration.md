@@ -1,14 +1,12 @@
 ---
 ms.assetid: b146f47e-3081-4c8e-bf68-d0f993564db2
 title: Virtualized Domain Controller Deployment and Configuration
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -264,7 +262,7 @@ You run the cmdlet on the proposed source domain controller that you intend to c
   
 ||||  
 |-|-|-|  
-|**ActiveDirectory**<br /><br />**Cmdlet**|**Arguments**|**Explanation**|  
+|**ActiveDirectory**<p>**Cmdlet**|**Arguments**|**Explanation**|  
 |**New-ADDCCloneConfigFile**|*<no argument specified>*|Creates a blank DcCloneConfig.xml file in the DSA Working Directory (default: %systemroot%\ntds)|  
 ||-CloneComputerName|Specifies the clone DC computer name. String data type.|  
 ||-Path|Specifies the folder to create the DcCloneConfig.xml. If not specified, writes to the DSA Working Directory (default: %systemroot%\ntds). String data type.|  

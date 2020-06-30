@@ -6,7 +6,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 04/15/2020
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
 ---
 # Frequently Asked Questions about Storage Replica
@@ -225,7 +225,11 @@ However, to get the improved replication performance of Windows Server 2019, all
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?  
 For technical assistance with Storage Replica, you can post at [the Microsoft TechNet forums](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The <https://windowsserver.uservoice.com> site is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
+## <a name="FAQ18"></a> Can Storage Replica be configured to replicate in both directions?
+Storage Replica is a one-way replication technology.  It will only replicate from the source to the destination on a per volume basis.  This direction can be reversed at any time, but is still only in one direction.  However, that does not mean you cannot have a set of volumes (source and destination) replicate in one direction and a different set of drives (source and destination) replicate in the opposite direction.  For example, you have want to have server to server replication configured.  Server1 and Server2 each have drive letters L:, M:, N:, and O: and you wish to replicate drive M: from Server1 to Server2 but drive O: replicate from Server2 to Server1.  This can be done as long as there separate log drives for each of the groups. I.E. 
 
+- Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
+- Server2 source drive O: with source log drive N: replicating to Server1 destination drive O: with destination log drive N:
 
 ## Related Topics  
 - [Storage Replica Overview](storage-replica-overview.md) 
@@ -235,5 +239,5 @@ For technical assistance with Storage Replica, you can post at [the Microsoft Te
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)  
 
 ## See Also  
-- [Storage Overview](../storage.md)  
+- [Storage Overview](../storage.yml)  
 - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)  

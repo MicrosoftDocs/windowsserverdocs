@@ -2,7 +2,7 @@
 title: Storage Spaces Direct in-memory read cache
 ms.prod: windows-server
 ms.author: eldenc
-ms.manager: siroy
+manager: siroy
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
@@ -63,6 +63,6 @@ Get-ClusterSharedVolume | ForEach {
 }
 ```
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

@@ -1,14 +1,12 @@
 ---
 ms.assetid: c28c60ff-693d-49ee-a75b-58f24866217b
 title: Name Resolution Requirements for Federation Server Proxies
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

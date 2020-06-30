@@ -1,12 +1,8 @@
 ---
 title: "Troubleshoot Anywhere Access in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
@@ -49,11 +45,6 @@ This topic provides general instructions for using the Repair Anywhere Access wi
 
 -   [Troubleshoot Remote Web Access connectivity](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
   
--   [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
-
--   [Troubleshoot Remote Web Access connectivity](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
-  
--   [Troubleshoot your firewall](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
-
+-   [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
   
 -   Check the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/winserveressentials/threads) for the most recent issues reported by the  Windows Server Essentials community.

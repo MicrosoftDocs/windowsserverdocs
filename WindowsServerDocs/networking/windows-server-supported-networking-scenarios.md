@@ -5,10 +5,9 @@ manager: brianlic
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.date: 
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
-ms.author: pashort
-author: shortpatti
+author: dcuomo
+ms.author: dacuo
 ---
 # Windows Server supported networking scenarios
 

@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate storage to Win
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 01/17/2020
+ms.date: 03/26/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -15,7 +15,7 @@ ms.technology: storage
 
 Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 
-This topic discusses why you'd want to use Storage Migration Service, how the migration process works, and what the requirements are for source and destination servers.
+This topic discusses why you'd want to use Storage Migration Service, how the migration process works, what the requirements are for source and destination servers, and [what's new in Storage Migration Service](#whats-new-in-storage-migration-service).
 
 ## Why use Storage Migration Service
 
@@ -66,7 +66,7 @@ We strongly recommend that the orchestrator and destination computers have at le
   - Netlogon Service (NP-In)
   - Windows Management Instrumentation (DCOM-In)
   - Windows Management Instrumentation (WMI-In)
-  
+
   > [!TIP]
   > Installing the Storage Migration Service Proxy service on a Windows Server 2019 computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
 
@@ -99,7 +99,7 @@ The source server must run one of the following operating systems:
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
 
-Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
+Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.
 
 You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
@@ -124,7 +124,16 @@ The destination server must run one of the following operating systems:
 > [!TIP]
 > Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
 
+## Azure VM Migration
+
+Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Storage Migration Service. Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system.
+
+   Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
+   > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
+
 ## What's new in Storage Migration Service
+
+Windows Admin Center version 1910 adds the ability to deploy Azure virtual machines. This integrates Azure VM deployment into Storage Migration Service. For more info, see [Azure VM migration](#azure-vm-migration).
 
 The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or later, or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
@@ -134,7 +143,7 @@ The following new features are available when running the Storage Migration Serv
 - More easily sync migrated shares into Azure by using Azure File Sync
 - Migrate to new networks such as Azure
 
-## See also
+## Additional References
 
 - [Migrate a file server by using Storage Migration Service](migrate-data.md)
 - [Storage Migration Services frequently asked questions (FAQ)](faq.md)

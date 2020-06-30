@@ -1,14 +1,12 @@
 ---
 ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: Appendix C - Protected Accounts and Groups in Active Directory
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Appendix C: Protected Accounts and Groups in Active Directory
@@ -37,8 +35,6 @@ The following table contains the protected groups in Active Directory listed by 
 |Domain Admins|Domain Admins|Domain Admins|Domain Admins|
 |Domain Controllers|Domain Controllers|Domain Controllers|Domain Controllers|
 |Enterprise Admins|Enterprise Admins|Enterprise Admins|Enterprise Admins|
-||||Enterprise Key Admins|
-||||Key Admins|
 |Krbtgt|Krbtgt|Krbtgt|Krbtgt|
 |Print Operators|Print Operators|Print Operators|Print Operators|
 |||Read-only Domain Controllers|Read-only Domain Controllers|

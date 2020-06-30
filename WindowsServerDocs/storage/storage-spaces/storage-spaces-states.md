@@ -1,7 +1,6 @@
 ---
 title: Storage Spaces and Storage Spaces Direct health and operational states
 description: How to find and understand the different health and operational states of Storage Spaces Direct and Storage Spaces (including physical disks, pools, and virtual disks), and what to do about them.
-keywords: Storage Spaces,detached,virtual disk,physical disk,degraded
 author: jasongerend
 ms.author: jgerend
 ms.date: 12/06/2019
@@ -202,7 +201,7 @@ The following table gives a little more detail on each of the reasons.
 |Firmware not compliant|The firmware on the physical drive isn't in the list of approved firmware revisions specified by the server administrator by using the [Health Service](../../failover-clustering/health-service-overview.md#supported-components-document). |
 |Hardware not compliant|The drive isn't in the list of approved storage models specified by the server administrator by using the [Health Service](../../failover-clustering/health-service-overview.md#supported-components-document).|
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct](storage-spaces-direct-overview.md)
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)

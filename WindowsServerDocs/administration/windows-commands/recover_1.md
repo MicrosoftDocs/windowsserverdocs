@@ -1,12 +1,12 @@
 ---
 title: recover
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference topic for **** - 
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8cc3a73d-9456-41a0-b375-2b4cc37c3992
 author: coreyp-at-msft
@@ -30,7 +30,7 @@ Refreshes the state of all disks in a disk group, attempt to recover disks in an
 recover [noerr]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -43,14 +43,14 @@ recover [noerr]
 -   This command operates on disks that are failed or failing. It also operates on volumes that are failed, failing, or in failed redundancy state.
 -   A disk that is part of a disk group must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To recover the disk group that contains the disk with focus, type:
 ```
 recover
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

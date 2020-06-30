@@ -1,14 +1,12 @@
 ---
 title: What's new in Hyper-V on Windows Server 2016
-description: "Gives a summary of the new features in Hyper-V"
+description: Gives a summary of the new features in Hyper-V
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 09/21/2017
 ---

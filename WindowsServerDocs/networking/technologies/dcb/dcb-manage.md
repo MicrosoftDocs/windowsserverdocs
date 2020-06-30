@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Manage Data Center Bridging (DCB)
@@ -304,13 +304,13 @@ Following are examples of Priority assignment.
 ### Create QoS Policy
 
 ```
-PS C:\> New-NetQosPolicy -Name "SMB Policy" -PriorityValue8021Action 4
+PS C:\> New-NetQosPolicy -Name "SMB Policy" -SMB -PriorityValue8021Action 4
 
 Name           : SMB Policy
 Owner          : Group Policy (Machine)
 NetworkProfile : All
 Precedence     : 127
-JobObject      :
+Template       : SMB
 PriorityValue  : 4
 
 ```
@@ -381,6 +381,7 @@ Name           : SMB Policy
 Owner          : Group Policy (Machine)
 NetworkProfile : All
 Precedence     : 127
+Template       : SMB
 JobObject      :
 PriorityValue  : 4
 

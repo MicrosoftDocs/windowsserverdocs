@@ -1,5 +1,5 @@
 ﻿---
-title: 'DFS Replication: Frequently Asked Questions (FAQ)'
+title: DFS Replication - Frequently Asked Questions (FAQ)
 ms.date: 06/18/2014
 ms.prod: windows-server
 ms.technology: storage
@@ -69,7 +69,7 @@ Yes. DFS Replication is supported on Volume Shadow Copy Service (VSS) volumes an
 
 No, using Windows Backup (Ntbackup.exe) on a computer running Windows Server 2003 or earlier to back up the contents of a replicated folder on a computer running Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 is not supported.
 
-To back up files that are stored in a replicated folder, use Windows Server Backup or Microsoft® System Center Data Protection Manager. For information about Backup and Recovery functionality in Windows Server 2008 R2 and Windows Server 2008, see [Backup and Recovery](https://technet.microsoft.com/library/Cc754097). For more information, see [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261) (https://go.microsoft.com/fwlink/?LinkId=182261).
+To back up files that are stored in a replicated folder, use Windows Server Backup or Microsoft&reg; System Center Data Protection Manager. For information about Backup and Recovery functionality in Windows Server 2008 R2 and Windows Server 2008, see [Backup and Recovery](https://technet.microsoft.com/library/Cc754097). For more information, see [System Center Data Protection Manager](https://go.microsoft.com/fwlink/?linkid=182261) (https://go.microsoft.com/fwlink/?LinkId=182261).
 
 ### Do file system policies impact DFS Replication?
 
@@ -124,7 +124,7 @@ Antivirus applications can cause excessive replication if their scanning activit
 
 ### What are the benefits of using DFS Replication instead of Windows SharePoint Services?
 
-Windows® SharePoint® Services provides tight coherency in the form of file check-out functionality that DFS Replication does not. If you are concerned about multiple people editing the same file, we recommend using Windows SharePoint Services. Windows SharePoint Services 2.0 with Service Pack 2 is available as part of Windows Server 2003 R2. Windows SharePoint Services can be downloaded from the Microsoft Web site; it is not included in newer versions of Windows Server. However, if you are replicating data across multiple sites and users will not edit the same files at the same time, DFS Replication provides greater bandwidth and simpler management.
+Windows&reg; SharePoint&reg; Services provides tight coherency in the form of file check-out functionality that DFS Replication does not. If you are concerned about multiple people editing the same file, we recommend using Windows SharePoint Services. Windows SharePoint Services 2.0 with Service Pack 2 is available as part of Windows Server 2003 R2. Windows SharePoint Services can be downloaded from the Microsoft Web site; it is not included in newer versions of Windows Server. However, if you are replicating data across multiple sites and users will not edit the same files at the same time, DFS Replication provides greater bandwidth and simpler management.
 
 ## Limitations and requirements
 
@@ -147,7 +147,7 @@ DFS Replication can safely replicate Microsoft Outlook personal folder files (.p
 
 ### Can I use DFS Replication in a workgroup?
 
-No. DFS Replication relies on Active Directory® Domain Services for configuration. It will only work in a domain.
+No. DFS Replication relies on Active Directory&reg; Domain Services for configuration. It will only work in a domain.
 
 ### Can more than one folder be replicated on a single server?
 
@@ -338,7 +338,7 @@ DFS Replication in Windows Server 2008 includes several performance enhancement
 
 ### How does DFS Replication performance compare with FRS?
 
-DFS Replication is much faster than FRS, particularly when small changes are made to large files and RDC is enabled. For example, with RDC, a small change to a 2 MB PowerPoint® presentation can result in only 60 kilobytes (KB) being sent across the network—a 97 percent savings in bytes transferred.
+DFS Replication is much faster than FRS, particularly when small changes are made to large files and RDC is enabled. For example, with RDC, a small change to a 2 MB PowerPoint&reg; presentation can result in only 60 kilobytes (KB) being sent across the network—a 97 percent savings in bytes transferred.
 
 RDC is not used on files smaller than 64 KB and might not be beneficial on high-speed LANs where network bandwidth is not contended. RDC can be disabled on a per-connection basis using DFS Management.
 

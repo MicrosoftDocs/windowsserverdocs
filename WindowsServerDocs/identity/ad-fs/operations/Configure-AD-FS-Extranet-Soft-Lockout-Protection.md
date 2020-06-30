@@ -1,14 +1,12 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Lockout Protection
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 02/01/2019
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

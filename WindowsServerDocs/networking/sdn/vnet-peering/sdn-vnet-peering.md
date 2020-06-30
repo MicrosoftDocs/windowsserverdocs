@@ -1,13 +1,11 @@
 ---
 title: Virtual network peering
-description:  
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
-ms.assetid: 
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/08/2018
 ---
 
@@ -44,8 +42,6 @@ Virtual network peering has a few requirements and constraints:
   >If you need to add address ranges:<ol><li>Remove the peering.</li><li>Add the address space.</li><li>Add the peering again.</li></ol>
 
 - Since virtual network peering is between two virtual networks, there is no derived transitive relationship across peerings. For example, if you peer virtualNetworkA with virtualNetworkB and virtualNetworkB with virtualNetworkC, then virtualNetworkA does not get peered with virtualNetworkC.
-
-  [image here]
 
 ## Connectivity
 

@@ -5,16 +5,19 @@ ms.topic: troubleshooting
 ms.date: 9/18/2019
 ms.technology: server-general
 ms.topic: article
-ms.assetid: 
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
+ms.custom:
+  - CI ID 116803
+  - CSSTroubleshoot
+manager: dcscontentpm
 ---
 
 # Resolve Windows activation error codes
 
-> **Home users**  
-> This article is intended for use by support agents and IT professionals. If you're looking for more information about Windows activation error messages, see [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).  
+> [!NOTE]  
+> This article is intended for technical support agents and IT professionals. If you're looking for more information about Windows activation error messages, see [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).  
 
 This article provides troubleshooting information to help you respond to error messages that you may receive when you try to use a Multiple Activation Key (MAK) or the Key Management Service (KMS) to perform Volume Activation on one or more Windows-based computers. Look for the error code in the following table, and then select the link to see more information about that error code and how to resolve it.
 
@@ -26,11 +29,15 @@ For more information about volume activation for older versions of Windows, seeÂ
 
 ## Diagnostic tool
 
+> [!NOTE]  
+> This tool is intended to help fix Windows activation problems on computers that run Enterprise, Professional, or Server edition of Windows.
+
+
 Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. Download the diagnostic tool from [here](https://aka.ms/SaRA-WindowsActivation).
 
 This tool will try to activate Windows. If it returns an activation error code, the tool will display targeted solutions for known error codes.
 
-The following error codes are supported: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008.
+The following error codes are supported: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008, 0x8007007b, 0xC004C003, 0x8007232B.
 
 ## Summary of error codes
 

@@ -1,11 +1,9 @@
 ---
 title: Generation 2 virtual machine security settings for Hyper-V
-description: "Describes the security settings available in Hyper-V Manager for generation 2 virtual machines"
+description: Describes the security settings available in Hyper-V Manager for generation 2 virtual machines
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
 author: larsiwer
@@ -79,4 +77,4 @@ For more virtual machine security, use the **Enable Shielding** option to disabl
 
 You can run the shielded virtual machine locally without setting up a Host Guardian Service. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](https://go.microsoft.com/fwlink/?LinkId=746381).  
 
-For more information about security in Windows Server, see [Security and Assurance](../../../security/Security-and-Assurance.md).  
+For more information about security in Windows Server, see [Security and Assurance](../../../security/Security-and-Assurance.yml).  

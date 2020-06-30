@@ -8,8 +8,8 @@
 ## [Plan and design](rds-plan-and-design.md)
 ### [Build anywhere](rds-plan-build-anywhere.md)
 ### [Remote Desktop workloads](remote-desktop-workloads.md)
-### [Network guidance](network-guidance.md)
-### [Virtual machine sizing guidance](virtual-machine-recs.md)
+### [Network guidelines](network-guidance.md)
+### [Virtual machine sizing guidelines](virtual-machine-recs.md)
 ### [Access from anywhere](rds-plan-access-from-anywhere.md)
 ### [High availability](rds-plan-high-availability.md)
 ### [Multifactor Authentication](rds-plan-mfa.md)
@@ -63,7 +63,7 @@
 ### [Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role](rds_vdi-recommendations-1909.md)
 ### [Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-1803.md)
 ### [Manage users in your RDS collection](rds-user-management.md)
-### [Customize the RDS title “Work Resources” using PowerShell on Windows Server](rds-work-resources.md)
+### [Customize the RDS title "Work Resources" using PowerShell on Windows Server](rds-work-resources.md)
 ### [Diagnose app performance issues with performance counters](rds-rdsh-performance-counters.md)
 
 ## Access your Remote Desktop resources
@@ -93,8 +93,8 @@
 #### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
 #### [Change the RD listening port on your PC](clients/change-listening-port.md)
 ### Advanced information
-#### [Which client works best for you?](clients/remote-desktop-app-compare.md)
-#### [Remote Desktop RDP file settings](clients/rdp-files.md)
+#### [Compare the clients](clients/remote-desktop-app-compare.md)
+#### [Supported Remote Desktop RDP file settings](clients/rdp-files.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
 #### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)

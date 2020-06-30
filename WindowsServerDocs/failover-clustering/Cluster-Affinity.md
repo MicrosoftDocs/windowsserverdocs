@@ -1,10 +1,11 @@
 ---
 title: Cluster affinity
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 03/07/2019
 description: This article describes failover cluster affinity and antiAffinity levels
 ---
@@ -12,11 +13,11 @@ description: This article describes failover cluster affinity and antiAffinity l
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-A failover cluster can hold numerous roles that can move between nodes and run.  There are times when certain roles (i.e. virtual machines, resource groups, etc) should not run on the same node.  This could be due to resource consumption, memory usage, etc.  For example, there are two virtual machines that are memory and CPU intensive and if the two virtual machines are running on the same node, one or both of the virtual machines could have performance impact issues.  This article will explain cluster antiaffinity levels and how you can use them.
+A failover cluster can hold numerous roles that can move between nodes and run. There are times when certain roles (i.e. virtual machines, resource groups, etc) should not run on the same node.  This could be due to resource consumption, memory usage, etc.  For example, there are two virtual machines that are memory and CPU intensive and if the two virtual machines are running on the same node, one or both of the virtual machines could have performance impact issues.  This article will explain cluster antiaffinity levels and how you can use them.
 
 ## What is Affinity and AntiAffinity?
 
-Affinity is a rule you would set up that establishes a relationship between two or more roles (i,e, virtual machines, resource groups, etc) to keep them together.  AntiAffinity is the same but is used to try and keep the specified roles apart from each other.  Failover Clusters use AntiAffinity for its roles.  More specifically, the [AntiAffinityClassNames](https://docs.microsoft.com/previous-versions/windows/desktop/mscs/groups-antiaffinityclassnames) parameter defined on the roles so they do not run on the same node.  
+Affinity is a rule you would set up that establishes a relationship between two or more roles (i,e, virtual machines, resource groups, etc) to keep them together.  AntiAffinity is the same but is used to try and keep the specified roles apart from each other. Failover Clusters use AntiAffinity for its roles.  More specifically, the [AntiAffinityClassNames](https://docs.microsoft.com/previous-versions/windows/desktop/mscs/groups-antiaffinityclassnames) parameter defined on the roles so they do not run on the same node.  
 
 ## AntiAffinityClassnames
 
@@ -81,6 +82,3 @@ In a PowerShell listing of the groups, you would see this:
 
 - The use of Preferred Owners on groups can be combined with AntiAffinity in a three or more node cluster.
 - The AntiAffinityClassNames and ClusterEnforcedAntiAffinity settings will only take place after a recycling of the resources. I.E. you can set them, but if both groups are online on the same node when set, they will both continue to remain online.
-
-
-

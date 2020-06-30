@@ -1,12 +1,8 @@
 ---
 title: "Create a Bootable USB Flash Drive"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 05/04/2018
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
@@ -66,12 +62,6 @@ You can create a bootable USB flash drive to use to deploy  Windows Server Essen
  [Creating and Customizing the Image](Creating-and-Customizing-the-Image.md)   
  [Additional Customizations](Additional-Customizations.md)   
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](Testing-the-Customer-Experience.md)   
-
- [Getting Started with the Windows Server Essentials ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Creating and Customizing the Image](../install/Creating-and-Customizing-the-Image.md)   
- [Additional Customizations](../install/Additional-Customizations.md)   
- [Preparing the Image for Deployment](../install/Preparing-the-Image-for-Deployment.md)   
- [Testing the Customer Experience](../install/Testing-the-Customer-Experience.md)   
+ [Testing the Customer Experience](Testing-the-Customer-Experience.md)     
 
  [How can we help you?](https://windows.microsoft.com/windows/support)

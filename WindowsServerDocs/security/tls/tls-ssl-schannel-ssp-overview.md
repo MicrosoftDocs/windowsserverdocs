@@ -1,12 +1,8 @@
 ---
 title: TLS/SSL overview (Schannel SSP)
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b7b0432-1bef-4912-8c9a-8989d47a4da9
 author: coreyp-at-msft
@@ -44,7 +40,7 @@ TLS and SSL protocols use a client/server model and are based on certificate aut
 ## <a name="BKMK_INSTALL"></a>Server Manager information
 There are no configuration steps necessary to implement TLS, SSL or Schannel.
 
-## See also ##
+## Additional References ##
 
 -   [The Schannel security package](https://docs.microsoft.com/windows/desktop/com/schannel)
 -   [Secure Channel](https://docs.microsoft.com/windows/desktop/SecAuthN/secure-channel)

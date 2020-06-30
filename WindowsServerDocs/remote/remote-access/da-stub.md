@@ -4,11 +4,10 @@ description: This topic provides a link to DirectAccess documentation for Window
 manager: brianlic
 ms.prod: windows-server
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3673bb8-43dc-44e2-9e10-caf09bae2aa9
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # DirectAccess

@@ -1,12 +1,8 @@
 ---
 title: Authentication Policies and Authentication Policy Silos
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
 author: coreyp-at-msft
@@ -39,7 +35,7 @@ An authentication policy silo controls which accounts can be restricted by the s
 |--------|--------|
 |Authentication Policy Silo|An instance of this class defines authentication policies and related behaviors for assigned users, computers, and services.|
 |Authentication Policy Silos|A container of this class can contain authentication policy silo objects.|
-|Authentication Policy Silo Enforced|Specifies whether the authentication policy silo is enforced.<br /><br />When not enforced, the policy by default is in audit mode. Events that indicate potential successes and failures are generated, but protections are not applied to the system.|
+|Authentication Policy Silo Enforced|Specifies whether the authentication policy silo is enforced.<p>When not enforced, the policy by default is in audit mode. Events that indicate potential successes and failures are generated, but protections are not applied to the system.|
 |Assigned Authentication Policy Silo Backlink|This attribute is the back link for msDS-AssignedAuthNPolicySilo.|
 |Authentication Policy Silo Members|Specifies which principals are assigned to the AuthNPolicySilo.|
 |Authentication Policy Silo Members Backlink|This attribute is the back link for msDS-AuthNPolicySiloMembers.|
@@ -86,7 +82,7 @@ The policies for the Active Directory objects for users, computers, and services
 |----|--------|--------|
 |Policy|Authentication Policy|An instance of this class defines authentication policy behaviors for assigned principals.|
 |Policy|Authentication Policies|A container of this class can contain authentication policy objects.|
-|Policy|Authentication Policy Enforced|Specifies whether the authentication policy is enforced.<br /><br />When not enforced, the policy by default is in audit mode, and events that indicate potential successes and failures are generated, but protections are not applied to the system.|
+|Policy|Authentication Policy Enforced|Specifies whether the authentication policy is enforced.<p>When not enforced, the policy by default is in audit mode, and events that indicate potential successes and failures are generated, but protections are not applied to the system.|
 |Policy|Assigned Authentication Policy Backlink|This attribute is the back link for msDS-AssignedAuthNPolicy.|
 |Policy|Assigned Authentication Policy|Specifies which AuthNPolicy should be applied to this principal.|
 |User|User Authentication Policy|Specifies which AuthNPolicy should be applied to users who are assigned to this silo object.|
@@ -228,13 +224,13 @@ For troubleshooting steps that use these events, see [Troubleshoot Authenticatio
 
 |Event ID and Log|Description|
 |----------|--------|
-|101<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: An NTLM sign-in failure occurs because the authentication policy is configured.<br /><br />An event is logged in the domain controller to indicate that NTLM authentication failed because access control restrictions are required, and those restrictions cannot be applied to NTLM.<br /><br />Displays the account, device, policy, and silo names.|
-|105<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the authentication from a particular device was not permitted.<br /><br />An event is logged in the domain controller to indicate that a Kerberos TGT was denied because the device did not meet the enforced access control restrictions.<br /><br />Displays the account, device, policy, silo names, and TGT lifetime.|
-|305<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A potential Kerberos restriction failure might occur because the authentication from a particular device was not permitted.<br /><br />In audit mode, an informational event is logged in the domain controller to determine if a Kerberos TGT will be denied because the device did not meet the access control restrictions.<br /><br />Displays the account, device, policy, silo names, and TGT lifetime.|
-|106<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the user or device was not allowed to authenticate to the server.<br /><br />An event is logged in the domain controller to indicate that a Kerberos service ticket was denied because the user, device, or both do not meet the enforced access control restrictions.<br /><br />Displays the device, policy, and silo names.|
-|306<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure might occur because the user or device was not allowed to authenticate to the server.<br /><br />In audit mode, an informational event is logged on the domain controller to indicate that a Kerberos service ticket will be denied because the user, device, or both do not meet the access control restrictions.<br /><br />Displays the device, policy, and silo names.|
+|101<p>**AuthenticationPolicyFailures-DomainController**|Reason: An NTLM sign-in failure occurs because the authentication policy is configured.<p>An event is logged in the domain controller to indicate that NTLM authentication failed because access control restrictions are required, and those restrictions cannot be applied to NTLM.<p>Displays the account, device, policy, and silo names.|
+|105<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the authentication from a particular device was not permitted.<p>An event is logged in the domain controller to indicate that a Kerberos TGT was denied because the device did not meet the enforced access control restrictions.<p>Displays the account, device, policy, silo names, and TGT lifetime.|
+|305<p>**AuthenticationPolicyFailures-DomainController**|Reason: A potential Kerberos restriction failure might occur because the authentication from a particular device was not permitted.<p>In audit mode, an informational event is logged in the domain controller to determine if a Kerberos TGT will be denied because the device did not meet the access control restrictions.<p>Displays the account, device, policy, silo names, and TGT lifetime.|
+|106<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the user or device was not allowed to authenticate to the server.<p>An event is logged in the domain controller to indicate that a Kerberos service ticket was denied because the user, device, or both do not meet the enforced access control restrictions.<p>Displays the device, policy, and silo names.|
+|306<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure might occur because the user or device was not allowed to authenticate to the server.<p>In audit mode, an informational event is logged on the domain controller to indicate that a Kerberos service ticket will be denied because the user, device, or both do not meet the access control restrictions.<p>Displays the device, policy, and silo names.|
 
-## See also
+## Additional References
 [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
 
 [Credentials Protection and Management](credentials-protection-and-management.md)

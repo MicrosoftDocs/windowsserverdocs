@@ -1,14 +1,13 @@
 ---
 title: More than one network adapter should be available
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # More than one network adapter should be available

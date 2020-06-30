@@ -1,12 +1,11 @@
 ---
 title: Performance history for virtual hard disks
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
@@ -83,6 +82,6 @@ To get the path of every VHD from the virtual machine:
    > [!NOTE]
    > The Get-VHD cmdlet requires a file path to be provided. It does not support enumeration.
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

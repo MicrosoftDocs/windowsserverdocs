@@ -1,12 +1,8 @@
 ---
 title: "Step 8: Run the Windows Server Essentials Best Practices Analyzer"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: e6ba701d-7183-4c26-960e-44cc280bf3e6
 author: nnamuhcs
@@ -16,7 +12,7 @@ manager: dongill
 
 # Step 8: Run the Windows Server Essentials Best Practices Analyzer
 
->Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 When you finish migrating your settings and data to  Windows Server Essentials, you should run the  Windows Server Essentials Best Practices Analyzer (BPA) on the Destination Server. The BPA examines a server that is running  Windows Server Essentials and presents a report that describes issues and provides recommendations for resolving them. The recommendations are developed by the product support organization for  Windows Server Essentials.  
   
