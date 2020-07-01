@@ -1,6 +1,6 @@
 ---
 title: bitsadmin sethttpmethod
-description: Reference topic for the bitsadmin sethttpmethod command, which sets the HTTP verb to use.
+description: Reference article for the bitsadmin sethttpmethod command, which sets the HTTP verb to use.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

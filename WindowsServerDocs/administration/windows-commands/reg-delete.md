@@ -1,6 +1,6 @@
 ---
 title: reg delete
-description: Reference topic for **** - 
+description: Reference article for **** -
 
 ms.prod: windows-server
 

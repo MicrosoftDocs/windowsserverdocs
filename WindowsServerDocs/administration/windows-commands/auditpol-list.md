@@ -1,6 +1,6 @@
 ---
 title: auditpol list
-description: Reference topic for the auditpol list command, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
+description: Reference article for the auditpol list command, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

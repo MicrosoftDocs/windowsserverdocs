@@ -1,6 +1,6 @@
 ---
 title: ftp debug
-description: Reference topic for the ftp debug command, which toggles Debugging mode.
+description: Reference article for the ftp debug command, which toggles Debugging mode.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

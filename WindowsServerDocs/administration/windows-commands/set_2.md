@@ -1,6 +1,6 @@
 ---
 title: set_2
-description: Reference topic for set_2, which sets the context, options, verbose mode, and metadata file for shadow copy creation.  
+description: Reference article for set_2, which sets the context, options, verbose mode, and metadata file for shadow copy creation.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

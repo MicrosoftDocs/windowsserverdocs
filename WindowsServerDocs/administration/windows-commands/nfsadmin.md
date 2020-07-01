@@ -1,6 +1,6 @@
 ---
 title: nfsadmin
-description: Reference topic for the nfsadmin command, which manages both Server for NFS and Client for NFS.
+description: Reference article for the nfsadmin command, which manages both Server for NFS and Client for NFS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

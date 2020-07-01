@@ -1,6 +1,6 @@
 ---
 title: break
-description: Reference topic for the break command, which disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
+description: Reference article for the break command, which disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

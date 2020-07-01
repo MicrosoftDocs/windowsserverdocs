@@ -1,6 +1,6 @@
 ---
 title: pushprinterconnections
-description: Reference topic for the pushprinterconnections command, which reads Deployed Printer Connection settings from Group Policy and deploys/removes printer connections as needed.
+description: Reference article for the pushprinterconnections command, which reads Deployed Printer Connection settings from Group Policy and deploys/removes printer connections as needed.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

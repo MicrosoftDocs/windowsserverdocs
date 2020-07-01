@@ -1,6 +1,6 @@
 ---
 title: stop-server
-description: Reference topic for stop-server, which stops services for Windows Deployment Services.
+description: Reference article for stop-server, which stops services for Windows Deployment Services.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

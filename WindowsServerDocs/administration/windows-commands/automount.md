@@ -1,6 +1,6 @@
 ---
 title: automount
-description: Reference topic for the automount command, which enables or disables the automount feature.
+description: Reference article for the automount command, which enables or disables the automount feature.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

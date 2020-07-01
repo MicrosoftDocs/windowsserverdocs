@@ -1,6 +1,6 @@
 ---
 title: get-AllImageGroups
-description: Reference topic for get-AllImageGroups, which retrieves information about all image groups on a server and all images in those image groups. 
+description: Reference article for get-AllImageGroups, which retrieves information about all image groups on a server and all images in those image groups.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

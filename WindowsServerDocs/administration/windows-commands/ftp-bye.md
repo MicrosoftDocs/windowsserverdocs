@@ -1,6 +1,6 @@
 ---
 title: ftp bye
-description: Reference topic for the ftp bye command, which ends the ftp session on the remote computer, and then exits.
+description: Reference article for the ftp bye command, which ends the ftp session on the remote computer, and then exits.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

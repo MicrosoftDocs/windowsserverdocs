@@ -1,6 +1,6 @@
 ---
 title: nslookup server
-description: Reference topic for the nslookup server command, which changes the default server to the specified Domain Name System (DNS) domain.
+description: Reference article for the nslookup server command, which changes the default server to the specified Domain Name System (DNS) domain.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

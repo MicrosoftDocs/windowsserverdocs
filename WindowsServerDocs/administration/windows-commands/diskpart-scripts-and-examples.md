@@ -1,6 +1,6 @@
 ---
 title: diskpart scripts and examples
-description: Reference topic for diskpart scripts and examples about how to automate disk-related tasks, such as creating volumes or converting disks to dynamic disks.
+description: Reference article for diskpart scripts and examples about how to automate disk-related tasks, such as creating volumes or converting disks to dynamic disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

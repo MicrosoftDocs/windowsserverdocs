@@ -1,6 +1,6 @@
 ---
 title: reg unload
-description: Reference topic for the reg unload command, which removes a section of the registry loaded using the reg load operation. 
+description: Reference article for the reg unload command, which removes a section of the registry loaded using the reg load operation.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

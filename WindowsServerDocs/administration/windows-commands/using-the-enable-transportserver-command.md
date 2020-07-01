@@ -1,6 +1,6 @@
 ---
 title: enable-TransportServer
-description: Reference topic for enable-TransportServer, which enables all services for the Transport Server.
+description: Reference article for enable-TransportServer, which enables all services for the Transport Server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

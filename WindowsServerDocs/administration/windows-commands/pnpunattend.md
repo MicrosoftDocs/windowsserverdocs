@@ -1,6 +1,6 @@
 ---
 title: pnpunattend
-description: Reference topic for the pnpunattend command, which audits the device drivers on a computer, as well as performs silent driver installations.
+description: Reference article for the pnpunattend command, which audits the device drivers on a computer, as well as performs silent driver installations.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

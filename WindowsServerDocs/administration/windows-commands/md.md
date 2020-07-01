@@ -1,6 +1,6 @@
 ---
 title: md
-description: Reference topic for the md command, which creates a directory or subdirectory.
+description: Reference article for the md command, which creates a directory or subdirectory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

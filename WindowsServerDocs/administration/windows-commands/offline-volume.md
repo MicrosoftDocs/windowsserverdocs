@@ -1,6 +1,6 @@
 ---
 title: offline volume
-description: Reference topic for the offline volume command, which takes the online volume with focus to the offline state.
+description: Reference article for the offline volume command, which takes the online volume with focus to the offline state.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

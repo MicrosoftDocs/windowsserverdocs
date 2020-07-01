@@ -1,6 +1,6 @@
 ---
 title: chdir
-description: Reference topic for the chdir command, which performs the same actions as the cd command.
+description: Reference article for the chdir command, which performs the same actions as the cd command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: verifier
-description: Reference topic for verifier, which runs the Driver verifier manager.
+description: Reference article for verifier, which runs the Driver verifier manager.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: get-AllMulticastTransmissions
-description: Reference topic for get-AllMulticastTransmissions, which displays information about all multicast transmissions on a server. 
+description: Reference article for get-AllMulticastTransmissions, which displays information about all multicast transmissions on a server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: ftp ls
-description: Reference topic for the ftp ls command, which displays an abbreviated list of files and subdirectories from the remote computer.
+description: Reference article for the ftp ls command, which displays an abbreviated list of files and subdirectories from the remote computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

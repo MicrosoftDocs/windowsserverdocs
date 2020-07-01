@@ -1,6 +1,6 @@
 ---
 title: cmd
-description: Reference topic for the cmd command, which starts a new instance of the command interpreter, Cmd.exe. 
+description: Reference article for the cmd command, which starts a new instance of the command interpreter, Cmd.exe.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -107,7 +107,7 @@ The following table lists valid hexadecimal digits that you can use as the value
     > [!CAUTION]
     > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
-    When you enable command extensions, the following commands are affected:  
+    When you enable command extensions, the following commands are affected:
     - **assoc**
 
     - **call**

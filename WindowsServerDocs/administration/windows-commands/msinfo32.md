@@ -1,6 +1,6 @@
 ---
 title: msinfo32
-description: Reference topic for the msinfo32 command, which opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
+description: Reference article for the msinfo32 command, which opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: ftp prompt
-description: Reference topic for the ftp prompt command, which toggles Prompt mode on and off.
+description: Reference article for the ftp prompt command, which toggles Prompt mode on and off.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

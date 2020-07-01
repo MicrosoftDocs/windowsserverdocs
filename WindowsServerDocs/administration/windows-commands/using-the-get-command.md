@@ -1,6 +1,6 @@
 ---
 title: get
-description: Reference topic for get, which retrieves properties or attributes about the specified object. 
+description: Reference article for get, which retrieves properties or attributes about the specified object.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

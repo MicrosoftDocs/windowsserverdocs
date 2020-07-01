@@ -1,6 +1,6 @@
 ---
 title: remove-DriverGroupFilter
-description: Reference topic for remove-DriverGroupFilter, which removes a filter rule from a driver group on a server. 
+description: Reference article for remove-DriverGroupFilter, which removes a filter rule from a driver group on a server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-DriverPackage
-description: Reference topic for Subcommand set-DriverPackage, which renames and/or enables or disables a driver package on a server.
+description: Reference article for Subcommand set-DriverPackage, which renames and/or enables or disables a driver package on a server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: query process
-description: Reference topic for the query process command, which displays information about processes that are running on a Remote Desktop Session Host server.
+description: Reference article for the query process command, which displays information about processes that are running on a Remote Desktop Session Host server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

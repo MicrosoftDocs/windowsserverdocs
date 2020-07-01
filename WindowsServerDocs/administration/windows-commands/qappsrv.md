@@ -1,6 +1,6 @@
 ---
 title: qappsrv
-description: Reference topic for the qappsrv command, which displays a list of all Remote Desktop Session Host servers on the network.
+description: Reference article for the qappsrv command, which displays a list of all Remote Desktop Session Host servers on the network.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

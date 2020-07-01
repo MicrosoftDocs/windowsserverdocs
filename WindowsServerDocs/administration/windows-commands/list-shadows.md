@@ -1,6 +1,6 @@
 ---
 title: list shadows
-description: Reference topic for the list shadows command, which lists persistent and existing non-persistent shadow copies that are on the system.
+description: Reference article for the list shadows command, which lists persistent and existing non-persistent shadow copies that are on the system.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

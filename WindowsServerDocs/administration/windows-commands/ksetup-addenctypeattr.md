@@ -1,6 +1,6 @@
 ---
 title: ksetup addenctypeattr
-description: Reference topic for the ksetup addenctypeattr command, which adds the encryption type attribute to the list of possible types for the domain.
+description: Reference article for the ksetup addenctypeattr command, which adds the encryption type attribute to the list of possible types for the domain.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

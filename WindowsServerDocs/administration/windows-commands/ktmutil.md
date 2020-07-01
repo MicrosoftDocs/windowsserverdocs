@@ -1,6 +1,6 @@
 ---
 title: ktmutil
-description: Reference topic for the ktmutil command, which starts the Kernel Transaction Manager utility.
+description: Reference article for the ktmutil command, which starts the Kernel Transaction Manager utility.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

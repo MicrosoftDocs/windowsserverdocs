@@ -1,6 +1,6 @@
 ---
 title: typeperf
-description: Reference topic for typeperf, which writes performance data to the command window or to a log file. 
+description: Reference article for typeperf, which writes performance data to the command window or to a log file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -51,15 +51,15 @@ typeperf -qx [object] [options]
 
 ## Examples
 
-- To writes the values for the local computer's performance counter **\\\\Processor(_Total)\% Processor Time** to the command window at a default sample interval of 1 second until CTRL+C is pressed.  
+- To writes the values for the local computer's performance counter **\\\\Processor(_Total)\% Processor Time** to the command window at a default sample interval of 1 second until CTRL+C is pressed.
   ```
   typeperf \Processor(_Total)\% Processor Time
-  ```  
-- To writes the values for the list of counters in the file **counters.txt** to the tab-delimited file **domain2.tsv** at a sample interval of 5 seconds until 50 samples have been collected.  
+  ```
+- To writes the values for the list of counters in the file **counters.txt** to the tab-delimited file **domain2.tsv** at a sample interval of 5 seconds until 50 samples have been collected.
   ```
   typeperf -cf counters.txt -si 5 -sc 50 -f TSV -o domain2.tsv
-  ```  
-- To queries installed counters with instances for the counter object **PhysicalDisk** and writes the resulting list to the file **counters.txt**.  
+  ```
+- To queries installed counters with instances for the counter object **PhysicalDisk** and writes the resulting list to the file **counters.txt**.
   ```
   typeperf -qx PhysicalDisk -o counters.txt
   ```

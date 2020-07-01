@@ -1,6 +1,6 @@
 ---
 title: nslookup set domain
-description: Reference topic for the nslookup set domain command, which changes the default Domain Name System (DNS) domain name to the specified name.
+description: Reference article for the nslookup set domain command, which changes the default Domain Name System (DNS) domain name to the specified name.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

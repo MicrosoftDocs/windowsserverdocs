@@ -1,6 +1,6 @@
 ---
 title: icacls
-description: Reference topic for the icacls command, which displays or modifies discretionary access control lists (DACL) on specified files, and applies stored DACLs to files in specified directories.
+description: Reference article for the icacls command, which displays or modifies discretionary access control lists (DACL) on specified files, and applies stored DACLs to files in specified directories.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -52,7 +52,7 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 
 - SIDs may be in either numerical or friendly name form. If you use a numerical form, affix the wildcard character **&#42;** to the beginning of the SID.
 
-- This command preserves the canonical order of ACE entries as:  
+- This command preserves the canonical order of ACE entries as:
 
     - Explicit denials
 

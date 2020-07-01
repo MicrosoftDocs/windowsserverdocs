@@ -1,6 +1,6 @@
 ---
 title: start-server
-description: Reference topic for start-server, which starts the multicast transmission, namespace, Transport Server, or all services on the Windows Deployment Services server.
+description: Reference article for start-server, which starts the multicast transmission, namespace, Transport Server, or all services on the Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

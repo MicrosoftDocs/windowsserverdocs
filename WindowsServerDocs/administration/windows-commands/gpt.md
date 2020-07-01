@@ -1,6 +1,6 @@
 ---
 title: gpt
-description: Reference topic for the gpt command, which assigns the gpt attribute(s) to the partition with focus.
+description: Reference article for the gpt command, which assigns the gpt attribute(s) to the partition with focus.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

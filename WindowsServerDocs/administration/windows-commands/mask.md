@@ -1,6 +1,6 @@
 ---
 title: mask
-description: Reference topic for the mask command, which removes hardware shadow copies that were imported by using the import command.
+description: Reference article for the mask command, which removes hardware shadow copies that were imported by using the import command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

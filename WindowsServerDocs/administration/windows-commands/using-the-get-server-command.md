@@ -1,6 +1,6 @@
 ---
 title: get-Server
-description: Reference topic for get-Server, which retrieves information from the specified Windows Deployment Services server. 
+description: Reference article for get-Server, which retrieves information from the specified Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

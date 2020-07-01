@@ -1,6 +1,6 @@
 ---
 title: Services for Network File System Command Reference
-description: Reference topic for **** - 
+description: Reference article for **** -
 ms.prod: windows-server
 
 

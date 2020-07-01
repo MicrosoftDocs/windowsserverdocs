@@ -1,6 +1,6 @@
 ---
 title: mstsc
-description: Reference topic for the mstsc command, which creates connections to Remote Desktop Session Host servers or other remote computers, edits an existing Remote Desktop Connection (.rdp) configuration file, and migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.
+description: Reference article for the mstsc command, which creates connections to Remote Desktop Session Host servers or other remote computers, edits an existing Remote Desktop Connection (.rdp) configuration file, and migrates legacy connection files that were created with Client Connection Manager to new .rdp connection files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

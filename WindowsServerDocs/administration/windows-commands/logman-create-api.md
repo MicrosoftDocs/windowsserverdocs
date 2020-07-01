@@ -1,6 +1,6 @@
 ---
 title: logman create api
-description: Reference topic for the logman create api command, which creates an API-tracing data collector.
+description: Reference article for the logman create api command, which creates an API-tracing data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

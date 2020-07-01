@@ -1,6 +1,6 @@
 ---
 title: get-Image
-description: Reference topic for get-Image, which retrieves information about an image. 
+description: Reference article for get-Image, which retrieves information about an image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

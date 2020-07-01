@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and clear
-description: Reference topic for the bitsadmin cache and clear command, which purges the local cache.
+description: Reference article for the bitsadmin cache and clear command, which purges the local cache.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

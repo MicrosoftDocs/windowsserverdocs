@@ -1,6 +1,6 @@
 ---
 title: lpq
-description: Reference topic for the lpq command, which displays the status of a print queue on a computer running Line printer Daemon (LPD).
+description: Reference article for the lpq command, which displays the status of a print queue on a computer running Line printer Daemon (LPD).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

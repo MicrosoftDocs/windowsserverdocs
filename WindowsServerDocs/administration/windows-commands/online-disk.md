@@ -1,6 +1,6 @@
 ---
 title: online disk
-description: Reference topic for the online disk command, which takes the offline disk to the online state.
+description: Reference article for the online disk command, which takes the offline disk to the online state.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

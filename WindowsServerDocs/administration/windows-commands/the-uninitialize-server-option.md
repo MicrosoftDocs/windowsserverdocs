@@ -1,6 +1,6 @@
 ---
 title: uninitialize-Server
-description: Reference topic for uninitialize-Server, which reverts changes made to the server during the initial server configuration.
+description: Reference article for uninitialize-Server, which reverts changes made to the server during the initial server configuration.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: dfsdiag testdfsintegrity
-description: Reference topic for the dfsdiag testdfsintegrity command, which checks the integrity of the Distributed File System (DFS) namespace.
+description: Reference article for the dfsdiag testdfsintegrity command, which checks the integrity of the Distributed File System (DFS) namespace.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

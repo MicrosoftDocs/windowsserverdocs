@@ -1,6 +1,6 @@
 ---
 title: unlodctr
-description: Reference topic for unlodctr, which removes Performance counter names and Explain text for a service or device driver from the system registry
+description: Reference article for unlodctr, which removes Performance counter names and Explain text for a service or device driver from the system registry
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

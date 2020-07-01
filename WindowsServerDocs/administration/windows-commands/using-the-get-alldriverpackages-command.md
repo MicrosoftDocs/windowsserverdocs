@@ -1,6 +1,6 @@
 ---
 title: get-AllDriverPackages
-description: Reference topic for get-AllDriverPackages, which displays information about all the driver packages on a server that match the specified search criteria. 
+description: Reference article for get-AllDriverPackages, which displays information about all the driver packages on a server that match the specified search criteria.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

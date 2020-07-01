@@ -1,6 +1,6 @@
 ---
 title: gpresult
-description: Reference topic for the gpresult command, which displays the Resultant Set of Policy (RSoP) information for a remote user and computer.
+description: Reference article for the gpresult command, which displays the Resultant Set of Policy (RSoP) information for a remote user and computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

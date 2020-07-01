@@ -1,6 +1,6 @@
 ---
 title: auditpol set
-description: Reference topic for the auditpol set command, which sets the per-user audit policy, system audit policy, or auditing options.
+description: Reference article for the auditpol set command, which sets the per-user audit policy, system audit policy, or auditing options.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

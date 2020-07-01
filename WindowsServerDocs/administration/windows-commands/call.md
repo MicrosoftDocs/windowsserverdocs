@@ -1,6 +1,6 @@
 ---
 title: call
-description: Reference topic for the call command, which calls one batch program from another without stopping the parent batch program.
+description: Reference article for the call command, which calls one batch program from another without stopping the parent batch program.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

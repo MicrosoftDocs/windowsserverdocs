@@ -1,6 +1,6 @@
 ---
 title: ftp mkdir
-description: Reference topic for the ftp mkdir command, which creates a directory on the remote computer.
+description: Reference article for the ftp mkdir command, which creates a directory on the remote computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

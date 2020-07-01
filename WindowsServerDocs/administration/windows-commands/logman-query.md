@@ -1,6 +1,6 @@
 ---
 title: logman query
-description: Reference topic for the logman query command, which queries data collector or data collector set properties.
+description: Reference article for the logman query command, which queries data collector or data collector set properties.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

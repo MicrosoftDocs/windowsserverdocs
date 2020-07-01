@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and list
-description: Reference topic for the bitsadmin cache and list command, which lists all cache entries.
+description: Reference article for the bitsadmin cache and list command, which lists all cache entries.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: nslookup set
-description: Reference topic for the nslookup set command, which changes configuration settings affecting how lookups behave.
+description: Reference article for the nslookup set command, which changes configuration settings affecting how lookups behave.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

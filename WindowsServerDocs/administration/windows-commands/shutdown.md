@@ -1,6 +1,6 @@
 ---
 title: shutdown
-description: Reference topic for shutdown, which enables you to shut down or restart local or remote computers one at a time.
+description: Reference article for shutdown, which enables you to shut down or restart local or remote computers one at a time.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -20,7 +20,7 @@ Enables you to shut down or restart local or remote computers one at a time.
 ## Syntax
 
 ```
-shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t <XXX>] [/d [p|u:]<XX>:<YY> [/c comment]] 
+shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t <XXX>] [/d [p|u:]<XX>:<YY> [/c comment]]
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t 
 ## Remarks
 
 -   Users must be assigned the **Shut down the system** user right to shut down a local or remotely administered computer that is using the **shutdown** command.
--   Users must be members of the Administrators group to annotate an unexpected shutdown of a local or remotely administered computer. If the target computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. For more information, see:  
+-   Users must be members of the Administrators group to annotate an unexpected shutdown of a local or remotely administered computer. If the target computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. For more information, see:
     -   [Default local groups](https://technet.microsoft.com/library/cc785098(v=ws.10).aspx)
     -   [Default groups](https://technet.microsoft.com/library/cc756898(v=ws.10).aspx)
 -   If you want to shut down more than one computer at a time, you can call **shutdown** for each computer by using a script, or you can use **shutdown** **/i** to display the Remote Shutdown Dialog box.

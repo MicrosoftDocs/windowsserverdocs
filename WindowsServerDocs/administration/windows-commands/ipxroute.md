@@ -1,6 +1,6 @@
 ---
 title: ipxroute
-description: Reference topic for the ipxroute command, which displays and modifies information about the routing tables used by the IPX protocol.
+description: Reference article for the ipxroute command, which displays and modifies information about the routing tables used by the IPX protocol.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

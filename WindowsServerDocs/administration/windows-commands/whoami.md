@@ -1,6 +1,6 @@
 ---
 title: whoami
-description: Reference topic for whoami, which displays user, group and privileges information for the user who is currently logged on to the local system.
+description: Reference article for whoami, which displays user, group and privileges information for the user who is currently logged on to the local system.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

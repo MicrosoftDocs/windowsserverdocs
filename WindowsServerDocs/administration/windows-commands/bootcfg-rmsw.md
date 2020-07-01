@@ -1,6 +1,6 @@
 ---
 title: bootcfg rmsw
-description: Reference topic for the bootcfg rmsw command, which removes operating system load options for a specified operating system entry.
+description: Reference article for the bootcfg rmsw command, which removes operating system load options for a specified operating system entry.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

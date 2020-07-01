@@ -1,6 +1,6 @@
 ---
 title: manage-bde protectors
-description: Reference topic for the manage-bde protectors command, which manages the protection methods used for the BitLocker encryption key.
+description: Reference article for the manage-bde protectors command, which manages the protection methods used for the BitLocker encryption key.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

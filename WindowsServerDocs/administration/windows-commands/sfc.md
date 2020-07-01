@@ -1,6 +1,6 @@
 ---
 title: sfc
-description: Reference topic for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
+description: Reference article for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

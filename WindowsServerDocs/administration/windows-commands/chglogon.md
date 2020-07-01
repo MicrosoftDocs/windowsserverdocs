@@ -1,6 +1,6 @@
 ---
 title: chglogon
-description: Reference topic for the chglogon command, which enables or disables logons from client sessions on an Remote Desktop Session Host server, or displays current logon status.
+description: Reference article for the chglogon command, which enables or disables logons from client sessions on an Remote Desktop Session Host server, or displays current logon status.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg target
-description: Reference topic for the bdehdcfg target command, which prepares a partition for use as a system drive by BitLocker and Windows recovery.
+description: Reference article for the bdehdcfg target command, which prepares a partition for use as a system drive by BitLocker and Windows recovery.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

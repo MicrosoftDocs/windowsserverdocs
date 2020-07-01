@@ -1,6 +1,6 @@
 ---
 title: mmc
-description: Reference topic for the mmc command, which lets you open a specific mmc console, open mmc in author mode, or specify to open the 32-bit or 64-bit version of mmc.
+description: Reference article for the mmc command, which lets you open a specific mmc console, open mmc in author mode, or specify to open the 32-bit or 64-bit version of mmc.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

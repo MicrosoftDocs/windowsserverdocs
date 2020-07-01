@@ -1,6 +1,6 @@
 ---
 title: ftp recv
-description: Reference topic for the ftp recv command, which copies a remote file to the local computer using the current file transfer type.
+description: Reference article for the ftp recv command, which copies a remote file to the local computer using the current file transfer type.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

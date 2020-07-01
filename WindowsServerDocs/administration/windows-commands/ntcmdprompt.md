@@ -1,6 +1,6 @@
 ---
 title: ntcmdprompt
-description: Reference topic for the ntcmdprompt command, which runs the command interpreter **Cmd.exe**, rather than **Command.com**, after running a Terminate and Stay Resident (TSR) or after starting the command prompt from within an MS-DOS application.
+description: Reference article for the ntcmdprompt command, which runs the command interpreter **Cmd.exe**, rather than **Command.com**, after running a Terminate and Stay Resident (TSR) or after starting the command prompt from within an MS-DOS application.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

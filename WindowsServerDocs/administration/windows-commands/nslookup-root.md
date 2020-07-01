@@ -1,6 +1,6 @@
 ---
 title: nslookup root
-description: Reference topic for the nslookup root command, which changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
+description: Reference article for the nslookup root command, which changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

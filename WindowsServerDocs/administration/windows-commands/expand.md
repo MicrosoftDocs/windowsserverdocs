@@ -1,6 +1,6 @@
 ---
 title: expand
-description: Reference topic for the expand command, which expands one or more compressed files.
+description: Reference article for the expand command, which expands one or more compressed files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

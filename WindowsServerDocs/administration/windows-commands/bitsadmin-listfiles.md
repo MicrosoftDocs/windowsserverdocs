@@ -1,6 +1,6 @@
 ---
 title: bitsadmin listfiles
-description: Reference topic for the bitsadmin listfiles command, which lists the files in the specified job.
+description: Reference article for the bitsadmin listfiles command, which lists the files in the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

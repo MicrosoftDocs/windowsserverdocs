@@ -1,6 +1,6 @@
 ---
 title: more
-description: Reference topic for the more command, which displays one screen of output at a time.
+description: Reference article for the more command, which displays one screen of output at a time.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

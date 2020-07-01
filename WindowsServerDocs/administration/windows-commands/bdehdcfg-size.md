@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg size
-description: Reference topic for the bdehdcfg size command, which specifies the size of the system partition when a new system drive is being created.
+description: Reference article for the bdehdcfg size command, which specifies the size of the system partition when a new system drive is being created.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

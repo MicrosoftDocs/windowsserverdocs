@@ -1,6 +1,6 @@
 ---
 title: nfsshare
-description: Reference topic for the nfsshare command, which controls Network File System (NFS) shares.
+description: Reference article for the nfsshare command, which controls Network File System (NFS) shares.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setreplyfilename
-description: Reference topic for the bitsadmin setreplyfilename command, which specifies the path of the file that contains the server upload-reply.
+description: Reference article for the bitsadmin setreplyfilename command, which specifies the path of the file that contains the server upload-reply.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: nslookup set d2
-description: Reference topic for the nslookup set d2 command, which turns the verbose debugging mode on or off.
+description: Reference article for the nslookup set d2 command, which turns the verbose debugging mode on or off.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

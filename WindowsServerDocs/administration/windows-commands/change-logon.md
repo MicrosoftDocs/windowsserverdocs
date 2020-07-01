@@ -1,6 +1,6 @@
 ---
 title: change logon
-description: Reference topic for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
+description: Reference article for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -46,7 +46,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 ### Examples
 
 - To display the current logon status, type:
-  
+
   ```
   change logon /query
   ```
@@ -62,7 +62,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
   ```
   change logon /disable
   ```
-  
+
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

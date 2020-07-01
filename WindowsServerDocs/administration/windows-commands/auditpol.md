@@ -1,6 +1,6 @@
 ---
 title: auditpol
-description: Reference topic for the auditpol command, which displays information about and performs functions to manipulate audit policies.
+description: Reference article for the auditpol command, which displays information about and performs functions to manipulate audit policies.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: nslookup
-description: Reference topic for the nslookup command, which displays information that you can use to diagnose Domain Name System (DNS) infrastructure.
+description: Reference article for the nslookup command, which displays information that you can use to diagnose Domain Name System (DNS) infrastructure.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: Set metadata
-description: Reference topic for set metadata, which sets the name and location of the shadow creation metadata file used to transfer shadow copies from one computer to another.
+description: Reference article for set metadata, which sets the name and location of the shadow creation metadata file used to transfer shadow copies from one computer to another.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

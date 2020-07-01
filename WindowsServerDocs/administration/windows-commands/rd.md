@@ -1,12 +1,8 @@
 ---
 title: rd
-description: Reference topic for **** - 
-
+description: Reference article for the rd command, which deletes a directory.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: 42e672f6-5bc2-4c16-af25-18e7ed2dd555
 author: coreyp-at-msft
@@ -17,62 +13,61 @@ ms.date: 10/16/2017
 
 # rd
 
+Deletes a directory.
 
+The **rd** command can also run from the Windows Recovery Console, using different parameters. For more information, see [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
-Deletes a directory. This command is the same as the **rmdir** command.
-
-
+> [!NOTE]
+> This command is the same as the [rmdir command](rmdir.md).
 
 ## Syntax
 
 ```
-rd [<Drive>:]<Path> [/s [/q]]
-rmdir [<Drive>:]<Path> [/s [/q]]
+rd [<drive>:]<path> [/s [/q]]
 ```
 
 ### Parameters
 
-|     Parameter     |                                                                 Description                                                                  |
-|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| [\<Drive>:]<Path> |                      Specifies the location and the name of the directory that you want to delete. *Path* is required.                       |
-|        /s         |                     Deletes a directory tree (the specified directory and all its subdirectories, including all files).                      |
-|        /q         | Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. (Note that **/q** works only if **/s** is specified.) |
-|        /?         |                                                     Displays help at the command prompt.                                                     |
+| Parameter | Description |
+|--|--|
+| `[<drive>:]<path>` | Specifies the location and the name of the directory that you want to delete. *Path* is required. If you include a backslash (\) at the beginning of the specified *path*, then the *path* starts at the root directory (regardless of the current directory). |
+| /s | Deletes a directory tree (the specified directory and all its subdirectories, including all files). |
+| /q | Specifies quiet mode. Does not prompt for confirmation when deleting a directory tree. The **/q** parameter works only if **/s** is also specified.<p>**CAUTION:** When you run in quiet mode, the entire directory tree is deleted without confirmation. Make sure that important files are moved or backed up before using the **/q** command-line option. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
+#### Remarks
 
--   You cannot delete a directory that contains files, including hidden or system files. If you attempt to do so, the following message appears:
+- You can't delete a directory that contains files, including hidden or system files. If you attempt to do so, the following message appears:
 
     `The directory is not empty`
 
     Use the **dir /a** command to list all files (including hidden and system files). Then use the **attrib** command with **-h** to remove hidden file attributes, **-s** to remove system file attributes, or **-h -s** to remove both hidden and system file attributes. After the hidden and file attributes have been removed, you can delete the files.
--   If you insert a backslash (\) at the beginning of *Path*, *Path* will start at the root directory (regardless of the current directory).
--   You cannot use **rd** to delete the current directory. If you attempt to delete the current directory, the following error message appears:
 
-    `The process cannot access the file because it is being used by another process.`
+- You can't use the **rd** command to delete the current directory. If you attempt to delete the current directory, the following error message appears:
 
-    If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then use **rd** (specify *Path* if necessary).
--   The **rd** command, with different parameters, is available from the Recovery Console.
+    `The process can't access the file because it is being used by another process.`
 
-## Examples
+    If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then try again.
 
-You cannot delete the directory that you are currently working in. You must change to a directory that is not within the current directory. For example, to change to the parent directory, type:
+### Examples
+
+To change to the parent directory so you can safely remove the desired directory, type:
+
 ```
 cd ..
 ```
-You can now safely remove the desired directory.
 
-Use the **/s** option to remove a directory tree. For example, to remove a directory named Test (and all its subdirectories and files) from the current directory, type:
+To remove a directory named *test* (and all its subdirectories and files) from the current directory, type:
+
 ```
 rd /s test
 ```
+
 To run the previous example in quiet mode, type:
+
 ```
 rd /s /q test
 ```
-
-> [!CAUTION]
-> When you run **rd /s** in quiet mode, the entire directory tree is deleted without confirmation. Ensure that important files are moved or backed up before using the **/q** command-line option.
 
 ## Additional References
 

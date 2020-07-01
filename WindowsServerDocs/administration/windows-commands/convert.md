@@ -1,6 +1,6 @@
 ---
 title: convert
-description: Reference topic for the convert command, which converts a disk from one disk type to another.
+description: Reference article for the convert command, which converts a disk from one disk type to another.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

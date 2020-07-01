@@ -1,6 +1,6 @@
 ---
 title: get-DriverPackageFile
-description: Reference topic for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains. 
+description: Reference article for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

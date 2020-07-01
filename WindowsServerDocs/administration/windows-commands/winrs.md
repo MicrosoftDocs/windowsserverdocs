@@ -1,6 +1,6 @@
 ---
 title: winrs
-description: Reference topic for winrs, which allows you to manage and execute programs remotely.
+description: Reference article for winrs, which allows you to manage and execute programs remotely.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

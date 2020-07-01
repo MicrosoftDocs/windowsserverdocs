@@ -1,6 +1,6 @@
 ---
 title: choice
-description: Reference topic for the choice command, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
+description: Reference article for the choice command, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -35,7 +35,7 @@ choice [/c [<choice1><choice2><…>]] [/n] [/cs] [/t <timeout> /d <choice>] [/m 
 
 ## Remarks
 
-- The **ERRORLEVEL** environment variable is set to the index of the key that the user selects from the list of choices. The first choice in the list returns a value of `1`, the second a value of `2`, and so on. If the user presses a key that is not a valid choice, **choice** sounds a warning beep. 
+- The **ERRORLEVEL** environment variable is set to the index of the key that the user selects from the list of choices. The first choice in the list returns a value of `1`, the second a value of `2`, and so on. If the user presses a key that is not a valid choice, **choice** sounds a warning beep.
 
 - If **choice** detects an error condition, it returns an **ERRORLEVEL** value of `255`. If the user presses CTRL+BREAK or CTRL+C, **choice** returns an **ERRORLEVEL** value of `0`.
 

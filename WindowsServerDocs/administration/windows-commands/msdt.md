@@ -1,6 +1,6 @@
 ---
 title: msdt
-description: Reference topic for the msdt command, which invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
+description: Reference article for the msdt command, which invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

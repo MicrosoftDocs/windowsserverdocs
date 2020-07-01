@@ -1,6 +1,6 @@
 ---
 title: ftp rename
-description: Reference topic for the ftp rename command, which renames remote files.
+description: Reference article for the ftp rename command, which renames remote files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

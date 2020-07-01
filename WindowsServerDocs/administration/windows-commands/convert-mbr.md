@@ -1,6 +1,6 @@
 ---
 title: convert mbr
-description: Reference topic for the convert mbr command, which converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
+description: Reference article for the convert mbr command, which converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

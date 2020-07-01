@@ -1,6 +1,6 @@
 ---
 title: mountvol
-description: Reference topic for the mountvol command, which creates, deletes, or lists a volume mount point.
+description: Reference article for the mountvol command, which creates, deletes, or lists a volume mount point.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

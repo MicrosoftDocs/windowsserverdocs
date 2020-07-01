@@ -1,6 +1,6 @@
 ---
 title: copy-DriverGroup
-description: Reference topic for copy-DriverGroup, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status. 
+description: Reference article for copy-DriverGroup, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

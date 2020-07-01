@@ -1,6 +1,6 @@
 ---
 title: nslookup exit
-description: Reference topic for the nslookup exit command, which exits the nslookup command-line tool.
+description: Reference article for the nslookup exit command, which exits the nslookup command-line tool.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

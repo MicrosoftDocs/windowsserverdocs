@@ -1,6 +1,6 @@
 ---
 title: forfiles
-description: Reference topic for forfiles command, which selects and runs a command on a file or set of files.
+description: Reference article for forfiles command, which selects and runs a command on a file or set of files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

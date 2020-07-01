@@ -1,6 +1,6 @@
 ---
 title: winsat mem
-description: Reference topic for winsat mem, which tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
+description: Reference article for winsat mem, which tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 winms.topic: article
@@ -46,7 +46,7 @@ winsat mem <parameters>
 
 ## Examples
 
-- To runs the assessment for a minimum of 4 seconds and no longer than 12 seconds, using a 32MB buffer size and saving the results in XML format to the file **memtest.xml**.  
+- To runs the assessment for a minimum of 4 seconds and no longer than 12 seconds, using a 32MB buffer size and saving the results in XML format to the file **memtest.xml**.
   ```
   winsat mem -mint 4.0 -maxt 12.0 -buffersize 32MB -xml memtest.xml
   ```

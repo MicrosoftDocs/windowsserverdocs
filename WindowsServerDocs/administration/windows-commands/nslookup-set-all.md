@@ -1,6 +1,6 @@
 ---
 title: nslookup set all
-description: Reference topic for the nslookup set all command, which outputs the current configuration setting values.
+description: Reference article for the nslookup set all command, which outputs the current configuration setting values.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getmodificationtime
-description: Reference topic for the bitsadmin getmodificationtime command, which retrieves the last time the job was modified or data was successfully transferred.
+description: Reference article for the bitsadmin getmodificationtime command, which retrieves the last time the job was modified or data was successfully transferred.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

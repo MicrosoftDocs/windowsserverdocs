@@ -1,6 +1,6 @@
 ---
 title: get-Device
-description: Reference topic for get-Device, which retrieves Windows Deployment Services information about a prestaged computer (that is, a physical computer that has been lined to a computer account in active directory Domain Services.
+description: Reference article for get-Device, which retrieves Windows Deployment Services information about a prestaged computer (that is, a physical computer that has been lined to a computer account in active directory Domain Services.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

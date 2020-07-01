@@ -1,6 +1,6 @@
 ---
 title: Export-Image
-description: Reference topic for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file. 
+description: Reference article for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -53,13 +53,13 @@ mediatype:{Boot &#124; Install}|Specifies the type of image to be exported.|
 To export a boot image, type one of the following:
 ```
 wdsutil /Export-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86 /DestinationImage /Filepath:C:\temp\boot.wim
-wdsutil /verbose /Progress /Export-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim 
+wdsutil /verbose /Progress /Export-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim
 /DestinationImage /Filepath:\\Server\Share\ExportImage.wim /Name:Exported WinPE image /Description:WinPE Image from WDS server /Overwrite:Yes
 ```
 To export an install image, type one of the following:
 ```
 wdsutil /Export-Imagmedia:Windows Vista with Officemediatype:Install /DestinationImage /Filepath:C:\Temp\Install.wim
-wdsutil /verbose /Progress /Export-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /verbose /Progress /Export-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /DestinationImage /Filepath:\\server\share\export.wim /Name:Exported Windows image /Description:Windows Vista image from WDS server /Overwrite:append
 ```
 ## Additional References

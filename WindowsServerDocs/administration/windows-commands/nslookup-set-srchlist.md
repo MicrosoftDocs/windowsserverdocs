@@ -1,6 +1,6 @@
 ---
 title: nslookup set srchlist
-description: Reference topic for the nslookup set srchlist command, which changes the default Domain Name System (DNS) domain name and search list.
+description: Reference article for the nslookup set srchlist command, which changes the default Domain Name System (DNS) domain name and search list.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

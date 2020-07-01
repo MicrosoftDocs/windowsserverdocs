@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getowner
-description: Reference topic for the bitsadmin getowner command, which retrieves the owner of the specified job.
+description: Reference article for the bitsadmin getowner command, which retrieves the owner of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

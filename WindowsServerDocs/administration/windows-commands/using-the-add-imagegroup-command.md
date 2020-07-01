@@ -1,6 +1,6 @@
 ---
 title: add-ImageGroup
-description: Reference topic for add-ImageGroup, which adds an image group to a Windows Deployment Services server. 
+description: Reference article for add-ImageGroup, which adds an image group to a Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

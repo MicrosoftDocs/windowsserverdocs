@@ -1,6 +1,6 @@
 ---
 title: Subcommand stop-TransportServer
-description: Reference topic for stop-TransportServer
+description: Reference article for stop-TransportServer
 
 ms.prod: windows-server
 

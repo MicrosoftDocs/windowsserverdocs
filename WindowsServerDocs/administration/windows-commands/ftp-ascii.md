@@ -1,6 +1,6 @@
 ---
 title: ftp ascii
-description: Reference topic for the ftp ascii command, which sets the file transfer type to ASCII.
+description: Reference article for the ftp ascii command, which sets the file transfer type to ASCII.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

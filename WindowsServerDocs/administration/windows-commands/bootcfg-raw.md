@@ -1,6 +1,6 @@
 ---
 title: bootcfg raw
-description: Reference topic for the bootcfg raw command, which adds operating system load options, specified as a string, to an operating system entry in the operating system section of the Boot.ini file.
+description: Reference article for the bootcfg raw command, which adds operating system load options, specified as a string, to an operating system entry in the operating system section of the Boot.ini file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

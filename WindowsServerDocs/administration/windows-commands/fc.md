@@ -1,6 +1,6 @@
 ---
 title: fc
-description: Reference topic for the fc command, which compares two files or sets of files and displays the differences between them.
+description: Reference article for the fc command, which compares two files or sets of files and displays the differences between them.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: pubprn
-description: Reference topic for the pubprn command, which publishes a printer to the Active Directory Domain Services.
+description: Reference article for the pubprn command, which publishes a printer to the Active Directory Domain Services.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

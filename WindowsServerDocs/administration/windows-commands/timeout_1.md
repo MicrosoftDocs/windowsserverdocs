@@ -1,6 +1,6 @@
 ---
 title: timeout
-description: Reference topic for timeout, which pauses the command processor for the specified number of seconds.
+description: Reference article for timeout, which pauses the command processor for the specified number of seconds.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -20,7 +20,7 @@ Pauses the command processor for the specified number of seconds.
 ## Syntax
 
 ```
-timeout /t <TimeoutInSeconds> [/nobreak] 
+timeout /t <TimeoutInSeconds> [/nobreak]
 ```
 
 ### Parameters

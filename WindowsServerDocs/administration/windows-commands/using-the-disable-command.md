@@ -1,6 +1,6 @@
 ---
 title: disable
-description: Reference topic for disable, which disables all services for Windows Deployment Services. 
+description: Reference article for disable, which disables all services for Windows Deployment Services.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

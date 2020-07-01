@@ -1,6 +1,6 @@
 ---
 title: bootcfg timeout
-description: Reference topic for the bootcfg timeout command, which changes the operating system time-out value.
+description: Reference article for the bootcfg timeout command, which changes the operating system time-out value.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

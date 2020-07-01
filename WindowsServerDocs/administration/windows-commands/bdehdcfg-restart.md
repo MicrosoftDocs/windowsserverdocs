@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg restart
-description: Reference topic for the bdehdcfg restart command, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
+description: Reference article for the bdehdcfg restart command, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

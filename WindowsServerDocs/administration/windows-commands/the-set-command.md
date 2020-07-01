@@ -1,6 +1,6 @@
 ---
 title: set
-description: Reference topic for set, which sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
+description: Reference article for set, which sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

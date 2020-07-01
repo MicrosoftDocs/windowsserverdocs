@@ -1,6 +1,6 @@
 ---
 title: dfsutil
-description: Reference topic for the dfsutil command, which manages DFS Namespaces, servers and clients.
+description: Reference article for the dfsutil command, which manages DFS Namespaces, servers and clients.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

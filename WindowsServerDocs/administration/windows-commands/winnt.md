@@ -1,6 +1,6 @@
 ---
 title: winnt
-description: Reference topic for winnt, which is deprecated, and is not guaranteed to be supported in future releases of Windows.
+description: Reference article for winnt, which is deprecated, and is not guaranteed to be supported in future releases of Windows.
 
 ms.prod: windows-server
 

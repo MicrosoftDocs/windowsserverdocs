@@ -1,6 +1,6 @@
 ---
 title: ftp literal
-description: Reference topic for the ftp literal command, which sends verbatim arguments to the remote ftp server.
+description: Reference article for the ftp literal command, which sends verbatim arguments to the remote ftp server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

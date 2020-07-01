@@ -1,6 +1,6 @@
 ---
 title: diskcomp
-description: Reference topic for the diskcomp command, which compares the contents of two floppy disks.
+description: Reference article for the diskcomp command, which compares the contents of two floppy disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

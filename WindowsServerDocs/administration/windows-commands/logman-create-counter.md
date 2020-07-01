@@ -1,6 +1,6 @@
 ---
 title: logman create counter
-description: Reference topic for the logman create counter command, which creates a counter data collector.
+description: Reference article for the logman create counter command, which creates a counter data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

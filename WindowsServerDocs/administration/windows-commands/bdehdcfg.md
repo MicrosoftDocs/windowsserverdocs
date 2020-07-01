@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg
-description: Reference topic for the bdehdcfg command, which prepares a hard drive with the partitions necessary for BitLocker Drive Encryption.
+description: Reference article for the bdehdcfg command, which prepares a hard drive with the partitions necessary for BitLocker Drive Encryption.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

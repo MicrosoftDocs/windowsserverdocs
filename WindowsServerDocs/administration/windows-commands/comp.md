@@ -1,6 +1,6 @@
 ---
 title: comp
-description: Reference topic for the comp command, which compares the contents of two files or sets of files byte-by-byte.
+description: Reference article for the comp command, which compares the contents of two files or sets of files byte-by-byte.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

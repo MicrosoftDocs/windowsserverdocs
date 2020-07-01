@@ -1,6 +1,6 @@
 ---
 title: detail volume
-description: Reference topic for detail volume, which displays the disks on which the current volume resides.
+description: Reference article for detail volume, which displays the disks on which the current volume resides.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: auditpol resourceSACL
-description: Reference topic for the auditpol resourceSACL command, which configures global resource system access control lists (SAcls).
+description: Reference article for the auditpol resourceSACL command, which configures global resource system access control lists (SAcls).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

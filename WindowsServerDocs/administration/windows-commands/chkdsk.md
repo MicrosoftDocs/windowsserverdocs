@@ -1,6 +1,6 @@
 ---
 title: chkdsk
-description: Reference topic for the chkdsk command, which checks the file system and file system metadata of a volume for logical and physical errors.
+description: Reference article for the chkdsk command, which checks the file system and file system metadata of a volume for logical and physical errors.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -26,7 +26,7 @@ Checks the file system and file system metadata of a volume for logical and phys
 ## Syntax
 
 ```
-chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]] [/b]  
+chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]] [/b]
 ```
 
 ### Parameters
@@ -60,7 +60,7 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 - If you want **chkdsk** to correct disk errors, you can't have open files on the drive. If files are open, the following error message appears:
 
   ```
-  Chkdsk cannot run because the volume is in use by another process. Would you like to schedule this volume to be checked the next time the system restarts? (Y/N)  
+  Chkdsk cannot run because the volume is in use by another process. Would you like to schedule this volume to be checked the next time the system restarts? (Y/N)
   ```
 
 - If you choose to check the drive the next time you restart the computer, **chkdsk** checks the drive and corrects errors automatically when you restart the computer. If the drive partition is a boot partition, **chkdsk** automatically restarts the computer after it checks the drive.
@@ -74,8 +74,8 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
   Because repairs on FAT file systems usually change a disk's file allocation table and sometimes cause a loss of data, **chkdsk** might display a confirmation message similar to the following:
 
   ```
-  10 lost allocation units found in 3 chains.  
-  Convert lost chains to files?  
+  10 lost allocation units found in 3 chains.
+  Convert lost chains to files?
   ```
 
     - If you press **Y**, Windows saves each lost chain in the root directory as a file with a name in the format File`<nnnn>`.chk. When **chkdsk** finishes, you can check these files to see if they contain any data you need.
@@ -98,7 +98,7 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 
 ### Understanding exit codes
 
-The following table lists the exit codes that **chkdsk** reports after it has finished.  
+The following table lists the exit codes that **chkdsk** reports after it has finished.
 
   | Exit code | Description |
   | --------- | ----------- |
@@ -112,7 +112,7 @@ The following table lists the exit codes that **chkdsk** reports after it has fi
 To check the disk in drive D and have Windows fix errors, type:
 
 ```
-chkdsk d: /f  
+chkdsk d: /f
 ```
 
 If it encounters errors, **chkdsk** pauses and displays messages. **Chkdsk** finishes by displaying a report that lists the status of the disk. You cannot open any files on the specified drive until **chkdsk** finishes.
@@ -120,7 +120,7 @@ If it encounters errors, **chkdsk** pauses and displays messages. **Chkdsk** fin
 To check all files on a FAT disk in the current directory for noncontiguous blocks, type:
 
 ```
-chkdsk *.*  
+chkdsk *.*
 ```
 
 **Chkdsk** displays a status report, and then lists the files that match the file specifications that have noncontiguous blocks.

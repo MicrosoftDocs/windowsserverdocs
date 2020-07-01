@@ -1,6 +1,6 @@
 ---
 title: print
-description: Reference topic for the print command, which sends a text file to a printer.
+description: Reference article for the print command, which sends a text file to a printer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
