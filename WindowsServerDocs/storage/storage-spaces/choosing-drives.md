@@ -7,7 +7,7 @@ manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 06/24/2020
+ms.date: 07/01/2020
 ms.localizationpriority: medium
 ---
 # Choosing drives for Storage Spaces Direct
@@ -26,7 +26,7 @@ Storage Spaces Direct currently works with four types of drives:
 			<img src="media/understand-the-cache/pmem-100px.png">
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
-			<b>PMem</b> refers to persistent memory, a new type of memory technology that delivers a unique combination of affordable large capacity and persistence.
+			<b>PMem</b> refers to persistent memory, a new type of low latency, high performance storage.
 		</td>
 	</tr>
 	<tr style="border: 0;">
