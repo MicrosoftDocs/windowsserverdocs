@@ -7,26 +7,34 @@ manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/19/2019
+ms.date: 07/01/2020
 ms.localizationpriority: medium
 ---
 # Choosing drives for Storage Spaces Direct
 
->Applies to: Windows 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance on how to choose drives for [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your performance and capacity requirements.
 
 ## Drive types
 
-Storage Spaces Direct currently works with three types of drives:
+Storage Spaces Direct currently works with four types of drives:
 
 <table>
+	<tr style="border: 0;">
+		<td style="padding: 10px; border: 0; width:70px">
+			<img src="media/understand-the-cache/pmem-100px.png">
+		</td>
+		<td style="padding: 10px; border: 0;" valign="middle">
+			<b>PMem</b> refers to persistent memory, a new type of low latency, high performance storage.
+		</td>
+	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
 			<img src="media/understand-the-cache/NVMe-100px.png">
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
-			<b>NVMe</b> (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today.
+			<b>NVMe</b> (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except persistent memory.
 		</td>
 	</tr>
 	<tr style="border: 0;">
