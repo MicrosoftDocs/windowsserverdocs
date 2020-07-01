@@ -28,7 +28,7 @@ SMBv1 has the following behavior in Windows 10 and Windows Server starting in v
 - Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Network can no longer display Windows computers through the legacy NetBIOS datagram browsing method.    
 - SMBv1 can still be reinstalled in all editions of Windows 10 and Windows Server 2016.    
 
-SMBv1 has the following addditional behaviors in Windows 10 starting in version 1809 (RS5). All other behaviors from version 1709 still apply:
+SMBv1 has the following additional behaviors in Windows 10 starting in version 1809 (RS5). All other behaviors from version 1709 still apply:
 
 - Windows 10 Pro no longer contains the SMBv1 client by default after a clean installation.
 - In Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations an administrator can activate automatic removal of SMBv1 by turning on the "SMB 1.0/CIFS Automatic Removal" feature.
@@ -120,7 +120,7 @@ To work around this issue, contact the manufacturer of the product that support
 [SMBv1 Product Clearinghouse](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/SMB1-Product-Clearinghouse/ba-p/426008) 
 #### Leasing mode
 
-If SMBv1 is required to provide application compatibility for legacy software behavior, such as a requirement to disable oplocks, Windows provides a new SMB share flag that's known as Leasing mode.This flag specifies whether a share disables modern SMB semantics such as leases and oplocks.
+If SMBv1 is required to provide application compatibility for legacy software behavior, such as a requirement to disable oplocks, Windows provides a new SMB share flag that's known as Leasing mode. This flag specifies whether a share disables modern SMB semantics such as leases and oplocks.
 
 You can specify a share without using oplocks or leasing to allow a legacy application to work with SMBv2 or a later version. To do this, use the **New-SmbShare** or **Set-SmbShare** PowerShell cmdlets together with the **-LeasingMode None** parameter.
 
