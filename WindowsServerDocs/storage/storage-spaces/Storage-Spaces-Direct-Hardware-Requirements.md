@@ -74,7 +74,7 @@ Switched or switchless node interconnects
 
 Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) and [Understand and deploy persistent memory](deploy-pmem.md) topics.
 
-- SATA, SAS, PMem, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
+- SATA, SAS, persistent memory, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
