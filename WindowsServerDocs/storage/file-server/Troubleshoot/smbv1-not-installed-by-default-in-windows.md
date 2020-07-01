@@ -12,25 +12,30 @@ ms.date: 12/25/2019
 
 ## Summary
 
-In Windows 10 Fall Creators Update and Windows Server, version 1709 (RS3) and later versions, the Server Message Block version 1 (SMBv1) network protocol is no longer installed by default. It was superseded by SMBv2 and later protocols starting in 2007.Microsoft publicly deprecated the SMBv1 protocol in 2014. 
+In Windows 10 Fall Creators Update and Windows Server, version 1709 (RS3) and later versions, the Server Message Block version 1 (SMBv1) network protocol is no longer installed by default. It was superseded by SMBv2 and later protocols starting in 2007. Microsoft publicly deprecated the SMBv1 protocol in 2014. 
 
-SMBv1 has the following behavior in Windows 10 Fall Creators Update and Windows Server, version 1709 (RS3): 
+SMBv1 has the following behavior in Windows 10 and Windows Server starting in version 1709 (RS3): 
  
 - SMBv1 now has both client and server sub-features that can be uninstalled separately.    
-- Windows 10 Enterprise and Windows 10 Education no longer contain the SMBv1 client or server by default after a clean installation.    
+- Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations no longer contain the SMBv1 client or server by default after a clean installation.    
 - Windows Server 2016 no longer contains the SMBv1 client or server by default after a clean installation.    
-- Windows 10 Home and Windows 10 Professional no longer contain the SMBv1 server by default after a clean installation.    
-- Windows 10 Home and Windows 10 Professional still contain the SMBv1 client by default after a clean installation. If the SMBv1 client is not used for 15 days in total (excluding the computer being turned off), it automatically uninstalls itself.    
-- In-place upgrades and Insider flights of Windows 10 Home and Windows 10 Professional do not automatically remove SMBv1 initially. If the SMBv1 client or server is not used for 15 days in total (excluding the time during which the computer is off), they each automatically uninstall themselves.     
-- In-place upgrades and Insider flights of the Windows 10 Enterprise and Windows 10 Education editions do not automatically remove SMBv1. An administrator must decide to uninstall SMBv1 in these managed environments. In Windows 10, version 1809 (RS5) and later versions, an administrator can activate automatic removal of SMBv1 by turning on the "SMB 1.0/CIFS Automatic Removal" feature.    
+- Windows 10 Home and Windows 10 Pro no longer contain the SMBv1 server by default after a clean installation.    
+- Windows 10 Home and Windows 10 Pro still contain the SMBv1 client by default after a clean installation. If the SMBv1 client is not used for 15 days in total (excluding the computer being turned off), it automatically uninstalls itself.    
+- In-place upgrades and Insider flights of Windows 10 Home and Windows 10 Pro do not automatically remove SMBv1 initially. If the SMBv1 client or server is not used for 15 days in total (excluding the time during which the computer is off), they each automatically uninstall themselves.     
+- In-place upgrades and Insider flights of the Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations editions do not automatically remove SMBv1. An administrator must decide to uninstall SMBv1 in these managed environments. 
 - Automatic removal of SMBv1 after 15 days is a one-time operation. If an administrator re-installs SMBv1, no further attempts will be made to uninstall it.
 - The SMB version 2.02, 2.1, 3.0, 3.02, and 3.1.1 features are still fully supported and included by default as part of the SMBv2 binaries.    
 - Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Network can no longer display Windows computers through the legacy NetBIOS datagram browsing method.    
 - SMBv1 can still be reinstalled in all editions of Windows 10 and Windows Server 2016.    
- 
+
+SMBv1 has the following addditional behaviors in Windows 10 starting in version 1809 (RS5). All other behaviors from version 1709 still apply:
+
+- Windows 10 Pro no longer contains the SMBv1 client by default after a clean installation.
+- In Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations an administrator can activate automatic removal of SMBv1 by turning on the "SMB 1.0/CIFS Automatic Removal" feature.
+
   > [!NOTE]
-  > Windows 10, version 1803 (RS4) Professional handles SMBv1 in the same manner as Windows 10, version 1703 (RS2) and Windows 10, version 1607 (RS1). This issue was fixed in Windows 10, version 1809 (RS5). You can still uninstall SMBv1 manually. However, Windows will not automatically uninstall SMBv1 after 15 days in the following scenarios: 
- 
+  > Windows 10, version 1803 (RS4) Pro handles SMBv1 in the same manner as Windows 10, version 1703 (RS2) and Windows 10, version 1607 (RS1). This issue was fixed in Windows 10, version 1809 (RS5). You can still uninstall SMBv1 manually. However, Windows will not automatically uninstall SMBv1 after 15 days in the following scenarios: 
+
 -  You do a clean install of Windows 10, version 1803.     
 -  You upgrade Windows 10, version 1607 or Windows 10, version 1703 to Windows 10, version 1803 directly without first upgrading to Windows 10, version 1709.     
  
