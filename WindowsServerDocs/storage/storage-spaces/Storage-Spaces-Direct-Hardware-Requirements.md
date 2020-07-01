@@ -79,7 +79,7 @@ Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent 
 - Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
 - Cache devices must be 32 GB or larger
-- PMem devices are used in block storage mode
+- Persistent memory devices are used in block storage mode
 - When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)
 - NVMe driver is the Microsoft-provided one included in Windows (stornvme.sys)
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
