@@ -19,6 +19,8 @@ Windows Admin Center version 1910 allows you to deploy Azure virtual machines. T
 
 Windows Admin Center also manages a variety of Azure services. [Learn more about the Azure integration options available with Windows Admin Center](../plan/azure-integration-options.md).
 
+If you want to lift and shift virtual machines to Azure instead of creating new ones, consider using Azure Migrate. For more info, see [Azure Migrate overview](https://go.microsoft.com/fwlink/?linkid=2056064).
+
 ## Scenarios
 
 Windows Admin Center version 1910 Azure VM deployment supports the following scenarios:
