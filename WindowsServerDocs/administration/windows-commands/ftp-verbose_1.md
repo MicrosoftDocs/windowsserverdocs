@@ -1,6 +1,6 @@
 ---
 title: ftp verbose
-description: Reference topic for the ftp verbose command, which toggles verbose mode.
+description: Reference article for the ftp verbose command, which toggles verbose mode.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

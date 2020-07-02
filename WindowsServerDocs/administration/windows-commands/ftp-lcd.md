@@ -1,6 +1,6 @@
 ---
 title: ftp lcd
-description: Reference topic for the ftp lcd command, which changes the working directory on the local computer.
+description: Reference article for the ftp lcd command, which changes the working directory on the local computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

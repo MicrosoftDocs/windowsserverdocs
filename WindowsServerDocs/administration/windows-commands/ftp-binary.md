@@ -1,6 +1,6 @@
 ---
 title: ftp binary
-description: Reference topic for the ftp binary command, which sets the file transfer type to binary.
+description: Reference article for the ftp binary command, which sets the file transfer type to binary.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

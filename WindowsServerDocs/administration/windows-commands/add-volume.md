@@ -1,6 +1,6 @@
 ---
 title: add volume
-description: Reference topic for the add volume command, which adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied.
+description: Reference article for the add volume command, which adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

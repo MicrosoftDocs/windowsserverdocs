@@ -1,6 +1,6 @@
 ---
 title: replace-Image
-description: Reference topic for replace-Image, which replaces an existing image with a new version of that image.
+description: Reference article for replace-Image, which replaces an existing image with a new version of that image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -52,13 +52,13 @@ mediatype:{Boot &#124; Install}|Specifies the type of image to be replaced.|
 To replace a boot image, type one of the following:
 ```
 wdsutil /replace-Imagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /replacementImagmediaFile:C:\MyFolder\Boot.wim
-wdsutil /verbose /Progress /replace-Imagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim 
+wdsutil /verbose /Progress /replace-Imagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim
 /replacementImagmediaFile:\\MyServer\Share\Boot.wim /Name:My WinPE Image /Description:WinPE Image with drivers
 ```
 To replace an install image, type one of the following:
 ```
 wdsutil /replace-Imagmedia:Windows Vista Homemediatype:Install /replacementImagmediaFile:C:\MyFolder\Install.wim
-wdsutil /verbose /Progress /replace-Imagmedia:Windows Vista Pro /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /verbose /Progress /replace-Imagmedia:Windows Vista Pro /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:Install.wim /replacementImagmediaFile:\\MyServer\Share \Install.wim /SourceImage:Windows Vista Ultimate /Name:Windows Vista Desktop /Description:Windows Vista Ultimate with standard business applications.
 ```
 ## Additional References

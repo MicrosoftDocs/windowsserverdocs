@@ -1,6 +1,6 @@
 ---
 title: disable-TransportServer
-description: Reference topic for disable-TransportServer, which disables all services for a Transport Server. 
+description: Reference article for disable-TransportServer, which disables all services for a Transport Server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

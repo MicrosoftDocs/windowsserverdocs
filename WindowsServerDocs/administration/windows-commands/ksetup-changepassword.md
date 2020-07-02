@@ -1,6 +1,6 @@
 ---
 title: ksetup changepassword
-description: Reference topic for the ksetup changepassword command, which uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user.
+description: Reference article for the ksetup changepassword command, which uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

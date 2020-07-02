@@ -1,6 +1,6 @@
 ---
 title: tskill
-description: Reference topic for tskill, which ends a process running in a session on a Remote Desktop Session Host server.
+description: Reference article for tskill, which ends a process running in a session on a Remote Desktop Session Host server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

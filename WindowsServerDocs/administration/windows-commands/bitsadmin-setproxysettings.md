@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setproxysettings
-description: Reference topic for the bitsadmin setproxysettings command, which sets the proxy settings for the specified job.
+description: Reference article for the bitsadmin setproxysettings command, which sets the proxy settings for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: telnet
-description: Reference topic for telnet, which communicates with a computer running the telnet Server service.
+description: Reference article for telnet, which communicates with a computer running the telnet Server service.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

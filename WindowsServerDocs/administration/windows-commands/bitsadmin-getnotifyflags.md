@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifyflags
-description: Reference topic for the bitsadmin getnotifyflags command, which retrieves the notification flags for the specified job.
+description: Reference article for the bitsadmin getnotifyflags command, which retrieves the notification flags for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

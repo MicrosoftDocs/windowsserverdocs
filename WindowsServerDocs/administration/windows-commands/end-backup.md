@@ -1,6 +1,6 @@
 ---
 title: end backup
-description: Reference topic for the end backup command, which ends a full backup session and issues a **BackupComplete** event with the appropriate writer state, if needed.
+description: Reference article for the end backup command, which ends a full backup session and issues a **BackupComplete** event with the appropriate writer state, if needed.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: ksetup
-description: Reference topic for the ksetup command, which performs tasks related to setting up and maintaining Kerberos protocol and the Key Distribution Center (KDC) to support Kerberos realms.
+description: Reference article for the ksetup command, which performs tasks related to setting up and maintaining Kerberos protocol and the Key Distribution Center (KDC) to support Kerberos realms.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: type
-description: Reference topic for type, which displays the contents of a text file. 
+description: Reference article for type, which displays the contents of a text file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -38,11 +38,11 @@ type [<Drive>:][<Path>]<FileName>
 
 To display the contents of a file named Holiday.mar, type:
 ```
-type holiday.mar 
+type holiday.mar
 ```
 To display the contents of a lengthy file named Holiday.mar one screen at a time, type:
 ```
-type holiday.mar | more 
+type holiday.mar | more
 ```
 
 ## Additional References

@@ -1,6 +1,6 @@
 ---
 title: ftp mdir
-description: Reference topic for the ftp mdir command, which displays a directory list of files and subdirectories in a remote directory.
+description: Reference article for the ftp mdir command, which displays a directory list of files and subdirectories in a remote directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

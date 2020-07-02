@@ -1,6 +1,6 @@
 ---
 title: dfsdiag testdcs
-description: Reference topic for the dfsdiag testdcs command, which checks the configuration of domain controllers in the specified domain.
+description: Reference article for the dfsdiag testdcs command, which checks the configuration of domain controllers in the specified domain.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

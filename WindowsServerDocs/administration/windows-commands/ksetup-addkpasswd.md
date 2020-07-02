@@ -1,6 +1,6 @@
 ---
 title: ksetup addkpasswd
-description: Reference topic for the ksetup addkpasswd command, which adds a Kerberos password (kpasswd) server address for a realm.
+description: Reference article for the ksetup addkpasswd command, which adds a Kerberos password (kpasswd) server address for a realm.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

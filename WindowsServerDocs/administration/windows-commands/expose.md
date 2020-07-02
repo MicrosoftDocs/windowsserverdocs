@@ -1,6 +1,6 @@
 ---
 title: expose
-description: Reference topic for the expose command, which exposes a persistent shadow copy as a drive letter, share, or mount point.
+description: Reference article for the expose command, which exposes a persistent shadow copy as a drive letter, share, or mount point.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: enable-Server
-description: Reference topic for enable-Server, which enables all services for Windows Deployment Services. 
+description: Reference article for enable-Server, which enables all services for Windows Deployment Services.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

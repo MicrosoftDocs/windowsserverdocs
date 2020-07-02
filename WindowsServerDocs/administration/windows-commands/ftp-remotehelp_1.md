@@ -1,6 +1,6 @@
 ---
 title: ftp remotehelp
-description: Reference topic for the ftp remotehelp command, which displays help for remote commands.
+description: Reference article for the ftp remotehelp command, which displays help for remote commands.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

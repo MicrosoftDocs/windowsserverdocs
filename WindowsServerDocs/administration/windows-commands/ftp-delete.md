@@ -1,6 +1,6 @@
 ---
 title: ftp delete
-description: Reference topic for the ftp delete command, which deletes files on remote computers.
+description: Reference article for the ftp delete command, which deletes files on remote computers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

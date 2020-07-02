@@ -1,6 +1,6 @@
 ---
 title: ftp dir
-description: Reference topic for the ftp dir command, which displays a list of directory files and subdirectories on a remote computer.
+description: Reference article for the ftp dir command, which displays a list of directory files and subdirectories on a remote computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

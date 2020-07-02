@@ -1,6 +1,6 @@
 ---
 title: logman update
-description: Reference topic for the logman update command, which updates an existing data collector.
+description: Reference article for the logman update command, which updates an existing data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

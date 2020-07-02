@@ -1,6 +1,6 @@
 ---
 title: create partition logical
-description: Reference topic for the create partition logical command, which creates a logical partition in an existing extended partition.
+description: Reference article for the create partition logical command, which creates a logical partition in an existing extended partition.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

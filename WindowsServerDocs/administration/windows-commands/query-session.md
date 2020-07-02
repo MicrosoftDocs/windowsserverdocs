@@ -1,6 +1,6 @@
 ---
 title: query session
-description: Reference topic for the query session command, which displays information about sessions on a Remote Desktop Session Host server.
+description: Reference article for the query session command, which displays information about sessions on a Remote Desktop Session Host server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

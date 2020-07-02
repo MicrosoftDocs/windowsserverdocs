@@ -1,6 +1,6 @@
 ---
 title: Diskraid
-description: Reference topic for the Diskraid command-line tool, which enables you to configure and manage redundant array of independent (or inexpensive) disks (RAID) storage subsystems.
+description: Reference article for the Diskraid command-line tool, which enables you to configure and manage redundant array of independent (or inexpensive) disks (RAID) storage subsystems.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

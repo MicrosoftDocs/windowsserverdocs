@@ -1,6 +1,6 @@
 ---
 title: wevtutil
-description: Reference topic for wevtutil, which lets you retrieve information about event logs and publishers.
+description: Reference article for wevtutil, which lets you retrieve information about event logs and publishers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

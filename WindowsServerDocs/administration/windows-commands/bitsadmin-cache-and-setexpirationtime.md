@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and setexpirationtime
-description: Reference topic for the bitsadmin cache and setexpirationtime command, which sets the cache expiration time.
+description: Reference article for the bitsadmin cache and setexpirationtime command, which sets the cache expiration time.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

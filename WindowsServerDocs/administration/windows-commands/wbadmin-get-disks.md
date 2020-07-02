@@ -1,6 +1,6 @@
 ---
 title: wbadmin get disks
-description: Reference topic for wbadmin get disks, which lists the internal and external disks that are currently online for the local computer.
+description: Reference article for wbadmin get disks, which lists the internal and external disks that are currently online for the local computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

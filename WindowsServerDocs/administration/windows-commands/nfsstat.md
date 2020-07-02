@@ -1,6 +1,6 @@
 ---
 title: nfsstat
-description: Reference topic for the nfsstat command, which displays statistical info about the Network File System (NFS) and Remote Procedure Call (RPC) calls.
+description: Reference article for the nfsstat command, which displays statistical info about the Network File System (NFS) and Remote Procedure Call (RPC) calls.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

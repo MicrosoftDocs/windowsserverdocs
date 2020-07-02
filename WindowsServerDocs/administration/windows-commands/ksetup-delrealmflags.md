@@ -1,6 +1,6 @@
 ---
 title: ksetup delrealmflags
-description: Reference topic for the ksetup delrealmflags command, which removes realm flags from the specified realm.
+description: Reference article for the ksetup delrealmflags command, which removes realm flags from the specified realm.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

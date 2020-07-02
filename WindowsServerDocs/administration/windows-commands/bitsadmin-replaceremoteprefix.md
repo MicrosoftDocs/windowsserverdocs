@@ -1,6 +1,6 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: Reference topic for the bitsadmin replaceremoteprefix command, which changes the remote URL for all files in the job from *oldprefix* to *newprefix*, as necessary.
+description: Reference article for the bitsadmin replaceremoteprefix command, which changes the remote URL for all files in the job from *oldprefix* to *newprefix*, as necessary.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

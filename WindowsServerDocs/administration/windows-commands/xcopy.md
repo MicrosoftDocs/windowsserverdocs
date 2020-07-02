@@ -1,6 +1,6 @@
 ---
 title: xcopy
-description: Reference topic for xcopy, which copies files and directories, including subdirectories.
+description: Reference article for xcopy, which copies files and directories, including subdirectories.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

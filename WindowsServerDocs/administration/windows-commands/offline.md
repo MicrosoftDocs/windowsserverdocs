@@ -1,6 +1,6 @@
 ---
 title: offline
-description: Reference topic for the offline command, which takes an online disk or volume to the offline state.
+description: Reference article for the offline command, which takes an online disk or volume to the offline state.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: goto
-description: Reference topic for the goto command, which directs cmd.exe to a labeled line in a batch program.
+description: Reference article for the goto command, which directs cmd.exe to a labeled line in a batch program.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

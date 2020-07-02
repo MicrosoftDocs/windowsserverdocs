@@ -1,6 +1,6 @@
 ---
 title: logman update api
-description: Reference topic for the logman update api command, which updates the properties of an existing API tracking data collector.
+description: Reference article for the logman update api command, which updates the properties of an existing API tracking data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

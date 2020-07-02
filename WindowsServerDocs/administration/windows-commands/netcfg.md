@@ -1,6 +1,6 @@
 ---
 title: netcfg
-description: Reference topic for the netcfg command, which installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
+description: Reference article for the netcfg command, which installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: tpmtool
-description: Reference topic for tpmtool, which gets information about the Trusted Platform Module.
+description: Reference article for tpmtool, which gets information about the Trusted Platform Module.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setminretrydelay
-description: Reference topic for the bitsadmin setminretrydelay command, which sets the minimum length of time, in seconds, that BITS waits after encountering a transient error before trying to transfer the file. 
+description: Reference article for the bitsadmin setminretrydelay command, which sets the minimum length of time, in seconds, that BITS waits after encountering a transient error before trying to transfer the file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

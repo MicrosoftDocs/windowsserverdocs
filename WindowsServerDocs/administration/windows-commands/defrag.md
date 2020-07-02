@@ -1,6 +1,6 @@
 ---
 title: defrag
-description: Reference topic for the defrag command, which locates and consolidates fragmented files on local volumes to improve system performance.
+description: Reference article for the defrag command, which locates and consolidates fragmented files on local volumes to improve system performance.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

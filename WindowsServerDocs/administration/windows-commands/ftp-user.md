@@ -1,6 +1,6 @@
 ---
 title: ftp user
-description: Reference topic for the ftp user command, which specifies a user to the remote computer.
+description: Reference article for the ftp user command, which specifies a user to the remote computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

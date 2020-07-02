@@ -1,6 +1,6 @@
 ---
 title: prompt
-description: Reference topic for the prompt command, which customizes your Cmd.exe command prompt.
+description: Reference article for the prompt command, which customizes your Cmd.exe command prompt.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

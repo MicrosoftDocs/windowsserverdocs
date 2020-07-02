@@ -1,6 +1,6 @@
 ---
 title: netsh
-description: Reference topic for the netsh command, which is a command-line scripting utility that allows you to, either locally or remotely, display or modify the network configuration of a currently running computer.
+description: Reference article for the netsh command, which is a command-line scripting utility that allows you to, either locally or remotely, display or modify the network configuration of a currently running computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin reset
-description: Reference topic for the bitsadmin reset command, which cancels all jobs in the transfer queue owned by the current user.
+description: Reference article for the bitsadmin reset command, which cancels all jobs in the transfer queue owned by the current user.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

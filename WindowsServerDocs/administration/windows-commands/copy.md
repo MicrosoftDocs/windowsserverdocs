@@ -1,6 +1,6 @@
 ---
 title: copy
-description: Reference topic for the copy command, which copies one or more files from one location to another.
+description: Reference article for the copy command, which copies one or more files from one location to another.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -61,7 +61,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
 - If a write operation cannot be verified, an error message appears. Although recording errors rarely occur with the **copy** command , you can use **/v** to verify that critical data has been correctly recorded. The **/v** command-line option also slows down the **copy** command, because each sector recorded on the disk must be checked.
 
 - If **/y** is preset in the **COPYCMD** environment variable, you can override this setting by using **/-y** at the command line. By default, you are prompted when you replace this setting, unless the **copy** command is executed in a batch script.
-  
+
 - To append files, specify a single file for *destination*, but multiple files for *source* (use wildcard characters or *file1*+*file2*+*file3* format).
 
 - If the connection is lost during the copy phase (for example, if the server going offline breaks the connection), you can use **copy /z** to resume after the connection is re-established. The **/z** option also displays the percentage of the copy operation that is completed for each file.
@@ -81,7 +81,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
 
 - To copy files that are 0 bytes long, or to copy all of a directory's files and subdirectories, use the [xcopy command](xcopy.md).
 
-- To assign the current time and date to a file without modifying the file, use the following syntax:  
+- To assign the current time and date to a file without modifying the file, use the following syntax:
 
     ```
     copy /b <source> +,,

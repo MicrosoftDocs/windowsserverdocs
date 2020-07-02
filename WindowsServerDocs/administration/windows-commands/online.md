@@ -1,6 +1,6 @@
 ---
 title: online
-description: Reference topic for the online command, which takes an offline disk or volume to the online state.
+description: Reference article for the online command, which takes an offline disk or volume to the online state.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

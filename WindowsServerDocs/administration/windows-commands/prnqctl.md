@@ -1,6 +1,6 @@
 ---
 title: prnqctl
-description: Reference topic for the prnqctl command, which prints a test page, and pauses or resumes a printer.
+description: Reference article for the prnqctl command, which prints a test page, and pauses or resumes a printer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

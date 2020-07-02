@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util
-description: Reference topic for the bitsadmin util command, which lists the Util switches.
+description: Reference article for the bitsadmin util command, which lists the Util switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: list providers
-description: Reference topic for the list providers command, which lists shadow copy providers that are currently registered on the system.
+description: Reference article for the list providers command, which lists shadow copy providers that are currently registered on the system.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

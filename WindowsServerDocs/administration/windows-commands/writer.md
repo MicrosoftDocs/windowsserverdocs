@@ -1,6 +1,6 @@
 ---
 title: writer
-description: Reference topic for writer, which verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.
+description: Reference article for writer, which verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

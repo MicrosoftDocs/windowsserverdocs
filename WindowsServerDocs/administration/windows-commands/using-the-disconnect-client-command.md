@@ -1,6 +1,6 @@
 ---
 title: Disconnect-Client
-description: Reference topic for Disconnect-Client, which disconnects a client from a multicast transmission or namespace. 
+description: Reference article for Disconnect-Client, which disconnects a client from a multicast transmission or namespace.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

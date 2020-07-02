@@ -1,6 +1,6 @@
 ---
 title: import diskpart
-description: Reference topic for the import command, which imports a foreign disk group into the disk group of the local computer.
+description: Reference article for the import command, which imports a foreign disk group into the disk group of the local computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

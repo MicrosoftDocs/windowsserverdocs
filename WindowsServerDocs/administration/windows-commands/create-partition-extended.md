@@ -1,6 +1,6 @@
 ---
 title: create partition extended
-description: Reference topic for the create partition extended command, which creates an extended partition on the disk with focus.
+description: Reference article for the create partition extended command, which creates an extended partition on the disk with focus.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: logman
-description: Reference topic for the logman command, which creates and manages Event Trace Session and Performance logs and supports many functions of Performance Monitor from the command line.
+description: Reference article for the logman command, which creates and manages Event Trace Session and Performance logs and supports many functions of Performance Monitor from the command line.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

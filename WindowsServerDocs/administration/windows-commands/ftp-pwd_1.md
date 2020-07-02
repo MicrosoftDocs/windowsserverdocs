@@ -1,6 +1,6 @@
 ---
 title: ftp pwd
-description: Reference topic for the ftp pwd command, which displays the current remote computer directory.
+description: Reference article for the ftp pwd command, which displays the current remote computer directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

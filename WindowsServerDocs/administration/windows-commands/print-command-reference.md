@@ -1,6 +1,6 @@
 ---
 title: Print command-line tool reference
-description: Reference topic for using the print command-line tools.
+description: Reference article for using the print command-line tools.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

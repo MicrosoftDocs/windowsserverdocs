@@ -1,6 +1,6 @@
 ---
 title: wbadmin
-description: Reference topic for wbadmin, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.  
+description: Reference article for wbadmin, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.
 
 ms.prod: windows-server
 

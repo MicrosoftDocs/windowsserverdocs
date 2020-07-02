@@ -1,6 +1,6 @@
 ---
 title: tsdiscon
-description: Reference topic for tsdiscon, which disconnects a session from a remote Desktop Session Host server. 
+description: Reference article for tsdiscon, which disconnects a session from a remote Desktop Session Host server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

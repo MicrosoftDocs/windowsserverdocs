@@ -1,6 +1,6 @@
 ---
 title: PowerShell
-description: Reference topic for the PowerShell command, which opens the PowerShell console from a command prompt.
+description: Reference article for the PowerShell command, which opens the PowerShell console from a command prompt.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

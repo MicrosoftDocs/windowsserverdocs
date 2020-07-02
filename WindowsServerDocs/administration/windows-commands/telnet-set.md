@@ -1,6 +1,6 @@
 ---
 title: telnet set
-description: Reference topic for telnet set, which sets options.
+description: Reference article for telnet set, which sets options.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin removecredentials
-description: Reference topic for the bitsadmin removecredentials command, which removes credentials from a job.
+description: Reference article for the bitsadmin removecredentials command, which removes credentials from a job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

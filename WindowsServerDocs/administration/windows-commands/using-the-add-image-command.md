@@ -1,6 +1,6 @@
 ---
 title: add-Image
-description: Reference topic for add-Image, which adds images to a Windows Deployment Services server.
+description: Reference article for add-Image, which adds images to a Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -19,7 +19,7 @@ Adds images to a Windows Deployment Services server.
 ## Syntax
 for boot images, use the following syntax:
 ```
-wdsutil /add-ImagmediaFile:<wim file path> [/Server:<Server name>mediatype:Boot [/Skipverify] [/Name:<Image name>] [/Description:<Image description>] 
+wdsutil /add-ImagmediaFile:<wim file path> [/Server:<Server name>mediatype:Boot [/Skipverify] [/Name:<Image name>] [/Description:<Image description>]
 [/Filename:<New wim file name>]
 ```
 for install images, use the following syntax:
@@ -52,13 +52,13 @@ mediatype:{Boot&#124;Install}|Specifies the type of images to be added.|
 To add a boot image, type:
 ```
 wdsutil /add-ImagmediaFile:C:\MyFolder\Boot.wimmediatype:Boot
-wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share\Boot.wim /Server:MyWDSServemediatype:Boot /Name:My WinPE Image 
+wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share\Boot.wim /Server:MyWDSServemediatype:Boot /Name:My WinPE Image
 /Description:WinPE Image containing the WDS Client /Filename:WDSBoot.wim
 ```
 To add an install image, type one of the following:
 ```
 wdsutil /add-ImagmediaFile:C:\MyFolder\Install.wimmediatype:Install
-wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /SingleImage:Windows Pro /Name:My WDS Image
 /Description:Windows Pro image with Microsoft Office /Filename:Win Pro.wim /UnattendFile:\\server\share\unattend.xml
 ```

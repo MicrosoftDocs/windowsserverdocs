@@ -1,6 +1,6 @@
 ---
 title: cmstp
-description: Reference topic for cmstp, which installs or removes a Connection Manager service profile.
+description: Reference article for cmstp, which installs or removes a Connection Manager service profile.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

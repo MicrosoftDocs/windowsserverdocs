@@ -1,6 +1,6 @@
 ---
 title: cprofile
-description: Reference topic for the cprofile command. This command has been deprecated and is not guaranteed to be supported in future releases of Windows.
+description: Reference article for the cprofile command. This command has been deprecated and is not guaranteed to be supported in future releases of Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

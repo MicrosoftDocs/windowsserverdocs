@@ -1,6 +1,6 @@
 ---
 title: get-AllImages
-description: Reference topic for get-AllImages, which retrieves information about all images on a server.
+description: Reference article for get-AllImages, which retrieves information about all images on a server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: pushd
-description: Reference topic for the pushd command, which stores the current directory for use by the popd command, and then changes to the specified directory.
+description: Reference article for the pushd command, which stores the current directory for use by the popd command, and then changes to the specified directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

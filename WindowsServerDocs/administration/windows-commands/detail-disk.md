@@ -1,6 +1,6 @@
 ---
 title: detail disk
-description: Reference topic for the detail disk command, which displays the properties of the selected disk and the volumes on that disk.
+description: Reference article for the detail disk command, which displays the properties of the selected disk and the volumes on that disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: cscript
-description: Reference topic for the cscript command, which starts a script so that it runs in a command-line environment.
+description: Reference article for the cscript command, which starts a script so that it runs in a command-line environment.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

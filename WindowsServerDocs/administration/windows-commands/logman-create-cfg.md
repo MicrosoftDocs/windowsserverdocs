@@ -1,6 +1,6 @@
 ---
 title: logman create cfg
-description: Reference topic for the logman create cfg command, which creates a configuration data collector.
+description: Reference article for the logman create cfg command, which creates a configuration data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

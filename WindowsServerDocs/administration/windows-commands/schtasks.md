@@ -1,6 +1,6 @@
 ---
 title: schtasks
-description: Reference topic for **** - 
+description: Reference article for **** -
 
 ms.prod: windows-server
 
@@ -34,16 +34,16 @@ To view the command syntax, click one of the following commands:
 - **SchTasks.exe** performs the same operations as **Scheduled Tasks** in **Control Panel**. You can use these tools together and interchangeably.
 - **Schtasks** replaces **At.exe**, a tool included in previous versions of Windows. Although **At.exe** is still included in the Windows Server 2003 family, **schtasks** is the recommended command-line task scheduling tool.
 - The parameters in a **schtasks** command can appear in any order. Typing **schtasks** without any parameters performs a query.
-- Permissions for **schtasks**  
+- Permissions for **schtasks**
   -   You must have permission to run the command. Any user can schedule a task on the local computer, and they can view and change the tasks that they scheduled. Members of the Administrators group can schedule, view, and change all tasks on the local computer.
   -   To schedule, view, or change a task on a remote computer, you must be member of the Administrators group on the remote computer, or you must use the **/u** parameter to provide the credentials of an Administrator of the remote computer.
   -   You can use the **/u** parameter in a **/create** or **/change** operation only when the local and remote computers are in the same domain or the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer cannot authenticate the user account specified and it cannot verify that the account is a member of the Administrators group.
   -   The task must have permission to run. The permissions required vary with the task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. To run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
 - To verify that a scheduled task ran or to find out why a scheduled task did not run, see the Task Scheduler service transaction log, *SystemRoot*\SchedLgU.txt. This log records attempted runs initiated by all tools that use the service, including **Scheduled Tasks** and **SchTasks.exe**.
-- On rare occasions, task files become corrupted. Corrupted tasks do not run. When you try to perform an operation on corrupted tasks, **SchTasks.exe** displays the following error message:  
+- On rare occasions, task files become corrupted. Corrupted tasks do not run. When you try to perform an operation on corrupted tasks, **SchTasks.exe** displays the following error message:
   ```
   ERROR: The data is invalid.
-  ```  
+  ```
   You cannot recover corrupted tasks. To restore the task scheduling features of the system, use **SchTasks.exe** or **Scheduled Tasks** to delete the tasks from the system and reschedule them.
 
 ## <a name=BKMK_create></a>schtasks create
@@ -433,7 +433,7 @@ The following command schedules the MyApp program to run every other month on th
 
 The command uses the **/mo** parameter to specify the monthly interval (every two months), the **/d** parameter to specify the date, and the **/st** to specify the time. It also uses the **/sd** and **/ed** parameters to specify the start date and end date, respectively. Because the local computer is set to the **English (South Africa)** option in **Regional and Language Options** in **Control Panel**, the dates are specified in the local format, YYYY/MM/DD.
 ```
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00:00 /sd 2002/07/01 /ed 2003/06/30 
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00:00 /sd 2002/07/01 /ed 2003/06/30
 ```
 
 ### <a name=BKMK_spec_day></a>To schedule a task that runs on a specific day of the week
@@ -763,20 +763,20 @@ SUCCESS: The scheduled task My App has successfully been created.
 Each task runs only one program. However, you can create a batch file that runs multiple programs and then schedule a task to run the batch file. The following procedure demonstrates this method:
 1. Create a batch file that starts the programs you want to run.
 
-   In this example, you create a batch file that starts Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe).  
+   In this example, you create a batch file that starts Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe).
    - Open a text editor, such as Notepad.
-   - Type the name and fully qualified path to the executable file for each program. In this case, the file includes the following statements.  
+   - Type the name and fully qualified path to the executable file for each program. In this case, the file includes the following statements.
      ```
-     C:\Windows\System32\Eventvwr.exe 
+     C:\Windows\System32\Eventvwr.exe
      C:\Windows\System32\Perfmon.exe
-     ```  
+     ```
    - Save the file as MyApps.bat.
 2. Use **Schtasks.exe** to create a task that runs MyApps.bat.
 
-   The following command creates the Monitor task, which runs whenever anyone logs on. It uses the **/tn** parameter to name the task, and the **/tr** parameter to run MyApps.bat. It uses the **/sc** parameter to indicate the OnLogon schedule type and the **/ru** parameter to run the task with the permissions of the user's Administrator account.  
+   The following command creates the Monitor task, which runs whenever anyone logs on. It uses the **/tn** parameter to name the task, and the **/tr** parameter to run MyApps.bat. It uses the **/sc** parameter to indicate the OnLogon schedule type and the **/ru** parameter to run the task with the permissions of the user's Administrator account.
    ```
    schtasks /create /tn Monitor /tr C:\MyApps.bat /sc onlogon /ru Reskit\Administrator
-   ```  
+   ```
    As a result of this command, whenever a user logs on to the computer, the task starts both Event Viewer and System Monitor.
 
 ### <a name=BKMK_remote></a>To schedule a task that runs on a remote computer
@@ -959,7 +959,7 @@ schtasks /change /tn ChkNews /tr c:\program files\Internet Explorer\iexplore.exe
 ```
 In response, **SchTasks.exe** requests the password for the user account. It obscures the text you type, so the password is not visible.
 ```
-Please enter the password for DomainX\Admin01: 
+Please enter the password for DomainX\Admin01:
 ```
 Note that the **/tn** parameter identifies the task and that the **/tr** and **/ru** parameters change the properties of the task. You cannot use another parameter to identify the task and you cannot change the task name.
 
@@ -973,7 +973,7 @@ As a result of this command, the ChkNews task now runs Internet Explorer with th
 
 The following command changes the SecurityScript task so that it runs with permissions of the System account. It uses the **/ru ** parameter to indicate the System account.
 ```
-schtasks /change /tn SecurityScript /ru 
+schtasks /change /tn SecurityScript /ru
 ```
 In response, **SchTasks.exe** displays the following success message:
 ```
@@ -1147,7 +1147,7 @@ schtasks /delete /tn Start Mail /s Svr16
 ```
 In response, **SchTasks.exe** displays the following confirmation message. To delete the task, press Y<strong>.</strong> To cancel the command, type **n**:
 ```
-WARNING: Are you sure you want to remove the task Start Mail (Y/N )? 
+WARNING: Are you sure you want to remove the task Start Mail (Y/N )?
 SUCCESS: The scheduled task Start Mail was successfully deleted.
 ```
 

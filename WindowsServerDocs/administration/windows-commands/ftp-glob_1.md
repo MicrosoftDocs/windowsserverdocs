@@ -1,6 +1,6 @@
 ---
 title: ftp glob
-description: Reference topic for the ftp glob command, which toggles allowing wildcard expansion for local file names.
+description: Reference article for the ftp glob command, which toggles allowing wildcard expansion for local file names.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

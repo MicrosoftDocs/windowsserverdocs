@@ -1,6 +1,6 @@
 ---
 title: copy
-description: Reference topic for copy, which copies an image or a driver group.
+description: Reference article for copy, which copies an image or a driver group.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

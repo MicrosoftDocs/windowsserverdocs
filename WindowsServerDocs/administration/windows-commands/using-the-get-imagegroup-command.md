@@ -1,6 +1,6 @@
 ---
 title: get-ImageGroup
-description: Reference topic for get-ImageGroup, which retrieves information about an image group and the images in it.
+description: Reference article for get-ImageGroup, which retrieves information about an image group and the images in it.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

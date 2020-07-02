@@ -1,6 +1,6 @@
 ---
 title: mapadmin
-description: Reference topic for the mapadmin command, which manages User Name Mapping for Microsoft Services for Network File System.
+description: Reference article for the mapadmin command, which manages User Name Mapping for Microsoft Services for Network File System.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

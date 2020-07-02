@@ -1,6 +1,6 @@
 ---
 title: telnet quit
-description: Reference topic for telnet quit,which exits telnet.
+description: Reference article for telnet quit,which exits telnet.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

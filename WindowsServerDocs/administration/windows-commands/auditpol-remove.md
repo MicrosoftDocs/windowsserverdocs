@@ -1,6 +1,6 @@
 ---
 title: auditpol remove
-description: Reference topic for the auditpol remove command, which removes the per-user audit policy for a specified account or all accounts.
+description: Reference article for the auditpol remove command, which removes the per-user audit policy for a specified account or all accounts.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

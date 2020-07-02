@@ -1,6 +1,6 @@
 ---
 title: certutil
-description: Reference topic for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
+description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -248,101 +248,101 @@ Where:
 - **infoname** indicates the CA property to display, based on the following infoname argument syntax:
 
   - **file** - File version
-  
+
   - **product** - Product version
-  
+
   - **exitcount** - Exit module count
-  
+
   - **exit `[index]`** - Exit module description
-  
+
   - **policy** - Policy module description
-  
+
   - **name** - CA name
-  
+
   - **sanitizedname** - Sanitized CA name
-  
+
   - **dsname** - Sanitized CA short name (DS name)
-  
+
   - **sharedfolder** - Shared folder
-  
+
   - **error1 ErrorCode** - Error message text
-  
+
   - **error2 ErrorCode** - Error message text and error code
-  
+
   - **type** - CA type
-  
+
   - **info** - CA info
-  
+
   - **parent** - Parent CA
-  
+
   - **certcount** - CA cert count
-  
+
   - **xchgcount** - CA exchange cert count
-  
+
   - **kracount** - KRA cert count
-  
+
   - **kraused** - KRA cert used count
-  
+
   - **propidmax** - Maximum CA PropId
-  
+
   - **certstate `[index]`** - CA cert
-  
+
   - **certversion `[index]`** - CA cert version
-  
+
   - **certstatuscode `[index]`** - CA cert verify status
-  
+
   - **crlstate `[index]`** - CRL
-  
+
   - **krastate `[index]`** - KRA cert
-  
+
   - **crossstate+ `[index]`** - Forward cross cert
-  
+
   - **crossstate- `[index]`** - Backward cross cert
-  
+
   - **cert `[index]`** - CA cert
-  
+
   - **certchain `[index]`** - CA cert chain
-  
+
   - **certcrlchain `[index]`** - CA cert chain with CRLs
-  
+
   - **xchg `[index]`** - CA exchange cert
-  
+
   - **xchgchain `[index]`** - CA exchange cert chain
 
   - **xchgcrlchain `[index]`** - CA exchange cert chain with CRLs
-  
+
   - **kra `[index]`** - KRA cert
-  
+
   - **cross+ `[index]`** - Forward cross cert
-  
+
   - **cross- `[index]`** - Backward cross cert
-  
+
   - **CRL `[index]`** - Base CRL
-  
+
   - **deltacrl `[index]`** - Delta CRL
-  
+
   - **crlstatus `[index]`** - CRL Publish Status
-  
+
   - **deltacrlstatus `[index]`** - Delta CRL Publish Status
-  
+
   - **dns** - DNS Name
-  
+
   - **role** - Role Separation
-  
+
   - **ads** - Advanced Server
-  
+
   - **templates** - Templates
-  
+
   - **csp `[index]`** - OCSP URLs
-  
+
   - **aia `[index]`** - AIA URLs
-  
+
   - **cdp `[index]`** - CDP URLs
-  
+
   - **localename** - CA locale name
-  
+
   - **subjecttemplateoids** - Subject Template OIDs
-  
+
   - **&#42;** - Displays all properties
 
 - **index** is the optional zero-based property index.
@@ -475,7 +475,7 @@ Where:
 - The command defaults to the Request and Certificate table.
 
 - **ext** is the extension table.
-  
+
 - **attribute** is the attribute table.
 
 - **crl** is the CRL table.
@@ -503,7 +503,7 @@ Where:
 - **revoked** dumps the revoked certificates.
 
 - **ext** dumps the extension table.
-  
+
 - **attribute** dumps the attribute table.
 
 - **crl** dumps the CRL table.
@@ -559,7 +559,7 @@ Where:
 - **cert** deletes the expired and revoked certificates, based on expiration date.
 
 - **ext** deletes the extension table.
-  
+
 - **attribute** deletes the attribute table.
 
 - **crl** deletes the CRL table.
@@ -697,19 +697,19 @@ Where:
 - **modifiers** are the comma-separated list, which can include one or more of the following:
 
   1. **AT_SIGNATURE** - Changes the keyspec to signature
-  
+
   2. **AT_KEYEXCHANGE** - Changes the keyspec to key exchange
-  
+
   3. **NoExport** - Makes the private key non-exportable
-  
+
   4. **NoCert** - Doesn't import the certificate
-  
+
   5. **NoChain** - Doesn't import the certificate chain
-  
+
   6. **NoRoot** - Doesn't import the root certificate
-  
+
   7. **Protect** - Protects keys by using a password
-  
+
   8. **NoProtect** - Doesn't password protect keys by using a password
 
 ```
@@ -765,17 +765,17 @@ Where:
 - **certificatestorename** is the certificate store name. For example:
 
   - `My, CA (default), Root,`
-  
+
   - `ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)`
-  
+
   - `ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)`
-  
+
   - `ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)`
-  
+
   - `ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)`
-  
+
   - `ldap: (AD computer object certificates)`
-  
+
   - `-user ldap: (AD user object certificates)`
 
 - **certID** is the certificate or CRL match token. This can be a serial number, a SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
@@ -1464,7 +1464,7 @@ Where:
   - optional date plus
 
   - optional days and hours validity period
-  
+
   If both are specified, you must use a plus sign (+) separator. Use `now[+dd:hh]` to start at the current time. Use `never` to have no expiration date (for CRLs only).
 
 - **serialnumberlist** is the comma-separated serial number list of the files to add or remove.
@@ -1527,7 +1527,7 @@ Where:
 - **addenrollmentserver** requires you to use an authentication method for the client connection to the Certificate Enrollment Server, including:
 
   - **kerberos** uses Kerberos SSL credentials.
-  
+
   - **username** uses named account for SSL credentials.
 
   - **clientcertificate** uses X.509 Certificate SSL credentials.
@@ -1553,7 +1553,7 @@ Where:
 - **deleteenrollmentserver** requires you to use an authentication method for the client connection to the Certificate Enrollment Server, including:
 
   - **kerberos** uses Kerberos SSL credentials.
-  
+
   - **username** uses named account for SSL credentials.
 
   - **clientcertificate** uses X.509 Certificate SSL credentials.
@@ -1575,7 +1575,7 @@ Where:
 - **addpolicyserver** requires you to use an authentication method for the client connection to the Certificate Policy Server, including:
 
   - **kerberos** uses Kerberos SSL credentials.
-  
+
   - **username** uses named account for SSL credentials.
 
   - **clientcertificate** uses X.509 Certificate SSL credentials.
@@ -1593,7 +1593,7 @@ Where:
 - **deletepolicyserver** requires you to use an authentication method for the client connection to the Certificate Policy Server, including:
 
   - **kerberos** uses Kerberos SSL credentials.
-  
+
   - **username** uses named account for SSL credentials.
 
   - **clientcertificate** uses X.509 Certificate SSL credentials.
@@ -1629,7 +1629,7 @@ Where:
 - **Type** is the type of DS object to create, including:
 
   - `1` - Template (default)
-  
+
   - `2` - Issuance Policy
 
   - `3` - Application Policy
@@ -1843,15 +1843,15 @@ Where:
 - **searchtoken** selects the keys and certificates to be recovered, including:
 
   - 1. Certificate Common Name
-  
+
   - 2. Certificate Serial Number
-  
+
   - 3. Certificate SHA-1 hash (thumbprint)
-  
+
   - 4. Certificate KeyId SHA-1 hash (Subject Key Identifier)
-  
+
   - 5. Requester Name (domain\user)
-  
+
   - 6. UPN (user\@domain)
 
 - **recoverybloboutfile** outputs a file with a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
@@ -1941,7 +1941,7 @@ Where:
 
 Displays the list of parameters.
 
-``` 
+```
 certutil -?
 certutil <name_of_parameter> -?
 certutil -? -v

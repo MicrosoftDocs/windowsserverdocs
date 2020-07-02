@@ -1,6 +1,6 @@
 ---
 title: openfiles
-description: Reference topic for the openfiles command, which enables an administrator to query, display, or disconnect files and directories that have been opened on a system.
+description: Reference article for the openfiles command, which enables an administrator to query, display, or disconnect files and directories that have been opened on a system.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

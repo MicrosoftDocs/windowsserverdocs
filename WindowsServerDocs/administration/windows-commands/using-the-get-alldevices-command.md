@@ -1,6 +1,6 @@
 ---
 title: get-AllDevices
-description: Reference topic for get-AllDevices, which displays the Windows Deployment Services properties of all prestaged computers.
+description: Reference article for get-AllDevices, which displays the Windows Deployment Services properties of all prestaged computers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

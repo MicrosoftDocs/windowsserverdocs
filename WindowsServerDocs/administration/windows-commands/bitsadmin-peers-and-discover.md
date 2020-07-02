@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and discover
-description: Reference topic for the bitsadmin peers and discover command, which discovers peers again.
+description: Reference article for the bitsadmin peers and discover command, which discovers peers again.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

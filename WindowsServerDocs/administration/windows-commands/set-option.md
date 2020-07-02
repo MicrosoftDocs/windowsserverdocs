@@ -1,6 +1,6 @@
 ---
 title: Set option
-description: Reference topic for Set option, which sets the options for shadow copy creation.
+description: Reference article for Set option, which sets the options for shadow copy creation.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

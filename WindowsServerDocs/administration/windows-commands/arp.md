@@ -1,6 +1,6 @@
 ---
 title: arp
-description: Reference topic for the arp command, which displays and modifies entries in the address Resolution Protocol (arp) cache used to store IP addresses and their resolved physical addresses.
+description: Reference article for the arp command, which displays and modifies entries in the address Resolution Protocol (arp) cache used to store IP addresses and their resolved physical addresses.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

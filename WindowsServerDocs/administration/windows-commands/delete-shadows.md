@@ -1,6 +1,6 @@
 ---
 title: delete shadows
-description: Reference topic for the delete shadows command, which deletes shadow copies.
+description: Reference article for the delete shadows command, which deletes shadow copies.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

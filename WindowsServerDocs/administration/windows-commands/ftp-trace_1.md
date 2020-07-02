@@ -1,6 +1,6 @@
 ---
 title: ftp trace
-description: Reference topic for the ftp trace command, which toggles packet tracing.
+description: Reference article for the ftp trace command, which toggles packet tracing.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

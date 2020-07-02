@@ -1,6 +1,6 @@
 ---
 title: autofmt
-description: Reference topic for the autofmt command, which formats a drive or partition when called from the Windows Recovery Console.
+description: Reference article for the autofmt command, which formats a drive or partition when called from the Windows Recovery Console.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

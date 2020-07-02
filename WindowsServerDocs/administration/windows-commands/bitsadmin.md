@@ -1,6 +1,6 @@
 ---
 title: bitsadmin
-description: Reference topic for the bitsadmin command, which is a command-line tool used to create, download, or upload jobs and monitor their progress.
+description: Reference article for the bitsadmin command, which is a command-line tool used to create, download, or upload jobs and monitor their progress.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

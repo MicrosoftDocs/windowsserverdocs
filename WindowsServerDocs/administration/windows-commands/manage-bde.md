@@ -1,6 +1,6 @@
 ---
 title: manage-bde
-description: Reference topic for the manage-bde command, which turns on or turns off BitLocker, specifies unlock mechanisms, updates recovery methods, and unlocks BitLocker-protected data drives.
+description: Reference article for the manage-bde command, which turns on or turns off BitLocker, specifies unlock mechanisms, updates recovery methods, and unlocks BitLocker-protected data drives.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

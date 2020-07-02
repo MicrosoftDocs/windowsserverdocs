@@ -1,6 +1,6 @@
 ---
 title: rem
-description: Reference topic for **** - 
+description: Reference article for **** -
 
 ms.prod: windows-server
 
@@ -51,8 +51,8 @@ rem  This batch program formats and checks new disks.
 rem  It is named Checknew.bat.
 rem
 rem echo Insert new disk in Drive B.
-pause 
-format b: /v chkdsk b: 
+pause
+format b: /v chkdsk b:
 ```
 To include an explanatory comment before the **prompt** command in your CONFIG.SYS file, add the following lines to CONFIG.SYS:
 ```

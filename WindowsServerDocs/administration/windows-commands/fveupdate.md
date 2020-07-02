@@ -1,6 +1,6 @@
 ---
 title: fveupdate
-description: Reference topic for the fveupdate tool, which is an internal tool used by the setup program when a computer is upgraded.
+description: Reference article for the fveupdate tool, which is an internal tool used by the setup program when a computer is upgraded.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

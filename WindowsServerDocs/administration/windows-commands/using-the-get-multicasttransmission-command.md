@@ -1,6 +1,6 @@
 ---
 title: get-MulticastTransmission
-description: Reference topic for get-MulticastTransmission, which displays information about the multicast transmission for a specified image.
+description: Reference article for get-MulticastTransmission, which displays information about the multicast transmission for a specified image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -19,7 +19,7 @@ Displays information about the multicast transmission for a specified image.
 ## Syntax
 **Windows Server 2008**
 ```
-wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>] 
+wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>]
 [/Filename:<File name>] [/Show:Clients]
 ```
 **Windows Server 2008 R2**

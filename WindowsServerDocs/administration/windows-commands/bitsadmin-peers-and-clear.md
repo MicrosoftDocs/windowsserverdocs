@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and clear
-description: Reference topic for the bitsadmin peers and clear command, which clears the peer list.
+description: Reference article for the bitsadmin peers and clear command, which clears the peer list.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

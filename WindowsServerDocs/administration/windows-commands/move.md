@@ -1,6 +1,6 @@
 ---
 title: move
-description: Reference topic for the move command, which moves one or more files from one directory to another directory.
+description: Reference article for the move command, which moves one or more files from one directory to another directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

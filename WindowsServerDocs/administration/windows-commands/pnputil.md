@@ -1,6 +1,6 @@
 ---
 title: pnputil
-description: Reference topic for the pnputil command, which adds driver packages, removes driver packages, and lists driver packages that are in the driver store, using the pnputil.exe utility.
+description: Reference article for the pnputil command, which adds driver packages, removes driver packages, and lists driver packages that are in the driver store, using the pnputil.exe utility.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

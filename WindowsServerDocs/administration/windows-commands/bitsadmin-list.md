@@ -1,6 +1,6 @@
 ---
 title: bitsadmin list
-description: Reference topic for the bitsadmin list command, which lists the transfer jobs owned by the current user.
+description: Reference article for the bitsadmin list command, which lists the transfer jobs owned by the current user.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

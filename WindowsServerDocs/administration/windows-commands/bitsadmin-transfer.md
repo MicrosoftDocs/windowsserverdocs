@@ -1,6 +1,6 @@
 ---
 title: bitsadmin transfer
-description: Reference topic for the bitsadmin transfer command, which transfers one or more files.
+description: Reference article for the bitsadmin transfer command, which transfers one or more files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getdescription
-description: Reference topic for the bitsadmin getdescription command, which retrieves the description of the specified job.
+description: Reference article for the bitsadmin getdescription command, which retrieves the description of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

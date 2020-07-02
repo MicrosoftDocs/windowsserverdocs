@@ -1,6 +1,6 @@
 ---
 title: prnjobs
-description: Reference topic for the prnjobs command, which pauses, resumes, cancels, and lists print jobs.
+description: Reference article for the prnjobs command, which pauses, resumes, cancels, and lists print jobs.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

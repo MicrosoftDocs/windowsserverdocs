@@ -1,6 +1,6 @@
 ---
 title: finger
-description: Reference topic for the finger command, which displays information about users on a specified remote computer running the finger service or daemon.
+description: Reference article for the finger command, which displays information about users on a specified remote computer running the finger service or daemon.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bootcfg debug
-description: Reference topic for the bootcfg debug command, which adds or changes the debug settings for a specified operating system entry.
+description: Reference article for the bootcfg debug command, which adds or changes the debug settings for a specified operating system entry.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

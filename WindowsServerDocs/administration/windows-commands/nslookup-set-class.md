@@ -1,6 +1,6 @@
 ---
 title: nslookup set class
-description: Reference topic for the nslookup set class command, which changes the query class.
+description: Reference article for the nslookup set class command, which changes the query class.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

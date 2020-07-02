@@ -1,6 +1,6 @@
 ---
 title: create partition efi
-description: Reference topic for the create partition efi command, which creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (gpt) disk on Itanium-based computers.
+description: Reference article for the create partition efi command, which creates an Extensible Firmware Interface (EFI) system partition on a GUID Partition Table (gpt) disk on Itanium-based computers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

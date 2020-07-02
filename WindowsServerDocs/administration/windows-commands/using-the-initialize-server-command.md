@@ -1,6 +1,6 @@
 ---
 title: Initialize-Server
-description: Reference topic for Initialize-Server, which configures a Windows Deployment Services server for initial use after the server role has been installed.
+description: Reference article for Initialize-Server, which configures a Windows Deployment Services server for initial use after the server role has been installed.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

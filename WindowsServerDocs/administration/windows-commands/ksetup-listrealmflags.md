@@ -1,6 +1,6 @@
 ---
 title: ksetup listrealmflags
-description: Reference topic for the ksetup listrealmflags command, which lists the available realm flags that can be reported by ksetup.
+description: Reference article for the ksetup listrealmflags command, which lists the available realm flags that can be reported by ksetup.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
