@@ -1,6 +1,6 @@
 ---
 title: attach vdisk
-description: Reference topic for the attach vdisk command, which attaches (sometimes called mounts or surfaces) a virtual hard disk (VHD) so that it appears on the host computer as a local hard disk drive.
+description: Reference article for the attach vdisk command, which attaches (sometimes called mounts or surfaces) a virtual hard disk (VHD) so that it appears on the host computer as a local hard disk drive.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

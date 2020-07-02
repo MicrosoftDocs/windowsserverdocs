@@ -1,6 +1,6 @@
 ---
 title: prnport
-description: Reference topic for the prnport command, which creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
+description: Reference article for the prnport command, which creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

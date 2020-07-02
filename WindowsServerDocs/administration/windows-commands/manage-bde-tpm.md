@@ -1,6 +1,6 @@
 ---
 title: manage-bde tpm
-description: Reference topic for the manage-bde tpm command, which configures the computer's Trusted Platform Module (TPM).
+description: Reference article for the manage-bde tpm command, which configures the computer's Trusted Platform Module (TPM).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

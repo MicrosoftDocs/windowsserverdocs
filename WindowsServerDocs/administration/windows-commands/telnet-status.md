@@ -1,6 +1,6 @@
 ---
 title: telnet status
-description: Reference topic for telnet status, which displays status information.
+description: Reference article for telnet status, which displays status information.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: convert dynamic
-description: Reference topic for the convert dynamic command, which converts a basic disk into a dynamic disk.
+description: Reference article for the convert dynamic command, which converts a basic disk into a dynamic disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

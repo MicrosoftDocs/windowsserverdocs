@@ -1,6 +1,6 @@
 ---
 title: nslookup set vc
-description: Reference topic for the nslookup set vc command, which specifies whether to use a virtual circuit when sending requests to the server.
+description: Reference article for the nslookup set vc command, which specifies whether to use a virtual circuit when sending requests to the server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

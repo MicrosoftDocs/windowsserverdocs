@@ -1,6 +1,6 @@
 ---
 title: New
-description: Reference topic for New, which creates capture and discover images, multicast transmissions, and namespaces. 
+description: Reference article for New, which creates capture and discover images, multicast transmissions, and namespaces.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

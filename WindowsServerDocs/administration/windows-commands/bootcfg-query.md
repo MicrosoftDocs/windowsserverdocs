@@ -1,6 +1,6 @@
 ---
 title: bootcfg query
-description: Reference topic for the bootcfg query command, which queries and displays the boot loader and operating system section entries from Boot.ini.
+description: Reference article for the bootcfg query command, which queries and displays the boot loader and operating system section entries from Boot.ini.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -34,7 +34,7 @@ bootcfg /query [/s <computer> [/u <domain>\<user> /p <password>]]
 #### Sample output
 
 Sample output for the **bootcfg /query** command:
-  
+
 ```
 Boot Loader Settings
 ----------

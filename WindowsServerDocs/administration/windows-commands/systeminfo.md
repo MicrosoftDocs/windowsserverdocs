@@ -1,6 +1,6 @@
 ---
 title: systeminfo
-description: Reference topic for systeminfo, which displays detailed configuration information about a computer and its operating system, including operating system configuration, security information, product ID, and hardware properties (such as RAM, disk space, and network cards).
+description: Reference article for systeminfo, which displays detailed configuration information about a computer and its operating system, including operating system configuration, security information, product ID, and hardware properties (such as RAM, disk space, and network cards).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

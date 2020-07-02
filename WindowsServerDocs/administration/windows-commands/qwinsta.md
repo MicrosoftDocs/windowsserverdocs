@@ -1,6 +1,6 @@
 ---
 title: qwinsta
-description: Reference topic for the qwinsta command, which displays information about sessions on a Remote Desktop Session Host server.
+description: Reference article for the qwinsta command, which displays information about sessions on a Remote Desktop Session Host server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: hostname
-description: Reference topic for the hostname command, which displays the host name portion of the full computer name of the computer.
+description: Reference article for the hostname command, which displays the host name portion of the full computer name of the computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

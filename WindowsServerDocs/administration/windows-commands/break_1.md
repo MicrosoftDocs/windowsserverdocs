@@ -1,6 +1,6 @@
 ---
 title: break
-description: Reference topic for the break command. This command is no longer in use.
+description: Reference article for the break command. This command is no longer in use.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -29,5 +29,5 @@ break=[on|off]
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-  
+
 - [break command](break.md)

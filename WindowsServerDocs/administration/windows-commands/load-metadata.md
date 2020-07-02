@@ -1,6 +1,6 @@
 ---
 title: load metadata
-description: Reference topic for the load metadata command, which loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore.
+description: Reference article for the load metadata command, which loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

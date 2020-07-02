@@ -1,6 +1,6 @@
 ---
 title: pwlauncher
-description: Reference topic for the pwlauncher command, which enables or disables the Windows To Go Startup Options (pwlauncher).
+description: Reference article for the pwlauncher command, which enables or disables the Windows To Go Startup Options (pwlauncher).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

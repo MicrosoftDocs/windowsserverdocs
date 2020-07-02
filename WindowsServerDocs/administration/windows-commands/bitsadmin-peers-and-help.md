@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers and help
-description: Reference topic for the bitsadmin peers and help command, which displays the command-line usage for the /peers switches.
+description: Reference article for the bitsadmin peers and help command, which displays the command-line usage for the /peers switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

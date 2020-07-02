@@ -1,6 +1,6 @@
 ---
 title: prncnfg
-description: Reference topic for the prncnfg command, which configures or displays configuration information about a printer.
+description: Reference article for the prncnfg command, which configures or displays configuration information about a printer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

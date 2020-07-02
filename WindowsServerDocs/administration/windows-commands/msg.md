@@ -1,6 +1,6 @@
 ---
 title: msg
-description: Reference topic for the msg command, which sends a message to a user on a Remote Desktop Session Host server
+description: Reference article for the msg command, which sends a message to a user on a Remote Desktop Session Host server
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

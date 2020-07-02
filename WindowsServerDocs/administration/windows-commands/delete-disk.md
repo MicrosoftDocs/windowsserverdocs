@@ -1,6 +1,6 @@
 ---
 title: delete disk
-description: Reference topic for the delete disk command, which deletes a missing dynamic disk from the list of disks.
+description: Reference article for the delete disk command, which deletes a missing dynamic disk from the list of disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

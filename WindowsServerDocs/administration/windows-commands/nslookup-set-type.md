@@ -1,6 +1,6 @@
 ---
 title: nslookup set type
-description: Reference topic for the nslookup set type command, which changes the resource record type for the query.
+description: Reference article for the nslookup set type command, which changes the resource record type for the query.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

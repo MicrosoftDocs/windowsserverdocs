@@ -1,6 +1,6 @@
 ---
 title: bootcfg copy
-description: Reference topic for the bootcfg copy command, which makes a copy of an existing boot entry, to which you can add command-line options.
+description: Reference article for the bootcfg copy command, which makes a copy of an existing boot entry, to which you can add command-line options.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

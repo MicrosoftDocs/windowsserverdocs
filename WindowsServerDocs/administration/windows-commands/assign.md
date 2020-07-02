@@ -1,6 +1,6 @@
 ---
 title: assign
-description: Reference topic for the assign command, which assigns a drive letter or mount point to the volume with focus.
+description: Reference article for the assign command, which assigns a drive letter or mount point to the volume with focus.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

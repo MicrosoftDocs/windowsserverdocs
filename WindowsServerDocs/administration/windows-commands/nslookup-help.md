@@ -1,6 +1,6 @@
 ---
 title: nslookup help
-description: Reference topic for the nslookup help command, which displays the subcommand help content.
+description: Reference article for the nslookup help command, which displays the subcommand help content.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

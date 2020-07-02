@@ -1,6 +1,6 @@
 ---
 title: Subcommand start-TransportServer
-description: Reference topic for Subcommand start-TransportServer, which starts all services for a Transport Server.
+description: Reference article for Subcommand start-TransportServer, which starts all services for a Transport Server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

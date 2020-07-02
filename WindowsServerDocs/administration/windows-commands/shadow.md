@@ -1,6 +1,6 @@
 ---
 title: shadow
-description: Reference topic for shadow, which enables you to remotely control an active session of another user on a Remote Desktop Session Host server.  
+description: Reference article for shadow, which enables you to remotely control an active session of another user on a Remote Desktop Session Host server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

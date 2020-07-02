@@ -1,6 +1,6 @@
 ---
 title: nslookup set search
-description: Reference topic for the nslookup set search command, which appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received.
+description: Reference article for the nslookup set search command, which appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

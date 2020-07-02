@@ -1,6 +1,6 @@
 ---
 title: unexpose
-description: Reference topic for unexpose, which unexposes a shadow copy that was exposed by using the expose command. 
+description: Reference article for unexpose, which unexposes a shadow copy that was exposed by using the expose command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

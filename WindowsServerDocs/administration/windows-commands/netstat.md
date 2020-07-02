@@ -1,6 +1,6 @@
 ---
 title: netstat
-description: Reference topic for the netstat command, which displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPv4 statistics, and IPv6 statistics.
+description: Reference article for the netstat command, which displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPv4 statistics, and IPv6 statistics.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

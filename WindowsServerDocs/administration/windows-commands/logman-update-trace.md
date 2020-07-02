@@ -1,6 +1,6 @@
 ---
 title: logman update trace
-description: Reference topic for the logman update trace command, which updates the properties of an existing event trace data collector.
+description: Reference article for the logman update trace command, which updates the properties of an existing event trace data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

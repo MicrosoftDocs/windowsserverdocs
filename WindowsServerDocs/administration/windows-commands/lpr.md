@@ -1,6 +1,6 @@
 ---
 title: lpr
-description: Reference topic for the lpr command, which sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
+description: Reference article for the lpr command, which sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

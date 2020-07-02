@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcompletiontime
-description: Reference topic for the bitsadmin getcompletiontime command, which retrieves the time that the job finished transferring data.
+description: Reference article for the bitsadmin getcompletiontime command, which retrieves the time that the job finished transferring data.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

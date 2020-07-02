@@ -1,6 +1,6 @@
 ---
 title: cipher
-description: Reference topic for the cipher command, which displays or alters the encryption of directories and files on NTFS volumes. 
+description: Reference article for the cipher command, which displays or alters the encryption of directories and files on NTFS volumes.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

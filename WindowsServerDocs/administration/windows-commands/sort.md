@@ -1,6 +1,6 @@
 ---
 title: sort
-description: Reference topic for sort, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
+description: Reference article for sort, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifyinterface
-description: Reference topic for the bitsadmin getnotifyinterface command, which determines if another program has registered a COM callback interface for the specified job.
+description: Reference article for the bitsadmin getnotifyinterface command, which determines if another program has registered a COM callback interface for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

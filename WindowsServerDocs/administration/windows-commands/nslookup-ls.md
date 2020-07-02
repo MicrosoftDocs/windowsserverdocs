@@ -1,6 +1,6 @@
 ---
 title: nslookup ls
-description: Reference topic for the nslookup ls command, which lists DNS domain information.
+description: Reference article for the nslookup ls command, which lists DNS domain information.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

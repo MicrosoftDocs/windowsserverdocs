@@ -1,6 +1,6 @@
 ---
 title: delete-AutoaddDevices
-description: Reference topic for delete-AutoaddDevices, which deletes computers that are pending, rejected, or approved from the Auto-add database. 
+description: Reference article for delete-AutoaddDevices, which deletes computers that are pending, rejected, or approved from the Auto-add database.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

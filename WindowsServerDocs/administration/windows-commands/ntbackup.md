@@ -1,6 +1,6 @@
 ---
 title: ntbackup
-description: Reference topic for the ntbackup command, which has been replaced by the wbadmin command.
+description: Reference article for the ntbackup command, which has been replaced by the wbadmin command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

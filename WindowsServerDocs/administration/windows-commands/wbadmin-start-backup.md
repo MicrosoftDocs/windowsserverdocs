@@ -1,6 +1,6 @@
 ---
 title: wbadmin start backup
-description: Reference topic for wbadmin start backup, which creates a backup using specified parameters.
+description: Reference article for wbadmin start backup, which creates a backup using specified parameters.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

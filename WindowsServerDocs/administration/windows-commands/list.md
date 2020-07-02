@@ -1,6 +1,6 @@
 ---
 title: list
-description: Reference topic for the list command, which displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs).
+description: Reference article for the list command, which displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

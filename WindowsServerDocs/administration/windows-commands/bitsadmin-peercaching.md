@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching
-description: Reference topic for the bitsadmin peercaching command, which lists the /peercaching switches.
+description: Reference article for the bitsadmin peercaching command, which lists the /peercaching switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

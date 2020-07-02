@@ -1,6 +1,6 @@
 ---
 title: query
-description: Reference topic for the query command, which displays information about processes, sessions, and Remote Desktop Session Host servers.
+description: Reference article for the query command, which displays information about processes, sessions, and Remote Desktop Session Host servers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

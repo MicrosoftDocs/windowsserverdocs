@@ -1,6 +1,6 @@
 ---
 title: help
-description: Reference topic for the help command, which displays a list of the available commands or detailed help information on a specified command.
+description: Reference article for the help command, which displays a list of the available commands or detailed help information on a specified command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

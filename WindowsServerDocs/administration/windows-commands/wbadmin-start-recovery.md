@@ -1,6 +1,6 @@
 ---
 title: wbadmin start recovery
-description: Reference topic for wbadmin start recovery, which runs a recovery operation based on the parameters that you specify. 
+description: Reference article for wbadmin start recovery, which runs a recovery operation based on the parameters that you specify.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -76,7 +76,7 @@ wbadmin start recovery -version:03/31/2013-09:00 -itemType:File -items:d:\folder
 ```
 To run a recovery of the backup from March 31, 2013, taken at 9:00 A.M., of the volume \\\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\, type:
 ```
-wbadmin start recovery -version:03/31/2013-09:00 -itemType:Volume 
+wbadmin start recovery -version:03/31/2013-09:00 -itemType:Volume
 -items:\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
 ```
 To run a recovery of the backup from April 30, 2013, taken at 9:00 A.M., of the shared folder \\\\servername\share from server01, type:

@@ -1,6 +1,6 @@
 ---
 title: nbtstat
-description: Reference topic for the nbtstat command, which displays NetBIOS over TCP/IP (NetBT) protocol statistics, NetBIOS name tables for both the local computer and remote computers, and the NetBIOS name cache.
+description: Reference article for the nbtstat command, which displays NetBIOS over TCP/IP (NetBT) protocol statistics, NetBIOS name tables for both the local computer and remote computers, and the NetBIOS name cache.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

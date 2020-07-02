@@ -1,6 +1,6 @@
 ---
 title: taskkill
-description: Reference topic for taskkill, which ends one or more tasks or processes.
+description: Reference article for taskkill, which ends one or more tasks or processes.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

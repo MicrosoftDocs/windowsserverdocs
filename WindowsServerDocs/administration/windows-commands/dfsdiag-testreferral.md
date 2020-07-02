@@ -1,6 +1,6 @@
 ---
 title: dfsdiag testreferral
-description: Reference topic for the dfsdiag testreferral command, which checks Distributed File System (DFS) referrals.
+description: Reference article for the dfsdiag testreferral command, which checks Distributed File System (DFS) referrals.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

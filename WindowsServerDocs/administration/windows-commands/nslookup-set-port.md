@@ -1,6 +1,6 @@
 ---
 title: nslookup set port
-description: Reference topic for the nslookup set port command, which changes the default TCP/UDP Domain Name System (DNS) name server port to the specified value.
+description: Reference article for the nslookup set port command, which changes the default TCP/UDP Domain Name System (DNS) name server port to the specified value.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

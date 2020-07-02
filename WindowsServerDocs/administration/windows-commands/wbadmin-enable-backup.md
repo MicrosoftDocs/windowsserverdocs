@@ -1,6 +1,6 @@
 ---
 title: wbadmin enable backup
-description: Reference topic for wbadmin enable backup, which creates and enables a daily backup schedule or modifies an existing backup schedule.
+description: Reference article for wbadmin enable backup, which creates and enables a daily backup schedule or modifies an existing backup schedule.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

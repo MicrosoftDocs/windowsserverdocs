@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peers
-description: Reference topic for the bitsadmin peers command, which lists the /peers switches.
+description: Reference article for the bitsadmin peers command, which lists the /peers switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

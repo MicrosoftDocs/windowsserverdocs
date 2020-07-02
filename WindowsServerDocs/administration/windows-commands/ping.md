@@ -1,6 +1,6 @@
 ---
 title: ping
-description: Reference topic for the ping command, which verifies network connectivity.
+description: Reference article for the ping command, which verifies network connectivity.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

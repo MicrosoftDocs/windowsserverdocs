@@ -1,6 +1,6 @@
 ---
 title: tsprof
-description: Reference topic for tsprof, which copies the Remote Desktop Services user configuration information from one user to another. 
+description: Reference article for tsprof, which copies the Remote Desktop Services user configuration information from one user to another.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

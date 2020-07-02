@@ -1,6 +1,6 @@
 ---
 title: path
-description: Reference topic for setting the command path in the PATH environment variable, specifying the set of directories used to search for executable (.exe) files.
+description: Reference article for setting the command path in the PATH environment variable, specifying the set of directories used to search for executable (.exe) files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: break
-description: Reference topic for the break command, which breaks the mirrored volume with focus into two simple volumes.
+description: Reference article for the break command, which breaks the mirrored volume with focus into two simple volumes.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

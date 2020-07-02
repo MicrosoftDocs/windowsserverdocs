@@ -1,6 +1,6 @@
 ---
 title: findstr
-description: Reference topic for the findstr command, which searches for patterns of text in files.
+description: Reference article for the findstr command, which searches for patterns of text in files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

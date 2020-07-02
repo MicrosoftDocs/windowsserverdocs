@@ -1,6 +1,6 @@
 ---
 title: extend
-description: Reference topic for the extend command, which extends the volume or partition with focus and its file system into free (unallocated) space on a disk.
+description: Reference article for the extend command, which extends the volume or partition with focus and its file system into free (unallocated) space on a disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

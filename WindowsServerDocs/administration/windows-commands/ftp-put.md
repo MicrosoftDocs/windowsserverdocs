@@ -1,6 +1,6 @@
 ---
 title: ftp put
-description: Reference topic for the ftp put command, which copies a local file to the remote computer using the current file transfer type.
+description: Reference article for the ftp put command, which copies a local file to the remote computer using the current file transfer type.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: Subcommand start-MulticastTransmission
-description: Reference topic for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
+description: Reference article for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

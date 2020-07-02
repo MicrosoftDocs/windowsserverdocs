@@ -1,6 +1,6 @@
 ---
 title: ksetup delkdc
-description: Reference topic for the ksetup delkdc command, which deletes instances of Key Distribution Center (KDC) names for the Kerberos realm.
+description: Reference article for the ksetup delkdc command, which deletes instances of Key Distribution Center (KDC) names for the Kerberos realm.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

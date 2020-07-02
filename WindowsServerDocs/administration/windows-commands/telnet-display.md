@@ -1,6 +1,6 @@
 ---
 title: telnet display
-description: Reference topic for telnet display, which displays operating parameters.
+description: Reference article for telnet display, which displays operating parameters.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

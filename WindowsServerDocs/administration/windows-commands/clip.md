@@ -1,6 +1,6 @@
 ---
 title: clip
-description: Reference topic for the clip command, which redirects the command output from the command line to the Windows clipboard. 
+description: Reference article for the clip command, which redirects the command output from the command line to the Windows clipboard.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

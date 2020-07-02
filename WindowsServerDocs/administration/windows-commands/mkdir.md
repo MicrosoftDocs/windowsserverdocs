@@ -1,6 +1,6 @@
 ---
 title: mkdir
-description: Reference topic for the mkdir command, which creates a directory or subdirectory.
+description: Reference article for the mkdir command, which creates a directory or subdirectory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

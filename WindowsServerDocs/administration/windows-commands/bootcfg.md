@@ -1,6 +1,6 @@
 ---
 title: bootcfg
-description: Reference topic for the bootcfg command, which configures, queries, or changes Boot.ini file settings.
+description: Reference article for the bootcfg command, which configures, queries, or changes Boot.ini file settings.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -19,8 +19,8 @@ Configures, queries, or changes Boot.ini file settings.
 
 ## Syntax
 
-```  
-bootcfg <parameter> [arguments...]  
+```
+bootcfg <parameter> [arguments...]
 ```
 
 ### Parameters

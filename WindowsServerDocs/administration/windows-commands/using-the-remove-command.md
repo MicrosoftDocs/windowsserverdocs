@@ -1,6 +1,6 @@
 ---
 title: remove
-description: Reference topic for remove, which removes various driver-related information. 
+description: Reference article for remove, which removes various driver-related information.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

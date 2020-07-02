@@ -1,6 +1,6 @@
 ---
 title: bitsadmin peercaching and setconfigurationflags
-description: Reference topic for the bitsadmin peercaching and setconfigurationflags command, which sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers.
+description: Reference article for the bitsadmin peercaching and setconfigurationflags command, which sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

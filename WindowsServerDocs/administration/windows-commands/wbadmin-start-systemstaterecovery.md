@@ -1,6 +1,6 @@
 ---
 title: wbadmin start systemstaterecovery
-description: Reference topic for wbadmin start systemstaterecovery, which performs a system state recovery to a location, and from a backup, that you specify.
+description: Reference article for wbadmin start systemstaterecovery, which performs a system state recovery to a location, and from a backup, that you specify.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

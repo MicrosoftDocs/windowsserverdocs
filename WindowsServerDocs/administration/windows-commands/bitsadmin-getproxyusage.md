@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxyusage
-description: Reference topic for the bitsadmin getproxyusage command, which retrieves the proxy usage setting for the specified job.
+description: Reference article for the bitsadmin getproxyusage command, which retrieves the proxy usage setting for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

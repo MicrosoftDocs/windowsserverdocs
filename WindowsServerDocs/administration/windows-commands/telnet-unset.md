@@ -1,6 +1,6 @@
 ---
 title: telnet unset
-description: Reference topic for telnet unset, which turns off previously set options.
+description: Reference article for telnet unset, which turns off previously set options.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

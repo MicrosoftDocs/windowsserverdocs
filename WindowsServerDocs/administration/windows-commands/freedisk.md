@@ -1,6 +1,6 @@
 ---
 title: freedisk
-description: Reference topic for the freedisk command, which checks to see if the specified amount of disk space is available before continuing with an installation process.
+description: Reference article for the freedisk command, which checks to see if the specified amount of disk space is available before continuing with an installation process.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

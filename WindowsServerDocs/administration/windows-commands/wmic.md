@@ -1,6 +1,6 @@
 ---
 title: wmic
-description: Reference topic for wmic, which displays WMI information inside an interactive command shell. 
+description: Reference article for wmic, which displays WMI information inside an interactive command shell.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

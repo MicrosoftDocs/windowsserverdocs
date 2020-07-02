@@ -1,6 +1,6 @@
 ---
 title: auditpol backup
-description: Reference topic for the auditpol backup command, which backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
+description: Reference article for the auditpol backup command, which backs up system audit policy settings, per-user audit policy settings for all users, and all auditing options to a comma-separated value (CSV) text file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: telnet open
-description: Reference topic for telnet open, which connects to a telnet server.
+description: Reference article for telnet open, which connects to a telnet server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 s.topic: article

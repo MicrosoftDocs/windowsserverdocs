@@ -1,6 +1,6 @@
 ---
 title: bcdedit
-description: Reference topic for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
+description: Reference article for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

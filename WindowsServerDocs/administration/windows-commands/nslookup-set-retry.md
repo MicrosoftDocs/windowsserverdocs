@@ -1,6 +1,6 @@
 ---
 title: nslookup set retry
-description: Reference topic for the nslookup set retry command, which sets the number of tries to get information from a specified server.
+description: Reference article for the nslookup set retry command, which sets the number of tries to get information from a specified server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

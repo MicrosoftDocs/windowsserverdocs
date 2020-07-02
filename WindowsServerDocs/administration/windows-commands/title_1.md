@@ -1,6 +1,6 @@
 ---
 title: title
-description: Reference topic for title, which creates a title for the Command Prompt window.
+description: Reference article for title, which creates a title for the Command Prompt window.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

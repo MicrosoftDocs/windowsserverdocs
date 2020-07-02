@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and setlimit
-description: Reference topic for the bitsadmin cache and setlimit command, which sets the cache size limit.
+description: Reference article for the bitsadmin cache and setlimit command, which sets the cache size limit.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

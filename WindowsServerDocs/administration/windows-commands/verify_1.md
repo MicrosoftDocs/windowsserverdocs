@@ -1,6 +1,6 @@
 ---
 title: verify
-description: Reference topic for verify, which tells **cmd** whether to verify that your files are written correctly to a disk. 
+description: Reference article for verify, which tells **cmd** whether to verify that your files are written correctly to a disk.
 
 ms.prod: windows-server
 

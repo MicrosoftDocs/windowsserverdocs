@@ -1,6 +1,6 @@
 ---
 title: cd
-description: Reference topic for the cd command, which displays the name of or changes the current directory. 
+description: Reference article for the cd command, which displays the name of or changes the current directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -51,8 +51,8 @@ If command extensions are enabled, the following conditions apply to the **cd** 
   cd username\programs\start menu
   ```
 
-  is the same as:  
-  
+  is the same as:
+
   ```
   cd "username\programs\start menu"
   ```

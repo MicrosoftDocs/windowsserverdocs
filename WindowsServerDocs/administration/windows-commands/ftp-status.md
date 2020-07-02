@@ -1,6 +1,6 @@
 ---
 title: ftp status
-description: Reference topic for the ftp status command, which displays the current status of your ftp connections.
+description: Reference article for the ftp status command, which displays the current status of your ftp connections.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: change port
-description: Reference topic for the change port command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
+description: Reference article for the change port command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -44,13 +44,13 @@ change port [<portX>=<portY| /d <portX | /query]
 ## Examples
 
 - To map COM12 to COM1 for use by an MS-DOS-based application, type:
-  
+
   ```
   change port com12=com1
   ```
 
 - To display the current port mappings, type:
-  
+
   ```
   change port /query
   ```

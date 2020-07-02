@@ -1,6 +1,6 @@
 ---
 title: begin restore
-description: Reference topic for the begin restore command, which starts a restore session and issues a PreRestore event to involved writers.
+description: Reference article for the begin restore command, which starts a restore session and issues a PreRestore event to involved writers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

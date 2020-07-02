@@ -1,6 +1,6 @@
 ---
 title: dfsdiag testsites
-description: Reference topic for dfsdiag testsites, which checks the configuration of active directory Domain Services (AD DS) sites by verifying that servers that act as namespace servers or folder (link) targets have the same site associations on all domain controllers.
+description: Reference article for dfsdiag testsites, which checks the configuration of active directory Domain Services (AD DS) sites by verifying that servers that act as namespace servers or folder (link) targets have the same site associations on all domain controllers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

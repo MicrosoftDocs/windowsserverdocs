@@ -1,6 +1,6 @@
 ---
 title: mqbkup
-description: Reference topic for the mqbkup command, which backs up MSMQ message files and registry settings to a storage device and restores previously-stored messages and settings.
+description: Reference article for the mqbkup command, which backs up MSMQ message files and registry settings to a storage device and restores previously-stored messages and settings.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: get-DriverPackage
-description: Reference topic for get-DriverPackage, which displays information about a driver package on the server.
+description: Reference article for get-DriverPackage, which displays information about a driver package on the server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

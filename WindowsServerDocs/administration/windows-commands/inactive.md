@@ -1,6 +1,6 @@
 ---
 title: inactive
-description: Reference topic for the inactive command, which marks the system partition or boot partition with focus as inactive on basic master boot record (MBR) disks.
+description: Reference article for the inactive command, which marks the system partition or boot partition with focus as inactive on basic master boot record (MBR) disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

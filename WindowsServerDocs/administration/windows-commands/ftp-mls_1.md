@@ -1,6 +1,6 @@
 ---
 title: ftp mls
-description: Reference topic for the ftp mls command, which displays an abbreviated list of files and subdirectories in a remote directory.
+description: Reference article for the ftp mls command, which displays an abbreviated list of files and subdirectories in a remote directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: manage-bde pause
-description: Reference topic for the manage-bde pause command, which pauses BitLocker encryption or decryption.
+description: Reference article for the manage-bde pause command, which pauses BitLocker encryption or decryption.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

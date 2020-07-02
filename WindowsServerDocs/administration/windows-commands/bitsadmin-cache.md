@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache
-description: Reference topic for the bitsadmin cache command, which contains a list of the bitsadmin cache switches.
+description: Reference article for the bitsadmin cache command, which contains a list of the bitsadmin cache switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,7 +8,7 @@ ms.assetid: 9ae4a283-a187-4fe3-b05c-4b53732c27cb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/16/2017 
+ms.date: 10/16/2017
 ---
 # bitsadmin cache
 

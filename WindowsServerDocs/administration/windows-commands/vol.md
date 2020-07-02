@@ -1,6 +1,6 @@
 ---
 title: vol
-description: Reference topic for vol, which displays the disk volume label and serial number, if they exist.
+description: Reference article for vol, which displays the disk volume label and serial number, if they exist.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

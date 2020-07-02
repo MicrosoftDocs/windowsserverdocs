@@ -1,6 +1,6 @@
 ---
 title: cmdkey
-description: Reference topic for the cmdkey command, which creates, lists, and deletes stored user names and passwords or credentials.
+description: Reference article for the cmdkey command, which creates, lists, and deletes stored user names and passwords or credentials.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

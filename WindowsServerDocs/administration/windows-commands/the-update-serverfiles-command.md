@@ -1,6 +1,6 @@
 ---
 title: Update-ServerFiles
-description: Reference topic for Update-ServerFiles, which updates files in the REMINST shared folder by using the latest files that are stored in the server's %Windir%\System32\RemInst folder.  
+description: Reference article for Update-ServerFiles, which updates files in the REMINST shared folder by using the latest files that are stored in the server's %Windir%\System32\RemInst folder.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

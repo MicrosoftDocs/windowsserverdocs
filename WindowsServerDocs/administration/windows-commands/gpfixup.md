@@ -1,6 +1,6 @@
 ---
 title: gpfixup
-description: Reference topic for the gpfixup command, which fixes domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation.
+description: Reference article for the gpfixup command, which fixes domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
