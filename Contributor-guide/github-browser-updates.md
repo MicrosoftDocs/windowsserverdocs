@@ -3,7 +3,7 @@ title: Edit existing Windows Server articles using a web browser and GitHub
 description: How to make quick edits to the existing Windows Server documentation using a web browser and GitHub, as a Microsoft employee.
 author: eross-msft
 ms.author: lizross
-ms.date: 05/02/2019
+ms.date: 07/02/2020
 ---
 
 # Update existing Windows Server articles using a web browser and GitHub
@@ -18,7 +18,7 @@ There are two separate locations where we keep Windows Server technical content.
 
     - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](edit-existing-using-github.md) article.
 
-    - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in this article.
+    - **Make minor changes to an existing article.** To make minor changes to an existing article, follow the instructions in this article.
 
     > [!IMPORTANT]
     > All repositories that publish to docs.microsoft.com have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) or the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/). Or contact [opencode@microsoft.com](mailto:opencode@microsoft.com), or [conduct@dotnetfoundation.org](mailto:conduct@dotnetfoundation.org) with any questions or comments.
@@ -28,6 +28,8 @@ There are two separate locations where we keep Windows Server technical content.
 ## Quick edits to existing articles using GitHub and a web browser
 
 Quick edits streamline the process to report and fix small errors and omissions in documents. Despite all efforts, small grammar and spelling errors _do_ make their way into our published documents.
+
+1. Follow the instructions in [GitHub accountn setup](https://review.docs.microsoft.com/en-us/help/contribute/contribute-get-started-setup-github?branch=master).
 
 1. Go to https://github.com/MicrosoftDocs/windowsserverdocs-pr/tree/master/WindowsServerDocs.
 
