@@ -26,8 +26,8 @@ regsvr32 [/u] [/s] [/n] [/i[:cmdline]] <Dllname>
 | Parameter | Description |
 |--|--|
 | /u | Unregisters server. |
-| /s | Prevents showing display messages. |
-| /n | Prevents calling **DllRegisterServer**. This paramter requires the **/i** parameter. |
+| /s | Prevents displaying messages. |
+| /n | Prevents calling **DllRegisterServer**. This parameter requires you to also use the **/i** parameter. |
 | /i:`<cmdline>` | Passes an optional command-line string (*cmdline*) to **DllInstall**. If you use this parameter with the **/u** parameter, it calls **DllUninstall**. |
 | `<Dllname>` | The name of the .dll file that will be registered. |
 | /? | Displays help at the command prompt. |
