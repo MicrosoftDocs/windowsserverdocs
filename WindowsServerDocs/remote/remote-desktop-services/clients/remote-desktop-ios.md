@@ -161,7 +161,7 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Right-click          | Tap with two fingers                                              |
 | Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                    |
 | Mouse pointer | Mouse wheel          | Double-tap and hold with two fingers, then drag up or down                |
-| Mouse pointer | Zoom                 | With two fingers, pinch to zoom in and spread fingers apart to zoom out |
+| Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and spread fingers apart to zoom in |
 
 ## Supported input devices
 
