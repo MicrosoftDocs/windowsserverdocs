@@ -194,7 +194,7 @@ Two mouse modes are available to interact with the session.
 | Mouse pointer | Right-click          | Tap with two fingers                                                          |
 | Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                              |
 | Mouse pointer | Mouse wheel          | Tap and hold with two fingers, then drag up or down                          |
-| Mouse pointer | Zoom                 | With two fingers, pinch to zoom in and move fingers apart to zoom out |
+| Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and move fingers apart to zoom in |
 
 > [!TIP]
 > Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winrdc) and start a new thread. If you have a feature suggestion, you can tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=605).
