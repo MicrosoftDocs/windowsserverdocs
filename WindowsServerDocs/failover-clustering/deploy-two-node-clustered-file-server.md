@@ -324,6 +324,7 @@ To configure a file server failover cluster, follow the below steps.
 8. On the **Confirmation** page, verify your configuration and select **Next**.
 
 9. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the file server role creation.
+    - If the role does not add or start correctly, the CNO (Cluster Name Object) may not have permission to create further objects in Active Directory. In this case the "Client Access Point" name selected in step 8.
 
 10. Under **Roles** in the console tree, you will see the new role you created listed as the name you created.  With it highlighted, under the **Actions** pane on the right, choose **Add a share**.
 
