@@ -212,8 +212,7 @@ This will ensure that all data trasmitted to fs.contoso.com end up at the ILB an
 > If you are using the WID (Windows Internal Database) for your AD FS database, this value should instead be temporarily set to point to your primary AD FS server or the Web Application Proxy will fail enrollement. After you have successfully enrolled all Web Appplication Proxy servers, change this DNS entry to point to the load balancer.
 
 > [!NOTE]
->If your deployment is also using IPv6, be sure to create a corresponding AAAA record.
->
+> If your deployment is also using IPv6, be sure to create a corresponding AAAA record.
 >
 
 ### 7. Configuring the Web Application Proxy server
