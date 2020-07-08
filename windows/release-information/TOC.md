@@ -1,4 +1,4 @@
-# [Windows 10 release information](index.md)
+﻿# [Windows 10 release information](index.md)
 # [Message center](windows-message-center.md)
 # Version 2004
 ## [Known issues and notifications](status-windows-10-2004.md)
@@ -37,3 +37,4 @@
 ## Windows Server 2008 SP2
 ### [Known issues and notifications](status-windows-server-2008-sp2.md)
 ### [Resolved issues](resolved-issues-windows-server-2008-sp2.md)
+
