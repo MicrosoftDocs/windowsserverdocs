@@ -7,12 +7,15 @@ author: rick-man
 ms.author: rickman
 manager: stevelee
 ms.topic: article
-ms.date: 08/21/2019
+ms.date: 07/14/2020
 ---
 
 # Deploy graphics devices using RemoteFX vGPU
 
 > Applies to: Windows Server 2016, Microsoft Hyper-V Server 2016
+
+> [!NOTE]
+> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update. To learn more, please see [KB 4570006](https://support.microsoft.com/help/4570006).
 
 The vGPU feature for RemoteFX makes it possible for multiple virtual machines to share a physical GPU. Rendering and compute resources are shared dynamically among virtual machines, making RemoteFX vGPU appropriate for high-burst workloads where dedicated GPU resources are not required. For example, in a VDI service, RemoteFX vGPU can be used to offload app rendering costs to the GPU, with the effect of decreasing CPU load and improving service scalability.
 
