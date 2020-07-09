@@ -319,7 +319,7 @@ To configure a file server failover cluster, follow the below steps.
 
 9. Choose **Next**.
 
-10. In the **Select Storage** window, select the additional drive (not the witness) that will hold your shares and **Next**.
+10. In the **Select Storage** window, select the additional drive (not the witness) that will hold your shares, and click **Next**.
 
 11. On the **Confirmation** page, verify your configuration and select **Next**.
 
@@ -335,10 +335,10 @@ To configure a file server failover cluster, follow the below steps.
     - Type of share it will be
     - Location/path the folder shared will be
     - The name of the share users will connect to
-    - Additional settings such as Access-based enumeration, caching, encryption, etc
+    - Additional settings such as Access-based enumeration, caching, encryption, etc.
     - File level permissions if they will be other than the defaults
 
-15. On the **Confirmation** page, verify what you have configured and select **Create** to create the file server share.
+15. On the **Confirmation** page, verify what you have configured, and select **Create** to create the file server share.
 
 16. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
 
