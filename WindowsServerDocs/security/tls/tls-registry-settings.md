@@ -489,8 +489,8 @@ If an SSPI app requests to use DTLS 1.0, it will be denied.
 To disable DTLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1. 
 If an SSPI app explicitly requests to use DTLS 1.2, it may be negotiated. 
 
-The following example shows DTLS 1.1 disabled in the registry:
+The following example shows DTLS 1.2 disabled in the registry:
 
-![DTLS 1.1 disabled](images/dtls-11-registry-setting.png)
+![DTLS 1.2 disabled](https://user-images.githubusercontent.com/3296790/87178706-3598af00-c2fb-11ea-84a9-db3f7d0313c8.png)
 
 
