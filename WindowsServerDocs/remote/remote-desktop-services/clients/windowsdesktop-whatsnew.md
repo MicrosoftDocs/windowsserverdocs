@@ -7,7 +7,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 06/23/2020
+ms.date: 07/14/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -21,7 +21,18 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.1104 |
-|Insider    |1.2.1104 |
+|Insider    |1.2.1185 |
+
+## Updates for version 1.2.1185
+
+*Date published: 07/14/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hr), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hs), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hq)
+
+- You can now be subscribed to Workspaces with multiple user accounts, using the overflow menu (**...**) option on the command bar at the top of the client. To differentiate Workspaces, the Workspace titles now include the username, as do all app shortcuts titles.
+- Added additional information to subscription error messages to improve troubleshooting.
+- The collapsed/expanded state of Workspaces is now preserved during a refresh.
+- Added a **Send Diagnostics and Close** button to the **Connection information** dialog.
 
 ## Updates for version 1.2.1104
 
