@@ -361,3 +361,436 @@ Background Intelligent Transfer Service (BITS)|Do not allow the computer to act 
 *WLAN Service\ WLAN Settings|Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services||**Disabled** (This policy setting determines whether users can enable the following WLAN settings: "Connect to suggested open hotspots," "Connect to networks shared by my contacts," and "Enable paid services". With this policy setting disabled, "Connect to suggested open hotspots," "Connect to networks shared by my contacts," and "Enable paid services" will be turned off and users on this device will be prevented from enabling them.)|
 |WWAN Service\ Cellular Data Access|Let Windows apps access cellular data|Default for all apps: **Force Deny**|**Enabled** (If you choose the "Force Deny" option, Windows apps are not allowed to access cellular data and users cannot change it.)|
 |Local Computer Policy \ Computer Configuration \ Administrative Templates \ Start Menu and Taskbar|||
+|*Notifications|Turn off notifications network usage||**Enabled** (With this policy setting enabled, applications and system features will not be able receive notifications from the network from WNS or via notification polling APIs)|
+|Local Computer Policy \ Computer Configuration \ Administrative Templates \ System||||
+|Device Installation|Do not send a Windows error report when a generic driver is installed on a device||**Enabled** (With this policy setting enabled, an error report is not sent when a generic driver is installed.)|
+|Device Installation|Prevent creation of a system restore point during device activity that would normally prompt creation of a restore point||**Enabled** (With this policy setting enabled, Windows does not create a system restore point when one would normally be created.)|
+|Device Installation|Prevent device metadata retrieval from the Internet||**Enabled** (This policy setting allows you to prevent Windows from retrieving device metadata from the Internet. With this policy setting enabled, Windows does not retrieve device metadata for installed devices from the Internet. This policy setting overrides the setting in the Device Installation Settings dialog box (Control Panel > System and Security > System > Advanced System Settings > Hardware tab).)|
+|Device Installation|Turn off "Found New Hardware" balloons during device installation||**Enabled** (This policy setting allows you to turn off "Found New Hardware" balloons during device installation.With this policy setting enabled, "Found New Hardware" balloons do not appear while a device is being installed.)|
+|Filesystem\NTFS|Short name creation options|Short name creation options: Disabled on all volumes|**Enabled** (These settings provide control over whether or not short names are generated during file creation.  Some applications require short names for compatibility, but short names have a negative performance impact on the system. With short names disabled on all volumes then they will never be generated.)|
+|*Group Policy|Continue experiences on this device||**Disabled** (This policy setting determines whether the Windows device is allowed to participate in cross-device experiences (continue experiences). Disabling this policy prevents this device from being discoverable by other devices, and thus cannot participate in cross-device experiences.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Event Viewer "Events.asp" links||**Enabled** (This policy setting specifies whether "Events.asp" hyperlinks are available for events within the Event Viewer application.)|
+|Internet Communication Management\ Internet Communication settings|Turn off handwriting personalization data sharing||**Enabled** (Turns off data sharing from the handwriting recognition personalization tool.)|
+|Internet Communication Management\ Internet Communication settings|Turn off handwriting recognition error reporting||**Enabled** (Turns off the handwriting recognition error reporting tool.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Help and Support Center Microsoft Knowledge Base search||**Enabled** (This policy setting specifies whether users can perform a Microsoft Knowledge Base search from the Help and Support Center.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com||**Enabled** (This policy setting specifies whether the Internet Connection Wizard can connect to Microsoft to download a list of Internet Service Providers (ISPs).)|
+|Internet Communication Management\ Internet Communication settings|Turn off Internet download for Web publishing and online ordering wizards||**Enabled** (This policy setting specifies whether Windows should download a list of providers for the web publishing and online ordering wizards.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Internet File Association service||**Enabled** (This policy setting specifies whether to use the Microsoft Web service for finding an application to open a file with an unhandled file association.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Registration if URL connection is referring to Microsoft.com||**Enabled** (This policy setting specifies whether the Windows Registration Wizard connects to Microsoft.com for online registration.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Search Companion content file updates||**Enabled** (This policy setting specifies whether Search Companion should automatically download content updates during local and Internet searches.)|
+|Internet Communication Management\ Internet Communication settings|Turn off the "Order Prints" picture task||**Enabled** (If you enable this policy setting, the task "Order Prints Online" is removed from Picture Tasks in File Explorer folders.)|
+Internet Communication Management\ Internet Communication settings|Turn off the "Publish to Web" task for files and folders||**Enabled* (This policy setting specifies whether the tasks "Publish this file to the Web," "Publish this folder to the Web," and "Publish the selected items to the Web" are available from File and Folder Tasks in Windows folders.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Windows Customer Experience Improvement Program||**Enabled** (The Windows Customer Experience Improvement Program (CEIP) collects information about your hardware configuration and how you use our software and services to identify trends and usage patterns. If you enable this policy setting, all users are opted out of the Windows CEIP.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Windows Error Reporting||**Enabled** (This policy setting controls whether or not errors are reported to Microsoft. If you enable this policy setting, users are not given the option to report errors.)|
+|Internet Communication Management\ Internet Communication settings|Turn off Windows Update device driver searching||**Enabled** (This policy setting specifies whether Windows searches Windows Update for device drivers when no local drivers for a device are present. If you enable this policy setting, Windows Update is not searched when a new device is installed.)|
+|Logon|Do not display the Getting Started welcome screen at logon||**Enabled** (With this setting enabled, the welcome screen is hidden from the user logging on to a Windows device.)|
+|Logon|Do not enumerate connected users on domain-joined computers||**Enabled** (With this setting enabled, the Logon UI will not enumerate any connected users on domain-joined computers.)|
+|Logon|Enumerate local users on domain-joined computers||**Disabled** (With this setting disabled, the Logon UI will not enumerate local users on domain-joined computers.)|
+|Logon|Show clear logon background||**Enabled** (This policy setting disables the acrylic blur effect on logon background image. With this setting enabled, the logon background image shows without blur.)|
+|Logon|Show first sign-in animation||**Disabled** (This policy setting allows you to control whether users see the first sign-in animation when signing in to the computer for the first time.  This applies to both the first user of the computer who completes the initial setup and users who are added to the computer later.  It also controls if Microsoft account users will be offered the opt-in prompt for services during their first sign-in.<p>With this setting disabled, users will not see the first logon animation and Microsoft account users will not see the opt-in prompt for services.)|
+|Logon|Turn off app notifications on the lock screen||**Enabled** (This policy setting allows you to prevent app notifications from appearing on the lock screen. With this setting enabled, no app notifications are displayed on the lock screen.)|
+|Power Management|Select an active power plan|Active Power Plan: High Performance|**Enabled** (If you enable this policy setting, specify a power plan from the Active Power Plan list.) <p>**NOTE**: With the ‘Power’ service disabled, the ‘Powercfg.cpl’ UI is not able to display these power options, and instead returns an RPC error.|
+|Power Management \ Video and Display Settings|Turn on desktop background slideshow (plugged-in)||**Disabled** (This policy setting allows you to specify if Windows should enable the desktop background slideshow.) With this setting disabled, the desktop background slideshow is disabled. NOTE: This setting likely has no effect to a VM|
+|Recovery|Allow restore of system to default state||**Disabled** (With this setting disabled, the items "Use a system image you created earlier to recover your computer" and "Reinstall Windows" (or "Return your computer to factory condition") in Recovery (in Control Panel) will be unavailable.)|
+|*Storage Health|Allow downloading updates to the Disk Failure Prediction Model||**Disabled** (Updates would not be downloaded for the Disk Failure Prediction Failure Model)|
+|System Restore|Turn off System Restore||**Enabled** (With this setting enabled, System Restore is turned off, and the System Restore Wizard cannot be accessed. The option to configure System Restore or create a restore point through System Protection is also disabled.).)|
+|Troubleshooting and Diagnostics\ Scheduled Maintenance|Configure Scheduled Maintenance Behavior||**Disabled** (Determines whether scheduled diagnostics will run to proactively detect and resolve system problems. With this policy setting disabled, Windows will not be able to detect, troubleshoot or resolve problems on a scheduled basis.)|
+|Troubleshooting and Diagnostics\ Scripted Diagnostics|Troubleshooting: Allow users to access and run Troubleshooting wizards||**Disabled** (With this setting disabled, users cannot access or run the troubleshooting tools from the Control Panel.)|
+|Troubleshooting and Diagnostics\ Scripted Diagnostics|Troubleshooting: Allow users to access online troubleshooting content on Microsoft servers from the Troubleshooting Control Panel (via the Windows Online Troubleshooting Service – WOTS)||**Disabled** (With this setting disabled, users can only access and search troubleshooting content that is available locally on their computers, even if they are connected to the Internet. They are prevented from connecting to the Microsoft servers that host the Windows Online Troubleshooting Service.|
+|Troubleshooting and Diagnostics\ Windows Boot Performance Diagnostics|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows Boot Performance Diagnostics. If you disable this policy setting, Windows will not be able to detect, troubleshoot or resolve any Windows Boot Performance problems that are handled by the DPS.)<p>**NOTE**: This setting can be very useful during design, test, development, or maintenance phases.  This setting could be enabled on an isolated VM or session host, measurements taken, and results noted in event logs under ‘Microsoft-Windows-Diagnostics-Performance/Operational’ Source: Diagnostics-Performance, Task Category ‘Boot Performance Monitoring’.<p>**ALSO**: With the DPS service disabled, this setting has no effect, as Windows will not be logging performance data.|
+|Troubleshooting and Diagnostics\ Windows Memory Leak Diagnostics|Configure Scenario Execution Level||**Disabled** (This policy setting determines whether Diagnostic Policy Service (DPS) diagnoses memory leak problems. With this setting disabled, the DPS is not able to diagnose memory leak problems.) <p>**NOTE**: Many diagnostics modes can be enabled, and tools used such as WPT, though these are usually done in dev/test/maintenance scenarios and not enabled and used on production VMs or sessions|
+|Troubleshooting and Diagnostics\ Windows Performance PerfTrack|Enable/Disable PerfTrack||**Disabled** (This policy setting specifies whether to enable or disable tracking of responsiveness events. With this setting disabled, responsiveness events are not processed.)|
+|Troubleshooting and Diagnostics\ Windows Resource Exhaustion Detection and Resolution|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows Resource Exhaustion Detection and Resolution. With this setting disabled, Windows will not be able to detect, troubleshoot or resolve any Windows Resource Exhaustion problems that are handled by the DPS.)|
+|Troubleshooting and Diagnostics\ Windows Shutdown Performance Diagnostics|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows Shutdown Performance Diagnostics. With this setting disabled, Windows will not be able to detect, troubleshoot or resolve any Windows Shutdown Performance problems that are handled by the DPS.)|
+|Troubleshooting and Diagnostics\ Windows Standby/Resume Performance Diagnostics|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows Standby/Resume Performance Diagnostics. With this setting disabled, Windows will not be able to detect, troubleshoot or resolve any Windows Standby/Resume Performance problems that are handled by the DPS.)|
+|Troubleshooting and Diagnostics\ Windows System Responsiveness Performance Diagnostics|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows System Responsiveness Diagnostics. With this setting disabled, Windows will not be able to detect, troubleshoot or resolve any Windows System Responsiveness problems that are handled by the DPS.)|
+*User Profiles|Turn off the advertising ID||**Enabled** (With this setting enabled, the advertising ID is turned off. Apps can't use the ID for experiences across apps)|
+|Local Computer Policy \ Computer Configuration \ Administrative Templates \ Windows Components||||
+|*App Privacy|Let Windows apps access diagnostic information about other apps|Default for all apps: Force Deny|**Enabled** (With this setting enabled, and using the "Force Deny" option, Windows apps are not allowed to get diagnostic information about other apps and employees in your organization cannot change it.)|
+|*App Privacy|Let Windows apps access location|Default for all apps: Force Deny|**Enabled** (With this setting enabled, and using the "Force Deny" option, Windows apps are not allowed to access location and users cannot change the setting.|
+|*App Privacy|Let Windows apps access motion|Default for all apps: Force Deny|**Enabled** (With this setting enabled, and using the "Force Deny" option, Windows apps are not allowed to access motion data and users cannot change the setting.)|
+|*App Privacy|Let Windows apps access notifications|Default for all apps: Force Deny|**Enabled** (With this setting enabled, and using the "Force Deny" option, Windows apps are not allowed to access notifications and users cannot change the setting)|
+|*App Privacy|Let Windows apps activate with voice|Default for all apps: Force Deny|**Enabled** (This policy setting specifies whether Windows apps can be activated by voice.)|
+|*App Privacy|Let Windows apps activate with voice while the system is locked|Default for all apps: Force Deny|**Enabled** (This policy setting specifies whether Windows apps can be activated by voice while the system is locked.)|
+|*App Privacy|Let Windows apps control radios|Default for all apps: Force Deny|**Enabled** (If you choose the "Force Deny" option, Windows apps will not have access to control radios and employees in your organization cannot change it)|
+|Application Compatibility|Turn off Inventory Collector||**Enabled** (This policy setting controls the state of the Inventory Collector. The Inventory Collector inventories applications, files, devices, and drivers on the system and sends the information to Microsoft. With this policy setting enabled, the Inventory Collector will be turned off and data will not be sent to Microsoft. Collection of installation data through the Program Compatibility Assistant is also disabled.)|
+|AutoPlay Policies|Set the default behavior for AutoRun|Do not execute any autorun commands|**Enabled** (This policy setting sets the default behavior for Autorun commands.)|
+|*AutoPlay Policies|Turn off Autoplay|All drives|**Enabled** (If you enable this policy setting, Autoplay is disabled on all drives.)|
+|*Cloud Content|Do not show Windows tips||**Enabled** (This policy setting prevents Windows tips from being shown to users)|
+|*Cloud Content|Turn off Microsoft consumer experiences||**Enabled** (With this policy setting enabled, users will no longer see personalized recommendations from Microsoft and notifications about their Microsoft account)|
+|*Data Collection and Preview Builds|Allow Telemetry|0 – Security [Enterprise Only]|**Enabled** (Setting a value of 0 applies to devices running Enterprise, Education, IoT, or Windows Server editions only, and reduces telemetry sent to the most basic level supported)|
+|Data Collection and Preview Builds|Configure collection of browsing data for Desktop Analytics|Configure telemetry collection: Do not allow sending intranet or internet history|**Enabled** (You can configure Microsoft Edge to send intranet history only, internet history only, or both to Desktop Analytics for enterprise devices with a configured Commercial ID. If disabled or not configured, Microsoft Edge does not send browsing history data to Desktop Analytics.)|
+|*Data Collection and Preview Builds|Do not show feedback notifications||**Enabled** (This policy setting allows an organization to prevent its devices from showing feedback questions from Microsoft.)|
+|Delivery Optimization|Download Mode|Download Mode: Simple (99)|**Enabled** (99 = Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services.)|
+|Desktop Window Manager|Do not allow window animations||**Enabled** (This policy setting controls the appearance of window animations such as those found when restoring, minimizing, and maximizing windows. With this policy setting enabled, window animations are turned off.)|
+|Desktop Window Manager|Use solid color for Start background||**Enabled** ((This policy setting controls the Start background visuals. With this policy setting enabled, the Start background will use a solid color.)|
+|Edge UI|Allow edge swipe||**Disabled** (If you disable this policy setting, users will not be able to invoke any system UI by swiping in from any screen edge.)|
+|Edge UI|Disable help tips||**Enabled** (If this setting is enabled, Windows will not show any help tips to the user.)|
+|File Explorer|Do not show the ‘new application installed’ notification||**Enabled** (This policy removes the end-user notification for new application associations. These associations are based on file types (e.g. *.txt) or protocols (e.g. http:). If this policy is enabled, no notifications will be shown to the end-user)|
+|File History|Turn off File History||**Enabled** (With this policy setting enabled, File History cannot be activated to create regular, automatic backups.)|
+|*Find My Device|Turn On/Off Find My Device||**Disabled** (When Find My Device is off, the device and its location are not registered, and the ‘Find My Device’ feature will not work. The user will also not be able to view the location of the last use of their active digitizer on their device.)|
+|Homegroup|Prevent the computer from joining a homegroup||**Enabled** (If you enable this policy setting, users cannot add computers to a homegroup. This policy setting does not affect other network sharing features.)|
+|*Internet Explorer|Allow Microsoft services to provide enhanced suggestions as the user types in the Address bar||**Disabled** (users won't receive enhanced suggestions while typing in the Address bar. In addition, users won't be able to change the Suggestions setting)|
+|Internet Explorer|Disable Periodic Check for Internet Explorer software updates||**Enabled** (Prevents Internet Explorer from checking whether a new version of the browser is available.)|
+|Internet Explorer|Disable showing the splash screen||**Enabled** (Prevents the Internet Explorer splash screen from appearing when users start the browser.)|
+|Internet Explorer|Install new versions of Internet Explorer automatically||**Disabled** (This policy setting configures Internet Explorer to automatically install new versions of Internet Explorer when they are available.)|
+|Internet Explorer|Prevent participation in the Customer Experience Improvement Program||**Enabled** (This policy setting prevents the user from participating in the Customer Experience Improvement Program (CEIP).)|
+|Internet Explorer|Prevent running First Run wizard|Go directly to home page|**Enabled** (This policy setting prevents Internet Explorer from running the First Run wizard the first time a user starts the browser after installing Internet Explorer or Windows.)|
+|Internet Explorer|Set tab process growth|Low|**Enabled** (This policy setting allows you to set the rate at which Internet Explorer creates new tab processes.)|
+|Internet Explorer|Turn off add-on performance notifications||**Enabled** (This policy setting prevents Internet Explorer from displaying a notification when the average time to load all the user's enabled add-ons exceeds the threshold.)|
+|Internet Explorer|Turn off Automatic Crash Recovery||**Enabled** (This policy setting turns off Automatic Crash Recovery. With this policy setting enabled, Automatic Crash Recovery does not prompt the user to recover his or her data after a program stops responding.)|
+|*Internet Explorer|Turn off browser geolocation||**Enabled** (With this policy setting enabled, browser geolocation support is turned off)|
+|*Internet Explorer|Turn on Suggested Sites||**Disabled** (With this policy setting disabled, the entry points and functionality associated with this feature are turned off.)|
+|Internet Explorer\ Internet Control Panel\ Advanced Page|Play animations in web pages||**Disabled** (This policy setting allows you to manage whether Internet Explorer will display animated pictures found in Web content. Generally only animated GIF files are affected by this setting; active Web content such as java applets are not.)|
+|Internet Explorer\  Internet Control Panel\ Advanced Page|Play sounds in web pages||**Disabled** (With this policy setting disabled, Internet Explorer will not play or download sounds in Web content, helping pages display more quickly.)|
+|Internet Explorer\  Internet Control Panel\ Advanced Page|Play videos in web pages||**Disabled** (If you disable this policy setting, Internet Explorer will not play or download videos, helping pages display more quickly.)|
+|Internet Explorer\  Internet Control Panel\ Advanced Page|Turn off loading websites and content in the background to optimize performance||**Enabled** (With this policy setting enabled, IE doesn’t load any websites or content in the background.)|
+|*Internet Explorer\  Internet Control Panel\ Advanced Page|Turn off the flip ahead with page prediction features||**Enabled** (Microsoft collects your browsing history to improve how flip ahead with page prediction works. If you enable this policy setting, flip ahead with page prediction is turned off and the next webpage isn't loaded into the background.)|
+|Internet Explorer\ Internet Settings\ Advanced Settings\ Browsing|Turn off phone number detection||**Enabled** (This policy setting determines whether phone numbers are recognized and turned into hyperlinks, which can be used to invoke the default phone application on the system. If you disable this policy setting, phone number detection is turned on. Users won't be able to modify this setting.)|
+|Internet Information Services|Prevent IIS installation||**Enabled** (With this policy setting enabled, IIS cannot be installed, and you will not be able to install Windows components or applications that require IIS.)|
+|*Location and Sensors|Turn off location||**Enabled** (With this setting enabled, the location feature is turned off, and all programs on this device are prevented from using location information from the location feature)|
+|Location and Sensors|Turn off sensors||**Enabled** (This policy setting turns off the sensor feature for this device. With this policy setting enabled, the sensor feature is turned off, and all programs on this computer cannot use the sensor feature.)|
+|Locations and Sensors / Windows Location Provider|Turn off Windows Location Provider||**Enabled** (This policy setting turns off the Windows Location Provider feature for this device.)|
+|*Maps|Turn off Automatic Download and Update of Map Data||**Enabled** (With this setting enabled, the automatic download and update of map data is turned off.)|
+|*Maps|Turn off unsolicited network traffic on the Offline Maps settings page||**Enabled** (With this setting enabled, features that generate network traffic on the Offline Maps settings page are turned off. Note: This may turn off the entire settings page)|
+|*Messaging|Allow Message Service Cloud Sync||**Disabled** (This policy setting allows backup and restore of cellular text messages to Microsoft's cloud services.)|
+|*Microsoft Edge|Allow configuration updates for the Books Library||**Disabled** (With this setting disabled, Microsoft Edge won't automatically download updated configuration data for the Books Library.)|
+|*Microsoft Edge|Allow extended telemetry for the Books tab||**Disabled** (With this setting disabled, Microsoft Edge only sends basic telemetry data, depending on your device configuration.)|
+|Microsoft Edge|Allow Microsoft Edge to pre-launch at Windows startup, when the system is idle, and each time Microsoft Edge is closed|Configure pre-launch: Prevent pre-launching|**Enabled** (With this setting enabled and configured to prevent pre-launch, Microsoft Edge won’t pre-launch during Windows sign in, when the system is idle, or each time Microsoft Edge is closed.)|
+|Microsoft Edge|Allow Microsoft Edge to start and load the Start and New Tab page at Windows startup and each time Microsoft Edge is closed|Configure tab preloading: Prevent tab-preloading|**Enabled** (This policy setting lets you decide whether Microsoft Edge can load the Start and New Tab page during Windows sign in and each time Microsoft Edge is closed. By default this setting is to allow preloading. With preloading disabled, Microsoft Edge won’t load the Start or New Tab page during Windows sign in and each time Microsoft Edge is closed.)|
+|Microsoft Edge|Allow web content on New Tab page||**Disabled** (With this setting disabled, Edge opens a new tab with a blank page.  If this setting is configured, users cannot change the setting.)|
+|*Microsoft Edge|Prevent the First Run webpage from opening on Microsoft Edge||**Enabled** (users won’t see the First Run page when opening Microsoft Edge for the first time)|
+|OneDrive|Prevent OneDrive from generating network traffic until the user signs in to OneDrive||**Enabled** (Enable this setting to prevent the OneDrive sync client (OneDrive.exe) from generating network traffic (checking for updates, etc.) until the user signs in to OneDrive or starts syncing files to the local computer)|
+|Online Assistance|Turn off Active Help||**Enabled** (With this policy setting enabled, active content links are not rendered. The text is displayed, but there are no clickable links for these elements.)|
+|OOBE|Don’t launch privacy settings experience on user logon||**Enabled** (When logging into a new user account for the first time or after an upgrade in some scenarios, that user may be presented with a screen or series of screens that prompts the user to choose privacy settings for their account. Enable this policy to prevent this experience from launching.)|
+|RSS Feeds|Prevent automatic discovery of feeds and Web Slices||**Enabled** (This policy setting prevents users from having Internet Explorer automatically discover whether a feed or Web Slice is available for an associated webpage.)|
+|*RSS Feeds|Turn off background synchronization for feeds and Web Slices||**Enabled** (With this policy setting enabled, the ability to synchronize feeds and Web Slices in the background is turned off.)|
+|*Search|Allow Cortana||**Disabled** (This policy setting specifies whether Cortana is allowed on the device. When Cortana is off, users will still be able to use search to find things on the device.)|
+|Search|Allow Cortana above lock screen||**Disabled** (This policy setting determines whether or not the user can interact with Cortana using speech while the system is locked.)|
+|*Search|Allow search and Cortana to use location||**Disabled** (This policy setting specifies whether search and Cortana can provide location aware search and Cortana results.)|
+|Search|Control rich previews for attachments|Control Rich Previews for Attachments:**.docx;.xlsx;.txt;.xls**|**Enabled** (Enabling this policy defines a semicolon-delimited list of file extensions which will be allowed to have rich attachment previews.)<p>**NOTE**: This setting can be used to limit what types of attachments are previewed, which can also help prevent automatically previewing some potentially dangerous contents types.|
+|Search|Do not allow web search||**Enabled** (Enabling this policy removes the option of searching the Web from Windows Desktop Search.)|
+|*Search|Don’t search the web or display web results in Search||**Enabled** (With this policy setting enabled, queries won't be performed on the web and web results won't be displayed when a user performs a query in Search.)|
+|Search|Enable indexing uncached Exchange folders||**Disabled** (Enabling this policy allows indexing of mail items on a Microsoft Exchange server when Microsoft Outlook is not running in cached mode. The default behavior for search is to not index uncached Exchange folders. Disabling this policy will block any indexing of uncached Exchange folders.)|
+|Search|Prevent indexing files in offline files cache||**Enabled** (If enabled, files on network shares made available offline are not indexed. Otherwise they are indexed. Disabled by default.)|
+|*Search|Set what information is shared in Search|Anonymous info|**Enabled** (Anonymous info: Share usage information but don't share search history, Microsoft account info or specific location)|
+|Search|Stop indexing in the event of limited hard drive space|MB Limit: **5000**|**Enabled** (Enabling this policy prevents indexing from continuing after less than the specified amount of hard drive space is left on the same drive as the index location. Select between 0 and 2147483647 MB.)|
+|Software Protection Platform|Turn off KMS Client Online AVS Validation||**Enabled** (With this setting enabled, the device does not send data to Microsoft regarding its activation state)|
+|*Speech|Allow Automatic Update of Speech Data||**Disabled** (Specifies whether the device will receive updates to the speech recognition and speech synthesis models.)|
+|Store|Turn off the offer to update to the latest version of Windows||**Enabled** (Enables or disables the Store offer to update to the latest version of Windows. If you enable this setting, the Store application will not offer updates to the latest version of Windows.)|
+|Text Input|Improve inking and typing recognition||**Disabled** (This policy setting controls the ability to send inking and typing data to Microsoft to improve the language recognition and suggestion capabilities of apps and services running on Windows.)|
+|Windows Error Reporting|Disable Windows Error Reporting||**Enabled** (With this policy setting enabled, Windows Error Reporting does not send any problem information to Microsoft. Additionally, solution information is not available in Security and Maintenance in Control Panel.)|
+|Windows Game Recording and Broadcasting|Enables or disables Windows Game Recording and Broadcasting||**Disabled** (With this setting disabled, Windows Game Recording will not be allowed.)|
+|Windows Ink Workspace|Allow Windows Ink Workspace|Choose one of the following actions: Disabled|**Enabled** (With this setting enabled and sub-setting set to disabled, Windows Ink Workspace functionality is unavailable.)|
+|Windows Installer|Control maximum size of baseline file cache|5|**Enabled** (This policy controls the percentage of disk space available to the Windows Installer baseline file cache. With this policy setting enabled you can modify the maximum size of the Windows Installer baseline file cache.)|
+|Windows Installer|Turn off creation of System Restore checkpoints||**Enabled** (With this policy setting enabled, the Windows Installer does not generate System Restore checkpoints when installing applications.)|
+|Windows Mobility Center|Turn off Windows Mobility Center||**Enabled** (With this policy setting enabled, the user is unable to invoke Windows Mobility Center. The Windows Mobility Center UI is removed from all shell entry points and the .exe file does not launch it.)|
+|Windows Reliability Analysis|Configure Reliability WMI Providers||**Disabled** (With this policy setting disabled, Reliability Monitor will not display system reliability information, and WMI-capable applications will be unable to access reliability information from the listed providers.)|
+|Windows Security \ Notifications|Hide non-critical notifications||**Enabled** (With this setting enabled, local users will only see critical notifications from Windows Security. They will not see other types of notifications, such as regular PC or device health information.)|
+|Windows Update|Turn on Software Notifications||**Disabled** (This policy setting allows you to control whether users see detailed enhanced notification messages about featured software from the Microsoft Update service. Enhanced notification messages convey the value and promote the installation and use of optional software. This policy setting is intended for use in loosely managed environments in which you allow the end user access to the Microsoft Update service.)|
+|*Windows Update\ Windows Update for Business|Manage preview builds|Set the behavior for receiving preview builds: **Disable preview builds**|**Enabled** (Selecting "Disable preview builds" will prevent preview builds from installing on the device. This will prevent users from opting into the Windows Insider Program, through Settings -> Update and Security)|
+|*Windows Update\ Windows Update for Business|Select when Preview Builds and Feature Updates are received|Select the Windows readiness level for the updates you want to receive:<p>**Semi-Annual Channel**<p>After a Preview Build or Feature Update is released, defer receiving it for this many days: **365**<p>Pause Preview Builds or Feature Updates starting: **yyyy-mm-dd**|**Enabled** (Enable this policy to specify the level of Preview Build or Feature Updates to receive, and when. Semi-Annual Channel: Receive feature updates when they are released to the general public.<p> When Selecting Semi-Annual Channel:<p>- You can defer receiving Feature Updates for up to 365 days.<p>- To prevent Feature Updates from being received on their scheduled time, you can temporarily pause them. The pause will remain in effect for 35 days from the start time provided.<p> - To resume receiving Feature Updates which are paused, clear the start date field.)|
+|Windows Update\ Windows Update for Business|Select when Quality Updates are received|After a quality update is released, defer receiving it for this many days: **30**<p>Pause Quality Updates starting: yyyy-mm-dd|**Enabled** (Enable this policy to specify when to receive quality updates.<p>You can defer receiving quality updates for up to 30 days.<p>To prevent quality updates from being received on their scheduled time, you can temporarily pause quality updates. The pause will remain in effect for 35 days or until you clear the start date field.<p>To resume receiving Quality Updates which are paused, clear the start date field.)<p>**NOTE**: This recommendation is to help control when updates are applied, and to ensure updates don’t get offered and installed unexpectedly|
+|Local Computer Policy \ User Configuration \ Administrative Templates||||
+|Control Panel\ Regional and Language Options|Turn off offer text predictions as I type||**Enabled** (This policy turns off the offer text predictions as I type option. This does not, however, prevent the user or an application from changing the setting programmatically. With this policy setting enabled, the option will be locked to not offer text predictions.)|
+|Desktop|Do not add shares of recently opened documents to Network Locations||**Enabled** (With this setting enabled, shared folders are not added to Network Locations automatically when you open a document in the shared folder.)|
+|Desktop|Turn off Aero Shake window minimizing mouse gesture||**Enabled** (Prevents windows from being minimized or restored when the active window is shaken back and forth with the mouse. With this policy enabled, application windows will not be minimized or restored when the active window is shaken back and forth with the mouse.)|
+|Desktop / Active Directory|Maximum size of Active Directory searches|Number of objects returned:**1500**|**Enabled** (Specifies the maximum number of objects the system displays in response to a command to browse or search Active Directory. This setting affects all browse displays associated with Active Directory, such as those in Local Users and Groups, Active Directory Users and Computers, and dialog boxes used to set permissions for user or group objects in Active Directory.)|
+|Start Menu and Taskbar|Do not display or track items in Jump Lists from remote locations||**Enabled** (This policy setting allows you to control displaying or tracking items in Jump Lists from remote locations.)|
+|Start Menu and Taskbar|Do not search Internet||**Enabled** (With this policy setting enabled, the Start Menu search box will not search for internet history or favorites.)|
+|Start Menu and Taskbar|Do not use the search-based method when resolving shell shortcuts||**Enabled** (This policy setting prevents the system from conducting a comprehensive search of the target drive to resolve a shortcut.)|
+|Start Menu and Taskbar|Turn off all balloon notifications||**Enabled** (With this policy setting enabled, no notification balloons are shown to the user.)
+|Start Menu and Taskbar|Turn off feature advertisement balloon notifications||**Enabled** (With this policy setting enabled, certain notification balloons that are marked as feature advertisements are not shown.)|
+|Start Menu and Taskbar|Turn off user tracking||**Enabled** (With this policy setting enabled, the system does not track the programs that the user runs and does not display frequently used programs in the Start Menu.)|
+|Start Menu and Taskbar / Notifications|Turn off toast notifications||**Enabled** (With this policy setting enabled, applications will not be able to raise toast notifications.)|
+|*Start Menu and Taskbar / Notifications|Turn off toast notifications on the lock screen||**Enabled** (With this policy setting enabled, applications will not be able to raise toast notifications on the lock screen.)|
+|Local Computer Policy \ User Configuration||||
+|Windows Components / Cloud Content|Configure Windows spotlight on lock screen||**Disabled** (With this policy disabled, Windows spotlight will be turned off and users will no longer be able to select it as their lock screen. Users will see the default lock screen image and will be able to select another image, unless you have enabled the "Prevent changing lock screen image" policy.)|
+|*Windows Components / Cloud Content|Do not suggest third-party content in Windows spotlight||**Enabled** (With this policy enabled, Windows spotlight features like lock screen spotlight, suggested apps in Start menu or Windows tips will no longer suggest apps and content from third-party software publishers. Users may still see suggestions and tips to make them more productive with Microsoft features and apps.)|
+|Windows Components / Cloud Content|Do not use diagnostic data for tailored experiences||**Enabled** (With this policy setting enabled, Windows will not use diagnostic data from this device (this data may include browser, app and feature usage, depending on the "diagnostic data" setting value) to customize content shown on lock screen, Windows tips, Microsoft consumer features and other related features.)|
+|Windows Components / Cloud Content|Turn off all Windows spotlight features||**Enabled** (Windows spotlight on lock screen, Windows tips, Microsoft consumer features and other related features will be turned off. You should enable this policy setting if your goal is to minimize network traffic from target devices.) Edge UI|Turn off tracking of app usage||**Enabled** (This policy setting prevents Windows from keeping track of the apps that are used and searched most frequently. If you enable this policy setting, apps will be sorted alphabetically in:<p> - search results<p> - the Search and Share panes<p> - the drop-down app list in the Picker)|
+|File Explorer|Turn off caching of thumbnail pictures||**Enabled** (With this policy setting enabled, thumbnail views are not cached.)|
+|File Explorer|Turn off common control and window animations||**Enabled** (Disabling animations can improve usability for users with some visual disabilities as well as improving performance and battery life in some scenarios.)|
+|File Explorer|Turn off display of recent search entries in the File Explorer search box||**Enabled** (Disables suggesting recent queries for the Search Box and prevents entries into the Search Box from being stored in the registry for future references.)|
+|File Explorer|Turn off the caching of thumbnails in hidden thumbs.db files||**Enabled** (With this policy setting enabled, File Explorer does not create, read from, or write to thumbs.db files.)|
+\* Comes from the “[Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887).”
+
+### System services
+
+If considering disabling system services to conserve resources, great care should be taken that the service being considered is not in some way a component of some other service. In this paper and with the available GitHub scripts, some services are not in the list because they cannot be disabled in a supported manner.
+
+Most of these recommendations mirror recommendations for Windows Server 2016, installed with the Desktop Experience, per the following Microsoft article:
+
+**Microsoft**: [Guidance on disabling system services on Windows Server 2016 with Desktop Experience](https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)
+
+Many services that may seem like good candidates to disable are set to manual service start type. This means that the service will not automatically start and is not started unless process or event triggers a request to the service being consider for disabling. Services that are already set to start type manual are usually not listed here.
+
+> [!NOTE] You can enumerate running services with this PowerShell sample code, outputting only the service short name:
+```powershell
+Get-Service | Where-Object {$_.Status -eq 'Running'} | Select-Object -ExpandProperty Name
+```
+The following table contains some services that may be considered to disable in virtual desktop environments:
+
+| Windows Service | Service Name | Item | Comment|
+| --------------- | ------------ | ---- | ------ |
+|Cellular Time|autotimesvc|This service sets time based on NITZ messages from a Mobile Network|Virtual desktop environments may not have such devices available. <p>[https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support)|
+|GameDVR and Broadcast user service|BcastDVRUserService|This (per-user) service is used for Game Recordings and Live Broadcasts|NOTE: This is a “per-user service”, and as such, the template service must be disabled. This user service is used for Game Recordings and Live Broadcasts.<p>[https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support)|
+|CaptureService|CaptureService|Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API.|OneCore capture service: enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API<p> [https://docs.microsoft.com/en-us/uwp/api/windows.graphics.capture?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.capture?view=winrt-19041)|
+|Connected Devices Platform Service|CDPSvc|This service is used for Connected Devices Platform scenarios|Connected Devices Platform Service <p>[https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736)|
+|CDP User Service|CDPUserSvc|This user service is used for Connected Devices Platform scenarios|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled (CDPUserSvc).||Connected Devices Platform User Service.[https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4)|
+|Optimize drives|defragsvc|Helps the computer run more efficiently by optimizing files on storage drives.|Virtual desktop solutions do not normally benefit from disk optimization. The “drives” are often not traditional drives and often just a temporary storage allocation.|
+|Diagnostic Execution Service|DiagSvc|Executes diagnostic actions for troubleshooting support|Disabling this service disables the ability to run Windows diagnostics Diagnostic Execution Service.|
+|Connected User Experiences and Telemetry|DiagTrack|This service enables features that support in-application and connected user experiences. Additionally, this service manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.|Consider disabling if on disconnected network [https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)|
+|Diagnostic Policy Service|DPS|The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components.  If this service is stopped, diagnostics will no longer function.|Disabling this service disables the ability to run Windows diagnostics [https://docs.microsoft.com/en-us/uwp/api/Windows.System.Diagnostics?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.System.Diagnostics?view=winrt-19041)|
+|Device Setup Manager|DsmSvc|Enables the detection, download and installation of device-related software. |If this service is disabled, devices may be configured with outdated software, and may not work correctly. <p>**NOTE**: Virtual desktop environments very closely control what software is installed and maintain that consistency across the environment.|
+|Data Usage service|DusmSvc|Network data usage, data limit, restrict background data, metered networks.|[https://docs.microsoft.com/en-us/uwp/schemas/mobilebroadbandschema/dusm/schema-root](https://docs.microsoft.com/en-us/uwp/schemas/mobilebroadbandschema/dusm/schema-root)|
+|Windows Mobile Hotspot Service|icssvc|Provides the ability to share a cellular data connection with another device.|[https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041)|
+|Microsoft Store Install Service|InstallService|Provides infrastructure support for the Microsoft Store.  |This service is started on demand and if disabled then installations will not function properly.<p>**NOTE**: Consider disabling this service on non-persistent virtual desktop, leave as-is for persistent virtual desktop solutions.|
+|Geolocation Service|Lfsvc|Monitors the current location of the system and manages geofences (a geographical location with associated events). |If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences. [https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Geolocation?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Geolocation?view=winrt-19041)|
+|Downloaded Maps Manager|MapsBroker|Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps.|Disabling this service will prevent apps from accessing maps. [https://docs.microsoft.com/en-us/uwp/api/Windows.Services.Maps?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.Services.Maps?view=winrt-19041)|
+|MessagingService|MessagingService|Service supporting text messaging and related functionality.|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
+|Sync Host|OneSyncSvc|This service synchronizes mail, contacts, calendar and various other user data. |(UWP) Mail and other applications dependent on this functionality will not work properly when this service is not running. <p>**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
+|Contact Data|PimIndexMaintenanceSvc|Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
+|Power|Power|Manages power policy and power policy notification delivery.|Virtual machines have virtually no influence on power properties. If this service is disabled, power management and reporting are not available. [https://docs.microsoft.com/en-us/windows-hardware/drivers/powermeter/user-mode-power-service](https://docs.microsoft.com/en-us/windows-hardware/drivers/powermeter/user-mode-power-service)|
+|Payments and NFC/SE Manager|SEMgrSvc|Manages payments and Near Field Communication (NFC) based secure elements.|May not need this service for payments, in the enterprise environment.|
+|Microsoft Windows SMS Router Service|SmsRouter|Routes messages based on rules to appropriate clients.|May not need this service, if other tools are used for messaging, such as Teams, Skype, or other. For more info on this service, see:[https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/routing-service](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/routing-service)|
+|Superfetch (SysMain)|SysMain|Maintains and improves system performance over time.|Superfetch generally does not improve performance in virtual desktop environments for various reasons.  The underlying storage is often virtualized and possibly striped across multiple drives.  In some virtual desktop solutions the accumulated user state is discarded when the user logs off.  The SysMain feature should be evaluated in each environment.|
+|Touch Keyboard and Handwriting Panel Service|TabletInputService|Enables Touch Keyboard and Handwriting Panel pen and ink functionality|Not needed unless there is an active touchscreen in use, or a handwriting input device.|
+|Update Orchestrator Service|UsoSvc|Manages Windows Updates. If stopped, your devices will not be able to download and install the latest updates.|Virtual desktop devices are often carefully managed with respect to updates. Servicing is usually performed during maintenance windows. In some cases, an update client may be utilized, such as SCCM. The exception would be security signature updates, that would be applied at any time, to any virtual desktop device, so as to maintain up-to-date signatures. If you disable this service, test to ensure that security signatures are still able to be installed.|
+|Volume Shadow Copy|VSS|Manages and implements Volume Shadow Copies used for backup and other purposes. |If this service is stopped, shadow copies will be unavailable for backup and the backup may fail. If this service is disabled, any services that explicitly depend on it will fail to start. [https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)|
+|Diagnostic System Host|WdiSystemHost|The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.  If this service is stopped, any diagnostics that depend on it will no longer function.|Disabling this service disables the ability to run Windows diagnostics
+|Windows Error Reporting|WerSvc|Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. If this service is stopped, error reporting might not work correctly, and results of diagnostic services and repairs might not be displayed.|With virtual desktop environments, diagnostics are often performed in an “offline” scenario, and not in mainstream production. In addition, some customers disable WER anyway.  WER incurs a tiny amount of resources for many different things, including failure to install a device, or failure to install an update. [https://docs.microsoft.com/en-us/windows/win32/wer/windows-error-reporting](https://docs.microsoft.com/en-us/windows/win32/wer/windows-error-reporting)|
+|Windows Search|WSearch|Provides content indexing, property caching, and search results for files, e-mail, and other content.|Disabling this service prevents indexing of e-mail and other things. Test before disabling this service. [https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service](https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service)|
+|Xbox Live Auth Manager|XblAuthManager|Provides authentication and authorization services for interacting with Xbox Live. |If this service is stopped, some applications may not operate correctly.
+|Xbox Live Game Save|XblGameSave|This service syncs save data for Xbox Live save enabled games. |If this service is stopped, game save data will not upload to or download from Xbox Live.
+|Xbox Accessory Management Service|XboxGipSvc|This service manages connected Xbox Accessories.||
+|Xbox Live Networking Service|XboxNetApiSvc|This service supports the Windows.Networking.XboxLive application programming interface.||
+
+#### Per-user services in Windows
+[https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows](https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows)
+Per-user services are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks.
+
+If you intend to change a service start value, the preferred method is to open an elevated .CMD prompt and run the Service Control Manager tool ‘SC.EXE’. You can find more information on using ‘SC.EXE’ at this Internet location:
+
+**Microsoft**: [SC](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11))
+
+### Scheduled tasks
+Like other items in Windows, ensure an item is not needed before disabling a scheduled task.  Some tasks in virtual desktop environments, such as “**StartComponentCleanup**”, may not be desirable to run in production, but may be good to run during a maintenance window on the “gold image” (reference image).
+
+The following list of tasks are those that perform optimizations or data collections on computers that maintain their state across reboots. When a virtual desktop device reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
+
+You can get all the current scheduled tasks, including descriptions, with the following PowerShell code:
+
+```powershell
+  Get-ScheduledTask | Select-Object -Property TaskPath,TaskName,State,Description
+```
+> [!NOTE] There are several tasks that cannot be disabled via script, even when run elevated. The recommendations here, and in the GitHub scripts do not attempt to disable tasks that cannot be disabled via script.
+
+|Scheduled Task Name|Description|
+|-------------------|-----------|
+|*MNO*|Mobile broadband account experience metadata parser|
+|AnalyzeSystem|This task analyzes the system looking for conditions that may cause high energy use|
+|Cellular|Related to cellular devices|
+|Compatibility|Collects program telemetry information if opted-in to the Microsoft Customer Experience Improvement Program.|
+|Consolidator|If the user has consented to participate in the Windows Customer Experience Improvement Program, this job collects and sends usage data to Microsoft|
+|Diagnostics|(DiskFootprint in task path) 'DiskFootprint' is the combined contribution of all processes that issue storage I/O in the form of storage reads, writes, and flushes.|
+|FamilySafetyMonitor|Initializes Family Safety monitoring and enforcement.|
+|FamilySafetyRefreshTask|Synchronizes the latest settings with the Microsoft family features service.|
+|MapsToastTask|This task shows various Map related toasts|
+|Microsoft-Windows-DiskDiagnosticDataCollector|The Windows Disk Diagnostic reports general disk and system information to Microsoft for users participating in the Customer Experience Program.|
+|NotificationTask|Background task for performing per user and web interactions|
+|ProcessMemoryDiagnosticEvents|Schedules a memory diagnostic in response to system events|
+|Proxy|This task collects and uploads autochk SQM data if opted-in to the Microsoft Customer Experience Improvement Program.|
+|QueueReporting|Windows Error Reporting task to process queued reports.|
+|RecommendedTroubleshootingScanner|Check for recommended troubleshooting from Microsoft|
+|RegIdleBackup|Registry Idle Backup Task|
+|RunFullMemoryDiagnostic|Detects and mitigates problems in physical memory (RAM).|
+|Scheduled|The Windows Scheduled Maintenance Task performs periodic maintenance of the computer system by fixing problems automatically or reporting them through Security and Maintenance.|
+|ScheduledDefrag|This task optimizes local storage drives.|
+|SilentCleanup|Maintenance task used by the system to launch a silent auto disk cleanup when running low on free disk space.|
+|SpeechModelDownloadTask|
+|Sqm-Tasks|This task gathers information about the Trusted Platform Module (TPM), Secure Boot, and Measured Boot.|
+|SR|This task creates regular system protection points.|
+|StartComponentCleanup|Servicing task that may be better performed during maintenance windows|
+|StartupAppTask|Scans startup entries and raises notification to the user if there are too many startup entries.|
+|SyspartRepair|
+|WindowsActionDialog|Location Notification|
+|WinSAT|Measures a system's performance and capabilities|
+|XblGameSaveTask|Xbox Live GameSave standby task|
+
+### Apply Windows (and other) updates
+Whether from Microsoft Update, or from your internal resources, apply available updates including Windows Defender signatures. This is a good time to apply other available updates including Microsoft Office if installed, and other software updates. If PowerShell will remain in the image you can download the latest available help for PowerShell by running the command ‘Update-Help’.
+
+#### Servicing OS and apps
+At some point during the image optimization process available Windows updates should be applied. There is a setting in Windows 10 update settings that can provide additional updates:
+
+![Additional updates](media/rds-vdi-recommendations-1909/servicing.png)
+
+This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image.  That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
+
+One very important consideration for non-persistent virtual desktop devices are security updates, including security software definition files.  These updates may be released once or even more than once per day.
+
+For Windows Defender it may be best to allow the updates to occur, even on non-persistent virtual desktop environments.  The updates are going to apply nearly every logon session, but the updates are small and should not be a problem.  Plus, the device won’t be behind on updates because only the latest available will apply.  The same may be true for third-party definition files.
+
+**Note** that Store apps (UWP apps) update through the Windows Store.  Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
+
+#### Windows system startup event traces (AutoLoggers)
+Windows is configured, by default, to collect and save diagnostic data. The purpose is to enable diagnostics, or to record data if further troubleshooting is necessary. Automatic system traces can be found at the location depicted in the following illustration:
+
+![System Traces](media/rds-vdi-recommendations-1909/system-traces.png)
+
+Some of the traces displayed under **Event Trace Sessions** and **Startup Event Trace Sessions** can't and should not be stopped. Others, such as the ‘WiFiSession’ trace can be stopped. To stop a running trace under **Event Trace Sessions** right-click the trace and then click ‘Stop’. Use the following procedure to prevent the traces from starting automatically on startup:
+
+1. Click the **Startup Event Trace Sessions** folder.
+
+2. Locate the trace of interest, and then double-click that trace.
+
+3. Click the **Trace Session** tab.
+
+4. Click the box labeled **Enabled** to remove the check mark.
+
+5. Click **Ok**.
+
+The following are some system traces that could be considered for disablement for virtual desktop environments:
+
+|Name|Comment|
+|---|--------|
+|Cellcore|[https://docs.microsoft.com/en-us/windows-hardware/drivers/network/cellular-architecture-and-driver-model](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/cellular-architecture-and-driver-model)|
+|CloudExperienceHostOOBE|Documented [here](https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-how-it-works-technology#cloud-experience-host).|
+|DiagLog|A log generated by the Diagnostic Policy Service, which is documented [here](https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)|
+|RadioMgr|https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-device-drivers|
+|ReadyBoot|Documentation [here](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/xperf/readyboot-analysis).|
+|WDIContextLog|Wireless Local Area Network (WLAN) Device Driver Interface, and is documented here. |
+|WiFiDriverIHVSession|Documented [here](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/user-initiated-feedback-normal-mode).|
+|WiFiSession|Diagnostic log for WLAN technology. If Wi-Fi not implemented, no need for this logger|
+|WinPhoneCritical|Diagnostic log for phone (Windows?). If not using phones, no need for this logger|
+
+#### Windows Defender optimization in the virtual desktop environment
+Microsoft has recently published documentation regarding Windows Defender in a virtual desktop environment, at this location:
+
+[Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
+
+The above article contains procedures to service the ‘gold’ virtual desktop image, and how to maintain the virtual desktop clients as they are running. To reduce network bandwidth when virtual desktop devices need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where practical, have those files shares on the same or close networking segments as the virtual desktop devices.
+
+#### Client network performance tuning by registry settings
+There are some registry settings that can increase network performance. This is especially important in environments where the virtual desktop device or physical computer has a workload that is primarily network based.  The settings in this section are recommended to tune performance for the networking workload profile, by setting up additional buffering and caching of things like directory entries and so on.
+
+> [!NOTE]Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
+
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/) information, published on Microsoft.com by the Windows Product Group.
+
+#### DisableBandwidthThrottling
+
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DisableBandwidthThrottling`
+
+Applies to Windows 10. The default is **0**. By default, the SMB redirector throttles throughput across high-latency network connections, in some cases to avoid network-related timeouts. Setting this registry value to 1 disables this throttling, enabling higher file transfer throughput over high-latency network connections. Consider setting this value to **1**.
+
+#### FileInfoCacheEntriesMax
+
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileInfoCacheEntriesMax`
+Applies to Windows 10. The default is **64**, with a valid range of 1 to 65536. This value is used to determine the amount of file metadata that can be cached by the client. Increasing the value can reduce network traffic and increase performance when many files are accessed. Try increasing this value to **1024**.
+
+#### DirectoryCacheEntriesMax
+
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DirectoryCacheEntriesMax`
+
+Applies to Windows 10. The default is **16**, with a valid range of 1 to 4096. This value is used to determine the amount of directory information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when large directories are accessed. Consider increasing this value to **1024**.
+
+#### FileNotFoundCacheEntriesMax
+
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\FileNotFoundCacheEntriesMax`
+
+Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536. This value is used to determine the amount of file name information that can be cached by the client. Increasing the value can reduce network traffic and increase performance when many file names are accessed. Consider increasing this value to **2048**.
+
+#### DormantFileLimit
+
+`HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit`
+
+Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
+
+You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbclientconfiguration?view=win10-ps) and [Set-SmbServerConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
+
+```powershell
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
+```
+
+#### Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
+Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/en-us/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
+
+The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) settings are called out in the group policy table with an asterisk.
+
+#### Disk cleanup (including using the Disk Cleanup Wizard)
+
+Disk cleanup can be especially helpful with gold/master image virtual desktop implementations. After the gold/master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup.  The optimization scripts on Github.com have PowerShell code to perform common disk cleanup tasks
+
+> [!NOTE]
+Disk cleanup settings and are in the Settings category ‘System’ called ‘Storage’. The technology ‘Storage Sense’ by default runs when a low disk free space threshold is reached.
+Microsoft has provided guidance on using ‘Storage Sense’ with Azure custom VHD images.  You can locate that guidance here:<p>
+[Prepare and customize a master VHD image](https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-customize-master-image)<p>“For Windows Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**”
+
+Here are suggestions for various disk cleanup tasks.  These should all be tested before implementing:
+
+1. Storage Sense may be utilized manually or automatically.  For more information on Storage Sense, see this article:
+Use OneDrive and Storage Sense in Windows 10 to manage disk space
+2. Manually cleanup temporary files and logs.  From an elevated command prompt:
+   1. Del C:\*.tmp /s
+   2. C:\*.etl /s
+   3. C:\*.evtx /s
+
+```powershell
+Get-ChildItem -Path c:\ -Include *.tmp, *.dmp, *.etl, *.evtx, thumbcache*.db, *.log -File -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -ErrorAction SilentlyContinue
+
+Remove-Item -Path $env:ProgramData\Microsoft\Windows\WER\Temp\* -Recurse -Force -ErrorAction SilentlyContinue
+
+Remove-Item -Path $env:ProgramData\Microsoft\Windows\WER\ReportArchive\* -Recurse -Force -ErrorAction SilentlyContinue
+
+Remove-Item -Path $env:ProgramData\Microsoft\Windows\WER\ReportQueue\* -Recurse -Force -ErrorAction SilentlyContinue
+
+Clear-RecycleBin -Force -ErrorAction SilentlyContinue
+
+Clear-BCCache -Force -ErrorAction SilentlyContinue
+
+```
+
+3. Delete any unused profiles on the system
+    1. wmic path win32_UserProfile where LocalPath="C:\\users\\<users>" Delete
+
+For any questions or concerns about the information in this paper, contact your Microsoft account team, research the [Microsoft virtual desktop IT Pro blog](https://community.windows.com/en-us/stories/virtual-desktop-windows-10), post a message to [Microsoft Virtual Desktop forums](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/bd-p/WindowsVirtualDesktop), or contact [Microsoft](https://support.microsoft.com/en-us/contactus/) for questions or concerns.
+
+### Additional Notes
+
+#### Re-enabled WIndows Update
+
+If you would like to enable the use of Windows Update, as in the case of persistent virtual desktop, follow these steps:
+
+* Re-enable group policy settings
+  * Local Computer Policy \ Computer Configuration \ Administrative Templates \ System \ Internet Communication Management \ Internet Communication settings
+    * Turn off access to all Windows Update features (change from '**enabled**' to '**not configured**')
+  * Local Computer Policy \ Computer Configuration \ Administrative Templates \ Windows Components \ Windows Update
+    * Remove access to all Windows Update features (change from '**enabled**' to '**not configured**')
+    * Do not connect to any Windows Update Internet locations (change from '**enabled**' to '**not configured**')
+  * Local Computer Policy \ Computer Configuration \ Administrative Templates \ Windows Components \ Windows Update \ Windows Update for Business
+    * Select when Quality Updates are received (change from '**enabled**' to '**not configured**')
+  * Local Computer Policy \ Computer Configuration \ Administrative Templates \ Windows Components \ Windows Update \ Windows Update for Business
+    * Select when Preview Builds and Feature Updates are received (change from '**enabled**' to '**not configured**')
+* Re-enable service(s)
+  * Update Orchestrator service (change from '**disabled**' to '**Automatic (Delayed Start)**')
+* Edit the Windows registry (warning, be careful when editing the registry)
+  * HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UpdatePolicy\PolicyState
+    * DeferQualityUpdates (change from '1' to '0')
+  * HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UpdatePolicy\Settings
+    * PausedQualityDate (delete any existing value)
+  * HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\WAU
+    * Disabled 
+* Re-enable scheduled tasks
+  * Task Scheduler Library \ Microsoft \ Windows \ InstallService\ ScanForUpdates
+  * Task Scheduler Library \ Microsoft \ Windows \ InstallService\ ScanForUpdatesAsUser
+* To make all these settings take effect, **restart the device**
+* If you do not want this device offered Feature Updates, go to 'Settings' \ 'Windows Update' \ 'Advanced options' \ 'Choose when updates are installed' and manually set the option 'A feature update includes new capabilities and improvements. It can be deferred for this many days' to some non-zero value, such as 180, 365, etc.
+
+## Reference
+Citrix: [What is VDI (Virtual Desktop Infrastructure)](https://www.citrix.com/glossary/vdi.html)?
+
+Microsoft: [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/en-us/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).
+
+End of atricle.
