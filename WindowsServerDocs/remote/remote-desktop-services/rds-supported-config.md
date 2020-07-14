@@ -82,7 +82,7 @@ The following table shows support for GPU scenarios in the client OS.
 ### RemoteFX 3D Video Adapter (vGPU) support
 
 > [!NOTE]
-> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update. To learn more, please see [KB 4570006](https://support.microsoft.com/help/4570006).
+> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
 Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server 2012 R2 or Windows Server 2016. The following guest operating systems have RemoteFX vGPU support:
 
