@@ -52,9 +52,9 @@ There are several different implementations of persistent virtual desktop.
 
 - Traditional virtual machine (VM), where the VM has its own virtual disk file, starts up normally, and saves changes from one session to the next. The difference is how the user accesses this VM. There may be a web portal the user logs into that automatically directs the user to their one or more assigned virtual desktop devices (VMs).
 - Image-based persistent VM, optionally with personal virtual disks (PVD). In this type of implementation there is a base/gold image on one or more host servers. A VM is created, and one or more virtual disks are created and assigned to this disk for persistent storage.
-    - When the VM is started, a copy of the base image is read into the memory space of that VM. At the same time, a persistent virtual disk assigned to that VM, with any previous OS deltas is merged through a complex process.
-    - Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
-    - In this circumstance, OS and app servicing may operate normally, using traditional servicing software such as Windows Server Update Services, or other management technologies.
+  - When the VM is started, a copy of the base image is read into the memory space of that VM. At the same time, a persistent virtual disk assigned to that VM, with any previous OS deltas is merged through a complex process.
+  - Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
+  - In this circumstance, OS and app servicing may operate normally, using traditional servicing software such as Windows Server Update Services, or other management technologies.
 - The difference between a persistent virtual desktop device and a “normal” virtual desktop device” is the relationship to the master/gold image. At some point updates must be applied to the master. It is at this point where organizations decide how the user persistent changes are handled. In some cases, the disk with the user changes is discarded and/or reset.  It may also be that the changes the user makes to the machine are kept through monthly Quality Updates, and the base is reset following a Feature Update.
 
 ### Non-Persistent Virtual Desktop Environments
@@ -792,5 +792,3 @@ If you would like to enable the use of Windows Update, as in the case of persist
 Citrix: [What is VDI (Virtual Desktop Infrastructure)](https://www.citrix.com/glossary/vdi.html)?
 
 Microsoft: [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/en-us/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).
-
-End of atricle.
