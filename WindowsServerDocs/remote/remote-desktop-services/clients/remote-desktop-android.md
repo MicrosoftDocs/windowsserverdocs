@@ -70,7 +70,9 @@ Remote resources are RemoteApp programs, session-based desktops, and virtual des
 
 1. In the Connection Center, tap **+**, and then tap **Remote Resource Feed**.
 2. Enter the **Feed URL**. This can be a URL or email address:
-   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use `https://rdweb.wvd.microsoft.com`.
+   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs depending on which version you're using:
+     - If you're using the Fall 2019 version, use: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+     - If you're using the Spring 2020 version, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
 3. Tap **Next**.
 4. Provide your sign in information when prompted. This can vary based on the deployment and can include:
