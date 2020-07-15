@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: JasonGerend
   ms.author: jgerend
-  ms.date: 06/09/2020 
+  ms.date: 07/15/2020 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -79,7 +79,7 @@ landingContent:
           - text: Network File System (NFS)
             url: https://technet.microsoft.com/library/jj592688(v=ws.11).aspx
 
-  # Card (optional)
+  # Card
   - title: In Azure
     linkLists:
       - linkListType: overview
@@ -88,6 +88,8 @@ landingContent:
             url: https://azure.microsoft.com/documentation/services/storage/
           - text: Azure StorSimple
             url: https://www.microsoft.com/cloud-platform/azure-storsimple
+          - text: Azure Shared Disk
+            url: /azure/virtual-machines/windows/disks-shared
 
   # Card
   - title: Older versions of Windows Server
