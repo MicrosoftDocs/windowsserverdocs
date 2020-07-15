@@ -7,7 +7,7 @@ manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 10/25/2017
+ms.date: 07/15/2020
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +15,9 @@ ms.localizationpriority: medium
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud so that application high availability solutions can be used to increase the availability of applications.
+You can deploy Storage Spaces Direct (sometimes called S2D) on a cluster of physical servers or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud so that application high availability solutions can be used to increase the availability of applications.
+
+To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared Disks](/azure/virtual-machines/windows/disks-shared).
 
 ![](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
@@ -26,7 +28,7 @@ templates](https://github.com/robotechredmond/301-storage-spaces-direct-md) have
 
 <iframe src="https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure/player" width="960" height="540" allowfullscreen></iframe>
 
-## Requirements
+## Requirements for guest clusters
 
 The following considerations apply when deploying Storage Spaces Direct in a virtualized environment.
 
@@ -58,8 +60,8 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 - Disable the automatic drive replacement capabilities in the Health Service by running the following PowerShell cmdlet:
 
     ```powershell
-          Get-storagesubsystem clus* | set-storagehealthsetting -name "System.Storage.PhysicalDisk.AutoReplace.Enabled" -value "False"
-          ```
+    Get-storagesubsystem clus* | set-storagehealthsetting -name "System.Storage.PhysicalDisk.AutoReplace.Enabled" -value "False"
+    ```
 
 - To give greater resiliency to possible VHD / VHDX / VMDK storage latency in guest clusters, increase the Storage Spaces I/O timeout value:
 
