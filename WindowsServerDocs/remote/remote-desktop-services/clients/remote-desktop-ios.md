@@ -8,7 +8,7 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: lizross
 ms.author: helohr
-date: 06/01/2020
+ms.date: 07/16/2020
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client

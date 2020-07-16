@@ -8,7 +8,7 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/06/2020
+ms.date: 07/16/2020
 ms.localizationpriority: medium
 ---
 # Get started with the macOS client
@@ -57,17 +57,19 @@ Once you've subscribed to a feed, the feed's content will update automatically o
 
 ### Export and import connections
 
-You can export a remote desktop connection definition and use it on a  different device. Remote desktops are saved in separate .RDP files.
+You can export a remote desktop connection definition and use it on a different device. Remote desktops are saved in separate RDP files.
+
+To export an RDP file:
 
 1. In the Connection Center, right-click the remote desktop.
 2. Select **Export**.
-3. Browse to the location where you want to save the remote desktop .RDP file.
+3. Browse to the location where you want to save the remote desktop RDP file.
 4. Select **OK**.
 
-Use the following steps to import a remote desktop .RDP file.
+To import an RDP file:
 
 1. In the menu bar, select **File** > **Import**.
-2. Browse to the .RDP file.
+2. Browse to the RDP file.
 3. Select **Open**.
 
 ## Add a remote resource
@@ -79,7 +81,7 @@ Remote resources are RemoteApp programs, session-based desktops, and virtual des
 
 To add a remote resource:
 
-1. In the Connection Center select **+**, and then select **Add Remote Resources**. 
+1. In the Connection Center select **+**, and then select **Add Remote Resources**.
 2. Enter information for the remote resource:
    - **Feed URL** - The URL of the RD Web Access server. You can also enter your corporate email account in this field – this tells the client to search for the RD Web Access Server associated with your email address.
    - **User name** - The user name to use for the RD Web Access server you are connecting to.
@@ -124,8 +126,9 @@ You can specify the display resolution for the remote desktop session.
 
 To delete the resolution, select it, and then select **-**.
 
-**Displays have separate spaces**
-If you are running Mac OS X 10.9 and disabled **Displays have separate spaces** in Mavericks (**System Preferences > Mission Control**), you need to configure this setting in the remote desktop client using the same option.
+## Displays have separate spaces
+
+If you're running Mac OS X 10.9 and have disabled **Displays have separate spaces** in Mavericks (**System Preferences > Mission Control**), you need to configure this setting in the Remote Desktop client using the same option.
 
 ### Drive redirection for remote resources
 
@@ -136,21 +139,21 @@ Drive redirection is supported for remote resources, so that you can save files 
 
 ## Use a keyboard in a remote session
 
-Mac keyboard layouts differ from the Windows keyboard layouts. 
+Mac keyboard layouts differ from the Windows keyboard layouts.
 
 - The Command key on the Mac keyboard equals the Windows key.
-- To perform actions that use the Command button on the Mac, you will need to use the control button in Windows (e.g.: Copy = Ctrl + C).
-- The function keys can be activated in the session by pressing additionally the FN key (e.g.: FN + F1).
+- To perform actions that use the Command button on the Mac, you will need to use the control button in Windows (for example Copy = Ctrl+C).
+- The function keys can be activated in the session by pressing additionally the FN key (for example, FN+F1).
 - The Alt key to the right of the space bar on the Mac keyboard equals the Alt Gr/right Alt key in Windows.
 
 By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.md) for more information about keyboards and locales.
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
-Windows Server 2012 R2 introduced support for a new authentication method, Remote Desktop Gateway pluggable authentication and authorization, which provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client. 
+Windows Server 2012 R2 introduced support for a new authentication method, Remote Desktop Gateway pluggable authentication and authorization, which provides more flexibility for custom authentication routines. You can now try this authentication model with the Mac client.
 
 > [!IMPORTANT]
-> Custom authentication and authorization models before Windows 8.1 are not supported, although the article above discusses them.
+> Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.
 
 To learn more about this feature, check out [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
 
