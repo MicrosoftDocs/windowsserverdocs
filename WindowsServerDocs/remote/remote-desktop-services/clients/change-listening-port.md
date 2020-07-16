@@ -17,7 +17,7 @@ When you connect to a computer (either a Windows client or Windows Server) throu
 
 1. Start the registry editor. (Type regedit in the Search box.)
 2. Navigate to the following registry subkey:
-**HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\PortNumber**
+   **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp**
 3. Find **PortNumber**
 4. Click **Edit > Modify**, and then click **Decimal**.
 5. Type the new port number, and then click **OK**. 
