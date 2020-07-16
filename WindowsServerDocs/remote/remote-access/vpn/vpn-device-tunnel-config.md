@@ -24,7 +24,7 @@ Unlike _user tunnel_, which only connects after a user logs on to the device or 
 
 User tunnel is supported on domain-joined, nondomain-joined (workgroup), or Azure AD–joined devices to allow for both enterprise and BYOD scenarios. It is available in all Windows editions, and the platform features are available to third parties by way of UWP VPN plug-in support.
 
-Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel. Device tunnel does not support using the Name Resolution Policy table (NRPT). Device Tunnel does not support Force Tunnel, it must be configured as Split Tunnel.
+Device tunnel can only be configured on domain-joined devices running Windows 10 Enterprise or Education version 1709 or later. There is no support for third-party control of the device tunnel. Device tunnel does not support using the Name Resolution Policy table (NRPT). Device tunnel does not support Force tunnel. You must configure it as Split tunnel.
 
 
 ## Device Tunnel Requirements and Features
@@ -181,4 +181,3 @@ The following are Remote Access Server (RAS) Gateway resources.
 
 >[!IMPORTANT]
 >When using Device Tunnel with a Microsoft RAS gateway, you will need to configure the RRAS server to support IKEv2 machine certificate authentication by enabling the **Allow machine certificate authentication for IKEv2** authentication method as described [here](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Once this setting is enabled, it is strongly recommended that the **Set-VpnAuthProtocol** PowerShell cmdlet, along with the **RootCertificateNameToAccept** optional parameter, is used to ensure that RRAS IKEv2 connections are only permitted for VPN client certificates that chain to an explicitly defined internal/private Root Certification Authority. Alternatively, the **Trusted Root Certification Authorities** store on the RRAS server should be amended to ensure that it does not contain public certification authorities as discussed [here](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Similar methods may also need to be considered for other VPN gateways.
-
