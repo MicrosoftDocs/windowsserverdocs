@@ -1,6 +1,6 @@
 ---
 title: append
-description: Reference topic for the append command, which allows programs to open data files in specified directories, as if they were in the current directory.
+description: Reference article for the append command, which allows programs to open data files in specified directories, as if they were in the current directory.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

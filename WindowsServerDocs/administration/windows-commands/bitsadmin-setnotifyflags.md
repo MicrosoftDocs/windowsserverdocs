@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifyflags
-description: Reference topic for the bitsadmin setnotifyflags command, which sets the event notification flags for the specified job.
+description: Reference article for the bitsadmin setnotifyflags command, which sets the event notification flags for the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

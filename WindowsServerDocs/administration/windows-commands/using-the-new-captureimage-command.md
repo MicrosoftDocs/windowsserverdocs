@@ -1,6 +1,6 @@
 ---
 title: new-CaptureImage
-description: Reference topic for new-CaptureImage, which creates a new capture image from an existing boot image. 
+description: Reference article for new-CaptureImage, which creates a new capture image from an existing boot image.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -48,7 +48,7 @@ WDSUTIL /New-CaptureImage /Image:WinPE boot image /Architecture:x86 /Destination
 ```
 To create a capture image and apply the specified settings, type:
 ```
-WDSUTIL /Verbose /Progress /New-CaptureImage /Server:MyWDSServer /Image:WinPE boot image /Architecture:x64 /Filename:boot.wim 
+WDSUTIL /Verbose /Progress /New-CaptureImage /Server:MyWDSServer /Image:WinPE boot image /Architecture:x64 /Filename:boot.wim
 /DestinationImage /FilePath:\\Server\Share\WinPECapture.wim /Name:New WinPE image /Description:WinPE image with capture utility /Overwrite:No /UnattendFilePath:\\Server\Share\WDSCapture.inf
 ```
 

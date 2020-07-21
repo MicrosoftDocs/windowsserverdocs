@@ -1,6 +1,6 @@
 ---
 title: jetpack
-description: Reference topic for the jetpack command, which compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Protocol (DHCP) database.
+description: Reference article for the jetpack command, which compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Protocol (DHCP) database.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -26,7 +26,7 @@ To delete a volume in Windows Admin Center:
 4. At the top of the volumes detail page, select **Delete**.
 5. In the confirmations dialog, select the check box to confirm that you want to delete the volume, and select **Delete**.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)

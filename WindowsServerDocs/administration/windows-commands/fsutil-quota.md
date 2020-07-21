@@ -1,6 +1,6 @@
 ---
 title: fsutil quota
-description: Reference topic for the fsutil quota command, which manages disk quotas on NTFS volumes to provide more precise control of network-based storage.
+description: Reference article for the fsutil quota command, which manages disk quotas on NTFS volumes to provide more precise control of network-based storage.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima

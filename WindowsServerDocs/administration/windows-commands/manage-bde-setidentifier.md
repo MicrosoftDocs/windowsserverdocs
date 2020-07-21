@@ -1,6 +1,6 @@
 ---
 title: manage-bde setidentifier
-description: Reference topic for the manage-bde setidentifier command, which sets the drive identifier field on the drive to the value specified in the Provide the unique identifiers for your organization Group Policy setting.
+description: Reference article for the manage-bde setidentifier command, which sets the drive identifier field on the drive to the value specified in the Provide the unique identifiers for your organization Group Policy setting.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

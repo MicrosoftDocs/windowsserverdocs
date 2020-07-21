@@ -1,6 +1,6 @@
 ---
 title: verbose
-description: Reference topic for verbose, which displays verbose output for a specified command.
+description: Reference article for verbose, which displays verbose output for a specified command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

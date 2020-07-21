@@ -1,6 +1,6 @@
 ---
 title: bitsadmin info
-description: Reference topic for the bitsadmin info command, which displays summary information about the specified job.
+description: Reference article for the bitsadmin info command, which displays summary information about the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

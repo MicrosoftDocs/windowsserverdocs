@@ -1,6 +1,6 @@
 ---
 title: manage-bde changepassword
-description: Reference topic for the manage-bde changepassword command, which modifies the password for a data drive.
+description: Reference article for the manage-bde changepassword command, which modifies the password for a data drive.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

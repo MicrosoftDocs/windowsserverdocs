@@ -1,6 +1,6 @@
 ---
 title: manage-bde unlock
-description: Reference topic for the manage-bde unlock command, which unlocks a BitLocker-protected drive by using a recovery password or a recovery key.
+description: Reference article for the manage-bde unlock command, which unlocks a BitLocker-protected drive by using a recovery password or a recovery key.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

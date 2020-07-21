@@ -1,6 +1,6 @@
 ---
 title: ksetup removerealm
-description: Reference topic for the ksetup removerealm command, which deletes all information for the specified realm from the registry.
+description: Reference article for the ksetup removerealm command, which deletes all information for the specified realm from the registry.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

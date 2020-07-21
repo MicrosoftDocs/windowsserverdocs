@@ -125,7 +125,7 @@ If latencies are consistently greater than 50ms, you should do the following:
 
 -   Use VHDX
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

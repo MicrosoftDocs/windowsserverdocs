@@ -1,6 +1,6 @@
 ---
 title: date
-description: Reference topic for the date command, which displays or sets the system date. If used without parameters,
+description: Reference article for the date command, which displays or sets the system date. If used without parameters,
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

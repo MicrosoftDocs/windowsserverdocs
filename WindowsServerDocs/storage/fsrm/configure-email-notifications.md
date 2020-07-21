@@ -34,6 +34,6 @@ To send these notifications and storage reports, you must specify the SMTP serve
 6. Click **OK**.
 
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)

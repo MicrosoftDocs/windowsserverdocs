@@ -1,6 +1,6 @@
 ---
 title: list writers
-description: Reference topic for the list writers command, which lists writers that are on the system.
+description: Reference article for the list writers command, which lists writers that are on the system.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: logman update cfg
-description: Reference topic for the logman update cfg command, which updates the properties of an existing configuration data collector.
+description: Reference article for the logman update cfg command, which updates the properties of an existing configuration data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

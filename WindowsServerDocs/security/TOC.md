@@ -1,4 +1,4 @@
-# [Security and Assurance](security-and-assurance.md)
+# [Security and Assurance](security-and-assurance.yml)
 ## [Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016](gdpr/gdpr-winserver-whitepaper.md)
 ## [Set up HGS for a guarded fabric and shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [Overview](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)

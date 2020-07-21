@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-TransportServer
-description: Reference topic for Subcommand set-TransportServer, which sets configuration settings for a Transport Server.
+description: Reference article for Subcommand set-TransportServer, which sets configuration settings for a Transport Server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -24,10 +24,10 @@ wdsutil [Options] /Set-TransportServer [/Server:<Server name>]
         [/End:<Ending IP address>]
      [/ObtainIpv6From:Range]\n\
         [/start:<start IP address>]\n\
-        [/End:<End IP address>]      
+        [/End:<End IP address>]
      [/startPort:<starting port>
         [/EndPort:<starting port>
-     [/Profile:{10Mbps | 100Mbps | 1Gbps | Custom}]    
+     [/Profile:{10Mbps | 100Mbps | 1Gbps | Custom}]
      [/MulticastSessionPolicy]
              [/Policy:{None | AutoDisconnect | Multistream}]
                  [/Threshold:<Speed in KBps>]

@@ -1,6 +1,6 @@
 ---
 title: remove-DriverPackages
-description: Reference topic for 4emove-DriverPackages, which removes driver packages from the server.
+description: Reference article for 4emove-DriverPackages, which removes driver packages from the server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

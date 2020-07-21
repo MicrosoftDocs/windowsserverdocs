@@ -112,4 +112,4 @@ The following table provides additional resources for evaluating NFS.
 |---|---|
 |Deployment|[Deploy Network File System](deploy-nfs.md)|
 |Operations|[NFS cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/nfs/?view=win10-ps)|
-|Related technologies|[Storage in Windows Server](../storage.md)|
+|Related technologies|[Storage in Windows Server](../storage.yml)|

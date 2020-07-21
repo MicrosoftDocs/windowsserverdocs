@@ -1,6 +1,6 @@
 ---
 title: Windows Server Backup Command Reference
-description: Reference topic for backup command reference. 
+description: Reference article for backup command reference.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

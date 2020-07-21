@@ -1,6 +1,6 @@
 ---
 title: ver
-description: Reference topic for ver, which displays the operating system version number. 
+description: Reference article for ver, which displays the operating system version number.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

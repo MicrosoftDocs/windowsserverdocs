@@ -1,6 +1,6 @@
 ---
 title: shift
-description: Reference topic for shift, which changes the position of batch parameters in a batch file. 
+description: Reference article for shift, which changes the position of batch parameters in a batch file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -42,11 +42,11 @@ shift [/n <N>]
 
 The following lines from a sample batch file called Mycopy.bat demonstrate how to use **shift** with any number of batch parameters. In this example, Mycopy.bat copies a list of files to a specific directory. The batch parameters are represented by the directory and file name arguments.
 ```
-@echo off 
+@echo off
 rem MYCOPY.BAT copies any number of files
 rem to a directory.
 rem The command uses the following syntax:
-rem mycopy dir file1 file2 ... 
+rem mycopy dir file1 file2 ...
 set todir=%1
 :getfile
 shift

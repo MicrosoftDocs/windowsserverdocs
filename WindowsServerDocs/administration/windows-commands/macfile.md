@@ -1,6 +1,6 @@
 ---
 title: macfile
-description: Reference topic for the macfile command, which manages File Server for Macintosh servers, volumes, directories, and files.
+description: Reference article for the macfile command, which manages File Server for Macintosh servers, volumes, directories, and files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -230,7 +230,7 @@ For troubleshooting steps that use these events, see [Troubleshoot Authenticatio
 |106<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the user or device was not allowed to authenticate to the server.<p>An event is logged in the domain controller to indicate that a Kerberos service ticket was denied because the user, device, or both do not meet the enforced access control restrictions.<p>Displays the device, policy, and silo names.|
 |306<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure might occur because the user or device was not allowed to authenticate to the server.<p>In audit mode, an informational event is logged on the domain controller to indicate that a Kerberos service ticket will be denied because the user, device, or both do not meet the access control restrictions.<p>Displays the device, policy, and silo names.|
 
-## See also
+## Additional References
 [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
 
 [Credentials Protection and Management](credentials-protection-and-management.md)

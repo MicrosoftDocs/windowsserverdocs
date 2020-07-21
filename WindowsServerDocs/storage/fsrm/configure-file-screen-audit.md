@@ -26,7 +26,7 @@ By using File Server Resource Manager, you can record file screening activity in
 
 3.  Click **OK**. All file screening activity will now be stored in the auditing database, and it can be viewed by running a File Screening Audit report.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Storage Reports Management](storage-reports-management.md)

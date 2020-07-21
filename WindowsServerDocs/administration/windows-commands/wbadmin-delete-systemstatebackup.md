@@ -1,6 +1,6 @@
 ---
 title: wbadmin delete systemstatebackup
-description: Reference topic for wbadmin delete systemstatebackup, which deletes the system state backups that you specify.
+description: Reference article for wbadmin delete systemstatebackup, which deletes the system state backups that you specify.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

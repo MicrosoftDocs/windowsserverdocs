@@ -14,7 +14,7 @@ ms.date: 03/29/2018
 Windows Server 2019 introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server 2019. It is not available in Windows Server 2016. 
+   > This feature is new in Windows Server 2019. It is not available in Windows Server 2016.
 
 ## Prerequisites
 
@@ -105,7 +105,7 @@ PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0      
+MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0
 ```
 
 Note that only Server1, Server2, Server3, and Server4 contain slabs of *MyVolume*.
@@ -143,7 +143,7 @@ PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0      
+MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0
 ```
 
 Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server5 does.
@@ -162,7 +162,7 @@ Balance how much storage is allocated to each server, accounting for volume size
 
 ### Stagger delimited allocation volumes
 
-To maximize fault tolerance, make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). 
+To maximize fault tolerance, make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay).
 
 For example on an eight-node system:
 Volume 1: Servers 1, 2, 3, 4
@@ -199,7 +199,7 @@ Yes. You can choose per-volume whether or not to delimit allocation.
 
 No, it's the same as with regular allocation.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance.md)

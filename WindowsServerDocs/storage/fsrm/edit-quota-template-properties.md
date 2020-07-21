@@ -36,7 +36,7 @@ When you make changes to a quota template, you have the option of extending thos
 
 6.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -   [Create a Quota Template](create-quota-template.md)

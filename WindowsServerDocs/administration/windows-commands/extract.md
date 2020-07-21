@@ -1,6 +1,6 @@
 ---
 title: extract
-description: Reference topic for the extract command, which extracts files from a source location.
+description: Reference article for the extract command, which extracts files from a source location.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

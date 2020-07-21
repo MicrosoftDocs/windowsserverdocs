@@ -1,6 +1,6 @@
 ---
 title: add alias
-description: Reference topic for the add alias command, which adds aliases to the alias environment.
+description: Reference article for the add alias command, which adds aliases to the alias environment.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

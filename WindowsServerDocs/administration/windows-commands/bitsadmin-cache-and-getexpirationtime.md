@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and getexpirationtime
-description: Reference topic for the bitsadmin cache and getexpirationtime command, which retrieves the cache expiration time.
+description: Reference article for the bitsadmin cache and getexpirationtime command, which retrieves the cache expiration time.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

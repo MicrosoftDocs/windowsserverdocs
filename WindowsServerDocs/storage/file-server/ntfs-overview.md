@@ -94,4 +94,4 @@ If the space on a volume is limited, NTFS provides the following ways to work wi
 - [NTFS Health and Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))
 - [Self-Healing NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (introduced in Windows Server 2008)
 - [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (introduced in Windows Server 2008)
-- [Storage in Windows Server](../storage.md)
+- [Storage in Windows Server](../storage.yml)

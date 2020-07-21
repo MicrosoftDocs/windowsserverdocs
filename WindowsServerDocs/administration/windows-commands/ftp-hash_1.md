@@ -1,6 +1,6 @@
 ---
 title: ftp hash
-description: Reference topic for the ftp hash command, which toggles number sign (#) printing for each transferred data block.
+description: Reference article for the ftp hash command, which toggles number sign (#) printing for each transferred data block.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

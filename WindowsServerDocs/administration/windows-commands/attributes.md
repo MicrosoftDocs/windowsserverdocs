@@ -1,6 +1,6 @@
 ---
 title: attributes
-description: Reference topic for the attributes command, which displays, sets, or clears the attributes of a disk or volume.
+description: Reference article for the attributes command, which displays, sets, or clears the attributes of a disk or volume.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

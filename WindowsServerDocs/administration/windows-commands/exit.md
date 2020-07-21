@@ -1,6 +1,6 @@
 ---
 title: exit
-description: Reference topic for exit, which exits the command interpreter.
+description: Reference article for exit, which exits the command interpreter.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

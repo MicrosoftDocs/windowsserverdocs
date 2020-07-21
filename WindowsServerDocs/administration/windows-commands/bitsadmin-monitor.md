@@ -1,6 +1,6 @@
 ---
 title: bitsadmin monitor
-description: Reference topic for the bitsadmin monitor command, which monitors jobs in the transfer queue that are owned by the current user.
+description: Reference article for the bitsadmin monitor command, which monitors jobs in the transfer queue that are owned by the current user.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

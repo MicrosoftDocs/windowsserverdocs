@@ -1,6 +1,6 @@
 ---
 title: fsutil objectid
-description: Reference topic for the fsutil objectid command, which manages object identifiers to track other objects such as files, directories, and links.
+description: Reference article for the fsutil objectid command, which manages object identifiers to track other objects such as files, directories, and links.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima

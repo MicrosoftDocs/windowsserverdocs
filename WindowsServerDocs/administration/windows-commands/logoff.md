@@ -1,6 +1,6 @@
 ---
 title: logoff
-description: Reference topic for the logoff command, which logs off a user from a session on a Remote Desktop Session Host server and deletes the session.
+description: Reference article for the logoff command, which logs off a user from a session on a Remote Desktop Session Host server and deletes the session.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

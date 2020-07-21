@@ -1,6 +1,6 @@
 ---
 title: ftp disconnect
-description: Reference topic for the ftp disconnect command, which disconnects from the remote computer and retains the ftp prompt.
+description: Reference article for the ftp disconnect command, which disconnects from the remote computer and retains the ftp prompt.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

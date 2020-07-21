@@ -1,6 +1,6 @@
 ---
 title: irftp
-description: Reference topic for the irftp command, which sends files over an infrared link.
+description: Reference article for the irftp command, which sends files over an infrared link.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

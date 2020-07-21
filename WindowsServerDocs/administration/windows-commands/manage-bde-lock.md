@@ -1,6 +1,6 @@
 ---
 title: manage-bde lock
-description: Reference topic for the manage-bde lock command, which locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided.
+description: Reference article for the manage-bde lock command, which locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

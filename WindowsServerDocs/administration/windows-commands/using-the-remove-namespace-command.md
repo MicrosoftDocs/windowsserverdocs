@@ -1,6 +1,6 @@
 ---
 title: remove-Namespace
-description: Reference topic for remove-Namespace, which removes a custom namespace.
+description: Reference article for remove-Namespace, which removes a custom namespace.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

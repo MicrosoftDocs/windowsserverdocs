@@ -89,6 +89,6 @@ Use the [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-vo
 Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

@@ -20,7 +20,7 @@ This topic describes how to create volumes on a Storage Spaces Direct cluster by
 
 ## Create a three-way mirror volume
 
-To create a three-way mirror volume in Windows Admin Center: 
+To create a three-way mirror volume in Windows Admin Center:
 
 1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
 2. On the Volumes page, select the **Inventory** tab, and then select **Create volume**.
@@ -145,7 +145,7 @@ New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 You're done! Repeat as needed to create more than one volume.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)

@@ -1,6 +1,6 @@
 ---
 title: label
-description: Reference topic for the label command, which creates, changes, or deletes the volume label (that is, the name) of a disk.
+description: Reference article for the label command, which creates, changes, or deletes the volume label (that is, the name) of a disk.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

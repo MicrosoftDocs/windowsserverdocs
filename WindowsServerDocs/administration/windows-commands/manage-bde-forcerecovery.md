@@ -1,6 +1,6 @@
 ---
 title: manage-bde forcerecovery
-description: Reference topic for the manage-bde forcerecovery command, which forces a BitLocker-protected drive into recovery mode on restart.
+description: Reference article for the manage-bde forcerecovery command, which forces a BitLocker-protected drive into recovery mode on restart.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

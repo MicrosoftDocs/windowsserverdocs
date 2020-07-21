@@ -1,6 +1,6 @@
 ---
 title: certreq
-description: Reference topic for the certreq command, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.  
+description: Reference article for the certreq command, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

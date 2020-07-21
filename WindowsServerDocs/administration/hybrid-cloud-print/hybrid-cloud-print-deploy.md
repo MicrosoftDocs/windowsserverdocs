@@ -4,6 +4,7 @@ description: How to set up Microsoft Hybrid Cloud Print
 ms.prod: windows-server
 ms.technology: windows server 2016
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
+ms.topic: how-to
 author: msjimwu
 ms.author: coreyp
 manager: dongill
@@ -367,7 +368,7 @@ To enable authenticated communication with the HCP services, we need to create 3
             - Value = The Application ID URI of the Enterprise Cloud Print app
         - DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit
             - Value = A positive integer
-    
+
 ### Step 7 - Publish the shared printer
 
 1. Install desired printer on the Print Server.

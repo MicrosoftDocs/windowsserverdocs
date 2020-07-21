@@ -1,6 +1,6 @@
 ---
 title: Set context
-description: Reference topic for Set context, which sets the context for shadow copy creation.
+description: Reference article for Set context, which sets the context for shadow copy creation.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -23,7 +23,7 @@ Starting with Windows Server 2008, the operating system features enlightenments
 
 The following sections suggest best practices that yield increased performance on servers running Hyper-V role.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

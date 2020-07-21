@@ -1,6 +1,6 @@
 ---
 title: add
-description: Reference topic for the various add commands.
+description: Reference article for the various add commands.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

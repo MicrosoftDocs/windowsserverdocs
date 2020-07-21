@@ -40,7 +40,7 @@ TLS and SSL protocols use a client/server model and are based on certificate aut
 ## <a name="BKMK_INSTALL"></a>Server Manager information
 There are no configuration steps necessary to implement TLS, SSL or Schannel.
 
-## See also ##
+## Additional References ##
 
 -   [The Schannel security package](https://docs.microsoft.com/windows/desktop/com/schannel)
 -   [Secure Channel](https://docs.microsoft.com/windows/desktop/SecAuthN/secure-channel)

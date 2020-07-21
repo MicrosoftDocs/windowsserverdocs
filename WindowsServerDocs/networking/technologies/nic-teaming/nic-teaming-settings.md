@@ -104,7 +104,7 @@ After you click the highlighted link, the following **New Team Interface** dialo
   
 If you are using VLANs, you can use this dialog box to specify a VLAN number.  
   
-Whether or  not you are using VLANs, you can specify a tNIC name for the NIC Team.  
+Whether or not you are using VLANs, you can specify a NIC name for the NIC Team.  
   
 
 

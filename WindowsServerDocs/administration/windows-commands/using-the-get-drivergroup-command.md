@@ -1,6 +1,6 @@
 ---
 title: get-DriverGroup
-description: Reference topic for get-DriverGroup, which displays information about the driver groups on a server.
+description: Reference article for get-DriverGroup, which displays information about the driver groups on a server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

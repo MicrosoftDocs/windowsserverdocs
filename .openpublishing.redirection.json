@@ -8652,6 +8652,11 @@
   "source_path": "WindowsServerDocs/security/set-up-hgs-for-always-encrypted-in-sql-server.md",
   "redirect_url": "https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan?view=sql-server-ver15",
   "redirect_document_id": true
+ },
+ {
+  "source_path": "WindowsServerDocs/networking/Networking.md",
+  "redirect_url": "https://docs.microsoft.com/windows-server/networking",
+  "redirect_document_id": true
  }
   ]
 }

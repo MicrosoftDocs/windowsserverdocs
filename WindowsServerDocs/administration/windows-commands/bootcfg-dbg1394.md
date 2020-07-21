@@ -1,6 +1,6 @@
 ---
 title: bootcfg dbg1394
-description: Reference topic for the bootcfg dbg1394 command, which configures 1394 port debugging for a specified operating system entry
+description: Reference article for the bootcfg dbg1394 command, which configures 1394 port debugging for a specified operating system entry
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

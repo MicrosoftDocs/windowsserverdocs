@@ -119,7 +119,7 @@ This section summarizes the resiliency types available in Storage Spaces Direct,
 |    Mixed               |    4                                |
 
    >[!TIP]
-   > Unless you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct. 
+   > Unless you are using [chassis or rack fault tolerance](../../failover-clustering/fault-domains.md), the number of fault domains refers to the number of servers. The number of drives in each server does not affect which resiliency types you can use, as long as you meet the minimum requirements for Storage Spaces Direct.
 
 ### Dual parity efficiency for hybrid deployments
 
@@ -203,7 +203,7 @@ Over its lifetime, Storage Spaces can tolerate any number of failures, because i
 
 Check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
-## See also
+## Additional References
 
 Every link below is inline somewhere in the body of this topic.
 

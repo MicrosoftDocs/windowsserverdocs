@@ -1,6 +1,6 @@
 ---
 title: chcp
-description: Reference topic for the chcp command, which changes the active console code page.
+description: Reference article for the chcp command, which changes the active console code page.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

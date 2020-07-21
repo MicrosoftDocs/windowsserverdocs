@@ -14,16 +14,16 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-The following topics provide information about methods that you can use to manage online services for your organization:  
-  
--   [Manage Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)   
-  
--   [Manage Online Backup](Manage-Online-Backup-in-Windows-Server-Essentials.md)  
-  
--   [Manage SharePoint Online](Manage-SharePoint-Online-in-Windows-Server-Essentials.md)  
-  
-## See also  
-  
--   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
-  
+The following topics provide information about methods that you can use to manage online services for your organization:
+
+-   [Manage Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)
+
+-   [Manage Online Backup](Manage-Online-Backup-in-Windows-Server-Essentials.md)
+
+-   [Manage SharePoint Online](Manage-SharePoint-Online-in-Windows-Server-Essentials.md)
+
+## Additional References
+
+-   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)
+
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

@@ -1,6 +1,6 @@
 ---
 title: ipconfig
-description: Reference topic for the ipconfig command, which displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.
+description: Reference article for the ipconfig command, which displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

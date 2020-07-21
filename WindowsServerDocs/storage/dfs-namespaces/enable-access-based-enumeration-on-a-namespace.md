@@ -47,7 +47,7 @@ You can enable access-based enumeration on a namespace either by using the Windo
 
 2.  Type the following command, where *<namespace\_root>* is the root of the namespace:
 
-    ```  
+    ```
     dfsutil property abe enable \\ <namespace_root>
     ```
 
@@ -83,7 +83,7 @@ You can control which users and groups can view individual DFS folders either by
    For example, to replace existing permissions with permissions that allows the Domain Admins and CONTOSO\\Trainers groups Read (R) access to the \\contoso.office\public\training folder, type the following command:
 
    ```
-   dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 
+   dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace
    ```
 
 3. To perform additional tasks from the command prompt, use the following commands:
@@ -95,7 +95,7 @@ You can control which users and groups can view individual DFS folders either by
 |[Dfsutil property sd reset](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx) |Removes all permissions from the folder.|
 |[Dfsutil property sd revoke](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)| Removes a group or user ACE from the folder. |
 
-## See also
+## Additional References
 
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)

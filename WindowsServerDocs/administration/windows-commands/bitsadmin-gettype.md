@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gettype
-description: Reference topic for the bitsadmin gettype command, which retrieves the job type of the specified job.
+description: Reference article for the bitsadmin gettype command, which retrieves the job type of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

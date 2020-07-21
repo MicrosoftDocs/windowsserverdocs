@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getstate
-description: Reference topic for the bitsadmin getstate command, which retrieves the state of the specified job.
+description: Reference article for the bitsadmin getstate command, which retrieves the state of the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

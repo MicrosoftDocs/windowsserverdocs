@@ -19,7 +19,7 @@ ms.date: 08/29/2018
 > [!div class="nextstepaction"]
 > [Configure HTTPS](guarded-fabric-configure-hgs-https.md)
 
-## See also
+## Additional References
 
 - [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 - [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms)

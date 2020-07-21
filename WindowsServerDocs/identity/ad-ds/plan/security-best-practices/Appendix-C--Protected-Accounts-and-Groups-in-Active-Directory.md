@@ -35,8 +35,6 @@ The following table contains the protected groups in Active Directory listed by 
 |Domain Admins|Domain Admins|Domain Admins|Domain Admins|
 |Domain Controllers|Domain Controllers|Domain Controllers|Domain Controllers|
 |Enterprise Admins|Enterprise Admins|Enterprise Admins|Enterprise Admins|
-||||Enterprise Key Admins|
-||||Key Admins|
 |Krbtgt|Krbtgt|Krbtgt|Krbtgt|
 |Print Operators|Print Operators|Print Operators|Print Operators|
 |||Read-only Domain Controllers|Read-only Domain Controllers|

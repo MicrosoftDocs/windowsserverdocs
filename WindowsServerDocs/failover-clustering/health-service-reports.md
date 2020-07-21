@@ -12,9 +12,9 @@ ms.date: 10/05/2017
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-## What are reports  
+## What are reports
 
-The Health Service reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.  
+The Health Service reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.
 
 ## Usage in PowerShell
 
@@ -24,16 +24,16 @@ Use this cmdlet to get metrics for the entire Storage Spaces Direct cluster:
 Get-StorageSubSystem Cluster* | Get-StorageHealthReport
 ```
 
-The optional **Count** parameter indicates how many sets of values to return, at one second intervals.  
+The optional **Count** parameter indicates how many sets of values to return, at one second intervals.
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>  
+Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>
 ```
 
-You can also get metrics for one specific volume or server:  
+You can also get metrics for one specific volume or server:
 
 ```PowerShell
-Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>  
+Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>
 
 Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 ```
@@ -274,6 +274,6 @@ Below are the metrics available for each scope in Windows Server 2016.
 | IOThroughputTotal   | 1         |
 | IOThroughputWrite   | 1         |
 
-## See also
+## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)

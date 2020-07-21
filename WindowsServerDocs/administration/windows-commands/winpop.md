@@ -1,6 +1,6 @@
 ---
 title: winpop
-description: Reference topic for winpop, which is deprecated and not guaranteed to be supported in future releases of Windows.
+description: Reference article for winpop, which is deprecated and not guaranteed to be supported in future releases of Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: Set verbose
-description: Reference topic for set verbose, which specifies whether verbose output is provided during shadow copy creation. 
+description: Reference article for set verbose, which specifies whether verbose output is provided during shadow copy creation.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

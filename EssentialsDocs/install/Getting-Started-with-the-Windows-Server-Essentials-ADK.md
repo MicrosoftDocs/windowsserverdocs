@@ -33,13 +33,3 @@ The Assessment and Deployment Kit (ADK) for the  Windows Server Essentials serve
   
 -   [Configure Server Storage](Configure-Server-Storage.md)
 
--   [Important Information for Using the Windows Server Essentials ADK](../install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md)  
-  
--   [Hardware Requirements for the Target Computer](../install/Hardware-Requirements-for-the-Target-Computer.md)  
-  
--   [Preconfiguring a Router](../install/Preconfiguring-a-Router.md)  
-  
--   [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md)  
-  
--   [Configure Server Storage](../install/Configure-Server-Storage.md)
-

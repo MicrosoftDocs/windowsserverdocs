@@ -1,6 +1,6 @@
 ---
 title: fsutil reparsepoint
-description: Reference topic for the fsutil reparsepoint command, which queries or deletes reparse points.
+description: Reference article for the fsutil reparsepoint command, which queries or deletes reparse points.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima

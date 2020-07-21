@@ -26,7 +26,7 @@ There are two key scenarios this enables:
 Protect password-based login from brute-force attacks and lockouts by prompting for an additional, external factor first.  Only if the external authentication is successfully completed does the user then see a password prompt.  This eliminates a convenient way attackers have been trying to compromise or disable accounts.
 
 This scenario consists of two components:
-- Prompting for Azure MFA or an external authentication factor as primary authentication
+- Prompting for Azure MFA (available in AD FS 2016 onwards) or an external authentication factor as primary authentication
 - Username and password as additional authentication in AD FS
 
 ## Scenario 2: password-free!

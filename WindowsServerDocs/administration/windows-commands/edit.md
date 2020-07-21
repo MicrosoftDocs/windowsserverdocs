@@ -1,6 +1,6 @@
 ---
 title: edit
-description: Reference topic for the edit command, which starts the MS-DOS Editor, so you can create and change ASCII text files.
+description: Reference article for the edit command, which starts the MS-DOS Editor, so you can create and change ASCII text files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

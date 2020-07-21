@@ -48,7 +48,7 @@ When creating a new file screen, you can choose to save a file screen template t
 
 12. Click **OK**.
 
-## See also
+## Additional References
 
 -   [File Screening Management](file-screening-management.md)
 -   [Define File Groups for Screening](define-file-groups-for-screening.md)

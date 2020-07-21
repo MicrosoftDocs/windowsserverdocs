@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 ![Icon showing a newspaper](media/whats-new.png) To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.
 
-## [Compute](../virtualization/virtualization.md)
+## [Compute](../virtualization/virtualization.yml)
 
 The Virtualization area includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.  
 
@@ -53,7 +53,7 @@ Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to pro
 
 For more details and instructions for working with shielded virtual machines, see [Shielded VMs and Guarded Fabric Validation Guide for Windows Server 2016 (TPM)](https://aka.ms/shieldedvms).  
 
-## [Identity and Access](../identity/Identity-and-Access.md)  
+## [Identity and Access](../identity/Identity-and-Access.yml)  
 New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.  
 
 ### Active Directory Certificate Services  
@@ -68,7 +68,7 @@ What's New in Active Directory Federation Services. Active Directory Federation 
 ### Web Application Proxy  
 The latest version of Web Application Proxy focuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).  
 
-##  [Administration](../administration/manage-windows-server.md)  
+##  [Administration](../administration/manage-windows-server.yml)  
 The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.
 
 Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](https://docs.microsoft.com/powershell/wmf/5.1/scenarios-features) for details.
@@ -92,7 +92,7 @@ To help the team responsible for investigating comprimised systems - sometimes k
 
 For more info, see [PowerShell ♥ the Blue Team](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/).
 
-## [Networking](../networking/Networking.md)  
+## [Networking](../networking/index.yml)  
 This area addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server 2016.  
 
 ### Software-Defined Networking
@@ -103,8 +103,8 @@ The default Initial Congestion Window (ICW) has been increased from 4 to 10 and 
 
 In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgement (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet. 
 
-## [Security and Assurance](../security/Security-and-Assurance.md)  
-Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](../security/Security-and-Assurance.md).  
+## [Security and Assurance](../security/Security-and-Assurance.yml)  
+Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](../security/Security-and-Assurance.yml).  
 
 ### Just Enough Administration  
 Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](https://aka.ms/JEA).
@@ -126,7 +126,7 @@ Device Guard provides kernel mode code integrity (KMCI) and user mode code integ
 Control Flow Guard (CFG) is a platform security feature that was created to combat memory corruption vulnerabilities. See [Control Flow Guard](https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx) for more information.
 
 
-## [Storage](../storage/storage.md)
+## [Storage](../storage/storage.yml)
 
 Storage in Windows Server 2016 includes new features and enhancements for software-defined storage, as well as for traditional file servers. Below are a few of the new features, for more enhancements and further details, see [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md).
 

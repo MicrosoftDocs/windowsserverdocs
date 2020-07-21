@@ -1,12 +1,8 @@
 ---
 title: offline volume
-description: Reference topic for **** - 
-
+description: Reference article for the offline volume command, which takes the online volume with focus to the offline state.
 ms.prod: windows-server
-
-
 ms.technology: manage-windows-commands
-
 ms.topic: article
 ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
 author: coreyp-at-msft
@@ -17,12 +13,10 @@ ms.date: 10/16/2017
 
 # offline volume
 
-
-
 Takes the online volume with focus to the offline state.
 
-> [!IMPORTANT]
-> This DiskPart command is not available in any edition of Windows Vista.
+> [!NOTE]
+> A volume must be selected for the **offline volume** command to succeed. Use the [select volume](select-volume.md) command to select a disk and shift the focus to it.
 
 ## Syntax
 
@@ -32,17 +26,14 @@ offline volume [noerr]
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+| Parameter | Description |
+| --------- | ----------- |
+| noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
-## Remarks
-
--   A volume must be selected for this to succeed. Use the **select volume** command to select a disk and shift the focus to it.
-
-## Examples
+### Examples
 
 To take the disk with focus offline, type:
+
 ```
 offline volume
 ```
@@ -50,4 +41,3 @@ offline volume
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-

@@ -1,6 +1,6 @@
 ---
 title: manage-bde upgrade
-description: Reference topic for the manage-bde upgrade command, which upgrades the BitLocker version.
+description: Reference article for the manage-bde upgrade command, which upgrades the BitLocker version.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

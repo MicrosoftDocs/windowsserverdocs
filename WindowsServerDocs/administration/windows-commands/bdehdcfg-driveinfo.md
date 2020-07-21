@@ -1,6 +1,6 @@
 ---
 title: bdehdcfg driveinfo
-description: Reference topic for the bdehdcfg driveinfo command, which displays the drive letter, the total size, the maximum free space, and the partition characteristics.
+description: Reference article for the bdehdcfg driveinfo command, which displays the drive letter, the total size, the maximum free space, and the partition characteristics.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

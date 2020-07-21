@@ -1,6 +1,6 @@
 ---
 title: disable-Server
-description: Reference topic for disable-Server, which disables all services for a Windows Deployment Services server. 
+description: Reference article for disable-Server, which disables all services for a Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: flattemp
-description: Reference topic for the flattemp command, which enables or disables flat temporary folders.
+description: Reference article for the flattemp command, which enables or disables flat temporary folders.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

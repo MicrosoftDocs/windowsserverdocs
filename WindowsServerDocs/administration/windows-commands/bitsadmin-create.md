@@ -1,6 +1,6 @@
 ---
 title: bitsadmin create
-description: Reference topic for the bitsadmin create command, which creates a transfer job with the given display name.
+description: Reference article for the bitsadmin create command, which creates a transfer job with the given display name.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

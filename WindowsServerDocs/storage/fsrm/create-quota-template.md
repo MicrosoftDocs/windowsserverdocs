@@ -82,7 +82,7 @@ For example, you could configure thresholds to send an e-mail message to the adm
 
 8. Repeat these steps if you want to configure additional notification thresholds for the quota template.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -    [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)

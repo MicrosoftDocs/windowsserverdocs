@@ -1,6 +1,6 @@
 ---
 title: compact
-description: Reference topic for the compact command, which displays or alters the compression of files or directories on NTFS partitions.
+description: Reference article for the compact command, which displays or alters the compression of files or directories on NTFS partitions.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

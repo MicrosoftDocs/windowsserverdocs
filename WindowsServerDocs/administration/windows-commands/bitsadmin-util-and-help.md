@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and help
-description: Reference topic for the bitsadmin util and help command, which displays the command-line usage for the /util switches.
+description: Reference article for the bitsadmin util and help command, which displays the command-line usage for the /util switches.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

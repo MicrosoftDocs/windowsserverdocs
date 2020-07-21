@@ -1,6 +1,6 @@
 ---
 title: bitsadmin help
-description: Reference topic for the bitsadmin help command, which displays the command-line usage.
+description: Reference article for the bitsadmin help command, which displays the command-line usage.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

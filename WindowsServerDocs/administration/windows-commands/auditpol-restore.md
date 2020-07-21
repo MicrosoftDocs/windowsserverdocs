@@ -1,6 +1,6 @@
 ---
 title: auditpol restore
-description: Reference topic for the auditpol restore command, which restores system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file that is syntactically consistent with the comma-separated value (CSV) file format used by the /backup option.
+description: Reference article for the auditpol restore command, which restores system audit policy settings, per-user audit policy settings for all users, and all auditing options from a file that is syntactically consistent with the comma-separated value (CSV) file format used by the /backup option.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

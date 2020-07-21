@@ -1,6 +1,6 @@
 ---
 title: cls
-description: Reference topic for the cls command, which clears the Command Prompt window. 
+description: Reference article for the cls command, which clears the Command Prompt window.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

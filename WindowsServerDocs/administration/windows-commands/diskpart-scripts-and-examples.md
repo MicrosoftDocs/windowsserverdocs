@@ -1,6 +1,6 @@
 ---
 title: diskpart scripts and examples
-description: Reference topic for diskpart scripts and examples about how to automate disk-related tasks, such as creating volumes or converting disks to dynamic disks.
+description: Reference article for diskpart scripts and examples about how to automate disk-related tasks, such as creating volumes or converting disks to dynamic disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -51,8 +51,8 @@ To create a diskpart script, create a text file that contains the Diskpart comma
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Sample: Configure UEFI\/gpt\-Based Hard Drive Partitions by Using Windows PE and diskpart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
+- [Sample: Configure UEFI/GPT-Based Hard Drive Partitions by Using Windows PE and DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
 
-- [Sample: Configure BIOS\/MBR\-Based Hard Disk Partitions by Using Windows PE and diskpart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
+- [Sample: Configure BIOS/MBR-Based Hard Disk Partitions by Using Windows PE and DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
 
 - [Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/?view=win10-ps)

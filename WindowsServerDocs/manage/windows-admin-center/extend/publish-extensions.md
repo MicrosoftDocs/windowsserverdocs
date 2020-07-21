@@ -77,9 +77,6 @@ Here's an example .nuspec file and the list of required or recommended propertie
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="https://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <packageTypes>
-      <packageType name="WindowsAdminCenterExtension" />
-    </packageTypes>  
     <id>contoso.project.extension</id>
     <version>1.0.0</version>
     <title>Contoso Hello Extension</title>

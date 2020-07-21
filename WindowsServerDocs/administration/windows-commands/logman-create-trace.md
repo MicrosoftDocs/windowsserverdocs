@@ -1,6 +1,6 @@
 ---
 title: logman create trace
-description: Reference topic for the logman create trace command, which creates an event trace data collector.
+description: Reference article for the logman create trace command, which creates an event trace data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: erase
-description: Reference topic for the erase command, which deletes one or more files.
+description: Reference article for the erase command, which deletes one or more files.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -13,10 +13,11 @@ ms.date: 10/16/2017
 
 # erase
 
-Deletes one or more files. This command performs the same actions as the **del** command.
+Deletes one or more files. If you use **erase** to delete a file from your disk, you can't retrieve it.
 
-> [!WARNING]
-> If you use **erase** to delete a file from your disk, you can't retrieve it.
+> [!NOTE]
+> This command is the same as the [del command](del.md).
+
 
 ## Syntax
 
@@ -92,3 +93,5 @@ erase /a:r *.*
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [del command](del.md)

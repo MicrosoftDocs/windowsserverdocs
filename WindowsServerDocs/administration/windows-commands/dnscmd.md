@@ -1,6 +1,6 @@
 ---
 title: dnscmd
-description: Reference topic for the dnscmd command, which is a command-line interface for managing DNS servers.
+description: Reference article for the dnscmd command, which is a command-line interface for managing DNS servers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

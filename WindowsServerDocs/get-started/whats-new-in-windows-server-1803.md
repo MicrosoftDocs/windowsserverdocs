@@ -30,7 +30,7 @@ Windows Server version 1709 was released in September 2017 as the first release 
 
 Based on telemetry and feedback, these channels have demonstrated that they conform well to the following general strategy:
 - The Semi-Annual Channel is ideal for modern applications and innovation scenarios, such as containers and micro-services.
-- The Long-Term Servicing Channel is the preferred release for core infrastructure scenarios such as software-defined datacenter and hyper-converged infrastructure (HCI). 
+- The Long-Term Servicing Channel is the preferred release for core infrastructure scenarios such as software-defined datacenter and hyper-converged infrastructure (HCI).
 
 The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing Channel are as follows:
 
@@ -46,7 +46,7 @@ The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing C
 ## Application platform and containers
 
 - Optimization
-    - The Server Core base container image is reduced by 30% from Windows Server, version 1709. 
+    - The Server Core base container image is reduced by 30% from Windows Server, version 1709.
     - Application compatibility is also improved to help with containerizing of traditional applications.
     - Container boot performance and run-time performance are improved as well thanks to various fixes and optimizations.
 - Container networking: Localhost and http proxy support has been added, and container scalability and startup time is improved.
@@ -65,16 +65,16 @@ A smaller Server Core container with better application compatibility is now ava
 
 WSL enables server administrators to use existing tools and scripts from Linux on Windows Server. Many improvements showcased in the [command line blog](https://blogs.msdn.microsoft.com/commandline/tag/wsl/) are now part of Windows Server, including Background tasks, DriveFS, WSLPath, and much more.
 
-### Kubernetes 
+### Kubernetes
 
-Kubernetes (commonly referred to as K8s) is an open source system for automating deployment, scaling and management of containerized applications developed under the stewardship of the [Cloud Native Computing Foundation](https://www.cncf.io). 
+Kubernetes (commonly referred to as K8s) is an open source system for automating deployment, scaling and management of containerized applications developed under the stewardship of the [Cloud Native Computing Foundation](https://www.cncf.io).
 
 In Windows Server, version 1709 users were able to take advantage of Kubernetes on Windows networking features, including:
 - Shared pod compartments: Infrastructure and worker pods now share a network compartment (analogous to a Linux namespace).
 - Endpoint optimization: Thanks to compartment sharing, container services need to track at least half as many endpoints.
 - Data-path optimization: Improvements to the Virtual Filtering Platform and the Host Networking Service allow kernel-based load-balancing.
 
-With the release of Windows Server, version 1803 more features will be available in coming Kubernetes releases: 
+With the release of Windows Server, version 1803 more features will be available in coming Kubernetes releases:
 - [Storage plugins](https://github.com/Microsoft/K8s-Storage-Plugins) for Windows containers orchestrated by Kubernetes.
 - Cloud scale networking though initiatives like our partnership with [Tigera on Project Calico](https://cloudblogs.microsoft.com/windowsserver/2017/12/07/securing-modernized-apps-and-simplified-networking-on-windows-with-calico/) support.
 - Windows platform support for Hyper-V isolated Pods with multiple containers per Pod.
@@ -85,7 +85,7 @@ With the release of Windows Server, version 1803 more features will be available
 - An issue that breaks ASP.net performance counters has been fixed.
 - An issue where services running in containers did not receive shutdown notification has been fixed.
     - Specifically, the notification is changed to CTRL_SHUTDOWN_EVENT for both Server Core and Nano Server container based images. In addition, it extends the notification in Server Core container based images to affect all process running in the container, including sending service shutdown notifications to services running in the container.
-- An incompatibility of docker pull & docker load with the policy setting that determines whether BitLocker protection is required for fixed data drives to be writable (FDVDenyWriteAccess) has been fixed. 
+- An incompatibility of docker pull & docker load with the policy setting that determines whether BitLocker protection is required for fixed data drives to be writable (FDVDenyWriteAccess) has been fixed.
 
 ## Storage
 
@@ -103,7 +103,7 @@ You can use the following Windows PowerShell command to enable the Transport Ser
 Install-WindowsFeature -Name WDS
 ```
 
-## See also
+## Additional References
 
 [Windows Server release information](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
 [What's new in Windows 10, version 1803 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)

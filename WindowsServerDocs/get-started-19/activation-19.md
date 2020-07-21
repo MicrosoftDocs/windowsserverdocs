@@ -40,6 +40,8 @@ The following table summarizes KMS host and client requirements for networks tha
 > - Installations of KMS on Windows Server 2012 must be updated in order to support activation of clients running Windows 10 and Windows Server 2016 or Windows Server 2019, or newer client or server operating systems. For more information, see [July 2016 update rollup for Windows Server 2012](https://support.microsoft.com/help/3172615/july-2016-update-rollup-for-windows-server-2012). 
 > - Installations of KMS on Windows 8.1 or Windows Server 2012 R2 must be updated in order to support activation of clients running Windows 10 and Windows Server 2016 or Windows Server 2019, or newer client or server operating systems. For more information, see [July 2016 update rollup for Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8.1-and-windows-server-2012-r2).  
 > - Windows Server 2008 R2 cannot be updated to support activation of clients running Windows Server 2016, Windows Server 2019, or newer operating systems. 
+> - The KMS installed on Windows Server 2012 R2 must be updated in order to support activation of clients running Windows Server 2019. For more information, see [November 27, 2018—KB4467695 (Preview of Monthly Rollup)](https://support.microsoft.com/help/4467695/).
+
 
 A single KMS host can support an unlimited number of KMS clients. If you have more than 50 clients, we recommend that you have at least two KMS hosts in case one of your KMS hosts becomes unavailable. Most organizations can operate with as few as two KMS hosts for their entire infrastructure.
 

@@ -1,6 +1,6 @@
 ---
 title: if
-description: Reference topic for the if command, which performs conditional processing in batch programs.
+description: Reference article for the if command, which performs conditional processing in batch programs.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ---
-# AD FS 2016 Design Guide
+# AD FS Design Guide
 
 
 

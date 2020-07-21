@@ -74,6 +74,6 @@ This table shows the minimum number of fault domains required for each resilienc
    >[!NOTE]
    > It is okay to briefly have fewer servers, such as during failures or maintenance. However, in order for volumes to return to a fully healthy state, you must have the minimum number of servers listed above.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

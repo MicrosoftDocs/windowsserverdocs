@@ -1,6 +1,6 @@
 ---
 title: ksetup dumpstate
-description: Reference topic for the ksetup dumpstate commnand, which displays the current state of realm settings for all realms that are defined on the computer.
+description: Reference article for the ksetup dumpstate commnand, which displays the current state of realm settings for all realms that are defined on the computer.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

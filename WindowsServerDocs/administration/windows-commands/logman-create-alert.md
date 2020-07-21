@@ -1,6 +1,6 @@
 ---
 title: logman create alert
-description: Reference topic for the logman create alert command, which creates an alert data collector.
+description: Reference article for the logman create alert command, which creates an alert data collector.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

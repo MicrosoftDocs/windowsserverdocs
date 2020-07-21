@@ -34,7 +34,7 @@ You can configure the default parameters for storage reports. These default para
 
 7.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Storage Reports Management](storage-reports-management.md)

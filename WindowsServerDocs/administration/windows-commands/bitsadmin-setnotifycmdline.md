@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifycmdline
-description: Reference topic for the bitsadmin setnotifycmdline command, which sets the command-line command that will run when the job finishes transferring data, or when a job enters a state.
+description: Reference article for the bitsadmin setnotifycmdline command, which sets the command-line command that will run when the job finishes transferring data, or when a job enters a state.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

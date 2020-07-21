@@ -1,6 +1,6 @@
 ---
 title: eventtriggers
-description: Reference topic for the eventtriggers command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
+description: Reference article for the eventtriggers command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

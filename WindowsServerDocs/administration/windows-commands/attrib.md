@@ -1,6 +1,6 @@
 ---
 title: attrib
-description: Reference topic for the attrib command, which displays, sets, or removes attributes assigned to files or directories.
+description: Reference article for the attrib command, which displays, sets, or removes attributes assigned to files or directories.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

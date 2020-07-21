@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and enableanalyticchannel
-description: Reference topic for the bitsadmin util and enableanalyticchannel command, which enables or disables the BITS client analytic channel.
+description: Reference article for the bitsadmin util and enableanalyticchannel command, which enables or disables the BITS client analytic channel.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

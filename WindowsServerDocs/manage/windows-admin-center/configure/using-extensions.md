@@ -50,12 +50,12 @@ If Windows Admin Center is installed on a computer that isn't connected to the i
 
 ### Manually downloading extension packages
 
-1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://msft-sme.myget.org/gallery/windows-admin-center-feed](https://msft-sme.myget.org/gallery/windows-admin-center-feed) 
+1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC) 
 
-   * You may need to create an account on msft-sme.myget.org and login to view the extension packages.
+   * You may need to create a Microsoft account and login to view the extension packages.
 
 2. Click on the name of the package you want to install to view the package details page.
-3. Click on the **Download** link in the right-side pane of the package details page and download the .nupkg file for the extension.
+3. Click on the **Download** link in the top navigation bar of the package details page and download the .nupkg file for the extension.
 4. Repeat steps 2 and 3 for all the packages you want to download.
 5. Copy the package files to a file share that can be accessed from the computer Windows Admin Center is installed on, or to the local disk of the computer.
 6. [Follow the instructions to install extensions from a different feed](#installing-extensions-from-a-different-feed).

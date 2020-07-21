@@ -1,6 +1,6 @@
 ---
 title: get-AllServers
-description: Reference topic for get-AllServers, which retrieves information about all Windows Deployment Services servers. 
+description: Reference article for get-AllServers, which retrieves information about all Windows Deployment Services servers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

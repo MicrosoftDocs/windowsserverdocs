@@ -1,6 +1,6 @@
 ---
 title: bitsadmin nowrap
-description: Reference topic for the bitsadmin nowrap command, which truncates any line of output text extending beyond the rightmost edge of the command window.
+description: Reference article for the bitsadmin nowrap command, which truncates any line of output text extending beyond the rightmost edge of the command window.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

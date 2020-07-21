@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util and setieproxy
-description: Reference topic for the bitsadmin util and setieproxy command, which sets the proxy settings to use when transferring files using a service account.
+description: Reference article for the bitsadmin util and setieproxy command, which sets the proxy settings to use when transferring files using a service account.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

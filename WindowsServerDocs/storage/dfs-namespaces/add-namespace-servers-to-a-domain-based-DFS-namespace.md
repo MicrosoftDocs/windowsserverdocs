@@ -32,7 +32,7 @@ To add a namespace server to a domain-based namespace using DFS Management, use 
 > [!TIP]
 > To add a namespace server by using Windows PowerShell, use the [New-DfsnRootTarget cmdlet](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroottarget). The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
-## See also
+## Additional References
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Review DFS Namespaces Server Requirements](https://technet.microsoft.com/library/cc753448(v=ws.11).aspx)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin rawreturn
-description: Reference topic for the bitsadmin rawreturn command, which returns data suitable for parsing.
+description: Reference article for the bitsadmin rawreturn command, which returns data suitable for parsing.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

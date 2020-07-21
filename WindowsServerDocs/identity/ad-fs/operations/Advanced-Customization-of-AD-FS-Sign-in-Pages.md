@@ -68,7 +68,7 @@ Use the following steps when customizing the onload.js for the AD FS service.
     For AD FS on Windows Server 2016:
 
      ```  
-    Set-AdfsWebTheme -TargetName custom -OnLoadScriptPath "c:\ADFStheme\script\onload.js"   
+    Set-AdfsWebTheme -TargetName custom -OnLoadScriptPath "c:\theme\script\onload.js"   
   
     ```  
   

@@ -86,6 +86,6 @@ Use the [Get-PhysicalDisk](https://docs.microsoft.com/powershell/module/storage/
 Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

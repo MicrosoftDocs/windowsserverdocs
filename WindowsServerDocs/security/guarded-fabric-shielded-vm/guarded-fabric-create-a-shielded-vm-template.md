@@ -21,7 +21,7 @@ To understand how this topic fits in the overall process of deploying shielded V
 
 ## Prepare an operating system VHDX
 
-First prepare an OS disk that you will then run through the Shielded Template Disk Creation Wizard. This disk will be used as the OS disk in your tenant's VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs: 
+First prepare an OS disk that you will then run through the Shielded Template Disk Creation Wizard. This disk will be used as the OS disk in your tenant's VMs. You can use any existing tooling to create this disk, such as Microsoft Desktop Image Service Manager (DISM), or manually set up a VM with a blank VHDX and install the OS onto that disk. When setting up the disk, it must adhere to the following requirements that are specific to generation 2 and/or shielded VMs:
 
 | Requirement for VHDX | Reason |
 |-----------|----|
@@ -30,10 +30,10 @@ First prepare an OS disk that you will then run through the Shielded Template Di
 |The disk has at least two partitions. One partition must include the drive on which Windows is installed. This is the drive that BitLocker will encrypt. The other partition is the active partition, which contains the bootloader and remains unencrypted so that the computer can be started.|Needed for BitLocker|
 |File system is NTFS | Needed for BitLocker|
 |The operating system installed on the VHDX is one of the following:<br>- Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 <br>- Windows 10, Windows 8.1, Windows 8| Needed to support generation 2 virtual machines and the Microsoft Secure Boot template|
-|Operating system must be generalized (run sysprep.exe) | Template provisioning involves specializing VMs for a specific tenant's workload| 
+|Operating system must be generalized (run sysprep.exe) | Template provisioning involves specializing VMs for a specific tenant's workload|
 
 > [!NOTE]
-> If you use VMM, do not copy the template disk into the VMM library at this stage. 
+> If you use VMM, do not copy the template disk into the VMM library at this stage.
 
 ## Run Windows Update on the template operating system
 
@@ -53,7 +53,7 @@ Perform the following steps on a computer running Windows Server 2016, Windows 1
 2. To administer the server locally, install the **Shielded VM Tools** feature from **Remote Server Administration Tools** on the server.
 
         Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
-        
+
     You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
 
 3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
@@ -82,7 +82,7 @@ Perform the following steps on a computer running Windows Server 2016, Windows 1
 
 9. On the **Summary** page, information about the disk template, the certificate used to sign the VSC, and the certificate issuer is shown. Click **Close** to exit the wizard.
 
-If you use VMM, follow the steps in the remaining sections in this topic to incorporate a template disk into a shielded VM template in VMM. 
+If you use VMM, follow the steps in the remaining sections in this topic to incorporate a template disk into a shielded VM template in VMM.
 
 ## Copy the template disk to the VMM Library
 
@@ -120,9 +120,9 @@ With a prepared template disk in your VMM library, you are ready to create a VM 
 
 5. On the **Configure Hardware** page, specify the capabilities of VMs created from this template. Ensure that at least one NIC is available and configured on the VM template. The only way for a tenant to connect to a shielded VM is through Remote Desktop Connection, Windows Remote Management, or other pre-configured remote management tools that work over networking protocols.
 
-    If you choose to leverage static IP pools in VMM instead of running a DHCP server on the tenant network, you will need to alert your tenants to this configuration. When a tenant supplies their shielding data file, which contains the unattend file for the VMM, they will need to provide special placeholder values for the static IP pool information. For more information about VMM placeholders in tenant unattend files, see [Create an answer file](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file). 
+    If you choose to leverage static IP pools in VMM instead of running a DHCP server on the tenant network, you will need to alert your tenants to this configuration. When a tenant supplies their shielding data file, which contains the unattend file for the VMM, they will need to provide special placeholder values for the static IP pool information. For more information about VMM placeholders in tenant unattend files, see [Create an answer file](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file).
 
-6. On the **Configure Operating System** page, VMM will only show a few options for shielded VMs, including the product key, time zone, and computer name. Some secure information, such as the administrator password and domain name, is specified by the tenant through a shielding data file (.PDK file). 
+6. On the **Configure Operating System** page, VMM will only show a few options for shielded VMs, including the product key, time zone, and computer name. Some secure information, such as the administrator password and domain name, is specified by the tenant through a shielding data file (.PDK file).
 
     > [!NOTE]
     > If you choose to specify a product key on this page, ensure it is valid for the operating system on the template disk. If an incorrect product key is used, the VM creation will fail.
@@ -162,7 +162,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -Vo
 > [!div class="nextstepaction"]
 > [Create a shielding data file](guarded-fabric-tenant-creates-shielding-data.md)
 
-## See also
+## Additional References
 
 - [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

@@ -1,6 +1,6 @@
 ---
 title: tzutil
-description: Reference topic for tzutil, which displays the Windows Time Zone utility.
+description: Reference article for tzutil, which displays the Windows Time Zone utility.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

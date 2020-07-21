@@ -1,6 +1,6 @@
 ---
 title: import diskshadow
-description: Reference topic for the import command, which imports a transportable shadow copy from a loaded metadata file into the system.
+description: Reference article for the import command, which imports a transportable shadow copy from a loaded metadata file into the system.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

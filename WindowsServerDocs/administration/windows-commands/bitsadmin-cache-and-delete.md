@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache and delete
-description: Reference topic for the bitsadmin cache and delete command, which deletes a specific cache entry.
+description: Reference article for the bitsadmin cache and delete command, which deletes a specific cache entry.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

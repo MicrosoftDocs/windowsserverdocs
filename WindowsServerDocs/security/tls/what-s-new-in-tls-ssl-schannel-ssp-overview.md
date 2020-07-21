@@ -141,7 +141,7 @@ Applications that use DTLS over UDP can use the SSPI model in Windows Server 201
 ### <a name="BKMK_Deprecated"></a>Deprecated functionality
 In the Schannel SSP for Windows Server 2012 and Windows 8, there are no deprecated features or functionality.
 
-## See also
+## Additional References
 -   [Private Cloud Security Model - Wrapper Functionality](https://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)
 
 

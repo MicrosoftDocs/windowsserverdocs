@@ -1,6 +1,6 @@
 ---
 title: remove-DriverGroup
-description: Reference topic for remove-DriverGroup, which removes a driver group from a server. 
+description: Reference article for remove-DriverGroup, which removes a driver group from a server.
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 1fefe9df-9782-433c-8abe-3f1a35e50da2

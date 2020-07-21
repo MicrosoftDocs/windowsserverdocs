@@ -1,6 +1,6 @@
 ---
 title: endlocal
-description: Reference topic for the endlocal command, which ends localization of environment changes in a batch file, and restores environment variables to their values before the corresponding setlocal command was run.
+description: Reference article for the endlocal command, which ends localization of environment changes in a batch file, and restores environment variables to their values before the corresponding setlocal command was run.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

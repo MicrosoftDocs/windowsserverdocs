@@ -23,7 +23,7 @@ To deploy the HGS, complete the following tasks:
 - [Configure Https (optional)](guarded-fabric-configure-hgs-https.md)
 - [Add nodes](guarded-fabric-configure-additional-hgs-nodes.md)
 
-## See also
+## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
 - [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)

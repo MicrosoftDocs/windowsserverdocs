@@ -1,6 +1,6 @@
 ---
 title: setx
-description: Reference topic for setx, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting. 
+description: Reference article for setx, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -71,7 +71,7 @@ setx MYPATH %PATH%
 ```
 To set the MYPATH environment variable in the local environment to use the search path defined in the PATH environment variable after replacing **~** with **%**, type:
 ```
-setx MYPATH ~PATH~ 
+setx MYPATH ~PATH~
 ```
 To set the MACHINE environment variable in the local environment to Brand1 on a remote computer named Computer1, type:
 ```
@@ -83,11 +83,11 @@ setx /s computer1 /u maindom\hiropln /p p@ssW23 MYPATH %PATH%
 ```
 To set the TZONE environment variable in the local environment to the value found in the **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName** registry key, type:
 ```
-setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName 
+setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
 ```
 To set the TZONE environment variable in the local environment of a remote computer named Computer1 to the value found in the **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName** registry key, type:
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23 TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName 
+setx /s computer1 /u maindom\hiropln /p p@ssW23 TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
 ```
 To set the BUILD environment variable in the system environment to the value found in the **HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber** registry key, type:
 ```
@@ -107,15 +107,15 @@ setx IPADDR /f ipconfig.out /a 5,11
 ```
 To set the OCTET1 environment variable in the local environment to the value found at the coordinate 5,3 in the file Ipconfig.out with delimiters **#$\*.**, type:
 ```
-setx OCTET1 /f ipconfig.out /a 5,3 /d #$*. 
+setx OCTET1 /f ipconfig.out /a 5,3 /d #$*.
 ```
 To set the IPGATEWAY environment variable in the local environment to the value found at the coordinate 0,7 with respect to the coordinate of Gateway in the file Ipconfig.out, type:
 ```
-setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway 
+setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway
 ```
 To display the contents of a file named Ipconfig.out — along with the contents' corresponding coordinates — on a computer named Computer1, type:
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x 
+setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x
 ```
 
 ## Additional References

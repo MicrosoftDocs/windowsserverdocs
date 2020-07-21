@@ -1,6 +1,6 @@
 ---
 title: Change the Amount of Time that Clients Cache Referrals
-description: This article describes how to change the amount of time that clients cache referrals 
+description: This article describes how to change the amount of time that clients cache referrals
 ms.date: 6/5/2017
 ms.prod: windows-server
 ms.technology: storage
@@ -35,7 +35,7 @@ cmdlet. These cmdlets were introduced in Windows Server 2012.
 
 3.  On the **Referrals** tab, in the **Cache duration (in seconds)** text box, type the amount of time (in seconds) that clients cache folder referrals. The default setting is 1800 seconds (30 minutes).
 
-## See also
+## Additional References
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)

@@ -1,6 +1,6 @@
 ---
 title: wbadmin get items
-description: Reference topic for wbadmin get items, which lists the items included in a specific backup.
+description: Reference article for wbadmin get items, which lists the items included in a specific backup.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

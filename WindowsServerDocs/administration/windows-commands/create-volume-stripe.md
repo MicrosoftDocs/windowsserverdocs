@@ -1,6 +1,6 @@
 ---
 title: create volume stripe
-description: Reference topic for the create volume stripe command, which creates a striped volume using two or more specified dynamic disks.
+description: Reference article for the create volume stripe command, which creates a striped volume using two or more specified dynamic disks.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

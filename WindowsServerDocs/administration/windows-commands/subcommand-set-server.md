@@ -1,6 +1,6 @@
 ---
 title: Subcommand set-Server
-description: Reference topic for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
+description: Reference article for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -30,9 +30,9 @@ wdsutil [Options] /Set-Server [/Server:<Server name>]
     [/UseDhcpPorts:{Yes | No}]
     [/DhcpOption60:{Yes | No}]
     [/RpcPort:<Port number>]
-    [/PxepromptPolicy 
+    [/PxepromptPolicy
         [/Known:{OptIn | Noprompt | OptOut}]
-        [/New:{OptIn | Noprompt | OptOut}] 
+        [/New:{OptIn | Noprompt | OptOut}]
     [/BootProgram:<Relative path>]
          /Architecture:{x86 | ia64 | x64}
     [/N12BootProgram:<Relative path>]
@@ -105,7 +105,7 @@ wdsutil [Options] /Set-Server [/Server:<Server name>]
              [/Policy:{None | AutoDisconnect | Multistream}]
                  [/Threshold:<Speed in KBps>]
                  [/StreamCount:{2 | 3}]
-                 [/Fallback:{Yes | No}]    
+                 [/Fallback:{Yes | No}]
         [/forceNative]
 ```
 ### Parameters

@@ -30,7 +30,7 @@ Note that caching over an SSD or NVMe device defaults to write caching, only. Th
 
 To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt634616.aspx) and [Set-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt763265.aspx) cmdlets. The `CacheModeHDD` and `CacheModeSSD` properties define how the cache operates on capacity media of the indicated type.
 
-## See also
+## Additional References
 
 - [Understanding Storage Spaces Direct](../../../../storage/storage-spaces/understand-storage-spaces-direct.md)
 - [Planning Storage Spaces Direct](../../../../storage/storage-spaces/plan-storage-spaces-direct.md)

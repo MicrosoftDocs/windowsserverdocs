@@ -1,6 +1,6 @@
 ---
 title: ftp type
-description: Reference topic for the ftp type command, which sets or displays the file transfer type.
+description: Reference article for the ftp type command, which sets or displays the file transfer type.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

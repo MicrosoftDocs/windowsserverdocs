@@ -1,6 +1,6 @@
 ---
 title: add-Device
-description: Reference topic for add-Device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
+description: Reference article for add-Device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -18,7 +18,7 @@ Prestages a computer in active directory Domain Services. Prestaged computers ar
 
 ## Syntax
 ```
-wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] [/WdsClientUnattend:<Relative path>] 
+wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] [/WdsClientUnattend:<Relative path>]
 [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/OU:<DN of OU>] [/Domain:<Domain>]
 ```
 ### Parameters
@@ -42,7 +42,7 @@ wdsutil /add-Device /Device:computer1 /ID:00-B0-56-88-2F-DC
 ```
 To add a computer by using a GUID string, type:
 ```
-wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6} /ReferralServer:WDSServer1 /BootProgram:boot\x86\pxeboot.com 
+wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6} /ReferralServer:WDSServer1 /BootProgram:boot\x86\pxeboot.com
 /WDSClientUnattend:WDSClientUnattend\unattend.xml /User:Domain\MyUser/JoinRights:Full /BootImagepath:boot\x86\images\boot.wim /OU:OU=MyOU,CN=Test,DC=Domain,DC=com
 ```
 ## Additional References

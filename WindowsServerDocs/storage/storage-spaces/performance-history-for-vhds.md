@@ -82,6 +82,6 @@ To get the path of every VHD from the virtual machine:
    > [!NOTE]
    > The Get-VHD cmdlet requires a file path to be provided. It does not support enumeration.
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

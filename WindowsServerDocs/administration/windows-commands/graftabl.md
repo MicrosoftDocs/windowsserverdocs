@@ -1,6 +1,6 @@
 ---
 title: graftabl
-description: Reference topic for the graftabl command, which enables Windows operating systems to display an extended character set in graphics mode.
+description: Reference article for the graftabl command, which enables Windows operating systems to display an extended character set in graphics mode.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

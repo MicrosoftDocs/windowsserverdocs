@@ -1,6 +1,6 @@
 ---
 title: Reject-AutoaddDevices
-description: Reference topic for Reject-AutoaddDevices, which rejects computers that are pending administrative approval. 
+description: Reference article for Reject-AutoaddDevices, which rejects computers that are pending administrative approval.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

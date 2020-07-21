@@ -66,7 +66,7 @@ We strongly recommend that the orchestrator and destination computers have at le
   - Netlogon Service (NP-In)
   - Windows Management Instrumentation (DCOM-In)
   - Windows Management Instrumentation (WMI-In)
-  
+
   > [!TIP]
   > Installing the Storage Migration Service Proxy service on a Windows Server 2019 computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
 
@@ -99,7 +99,7 @@ The source server must run one of the following operating systems:
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
 
-Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
+Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.
 
 You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
@@ -126,10 +126,12 @@ The destination server must run one of the following operating systems:
 
 ## Azure VM Migration
 
-Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Storage Migration Service. Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system. 
+Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Storage Migration Service. Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system.
 
    Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
-   > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
+   > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
+   
+If you want to lift and shift virtual machines to Azure without migrating to a later operating system, consider using Azure Migrate. For more info, see [Azure Migrate overview](https://go.microsoft.com/fwlink/?linkid=2056064).
 
 ## What's new in Storage Migration Service
 
@@ -143,7 +145,7 @@ The following new features are available when running the Storage Migration Serv
 - More easily sync migrated shares into Azure by using Azure File Sync
 - Migrate to new networks such as Azure
 
-## See also
+## Additional References
 
 - [Migrate a file server by using Storage Migration Service](migrate-data.md)
 - [Storage Migration Services frequently asked questions (FAQ)](faq.md)

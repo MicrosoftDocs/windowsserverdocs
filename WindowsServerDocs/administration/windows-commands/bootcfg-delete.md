@@ -1,6 +1,6 @@
 ---
 title: bootcfg delete
-description: Reference topic for the bootcfg delete command, which deletes an operating system entry in the operating systems section of the Boot.ini file.
+description: Reference article for the bootcfg delete command, which deletes an operating system entry in the operating systems section of the Boot.ini file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

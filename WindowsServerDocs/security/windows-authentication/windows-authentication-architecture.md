@@ -34,7 +34,7 @@ The Security Support Provider Interface (SSPI) is the API that obtains integrate
 
 SSPI is the implementation of the Generic Security Service API (GSSAPI). SSPI provides a mechanism by which a distributed application can call one of several security providers to obtain an authenticated connection without knowledge of the details of the security protocol.
 
-## See also
+## Additional References
 
 -   [Security Support Provider Interface Architecture](security-support-provider-interface-architecture.md)
 

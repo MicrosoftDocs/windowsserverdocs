@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getfilestotal
-description: Reference topic for the bitsadmin getfilestotal command, which retrieves the number of files in the specified job.
+description: Reference article for the bitsadmin getfilestotal command, which retrieves the number of files in the specified job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

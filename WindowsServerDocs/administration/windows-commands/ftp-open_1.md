@@ -1,6 +1,6 @@
 ---
 title: ftp open
-description: Reference topic for the ftp open command, which connects to the specified ftp server.
+description: Reference article for the ftp open command, which connects to the specified ftp server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

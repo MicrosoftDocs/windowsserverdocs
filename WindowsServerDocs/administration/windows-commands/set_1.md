@@ -1,6 +1,6 @@
 ---
 title: set
-description: Reference topic for set, which displays, sets, or removes cmd.exe environment variables.
+description: Reference article for set, which displays, sets, or removes cmd.exe environment variables.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

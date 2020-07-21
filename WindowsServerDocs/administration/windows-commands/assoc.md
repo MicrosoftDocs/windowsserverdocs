@@ -1,6 +1,6 @@
 ---
 title: assoc
-description: Reference topic for the assoc command, which displays or modifies file name extension associations.
+description: Reference article for the assoc command, which displays or modifies file name extension associations.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: logman import and logman export
-description: Reference topic for logman import and logman export, which imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
+description: Reference article for logman import and logman export, which imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -20,8 +20,8 @@ Imports a Data Collector Set from an XML file, or exports a Data Collector Set t
 ## Syntax
 
 ```
-logman import <[-n] <name>> <-xml <name>> [options]
-logman export <[-n] <name>> <-xml <name>> [options]
+logman import <[-n] <name> <-xml <name> [options]
+logman export <[-n] <name> <-xml <name> [options]
 ```
 
 ### Parameters

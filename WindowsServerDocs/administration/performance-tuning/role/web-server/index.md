@@ -52,7 +52,7 @@ Disabling the updates is effective when you are using large data sets (or many h
 >[!Warning]
 > Some applications, such as incremental backup utilities, rely on this update information, and they do not function correctly without it.
 
-## See also
+## Additional References
 - [IIS 10.0 performance tuning](tuning-iis-10.md)
 - [HTTP 1.1/2 tuning](http-performance.md)
 

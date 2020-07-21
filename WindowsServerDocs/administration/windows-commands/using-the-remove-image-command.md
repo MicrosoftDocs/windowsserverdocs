@@ -1,6 +1,6 @@
 ---
 title: remove-Image
-description: Reference topic for remove-Image, which deletes an image from a server.  
+description: Reference article for remove-Image, which deletes an image from a server.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article

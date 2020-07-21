@@ -1,6 +1,6 @@
 ---
 title: bitsadmin complete
-description: Reference topic for the bitsadmin complete command, which completes the job.
+description: Reference article for the bitsadmin complete command, which completes the job.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
