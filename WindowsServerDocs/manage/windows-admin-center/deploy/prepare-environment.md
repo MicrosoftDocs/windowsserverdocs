@@ -59,7 +59,7 @@ To enable File Server Role for basic file sharing and remote management:
 1. Click **Roles and Features** in the **Tools** menu.
 2. In **Roles and Features**, find **File and Storage Services**, and check **File and iSCSI Services** and **File Server**:
 
-![Screenshot of Roles and Features showing the File and iSCSI Services role selected](../media/prepare-environment/c6c30b812d96afcc1edcdb6f52f0e13c.png)
+![Screenshot of Roles and Features showing the File and iSCSI Services role selected](../media/prepare-environment/prepare-your-environment-image-1.png)
 
 ### **Step 3:** Enable Hyper-V Module for PowerShell
 
@@ -68,7 +68,7 @@ To enable Hyper-V Module for PowerShell features:
 1. Click **Roles and Features** in the **Tools** menu.
 2. In **Roles and Features**, find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for PowerShell**:
 
-![Screenshot of Roles and Features showing Hyper-V roles selected](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
+![Screenshot of Roles and Features showing Hyper-V roles selected](../media/prepare-environment/prepare-your-environment-image-2.png)
 
 Microsoft Hyper-V Server 2016 is now ready for management with Windows Admin Center.
 
