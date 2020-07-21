@@ -139,6 +139,9 @@ Check the WAP configuration by running the Get-WebApplicationProxyConfiguration 
 ```PowerShell
 Get-WebApplicationProxyConfiguration
 ```
+> [!NOTE]
+> Skip the next step if the ConfigurationVersion is Windows Server 2016. This is the correct value for Web Application Proxy on Windows Server 2016 / 2019.
+
 To upgrade the ConfigurationVersion of the WAP servers, run the following Powershell command.
 
 ```PowerShell
