@@ -176,12 +176,12 @@ Select the newly created ILB in the Load Balancers panel. It will open the setti
 In the ILB settings panel, select Health probes.
 
 1. Click on add
-2. Provide details for probe
-   a. **Name**: Probe name
-   b. **Protocol**: HTTP
-   c. **Port**: 80 (HTTP)
-   d. **Path**: /adfs/probe 
-   e. **Interval**: 5 (default value) – this is the interval at which ILB will probe the machines in the backend pool
+2. Provide details for probe  
+   a. **Name**: Probe name  
+   b. **Protocol**: HTTP  
+   c. **Port**: 80 (HTTP)  
+   d. **Path**: /adfs/probe   
+   e. **Interval**: 5 (default value) – this is the interval at which ILB will probe the machines in the backend pool  
    f. **Unhealthy threshold limit**: 2 (default value) – this is the threshold of consecutive probe failures after which ILB will declare a machine in the backend pool non-responsive and stop sending traffic to it.
 
 
@@ -193,12 +193,12 @@ In order to effectively balance the traffic, the ILB should be configured with l
 
 1. Select Load balancing rule from the settings panel of the ILB
 2. Click on Add in the Load balancing rule panel
-3. In the Add load balancing rule panel
-   a. **Name**: Provide a name for the rule
-   b. **Protocol**: Select TCP
-   c. **Port**: 443
-   d. **Backend port**: 443
-   e. **Backend pool**: Select the pool you created for the AD FS cluster earlier
+3. In the Add load balancing rule panel  
+   a. **Name**: Provide a name for the rule  
+   b. **Protocol**: Select TCP  
+   c. **Port**: 443  
+   d. **Backend port**: 443  
+   e. **Backend pool**: Select the pool you created for the AD FS cluster earlier  
    f. **Probe**: Select the probe created for AD FS servers earlier
 
 ![Configure ILB balancing rules](./media/how-to-connect-fed-azure-adfs/ilbdeployment5.png)
@@ -208,15 +208,21 @@ In order to effectively balance the traffic, the ILB should be configured with l
 Using your internal DNS server, create an A record for the ILB. The A record should be for the federation service with the IP address pointing to the IP address of the ILB. For example, if the ILB IP address is 10.3.0.8 and the federation service installed is fs.contoso.com, then create an A record for fs.contoso.com pointing to 10.3.0.8.
 This will ensure that all data trasmitted to fs.contoso.com end up at the ILB and are appropriately routed. 
 
+> [!WARNING]
+> If you are using the WID (Windows Internal Database) for your AD FS database, this value should instead be temporarily set to point to your primary AD FS server or the Web Application Proxy will fail enrollement. After you have successfully enrolled all Web Appplication Proxy servers, change this DNS entry to point to the load balancer.
+
 > [!NOTE]
->If your deployment is also using IPv6, be sure to create a corresponding AAAA record.
->
+> If your deployment is also using IPv6, be sure to create a corresponding AAAA record.
 >
 
 ### 7. Configuring the Web Application Proxy server
 **7.1. Configuring the Web Application Proxy servers to reach AD FS servers**
 
 In order to ensure that Web Application Proxy servers are able to reach the AD FS servers behind the ILB, create a record in the %systemroot%\system32\drivers\etc\hosts for the ILB. Note that the distinguished name (DN) should be the federation service name, for example fs.contoso.com. And the IP entry should be that of the ILB's IP address (10.3.0.8 as in the example).
+
+> [!WARNING]
+> If you are using the WID (Windows Internal Database) for your AD FS database, this value should instead be temporarily set to point to your primary AD FS server, or the Web Application Proxy will fail enrollement. After you have successfully enrolled all Web Appplication Proxy servers, change this DNS entry to point to the load balancer.
+
 
 **7.2. Installing the Web Application Proxy role**
 
@@ -291,7 +297,7 @@ Overall, you need the following rules to efficiently secure your internal subnet
 ![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsg_dmz.png)
 
 > [!NOTE]
-> If client user certificate authentication (clientTLS authentication using X509 user certificates) is required, then AD FS requires TCP port 49443 be enabled for inbound access.
+> If client user certificate authentication (clientTLS authentication using X.509 user certificates) is required, then AD FS requires TCP port 49443 to be enabled for inbound access.
 > 
 > 
 
