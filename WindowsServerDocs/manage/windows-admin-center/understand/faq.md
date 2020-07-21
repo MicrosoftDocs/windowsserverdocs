@@ -81,7 +81,7 @@ Yes! the [Showscript feature](../use/get-started.md#view-powershell-scripts-used
 
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
-Windows Admin Center now supports **limited** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don't exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers [move to Azure or upgrade to the latest version of Windows Server](https://www.microsoft.com/cloud-platform/windows-server-2008).
+Windows Admin Center **no longer supports** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don't exist in Windows Server 2008 R2 and earlier, making full support infeasible. If you have not yet, Microsoft recommends [moving to Azure or upgrading to the latest version of Windows Server](https://www.microsoft.com/cloud-platform/windows-server-2008).
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 
@@ -99,9 +99,7 @@ Traffic from the browser to the Windows Admin Center gateway uses HTTPS. Traffic
 
 Yes, in a few cases Windows Admin Center requires CredSSP. This is required to pass your credentials for authentication to machines beyond the specific server you are targeting for management. For example, if you are managing virtual machines on **server B**, but want to store the vhdx files for those virtual machines on a file share hosted by **server C**, Windows Admin Center must use CredSSP to authenticate with **server C** to access the file share.
 
-Windows Admin Center handles the configuration of CredSSP automatically after prompting for consent from you. Before configuring CredSSP, Windows Admin Center will check to make sure that the system has the recent CredSSP [updates](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018). While CredSSP is enabled, there will be a badge on the Server Overview, and an option to disable it -
-
-![CredSSP on server overview](../media/CredSSP-overview.png)
+Windows Admin Center handles the configuration of CredSSP automatically after prompting for consent from you. Before configuring CredSSP, Windows Admin Center will check to make sure that the system has the recent CredSSP [updates](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018). 
 
 CredSSP is currently used in the following areas:
 

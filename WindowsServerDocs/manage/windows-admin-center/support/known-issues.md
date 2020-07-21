@@ -194,6 +194,82 @@ The Computer Management solution contains a subset of the tools from the Server 
 
   - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
 
+## Cluster Deployment
+
+### Step 1.2
+Mixed workgroup machines are currently not supported when adding servers. All machines used for clustering need to belong to same workgroup. If they do not, the next button will be disabled and the following error will appear: "Cannot create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again."
+
+### Step 1.4
+Hyper-V needs to be installed on virtual machines running the Azure Stack HCI OS. Trying to enable the Hyper-V feature for these virtual machines will fail with the error below: 
+
+![Screenshot of Hyper-V enablement error](../media/cluster-create-install-hyperv.png)
+
+To install Hyper-V on virtual machines running the Azure Stack HCI OS, run the following command: 
+
+```PowerShell
+Enable-windowsoptionalfeature -online -featurename Microsoft-hyper-v 
+```
+
+### Step 1.7
+Sometimes servers take longer than expected to restart after updates are installed. The Windows Admin Center cluster deployment wizard will check the server restart state periodically to know if the server was restarted successfully. However, if the user restarts the server outside of the wizard manually, then the wizard does not have a way to capture the server state in an appropriate way. 
+
+If you would like to restart the server manually, exit the current wizard session. After you have restarted the server, you may restart the wizard. 
+
+### Stretch cluster creation
+It is recommended to use servers that are domain-joined when creating a stretch cluster. There is a network segmentation issue when trying to use workgroup machines for stretch cluster deployment due to WinRM limitations.
+
+### Undo and start over
+When using same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](https://docs.microsoft.com/windows-server/manage/windows-admin-center/use/deploy-hyperconverged-infrastructure#undo-and-start-over) for instructions on how to clean up your cluster. 
+
+### CredSSP
+The Windows Admin Center cluster deployment wizard uses CredSSP in several places. You run into this error message during the wizard (this occurs most frequently in the Validate cluster step):
+
+![Screenshot of cluster create CredSSP error](../media/cluster-create-credssp-error.jpg)
+
+You can use the following steps to troubleshoot: 
+
+1. Disable CredSSP settings on all nodes and the Windows Admin Center gateway machine. Run the first command on your gateway machine and the second command on all of the nodes in your cluster: 
+
+```PowerShell
+Disable-WsmanCredSSP -Role Client
+```
+```PowerShell
+Disable-WsmanCredSSP -Role Server
+```
+2. Repair the trust on all nodes. Run the following command on all nodes: 
+```PowerShell
+Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
+```
+
+3. Reset group policy propogated data using the command
+```Command Line
+gpupdate /force
+```
+
+4. Reboot the nodes. After reboot, test the connectivity between your gateway machine and target nodes, as well as your connectivity between nodes, using the following command: 
+```PowerShell
+Enter-PSSession -computername <node fqdn>
+```
+
+### Nested Virtualization
+When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below powershell command:
+
+```PowerShell
+Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true 
+```
+
+  > [!Note]
+  > For virtual switch teaming to be successful in a virtual machine environment, the following command needs to be run in PowerShell on the host soon after the virtual machines are created: Get-vm | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on } 
+
+If you are a deploying a cluster using the Azure Stack HCI OS, there is an additional requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To do this, run the following command before creating the virtual machines: 
+
+```PowerShell
+Install-WindowsFeature –VHD <Path to the VHD> -Name Hyper-V, RSAT-Hyper-V-Tools, Hyper-V-PowerShell
+```
+
+### Support for RDMA
+The cluster deployment wizard in Windows Admin Center version 2007 does not provide support for RDMA configuration.   
+
 ## Failover Cluster Manager solution
 
 - When managing a cluster, (either Hyper-Converged or traditional?) you may encounter a **shell was not found** error. If this happens either reload your browser, or navigate away to another tool and back. [13882442]
