@@ -55,7 +55,7 @@ Windows Admin Center has many points of [integration with Azure services](../pla
 
 ### **Deploy hyper-converged and failover clusters**
 
-Windows Admin Center allows for [seamless deployment of hyper-converged and failover clusters](../use/deploying-hyperconverged-infrastructure.md) through an easy-to-use wizard. 
+Windows Admin Center allows for [seamless deployment of hyper-converged and failover clusters](../use/deploy-hyperconverged-infrastructure.md) through an easy-to-use wizard. 
 
 ### **Manage hyper-converged clusters**
 
