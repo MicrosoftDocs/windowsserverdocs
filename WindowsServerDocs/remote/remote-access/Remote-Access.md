@@ -24,7 +24,7 @@ The Remote Access guide provides you with an overview of the Remote Access serve
 - [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
 - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
  
-For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
+For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).
 
 The Remote Access server role is a logical grouping of these related network access technologies: [Remote Access Service (RAS)](#bkmk_da), [Routing](#bkmk_rras), and [Web Application Proxy](#bkmk_proxy). These technologies are the *role services* of the Remote Access server role. When you install the Remote Access server role with the **Add Roles and Features Wizard** or Windows PowerShell, you can install one or more of these three role services.
 
@@ -66,7 +66,7 @@ To install Remote Access as a Web Application Proxy, either use the Add Roles an
 Install-RemoteAccess -VpnType SstpProxy  
 ```  
 
-For more information, see [Web Application Proxy](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).
+For more information, see [Web Application Proxy](./web-application-proxy/web-application-proxy-windows-server.md).
 
 
 ---

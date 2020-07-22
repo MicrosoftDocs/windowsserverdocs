@@ -50,4 +50,4 @@ Use the following procedures to set up the type of backup you require.
   
 ## Configure backups using Windows Server Backup  
   
--   Follow the guidance in [Backing Up Your Server](https://technet.microsoft.com/library/cc753528.aspx). 
+-   Follow the guidance in [Backing Up Your Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753528(v=ws.11)). 

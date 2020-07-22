@@ -90,9 +90,9 @@ When you use an internal CA to issue certificates, you must configure a certific
   
 ##### To configure a certificate template  
   
-1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](https://technet.microsoft.com/library/cc731705.aspx).  
+1.  On the internal CA, create a certificate template as described in [Creating Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731705(v=ws.10)).  
   
-2.  Deploy the certificate template as described in [Deploying Certificate Templates](https://technet.microsoft.com/library/cc770794.aspx).  
+2.  Deploy the certificate template as described in [Deploying Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770794(v=ws.10)).  
   
 ### Configure the IP-HTTPS certificate  
 Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connections to the Remote Access server. There are three certificate options for the IP-HTTPS certificate:  
@@ -237,7 +237,7 @@ Restart-Computer
 ## <a name="ConfigGPOs"></a>Configure GPOs  
 To deploy Remote Access, you require a minimum of two Group Policy Objects: one Group Policy Object contains settings for the Remote Access server and one contains settings for DirectAccess client computers. When you configure Remote Access, the wizard automatically creates the required Group Policy Objects. However, if your organization enforces a naming convention, or you do not have the required permissions to create or edit Group Policy Objects, they must be created prior to configuring Remote Access.  
   
-To create Group Policy Objects, see [Create and Edit a Group Policy Object](https://technet.microsoft.com/library/cc754740.aspx).  
+To create Group Policy Objects, see [Create and Edit a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754740(v=ws.11)).  
   
 > [!IMPORTANT]  
 > The administrator can manually link the DirectAccess Group Policy Objects to an Organizational Unit using these steps:  
@@ -245,7 +245,7 @@ To create Group Policy Objects, see [Create and Edit a Group Policy Object](http
 > 1.  Before configuring DirectAccess, link the created GPOs to the respective Organizational Units.  
 > 2.  Configure DirectAccess, specifying a security group for the client computers.  
 > 3.  The Remote Access administrator may or may not have permissions to link the Group Policy Objects to the domain. In either case, the Group Policy Objects will be configured automatically. If the GPOs are already linked to an OU, the links will not be removed, and the GPOs will not be linked to the domain. For a server GPO, the OU must contain the server computer object, or the GPO will be linked to the root of the domain.  
-> 4.  If the linking to the OU has not been done before running the DirectAccess wizard, then after the configuration is complete, the domain administrator can link the DirectAccess Group Policy Objects to the required Organizational Units. The link to the domain can be removed. Steps for linking a Group Policy Object to an Organization Unit can be found [here](https://technet.microsoft.com/library/cc732979.aspx).  
+> 4.  If the linking to the OU has not been done before running the DirectAccess wizard, then after the configuration is complete, the domain administrator can link the DirectAccess Group Policy Objects to the required Organizational Units. The link to the domain can be removed. Steps for linking a Group Policy Object to an Organization Unit can be found [here](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732979(v=ws.11)).  
   
 > [!NOTE]  
 > If a Group Policy Object was created manually, it is possible during the DirectAccess configuration that the Group Policy Object will not be available. The Group Policy Object may not have been replicated to the closest Domain Controller to the management computer. In this event, the administrator can wait for replication to complete, or force the replication.  
@@ -327,5 +327,3 @@ The network location server should be on a server with high availability, and a 
   
 
   
-
-

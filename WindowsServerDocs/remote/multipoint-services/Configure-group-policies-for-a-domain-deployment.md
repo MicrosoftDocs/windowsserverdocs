@@ -20,7 +20,7 @@ To ensure that your domain deployment of MultiPoint Services works properly, app
 The WMSshell user account is a system account which MultiPoint services uses to sign-in into the console, where the actual stations are created. This account is not meant to be managed by MultiPoint Manager.
   
 > [!NOTE]  
-> To find out how to update group policies, see [Local Group Policy Editor](https://technet.microsoft.com/library/dn265982.aspx).  
+> To find out how to update group policies, see [Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265982(v=ws.11)).  
   
 **POLICY:** User Configuration > Administrative templates > Control Panel > **Personalization**  
   

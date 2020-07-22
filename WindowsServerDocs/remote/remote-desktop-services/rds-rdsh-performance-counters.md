@@ -28,7 +28,7 @@ The following image shows a rough representation of user input flow from client 
 
 ![Remote Desktop - User input flows from the users Remote Desktop client to the application](./media/rds-user-input.png)
 
-The User Input Delay counter measures the max delta (within an interval of time) between the input being queued and when it's picked up by the app in a [traditional message loop](https://docs.microsoft.com/windows/win32/winmsg/about-messages-and-message-queues#message-loop), as shown in the following flow chart:
+The User Input Delay counter measures the max delta (within an interval of time) between the input being queued and when it's picked up by the app in a [traditional message loop](/windows/win32/winmsg/about-messages-and-message-queues#message-loop), as shown in the following flow chart:
 
 ![Remote Desktop - User input Delay performance counter flow](./media/rds-user-input-delay.png)
 
@@ -63,7 +63,7 @@ After doing that, you should see the Add Counters dialog, where you can select *
 
 If you select **User Input Delay per Process**, you'll see the **Instances of the selected object** (in other words, the processes) in ```SessionID:ProcessID <Process Image>``` format.
 
-For example, if the Calculator app is running in a [Session ID 1](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), you'll see ```1:4232 <Calculator.exe>```.
+For example, if the Calculator app is running in a [Session ID 1](/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), you'll see ```1:4232 <Calculator.exe>```.
 
 > [!NOTE]
 > Not all processes are included. You won't see any processes that are running as SYSTEM.
@@ -130,7 +130,7 @@ This is what it looks like if you turn both keys on:
 
 ## Using the new counters with non-Microsoft tools
 
-Monitoring tools can consume this counter by [Using Performance Counters](https://docs.microsoft.com/windows/win32/perfctrs/using-performance-counters).
+Monitoring tools can consume this counter by [Using Performance Counters](/windows/win32/perfctrs/using-performance-counters).
 
 ## Download Windows Server Insider software
 

@@ -21,11 +21,11 @@ This topic provides an introduction to the DirectAccess scenario for the Enterpr
   
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites  
   
--   [DirectAccess Unsupported Configurations](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
+-   [DirectAccess Unsupported Configurations](../directaccess/directaccess-unsupported-configurations.md)  
   
--   [DirectAccess Known Issues](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-known-issues)  
+-   [DirectAccess Known Issues](../directaccess/directaccess-known-issues.md)  
   
--   [Prerequisites for Deploying DirectAccess) Prerequisites](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/prerequisites-for-deploying-directaccess)  
+-   [Prerequisites for Deploying DirectAccess) Prerequisites](../directaccess/prerequisites-for-deploying-directaccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 Remote access includes a number of enterprise features, including deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing (NLB) or an external load balancer, setting up a multisite deployment with Remote Access servers situated in dispersed geographical locations, and deploying DirectAccess with two-factor client authentication using a one-time password (OTP).  
@@ -63,5 +63,3 @@ The following table lists the roles and features used in the enterprise scenario
   
 
   
-
-

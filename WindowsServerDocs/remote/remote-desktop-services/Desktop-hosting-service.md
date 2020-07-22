@@ -35,9 +35,9 @@ There are multiple ways to deploy AD DS:
 
 For more information, see the following articles:
 
-* [Azure Active Directory Domain Services documentation](https://docs.microsoft.com/azure/active-directory-domain-services/)
-* [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
-* [Create a site-to-site connection in the Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Azure Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
+* [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Create a site-to-site connection in the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
 ## SQL database
 
@@ -50,8 +50,8 @@ There are multiple ways to deploy an SQL database:
 
 For more information about how to set up a highly-available SQL database infrastructure, see the following articles:
 
-* [What is the Azure SQL Database service?](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-* [Creation and configuration of availability groups (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
+* [What is the Azure SQL Database service?](/azure/sql-database/sql-database-technical-overview)
+* [Creation and configuration of availability groups (SQL Server)](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
 * [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md).
 
 ## File server
@@ -65,7 +65,7 @@ Small tenants can reduce costs by combining the file server and [RD Licensing ro
 For more information, see the following articles:
 
 * [Storage in Windows Server](../../storage/storage.yml)
-* [How to attach a managed data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Fclassic%2Ftoc.json)
+* [How to attach a managed data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal?toc=/azure/virtual-machines/windows/classic/toc.json)
 
 ### User profile disks
 

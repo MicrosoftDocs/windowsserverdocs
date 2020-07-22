@@ -42,7 +42,7 @@ Since the authentication method is EAP-TLS, this registry value is only needed u
 
 5. Select **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
 
-For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](https://technet.microsoft.com/library/bb680540.aspx).
+For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](/previous-versions/system-center/configuration-manager-2007/bb680540(v=technet.10)).
 
 
 |Registry Path  |EAP Extension  |
