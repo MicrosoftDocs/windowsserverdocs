@@ -98,7 +98,7 @@ The following table summarizes the new features for AD DS in Windows Server 2012
 |[Rapid deployment via virtual domain controller (DC) cloning](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574150(v=ws.11)#virtualized_dc_cloning)|Virtualized DCs can be rapidly deployed by cloning existing virtual domain controllers using Windows PowerShell cmdlets.|  
 |[RID pool changes](../manage/managing-rid-issuance.md)|Adds new monitoring events and quotas to safeguard against excessive consumption of the global RID pool. Optionally doubles the size of the global RID pool if the original pool becomes exhausted.|  
 |Secure Time service|Enhances security for W32tm by removing secrets from the wire, removing the MD5 hash functions and requiring the server to authenticate with Windows 8 time clients|  
-|[USN rollback protection for virtualized DCs](../manage/managing-rid-issuance.md#safe_virt_dc)|Accidentally restoring snapshot backups of virtualized DCs no longer causes USN rollback.|  
+|[USN rollback protection for virtualized DCs](../manage/managing-rid-issuance.md)|Accidentally restoring snapshot backups of virtualized DCs no longer causes USN rollback.|  
 |[Windows PowerShell History Viewer](../get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-.md#windows_powershell_history_viewer)|Allow administrators to view the Windows PowerShell commands executed when using ADAC.|  
   
 ### <a name="BKMK_"></a>Automatic Maintenance and changes to restart behavior after updates are applied by Windows Update
