@@ -53,7 +53,7 @@ To add additional users to the local administrators group, use the **Add Local A
 You can configure the IP address to be assigned automatically by a DHCP Server or you can assign a static IP address manually. This option allows you to configure DNS Server settings for the server as well.
 
 > [!NOTE]
-> These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](https://docs.microsoft.com/powershell/module/netadapter/?view=win10-ps) in the Windows Server Library.
+> These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](/powershell/module/netadapter/?view=win10-ps) in the Windows Server Library.
 
 ## Windows Update settings
 

@@ -130,7 +130,7 @@ Generally, these cmdlets should work in Nano Server without any conversion neces
 ### Building C++ for Nano Server  
 To get C++ DLLs working on Nano Server, compile them for Nano Server rather than for a specific edition.  
   
-For prerequisites and a walkthrough of developing C++ on Nano Server, see [Developing Native Apps on Nano Server](https://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx).  
+For prerequisites and a walkthrough of developing C++ on Nano Server, see [Developing Native Apps on Nano Server](/archive/blogs/nanoserver/developing-native-apps-on-nano-server).  
   
   
 ## Porting .NET cmdlets  
@@ -170,7 +170,7 @@ You can search in the API catalog for .NET Core or disassemble Core CLR referenc
 ### PInvoke  
 In the Core CLR that Nano Server uses, some fundamental DLLs such as kernel32.dll and advapi32.dll were split into numerous API sets, so you'll need to ensure that your PInvokes reference the correct API. Any incompatibility will manifest as a runtime error.  
   
-For a list of native APIs supported on Nano Server, see [Nano Server APIs](https://msdn.microsoft.com/library/mt588480(v=vs.85).aspx).  
+For a list of native APIs supported on Nano Server, see [Nano Server APIs](/previous-versions/windows/desktop/legacy/mt588480(v=vs.85)).  
   
 ### Building C# for Nano Server  
   
@@ -234,7 +234,7 @@ To remotely debug a script, connect to the remote computer using `Enter-PSsessio
   
 ### Migrating from WMI .NET to MI .NET  
   
-[WMI .NET](https://msdn.microsoft.com/library/mt481551(v=vs.110).aspx) is not supported, so all cmdlets using the old API must migrate to the supported WMI API: [MI. NET](https://msdn.microsoft.com/library/dn387184(v=vs.85).aspx). You can access MI .NET directly through C# or through the cmdlets in the CimCmdlets module.   
+[WMI .NET](/dotnet/api/?view=netframework-4.7.1) is not supported, so all cmdlets using the old API must migrate to the supported WMI API: [MI. NET](/previous-versions//dn387184(v=vs.85)). You can access MI .NET directly through C# or through the cmdlets in the CimCmdlets module.   
   
 ### CimCmdlets module  
   
@@ -245,5 +245,3 @@ The WMI v1 cmdlets (e.g., Get-WmiObject) are not supported on Nano Server. Howev
 WMI .NET wraps the WMIv1 interface, while MI .NET wraps the WMIv2 (CIM) interface. The classes exposed might be different, but the underlying operations are very similar. You enumerate or get instances of objects and invoke operations on them to accomplish tasks.   
   
   
-
-

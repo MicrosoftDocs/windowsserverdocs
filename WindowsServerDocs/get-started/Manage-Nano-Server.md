@@ -94,7 +94,7 @@ Now you can run commands remotely on the Nano Server. For example:
 winrs -r:<IP address of Nano Server> -u:Administrator -p:<Nano Server administrator password> ipconfig
 ```
   
-For more information about Windows Remote Management, see [Windows Remote Management (WinRM) Overview](https://technet.microsoft.com/library/dn265971.aspx).  
+For more information about Windows Remote Management, see [Windows Remote Management (WinRM) Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265971(v=ws.11)).  
    
    
   
@@ -108,7 +108,7 @@ Add-NetEventPacketCaptureProvider -SessionName
 Start-NetEventSession [-Name]  
 Stop-NetEventSession [-Name]  
 ```  
-These cmdlets are documented in detail at [Network Event Packet Capture Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)  
+These cmdlets are documented in detail at [Network Event Packet Capture Cmdlets in Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265971(v=ws.11))  
 
 ## Installing servicing packages  
 If you want install a servicing packages, use the -ServicingPackagePath parameter (you can pass an array of paths to .cab files):  
@@ -207,7 +207,7 @@ Get-WindowsPackage -Online
 ---  
 The commands listed above will query the Windows Update and Microsoft Update serviceon the Internet to find and download updates. If you use WSUS, you can set registry keys on the Nano Server to use your WSUS server instead.  
   
-See the Windows Update Agent Environment Options Registry Keys table in  [Configure Automatic Updates in a Non-Active-Directory Environment](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
+See the Windows Update Agent Environment Options Registry Keys table in  [Configure Automatic Updates in a Non-Active-Directory Environment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708449(v=ws.10))  
   
 You should set at least the **WUServer** and **WUStatusServer** registry keys, but depending on how you have implemented WSUS, other values might be needed. You can always confirm these settings by examining another Windows Server in the same environment.  
 
@@ -222,7 +222,7 @@ Currently, the way to automate update installation is to convert the steps above
 [comment]: # (from Venkat Yalla.)
 Nano Server fully supports the [Event Tracing for Windows](https://aka.ms/u2pa0i) (ETW) framework, but some familiar tools used to manage tracing and performance counters are not currently available on Nano Server. However, Nano Server has tools and cmdlets to accomplish most common performance analysis scenarios.
 
-The high-level workflow remains the same as on any Window Server installation -- low-overhead tracing is performed on the target (Nano Server) computer, and the resulting trace files and/or logs are post-processed offline on a separate computer using tools such as [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx), [Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226), or others.
+The high-level workflow remains the same as on any Window Server installation -- low-overhead tracing is performed on the target (Nano Server) computer, and the resulting trace files and/or logs are post-processed offline on a separate computer using tools such as [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)), [Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226), or others.
 
 > [!NOTE]
 > Refer to [How to copy files to and from Nano Server](https://aka.ms/nri9c8) for a refresher on how to transfer files using PowerShell remoting.
@@ -230,7 +230,7 @@ The high-level workflow remains the same as on any Window Server installation --
 The following sections list the most common performance data collection activities along with a supported way to accomplish them on Nano Server.
 
 ### Query available event providers
-[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) is tool to query available event providers as follows:
+[Windows Performance Recorder](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448229(v=win.10)) is tool to query available event providers as follows:
 ```
 wpr.exe -providers
 ```
@@ -247,7 +247,7 @@ PS C:\> wpr.exe -providers | select-string Storage
 ```
 
 ### Record traces from a single ETW provider
-You can use new [Event Tracing Management cmdlets](https://technet.microsoft.com/library/dn919247.aspx) for this. Here is an example workflow:
+You can use new [Event Tracing Management cmdlets](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448229(v=win.10)) for this. Here is an example workflow:
 
 Create and start the trace, specifying a file name for storing the events.
 ```
@@ -279,7 +279,7 @@ Mode                LastWriteTime         Length Name
 > This example shows adding a single trace provider to the session, but you can also use the ```Add-EtwTraceProvider``` cmdlet multiple times on a trace session with different provider GUIDs to enable tracing from multiple sources. Another alternative is to use ```wpr.exe``` profiles described below.
 
 ### Record traces from multiple ETW providers
-The ```-profiles``` option of [Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) enables tracing from multiple providers at the same time. There are a number of built-in profiles like CPU, Network, and DiskIO to choose from:
+The ```-profiles``` option of [Windows Performance Recorder](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448229(v=win.10)) enables tracing from multiple providers at the same time. There are a number of built-in profiles like CPU, Network, and DiskIO to choose from:
 ```
 PS C:\Users\Administrator\Documents> wpr.exe -profiles 
 
@@ -316,7 +316,7 @@ Copyright (c) 2015 Microsoft Corporation. All rights reserved.
         WdfTraceLoggingProvider     WDF Driver Activity
 ```
 
-For detailed guidance on creating custom profiles, see the [WPR.exe documentation](https://msdn.microsoft.com/library/windows/hardware/hh448223.aspx).
+For detailed guidance on creating custom profiles, see the [WPR.exe documentation](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448223(v=win.10)).
 
 ### Record ETW traces during operating system boot time
 Use the ```New-AutologgerConfig``` cmdlet to collect events during system boot. Usage is very similar to the ```New-EtwTraceSession``` cmdlet, but providers added to the Autologger's configuration will only be enabled early at next boot. The overall workflow looks like this:
@@ -371,13 +371,13 @@ Exiting, please wait...
 The command completed successfully.
 ```
 
-Other command-line options allow you to specify performance counter names of interest in a configuration file, redirecting output to a log file, among other things. See the [typeperf.exe documentation](https://technet.microsoft.com/library/bb490960.aspx) for details.
+Other command-line options allow you to specify performance counter names of interest in a configuration file, redirecting output to a log file, among other things. See the [typeperf.exe documentation](/previous-versions/windows/it-pro/windows-xp/bb490960(v=technet.10)) for details.
 
 You can also use Perfmon.exe's graphical interface remotely with Nano Server targets. When adding performance counters to the view, specify the Nano Server target in the computer name instead of the default *<Local computer>*.
 
 ### Interact with the Windows Event Log
 
-Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](https://technet.microsoft.com/library/hh849682.aspx). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
+Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
 ```
 PS C:\> $StartTime = (Get-Date) - (New-TimeSpan -Day 2)
 PS C:\> Get-WinEvent -FilterHashTable @{LogName='System'; Level=2; StartTime=$StartTime} | select TimeCreated, Message
@@ -392,7 +392,7 @@ TimeCreated           Message
 Nano Server also supports ```wevtutil.exe``` which allows retrieving information about event logs and publishers. See [wevtutil.exe documentation](https://aka.ms/qvod7p) for more details. 
 
 ### Graphical interface tools
-[Web-based server management tools](https://blogs.technet.microsoft.com/servermanagement/2016/08/17/deploy-setup-server-management-tools/) can be used to remotely manage Nano Server targets and present a Nano Server Event Log by using a web browser. Finally, the MMC snap-in Event Viewer (eventvwr.msc) can also be used to view logs -- just open it on a computer with a desktop and point it to a remote Nano Server.
+[Web-based server management tools](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog) can be used to remotely manage Nano Server targets and present a Nano Server Event Log by using a web browser. Finally, the MMC snap-in Event Viewer (eventvwr.msc) can also be used to view logs -- just open it on a computer with a desktop and point it to a remote Nano Server.
 
 
 
@@ -401,4 +401,4 @@ Nano Server also supports ```wevtutil.exe``` which allows retrieving information
   
 You can manage Nano Server as target nodes with Windows PowerShell Desired State Configuration (DSC). Currently, you can manage nodes running Nano Server with DSC in push mode only. Not all DSC features function with Nano Server.  
   
-For full details, see [Using DSC on Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc).  
+For full details, see [Using DSC on Nano Server](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog).  
