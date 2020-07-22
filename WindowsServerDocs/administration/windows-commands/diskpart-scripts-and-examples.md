@@ -51,8 +51,8 @@ To create a diskpart script, create a text file that contains the Diskpart comma
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Sample: Configure UEFI/GPT-Based Hard Drive Partitions by Using Windows PE and DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
+- [Sample: Configure UEFI/GPT-Based Hard Drive Partitions by Using Windows PE and DiskPart](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
 
-- [Sample: Configure BIOS/MBR-Based Hard Disk Partitions by Using Windows PE and DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
+- [Sample: Configure BIOS/MBR-Based Hard Disk Partitions by Using Windows PE and DiskPart](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
 
-- [Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/?view=win10-ps)
+- [Storage Cmdlets in Windows PowerShell](/powershell/module/storage/?view=win10-ps)

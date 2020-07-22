@@ -19,7 +19,7 @@ Converts an empty basic disk with the master boot record (MBR) partition style i
 > The disk must be empty to convert it to a basic disk. Back up your data, and then delete all partitions or volumes before converting the disk. The required minimum disk size for conversion to GPT is 128 megabytes.
 
 > [!NOTE]
-> For instructions regarding how to use this command, see [Change a Master Boot Record Disk into a GUID Partition Table Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725671(v=ws.11)).
+> For instructions regarding how to use this command, see [Change a Master Boot Record Disk into a GUID Partition Table Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc725671(v=ws.11)).
 
 ## Syntax
 

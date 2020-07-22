@@ -12,7 +12,7 @@ ms.date: 03/01/2019
 
 # bitsadmin gethelpertokenflags
 
-Returns the usage flags for a [helper token](https://docs.microsoft.com/windows/win32/bits/helper-tokens-for-bits-transfer-jobs) that is associated with a BITS transfer job.
+Returns the usage flags for a [helper token](/windows/win32/bits/helper-tokens-for-bits-transfer-jobs) that is associated with a BITS transfer job.
 
 > [!NOTE]
 > This command isn't supported by BITS 3.0 and earlier.

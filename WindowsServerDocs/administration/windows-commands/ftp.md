@@ -70,8 +70,8 @@ ftp -s:resync.txt ftp.example.microsoft.com
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
 
-- [IP version 6](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738636(v=ws.10))
+- [IP version 6](/previous-versions/windows/it-pro/windows-server-2003/cc738636(v=ws.10))
 
-- [IPv6 applications](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782509(v=ws.10))
+- [IPv6 applications](/previous-versions/windows/it-pro/windows-server-2003/cc782509(v=ws.10))

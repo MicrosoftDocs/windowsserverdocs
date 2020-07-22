@@ -1,4 +1,4 @@
-﻿---
+---
 title: Vssadmin resize shadowstorage
 description: A description of the vssadmin resize shadowstorage command.
 ms.prod: windows-server
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 Resizes the maximum amount of storage space that can be used for shadow copy storage.
 
-The minimum amount of storage space that can be used for shadow copy storage can be specified by using the **MinDiffAreaFileSize** registry value. For more information, see [MinDiffAreaFileSize](https://docs.microsoft.com/windows/win32/backup/registry-keys-for-backup-and-restore#mindiffareafilesize).
+The minimum amount of storage space that can be used for shadow copy storage can be specified by using the **MinDiffAreaFileSize** registry value. For more information, see [MinDiffAreaFileSize](/windows/win32/backup/registry-keys-for-backup-and-restore#mindiffareafilesize).
 
 > [!WARNING]
 > Resizing the storage association may cause shadow copies to disappear.
@@ -44,5 +44,5 @@ vssadmin Resize ShadowStorage /For=C: /On=C: /MaxSize=20%
 
 ## Additional References
 
-* [Command-line syntax key](https://docs.microsoft.com/windows-server/administration/windows-commands/command-line-syntax-key)
+* [Command-line syntax key](./command-line-syntax-key.md)
 * [Vssadmin](vssadmin.md)

@@ -39,4 +39,4 @@ nlbmgr [/noping][/hostlist <filename>][/autorefresh <interval>][/help | /?]
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [NetworkLoadBalancingClusters cmdlets reference](https://docs.microsoft.com/powershell/module/networkloadbalancingclusters)
+- [NetworkLoadBalancingClusters cmdlets reference](/powershell/module/networkloadbalancingclusters)

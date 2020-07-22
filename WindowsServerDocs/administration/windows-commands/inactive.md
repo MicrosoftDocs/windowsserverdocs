@@ -40,4 +40,4 @@ inactive
 
 - [select partition command](select-partition.md)
 
-- [Advanced troubleshooting for Windows boot problems](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems)
+- [Advanced troubleshooting for Windows boot problems](/windows/client-management/advanced-troubleshooting-boot-problems)

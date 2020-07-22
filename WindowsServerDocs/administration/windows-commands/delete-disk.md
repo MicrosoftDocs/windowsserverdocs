@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 Deletes a missing dynamic disk from the list of disks.
 
 > [!NOTE]
-> For detailed instructions about how to use this command, see [Remove a Missing Dynamic Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753029(v=ws.11)).
+> For detailed instructions about how to use this command, see [Remove a Missing Dynamic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753029(v=ws.11)).
 
 ## Syntax
 

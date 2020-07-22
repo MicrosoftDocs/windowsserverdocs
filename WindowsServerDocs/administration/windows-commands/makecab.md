@@ -46,4 +46,4 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 
 - [diantz command](diantz.md)
 
-- [Microsoft Cabinet format](https://docs.microsoft.com/previous-versions/bb417343(v=msdn.10))
+- [Microsoft Cabinet format](/previous-versions/bb417343(v=msdn.10))

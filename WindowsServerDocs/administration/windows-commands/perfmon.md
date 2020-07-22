@@ -34,4 +34,4 @@ perfmon </res|report|rel|sys>
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749154(v%3dws.11))
+- [Windows Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749154(v%3dws.11))

@@ -53,6 +53,6 @@ manage-bde  tpm  takeownership 0wnerP@ss
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [TPM Management cmdlets for Windows PowerShell](https://docs.microsoft.com/powershell/module/trustedplatformmodule/)
+- [TPM Management cmdlets for Windows PowerShell](/powershell/module/trustedplatformmodule/)
 
 - [manage-bde command](manage-bde.md)

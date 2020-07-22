@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 
-Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx).
+Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](/previous-versions/windows/it-pro/windows-server-2003/cc783305(v=ws.10)).
 
 ## Syntax
 

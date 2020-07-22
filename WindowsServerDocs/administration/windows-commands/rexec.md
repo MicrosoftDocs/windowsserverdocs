@@ -21,4 +21,4 @@ ms.date: 10/16/2017
 
 Rexec is deprecated, and is not guaranteed to be supported in future releases of Windows.
 
-This tool is included in Windows Server 2003. For more information, see [Rexec](https://technet.microsoft.com/library/cc755410(v=ws.10).aspx).
+This tool is included in Windows Server 2003. For more information, see [Rexec](/previous-versions/orphan-topics/ws.10/cc755410(v=ws.10)).

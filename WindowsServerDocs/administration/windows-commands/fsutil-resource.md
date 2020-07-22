@@ -87,4 +87,4 @@ fsutil resource setautoreset true c:\
 
 - [fsutil](fsutil.md)
 
-- [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730726(v=ws.10))
+- [Transactional NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v=ws.10))
