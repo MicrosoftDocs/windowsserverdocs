@@ -49,7 +49,7 @@ Storage Replica can be used if you have virtual machines or an SOFS running on y
 
 ## Hyper-V Replica
 
-[Hyper-V Replica](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica) provides virtual machine level replication for disaster recovery on hyper-converged infrastructures. What Hyper-V Replica can do is to take a virtual machine and replicate it to a secondary site or Azure (replica). Then from the secondary site, Hyper-V Replica can replicate the virtual machine to a third (extended replica).
+[Hyper-V Replica](../../virtualization/hyper-v/manage/set-up-hyper-v-replica.md) provides virtual machine level replication for disaster recovery on hyper-converged infrastructures. What Hyper-V Replica can do is to take a virtual machine and replicate it to a secondary site or Azure (replica). Then from the secondary site, Hyper-V Replica can replicate the virtual machine to a third (extended replica).
 
 ![Hyper-V Replication diagram](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure2.png)
 
@@ -71,7 +71,7 @@ Other considerations you will need are:
 - How often you wish to have the Volume Shadow Copy Service (VSS) replicate an incremental shadow copy.
 - How often changes get replicated (30 seconds, 5 minutes, 15 minutes).
 
-When HCI participate in Hyper-V Replica, you must have the [Hyper-V Replica Broker](https://blogs.technet.microsoft.com/virtualization/2012/03/27/why-is-the-hyper-v-replica-broker-required/) resource created in each cluster. This resource does several things:
+When HCI participate in Hyper-V Replica, you must have the [Hyper-V Replica Broker](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization) resource created in each cluster. This resource does several things:
 
 1.    Gives you a single namespace for each cluster for Hyper-V Replica to connect to.
 2.    Determines which node within that cluster the replica (or extended replica) will reside on when it first receives the copy.
@@ -120,5 +120,3 @@ Once the restore has taken place, this node must be the one to start the Cluster
 ## Summary 
 
 To sum this all up, hyper-converged disaster recovery is something that should be planned out carefully. There are several scenarios that can best suits your needs and should be thoroughly tested. One item to note is that if you are familiar with Failover Clusters in the past, stretch clusters have been a very popular option over the years. There was a bit of a design change with the hyper-converged solution and it is based on resiliency. If you lose two nodes in a hyper-converged cluster, the entire cluster will go down. With this being the case, in a hyper-converged environment, the stretch scenario is not supported.
-
-

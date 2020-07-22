@@ -1,4 +1,4 @@
-﻿---
+---
 title: Use Robocopy to pre-seed files for DFS Replication
 description: How to use Robocopy.exe to pre-seed files for DFS Replication.
 ms.prod: windows-server 
@@ -37,9 +37,9 @@ Because pre-seeding does not directly involve DFS Replication, you only need to
 - Ensure that sufficient storage space is available on the destination drive. Do not create a folder on the path that you plan to copy to: Robocopy must create the root folder.
     
     >[!NOTE]
-    >When you decide how much space to allocate for the pre-seeded files, consider expected data growth over time and storage requirements for DFS Replication. For planning help, see [Edit the Quota Size of the Staging Folder and Conflict and Deleted Folder](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754229(v=ws.11)) in [Managing DFS Replication](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754771(v=ws.11)>).
+    >When you decide how much space to allocate for the pre-seeded files, consider expected data growth over time and storage requirements for DFS Replication. For planning help, see [Edit the Quota Size of the Staging Folder and Conflict and Deleted Folder](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754229(v=ws.11)) in [Managing DFS Replication](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754771(v=ws.11)>).
 
-- On the source server, optionally install Process Monitor or Process Explorer, which you can use to check for applications that are locking files. For download information, see [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) and [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer).
+- On the source server, optionally install Process Monitor or Process Explorer, which you can use to check for applications that are locking files. For download information, see [Process Monitor](/sysinternals/downloads/procmon) and [Process Explorer](/sysinternals/downloads/process-explorer).
 
 ## Step 1: Download and install the latest version of Robocopy
 
@@ -70,7 +70,7 @@ After you install the latest version of Robocopy on the server, you should preve
 |Source of the lock|Explanation|Mitigation|
 |---|---|---|
 |Users remotely open files on shares.|Employees connect to a standard file server and edit documents, multimedia content, or other files. Sometimes referred to as the traditional home folder or shared data workloads.|Only perform Robocopy operations during off-peak, non-business hours. This minimizes the number of files that Robocopy must skip during pre-seeding.<br><br>Consider temporarily setting Read-only access on the file shares that will be replicated by using the Windows PowerShell **Grant-SmbShareAccess** and **Close-SmbSession** cmdlets. If you set permissions for a common group such as Everyone or Authenticated Users to READ, standard users might be less likely to open files with exclusive locks (if their applications detect the Read-only access when files are opened).<br><br>You might also consider setting a temporary firewall rule for SMB port 445 inbound to that server to block access to files or use the **Block-SmbShareAccess** cmdlet. However, both of these methods are very disruptive to user operations.|
-|Applications open files local.|Application workloads running on a file server sometimes lock files.|Temporarily disable or uninstall the applications that are locking files. You can use Process Monitor or Process Explorer to determine which applications are locking files. To download Process Monitor or Process Explorer, visit the [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) and [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) pages.|
+|Applications open files local.|Application workloads running on a file server sometimes lock files.|Temporarily disable or uninstall the applications that are locking files. You can use Process Monitor or Process Explorer to determine which applications are locking files. To download Process Monitor or Process Explorer, visit the [Process Monitor](/sysinternals/downloads/procmon) and [Process Explorer](/sysinternals/downloads/process-explorer) pages.|
 
 ## Step 3: Copy the replicated files to the destination server
 
@@ -115,7 +115,7 @@ After you minimize locks on the files that will be replicated, you can pre-seed 
     ```
     
     >[!NOTE]
-    >We recommend that you use the parameters described above when you use Robocopy to pre-seed files for DFS Replication. However, you can change some of their values or add additional parameters. For example, you might find out through testing that you have the capacity to set a higher value (thread count) for the */MT* parameter. Also, if you'll primarily replicate larger files, you might be able to increase copy performance by adding the **/j** option for unbuffered I/O. For more information about Robocopy parameters, see the [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) command-line reference.
+    >We recommend that you use the parameters described above when you use Robocopy to pre-seed files for DFS Replication. However, you can change some of their values or add additional parameters. For example, you might find out through testing that you have the capacity to set a higher value (thread count) for the */MT* parameter. Also, if you'll primarily replicate larger files, you might be able to increase copy performance by adding the **/j** option for unbuffered I/O. For more information about Robocopy parameters, see the [Robocopy](../../administration/windows-commands/robocopy.md) command-line reference.
 
     >[!WARNING]
     >To avoid potential data loss when you use Robocopy to pre-seed files for DFS Replication, do not make the following changes to the recommended parameters:

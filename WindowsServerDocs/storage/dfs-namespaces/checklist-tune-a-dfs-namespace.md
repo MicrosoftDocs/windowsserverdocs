@@ -28,8 +28,6 @@ In addition, by using a DFS Namespaces enhancement known as target priority, yo
 
 ## Additional References
 
--   [Namespaces](https://technet.microsoft.com/library/cc771914(v=ws.11).aspx)
+-   [Namespaces](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771914(v=ws.11))
 -   [Checklist: Deploy DFS Namespaces](checklist-deploy-dfs-namespaces.md)
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
-
-

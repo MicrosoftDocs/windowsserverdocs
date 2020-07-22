@@ -22,7 +22,7 @@ With Storage Spaces Direct, taking a server offline (bringing it down) also mean
 Use the following procedures to properly pause a server in a Storage Spaces Direct cluster before taking it offline.
 
    > [!IMPORTANT]
-   > To install updates on a Storage Spaces Direct cluster, use Cluster-Aware Updating (CAU), which automatically performs the procedures in this topic so you don't have to when installing updates. For more info, see [Cluster Aware Updating (CAU)](https://technet.microsoft.com/library/hh831694.aspx).
+   > To install updates on a Storage Spaces Direct cluster, use Cluster-Aware Updating (CAU), which automatically performs the procedures in this topic so you don't have to when installing updates. For more info, see [Cluster Aware Updating (CAU)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831694(v=ws.11)).
 
 ## Verifying it's safe to take the server offline
 
@@ -181,4 +181,4 @@ Use the following steps to path your Storage Spaces Direct system quickly. It in
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- [Cluster Aware Updating (CAU)](https://technet.microsoft.com/library/hh831694.aspx)
+- [Cluster Aware Updating (CAU)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831694(v=ws.11))

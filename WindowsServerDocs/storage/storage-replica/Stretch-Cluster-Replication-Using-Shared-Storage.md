@@ -152,13 +152,13 @@ You will now create a normal failover cluster. After configuration, validation, 
    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
 
    > [!WARNING]  
-   > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
+   > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).  
 
-5. Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
+5. Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728(v=ws.11)) and ensure that you have optimally configured cluster networking.  
 
 6. Add one disk in the Redmond site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.  
 
-7. Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
+7. Using the [Deploy a Hyper-V Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj863389(v=ws.11)) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
 
 8. If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
@@ -214,7 +214,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 14. **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
 
-    For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) and the [Enable Change Notifications between Sites - How and Why?](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx) blog post.  
+    For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) and the [Enable Change Notifications between Sites - How and Why?](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why) blog post.  
 
 15. **(Optional)** Configure VM resiliency so that guests do not pause for long during node failures. Instead, they failover to the new replication source storage within 10 seconds.  
 
@@ -252,15 +252,15 @@ You will now create a normal failover cluster. After configuration, validation, 
    > [!NOTE]
    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.  
     
-   For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).  
+   For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).  
 
-4. Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://technet.microsoft.com/library/dn550728.aspx) and ensure that you have optimally configured cluster networking.  
+4. Review [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728(v=ws.11)) and ensure that you have optimally configured cluster networking.  
 
 5. If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
    This is by-design behavior in Windows Server 2016.
 
-6. Using the [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
+6. Using the [Deploy a Hyper-V Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj863389(v=ws.11)) guide, follow steps 7-10 within **Redmond** site to create a test virtual machine only to ensure the cluster is working normally within the two nodes sharing the storage in the first test site.  
 
 7. Once satisfied, remove the test VM. Add any real test virtual machines needed for further evaluation to a proposed source node.  
 
@@ -281,7 +281,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 9. **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
 
-   For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) and [Enable Change Notifications between Sites - How and Why](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).  
+   For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) and [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).  
 
 10. **(Optional)** Configure VM resiliency so that guests do not pause for long periods during node failures. Instead, they failover to the new replication source storage within 10 seconds.  
 
@@ -314,7 +314,7 @@ You will now create a normal failover cluster. After configuration, validation, 
    >[!NOTE]
    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.                                                                                                                                                                             
    >[!NOTE]
-   >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](https://technet.microsoft.com/library/jj612870.aspx). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum). 
+   >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum). 
 
 5. If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
@@ -360,7 +360,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 16. (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
 
-For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).    
+For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).    
 
 #### PowerShell Method
 
@@ -393,7 +393,7 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
     >[!NOTE]
     > Windows Server now includes an option for cloud witness using Azure. You can choose this quorum option instead of the file share witness.  
 
-   For more information about quorum configuration, see the [Understanding cluster and pool quorum](../storage-spaces/understand-quorum.md). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).
+   For more information about quorum configuration, see the [Understanding cluster and pool quorum](../storage-spaces/understand-quorum.md). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 4.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 
@@ -429,7 +429,7 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
 
 8.  (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.  
     
-    For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](https://blogs.technet.com/b/qzaidi/archive/2010/09/23/enable-change-notifications-between-sites-how-and-why.aspx).
+    For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).
 
 ### Configure a stretch cluster  
 Now you will configure the stretch cluster, using either Failover Cluster Manager or Windows PowerShell. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.  
@@ -739,7 +739,7 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter).  
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).  
 
 3.  To alter replication source and destination within the stretch cluster, use the following methods:  
 

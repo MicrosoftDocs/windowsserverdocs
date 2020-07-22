@@ -85,4 +85,4 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
 - [Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
-- [Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+- [Additional Storage Spaces Direct Overview](./storage-spaces-direct-overview.md)

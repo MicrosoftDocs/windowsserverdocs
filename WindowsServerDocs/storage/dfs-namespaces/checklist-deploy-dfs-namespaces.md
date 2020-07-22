@@ -32,8 +32,6 @@ To deploy DFS Namespaces, perform the following tasks:
 
 ## Additional References
 
--   [Namespaces](https://technet.microsoft.com/library/cc771914(v=ws.11).aspx)
+-   [Namespaces](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771914(v=ws.11))
 -   [Checklist: Tune a DFS Namespace](checklist-tune-a-dfs-namespace.md)
--   [Replication](https://technet.microsoft.com/library/cc770278(v=ws.11).aspx)
-
-
+-   [Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v=ws.11))

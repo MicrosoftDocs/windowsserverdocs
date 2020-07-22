@@ -67,7 +67,7 @@ The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Hyp
 
 ## Usage in PowerShell
 
-Use the [Get-VHD](https://docs.microsoft.com/powershell/module/hyper-v/get-vhd) cmdlet:
+Use the [Get-VHD](/powershell/module/hyper-v/get-vhd) cmdlet:
 
 ```PowerShell
 Get-VHD <Path> | Get-ClusterPerf

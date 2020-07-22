@@ -55,5 +55,5 @@ Here's how to extend a volume into empty space immediately after the volume on t
 
 ## See slso
 
-- [Resize-Partition](https://docs.microsoft.com/powershell/module/storage/resize-partition)
-- [Diskpart extend](https://docs.microsoft.com/windows-server/administration/windows-commands/extend)
+- [Resize-Partition](/powershell/module/storage/resize-partition)
+- [Diskpart extend](../../administration/windows-commands/extend.md)

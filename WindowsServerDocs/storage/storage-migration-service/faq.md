@@ -122,7 +122,7 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
 
 - **Enable high-performance processing.** Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required. Don't forget to return these to appropriate states after completing migration.
 
-- **Tune hardware** Review the [Performance Tuning Guidelines for Windows Server 2016](https://docs.microsoft.com/windows-server/administration/performance-tuning/) for tuning the orchestrator and destination computers running Windows Server 2019 and Windows Server 2016. The [Network Subsystem Performance Tuning](https://docs.microsoft.com/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) section contains especially valuable information.
+- **Tune hardware** Review the [Performance Tuning Guidelines for Windows Server 2016](/windows-server/administration/performance-tuning/) for tuning the orchestrator and destination computers running Windows Server 2019 and Windows Server 2016. The [Network Subsystem Performance Tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md) section contains especially valuable information.
 
 - **Use faster storage.** While it may be difficult to upgrade the source computer storage speed, you should ensure the destination storage is at least as fast at write IO performance as the source is at read IO performance in order to ensure there is no unnecessary  bottleneck in transfers. If the destination is a VM, ensure that, at least for the purposes of migration, it runs in the fastest storage layer of your hypervisor hosts, such as on the flash tier or with Storage Spaces Direct HCI clusters utilizing mirrored all-flash or hybrid spaces. When the SMS migration is complete the VM can be live migrated to a slower tier or host.
 
@@ -159,7 +159,7 @@ When performing a transfer, the Storage Migration Service seeks to mirror data f
 
 ## What do the error numbers mean in the transfer CSV?
 
-Most errors found in the transfer CSV file are Windows System Error Codes. You can find out what each error means by reviewing the [Win32 error codes documentation](https://docs.microsoft.com/windows/win32/debug/system-error-codes).
+Most errors found in the transfer CSV file are Windows System Error Codes. You can find out what each error means by reviewing the [Win32 error codes documentation](/windows/win32/debug/system-error-codes).
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 

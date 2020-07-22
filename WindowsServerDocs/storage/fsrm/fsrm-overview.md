@@ -51,7 +51,7 @@ The features included with File Server Resource Manager can be configured and ma
 
 Starting with Windows Server, version 1803, you can now prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on volumes when the service starts. This can conserve a little bit of space on each volume, but will disable real-time file classification.
 
-For older new features, see [What's New in File Server Resource Manager](https://technet.microsoft.com/library/dn383587.aspx).
+For older new features, see [What's New in File Server Resource Manager](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383587(v=ws.11)).
 
 To prevent File Server Resource Manager from creating a change journal on some or all volumes when the service starts, use the following steps:
 
@@ -100,4 +100,4 @@ To prevent File Server Resource Manager from creating a change journal on some o
 
 ## Additional References
 
-- [Dynamic Access Control](https://technet.microsoft.com/library/dn408191(v=ws.11).aspx)
+- [Dynamic Access Control](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408191(v=ws.11))

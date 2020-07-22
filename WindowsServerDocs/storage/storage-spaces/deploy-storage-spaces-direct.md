@@ -96,7 +96,7 @@ From the management system, open a PowerShell console with Administrator privile
 Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force
 ```
 
-If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](https://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) for more info):
+If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](https://devblogs.microsoft.com/scripting/use-powershell-to-add-domain-users-to-a-local-group/) for more info):
 
 ```
 Net localgroup Administrators <Domain\Account> /add
@@ -113,7 +113,7 @@ The next step is to install server roles on every server. You can do this by usi
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-To install via PowerShell, use the [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
 
 ```PowerShell
 Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
@@ -378,7 +378,7 @@ CD $ScriptFolder
 
 ## Next steps
 
-After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/library/dn894707.aspx).
+After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11)).
 
 ## Additional References
 
@@ -387,4 +387,4 @@ After deploying your clustered file server, we recommend testing the performance
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
--   [To RDMA, or not to RDMA – that is the question](https://blogs.technet.microsoft.com/filecab/2017/03/27/to-rdma-or-not-to-rdma-that-is-the-question/) (TechNet blog)
+-   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)
