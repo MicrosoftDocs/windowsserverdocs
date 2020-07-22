@@ -101,7 +101,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 ## Additional References
 
-For examples of how to use BCDEdit, see the [BCDEdit Options Reference](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
+For examples of how to use BCDEdit, see the [BCDEdit Options Reference](/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
 
 ## Additional References
 

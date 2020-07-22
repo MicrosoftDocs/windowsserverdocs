@@ -90,7 +90,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 
 
 > [!TIP]  
-> You can use the Windows PowerShell History Viewer in Active Directory Administrative Center to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](https://technet.microsoft.com/library/hh831702)  
+> You can use the Windows PowerShell History Viewer in Active Directory Administrative Center to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](../ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-.md)  
 
 The next step is to create resource properties. In the following procedure you create a resource property that is automatically added to the Global Resource Properties list on the domain controller, so that it is available to the file server.  
 
@@ -409,7 +409,7 @@ Set-ADCentralAccessRule
 ```  
 
 > [!NOTE]  
-> In the above cmdlet example, the Server value reflects the Server in the test lab environment. You can use the Windows PowerShell History Viewer to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](https://technet.microsoft.com/library/hh831702)  
+> In the above cmdlet example, the Server value reflects the Server in the test lab environment. You can use the Windows PowerShell History Viewer to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](../ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-.md)  
 
 In this proposed permissions set, members of the FinanceException group will have Full Access to files from their own country when they access them through a device from the same country as the document. Audit entries are available in the File Servers security log when someone from the Finance department attempts to access files. However, security settings are not enforced until the policy is promoted from staging.  
 
@@ -429,5 +429,3 @@ In the next procedure, you verify the results of the staging policy. You access 
 
 ## Next Steps  
 If you have a central server management system such as System Center Operations Manager, you can also configuring monitoring for events. This allows Administrators to monitor the effects of central access policies before enforcing them.  
-
-

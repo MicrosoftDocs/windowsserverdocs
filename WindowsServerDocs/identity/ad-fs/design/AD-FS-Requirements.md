@@ -182,7 +182,7 @@ Several key browsers and platforms have undergone validation for rendering and f
 AD FS creates session\-based and persistent cookies that must be stored on client computers to provide sign\-in, sign\-out, single sign\-on \(SSO\), and other functionality. Therefore, the client browser must be configured to accept cookies. Cookies that are used for authentication are always Secure Hypertext Transfer Protocol \(HTTPS\) session cookies that are written for the originating server. If the client browser is not configured to allow these cookies, AD FS cannot function correctly. Persistent cookies are used to preserve user selection of the claims provider. You can disable them by using a configuration setting in the configuration file for the AD FS sign\-in pages. Support for TLS\/SSL is required for security reasons.  
   
 ## <a name="BKMK_extranet"></a>Extranet requirements  
-To provide extranet access to the AD FS service, you must deploy the Web Application Proxy role service as the extranet facing role that proxies authentication requests in a secure manner to the AD FS service. This provides isolation of the AD FS service endpoints as well as isolation of all security keys \(such as token signing certificates\) from requests that originate from the internet. In addition, features such as Soft Extranet Account Lockout require the use of the Web Application Proxy. For more information about Web Application Proxy, see [Web Application Proxy](https://technet.microsoft.com/library/dn584107.aspx).  
+To provide extranet access to the AD FS service, you must deploy the Web Application Proxy role service as the extranet facing role that proxies authentication requests in a secure manner to the AD FS service. This provides isolation of the AD FS service endpoints as well as isolation of all security keys \(such as token signing certificates\) from requests that originate from the internet. In addition, features such as Soft Extranet Account Lockout require the use of the Web Application Proxy. For more information about Web Application Proxy, see [Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584107(v=ws.11)).  
   
 If you want to use a third\-party proxy for extranet access, this third\-party proxy must support the protocol defined in [http:\/\/download.microsoft.com\/download\/9\/5\/E\/95EF66AF\-9026\-4BB0\-A41D\-A4F81802D92C\/%5bMS\-ADFSPIP%5d.pdf](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf).  
   
@@ -208,9 +208,9 @@ In addition, if client user certificate authentication \(clientTLS authenticatio
   
 -   For Windows Integrated authentication to work inside the network and outside the network for a subset of endpoints exposed through the Web Application Proxy, you must use an A record \(not CNAME\) to point to the load balancers.  
   
-For information on configuring corporate DNS for the federation service and Device Registration Service, see [Configure Corporate DNS for the Federation Service and DRS](https://technet.microsoft.com/library/dn486786.aspx).  
+For information on configuring corporate DNS for the federation service and Device Registration Service, see [Configure Corporate DNS for the Federation Service and DRS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486786(v=ws.11)).  
   
-For information on configuring corporate DNS for Web Application proxies, see the "Configure DNS" section in [Step 1: Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx).  
+For information on configuring corporate DNS for Web Application proxies, see the "Configure DNS" section in [Step 1: Configure the Web Application Proxy Infrastructure](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383644(v=ws.11)).  
   
 For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](https://go.microsoft.com/fwlink/?LinkId=75282).  
   

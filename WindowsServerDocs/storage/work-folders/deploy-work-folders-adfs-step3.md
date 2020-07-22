@@ -26,7 +26,7 @@ This topic describes the third step in deploying Work Folders with Active Direct
 -   [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set Up Clients](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   The instructions covered in this section are for a Windows Server 2019 or Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+>   The instructions covered in this section are for a Windows Server 2019 or Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn747208(v=ws.11)).
 
 To set up Work Folders, use the following procedures.  
   
@@ -91,7 +91,7 @@ Install the AD FS certificate that was created during AD FS setup into the local
 ### Create the Work Folders self-signed certificate  
 To create the Work Folders self-signed certificate, follow these steps:  
   
-1.  Download the scripts provided in the [Deploying Work Folders with AD FS and Web Application Proxy](https://blogs.technet.microsoft.com/filecab/2014/03/03/deploying-work-folders-with-ad-fs-and-web-application-proxy-wap) blog post and then copy the file makecert.ps1 to the Work Folders machine.  
+1.  Download the scripts provided in the [Deploying Work Folders with AD FS and Web Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deploying-work-folders-with-ad-fs-and-web-application-proxy-wap/ba-p/425318) blog post and then copy the file makecert.ps1 to the Work Folders machine.  
   
 2.  Open a Windows PowerShell window with admin privileges.  
   
@@ -272,4 +272,3 @@ Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 4, Se
 ## See Also  
 [Work Folders Overview](Work-Folders-Overview.md)  
   
-

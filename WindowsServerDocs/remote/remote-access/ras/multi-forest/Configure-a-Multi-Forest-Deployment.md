@@ -63,7 +63,7 @@ Note the following terms when configuring OTP in a multi-forest deployment:
   
 -   Account Forest-All other forests in the topology.  
   
-The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: PKISync.ps1 Script for Cross-forest Certificate Enrollment](https://technet.microsoft.com/library/ff961506.aspx).  
+The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: PKISync.ps1 Script for Cross-forest Certificate Enrollment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff961506(v=ws.10)).  
   
 > [!NOTE]  
 > This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -234,5 +234,3 @@ The automatic discovery process of infrastructure servers is required to allow a
   
 2.  On the **Refreshing Management Servers** dialog box, click **Close**.  
   
-
-

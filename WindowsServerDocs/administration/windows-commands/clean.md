@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 Removes all partitions or volume formatting from the disk with focus.
 
 >[!NOTE]
-> For a PowerShell version of this command, see [clear-disk command](https://docs.microsoft.com/powershell/module/storage/clear-disk).
+> For a PowerShell version of this command, see [clear-disk command](/powershell/module/storage/clear-disk).
 
 ## Syntax
 
@@ -50,6 +50,6 @@ clean
 
 ## Additional References
 
-- [clear-disk command](https://docs.microsoft.com/powershell/module/storage/clear-disk)
+- [clear-disk command](/powershell/module/storage/clear-disk)
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

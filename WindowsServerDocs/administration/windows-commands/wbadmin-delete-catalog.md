@@ -40,4 +40,4 @@ If you delete the backup catalog for a computer, you will not be able to access 
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Remove-WBCatalog](https://technet.microsoft.com/library/jj902445.aspx)
+-   [Remove-WBCatalog](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)

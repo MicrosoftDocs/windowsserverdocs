@@ -61,7 +61,7 @@ A good sample web app is available here.  This app is a simple web app that echo
 
 ![claims](media/ad-fs-tshoot-claims/claims3.png)
 
-The following [blog article](https://blogs.technet.microsoft.com/tangent_thoughts/2015/02/20/install-and-configure-a-simple-net-4-5-sample-federated-application-samapp/) has excellent, in-depth instructions, for setting this up.
+The following [blog article](/archive/blogs/tangent_thoughts/install-and-configure-a-simple-net-4-5-sample-federated-application-samapp) has excellent, in-depth instructions, for setting this up.
 
 ## Next Steps
 

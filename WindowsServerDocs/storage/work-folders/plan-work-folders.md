@@ -133,9 +133,9 @@ Work Folders has the following software requirements for client computers:
 
 Work Folders supports using Web Application Proxy, Azure AD Application Proxy or 3rd party reverse proxy solutions:
 
--  Web Application Proxy is an on-premises reverse proxy solution. To learn more, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).
+-  Web Application Proxy is an on-premises reverse proxy solution. To learn more, see [Web Application Proxy in Windows Server 2016](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
 
--  Azure AD Application Proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+-  Azure AD Application Proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](/azure/active-directory/active-directory-application-proxy-get-started)
 
 ## Additional design considerations
  In addition to understanding each of the components noted above, customers need to spend time in their design thinking about the number of sync servers and shares to operate, and whether or not to leverage failover clustering to provide fault tolerance on those sync servers
@@ -149,7 +149,7 @@ Work Folders supports using Web Application Proxy, Azure AD Application Proxy or
 
 - Load balancing – in large environments, storing user data on multiple servers can increase server performance and uptime.
 
-  For information on Work Folders server scaling and performance, see [Performance Considerations for Work Folders Deployments](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx).
+  For information on Work Folders server scaling and performance, see [Performance Considerations for Work Folders Deployments](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
 
 > [!NOTE]
 >  When using multiple sync servers, we recommend setting up automatic server discovery for users. This process relies upon the configuration of an attribute on each user account in AD DS. The attribute is named **msDS-SyncServerURL** and becomes available on user accounts after a Windows Server 2012 R2 domain controller is added to the domain or the Active Directory schema updates are applied. This attribute should be set for each user to ensure that users connect to the appropriate sync server. By using automatic server discovery, organizations can publish Work Folders behind a "friendly" URL such as *https://workfolders.contoso.com*, regardless of the number of sync servers in operation.
@@ -249,5 +249,5 @@ The following set of design questions is intended to aid customers in designing 
 
 |Content type|References|
 |------------------|----------------|
-|**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](https://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (blog post)|
-|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />-   [Performance Considerations for Work Folders Deployments](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](https://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)|
+|**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
+|**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Azure AD Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Performance Considerations for Work Folders Deployments](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|

@@ -35,6 +35,5 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ## Additional references  
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[Certificate Requirements for Federation Servers](https://technet.microsoft.com/library/dd807040.aspx)  
+[Certificate Requirements for Federation Servers](../design/certificate-requirements-for-federation-servers.md)  
   
-

@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 # net print
 
 > [!IMPORTANT]
-> This command has been deprecated. However, you can perform many of the same tasks using the [prnjobs command](prnjobs.md), [Windows Management Instrumentation (WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page), [PrintManagement in Powershell](https://docs.microsoft.com/powershell/module/printmanagement), or [Script resources for IT professionals](https://gallery.technet.microsoft.com/ScriptCenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=printing&f%5B0%5D.Text=Printing).
+> This command has been deprecated. However, you can perform many of the same tasks using the [prnjobs command](prnjobs.md), [Windows Management Instrumentation (WMI)](/windows/win32/wmisdk/wmi-start-page), [PrintManagement in Powershell](/powershell/module/printmanagement), or [Script resources for IT professionals](https://gallery.technet.microsoft.com/ScriptCenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=printing&f%5B0%5D.Text=Printing).
 
 Displays information about a specified printer queue or a specified print job, or controls a specified print job.
 
@@ -96,8 +96,8 @@ net print \\Production 263 /release
 
 - [prnjobs command](prnjobs.md)
 
-- [Windows Management Instrumentation (WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page)
+- [Windows Management Instrumentation (WMI)](/windows/win32/wmisdk/wmi-start-page)
 
-- [PrintManagement in Powershell](https://docs.microsoft.com/powershell/module/printmanagement)
+- [PrintManagement in Powershell](/powershell/module/printmanagement)
 
 - [Script resources for IT professionals](https://gallery.technet.microsoft.com/ScriptCenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=printing&f%5B0%5D.Text=Printing)

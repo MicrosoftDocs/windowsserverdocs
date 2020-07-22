@@ -32,7 +32,7 @@ You can customize desktops even more by creating and uploading a virtual hard di
 For more information, see the following articles:
 
 * [Remote Desktop Services - Secure data storage](rds-plan-secure-data-storage.md)
-* [Upload a generalized VHD and use it to create new VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/upload-generalized-managed?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
+* [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed?toc=/azure/virtual-machines/windows/toc.json)
 * [Update RDSH collection (ARM template)](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/)
 
 ## Remote Desktop Connection Broker

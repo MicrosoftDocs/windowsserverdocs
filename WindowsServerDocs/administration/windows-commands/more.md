@@ -105,4 +105,4 @@ The **more** prompt asks you for the number of lines to skip, as follows: `-- Mo
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)

@@ -37,7 +37,7 @@ Because DNS in the perimeter network is configured to resolve all requests for f
 ### 2. Configure perimeter DNS  
 Because there is only a single AD FS host name that client computers are directed to—whether they are on an intranet or on the Internet—client computers on the Internet that use the perimeter DNS server must resolve the FQDN for the account federation server \(fs.fabrikam.com\) to the IP address of the account federation server proxy on the perimeter network. So that it can forward clients on to the account federation server proxy when they attempt to resolve fs.fabrikam.com, perimeter DNS contains a limited corp.fabrikam.com DNS zone with a single host \(A\) resource record for fs \(fs.fabrikam.com\) and the IP address of the account federation server proxy on the perimeter network.  
   
-For more information about how to modify the hosts file of the federation server proxy and configure DNS in the perimeter network, see [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](../../ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md).  
+For more information about how to modify the hosts file of the federation server proxy and configure DNS in the perimeter network, see [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](../deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md).  
   
 ## DNS zone serving both the perimeter network and Internet clients  
 In this scenario, your organization controls the DNS zone in the perimeter network and at least one DNS zone on the Internet. Successful name resolution for a federation server proxy in this scenario depends on the following conditions:  
@@ -58,7 +58,7 @@ So that clients can be forwarded to the account federation server when they atte
 ### 2. Configure Internet DNS  
 For name resolution to be successful in this scenario, all requests from client computers on the Internet to fs.fabrikam.com must be resolved by the Internet DNS zone that you control. Consequently, you must configure your Internet DNS zone to forward client requests for fs.fabrikam.com to the IP address of the account federation server proxy in the perimeter network.  
   
-For more information about how to modify the perimeter network and Internet DNS zones, see [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients](../../ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md).  
+For more information about how to modify the perimeter network and Internet DNS zones, see [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients](../deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md).  
   
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

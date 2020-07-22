@@ -16,12 +16,12 @@ ms.technology: identity-adds
 
 This section addresses the Windows default audit policy settings, baseline recommended audit policy settings, and the more aggressive recommendations from Microsoft, for workstation and server products.  
 
-The SCM baseline recommendations shown here, along with the settings we recommend to help detect compromise, are intended only to be a starting baseline guide to administrators. Each organization must make its own decisions regarding the threats they face, their acceptable risk tolerances, and what audit policy categories or subcategories they should enable. For further information about threats, refer to the [Threats and Countermeasures Guide](https://technet.microsoft.com/library/hh125921(v=ws.10).aspx). Administrators without a thoughtful audit policy in place are encouraged to start with the settings recommended here, and then to modify and test, prior to implementing in their production environment.  
+The SCM baseline recommendations shown here, along with the settings we recommend to help detect compromise, are intended only to be a starting baseline guide to administrators. Each organization must make its own decisions regarding the threats they face, their acceptable risk tolerances, and what audit policy categories or subcategories they should enable. For further information about threats, refer to the [Threats and Countermeasures Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125921(v=ws.10)). Administrators without a thoughtful audit policy in place are encouraged to start with the settings recommended here, and then to modify and test, prior to implementing in their production environment.  
 
 The recommendations are for enterprise-class computers, which Microsoft defines as computers that have average security requirements and require a high level of operational functionality. Entities needing higher security requirements should consider more aggressive audit policies.  
 
 > [!NOTE]  
-> Microsoft Windows defaults and baseline recommendations were taken from the [Microsoft Security Compliance Manager tool](https://technet.microsoft.com/library/cc677002.aspx).  
+> Microsoft Windows defaults and baseline recommendations were taken from the [Microsoft Security Compliance Manager tool](/previous-versions/tn-archive/cc677002(v=technet.10)).  
 
 The following baseline audit policy settings are recommended for normal security computers that are not known to be under active, successful attack by determined adversaries or malware.  
 
@@ -279,15 +279,15 @@ Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-
 ## Additional Information for Monitoring Active Directory Domain Services  
 Review the following links for additional information about monitoring AD DS:  
   
--   [Global Object Access Auditing is Magic](https://blogs.technet.com/b/askds/archive/2011/03/10/global-object-access-auditing-is-magic.aspx) - Provides information about configuring and using Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2.  
+-   [Global Object Access Auditing is Magic](/archive/blogs/askds/global-object-access-auditing-is-magic) - Provides information about configuring and using Advanced Audit Policy Configuration that was added to Windows 7 and Windows Server 2008 R2.  
 
--   [Introducing Auditing Changes in Windows 2008](https://blogs.technet.com/b/askds/archive/2007/10/19/introducing-auditing-changes-in-windows-2008.aspx) - Introduces the auditing changes made in Windows 2008.  
+-   [Introducing Auditing Changes in Windows 2008](/archive/blogs/askds/introducing-auditing-changes-in-windows-2008) - Introduces the auditing changes made in Windows 2008.  
 
--   [Cool Auditing Tricks in Vista and 2008](https://blogs.technet.com/b/askds/archive/2007/11/16/cool-auditing-tricks-in-vista-and-2008.aspx) - Explains interesting new features of auditing in Windows Vista and Windows Server 2008 that can be used for troubleshooting problems or seeing what's happening in your environment.  
+-   [Cool Auditing Tricks in Vista and 2008](/archive/blogs/askds/cool-auditing-tricks-in-vista-and-2008) - Explains interesting new features of auditing in Windows Vista and Windows Server 2008 that can be used for troubleshooting problems or seeing what's happening in your environment.  
 
--   [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](https://blogs.technet.com/b/askds/archive/2008/03/27/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista.aspx) - Contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
+-   [One-Stop Shop for Auditing in Windows Server 2008 and Windows Vista](/archive/blogs/askds/one-stop-shop-for-auditing-in-windows-server-2008-and-windows-vista) - Contains a compilation of auditing features and information contained in Windows Server 2008 and Windows Vista.  
 
--   [AD DS Auditing Step-by-Step Guide](https://technet.microsoft.com/library/a9c25483-89e2-4202-881c-ea8e02b4b2a5.aspx) - Describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
+-   [AD DS Auditing Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10)) - Describes the new Active Directory Domain Services (AD DS) auditing feature in Windows Server 2008. It also provides procedures to implement this new feature.  
 
 ## General List of Security Event ID Recommendation Criticalities  
 All Event ID recommendations are accompanied by a criticality rating as follows:  

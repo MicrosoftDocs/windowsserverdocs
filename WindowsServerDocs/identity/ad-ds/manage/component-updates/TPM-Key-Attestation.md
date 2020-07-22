@@ -23,7 +23,7 @@ ms.technology: identity-adds
 While support for TPM-protected keys has existed since Windows 8, there were no mechanisms for CAs to cryptographically attest that the certificate requester private key is actually protected by a Trusted Platform Module (TPM). This update enables a CA to perform that attestation and to reflect that attestation in the issued certificate.  
   
 > [!NOTE]  
-> This article assumes that the reader is familiar with certificate template concept (for reference, see [Certificate Templates](https://technet.microsoft.com/library/cc730705.aspx)). It also assumes that the reader is familiar with how to configure enterprise CAs to issue certificates based on certificate templates (for reference, see [Checklist: Configure CAs to Issue and Manage Certificates](https://technet.microsoft.com/library/cc771533.aspx)).  
+> This article assumes that the reader is familiar with certificate template concept (for reference, see [Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11))). It also assumes that the reader is familiar with how to configure enterprise CAs to issue certificates based on certificate templates (for reference, see [Checklist: Configure CAs to Issue and Manage Certificates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771533(v=ws.11))).  
   
 ### Terminology  
   
@@ -78,7 +78,7 @@ There are three steps to deploying TPM key attestation:
   
     Note that it is possible to choose a combination of TPM trust models. In this case, the CA will accept any of the attestation methods, and the issuance policy OIDs will reflect all attestation methods that succeed.  
   
-2.  **Configure the certificate template:** Configuring the certificate template is described in the [Deployment details](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_DeploymentDetails) section in this topic. This article does not cover how this certificate template is assigned to the enterprise CA or how enroll access is given to a group of users. For more information, see [Checklist: Configure CAs to Issue and Manage Certificates](https://technet.microsoft.com/library/cc771533.aspx).  
+2.  **Configure the certificate template:** Configuring the certificate template is described in the [Deployment details](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md#BKMK_DeploymentDetails) section in this topic. This article does not cover how this certificate template is assigned to the enterprise CA or how enroll access is given to a group of users. For more information, see [Checklist: Configure CAs to Issue and Manage Certificates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771533(v=ws.11)).  
   
 3.  **Configure the CA for the TPM trust model**  
   
@@ -93,7 +93,7 @@ There are three steps to deploying TPM key attestation:
     > -   TPM key attestation for third-party smart card KSPs is not supported. Microsoft Platform Crypto Provider KSP must be used.  
     > -   TPM key attestation only works for RSA keys.  
     > -   TPM key attestation is not supported for a standalone CA.  
-    > -   TPM key attestation does not support [non-persistent certificate processing](https://technet.microsoft.com/library/ff934598).  
+    > -   TPM key attestation does not support [non-persistent certificate processing](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff934598(v=ws.10)).  
   
 ## <a name="BKMK_DeploymentDetails"></a>Deployment details  
   
@@ -270,5 +270,5 @@ Use the Windows PowerShell cmdlet, **Confirm-CAEndorsementKeyInfo**, to verify t
         ```  
   
 ## See Also  
-[Trusted Platform Module Technology Overview](https://technet.microsoft.com/library/jj131725.aspx)  
+[Trusted Platform Module Technology Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/jj131725(v=ws.11))  
 [External Resource: Trusted Platform Module](http://www.cs.unh.edu/~it666/reading_list/Hardware/tpm_fundamentals.pdf)  

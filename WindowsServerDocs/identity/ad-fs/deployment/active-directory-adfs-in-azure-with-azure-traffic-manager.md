@@ -12,7 +12,7 @@ ms.author: anandy;billmath
 
 ---
 # High availability cross-geographic AD FS deployment in Azure with Azure Traffic Manager
-[AD FS deployment in Azure](how-to-connect-fed-azure-adfs.md) provides step-by-step guideline as to how you can deploy a simple AD FS infrastructure for your organization in Azure. This article provides the next steps to create a cross-geographic deployment of AD FS in Azure using [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/). Azure Traffic Manager helps create a geographically spread high availability and high-performance AD FS infrastructure for your organization by making use of range of routing methods available to suit different needs from the infrastructure.
+[AD FS deployment in Azure](how-to-connect-fed-azure-adfs.md) provides step-by-step guideline as to how you can deploy a simple AD FS infrastructure for your organization in Azure. This article provides the next steps to create a cross-geographic deployment of AD FS in Azure using [Azure Traffic Manager](/azure/traffic-manager/). Azure Traffic Manager helps create a geographically spread high availability and high-performance AD FS infrastructure for your organization by making use of range of routing methods available to suit different needs from the infrastructure.
 
 A highly available cross-geographic AD FS infrastructure enables:
 
@@ -42,7 +42,7 @@ As mentioned above, the Azure Traffic Manager can only refer to DNS labels as en
 ![DNS Label](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/eastfabstsdnslabel.png)
 
 ### Deploying Azure Traffic Manager
-Follow the steps below to create a traffic manager profile. For more information, you can also refer to [Manage an Azure Traffic Manager profile](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-manage-profiles).
+Follow the steps below to create a traffic manager profile. For more information, you can also refer to [Manage an Azure Traffic Manager profile](/azure/traffic-manager/traffic-manager-manage-profiles).
 
 1. **Create a Traffic Manager profile:** Give your traffic manager profile a unique name. This name of the profile is part of the DNS name and acts as a prefix for the Traffic Manager domain name label. The name / prefix is added to .trafficmanager.net to create a DNS label for your traffic manager. The screenshot below shows the traffic manager DNS prefix being set as mysts and resulting DNS label will be mysts.trafficmanager.net. 
    
@@ -53,7 +53,7 @@ Follow the steps below to create a traffic manager profile. For more information
    * Performance
    * Weighted
      
-     **Performance** is the recommended option to achieve highly responsive AD FS infrastructure. However, you can choose any routing method best suited for your deployment needs. The AD FS functionality is not impacted by the routing option selected. See [Traffic Manager traffic routing methods](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-routing-methods) for more information. In the sample screenshot above you can see the **Performance** method selected.
+     **Performance** is the recommended option to achieve highly responsive AD FS infrastructure. However, you can choose any routing method best suited for your deployment needs. The AD FS functionality is not impacted by the routing option selected. See [Traffic Manager traffic routing methods](/azure/traffic-manager/traffic-manager-routing-methods) for more information. In the sample screenshot above you can see the **Performance** method selected.
 3. **Configure endpoints:** In the traffic manager page, click on endpoints and select Add. This will open an Add endpoint page similar to the screenshot below
    
    ![Configure endpoints](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/eastfsendpoint.png)
@@ -69,7 +69,7 @@ Follow the steps below to create a traffic manager profile. For more information
    **Target resource:** This will give you an option to choose from the different DNS labels you have available under your subscription. Choose the DNS label corresponding to the endpoint you are configuring.
    
    Add endpoint for each geographical region you want the Azure Traffic Manager to route traffic to.
-   For more information and detailed steps on how to add / configure endpoints in traffic manager, refer to [Add, disable, enable or delete endpoints](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-manage-endpoints)
+   For more information and detailed steps on how to add / configure endpoints in traffic manager, refer to [Add, disable, enable or delete endpoints](/azure/traffic-manager/traffic-manager-manage-endpoints)
 4. **Configure probe:** In the traffic manager page, click on Configuration. In the configuration page, you need to change the monitor settings to probe at HTTP port 80 and relative path /adfs/probe
    
     ![Configure probe](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/mystsconfig.png) 
@@ -106,10 +106,9 @@ The easiest way to test AD FS is by using the IdpInitiatedSignon.aspx page. In o
 
 ## Related links
 * [Basic AD FS deployment in Azure](how-to-connect-fed-azure-adfs.md)
-* [Microsoft Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/)
-* [Traffic Manager traffic routing methods](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-routing-methods)
+* [Microsoft Azure Traffic Manager](/azure/traffic-manager/)
+* [Traffic Manager traffic routing methods](/azure/traffic-manager/traffic-manager-routing-methods)
 
 ## Next steps
-* [Manage an Azure Traffic Manager profile](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-manage-profiles)
-* [Add, disable, enable or delete endpoints](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-manage-endpoints) 
-
+* [Manage an Azure Traffic Manager profile](/azure/traffic-manager/traffic-manager-manage-profiles)
+* [Add, disable, enable or delete endpoints](/azure/traffic-manager/traffic-manager-manage-endpoints) 

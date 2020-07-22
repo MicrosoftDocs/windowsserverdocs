@@ -73,7 +73,7 @@ You can use the following steps to generate a new self-signed certificate manual
 ## If you're not using self-signed certificates…
 If you are not using the default automatically generated, self-signed token signing and token decryption certificates, you must renew and configure these certificates manually.
 
-First, you must obtain a new certificate from your certificate authority and import it into the local machine personal certificate store on each federation server. For instructions, see the [Import a Certificate](https://technet.microsoft.com/library/cc754489.aspx) article.
+First, you must obtain a new certificate from your certificate authority and import it into the local machine personal certificate store on each federation server. For instructions, see the [Import a Certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754489(v=ws.11)) article.
 
 Then you must configure this certificate as the secondary AD FS token signing or decryption certificate. (You configure it as a secondary certificate to allow your federation partners enough time to consume this new certificate before you promote it to the primary certificate).
 
@@ -113,4 +113,4 @@ If **AutoCertificateRollover** is set to **False**, AD FS will not automatically
 After allowing a sufficient period of time for all of your federation partners to consume the new secondary certificate, promote this secondary certificate to primary (in the MMC snap-in, click the secondary token signing certificate and in the Actions pane, click **Set As Primary**.)
 
 ## Updating Azure AD
-AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials.  For additional information on using certificates see [Renew federation certificates for Office 365 and Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials.  For additional information on using certificates see [Renew federation certificates for Office 365 and Azure AD](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).

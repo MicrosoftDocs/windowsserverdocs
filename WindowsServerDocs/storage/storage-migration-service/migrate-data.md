@@ -17,7 +17,7 @@ This topic discusses how to migrate a server, including its files and configurat
 
 Before you get started, install Storage Migration Service and make sure that the necessary firewall ports are open.
 
-1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
+1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/overview.md) on your PC or a management server if you haven't already. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
 2. In Windows Admin Center, connect to the orchestrator server running Windows Server 2019. <br>This is the server that you'll install Storage Migration Service on and use to manage the migration. If you're migrating only one server, you can use the destination server as long as it's running Windows Server 2019. We recommend you use a separate orchestration server for any multi-server migrations.
 3. Go to **Server Manager** (in Windows Admin Center) > **Storage Migration Service** and select **Install** to install Storage Migration Service and its required components (shown in Figure 1).
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
@@ -92,7 +92,7 @@ At this point, you have three options:
 - **Consider the migration complete** without taking over the source servers' identities.
 - **Transfer again**, copying only files that were updated since the last transfer.
 
-If your goal is to sync the files with Azure, you could set up the destination servers with Azure File Sync after transferring files, or after cutting over to the destination servers (see [Planning for an Azure File Sync deployment](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)).
+If your goal is to sync the files with Azure, you could set up the destination servers with Azure File Sync after transferring files, or after cutting over to the destination servers (see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning)).
 
 ## Step 3: Cut over to the new servers
 
@@ -116,4 +116,4 @@ In this step you cut over from the source servers to the destination servers, mo
 
 - [Storage Migration Service overview](overview.md)
 - [Storage Migration Services frequently asked questions (FAQ)](faq.md)
-- [Planning for an Azure File Sync deployment](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)
+- [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning)

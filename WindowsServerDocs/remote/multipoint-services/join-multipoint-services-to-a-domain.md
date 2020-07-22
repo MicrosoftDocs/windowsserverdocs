@@ -27,4 +27,4 @@ If you will access your MultiPoint Services computer over an Active Directory do
 5.  After the computer restarts, log on as Administrator and wait for MultiPoint Manager to open.  
   
 > [!IMPORTANT]  
-> To ensure that your MultiPoint Services domain deployment works correctly, you will need to configure a couple of group policies and update the Registry. For information, see [Configure group policies for a domain deployment](https://technet.microsoft.com/library/dn265982.aspx).  
+> To ensure that your MultiPoint Services domain deployment works correctly, you will need to configure a couple of group policies and update the Registry. For information, see [Configure group policies for a domain deployment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265982(v=ws.11)).  

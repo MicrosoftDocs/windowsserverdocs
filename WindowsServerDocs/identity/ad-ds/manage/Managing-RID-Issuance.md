@@ -20,7 +20,7 @@ This topic explains the change to the RID master FSMO role, including the new is
   
 -   [Troubleshooting RID Issuance](../../ad-ds/manage/Managing-RID-Issuance.md#BKMK_Tshoot)  
   
-More information is available at the [AskDS Blog](https://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx).  
+More information is available at the [AskDS Blog](/archive/blogs/askds/managing-rid-issuance-in-windows-server-2012).  
   
 ## <a name="BKMK_Manage"></a>Managing RID Issuance  
 By default, a domain has capacity for roughly one billion security principals, such as users, groups, and computers. Naturally, there are no domains with that many actively used objects. However, Microsoft Customer Support has found cases where:  
@@ -238,7 +238,7 @@ To troubleshoot issues not explained by the aforementioned logs - especially old
   
 3.  Does the error returned specifically mention RIDs but is otherwise non-specific? For example, "Windows cannot create the object because the Directory Service was unable to allocate a relative identifier."  
   
-    1.  Examine the System Event log on the domain controller for "legacy" (pre-Windows Server 2012) RID events detailed in [RID Pool Request](https://technet.microsoft.com/library/ee406152(WS.10).aspx) (16642, 16643, 16644, 16645, 16656).  
+    1.  Examine the System Event log on the domain controller for "legacy" (pre-Windows Server 2012) RID events detailed in [RID Pool Request](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee406152(v=ws.10)) (16642, 16643, 16644, 16645, 16656).  
   
     2.  Examine the System Event on the domain controller and the RID Master for new block-indicating events detailed below in this topic (16655, 16656, 16657).  
   
@@ -296,7 +296,5 @@ The following new messages log in the System event log on Windows Server 2012 do
 |Notes and resolution|Contact all domain administrators and inform them that RID consumption has crossed a major milestone; determine if this is expected behavior or not by reviewing security trustee creation patterns. To ever see this event would be highly unusual, as it means that at least ~100 million RIDS have been allocated.|  
   
 ## See Also  
-[Managing RID Issuance in Windows Server 2012](https://blogs.technet.com/b/askds/archive/2012/08/10/managing-rid-issuance-in-windows-server-2012.aspx)  
+[Managing RID Issuance in Windows Server 2012](/archive/blogs/askds/managing-rid-issuance-in-windows-server-2012)  
   
-
-

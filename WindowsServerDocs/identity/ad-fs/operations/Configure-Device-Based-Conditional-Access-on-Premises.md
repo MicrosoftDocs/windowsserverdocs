@@ -60,17 +60,17 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png) 
 
-For additional information on upgrading, see [Upgrade Domain Controllers to Windows Server 2016](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md). 
+For additional information on upgrading, see [Upgrade Domain Controllers to Windows Server 2016](../../ad-ds/deploy/upgrade-domain-controllers.md). 
 
 ## Enable Azure AD Device Registration  
 To configure this scenario, you must configure the device registration capability in Azure AD.  
 
-To do this, follow the steps under [Setting up Azure AD Join in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-setup/)  
+To do this, follow the steps under [Setting up Azure AD Join in your organization](/azure/active-directory/devices/device-management-azure-portal)  
 
 ## Setup AD FS  
-1. Create the a [new AD FS 2016 farm](https://technet.microsoft.com/library/dn486775.aspx).   
-2.  Or [migrate](../../ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md) a farm to AD FS 2016 from AD FS 2012 R2  
-4. Deploy [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnectfed-whatis/) using the Custom path to connect AD FS to Azure AD.  
+1. Create the a [new AD FS 2016 farm](../deployment/deploying-a-federation-server-farm.md).   
+2.  Or [migrate](../deployment/upgrading-to-ad-fs-in-windows-server.md) a farm to AD FS 2016 from AD FS 2012 R2  
+4. Deploy [Azure AD Connect](../deployment/upgrading-to-ad-fs-in-windows-server.md) using the Custom path to connect AD FS to Azure AD.  
 
 ## Configure Device Write Back and Device Authentication  
 > [!NOTE]
@@ -184,14 +184,14 @@ For your reference, below is a comprehensive list of the AD DS devices, containe
 - object of type msDS-DeviceRegistrationService in the above container  
 
 ### See it work  
-To evaluate the new claims and policies, first register a device.  For example, you can Azure AD Join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps [here](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/).  For information on joining Windows 10 mobile devices, see the document [here](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory).  
+To evaluate the new claims and policies, first register a device.  For example, you can Azure AD Join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps [here](/azure/active-directory/devices/hybrid-azuread-join-plan).  For information on joining Windows 10 mobile devices, see the document [here](/windows/client-management/join-windows-10-mobile-to-azure-active-directory).  
 
 For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You will be able to see new claims including isManaged, isCompliant, and trusttype.  If you enable Microsoft Passport for work, you will also see the prt claim.  
  
 
 ## Configure Additional Scenarios  
 ### Automatic Registration for Windows 10 Domain Joined computers  
-To enable automatic device registration for Windows 10 domain joined computers, follow steps 1 and 2 [here](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/).   
+To enable automatic device registration for Windows 10 domain joined computers, follow steps 1 and 2 [here](/azure/active-directory/devices/hybrid-azuread-join-plan).   
 This will help you achieve the following:  
 
 1. Ensure your service connection point in AD DS exists and has the proper permissions (we created this object above, but it does not hurt to double check).  
@@ -200,10 +200,10 @@ This will help you achieve the following:
 4. Configure the group policy settings required for automatic device registration of domain joined computers   
 
 ### Microsoft Passport for Work   
-For information on enabling Windows 10 with Microsoft Passport for Work, see [Enable Microsoft Passport for Work in your organization.](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)  
+For information on enabling Windows 10 with Microsoft Passport for Work, see [Enable Microsoft Passport for Work in your organization.](/windows/security/identity-protection/hello-for-business/hello-identity-verification)  
 
 ### Automatic MDM enrollment   
-To enable automatic MDM enrollment of registered devices so that you can use the isCompliant claim in your access control policy, follow the steps [here.](https://blogs.technet.microsoft.com/ad/2015/08/14/windows-10-azure-ad-and-microsoft-intune-automatic-mdm-enrollment-powered-by-the-cloud/)  
+To enable automatic MDM enrollment of registered devices so that you can use the isCompliant claim in your access control policy, follow the steps [here.](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)  
 
 ## Troubleshooting  
 1.  if you get an error on `Initialize-ADDeviceRegistration` that complains about an object already existing in the wrong state, such as "The drs service object has been found without all the required attributes", you may have executed Azure AD Connect powershell commands previously and have a partial configuration in AD DS.  Try deleting manually the objects under **CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=&lt;domain&gt;** and trying again.  
@@ -217,7 +217,7 @@ To enable automatic MDM enrollment of registered devices so that you can use the
     4. Try the device enrollment or registration again  
 
 ### Related Articles  
-* [Securing access to Office 365 and other apps connected to Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)  
-* [Conditional access device policies for Office 365 services](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-device-policies/)  
-* [Setting up on-premises conditional access using Azure Active Directory Device Registration](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
-* [Connect domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  
+* [Securing access to Office 365 and other apps connected to Azure Active Directory](/azure/active-directory/conditional-access/overview)  
+* [Conditional access device policies for Office 365 services](/azure/active-directory/conditional-access/overview)  
+* [Setting up on-premises conditional access using Azure Active Directory Device Registration](/azure/active-directory/active-directory-device-registration-on-premises-setup)  
+* [Connect domain-joined devices to Azure AD for Windows 10 experiences](/azure/active-directory/devices/hybrid-azuread-join-plan)  

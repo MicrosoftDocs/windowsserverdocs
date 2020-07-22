@@ -85,12 +85,12 @@ Depending on the architecture of VDI VM, things like PreFetch and SuperFetch are
 
 ### To Sysprep or not Sysprep
 
-Windows 10 has a built-in capability called the [System Preparation Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview),
+Windows 10 has a built-in capability called the [System Preparation Tool](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview),
 (often abbreviated to "Sysprep"). The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting operating system is properly unique to run in production.
 
 There are reasons for and against running Sysprep. In the case of VDI, you might want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You might have apps that you want installed, but also able to control per-app settings.
 
-The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](https://blogs.technet.microsoft.com/secguide/2016/01/21/lgpo-exe-local-group-policy-object-utility-v1-0/)
+The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](/archive/blogs/secguide/lgpo-exe-local-group-policy-object-utility-v1-0)
 tool.
 
 #### VDI Optimization Categories
@@ -180,13 +180,13 @@ Run the following command to enumerate provisioned UWP apps from a running Windo
 UWP apps that are provisioned to a system can be removed during operating system installation as part of a task sequence, or later after the operating system is installed. This might be the
 preferred method because it makes the overall process of creating or maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build you edit an existing script rather than repeat the process from scratch. Here are some links to information on this topic:
 
-[Removing Windows 10 in-box apps during a task sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
+[Removing Windows 10 in-box apps during a task sequence](/archive/blogs/mniehaus/removing-windows-10-in-box-apps-during-a-task-sequence)
 
 [Removing Built-in apps from Windows 10 WIM-File with Powershell - Version 1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
 
-[Windows 10 1607: Keeping apps from coming back when deploying the feature update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
+[Windows 10 1607: Keeping apps from coming back when deploying the feature update](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
 
-Then run the [Remove-AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
+Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
 
 ```powershell
 Remove-AppxProvisionedPackage -Online -PackageName 
@@ -458,7 +458,7 @@ group policy setting, you can find that in this location:
 | **Start Menu and Taskbar**                  | Remove the networking icon               |                         | **Enabled** (the networking icon is not displayed in the system notification area.) |
 
 For more about the Network Connection Status Indicator
-(NCSI), see: [The Network Connection Status icon](https://blogs.technet.microsoft.com/networking/2012/12/20/the-network-connection-status-icon/)
+(NCSI), see: [The Network Connection Status icon](https://techcommunity.microsoft.com/t5/networking-blog/bg-p/NetworkingBlog)
 
 ### System services
 
@@ -466,7 +466,7 @@ If you are considering disabling system services to conserve resources, take gre
 of some other service.
 
 Also, most of these recommendations mirror recommendations for Windows Server
-2016 with Desktop Experience; for more information, see [Guidance on disabling system services in Windows Server 2016 with Desktop Experience](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server).
+2016 with Desktop Experience; for more information, see [Guidance on disabling system services in Windows Server 2016 with Desktop Experience](../../security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md).
 
 Note that a lot of services that might seem to be good candidates to disable are set to manual service start type. This means that the service will not automatically start and is not started unless a specific application or service triggers a request to the service being consider for disabling. Services that are already set to start type manual are usually not listed here.
 
@@ -490,7 +490,7 @@ Note that a lot of services that might seem to be good candidates to disable are
 
 #### Per-user services in Windows
 
-[Per-user services](https://docs.microsoft.com/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks. 
+[Per-user services](/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks. 
 
 ### Scheduled tasks
 
@@ -609,7 +609,7 @@ For Windows Defender it might be best to allow the updates to occur, even on non
 
 ### Windows Defender optimization with VDI
 
-Microsoft has recently published documentation regarding Windows Defender in a VDI environment. See [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus) for details.
+Microsoft has recently published documentation regarding Windows Defender in a VDI environment. See [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus) for details.
 
 The above article contains procedures to service the gold VDI image, and how to maintain the VDI clients as they are running. To reduce network bandwidth when VDI computers need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where
 practical, have those files shares on the same or close networking segments as the VDI virtual machines.
@@ -622,7 +622,7 @@ This is especially important in environments where the VDI or physical computer 
 
 Note that some settings in this section are *registry-based only* and should be incorporated in the base image before the image is deployed for production use.
 
-The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](https://docs.microsoft.com/windows-server/administration/performance-tuning/)
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](/windows-server/administration/performance-tuning/)
 information, published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling
@@ -655,17 +655,17 @@ HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\Dorman
 
 Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
 
-You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbclientconfiguration)
-and [Set-SmbServerConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration)
+You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration)
+and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration)
 Windows PowerShell cmdlets. You can configure registry-only settings by using Windows PowerShell as well, as in the following example:
 
 `Set-ItemProperty -Path "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters" RequireSecuritySignature -Value 0 -Force`
 
 ### Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
 
-Microsoft has released a baseline  created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or want to reduce data sent to Microsoft and other services.
+Microsoft has released a baseline  created using the same procedures as the [Windows Security Baselines](/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or want to reduce data sent to Microsoft and other services.
 
-The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
+The [Windows Restricted Traffic Limited Functionality Baseline](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
 settings are marked in the Group Policy table with an asterisk.
 
 ### Disk cleanup (including using the Disk Cleanup wizard)

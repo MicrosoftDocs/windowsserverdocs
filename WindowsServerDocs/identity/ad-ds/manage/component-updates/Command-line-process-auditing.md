@@ -94,11 +94,11 @@ The following procedure shows how to prevent conflicts by blocking the applicati
 6.  Click Enabled, and then click OK.  
   
 ## Additional Resources  
-[Audit Process Creation](https://technet.microsoft.com/library/dd941613(v=WS.10).aspx)  
+[Audit Process Creation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941613(v=ws.10))  
   
-[Advanced Security Audit Policy Step-by-Step Guide](https://technet.microsoft.com/library/dd408940(v=WS.10).aspx)  
+[Advanced Security Audit Policy Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd408940(v=ws.10))  
   
-[AppLocker: Frequently Asked Questions](https://technet.microsoft.com/library/ee619725(v=ws.10).aspx)  
+[AppLocker: Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619725(v=ws.10))  
   
 ## Try This: Explore command line process auditing  
   
@@ -117,5 +117,3 @@ The following procedure shows how to prevent conflicts by blocking the applicati
   
 4.  Execute the same script as before and observe the events  
   
-
-

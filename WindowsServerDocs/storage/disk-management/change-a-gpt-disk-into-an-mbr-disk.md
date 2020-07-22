@@ -58,4 +58,4 @@ You can change a disk from a GPT to an MBR partition style as long as the disk i
 
 ## See Also
 
--   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
+-   [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))

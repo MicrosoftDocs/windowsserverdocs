@@ -36,9 +36,9 @@ The planning tasks do not need to be done in a specific order.
   
     DirectAccess uses IPv6 with IPsec to create a secure connection between DirectAccess client computers and the internal corporate network. However, DirectAccess does not necessarily require connectivity to the IPv6 Internet or native IPv6 support on internal networks. Instead, it automatically configures and uses IPv6 transition technologies to tunnel IPv6 traffic across the IPv4 Internet \(6to4, Teredo, IP\-HTTPS\) and across your IPv4\-only intranet \(NAT64 or ISATAP\). For an overview of these transition technologies, see the following resources:  
   
-    -   [IPv6 Transition Technologies](https://technet.microsoft.com/library/bb726951.aspx)  
+    -   [IPv6 Transition Technologies](/previous-versions//bb726951(v=technet.10))  
   
-    -   [IP-HTTPS Tunneling Protocol Specification](https://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
+    -   [IP-HTTPS Tunneling Protocol Specification](/previous-versions//bb726951(v=technet.10))  
   
 3.  Configure required adapters and addressing according to the following table. For deployments behind a NAT device using a single network adapter, configure your IP addresses using only the **Internal network adapter** column.  
   

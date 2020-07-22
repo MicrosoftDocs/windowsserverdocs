@@ -25,7 +25,7 @@ The following is a list of features and functionalities in Windows Server 2016 t
 The following features and functionalities have been removed from this release of Windows Server 2016. Applications, code, or usage that depend on these features will not function in this release unless you employ an alternate method.  
 
 > [!NOTE]  
-> If you are moving to Windows Server 2016 from a server release prior to Windows Server 2012 R2 or Windows Server 2012, you should also review [Features Removed or Deprecated in Windows Server 2012 R2](https://technet.microsoft.com/library/dn303411.aspx) and [Features Removed or Deprecated in Windows Server 2012](https://technet.microsoft.com/library/hh831568.aspx).  
+> If you are moving to Windows Server 2016 from a server release prior to Windows Server 2012 R2 or Windows Server 2012, you should also review [Features Removed or Deprecated in Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)) and [Features Removed or Deprecated in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831568(v=ws.11)).  
 
 ### Share and Storage Management
 
@@ -43,7 +43,7 @@ The Journal.dll is removed from Windows Server 2016. There is no replacement.
 
 ### Security Configuration Wizard
 
-The Security Configuration Wizard is removed. Instead, features are secured by default. If you need to control specific security settings, you can use either Group Policy or [Microsoft Security Compliance Manager](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
+The Security Configuration Wizard is removed. Instead, features are secured by default. If you need to control specific security settings, you can use either Group Policy or [Microsoft Security Compliance Manager](/previous-versions/tn-archive/cc936627(v=technet.10)).  
 
 ### SQM
 
@@ -73,7 +73,7 @@ The following features and functionalities are deprecated starting with this rel
 
 -   **Scregedit.exe** is deprecated. If you have scripts that depend on Scregedit.exe, adjust them to use Reg.exe or Windows PowerShell methods.  
 
--   **Sconfig.exe** is deprecated. Use [Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016) instead. 
+-   **Sconfig.exe** is deprecated. Use [Sconfig.cmd](./sconfig-on-ws2016.md) instead. 
 
 ### NetCfg custom APIs
 

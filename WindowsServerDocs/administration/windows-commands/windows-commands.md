@@ -64,14 +64,14 @@ The information that is contained in this topic applies to:
 
 The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all Commands that are available at the command line.
 
-Windows has two command shells: The Command shell and [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
+Windows has two command shells: The Command shell and [PowerShell](/powershell/scripting/powershell-scripting?view=powershell-6). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
 
 PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run Windows Commands and PowerShell cmdlets in Powershell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
 
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
 > [!NOTE]
->You can also download and install [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
+>You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.

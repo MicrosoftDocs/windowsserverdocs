@@ -24,7 +24,7 @@ Is it time to move to a newer version of Windows Server? Depending on what you a
 
 ## Installation
 
-If you want to move to a newer version of Windows Server on the same hardware, one way that always works is a **clean installation**, where you just install the newer operating system directly over the old one on the same hardware, thus deleting the previous operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418), and [Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).
+If you want to move to a newer version of Windows Server on the same hardware, one way that always works is a **clean installation**, where you just install the newer operating system directly over the old one on the same hardware, thus deleting the previous operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)), and [Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)).
 
 Moving from any pre-release version (such as Windows Server 2016 Technical Preview) to the released version (Windows Server 2016) always requires a clean installation.
 
@@ -33,7 +33,7 @@ Moving from any pre-release version (such as Windows Server 2016 Technical Previ
 Windows Server migration documentation helps you migrate one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer. This is the recommended manner in which to move your existing workload and data to a more recent version of Windows Server. To get started, check the [server role upgrade and migration matrix](https://go.microsoft.com/fwlink/?LinkId=828595) for Windows Server.
 
 ## Cluster OS Rolling Upgrade
-Cluster OS Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
+Cluster OS Rolling Upgrade is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
 ## License Conversion
 In some operating system releases, you can convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. This is called **license conversion**. For example, if your server is running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter. In some releases of Windows Server, you can also freely convert among OEM, volume-licensed, and retail versions with the same command and the appropriate key.
@@ -86,7 +86,7 @@ You can convert the evaluation version of Windows Server 2016 Standard to either
 You can convert the evaluation version of Windows Server 2016 Datacenter to Windows Server 2016 Datacenter (retail).
  
 ## Upgrading to Windows Server 2012 R2
-For details, including important caveats and limitations on upgrade, license conversion between editions of Windows Server 2012 R2, and conversion of evaluation editions to retail, see [Upgrade Options for Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx).
+For details, including important caveats and limitations on upgrade, license conversion between editions of Windows Server 2012 R2, and conversion of evaluation editions to retail, see [Upgrade Options for Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)).
 
 Quick reference table of supported upgrade paths from older Windows Server retail editions to Windows Server 2012 R2 retail editions:
 
@@ -108,7 +108,7 @@ You can convert Windows Server 2012 Essentials (retail) to Windows Server 2012 S
 You can convert the evaluation version of Windows Server 2012 Standard to either Windows Server 2012 Standard (retail) or Datacenter (retail).
 
 ## Upgrading to Windows Server 2012
-For details, including important caveats and limitations on upgrade, and conversion of evaluation editions to retail, see [Evaluation Versions and Upgrade Options for Windows Server 2012](https://technet.microsoft.com/library/jj574204.aspx).
+For details, including important caveats and limitations on upgrade, and conversion of evaluation editions to retail, see [Evaluation Versions and Upgrade Options for Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204(v=ws.11)).
  
 Quick reference table of supported upgrade paths from older Windows Server retail editions to Windows Server 2012 retail editions:
 
@@ -142,5 +142,4 @@ As you are planning your upgrade, be aware of the following guidelines for the m
 
   - You can't migrate from a Windows Server 2008 server core installation to Windows Server 2012 R2 with the Server GUI (called "Server with Full Desktop" in Windows Server). You can switch your upgraded server core installation to Server with Full Desktop, but only on Windows Server 2012 R2. Windows Server 2016 and later *do not* support switching from server core to Full Desktop, so make that switch before you upgrade to Windows Server 2016.
   
-For more information, check out [Evaluation Versions and Upgrade Options for Windows Server 2012](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204\(v=ws.11\)), which includes role-specific upgrade details.
-
+For more information, check out [Evaluation Versions and Upgrade Options for Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj574204\(v=ws.11\)), which includes role-specific upgrade details.

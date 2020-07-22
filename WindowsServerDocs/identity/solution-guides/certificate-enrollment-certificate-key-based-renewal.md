@@ -93,9 +93,9 @@ To install the CEPCES01 instance, use either of the following methods.
 
 See the following articles for step-by-step guidance to enable CEP and CES for username and password authentication:
 
-[Certificate Enrollment Policy Web Service Guidance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
+[Certificate Enrollment Policy Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
 
-[Certificate Enrollment Web Service Guidance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
+[Certificate Enrollment Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
 
 > [!Note]
 > Make sure that you do not select the “Enable Key-Based Renewal” option if you configure both CEP and CES instances of username and password authentication.
@@ -215,7 +215,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 1. On a domain controller, open adsiedit.msc.
 
-2. [Connect to the Configuration partition](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10)), and navigate to your CA enrollment services object:
+2. [Connect to the Configuration partition](/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10)), and navigate to your CA enrollment services object:
    
    CN=ENTCA,CN=Enrollment Services,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com
 
@@ -301,13 +301,13 @@ After the test finishes, revert the time setting to the original value, and then
 
 ## References
 
-[Test Lab Guide: Demonstrating Certificate Key-Based Renewal](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3Dws.11))
+[Test Lab Guide: Demonstrating Certificate Key-Based Renewal](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3dws.11))
 
 [Certificate Enrollment Web Services](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/Certificate-Enrollment-Web-Services/ba-p/397385)
 
-[Install-AdcsEnrollmentPolicyWebService](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=win10-ps)
+[Install-AdcsEnrollmentPolicyWebService](/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=win10-ps)
 
-[Install-AdcsEnrollmentWebService](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
+[Install-AdcsEnrollmentWebService](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
 
 See also
 
@@ -317,6 +317,6 @@ See also
 
 [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
 
-[Windows PKI Blog](https://blogs.technet.com/b/pki/)
+[Windows PKI Blog](/archive/blogs/pki/)
 
 [How to configure Kerberos Constrained Delegation (S4U2Proxy or Kerberos Only) on a custom service account for Web Enrollment proxy pages](https://support.microsoft.com/help/4494313/configuring-web-enrollment-proxy-for-s4u2proxy-constrained-delegation)

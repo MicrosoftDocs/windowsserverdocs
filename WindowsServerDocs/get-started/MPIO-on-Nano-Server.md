@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means. 
 
-This topic introduces the use of MPIO in Nano Server installations of Windows Server 2016. For general information about MPIO in Windows Server, see [Multipath I/O Overview](https://technet.microsoft.com/library/cc725907.aspx).  
+This topic introduces the use of MPIO in Nano Server installations of Windows Server 2016. For general information about MPIO in Windows Server, see [Multipath I/O Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725907(v=ws.11)).  
 
 ## Using MPIO on Nano Server  
 You can use MPIO on Nano Server, but with these differences:  
@@ -365,5 +365,3 @@ if ($changed -eq 'true')
 }  
 ```  
   
-
-

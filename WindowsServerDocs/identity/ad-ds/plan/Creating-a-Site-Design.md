@@ -34,7 +34,7 @@ Document locations that will become sites and the network addresses and subnet m
 
 For every location where you have decided to create sites, plan to create site objects in Active Directory Domain Services (AD DS). Document locations that will become sites in the "Associating Subnets with Sites" worksheet.
 
-For more information about how to create site objects, see the article [Create a Site](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772304(v=ws.11)).
+For more information about how to create site objects, see the article [Create a Site](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772304(v=ws.11)).
 
 ## Creating a subnet object design
 
@@ -44,4 +44,4 @@ When creating an Active Directory subnet object, the information about network I
 
 Associate each subnet object with a site object by referring to the "Associating Subnets with Sites" (DSSTOPO_6.doc) worksheet in "Deciding Which Locations Will Become Sites" section to determine which subnet is to be associated with which site. Document the Active Directory subnet object associated with each location in the "Associating Subnets with Sites" (DSSTOPO_6.doc) worksheet.
 
-For more information about how to create subnet objects, see the article [Create a Subnet](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770372(v=ws.11)).
+For more information about how to create subnet objects, see the article [Create a Subnet](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770372(v=ws.11)).

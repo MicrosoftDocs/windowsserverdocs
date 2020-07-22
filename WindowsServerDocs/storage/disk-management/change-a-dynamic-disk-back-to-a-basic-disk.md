@@ -64,4 +64,4 @@ This topic describes how to delete everything on a dynamic disk and then convert
 
 ## Additional References
 
--   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
+-   [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))

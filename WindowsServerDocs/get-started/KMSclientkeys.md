@@ -21,7 +21,7 @@ Computers that are running volume licensed editions of Windows Server, Windows 1
 
 **To use the keys listed here (which are GVLKs), you must first have a KMS host
 running in your deployment.** If you haven't already configured a KMS host, see
-[Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) for steps to set one up.
+[Deploy KMS Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502531(v=ws.11)) for steps to set one up.
 
 If you are converting a computer from a KMS host, MAK, or retail edition of
 Windows to a KMS client, install the applicable setup key (GVLK) from the
@@ -209,6 +209,4 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 See also
 
-• [Plan for Volume Activation](https://technet.microsoft.com/library/jj134042(v=ws.11).aspx)
-
-
+• [Plan for Volume Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134042(v=ws.11))

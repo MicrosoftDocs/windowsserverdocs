@@ -48,4 +48,4 @@ You must run **wbadmin** from an elevated command prompt. (To open an elevated c
 ## Additional References
 
 -   [Backup and Recovery](https://go.microsoft.com/fwlink/?LinkID=195054)
--   [Windows Server Backup Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj902428.aspx)
+-   [Windows Server Backup Cmdlets in Windows PowerShell](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)

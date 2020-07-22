@@ -107,4 +107,4 @@ nfsadmin client config
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [NFS cmdlets reference](https://docs.microsoft.com/powershell/module/nfs)
+- [NFS cmdlets reference](/powershell/module/nfs)

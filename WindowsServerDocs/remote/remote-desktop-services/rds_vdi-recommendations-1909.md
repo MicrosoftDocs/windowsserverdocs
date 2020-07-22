@@ -96,23 +96,23 @@ Depending on the architecture of VDI VM, things like PreFetch and SuperFetch are
 
 ### To Sysprep or not Sysprep
 
-Windows 10 has a built-in capability called the [System Preparation Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), (often abbreviated to "Sysprep"). The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting operating system is properly unique to run in production.
+Windows 10 has a built-in capability called the [System Preparation Tool](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), (often abbreviated to "Sysprep"). The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting operating system is properly unique to run in production.
 
 There are reasons for and against running Sysprep. In the case of VDI, you might want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You might have apps that you want installed, but also able to control per-app settings.
 
-The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO) tool](https://docs.microsoft.com/archive/blogs/secguide/lgpo-exe-local-group-policy-object-utility-v1-0).
+The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO) tool](/archive/blogs/secguide/lgpo-exe-local-group-policy-object-utility-v1-0).
 
 ### Supportability
 
 Anytime that Windows defaults are changed, questions arise regarding supportability. Once a VDI image (VM or session) is customized, every change made to the image needs to be tracked in a change log. At troubleshooting, often an image can be isolated in a pool and configured for problem analysis. Once a problem has been tracked to the root cause, that change can then be rolled out to the test environment first, and ultimately to the production workload.
 
-This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service VDI images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in VDI environments, *except for security software updates*. Microsoft has published guidance for Windows Security in VDI environments. For more information, see [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus).
+This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service VDI images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in VDI environments, *except for security software updates*. Microsoft has published guidance for Windows Security in VDI environments. For more information, see [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus).
 
 Consider supportability when altering default Windows settings. Difficult problems can arise when altering system services, policies, or scheduled tasks, in the name of hardening, “lightening”, etc. Consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub will be maintained with regards to known issues, if any arise. In addition, you can report issues in several ways to Microsoft.
 
 You can use your favorite search engine with the terms “"start value" site:support.microsoft.com” to bring up known issues regarding default start values for services.
 
-You might note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings, start with the project known as **AaronLocker**. For more information, see [ANNOUNCING: Application whitelisting with “AaronLocker”](https://docs.microsoft.com/archive/blogs/aaron_margosis/announcing-application-whitelisting-with-aaronlocker).
+You might note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings, start with the project known as **AaronLocker**. For more information, see [ANNOUNCING: Application whitelisting with “AaronLocker”](/archive/blogs/aaron_margosis/announcing-application-whitelisting-with-aaronlocker).
 
 #### VDI Optimization Categories
 
@@ -171,13 +171,13 @@ Run the following command to enumerate provisioned UWP apps from a running opera
 
 UWP apps that are provisioned to a system can be removed during operating system installation as part of a task sequence, or later after the operating system is installed. This might be the preferred method because it makes the overall process of creating or maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build, you edit an existing script rather than repeat the process from scratch. Here are some links to information on this topic:
 
-[Removing Windows 10 in-box apps during a task sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
+[Removing Windows 10 in-box apps during a task sequence](/archive/blogs/mniehaus/removing-windows-10-in-box-apps-during-a-task-sequence)
 
 [Removing Built-in apps from Windows 10 WIM-File with Powershell - Version 1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
 
-[Windows 10 1607: Keeping apps from coming back when deploying the feature update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
+[Windows 10 1607: Keeping apps from coming back when deploying the feature update](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
 
-Then run the [Remove-AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
+Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
 
 ```powershell
 Remove-AppxProvisionedPackage -Online -PackageName
@@ -248,7 +248,7 @@ If you want to remove the Windows Media Player package (to free up about 60 MB d
 
 #### Enable or disable Windows Features using DISM
 
-You can use the built-in Dism.exe tool to enumerate and control Windows Optional Features. A Dism.exe script could be developed and run during an operating system installation task sequence. The Windows technology involved is called [Features on Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
+You can use the built-in Dism.exe tool to enumerate and control Windows Optional Features. A Dism.exe script could be developed and run during an operating system installation task sequence. The Windows technology involved is called [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
 #### Default user settings
 
@@ -531,13 +531,13 @@ The group policy settings above include settings to turn off checking to see if 
 | Local Computer Policy \\ User Configuration \\ Administrative Templates |  |  |  |
 | Start Menu and Taskbar | Remove the networking icon |  | Enabled. The networking icon isn't displayed in the system notification area. |
 
-For more information about the Network Connection Status Indicator (NCSI), see [Manage connection endpoints for Windows 10 Enterprise, version 1903](https://docs.microsoft.com/windows/privacy/manage-windows-1903-endpoints) and [Manage connections from Windows 10 operating system components to Microsoft services](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
+For more information about the Network Connection Status Indicator (NCSI), see [Manage connection endpoints for Windows 10 Enterprise, version 1903](/windows/privacy/manage-windows-1903-endpoints) and [Manage connections from Windows 10 operating system components to Microsoft services](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services).
 
 ### System services
 
 If you're considering disabling your system services to conserve resources, great care should be taken that the service being considered isn't in some way a component of some other service. available Note that some services are not in the list because they can't be disabled in a supported manner.
 
-Most of these recommendations mirror recommendations for Windows Server 2016, installed with the Desktop Experience in [Guidance on disabling system services on Windows Server 2016 with Desktop Experience](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)
+Most of these recommendations mirror recommendations for Windows Server 2016, installed with the Desktop Experience in [Guidance on disabling system services on Windows Server 2016 with Desktop Experience](../../security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md)
 
 Many services that might seem like good candidates to disable are set to manual service start type. This means that the service won't automatically start and isn't started unless a process or event triggers a request to the service being considered for disabling. Services that are already set to start type manual are usually not listed here.
 
@@ -570,9 +570,9 @@ Many services that might seem like good candidates to disable are set to manual 
 
 Per-user services are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks.
 
-[Per-user services in Windows 10 and Windows Server](https://docs.microsoft.com/windows/application-management/per-user-services-in-windows)
+[Per-user services in Windows 10 and Windows Server](/windows/application-management/per-user-services-in-windows)
 
-If you intend to change a service start value, the preferred method is to open an elevated .cmd prompt and run the Service Control Manager tool ‘Sc.exe’. For more information on using ‘Sc.exe’ see [Sc](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11))
+If you intend to change a service start value, the preferred method is to open an elevated .cmd prompt and run the Service Control Manager tool ‘Sc.exe’. For more information on using ‘Sc.exe’ see [Sc](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754599(v=ws.11))
 
 ### Scheduled tasks
 
@@ -648,7 +648,7 @@ Scheduled Task Name:
 
 ### Apply Windows (and other) updates
 
-Whether from Microsoft Update, or from your internal resources, apply the available updates including Windows Defender signatures. This is a good time to apply other available updates including Microsoft Office if installed, and other software updates. If PowerShell will remain in the image you can download the latest available help for PowerShell by running the command [Update-Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/update-help?view=powershell-7).
+Whether from Microsoft Update, or from your internal resources, apply the available updates including Windows Defender signatures. This is a good time to apply other available updates including Microsoft Office if installed, and other software updates. If PowerShell will remain in the image you can download the latest available help for PowerShell by running the command [Update-Help](/powershell/module/microsoft.powershell.core/update-help?view=powershell-7).
 
 #### Servicing the operating system and apps
 
@@ -699,7 +699,7 @@ The following are some system traces to consider disabling for VDI use:
 
 ### Windows Defender optimization with VDI
 
-Microsoft has recently published documentation regarding Windows Defender in a VDI environment. See [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus) for more information.
+Microsoft has recently published documentation regarding Windows Defender in a VDI environment. See [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus) for more information.
 
 The above article contains procedures to service the ‘gold’ VDI image, and how to maintain the VDI clients as they are running. To reduce network bandwidth when VDI computers need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where practical, have those files shares on the same or close networking segments as the VDI virtual machines.
 
@@ -710,7 +710,7 @@ There are some registry settings that can increase network performance. This is 
 >[!NOTE]
 > Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
 
-The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](https://docs.microsoft.com/windows-server/administration/performance-tuning/), published on Microsoft.com by the Windows Product Group.
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](/windows-server/administration/performance-tuning/), published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling
 
@@ -741,16 +741,16 @@ Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536.
 
 Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
 
-You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbclientconfiguration?view=win10-ps) and [Set-SmbServerConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
+You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration?view=win10-ps) and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```
 
 Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
-Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
+Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
 
-The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) settings are called out in the group policy table with an asterisk.
+The [Windows Restricted Traffic Limited Functionality Baseline](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) settings are called out in the group policy table with an asterisk.
 
 #### Disk cleanup (including using the Disk Cleanup Wizard)
 

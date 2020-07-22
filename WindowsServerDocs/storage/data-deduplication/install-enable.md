@@ -57,7 +57,7 @@ Data Deduplication can effectively minimize the costs of a server application's 
 * *Recommended workloads* that have been proven to have both datasets that benefit highly from deduplication and have resource consumption patterns that are compatible with Data Deduplication's post-processing model. We recommend that you always [enable Data Deduplication](install-enable.md#enable-dedup-lights-on) on these workloads:
 	* General purpose file servers (GPFS) serving shares such as team shares, user home folders, work folders, and software development shares.
 	* Virtualized desktop infrastructure (VDI) servers.
-	* Virtualized backup applications, such as [Microsoft Data Protection Manager (DPM)](https://technet.microsoft.com/library/hh758173.aspx).
+	* Virtualized backup applications, such as [Microsoft Data Protection Manager (DPM)](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)).
 * Workloads that might benefit from deduplication, but aren't always good candidates for deduplication. For example, the following workloads could work well with deduplication, but you should evaluate the benefits of deduplication first:
 	* General purpose Hyper-V hosts
 	* SQL servers
@@ -106,7 +106,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 
 * [Default](understand.md#usage-type-default) - tuned specifically for general purpose file servers
 * [Hyper-V](understand.md#usage-type-hyperv) - tuned specifically for VDI servers
-* [Backup](understand.md#usage-type-backup) - tuned specifically for virtualized backup applications, such as [Microsoft DPM](https://technet.microsoft.com/library/hh758173.aspx)
+* [Backup](understand.md#usage-type-backup) - tuned specifically for virtualized backup applications, such as [Microsoft DPM](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12))
 
 #### <a id="enable-dedup-via-server-manager"></a>Enable Data Deduplication by using Server Manager
 1. Select **File and Storage Services** in Server Manager.  
@@ -131,7 +131,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 2. If you are running a recommended workload, you're done. For other workloads, see [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]  
-> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](https://technet.microsoft.com/library/hh848441.aspx), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run [`New-CimSession`](https://technet.microsoft.com/library/jj590760.aspx).
+> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run [`New-CimSession`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)).
 
 #### <a id="enable-dedup-sometimes-considerations"></a>Other considerations
 > [!Important]  

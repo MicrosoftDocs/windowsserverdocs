@@ -17,7 +17,7 @@ Active Directory Rights Management Services (AD RMS) is a Microsoft service that
 This document provides guidance for migrating from Windows Server 2012 R2 with SQL Server 2012 to Windows Server 2016 and SQL Server 2016. The same process can be used to migrate from older but supported versions of AD RMS.
 Please note that Active Directory Rights Management Services is no longer in active development, and for the latest capabilities customers should consider migrating to [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which offers a much more comprehensive set of features with more complete device and application support. 
 
-For information on migrating to Azure Information Protection from AD RMS without having to re-protect your content see [the Azure Information Protection migration documentation](https://docs.microsoft.com/azure/information-protection/migrate-from-ad-rms-to-azure-rms).
+For information on migrating to Azure Information Protection from AD RMS without having to re-protect your content see [the Azure Information Protection migration documentation](/azure/information-protection/migrate-from-ad-rms-to-azure-rms).
 
 ## About the environment used in this guide
 

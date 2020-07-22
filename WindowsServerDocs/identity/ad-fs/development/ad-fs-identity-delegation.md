@@ -94,9 +94,9 @@ if ( claimsPrincipal != null )
     bootstrapToken = claimsIdentity.BootstrapToken;
 }
 ```
-WIF provides a method, [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank's identity has the [Actor](https://msdn.microsoft.com/library/microsoft.identitymodel.claims.iclaimsidentity.actor.aspx) property set to web1's identity.
+WIF provides a method, [CreateChannelActingAs](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank's identity has the [Actor](/previous-versions/windows-identity-foundation/ee766706(v=msdn.10)) property set to web1's identity.
 
-The following code snippet shows how to call to the Web service with [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx) and then call one of the service's methods, ComputeResponse, on the returned channel:
+The following code snippet shows how to call to the Web service with [CreateChannelActingAs](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)) and then call one of the service's methods, ComputeResponse, on the returned channel:
 
 ```
 // Get the channel factory to the backend service from the application state

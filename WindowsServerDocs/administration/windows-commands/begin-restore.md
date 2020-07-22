@@ -29,4 +29,4 @@ begin restore
 
 - [begin backup command](begin-backup.md)
 
-- [Prepare for restore](https://docs.microsoft.com/windows/win32/vss/overview-of-preparing-for-restore)
+- [Prepare for restore](/windows/win32/vss/overview-of-preparing-for-restore)

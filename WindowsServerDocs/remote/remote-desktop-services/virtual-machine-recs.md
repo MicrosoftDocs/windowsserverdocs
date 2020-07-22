@@ -34,9 +34,9 @@ For VM requirements to run the operating system, see [Windows 10 computer specif
 
 We recommend you use Premium SSD storage in your OS disk for production workloads that require a service level agreement (SLA). For more details, see the [SLA for virtual machines](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/).
 
-Graphics processing units (GPUs) are a good choice for users who regularly use graphics-intensive programs for video rendering, 3D design, and simulations. To learn more about graphics acceleration, see [Choose your graphics rendering technology](rds-graphics-virtualization.md). Azure has several graphics acceleration deployment options and multiple available GPU VM sizes. Learn more at [GPU optimized virtual machine sizes](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu).
+Graphics processing units (GPUs) are a good choice for users who regularly use graphics-intensive programs for video rendering, 3D design, and simulations. To learn more about graphics acceleration, see [Choose your graphics rendering technology](rds-graphics-virtualization.md). Azure has several graphics acceleration deployment options and multiple available GPU VM sizes. Learn more at [GPU optimized virtual machine sizes](/azure/virtual-machines/windows/sizes-gpu).
 
-[B-series burstable VMs](https://docs.microsoft.com/azure/virtual-machines/windows/b-series-burstable) are a good choice for users who don't always need maximum CPU performance. For more information about VM types and sizes, see [Sizes for Windows virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) and the pricing information on [our Virtual Machine series page](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
+[B-series burstable VMs](/azure/virtual-machines/windows/b-series-burstable) are a good choice for users who don't always need maximum CPU performance. For more information about VM types and sizes, see [Sizes for Windows virtual machines in Azure](/azure/virtual-machines/windows/sizes) and the pricing information on [our Virtual Machine series page](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
 
 ## Test your workload
 

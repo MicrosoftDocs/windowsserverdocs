@@ -14,7 +14,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))  
   
 Disaster recovery plans in many organizations focus on recovering from regional disasters or failures that result in loss of computing services. However, when working with compromised customers, we often find that recovering from intentional compromise is absent in their disaster recovery plans. This is particularly true when the compromise results in theft of intellectual property or intentional destruction that leverages logical boundaries (such as destruction of all Active Directory domains or all servers) rather than physical boundaries (such as destruction of a datacenter). Although an organization may have incident response plans that define initial activities to take when a compromise is discovered, these plans often omit steps to recover from a compromise that affects the entire computing infrastructure.  
   
@@ -29,7 +29,7 @@ To create effective defenses while still providing services to the users and bus
 Recommendations for recovering an Active Directory forest are presented in [Windows Server 2012: Planning for Active Directory Forest Recovery](https://www.microsoft.com/download/details.aspx?id=16506). You may be able to prevent your new environment from being completely compromised, but even if you can't, you will have tools to recover and regain control of your environment.  
   
 ## Rethinking the Approach  
-*Law Number Eight: The difficulty of defending a network is directly proportional to its complexity.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Eight: The difficulty of defending a network is directly proportional to its complexity.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))  
   
 It is generally well-accepted that if an attacker has obtained SYSTEM, Administrator, root, or equivalent access to a computer, regardless of operating system, that computer can no longer be considered trustworthy, no matter how many efforts are made to "clean" the system. Active Directory is no different. If an attacker has obtained privileged access to a domain controller or a highly privileged account in Active Directory, unless you have a record of every modification the attacker makes or a known good backup, you can never restore the directory to a completely trustworthy state.  
   
@@ -102,7 +102,7 @@ In a traditional Active Directory migration from one forest to another, the SIDH
   
 Maintaining SID history, however, has proven problematic in some environments because populating users' access tokens with current and historical SIDs can result in token bloat. Token bloat is an issue in which the number of SIDs that must be stored in a user's access token uses or exceeds the amount of space available in the token.  
   
-Although token sizes can be increased to a limited extent, the ultimate solution to token bloat is to reduce the number of SIDs associated with user accounts, whether by rationalizing group memberships, eliminating SID history, or a combination of both. For more information about token bloat, see [MaxTokenSize and Kerberos Token Bloat](https://blogs.technet.com/b/shanecothran/archive/2010/07/16/maxtokensize-and-kerberos-token-bloat.aspx).  
+Although token sizes can be increased to a limited extent, the ultimate solution to token bloat is to reduce the number of SIDs associated with user accounts, whether by rationalizing group memberships, eliminating SID history, or a combination of both. For more information about token bloat, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).  
   
 Rather than migrating users from a legacy environment (particularly one in which group memberships and SID histories may be compromised) by using SID history, consider leveraging metadirectory applications to "migrate" users, without carrying SID histories into the new forest. When user accounts are created in the new forest, you can use a metadirectory application to map the accounts to their corresponding accounts in the legacy forest.  
   
@@ -138,7 +138,7 @@ In most organizations, users who have access to the most sensitive information d
   
 For example, you may define a policy in which executives and other VIPs are required to use secure workstations to access sensitive data and systems, allowing them to use their other devices to access less sensitive data. This is a simple principle for users to remember, but you can implement a number of backend controls to help to enforce the approach.  
 
-You can use [Authentication Mechanism Assurance](https://technet.microsoft.com/library/dd391847(v=WS.10).aspx) to permit the users to access sensitive data only if they've logged on to their secure systems using their smart cards, and can use IPsec and user rights restrictions to control the systems from which they can connect to sensitive data repositories. You can use the [Microsoft Data Classification Toolkit](https://www.microsoft.com/download/details.aspx?id=27123) to build a robust file classification infrastructure, and you can implement [Dynamic Access Control](https://blogs.technet.com/b/windowsserver/archive/2012/05/22/introduction-to-windows-server-2012-dynamic-access-control.aspx) to restrict access to data based on characteristics of an access attempt, translating business rules into technical controls.  
+You can use [Authentication Mechanism Assurance](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391847(v=ws.10)) to permit the users to access sensitive data only if they've logged on to their secure systems using their smart cards, and can use IPsec and user rights restrictions to control the systems from which they can connect to sensitive data repositories. You can use the [Microsoft Data Classification Toolkit](https://www.microsoft.com/download/details.aspx?id=27123) to build a robust file classification infrastructure, and you can implement [Dynamic Access Control](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391847(v=ws.10)) to restrict access to data based on characteristics of an access attempt, translating business rules into technical controls.  
   
 From the perspective of the user, accessing sensitive data from a secured system "just works," and attempting to do so from an unsecured system "just doesn't." However, from the perspective of monitoring and managing your environment, you're helping to create identifiable patterns in how users access sensitive data and systems, making it easier for you to detect anomalous access attempts.  
   

@@ -282,7 +282,7 @@ WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualM
 
 This warning can be ignored as the warning is "No changes in the virtual machine role storage configuration were detected". The reason for the warning as the actual physical location does not change; only the configuration paths.
 
-For more information on Move-VMStorage, please review this [link](https://docs.microsoft.com/powershell/module/hyper-v/move-vmstorage?view=win10-ps).
+For more information on Move-VMStorage, please review this [link](/powershell/module/hyper-v/move-vmstorage?view=win10-ps).
 
 Live migrating a virtual machine between different cluster set clusters is not the same as in the past. In non-cluster set scenarios, the steps would be:
 

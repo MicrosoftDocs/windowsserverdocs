@@ -179,7 +179,7 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
   
 7.  On the **Request Certificates** page, click the Web Server certificate template, and then click **More information is required to enroll for this certificate**.  
   
-    If the Web Server certificate template does not appear, ensure that the Remote Access server computer account has enroll permissions for the Web Server certificate template. For more information, see [Configure Permissions on the Web Server Certificate Template](https://msdn.microsoft.com/library/ee649249.aspx).  
+    If the Web Server certificate template does not appear, ensure that the Remote Access server computer account has enroll permissions for the Web Server certificate template. For more information, see [Configure Permissions on the Web Server Certificate Template](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649249(v=ws.10)).  
   
 8.  On the **Subject** tab of the **Certificate Properties** dialog box, in **Subject name**, for **Type**, select **Common name**.  
   
@@ -309,5 +309,3 @@ Clicking **Remove configuration settings** will remove Remote Access and NLB (if
   
 -   [Step 4: Verifying the cluster](Step-4-Verify-the-Cluster.md)  
   
-
-

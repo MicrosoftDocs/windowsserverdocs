@@ -30,7 +30,7 @@ In Windows Server 2003 Active Directory and Windows Server 2008 AD DS, you could
 
 Active Directory Recycle Bin, starting in Windows Server 2008 R2, builds on the existing tombstone reanimation infrastructure and enhances your ability to preserve and recover accidentally deleted Active Directory objects.
 
-When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. Active Directory Recycle Bin works for both AD DS and AD LDS environments. For a detailed description of Active Directory Recycle Bin, see [What's New in AD DS: Active Directory Recycle Bin](https://technet.microsoft.com/library/dd391916(WS.10).aspx).
+When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. Active Directory Recycle Bin works for both AD DS and AD LDS environments. For a detailed description of Active Directory Recycle Bin, see [What's New in AD DS: Active Directory Recycle Bin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391916(v=ws.10)).
 
 **What's new?** In Windows Server 2012 and newer, the Active Directory Recycle Bin feature is enhanced with a new graphical user interface for users to manage and restore deleted objects. Users can now visually locate a list of deleted objects and restore them to their original or desired locations.
 
@@ -43,7 +43,7 @@ If you plan to enable Active Directory Recycle Bin in Windows Server, consider t
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     >
-    > For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+    > For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
 ### Active Directory Recycle Bin step-by-step
 
@@ -224,7 +224,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 The Windows Server 2008 operating system provides organizations with a way to define different password and account lockout policies for different sets of users in a domain. In Active Directory domains prior to Windows Server 2008, only one password policy and account lockout policy could be applied to all users in the domain. These policies were specified in the Default Domain Policy for the domain. As a result, organizations that wanted different password and account lockout settings for different sets of users had to either create a password filter or deploy multiple domains. Both are costly options.
 
-You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. In other cases, you might want to apply a special password policy for accounts whose passwords are synchronized with other data sources. For a detailed description of Fine-Grained Password Policy, see [AD DS: Fine-Grained Password Policies](https://technet.microsoft.com/library/cc770394(WS.10).aspx)
+You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. In other cases, you might want to apply a special password policy for accounts whose passwords are synchronized with other data sources. For a detailed description of Fine-Grained Password Policy, see [AD DS: Fine-Grained Password Policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10))
 
 **What's new?**
 
@@ -239,7 +239,7 @@ If you plan to use fine-grained password policies in Windows Server 2012, consid
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     >
-    > For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+    > For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
 ### Fine-Grained Password Policy step-by-step
 
@@ -400,9 +400,9 @@ When using the Windows PowerShell History Viewer in Windows Server 2012 or newer
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     >
-    > For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+    > For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
-- Have a basic understanding of Windows PowerShell. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).
+- Have a basic understanding of Windows PowerShell. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).
 
 ### Windows PowerShell History Viewer step-by-step
 

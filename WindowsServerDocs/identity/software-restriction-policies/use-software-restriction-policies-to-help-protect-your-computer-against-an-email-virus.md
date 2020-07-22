@@ -27,7 +27,7 @@ Beginning with  Windows Server 2008 R2  and  Windows 7 , Windows AppLocker can b
 
     -   [Best practices](software-restriction-policies-technical-overview.md#BKMK_Best_Practices)
 
-    -   [How Software Restriction Policies Work](https://technet.microsoft.com/library/cc786941(v=WS.10).aspx)
+    -   [How Software Restriction Policies Work](/previous-versions/windows/it-pro/windows-server-2003/cc786941(v=ws.10))
 
 2.  Open Software Restriction Policies.
 
@@ -56,5 +56,3 @@ Beginning with  Windows Server 2008 R2  and  Windows 7 , Windows AppLocker can b
         -   [To prevent software restriction policies from applying to local administrators](administer-software-restriction-policies.md#BKMK_Prevent_Admin)
 
 7.  Test the policy.
-
-

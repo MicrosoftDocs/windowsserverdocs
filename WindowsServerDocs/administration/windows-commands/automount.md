@@ -57,4 +57,4 @@ automount disable
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [diskpart commands](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770877(v%3dws.11))
+- [diskpart commands](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770877(v%3dws.11))

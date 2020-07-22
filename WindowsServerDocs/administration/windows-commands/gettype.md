@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 The **gettype** command has been deprecated, and isn't guaranteed to be supported in future releases of Windows.
 
-This tool is included in Windows Server 2003. For more information, see [gettype](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc773104(v=ws.10)).
+This tool is included in Windows Server 2003. For more information, see [gettype](/previous-versions/orphan-topics/ws.10/cc773104(v=ws.10)).
 
 ## Additional References
 

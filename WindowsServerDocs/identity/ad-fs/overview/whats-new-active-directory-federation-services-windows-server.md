@@ -148,7 +148,7 @@ D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" fr
 ## What's new in Active Directory Federation Services for Windows Server 2016
 
 If you are looking for information on earlier versions of AD FS, see the following articles:
- [ADFS in Windows Server 2012 or 2012 R2](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) and [AD FS 2.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd727958(v=ws.10))
+ [ADFS in Windows Server 2012 or 2012 R2](../../active-directory-federation-services.md) and [AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd727958(v=ws.10))
 
  Active Directory Federation Services provides access control and single sign on across a wide variety of applications including Office 365, cloud based SaaS applications, and applications on the corporate network.
 * For the IT organization, it enables you to provide sign on and access control to both modern and legacy applications, on premises and in the cloud, based on the same set of credentials and policies.
@@ -174,7 +174,7 @@ AD FS 2016 builds upon the multi-factor authentication (MFA) capabilities of AD 
 * Azure MFA can be configured for intranet or extranet, or as part of any access control policy.
 
 For more information about Azure MFA with AD FS
-*  [Configure AD FS 2016 and Azure MFA](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa)
+*  [Configure AD FS 2016 and Azure MFA](../operations/configure-ad-fs-and-azure-mfa.md)
 
 
 ### Password-less Access from Compliant Devices
@@ -190,7 +190,7 @@ AD FS provides the on premises component of conditional access policies in a hyb
 ![whats new](media/whats-new-in-active-directory-federation-services-for-windows-server-2016/ADFS_ITPRO4.png)
 
  For more information about using device based conditional access in the cloud
- * [Azure Active Directory Conditional Access](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)
+ * [Azure Active Directory Conditional Access](/azure/active-directory/conditional-access/overview)
 
 For more information about using device based conditional access with AD FS
 * [Planning for Device Based Conditional Access with AD FS](../../ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
@@ -205,7 +205,7 @@ For more information about using device based conditional access with AD FS
 Windows 10 devices introduce Windows Hello and Windows Hello for Business, replacing user passwords with strong device-bound user credentials protected by a user's gesture (a PIN, a biometric gesture like fingerprint, or facial recognition). AD FS 2016 supports these new Windows 10 capabilities so that users can sign in to AD FS applications from the intranet or the extranet without the need to provide a password.
 
 For more information about using Microsoft Windows Hello for Business in your organization
-* [Enable Windows Hello for Business in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)
+* [Enable Windows Hello for Business in your organization](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 
 
 ## Secure Access to Applications
@@ -285,4 +285,4 @@ Now, moving from AD FS on Windows Server 2012 R2 to AD FS on Windows Server 2016
 
 Then, add new Windows Server 2016 servers to the farm, verify the functionality and remove the older servers from the load balancer. Once all farm nodes are running Windows Server 2016, you are ready to upgrade the farm behavior level to 2016 and begin using the new features.
 
-For more information see [Upgrading to AD FS in Windows Server 2016.](../../ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)
+For more information see [Upgrading to AD FS in Windows Server 2016.](../deployment/upgrading-to-ad-fs-in-windows-server.md)

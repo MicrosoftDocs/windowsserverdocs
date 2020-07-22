@@ -41,7 +41,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
 
 1. Create a [Microsoft Azure subscription](https://azure.microsoft.com).
 2. Sign into the [Azure portal](https://ms.portal.azure.com).
-3. Create an [Azure storage account](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account) in Azure Resource Manager. Create it in a new resource group and use the  following configurations:
+3. Create an [Azure storage account](/azure/storage/common/storage-account-create#create-a-storage-account) in Azure Resource Manager. Create it in a new resource group and use the  following configurations:
    - Deployment model: Resource Manager
    - Type of storage account: General purpose
    - Performance tier: Premium
@@ -50,7 +50,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    - Deploy using an Azure quickstart template:
       - [Create an Azure VM with a new AD forest](https://azure.microsoft.com/documentation/templates/active-directory-new-domain/)
       - [Create a new AD domain with 2 domain controllers](https://azure.microsoft.com/documentation/templates/active-directory-new-domain-ha-2-dc/) (for high availability)
-   - Manually [deploy the forest](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/) with the following configurations:
+   - Manually [deploy the forest](../../identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md) with the following configurations:
       - Create the virtual network in the same resource group as the storage account.
       - Recommended size: DS2 (increase the size if the domain controller will host more domain objects)
       - Use an automatically generated VNet.
@@ -70,12 +70,12 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    2. Create the second node. Repeat the step above with the following changes:
       - Name: my-fsn2
       - High Availability - select the availability set you created above.  
-7. [Attach data disks](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) to the cluster node VMs according to your user needs (as seen in the table above). After the data disks are created and attached to the VM, set **host caching** to **None**.
+7. [Attach data disks](/azure/virtual-machines/windows/attach-managed-disk-portal) to the cluster node VMs according to your user needs (as seen in the table above). After the data disks are created and attached to the VM, set **host caching** to **None**.
 8. Set IP addresses for all VMs to **static**. 
    1. In the resource group, select a VM, and then click **Network interfaces** (under **settings**). Select the listed network interface, and then click **IP Configurations**. Select the listed IP configuration, select **static**, and then click **Save**.
    2. Note the domain controller (my-dc for our example) private IP address (10.x.x.x).
 9. Set primary DNS server address on NICs of the cluster node VMs to the my-dc server. Select the VM, and then click **Network Interfaces > DNS servers > Custom DNS**. Enter the private IP address you noted above, and then click **Save**.
-10. Create an [Azure storage account to be your cloud witness](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
+10. Create an [Azure storage account to be your cloud witness](../../failover-clustering/deploy-cloud-witness.md). (If you use the linked instructions, stop when you get to "Configuring Cloud Witness with Failover Cluster Manager GUI" - we'll do that step below.)
 11. Set up the Storage Spaces Direct file server. Connect to a node VM, and then run the following Windows PowerShell cmdlets.
     1. Install Failover Clustering Feature and File Server Feature on the two file server cluster node VMs:
 

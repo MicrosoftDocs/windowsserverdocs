@@ -47,12 +47,12 @@ After the modifying write, region B is still shared by both files. Note that if 
 - The source and destination region must begin and end at a cluster boundary.
 - The cloned region must be less than 4GB in length.
 - The maximum number of file regions that can map to the same physical region is 8175.
-- The destination region must not extend past the end of the file. If the application wishes to extend the destination with cloned data, it must first call [SetEndOfFile](https://msdn.microsoft.com/library/windows/desktop/aa365531(v=vs.85).aspx).
+- The destination region must not extend past the end of the file. If the application wishes to extend the destination with cloned data, it must first call [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile).
 - If the source and destination regions are in the same file, they must not overlap. (The application may be able to proceed by splitting up the block clone operation into multiple block clones that no longer overlap).
 - The source and destination files must be on the same ReFS volume.
-- The source and destination files must have the same [Integrity Streams](https://msdn.microsoft.com/library/windows/desktop/gg258117(v=vs.85).aspx) setting.
+- The source and destination files must have the same [Integrity Streams](/windows/win32/fileio/file-attribute-constants) setting.
 - If the source file is sparse, the destination file must also be sparse.
-- The block clone operation will break Shared Opportunistic Locks (also know as [Level 2 Opportunistic Locks](https://msdn.microsoft.com/library/windows/desktop/aa365713(v=vs.85).aspx)).
+- The block clone operation will break Shared Opportunistic Locks (also know as [Level 2 Opportunistic Locks](/windows/win32/fileio/types-of-opportunistic-locks)).
 - The ReFS volume must have been formatted with Windows Server 2016, and if Failover Clustering is in use, the Clustering Functional Level must have been Windows Server 2016 or later at format time.
 
 ## Additional References
@@ -60,5 +60,5 @@ After the modifying write, region B is still shared by both files. Note that if 
 -   [ReFS overview](refs-overview.md)
 -   [ReFS integrity streams](integrity-streams.md)
 -   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
--   [DUPLICATE_EXTENTS_DATA](https://msdn.microsoft.com/library/windows/desktop/mt590821(v=vs.85).aspx)
--   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](https://msdn.microsoft.com/library/windows/desktop/mt590823(v=vs.85).aspx)
+-   [DUPLICATE_EXTENTS_DATA](/windows/win32/api/winioctl/ns-winioctl-duplicate_extents_data)
+-   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](/windows/win32/api/winioctl/ni-winioctl-fsctl_duplicate_extents_to_file)

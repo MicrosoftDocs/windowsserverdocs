@@ -2000,7 +2000,7 @@ For some more examples about how to use this command, see
 
 - [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
 
-- [Certutil tasks for managing certificates](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
+- [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
 - [Binary Request Export Using the certutil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
 

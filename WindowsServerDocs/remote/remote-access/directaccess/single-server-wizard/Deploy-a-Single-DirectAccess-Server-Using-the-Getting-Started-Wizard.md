@@ -140,10 +140,8 @@ The following table provides links to additional resources.
   
 |Content type|References|  
 |--------|-------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](https://technet.microsoft.com/network/bb545655.aspx)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](https://technet.microsoft.com/library/hh918399.aspx)|  
+|**Remote Access on TechNet**|[Remote Access TechCenter](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn756544(v=ws.11))|  
+|**Tools and settings**|[Remote Access PowerShell cmdlets](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn756544(v=ws.11))|  
 |**Community resources**|[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
+|**Related technologies**|[How IPv6 works](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10))|  
   
-
-

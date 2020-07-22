@@ -54,4 +54,4 @@ manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unloc
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Enabling BitLocker by Using the Command Line](https://technet.microsoft.com/library/dd894351(v=ws.10).aspx)
+- [Enabling BitLocker by Using the Command Line](/previous-versions/windows/it-pro/windows-7/dd894351(v=ws.10))

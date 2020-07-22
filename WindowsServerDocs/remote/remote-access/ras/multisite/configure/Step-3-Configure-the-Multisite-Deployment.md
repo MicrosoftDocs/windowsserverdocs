@@ -108,7 +108,7 @@ On each Remote Access server that will be added to the multisite deployment, an 
   
 7.  On the **Request Certificates** page, click the Web Server certificate template, and then click **More information is required to enroll for this certificate**.  
   
-    If the Web Server certificate template does not appear, ensure that the Remote Access server computer account has enroll permissions for the Web Server certificate template. For more information, see [Configure Permissions on the Web Server Certificate Template](https://technet.microsoft.com/library/ee649249(v=ws.10).aspx).  
+    If the Web Server certificate template does not appear, ensure that the Remote Access server computer account has enroll permissions for the Web Server certificate template. For more information, see [Configure Permissions on the Web Server Certificate Template](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649249(v=ws.10)).  
   
 8.  On the **Subject** tab of the **Certificate Properties** dialog box, in **Subject name**, for **Type**, select **Common name**.  
   
@@ -149,7 +149,7 @@ If you selected to set up the network location server website on the Remote Acce
   
 7.  On the **Request Certificates** page, click the Web Server certificate template, and then click **More information is required to enroll for this certificate**.  
   
-    If the Web Server certificate template does not appear, ensure that the Remote Access server computer account has enroll permissions for the Web Server certificate template. For more information, see [Configure Permissions on the Web Server Certificate Template](https://technet.microsoft.com/library/ee649249(v=ws.10).aspx).  
+    If the Web Server certificate template does not appear, ensure that the Remote Access server computer account has enroll permissions for the Web Server certificate template. For more information, see [Configure Permissions on the Web Server Certificate Template](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649249(v=ws.10)).  
   
 8.  On the **Subject** tab of the **Certificate Properties** dialog box, in **Subject name**, for **Type**, select **Common name**.  
   

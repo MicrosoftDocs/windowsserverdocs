@@ -88,4 +88,4 @@ fsutil volume querycluster C: 50 0x2000
 
 - [fsutil](fsutil.md)
 
-- [How NTFS Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10))
+- [How NTFS Works](/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10))

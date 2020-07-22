@@ -62,6 +62,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 ## Additional references  
 [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
-[Name Resolution Requirements for Federation Server Proxies](https://technet.microsoft.com/library/dd807055.aspx)  
+[Name Resolution Requirements for Federation Server Proxies](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807055(v=ws.11))  
   
-

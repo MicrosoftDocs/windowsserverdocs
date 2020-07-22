@@ -46,7 +46,7 @@ Create the following resources in Azure to create a geo-redundant multi-data cen
 2. A highly-available Active Directory deployment in RG A. You can use the [New AD Domain with 2 Domain Controllers template](https://azure.microsoft.com/resources/templates/active-directory-new-domain-ha-2-dc/) to create the deployment.
 3. A highly-available RDS deployment in RG A. Use the [RDS farm deployment using existing active directory](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/) template to create the basic RDS deployment, and then follow the information in [Remote Desktop Services - High availability](rds-plan-high-availability.md) to configure the other RDS components for high availability.
 4. A VNet in RG B - make sure to use an address space that does not overlap the deployment in RG A.
-5. A [VNet-to-VNet connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps) between the two resource groups.
+5. A [VNet-to-VNet connection](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps) between the two resource groups.
 6. Two AD virtual machines in an availability set in RG B - make sure the VM names are different from the AD VMs in RG A. Deploy two Windows Server 2016 VMs in a single availability set, install the Active Directory Domain Services role, and then promote them to the domain controller in the domain you created in step 1.
 7. A second highly-available RDS deployment in RG B. 
    1. Use the [RDS farm deployment using existing active directory](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/) template again, but this time make the following changes. (To customize the template, select it in the gallery, click **Deploy to Azure** and then **Edit template**.)
@@ -75,7 +75,7 @@ Want to learn more about managing replication? Check out [Cluster to cluster Sto
 
 To enable UPDs on both deployments, do the following:
 
-1. Run the [Set-RDSessionCollectionConfiguration cmdlet](https://docs.microsoft.com/powershell/module/remotedesktop/set-rdsessioncollectionconfiguration) to enable the user profile disks for the primary (active) deployment - provide a path to the file share on the source volume (which you created in Step 7 in the deployment steps).
+1. Run the [Set-RDSessionCollectionConfiguration cmdlet](/powershell/module/remotedesktop/set-rdsessioncollectionconfiguration) to enable the user profile disks for the primary (active) deployment - provide a path to the file share on the source volume (which you created in Step 7 in the deployment steps).
 2. Reverse the Storage Replica direction so that the destination volume becomes the source volume (this mounts the volume and makes it accessible by the secondary deployment). You can run **Set-SRPartnership** cmdlet to do this. For example:
 
    ```powershell
@@ -154,4 +154,4 @@ While an on-premises deployment couldn't use the Azure Quickstart Templates refe
 
 You can use Azure Traffic Manager with on-premises endpoints, but it requires an Azure subscription. Alternatively, for the DNS provided to end users, give them a CNAME record that simply directs users to the primary deployment. In the case of failover, modify the DNS CNAME record to redirect to the secondary deployment. In this way, the end user uses a single URL, just like with Azure Traffic Manager, that directs the user to the appropriate deployment. 
 
-If you are interested in creating an on-premises-to-Azure-site model, consider using [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).
+If you are interested in creating an on-premises-to-Azure-site model, consider using [Azure Site Recovery](/azure/site-recovery/site-recovery-overview).

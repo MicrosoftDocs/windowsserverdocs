@@ -14,7 +14,7 @@ ms.technology: identity-adds
 
 > Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://technet.microsoft.com/security/hh278941.aspx)
+*Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)
 
 Domain controllers provide the physical storage for the AD DS database, in addition to providing the services and data that allow enterprises to effectively manage their servers, workstations, users, and applications. If privileged access to a domain controller is obtained by a malicious user, that user can modify, corrupt, or destroy the AD DS database and, by extension, all of the systems and accounts that are managed by Active Directory.
 
@@ -48,7 +48,7 @@ Whenever possible, you should run virtual domain controllers in branch offices o
 
 ### Remote Locations with Limited Space and Security
 
-If your infrastructure includes locations in which only a single physical server can be installed, a server capable of running virtualization workloads should be installed in the remote location, and BitLocker Drive Encryption should be configured to protect all volumes in the server. One virtual machine on the server should run an RODC, with other servers running as separate virtual machines on the host. Information about planning for deployment of RODC is provided in the [Read-Only Domain Controller Planning and Deployment Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)). For more information about deploying and securing virtualized domain controllers, see [Running Domain Controllers in Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10)). For more detailed guidance for hardening Hyper-V, delegating virtual machine management, and protecting virtual machines, see the [Hyper-V Security Guide](https://www.microsoft.com/download/details.aspx?id=16650) Solution Accelerator on the Microsoft website.
+If your infrastructure includes locations in which only a single physical server can be installed, a server capable of running virtualization workloads should be installed in the remote location, and BitLocker Drive Encryption should be configured to protect all volumes in the server. One virtual machine on the server should run an RODC, with other servers running as separate virtual machines on the host. Information about planning for deployment of RODC is provided in the [Read-Only Domain Controller Planning and Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771744(v=ws.10)). For more information about deploying and securing virtualized domain controllers, see [Running Domain Controllers in Hyper-V](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd363553(v=ws.10)). For more detailed guidance for hardening Hyper-V, delegating virtual machine management, and protecting virtual machines, see the [Hyper-V Security Guide](https://www.microsoft.com/download/details.aspx?id=16650) Solution Accelerator on the Microsoft website.
 
 ## Domain Controller Operating Systems
 

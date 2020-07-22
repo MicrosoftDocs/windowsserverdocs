@@ -21,7 +21,7 @@ After deploying a single Remote Access server, plan to add additional servers to
 |[2.2 Configure server settings](#BKMK_Config)|Configure settings for each server that will be added to the cluster. Note that you can configure a load balanced cluster of servers using virtual machines. In order for routing and connectivity to work correctly, you must configure the virtual machines to use MAC address spoofing.|  
   
 ## <a name="BKMK_Install"></a>2.1 Installing roles and features  
-For each server you want to join to the cluster, plan to install the Remote Access role. In addition plan to install the Network Load Balancing (NLB) feature if you want to load balance traffic to the cluster using Windows NLB. For more information see [Network Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/technologies/network-load-balancing).  
+For each server you want to join to the cluster, plan to install the Remote Access role. In addition plan to install the Network Load Balancing (NLB) feature if you want to load balance traffic to the cluster using Windows NLB. For more information see [Network Load Balancing](../../../../../networking/technologies/network-load-balancing.md).  
   
 ## <a name="BKMK_Config"></a>2.2 Configure server settings  
 For each server that will be added to the cluster, plan IP address and domain settings. Note the following:  
@@ -43,4 +43,3 @@ When you load balance the cluster using Windows NLB the following Windows NLB se
 4.  Affinity-Single affinity is defined.  
   
 5.  Protocols-Both  
-

@@ -19,12 +19,12 @@ This topic includes information about upgrading to Windows Server&reg; 2016 from
 
 The process of moving to Windows Server 2016 might vary greatly depending on which operating system you are starting with and the pathway you take. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 deployment.
 
-- **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. For information about installing Windows Server 2016, see [System Requirements and Installation Information for Windows Server 2016](https://technet.microsoft.com/windows-server-docs/get-started/system-requirements--and-installation). For information about installing other versions of Windows Server, see [Windows Server Installation and Upgrade](https://technet.microsoft.com//windowsserver/dn527667).
+- **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. For information about installing Windows Server 2016, see [System Requirements and Installation Information for Windows Server 2016](./system-requirements.md). For information about installing other versions of Windows Server, see [Windows Server Installation and Upgrade](./installation-and-upgrade.md).
 
 - **Migration** means moving from your existing operating system to Windows Server 2016 by transferring to a different set of hardware or virtual machine. Migration, which might vary considerably depending on the server roles you have installed, is discussed in detail at [Windows Server Installation, Upgrade,
-and Migration](https://technet.microsoft.com/windowsserver/dn458795).
+and Migration](./installation-and-upgrade.md).
 
-- **Cluster OS Rolling Upgrade** is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
+- **Cluster OS Rolling Upgrade** is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
 - **License conversion** In some operating system releases, you can convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key. We call this license conversion. For example, if you are running Windows Server 2016 Standard, you can convert it to Windows Server 2016 Datacenter.
 
@@ -37,7 +37,7 @@ and Migration](https://technet.microsoft.com/windowsserver/dn458795).
 > For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, **you can only perform conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 > [!IMPORTANT]  
-> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](https://technet.microsoft.com/library/hh831648(v=ws.11).aspx) for details.
+> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
 
 ## Upgrading previous retail versions of Windows Server to Windows Server 2016
 
@@ -47,7 +47,7 @@ Note the following general guidelines for supported paths:
 
 - Upgrades from 32-bit to 64-bit architectures are not supported. All editions of Windows Server 2016 are 64-bit only.
 - Upgrades from one language to another are not supported.
-- If the server is a domain controller, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](https://technet.microsoft.com/library/hh994618.aspx) for important information.
+- If the server is a domain controller, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](../identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012.md) for important information.
 - Upgrades from pre-release versions (previews) of Windows Server 2016 are not supported. Perform a clean installation to Windows Server 2016.
 - Upgrades that switch from a Server Core installation to a Server with a Desktop installation (or vice versa) are not supported.
 - Upgrades from a previous Windows Server installation to an evaluation copy of Windows Server are not supported. Evaluation versions should be installed as a clean installation.
@@ -94,7 +94,7 @@ For **Windows Server 2016 Essentials**: You can convert to the full retail versi
 
 If the server is running an evaluation version of Windows Server 2016 Standard or Windows Server 2016 Datacenter, you can convert it to a retail version as follows:
 
-1.    If the server is a **domain controller**, you cannot convert it to a retail version. In this case, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](https://technet.microsoft.com/library/hh994618.aspx).
+1.    If the server is a **domain controller**, you cannot convert it to a retail version. In this case, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](../identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012.md).
 2.    Read the license terms.
 3.    From an elevated command prompt, determine the current edition name with the command **DISM /online /Get-CurrentEdition**. Make note of the edition ID, an abbreviated form of the edition name. Then run **DISM /online /Set-Edition:\<edition ID\> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula**, providing the edition ID and a retail product key. The server will restart twice.
 

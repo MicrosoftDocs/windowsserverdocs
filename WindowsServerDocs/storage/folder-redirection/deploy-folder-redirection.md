@@ -192,6 +192,6 @@ The following table summarizes some of the most important changes to this topic.
 * [Folder Redirection, Offline Files, and Roaming User Profiles](folder-redirection-rup-overview.md)
 * [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 * [Enable Advanced Offline Files Functionality](enable-always-offline.md)
-* [Microsoft's Support Statement Around Replicated User Profile Data](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
+* [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
 * [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
-* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting)
+* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](/windows/win32/appxpkg/troubleshooting)

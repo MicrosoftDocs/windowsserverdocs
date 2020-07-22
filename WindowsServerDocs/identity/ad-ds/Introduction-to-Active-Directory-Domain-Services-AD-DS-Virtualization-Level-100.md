@@ -26,7 +26,7 @@ For example, the following illustration shows the sequence of events that occurs
 
 ![The sequence of events when USN rollback is detected](../media/Introduction-to-Active-Directory-Domain-Services--AD-DS--Virtualization--Level-100-/ADDS_Exampleofhowreplicationcanbecomeinconsistent.png)
 
-A virtual machine (VM) makes it easy for hypervisor administrators to roll back a domain controller's USNs (its logical clock) by, for example, applying a snapshot outside of the domain controller's awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv(WS.10).aspx#usn_and_usn_rollback).
+A virtual machine (VM) makes it easy for hypervisor administrators to roll back a domain controller's USNs (its logical clock) by, for example, applying a snapshot outside of the domain controller's awareness. For more information about USN and USN rollback, including another illustration to demonstrate undetected instances of USN rollback, see [USN and USN Rollback](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10)#usn_and_usn_rollback).
 
 Beginning with  Windows Server 2012 , AD DS virtual domain controllers hosted on hypervisor platforms that expose an identifier called VM-Generation ID can detect and employ necessary safety measures to protect the AD DS environment if the virtual machine is rolled back in time by the application of a VM snapshot. The VM-GenerationID design uses a hypervisor-vendor independent mechanism to expose this identifier in the address space of the guest virtual machine, so the safe virtualization experience is consistently available of any hypervisor that supports VM-GenerationID. This identifier can be sampled by services and applications running inside the virtual machine to detect if a virtual machine has been rolled back in time.
 
@@ -121,7 +121,7 @@ There are two approaches to recover from a USN rollback:
 
 Evaluate whether valid system state backups exist for this domain controller. If a valid system state backup was made before the rolled-back domain controller was incorrectly restored, and the backup contains recent changes that were made on the domain controller, restore the system state from the most recent backup.
 
-You can also use the snapshot as a source of a backup. Or you can set the database to give itself a new invocation ID using the procedure in the section [Restoring a virtual domain controller when an appropriate system state data backup is not available](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553%28v%3dws.10%29#restoring-a-virtual-domain-controller-when-an-appropriate-system-state-data-backup-is-not-available)
+You can also use the snapshot as a source of a backup. Or you can set the database to give itself a new invocation ID using the procedure in the section [Restoring a virtual domain controller when an appropriate system state data backup is not available](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd363553%28v%3dws.10%29#restoring-a-virtual-domain-controller-when-an-appropriate-system-state-data-backup-is-not-available)
 
 ## Next steps
 

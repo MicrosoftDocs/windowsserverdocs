@@ -1,4 +1,4 @@
-﻿---
+---
 title: Slmgr.vbs options for obtaining volume activation information
 description: Lists the options available for the Slmgr.vbs script, and describes how to use them
 ms.date: 09/24/2019
@@ -30,7 +30,7 @@ slmgr.vbs [<ComputerName> [<User> <Password>]] [<Options>]
 
 ## Using Slmgr on remote computers
 
-To manage remote clients, use the Volume Activation Management Tool (VAMT) version 1.2 or later, or create custom WMI scripts that are aware of the differences between platforms. For more information about WMI properties and methods for Volume Activation, see [WMI Properties and Methods for Volume Activation](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502536(v=ws.11)).
+To manage remote clients, use the Volume Activation Management Tool (VAMT) version 1.2 or later, or create custom WMI scripts that are aware of the differences between platforms. For more information about WMI properties and methods for Volume Activation, see [WMI Properties and Methods for Volume Activation](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502536(v=ws.11)).
 
 > [!IMPORTANT]
 > Because of WMI changes in Windows 7 and Windows Server 2008 R2, the Slmgr.vbs script is not intended to work across platforms. Using Slmgr.vbs to manage a Windows 7 or Windows Server 2008 R2 system from the Windows Vista&reg; operating system is not supported. Trying to manage an older system from Windows 7 or Windows Server 2008 R2 will generate a specific version mismatch error. For example, running **cscript slmgr.vbs \<vista\_machine\_name\> /dlv** produces the following output:
@@ -65,7 +65,7 @@ To manage remote clients, use the Volume Activation Management Tool (VAMT) versi
 |\/cpky |Some servicing operations require the product key to be available in the registry during Out-of-Box Experience (OOBE) operations. The **/cpky** option removes the product key from the registry to prevent this key from being stolen by malicious code.<br />For retail installations that deploy keys, best practices recommend running this option. This option is not required for MAK and KMS host keys, because this is the default behavior for those keys. This option is required only for other types of keys whose default behavior is not to clear the key from the registry.<br />This operation must be run in an elevated Command Prompt window. |
 |\/ilc&nbsp;&lt;license_file&gt; |This option installs the license file specified by the required parameter. These licenses may be installed as a troubleshooting measure, to support token-based activation, or as part of a manual installation of an on-boarded application.<br />Licenses are not validated during this process: License validation is out of scope for Slmgr.vbs. Instead, validation is handled by the Software Protection Service at runtime.<br />This operation must be run from an elevated Command Prompt window, or the **Standard User Operations** registry value must be set to allow unprivileged users extra access to the Software Protection Service. |
 |\/rilc |This option reinstalls all licenses stored in %SystemRoot%\system32\oem and %SystemRoot%\System32\spp\tokens. These are "known-good" copies that were stored during installation.<br />Any matching licenses in the Trusted Store are replaced. Any additional licenses&mdash;for example, Trusted Authority (TA) Issuance Licenses (ILs), licenses for applications&mdash;are not affected.<br />This operation must be run in an elevated Command Prompt window, or the **Standard User Operations** registry value must be set to allow unprivileged users extra access to the Software Protection Service. |
-|\/rearm |This option resets the activation timers. The **/rearm** process is also called by **sysprep /generalize**.<br />This operation does nothing if the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\SkipRearm** registry entry is set to **1**. See [Registry Settings for Volume Activation](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502532(v=ws.11)) for details about this registry entry.<br />This operation must be run in an elevated Command Prompt window, or the **Standard User Operations** registry value must be set to allow unprivileged users extra access to the Software Protection Service. |
+|\/rearm |This option resets the activation timers. The **/rearm** process is also called by **sysprep /generalize**.<br />This operation does nothing if the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\SkipRearm** registry entry is set to **1**. See [Registry Settings for Volume Activation](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502532(v=ws.11)) for details about this registry entry.<br />This operation must be run in an elevated Command Prompt window, or the **Standard User Operations** registry value must be set to allow unprivileged users extra access to the Software Protection Service. |
 |\/rearm-app &lt;Application&nbsp;ID&gt; |Resets the licensing status of the specified app. |
 |\/rearm-sku &lt;Application&nbsp;ID&gt; |Resets the licensing status of the specified SKU. |
 |\/upk&nbsp;\[&lt;Application&nbsp;ID&gt;] |This option uninstalls the product key of the current Windows edition. After a restart, the system will be in an Unlicensed state unless a new product key is installed.<br />Optionally, you can use the \<**Activation ID**\> parameter to specify a different installed product.<br />This operation must be run from an elevated Command Prompt window. |
@@ -119,6 +119,5 @@ To manage remote clients, use the Volume Activation Management Tool (VAMT) versi
 
 ## Additional References
 
-- [Volume Activation Technical Reference](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502529%28v%3dws.11%29)
-- [Volume Activation Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831612%28v%3dws.11%29)
-
+- [Volume Activation Technical Reference](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502529%28v%3dws.11%29)
+- [Volume Activation Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831612%28v%3dws.11%29)

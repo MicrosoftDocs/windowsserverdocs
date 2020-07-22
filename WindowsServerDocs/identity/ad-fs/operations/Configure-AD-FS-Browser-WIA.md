@@ -73,4 +73,4 @@ The command above will ensure that AD FS only covers the following use cases for
 
 ### Additional links
 
-[Microsoft Edge documentation](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string)
+[Microsoft Edge documentation](/microsoft-edge/web-platform/user-agent-string)

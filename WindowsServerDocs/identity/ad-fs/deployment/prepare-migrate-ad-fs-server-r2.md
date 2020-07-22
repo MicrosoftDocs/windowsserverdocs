@@ -81,7 +81,7 @@ For more information, see [Migrating the AD FS Federation Server](migrate-ad-fs-
         -   Bypassing Home Realm Discovery for intranet.  
         -   Creating custom web themes.  
   
-For detailed instructions on configuring the look and feel of the AD FS sign-in pages, see [Customizing the AD FS Sign-in Pages](../operations/AD-FS-Customization-in-Windows-Server-2016.md).  
+For detailed instructions on configuring the look and feel of the AD FS sign-in pages, see [Customizing the AD FS Sign-in Pages](../operations/ad-fs-customization-in-windows-server.md).  
   
 If you have web page customization in your existing AD FS farm that you want to migrate to Windows Server 2012 R2, you can recreate them as part of the migration process using the new customization features in Windows Server 2012 R2.  
   
