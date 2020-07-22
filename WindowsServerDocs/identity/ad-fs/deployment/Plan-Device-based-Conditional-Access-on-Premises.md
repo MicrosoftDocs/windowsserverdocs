@@ -35,16 +35,16 @@ There are three kinds of registered devices, all of which are represented as Dev
   
 
 For more information on the different ways to register devices, see also:  
-* [Using Windows 10 devices in your workplace](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices/)  
+* [Using Windows 10 devices in your workplace](/azure/active-directory/devices/overview)  
 * [Setting up Windows 10 devices for work](https://jairocadena.com/2016/01/18/setting-up-windows-10-devices-for-work-domain-join-azure-ad-join-and-add-work-or-school-account/)  
-[Join Windows 10 Mobile to Azure Active Directory](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory)  
+[Join Windows 10 Mobile to Azure Active Directory](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)  
 
 ### How Windows 10 User and Device Sign on is different from previous versions  
 For Windows 10 and AD FS 2016 there are some new aspects of device registration and authentication you should know about (especially if you are very familiar with device registration and "workplace join" in previous releases).  
 
 First, in Windows 10 and AD FS in Windows Server 2016, device registration and authentication is no longer based solely on an X509 user certificate.  There is a new and more robust protocol that provides better security and a more seamless user experience.  The key differences are that, for Windows 10 Domain Join and Azure AD Join, there is an X509 computer certificate and a new credential called a PRT.  You can read all about it [here](https://jairocadena.com/2016/01/18/how-domain-join-is-different-in-windows-10-with-azure-ad/) and [here](https://jairocadena.com/2016/02/01/azure-ad-join-what-happens-behind-the-scenes/).  
 
-Second, Windows 10 and AD FS 2016 support user authentication using Microsoft Passport for Work, which you can read about [here](https://jairocadena.com/2016/03/09/azure-ad-and-microsoft-passport-for-work-in-windows-10/) and [here](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/).  
+Second, Windows 10 and AD FS 2016 support user authentication using Microsoft Passport for Work, which you can read about [here](https://jairocadena.com/2016/03/09/azure-ad-and-microsoft-passport-for-work-in-windows-10/) and [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 AD FS 2016 provides seamless device and user SSO based on both PRT and Passport credentials.  Using the steps in this document, you can enable these capabilities and see them work.  
 

@@ -79,5 +79,5 @@ To add a new claims provider trust, using the AD FS Management snap-in, by autom
 [Checklist: Creating Claim Rules for a Claims Provider Trust](../../ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Claims-Provider-Trust.md)  
   
 ## See Also  
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
+[AD FS Operations](../ad-fs-operations.md) 
   

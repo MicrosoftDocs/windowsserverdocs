@@ -81,4 +81,4 @@ The meanings of the `DeviceAuthenticationMethod` values have changed slightly si
 ||All|PRT + PkeyAuth + clientTLS|
 
 ## See Also
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

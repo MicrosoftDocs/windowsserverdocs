@@ -25,7 +25,7 @@ To configure your computer for troubleshooting Active Directory Domain Services 
 
 When you install AD DS to create a domain controller, the administrative tools that you use to manage AD DS are installed automatically. If you want to manage domain controllers remotely from a computer that is not a domain controller, you can install the Remote Server Administration Tools (RSAT) on a member server or workstation that is running a supported version of Windows. RSAT replaces Windows Support Tools from Windows Server 2003.
 
-For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
 ### Configure Reliability and Performance Monitor
 

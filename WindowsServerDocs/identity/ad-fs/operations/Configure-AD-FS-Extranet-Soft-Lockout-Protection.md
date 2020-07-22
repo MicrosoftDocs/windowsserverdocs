@@ -69,7 +69,7 @@ Let's take a look at two examples and see how **badPwdCount** changes over time 
 
 As you can see from the above, there are two conditions when **badPwdCount** will be reset to 0. One is when there is a successful logon. The other is when it is time to reset this counter as defined in **Reset Account Lockout Counter After** setting. When **Reset Account Lockout Counter After** &lt; **ExtranetObservationWindow**, an account does not have any risk of being locked out by AD. However, if **Reset Account Lockout Counter After** &gt; **ExtranetObservationWindow**, there is a chance that an account may be locked out by AD but in a "delayed fashion". It may take a while to get an account locked out by AD depending on your configuration as AD FS will only allow one bad password attempt during its observation window until **badPwdCount** reaches **Account Lockout Threshold**.
 
-For more information, see [Configuring Account Lockout](https://blogs.technet.microsoft.com/secguide/2014/08/13/configuring-account-lockout/). 
+For more information, see [Configuring Account Lockout](/archive/blogs/secguide/configuring-account-lockout). 
 
 ## Known Issues
 There is a known issue where the AD user account cannot authenticate with AD FS because the **badPwdCount** attribute is not replicated to the domain controller that ADFS is querying. See [2971171](https://support.microsoft.com/help/2971171/adfs-authentication-issue-for-active-directory-users-when-extranet-loc) for more details. You can find all AD FS QFEs that have been released so far [here](../deployment/updates-for-active-directory-federation-services-ad-fs.md).
@@ -88,8 +88,8 @@ There is a known issue where the AD user account cannot authenticate with AD FS 
 ## Additional references  
 - [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 - [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
-- [Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
+- [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)
 
     

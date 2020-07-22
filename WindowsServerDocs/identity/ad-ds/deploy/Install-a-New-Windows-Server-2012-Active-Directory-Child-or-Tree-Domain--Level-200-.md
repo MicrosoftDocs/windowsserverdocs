@@ -164,7 +164,7 @@ The **DNS Options** ADDSDeployment Windows PowerShell arguments are:
 -dnsdelegationcredential <pscredential>  
 ```  
   
-For more information about DNS delegation, see [Understanding Zone Delegation](https://technet.microsoft.com/library/cc771640.aspx).  
+For more information about DNS delegation, see [Understanding Zone Delegation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771640(v=ws.11)).  
   
 ### Additional Options  
 ![Install a new AD Child](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildAdditionalOptions.png)  
@@ -296,4 +296,3 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
   
 The **Results** page shows the success or failure of the promotion and any important administrative information. The domain controller will automatically reboot after 10 seconds.  
   
-

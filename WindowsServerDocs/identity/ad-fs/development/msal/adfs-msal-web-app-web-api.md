@@ -22,7 +22,7 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
  
 ![Overview of web app calling web api](media/adfs-msal-web-app-web-api/webapp1.png)
 
-In this flow you add authentication to your Web App (Server App), which can therefore sign in users and calls a web API. From the Web App, to call the Web API, use MSAL's [AcquireTokenByAuthorizationCode](https://docs.microsoft.com/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder?view=azure-dotnet) token acquisition method. You'll use the Authorization code flow, storing the acquired token in the token cache. Then the controller will acquire tokens silently from the cache when needed. MSAL refreshes the token if needed. 
+In this flow you add authentication to your Web App (Server App), which can therefore sign in users and calls a web API. From the Web App, to call the Web API, use MSAL's [AcquireTokenByAuthorizationCode](/dotnet/api/microsoft.identity.client.acquiretokenbyauthorizationcodeparameterbuilder?view=azure-dotnet) token acquisition method. You'll use the Authorization code flow, storing the acquired token in the token cache. Then the controller will acquire tokens silently from the cache when needed. MSAL refreshes the token if needed. 
 
 Web Apps that calls Web APIs: 
 

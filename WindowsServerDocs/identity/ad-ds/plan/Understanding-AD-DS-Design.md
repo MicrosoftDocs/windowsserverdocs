@@ -19,6 +19,6 @@ An AD DS deployment project involves three phases: a design phase, a deployment 
 
 Although the Windows Server AD DS design and deployment strategies that are presented in this guide are based on extensive lab and pilot-program testing and successful implementation in customer environments, you might have to customize your AD DS design and deployment to better suit specific, complex environments.
 
-- For more information about deploying AD DS in a branch office environment, see the [Read-Only Domain Controller (RODC) Branch Office Planning Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd734758(v=ws.10)).
-- For more information about deploying AD DS in an Exchange environment, see the article [Active Directory in Exchange Server organizations](https://docs.microsoft.com/Exchange/plan-and-deploy/active-directory/active-directory).
-- For more information about deploying AD DS in a multiple forest environment, see the article [Multiple Forest Considerations in Windows 2000 and Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739395(v=ws.10)).
+- For more information about deploying AD DS in a branch office environment, see the [Read-Only Domain Controller (RODC) Branch Office Planning Guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd734758(v=ws.10)).
+- For more information about deploying AD DS in an Exchange environment, see the article [Active Directory in Exchange Server organizations](/exchange/plan-and-deploy/active-directory/active-directory).
+- For more information about deploying AD DS in a multiple forest environment, see the article [Multiple Forest Considerations in Windows 2000 and Windows Server 2003](/previous-versions/windows/it-pro/windows-server-2003/cc739395(v=ws.10)).

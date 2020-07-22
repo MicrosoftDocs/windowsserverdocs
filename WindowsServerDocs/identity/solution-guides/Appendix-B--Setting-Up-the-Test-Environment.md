@@ -167,7 +167,7 @@ Create the following users by using Active Directory Administrative Center.
    |     Jeff Low     |    JLow    |    JLow@contoso.com    |     HR     |                  |       US       |
    |    RMS Server    |    rms     |    rms@contoso.com     |            |                  |                |
 
-   For more information about creating security groups, see [Create a New Group](https://technet.microsoft.com/library/dd861305.aspx) on the Windows Server website.  
+   For more information about creating security groups, see [Create a New Group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd861305(v=ws.11)) on the Windows Server website.  
 
 ##### To create a Group Policy Object  
 
@@ -376,7 +376,7 @@ Add the Active Directory Rights Management Services (AD RMS) and all required fe
 >     -   NLTEST /SC_RESET:contoso.com  
 > 2.  On the domain controller (DC1), replicate Active Directory.  
 >   
->     For more information about steps to force the replication of Active Directory, see [Active Directory Replication](https://technet.microsoft.com/library/cc794809(WS.10).aspx)  
+>     For more information about steps to force the replication of Active Directory, see [Active Directory Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794809(v=ws.10))  
 
 Optionally, instead of using the Add Roles and Features Wizard in Server Manager, you can use Windows PowerShell to install and configure the AD RMS server role as show in the following procedure.  
 
@@ -557,7 +557,7 @@ Configure Microsoft Exchange Server on this computer. For more information, see 
 -   Connect the virtual machine to the ID_AD_Network.  
 
 > [!IMPORTANT]  
-> Joining virtual machines to a domain and deploying claim types across forests require that the virtual machines be able to resolve the FQDNs of the relevant domains. You may have to manually configure the DNS settings on the virtual machines to accomplish this. For more information, see [Configuring a virtual network](https://technet.microsoft.com/library/cc732470%28v=ws.10%29.aspx).  
+> Joining virtual machines to a domain and deploying claim types across forests require that the virtual machines be able to resolve the FQDNs of the relevant domains. You may have to manually configure the DNS settings on the virtual machines to accomplish this. For more information, see [Configuring a virtual network](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732470(v=ws.10)).  
 >   
 > All the virtual machine images (servers and clients) must be reconfigured to use a static IP version 4 (IPv4) address and Domain Name System (DNS) client settings. For more information, see [Configure a DNS Client for Static IP Address](https://go.microsoft.com/fwlink/?LinkId=150952).  
 
@@ -830,6 +830,3 @@ Create a new NTFS volume on FILE1, and create the following folder: D:\Earnings.
 7. Click the **Security** tab, click **Advanced**, and then click the **Central Policy** tab. You should see the **AdatumEmployeeAccessRule** listed. You can expand the item to view all of the permissions that you set when you created the rule in Active Directory.  
 
 8. Click **OK** to return to Windows Explorer.  
-
-
-

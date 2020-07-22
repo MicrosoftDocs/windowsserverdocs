@@ -93,7 +93,7 @@ Considerations for creating forests for data isolation include the following:
 - Other forests can be configured to trust the organizational forest created for data isolation so that users in the isolated forest can access resources in other forests. However, users from the isolated forest must never interactively log on to workstations in the trusting forest. The computer in the trusting forest can potentially be compromised by malicious software and can be used to capture the logon credentials of the user.
 
    > [!NOTE]
-   > To prevent servers in a trusting forest from impersonating users from the isolated forest, and then accessing resources in the isolated forest, the forest owner can disable delegated authentication or use the constrained delegation feature. For more information about delegated authentication and constrained delegation, see [Delegating authentication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739740(v=ws.10)).
+   > To prevent servers in a trusting forest from impersonating users from the isolated forest, and then accessing resources in the isolated forest, the forest owner can disable delegated authentication or use the constrained delegation feature. For more information about delegated authentication and constrained delegation, see [Delegating authentication](/previous-versions/windows/it-pro/windows-server-2003/cc739740(v=ws.10)).
 
 - You might need to establish a firewall between the organizational forest and the other forests in the organization to limit user access to information outside of their forest.
 

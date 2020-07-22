@@ -18,15 +18,15 @@ In the context of AD FS, Web Application Proxy functions as an AD FS federation 
   
 To plan the deployment of Web Application proxy, you can review the information in the following topics:  
   
--   [Plan the Web Application Proxy Infrastructure (WAP)](https://technet.microsoft.com/library/dn383648.aspx)  
+-   [Plan the Web Application Proxy Infrastructure (WAP)](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))  
   
--   [Plan the Web Application Proxy Server](https://technet.microsoft.com/library/dn383647.aspx)  
+-   [Plan the Web Application Proxy Server](/previous-versions/orphan-topics/ws.11/dn383647(v=ws.11))  
   
 To deploy Web Application proxy, you can follow the procedures in the following topics:  
   
--   [Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx)  
+-   [Configure the Web Application Proxy Infrastructure](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383644(v=ws.11))  
   
--   [Install and Configure the Web Application Proxy Server](https://technet.microsoft.com/library/dn383662.aspx)  
+-   [Install and Configure the Web Application Proxy Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383662(v=ws.11))  
   
  
 ## See Also 
@@ -37,4 +37,3 @@ To deploy Web Application proxy, you can follow the procedures in the following 
  
 [Deploying a Federation Server Farm](../../ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)  
   
-

@@ -16,13 +16,13 @@ ms.technology: identity-adds
 
 The following new features in Active Directory Domain Services (AD DS) improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements include:  
   
-- [Privileged access management](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)  
+- [Privileged access management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)  
   
-- [Extending cloud capabilities to Windows 10 devices through Azure Active Directory Join](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)
+- [Extending cloud capabilities to Windows 10 devices through Azure Active Directory Join](/azure/active-directory/devices/overview)
   
-- [Connecting domain-joined devices to Azure AD for Windows 10 experiences](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)
+- [Connecting domain-joined devices to Azure AD for Windows 10 experiences](/azure/active-directory/devices/hybrid-azuread-join-plan)
   
-- [Enable Microsoft Passport for Work in your organization](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)
+- [Enable Microsoft Passport for Work in your organization](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
   
 - [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](ad-ds/active-directory-functional-levels.md)  
   
@@ -72,7 +72,7 @@ Benefits:
 - **Developer experience** lets you build apps that cater to both enterprise and personal contexts with a shared programing stack.  
 - **Imaging** option lets you choose between imaging and allowing your users to configure corp-owned devices directly during the first-run experience.  
   
-For more information see, [Introduction to device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview).  
+For more information see, [Introduction to device management in Azure Active Directory](/azure/active-directory/devices/overview).  
   
 ## Windows Hello for Business
 
@@ -80,16 +80,16 @@ Windows Hello for Business is a key-based authentication approach organizations 
   
 The user logs on to the device with a biometric or PIN log on information that is linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), Phone or a different notification mechanism.  
   
-For more information see, [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)  
+For more information see, [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification)  
   
 ## Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels
 
 Although File Replication Service (FRS) and the Windows Server 2003 functional levels were deprecated in previous versions of Windows Server, it bears repeating that the Windows Server 2003 operating system is no longer supported. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain. The domain and forest functional level should be raised to at least Windows Server 2008 to prevent a domain controller that runs an earlier version of Windows Server from being added to the environment.
 
-At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow [these steps](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640019\(v=ws.10\)) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).  
+At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow [these steps](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640019\(v=ws.10\)) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).  
   
 The Windows Server 2003 domain and forest functional levels continue to be supported, but organizations should raise the functional level to Windows Server 2008 (or higher if possible) to ensure SYSVOL replication compatibility and support in the future. In addition, there are many other benefits and features available at the higher functional levels higher. See the following resources for more information:  
 
 - [Understanding Active Directory Domain Services (AD DS) Functional Levels](ad-ds/active-directory-functional-levels.md)  
-- [Raise the Domain Functional Level](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104\(v=ws.11\))  
-- [Raise the Forest Functional Level](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985\(v=ws.11\))  
+- [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753104\(v=ws.11\))  
+- [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730985\(v=ws.11\))  

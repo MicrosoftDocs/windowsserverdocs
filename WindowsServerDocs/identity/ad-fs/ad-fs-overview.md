@@ -20,10 +20,9 @@ This document contains a list of all of the documentation overviews for AD FS fo
   
 * [AD FS OpenID Connect/OAuth flows and Application Scenarios](../ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md) 
 
-* [AD FS Requirements](../ad-fs/overview/AD-FS-2016-Requirements.md)
+* [AD FS Requirements](./overview/ad-fs-requirements.md)
 
 * [AD FS FAQ](../ad-fs/overview/AD-FS-FAQ.md)
 
   
   
-

@@ -43,7 +43,7 @@ After completing this module, you will be able to:
 
     -   [Command line process auditing](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)  
 
-    -   [Credentials Protection and Management](https://technet.microsoft.com/library/dn408190.aspx)  
+    -   [Credentials Protection and Management](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))  
 
     -   [Directory Services component updates](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md)  
 
@@ -56,6 +56,3 @@ After completing this module, you will be able to:
         -   [1644 Event improvements](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_1644)  
 
         -   [Active Directory Replication throughput improvement](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
-
-
-

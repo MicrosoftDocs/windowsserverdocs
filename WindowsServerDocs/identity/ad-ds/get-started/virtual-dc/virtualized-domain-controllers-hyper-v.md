@@ -184,7 +184,7 @@ Virtualization platforms, such as Hyper-V, offer a number of convenience feature
 
 - To ensure durability of Active Directory writes, do not deploy a virtual domain controller's database files (the Active Directory database (NTDS.DIT), logs and SYSVOL) on virtual IDE disks. Instead, create a second VHD attached to a virtual SCSI controller and ensure that the database, logs, and SYSVOL are placed on the virtual machine's SCSI disk during domain controller installation.  
 - Do not implement differencing disk virtual hard disks (VHDs) on a virtual machine that you are configuring as a domain controller. This makes it too easy to revert to a previous version, and it also decreases performance. For more information about VHD types, see [New Virtual Hard Disk Wizard](https://go.microsoft.com/fwlink/?linkid=137279).  
-- Do not deploy new Active Directory domains and forests on a copy of a Windows Server operating system that was not first prepared using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
+- Do not deploy new Active Directory domains and forests on a copy of a Windows Server operating system that was not first prepared using System Preparation tool (Sysprep). For more information about running the Sysprep, see [Sysprep (System Preparation) Overview](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
 
    > [!WARNING]
    > Running Sysprep on a domain controller is not supported.
@@ -239,7 +239,7 @@ To optimize the performance of the domain controller virtual machine and ensure 
 
   > [!NOTE]
   > If you are planning to use Bitlocker for the virtual DC guest, you need to make sure the additional volumes are configured for “auto unlock”.
-  > More information about configuring auto unlock can be found in [Enable-BitLockerAutoUnlock](https://docs.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock)
+  > More information about configuring auto unlock can be found in [Enable-BitLockerAutoUnlock](/powershell/module/bitlocker/enable-bitlockerautounlock)
 
 - **Host storage of VHD files**. Recommendations: Host storage recommendations address storage of VHD files. For maximum performance, do not store VHD files on a disk that is used frequently by other services or applications, such as the system disk on which the host Windows operating system is installed. Store each VHD file on a separate partition from the host operating system and any other VHD files. The ideal configuration is to store each VHD file on a separate physical drive.  
 

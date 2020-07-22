@@ -18,18 +18,18 @@ ms.technology: identity-adfs
 This article describes how to deploy a new SSL certificate to your AD FS and WAP servers.
 
 >[!NOTE]
->The recommended way to replace the SSL certificate going forward for an AD FS farm is to use Azure AD Connect.  For more information see [Update the SSL certificate for an Active Directory Federation Services (AD FS) farm](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update)
+>The recommended way to replace the SSL certificate going forward for an AD FS farm is to use Azure AD Connect.  For more information see [Update the SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update)
 
 ## Obtaining your SSL Certificates
 For production AD FS farms a publicly trusted SSL certificate is recommended. This is usually obtained by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC. Your vendor should have documentation for this.
 
-- Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1)
+- Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1)
 
 ### How many certificates are needed
-It is recommended that you use a common SSL certificate across all AD FS and Web Application Proxy servers. For detailed requirements see the document [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1)
+It is recommended that you use a common SSL certificate across all AD FS and Web Application Proxy servers. For detailed requirements see the document [AD FS and Web Application Proxy SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1)
 
 ### SSL Certificate Requirements
-For requirements including naming, root of trust and extensions see the document [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1)
+For requirements including naming, root of trust and extensions see the document [AD FS and Web Application Proxy SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1)
 
 ## Replacing the SSL certificate for AD FS
 > [!NOTE]
@@ -45,7 +45,7 @@ Follow the steps below:
 
 1. First, you will need to obtain the new certificate. This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC. Your vendor should have documentation for this.
 
-    * Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1)
+    * Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1)
 
 1. Once you get the response from your certificate provider, import it to the Local Machine store on each AD FS and Web Application Proxy server.
 
@@ -76,7 +76,7 @@ Follow the steps below:
 
 1. First, you will need to obtain the new certificate. This is usually done by submitting a certificate signing request (CSR) to a third party, public certificate provider. There are a variety of ways to generate the CSR, including from a Windows 7 or higher PC. Your vendor should have documentation for this.
 
-    * Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1)
+    * Make sure the certificate meets the [AD FS and Web Application Proxy SSL certificate requirements](../overview/ad-fs-requirements.md#BKMK_1)
 
 1. Once you get the response from your certificate provider, import it to the Local Machine store on each AD FS and Web Application Proxy server.
 

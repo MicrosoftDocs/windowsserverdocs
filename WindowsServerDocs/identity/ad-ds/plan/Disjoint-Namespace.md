@@ -72,7 +72,7 @@ Using a disjoint namespace can have the following disadvantages:
 - To optimize name resolution, you must perform manual steps to modify and maintain Group Policy to configure member computers with alternate primary DNS suffixes.
 
 > [!NOTE]
-> The Windows Internet Name Service (WINS) could be used to offset this disadvantage by resolving single-label names. For more information about WINS, see the [WINS Technical Reference](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736411(v=ws.10)).
+> The Windows Internet Name Service (WINS) could be used to offset this disadvantage by resolving single-label names. For more information about WINS, see the [WINS Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc736411(v=ws.10)).
 
 - When your environment requires multiple primary DNS suffixes, you must configure the DNS suffix search order for all of the Active Directory domains in the forest appropriately.
 
@@ -80,7 +80,7 @@ Using a disjoint namespace can have the following disadvantages:
 
 - You must carefully test all applications for compatibility issues.
 
-For more information about steps that you can take to address these disadvantages, see [Create a Disjoint Namespace](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc755926(v=ws.10)).
+For more information about steps that you can take to address these disadvantages, see [Create a Disjoint Namespace](/previous-versions/windows/it-pro/windows-server-2003/cc755926(v=ws.10)).
 
 ### Planning a namespace transition
 
@@ -88,11 +88,11 @@ Before you modify a namespace, review the following considerations, which apply 
 
 - Manually configured Service Principal Names (SPNs) may no longer match DNS names after a namespace change. This can cause authentication failures.
 
-    For more information, see [Service Logons Fail Due to Incorrectly Set SPNs](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
+    For more information, see [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
 
     - If you use Windows Server 2003-based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base, [The SPN does not appear in the list of services that can be delegated to an account when you try to configure constrained delegation on a computer that is running Windows Server 2003](https://support.microsoft.com/help/936628) (404).
 
-    - If you want to delegate permissions to modify SPNs to subordinate administrators, see [Delegating Authority to Modify SPNs](https://technet.microsoft.com/library/cc772895(WS.10).aspx).
+    - If you want to delegate permissions to modify SPNs to subordinate administrators, see [Delegating Authority to Modify SPNs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770439(v=ws.10)).
 
 - If you use Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL) (known as LDAPS) with a CA in a deployment that has domain controllers that are configured in a disjoint namespace, you must use the appropriate Active Directory domain name and primary DNS suffix when you configure the LDAPS certificates.
 

@@ -54,6 +54,6 @@ BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 ## Additional references  
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
+[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

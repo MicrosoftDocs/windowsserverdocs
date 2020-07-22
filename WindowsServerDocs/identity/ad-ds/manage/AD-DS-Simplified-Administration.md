@@ -49,7 +49,7 @@ Active Directory forest schema extension and domain preparation now integrate in
   
 Adprep.exe remains on the DVD for separate forest and domain preparation. The version of the tool included with Windows Server 2012 is backwards compatible to Windows Server 2008 x64 and Windows Server 2008 R2. Adprep.exe also supports remote forestprep and domainprep, just like the ADDSDeployment-based domain controller configuration tools.  
   
-For information about Adprep and previous operating system forest preparation, see [Running Adprep (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd464018(WS.10).aspx).  
+For information about Adprep and previous operating system forest preparation, see [Running Adprep (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).  
 
 ## Server Manager AD DS Integration
 
@@ -75,7 +75,7 @@ Windows Server 2008 R2 introduced the Active Directory Recycle Bin, which recove
   
 Windows Server 2012 enhances the existing Windows PowerShell-based restore capabilities with a new graphical interface in the Active Directory Administrative Center. This allows administrators to enable the Recycle Bin and locate or restore deleted objects in the domain contexts of the forest, all without directly running Windows PowerShell cmdlets. The Active Directory Administrative Center and Active Directory Recycle Bin still use Windows PowerShell under the covers, so previous scripts and procedures are still valuable.  
   
-For information about the Active Directory [Recycle Bin, see Active Directory Recycle Bin Step-by-Step Guide (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd392261(WS.10).aspx).  
+For information about the Active Directory [Recycle Bin, see Active Directory Recycle Bin Step-by-Step Guide (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)).  
   
 ## Active Directory Administrative Center Fine-Grained Password Policy
 
@@ -85,7 +85,7 @@ Windows Server 2008 introduced the Fine-Grained Password policy, which allows ad
   
 Windows Server 2012 brings a graphical interface to Fine-Grained Password Policy. The Active Directory Administrative Center is the home of this new dialog, which brings simplified FGPP management to all administrators.  
   
-For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](https://technet.microsoft.com/library/cc770842(WS.10).aspx).  
+For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).  
   
 ## Active Directory Administrative Center Windows PowerShell History Viewer
 
@@ -101,7 +101,7 @@ While the Active Directory module contains over a hundred cmdlets, the learning 
   
 Windows Server 2012 adds additional Active Directory replication cmdlets to the Active Directory Windows PowerShell module. These allow configuration of new or existing sites, subnets, connections, site links, and bridges. They also return Active Directory replication metadata, replication status, queuing, and up-to-dateness version vector information. The introduction of the replication cmdlets - combined with the deployment and other existing AD DS cmdlets - makes it possible to administer a forest using Windows PowerShell alone. This creates new opportunities for administrators wishing to provision and manage Windows Server 2012 without a graphical interface, which then reduces the operating system's attack surface and servicing requirements. This is especially important when deploying servers into high security networks such as Secret Internet Protocol Router (SIPR) and corporate DMZs.  
   
-For more information about AD DS site topology and replication, see the [Windows Server Technical Reference](https://technet.microsoft.com/library/cc739127(WS.10).aspx).  
+For more information about AD DS site topology and replication, see the [Windows Server Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc739127(v=ws.10)).  
 
 ## RID Management and Issuance Improvements
 
@@ -115,7 +115,7 @@ Windows Server 2012 addresses a number of RID issuance and management issues unc
 - Artificial RID ceilings are now enforced and logged when the global RID space is low, allowing an administrator to take action before the global space is exhausted
 - The global RID space can now be increased by one bit, doubling the size to 2<sup>31</sup> (2,147,483,648 SIDs)  
 
-For more information about RIDs and the RID Master, review [How Security Identifiers Work](https://technet.microsoft.com/library/cc778824(WS.10).aspx).  
+For more information about RIDs and the RID Master, review [How Security Identifiers Work](/previous-versions/windows/it-pro/windows-server-2003/cc778824(v=ws.10)).  
   
 ## AD DS Role Deployment and Management Architecture
 

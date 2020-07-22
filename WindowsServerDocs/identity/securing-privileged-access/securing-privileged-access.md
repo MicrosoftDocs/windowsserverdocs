@@ -56,11 +56,11 @@ The roadmap is designed to maximize the use of Microsoft technologies that you a
 
 The roadmap of Microsoft recommendations is broken into 3 phases:
 
-* [Phase 1: First 30 days](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-1-quick-wins-with-minimal-operational-complexity)
+* [Phase 1: First 30 days](#phase-1-quick-wins-with-minimal-operational-complexity)
    * Quick wins with meaningful positive impact.
-* [Phase 2: 90 days](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-2-significant-incremental-improvements)
+* [Phase 2: 90 days](#phase-2-significant-incremental-improvements)
    * Significant incremental improvements.
-* [Phase 3: Ongoing](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-3-security-improvement-and-sustainment)
+* [Phase 3: Ongoing](#phase-3-security-improvement-and-sustainment)
    * Security improvement and sustainment.
 
 The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation. 

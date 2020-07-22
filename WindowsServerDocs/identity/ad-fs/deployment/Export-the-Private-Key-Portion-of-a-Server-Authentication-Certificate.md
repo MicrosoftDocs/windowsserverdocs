@@ -52,8 +52,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
   
 [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
-[Certificate Requirements for Federation Servers](https://technet.microsoft.com/library/dd807040.aspx)  
+[Certificate Requirements for Federation Servers](../design/certificate-requirements-for-federation-servers.md)  
   
-[Certificate Requirements for Federation Server Proxies](https://technet.microsoft.com/library/dd807054.aspx)  
+[Certificate Requirements for Federation Server Proxies](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807054(v=ws.11))  
   
-

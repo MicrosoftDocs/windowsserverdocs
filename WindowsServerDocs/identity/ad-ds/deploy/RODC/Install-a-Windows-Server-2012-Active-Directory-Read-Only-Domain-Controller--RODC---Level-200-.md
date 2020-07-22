@@ -58,7 +58,7 @@ The diagram below illustrates the Active Directory Domain Services configuration
   
 You perform the staging operation of a read-only domain controller computer account by opening the Active Directory Administrative Center (**Dsac.exe**). Click the name of the domain in the navigation pane. Double-click **Domain Controllers** in the management list. Click **Pre-create a Read-only domain controller account** in the tasks pane.  
   
-For more information about the Active Directory Administrative Center, see [Advanced AD DS Management Using Active Directory Administrative Center &#40;Level 200&#41;](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) and review [Active Directory Administrative Center: Getting Started](https://technet.microsoft.com/library/dd560651(WS.10).aspx).  
+For more information about the Active Directory Administrative Center, see [Advanced AD DS Management Using Active Directory Administrative Center &#40;Level 200&#41;](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) and review [Active Directory Administrative Center: Getting Started](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560651(v=ws.10)).  
   
 If you have experience creating read-only domain controllers, you will discover that the installation wizard has the same graphical interface as seen when using the older Active Directory Users and Computers snap-in from Windows Server 2008 and uses the same code, which includes exporting the configuration in the unattend file format used by the obsolete dcpromo.  
   
@@ -688,4 +688,3 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
   
 The **Results** page shows the success or failure of the promotion and any important administrative information. The domain controller will automatically reboot after 10 seconds.  
   
-
