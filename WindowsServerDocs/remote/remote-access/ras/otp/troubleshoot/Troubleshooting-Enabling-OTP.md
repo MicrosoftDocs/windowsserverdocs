@@ -93,7 +93,5 @@ The Certificate Templates MMC snap-in in Windows Server 2003 doesn't allow you t
   
 **Solution**  
   
-Install Certificate Templates snap-in on a post-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](https://technet.microsoft.com/library/cc732445.aspx).  
+Install Certificate Templates snap-in on a post-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732445(v=ws.11)).  
   
-
-

@@ -13,7 +13,7 @@ ms.technology: web-app-proxy
 
 >Applies To: Windows Server 2016
 
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**  
   
 This topic describes how to publish applications through Web Application Proxy using Active Directory Federation Services (AD FS) preauthentication.  
   
@@ -139,11 +139,11 @@ Add-WebApplicationProxyApplication
 ## <a name="BKMK_1.2"></a>Publish an Integrated Windows authenticated-based Application for Web Browser Clients  
 Web Application Proxy can be used to publish applications that uses Integrated Windows authentication; that is, Web Application Proxy performs preauthentication as required, and can then perform SSO to the published application that uses Integrated Windows authentication. To publish an application that uses Integrated Windows authentication you must add a non-claims-aware relying party trust for the application to the Federation Service.  
   
-To allow Web Application Proxy to perform single sign-on (SSO) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](https://technet.microsoft.com/library/dn383648.aspx#BKMK_AD).  
+To allow Web Application Proxy to perform single sign-on (SSO) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)#BKMK_AD).  
   
-To allow users to access applications that use Integrated Windows authentication, the Web Application Proxy server must be able to provide delegation for users to the published application. You can do this on the domain controller for any application. You can also do this on the backend server if it is running on  Windows Server 2012 R2  or  Windows Server 2012 . For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx).  
+To allow users to access applications that use Integrated Windows authentication, the Web Application Proxy server must be able to provide delegation for users to the published application. You can do this on the domain controller for any application. You can also do this on the backend server if it is running on  Windows Server 2012 R2  or  Windows Server 2012 . For more information, see [What's New in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)).  
   
-For a walkthrough of how to configure Web Application Proxy to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](https://technet.microsoft.com/library/dn280943.aspx#BKMK_3).  
+For a walkthrough of how to configure Web Application Proxy to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280943(v=ws.11)#BKMK_3).  
   
 When using Integrated Windows authentication to backend servers, the authentication between Web Application Proxy and the published application is not claims-based, instead it uses Kerberos constrained delegation to authenticate end users to the application. The general flow is described below:  
   
@@ -220,10 +220,10 @@ Add-WebApplicationProxyApplication
 ```  
   
 ## <a name="BKMK_1.3"></a>Publish an Application that uses MS-OFBA  
-Web Application Proxy supports access from Microsoft Office clients such as Microsoft Word that access documents and data on backend servers. The only difference between these applications and a standard browser is that the redirection to the STS is done not via regular HTTP redirection but with special MS-OFBA headers as specified in: [https://msdn.microsoft.com/library/dd773463(v=office.12).aspx](https://msdn.microsoft.com/library/dd773463(v=office.12).aspx). Backend application may be claims or IWA.   
+Web Application Proxy supports access from Microsoft Office clients such as Microsoft Word that access documents and data on backend servers. The only difference between these applications and a standard browser is that the redirection to the STS is done not via regular HTTP redirection but with special MS-OFBA headers as specified in: [https://msdn.microsoft.com/library/dd773463(v=office.12).aspx](/openspecs/sharepoint_protocols/ms-ofba/868d129f-f1b5-46bc-9385-4af58610dbbe). Backend application may be claims or IWA.   
 To publish an application for clients that use MS-OFBA, you must add a relying party trust for the application to the Federation Service. Depending on the application, you can use claims-based authentication or Integrated Windows authentication. Therefore, you must add the relevant relying party trust depending on the application.  
   
-To allow Web Application Proxy to perform single sign-on (SSO) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](https://technet.microsoft.com/library/dn383648.aspx#BKMK_AD).  
+To allow Web Application Proxy to perform single sign-on (SSO) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)#BKMK_AD).  
   
 There are no additional planning steps if the application uses claims-based authentication. If the application used Integrated Windows authentication, see [Publish an Integrated Windows authenticated-based Application for Web Browser Clients](../web-application-proxy/../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md#BKMK_1.2).  
   
@@ -252,7 +252,7 @@ The steps to publish an application that uses MS-OFBA are identical to the steps
   
 ## Publish an Application that uses HTTP Basic  
 
-HTTP Basic is the authorization protocol used by many protocols, to connect rich clients, including smartphones, with your Exchange mailbox. For more information on HTTP Basic, see [RFC 2617](https://www.ietf.org/rfc/rfc2617.txt). Web Application Proxy traditionally interacts with AD FS using redirections; most rich clients don't support cookies or state management. In this way Web Application Proxy enables the HTTP app to receive a non-claims relying party trust for the application to the Federation Service. See [Plan Active Directory](https://technet.microsoft.com/library/dn383648.aspx#BKMK_AD).  
+HTTP Basic is the authorization protocol used by many protocols, to connect rich clients, including smartphones, with your Exchange mailbox. For more information on HTTP Basic, see [RFC 2617](https://www.ietf.org/rfc/rfc2617.txt). Web Application Proxy traditionally interacts with AD FS using redirections; most rich clients don't support cookies or state management. In this way Web Application Proxy enables the HTTP app to receive a non-claims relying party trust for the application to the Federation Service. See [Plan Active Directory](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)#BKMK_AD).  
   
 The authentication flow for clients that use HTTP Basic is described below and in this diagram:  
   
@@ -284,7 +284,7 @@ The following procedure explains how to publish HTTP basic applications.
   
 4.  On the **Supported Clients** page, select **HTTP Basic** and then click **Next**.  
   
-    If you wish to enable access to the Exchange only from workplace joined devices, select the **Enable access only for workplace joined devices** box. For more information see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](https://technet.microsoft.com/library/dn280945.aspx).  
+    If you wish to enable access to the Exchange only from workplace joined devices, select the **Enable access only for workplace joined devices** box. For more information see [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../../identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md).  
   
 5.  On the **Relying Party** page, in the list of relying parties select the relying party for the application that you want to publish, and then click **Next**. Note that this list contains only on-claims relying parties.  
   
@@ -336,7 +336,7 @@ Add-WebApplicationProxyApplication
 ## <a name="BKMK_1.4"></a>Publish an Application that uses OAuth2 such as a Microsoft Store App  
 To publish an application for Microsoft Store apps, you must add a relying party trust for the application to the Federation Service.  
   
-To allow Web Application Proxy to perform single sign-on (SSO) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](https://technet.microsoft.com/library/dn383648.aspx#BKMK_AD).  
+To allow Web Application Proxy to perform single sign-on (SSO) and to perform credentials delegation using Kerberos constrained delegation, the Web Application Proxy server must be joined to a domain. See [Plan Active Directory](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)#BKMK_AD).  
   
 > [!NOTE]  
 > Web Application Proxy supports publishing only for Microsoft Store apps that use the OAuth 2.0 protocol.  
@@ -361,7 +361,7 @@ The authentication flow for clients that use Microsoft Store apps is described b
   
 4.  The app sends an HTTPS request to the AD FS server.  
   
-5.  The app uses the web authentication broker to generate a dialog box in which the user enters credentials to authenticate to the AD FS server. For information about web authentication broker, see [Web authentication broker](https://msdn.microsoft.com/library/windows/apps/hh750287.aspx).  
+5.  The app uses the web authentication broker to generate a dialog box in which the user enters credentials to authenticate to the AD FS server. For information about web authentication broker, see [Web authentication broker](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).  
   
 6.  After successful authentication, the AD FS server creates a combo token that contains the OAuth token and the edge token and sends the token to the app.  
   
@@ -435,19 +435,17 @@ Add-WebApplicationProxyApplication
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
+-   [Troubleshooting Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))  
   
--   [Publish Applications through Web Application Proxy](https://technet.microsoft.com/library/dn383659.aspx)  
+-   [Publish Applications through Web Application Proxy](/previous-versions/orphan-topics/ws.11/dn383659(v=ws.11))  
   
--   [Planning to Publish Applications Using Web Application Proxy](https://technet.microsoft.com/library/dn383650.aspx)  
+-   [Planning to Publish Applications Using Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11))  
   
--   [Web Application Proxy Walkthrough Guide](https://technet.microsoft.com/library/dn280944.aspx)  
+-   [Web Application Proxy Walkthrough Guide](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))  
   
--   [Web Application Proxy Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn283404.aspx)  
+-   [Web Application Proxy Cmdlets in Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))  
   
--   [Add-WebApplicationProxyApplication](https://technet.microsoft.com/library/dn283409.aspx)  
+-   [Add-WebApplicationProxyApplication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))  
   
--   [Set-WebApplicationProxyConfiguration](https://technet.microsoft.com/library/dn283406.aspx)  
+-   [Set-WebApplicationProxyConfiguration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))  
   
-
-

@@ -23,9 +23,9 @@ The following table outlines which of these new features are supported in a VDI 
 
 |  VDI collection  type               |  Managed  pooled |  Managed  personal |  Unmanaged  pooled                                     |  Unmanaged  personal                                    |
 |-------------------------------------|------------------|--------------------|--------------------------------------------------------|--------------------------------------------------------|
-| [Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)                    | Yes              | Yes                | Yes                                                    | Yes                                                    |
-| [Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)                        | Yes              | Yes                | Yes                                                    | Yes                                                    |
-| [Remote Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)             | No               | No                 | No                                                     | No                                                     |
+| [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard)                    | Yes              | Yes                | Yes                                                    | Yes                                                    |
+| [Device Guard](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)                        | Yes              | Yes                | Yes                                                    | Yes                                                    |
+| [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard)             | No               | No                 | No                                                     | No                                                     |
 | [Shielded & Encryption Supported VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | No               | No                 | Encryption supported VMs with additional configuration | Encryption supported VMs with additional configuration |
 
 ## Remote Credential Guard:
@@ -41,4 +41,3 @@ Remote Credential Guard is only supported for direct connections to the target m
 For leveraging Encryption Supported VMs:
 - Use an unmanaged collection and a provisioning technology outside of the Remote Desktop Services collection creation process to provision the virtual machines. 
 - User Profile Disks are not supported as they rely on differential disks 
-

@@ -48,9 +48,9 @@ This section explains how to plan for your network, including:
   
     DirectAccess uses IPv6 with IPsec to create a secure connection between DirectAccess client computers and the internal corporate network. However, DirectAccess does not necessarily require connectivity to the IPv6 Internet or native IPv6 support on internal networks. Instead, it automatically configures and uses IPv6 transition technologies to tunnel IPv6 traffic across the IPv4 Internet (by using 6to4, Teredo, or IP-HTTPS) and across your IPv4-only intranet (by using NAT64 or ISATAP). For an overview of these transition technologies, see the following resources:  
   
-    - [IPv6 Transition Technologies](https://technet.microsoft.com/library/bb726951.aspx)  
+    - [IPv6 Transition Technologies](/previous-versions//bb726951(v=technet.10))  
   
-    - [IP-HTTPS Tunneling Protocol Specification](https://msdn.microsoft.com/library/dd358571(PROT.10).aspx)  
+    - [IP-HTTPS Tunneling Protocol Specification](/previous-versions//bb726951(v=technet.10))  
   
 3. Configure required adapters and addresses according to the following table. For deployments that use a single network adapter and are set up behind a NAT device, configure your IP addresses by using only the **Internal network adapter** column.  
   
@@ -165,7 +165,7 @@ The certification authority (CA) requirements for each scenario are summarized i
 ||**Recommended**<br/><br/>Public CA:<br/><br/>It is recommended to use a public CA to issue the IP-HTTPS certificate. This ensures that the CRL distribution point is available externally.|  
   
 ### 1.3.1 Plan computer certificates for IPsec authentication  
-If you are using certificate-based IPsec authentication, the DirectAccess server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to configure Group Policy-based automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](https://technet.microsoft.com/library/cc770357.aspx).  
+If you are using certificate-based IPsec authentication, the DirectAccess server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to configure Group Policy-based automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770357(v=ws.10)).  
   
 This certificate has the following requirements:  
   
@@ -361,7 +361,7 @@ Following are the requirements for DNS when you deploy DirectAccess.
 -   For DirectAccess clients, you must use a DNS server that is running  Windows Server 2012 R2 ,  Windows Server 2012 ,  Windows Server 2008 R2 ,  Windows Server 2008 , or any other DNS server that supports IPv6.  
   
     > [!NOTE]  
-    > It is not recommended that you use DNS servers that are running Windows Server 2003 when you are deploying DirectAccess. Although Windows Server 2003 DNS servers do support IPv6 records, Windows Server 2003 is no longer supported by Microsoft. In addition, you should not deploy DirectAccess if your domain controllers are running Windows Server 2003 due to an issue with the File Replication Service. For more information, see [DirectAccess Unsupported Configurations](https://technet.microsoft.com/library/dn464274.aspx).  
+    > It is not recommended that you use DNS servers that are running Windows Server 2003 when you are deploying DirectAccess. Although Windows Server 2003 DNS servers do support IPv6 records, Windows Server 2003 is no longer supported by Microsoft. In addition, you should not deploy DirectAccess if your domain controllers are running Windows Server 2003 due to an issue with the File Replication Service. For more information, see [DirectAccess Unsupported Configurations](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn464274(v=ws.11)).  
   
 -   Use a DNS server that supports dynamic updates. You can use DNS servers that do not support dynamic updates, but you must manually update entries on these servers.  
   
@@ -677,5 +677,3 @@ The Remote Access Management console will display the following error message: *
   
 -   [Step 2: Plan DirectAccess Deployments](da-adv-plan-s2-deployments.md)  
   
-
-

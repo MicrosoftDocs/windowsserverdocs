@@ -84,7 +84,7 @@ Hardware requirements for this scenario include the following:
   
 ### Server requirements  
   
--   A computer that meets the hardware requirements for  Windows Server 2016. For more information, see Windows Server 2016 [System Requirements](https://technet.microsoft.com/windows-server-docs/get-started/system-requirements-and-installation).  
+-   A computer that meets the hardware requirements for  Windows Server 2016. For more information, see Windows Server 2016 [System Requirements](../directaccess/prerequisites-for-deploying-directaccess.md).  
   
 -   The server must have at least one network adapter installed and enabled. There should be only one adapter connected to the corporate internal network, and only one connected to the external network (Internet).  
   
@@ -123,4 +123,3 @@ Software requirements for this scenario include the following:
   
 -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. Computers should not be included in more than one security group that includes DirectAccess clients. If clients are included in multiple groups, name resolution for client requests will not work as expected.  
   
-

@@ -131,7 +131,7 @@ To deploy Remote Access, you need to configure the Remote Access server with the
   
 5.  On the **Authentication** page:  
   
-    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two-factor authentication, click **Two-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/library/hh831379.aspx).  
+    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two-factor authentication, click **Two-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831379(v=ws.11)).  
   
     -   For multisite and two-factor authentication deployments, you must use computer certificate authentication. Select the **Use computer certificates** check box to use computer certificate authentication, and select the IPsec root certificate.  
   
@@ -239,5 +239,3 @@ Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connecti
   
 -   [Step 3: Verify the Deployment](Step-3-Verify-the-Deployment.md)  
   
-
-

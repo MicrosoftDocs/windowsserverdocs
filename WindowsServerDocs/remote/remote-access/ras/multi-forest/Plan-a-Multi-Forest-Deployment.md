@@ -21,7 +21,7 @@ Before you begin deploying this scenario, review this list for important require
 -   Two-way trust is required.  
   
 ## Plan trust between forests  
-When you decide to enable access to resources from a new forest, allow clients from the new forest to use DirectAccess, or add Remote Access servers from the new forest as entry points to the Remote Access deployment, you must make sure that a full trust; that is, a two-way transitive trust, is configured between the two forests, see [Trust types](https://technet.microsoft.com/library/cc775736.aspx). Full trust between forests is a prerequisite for a multi-forest deployment to allow administrators to perform operations such as editing GPOs in the new forest, using security groups from new forest as the client security group, performing remote calls (WinRM, RPC) to computers in the new forest, and authenticating remote clients from the new forest.  
+When you decide to enable access to resources from a new forest, allow clients from the new forest to use DirectAccess, or add Remote Access servers from the new forest as entry points to the Remote Access deployment, you must make sure that a full trust; that is, a two-way transitive trust, is configured between the two forests, see [Trust types](/previous-versions/windows/it-pro/windows-server-2003/cc775736(v=ws.10)). Full trust between forests is a prerequisite for a multi-forest deployment to allow administrators to perform operations such as editing GPOs in the new forest, using security groups from new forest as the client security group, performing remote calls (WinRM, RPC) to computers in the new forest, and authenticating remote clients from the new forest.  
   
 ## Plan Remote Access administrator permissions  
 When you configure Remote Access it updates and sometimes creates GPOs in each of the domains that contain Remote Access servers or clients. In a multi-forest environment, as in single-forest environments, the Remote Access administrator must have permissions to write and modify DirectAccess GPOs and their security filters and optionally have permissions to create links for the DirectAccess GPOs in all involved forests. These permissions are required regardless of the forest to which the Remote Access administrator belongs.  
@@ -47,5 +47,3 @@ When using IPsec machine certificate authentication, all client and server compu
 ## Plan OTP exemptions  
 If you are using DirectAccess OTP authentication, note that the OTP exemption security group is limited to users of a single forest. This is because each security group can contain only users from a single forest and only one such security group can be configured.  
   
-
-

@@ -60,7 +60,7 @@ This deployment does not provide instructions for:
 - Dynamic Host Configuration Protocol (DHCP).
 - Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
-- Internet connectivity or Conditional Access for Internet connectivity using Azure AD. For details, see [Conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+- Internet connectivity or Conditional Access for Internet connectivity using Azure AD. For details, see [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## Next steps
 

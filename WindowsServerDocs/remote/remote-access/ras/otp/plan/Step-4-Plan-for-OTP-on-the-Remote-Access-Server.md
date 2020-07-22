@@ -35,7 +35,5 @@ When OTP authentication is enabled, the option to enable the use of smart cards 
   
 ## <a name="BKMK_Links"></a>See also  
   
--   [Configure DirectAccess with OTP authentication](https://technet.microsoft.com/windows-server-docs/networking/remote-access/ras/otp/deploy-ra-otp)  
+-   [Configure DirectAccess with OTP authentication](../deploy-ra-otp.md)  
   
-
-
