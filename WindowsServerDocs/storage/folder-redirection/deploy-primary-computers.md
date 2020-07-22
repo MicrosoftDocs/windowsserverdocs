@@ -112,4 +112,4 @@ Here's how to test primary computer functionality:
 - [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md)
 - [Deploy Roaming User Profiles](deploy-roaming-user-profiles.md)
 - [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
-- [Digging a little deeper into Windows 8 Primary Computer](https://blogs.technet.com/b/askds/archive/2012/10/23/digging-a-little-deeper-into-windows-8-primary-computer.aspx)
+- [Digging a little deeper into Windows 8 Primary Computer](/archive/blogs/askds/digging-a-little-deeper-into-windows-8-primary-computer)

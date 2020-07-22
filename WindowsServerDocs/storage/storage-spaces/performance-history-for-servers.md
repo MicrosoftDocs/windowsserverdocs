@@ -80,7 +80,7 @@ The `memory.*` series are (COMING SOON).
 
 ## Usage in PowerShell
 
-Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode) cmdlet:
+Use the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) cmdlet:
 
 ```PowerShell
 Get-ClusterNode <Name> | Get-ClusterPerf

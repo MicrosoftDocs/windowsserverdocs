@@ -20,7 +20,7 @@ If you add a brand new disk to your PC and it doesn't show up in File Explorer, 
 
 ## To initialize new disks
 
-Here's how to initialize a new disk using Disk Management. If you prefer using PowerShell, use the [initialize-disk](https://docs.microsoft.com/powershell/module/storage/initialize-disk) cmdlet instead.
+Here's how to initialize a new disk using Disk Management. If you prefer using PowerShell, use the [initialize-disk](/powershell/module/storage/initialize-disk) cmdlet instead.
 
 1. Open Disk Management with administrator permissions.
  

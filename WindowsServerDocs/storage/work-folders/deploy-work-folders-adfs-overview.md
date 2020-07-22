@@ -20,7 +20,7 @@ Work Folders is a component introduced in Windows Server 2012 R2 that allows inf
 To enable users to sync their Work Folders across the Internet, you need to publish Work Folders through a reverse proxy, making Work Folders available externally on the Internet. Web Application Proxy, which is included in AD FS, is one option that you can use to provide reverse proxy functionality. Web Application Proxy pre-authenticates access to the Work Folders web application by using AD FS, so that users on any device can access Work Folders from outside the corporate network. 
 
 > [!NOTE]
->   The instructions covered in this section are for a Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+>   The instructions covered in this section are for a Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn747208(v=ws.11)).
   
 These topics provide the following:  
   
@@ -78,4 +78,3 @@ To perform the deployment by using the Windows Server user interface, follow the
 [Designing a Work Folders Implementation](Plan-Work-Folders.md)  
 [Deploying Work Folders](Deploy-Work-Folders.md)  
   
-

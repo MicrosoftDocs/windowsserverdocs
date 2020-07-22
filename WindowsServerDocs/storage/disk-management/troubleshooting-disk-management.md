@@ -115,7 +115,7 @@ To bring a disk that is Offline and Missing back online:
 **To bring a disk that is Offline and is still named Disk \# (not Missing) back online, try one or more of the following procedures:**
 
 1. In Disk Management, select and hold (or right-click) the disk and then click **Reactivate Disk** to bring the disk back online. If the disk status remains **Offline**, check the cables and disk controller, and make sure that the physical disk is healthy. Correct any problems and try to reactivate the disk again. If the disk reactivation succeeds, any volumes on the disk should automatically return to the **Healthy** status.
-2. In Event Viewer, check the event logs for any disk-related errors such as "No good config copies". If the event logs contain this error, contact [Microsoft Product Support Services](https://msdn.microsoft.com/library/aa263468(v=vs.60).aspx).
+2. In Event Viewer, check the event logs for any disk-related errors such as "No good config copies". If the event logs contain this error, contact [Microsoft Product Support Services](/previous-versions/visualstudio/visual-basic-6/aa263468(v=vs.60)).
 
 3. Try moving the disk to another computer. If you can get the disk to go **Online** on another computer, the problem is most likely due to the configuration of the computer on which the disk does not go **Online**.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy Storage Spaces on a stand-alone server
 description: Describes how to deploy Storage Spaces on a stand-alone Windows Server 2012-based server.
 ms.prod: windows-server 
@@ -17,7 +17,7 @@ This topic describes how to deploy Storage Spaces on a stand-alone server. For i
 
 To create a storage space, you must first create one or more storage pools. A storage pool is a collection of physical disks. A storage pool enables storage aggregation, elastic capacity expansion, and delegated administration.
 
-From a storage pool, you can create one or more virtual disks. These virtual disks are also referred to as *storage spaces*. A storage space appears to the Windows operating system as a regular disk from which you can create formatted volumes. When you create a virtual disk through the File and Storage Services user interface, you can configure the resiliency type (simple, mirror, or parity), the provisioning type (thin or fixed), and the size. Through Windows PowerShell, you can set additional parameters such as the number of columns, the interleave value, and which physical disks in the pool to use. For information about these additional parameters, see [New-VirtualDisk](https://docs.microsoft.com/powershell/module/storage/new-virtualdisk?view=win10-ps) and [What are columns and how does Storage Spaces decide how many to use?](https://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx%23what_are_columns_and_how_does_storage_spaces_decide_how_many_to_use) in Storage Spaces Frequently Asked Questions (FAQ).
+From a storage pool, you can create one or more virtual disks. These virtual disks are also referred to as *storage spaces*. A storage space appears to the Windows operating system as a regular disk from which you can create formatted volumes. When you create a virtual disk through the File and Storage Services user interface, you can configure the resiliency type (simple, mirror, or parity), the provisioning type (thin or fixed), and the size. Through Windows PowerShell, you can set additional parameters such as the number of columns, the interleave value, and which physical disks in the pool to use. For information about these additional parameters, see [New-VirtualDisk](/powershell/module/storage/new-virtualdisk?view=win10-ps) and [What are columns and how does Storage Spaces decide how many to use?](https://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx%23what_are_columns_and_how_does_storage_spaces_decide_how_many_to_use) in Storage Spaces Frequently Asked Questions (FAQ).
 
 >[!NOTE]
 >You can't use a storage space to host the Windows operating system.
@@ -31,7 +31,7 @@ The following figure illustrates the Storage Spaces workflow.
 **Figure 1: Storage Spaces workflow**
 
 >[!NOTE]
->This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6).
+>This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [PowerShell](/powershell/scripting/powershell-scripting?view=powershell-6).
 
 ## Prerequisites
 
@@ -260,6 +260,6 @@ Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Pas
 ## Additional information
 
 - [Storage Spaces](overview.md)
-- [Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/index?view=win10-ps)
-- [Deploy Clustered Storage Spaces](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
+- [Storage Cmdlets in Windows PowerShell](/powershell/module/storage/index?view=win10-ps)
+- [Deploy Clustered Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
 - [Storage Spaces Frequently Asked Questions (FAQ)](https://social.technet.microsoft.com/wiki/contents/articles/11382.storage-spaces-frequently-asked-questions-faq.aspx)

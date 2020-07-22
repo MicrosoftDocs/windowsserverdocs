@@ -31,7 +31,7 @@ Here's an overview video of using Storage Replica in Windows Admin Center.
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.<br>
-If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](#add-azure-vm-expressroute), a [Site-to-Site VPN gateway connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
+If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](#add-azure-vm-expressroute), a [Site-to-Site VPN gateway connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 > [!IMPORTANT]
@@ -378,7 +378,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter).  
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).  
 
 3.  To move the replication direction from one site, use the `Set-SRPartnership` cmdlet.  
 
@@ -436,14 +436,14 @@ The process is, at a high level:
 
 ## <a name="add-azure-vm-expressroute"></a>Adding an Azure VM connected to your network via ExpressRoute
 
-1. [Create an ExpressRoute in the Azure portal](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the virtual network name.
+1. [Create an ExpressRoute in the Azure portal](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the virtual network name.
 ![Azure portal showing the resource group added with the ExpressRoute](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
     
     **Figure 4: The resources associated with an ExpressRoute - take note of the virtual network name**
-1. [Create a new resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
-1. [Add a network security group](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
+1. [Create a new resource group](/azure/azure-resource-manager/resource-group-portal).
+1. [Add a network security group](/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
 <br><br>Add any inbound and outbound security rules you need to the network security group. For example, you might want to allow Remote Desktop access to the VM.
-1. [Create an Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
+1. [Create an Azure VM](/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
     - **Public IP address**: None
     - **Virtual network**: Select the virtual network you took note of from the resource group added with the ExpressRoute.
     - **Network security group (firewall)**: Select the network security group you created previously.

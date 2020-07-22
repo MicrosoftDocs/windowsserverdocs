@@ -20,10 +20,10 @@ The [default Data Deduplication job schedules](understand.md#job-info) are desig
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication schedule
 Data Deduplication jobs are scheduled via Windows Task Scheduler and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets that make scheduling easy.
-* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx) shows the current scheduled jobs.
-* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx) creates a new scheduled job.
-* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) modifies an existing scheduled job.
-* [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) removes a scheduled job.
+* [`Get-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) shows the current scheduled jobs.
+* [`New-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) creates a new scheduled job.
+* [`Set-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) modifies an existing scheduled job.
+* [`Remove-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) removes a scheduled job.
 
 The most common reason for changing when Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Data Deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weekends and after 7:00 PM on weeknights. To change the schedule, run the following PowerShell cmdlets in an Administrator context.
 
@@ -174,8 +174,8 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 ### <a id="modifying-volume-settings-how-to-toggle"></a>Toggling volume settings
 You can set the volume-wide default settings for Data Deduplication via the [usage type](understand.md#usage-type) that you select when you enable a deduplication for a volume. Data Deduplication includes cmdlets that make editing volume-wide settings easy:
 
-* [`Get-DedupVolume`](https://technet.microsoft.com/library/hh848448.aspx)
-* [`Set-DedupVolume`](https://technet.microsoft.com/library/hh848438.aspx)
+* [`Get-DedupVolume`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11))
+* [`Set-DedupVolume`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11))
 
 The main reasons to modify the volume settings from the selected usage type are to improve read performance for specific files (such as multimedia or other file types that are already compressed) or to fine-tune Data Deduplication for better optimization for your specific workload. The following example shows how to modify the Data Deduplication volume settings for a workload that most closely resembles a general purpose file server workload, but uses large files that change frequently.
 
@@ -270,7 +270,7 @@ The main reasons to modify the volume settings from the selected usage type are 
 </table>
 
 ## <a id="modifying-dedup-system-settings"></a>Modifying Data Deduplication system-wide settings
-Data Deduplication has additional system-wide settings that can be configured via [the registry](https://technet.microsoft.com/library/cc755256(v=ws.11).aspx). These settings apply to all of the jobs and volumes that run on the system. Extra care must be given whenever editing the registry.
+Data Deduplication has additional system-wide settings that can be configured via [the registry](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755256(v=ws.11)). These settings apply to all of the jobs and volumes that run on the system. Extra care must be given whenever editing the registry.
 
 For example, you may want to disable full Garbage Collection. More information about why this may be useful for your scenario can be found in [Frequently asked questions](#faq-why-disable-full-gc). To edit the registry with PowerShell:
 

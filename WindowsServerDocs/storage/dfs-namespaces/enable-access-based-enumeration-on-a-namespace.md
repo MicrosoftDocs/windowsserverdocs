@@ -30,7 +30,7 @@ To use access-based enumeration with DFS Namespaces, you must follow these steps
 
 
 > [!WARNING]
-> Access-based enumeration does not prevent users from getting a referral to a folder target if they already know the DFS path. Only the share permissions or the NTFS file system permissions of the folder target (shared folder) itself can prevent users from accessing a folder target. DFS folder permissions are used only for displaying or hiding DFS folders, not for controlling access, making Read access the only relevant permission at the DFS folder level. For more information, see [Using Inherited Permissions with Access-Based Enumeration](https://technet.microsoft.com/library/dd834874(v=ws.11).aspx)
+> Access-based enumeration does not prevent users from getting a referral to a folder target if they already know the DFS path. Only the share permissions or the NTFS file system permissions of the folder target (shared folder) itself can prevent users from accessing a folder target. DFS folder permissions are used only for displaying or hiding DFS folders, not for controlling access, making Read access the only relevant permission at the DFS folder level. For more information, see [Using Inherited Permissions with Access-Based Enumeration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11))
 
 <br />
 You can enable access-based enumeration on a namespace either by using the Windows interface or by using a command line.
@@ -52,7 +52,7 @@ You can enable access-based enumeration on a namespace either by using the Windo
     ```
 
 > [!TIP]
-> To manage access-based enumeration on a namespace by using Windows PowerShell, use the [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx), [Grant-DfsnAccess](https://technet.microsoft.com/library/jj884272.aspx), and [Revoke-DfsnAccess](https://technet.microsoft.com/library/jj884273.aspx) cmdlets. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
+> To manage access-based enumeration on a namespace by using Windows PowerShell, use the [Set-DfsnRoot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11)), [Grant-DfsnAccess](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11)), and [Revoke-DfsnAccess](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11)) cmdlets. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
 You can control which users and groups can view individual DFS folders either by using the Windows interface or by using a command line.
 
@@ -91,13 +91,13 @@ You can control which users and groups can view individual DFS folders either by
 
 | Command | Description |
 |---|---|
-|[Dfsutil property sd deny](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)|Denies a group or user the ability to view the folder.|
-|[Dfsutil property sd reset](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx) |Removes all permissions from the folder.|
-|[Dfsutil property sd revoke](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)| Removes a group or user ACE from the folder. |
+|[Dfsutil property sd deny](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759150(v=ws.11))|Denies a group or user the ability to view the folder.|
+|[Dfsutil property sd reset](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759150(v=ws.11)) |Removes all permissions from the folder.|
+|[Dfsutil property sd revoke](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759150(v=ws.11))| Removes a group or user ACE from the folder. |
 
 ## Additional References
 
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
--   [Installing DFS](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx)
+-   [Installing DFS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11))
 -   [Using Inherited Permissions with Access-Based Enumeration](using-inherited-permissions-with-access-based-enumeration.md)

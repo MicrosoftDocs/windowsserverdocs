@@ -33,7 +33,7 @@ A default 60-minute limit is set for each notification type, but you can change 
 3.  Click **OK**.
 
 > [!Note]
-> To customize time limits that are associated with notifications for a specific quota or file screen, you can use the File Server Resource Manager command-line tools **Dirquota.exe** and **Filescrn.exe**, or use the [File Server Resource Manager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager) cmdlets.
+> To customize time limits that are associated with notifications for a specific quota or file screen, you can use the File Server Resource Manager command-line tools **Dirquota.exe** and **Filescrn.exe**, or use the [File Server Resource Manager](/powershell/module/fileserverresourcemanager/?view=win10-ps) cmdlets.
 
 ## Additional References
 

@@ -60,7 +60,7 @@ In addition, all virtual hard disk (VHD) series, such as `vhd.iops.total`, are a
 
 ## Usage in PowerShell
 
-Use the [Get-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) cmdlet:
+Use the [Get-VM](/powershell/module/hyper-v/get-vm) cmdlet:
 
 ```PowerShell
 Get-VM <Name> | Get-ClusterPerf
