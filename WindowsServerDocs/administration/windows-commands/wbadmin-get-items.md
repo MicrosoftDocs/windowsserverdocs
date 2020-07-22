@@ -51,4 +51,4 @@ wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -ma
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBBackupSet](https://technet.microsoft.com/library/jj902473.aspx) cmdlet
+-   [Get-WBBackupSet](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) cmdlet

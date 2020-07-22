@@ -31,7 +31,7 @@ online disk [noerr]
 
 ### Parameters
 
-For instructions about using this command, see [Reactivate a Missing or Offline Dynamic Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732026(v=ws.11)).
+For instructions about using this command, see [Reactivate a Missing or Offline Dynamic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732026(v=ws.11)).
 
 | Parameter | Description |
 |--|--|

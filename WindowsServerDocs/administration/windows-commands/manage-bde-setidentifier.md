@@ -45,4 +45,4 @@ manage-bde –setidentifier C:
 
 - [manage-bde command](manage-bde.md)
 
-- [BitLocker Recovery Guide](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-recovery-guide-plan)
+- [BitLocker Recovery Guide](/windows/security/information-protection/bitlocker/bitlocker-recovery-guide-plan)

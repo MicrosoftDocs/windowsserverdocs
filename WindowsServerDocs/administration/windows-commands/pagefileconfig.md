@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 >[!IMPORTANT]
 > This command has been deprecated.
 
-Enables an administrator to display and configure a system's paging file Virtual Memory settings. For descriptions and usage information, see [pagefileconfig](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772827(v=ws.10)).
+Enables an administrator to display and configure a system's paging file Virtual Memory settings. For descriptions and usage information, see [pagefileconfig](/previous-versions/orphan-topics/ws.10/cc772827(v=ws.10)).
 
 ## Additional References
 

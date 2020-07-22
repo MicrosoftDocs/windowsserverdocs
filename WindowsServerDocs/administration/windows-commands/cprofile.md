@@ -15,4 +15,4 @@ ms.date: 10/16/2017
 
 Cprofile is deprecated and is not guaranteed to be supported in future releases of Windows.
 
-Terminal Services has been updated to Remote Desktop Services. For more information, see [Welcome to Remote Desktop Services](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds).
+Terminal Services has been updated to Remote Desktop Services. For more information, see [Welcome to Remote Desktop Services](../../remote/remote-desktop-services/welcome-to-rds.md).

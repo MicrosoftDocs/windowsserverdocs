@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 Formats a disk to accept Windows files. You must be a member of the Administrators group to format a hard drive.
 
 > [!NOTE]
-> You can also use the **format** command, with different parameters, from the Recovery Console. For more information about the recovery console, see [Windows Recovery Environment (Windows RE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+> You can also use the **format** command, with different parameters, from the Recovery Console. For more information about the recovery console, see [Windows Recovery Environment (Windows RE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ## Syntax
 
@@ -113,4 +113,4 @@ format a: /v:DATA
 
 ## Additional References
 
-- [Command-Line Syntax Key](https://technet.microsoft.com/library/cc771080.aspx)
+- [Command-Line Syntax Key](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771080(v=ws.11))

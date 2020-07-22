@@ -46,8 +46,8 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<ComputerName>] [/t 
 
 -   Users must be assigned the **Shut down the system** user right to shut down a local or remotely administered computer that is using the **shutdown** command.
 -   Users must be members of the Administrators group to annotate an unexpected shutdown of a local or remotely administered computer. If the target computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. For more information, see:
-    -   [Default local groups](https://technet.microsoft.com/library/cc785098(v=ws.10).aspx)
-    -   [Default groups](https://technet.microsoft.com/library/cc756898(v=ws.10).aspx)
+    -   [Default local groups](/previous-versions/windows/it-pro/windows-server-2003/cc785098(v=ws.10))
+    -   [Default groups](/previous-versions/windows/it-pro/windows-server-2003/cc756898(v=ws.10))
 -   If you want to shut down more than one computer at a time, you can call **shutdown** for each computer by using a script, or you can use **shutdown** **/i** to display the Remote Shutdown Dialog box.
 -   If you specify major and minor reason codes, you must first define these reason codes on each computer where you plan to use the reasons. If the reason codes are not defined on the target computer, Shutdown Event Tracker cannot log the correct reason text.
 -   Remember to indicate that a shutdown is planned by using the **p:** parameter. Omitting **p:** indicates that a shutdown is unplanned. If you type **p:** followed by the reason code for an unplanned shutdown, the command will not carry out the shutdown. Conversely, if you omit **p:** and type in the reason code for a planned shutdown, the command will not carry out the shutdown.

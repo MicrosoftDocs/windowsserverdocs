@@ -59,5 +59,5 @@ tlntadmn -s
 ```
 
 ## Additional References
--   [telnet Operations Guide](https://technet.microsoft.com/library/cc753164(v=ws.10).aspx)
+-   [telnet Operations Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753164(v=ws.10))
 - [Command-Line Syntax Key](command-line-syntax-key.md)

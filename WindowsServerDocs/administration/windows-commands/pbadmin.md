@@ -18,7 +18,7 @@ ms.date: 10/16/2017
 >[!IMPORTANT]
 > This command has been deprecated.
 
-Administers phone books. Used without parameters, pbadmin starts Phone Book Administrator. For descriptions and usage information, see [pbadmin](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc755767(v=ws.10)).
+Administers phone books. Used without parameters, pbadmin starts Phone Book Administrator. For descriptions and usage information, see [pbadmin](/previous-versions/orphan-topics/ws.10/cc755767(v=ws.10)).
 
 ## Additional References
 

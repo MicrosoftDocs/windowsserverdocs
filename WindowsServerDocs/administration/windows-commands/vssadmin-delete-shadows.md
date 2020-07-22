@@ -1,4 +1,4 @@
-﻿---
+---
 title: Vssadmin delete shadows
 description: A description of the vssadmin delete shadows command.
 ms.prod: windows-server
@@ -45,6 +45,6 @@ vssadmin delete shadows /for=c: /oldest
 
 ## Additional References
 
-* [Command-line syntax key](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
+* [Command-line syntax key](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
 * [Vssadmin](vssadmin.md)
 * [Vssadmin list shadows](vssadmin-list-shadows.md)

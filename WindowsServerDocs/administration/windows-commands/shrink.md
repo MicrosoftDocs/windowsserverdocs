@@ -50,4 +50,4 @@ shrink querymax [noerr]
   shrink querymax
   ```
 
-[Resize-Partition](https://technet.microsoft.com/library/hh848680.aspx)
+[Resize-Partition](/powershell/module/storage/resize-partition?view=win10-ps)

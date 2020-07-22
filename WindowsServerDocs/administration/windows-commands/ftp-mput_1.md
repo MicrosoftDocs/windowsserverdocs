@@ -45,4 +45,4 @@ mput Program1.exe Program2.exe
 
 - [ftp binary command](ftp-binary.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

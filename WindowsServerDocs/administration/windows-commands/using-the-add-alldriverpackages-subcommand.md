@@ -44,4 +44,4 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers\Printers /DriverGroup
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Add-WdsDriverPackage](https://technet.microsoft.com/library/dn283440.aspx)
+[Add-WdsDriverPackage](/previous-versions/windows/powershell-scripting/dn283440(v=wps.630))

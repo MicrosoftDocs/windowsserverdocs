@@ -32,7 +32,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 |/?|Displays help at the command prompt. Alternatively, you can type /h.|
 
 ## Remarks
--   You must install the telnet client software before you can run this command. For more information, see [Installing telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx).
+-   You must install the telnet client software before you can run this command. For more information, see [Installing telnet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293(v=ws.10)).
 -   You can run telnet without parameters to enter the telnet context, indicated by the telnet prompt (**Microsoft telnet>**). From the telnet prompt, you can use telnet commands to manage the computer running the telnet client.
 
 ## Examples
@@ -46,6 +46,6 @@ telnet /f telnetlog.txt telnet.microsoft.com 44
 ```
 
 ## Additional References
--   [Installing telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx)
--   [telnet Technical Reference](https://technet.microsoft.com/library/cc754987(v=ws.10).aspx)
+-   [Installing telnet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293(v=ws.10))
+-   [telnet Technical Reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754987(v=ws.10))
 - [Command-Line Syntax Key](command-line-syntax-key.md)

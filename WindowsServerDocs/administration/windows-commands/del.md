@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 
 Deletes one or more files. This command performs the same actions as the **erase** command.
 
-The **del** command can also run from the Windows Recovery Console, using different parameters. For more information, see [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+The **del** command can also run from the Windows Recovery Console, using different parameters. For more information, see [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 > [!WARNING]
 > If you use **del** to delete a file from your disk, you can't retrieve it.
@@ -95,4 +95,4 @@ del /a:r *.*
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)

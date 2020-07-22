@@ -48,4 +48,4 @@ nfsshare {<sharename> | <drive>:<path> | * } /delete
 
 - [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
 
-- [NFS cmdlets reference](https://docs.microsoft.com/powershell/module/nfs)
+- [NFS cmdlets reference](/powershell/module/nfs)

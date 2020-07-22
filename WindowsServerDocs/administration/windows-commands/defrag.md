@@ -135,4 +135,4 @@ The defragmentation process runs scheduled task as a maintenance task, which typ
 
 - [fsutil dirty](fsutil-dirty.md)
 
-- [Optimize-Volume Powershell](https://docs.microsoft.com/powershell/module/storage/optimize-volume?view=win10-ps)
+- [Optimize-Volume Powershell](/powershell/module/storage/optimize-volume?view=win10-ps)
