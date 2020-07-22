@@ -31,7 +31,7 @@ landingContent:
           - text: Advanced features of Always On VPN
             url: ./deploy/always-on-vpn-adv-options.md
           - text: Always On VPN deployment for Windows Server and Windows 10
-            url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy    
+            url: ./deploy/always-on-vpn-deploy.md
   
   # Card (optional)
   - title: Deploy Always On VPN
@@ -53,7 +53,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: VPN_Profile.ps1 script issues
-            url: ./deploy/always-on-vpn-deploy-troubleshooting.md#vpnprofileps1-script-issues
+            url: ./deploy/always-on-vpn-deploy-troubleshooting.md#vpn_profileps1-script-issues
           - text: Always On VPN client connection issues
             url: ./deploy/always-on-vpn-deploy-troubleshooting.md#always-on-vpn-client-connection-issues
           - text: Azure AD Conditional Access connection issues
