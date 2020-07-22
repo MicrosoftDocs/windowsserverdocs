@@ -86,7 +86,7 @@ Semi-Annual Channel releases should be installed as a clean installation.
 - Visual Studio Subscriptions: Visual Studio Subscribers can obtain Semi-Annual Channel releases by downloading them from the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347). If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above. Releases obtained through Visual Studio Subscriptions are for development and testing only.
 
 - Obtain preview releases through the Windows Insider Program: Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product.
-Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model. To get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](https://docs.microsoft.com/windows-insider/at-work/).
+Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model. To get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](/windows-insider/at-work/).
 
 ## Activating Semi-Annual Channel releases
 
@@ -110,7 +110,7 @@ Nano Server is available as a container operating system in the Semi-Annual Chan
 Generally speaking, Long-Term Servicing Channel releases such as Windows Server 2019 are released at the same time as a new version of the Semi-Annual Channel, for example, Windows Server, version 1809. This can make it a little tricky to determine whether a server is running Semi-Annual Channel release. Instead of looking at the build number, you must look at the product name: Semi-Annual Channel releases use the Windows Server Standard or Windows Server Datacenter product name, without a version number, while Long-Term Servicing Channel releases include the version number, for example, Windows Server 2019 Datacenter.
 
 > [!Note]
-> The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) is a better starting point for App Developers.
+> The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](/windows/desktop/sysinfo/operating-system-version) is a better starting point for App Developers.
 
 Open Powershell and use the Get-ItemProperty Cmdlet, or the Get-ComputerInfo Cmdlet, to check these properties in the registry.  Along with build number, this will indicate LTSC or SAC by the presence, or lack thereof, of the branded year, i.e. 2019.  LTSC has this, SAC does not.  This will also return the timing of the release with ReleaseId or WindowsVersion, i.e. 1809, as well as whether the installation is Server Core or Server with Desktop Experience.
 
@@ -160,7 +160,7 @@ OsVersion                     : 10.0.17763
 OsHardwareAbstractionLayer    : 10.0.17763.107
 ````
 
-To query if the new [Server Core App Compatibility FOD](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19) is present on a server, use [Get-WindowsCapability](https://docs.microsoft.com/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
+To query if the new [Server Core App Compatibility FOD](./install-fod-19.md) is present on a server, use [Get-WindowsCapability](/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
 ````
 Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
 State   :     Installed
@@ -172,8 +172,8 @@ State   :     Installed
 
 [Windows Server support lifecycle](https://support.microsoft.com/lifecycle)
 
-[Determining whether Server Core is running](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)
+[Determining whether Server Core is running](/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)?f=255&MSPPError=-2147217396)
 
-[GetProductInfo function](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
+[GetProductInfo function](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
 
-[Software Inventory Logging Cmdlets](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
+[Software Inventory Logging Cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
