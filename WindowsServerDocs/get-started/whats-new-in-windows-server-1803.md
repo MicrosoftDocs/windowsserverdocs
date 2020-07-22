@@ -22,7 +22,7 @@ Project Honolulu is now the **Windows Admin Center**.
 <br>&nbsp;
 > [!video https://www.youtube.com/embed/WCWxAp27ERk?autoplay=false]
 
-[Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview) consolidates all aspects of local and remote server management. Windows Admin Center is a locally deployed, browser-based management experience that does not require an Internet connection, giving you full control of all aspects of your Windows Server deployment.
+[Windows Admin Center](../manage/windows-admin-center/overview.md) consolidates all aspects of local and remote server management. Windows Admin Center is a locally deployed, browser-based management experience that does not require an Internet connection, giving you full control of all aspects of your Windows Server deployment.
 
 ## Windows Server release strategy
 
@@ -54,7 +54,7 @@ The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing C
 
 ### Server Core container image
 
-A smaller Server Core container with better application compatibility is now available. Detailed information is available [here](https://blogs.technet.microsoft.com/virtualization/2018/01/22/a-smaller-windows-server-core-container-with-better-application-compatibility/).
+A smaller Server Core container with better application compatibility is now available. Detailed information is available [here](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization).
 
 - Unused optional features and roles have been removed. For more information see [Roles, Role Services, and Features not in Server Core containers](../administration/server-core/server-core-container-removed-roles.md).
     - Decreased download size to 1.58 GB, 30% reduction from Windows Server, version 1709.
@@ -63,7 +63,7 @@ A smaller Server Core container with better application compatibility is now ava
 
 ### Windows Subsystem for Linux (WSL)
 
-WSL enables server administrators to use existing tools and scripts from Linux on Windows Server. Many improvements showcased in the [command line blog](https://blogs.msdn.microsoft.com/commandline/tag/wsl/) are now part of Windows Server, including Background tasks, DriveFS, WSLPath, and much more.
+WSL enables server administrators to use existing tools and scripts from Linux on Windows Server. Many improvements showcased in the [command line blog](https://devblogs.microsoft.com/commandline/tag/wsl/) are now part of Windows Server, including Background tasks, DriveFS, WSLPath, and much more.
 
 ### Kubernetes
 
@@ -89,7 +89,7 @@ With the release of Windows Server, version 1803 more features will be available
 
 ## Storage
 
-With this release, it is possible to prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve space on each volume, but will disable real-time file classification. For more information, see [File Server Resource Manager overview](https://docs.microsoft.com/windows-server/storage/fsrm/fsrm-overview).
+With this release, it is possible to prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve space on each volume, but will disable real-time file classification. For more information, see [File Server Resource Manager overview](../storage/fsrm/fsrm-overview.md).
 
 ## Features added to Server Core
 
@@ -105,5 +105,5 @@ Install-WindowsFeature -Name WDS
 
 ## Additional References
 
-[Windows Server release information](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
-[What's new in Windows 10, version 1803 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)
+[Windows Server release information](./windows-server-release-info.md)<br>
+[What's new in Windows 10, version 1803 IT Pro content](/windows/whats-new/whats-new-windows-10-version-1803)

@@ -49,14 +49,13 @@ You should also start migration from IIS 6.0 or earlier versions, and move to th
 
 
 ### IIS Digest Authentication
-This authentication method is planned for replacement. Instead, you should start using other authentication methods such as Client Certificate Mapping (see [Configuring One-to-One Client Certificate Mappings](https://docs.microsoft.com/iis/manage/configuring-security/configuring-one-to-one-client-certificate-mappings)) or Windows Authentication (see [Application Settings](https://docs.microsoft.com/iis-administration/configuration/appsettings.json)).
+This authentication method is planned for replacement. Instead, you should start using other authentication methods such as Client Certificate Mapping (see [Configuring One-to-One Client Certificate Mappings](/iis/manage/configuring-security/configuring-one-to-one-client-certificate-mappings)) or Windows Authentication (see [Application Settings](/iis-administration/configuration/appsettings.json)).
 
 ### Internet Storage Name Service (iSNS)
-iSNS is being considered for replacement. The Server Message Block (SMB) feature offers essentially the same functionality with additional features. See [Server Message Block Overview](https://technet.microsoft.com/library/hh831795(v=ws.11).aspx) for background information on this feature.
+iSNS is being considered for replacement. The Server Message Block (SMB) feature offers essentially the same functionality with additional features. See [Server Message Block Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) for background information on this feature.
 
 ### RSA/AES Encryption for IIS 
-This encryption method is being considered for replacement because the superior Cryptography API: Next Generation (CNG) method is already available. To learn more about CNG encryption, see [About CNG](https://msdn.microsoft.com/library/windows/desktop/aa375276(v=vs.85).aspx).
+This encryption method is being considered for replacement because the superior Cryptography API: Next Generation (CNG) method is already available. To learn more about CNG encryption, see [About CNG](/windows/win32/seccng/about-cng).
 
 ### Windows PowerShell 2.0
-This early version of Windows PowerShell has been superseded by several more recent versions. For the best features and performance, migrate to Windows PowerShell 5.0 or later. See [PowerShell Documentation](https://docs.microsoft.com/powershell/index?view=powershell-5.1) for plenty of information.
-
+This early version of Windows PowerShell has been superseded by several more recent versions. For the best features and performance, migrate to Windows PowerShell 5.0 or later. See [PowerShell Documentation](/powershell/index?view=powershell-5.1) for plenty of information.

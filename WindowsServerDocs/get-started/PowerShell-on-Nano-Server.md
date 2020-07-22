@@ -121,5 +121,4 @@ Nano Server includes PowerShell Core by default in all Nano Server installations
 
 You can manage Nano Server as target nodes with Windows PowerShell Desired State Configuration (DSC). Currently, you can manage nodes running Nano Server with DSC in push mode only. Not all DSC features function with Nano Server.
 
-For full details, see [Using DSC on Nano Server](https://docs.microsoft.com/powershell/scripting/dsc/getting-started/nanodsc).
-
+For full details, see [Using DSC on Nano Server](/powershell/scripting/dsc/getting-started/nanodsc).

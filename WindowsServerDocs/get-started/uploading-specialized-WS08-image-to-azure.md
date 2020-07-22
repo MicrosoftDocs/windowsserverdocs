@@ -80,12 +80,12 @@ In this section, you will be deploying the image VHD in Azure.
 > [!IMPORTANT]
 > Do not use pre-defined user images in Azure.
 
-1.    Create a new [resource group](https://docs.microsoft.com/rest/api/resources/resourcegroups/createorupdate). 
-2.    Create a new [storage blob](https://docs.microsoft.com/rest/api/storageservices/put-blob) inside the resource group.
-3.    Create a [container](https://docs.microsoft.com/rest/api/storageservices/create-container) inside the storage blob.
+1.    Create a new [resource group](/rest/api/resources/resourcegroups/createorupdate). 
+2.    Create a new [storage blob](/rest/api/storageservices/put-blob) inside the resource group.
+3.    Create a [container](/rest/api/storageservices/create-container) inside the storage blob.
 4.    Copy the URL of the blob storage from properties.
 5.    Use the script provided above to upload your image to the new storage blob.
-6.    Create a [disk](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) for your VHD.   
+6.    Create a [disk](/azure/virtual-machines/windows/prepare-for-upload-vhd-image) for your VHD.   
      a.    Go to Disks, click **Add**.  
      b.    Enter a name for the disk. Select the subscription you want to use, set the region, and choose the account type.   
      c. For Source Type, select storage. Browse to the blob VHD location created using the script.  
@@ -100,7 +100,3 @@ In this section, you will be deploying the image VHD in Azure.
  
         PORT:3389 Protocol: TCP Action: Allow Priority: 1000 Name: 'RDP-Rule'.   
      e.    Click **Create**.
-
-
-
-

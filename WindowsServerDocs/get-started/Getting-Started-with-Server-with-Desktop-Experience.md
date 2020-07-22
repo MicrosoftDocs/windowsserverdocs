@@ -54,7 +54,7 @@ If you already have a Full installation of the appropriate Windows Server produc
 
 - In-place upgrades from 32-bit to 64-bit architectures are not supported. All editions of Windows Server 2016 are 64-bit only.
 - In-place upgrades from one language to another are not supported.
-- If the server is a domain controller, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](https://technet.microsoft.com/library/hh994618.aspx) for important information.
+- If the server is a domain controller, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](../identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012.md) for important information.
 - Upgrades from pre-release versions (previews) of Windows Server 2016 are not supported. Perform a clean installation to Windows Server 2016.
 - Upgrades that switch from a Server Core installation to a Server with a Desktop installation (or vice versa) are not supported.
 
@@ -78,9 +78,9 @@ For many additional options for moving to Windows Server 2016, such as license c
 
 ### Migration
 **Migration** means moving from your existing operating system to Windows Server 2016 by performing a clean installation on a different set of hardware or virtual machine and then transferring the older server's workloads to the new server. Migration, which might vary considerably depending on the server roles you have installed, is discussed in detail at [Windows Server Installation, Upgrade,
-and Migration](https://technet.microsoft.com/windowsserver/dn458795).
+and Migration](./installation-and-upgrade.md).
 
-The ability to migrate varies among different server roles. The follwogin grid explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](https://technet.microsoft.com/windowsserver/jj554790.aspx). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](https://technet.microsoft.com/windowsserver/dn458795).
+The ability to migrate varies among different server roles. The follwogin grid explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](./migrate-roles-and-features.md). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
 
 |Server Role|Upgradeable from Windows Server 2012 R2?|Upgradeable from Windows Server 2012?|Migration Supported?|Can migration be completed without downtime?|  
 |-------------------|----------|--------------|--------------|----------|  
@@ -89,14 +89,14 @@ The ability to migrate varies among different server roles. The follwogin grid e
 |Active Directory Federation Services|    No|    No|    Yes|    No (new nodes need to be added to the farm)|
 |Active Directory Lightweight Directory Services|    Yes|    Yes|    Yes|    Yes|
 |Active Directory Rights Management Services|    Yes|    Yes|    Yes|    No|
-|Failover Cluster|Yes with [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade) process which includes node Pause-Drain, Evict, upgrade to Windows Server 2016 and rejoin the original cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.|Not while the server is part of a cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.    |Yes|No for Windows Server 2012 Failover Clusters. Yes for Windows Server 2012 R2 Failover Clusters with Hyper-V VMs or Windows Server 2012 R2 Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
+|Failover Cluster|Yes with [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md) process which includes node Pause-Drain, Evict, upgrade to Windows Server 2016 and rejoin the original cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.|Not while the server is part of a cluster. Yes, when the server is removed by the cluster for upgrade and then added to a different cluster.    |Yes|No for Windows Server 2012 Failover Clusters. Yes for Windows Server 2012 R2 Failover Clusters with Hyper-V VMs or Windows Server 2012 R2 Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).|
 |File and Storage Services|    Yes|    Yes|    Varies by sub-feature|    No|
 |Print and Fax Services|    No|    No|    Yes (Printbrm.exe)|    No|
 |Remote Desktop Services|    Yes, for all sub-roles, but mixed mode farm is not supported|    Yes, for all sub-roles, but mixed mode farm is not supported|    Yes|    No|
 |Web Server (IIS)|    Yes|    Yes|    Yes|    No|
 |Windows Server Essentials Experience|    Yes|    N/A – new feature|    Yes|    No|
 |Windows Server Update Services|    Yes|    Yes|    Yes|    No|
-|Work Folders|    Yes|    Yes|    Yes|    Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).|
+|Work Folders|    Yes|    Yes|    Yes|    Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).|
 
 > [!IMPORTANT]  
 > Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016 by using Windows Update or other update methods.
