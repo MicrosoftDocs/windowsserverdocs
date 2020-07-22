@@ -23,22 +23,16 @@ This document contains a list of all of the documentation walkthroughs for AD FS
 
 - [Build a single page web application using OAuth and ADAL.JS with AD FS 2016](../ad-fs/development/Single-Page-Application-with-AD-FS.md)
   
-- [Build a server side application using OAuth confidential clients with AD FS 2016](../ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md)
+- [Build a server side application using OAuth confidential clients with AD FS 2016](./development/enabling-oauth-confidential-clients-with-ad-fs.md)
 
-- [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md) 
+- [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](./development/ad-fs-on-behalf-of-authentication-in-windows-server.md) 
 
-- [Build a native client application using OAuth public clients with AD FS 2012 R2 or higher](https://msdn.microsoft.com/library/dn633593.aspx)
+- [Build a native client application using OAuth public clients with AD FS 2012 R2 or higher](/previous-versions/adfs-windows-server-2012R2/dn633593(v=msdn.10))
 
 - [Build a native client application using OAuth public clients with AD FS 2016](../ad-fs/development/native-client-with-ad-fs.md)
 
-- [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016](../ad-fs/development/Customize-Id-Token-AD-FS-2016.md)
+- [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016](./development/custom-id-tokens-in-ad-fs.md)
 
 - [Identity delegation with AD FS](../ad-fs/development/ad-fs-identity-delegation.md)
 
 - [Single log-out for OpenID Connect with AD FS 2016](../ad-fs/development/ad-fs-logout-openid-connect.md)
-
-
-
-
-
-

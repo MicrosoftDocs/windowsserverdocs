@@ -44,6 +44,6 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
   
 ## Additional references  
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)
   
 [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md)  

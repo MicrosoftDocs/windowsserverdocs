@@ -565,7 +565,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|  
 |Severity|Error|  
 |Message|Virtual domain controller cloning failed. The following %1 Managed Service Account(s) exist on the cloned machine:<p>%2<p>For cloning to succeed, all Managed Service Accounts must be removed. This can be done using the Remove-ADComputerServiceAccount PowerShell cmdlet.|  
-|Notes and resolution|Expected when using standalone MSAs (not group MSA). Do *not* follow the event advice to remove the account - it is incorrectly written. Use Uninstall-AdServiceAccount - [https://technet.microsoft.com/library/hh852310](https://technet.microsoft.com/library/hh852310).<p>Standalone MSAs - first released in Windows Server 2008 R2 - were replaced in Windows Server 2012 with group MSAs (gMSA). GMSAs support cloning.|  
+|Notes and resolution|Expected when using standalone MSAs (not group MSA). Do *not* follow the event advice to remove the account - it is incorrectly written. Use Uninstall-AdServiceAccount - [https://technet.microsoft.com/library/hh852310](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).<p>Standalone MSAs - first released in Windows Server 2008 R2 - were replaced in Windows Server 2012 with group MSAs (gMSA). GMSAs support cloning.|  
 
 |||  
 |-|-|  
@@ -1750,6 +1750,3 @@ The FRS database stops and starts, and is purged due to the D2 BURFLAGS operatio
 |**102**|ESENT|ntfrs (3000) The database engine (6.02.8189.0000) is starting a new instance (0).|  
 |**105**|ESENT|ntfrs (3000) The database engine started a new instance (0). (Time=0 seconds)<p>Internal Timing Sequence: [1] 0.016, [2] 0.000, [3] 0.000, [4] 0.094, [5] 0.000, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.032, [10] 0.000, [11] 0.000.|  
 |**326**|ESENT|ntfrs (3000) The database engine attached a database (1, c:\windows\ntfrs\jet\ntfrs.jdb). (Time=0 seconds)<p>Internal Timing Sequence: [1] 0.000, [2] 0.015, [3] 0.000, [4] 0.000, [5] 0.016, [6] 0.015, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.000, [12] 0.000.<p>Saved Cache: 1|  
-
-
-

@@ -120,7 +120,7 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
    The command will provide you the public key token (For me, the **Public Key Token is 714697626ef96b35**)
 
 4. Add the dll to the **Global Assembly Cache** of the AD FS server
-   Our best practice would be that you create a proper installer for your project and use the installer to add the file to the GAC. Another solution is to use **Gacutil.exe** (more information on **Gacutil.exe** available [here](https://docs.microsoft.com/dotnet/framework/tools/gacutil-exe-gac-tool)) on your development machine.  Since I have my visual studio on the same server as AD FS, I will be using **Gacutil.exe** as follows
+   Our best practice would be that you create a proper installer for your project and use the installer to add the file to the GAC. Another solution is to use **Gacutil.exe** (more information on **Gacutil.exe** available [here](/dotnet/framework/tools/gacutil-exe-gac-tool)) on your development machine.  Since I have my visual studio on the same server as AD FS, I will be using **Gacutil.exe** as follows
 
    a.    On Developer Command Prompt for Visual Studio and go to the directory containing the **Gacutil.exe** (In my case the directory is **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
 
@@ -191,7 +191,7 @@ Now that we know how to build and register the plug-in, let's walkthrough the pl
 Open the project `ThreatDetectionModule.sln` using Visual Studio and then open the main file **UserRiskAnalyzer.cs** from the **Solutions Explorer** on the right of the screen</br>
 ![model](media/ad-fs-risk-assessment-model/risk17.png)
  
-The file contains the main class UserRiskAnalyzer which implements the abstract class [ThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) and interface [IRequestReceivedThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) to read the IP from the request context, compare the obtained IP with the IPs loaded from AD FS DB, and block request if there is an IP match. Let's go over these types in more detail
+The file contains the main class UserRiskAnalyzer which implements the abstract class [ThreatDetectionModule](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) and interface [IRequestReceivedThreatDetectionModule](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) to read the IP from the request context, compare the obtained IP with the IPs loaded from AD FS DB, and block request if there is an IP match. Let's go over these types in more detail
 
 ### ThreatDetectionModule abstract class
 
@@ -214,18 +214,18 @@ The class includes following methods and properties.
 
 |Method |Type|Definition|
 |-----|-----|-----| 
-|[OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) |Void|Called by AD FS when the plugin is loaded into its pipeline| 
-|[OnAuthenticationPipelineUnload](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineunload?view=adfs-2019) |Void|Called by AD FS when the plugin is unloaded from its pipeline| 
-|[OnConfigurationUpdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019)| Void|Called by AD FS on config update |
+|[OnAuthenticationPipelineLoad](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) |Void|Called by AD FS when the plugin is loaded into its pipeline| 
+|[OnAuthenticationPipelineUnload](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineunload?view=adfs-2019) |Void|Called by AD FS when the plugin is unloaded from its pipeline| 
+|[OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019)| Void|Called by AD FS on config update |
 |**Property** |**Type** |**Definition**|
-|[VendorName](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname?view=adfs-2019)|String |Gets the name of the vendor owning the plugin|
-|[ModuleIdentifier](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier?view=adfs-2019)|String |Gets the identifier of the plugin|
+|[VendorName](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname?view=adfs-2019)|String |Gets the name of the vendor owning the plugin|
+|[ModuleIdentifier](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier?view=adfs-2019)|String |Gets the identifier of the plugin|
 
-In our sample plugin, we are using [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) and [OnConfigurationUpdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) methods to read the pre-defined IPs from AD FS DB. [OnAuthenticationPipelineLoad](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) is called when plug-in is registered with AD FS while [OnConfigurationUpdate](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) is called when the .csv is imported using the `Import-AdfsThreatDetectionModuleConfiguration` cmdlet. 
+In our sample plugin, we are using [OnAuthenticationPipelineLoad](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) and [OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) methods to read the pre-defined IPs from AD FS DB. [OnAuthenticationPipelineLoad](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) is called when plug-in is registered with AD FS while [OnConfigurationUpdate](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) is called when the .csv is imported using the `Import-AdfsThreatDetectionModuleConfiguration` cmdlet. 
 
 #### IRequestReceivedThreatDetectionModule Interface
 
-This [interface](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) enables you to implement risk assessment at the point where AD FS receives the authentication request but before user enters credentials i.e. at Received Request stage of the authentication process. 
+This [interface](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) enables you to implement risk assessment at the point where AD FS receives the authentication request but before user enters credentials i.e. at Received Request stage of the authentication process. 
  
 ```
 public interface IRequestReceivedThreatDetectionModule
@@ -236,20 +236,20 @@ RequestContext requestContext );
 }
 ```
 
-The interface includes [EvaluateRequest](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule.evaluaterequest?view=adfs-2019) method which allows you to use the context of the authentication request passed in the requestContext input parameter to write your risk assessment logic. The requestContext parameter is of type [RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019). 
+The interface includes [EvaluateRequest](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule.evaluaterequest?view=adfs-2019) method which allows you to use the context of the authentication request passed in the requestContext input parameter to write your risk assessment logic. The requestContext parameter is of type [RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019). 
 
-The other input parameter passed is logger which is type [ThreatDetectionLogger](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger?view=adfs-2019). The parameter can be used to write the error, audit and/or debug messages to AD FS logs. 
+The other input parameter passed is logger which is type [ThreatDetectionLogger](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger?view=adfs-2019). The parameter can be used to write the error, audit and/or debug messages to AD FS logs. 
 
-The method returns [ThrottleStatus](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus?view=adfs-2019) (0 if NotEvaluated, 1 to Block, and 2 to Allow) to AD FS which then either blocks or allows the request.
+The method returns [ThrottleStatus](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus?view=adfs-2019) (0 if NotEvaluated, 1 to Block, and 2 to Allow) to AD FS which then either blocks or allows the request.
 
-In our sample plug-in, [EvaluateRequest](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule.evaluaterequest?view=adfs-2019) method implementation parses the [clientIpAddress](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext.clientipaddresses?view=adfs-2019#Microsoft_IdentityServer_Public_ThreatDetectionFramework_RequestContext_ClientIpAddresses) from the [requestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019) parameter and compares it with all the IPs loaded from the AD FS DB. If a match is found, method returns 2 for **Block**, else it returns 1 for **Allow**. Based on the returned value, AD FS either blocks or allows the request. 
+In our sample plug-in, [EvaluateRequest](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule.evaluaterequest?view=adfs-2019) method implementation parses the [clientIpAddress](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext.clientipaddresses?view=adfs-2019#Microsoft_IdentityServer_Public_ThreatDetectionFramework_RequestContext_ClientIpAddresses) from the [requestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019) parameter and compares it with all the IPs loaded from the AD FS DB. If a match is found, method returns 2 for **Block**, else it returns 1 for **Allow**. Based on the returned value, AD FS either blocks or allows the request. 
 
 >[!NOTE]
 >The sample plug-in discussed above implements only IRequestReceivedThreatDetectionModule interface. However, the risk assessment model provides two additional interfaces –IPreAuthenticationThreatDetectionModule (to implement risk assessment logic duing pre-authentication stage) and IPostAuthenticationThreatDetectionModule (to implement risk assessment logic during post-authentication stage). The details on the two interfaces are provided below. 
 
 #### IPreAuthenticationThreatDetectionModule Interface 
 
-This [interface](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule?view=adfs-2019) enables you to implement risk assessment logic at the point where user provides the credentials but before AD FS evaluates them i.e. pre-authentication stage. 
+This [interface](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule?view=adfs-2019) enables you to implement risk assessment logic at the point where user provides the credentials but before AD FS evaluates them i.e. pre-authentication stage. 
 
 ```
 public interface IPreAuthenticationThreatDetectionModule
@@ -263,18 +263,18 @@ IList<Claim> additionalClams
 );
 }
 ```
-The interface includes [EvaluatePreAuthentication](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication?view=adfs-2019) method which allows you to use the information passed in the [RequestContext requestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext securityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext protocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019), and [IList<Claim> additionalClams](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) input parameters to write your pre-authentication risk assessment logic. 
+The interface includes [EvaluatePreAuthentication](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication?view=adfs-2019) method which allows you to use the information passed in the [RequestContext requestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext securityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext protocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019), and [IList<Claim> additionalClams](/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) input parameters to write your pre-authentication risk assessment logic. 
 
 >[!NOTE]
->For list of properties passed with each context type, visit [RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), and [ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) class definitions. 
+>For list of properties passed with each context type, visit [RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), and [ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) class definitions. 
 
-The other input parameter passed is logger which is type [ThreatDetectionLogger](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger?view=adfs-2019). The parameter can be used to write the error, audit and/or debug messages to AD FS logs.
+The other input parameter passed is logger which is type [ThreatDetectionLogger](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger?view=adfs-2019). The parameter can be used to write the error, audit and/or debug messages to AD FS logs.
 
-The method returns [ThrottleStatus](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus?view=adfs-2019) (0 if NotEvaluated, 1 to Block, and 2 to Allow) to AD FS which then either blocks or allows the request. 
+The method returns [ThrottleStatus](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.throttlestatus?view=adfs-2019) (0 if NotEvaluated, 1 to Block, and 2 to Allow) to AD FS which then either blocks or allows the request. 
 
 #### IPostAuthenticationThreatDetectionModule Interface
 
-This [interface](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule?view=adfs-2019) enables you to implement risk assessment logic after user has provided credentials and AD FS has performed authentication i.e. post-authentication stage. 
+This [interface](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule?view=adfs-2019) enables you to implement risk assessment logic after user has provided credentials and AD FS has performed authentication i.e. post-authentication stage. 
 
 ```
 public interface IPostAuthenticationThreatDetectionModule
@@ -290,17 +290,17 @@ IList<Claim> additionalClams
 }
 ```
 
-The interface includes [EvaluatePostAuthentication](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication?view=adfs-2019) method which allows you to use the information passed in the [RequestContext requestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext securityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext protocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019), and [IList<Claim> additionalClams](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) input parameters to write your post-authentication risk assessment logic. 
+The interface includes [EvaluatePostAuthentication](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication?view=adfs-2019) method which allows you to use the information passed in the [RequestContext requestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext securityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [ProtocolContext protocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019), and [IList<Claim> additionalClams](/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) input parameters to write your post-authentication risk assessment logic. 
 
 >[!NOTE]
-> For complete list of properties passed with each context type, refer [RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), and [ProtocolContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) class definitions. 
+> For complete list of properties passed with each context type, refer [RequestContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), and [ProtocolContext](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) class definitions. 
 
-The other input parameter passed is logger which is type [ThreatDetectionLogger](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger?view=adfs-2019). The parameter can be used to write the error, audit and/or debug messages to AD FS logs. 
+The other input parameter passed is logger which is type [ThreatDetectionLogger](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionlogger?view=adfs-2019). The parameter can be used to write the error, audit and/or debug messages to AD FS logs. 
 
-The method returns the [Risk Score](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.authentication.riskscoreconstants?view=adfs-2019) which can be used in AD FS policy and claim rules. 
+The method returns the [Risk Score](/dotnet/api/microsoft.identityserver.authentication.riskscoreconstants?view=adfs-2019) which can be used in AD FS policy and claim rules. 
 
 >[!NOTE]
->For plug-in to work, the main class (in this case UserRiskAnalyzer) needs to derive [ThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) abstract class and should implement at least one of the three interfaces described above. Once the dll is registered, AD FS checks which of the interfaces are implemented and calls them at appropriate stage in the pipeline.
+>For plug-in to work, the main class (in this case UserRiskAnalyzer) needs to derive [ThreatDetectionModule](/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) abstract class and should implement at least one of the three interfaces described above. Once the dll is registered, AD FS checks which of the interfaces are implemented and calls them at appropriate stage in the pipeline.
 
 ### FAQs
 

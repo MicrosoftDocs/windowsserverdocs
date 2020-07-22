@@ -33,7 +33,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Login People|Login People MFA API connector for AD FS 2012 R2 (public beta)|[https://www.loginpeople.com](https://www.loginpeople.com)|
-|Microsoft Corp.|Microsoft Azure MFA|[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](https://technet.microsoft.com/library/dn280946.aspx) (see step 3)|
+|Microsoft Corp.|Microsoft Azure MFA|[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280946(v=ws.11)) (see step 3)|
 Mideye | Mideye Authentication Provider for ADFS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://www.mideye.com/support/administrators/documentation/integration/microsoft-adfs/)|
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (ADFS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Starling 2FA AD FS|[Starling 2FA AD FS Adapter](https://www.oneidentity.com/products/starling-two-factor-authentication/)|
@@ -52,5 +52,3 @@ We now provide instructions for building your own custom authentication method f
 
 ## See Also
 [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-
-

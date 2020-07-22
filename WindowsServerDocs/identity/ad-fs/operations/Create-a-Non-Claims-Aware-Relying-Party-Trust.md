@@ -47,4 +47,4 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ![relying party](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon6.PNG)  
   
 ## See Also  
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
+[AD FS Operations](../ad-fs-operations.md) 

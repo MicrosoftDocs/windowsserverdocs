@@ -29,4 +29,4 @@ c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
 > There is a 14 days window so the sent claims will only be populated if the password is expiring within 14 days.
 
 ## See Also
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

@@ -21,7 +21,7 @@ By default, all site links are transitive. We recommend that you keep transitivi
 - Your IP network is not fully routed. When you disable **Bridge all site links**, all site links are considered nontransitive, and you can create and configure site link bridge objects to model the actual routing behavior of your network.
 - You need to control the replication flow of the changes made in Active Directory Domain Services (AD DS). By disabling **Bridge all site links** for the site link IP transport and configuring a site link bridge, the site link bridge becomes the equivalent of a disjointed network. All site links within the site link bridge can route transitively, but they do not route outside of the site link bridge.
 
-For more information about how to use the Active Directory Sites and Services snap-in to disable the **Bridge all site links** setting, see the article [Enable or disable site link bridges](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).
+For more information about how to use the Active Directory Sites and Services snap-in to disable the **Bridge all site links** setting, see the article [Enable or disable site link bridges](/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).
 
 ## Controlling AD DS replication flow
 

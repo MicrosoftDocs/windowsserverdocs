@@ -228,7 +228,7 @@ In order to ensure that Web Application Proxy servers are able to reach the AD F
 
 After you ensure that Web Application Proxy servers are able to reach the AD FS servers behind ILB, you can next install the Web Application Proxy servers. 
 Web Application Proxy servers need not be joined to the domain. Install the Web Application Proxy roles on the two Web Application Proxy servers by selecting the Remote Access role. The server manager will guide you to complete the WAP installation.
-For more information on how to deploy WAP, read [Install and Configure the Web Application Proxy Server](https://technet.microsoft.com/library/dn383662.aspx).
+For more information on how to deploy WAP, read [Install and Configure the Web Application Proxy Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383662(v=ws.11)).
 
 ### 8.  Deploying the Internet Facing (Public) Load Balancer
 **8.1.  Create Internet Facing (Public) Load Balancer**
@@ -360,6 +360,6 @@ You can use an existing virtual network or create a new VNET while deploying thi
 * [AD FS and Web Application Proxy Links](https://aka.ms/ADFSLinks) 
 
 ## Next steps
-* [Integrating your on-premises identities with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
+* [Integrating your on-premises identities with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity)
 * [Configuring and managing your AD FS using Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-fed-whatis)
 * [High availability cross-geographic AD FS deployment in Azure with Azure Traffic Manager](active-directory-adfs-in-azure-with-azure-traffic-manager.md)

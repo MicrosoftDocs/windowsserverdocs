@@ -25,7 +25,7 @@ When you use the version of Active Directory Users and Computers or Active Direc
 
 As an alternative, you can also use Active Directory Sites and Services in RSAT to delete a DC object. If you use Active Directory Sites and Services, you must delete the associated server object and NTDS Settings object before you can delete the DC object.  
 
-For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+For information about installing RSAT, see the article [Remote Server Administration Tools](../../../remote/remote-server-administration-tools.md).
   
 The following procedure is the same for DCs that run either Windows Server 2016, 2012, 2008 R2, or 2008. The target DC of the metadata cleanup operation can run any version of Windows Server.  
   

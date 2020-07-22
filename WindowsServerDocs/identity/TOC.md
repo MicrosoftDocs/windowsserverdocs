@@ -275,7 +275,7 @@
 #### [Deploy AD FS in Azure](ad-fs/deployment/how-to-connect-fed-azure-adfs.md)
 #### [AD FS in Azure with Azure Traffic Manager](ad-fs/deployment/active-directory-adfs-in-azure-with-azure-traffic-manager.md)  
 #### [Upgrading to AD FS in Windows Server 2016 using a SQL database](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-SQL.md)
-#### [Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
+#### [Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](/azure/active-directory/hybrid/whatis-hybrid-identity)
 
 
 #### [Windows Server 2016 and 2012 R2 AD FS Deployment Guide](ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
@@ -330,8 +330,8 @@
 ##### [Deploying Federation Server Proxies](ad-fs/deployment/Deploying-Federation-Server-Proxies.md)
 ###### [Checklist: Setting Up a Federation Server Proxy](ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md)
 ###### [Join a computer to a Domain](ad-fs/deployment/Join-a-computer-to-a-Domain.md)
-###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md)
-###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md)
+###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md)
+###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients](./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md)
 ###### [Export the Private Key Portion of a Server Authentication Certificate](ad-fs/deployment/Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)
 ###### [Import a Server Authentication Certificate to the Default Web Site](ad-fs/deployment/import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)
 ###### [Install the Federation Service Proxy Role Service](ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md)
@@ -345,7 +345,7 @@
 ###### [Create a Relying Party Trust Manually](ad-fs/operations/create-a-Relying-Party-Trust.md)
 ###### [Create a Claims Provider Trust Manually](ad-fs/operations/create-a-Claims-Provider-Trust.md)
 ###### [Create a Rule to Send an AD FS 1.x compatible Claim](ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md)
-#### [Deploy Azure AD Connect Health](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health/)
+#### [Deploy Azure AD Connect Health](/azure/active-directory/hybrid/whatis-hybrid-identity)
 #### [Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2](ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md)
 ##### [Prepare to Migrate the AD FS Federation Server](ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md)
 #####[Migrate the AD FS Federation Server](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)

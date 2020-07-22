@@ -65,7 +65,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
     - If you are not on AD FS 2016, we strongly recommend you [upgrade](../../ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md) to AD FS 2016. It is a simple upgrade path from AD FS 2012 R2. If you are on AD FS 2012 R2, implement [extranet lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md). One disadvantage of this approach is that valid users may be blocked from extranet access if you are in a brute force pattern. AD FS on Server 2016 does not have this disadvantage.
 
 2. Monitor & Block suspicious IP addresses 
-    - If you have Azure AD Premium, implement Connect Health for ADFS and use the [Risky IP report](https://docs.microsoft.com/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
+    - If you have Azure AD Premium, implement Connect Health for ADFS and use the [Risky IP report](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
 
         a. Licensing is not for all users and requires 25 licenses/ADFS/WAP server which may be easy for a customer.
 
@@ -79,7 +79,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
     b. If you are on AD FS 2012 R2 or lower, block the IP address directly at Exchange Online and optionally on your firewall.
 
-4. If you have Azure AD Premium, use [Azure AD Password Protection](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to prevent guessable passwords from getting into Azure AD  
+4. If you have Azure AD Premium, use [Azure AD Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to prevent guessable passwords from getting into Azure AD  
 
     a. Note that if you have guessable passwords, you can crack them with just 1-3 attempts. This feature prevents these from getting set. 
 
@@ -95,13 +95,13 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 6. Enable MFA for all extranet access. This gives you added protection for any extranet access.
 
-   a.  If you have Azure AD premium, use [Azure AD Conditional Access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Azure AD, when requesting a new access token (typically every hour) using a refresh token.  
+   a.  If you have Azure AD premium, use [Azure AD Conditional Access policies](/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Azure AD, when requesting a new access token (typically every hour) using a refresh token.  
 
    b.  If you don't have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement MFA (Can be Azure MFA as well on AD FS 2016) and do a [global MFA policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
 
 ## Level 3: Move to password less for extranet access
 
-7. Move to Window 10 and use [Hello For Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+7. Move to Window 10 and use [Hello For Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 8. For other devices, if on AD FS 2016, you can use [Azure MFA OTP](../../ad-fs/operations/configure-ad-fs-and-azure-mfa.md) as the first factor and password as the 2nd factor. 
 
@@ -119,5 +119,5 @@ If the AD FS environment is under active attack, the following steps should be i
 
 - [Upgrade to AD FS server 2016](../../ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md) 
 - [Extranet smart lockout in AD FS 2016](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md)
-- [Configure conditional access policies](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [Azure AD password protection](https://docs.microsoft.com/azure/active-directory/authentication/howto-password-ban-bad-on-premises)
+- [Configure conditional access policies](/azure/active-directory/conditional-access/overview)
+- [Azure AD password protection](/azure/active-directory/authentication/howto-password-ban-bad-on-premises)

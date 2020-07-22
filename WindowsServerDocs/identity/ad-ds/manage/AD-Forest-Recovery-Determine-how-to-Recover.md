@@ -48,9 +48,9 @@ If Active Directory Recycle Bin is enabled, the backup lifetime is equal to the 
 
 As an alternative, you can also use the Active Directory database mounting tool (Dsamain.exe) and a Lightweight Directory Access Protocol (LDAP) tool, such as Ldp.exe or Active Directory Users and Computers, to identify which backup has the last safe state of the forest. The Active Directory database mounting tool, which is included in Windows Server 2008 and later Windows Server operating systems, exposes Active Directory data that is stored in backups or snapshots as an LDAP server. Then, you can use an LDAP tool to browse the data. This approach has the advantage of not requiring you to restart any DC in Directory Services Restore Mode (DSRM) to examine the contents of the backup of AD DS.
 
-For more information about using the Active Directory database mounting tool, see the [Active Directory Database Mounting Tool Step-by-Step Guide](https://technet.microsoft.com/library/cc753609\(WS.10\).aspx).
+For more information about using the Active Directory database mounting tool, see the [Active Directory Database Mounting Tool Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10)).
 
-You can also use the **ntdsutil snapshot** command to create snapshots of the Active Directory database. By scheduling a task to periodically create snapshots, you can obtain additional copies of the Active Directory database over time. You can use these copies to better identify when the forest-wide failure occurred and then choose the best backup to restore. To create snapshots, use the version of **ntdsutil** that ships with Windows Server 2008 or the Remote Server Administration Tools (RSAT) for Windows Vista or later. The target DC can run any version of Windows Server. For more information about using the **ntdsutil snapshot** command, see [Snapshot](https://technet.microsoft.com/library/cc731620\(WS.10\).aspx).
+You can also use the **ntdsutil snapshot** command to create snapshots of the Active Directory database. By scheduling a task to periodically create snapshots, you can obtain additional copies of the Active Directory database over time. You can use these copies to better identify when the forest-wide failure occurred and then choose the best backup to restore. To create snapshots, use the version of **ntdsutil** that ships with Windows Server 2008 or the Remote Server Administration Tools (RSAT) for Windows Vista or later. The target DC can run any version of Windows Server. For more information about using the **ntdsutil snapshot** command, see [Snapshot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10)).
 
 ## Determining which domain controllers to restore
 
@@ -75,7 +75,7 @@ Choose a DC that best meets the following criteria:
 
    HKEY_LOCAL_MACHINESoftwarePoliciesMicrosoftSystemCertificatesFVE_NKP
 
-Maintain security procedures when handling or restoring backup files that include Active Directory. The urgency that accompanies forest recovery can unintentionally lead to overlooking security best practices. For more information, see the section titled “Establishing Domain Controller Backup and Restore Strategies” in [Best Practice Guide for Securing Active Directory Installations and Day-to-Day Operations: Part II](https://technet.microsoft.com/library/bb727066.aspx).
+Maintain security procedures when handling or restoring backup files that include Active Directory. The urgency that accompanies forest recovery can unintentionally lead to overlooking security best practices. For more information, see the section titled “Establishing Domain Controller Backup and Restore Strategies” in [Best Practice Guide for Securing Active Directory Installations and Day-to-Day Operations: Part II](/previous-versions/windows/it-pro/windows-2000-server/bb727066(v=technet.10)).
 
 ## Identify the current forest structure and DC functions
 

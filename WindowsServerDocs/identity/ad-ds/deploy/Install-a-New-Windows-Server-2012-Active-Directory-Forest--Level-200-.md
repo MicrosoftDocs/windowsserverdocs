@@ -50,11 +50,11 @@ A veteran AD DS administrator should find their previous knowledge highly releva
 ### What You Should Know Before You Begin  
 This topic assumes familiarity with previous releases of Active Directory Domain Services, and does not provide foundational detail around their purpose and functionality. For more information about AD DS, see the TechNet Portal pages linked below:  
   
--   [Active Directory Domain Services for Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
+-   [Active Directory Domain Services for Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378801(v=ws.10))  
   
--   [Active Directory Domain Services for Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
+-   [Active Directory Domain Services for Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378891(v=ws.10))  
   
--   [Windows Server Technical Reference](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
+-   [Windows Server Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc739127(v=ws.10))  
   
 ### Functional Descriptions  
   
@@ -247,7 +247,7 @@ A new forest does not need new credentials for the domain's Administrator accoun
   
 The **Domain Controller Options** enables you to configure the **forest functional level** and **domain functional level** for the new forest root domain. By default, these settings are  Windows Server 2012  in a new forest root domain. The  Windows Server 2012  forest functional level does not provide any new functionality over the Windows Server 2008 R2 forest functional level. The  Windows Server 2012  domain functional level is required only in order to implement the new Kerberos settings "always provide claims" and "Fail unarmored authentication requests." A primary use for functional levels in  Windows Server 2012  is to restrict participation in the domain to domain controllers that meet minimum-allowed operating system requirements. In other words, you can specify  Windows Server 2012  domain functional level only domain controllers that run  Windows Server 2012  can host the domain.  Windows Server 2012  implements a new domain controller flag called **DS_WIN8_REQUIRED** in the **DSGetDcName** function of NetLogon that exclusively locates  Windows Server 2012  domain controllers. This allows you the flexibility of a more homogeneous or heterogeneous forest in terms of which operating systems are permitted to be run on domain controllers.  
   
-For more information about domain controller Location, review [Directory Service Functions](https://msdn.microsoft.com/library/ms675900(VS.85).aspx).  
+For more information about domain controller Location, review [Directory Service Functions](/windows/win32/ad/directory-service-functions).  
   
 The only configurable domain controller capability is the DNS server option. Microsoft recommends that all domain controllers provide DNS services for high availability in distributed environments, which is why this option is selected by default when installing a domain controller in any mode or domain. The Global Catalog and read only domain controller options are unavailable when creating a new forest root domain; the first domain controller must be a GC, and cannot be a read only domain controller (RODC).  
   
@@ -260,7 +260,7 @@ The **DNS Options** page enables you to configure DNS delegation and provide alt
   
 You cannot configure DNS options or delegation in the Active Directory Domain Services Configuration Wizard when installing a new Active Directory Forest Root Domain where you selected the **DNS server** on the **Domain Controller Options** page. The **Create DNS delegation** option is available when creating a new forest root DNS zone in an existing DNS server infrastructure. This option enables you to provide alternate DNS administrative credentials that have the rights to update DNS zone.  
   
-For more information about whether you need to create a DNS delegation, see [Understanding Zone Delegation](https://technet.microsoft.com/library/cc771640.aspx).  
+For more information about whether you need to create a DNS delegation, see [Understanding Zone Delegation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771640(v=ws.11)).  
   
 #### Additional Options  
 ![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ForestAdditionalOptions.png)  
@@ -403,7 +403,7 @@ Further examples illustrated below:
   
 ![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSGetWindowsFeature.png)  
   
-For more information about more Windows PowerShell operations with pipelines and Where-Object, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).  
+For more information about more Windows PowerShell operations with pipelines and Where-Object, see [Piping and the Pipeline in Windows PowerShell](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).  
   
 Note also that Windows PowerShell 3.0 significantly simplified the command-line arguments needed in this pipeline operation. Windows PowerShell 2.0 would have required:  
   
@@ -563,12 +563,11 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
 > Overriding the reboot is discouraged. The domain controller must reboot to function correctly.  
   
 ## See Also  
-[Active Directory Domain Services  (TechNet Portal)](https://technet.microsoft.com/library/cc770946(WS.10).aspx)  
-[Active Directory Domain Services for Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
-[Active Directory Domain Services for Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
-[Windows Server Technical Reference (Windows Server 2003)](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
-[Active Directory Administrative Center: Getting Started (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd560651(WS.10).aspx)  
-[Active Directory Administration with Windows PowerShell (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd378937(WS.10).aspx)  
-[Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](https://blogs.technet.com/b/askds)  
+[Active Directory Domain Services  (TechNet Portal)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770946(v=ws.10))  
+[Active Directory Domain Services for Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378801(v=ws.10))  
+[Active Directory Domain Services for Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378891(v=ws.10))  
+[Windows Server Technical Reference (Windows Server 2003)](/previous-versions/windows/it-pro/windows-server-2003/cc739127(v=ws.10))  
+[Active Directory Administrative Center: Getting Started (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560651(v=ws.10))  
+[Active Directory Administration with Windows PowerShell (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378937(v=ws.10))  
+[Ask the Directory Services Team (Official Microsoft Commercial Technical Support Blog)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378937(v=ws.10))  
   
-

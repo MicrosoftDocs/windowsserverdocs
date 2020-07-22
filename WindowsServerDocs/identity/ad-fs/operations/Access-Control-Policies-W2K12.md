@@ -383,4 +383,4 @@ The policies described in this article should always be used with another authen
  The value of the claim is the name of the AD FS service that received the request.  
 
 ## See Also  
- [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+ [AD FS Operations](../ad-fs-operations.md)

@@ -59,7 +59,7 @@ Protocol |Ports |Description
 HTTPS|443(TCP/UDP)|Used for device authentication.
 TCP|49443 (TCP)|Used for certificate authentication.
 
-For additional information on required ports and protocols required for hybrid deployments see the document [here](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-ports).
+For additional information on required ports and protocols required for hybrid deployments see the document [here](/azure/active-directory/hybrid/reference-connect-ports).
 
 For detailed information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [here](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
 
@@ -109,7 +109,7 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 3.    Change the congestion control settings from its default values to '<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />'.
 4.    Save and close the file.
 5.    Restart the AD FS service by running 'net stop adfssrv' and then 'net start adfssrv'.
-For your reference, guidance on this capability can be found [here](https://msdn.microsoft.com/library/azure/dn528859.aspx ).
+For your reference, guidance on this capability can be found [here](/previous-versions/azure/azure-services/dn528859(v=azure.100)).
 
 ### Standard HTTP request checks at the proxy
 The proxy also performs the following standard checks against all traffic:
@@ -124,7 +124,7 @@ The most important security recommendation for your AD FS infrastructure is to e
 
 The recommended way for Azure AD customers to monitor and keep current their infrastructure is via Azure AD Connect Health for AD FS, a feature of Azure AD Premium.  Azure AD Connect Health includes monitors and alerts that trigger if an AD FS or WAP machine is missing one of the important updates specifically for AD FS and WAP.
 
-Information on installing Azure AD Connect Health for AD FS can be found [here](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health-agent-install/).
+Information on installing Azure AD Connect Health for AD FS can be found [here](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
 
 ## Additional security configurations
 The following additional capabilities can be configured optionally to provide additional protections to those offered in the default deployment.
@@ -136,7 +136,7 @@ You can use the following Windows PowerShell command to set the AD FS extranet l
 
     PS:\>Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -ExtranetObservationWindow ( new-timespan -Minutes 30 )
 
-For reference, the public documentation of this feature is [here](https://technet.microsoft.com/library/dn486806.aspx ). 
+For reference, the public documentation of this feature is [here](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486806(v=ws.11)). 
 
 ### Disable WS-Trust Windows endpoints on the proxy i.e. from extranet
 
@@ -151,7 +151,7 @@ AD FS has the ability to differentiate access policies for requests that origina
 ### Require Multi factor authentication (MFA)
 AD FS can be configured to require strong authentication (such as multi factor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Azure AD / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MFA and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.  
 
-Supported external MFA providers include those listed in [this](https://technet.microsoft.com/library/dn758113.aspx) page, as well as HDI Global.
+Supported external MFA providers include those listed in [this](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
 
 ### Hardware Security Module (HSM)
 In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, these keys can be protected in a hardware security module attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:
@@ -164,6 +164,3 @@ where:
 - `CertificateThumbprint` is your SSL certificate
 - `SigningCertificateThumbprint` is your signing certificate (with HSM protected key)
 - `DecryptionCertificateThumbprint` is your encryption certificate (with HSM protected key)
-
-
-

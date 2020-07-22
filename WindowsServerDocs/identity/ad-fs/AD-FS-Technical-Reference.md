@@ -23,7 +23,4 @@ ms.technology: identity-adfs
 > You can find additional AD FS 2.0 design content at the [AD FS 2.0 Content Map](https://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS 2.0 Community and is monitored on a regular basis by the AD FS Product Team.
 
 ## See Also
-[Active Directory Federation Services Overview](AD-FS-2016-Overview.md)
-
-
-
+[Active Directory Federation Services Overview](./ad-fs-overview.md)

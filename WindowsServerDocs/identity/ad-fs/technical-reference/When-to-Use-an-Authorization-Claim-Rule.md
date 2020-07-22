@@ -86,7 +86,7 @@ You can create both authorization rules using either the claim rule language or 
   
 -   Deny access to users with this incoming claim  
   
-For more instructions on how to create this template, see [Create a Rule to Permit All Users](https://technet.microsoft.com/library/ee913577.aspx) or [Create a Rule to Permit or Deny Users Based on an Incoming Claim](https://technet.microsoft.com/library/ee913594.aspx) in the AD FS Deployment Guide.  
+For more instructions on how to create this template, see [Create a Rule to Permit All Users](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913577(v=ws.11)) or [Create a Rule to Permit or Deny Users Based on an Incoming Claim](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913594(v=ws.11)) in the AD FS Deployment Guide.  
   
 ## Using the claim rule language  
 If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).  
@@ -142,4 +142,3 @@ When you want to specify which user or users can create a proxy trust for a give
   
 For more information about how to use the claim rule language, see [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md).  
   
-

@@ -21,7 +21,7 @@ When you deploy AD DS, set the domain and forest functional levels to the highes
 
 With the end of life of Windows 2003, Windows 2003 domain controllers (DCs) need to be updated to Windows Server 2008, 2008R2, 2012, 2012R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain.
 
-At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).
+At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 ## Windows Server 2019
 
@@ -39,7 +39,7 @@ Supported Domain Controller Operating System:
 ### Windows Server 2016 forest functional level features
 
 * All of the features that are available at the Windows Server 2012R2 forest functional level, and the following features, are available:
-   * [Privileged access management (PAM) using Microsoft Identity Manager (MIM)](https://docs.microsoft.com/windows-server/identity/whats-new-active-directory-domain-services#a-namebkmkpamaprivileged-access-management)
+   * [Privileged access management (PAM) using Microsoft Identity Manager (MIM)](../whats-new-active-directory-domain-services.md#a-namebkmkpamaprivileged-access-management)
 
 ### Windows Server 2016 domain functional level features
 
@@ -48,7 +48,7 @@ Supported Domain Controller Operating System:
    * DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
    * Kerberos clients successfully authenticating with the PKInit Freshness Extension will get the fresh public key identity SID.
 
-    For more information see [What's New in Kerberos Authentication](https://docs.microsoft.com/windows-server/security/kerberos/whats-new-in-kerberos-authentication) and [What's new in Credential Protection](https://docs.microsoft.com/windows-server/security/credentials-protection-and-management/whats-new-in-credential-protection)
+    For more information see [What's New in Kerberos Authentication](../../security/kerberos/whats-new-in-kerberos-authentication.md) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
 
 ## Windows Server 2012R2
 
@@ -91,7 +91,7 @@ Supported Domain Controller Operating System:
 ### Windows Server 2012 domain functional level features
 
 * All default Active Directory features, all features from the Windows Server 2008R2 domain functional level, plus the following features:
-   * The KDC support for claims, compound authentication, and Kerberos armoring KDC administrative template policy has two settings (Always provide claims and Fail unarmored authentication requests) that require Windows Server 2012 domain functional level. For more information, see [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx)
+   * The KDC support for claims, compound authentication, and Kerberos armoring KDC administrative template policy has two settings (Always provide claims and Fail unarmored authentication requests) that require Windows Server 2012 domain functional level. For more information, see [What's New in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11))
 
 ## Windows Server 2008R2
 
@@ -140,7 +140,7 @@ Supported Domain Controller Operating System:
 
   * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. Domain-based namespaces in Windows Server 2008 mode also require the forest to use the Windows Server 2003 forest functional level. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
   * Advanced Encryption Standard (AES 128 and AES 256) support for the Kerberos protocol. In order for TGTs to be issued using AES, the domain functional level must be Windows Server 2008 or higher and the domain password needs to be changed. 
-    * For more information, see [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(ws.10).aspx).
+    * For more information, see [Kerberos Enhancements](/previous-versions/windows/it-pro/windows-vista/cc749438(v=ws.10)).
 
       > [!NOTE]
       >Authentication errors may occur on a domain controller after the domain functional level is raised to Windows Server 2008 or higher if the domain controller has already replicated the DFL change but has not yet refreshed the krbtgt password. In this case, a restart of the KDC service on the domain controller will trigger an in-memory refresh of the new krbtgt password and resolve related authentication errors.
@@ -220,5 +220,5 @@ Supported Domain Controller Operating System:
 
 ## Next Steps
 
-* [Raise the Domain Functional Level](https://technet.microsoft.com/library/cc753104.aspx)  
-* [Raise the Forest Functional Level](https://technet.microsoft.com/library/cc730985.aspx)
+* [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))  
+* [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11))

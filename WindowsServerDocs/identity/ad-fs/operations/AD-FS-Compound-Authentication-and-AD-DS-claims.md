@@ -15,7 +15,7 @@ Windows Server 2012 enhances Kerberos authentication by introducing compound aut
 - the identity of the user
 - the identity of the user's device.  
 
-Windows accomplishes compound authentication by extending [Kerberos Flexible Authentication Secure Tunneling (FAST), or Kerberos armoring](https://technet.microsoft.com/library/hh831747.aspx). 
+Windows accomplishes compound authentication by extending [Kerberos Flexible Authentication Secure Tunneling (FAST), or Kerberos armoring](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)). 
 
 AD FS 2012 and later versions allows consumption of AD DS issued user or device claims that reside in a Kerberos authentication ticket. In previous versions of AD FS, the claims engine could only read user and group security IDs (SIDs) from Kerberos but was not able to read any claims information contained within a Kerberos ticket.
 

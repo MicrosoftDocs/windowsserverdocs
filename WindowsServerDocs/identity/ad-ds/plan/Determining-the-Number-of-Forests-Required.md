@@ -59,11 +59,9 @@ This support limitation exists because:
   
 ## In this section  
   
--   [Forest Design Models](https://technet.microsoft.com/library/cc770439.aspx)  
+-   [Forest Design Models](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770439(v=ws.10))  
   
 -   [Mapping Design Requirements to Forest Design Models](Forest-Design-Models.md)  
   
 -   [Using the Organizational Domain Forest Model](../../ad-ds/plan/Using-the-Organizational-Domain-Forest-Model.md)  
   
-
-

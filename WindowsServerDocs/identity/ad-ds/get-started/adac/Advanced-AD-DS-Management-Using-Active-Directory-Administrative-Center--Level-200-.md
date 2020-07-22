@@ -46,7 +46,7 @@ The underlying Windows PowerShell and layer of operations for the new Recycle Bi
   
 ### Limitations  
   
-- Because the Active Directory Administrative Center can only manage domain partitions, it cannot restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you cannot delete objects from the Schema partition). To restore objects from non-domain partitions, use [Restore-ADObject](https://technet.microsoft.com/library/ee617262.aspx).  
+- Because the Active Directory Administrative Center can only manage domain partitions, it cannot restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you cannot delete objects from the Schema partition). To restore objects from non-domain partitions, use [Restore-ADObject](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617262(v=technet.10)).  
 
 - The Active Directory Administrative Center cannot restore sub-trees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU does not restore the child objects.  
   
@@ -75,7 +75,7 @@ The equivalent Active Directory Windows PowerShell cmdlet is:
 Enable-ADOptionalFeature  
 ```
 
-For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-#active-directory-recycle-bin-step-by-step).  
+For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](./introduction-to-active-directory-administrative-center-enhancements--level-100-.md#active-directory-recycle-bin-step-by-step).  
   
 ### Managing Active Directory Recycle Bin using Active Directory Administrative Center
 
@@ -91,7 +91,7 @@ The Active Directory Recycle Bin preserves all objects deleted in the forest. It
   
 The **Deleted Objects** container shows you all the restorable objects in that domain partition. Deleted objects older than **msDS-deletedObjectLifetime** are known as recycled objects. The Active Directory Administrative Center does not show recycled objects and you cannot restore these objects using Active Directory Administrative Center.  
   
-For a deeper explanation of the recycle bin's architecture and processing rules, see [The AD Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](https://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx).  
+For a deeper explanation of the recycle bin's architecture and processing rules, see [The AD Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](/archive/blogs/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting).  
   
 The Active Directory Administrative Center artificially limits the default number of objects returned from a container to 20,000 objects. You can raise this limit as high as 100,000 objects by clicking the **Manage** menu, then **Management List Options**.  
   
@@ -136,7 +136,7 @@ You can also add, modify, or reorder the column headers to provide more detail w
   
 ![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
   
-For more information about Ambiguous Name Resolution, see [ANR Attributes](https://msdn.microsoft.com/library/ms675092(VS.85).aspx).  
+For more information about Ambiguous Name Resolution, see [ANR Attributes](/windows/win32/adschema/attributes-anr).  
   
 ##### Single Object
 
@@ -195,7 +195,7 @@ Filter on all the Sales users. Hold down the CTRL and A keys to select all the d
   
 If the **Sales** OU contained child OUs of its own, then you would restore the child OUs first before restoring their children, and so on.  
   
-To restore all nested deleted objects by specifying a deleted parent container, see [Appendix B: Restore Multiple, Deleted Active Directory Objects (Sample Script)](https://technet.microsoft.com/library/dd379504(WS.10).aspx).  
+To restore all nested deleted objects by specifying a deleted parent container, see [Appendix B: Restore Multiple, Deleted Active Directory Objects (Sample Script)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379504(v=ws.10)).  
   
 The Active Directory Windows PowerShell cmdlet for restoring deleted objects is:  
 
@@ -219,7 +219,7 @@ It is possible that over time, the Deleted Objects container will accumulate ove
 
 The Active Directory Administrative Center enables you to create and manage Fine-Grained Password Policy (FGPP) objects. Windows Server 2008 introduced the FGPP feature but Windows Server 2012 has the first graphical management interface for it. You apply Fine-Grained Password Policies at a domain level and it enables overriding the single domain password required by Windows Server 2003. By creating different FGPP with different settings, individual users or groups get differing password policies in a domain.  
   
-For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](https://technet.microsoft.com/library/cc770842(WS.10).aspx).  
+For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).  
   
 In the Navigation pane, click Tree View, click your domain, click **System**, click **Password Settings Container**, and then in the Tasks pane, click **New** and **Password Settings**.  
   

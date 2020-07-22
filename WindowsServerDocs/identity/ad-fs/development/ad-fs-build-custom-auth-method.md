@@ -12,7 +12,7 @@ ms.technology: identity-adfs
 
 # Build a Custom Authentication Method for AD FS in Windows Server
 
-This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](https://msdn.microsoft.com/library/dn758113\(v=msdn.10\)).
+This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
 
 
 > [!WARNING]
@@ -382,7 +382,7 @@ Copy files and add to GAC.
 
 2.  Install the AD FS role service and configure a farm with at least one node.
 
-    For detailed steps to setup a federation server in a lab environment, see the [Windows Server 2012 R2 AD FS Deployment Guide](https://msdn.microsoft.com/library/dn486820\(v=msdn.10\)).
+    For detailed steps to setup a federation server in a lab environment, see the [Windows Server 2012 R2 AD FS Deployment Guide](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
 
 3.  Copy the Gacutil.exe tools to the server.
 
@@ -646,6 +646,5 @@ You should see a successful sign-in when entering “adfabric” at the MFA auth
 
 #### Other Resources
 
-[Additional Authentication Methods](https://msdn.microsoft.com/library/dn758113\(v=msdn.10\))  
-[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](https://msdn.microsoft.com/library/dn280949\(v=msdn.10\))
-
+[Additional Authentication Methods](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))  
+[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))

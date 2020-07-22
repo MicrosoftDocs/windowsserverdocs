@@ -50,4 +50,4 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 
 ## See Also  
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
+[AD FS Operations](../ad-fs-operations.md) 

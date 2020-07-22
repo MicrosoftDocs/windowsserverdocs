@@ -323,4 +323,4 @@ c2:[Type == `"https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`",
 
 ## Additional references  
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

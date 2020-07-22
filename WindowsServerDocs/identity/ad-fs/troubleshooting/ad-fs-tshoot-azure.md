@@ -123,7 +123,7 @@ To get the User attribute value in Azure AD, run the following command line: `Ge
        - IDPEmail: The value of this claim should match the user principal name of the users in Azure AD.
        - NAMEID: The value of this claim should match the sourceAnchor or ImmutableID of the user in Azure AD.
 
-For more information, see [Use a SAML 2.0 identity provider to implement single sign-on](https://technet.microsoft.com/library/dn641269.aspx).
+For more information, see [Use a SAML 2.0 identity provider to implement single sign-on](/previous-versions/azure/azure-services/dn641269(v=azure.100)).
 
 ### Token-signing certificate mismatch between AD FS and Azure AD.
 
@@ -131,7 +131,7 @@ AD FS uses the token-signing certificate to sign the token that's sent to the us
 
 However, if the token-signing certificate on the AD FS side is changed because of Auto Certificate Rollover or by some intervention, the details of the new certificate must be updated on the Azure AD side for the federated domain. When the Primary token-signing certificate on the AD FS is different from Azure ADs, the token that's issued by AD FS is not trusted by Azure AD. Therefore, the federated user is not allowed to log on.
 
-To fix this you can use the steps outline in [Renew federation certificates for Office 365 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+To fix this you can use the steps outline in [Renew federation certificates for Office 365 and Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
 
 ## Other common things to check
 The following is a quick list of things to check if you are having issues with AD FS and Azure AD interaction.

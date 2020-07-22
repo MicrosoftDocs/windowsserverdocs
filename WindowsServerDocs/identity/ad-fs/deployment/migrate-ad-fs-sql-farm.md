@@ -21,7 +21,7 @@ This document provides detailed information on migrating an AD FS 2.0 SQL farm t
   
 2.  Remove any server in your SQL Server farm from the load balancer.  
   
-3.  Upgrade the operating system on this server in your SQL Server farm from Windows Server 2008 R2 or Windows Server 2008 to Windows Server 2012. For more information, see [Installing Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).  
+3.  Upgrade the operating system on this server in your SQL Server farm from Windows Server 2008 R2 or Windows Server 2008 to Windows Server 2012. For more information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)).  
   
 > [!IMPORTANT]
 >  As the result of the operating system upgrade, the AD FS configuration on this server is lost and the AD FS 2.0 server role is removed. The Windows Server 2012 AD FS server role is installed instead, but it is not configured. You must manually create the original AD FS configuration and restore the remaining AD FS settings to complete the federation server migration.  
@@ -47,6 +47,3 @@ This document provides detailed information on migrating an AD FS 2.0 SQL farm t
  [Migrate the AD FS 2.0 Federation Server](migrate-the-ad-fs-fed-server.md)   
  [Migrate the AD FS 2.0 Federation Server Proxy](migrate-the-ad-fs-2-fed-server-proxy.md)   
  [Migrate the AD FS 1.1 Web Agents](migrate-the-ad-fs-web-agent.md)
-
-
-

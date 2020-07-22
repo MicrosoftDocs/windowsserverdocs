@@ -36,4 +36,4 @@ AD FS makes issuance decisions that are based on identity information that is pr
 
 ## Additional references  
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

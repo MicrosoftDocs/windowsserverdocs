@@ -46,7 +46,7 @@ The following table provides a summary of the upgrade steps and the permission r
 |Run adprep /domainprep /gpprep|Domain Admins|
 |Run adprep /rodcprep|Enterprise Admins|
 
-For additional information on new features in Windows Server 2016, see [What's new in Windows Server 2016](../../../get-started/what-s-new-in-windows-server-2016.md).
+For additional information on new features in Windows Server 2016, see [What's new in Windows Server 2016](../../../get-started/whats-new-in-windows-server-2016.md).
 
 ## Supported in-place upgrade paths
 
@@ -72,7 +72,7 @@ If you are doing an in-place upgrade of an existing domain controller to the Win
 
 If you are promoting a new Windows Server 2016 server you do not need to run these manually.  These are integrated into the PowerShell and Server Manager experiences.
 
-For more information on running adprep see [Running Adprep](https://technet.microsoft.com/library/dd464018.aspx)
+For more information on running adprep see [Running Adprep](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10))
 
 ## Functional level features and requirements
 
@@ -145,7 +145,7 @@ The following is a simple example of upgrading the Contoso forest from Windows S
 
    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 
-1. In the PowerShell windows use the Move-ADDirectoryServerOperationMasterRole to move the FSMO roles. You can type the name of each -OperationMasterRole or use numbers to specify the roles. For more information see [Move-ADDirectoryServerOperationMasterRole](https://technet.microsoft.com/library/hh852302.aspx)
+1. In the PowerShell windows use the Move-ADDirectoryServerOperationMasterRole to move the FSMO roles. You can type the name of each -OperationMasterRole or use numbers to specify the roles. For more information see [Move-ADDirectoryServerOperationMasterRole](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10))
 
     ``` powershell
     Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
@@ -166,4 +166,4 @@ The following is a simple example of upgrading the Contoso forest from Windows S
 
 - [What's New in Active Directory Domain Services Installation and Removal](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)
 - [Install Active Directory Domain Services &#40;Level 100&#41;](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md)
-- [Windows Server 2016 Functional Levels](../../ad-ds/Windows-Server-2016-Functional-Levels.md)  
+- [Windows Server 2016 Functional Levels](../active-directory-functional-levels.md)  
