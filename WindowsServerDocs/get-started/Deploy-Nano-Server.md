@@ -76,8 +76,8 @@ This table shows the roles and features that are available in this release of Na
 | Deploying on a physical machine | - Package Microsoft-NanoServer-Host-Package |
 | BitLocker, trusted platform module (TPM), volume encryption, platform identification, cryptography providers, and other functionality related to secure startup | -Package Microsoft-NanoServer-SecureStartup-Package |
 | Hyper-V support for Shielded VMs | -Package Microsoft-NanoServer-ShieldedVM-Package<p>**Note:** This package is only available for the Datacenter edition of Nano Server. |
-| Simple Network Management Protocol (SNMP) agent | -Package Microsoft-NanoServer-SNMP-Agent-Package.cab<p>**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](#a-namebkmkonlineainstalling-roles-and-features-online) for details. |
-| IPHelper service which provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS | -Package Microsoft-NanoServer-IPHelper-Service-Package.cab<p>**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](#a-namebkmkonlineainstalling-roles-and-features-online) for details. ||
+| Simple Network Management Protocol (SNMP) agent | -Package Microsoft-NanoServer-SNMP-Agent-Package.cab<p>**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](#installing-roles-and-features-online) for details. |
+| IPHelper service which provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS | -Package Microsoft-NanoServer-IPHelper-Service-Package.cab<p>**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](#installing-roles-and-features-online) for details. ||
 
 > [!NOTE]
 > When you install packages with these options, a corresponding language pack is also installed based on selected server media locale. You can find the available language packs and their locale abbreviations in the installation media in subfolders named for the locale of the image.
@@ -207,7 +207,7 @@ Once you've connected to Nano Server, you can edit a file residing on your local
 
 Edit a file residing on the remote Nano Server by starting a remote session with `Enter-PSSession -ComputerName 192.168.0.100 -Credential ~\Administrator` and then passing the file's relative or absolute path to the psEdit command like this: `psEdit C:\Windows\Logs\DISM\dism.log`
 
-## <a name=BKMK_online></a>Installing roles and features online
+## <a name="BKMK_online"></a>Installing roles and features online
 
 > [!NOTE]
 > If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. To avoid a version mismatch between the optional packages and base operating system, you should install the [latest cumulative update](./update-nano-server.md) immediately after installing any optional packages and **before** restarting the server.
