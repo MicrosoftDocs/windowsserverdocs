@@ -88,7 +88,7 @@ Below is a list of third party providers we are aware of.  There may always be p
 
 
 ### Where is the capacity planning sizing spreadsheet for AD FS 2016?
-The AD FS 2016 version of the spreadsheet can be downloaded [here](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
+The AD FS 2016 version of the spreadsheet can be downloaded [here](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
 This can also be used for AD FS in Windows Server 2012 R2.
 
 ### How can I ensure my AD FS and WAP servers support Apple's ATP requirements?

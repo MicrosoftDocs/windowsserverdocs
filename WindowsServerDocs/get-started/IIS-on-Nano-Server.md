@@ -58,7 +58,7 @@ In this release of Nano Server, the following IIS features are available:
 |**Management Tools**||
 |IISAdministration module for Windows PowerShell|x|
 
-A series of articles on other configurations of IIS (such as using ASP.NET, PHP, and Java), as well as other related content is published at [http://iis.net/learn](https://iis.net/learn).
+A series of articles on other configurations of IIS (such as using ASP.NET, PHP, and Java), as well as other related content is published at [https://iis.net/learn](https://iis.net/learn).
 
 ## Installing IIS on Nano Server
 You can install this server role either offline (with the Nano Server off) or online (with the Nano Server running); offline installation is the recommended option.
