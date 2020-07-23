@@ -64,7 +64,7 @@ For small tenants, the cost can be reduced by combining the file server with the
   
 Additional information  
 [File and Storage Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))  
-[How to Attach a Data Disk to a Virtual Machine](http://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)  
+[How to Attach a Data Disk to a Virtual Machine](https://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)  
   
 ### User Profile Disks  
 User profile disks allow users to save personal settings and files when they are signed in to a session on an RD Session Host server in a collection, and then have access to the same settings and files when signing in to a different RD Session Host server in the collection. When the user first signs in, a user profile disk is created on the tenant's file server, and that disk is mounted to the RD Session Host server to which the user is connected. For each subsequent sign-in, the user profile disk is mounted to the appropriate RD Session host server, and with each sign-out, it is un-mounted. The contents of the profile disk can only be accessed by that user.  
