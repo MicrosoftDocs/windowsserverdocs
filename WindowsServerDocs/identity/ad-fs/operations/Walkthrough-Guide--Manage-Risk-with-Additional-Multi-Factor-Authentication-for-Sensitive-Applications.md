@@ -127,7 +127,7 @@ Complete the following procedures in order to download and configure and select 
 
         -   **Per Enabled User** - purchasing model that charges per enabled user.  Typically used for employee-facing scenarios such as Office 365.
 
-        For additional information on usage models, see [Windows Azure pricing details](http://www.windowsazure.com/pricing/details/active-directory/).
+        For additional information on usage models, see [Windows Azure pricing details](https://www.windowsazure.com/pricing/details/active-directory/).
 
     3.  **Directory** - The Windows Azure Active Directory tenant that the Multi-Factor Authentication Provider is associated with. This is optional as the provider does not have to be linked to Windows Azure Active Directory when securing on-premises applications.
 
