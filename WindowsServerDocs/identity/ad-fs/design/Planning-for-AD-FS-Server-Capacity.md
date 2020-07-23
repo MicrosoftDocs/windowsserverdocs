@@ -38,9 +38,9 @@ Once you have reviewed the content in the previous table, you can now complete t
   
 |Prerequisite task|Description|Reference|  
 |---------------------|---------------|-------------|  
-|Download the AD FS Capacity Planning Sizing Spreadsheet|The AD FS Capacity Planning Sizing spreadsheet can help you to determine the number of federation servers required for an AD FS federation server farm deployment. Instructions for how to use this spreadsheet are available in the link provided below for the next task.|[AD FS Capacity Planning Spreadsheet](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacityPlanning.xlsx)|  
+|Download the AD FS Capacity Planning Sizing Spreadsheet|The AD FS Capacity Planning Sizing spreadsheet can help you to determine the number of federation servers required for an AD FS federation server farm deployment. Instructions for how to use this spreadsheet are available in the link provided below for the next task.|[AD FS Capacity Planning Spreadsheet](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacityPlanning.xlsx)|  
 |Gather data about the number of users who will require single sign\-on \(SSO\) access to the target claims\-aware application and the expected peak usage periods associated with this access|This user data you collect will be used for the input values required within the context of the AD FS Capacity Planning Sizing Spreadsheet.|[Estimate the number of federation servers for your organization](Planning-for-Federation-Server-Capacity.md#bk_estimatefs)|  
-|AD FS Capacity Planning Spreadsheet for Windows Server 2016|Updated Planning worksheet for Windows Server 2016|[AD FS Windows Server 2016 Capacity Planning](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)  
+|AD FS Capacity Planning Spreadsheet for Windows Server 2016|Updated Planning worksheet for Windows Server 2016|[AD FS Windows Server 2016 Capacity Planning](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)  
   
 ## <a name="bk_terms"></a>AD FS capacity planning terms  
 The following table describes important terms that are used often in this capacity planning section of the AD FS Design Guide. For a more complete list of AD FS terms, see [Understanding Key AD FS Concepts](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md).  

@@ -91,7 +91,7 @@ Use the AD FS default, internally generated, self-signed token decrypting certif
 
 ## <a name="BKMK_2"></a>Hardware requirements  
 AD FS and Web Application Proxy hardware requirements (physical or virtual) are gated on CPU, so you should size your farm for processing capacity.  
-- Use the [AD FS 2016 Capacity Planning spreadsheet](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx) to determine the number of AD FS and Web Application Proxy servers you will need.
+- Use the [AD FS 2016 Capacity Planning spreadsheet](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx) to determine the number of AD FS and Web Application Proxy servers you will need.
 
 The memory and disk requirements for AD FS are fairly static, see the table below:
 
