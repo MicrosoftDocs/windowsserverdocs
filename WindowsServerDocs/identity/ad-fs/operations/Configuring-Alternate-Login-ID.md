@@ -28,18 +28,6 @@ An organization may have to use alternate ID in the following scenarios:
 2. The on-premises UPN is not same as the user's email address and to sign-in to Office 365, users use email address and UPN cannot be used due to organizational constraints.
    In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs. 
 
-## End-User Experience with Alternate Login ID
-The end-user experience varies depending on the authentication method used with alternate login id.  Currently there three different ways in which using alternate login id can be achieved.  They are:
-
-- **Regular Authentication (Legacy)**- uses the basic authentication protocol.
-- **Modern Authentication** - brings Active Directory Authentication Library (ADAL)-based sign-in to applications. This enables sign-in features such as Multi-Factor Authentication (MFA), SAML-based third-party Identity Providers with Office client applications, smart card and certificate-based authentication.
-- **Hybrid Modern Authentication** - Provides all of the benefits of Modern Authentication and provides users the ability to access on-premises applications using authorization tokens obtained from the cloud.
-
->[!NOTE]
-> For the best possible experience, Microsoft highly recommends Hybrid Modern Authentication.
-
-
-
 ## Configure alternate logon ID
 Using Azure AD Connect
 We recommend using Azure AD connect to configure alternate logon ID for your environment.
