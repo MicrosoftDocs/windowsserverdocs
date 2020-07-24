@@ -107,8 +107,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 02/25/2020*
 
-- Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope
--  properties has been modified.
+- Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope properties has been modified.
 - When a Workspace is empty or has been removed, the Connection Center no longer appears to be empty.
 - Added the activity ID and error code on disconnect messages to improve troubleshooting. You can copy the dialog message with **Ctrl+C**.
 - Fixed an issue that caused the desktop connection settings to not detect displays.
