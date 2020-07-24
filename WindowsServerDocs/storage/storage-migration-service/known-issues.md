@@ -543,7 +543,10 @@ When attempting to run inventory or transfer with the Storage Migration Service 
 
 Examining the logs further shows that the migration account and the server being migrated from or two are in different domains:
 
-    06/25/2020-10:11:16.543 [Info] Creating new job=NedJob user=**CONTOSO**\ned    [d:\os\src\base\dms\service\StorageMigrationService.IInventory.cs::CreateJob::133]
+    ```
+    06/25/2020-10:11:16.543 [Info] Creating new job=NedJob user=**CONTOSO**\ned    
+    [d:\os\src\base\dms\service\StorageMigrationService.IInventory.cs::CreateJob::133]
+    ```
     
     GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\common\proxycommon\CimSessionHelper.cs::GetOsVersion::66]
 06/25/2020-10:20:45.368 [Info] Computer 'fileserver75.corp.contoso.com': OS version 
