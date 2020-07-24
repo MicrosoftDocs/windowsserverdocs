@@ -28,7 +28,7 @@ We regularly update the [Remote Desktop client for Android](remote-desktop-andro
 - New Connection Progress UI.​
 - New in-session Connection Bar.​
 - Added support for Android TV devices.​
-- Integration with Microsoft Authenticator to enable conditional access when subscribing to WVD feeds.
+- Integration with Microsoft Authenticator to enable conditional access when subscribing to Windows Virtual Desktop feeds.
 - Enabled the transfer of connections and settings from Remote Desktop 8.​
 
 ## Updates for version 8.1.80
