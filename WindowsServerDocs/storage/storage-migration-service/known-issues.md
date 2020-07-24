@@ -24,7 +24,7 @@ The Storage Migration Service contains event logs for the Orchestrator service a
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService-Proxy
 
-If you need to gather these logs for offline viewing or to send to Microsoft Support, there is an open-source PowerShell script available on GitHub:
+If you need to gather these logs for offline viewing or to send to Microsoft Support, there's an open-source PowerShell script available on GitHub:
 
  [Storage Migration Service Helper](https://aka.ms/smslogs)
 
@@ -52,7 +52,7 @@ This issue is caused by a servicing issue in the Evaluation media of Windows Ser
 
 To work around this issue for evaluation, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and don't activate it. Without activation, all editions of Windows Server operate in evaluation mode for 180 days.
 
-We have fixed this issue in a later release of Windows Server.
+We've fixed this issue in a later release of Windows Server.
 
 ## Storage Migration Service times out downloading the transfer error CSV
 
@@ -60,7 +60,7 @@ When using Windows Admin Center or PowerShell to download the transfer operation
 
  >   Transfer Log - Please check file sharing is allowed in your firewall. : This request operation sent to net.tcp://localhost:28940/sms/service/1/transfer did not receive a reply within the configured timeout (00:01:00). The time allotted to this operation may have been a portion of a longer timeout. This may be because the service is still processing the operation or because the service was unable to send a reply message. Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
 
-This issue is caused by an extremely large number of transferred files that cannot be filtered in the default one minute timeout allowed by Storage Migration Service.
+This issue is caused by an extremely large number of transferred files that can't be filtered in the default one minute timeout allowed by Storage Migration Service.
 
 To work around this issue:
 
@@ -100,7 +100,7 @@ When validating a transfer job, you see the following warnings:
 
 If you have not installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, or the destination computer is Windows Server 2016 or Windows Server 2012 R2, this behavior is by design. We recommend migrating to a Windows Server 2019 computer with the proxy installed for significantly improved transfer performance.
 
-## Certain files do not inventory or transfer, error 5 "Access is denied"
+## Certain files don't inventory or transfer, error 5 "Access is denied"
 
 When inventorying or transferring files from source to destination computers, files from which a user has removed permissions for the Administrators group fail to migrate. Examining the Storage Migration Service-Proxy debug shows:
 
@@ -171,11 +171,11 @@ When attempting to transfer data from a Windows Server 2008 R2 source computer, 
     Couldn't transfer storage on any of the endpoints.
     0x9044
 
-This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. Irrespective of Storage Migration Service, we always recommend patching a Windows Server 2008 R2 computer for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
+This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. It's especially important to keep a Windows Server 2008 R2 computer updated for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
 
 ## Error "Couldn't transfer storage on any of the endpoints" and "Check if the source device is online - we couldn't access it."
 
-When attempting to transfer data from a source computer, some or all shares do not transfer, with summary error:
+When attempting to transfer data from a source computer, some or all shares don't transfer, with the error:
 
     Couldn't transfer storage on any of the endpoints.
     0x9044
@@ -198,7 +198,7 @@ Examining the StorageMigrationService/Admin event log shows:
 
 Examining the StorageMigrationService-Proxy/Debug log shows:
 
-    07/02/2019-13:35:57.231 [Error] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
+    07/02/2019-13:35:57.231 [Error] Transfer validation failed. ErrorCode: 40961, Source endpoint isn't reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
     at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
     at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)
 
@@ -341,7 +341,7 @@ When attempting to run cut over of a Windows Server 2008 R2 cluster source, the 
        at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
        at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
 
-This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the destination cluster netname and IP address to match the original source.
+This issue is caused by a missing API in older versions of Windows Server. Currently there's no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the destination cluster netname and IP address to match the original source.
 
 ## Cutover hangs on "38% Mapping network interfaces on the source computer..." when using static IPs
 
@@ -389,7 +389,7 @@ This is expected behavior when transferring a very large number of files and nes
 After starting the transfer from or to a domain controller:
 
  1. No data is migrated and no shares are created on the destination.
- 2. There is a red error symbol shown in Windows Admin Center with no error message
+ 2. there's a red error symbol shown in Windows Admin Center with no error message
  3. One or more AD users and Domain Local groups have their name and/or pre-Windows 2000 logon attribute changed
  4. You see event 3509 on the Storage Migration Service orchestrator:
 
@@ -483,7 +483,7 @@ When attempting to run inventory, you receive:
 
 At this stage, Storage Migration Service orchestrator is attempting remote registry reads to determine source machine configuration, but is being rejected by the source server saying the registry path does not exist. This can be caused by:
 
- - The Remote Registry service is not running on the source computer.
+ - The Remote Registry service isn't running on the source computer.
  - firewall does not allow remote registry connections to the source server from the Orchestrator.
  - The source migration account does not have remote registry permissions to connect to the source computer.
  - The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
@@ -516,7 +516,7 @@ This issue is caused by Group Policy that sets the following registry value on t
  "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
  LocalAccountTokenFilterPolicy = 0"
 
-This setting is not part of standard Group Policy, it's an add-on configured using the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319):
+This setting isn't part of standard Group Policy, it's an add-on configured using the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319):
 
  - Windows Server 2012 R2: "Computer Configuration\Administrative Templates\SCM: Pass the Hash Mitigations\Apply UAC restrictions to local accounts on network logons"
  - Widows Server 2016: "Computer Configuration\Administrative Templates\MS Security Guide\Apply UAC restrictions to local accounts on network logons"
