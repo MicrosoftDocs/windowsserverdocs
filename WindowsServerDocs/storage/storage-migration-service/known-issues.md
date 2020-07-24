@@ -539,7 +539,7 @@ When attempting to run inventory or transfer with the Storage Migration Service 
 
     The server was unable to process the request due to an internal error
 
-    04/28/2020-11:31:01.169 [Erro] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
+    04/28/2020-11:31:01.169 [Error] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
 
 Examining the logs further shows that the migration account and the server being migrated from or two are in different domains:
 
