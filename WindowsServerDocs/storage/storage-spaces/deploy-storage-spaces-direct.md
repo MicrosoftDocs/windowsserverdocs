@@ -7,15 +7,15 @@ ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 06/07/2019
-description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure.
+ms.date: 07/24/2020
+description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
