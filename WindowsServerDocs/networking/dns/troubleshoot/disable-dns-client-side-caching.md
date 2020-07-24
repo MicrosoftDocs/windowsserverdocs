@@ -61,7 +61,7 @@ The TTL for positive responses is the lesser of the following values:
 >[!Note]
 >- The default TTL for positive responses is 86,400 seconds (1 day).
 >- The TTL for negative responses is the number of seconds specified in the MaxNegativeCacheTtl registry setting.
->- The default TTL for negative responses is 900 seconds (15 minutes).
+>- The default TTL for negative responses is 5 seconds; prior to Windows 10, version 1703 the default was 900 seconds (15 minutes).
 If you do not want negative responses to be cached, set the MaxNegativeCacheTtl registry setting to 0.
 
 To set the caching time on a client computer:
@@ -78,15 +78,15 @@ To set the caching time on a client computer:
 
      Data type: REG_DWORD
 
-     Value data: Default value 86400 seconds. 
+     Value data: Default value 86400 seconds.
      
-     If you lower the Maximum TTL value in the client's DNS cache to 1 second, this gives the appearance that the client-side DNS cache has been disabled.    
+     If you lower the Maximum TTL value in the client's DNS cache to 1 second, this gives the appearance that the client-side DNS cache has been disabled.
 
    - Value name: MaxNegativeCacheTtl
 
      Data type: REG_DWORD
 
-     Value data: Default value 900 seconds. 
+     Value data: Default value 5 seconds.
      
      Set the value to 0 if you do not want negative responses to be cached.
 
