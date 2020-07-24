@@ -50,10 +50,10 @@
         "EssentialsDocs/migrate/*.md": "essentials",
         "EssentialsDocs/support/*.md": "essentials",
         "EssentialsDocs/use/*.md": "essentials"
-      }
-      ,
+      },
     "template": [],
     "dest": "window-server-docs/essentials",
     "markdownEngineName": "markdig"
+    }
   }
 }
