@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 06/02/2020
+ms.date: 07/24/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -102,7 +102,7 @@ If you have not installed the Storage Migration Service Proxy service on the Win
 
 ## Certain files do not inventory or transfer, error 5 "Access is denied"
 
-When inventorying or transferring files from source to destination computers, files from which a user has removed Administrators group permissions fail to migrate. Examining the Storage Migration Service-Proxy debug shows:
+When inventorying or transferring files from source to destination computers, files from which a user has removed permissions for the Administrators group fail to migrate. Examining the Storage Migration Service-Proxy debug shows:
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
@@ -132,7 +132,7 @@ To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Bui
 
 When using the Storage Migration Service to transfer files to a new destination, then configuring DFS Replication to replicate that data with an existing server through preseeded replication or DFS Replication database cloning, all files experience a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using Storage Migration Service to transfer them. Examining the files with ICACLS or the DFS Replication database cloning debug log reveals:
 
-Source file:
+### Source file
 
   icacls d:\test\Source:
 
@@ -140,27 +140,27 @@ Source file:
   thatcher.png
   D:AI(A;;FA;;;BA)(A;;0x1200a9;;;DD)(A;;0x1301bf;;;DU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)
 
-Destination file:
+### Destination file
 
   icacls d:\test\thatcher.png /save out.txt /t
   thatcher.png
   D:AI(A;;FA;;;BA)(A;;0x1301bf;;;DU)(A;;0x1200a9;;;DD)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)**S:PAINO_ACCESS_CONTROL**
 
-DFSR Debug Log:
+### DFSR Debug Log
 
-    20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found.
+   20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found.
 
-    Local ACL hash:1BCDFE03-A18BCE01-D1AE9859-23A0A5F6
-    LastWriteTime:20190308 18:09:44.876
-    FileSizeLow:1131654
-    FileSizeHigh:0
-    Attributes:32
+   Local ACL hash:1BCDFE03-A18BCE01-D1AE9859-23A0A5F6
+   LastWriteTime:20190308 18:09:44.876
+   FileSizeLow:1131654
+   FileSizeHigh:0
+   Attributes:32
 
-    Clone ACL hash:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B**
-    LastWriteTime:20190308 18:09:44.876
-    FileSizeLow:1131654
-    FileSizeHigh:0
-    Attributes:32
+   Clone ACL hash:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B**
+   LastWriteTime:20190308 18:09:44.876
+   FileSizeLow:1131654
+   FileSizeHigh:0
+   Attributes:32
 
 This issue is fixed by the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update
 
@@ -280,7 +280,7 @@ As an alternative workaround:
 2. Run the following Storage Migration Service PowerShell command on the orchestrator computer:
 
    ```PowerShell
-   Register-SMSProxy -ComputerName *destination server* -Force
+   Register-SMSProxy -ComputerName <destination server> -Force
    ```
 ## Error "Dll was not found" when running inventory from a cluster node
 
@@ -305,7 +305,7 @@ Uninstalling Windows Server cumulative updates may prevent the Storage Migration
 
 1.	Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
-     ```
+     ```DOS
      TAKEOWN /d y /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
 
      MD c:\ProgramData\Microsoft\StorageMigrationService\backup
@@ -382,7 +382,7 @@ There are two solutions for this issue:
 
 After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server.
 
-This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](./faq.md#optimizing-inventory-and-transfer-performance).
+This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance).
 
 ## Data does not transfer, user renamed when migrating to or from a domain controller
 
@@ -533,23 +533,11 @@ To work around this issue, use one of the following options:
 
 ## Inventory or transfer fail when using credentials from a different domain
 
-When attempting to run inventory or transfer with the Storage Migration Service and targeting a Windows Server while using migration credentials from a different domain than the targeted server, you receive one or more of the following errors
-
-    Exception from HRESULT:0x80131505
+When attempting to run inventory or transfer with the Storage Migration Service and targeting a Windows Server while using migration credentials from a different domain than the targeted server, you receive the following errors
 
     The server was unable to process the request due to an internal error
 
     04/28/2020-11:31:01.169 [Error] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
-
-Examining the logs further shows that the migration account and the server being migrated from or two are in different domains:
-
-    ```
-    06/25/2020-10:11:16.543 [Info] Creating new job=NedJob user=**CONTOSO**\ned    
-    [d:\os\src\base\dms\service\StorageMigrationService.IInventory.cs::CreateJob::133]
-    ```
-    
-    GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\common\proxycommon\CimSessionHelper.cs::GetOsVersion::66]
-06/25/2020-10:20:45.368 [Info] Computer 'fileserver75.corp.contoso.com': OS version 
 
 This issue is caused by a code defect in the Storage Migration Service. To work around this issue, use migration credentials from the same domain that the source and destination computer belong to. For instance, if the source and destination computer belong to the "corp.contoso.com" domain in the "contoso.com" forest, use 'corp\myaccount' to perform the migration, not a 'contoso\myaccount' credential.
 
