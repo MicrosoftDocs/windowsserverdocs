@@ -34,7 +34,24 @@
         }
       }
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.prod": {
+        "EssentialsDocs/get-started/*.md": "windows-server",
+        "EssentialsDocs/install/*.md": "windows-server",
+        "EssentialsDocs/manage/*.md": "windows-server",
+        "EssentialsDocs/migrate/*.md": "windows-server",
+        "EssentialsDocs/support/*.md": "windows-server",
+        "EssentialsDocs/use/*.md": "windows-server"
+      },
+        "ms.technology": {
+        "EssentialsDocs/get-started/*.md": "essentials",
+        "EssentialsDocs/install/*.md": "essentials",
+        "EssentialsDocs/manage/*.md": "essentials",
+        "EssentialsDocs/migrate/*.md": "essentials",
+        "EssentialsDocs/support/*.md": "essentials",
+        "EssentialsDocs/use/*.md": "essentials"
+      }
+      ,
     "template": [],
     "dest": "window-server-docs/essentials",
     "markdownEngineName": "markdig"

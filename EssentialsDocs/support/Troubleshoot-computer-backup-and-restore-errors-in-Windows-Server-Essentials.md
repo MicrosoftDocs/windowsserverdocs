@@ -2,7 +2,6 @@
 title: "Troubleshoot computer backup and restore errors in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 06/25/2013
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs

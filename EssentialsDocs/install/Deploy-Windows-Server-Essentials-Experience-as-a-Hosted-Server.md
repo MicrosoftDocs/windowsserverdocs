@@ -2,7 +2,6 @@
 title: "Deploy Windows Server Essentials Experience as a Hosted Server"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
