@@ -389,7 +389,7 @@ This is expected behavior when transferring a very large number of files and nes
 After starting the transfer from or to a domain controller:
 
  1. No data is migrated and no shares are created on the destination.
- 2. there's a red error symbol shown in Windows Admin Center with no error message
+ 2. There's a red error symbol shown in Windows Admin Center with no error message
  3. One or more AD users and Domain Local groups have their name and/or pre-Windows 2000 logon attribute changed
  4. You see event 3509 on the Storage Migration Service orchestrator:
 
