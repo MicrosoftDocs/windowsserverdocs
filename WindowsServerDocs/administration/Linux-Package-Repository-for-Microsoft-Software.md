@@ -13,6 +13,7 @@ ms.date: 10/16/2017
 # Linux Software Repository for Microsoft Products
 
 ## Overview
+
 Microsoft builds and supports a variety of software products for Linux systems and makes them available via standard APT and YUM package repositories. This document describes how to configure the repository on your Linux system, so that you can then install/upgrade Microsoft's Linux software using your distribution's standard package management tools.
 
 Microsoft's Linux Software Repository is comprised of multiple sub-repositories:
@@ -24,8 +25,8 @@ Microsoft's Linux Software Repository is comprised of multiple sub-repositories:
 > [!Note]
 > Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
 
-
 ## Configuring the repositories
+
 Repositories can be configured automatically by installing the Linux package that applies to your Linux distribution and version. The package will install the repository configuration along with the GPG public key used by tools such as apt/yum/zypper to validate the signed packages and/or repository metadata.
 
 ### Enterprise Linux (RHEL and variants)
@@ -38,45 +39,36 @@ Repositories can be configured automatically by installing the Linux package tha
 
         sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 
+ - Enterprise Linux 8 (EL8)
+
+        sudo rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
 
 ### Ubuntu
 
- - Ubuntu 14.04 (Trusty)
-
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-        sudo apt-add-repository https://packages.microsoft.com/ubuntu/14.04/prod
-        sudo apt-get update
-
  - Ubuntu 16.04 (Xenial)
 
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod
         sudo apt-get update
 
  - Ubuntu 18.04 (Bionic)
 
-         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
         sudo apt-get update
 
- - Ubuntu 18.10 (Cosmic)
+ - Ubuntu 20.04 (Disco)
 
-         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-        sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.10/prod
-        sudo apt-get update
-
- - Ubuntu 19.04 (Disco)
-
-         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-        sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+        sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod
         sudo apt-get update
 
 ### SUSE Linux Enterprise 12
 
         sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 
-
 ## Manual Configuration
+
 The repository configuration files are available from [packages.microsoft.com/config](https://packages.microsoft.com/config/). The name and location of these files can be located using the following URI naming convention:
 
         https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
@@ -92,22 +84,19 @@ The repository configuration files are available from [packages.microsoft.com/co
  - RHEL/CentOS 7
 
         # Install repository configuration
-        curl https://packages.microsoft.com/config/rhel/7/prod.repo > ./microsoft-prod.repo
-        sudo cp ./microsoft-prod.repo /etc/yum.repos.d/
+        curl -sSL https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft-prod.repo
 
         # Install Microsoft's GPG public key
-        curl https://packages.microsoft.com/keys/microsoft.asc > ./microsoft.asc
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc > ./microsoft.asc
         sudo rpm --import ./microsoft.asc
 
- - Ubuntu 16.04
+ - Ubuntu 20.04
 
         # Install repository configuration
-        curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > ./microsoft-prod.list
-        sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
+        curl -sSL https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list
 
-        # Install Microsoft GPG public key
-        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-        sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
+        # Install Microsoft GPG public keya
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
-
-
+        # Update package index files
+        sudo apt-get update
