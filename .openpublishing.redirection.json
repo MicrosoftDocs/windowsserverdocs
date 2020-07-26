@@ -8338,7 +8338,7 @@
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-an-Azure-internal-load-balancer-for-Remote-Desktop-deployment.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-2-configure-load-balancing-on-the-rd-connection-brokers",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-an-Azure-SQL-database-for-the-RD-Connection-Broker.md",
@@ -8558,7 +8558,7 @@
     {
       "source_path": "WindowsServerDocs/manage/windows-admin-center/understand/videos.md",
       "redirect_url": "/windows-server/manage/windows-admin-center/overview#video-based-learning",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/azure-hybrid-services/index.md",
@@ -8638,7 +8638,7 @@
     {
       "source_path": "WindowsServerDocs/security/set-up-hgs-for-always-encrypted-in-sql-server.md",
       "redirect_url": "https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan?view=sql-server-ver15",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/Networking.md",
