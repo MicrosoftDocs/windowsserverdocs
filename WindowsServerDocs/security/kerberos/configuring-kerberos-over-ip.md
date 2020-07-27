@@ -27,10 +27,10 @@ A Service Principal Name is a unique identifier used during Kerberos authenticat
 
 IP addresses are not normally used in place of hostnames because IP addresses are often temporary. This can lead to conflicts and authentication failures as address leases expire and renew. Therefore registering an IP address-based SPN is a manual process and should only be used when it's impossible to switch to a DNS-based hostname.
 
-The recommended approach is to use the [Setspn.exe](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) tool. Note that an SPN can only be registered to a single account in Active Directory at a time so it is recommended that IP addresses have static leases if DHCP is used.
+The recommended approach is to use the [Setspn.exe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) tool. Note that an SPN can only be registered to a single account in Active Directory at a time so it is recommended that IP addresses have static leases if DHCP is used.
 
 ```
-Setspn -s <service>/ip.address> <domain-user-account>  
+Setspn -s <service>/ip.address> <domain-user-account>
 ```
 
 Example:

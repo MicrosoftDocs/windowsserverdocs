@@ -2,12 +2,12 @@
 title: Troubleshooting Disk Management
 description: This article describes how to troubleshoot Disk Management issues
 ms.date: 12/20/2019
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.prod: windows-server
+ms.technology: storage
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 # Troubleshooting Disk Management
 
@@ -30,7 +30,7 @@ Before we launch into the tricky stuff, here's an easy way to get to Disk Manage
 ![Disk Management showing an unknown disk that must be initialized.](media/uninitialized-disk.PNG)
 
 **Cause:**
-If you have a disk that doesn't appear in File Explorer and is listed in Disk Management as *Not Initialized*, it could be because the disk doesn't have a valid disk signature. Basically this means that the disk has never been initialized and formatted, or the drive formatting has become corrupted somehow. 
+If you have a disk that doesn't appear in File Explorer and is listed in Disk Management as *Not Initialized*, it could be because the disk doesn't have a valid disk signature. Basically this means that the disk has never been initialized and formatted, or the drive formatting has become corrupted somehow.
 
 It's also possible that the disk is having hardware problems or issues plugging in, but we'll get to that in a few paragraphs.
 
@@ -50,7 +50,7 @@ There are a bunch of reasons a disk or memory card might be missing or fail to i
 
     > [!NOTE]
     > Ignore any partitions that are listed as **EFI System Partition** or **Recovery Partition**. These partitions are full of really important files your PC needs to operate properly. It's best to just leave them alone to do their jobs starting your PC and helping you recover from problems.
-3. If you have an external disk that's not showing up, unplug the disk, plug it back in, and then select **Action** > **Rescan Disks**. 
+3. If you have an external disk that's not showing up, unplug the disk, plug it back in, and then select **Action** > **Rescan Disks**.
 4. Shut down your PC, turn off your external hard disk (if it's an external disk with a power cord), and then turn your PC and the disk back on.
     To turn off your PC in Windows 10, select the Start button, select the Power button, and then select **Shut down**.
 5. Plug the disk into a different USB port that's directly on your PC (not on a hub).
@@ -64,14 +64,14 @@ There are a bunch of reasons a disk or memory card might be missing or fail to i
 
     ![Device Manager showing an unknown USB device](media/device-manager.PNG)
 8. Plug the disk into a different PC.
-    
-    If the disk doesn't work on another PC, it's a good sign that there's something bad going on with the disk, and not your PC. No fun, we know. There are some more steps you can try in [External USB drive error "You must initialize the disk before Logical Disk Manager can access it"](https://social.technet.microsoft.com/Forums/windows/en-US/2b069948-82e9-49ef-bbb7-e44ec7bfebdb/forum-faq-external-usb-drive-error-you-must-initialize-the-disk-before-logical-disk-manager-can?forum=w7itprohardware), but it might be time to search for and ask for help at the [Microsoft community](https://answers.microsoft.com/en-us/windows/forum/windows_10-files?sort=lastreplydate&dir=desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=all&isFilterExpanded=true&tm=1514405359639) site, or contact your disk manufacturer or [Microsoft Support](https://support.microsoft.com/contactus/).
+
+    If the disk doesn't work on another PC, it's a good sign that there's something bad going on with the disk, and not your PC. No fun, we know. Search for and ask for help at the [Microsoft community](https://answers.microsoft.com/) site, or contact your disk manufacturer or [Microsoft Support](https://support.microsoft.com/contactus/).
 
     If you just can't get it working, there are also apps that can try to recover data from a failing disk, or if the files are really important, you can pay a data recovery lab to try to recover them. If you find something that works for you, let us know in the comments section below.
 
 > [!IMPORTANT]
 > Disks fail pretty often, so it's important to regularly backup any files you care about. If you have a disk that sometimes doesn't appear or gives errors, consider this a reminder to double-check your backup methods. It's OK if you're a little behind - we've all been there. The best backup solution is one you use, so we encourage you to find one that works for you and stick with it.
-> 
+>
 > [!TIP]
 > For info on how to use apps built into Windows to backup files to an external drive such as a USB drive, see [Back up and restore your files](https://support.microsoft.com/help/17143/windows-10-back-up-your-files). You can also save files in Microsoft OneDrive, which syncs files from your PC to the cloud. If your hard disk fails, you'll still be able to get any files you store in OneDrive from OneDrive.com. For more info, see [OneDrive on your PC](https://support.microsoft.com/help/17184/windows-10-onedrive).
 
@@ -89,7 +89,7 @@ Disks might also display the **Unreadable** status while they are spinning up or
 
 In some cases, a disk that was previously connected to the system can display the **Foreign** status. Configuration data for dynamic disks is stored on all dynamic disks, so the information about which disks are owned by the system is lost when all dynamic disks fail.
 
-**Solution:** Add the disk to your computer's system configuration so that you can access data on the disk. To add a disk to your computer's system configuration, import the foreign disk (select and hold (or right-click) the disk and then click **Import Foreign Disks**). Any existing volumes on the foreign disk become visible and accessible when you import the disk. 
+**Solution:** Add the disk to your computer's system configuration so that you can access data on the disk. To add a disk to your computer's system configuration, import the foreign disk (select and hold (or right-click) the disk and then click **Import Foreign Disks**). Any existing volumes on the foreign disk become visible and accessible when you import the disk.
 
 ## A dynamic disk's status is Online (Errors)
 
@@ -106,8 +106,8 @@ If the disk status is **Offline** and the disk's name changes to **Missing**, th
 **Solution:**
 To bring a disk that is Offline and Missing back online:
 
-1. Repair any disk, controller, or cable problems. 
-2. Make sure that the physical disk is turned on, plugged in, and attached to the computer. 
+1. Repair any disk, controller, or cable problems.
+2. Make sure that the physical disk is turned on, plugged in, and attached to the computer.
 3. Next, use the **Reactivate Disk** command to bring the disk back online.
 4. Try the troubleshooting steps described in [A disk's status is Not Initialized or the disk is missing entirely](#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps).
 5. If the disk status remains **Offline** and the disk name remains **Missing**, and you determine that the disk has a problem that cannot be repaired, you can remove the disk from the system by selecting and holding (or right-clicking) the disk and then clicking **Remove Disk**). However, before you can remove the disk, you must delete all volumes (or mirrors) on the disk. You can save any mirrored volumes on the disk by removing the mirror instead of the entire volume. Deleting a volume destroys the data in the volume, so you should remove a disk only if you are absolutely certain that the disk is permanently damaged and unusable.
@@ -119,7 +119,7 @@ To bring a disk that is Offline and Missing back online:
 
 3. Try moving the disk to another computer. If you can get the disk to go **Online** on another computer, the problem is most likely due to the configuration of the computer on which the disk does not go **Online**.
 
-4. Try moving the disk to another computer that has dynamic disks. Import the disk on that computer and then move the disk back to the computer on which it would not go **Online**. 
+4. Try moving the disk to another computer that has dynamic disks. Import the disk on that computer and then move the disk back to the computer on which it would not go **Online**.
 
 ## A basic or dynamic volume's status is Failed
 
@@ -165,7 +165,7 @@ If you no longer require the multi-disk volume, you can import the disk and crea
 When the volume status is **Healthy (At Risk)**, an underlying disk's status is usually **Online (Errors)**.
 
 **Solution:**  
-1. Return the underlying disk to the **Online** status. Once the disk is returned to **Online** status, the volume should return to the **Healthy** status. If the **Healthy (At Risk)** status persists, the disk might be failing. 
+1. Return the underlying disk to the **Online** status. Once the disk is returned to **Online** status, the volume should return to the **Healthy** status. If the **Healthy (At Risk)** status persists, the disk might be failing.
 
 2. Back up the data and replace the disk as soon as possible.
 

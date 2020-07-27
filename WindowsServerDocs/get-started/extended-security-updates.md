@@ -81,7 +81,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 5. If you see a page that says "Register to get a Multiple Activation Key," that means you need to request access to the private preview before you can use Extended Security Updates. If you don't see this page, skip ahead to step 6.
 
    To request access, select **join the private preview**. An email message window will open. This email is your access request to the product team.
-  
+
     Include the following information in your request:
 
     * Customer name
@@ -95,7 +95,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     If the team doesn't approve your request, you'll see the following error:
 
-    [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
+    [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://docs.microsoft.com/windows-server/get-started/extended-security-updates)
 
 6. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.
 

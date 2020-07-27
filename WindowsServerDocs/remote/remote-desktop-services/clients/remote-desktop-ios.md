@@ -168,7 +168,7 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Supported input devices
 
-The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS. 
+The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS.
 
 For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
@@ -186,4 +186,4 @@ If Bluetooth is enabled for your iOS device, the client automatically detects th
 While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 
 > [!TIP]
-> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winrdc) and start a new thread. If you have a feature suggestion, you can tell us using the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](https://docs.microsoft.com/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

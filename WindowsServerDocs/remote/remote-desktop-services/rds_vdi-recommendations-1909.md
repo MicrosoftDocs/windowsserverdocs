@@ -34,7 +34,7 @@ There are some security settings that are not applicable to VDI environments tha
 
 Regarding updates, Windows 10 utilizes a monthly update algorithm, so there is no need for clients to attempt to update. In most cases VDI administrators control the process of updating through a process of shutting down VMs based on a “master”, or “gold” image, unseal that image which is read-only, patch the image, then reseal it and bring it back into production. Therefore, there is no need to have VDI VMs checking Windows Update. In certain instances, for example, persistent VDI VMs, normal patching procedures do take place. Windows Update or Microsoft Intune can also be used. System Center Configuration Manager can be used to handle update and other package delivery. It's up to each organization to determine the best approach to updating VDI.
 
-> [!TIP]  
+> [!TIP]
 > A script that implements the optimizations discussed in this topic--as well as a GPO export file that you can import with **LGPO.exe**--is available at [TheVDIGuys](https://github.com/TheVDIGuys) on GitHub.
 
 This script was designed to suit your environment and requirements. The main code is PowerShell, and the work is done by using input files (plain text), with Local Group Policy Object (LGPO) tool export files. These files contain lists of apps to be removed, and services to be disabled. If you do not wish to remove a particular app or disable a particular service, edit the corresponding text file and remove the item. Finally, there are local policy settings that can be imported into your device. It is better to have some settings within the base image, than to have the settings applied through the group policy, as some of the settings are effective on the next restart, or when a component is first used.
@@ -161,9 +161,9 @@ Run the following command to enumerate provisioned UWP apps from a running opera
     Get-AppxProvisionedPackage -Online
 
     DisplayName  : Microsoft.3DBuilder
-    Version      : 13.0.10349.0  
+    Version      : 13.0.10349.0
     Architecture : neutral
-    ResourceId   : \~ 
+    ResourceId   : \~
     PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
     Regions      :
     ...
@@ -190,7 +190,7 @@ Each UWP app should be evaluated for applicability in each unique environment. Y
 
 ### Manage Windows Optional Features using PowerShell
 
-You can manage Windows Optional Features using PowerShell. For more information, see [Windows 10: Managing Optional Features with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx). To enumerate currently installed Windows Features, run the following PowerShell command:
+You can manage Windows Optional Features using PowerShell. For more information, see the [Windows Server powershell forum](https://docs.microsoft.com/answers/topics/windows-server-powershell.html). To enumerate currently installed Windows Features, run the following PowerShell command:
 
 ```powershell
 Get-WindowsOptionalFeature -Online
@@ -761,7 +761,7 @@ Here are suggestions for various disk cleanup tasks. These should all be tested 
 1. Run (elevated) Disk Cleanup Wizard after applying all updates. Include the categories ‘Delivery Optimization’ and ‘Windows Update Cleanup’. This process can be automated, using command line `Cleanmgr.exe` with the `/SAGESET:11` option. The `/SAGESET` option sets registry values that can be used later to automate disk cleanup, that uses every available option in the Disk Cleanup Wizard.
 
     1. On a test VM, from a clean installation, running `Cleanmgr.exe /SAGESET:11` reveals that there are only two automatic disk cleanup options enabled by default:
-    
+
         - Downloaded Program Files
 
         - Temporary Internet Files
@@ -773,7 +773,7 @@ Here are suggestions for various disk cleanup tasks. These should all be tested 
 2. Cleanup your Volume Shadow Copy storage, if any is in use.
 
     - Open an elevated command prompt and run the `vssadmin list shadows` command and then the `vssadmin list shadowstorage` command.
-    
+
         If output from these commands is **No items found that satisfy the query**, then there is no VSS storage in use.
 
 3. Cleanup temporary files and logs. From an elevated command prompt, run the `Del C:\*.tmp /s` command, the `Del C:\Windows\Temp\.` command, and the `Del %temp%\.` command.
@@ -787,7 +787,7 @@ Removing OneDrive involves removing the package, uninstalling, and removing *.ln
 ```azurecli
 
 Taskkill.exe /F /IM "OneDrive.exe"
-Taskkill.exe /F /IM "Explorer.exe"` 
+Taskkill.exe /F /IM "Explorer.exe"`
     if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe")`
      { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe"`
          -ArgumentList "/uninstall"`

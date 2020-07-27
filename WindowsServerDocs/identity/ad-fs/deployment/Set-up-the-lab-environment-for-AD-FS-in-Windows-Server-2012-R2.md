@@ -82,7 +82,7 @@ You must install a server Secure Socket Layer (SSL) certificate on the ADFS1 ser
 
 -   Subject Alternative Name (DNS): enterpriseregistration.contoso.com
 
-For more information about setting up SSL certificates, see [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx).
+For more information about setting up SSL certificates, see [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)).
 
 [Active Directory Federation Services How-To Video Series: Updating Certificates](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
 
@@ -320,7 +320,7 @@ You must now secure your sample application that runs on your web server with AD
 
 1.  On you federation server (ADFS1), in the **AD FS Management console**, navigate to **Relying Party Trusts**, and then click **Add Relying Party Trust**.
 
-2.  On the **Select Data Source** page, select **Import data about the relying party published online or on a local network**, enter the metadata URL for **claimapp**, and then click **Next**. Running FedUtil.exe created a metadata .xml file. It is located at 
+2.  On the **Select Data Source** page, select **Import data about the relying party published online or on a local network**, enter the metadata URL for **claimapp**, and then click **Next**. Running FedUtil.exe created a metadata .xml file. It is located at
     **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml**.
 
 3.  On the **Specify Display Name** page, specify the **display name** for your relying party trust, **claimapp**, and then click **Next**.

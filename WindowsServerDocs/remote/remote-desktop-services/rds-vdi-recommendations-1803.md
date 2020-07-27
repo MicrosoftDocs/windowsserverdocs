@@ -17,10 +17,10 @@ This article helps you choose settings for Windows 10,  version 1803 (build 1713
 
 In a VDI environment the key ways to optimize Windows 10 performance are to minimize app graphic redraws, background activities that have no major benefit to the VDI environment, and generally reduce running processes to the bare minimum. A secondary goal is to reduce disk space usage in the base image to the bare minimum. With VDI implementations, the smallest possible base, or “gold” image size, can slightly reduce memory usage on the hypervisor, as well as a small reduction in overall network operations required to deliver the desktop image to the consumer.
 
-> [!NOTE]  
+> [!NOTE]
 > Settings recommended here can be applied to other installation of Windows 10, version 1803, including those on physical or other virtual devices. No recommendations in this topic should affect  the supportability of Windows 10, version 1803.
 
-> [!TIP]  
+> [!TIP]
 > A script that implements the optimizations discussed in this topic--as well as a GPO export file that you can import with **LGPO.exe**--is available at [TheVDIGuys](https://github.com//TheVDIGuys) on GitHub.
 
 ## VDI optimization principles
@@ -70,7 +70,7 @@ With image-based VDI, there is a set of processes to perform in order to get upd
 
 -   Users are allowed to log back on.
 
-> [!NOTE]  
+> [!NOTE]
 > Windows 10 performs a set of maintenance tasks automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM local time every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
 >
 >```powershell
@@ -153,7 +153,7 @@ Connectivity and timing are everything when it comes to UWP app cleanup. If you 
 
 If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps will not be installed to begin with and your profile creation times should be shorter. Later in this section, you'll find information on how to remove UWP apps from your installation .WIM file.
 
-A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. 
+A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied.
 
 #### Delete the payload of UWP apps
 
@@ -165,14 +165,14 @@ Run the following command to enumerate provisioned UWP apps from a running Windo
 
 ```powershell
 
-    Get-AppxProvisionedPackage -Online 
+    Get-AppxProvisionedPackage -Online
 
     DisplayName  : Microsoft.3DBuilder
-    Version      : 13.0.10349.0  
+    Version      : 13.0.10349.0
     Architecture : neutral
-    ResourceId   : \~ 
-    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe 
-    Regions      : 
+    ResourceId   : \~
+    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
+    Regions      :
     ...
 ```
 
@@ -189,7 +189,7 @@ preferred method because it makes the overall process of creating or maintaining
 Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
 
 ```powershell
-Remove-AppxProvisionedPackage -Online -PackageName 
+Remove-AppxProvisionedPackage -Online -PackageName
 ```
 
 Each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10, version 1803, then note which apps are running and consuming memory. For example, you might want to consider removing apps that start automatically, or apps that automatically display information on the Start menu, such as Weather and News, and that might not be of use in your environment.
@@ -209,10 +209,9 @@ Get-WindowsOptionalFeature -Online
 You can enable or disable a specific Windows optional feature as in this example:
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName "DirectPlay" -All
-```
+Enable-WindowsOptionalFeature -Online -FeatureName "DirectPlay"
 
-For more about this, see [Windows 10: Managing optional features with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx).
+For more about this, see the [Windows a PowerShell forum](https://docs.microsoft.com/answers/topics/windows-server-powershell.ht).
 
 #### Enable or disable Windows features by using DISM
 
@@ -230,7 +229,7 @@ Some decisions might be based on the specifics of the environment, for example:
 
 The following settings specifically do not counter or conflict with any setting that has anything to do with security. These settings were chosen to remove settings that might not be applicable to VDI environments.
 
-> [!NOTE]  
+> [!NOTE]
 > In this table of group policy settings, items marked with an asterisk are from the [Windows Restricted Traffic Limited Functionality
 Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 
@@ -490,7 +489,7 @@ Note that a lot of services that might seem to be good candidates to disable are
 
 #### Per-user services in Windows
 
-[Per-user services](/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks. 
+[Per-user services](/windows/application-management/per-user-services-in-windows) are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks.
 
 ### Scheduled tasks
 
@@ -577,7 +576,7 @@ Some of the traces displayed under **Event Trace Sessions** and **Startup Event 
 
 3.  Select the **Trace Session** tab.
 
-4.  Clear the box labeled **Enabled**. 
+4.  Clear the box labeled **Enabled**.
 
 5.  Select **OK**.
 
@@ -604,7 +603,7 @@ One very important consideration for non-persistent VDI VMs are security updates
 
 For Windows Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Plus, the VM won't be behind on updates because only the latest available will apply. The same might be true for non-Microsoft definition files.
 
-> [!NOTE]  
+> [!NOTE]
 > Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
 
 ### Windows Defender optimization with VDI
@@ -672,7 +671,7 @@ settings are marked in the Group Policy table with an asterisk.
 
 Disk cleanup can be especially helpful with master image VDI implementations. After the master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup. The Disk Cleanup wizard built into Windows can help clean up most potential areas of disk space savings.
 
-> [!NOTE]  
+> [!NOTE]
 > The Disk Cleanup wizard is no longer being developed. Windows will use other methods to provide disk cleanup functions.
 
 
@@ -718,7 +717,7 @@ Removing OneDrive involves removing the package, uninstalling, and removing \*.l
 ```azurecli
 
 Taskkill.exe /F /IM "OneDrive.exe"
-Taskkill.exe /F /IM "Explorer.exe"` 
+Taskkill.exe /F /IM "Explorer.exe"`
     if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe")`
      { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe"`
          -ArgumentList "/uninstall"`

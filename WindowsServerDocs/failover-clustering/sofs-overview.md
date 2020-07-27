@@ -1,12 +1,12 @@
 ---
 title: Scale-Out File Server for application data overview
 description: Overview of the Scale-Out File Server feature for Windows Server 201 R2 and Windows Server 2012.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.technology: storage-failover-clustering 
+ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
 ---
@@ -38,17 +38,17 @@ Key benefits provided by Scale-Out File Server in include:
 
 The following topics are available to help you deploy a Scale-Out File Server:
 
-- [Plan for Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134258(v%3dws.11)>)
+- [Plan for Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134258(v%3dws.11)>)
 
-  - [Step 1: Plan for Storage in Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134181%28v%3dws.11%29>)
-  - [Step 2: Plan for Networking in Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134253%28v%3dws.11%29>)
+  - [Step 1: Plan for Storage in Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134181%28v%3dws.11%29>)
+  - [Step 2: Plan for Networking in Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134253%28v%3dws.11%29>)
 
-- [Deploy Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831359%28v%3dws.11%29>)
+- [Deploy Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831359%28v%3dws.11%29>)
 
-  - [Step 1: Install Prerequisites for Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831478%28v%3dws.11%29>)
-  - [Step 2: Configure Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831718%28v%3dws.11%29>)
-  - [Step 3: Configure Hyper-V to Use Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
-  - [Step 4: Configure Microsoft SQL Server to Use Scale-Out File Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
+  - [Step 1: Install Prerequisites for Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831478%28v%3dws.11%29>)
+  - [Step 2: Configure Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831718%28v%3dws.11%29>)
+  - [Step 3: Configure Hyper-V to Use Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
+  - [Step 4: Configure Microsoft SQL Server to Use Scale-Out File Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
 
 ## When to use Scale-Out File Server
 
@@ -226,7 +226,7 @@ The following table lists the capabilities in SMB 3.0, the common Windows file s
 Scale-Out File Servers are ideal for server application storage. Some examples of server applications that can store their data on a scale-out file share are listed below:
 
 - The Internet Information Services (IIS) Web server can store configuration and data for Web sites on a scale-out file share. For more information, see [Shared Configuration](https://www.iis.net/learn/manage/managing-your-configuration-settings/shared-configuration_264).
-- Hyper-V can store configuration and live virtual disks on a scale-out file share. For more information, see [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
+- Hyper-V can store configuration and live virtual disks on a scale-out file share. For more information, see [Deploy Hyper-V over SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
 - SQL Server can store live database files on a scale-out file share. For more information, see [Install SQL Server with SMB file share as a storage option](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
 - Virtual Machine Manager (VMM) can store a library share (which contains virtual machine templates and related files) on a scale-out file share. However, the library server itself can't be a Scale-Out File Server—it must be on a stand-alone server or a failover cluster that doesn't use the Scale-Out File Server cluster role.
 
@@ -251,22 +251,22 @@ The following table lists the features that are part of this scenario and descri
 <tbody>
 <tr class="odd">
 <td><a href="failover-clustering.md">Failover Clustering</a></td>
-<td>Failover clusters added the following features in Windows Server 2012 to support scale-Out file server: Distributed Network Name, the Scale-Out File Server resource type, Cluster Shared Volumes (CSV) 2, and the Scale-Out File Server High Availability role. For more information about these features, see <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">What&#39;s New in Failover Clustering in Windows Server 2012 [redirected]</a>.</td>
+<td>Failover clusters added the following features in Windows Server 2012 to support scale-Out file server: Distributed Network Name, the Scale-Out File Server resource type, Cluster Shared Volumes (CSV) 2, and the Scale-Out File Server High Availability role. For more information about these features, see <a href="/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">What&#39;s New in Failover Clustering in Windows Server 2012 [redirected]</a>.</td>
 </tr>
 <tr class="even">
-<td><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">Server Message Block</a></td>
+<td><a href="/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">Server Message Block</a></td>
 <td>SMB 3.0 added the following features in Windows Server 2012 to support scale-Out File Server: SMB Transparent Failover, SMB Multichannel, and SMB Direct.<br />
 <br />
-For more information on new and changed functionality for SMB in Windows Server 2012 R2, see <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">What&#39;s New in SMB in Windows Server</a>.</td>
+For more information on new and changed functionality for SMB in Windows Server 2012 R2, see <a href="/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">What&#39;s New in SMB in Windows Server</a>.</td>
 </tr>
 </tbody>
 </table>
 
 ## More information
 
-- [Software-Defined Storage Design Considerations Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)>)
-- [Increasing Server, Storage, and Network Availability](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
-- [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
-- [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+- [Software-Defined Storage Design Considerations Guide](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)>)
+- [Increasing Server, Storage, and Network Availability](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
+- [Deploy Hyper-V over SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+- [Deploying Fast and Efficient File Servers for Server Applications](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
 - [To scale out or not to scale out, that is the question](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx) (blog post)
-- [Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>)
+- [Folder Redirection, Offline Files, and Roaming User Profiles](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>)
