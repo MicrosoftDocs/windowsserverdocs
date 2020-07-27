@@ -177,7 +177,7 @@ To file bugs:
 To get support:
 
  - Post a question on the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server)
- - Post on the [Windows Server 2019 Technet Forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=ws2019&filter=alltypes&sort=lastpostdesc)
+ - Post on the [Windows Server 2019 forum](https://docs.microsoft.com/answers/topics/windows-server-2019.html)
  - Open a support case via [Microsoft Support](https://support.microsoft.com)
 
 ## Additional References
