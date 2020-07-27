@@ -2,7 +2,6 @@
 title: "Azure Site Recovery Services integration"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/01/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 262701a6-8a97-4c4e-bfbf-9f8007c308d6
 author: nnamuhcs
