@@ -2,7 +2,6 @@
 title: "Manage Remote Web Access in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 author: nnamuhcs
@@ -145,9 +144,9 @@ manager: dongill
  During this step, Windows Server Essentials attempts to automatically configure your router by using UPnP commands. To do this, your router must support UPnP standards, and the UPnP setting must be enabled on your router.
 
 > [!NOTE]
->  Your network configuration should follow the supported network requirements for Windows Server Essentials. There should be only one router on your network.
+> Your network configuration should follow the supported network requirements for Windows Server Essentials. There should be only one router on your network.
 
- If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see [Router Setup](https://social.technet.microsoft.com/wiki/contents/articles/windows-small-business-server-2011-essentials-router-setup.aspx).
+ If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see the [Small Business Server forum](https://docs.microsoft.com/answers/topics/windows-small-business-server.html).
 
 ###  <a name="BKMK_ReplaceRouter"></a> Replace a router
  Replace the router according to the manufacturer's instructions, and then run the Set Up Your Router Wizard to configure the new router.

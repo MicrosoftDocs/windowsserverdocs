@@ -20,7 +20,8 @@ ms.technology: identity-adfs
 -   [User privacy and AD FS](../ad-fs/technical-reference/GDPR-and-AD-FS-Compliance.md)
 
 > [!TIP]
-> You can find additional AD FS 2.0 design content at the [AD FS 2.0 Content Map](https://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx) page on the Microsoft TechNet Wiki. This page is managed by members of the AD FS 2.0 Community and is monitored on a regular basis by the AD FS Product Team.
+> You can find additional AD FS 2.0 design content at the [AD FS 2.0 Content Map](https://support.microsoft.com/help/974408/availability-and-description-of-active-directory-federation-services-2) page.
 
 ## See Also
+
 [Active Directory Federation Services Overview](./ad-fs-overview.md)

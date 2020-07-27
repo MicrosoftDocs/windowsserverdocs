@@ -7,7 +7,7 @@ ms.topic: article
 ms.date: 11/05/2018
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ---
 
 
@@ -80,7 +80,7 @@ For more information, see [Network Policy Server (NPS)](../../../../networking/t
 
 The Certification Authority (CA) Server is a certification authority that is running Active Directory Certificate Services. The VPN configuration requires an Active Directory-based public key infrastructure (PKI).
 
-Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments. For more information, see [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)) and [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx).
+Organizations can use AD CS to enhance security by binding the identity of a person, device, or service to a corresponding public key. AD CS also includes features that allow you to manage certificate enrollment and revocation in a variety of scalable environments. For more information, see [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)) and [Public Key Infrastructure Design Guidance](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/designing-and-implementing-a-pki-part-i-design-and-planning/ba-p/396953).
 
 During completion of the deployment, you will configure the following certificate templates on the CA.
 
@@ -118,7 +118,7 @@ When you use digital server certificates for authentication between computers on
 
 3. Authentication by associating certificate keys with a computer, user, or device accounts on a computer network.
 
-For more information, see [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx).
+For more information, see [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)).
 
 ## Active Directory Domain Services (AD DS)
 
@@ -156,7 +156,7 @@ Group Policy Management Editor Microsoft Management Console (MMC).
 In addition to the server components, ensure that the client computers you configure to use VPN are running Windows 10 Anniversary Update (version 1607). The Windows 10 VPN clients must be domain-joined to your Active Directory domain.
 
 
-The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You'll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment. 
+The Windows 10 VPN client is highly configurable and offers many options. To better illustrate the specific features this scenario uses, Table 1 identifies the VPN feature categories and specific configurations that this deployment references. You'll configure the individual settings for these features by using the VPNv2 configuration service provider (CSP) discussed later in this deployment.
 
 Table 1. VPN Features and Configurations Discussed in this Deployment
 
@@ -201,8 +201,8 @@ Windows 10 offers many CSPs, but this deployment focuses on using the VPNv2 CSP 
 
 - [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)): This document provides an overview of Active Directory Certificate Services (AD CS) in Windows Server&reg; 2012. AD CS is the Server Role that allows you to build a public key infrastructure (PKI) and provide public key cryptography, digital certificates, and digital signature capabilities for your organization.
 
-- [Public Key Infrastructure Design Guidance](https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx):  This wiki provides guidance on designing Public Key Infrastructures (PKIs). Before you configure a PKI and certification authority (CA) hierarchy, you should be aware of your organization's security policy and certificate practice statement (CPS).
+- [Public Key Infrastructure Design Guidance](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/designing-and-implementing-a-pki-part-i-design-and-planning/ba-p/396953): This forum provides guidance on designing Public Key Infrastructures (PKIs). Before you configure a PKI and certification authority (CA) hierarchy, you should be aware of your organization's security policy and certificate practice statement (CPS).
 
-- [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx): This step-by-step guide describes the steps needed to set up a basic configuration of Active Directory&reg; Certificate Services (AD CS) in a lab environment. AD CS in Windows Server&reg; 2008 R2 provides customizable services for creating and managing public key certificates used in software security systems employing public key technologies.
+- [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)): This step-by-step guide describes the steps needed to set up a basic configuration of Active Directory&reg; Certificate Services (AD CS) in a lab environment. AD CS in Windows Server&reg; 2008 R2 provides customizable services for creating and managing public key certificates used in software security systems employing public key technologies.
 
 - [Network Policy Server (NPS)](../../../../networking/technologies/nps/nps-top.md): This topic provides an overview of Network Policy Server in Windows Server 2016. Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.

@@ -2,7 +2,6 @@
 title: "Migrate from Previous Versions to Windows Server Essentials or Windows Server Essentials Experience"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2974fb3a-5150-43fd-a73f-3e5074eb5d03
 author: nnamuhcs

@@ -17,7 +17,7 @@ A failover cluster can hold numerous roles that can move between nodes and run. 
 
 ## What is Affinity and AntiAffinity?
 
-Affinity is a rule you would set up that establishes a relationship between two or more roles (i,e, virtual machines, resource groups, etc) to keep them together.  AntiAffinity is the same but is used to try and keep the specified roles apart from each other. Failover Clusters use AntiAffinity for its roles.  More specifically, the [AntiAffinityClassNames](https://docs.microsoft.com/previous-versions/windows/desktop/mscs/groups-antiaffinityclassnames) parameter defined on the roles so they do not run on the same node.  
+Affinity is a rule you would set up that establishes a relationship between two or more roles (i,e, virtual machines, resource groups, etc) to keep them together.  AntiAffinity is the same but is used to try and keep the specified roles apart from each other. Failover Clusters use AntiAffinity for its roles.  More specifically, the [AntiAffinityClassNames](/previous-versions/windows/desktop/mscs/groups-antiaffinityclassnames) parameter defined on the roles so they do not run on the same node.
 
 ## AntiAffinityClassnames
 
@@ -42,7 +42,7 @@ Since AntiAffinityClassNames are not defined as a default, these roles can run t
     PS> Get-ClusterGroup "Group2" | fl AntiAffinityClassNames
     AntiAffinityClassNames : {DC}
 
-Now that they are set, failover clustering will attempt to keep them apart.  
+Now that they are set, failover clustering will attempt to keep them apart.
 
 The AntiAffinityClassName parameter is a "soft" block.  Meaning, it will try to keep them apart, but if it cannot, it will still allow them to run on the same node.  For example, the groups are running on a two-node failover cluster.  If one node needs to go down for maintenance, it would mean both groups would be up and running on the same node.  In this case, it would be okay to have this.  It may not be the most ideal, but both virtial machines will still running within acceptable performance ranges.
 
@@ -78,7 +78,7 @@ In a PowerShell listing of the groups, you would see this:
 ## Additional Comments
 
 - Ensure you are using the proper AntiAffinity setting depending on the needs.
-- Keep in mind that in a two-node scenario and ClusterEnforcedAntiAffinity, if one node is down, both groups will not run.  
+- Keep in mind that in a two-node scenario and ClusterEnforcedAntiAffinity, if one node is down, both groups will not run.
 
 - The use of Preferred Owners on groups can be combined with AntiAffinity in a three or more node cluster.
 - The AntiAffinityClassNames and ClusterEnforcedAntiAffinity settings will only take place after a recycling of the resources. I.E. you can set them, but if both groups are online on the same node when set, they will both continue to remain online.

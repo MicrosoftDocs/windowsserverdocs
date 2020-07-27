@@ -1,5 +1,5 @@
 ---
-title: Install HGS in an existing bastion forest 
+title: Install HGS in an existing bastion forest
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
@@ -9,7 +9,7 @@ ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
-# Install HGS in an existing bastion forest 
+# Install HGS in an existing bastion forest
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -22,7 +22,7 @@ In an existing bastion forest, HGS must be added to the root domain. Use Server 
 
 Run all commands in this topic in an elevated PowerShell session.
 
-[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
+[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)]
 
 If your datacenter has a secure bastion forest where you want to join HGS nodes, follow these steps.
 You can also use these steps to configure 2 or more independent HGS clusters that are joined to the same domain.
@@ -65,7 +65,7 @@ New-ADServiceAccount -Name 'HGSgMSA' -DnsHostName 'HGSgMSA.yourdomain.com' -Prin
 ```
 
 The gMSA will require the right to generate events in the security log on each HGS server.
-If you use Group Policy to configure User Rights Assignment, ensure that the gMSA account is granted the [generate audit events privilege](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) on your HGS servers.
+If you use Group Policy to configure User Rights Assignment, ensure that the gMSA account is granted the [generate audit events privilege](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) on your HGS servers.
 
 > [!NOTE]
 > Group managed service accounts are available beginning with the Windows Server 2012 Active Directory schema.

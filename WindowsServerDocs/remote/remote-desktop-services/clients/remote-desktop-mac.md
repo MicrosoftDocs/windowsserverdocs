@@ -34,7 +34,7 @@ Follow these steps to get started with Remote Desktop on your Mac:
 
 We're testing new features on our preview channel on AppCenter. Want to check it out? Go to [Microsoft Remote Desktop for Mac](https://aka.ms/rdmacbeta) and select **Download**. You don't need to create an account or sign into AppCenter to download the beta client.
 
-If you already have the client, you can check for updates to ensure you have the latest version. In the beta client, select **Microsoft Remote Desktop Beta** at the top, and then select **Check for updates**. 
+If you already have the client, you can check for updates to ensure you have the latest version. In the beta client, select **Microsoft Remote Desktop Beta** at the top, and then select **Check for updates**.
 
 ## Add a workspace
 
@@ -96,7 +96,7 @@ A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a
 
 To set up a new gateway in preferences:
 
-1. In the Connection Center, select **Preferences > Gateways**. 
+1. In the Connection Center, select **Preferences > Gateways**.
 2. Select the **+** button at the bottom of the table Enter the following information:
    - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
    - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
@@ -158,4 +158,4 @@ Windows Server 2012 R2 introduced support for a new authentication method, Remot
 To learn more about this feature, check out [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
 
 > [!TIP]
-> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://docs.microsoft.com/answers/topics/windows-remote-desktop-client.html) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
