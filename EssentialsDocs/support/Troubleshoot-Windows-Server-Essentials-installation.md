@@ -26,7 +26,7 @@ This topic provides troubleshooting for issues that occur when installing  Windo
 
 
 > [!NOTE]
->  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/winserveressentials/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
+>  For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://docs.microsoft.com/answers/topics/windows-server-essentials.html/threads). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
 
 ##  <a name="BKMK_GeneralTroubleshootingSteps"></a> General troubleshooting steps
  If the installation of  Windows Server Essentials fails, take these steps to help identify the issue that caused the failure.

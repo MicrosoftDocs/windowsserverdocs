@@ -10,7 +10,9 @@ author: evaseydl
 ms.author: evas
 manager: scottman
 ---
+
 # Deploying MultiPoint Services
+
 This guide describes how to deploy a server running MultiPoint Services and set up MultiPoint stations, install and configure your system, set up user accounts, and perform some basic administration tasks, such as turning on Disk Protection and setting up backups, before you start using your system.
 
 > [!NOTE]
@@ -36,5 +38,3 @@ The deployment information is organized in the following way. At a minimum, you 
 ## Additional References
 
 - [MultiPoint Services](MultiPoint-Services.md)
--   [MultiPoint Services Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)
-
