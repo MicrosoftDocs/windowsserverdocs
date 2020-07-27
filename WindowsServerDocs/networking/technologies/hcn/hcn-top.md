@@ -55,9 +55,6 @@ As part of documenting the HCN APIs, we are planning to publish the schema of ou
 
 The following is an example of this workflow for the object representing an SCSI controller in the configuration document of a VM. 
 
-In the Windows source code, we define schemas using .mars files:
-onecore/vm/dv/net/hns/schema/mars/Schema/HCN.Schema.Network.mars
-
 ```
 enum IpamType
 {
