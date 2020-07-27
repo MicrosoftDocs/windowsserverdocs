@@ -122,28 +122,28 @@ tool.
 
 Global VDI settings include the following:
 
--   [Universal Windows Platform (UWP) app cleanup](#universal-windows-platform-app-cleanup)
+- [Universal Windows Platform (UWP) app cleanup](#universal-windows-platform-app-cleanup)
 
--   [Clean up optional features](#clean-up-optional-features)
+- [Clean up optional features](#clean-up-optional-features)
 
--   [Local policy settings](#local-policy-settings)
+- [Local policy settings](#local-policy-settings)
 
--   [System services](#system-services)
+- [System services](#system-services)
 
--   [Scheduled tasks](#scheduled-tasks)
+- [Scheduled tasks](#scheduled-tasks)
 
--   [Apply Windows and other updates](#apply-windows-and-other-updates)
+- [Apply Windows and other updates](#apply-windows-and-other-updates)
 
--   [Automatic Windows traces](#automatic-windows-traces)
+- [Automatic Windows traces](#automatic-windows-traces)
 
--   [Windows Defender optimization with VDI](#windows-defender-optimization-with-vdi)
+- [Windows Defender optimization with VDI](#windows-defender-optimization-with-vdi)
 
--   [Tuning Windows 10 network performance by using registry settings](#tuning-windows-10-network-performance-by-using-registry-settings)
+- [Tuning Windows 10 network performance by using registry settings](#tuning-windows-10-network-performance-by-using-registry-settings)
 
--   Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
+- Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)
     guidance.
 
--   [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
+- [Disk cleanup](#disk-cleanup-including-using-the-disk-cleanup-wizard)
 
 ### Universal Windows Platform app cleanup
 
