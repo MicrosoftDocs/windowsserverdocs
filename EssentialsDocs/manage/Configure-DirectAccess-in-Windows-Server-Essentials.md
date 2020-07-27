@@ -2,7 +2,6 @@
 title: "Configure DirectAccess in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: c959b6fc-c67e-46cd-a9cb-cee71a42fa4c
 author: nnamuhcs

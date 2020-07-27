@@ -2,7 +2,6 @@
 title: "Play Digital Media in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs

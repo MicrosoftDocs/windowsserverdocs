@@ -2,7 +2,6 @@
 title: "Integrate an On-Premises Exchange Server with Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
