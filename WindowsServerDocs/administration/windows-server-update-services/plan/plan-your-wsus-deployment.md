@@ -42,8 +42,8 @@ Hardware and database software requirements are driven by the number of client c
 
     -   **Network adapter:** 100 megabits per second (Mbps) or greater (1GB is recommended)
 
-> [!NOTE] 
-> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rullup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.  
+> [!NOTE]
+> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rullup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.
 
 -   Software Requirements:
 
@@ -97,7 +97,7 @@ Be aware that configuring client computers (including servers) to update by usin
    > [!NOTE]
    > Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
 
-3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
+3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
    - [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) - VL access is required
    - OEM Portal - OEM access is required
    - MSDN Download - MSDN subscription is required
@@ -160,7 +160,7 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 
 -   You can scale WSUS for a large organization that has more client computers than one WSUS server can effectively manage.
 
-> [!NOTE] 
+> [!NOTE]
 > We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments that have a hierarchy of five levels deep have been tested by Microsoft.
 >
 > Also, downstream servers must be at the same version or an earlier version of WSUS as the upstream server synchronization source.

@@ -16,7 +16,7 @@ manager: dongill
  This topic contains troubleshooting guidance for issues that you might encounter when you connect a computer to the server that is running  Windows Server Essentials or  Windows Server Essentials.
 
 > [!NOTE]
->  For the most current troubleshooting information from the  Windows Server Essentials and  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
+>  For the most current troubleshooting information from the  Windows Server Essentials and  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://docs.microsoft.com/answers/topics/windows-server-essentials.html). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
 
  This topic provides solutions for the following issues:
 
@@ -275,6 +275,6 @@ manager: dongill
 
 ## Additional References
 
--   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
+- [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
 
--   [Windows 2012 Server Essentials ConnectComputer Troubleshooting (TechNet Wiki)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)
+- [Windows 2012 Server Essentials ConnectComputer Troubleshooting](https://docs.microsoft.com/windows-server-essentials/support/troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials)

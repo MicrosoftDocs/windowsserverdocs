@@ -1,10 +1,10 @@
 ---
 title: Network File System overview
 description: Explains what Network File System is.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
@@ -23,7 +23,7 @@ NFS in Windows Server includes Server for NFS and Client for NFS. A computer run
 
 ## Windows and Windows Server versions
 
-Windows supports multiple versions ofthe NFS client and server, depending on operating system version and family. 
+Windows supports multiple versions ofthe NFS client and server, depending on operating system version and family.
 
 | Operating Systems | NFS Server Versions |NFS Client Versions|
 | ----------------- | ------------------- | ----------------- |
@@ -93,7 +93,7 @@ Deploying and managing NFS has improved in the following ways:
 
 ## Server Manager information
 
-In Server Manager - or the newer [Windows Admin Center](../../manage/windows-admin-center/overview.md) - use the Add Roles and Features Wizard to add the Server for NFS role service (under the File and iSCSI Services role). For general information about installing features, see [Install or Uninstall Roles, Role Services, or Features](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)>). Server for NFS tools include the Services for Network File System MMC snap-in to manage the Server for NFS and Client for NFS components. Using the snap-in, you can manage the Server for NFS components installed on the computer. Server for NFS also contains several Windows command-line administration tools:
+In Server Manager - or the newer [Windows Admin Center](../../manage/windows-admin-center/overview.md) - use the Add Roles and Features Wizard to add the Server for NFS role service (under the File and iSCSI Services role). For general information about installing features, see [Install or Uninstall Roles, Role Services, or Features](</previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)>). Server for NFS tools include the Services for Network File System MMC snap-in to manage the Server for NFS and Client for NFS components. Using the snap-in, you can manage the Server for NFS components installed on the computer. Server for NFS also contains several Windows command-line administration tools:
 
 - **Mount** mounts a remote NFS share (also known as an export) locally and maps it to a local drive letter on the Windows client computer.
 - **Nfsadmin** manages configuration settings of the Server for NFS and Client for NFS components.

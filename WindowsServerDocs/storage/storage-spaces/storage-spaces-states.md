@@ -67,7 +67,7 @@ When a storage pool is in the **Unknown** or **Unhealthy** health state, it mean
 ||Policy|An administrator set the storage pool to read-only.<br><br>**Action:** To set a clustered storage pool to read-write access in Failover Cluster Manager, go to **Pools**, right-click the pool and then select **Bring Online**.<br><br>For other servers and PCs, open a PowerShell session with administrative permissions and then type:<br><br><code>Get-StoragePool <PoolName> \| Set-StoragePool -IsReadOnly $false</code><br><br> |
 ||Starting|Storage Spaces is starting or waiting for drives to be connected in the pool. This should be a temporary state. Once completely started, the pool should transition to a different operational state.<br><br>**Action:** If the pool stays in the *Starting* state, make sure that all drives in the pool are connected properly.|
 
-See also [Modifying a Storage Pool that has a Read-Only Configuration](https://social.technet.microsoft.com/wiki/contents/articles/14861.modifying-a-storage-pool-that-has-a-read-only-configuration.aspx).
+See also, the [Windows Server storage forum](https://docs.microsoft.com/answers/topics/windows-server-storage.html).
 
 ## Virtual disk states
 

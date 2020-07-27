@@ -32,7 +32,7 @@ landingContent:
             url: ./deploy/always-on-vpn-adv-options.md
           - text: Always On VPN deployment for Windows Server and Windows 10
             url: ./deploy/always-on-vpn-deploy.md
-  
+
   # Card (optional)
   - title: Deploy Always On VPN
     linkLists:
@@ -44,7 +44,7 @@ landingContent:
             url: ./deploy/always-on-vpn-deploy-planning.md
           - text: Deploy the VPN infrastructure
             url: ./deploy/vpn-deploy-server-infrastructure.md
-          - text: Configure conditional access  
+          - text: Configure conditional access
             url: ../ad-ca-vpn-connectivity-windows10.md
 
   # Card (optional)
@@ -64,7 +64,7 @@ landingContent:
             url: ./deploy/always-on-vpn-deploy-troubleshooting.md#error-codes
           - text: Log files
             url: ./deploy/always-on-vpn-deploy-troubleshooting.md#logs
-   
+
   # Card (optional)
   - title: Additional resources
     linkLists:
@@ -78,7 +78,7 @@ landingContent:
             url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)
           - text: Certificate Templates
             url: /previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)
-          - text: Public Key Infrastructure Design Guidance
-            url: https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx
-          - text: AD CS Step by Step Guide - Two Tier PKI Hierarchy Deployment
-            url: https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx
+          - text: Designing a Public Key Infrastructure
+            url: /previous-versions/windows/it-pro/windows-server-2003/cc773138(v=ws.10)
+          - text: Active Directory Certificate Services Overview
+            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)

@@ -1,12 +1,12 @@
 ---
 title: Configure and manage the quorum in a failover cluster
-description: Detailed info on how to manage the cluster quorum in a Windows Server failover cluster. 
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
+description: Detailed info on how to manage the cluster quorum in a Windows Server failover cluster.
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
 ms.author: jgerend
-manager: lizross 
-ms.technology: storage-failover-clustering 
+manager: lizross
+ms.technology: storage-failover-clustering
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ---
@@ -37,7 +37,7 @@ Depending on the quorum configuration option that you choose and your specific s
 | Mode  | Description  |
 | --------- | ---------|
 | Node majority (no witness)     |   Only nodes have votes. No quorum witness is configured. The cluster quorum is the majority of voting nodes in the active cluster membership.      |
-| Node majority with witness (disk or file share)     |   Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum is the majority of voting nodes in the active cluster membership plus a witness vote. A quorum witness can be a designated disk witness or a designated file share witness. 
+| Node majority with witness (disk or file share)     |   Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum is the majority of voting nodes in the active cluster membership plus a witness vote. A quorum witness can be a designated disk witness or a designated file share witness.
 | No majority (disk witness only)     | No nodes have votes. Only a disk witness has a vote. <br>The cluster quorum is determined by the state of the disk witness. Generally, this mode is not recommended, and it should not be selected because it creates a single point of failure for the cluster.       |
 
 The following subsections will give you more information about advanced quorum configuration settings.
@@ -101,7 +101,7 @@ After the cluster is in production, do not change the quorum configuration unles
 - A long-term node or witness failure
 - Recovering a cluster in a multisite disaster recovery scenario
 
-For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
+For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
 
 ## Configure the cluster quorum
 
@@ -236,7 +236,7 @@ Here's how to recover the cluster with Failover Cluster Manager:
     Failover Cluster Manager force starts the cluster on all nodes that are reachable. The cluster uses the current cluster configuration when starting.
 
 > [!NOTE]
-> * To force the cluster to start on a specific node that contains a cluster configuration that you want to use, you must use the Windows PowerShell cmdlets or equivalent command-line tools as presented after this procedure. 
+> * To force the cluster to start on a specific node that contains a cluster configuration that you want to use, you must use the Windows PowerShell cmdlets or equivalent command-line tools as presented after this procedure.
 > * If you use Failover Cluster Manager to connect to a cluster that is force started, and you use the **Start Cluster Service** action to start a node, the node is automatically started with the setting that prevents quorum.
 
 #### Windows PowerShell equivalent commands (Start-Clusternode)
