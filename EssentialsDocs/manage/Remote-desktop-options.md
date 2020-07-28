@@ -9,24 +9,19 @@ ms.author: coreyp
 manager: dongill
 ---
 
-
-
 # Remote desktop options
-
 
 ## Connection speed
  The speed of the connection to a network computer using Remote Web Access determines the desktop options that are available to you on the host computer. The following table tells you which desktop options are available for speed that you are connecting to the remote computer through Remote Web Access.
 
-||||||
-|-|-|-|-|-|
-||Slow modem (28.8 Kbps)|Fast modem (56 Kbps) (Default)|Broadband (128 Kbps - 1.5 Mbps)|Local area network (1.5 Mbps or higher)|
-|Desktop background|No|No|No|Yes|
-|Font smoothing|No|No|No|Yes|
-|Desktop composition|No|No|Yes|Yes|
-|Show contents of window while dragging|No|No|Yes|Yes|
-|Menu and window animation|No|No|Yes|Yes|
-|Themes|No|Yes|Yes|Yes|
-|Bitmap caching|Yes|Yes|Yes|Yes|
+| Desktop option | Slow modem (28.8 Kbps) | Fast modem (56 Kbps) (Default) | Broadband (128 Kbps - 1.5 Mbps) | Local area network (1.5 Mbps or higher) |
+|--|--|--|--|--|
+| Font smoothing | No | No | No | Yes |
+| Desktop composition | No | No | Yes | Yes |
+| Show contents of window while dragging | No | No | Yes | Yes |
+| Menu and window animation | No | No | Yes | Yes |
+| Themes | No | Yes | Yes | Yes |
+| Bitmap caching | Yes | Yes | Yes | Yes |
 
 ## Screen size
  This option determines the window size that is opened on the local computer when you connect to a remote computer through the Remote Access Web Site. The window size is expressed in pixels.
