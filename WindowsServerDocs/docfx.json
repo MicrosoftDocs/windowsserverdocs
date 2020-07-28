@@ -42,23 +42,22 @@
             "folder_relative_path_in_docset": "licensing/"
            }
         }
-    },
-    "fileMetadata": {
-      "feedback_product_url": {
-        "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
-        "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback",
-      "ms.prod": {
-        "EssentialsDocs/**/*.md": "windows-server",
-      "ms.technology": {
-        "EssentialsDocs/**/*.md": "essentials"
-        }
-      }
+      },
+      "fileMetadata": {
+         "ms.technology": {
+          "EssentialsDocs/**/*.md": "essentials"
+        },
+        "ms.prod": {
+          "EssentialsDocs/**/*.md": "windows-server"
+        },
+        "feedback_product_url": {
+          "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
+          "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
+        },
+      "template": [
+        "docs.html"
+      ],
+      "dest": "windows-server"
     }
-  },
-    "template": [
-      null
-    ],
-    "dest": "windows-server"
   }
- },
 }
