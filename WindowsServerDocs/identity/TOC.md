@@ -46,7 +46,7 @@
 ##### [Virtualized Domain Controller Cloning Test Guidance for Application Vendors](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Support for using Hyper-V Replica for virtualized domain controllers](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
 
-####[Windows Time Service and AD DS](../networking/windows-time-service/windows-time-service.md)
+#### [Windows Time Service and AD DS](../networking/windows-time-service/windows-time-service.md)
 
 ### [AD DS Design and Planning](ad-ds/plan/AD-DS-Design-and-Planning.md)
 
@@ -348,22 +348,22 @@
 #### [Deploy Azure AD Connect Health](/azure/active-directory/hybrid/whatis-hybrid-identity)
 #### [Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2](ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md)
 ##### [Prepare to Migrate the AD FS Federation Server](ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md)
-#####[Migrate the AD FS Federation Server](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)
-#####[Migrate the AD FS Federation Server Proxy](ad-fs/deployment/migrate-fed-server-proxy-r2.md)
-#####[Verfiy the AD FS Migration to Windows Server 2012 R2](ad-fs/deployment/verify-ad-fs-migration.md)
+##### [Migrate the AD FS Federation Server](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)
+##### [Migrate the AD FS Federation Server Proxy](ad-fs/deployment/migrate-fed-server-proxy-r2.md)
+##### [Verfiy the AD FS Migration to Windows Server 2012 R2](ad-fs/deployment/verify-ad-fs-migration.md)
 
 #### [Migrate Active Directory Federation Services Role Services to Windows Server 2012](ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md)
 ##### [Prepare to Migrate the AD FS 2.0 Federation Server](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md)
-######[Prepare to Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)
-######[Prepare to Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/prepare-to-migrate-a-wid-farm.md)
-######[Prepare to Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md)
-#####[Prepare to Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md)
-#####[Migrate the AD FS 2.0 Federation Server](ad-fs/deployment/migrate-the-ad-fs-fed-server.md)
-######[Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/migrate-ad-fs-stand-alone-server.md)
-######[Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/migrate-ad-fs-wid-farm.md)
-######[Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/migrate-ad-fs-sql-farm.md)
-#####[Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md)
-#####[Migrate the AD FS 1.1 Web Agents](ad-fs/deployment/migrate-the-ad-fs-web-agent.md)
+###### [Prepare to Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)
+###### [Prepare to Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/prepare-to-migrate-a-wid-farm.md)
+###### [Prepare to Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md)
+##### [Prepare to Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md)
+##### [Migrate the AD FS 2.0 Federation Server](ad-fs/deployment/migrate-the-ad-fs-fed-server.md)
+###### [Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/migrate-ad-fs-stand-alone-server.md)
+###### [Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/migrate-ad-fs-wid-farm.md)
+###### [Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/migrate-ad-fs-sql-farm.md)
+##### [Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md)
+##### [Migrate the AD FS 1.1 Web Agents](ad-fs/deployment/migrate-the-ad-fs-web-agent.md)
 
 
 
