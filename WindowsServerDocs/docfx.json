@@ -52,12 +52,10 @@
       "ms.technology": {
         "EssentialsDocs/**/*.md": "essentials"
       }
-    }
   },
     "template": [
       null
     ],
     "dest": "windows-server"
   }
-}
 }
