@@ -29,7 +29,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 Here's how to set up the Remote Desktop client on your Android device:
 
-1. Download the Microsoft Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android).
+1. Download the Microsoft Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx).
 2. Launch **RD client** from your list of apps.
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or [remote resources](#add-remote-resources). You use a connection to connect directly to a Windows PC and remote resources to access apps and desktops published to you by an admin.
 
@@ -122,12 +122,12 @@ To change the display settings tap **Settings**, and then tap **Display** from t
 You can set the following display settings:
 
 - **Orientation** sets the preferred orientation (landscape or portrait) for your session.
-  
+
   >[!NOTE]
   > If you connect to a PC running Windows 8 or earlier, the session won't scale correctly if the orientation of the device changes. To make the client scale correctly, disconnect from the PC, then reconnect in the orientation you want to use. You can also ensure correct scaling by using a PC with Windows 10 instead.
 
 - **Resolution** sets the remote resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual connection, this setting won't change that.
-  
+
   >[!NOTE]
   >When you change the display settings, the changes only apply to new connections you make after the you changed the setting. To apply your changes to the session you're currently connected to, refresh your session by disconnecting and reconnecting.
 
