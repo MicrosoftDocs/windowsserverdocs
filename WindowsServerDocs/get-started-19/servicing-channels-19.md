@@ -47,8 +47,8 @@ These are the key differences to take into account:
 
 The following table summarizes the key differences between the channels:
 
-| | Long-Term Servicing Channel (Windows Server 2019) | Semi-Annual Channel (Windows Server) |
-|-----------------------|--|--|
+| Description | Long-Term Servicing Channel (Windows Server 2019) | Semi-Annual Channel (Windows Server) |
+| -----------------------|--|--|
 | Recommended scenarios | General purpose file servers, Microsoft and non-Microsoft workloads, traditional apps, infrastructure roles, software-defined Datacenter, and hyper-converged infrastructure | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
 | New releases | Every 2–3 years | Every 6 months |
 | Support | 5 years of mainstream support, plus 5 years of extended support | 18 months |

@@ -9756,6 +9756,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/virtualization/virtualization-old.md",
+      "redirect_url": "virtualization.yml",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
       "redirect_url": "/windows-server/windows-server",
       "redirect_document_id": false
