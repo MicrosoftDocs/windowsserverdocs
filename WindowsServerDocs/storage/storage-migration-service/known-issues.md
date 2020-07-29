@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 06/02/2020
+ms.date: 07/29/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
@@ -558,9 +558,10 @@ Conside the following scenario:
 
 You have a source server with a DNS Host Name and Active Directory name more than 15 unicode characters, such as "iamaverylongcomputernamefromned". By design, Windows did not let you set the legacy NetBIOS name to be set this long and warned when the server was named that the NetBIOS name would be truncated to 15 unicode wide characters (example: "iamaverylongcom"). When you attempt to inventory this computer, you receive in Windows Admin Center and the event log: 
 
+```DOS
     "Element not found"
     
-========================
+    ========================
 
     Log Name:      Microsoft-Windows-StorageMigrationService/Admin
     Source:        Microsoft-Windows-StorageMigrationService
@@ -581,6 +582,7 @@ You have a source server with a DNS Host Name and Active Directory name more tha
     Error Message: 
 
     Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+```
 
 This issue is caused by a code defect in the Storage Migration Service. The only workaround currently is to rename the computer to have the same name as the NetBIOS name, then use [NETDOM COMPUTERNAME /ADD](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) to add an alternate computer name that contains the longer name that was in use prior to starting Inventory. Storage Migration Service supports migrating alternate computer names.   
 
