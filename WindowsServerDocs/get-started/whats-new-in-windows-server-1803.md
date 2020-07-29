@@ -12,7 +12,7 @@ ms.date: 05/07/2018
 
 # What's New in Windows Server version 1803
 
->Applies To: Windows Server (Semi-Annual Channel)
+> Applies To: Windows Server (Semi-Annual Channel)
 
 <img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1803. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server Semi-Annual Channel update](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/).
 
@@ -34,14 +34,14 @@ Based on telemetry and feedback, these channels have demonstrated that they conf
 
 The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing Channel are as follows:
 
-|   | Long Term Servicing Channel |  Semi-Annual Channel |
-| ------------- | ------------- | ------------ |
-| Recommended scenarios     | General purpose file servers, first and third-party workloads, traditional apps, infrastructure roles, software-defined Datacenter, and Hyper-converged infrastructure  | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
-| New releases  | Every 2–3 years  | Every 6 months |
-| Support  | 5 years of Mainstream support + 5 years of Extended support  | 18 months |
-| Editions  | All available Windows Server editions  | Standard and Datacenter editions |
-| Who can use  | All customers through all channels | Software Assurance and cloud customers only |
-| Installation options  | Server Core and Server with Desktop Experience  | Server Core for container host, container image, and Nano Server container image |
+| Description | Long Term Servicing Channel | Semi-Annual Channel |
+|--|--|--|
+| Recommended scenarios | General purpose file servers, first and third-party workloads, traditional apps, infrastructure roles, software-defined Datacenter, and Hyper-converged infrastructure | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
+| New releases | Every 2–3 years | Every 6 months |
+| Support | 5 years of Mainstream support + 5 years of Extended support | 18 months |
+| Editions | All available Windows Server editions | Standard and Datacenter editions |
+| Who can use | All customers through all channels | Software Assurance and cloud customers only |
+| Installation options | Server Core and Server with Desktop Experience | Server Core for container host, container image, and Nano Server container image |
 
 ## Application platform and containers
 

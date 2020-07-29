@@ -60,4 +60,4 @@ There are two ways to install **Hybrid Cloud Print**:
 ```PowerShell
     Install-Module -Name PublishCloudPrinter
     Import-Module PublishCloudPrinter
-    ```
+```

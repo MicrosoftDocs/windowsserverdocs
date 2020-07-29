@@ -89,7 +89,7 @@ manager: dongill
 ####  <a name="BKMK_Creating"></a> Step 3: Create the server recovery DVD
  Each server shipped from the factory must be accompanied by a server recovery DVD. Your ADK tools DVD includes the files necessary to create the DVD.
 
-###### To create the server recovery DVD
+##### To create the server recovery DVD
 
 1.  Create a working folder to use as the location for storing the final ISO.
 
@@ -109,15 +109,15 @@ manager: dongill
 
 1. The wizard page has a link for additional help. If this .chm file exists, it will override the FWLink for web Help. The Help file is located at:
 
-    <DVD Root\>\\$OEM$\Customization\\<culture name\>\RestartHelp.chm
+    `<DVD Root>\$OEM$\Customization\<culture name>\RestartHelp.chm`
 
 2. This file contains the text that the customer sees on the wizard page. The text should explain how to boot the server into recovery mode. The control is scrollable, which places a practical limit on the amount of text that can be added.
 
     The following file is used to replace the sample picture in the wizard, and it is primarily about branding. It must be a .png file. The file size must be 256 pixels x 256 pixels, or it will be cropped when it is displayed in the wizard.
 
-    <DVD Root\>\\$OEM$\Customization\\<culture name\>\RestartInstructions.rtf
+    `<DVD Root>\$OEM$\Customization\<culture name>\RestartInstructions.rtf`
 
-3. <DVD Root\>\\$OEM$\Customization\\<culture name\>\ServerImage.png
+3. `<DVD Root>\$OEM$\Customization\<culture name>\ServerImage.png`
 
    When you are converting your server recovery DVD to support multiple languages, ensure that you do the following:
 
@@ -131,8 +131,25 @@ manager: dongill
 
    Supported culture names include:
 
-|-|-|
-|- cs-CZ<br /><br /> - de-DE<br /><br /> - en-US<br /><br /> - es-ES<br /><br /> - fr-FR<br /><br /> - hu-HU<br /><br /> - it-IT<br /><br /> - ja-JP<br /><br /> - ko-KR<br /><br /> - nl-NL|- pl-PL<br /><br /> - pt-BR<br /><br /> - pt-PT<br /><br /> - ru-RU<br /><br /> - sv-SE<br /><br /> - tr-TR<br /><br /> - zh-CN<br /><br /> - zh-HK<br /><br /> - zh-TW
+   - cs-CZ
+   - de-DE
+   - en-US
+   - es-ES
+   - fr-FR
+   - hu-HU
+   - it-IT
+   - ja-JP
+   - ko-KR
+   - nl-NL
+   - pl-PL
+   - pt-BR
+   - pt-PT
+   - ru-RU
+   - sv-SE
+   - tr-TR
+   - zh-CN
+   - zh-HK
+   - zh-TW
 
 ####  <a name="BKMK_CreatingISO"></a> Step 5: Create the ISO file
  The folder that was created and all the contents can be burned to a DVD. This is the DVD that will be provided to customers with their new server.
