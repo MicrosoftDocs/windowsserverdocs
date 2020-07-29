@@ -95,22 +95,22 @@ In general:
 #### New environment
 
 | Component | Estimates |
-|-|-|
-|Storage/Database Size|40 KB to 60 KB for each user|
-|RAM|Database Size<br />Base operating system recommendations<br />Third-party applications|
-|Network|1 GB|
-|CPU|1000 concurrent users for each core|
+|--|--|
+| Storage/Database Size | 40 KB to 60 KB for each user |
+| RAM | Database Size<br />Base operating system recommendations<br />Third-party applications |
+| Network | 1 GB |
+| CPU | 1000 concurrent users for each core |
 
 #### High-level evaluation criteria
 
 | Component | Evaluation criteria | Planning considerations |
-|-|-|-|
-|Storage/Database size|The section entitled “To activate logging of disk space that is freed by defragmentation” in [Storage Limits](/previous-versions/windows/it-pro/windows-2000-server/cc961769(v=technet.10))| |
-|Storage/ Database performance|<ul><li>"LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read," "LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Write," "LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer"</li><li>"LogicalDisk(*\<NTDS Database Drive\>*)\Reads/sec," "LogicalDisk(*\<NTDS Database Drive\>*)\Writes/sec," "LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec"</li></ul>|<ul><li>Storage has two concerns to address<ul><li>Space available, which with the size of today's spindle based and SSD based storage is irrelevant for most AD environments.</li> <li>Input/Output (IO) Operations available – In many environments, this is often overlooked. But it is important to evaluate only environments where there is not enough RAM to load the entire NTDS Database into memory.</li></ul><li>Storage can be a complex topic and should involve hardware vendor expertise for proper sizing. Particularly with more complex scenarios such as SAN, NAS, and iSCSI scenarios. However, in general, cost per Gigabyte of storage is often in direct opposition to cost per IO:<ul><li>RAID 5 has lower cost per Gigabyte than Raid 1, but Raid 1 has lower cost per IO</li><li>Spindle-based hard drives have lower cost per Gigabyte, but SSDs have a lower cost per IO</li></ul><li>After a restart of the computer or the Active Directory Domain Services service, the Extensible Storage Engine (ESE) cache is empty and performance will be disk bound while the cache warms.</li><li>In most environments AD is read intensive I/O in a random pattern to disks, negating much of the benefit of caching and read optimization strategies.  Plus, AD has a way larger cache in memory than most storage system caches.</li></ul>
-|RAM|<ul><li>Database size</li><li>Base operating system recommendations</li><li>Third-party applications</li></ul>|<ul><li>Storage is the slowest component in a computer. The more that can be resident in RAM, the less it is necessary to go to disk.</li><li>Ensure enough RAM is allocated to store the operating system, Agents (antivirus, backup, monitoring), NTDS Database and growth over time.</li><li>For environments where maximizing the amount of RAM is not cost effective (such as a satellite locations) or not feasible (DIT is too large), reference the Storage section to ensure that storage is properly sized.</li></ul>|
-|Network|<ul><li>“Network Interface(\*)\Bytes Received/sec”</li><li>“Network Interface(\*)\Bytes Sent/sec”|<ul><li>In general, traffic sent from a DC far exceeds traffic sent to a DC.</li><li>As a switched Ethernet connection is full-duplex, inbound and outbound network traffic need to be sized independently.</li><li>Consolidating the number of DCs will increase the amount of bandwidth used to send responses back to client requests for each DC, but will be close enough to linear for the site as a whole.</li><li>If removing satellite location DCs, don't forget to add the bandwidth for the satellite DC into the hub DCs as well as use that to evaluate how much WAN traffic there will be.</li></ul>|
-|CPU|<ul><li>“Logical Disk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read”</li><li>“Process(lsass)\\% Processor Time”</li></ul>|<ul><li>After eliminating storage as a bottleneck, address the amount of compute power needed.</li><li>While not perfectly linear, the number of processor cores consumed across all servers within a specific scope (such as a site) can be used to gauge how many processors are necessary to support the total client load. Add the minimum necessary to maintain the current level of service across all the systems within the scope.</li><li>Changes in processor speed, including power management related changes, impact numbers derived from the current environment. Generally, it is impossible to precisely evaluate how going from a 2.5 GHz processor to a 3 GHz processor will reduce the number of CPUs needed.</li></ul>|
-|NetLogon|<ul><li>“Netlogon(\*)\Semaphore Acquires”</li><li>“Netlogon(\*)\Semaphore Timeouts”</li><li>“Netlogon(\*)\Average Semaphore Hold Time”</li></ul>|<ul><li>Net Logon Secure Channel/MaxConcurrentAPI only affects environments with NTLM authentications and/or PAC Validation. PAC Validation is on by default in operating system versions before Windows Server 2008. This is a client setting, so the DCs will be impacted until this is turned off on all client systems.</li><li>Environments with significant cross trust authentication, which includes intra-forest trusts, have greater risk if not sized properly.</li><li>Server consolidations will increase concurrency of cross-trust authentication.</li><li>Surges need to be accommodated, such as cluster fail-overs, as users re-authenticate en masse to the new cluster node.</li><li>Individual client systems (such as a cluster) might need tuning too.</li></ul>|
+|--|--|--|
+| Storage/Database size | The section entitled “To activate logging of disk space that is freed by defragmentation” in [Storage Limits](/previous-versions/windows/it-pro/windows-2000-server/cc961769(v=technet.10)) |  |
+| Storage/ Database performance | <ul><li>"LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read," "LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Write," "LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer"</li><li>"LogicalDisk(*\<NTDS Database Drive\>*)\Reads/sec," "LogicalDisk(*\<NTDS Database Drive\>*)\Writes/sec," "LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec"</li></ul> | <ul><li>Storage has two concerns to address<ul><li>Space available, which with the size of today's spindle based and SSD based storage is irrelevant for most AD environments.</li> <li>Input/Output (IO) Operations available – In many environments, this is often overlooked. But it is important to evaluate only environments where there is not enough RAM to load the entire NTDS Database into memory.</li></ul><li>Storage can be a complex topic and should involve hardware vendor expertise for proper sizing. Particularly with more complex scenarios such as SAN, NAS, and iSCSI scenarios. However, in general, cost per Gigabyte of storage is often in direct opposition to cost per IO:<ul><li>RAID 5 has lower cost per Gigabyte than Raid 1, but Raid 1 has lower cost per IO</li><li>Spindle-based hard drives have lower cost per Gigabyte, but SSDs have a lower cost per IO</li></ul><li>After a restart of the computer or the Active Directory Domain Services service, the Extensible Storage Engine (ESE) cache is empty and performance will be disk bound while the cache warms.</li><li>In most environments AD is read intensive I/O in a random pattern to disks, negating much of the benefit of caching and read optimization strategies.  Plus, AD has a way larger cache in memory than most storage system caches.</li></ul> |
+| RAM | <ul><li>Database size</li><li>Base operating system recommendations</li><li>Third-party applications</li></ul> | <ul><li>Storage is the slowest component in a computer. The more that can be resident in RAM, the less it is necessary to go to disk.</li><li>Ensure enough RAM is allocated to store the operating system, Agents (antivirus, backup, monitoring), NTDS Database and growth over time.</li><li>For environments where maximizing the amount of RAM is not cost effective (such as a satellite locations) or not feasible (DIT is too large), reference the Storage section to ensure that storage is properly sized.</li></ul> |
+| Network | <ul><li>“Network Interface(\*)\Bytes Received/sec”</li><li>“Network Interface(\*)\Bytes Sent/sec” | <ul><li>In general, traffic sent from a DC far exceeds traffic sent to a DC.</li><li>As a switched Ethernet connection is full-duplex, inbound and outbound network traffic need to be sized independently.</li><li>Consolidating the number of DCs will increase the amount of bandwidth used to send responses back to client requests for each DC, but will be close enough to linear for the site as a whole.</li><li>If removing satellite location DCs, don't forget to add the bandwidth for the satellite DC into the hub DCs as well as use that to evaluate how much WAN traffic there will be.</li></ul> |
+| CPU | <ul><li>“Logical Disk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read”</li><li>“Process(lsass)\\% Processor Time”</li></ul> | <ul><li>After eliminating storage as a bottleneck, address the amount of compute power needed.</li><li>While not perfectly linear, the number of processor cores consumed across all servers within a specific scope (such as a site) can be used to gauge how many processors are necessary to support the total client load. Add the minimum necessary to maintain the current level of service across all the systems within the scope.</li><li>Changes in processor speed, including power management related changes, impact numbers derived from the current environment. Generally, it is impossible to precisely evaluate how going from a 2.5 GHz processor to a 3 GHz processor will reduce the number of CPUs needed.</li></ul> |
+| NetLogon | <ul><li>“Netlogon(*)\Semaphore Acquires”</li><li>“Netlogon(*)\Semaphore Timeouts”</li><li>“Netlogon(*)\Average Semaphore Hold Time”</li></ul> | <ul><li>Net Logon Secure Channel/MaxConcurrentAPI only affects environments with NTLM authentications and/or PAC Validation. PAC Validation is on by default in operating system versions before Windows Server 2008. This is a client setting, so the DCs will be impacted until this is turned off on all client systems.</li><li>Environments with significant cross trust authentication, which includes intra-forest trusts, have greater risk if not sized properly.</li><li>Server consolidations will increase concurrency of cross-trust authentication.</li><li>Surges need to be accommodated, such as cluster fail-overs, as users re-authenticate en masse to the new cluster node.</li><li>Individual client systems (such as a cluster) might need tuning too.</li></ul> |
 
 ## Planning
 
@@ -150,15 +150,15 @@ Avoid memory over-commit at the host. The fundamental goal behind optimizing the
 
 ### Calculation summary example
 
-|Component|Estimated memory (example)|
-|-|-|
-|Base operating system recommended RAM (Windows Server 2008)|2 GB|
-|LSASS internal tasks|200 MB|
-|Monitoring agent|100 MB|
-|Antivirus|100 MB|
-|Database (Global Catalog)|8.5 GB |
-|Cushion for backup to run, administrators to log on without impact|1 GB|
-|Total|12 GB|
+| Component | Estimated memory (example) |
+|--|--|
+| Base operating system recommended RAM (Windows Server 2008) | 2 GB |
+| LSASS internal tasks | 200 MB |
+| Monitoring agent | 100 MB |
+| Antivirus | 100 MB |
+| Database (Global Catalog) | 8.5 GB |
+| Cushion for backup to run, administrators to log on without impact | 1 GB |
+| Total | 12 GB |
 
 **Recommended: 16 GB**
 
@@ -219,14 +219,14 @@ It is easy to make recommendations for a physical server: 1 GB for servers suppo
 
 ### Calculation summary example
 
-|System|Peak bandwidth|
-|-|-|
-DC 1|6.5 MB/s|
-DC 2|6.25 MB/s|
-|DC 3|6.25 MB/s|
-|DC 4|5.75 MB/s|
-|DC 5|4.75 MB/s|
-|Total|28.5 MB/s|
+| System | Peak bandwidth |
+|--|--|
+| DC 1 | 6.5 MB/s |
+| DC 2 | 6.25 MB/s |
+| DC 3 | 6.25 MB/s |
+| DC 4 | 5.75 MB/s |
+| DC 5 | 4.75 MB/s |
+| Total | 28.5 MB/s |
 
 **Recommended: 72 MB/s** (28.5 MB/s divided by 40%)
 
@@ -267,7 +267,7 @@ When reviewing existing environments with multiple domains, there may be variati
 The database size can vary between operating system versions. DCs that run earlier operating systems such as Windows Server 2003 has a smaller database size than a DC that runs a later operating system such as Windows Server 2008 R2, especially when features such Active Directory Recycle Bin or Credential Roaming are enabled.
 
 > [!NOTE]
-  >
+>
 >- For new environments, notice that the estimates in Growth Estimates for Active Directory Users and Organizational Units indicate that 100,000 users (in the same domain) consume about 450 MB of space. Please note that the attributes populated can have a huge impact on the total amount. Attributes will be populated on many objects by both third-party and Microsoft products, including Microsoft Exchange Server and Lync. An evaluation based on the portfolio of the products in the environment is preferred, but the exercise of detailing out the math and testing for precise estimates for all but the largest environments may not actually be worth significant time and effort.
 >- Ensure that 110% of the NTDS.dit size is available as free space in order to enable offline defrag, and plan for growth over a three to five year hardware lifespan. Given how cheap storage is, estimating storage at 300% the size of the DIT as storage allocation is safe to accommodate growth and the potential need for offline defrag.
 
@@ -277,11 +277,11 @@ In a scenario where multiple Virtual Hard Disk (VHD) files are being allocated o
 
 #### Calculation summary example
 
-|Data collected from evaluation phase| |
-|-|-|
-|NTDS.dit size|35 GB|
-|Modifier to allow for offline defrag|2.1|
-|Total storage needed|73.5 GB|
+| Data collected from evaluation phase | Size |
+|--|--|
+| NTDS.dit size | 35 GB |
+| Modifier to allow for offline defrag | 2.1 GB |
+| Total storage needed | 73.5 GB |
 
 > [!NOTE]
 > This storage needed is in addition to the storage needed for SYSVOL, operating system, page file, temporary files, local cached data (such as installer files), and applications.
@@ -327,8 +327,7 @@ These should be sampled in 15/30/60 minute intervals to benchmark the demands of
 >     > Recommendations exist stating that storage performance is degraded at 15ms to 20ms (depending on source).  The difference between the above values and the other guidance is that the above values are the normal operating range.  The other recommendations are troubleshooting guidance to identify when client experience significantly degrades and becomes noticeable.  Reference Appendix C for a deeper explanation.
 > - LogicalDisk(*\<NTDS\>*)\Reads/sec is the amount of I/O that is being performed.
 >   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is within the optimal range for the backend storage, LogicalDisk(*\<NTDS\>*)\Reads/sec can be used directly to size the storage.
->   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is not within the optimal range for the backend storage, additional I/O is needed according to the following formula:
->     > (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read) &divide; (Physical Media Disk Access Time) &times; (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read)
+>   - If LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read is not within the optimal range for the backend storage, additional I/O is needed according to the following formula: (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read) &divide; (Physical Media Disk Access Time) &times; (LogicalDisk(*\<NTDS\>*)\Avg Disk sec/Read)
 
 Considerations:
 
@@ -351,17 +350,17 @@ Determining the amount of I/O needed for a healthy system under normal operating
 - To determine the amount of I/O needed for storage where the capacity of the underlying storage is exceeded:
   >*Needed IOPS* = (LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read &divide; *\<Target Avg Disk sec/Read\>*) &times; LogicalDisk(*\<NTDS Database Drive\>*)\Read/sec
 
-|Counter|Value|
-|-|-|
-|Actual LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer|.02 seconds (20 milliseconds)|
-|Target LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer|.01 seconds|
-|Multiplier for change in available IO|0.02 &divide; 0.01 = 2|
+| Counter | Value |
+|--|--|
+| Actual LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer | .02 seconds (20 milliseconds) |
+| Target LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Transfer | .01 seconds |
+| Multiplier for change in available IO | 0.02 &divide; 0.01 = 2 |
 
-|Value name|Value|
-|-|-|
-|LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec|400|
-|Multiplier for change in available IO|2|
-|Total IOPS needed during peak period|800|
+| Value name | Value |
+|--|--|
+| LogicalDisk(*\<NTDS Database Drive\>*)\Transfers/sec | 400 |
+| Multiplier for change in available IO | 2 |
+| Total IOPS needed during peak period | 800 |
 
 To determine the rate at which the cache is desired to be warmed:
 
@@ -372,16 +371,16 @@ To determine the rate at which the cache is desired to be warmed:
 
 Note that the rate calculated, while accurate, will not be exact because previously loaded pages are evicted if ESE is not configured to have a fixed cache size, and AD DS by default uses variable cache size.
 
-|Data points to collect|Values
-|-|-|
-|Maximum acceptable time to warm|10 minutes (600 seconds)
-|Database size|2 GB|
+| Data points to collect | Values |
+|--|--|
+| Maximum acceptable time to warm | 10 minutes (600 seconds) |
+| Database size | 2 GB |
 
-|Calculation step|Formula|Result|
-|-|-|-|
-|Calculate size of database in pages|(2 GB &times; 1024 &times; 1024) = *Size of database in KB*|2,097,152 KB|
-|Calculate number of pages in database|2,097,152 KB &divide; 8 KB = *Number of pages*|262,144 pages|
-|Calculate IOPS necessary to fully warm the cache|262,144 pages &divide; 600 seconds = *IOPS needed*|437 IOPS|
+| Calculation step | Formula | Result |
+|--|--|--|
+| Calculate size of database in pages | (2 GB &times; 1024 &times; 1024) = *Size of database in KB* | 2,097,152 KB |
+| Calculate number of pages in database | 2,097,152 KB &divide; 8 KB = *Number of pages* | 262,144 pages |
+| Calculate IOPS necessary to fully warm the cache | 262,144 pages &divide; 600 seconds = *IOPS needed* | 437 IOPS |
 
 ## Processing
 
@@ -470,11 +469,11 @@ There are two common reasons to tune LDAP Weights:
 
 #### Example 1 - PDC
 
-| |Utilization with defaults|New LdapSrvWeight|Estimated new utilization|
-|-|-|-|-|
-|DC 1 (PDC emulator)|53%|57|40%|
-|DC 2|33%|100|40%|
-|DC 3|33%|100|40%|
+| System | Utilization with defaults | New LdapSrvWeight | Estimated new utilization |
+|--|--|--|--|
+| DC 1 (PDC emulator)| 53% | 57 | 40% |
+| DC 2| 33% | 100 | 40% |
+| DC 3| 33% | 100 | 40% |
 
 The catch here is that if the PDC emulator role is transferred or seized, particularly to another domain controller in the site, there will be a dramatic increase on the new PDC emulator.
 
@@ -482,19 +481,19 @@ Using the example from the section [Target site behavior profile](#target-site-b
 
 #### Example 2 - Differing CPU counts
 
-| |Processor Information\\ %&nbsp;Processor Utility(_Total)<br />Utilization with defaults|New LdapSrvWeight|Estimated new utilization|
-|-|-|-|-|
-|4-CPU DC 1|40|100|30%|
-|4-CPU DC 2|40|100|30%|
-|8-CPU DC 3|20|200|30%|
+| System | Processor Information\\ %&nbsp;Processor Utility(_Total)<br />Utilization with defaults | New LdapSrvWeight | Estimated new utilization |
+|--|--|--|--|
+| 4-CPU DC 1 | 40 | 100 | 30% |
+| 4-CPU DC 2 | 40 | 100 | 30% |
+| 8-CPU DC 3 | 20 | 200 | 30% |
 
 Be very careful with these scenarios though. As can be seen above, the math looks really nice and pretty on paper. But throughout this article, planning for an “*N* + 1” scenario is of paramount importance. The impact of one DC going offline must be calculated for every scenario. In the immediately preceding scenario where the load distribution is even, in order to ensure a 60% load during an “*N*” scenario, with the load balanced evenly across all servers, the distribution will be fine as the ratios stay consistent. Looking at the PDC emulator tuning scenario, and in general any scenario where user or application load is unbalanced, the effect is very different:
 
-| |Tuned Utilization|New LdapSrvWeight|Estimated New Utilization|
-|-|-|-|-|
-|DC 1 (PDC emulator)|40%|85|47%|
-|DC 2|40%|100|53%|
-|DC 3|40%|100|53%|
+| System | Tuned Utilization | New LdapSrvWeight | Estimated New Utilization |
+|--|--|--|--|
+| DC 1 (PDC emulator) | 40% | 85 | 47% |
+| DC 2 | 40% | 100 | 53% |
+| DC 3 | 40% | 100 | 53% |
 
 ### Virtualization considerations for processing
 
@@ -506,16 +505,16 @@ Throughout the analysis and calculation of the CPU quantities necessary to suppo
 
 ### Calculation summary example
 
-|System|Peak CPU|
-|-|-|-|
-|DC 1|120%|
-|DC 2|147%|
-|Dc 3|218%|
-|Total CPU being used|485%|
+| System | Peak CPU |
+|--|--|--|
+| DC 1 | 120% |
+| DC 2 | 147% |
+| Dc 3 | 218% |
+| Total CPU being used | 485% |
 
-|Target system(s) count|Total bandwidth (from above)|
-|-|-|
-|CPUs needed at 40% target|4.85 &divide; .4 = 12.25|
+| Target system(s) count | Total bandwidth (from above) |
+|--|--|
+| CPUs needed at 40% target | 4.85 &divide; .4 = 12.25 |
 
 Repeating due to the importance of this point, *remember to plan for growth*. Assuming 50% growth over the next three years, this environment will need 18.375 CPUs (12.25 &times; 1.5) at the three-year mark. An alternate plan would be to review after the first year and add in additional capacity as needed.
 
@@ -554,15 +553,15 @@ None, this is an operating system tuning setting.
 
 ### Calculation summary example
 
-|Data type|Value|
-|-|-|
-|Semaphore Acquires (Minimum)|6,161|
-|Semaphore Acquires (Maximum)|6,762|
-|Semaphore Timeouts|0|
-|Average Semaphore Hold Time|0.012|
-|Collection Duration (seconds)|1:11 minutes (71 seconds)|
-|Formula (from KB 2688798)|((6762 &ndash; 6161) + 0) &times; 0.012 /|
-|Minimum value for **MaxConcurrentAPI**|((6762 &ndash; 6161) + 0) &times; 0.012 &divide; 71 = .101|
+| Data type | Value |
+|--|--|
+| Semaphore Acquires (Minimum) | 6,161 |
+| Semaphore Acquires (Maximum) | 6,762 |
+| Semaphore Timeouts | 0 |
+| Average Semaphore Hold Time | 0.012 |
+| Collection Duration (seconds) | 1:11 minutes (71 seconds) |
+| Formula (from KB 2688798) | ((6762 &ndash; 6161) + 0) &times; 0.012 / |
+| Minimum value for **MaxConcurrentAPI** | ((6762 &ndash; 6161) + 0) &times; 0.012 &divide; 71 = .101 |
 
 For this system for this time period, the default values are acceptable.
 
@@ -570,14 +569,14 @@ For this system for this time period, the default values are acceptable.
 
 Throughout this article, it has been discussed that planning and scaling go towards utilization targets. Here is a summary chart of the recommended thresholds that must be monitored to ensure the systems are operating within adequate capacity thresholds. Keep in mind that these are not performance thresholds, but capacity planning thresholds. A server operating in excess of these thresholds will work, but is time to start validating that all the applications are well behaved. If said applications are well behaved, it is time to start evaluating hardware upgrades or other configuration changes.
 
-|Category|Performance counter|Interval/Sampling|Target|Warning|
-|-|-|-|-|-|
-|Processor|Processor Information(_Total)\\% Processor Utility|60 min|40%|60%|
-|RAM (Windows Server 2008 R2 or earlier)|Memory\Available MB|< 100 MB|N/A|< 100 MB|
-|RAM (Windows Server 2012)|Memory\Long-Term Average Standby Cache Lifetime(s)|30 min|Must be tested|Must be tested|
-|Network|Network Interface(\*)\Bytes Sent/sec<p>Network Interface(\*)\Bytes Received/sec|30 min|40%|60%|
-|Storage|LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read<p>LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Write|60 min|10 ms|15 ms|
-|AD Services|Netlogon(\*)\Average Semaphore Hold Time|60 min|0|1 second|
+| Category | Performance counter | Interval/Sampling | Target | Warning |
+|--|--|--|--|--|
+| Processor | Processor Information(_Total)\\% Processor Utility | 60 min | 40% | 60% |
+| RAM (Windows Server 2008 R2 or earlier) | Memory\Available MB | < 100 MB | N/A | < 100 MB |
+| RAM (Windows Server 2012) | Memory\Long-Term Average Standby Cache Lifetime(s) | 30 min | Must be tested | Must be tested |
+| Network | Network Interface(\*)\Bytes Sent/sec<p>Network Interface(\*)\Bytes Received/sec | 30 min | 40% | 60% |
+| Storage | LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Read<p>LogicalDisk(*\<NTDS Database Drive\>*)\Avg Disk sec/Write | 60 min | 10 ms | 15 ms |
+| AD Services | Netlogon(\*)\Average Semaphore Hold Time | 60 min | 0 | 1 second |
 
 ## Appendix A: CPU sizing criteria
 
@@ -748,27 +747,27 @@ Once the components are identified, an idea of how much data can transit the sys
 
   So far, the transfer rate of the hard drive has been irrelevant. Whether the hard drive is 20 MB/s Ultra Wide or an Ultra3 160 MB/s, the actual amount of IOPS the can be handled by the 10,000-RPM HD is ~100 random or ~300 sequential I/O. As block sizes change based on the application writing to the drive, the amount of data that is pulled per I/O is different. For example, if the block size is 8 KB, 100 I/O operations will read from or write to the hard drive a total of 800 KB. However, if the block size is 32 KB, 100 I/O will read/write 3,200 KB (3.2 MB) to the hard drive. As long as the SCSI transfer rate is in excess of the total amount of data transferred, getting a “faster” transfer rate drive will gain nothing. See the following tables for comparison.
 
-  | |7200 RPM 9ms seek, 4ms access|10,000 RPM 7ms seek, 3ms access|15,000 RPM 4ms seek, 2ms access
-  |-|-|-|-|
-  |Random I/O|80|100|150|
-  |Sequential I/O|250|300|500|
+  | Description | 7200 RPM 9ms seek, 4ms access | 10,000 RPM 7ms seek, 3ms access | 15,000 RPM 4ms seek, 2ms access |
+  |--|--|--|--|
+  | Random I/O | 80 | 100 | 150 |
+  | Sequential I/O | 250 | 300 | 500 |
 
-  |10,000 RPM drive|8 KB block size (Active Directory Jet)|
-  |-|-|
-  |Random I/O|800 KB/s|
-  |Sequential I/O|2400 KB/s|
+  | 10,000 RPM drive | 8 KB block size (Active Directory Jet) |
+  |--|--|
+  | Random I/O | 800 KB/s |
+  | Sequential I/O | 2400 KB/s |
 
 - **SCSI backplane (bus) –** Understanding how the “SCSI backplane (bus)”, or in this scenario the ribbon cable, impacts throughput of the storage subsystem depends on knowledge of the block size. Essentially the question would be, how much I/O can the bus handle if the I/O is in 8 KB blocks? In this scenario, the SCSI bus is 20 MB/s, or 20480 KB/s. 20480 KB/s divided by 8 KB blocks yields a maximum of approximately 2500 IOPS supported by the SCSI bus.
 
   > [!NOTE]
   > The figures in the following table represent an example. Most attached storage devices currently use PCI Express, which provides much higher throughput.
 
-  |I/O supported by SCSI bus per block size|2 KB block size|8 KB block size (AD Jet) (SQL Server 7.0/SQL Server 2000)
-  |-|-|-|
-  |20 MB/s|10,000|2,500|
-  |40 MB/s|20,000|5,000|
-  |128 MB/s|65,536|16,384|
-  |320 MB/s|160,000|40,000|
+  | I/O supported by SCSI bus per block size | 2 KB block size | 8 KB block size (AD Jet) (SQL Server 7.0/SQL Server 2000) |
+  |--|--|--|
+  | 20 MB/s | 10,000 | 2,500 |
+  | 40 MB/s | 20,000 | 5,000 |
+  | 128 MB/s | 65,536 | 16,384 |
+  | 320 MB/s | 160,000 | 40,000 |
 
   As can be determined from this chart, in the scenario presented, no matter what the use, the bus will never be a bottleneck, as the spindle maximum is 100 I/O, well below any of the above thresholds.
 
@@ -790,17 +789,17 @@ After analysis of the components of this storage subsystem, the spindle is the l
 
 Now, having analyzed a simple configuration, the following table demonstrates where the bottleneck will occur as components in the storage subsystem are changed or added.
 
-|Notes|Bottleneck analysis|Disk|Bus|Adapter|PCI bus|
-|-|-|-|-|-|-|
-|This is the domain controller configuration after adding a second disk. The disk configuration represents the bottleneck at 800 KB/s.|Add 1 disk (Total=2)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD|200 I/Os total<br />800 KB/s total.| | | |
-|After adding 7 disks, the disk configuration still represents the bottleneck at 3200 KB/s.|**Add 7 disks (Total=8)**  <p>I/O is random<p>4 KB block size<p>10,000 RPM HD|800 I/Os total.<br />3200 KB/s total| | | |
-|After changing I/O to sequential, the network adapter becomes the bottleneck because it is limited to 1000 IOPS.|Add 7 disks (Total=8)<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD| | |2400 I/O sec can be read/written to disk, controller limited to 1000 IOPS| |
-|After replacing the network adapter with a SCSI adapter that supports 10,000 IOPS, the bottleneck returns to the disk configuration.|Add 7 disks (Total=8)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade SCSI adapter (now supports 10,000 I/O)**|800 I/Os total.<br />3,200 KB/s total| | | |
-|After increasing the block size to 32 KB, the bus becomes the bottleneck because it only supports 20 MB/s.|Add 7 disks (Total=8)<p>I/O is random<p>**32 KB block size**<p>10,000 RPM HD| |800 I/Os total. 25,600 KB/s (25 MB/s) can be read/written to disk.<p>The bus only supports 20 MB/s| | |
-|After upgrading the bus and adding more disks, the disk remains the bottleneck.|**Add 13 disks (Total=14)**<p>Add second SCSI adapter with 14 disks<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade to 320 MB/s SCSI bus**|2800 I/Os<p>11,200 KB/s (10.9 MB/s)| | | |
-|After changing I/O to sequential, the disk remains the bottleneck.|Add 13 disks (Total=14)<p>Add second SCSI Adapter with 14 disks<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD<p>Upgrade to 320 MB/s SCSI bus|8,400 I/Os<p>33,600 KB\s<p>(32.8 MB\s)| | | |
-|After adding faster hard drives, the disk remains the bottleneck.|Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>4 KB block size<p>**15,000 RPM HD**<p>Upgrade to 320 MB/s SCSI bus|14,000 I/Os<p>56,000 KB/s<p>(54.7 MB/s)| | | |
-|After increasing the block size to 32 KB, the PCI bus becomes the bottleneck.|Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>**32 KB block size**<p>15,000 RPM HD<p>Upgrade to 320 MB/s SCSI bus| | | |14,000 I/Os<p>448,000 KB/s<p>(437 MB/s) is the read/write limit to the spindle.<p>The PCI bus supports a theoretical maximum of 133 MB/s (75% efficient at best).|
+| Notes | Bottleneck analysis | Disk | Bus | Adapter | PCI bus |
+|--|--|--|--|--|--|
+| This is the domain controller configuration after adding a second disk. The disk configuration represents the bottleneck at 800 KB/s. | Add 1 disk (Total=2)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD | 200 I/Os total<br />800 KB/s total. |  |  |  |
+| After adding 7 disks, the disk configuration still represents the bottleneck at 3200 KB/s. | **Add 7 disks (Total=8)**  <p>I/O is random<p>4 KB block size<p>10,000 RPM HD | 800 I/Os total.<br />3200 KB/s total |  |  |  |
+| After changing I/O to sequential, the network adapter becomes the bottleneck because it is limited to 1000 IOPS. | Add 7 disks (Total=8)<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD |  |  | 2400 I/O sec can be read/written to disk, controller limited to 1000 IOPS |  |
+| After replacing the network adapter with a SCSI adapter that supports 10,000 IOPS, the bottleneck returns to the disk configuration. | Add 7 disks (Total=8)<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade SCSI adapter (now supports 10,000 I/O)** | 800 I/Os total.<br />3,200 KB/s total |  |  |  |
+| After increasing the block size to 32 KB, the bus becomes the bottleneck because it only supports 20 MB/s. | Add 7 disks (Total=8)<p>I/O is random<p>**32 KB block size**<p>10,000 RPM HD |  | 800 I/Os total. 25,600 KB/s (25 MB/s) can be read/written to disk.<p>The bus only supports 20 MB/s |  |  |
+| After upgrading the bus and adding more disks, the disk remains the bottleneck. | **Add 13 disks (Total=14)**<p>Add second SCSI adapter with 14 disks<p>I/O is random<p>4 KB block size<p>10,000 RPM HD<p>**Upgrade to 320 MB/s SCSI bus** | 2800 I/Os<p>11,200 KB/s (10.9 MB/s) |  |  |  |
+| After changing I/O to sequential, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI Adapter with 14 disks<p>**I/O is sequential**<p>4 KB block size<p>10,000 RPM HD<p>Upgrade to 320 MB/s SCSI bus | 8,400 I/Os<p>33,600 KB\s<p>(32.8 MB\s) |  |  |  |
+| After adding faster hard drives, the disk remains the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>4 KB block size<p>**15,000 RPM HD**<p>Upgrade to 320 MB/s SCSI bus | 14,000 I/Os<p>56,000 KB/s<p>(54.7 MB/s) |  |  |  |
+| After increasing the block size to 32 KB, the PCI bus becomes the bottleneck. | Add 13 disks (Total=14)<p>Add second SCSI adapter with 14 disks<p>I/O is sequential<p>**32 KB block size**<p>15,000 RPM HD<p>Upgrade to 320 MB/s SCSI bus |  |  |  | 14,000 I/Os<p>448,000 KB/s<p>(437 MB/s) is the read/write limit to the spindle.<p>The PCI bus supports a theoretical maximum of 133 MB/s (75% efficient at best). |
 
 ### Introducing RAID
 
