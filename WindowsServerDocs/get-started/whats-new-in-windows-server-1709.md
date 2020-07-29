@@ -9,15 +9,15 @@ ms.author: coreyp
 ms.localizationpriority: medium
 ms.date: 06/03/2019
 ---
+
 # What's New in Windows Server version 1709
 
->Applies To: Windows Server (Semi-Annual Channel)
+> Applies To: Windows Server (Semi-Annual Channel)
 
 <img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://cloudblogs.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
 
 > [!IMPORTANT]
 > Windows Server, version 1709 is out of support as of April 9, 2019.
-
 
 ## New cadence of releases
 
@@ -27,21 +27,21 @@ Starting with this release, you have two options for receiving Windows Server fe
 
 Release channels are summarized in the following table.
 
-|   | Semi-Annual Channel | Long Term Servicing Channel |
-| ------------- | ------------- | ------------ |
-| Release cadence  | Twice a year (spring and fall)  | Every 2-3 years |
-| Support schedule  | 18 months mainstream production support  | 5 years mainstream support + 5 years extended support |
-| Availability  | Software Assurance or Azure (cloud hosted)  | All channels |
-| Naming convention  | Windows Server, version YYMM  | Windows Server YYYY |
+| Description | Semi-Annual Channel | Long Term Servicing Channel |
+| ------------- |--| -- |
+| Release cadence | Twice a year (spring and fall) | Every 2-3 years |
+| Support schedule | 18 months mainstream production support | 5 years mainstream support + 5 years extended support |
+| Availability | Software Assurance or Azure (cloud hosted) | All channels |
+| Naming convention | Windows Server, version YYMM | Windows Server YYYY |
 
 For more information, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
 
 ## Application containers and micro-services
 
-- The Server Core container image has been further optimized for lift-and-shift scenarios where you can migrate existing code bases or applications into containers with minimal changes, and it's also 60% smaller. 
+- The Server Core container image has been further optimized for lift-and-shift scenarios where you can migrate existing code bases or applications into containers with minimal changes, and it's also 60% smaller.
 - The Nano Server container image is nearly 80% smaller.
     - In the Windows Server Semi-Annual Channel, Nano Server as a container base OS image is decreased from 390 MB to 80 MB.
-- Linux containers with Hyper-V isolation 
+- Linux containers with Hyper-V isolation
 
 For more information, see [Changes to Nano Server in the next release of Windows Server](./nano-in-semi-annual-channel.md) and [Windows Server, version 1709 for developers](https://cloudblogs.microsoft.com/windowsserver/2017/09/13/sneak-peek-3-windows-server-version-1709-for-developers/).
 
@@ -52,7 +52,7 @@ Project Honolulu includes an intuitive all-new management experience for managin
 
 ## Compute
 
-**Nano Container and Server Core Container**: First and foremost, this release is about driving application innovation. Nano Server, or Nano as Host is deprecated and replaced by Nano Container, which is Nano running as a container image. 
+**Nano Container and Server Core Container**: First and foremost, this release is about driving application innovation. Nano Server, or Nano as Host is deprecated and replaced by Nano Container, which is Nano running as a container image.
 
 For more information about containers, see [Container Networking Overview](../networking/sdn/technologies/containers/container-networking-overview.md).
 
@@ -86,15 +86,15 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 ## Storage
 
 **Storage Replica**: The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq). 
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
 - **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
 
-**SMB**: 
-- **SMB1 and guest authentication removal**: Windows Server, version 1709 no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 is not installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server). 
+**SMB**:
+- **SMB1 and guest authentication removal**: Windows Server, version 1709 no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 is not installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
 
 - **SMB2/SMB3 security and compatibility**: Additional options for security and application compatibility were added, including the ability to disable oplocks in SMB2+ for legacy applications, as well as require signing or encryption on per-connection basis from a client. For more information, review the SMBShare PowerShell module help.
 
-**Data Deduplication**: 
+**Data Deduplication**:
 - **Data Deduplication now supports ReFS**: You no longer must choose between the advantages of a modern file system with ReFS and the Data Deduplication: now, you can enable Data Deduplication wherever you can enable ReFS. Increase storage efficiency by upwards of 95% with ReFS.
 - **DataPort API for optimized ingress/egress to deduplicated volumes**: Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
 
@@ -145,7 +145,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 **Software Defined Networking**
 
 - **Virtual Network Encryption** is a new feature that provides the ability for the virtual network traffic to be encrypted between Virtual Machines that communicate with each other within subnets that are marked as Encryption Enabled. This feature utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt the packets.  DTLS provides protection against eavesdropping, tampering and forgery by anyone with access to the physical network.
- 
+
 **Windows 10 VPN**
 
 - **Pre-Logon Infrastructure Tunnels**. By default, Windows 10 VPN does not automatically create Infrastructure Tunnels when users are not logged on to their computer or device. You can configure Windows 10 VPN to automatically create Pre-Logon Infrastructure Tunnels by using the Device Tunnel (prelogon) feature in the VPN profile.

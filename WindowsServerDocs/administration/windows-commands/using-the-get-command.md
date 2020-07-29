@@ -1,5 +1,5 @@
 ---
-title: get
+title: Using the get command
 description: Reference article for get, which retrieves properties or attributes about the specified object.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -10,7 +10,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# get
+
+# Using the get command
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

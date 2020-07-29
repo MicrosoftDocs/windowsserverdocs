@@ -1,16 +1,14 @@
 ---
 title: DHCP (Dynamic Host Configuration Protocol) Basics
-description: 
-ms.date: 05/22/2020
+description:
 ms.prod: windows-server
-ms.service: na
 manager: dcscontentpm
 ms.technology: server-general
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshoot
 author: Deland-Han
 ms.author: delhan
-ms.reviewer: 
+ms.reviewer:
 ---
 # DHCP (Dynamic Host Configuration Protocol) Basics
 
@@ -38,7 +36,7 @@ The following Microsoft products provide DHCP client functionality:
 
 - Microsoft TCP/IP-32 for Windows for Workgroups versions 3.11, 3.11a, and 3.11b
 
-Different DHCP clients support different options that they can receive from the DHCP server. 
+Different DHCP clients support different options that they can receive from the DHCP server.
 
 The following Microsoft server operating systems provide DHCP server functionality:
 
@@ -447,5 +445,5 @@ To view IP information on a Windows or Windows for Workgroups client, use the IP
 
 ## References
 
-For more information about DHCP, see RFC1541 and RFC2131. RFCs may be obtained via the Internet at numerous sites, for example: [http://www.rfc-editor.org/](http://www.rfc-editor.org/) 
+For more information about DHCP, see RFC1541 and RFC2131. RFCs may be obtained via the Internet at numerous sites, for example: [http://www.rfc-editor.org/](http://www.rfc-editor.org/)
 and [http://www.tech-nic.qc.ca/](http://www.tech-nic.qc.ca/)
