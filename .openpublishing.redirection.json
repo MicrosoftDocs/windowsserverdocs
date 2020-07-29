@@ -4363,7 +4363,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp.mdir.md",
       "redirect_url": "/windows-server/administration/windows-commands/ftp-mdir",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftype.md",
@@ -9513,6 +9513,11 @@
     {
       "source_path": "WindowsServerDocs/remote/multipoint-services/Limit-users--access-to-the-server-in-MultiPoint-services.md",
       "redirect_url": "limit-user-access-to-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep.exe.md",
+      "redirect_url": "WindowsServerDocs/identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep",
       "redirect_document_id": false
     },
     {

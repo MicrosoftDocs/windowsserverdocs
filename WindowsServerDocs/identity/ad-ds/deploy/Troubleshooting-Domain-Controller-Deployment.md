@@ -24,13 +24,13 @@ This topic covers detailed methodology on troubleshooting domain controller conf
 
 The built-in logs are the most important instrument for troubleshooting issues with domain controller promotion and demotion. All of these logs are enabled and configured for maximum verbosity by default.
 
-| Phase | Log |  |
-|--|--|--|
-| Server Manager or ADDSDeployment Windows PowerShell operations | -   %systemroot%\debug\dcpromoui.log<p>-   %systemroot%\debug\dcpromoui*.log |  |
-| Installation/Promotion of the domain controller | -   %systemroot%\debug\dcpromo.log<p>-   %systemroot%\debug\dcpromo*.log<p>-   Event viewer\Windows logs\System<p>-   Event viewer\Windows logs\Application<p>-   Event viewer\Applications and services logs\Directory Service<p>-   Event viewer\Applications and services logs\File Replication Service<p>-   Event viewer\Applications and services logs\DFS Replication |  |
-| Forest or domain upgrade | -   %systemroot%\debug\adprep\\<datetime>\adprep.log<p>-   %systemroot%\debug\adprep\\<datetime>\csv.log<p>-   %systemroot%\debug\adprep\\<datetime>\dspecup.log<p>-   %systemroot%\debug\adprep\\<datetime>\ldif.log* |  |
-| Server Manager ADDSDeployment Windows PowerShell deployment engine | -   Event viewer\Applications and services logs\Microsoft\Windows\DirectoryServices-Deployment\Operational |  |
-| Windows Servicing | -   %systemroot%\Logs\CBS\\*<p>-   %systemroot%\servicing\sessions\sessions.xml<p>-   %systemroot%\winsxs\poqexec.log<p>-   %systemroot%\winsxs\pending.xml |  |
+| Phase | Log |
+|--|--|
+| Server Manager or ADDSDeployment Windows PowerShell operations | -   %systemroot%\debug\dcpromoui.log<p>-   %systemroot%\debug\dcpromoui*.log |
+| Installation/Promotion of the domain controller | -   %systemroot%\debug\dcpromo.log<p>-   %systemroot%\debug\dcpromo*.log<p>-   Event viewer\Windows logs\System<p>-   Event viewer\Windows logs\Application<p>-   Event viewer\Applications and services logs\Directory Service<p>-   Event viewer\Applications and services logs\File Replication Service<p>-   Event viewer\Applications and services logs\DFS Replication |
+| Forest or domain upgrade | -   %systemroot%\debug\adprep\\<datetime>\adprep.log<p>-   %systemroot%\debug\adprep\\<datetime>\csv.log<p>-   %systemroot%\debug\adprep\\<datetime>\dspecup.log<p>-   %systemroot%\debug\adprep\\<datetime>\ldif.log* |
+| Server Manager ADDSDeployment Windows PowerShell deployment engine | -   Event viewer\Applications and services logs\Microsoft\Windows\DirectoryServices-Deployment\Operational |
+| Windows Servicing | -   %systemroot%\Logs\CBS\\*<p>-   %systemroot%\servicing\sessions\sessions.xml<p>-   %systemroot%\winsxs\poqexec.log<p>-   %systemroot%\winsxs\pending.xml |
 
 ### Tools and Commands for Troubleshooting Domain Controller Configuration
 
@@ -212,10 +212,10 @@ Promotion and demotion return the following failure message codes. There is also
 
 The following are common issues seen during the Windows Server 2012 development process. All of these issues are "by design" and have either a valid workaround or more appropriate technique to avoid them in the first place. Many of these behaviors are identical in Windows Server 2008 R2 and older operating systems, but the rewrite of AD DS deployment brings heightened sensitivity to issues.
 
-| Issue | Demoting a domain controller leaves DNS running with no zones |  |
-|--|--|--|
-| Symptoms | Server still responds to DNS requests but has no zone information |  |
-| Resolution and Notes | When removing the AD DS role, also remove the DNS Server role or set the DNS Server service to disabled. Remember to point the DNS client to another server than itself. If using Windows PowerShell, run the following after you demote the server:<p>Code - uninstall-windowsfeature dns<p>or<p>Code - set-service dns -starttype disabled<br />stop-service dns |  |
+| Issue | Demoting a domain controller leaves DNS running with no zones |
+|--|--|
+| Symptoms | Server still responds to DNS requests but has no zone information |
+| Resolution and Notes | When removing the AD DS role, also remove the DNS Server role or set the DNS Server service to disabled. Remember to point the DNS client to another server than itself. If using Windows PowerShell, run the following after you demote the server:<p>Code - uninstall-windowsfeature dns<p>or<p>Code - set-service dns -starttype disabled<br />stop-service dns |
 
 | Issue | Promoting a Windows Server 2012 into an existing single-label domain does not configure updatetopleveldomain=1 or allowsinglelabeldnsdomain=1 |
 |--|--|

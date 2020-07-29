@@ -17,35 +17,6 @@ All supported versions of Windows (server and client) have a set of Win32 consol
 
 This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
 
-To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
-
-[A](#a) |
-[B](#b) |
-[C](#c) |
-[D](#d) |
-[E](#e) |
-[F](#f) |
-[G](#g) |
-[H](#h) |
-[I](#i) |
-[J](#j) |
-[K](#k) |
-[L](#l) |
-[M](#m) |
-[N](#n) |
-[O](#o) |
-[P](#p) |
-[Q](#q) |
-[R](#r) |
-[S](#s) |
-[T](#t) |
-[U](#u) |
-[V](#v) |
-[W](#w) |
-[X](#x) |
-Y |
-Z
-
 ## Prerequisites
 
 The information that is contained in this topic applies to:
@@ -85,34 +56,9 @@ For the most robust, up-to-date Windows automation, we recommend using PowerShel
 
 ## Command-line reference A-Z
 
-To find information about a specific Windows command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
-[A](#a) |
-[B](#b) |
-[C](#c) |
-[D](#d) |
-[E](#e) |
-[F](#f) |
-[G](#g) |
-[H](#h) |
-[I](#i) |
-[J](#j) |
-[K](#k) |
-[L](#l) |
-[M](#m) |
-[N](#n) |
-[O](#o) |
-[P](#p) |
-[Q](#q) |
-[R](#r) |
-[S](#s) |
-[T](#t) |
-[U](#u) |
-[V](#v) |
-[W](#w) |
-[X](#x) |
-Y |
-Z)
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [X](#x) | Y | Z
 
 ### A
 
