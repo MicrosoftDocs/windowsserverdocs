@@ -112,13 +112,13 @@ When a backup has Unsuccessful status, no part of the backup succeeded and no da
 
     - Delete content from the volume to make more space available.
 
-            > [!NOTE]
-            > If you need to free up space on the system reserved volume, you can move the System Recovery Image to a different volume. For instructions, see [Deploy a System Recovery Image](/previous-versions/windows/it-pro/windows-7/dd744280(v=ws.10)).
+        > [!NOTE]
+        > If you need to free up space on the system reserved volume, you can move the System Recovery Image to a different volume. For instructions, see [Deploy a System Recovery Image](/previous-versions/windows/it-pro/windows-7/dd744280(v=ws.10)).
 
     - Exclude the volume from the client backup. Do this only if it is not important to you to maintain a backup copy of the data on the volume.
 
-            > [!WARNING]
-            > If you exclude the system reserved volume from a client backup, the client system will not be backed up, and you will not be able to perform a full system restore on the computer.
+        > [!WARNING]
+        > If you exclude the system reserved volume from a client backup, the client system will not be backed up, and you will not be able to perform a full system restore on the computer.
 
 5. Check for other alerts on the server that may indicate there is not enough disk space on the server for backup to complete successfully. Follow the instructions in the alert to fix the issue.
 

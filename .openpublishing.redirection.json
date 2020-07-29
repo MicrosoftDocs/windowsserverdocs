@@ -9756,6 +9756,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/virtualization/virtualization-old.md",
+      "redirect_url": "/windows-server/virtualization/virtualization.yml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/break_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/break",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
       "redirect_url": "/windows-server/windows-server",
       "redirect_document_id": false

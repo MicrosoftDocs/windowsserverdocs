@@ -51,13 +51,9 @@ To query the dirty bit on drive C, type:
 fsutil dirty query c:
 ```
 
-    If the volume is dirty, the following output displays:
+- If the volume is dirty, the following output displays: `Volume C: is dirty`
 
-    `Volume C: is dirty`
-
-    If the volume isn't dirty, the following output displays:
-
-    `Volume C: is not dirty`
+- If the volume isn't dirty, the following output displays: `Volume C: is not dirty`
 
 To set the dirty bit on drive C, type:
 

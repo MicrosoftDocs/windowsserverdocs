@@ -23,28 +23,37 @@ Affinity is a rule you would set up that establishes a relationship between two 
 
 When looking at the properties of a group, there is the parameter AntiAffinityClassNames and it is blank as a default.  In the examples below, Group1 and Group2 should be separated from running on the same node.  To view the property, the PowerShell command and result would be:
 
-    PS> Get-ClusterGroup Group1 | fl AntiAffinityClassNames
+```powershell
+Get-ClusterGroup Group1 | fl AntiAffinityClassNames
     AntiAffinityClassNames : {}
 
-    PS> Get-ClusterGroup Group2 | fl AntiAffinityClassNames
+Get-ClusterGroup Group2 | fl AntiAffinityClassNames
     AntiAffinityClassNames : {}
+```
 
 Since AntiAffinityClassNames are not defined as a default, these roles can run together or apart.  The goal is to keep them to be separated.  The value for AntiAffinityClassNames can be whatever you want them to be, they just have to be the same.  Say that Group1 and Group2 are domain controllers running in virtual machines and they would be best served running on different nodes.  Since these are domain controllers, I will use DC for the class name.  To set the value, the PowerShell command and results would be:
 
-    PS> $AntiAffinity = New-Object System.Collections.Specialized.StringCollection
-    PS> $AntiAffinity.Add("DC")
-    PS> (Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
-    PS> (Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
+```powershell
+$AntiAffinity = New-Object System.Collections.Specialized.StringCollection
+$AntiAffinity.Add("DC")
+(Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
+(Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
 
-    PS> Get-ClusterGroup "Group1" | fl AntiAffinityClassNames
+$AntiAffinity = New-Object System.Collections.Specialized.StringCollection
+$AntiAffinity.Add("DC")
+(Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
+(Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
+
+Get-ClusterGroup "Group1" | fl AntiAffinityClassNames
     AntiAffinityClassNames : {DC}
 
-    PS> Get-ClusterGroup "Group2" | fl AntiAffinityClassNames
+Get-ClusterGroup "Group2" | fl AntiAffinityClassNames
     AntiAffinityClassNames : {DC}
+```
 
 Now that they are set, failover clustering will attempt to keep them apart.
 
-The AntiAffinityClassName parameter is a "soft" block.  Meaning, it will try to keep them apart, but if it cannot, it will still allow them to run on the same node.  For example, the groups are running on a two-node failover cluster.  If one node needs to go down for maintenance, it would mean both groups would be up and running on the same node.  In this case, it would be okay to have this.  It may not be the most ideal, but both virtial machines will still running within acceptable performance ranges.
+The AntiAffinityClassName parameter is a "soft" block.  Meaning, it will try to keep them apart, but if it cannot, it will still allow them to run on the same node.  For example, the groups are running on a two-node failover cluster.  If one node needs to go down for maintenance, it would mean both groups would be up and running on the same node.  In this case, it would be okay to have this.  It may not be the most ideal, but both virtual machines will still running within acceptable performance ranges.
 
 ## I need more
 
@@ -54,13 +63,17 @@ For those cases, there is an additional cluster property of ClusterEnforcedAntiA
 
 To view the property and value, the PowerShell command (and result) would be:
 
-    PS> Get-Cluster | fl ClusterEnforcedAntiAffinity
+```powershell
+Get-Cluster | fl ClusterEnforcedAntiAffinity
     ClusterEnforcedAntiAffinity : 0
+```
 
 The value of "0" means it is disabled and not to be enforced.  The value of "1" enables it and is the hard block.  To enable this hard block, the command (and result) is:
 
-    PS> (Get-Cluster).ClusterEnforcedAntiAffinity = 1
+```powershell
+(Get-Cluster).ClusterEnforcedAntiAffinity = 1
     ClusterEnforcedAntiAffinity : 1
+```
 
 When both of these are set, the group will be prevented from coming online together.  If they are on the same node, this is what you would see in Failover Cluster Manager.
 
@@ -68,12 +81,14 @@ When both of these are set, the group will be prevented from coming online toget
 
 In a PowerShell listing of the groups, you would see this:
 
-    PS> Get-ClusterGroup
+```powershell
+Get-ClusterGroup
 
-    Name       State
-    ----       -----
-    Group1     Offline(Anti-Affinity Conflict)
-    Group2     Online
+Name       State
+----       -----
+Group1     Offline(Anti-Affinity Conflict)
+Group2     Online
+```
 
 ## Additional Comments
 
