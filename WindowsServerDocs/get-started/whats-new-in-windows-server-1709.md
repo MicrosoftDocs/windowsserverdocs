@@ -27,7 +27,7 @@ Starting with this release, you have two options for receiving Windows Server fe
 
 Release channels are summarized in the following table.
 
-| | Semi-Annual Channel | Long Term Servicing Channel |
+| Description | Semi-Annual Channel | Long Term Servicing Channel |
 | ------------- |--| -- |
 | Release cadence | Twice a year (spring and fall) | Every 2-3 years |
 | Support schedule | 18 months mainstream production support | 5 years mainstream support + 5 years extended support |

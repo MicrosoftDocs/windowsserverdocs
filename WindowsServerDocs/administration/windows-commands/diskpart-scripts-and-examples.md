@@ -10,6 +10,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # diskpart scripts and examples
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -18,28 +19,28 @@ Use `diskpart /s` to run scripts that automate disk-related tasks, such as creat
 
 To create a diskpart script, create a text file that contains the Diskpart commands that you want to run, with one command per line, and no empty lines. You can start a line with `rem` to make the line a comment. For example, here's a script that wipes a disk and then creates a 300 MB partition for the Windows Recovery Environment:
 
-    ```
-    select disk 0
-    clean
-    convert gpt
-    create partition primary size=300
-    format quick fs=ntfs label=Windows RE tools
-    assign letter=T
-    ```
+```
+select disk 0
+clean
+convert gpt
+create partition primary size=300
+format quick fs=ntfs label=Windows RE tools
+assign letter=T
+```
 
 ## Examples
 
 - To run a diskpart script, at the command prompt, type the following command, where *scriptname* is the name of the text file that contains your script:
 
-    ```
-    diskpart /s scriptname.txt
-    ```
+```
+diskpart /s scriptname.txt
+```
 
 - To redirect diskpart's scripting output to a file, type the following command, where *logfile* is the name of the text file where diskpart writes its output:
 
-    ```
-    diskpart /s scriptname.txt > logfile.txt
-    ```
+```
+diskpart /s scriptname.txt > logfile.txt
+```
 
 ### Remarks
 

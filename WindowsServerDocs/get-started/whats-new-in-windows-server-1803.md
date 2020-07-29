@@ -34,7 +34,7 @@ Based on telemetry and feedback, these channels have demonstrated that they conf
 
 The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing Channel are as follows:
 
-| | Long Term Servicing Channel | Semi-Annual Channel |
+| Description | Long Term Servicing Channel | Semi-Annual Channel |
 |--|--|--|
 | Recommended scenarios | General purpose file servers, first and third-party workloads, traditional apps, infrastructure roles, software-defined Datacenter, and Hyper-converged infrastructure | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
 | New releases | Every 2–3 years | Every 6 months |
