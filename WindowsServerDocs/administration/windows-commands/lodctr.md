@@ -40,10 +40,10 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 
 ### Examples
 
-To save the current performance registry settings and explanatory text to file *perf backup1.txt*, type:
+To save the current performance registry settings and explanatory text to file *"perf backup1.txt"*, type:
 
 ```
-lodctr /s:perf backup1.txt
+lodctr /s:"perf backup1.txt"
 ```
 
 ## Additional References
