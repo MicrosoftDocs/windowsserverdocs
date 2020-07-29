@@ -5568,6 +5568,11 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/rem.md",
       "redirect_url": "/windows-server/administration/windows-commands/rem",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs//administration/windows-commands/rem_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/rem",
       "redirect_document_id": true
     },
     {
