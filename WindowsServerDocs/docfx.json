@@ -54,7 +54,7 @@
         "ms.technology": {
           "EssentialsDocs/**/*.md": "essentials"
           }
-        }
+        },
     "template": [
       "docs.html"
     ],
