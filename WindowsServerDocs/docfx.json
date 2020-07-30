@@ -43,18 +43,18 @@
            }
         }
       },
-    "fileMetadata": {
-      "feedback_product_url": {
-        "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
-        "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback",
-      "ms.prod": {
-        "EssentialsDocs/**/*.md": "windows-server",
-      "ms.technology": {
-        "EssentialsDocs/**/*.md": "essentials"
+      "fileMetadata": {
+        "feedback_product_url": {
+          "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
+          "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
+        },
+        "ms.prod": {
+          "EssentialsDocs/**/*.md": "windows-server"
+        },
+        "ms.technology": {
+          "EssentialsDocs/**/*.md": "essentials"
+          }
         }
-      }
-     }
-    },
     "template": [
       "docs.html"
     ],
