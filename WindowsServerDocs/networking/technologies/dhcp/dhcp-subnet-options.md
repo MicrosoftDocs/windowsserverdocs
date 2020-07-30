@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: ca19e7d1-e445-48fc-8cf5-e4c45f561607
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/17/2018
 ---
 

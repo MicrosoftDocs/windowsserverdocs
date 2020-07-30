@@ -1,14 +1,13 @@
 ---
 title: Configure a policy to throttle the replication traffic on the network
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 82cb1aef-cdc3-4d0a-88d4-ef497ab79606
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Configure a policy to throttle the replication traffic on the network

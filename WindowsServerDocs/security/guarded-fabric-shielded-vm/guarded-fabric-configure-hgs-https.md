@@ -1,10 +1,10 @@
 ---
-title: Configure HGS for Https communications
-ms.custom: na
+title: Configure HGS for HTTPS communications
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---

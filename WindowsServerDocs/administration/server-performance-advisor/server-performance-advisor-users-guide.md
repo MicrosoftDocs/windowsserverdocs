@@ -22,7 +22,7 @@ SPA can help you with the following things:
 
 * Provide data reports and recommendations about common configuration and performance issues.
 
-* Provide best pratice recommendations based on the data collected.
+* Provide best practice recommendations based on the data collected.
 
 > [!NOTE]
 > The SPA Console does not make any changes to the servers.

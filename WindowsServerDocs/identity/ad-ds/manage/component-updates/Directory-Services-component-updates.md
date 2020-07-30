@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: Directory Services component updates
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -285,7 +283,7 @@ Log Record Bytes Generated: 0
 ### Try This: Use LDP to return query statistics  
 Perform the following on a domain controller, or from a domain-joined client or server that has the AD DS tools installed.  Repeat the following targeting your Windows Server 2012 DC and your Windows Server 2012 R2 DC.  
   
-1.  Review the ["Creating More Efficient Microsoft AD Enabled Applications"](https://msdn.microsoft.com/library/ms808539.aspx) article and refer back to it as needed.  
+1.  Review the ["Creating More Efficient Microsoft AD Enabled Applications"](/previous-versions/ms808539(v=msdn.10)) article and refer back to it as needed.  
   
 2.  Using LDP, enable search statistics (see [To enable the Stats control in LDP](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_EnableStats))  
   
@@ -296,11 +294,11 @@ Perform the following on a domain controller, or from a domain-joined client or 
 5.  Attempt to construct a search that takes a long time to complete (you may want to increase the **Time limit** option so the search does not timeout).  
   
 ### Additional Resources  
-[What Are Active Directory Searches?](https://technet.microsoft.com/library/cc783845(v=ws.10).aspx)  
+[What Are Active Directory Searches?](/previous-versions/windows/it-pro/windows-server-2003/cc783845(v=ws.10))  
   
-[How Active Directory Searches Work](https://technet.microsoft.com/library/cc755809(v=WS.10).aspx)  
+[How Active Directory Searches Work](/previous-versions/windows/it-pro/windows-server-2003/cc755809(v=ws.10))  
   
-[Creating More Efficient Microsoft Active Directory-Enabled Applications](https://msdn.microsoft.com/library/ms808539.aspx)  
+[Creating More Efficient Microsoft Active Directory-Enabled Applications](/previous-versions/ms808539(v=msdn.10))  
   
 [951581](https://support.microsoft.com/kb/951581) LDAP queries are executed more slowly than expected in the AD or LDS/ADAM directory service and Event ID 1644 may be logged  
   
@@ -399,7 +397,5 @@ This updates increase the maximum throughput to around 600 Mbps by changing the 
 > There are no configurable settings to modify this behavior.  
   
 ### Additional Resources  
-[How the Active Directory Replication Model Works](https://technet.microsoft.com/library/cc772726(v=WS.10).aspx)  
+[How the Active Directory Replication Model Works](/previous-versions/windows/it-pro/windows-server-2003/cc772726(v=ws.10))  
   
-
-

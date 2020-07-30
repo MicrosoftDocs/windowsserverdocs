@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8c3536b7-d091-4ee6-ad04-24713f070862
 title: Deploying AD FS in the Account Partner Organization
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

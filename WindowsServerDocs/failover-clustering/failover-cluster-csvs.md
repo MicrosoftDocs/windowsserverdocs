@@ -1,11 +1,12 @@
 ---
 title: Use Cluster Shared Volumes in a failover cluster
 description: How to use Cluster Shared Volumes in a failover cluster.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage-failover-clustering 
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+manager: lizross
+ms.technology: storage-failover-clustering
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ---
@@ -23,9 +24,9 @@ CSV provide a general-purpose, clustered file system, which is layered above NTF
 > [!NOTE]
 > CSVs don't support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
 
-In Windows Server 2012, CSV functionality was significantly enhanced. For example, dependencies on Active Directory Domain Services were removed. Support was added for the functional improvements in **chkdsk**, for interoperability with antivirus and backup applications, and for integration with general storage features such as BitLocker-encrypted volumes and Storage Spaces. For an overview of CSV functionality that was introduced in Windows Server 2012, see [What's New in Failover Clustering in Windows Server 2012 \[redirected\]](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
+In Windows Server 2012, CSV functionality was significantly enhanced. For example, dependencies on Active Directory Domain Services were removed. Support was added for the functional improvements in **chkdsk**, for interoperability with antivirus and backup applications, and for integration with general storage features such as BitLocker-encrypted volumes and Storage Spaces. For an overview of CSV functionality that was introduced in Windows Server 2012, see [What's New in Failover Clustering in Windows Server 2012 \[redirected\]](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
 
-Windows Server 2012 R2 introduces additional functionality, such as distributed CSV ownership, increased resiliency through availability of the Server service, greater flexibility in the amount of physical memory that you can allocate to CSV cache, better diagnosibility, and enhanced interoperability that includes support for ReFS and deduplication. For more information, see [What's New in Failover Clustering](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
+Windows Server 2012 R2 introduces additional functionality, such as distributed CSV ownership, increased resiliency through availability of the Server service, greater flexibility in the amount of physical memory that you can allocate to CSV cache, better diagnosibility, and enhanced interoperability that includes support for ReFS and deduplication. For more information, see [What's New in Failover Clustering](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)>).
 
 > [!NOTE]
 > For information about using data deduplication on CSV for Virtual Desktop Infrastructure (VDI) scenarios, see the blog posts [Deploying Data Deduplication for VDI storage in Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/07/31/deploying-data-deduplication-for-vdi-storage-in-windows-server-2012-r2.aspx) and [Extending Data Deduplication to new workloads in Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/07/31/extending-data-deduplication-to-new-workloads-in-windows-server-2012-r2.aspx).
@@ -39,7 +40,7 @@ Before using CSV in a failover cluster, review the network, storage, and other r
 Consider the following when you configure the networks that support CSV.
 
 - **Multiple networks and multiple network adapters**. To enable fault tolerance in the event of a network failure, we recommend that multiple cluster networks carry CSV traffic or that you configure teamed network adapters.
-    
+
     If the cluster nodes are connected to networks that should not be used by the cluster, you should disable them. For example, we recommend that you disable iSCSI networks for cluster use to prevent CSV traffic on those networks. To disable a network, in Failover Cluster Manager, select **Networks**, select the network, select the **Properties** action, and then select **Do not allow cluster network communication on this network**. Alternatively, you can configure the **Role** property of the network by using the [Get-ClusterNetwork](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternetwork?view=win10-ps) Windows PowerShell cmdlet.
 - **Network adapter properties**. In the properties for all adapters that carry cluster communication, make sure that the following settings are enabled:
 
@@ -52,14 +53,14 @@ Consider the following when you configure the networks that support CSV.
   - **Microsoft Failover Cluster Virtual Adapter Performance Filter**. This setting improves the ability of nodes to perform I/O redirection when it is required to reach CSV, for example, when a connectivity failure prevents a node from connecting directly to the CSV disk. For more information, see [About I/O synchronization and I/O redirection in CSV communication](#about-io-synchronization-and-io-redirection-in-csv-communication) later in this topic.
 - **Cluster network prioritization**. We generally recommend that you do not change the cluster-configured preferences for the networks.
 - **IP subnet configuration**. No specific subnet configuration is required for nodes in a network that use CSV. CSV can support multisubnet clusters.
-- **Policy-based Quality of Service (QoS)**. We recommend that you configure a QoS priority policy and a minimum bandwidth policy for network traffic to each node when you use CSV. For more information, see [Quality of Service (QoS)](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831679(v%3dws.11)>).
+- **Policy-based Quality of Service (QoS)**. We recommend that you configure a QoS priority policy and a minimum bandwidth policy for network traffic to each node when you use CSV. For more information, see [Quality of Service (QoS)](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831679(v%3dws.11)>).
 - **Storage network**. For storage network recommendations, review the guidelines that are provided by your storage vendor. For additional considerations about storage for CSV, see [Storage and disk configuration requirements](#storage-and-disk-configuration-requirements) later in this topic.
 
 For an overview of the hardware, network, and storage requirements for failover clusters, see [Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md).
 
 #### About I/O synchronization and I/O redirection in CSV communication
 
-- **I/O synchronization**: CSV enables multiple nodes to have simultaneous read-write access to the same shared storage. When a node performs disk input/output (I/O) on a CSV volume, the node communicates directly with the storage, for example, through a storage area network (SAN). However, at any time, a single node (called the coordinator node) “owns” the physical disk resource that is associated with the LUN. The coordinator node for a CSV volume is displayed in Failover Cluster Manager as **Owner Node** under **Disks**. It also appears in the output of the [Get-ClusterSharedVolume](https://docs.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolume?view=win10-ps) Windows PowerShell cmdlet.
+- **I/O synchronization**: CSV enables multiple nodes to have simultaneous read-write access to the same shared storage. When a node performs disk input/output (I/O) on a CSV volume, the node communicates directly with the storage, for example, through a storage area network (SAN). However, at any time, a single node (called the coordinator node) "owns" the physical disk resource that is associated with the LUN. The coordinator node for a CSV volume is displayed in Failover Cluster Manager as **Owner Node** under **Disks**. It also appears in the output of the [Get-ClusterSharedVolume](https://docs.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolume?view=win10-ps) Windows PowerShell cmdlet.
 
   >[!NOTE]
   >In Windows Server 2012 R2, CSV ownership is evenly distributed across the failover cluster nodes based on the number of CSV volumes that each node owns. Additionally, ownership is automatically rebalanced when there are conditions such as CSV failover, a node rejoins the cluster, you add a new node to the cluster, you restart a cluster node, or you start the failover cluster after it has been shut down.
@@ -87,7 +88,7 @@ To use CSV, your storage and disks must meet the following requirements:
 - **File system format**. In Windows Server 2012 R2, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS or ReFS. In Windows Server 2012, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS.
 
   A CSV has the following additional requirements:
-    
+
   - In Windows Server 2012 R2, you cannot use a disk for a CSV that is formatted with FAT or FAT32.
   - In Windows Server 2012, you cannot use a disk for a CSV that is formatted with FAT, FAT32, or ReFS.
   - If you want to use a storage space for a CSV, you can configure a simple space or a mirror space. In Windows Server 2012 R2, you can also configure a parity space. (In Windows Server 2012, CSV does not support parity spaces.)
@@ -211,13 +212,13 @@ You can monitor the CSV cache in Performance Monitor by adding the counters unde
     - For Windows Server 2012 R2 and later:
 
         ```PowerShell
-        (Get-Cluster).BlockCacheSize = 512  
+        (Get-Cluster).BlockCacheSize = 512
         ```
 
     - For Windows Server 2012:
 
         ```PowerShell
-        (Get-Cluster).SharedVolumeBlockCacheSizeInMB = 512  
+        (Get-Cluster).SharedVolumeBlockCacheSizeInMB = 512
         ```
 3. In Windows Server 2012, to enable the CSV cache on a CSV named *Cluster Disk 1*, enter the following:
 
@@ -228,7 +229,7 @@ You can monitor the CSV cache in Performance Monitor by adding the counters unde
 >[!NOTE]
 > * In Windows Server 2012, you can allocate only 20% of the total physical RAM to the CSV cache. In Windows Server 2012 R2 and later, you can allocate up to 80%. Because Scale-Out File Servers are not typically memory constrained, you can accomplish large performance gains by using the extra memory for the CSV cache.
 > * To avoid resource contention, you should restart each node in the cluster after you modify the memory that is allocated to the CSV cache. In Windows Server 2012 R2 and later, a restart is no longer required.
-> * After you enable or disable CSV cache on an individual disk, for the setting to take effect, you must take the Physical Disk resource offline and bring it back online. (By default, in Windows Server 2012 R2 and later, the CSV cache is enabled.) 
+> * After you enable or disable CSV cache on an individual disk, for the setting to take effect, you must take the Physical Disk resource offline and bring it back online. (By default, in Windows Server 2012 R2 and later, the CSV cache is enabled.)
 > * For more information about CSV cache that includes information about performance counters, see the blog post [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
 
 ## Backing up CSVs
@@ -252,4 +253,4 @@ You should consider the following factors when you select a backup application a
 ## More information
 
 - [Failover Clustering](failover-clustering.md)
-- [Deploy Clustered Storage Spaces](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)
+- [Deploy Clustered Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)

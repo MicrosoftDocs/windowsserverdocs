@@ -1,14 +1,10 @@
 ---
 title: Set up disaster recovery for RDS using Azure Disaster Recovery
 description: Learn how to use Azure Disaster Recovery for disaster recovery for an RDS deployment
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 06/12/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill

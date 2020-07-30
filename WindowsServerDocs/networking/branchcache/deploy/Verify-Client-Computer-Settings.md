@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Verify Client Computer Settings
 

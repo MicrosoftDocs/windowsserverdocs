@@ -11,7 +11,7 @@ ms.author: jgerend
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server (Semi-Annual Channel)
 
-DFS Replication is a role service in Windows Server that enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication 
+DFS Replication is a role service in Windows Server that enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication
 is an efficient, multiple-master replication engine that you can use to keep folders synchronized between servers across limited bandwidth network connections. It replaces the File Replication Service (FRS) as the replication engine for DFS Namespaces, as well as for replicating the Active Directory Domain Services (AD DS) SYSVOL folder in domains that use the Windows Server 2008 or later domain functional level.
 
 DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file and enables DFS Replication to replicate only the changed file blocks instead of the entire file.
@@ -45,18 +45,18 @@ Before you can deploy DFS Replication, you must configure your servers as follow
 
 Using DFS Replication on a virtual machine in Azure has been tested with Windows Server; however, there are some limitations and requirements that you must follow.
 
-- Using snapshots or saved states to restore a server running DFS Replication for replication of anything other than the SYSVOL folder causes DFS Replication to fail, which requires special database recovery steps. Similarly, don't export, clone, or copy the virtual machines. For more information, see article [2517913](https://support.microsoft.com/kb/2517913) in the Microsoft Knowledge Base, as well as [Safely Virtualizing DFSR](https://blogs.technet.microsoft.com/filecab/2013/04/05/safely-virtualizing-dfsr/).
-- When backing up data in a replicated folder hosed in a virtual machine, you must use backup software from within the guest virtual machine.
+- Using snapshots or saved states to restore a server running DFS Replication for replication of anything other than the SYSVOL folder causes DFS Replication to fail, which requires special database recovery steps. Similarly, don't export, clone, or copy the virtual machines. For more information, see article [2517913](https://support.microsoft.com/kb/2517913) in the Microsoft Knowledge Base, as well as [Safely Virtualizing DFSR](https://techcommunity.microsoft.com/t5/storage-at-microsoft/safely-virtualizing-dfsr/ba-p/424671).
+- When backing up data in a replicated folder housed in a virtual machine, you must use backup software from within the guest virtual machine.
 - DFS Replication requires access to physical or virtualized domain controllers – it can't communicate directly with Azure AD.
-- DFS Replication requires a VPN connection between your on premise replication group members and any members hosted in Azure VMs. You also need to configure the on premise router (such as Forefront Threat Management Gateway) to allow the RPC Endpoint Mapper (port 135) and a randomly assigned port between 49152 and 65535 to pass over the VPN connection. You can use the Set-DfsrMachineConfiguration cmdlet or the Dfsrdiag command line tool to specify a static port instead of the random port. For more information about how to specify a static port for DFS Replication, see [Set-DfsrServiceConfiguration](https://docs.microsoft.com/powershell/module/dfsr/set-dfsrserviceconfiguration). For information about related ports to open for managing Windows Server, see article [832017](https://support.microsoft.com/kb/832017) in the Microsoft Knowledge Base.
+- DFS Replication requires a VPN connection between your on premises replication group members and any members hosted in Azure VMs. You also need to configure the on premises router (such as Forefront Threat Management Gateway) to allow the RPC Endpoint Mapper (port 135) and a randomly assigned port between 49152 and 65535 to pass over the VPN connection. You can use the Set-DfsrMachineConfiguration cmdlet or the Dfsrdiag command line tool to specify a static port instead of the random port. For more information about how to specify a static port for DFS Replication, see [Set-DfsrServiceConfiguration](/powershell/module/dfsr/set-dfsrserviceconfiguration). For information about related ports to open for managing Windows Server, see article [832017](https://support.microsoft.com/kb/832017) in the Microsoft Knowledge Base.
 
-To learn about how to get started with Azure virtual machines, visit the [Microsoft Azure web site](https://docs.microsoft.com/azure/virtual-machines/).
+To learn about how to get started with Azure virtual machines, visit the [Microsoft Azure web site](/azure/virtual-machines/).
 
 ## Installing DFS Replication
 
 DFS Replication is a part of the File and Storage Services role. The management tools for DFS (DFS Management, the DFS Replication module for Windows PowerShell, and command-line tools) are installed separately as part of the Remote Server Administration Tools.
 
-Install DFS Replication by using [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md), Server Manager, or PowerShell, as described in the next sections.
+Install DFS Replication by using [Windows Admin Center](../../manage/windows-admin-center/overview.md), Server Manager, or PowerShell, as described in the next sections.
 
 ### To install DFS by using Server Manager
 
@@ -97,11 +97,11 @@ To install the DFS Replication, and the Distributed File System Tools portions o
 Install-WindowsFeature "FS-DFS-Replication", "RSAT-DFS-Mgmt-Con"
 ```
 
-## See also
+## Additional References
 
-- [DFS Namespaces and DFS Replication overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v%3dws.11))
-- [Checklist: Deploy DFS Replication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772201(v%3dws.11))
-- [Checklist: Manage DFS Replication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755035(v%3dws.11))
-- [Deploying DFS Replication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770925(v%3dws.11))
-- [Managing DFS Replication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770925(v%3dws.11))
-- [Troubleshooting DFS Replication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732802(v%3dws.11))
+- [DFS Namespaces and DFS Replication overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127250(v%3dws.11))
+- [Checklist: Deploy DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772201(v%3dws.11))
+- [Checklist: Manage DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755035(v%3dws.11))
+- [Deploying DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770925(v%3dws.11))
+- [Managing DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770925(v%3dws.11))
+- [Troubleshooting DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732802(v%3dws.11))

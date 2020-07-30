@@ -1,14 +1,12 @@
 ---
 ms.assetid: d7a4d2e1-217d-4ffc-93f0-817149bd9e7f
 title: Avenues to Compromise
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -16,7 +14,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))  
   
 In organizations that have experienced catastrophic compromise events, assessments usually reveal that the organizations have limited visibility into the actual state of their IT infrastructures, which may differ significantly from their "as documented" states. These variances introduce vulnerabilities that expose the environment to compromise, often with little risk of discovery until the compromise has progressed to the point at which the attackers effectively "own" the environment.  
   
@@ -45,7 +43,7 @@ Nobody intentionally builds an IT infrastructure that exposes the organization t
 Regardless of the motivation of the attacker, most information security breaches start with the compromise of one or two systems at a time. These initial events, or entry points into the network, often leverage vulnerabilities that could have been fixed, but were not. The [2012 Data Breach Investigations Report (DBIR)](http://www.verizonbusiness.com/resources/reports/rp_data-breach-investigations-report-2012_en_xg.pdf), which is an annual study produced by the Verizon RISK Team in cooperation with a number of national security agencies and other companies, states that 96 percent of attacks were "not highly difficult," and that "97 percent of breaches were avoidable through simple or intermediate controls." These findings may be a direct consequence of the commonly exploited vulnerabilities that follow.  
   
 ### Gaps in Antivirus and Antimalware Deployments  
-*Law Number Eight: An out-of-date malware scanner is only marginally better than no scanner at all.* - [Ten Immutable Laws of Security (Version 2.0)](https://technet.microsoft.com/security/hh278941.aspx)  
+*Law Number Eight: An out-of-date malware scanner is only marginally better than no scanner at all.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)  
   
 Analysis of organizations' antivirus and antimalware deployments often reveals an environment in which most workstations are configured with antivirus and antimalware software that is enabled and current. Exceptions are usually workstations that connect infrequently to the corporate environment or employee devices for which antivirus and antimalware software can be difficult to deploy, configure, and update.  
   
@@ -54,7 +52,7 @@ Server populations, however, tend to be less consistently protected in many comp
 It is important not only to ensure that your systems are protected with current, comprehensive malware protection, but also to monitor systems for disabling or removal of antivirus and antimalware software and to automatically restart protection when it is manually disabled. Although no antivirus and antimalware software can guarantee prevention and detection of all infections, a properly configured and deployed antivirus and antimalware implementation can reduce the likelihood of infection.  
   
 ### Incomplete Patching  
-*Law Number Three: If you don't keep up with security fixes, your network won't be yours for long.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Three: If you don't keep up with security fixes, your network won't be yours for long.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))  
   
 Microsoft releases security bulletins on the second Tuesday of each month, although on rare occasions security updates are released between the monthly security updates (these are also known as "out-of-band" updates) when the vulnerability is determined to pose an urgent risk to customer systems. Whether a small business configures its Windows computers to use Windows Update to manage system and application patching or a large organization uses management software such as Microsoft Endpoint Configuration Manager to deploy patches according to detailed, hierarchical plans, many customers patch their Windows infrastructures in a relatively timely manner.  
   
@@ -77,7 +75,7 @@ Even in cases in which organizations have updated their domain controllers to Wi
 To eliminate legacy systems and applications, you should first focus on identifying and cataloging them, then on determining whether to upgrade or replace the application or host. Although it can be difficult to find replacements for highly specialized applications for which there is neither support nor an upgrade path, you may be able to leverage a concept called "creative destruction" to replace the legacy application with a new application that provides the necessary functionality. [Planning for Compromise](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md) is described in more depth in "Planning for Compromise" later in this document.  
   
 ### Misconfiguration  
-*Law Number Four: It doesn't do much good to install security fixes on a computer that was never secured to begin with.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Four: It doesn't do much good to install security fixes on a computer that was never secured to begin with.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))  
   
 Even in environments where systems are generally kept current and patched, we commonly identify gaps or misconfigurations in the operating system, applications running on computers, and Active Directory. Some misconfigurations expose only the local computer to compromise, but after a computer is "owned," attackers usually focus on further propagating the compromise across other systems and eventually to Active Directory. Following are some of the common areas in which we identify configurations that introduce risk.  
   
@@ -95,7 +93,7 @@ When we extract the Internet Explorer configuration settings on domain controlle
 Domain controllers should be treated as critical infrastructure components, secured more stringently and configured more rigidly than file, print, and application servers. Domain controllers should not run any software that is not required for the domain controller to function or doesn't protect the domain controller against attacks. Domain controllers should not be permitted to access the Internet, and security settings should be configured and enforced by Group Policy Objects (GPOs). Detailed recommendations for the secure installation, configuration, and management of domain controllers are provided in [Securing Domain Controllers Against Attack](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md).  
   
 #### Within the Operating System  
-*Law Number Two: If a bad guy can alter the operating system on your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://technet.microsoft.com/security/hh278941.aspx)  
+*Law Number Two: If a bad guy can alter the operating system on your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)  
   
 Although some organizations create baseline configurations for servers of different types and allow limited customization of the operating system after it's installed, analysis of compromised environments often uncovers large numbers of servers deployed in an ad hoc fashion, and configured manually and independently. Configurations between two servers performing the same function may be completely different, where neither server is configured securely. Conversely, server configuration baselines may be consistently enforced, but also consistently misconfigured; that is, servers are configured in a manner that creates the same vulnerability on all servers of a given type. Misconfiguration includes practices such as disabling of security features, granting excessive rights and permissions to accounts (particularly service accounts), use of identical local credentials across systems, and permitting installation of unauthorized applications and utilities that create vulnerabilities of their own.  
   
@@ -118,13 +116,13 @@ There has long been debate among security specialists as to whether there is val
   
 If the local Administrator account is named to the same value across servers and the password assigned to the account is also configured to the same value, attackers can extract the account's credentials on one computer on which Administrator or SYSTEM-level access has been obtained. The attacker does not have to initially compromise the Administrator account; they need only compromise the account of a user who is a member of the local Administrators group, or of a service account that is configured to run as LocalSystem or with Administrator privileges. The attacker can then extract the credentials for the Administrator account and replay those credentials in network logons to other computers on the network.  
   
-As long as another computer has a local account with the same user name and password (or password hash) as the account credentials that are being presented, the logon attempt succeeds and the attacker obtains privileged access to the targeted computer. In current versions of Windows, the built-in Administrator account is [disabled by default](https://technet.microsoft.com/library/cc753450.aspx), but in legacy operating systems, the account is enabled by default.  
+As long as another computer has a local account with the same user name and password (or password hash) as the account credentials that are being presented, the logon attempt succeeds and the attacker obtains privileged access to the targeted computer. In current versions of Windows, the built-in Administrator account is [disabled by default](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753450(v=ws.11)), but in legacy operating systems, the account is enabled by default.  
   
 > [!NOTE]  
-> Some organizations have intentionally configured local Administrator accounts to be enabled in the belief that this provides a "failsafe" in case all other privileged accounts are locked out of a system. However, even if the local Administrator account is disabled and there are no other accounts available that can enable the account or log on to the system with Administrator privileges, the system can be booted into safe mode and the built-in local Administrator account can be re-enabled, as described in [Microsoft Support article 814777](https://support.microsoft.com/kb/814777). Additionally, if the system still successfully applies GPOs, a GPO can be modified to (temporarily) re-enable the Administrator account, or Restricted Groups can be configured to add a domain-based account to the local Administrators group. Repairs can be performed and the Administrator account can again be disabled. To effectively prevent a lateral compromise that uses built-in local Administrator account credentials, unique user names and passwords must be configured for local Administrator accounts. To deploy unique passwords for local Administrator accounts via a GPO, see [Solution for management of built-in Administrator account's password via GPO](https://technet.microsoft.com/mt227395.aspx) on technet.  
+> Some organizations have intentionally configured local Administrator accounts to be enabled in the belief that this provides a "failsafe" in case all other privileged accounts are locked out of a system. However, even if the local Administrator account is disabled and there are no other accounts available that can enable the account or log on to the system with Administrator privileges, the system can be booted into safe mode and the built-in local Administrator account can be re-enabled, as described in [Microsoft Support article 814777](https://support.microsoft.com/kb/814777). Additionally, if the system still successfully applies GPOs, a GPO can be modified to (temporarily) re-enable the Administrator account, or Restricted Groups can be configured to add a domain-based account to the local Administrators group. Repairs can be performed and the Administrator account can again be disabled. To effectively prevent a lateral compromise that uses built-in local Administrator account credentials, unique user names and passwords must be configured for local Administrator accounts. To deploy unique passwords for local Administrator accounts via a GPO, see [Solution for management of built-in Administrator account's password via GPO](/previous-versions/mt227395(v=msdn.10)) on technet.  
   
 ##### Permitting Installation of Unauthorized Applications  
-*Law Number One: If a bad guy can persuade you to run his program on your computer, it's not solely your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://technet.microsoft.com/security/hh278941.aspx)  
+*Law Number One: If a bad guy can persuade you to run his program on your computer, it's not solely your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)  
   
 Whether an organization deploys consistent baseline settings across servers, the installation of applications that are not part of a server's defined role should not be permitted. By allowing software to be installed that is not part of a server's designated functionality, servers are exposed to inadvertent or malicious installation of software that increases the server's attack surface, introduces application vulnerabilities, or causes system instability.  
   
@@ -162,5 +160,3 @@ Some organizations place the full cost of fixing a security issue in production 
   
 Implementing the SDL improves security by including security requirements early in requirements gathering and design of an application provides threat modeling for high-risk applications; requires effective training and monitoring of developers; and requires clear, consistent code standards and practices. The net effect of an SDL is significant improvements in application security while reducing the cost to develop, deploy, maintain, and decommission an application. Although a detailed discussion of the design and implementation of SDL is beyond the scope of this document, refer to the [Microsoft Security Development Lifecycle](https://www.microsoft.com/security/sdl/default.aspx) for detailed guidance and information.  
   
-
-

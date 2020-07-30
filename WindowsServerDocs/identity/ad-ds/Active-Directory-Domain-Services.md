@@ -1,14 +1,12 @@
 ---
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Active Directory Domain Services
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

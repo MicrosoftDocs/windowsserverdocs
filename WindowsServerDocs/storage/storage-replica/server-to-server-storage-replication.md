@@ -7,7 +7,7 @@ ms.author: nedpyle
 ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 03/26/2020
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
 ---
 # Server-to-server storage replication with Storage Replica
@@ -31,7 +31,7 @@ Here's an overview video of using Storage Replica in Windows Admin Center.
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.   
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.  
 * A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.<br>
-If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](#add-azure-vm-expressroute), a [Site-to-Site VPN gateway connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
+If you're replicating between on-premises servers and Azure VMs, you must create a network link between the on-premises servers and the Azure VMs. To do so, use [Express Route](#add-azure-vm-expressroute), a [Site-to-Site VPN gateway connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal), or install VPN software in your Azure VMs to connect them with your on-premises network.
 * The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
 > [!IMPORTANT]
@@ -83,6 +83,9 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
 1.  Install Windows Server on both server nodes with an installation type of Windows Server **(Desktop Experience)**. 
  
     To use an Azure VM connected to your network via an ExpressRoute, see [Adding an Azure VM connected to your network via ExpressRoute](#add-azure-vm-expressroute).
+    
+    > [!NOTE]
+    > Starting in Windows Admin Center version 1910, you can configure a destination server automatically in Azure. If you choose that option, install Windows Server on the source server and then skip to [Step 3: Set up server-to-server replication](#step-3-set-up-server-to-server-replication). 
 
 3.  Add network information, join the servers to the same domain as your Windows 10 management PC (if you're using one), and then restart the servers.  
 
@@ -193,8 +196,17 @@ If you're using Windows Admin Center to manage Storage Replica, use the followin
     3. Type the name of the server and then select **Submit**.
 2. On the **All Connections** page, select the source server.
 3. Select **Storage Replica** from Tools panel.
-4. Select **New** to create a new partnership.
-5. Provide the details of the partnership, and then select **Create**. <br>
+4. Select **New** to create a new partnership. To create a new Azure VM to use as the destination for the partnership:
+   
+    1. Under **Replicate with another server** select **Use a New Azure VM** and then select **Next**. If you don't see this option, make sure that you're using Windows Admin Center version 1910 or a later version.
+    2. Specify your source server information and replication group name, and then select **Next**.<br><br>This begins a process that automatically selects a Windows Server 2019 or Windows Server 2016 Azure VM as a destination for the migration source. Storage Migration Service recommends VM sizes to match your source, but you can override this by selecting **See all sizes**. Inventory data is used to automatically configure your managed disks and their file systems, as well as join your new Azure VM to your Active Directory domain.
+    3. After Windows Admin Center creates the Azure VM, provide a replication group name and then select **Create**. Windows Admin Center then begins the normal Storage Replica initial synchronization process to start protecting your data.
+    
+    Here's a video showing how to use Storage Replica to migrate to Azure VMs.
+
+    > [!VIDEO https://www.youtube-nocookie.com/embed/_VqD7HjTewQ] 
+
+5. Provide the details of the partnership, and then select **Create** (as shown in Figure 3). <br>
    ![The New Partnership screen showing partnership details, such as an 8 GB log size.](media/Storage-Replica-UI/Honolulu_SR_Create_Partnership.png)
 
     **Figure 3: Creating a new partnership**
@@ -366,7 +378,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent  
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter).  
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).  
 
 3.  To move the replication direction from one site, use the `Set-SRPartnership` cmdlet.  
 
@@ -424,14 +436,14 @@ The process is, at a high level:
 
 ## <a name="add-azure-vm-expressroute"></a>Adding an Azure VM connected to your network via ExpressRoute
 
-1. [Create an ExpressRoute in the Azure portal](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the virtual network name.
+1. [Create an ExpressRoute in the Azure portal](/azure/expressroute/expressroute-howto-circuit-portal-resource-manager).<br>After the ExpressRoute is approved, a resource group is added to the subscription - navigate to **Resource groups** to view this new group. Take note of the virtual network name.
 ![Azure portal showing the resource group added with the ExpressRoute](media/Server-to-Server-Storage-Replication/express-route-resource-group.png)
     
     **Figure 4: The resources associated with an ExpressRoute - take note of the virtual network name**
-1. [Create a new resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
-1. [Add a network security group](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
+1. [Create a new resource group](/azure/azure-resource-manager/resource-group-portal).
+1. [Add a network security group](/azure/virtual-network/virtual-networks-create-nsg-arm-pportal). When creating it, select the subscription ID associated with the ExpressRoute you created, and select the resource group you just created as well.
 <br><br>Add any inbound and outbound security rules you need to the network security group. For example, you might want to allow Remote Desktop access to the VM.
-1. [Create an Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
+1. [Create an Azure VM](/azure/virtual-machines/windows/quick-create-portal) with the following settings (shown in Figure 5):
     - **Public IP address**: None
     - **Virtual network**: Select the virtual network you took note of from the resource group added with the ExpressRoute.
     - **Network security group (firewall)**: Select the network security group you created previously.

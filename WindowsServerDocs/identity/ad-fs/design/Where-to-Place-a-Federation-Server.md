@@ -1,20 +1,18 @@
 ---
 ms.assetid: 935ea7c2-4678-4033-b50f-2036a0359c5d
 title: Where to Place a Federation Server
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
 # Where to Place a Federation Server
 
-As a security best practice, place Active Directory Federation Services \(AD FS\)federation servers in front of a firewall and connect them to your corporate network to prevent exposure from the Internet. This is important because federation servers have full authorization to grant security tokens. Therefore, they should have the same protection as a domain controller. If a federation server is compromised, a malicious user has the ability to issue full access tokens to all Web applications and to federation servers that are protected by Active Directory Federation Services \(AD FS\) in all resource partner organizations.  
+As a security best practice, place Active Directory Federation Services \(AD FS\)federation servers behind a firewall and connect them to your corporate network to prevent exposure from the Internet. This is important because federation servers have full authorization to grant security tokens. Therefore, they should have the same protection as a domain controller. If a federation server is compromised, a malicious user has the ability to issue full access tokens to all Web applications and to federation servers that are protected by Active Directory Federation Services \(AD FS\) in all resource partner organizations.  
   
 > [!NOTE]  
 > As a security best practice, avoid having your federation servers directly accessible on the Internet. Consider giving your federation servers direct Internet access only when you are setting up a test lab environment or when your organization does not have a perimeter network.  

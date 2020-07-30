@@ -7,7 +7,6 @@ manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -38,7 +37,7 @@ The components involved in this scenario are:
 - sts2: An STS that is in the role of identity provider for Fabrikam.com and provides an end point that the Fabrikam employee uses to authenticate. It has established trust with Contoso.com so that Fabrikam employees are allowed to access resources on Contoso.com.
 
 >[!NOTE] 
->The term “ActAs token”, which is used often in this scenario, refers to a token that is issued by an STS and contains the user's identity. The Actor property contains the STS's identity.
+>The term "ActAs token", which is used often in this scenario, refers to a token that is issued by an STS and contains the user's identity. The Actor property contains the STS's identity.
 
 As shown in the previous diagram, the flow in this scenario is:
 
@@ -53,7 +52,7 @@ As shown in the previous diagram, the flow in this scenario is:
 There are three options available for the Fabrikam.com administrator, Frank:
 
 
-1. Purchase and install an STS product such as Active Directory® Federation Services (AD FS).
+1. Purchase and install an STS product such as Active Directory&reg; Federation Services (AD FS).
 2. Subscribe to a cloud STS product such as LiveID STS.
 3. Build a custom STS using WIF.
 
@@ -95,9 +94,9 @@ if ( claimsPrincipal != null )
     bootstrapToken = claimsIdentity.BootstrapToken;
 }
 ```
-WIF provides a method, [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank's identity has the [Actor](https://msdn.microsoft.com/library/microsoft.identitymodel.claims.iclaimsidentity.actor.aspx) property set to web1's identity.
+WIF provides a method, [CreateChannelActingAs](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank's identity has the [Actor](/previous-versions/windows-identity-foundation/ee766706(v=msdn.10)) property set to web1's identity.
 
-The following code snippet shows how to call to the Web service with [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx) and then call one of the service's methods, ComputeResponse, on the returned channel:
+The following code snippet shows how to call to the Web service with [CreateChannelActingAs](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)) and then call one of the service's methods, ComputeResponse, on the returned channel:
 
 ```
 // Get the channel factory to the backend service from the application state

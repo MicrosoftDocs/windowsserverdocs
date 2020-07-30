@@ -1,14 +1,12 @@
 ---
 ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
 title: Deploy Automatic File Classification (Demonstration Steps)
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -184,9 +182,8 @@ You can verify that the files are properly classified by viewing the properties 
   
 -   [Scenario: Get Insight into Your Data by Using Classification](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   
--   [Plan for Automatic File Classification](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
+-   [Plan for Automatic File Classification](/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
 
   
 -   [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)  
   
-

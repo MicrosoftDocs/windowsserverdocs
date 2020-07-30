@@ -1,14 +1,12 @@
 ---
 ms.assetid: eb778f63-f7be-438e-8c5e-1fd9b194b967
 title: Web SSO Design
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

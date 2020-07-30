@@ -2,16 +2,12 @@
 title: Troubleshooting Adding Entry Points
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Troubleshooting Adding Entry Points
 
@@ -52,7 +48,7 @@ Multisite is not enabled on the server specified by the *ComputerName* parameter
   
 **Solution**  
   
-Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, see [Deploy multisite Remote Access](https://technet.microsoft.com/library/hh831664.aspx).  
+Enable multisite using the `Enable-DaMultiSite` cmdlet. For more information, see [Deploy multisite Remote Access](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831664(v=ws.11)).  
   
 ## IPv6 prefix issues  
   
@@ -231,7 +227,7 @@ When you add name suffixes without specifying a server address, the suffix is tr
 ## Saving server GPO settings  
 **Error received**. An error occurred while saving Remote Access settings to GPO <GPO_name>.  
   
-To troubleshoot this error, see Saving server GPO settings in [Troubleshooting Enabling Multisite](https://technet.microsoft.com/library/jj591658.aspx).  
+To troubleshoot this error, see Saving server GPO settings in [Troubleshooting Enabling Multisite](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj591658(v=ws.11)).  
   
 ## GPO updates cannot be applied  
 **Warning received**. GPO updates cannot be applied on <server_name>. Changes will not take effect until the next policy refresh.  
@@ -244,5 +240,3 @@ An error occurred while trying to refresh policies on the specified computer. Th
   
 To force a policy refresh, run `gpupdate /force` on the specified computer.  
   
-
-

@@ -1,12 +1,12 @@
 ---
 title: Scwcmd configure
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6528b9dc-3d82-4228-b734-ed717458d74c
 author: coreyp-at-msft
@@ -17,7 +17,7 @@ ms.date: 10/16/2017
 
 # Scwcmd: configure
 
-> Applies To: Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2012 R2, Windows Server 2012
 
 Applies a Security Configuration Wizard (SCW)-generated security policy to a computer. This command-line tool also accepts a list of computer names as input.
 
@@ -27,7 +27,7 @@ Applies a Security Configuration Wizard (SCW)-generated security policy to a com
 scwcmd configure [[[/m:<ComputerName> | /ou:<OuName>] /p:<Policy>] | /i:<ComputerList>] [/u:<UserName>] [/pw:<Password>] [/t:<Threads>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,7 +44,7 @@ scwcmd configure [[[/m:<ComputerName> | /ou:<OuName>] /p:<Policy>] | /i:<Compute
 
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 To configure a security policy against the file webpolicy.xml, type:
 ```
@@ -63,6 +63,6 @@ To configure a security policy on all computers in the WebServers OU against the
 scwcmd configure /ou:OU=WebServers,DC=Marketing,DC=ABCCompany,DC=com /p:webpolicy.xml /u:DomainAdmin
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

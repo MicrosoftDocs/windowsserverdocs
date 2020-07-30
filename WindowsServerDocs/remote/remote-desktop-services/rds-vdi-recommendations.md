@@ -1,14 +1,10 @@
 ---
 title: Recommended configuration for VDI desktops
 description: Recommended settings and configuration to minimize overhead for Windows 10 1607 (10.0.1393) desktops used as VDI images
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 12/18/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
@@ -26,10 +22,10 @@ This topic is not a blueprint, but rather a guide or starting point. Some recomm
 
 These instructions and recommended settings are relevant to Windows 10 1607 (version 10.0.1393).
 
-> [!NOTE]  
+> [!NOTE]
 > Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
 
-When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](https://technet.microsoft.com/windows/release-info.aspx).
+When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update).
 
 ## Creating the Windows 10 image
 The first step is to install a reference image of Windows 10 1607 (version 10.0.1393) on either a physical  or virtual machine. Installing to a virtual machine is easy and allows you to save versions of the virtual hard-disk (VHD) file, in case you want to roll back to an earlier version.
@@ -43,7 +39,7 @@ If you chose **Customize**, you can adjust these settings during installation:
 
 You can also adjust these after installation with Group Policy Editor; see the "Group Policy settings" section of this topic.
 
-|Setting|Default value|Recommended value for VDI use|  
+|Setting|Default value|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |**Personalization**| | |
 |Personalize your speech, typing, and inking input by sending your input data to Microsoft.|	On|	Off|
@@ -89,7 +85,7 @@ This area defines the app to be used by default for certain generic functions su
 
 These recommended values will reduce notifications and background network activity in a VDI environment:
 
-|Setting|Default value|Recommended value for VDI use|  
+|Setting|Default value|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |Get notifications from apps and other senders|	On|	Off|
 |Show notifications on the lock screen.|	On|	Off|
@@ -99,11 +95,11 @@ These recommended values will reduce notifications and background network activi
 
 #### Offline maps
 
-This setting is only applicable if the Maps app is installed. Its default value is **On**; for VDI use the recommended value is **Off**. 
+This setting is only applicable if the Maps app is installed. Its default value is **On**; for VDI use the recommended value is **Off**.
 
 #### Tablet mode
 
-|Setting|Default value|Recommended value for VDI use|  
+|Setting|Default value|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |When I sign in|	Use the appropriate mode for my hardware|	Use desktop mode|
 |When this device automatically switches mode on or off|	Always ask me before switching|	Don't ask me and don't switch|
@@ -115,7 +111,7 @@ In Windows Settings area, clicking the **Devices** icon gives you access to a nu
 
 #### Autoplay
 
-|Setting|Default value|Recommended value for VDI use|  
+|Setting|Default value|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |Use Autoplay for all media and devices|	On|	Off|
 |Removable drive:|Choose a default|Take no action|
@@ -126,12 +122,12 @@ In Windows Settings area, clicking the **Personalization** icon gives you access
 
 #### Background
 Sometimes the default black background can cause users to think the computer is not responding. Changing the background color can help make it clearer. To do this, follow these steps:
-1. In the **Background** area, click the pulldown menu.
+1. In the **Background** area, click the pull-down menu.
 2. To change the background color, click **Solid color**, and then click any of the colors other than black. Alternately, you could click **Picture** and then select an image to use as the background.
 
 #### Start
 
-|Setting|Default value|Recommended value for VDI use|  
+|Setting|Default value|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |Occasionally show suggestions in Start|	On|	Off|
 |Show most used apps|On|Off|
@@ -147,7 +143,7 @@ In Windows Settings area, clicking the **Privacy** icon gives you access to a nu
 #### General
 Some of these settings are also set from the "Customize settings" window, discussed at the beginning of this topic.
 
-|Setting|Default value|Recommended value for VDI use|  
+|Setting|Default value|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |Let apps use my advertising ID for experiences across apps (turning this off will reset your ID)|	On|	Off|
 |Let websites provide locally relevant content by accessing my language list|On|Off|
@@ -205,7 +201,7 @@ Listed apps have a default value of **On**, which allows them to receive informa
 #### Windows Update
 In the **Update settings** area, click **Advanced options** to adjust these settings:
 
-|Setting|Default value|Recommended value for VDI use|  
+|Setting|Default value|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |Give me updates for other Microsoft products when I update Windows|	cleared|	selected|
 |Defer feature updates|cleared|selected|
@@ -217,14 +213,14 @@ On the **Advanced options** page, click **Choose how updates are delivered** to 
 
 The settings in this section are adjustable either by navigating through Control Panel or opening the utility directly.
 
-> [!NOTE]  
+> [!NOTE]
 > Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
 
 
 ### Task Scheduler
 The fastest way to open Task Scheduler is to push the Windows button and type *task scheduler* or *taskschd.msc*. In the results that return, click **Task Scheduler** to open the utility. In Task Scheduler, expand **Task Scheduler Library**, expand **Microsoft**, and then expand **Windows**. You now have access to the list of task collections. To change the state of each scheduled task, right-click it, and then click the desired state (typically, **Disabled** for VDI use).
 
-|Task collection|Task name|Default state|Recommended state for VDI use|  
+|Task collection|Task name|Default state|Recommended state for VDI use|
 |-------------------|-------------|----------|--------------|
 |Customer Experience Improvement Program||||
 ||Consolidator|Enabled|Disabled|
@@ -264,7 +260,7 @@ The fastest way to open Performance Monitor is to push the Windows button and ty
 Click **StartupEventTraceSessions**, then right-click **ReadyBoot**; if it is running, click **Stop**. Click **Event Trace Sessions**, right-click **ReadyBoot**, and then click **Properties**. In the dialog that opens, click the **Trace Session** tab. Clear the **Enabled** check box.
 
 ### Services
-The fastest way to manage Services is to push the Windows button and type *services*. In the results that return, click **Services**. The following services are good candidates to disable for use in VDI scenarios; however, you might need to do some testing to verify that they aren't needed for your purposes. To disable a service, in the **Services** snap-in, right-click the service name, and then click **Properties**. On the **General** tab, click the **Startup type** pulldown menu, and then click **Disabled**. Click **OK**.
+The fastest way to manage Services is to push the Windows button and type *services*. In the results that return, click **Services**. The following services are good candidates to disable for use in VDI scenarios; however, you might need to do some testing to verify that they aren't needed for your purposes. To disable a service, in the **Services** snap-in, right-click the service name, and then click **Properties**. On the **General** tab, click the **Startup type** pull-down menu, and then click **Disabled**. Click **OK**.
 
 - BranchCache
 - Delivery Optimization
@@ -299,14 +295,14 @@ Push the Windows button and type *control panel*. In the results that return, cl
 
 To edit Group Policy settings, press the Windows button and type *group policy* or *gpedit.msc*. In the results that return, click **Edit group policy** to open Local Group Policy Editor.
 
-> [!NOTE]  
+> [!NOTE]
 > Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
 
 Under **Computer Configuration**, expand **Windows Settings**, and then expand **Security Settings**. Click **Network List Manager Policies**, and then double-click **All Networks**. In the dialog that opens, in the **Network location** area, select the radio button for **User cannot change location**. Click the **OK** button to save.
 
 Collapse **Windows Settings**, and then expand **Administrative Templates**. Click or expand **Network**, and then adjust each setting as follows by double-clicking it, then selecting the radio button for the indicated value and clicking the **OK** button:
 
-|Setting area|Setting|Recommended value for VDI use|  
+|Setting area|Setting|Recommended value for VDI use|
 |-------------------|-------|----------|
 |Background Intelligent Transfer Service (BITS)|||
 ||Do not allow the BITS client to use Windows Branch Cache|Enabled|
@@ -324,7 +320,7 @@ Collapse **Windows Settings**, and then expand **Administrative Templates**. Cli
 
 Collapse **Network**, and then expand **System**. Adjust each setting as follows double-clicking it, then selecting the radio button for the indicated value and clicking the **OK** button:
 
-|Setting area|Setting|Recommended value for VDI use|  
+|Setting area|Setting|Recommended value for VDI use|
 |-------------------|----------|--------------|
 |Device Installation||
 ||Do not send a Windows error report when a generic driver is installed on a device|Enabled|
@@ -333,7 +329,7 @@ Collapse **Network**, and then expand **System**. Adjust each setting as follows
 ||Prevent Windows from sending an error report when a device driver requests additional software during installation|Enabled|
 ||Turn off "Found New Hardware" balloons during device installation|Enabled|
 
-Expand **Filesystem**, double-click **NTFS**, double-click **Short name creation options**, select the radio button for **Enabled**, and then use the **Options** pulldown menu to select **Enable on all volumes**. Click the **OK** button to save.
+Expand **Filesystem**, double-click **NTFS**, double-click **Short name creation options**, select the radio button for **Enabled**, and then use the **Options** pull-down menu to select **Enable on all volumes**. Click the **OK** button to save.
 
 Collapse **Filesystem**, and then expand **Internet Communication Management**. Click **Internet Communication settings**. Adjust each setting as follows by double-clicking it, then selecting the radio button for **Enabled**, and then clicking the **OK** button:
 
@@ -353,7 +349,7 @@ Collapse **Filesystem**, and then expand **Internet Communication Management**. 
 - Turn off Windows Error Reporting
 - Turn off Windows Update device driver searching
 
-Click **Power Management** and then double-click **Select an active power plan**. Select the radio button for **Enabled**, and then use the **Options** pulldown menu to select **High Performance**. Click the **OK** button to save.
+Click **Power Management** and then double-click **Select an active power plan**. Select the radio button for **Enabled**, and then use the **Options** pull-down menu to select **High Performance**. Click the **OK** button to save.
 
 Click **Recovery**, and then double-click **Allow restore of system to default state**. Select the radio button for **Enabled**, and then click the **OK** button to save.
 
@@ -370,17 +366,17 @@ For each of the following settings areas, click it, then double-click **Configur
 
 Collapse **System**, and then expand **Windows Components**. Adjust each setting as follows by double-clicking it, then selecting the radio button for the indicated value and clicking the **OK** button:
 
-|Setting area|Setting|Recommended value for VDI use|  
+|Setting area|Setting|Recommended value for VDI use|
 |-------------------|-------|----------|
 |Add features to Windows 10|||
 ||Prevent the wizard from running|Enabled|
 |Autoplay Policies|||
-||Set the default behavior for AutoRun|Enabled, then use the **Options** pulldown menu to select **Do not execute any autorun commands**|
+||Set the default behavior for AutoRun|Enabled, then use the **Options** pull-down menu to select **Do not execute any autorun commands**|
 |Cloud Content|||
 ||Do not show Windows tips|Enabled|
 ||Turn off Microsoft consumer experiences|Enabled|
 |Data Collection and Preview Builds|||
-||Allow Telemetry|Enabled, then use the **Options** pulldown menu to select **1- Basic**|
+||Allow Telemetry|Enabled, then use the **Options** pull-down menu to select **1- Basic**|
 ||Disable pre-release features or settings|		Disabled|
 ||Do not show feedback notifications|		Enabled|
 ||Toggle user control over Insider builds|		Disabled|
@@ -405,22 +401,22 @@ Collapse **System**, and then expand **Windows Components**. Adjust each setting
 ||Disable showing the splash screen|		Enabled|
 ||Install new versions of Internet Explorer automatically|		Disabled|
 ||Prevent participation in the Customer Experience Improvement Program|		Enabled|
-||Prevent running First Run wizard	Go directly to home page|	Enabled, then use the **Options** pulldown menu to select **Go directly to home page**|
+||Prevent running First Run wizard	Go directly to home page|	Enabled, then use the **Options** pull-down menu to select **Go directly to home page**|
 ||Set tab process growth|Enabled, then type the following in the **Tab Process Growth** box: *Low*.|
-||Specify default behavior for a new tab|Enabled, then use the **Options** pulldown menu to select **New tab page**|
+||Specify default behavior for a new tab|Enabled, then use the **Options** pull-down menu to select **New tab page**|
 ||Turn off add-on performance notifications|		Enabled|
 ||Turn off browser geolocation|		Enabled|
 ||Turn off Reopen Last Browsing Session|		Enabled|
 ||Turn off suggestions for all user-installed providers|		Enabled|
 ||Turn on Suggested Site|		Disabled|
 
-At the same level as the **Internet Explorer** settings you just adjusted in the preceding table, note another level of folders ranging from **Accelerators** to **Toolbars**. In other words, you are now at Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > Internet Explorer. 
+At the same level as the **Internet Explorer** settings you just adjusted in the preceding table, note another level of folders ranging from **Accelerators** to **Toolbars**. In other words, you are now at Local Computer Policy > Computer Configuration > Administrative Templates > Windows Components > Internet Explorer.
 
 Open the **Delete Browsing History** folder, double-click **Allow deleting browsing history on exit**, select **Enable**, and then click **OK** to save and exit.
 
 Use the back arrow in the upper left of Local Group Policy Editor to go back to the **Internet Explorer** level. Double-click **Internet Settings**, double-click **Advanced Settings**, and then adjust the settings in the subfolders as follows:
 
-|Setting folder under **Advanced Settings**|Setting|Recommended value for VDI use|  
+|Setting folder under **Advanced Settings**|Setting|Recommended value for VDI use|
 |-------------------|-------|----------|
 |**Browsing**|||
 ||Turn off phone number detection|Enabled|
@@ -447,7 +443,7 @@ In the left pane, click **Maps**, set these settings to **Enabled**; for each, t
 
 Using the left pane, enter each of the following settings subfolders and adjust the individual settings as follows:
 
-|Settings folder under **Windows Components**|Setting|Recommended value for VDI use|  
+|Settings folder under **Windows Components**|Setting|Recommended value for VDI use|
 |-------------------|-------|----------|
 |**OneDrive**|||
 ||Prevent the usage of OneDrive for file storage|Enabled|
@@ -468,7 +464,7 @@ Using the left pane, enter each of the following settings subfolders and adjust 
 ||Automatically send memory dumps for OS-generated error reports|		Disabled|
 ||Disable Windows Error Reporting|		Enabled|
 |**Windows Installer**|||
-||Control maximum size of baseline file cache|	Enabled, then use the spinbox in the **Options** area to set **Baseline file cache maximum size** to *5*.|
+||Control maximum size of baseline file cache|	Enabled, then use the spin box in the **Options** area to set **Baseline file cache maximum size** to *5*.|
 ||Turn off creation of System Restore checkpoints|		Enabled|
 |**Windows Mail**|||
 ||Turn off the communities feature|Enabled|
@@ -483,18 +479,18 @@ Using the left pane, enter each of the following settings subfolders and adjust 
 ||Allow Automatic Updates immediate installation|		Enabled|
 ||Remove access to all Windows Update features|		Enabled|
 |In the **Windows Update** folder, open **Defer Windows Update**|||
-||Select when feature updates are received|Enabled, then in the **Options** area, use the **Select the branch readiness level for the feature updates you want to receive** pulldown menu to select **Current Branch for Business**. Set the **After a feature update is released, defer receiving it for this many days** spinbox to *180 days*.
-||Select when Quality Updates are received|Enabled, then in the **Options** area, Set the **After a quality update is released, defer receiving it for this many days** spinbox to *30 days* and select the check box for **Pause quality updates**.
+||Select when feature updates are received|Enabled, then in the **Options** area, use the **Select the branch readiness level for the feature updates you want to receive** pull-down menu to select **Current Branch for Business**. Set the **After a feature update is released, defer receiving it for this many days** spin box to *180 days*.
+||Select when Quality Updates are received|Enabled, then in the **Options** area, Set the **After a quality update is released, defer receiving it for this many days** spin box to *30 days* and select the check box for **Pause quality updates**.
 
 In the left pane of Local Group Policy Editor, click **User Configuration**. Using the left pane, click **Administrative Templates** and then enter each of the following settings subfolders and adjust the individual settings as follows:
 
-|Settings folder under **Administrative Templates**|Setting|Recommended value for VDI use|  
+|Settings folder under **Administrative Templates**|Setting|Recommended value for VDI use|
 |-------------------|-------|----------|
 |**Desktop**|||
 ||Do not add shares of recently opened documents to Network Locations|Enabled|
 |In the **Desktop** folder, open **Active Directory**|||
-||Maximum size of Active Directory searches|Enabled, then in the **Options** area, use the spinbox to set **Number of objects returned** to *5000*.|
-|**Start Manu and Taskbar**|||
+||Maximum size of Active Directory searches|Enabled, then in the **Options** area, use the spin box to set **Number of objects returned** to *5000*.|
+|**Start Menu and Taskbar**|||
 ||Clear the recent programs list for new users|		Enabled|
 ||Do not display or track items in Jump Lists from remote locations|		Enabled|
 ||Turn off feature advertisement balloon notifications|		Enabled|
@@ -521,7 +517,7 @@ There are a number of Microsoft Store apps that you might want to remove from th
 
 To customize the default user profile used for creating VDI images, use the built-in Administrator account. If it is not already enabled, do so by using Local Users and Groups in Computer Management. Then log in to the Administrator account to complete the following steps.
 
-> [!NOTE]  
+> [!NOTE]
 > Don't remove system apps such as the Store app. They are difficult to reinstall. Other apps are easily reinstallable from the Store.
 
 ### Delete unwanted apps from the Administrator user profile
@@ -567,30 +563,3 @@ To remove the OneDrive app:
 ### Delete downloaded updates
 1. Using File Explorer, navigate to **C:\Windows\Software Distribution\Download**.
 2. Delete all files and folders in that directory.
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-

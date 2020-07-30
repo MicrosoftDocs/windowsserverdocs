@@ -2,16 +2,12 @@
 title: Manage Remote Access
 description: This topic provides information on how to manage Remote Access in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Manage Remote Access
 
@@ -80,15 +76,15 @@ The following table lists the roles and features required for the scenario:
   
 |Role or feature|How it supports this scenario|  
 |----------|-----------------|  
-|*Remote Access role*|This role is installed and uninstalled by using the Server Manager console or Windows PowerShell. This role encompasses DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services, which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN: DirectAccess and VPN are managed in the Remote Access Management console.<br />2.  RRAS: Features are managed in the Routing and Remote Access console.<br /><br />The Remote Access server role is dependent on the following features:<br /><br />-   Web Server (IIS): Required to configure the network location server and default web probe.<br />-   Windows internal database: Used for local accounting on the Remote Access server.|  
-|Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   By default on a Remote Access server when the Remote Access role is installed and supports the Remote Management console user interface.<br />-   As an option on a server that is not running the Remote Access server role. In this case, it is used for remote management of a Remote Access server.<br /><br />This feature consists of the following:<br /><br />-   Remote Access GUI and command-line tools<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
+|*Remote Access role*|This role is installed and uninstalled by using the Server Manager console or Windows PowerShell. This role encompasses DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services, which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<p>1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN: DirectAccess and VPN are managed in the Remote Access Management console.<br />2.  RRAS: Features are managed in the Routing and Remote Access console.<p>The Remote Access server role is dependent on the following features:<p>-   Web Server (IIS): Required to configure the network location server and default web probe.<br />-   Windows internal database: Used for local accounting on the Remote Access server.|  
+|Remote Access Management Tools feature|This feature is installed as follows:<p>-   By default on a Remote Access server when the Remote Access role is installed and supports the Remote Management console user interface.<br />-   As an option on a server that is not running the Remote Access server role. In this case, it is used for remote management of a Remote Access server.<p>This feature consists of the following:<p>-   Remote Access GUI and command-line tools<br />-   Remote Access module for Windows PowerShell<p>Dependencies include:<p>-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
 Hardware requirements for this scenario include the following:  
   
 ### Server requirements  
   
--   A computer that meets the hardware requirements for  Windows Server 2016. For more information, see Windows Server 2016 [System Requirements](https://technet.microsoft.com/windows-server-docs/get-started/system-requirements-and-installation).  
+-   A computer that meets the hardware requirements for  Windows Server 2016. For more information, see Windows Server 2016 [System Requirements](../directaccess/prerequisites-for-deploying-directaccess.md).  
   
 -   The server must have at least one network adapter installed and enabled. There should be only one adapter connected to the corporate internal network, and only one connected to the external network (Internet).  
   
@@ -127,4 +123,3 @@ Software requirements for this scenario include the following:
   
 -   An Active Directory security group is required to contain the computers that will be configured as DirectAccess clients. Computers should not be included in more than one security group that includes DirectAccess clients. If clients are included in multiple groups, name resolution for client requests will not work as expected.  
   
-

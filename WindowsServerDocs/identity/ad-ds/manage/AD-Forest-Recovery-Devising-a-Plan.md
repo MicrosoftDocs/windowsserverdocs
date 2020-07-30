@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Devising an AD Forest Recovery Plan
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

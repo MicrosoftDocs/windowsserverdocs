@@ -91,7 +91,7 @@ Use the AD FS default, internally generated, self-signed token decrypting certif
 
 ## <a name="BKMK_2"></a>Hardware requirements  
 AD FS and Web Application Proxy hardware requirements (physical or virtual) are gated on CPU, so you should size your farm for processing capacity.  
-- Use the [AD FS 2016 Capacity Planning spreadsheet](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx) to determine the number of AD FS and Web Application Proxy servers you will need.
+- Use the [AD FS 2016 Capacity Planning spreadsheet](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx) to determine the number of AD FS and Web Application Proxy servers you will need.
 
 The memory and disk requirements for AD FS are fairly static, see the table below:
 
@@ -109,7 +109,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
   
 -   For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role. 
 
--   Third party proxies must support the [MS-ADFSPIP protocol](https://msdn.microsoft.com/library/dn392811.aspx) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md).
+-   Third party proxies must support the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md).
 
 -   AD FS 2016 requires Web Application Proxy servers on Windows Server 2016.  A downlevel proxy cannot be configured for an AD FS 2016 farm running at the 2016 farm behavior level.
   
@@ -205,9 +205,9 @@ When AD FS authentication is performed via a browser or browser control, your br
   
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.  
   
-In addition, if client user certificate authentication \(clientTLS authentication using X509 user certificates\) is required and the certauth endpoint on port 443 is not enabled, AD FS 2016 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers\). 
+In addition, if client user certificate authentication \(clientTLS authentication using X509 user certificates\) is required and the certauth endpoint on port 443 is not enabled, AD FS 2016 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers. 
 
-For additional information on hybrid port requirements see [Hybrid Identity Ports and Protocols](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-ports). 
+For additional information on hybrid port requirements see [Hybrid Identity Ports and Protocols](/azure/active-directory/connect/active-directory-aadconnect-ports). 
 
 For additional information see [Best practices for securing Active Directory Federation Services](../deployment/Best-Practices-Securing-AD-FS.md)
   
@@ -240,4 +240,3 @@ For additional information see [Best practices for securing Active Directory Fed
 The administrator that performs the installation and the initial configuration of AD FS must have local administrator permissions on the AD FS server.  If the local administrator does not have permissions to create objects in Active Directory, they must first have a domain admin create the required AD objects, then configure the AD FS farm using the AdminConfiguration parameter.  
   
   
-

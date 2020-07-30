@@ -1,20 +1,18 @@
 ---
 ms.assetid: 69ec592a-5499-4249-8ba0-afa356a8ff75
 title: Device Registration Technical Reference
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
 
 # Device Registration Technical Reference
-The Device Registration Service \(DRS\) is a new Windows service that is included with the Active Directory Federation Service Role on Windows Server 2012 R2.  The DRS must be installed and configured on all of the federation servers in your AD FS farm.  For information on deploying DRS, see [Configure a federation server with Device Registration Service](https://technet.microsoft.com/library/dn486831.aspx).  
+The Device Registration Service \(DRS\) is a new Windows service that is included with the Active Directory Federation Service Role on Windows Server 2012 R2.  The DRS must be installed and configured on all of the federation servers in your AD FS farm.  For information on deploying DRS, see [Configure a federation server with Device Registration Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486831(v=ws.11)).  
   
 ## Active Directory objects created when a device is registered  
 The following Active Directory objects are created as part of Device Registration Service.  
@@ -82,4 +80,3 @@ If you are using a test environment and a test certificate authority \(CA\) to i
 > [!CAUTION]  
 > This is never recommended for production systems  
   
-

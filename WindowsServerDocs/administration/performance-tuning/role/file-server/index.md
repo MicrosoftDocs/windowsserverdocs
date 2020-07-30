@@ -5,11 +5,8 @@ ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee
-ms.author: NedPyle; Danlo; DKruse; v-tea
+ms.author: nedpyle; danlo; dkruse; v-tea
 ms.date: 12/12/2019
-ms.custom:
-  - CI ID 111495
-  - CSSTroubleshoot
 manager: dcscontentpm
 audience: Admin
 ---

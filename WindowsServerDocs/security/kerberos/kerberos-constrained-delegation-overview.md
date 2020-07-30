@@ -1,12 +1,8 @@
 ---
 title: Kerberos Constrained Delegation Overview
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-kerberos
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
 author: coreyp-at-msft

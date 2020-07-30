@@ -1,14 +1,12 @@
 ---
 ms.assetid: 0379abc3-25c7-46ab-9a6b-80a5152365b0
 title: Custom Web Themes in AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -31,13 +29,13 @@ You can modify the .css file and configure the new web theme by using the new .c
 To apply the .css file to the new theme, use the following cmdlet.  
   
 
-    Set-AdfsWebTheme –TargetName custom –StyleSheet @{path=”c:\NewTheme.css”}  
+    Set-AdfsWebTheme –TargetName custom –StyleSheet @{path="c:\NewTheme.css"}  
   
   
 The following cmdlet creates a custom web theme from a new style sheet.  
   
   
-`New-AdfsWebTheme –Name custom –StyleSheet @{path=”c:\NewTheme.css”} –RTLStyleSheetPath c:\NewRtlTheme.css ` 
+`New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"} –RTLStyleSheetPath c:\NewRtlTheme.css ` 
   
   
   

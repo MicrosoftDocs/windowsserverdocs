@@ -1,15 +1,8 @@
 ---
 ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Additional Resources
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: 
-ms.suite: na
 ms.technology: identity-adds
-ms.tgt_pltfrm: na
-description:
-
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

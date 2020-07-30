@@ -1,14 +1,12 @@
 ---
 ms.assetid: 560dfa18-0398-4186-ba91-da03ab72c2d5
 title: AD DS Operations
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

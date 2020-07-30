@@ -1,14 +1,10 @@
 ---
 title: Device Health Attestation
-H1: na
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
 ms.technology: techgroup-security
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: brianlic-msft
+ms.author: brianlic
 ms.date: 10/12/2016
 ---
 # Device Health Attestation
@@ -17,11 +13,11 @@ ms.date: 10/12/2016
 
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 
--	Integrates with Windows 10 Mobile Device Management (MDM) framework in alignment with  [Open Mobile Alliance (OMA) standards](http://openmobilealliance.org/).
+-    Integrates with Windows 10 Mobile Device Management (MDM) framework in alignment with  [Open Mobile Alliance (OMA) standards](http://openmobilealliance.org/).
 
--	Supports devices that have a Trusted Module Platform (TPM) provisioned in a firmware or discrete format.
+-    Supports devices that have a Trusted Module Platform (TPM) provisioned in a firmware or discrete format.
 
--	Enables enterprises to raise the security bar of their organization to hardware monitored and attested security, with minimal or no impact on operation cost.
+-    Enables enterprises to raise the security bar of their organization to hardware monitored and attested security, with minimal or no impact on operation cost.
 
 Starting with Windows Server 2016, you can now run the DHA service as a server role within your organization. Use this topic to learn how to install and configure the Device Health Attestation server role.
 
@@ -29,8 +25,8 @@ Starting with Windows Server 2016, you can now run the DHA service as a server r
 
 You can use DHA to assess device health for:
   
--	Windows 10 and Windows 10 Mobile devices that support TPM 1.2 or 2.0.  
--	On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Azure Active Directory , or a hybrid deployment using both Active Directory and Azure Active Directory.
+-    Windows 10 and Windows 10 Mobile devices that support TPM 1.2 or 2.0.  
+-    On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Azure Active Directory , or a hybrid deployment using both Active Directory and Azure Active Directory.
 
 
 ### DHA service
@@ -45,8 +41,8 @@ The DHA service validates the TPM and PCR logs for a device and then issues a DH
 
 The DHA service integrates with MDM solutions and provides the following: 
 
--	Combine the info they receive from devices (through existing device management communication channels) with the DHA report
--	Make a more secure and trusted security decision, based on hardware attested and protected data
+-    Combine the info they receive from devices (through existing device management communication channels) with the DHA report
+-    Make a more secure and trusted security decision, based on hardware attested and protected data
 
 Here's an example that shows how you can use DHA to help raise the security protection bar for your organization's assets.
 
@@ -65,9 +61,9 @@ Here's an example that shows how you can use DHA to help raise the security prot
 
 The DHA cloud service provides the following benefits:
 
--	Reviews the TCG and PCR device boot logs it receives from a device that is enrolled with an MDM solution. 
--	Creates a tamper resistant and tamper evident report (DHA report) that describes how the device started based on data that is collected and protected by a device's TPM chip. 
--	Delivers the DHA report to the MDM server that requested the report in a protected communication channel.
+-    Reviews the TCG and PCR device boot logs it receives from a device that is enrolled with an MDM solution. 
+-    Creates a tamper resistant and tamper evident report (DHA report) that describes how the device started based on data that is collected and protected by a device's TPM chip. 
+-    Delivers the DHA report to the MDM server that requested the report in a protected communication channel.
 
 #### DHA on-premises service
 
@@ -125,19 +121,19 @@ You can install the Device Health Attestation server role and its dependencies b
 
 After you've installed Windows Server 2016, the device restarts and opens Server Manager. If Server manager doesn't start automatically, click **Start**, and then click **Server Manager**.
 
-1.	Click **Add roles and features**.
-2.	On the **Before you begin** page, click **Next**.
-3.	On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
-4.	On the **Select destination server** page, click **Select a server from the server pool**, select the server, and then click **Next**.
-5.	On the **Select server roles** page, select the **Device Health Attestation** check box.
-6.	Click **Add Features** to install other required role services and features.
-7.	Click **Next**.
-8.	On the **Select features** page, click **Next**.
-9.	On the **Web Server Role (IIS)** page, click **Next**.
-10.	On the **Select role services** page, click **Next**.
-11.	On the **Device Health Attestation Service** page, click **Next**.
-12.	On the **Confirm installation selections** page, click **Install**.
-13.	When the installation is done, click **Close**.
+1.    Click **Add roles and features**.
+2.    On the **Before you begin** page, click **Next**.
+3.    On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
+4.    On the **Select destination server** page, click **Select a server from the server pool**, select the server, and then click **Next**.
+5.    On the **Select server roles** page, select the **Device Health Attestation** check box.
+6.    Click **Add Features** to install other required role services and features.
+7.    Click **Next**.
+8.    On the **Select features** page, click **Next**.
+9.    On the **Web Server Role (IIS)** page, click **Next**.
+10.    On the **Select role services** page, click **Next**.
+11.    On the **Device Health Attestation Service** page, click **Next**.
+12.    On the **Confirm installation selections** page, click **Install**.
+13.    When the installation is done, click **Close**.
 
 ### Install the signing and encryption certificates
 

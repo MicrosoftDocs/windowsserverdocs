@@ -1,14 +1,12 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
-description: "Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs."
+description: Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 12/05/2016
 ---
@@ -17,7 +15,7 @@ ms.date: 12/05/2016
 >Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 > [!NOTE]
-> If you plan to ever upload a Windows virtual machines (VM) from on-premises to Microsoft Azure, generation 1 and generation 2 VMs in the VHD file format and have a fixed sized disk are supported. See [Generation 2 VMs on Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+> If you plan to ever upload Windows virtual machines (VMs) from on-premises to Microsoft Azure, generation 1 and generation 2 VMs in the VHD file format and have a fixed sized disk are supported. See [Generation 2 VMs on Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
 Your choice to create a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend that you create a generation 2 virtual machine to take advantage of features like Secure Boot unless one of the following statements is true:  
 

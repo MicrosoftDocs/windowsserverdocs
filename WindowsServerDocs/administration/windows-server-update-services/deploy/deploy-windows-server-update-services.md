@@ -1,8 +1,7 @@
 ---
 title: Deploy Windows Server Update Services
-description: "Windows Server Update Service (WSUS) topic - An overview of the deployment process with links to the four steps to accomplish it"
+description: Windows Server Update Service (WSUS) topic - An overview of the deployment process with links to the four steps to accomplish it
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: get-started-article
 ms.assetid: 2708f6b2-4252-4b8f-9b7e-84c9b4222075
@@ -13,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # Deploy Windows Server Update Services
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. WSUS is a Windows Server server role that can be installed to manage and distribute updates. A WSUS server can be the update source for other WSUS servers within the organization. The WSUS server that acts as an update source is called an upstream server.  
 

@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setdisplayname
-description: "Windows Commands topic for **bitsadmin setdisplayname** - Sets the display name of the specified job."
-ms.custom: na
+description: Reference article for the bitsadmin setdisplayname command, which sets the display name of the specified job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 13706c53-fb5f-4879-b5ca-82531361d6e1
 author: coreyp-at-msft
@@ -17,30 +13,31 @@ ms.date: 10/16/2017
 
 # bitsadmin setdisplayname
 
-
-
-Sets the display name of the specified job.
+Sets the display name for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /SetDisplayName <Job> <DisplayName>
+bitsadmin /setdisplayname <job> <display_name>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|DisplayName|Text used for the display name of the specified job.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| display_name | Text used as the displayed name for the specific job. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example sets the display name for the job named *myDownloadJob* to *myDownloadJob2*.
+To set the display name for the job to *myDownloadJob*:
+
 ```
-C:\>bitsadmin /SetDisplayName myDownloadJob "Download Music Job"
+bitsadmin /setdisplayname myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

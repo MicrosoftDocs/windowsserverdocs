@@ -1,12 +1,8 @@
 ---
 title: Windows Authentication Technical Overview
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-windows-auth
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
 author: coreyp-at-msft
@@ -59,7 +55,7 @@ This collection of topics does not cover procedures for designing, implementing,
 
 -   For design information on Windows authentication strategies, see [Designing an Authentication Strategy](https://technet.microsoft.com/library/cc758124.aspx).
 
--   For design information on Windows public key infrastructure implementation strategies, see [Designing a Public Key Infrastructure](https://technet.microsoft.com/library/cc773138.aspx).
+-   For design information on Windows public key infrastructure implementation strategies, see [Designing a Public Key Infrastructure](/previous-versions/windows/it-pro/windows-server-2003/cc773138(v=ws.10)).
 
 -   For configuring and monitoring security, including authentication, in your Windows environment, see:
 

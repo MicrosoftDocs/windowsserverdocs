@@ -8,7 +8,7 @@ ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
 ms.date: 06/07/2019
-description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure. 
+description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure.
 ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
@@ -33,7 +33,7 @@ Gather the following information:
 
 - **Server names.** Get familiar with your organization's naming policies for computers, files, paths, and other resources. You'll need to provision several servers, each with unique names.
 
-- **Domain name.** Get familiar with your organization's policies for domain naming and domain joining.  You'll be joining the servers to your domain, and you'll need to specify the domain name. 
+- **Domain name.** Get familiar with your organization's policies for domain naming and domain joining.  You'll be joining the servers to your domain, and you'll need to specify the domain name.
 
 - **RDMA networking.** There are two types of RDMA protocols: iWarp and RoCE. Note which one your network adapters use, and if RoCE, also note the version (v1 or v2). For RoCE, also note the model of your top-of-rack switch.
 
@@ -74,15 +74,15 @@ Enter the PS session and use either the server name or the IP address of the nod
    ```
 
 > [!TIP]
-> If you're deploying remotely from a management system, you might get an error like *WinRM cannot process the request.* To fix this, use Windows PowerShell to add each server to the Trusted Hosts list on your management computer:  
->   
+> If you're deploying remotely from a management system, you might get an error like *WinRM cannot process the request.* To fix this, use Windows PowerShell to add each server to the Trusted Hosts list on your management computer:
+>
 > `Set-Item WSMAN:\Localhost\Client\TrustedHosts -Value Server01 -Force`
->  
+>
 > Note: the trusted hosts list supports wildcards, like `Server*`.
 >
-> To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.  
->   
-> To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.  
+> To view your Trusted Hosts list, type `Get-Item WSMAN:\Localhost\Client\TrustedHosts`.
+>
+> To empty the list, type `Clear-Item WSMAN:\Localhost\Client\TrustedHost`.
 
 ### Step 1.3: Join the domain and add domain accounts
 
@@ -92,11 +92,11 @@ To manage Storage Spaces Direct, you'll need to join the servers to a domain and
 
 From the management system, open a PowerShell console with Administrator privileges. Use `Enter-PSSession` to connect to each server and  run the following cmdlet, substituting your own computer name, domain name, and domain credentials:
 
-```PowerShell  
-Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force  
+```PowerShell
+Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force
 ```
 
-If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](https://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) for more info):
+If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](https://devblogs.microsoft.com/scripting/use-powershell-to-add-domain-users-to-a-local-group/) for more info):
 
 ```
 Net localgroup Administrators <Domain\Account> /add
@@ -113,7 +113,7 @@ The next step is to install server roles on every server. You can do this by usi
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-To install via PowerShell, use the [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
 
 ```PowerShell
 Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
@@ -223,7 +223,7 @@ After the cluster is created, it can take time for DNS entry for the cluster nam
 
 ### Step 3.4: Configure a cluster witness
 
-We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness. 
+We recommend that you configure a witness for the cluster, so clusters with three or more servers can withstand two servers failing or being offline. A two-server deployment requires a cluster witness, otherwise either server going offline causes the other to become unavailable as well. With these systems, you can use a file share as a witness, or use cloud witness.
 
 For more info, see the following topics:
 
@@ -306,8 +306,8 @@ The next step in setting up the cluster services for your file server is creatin
     **Figure 1** Failover Cluster Manager showing the Scale-Out File Server with the Running status
 
 > [!NOTE]
->  After creating the clustered role, there might be some network propagation delays that could prevent you from creating file shares on it for a few minutes, or potentially longer.  
-  
+>  After creating the clustered role, there might be some network propagation delays that could prevent you from creating file shares on it for a few minutes, or potentially longer.
+
 #### To create a Scale-Out File Server role by using Windows PowerShell
 
  In a Windows PowerShell session that's connected to the file server cluster, enter the following commands to create the Scale-Out File Server role, changing *FSCLUSTER* to match the name of your cluster, and *SOFS* to match the name you want to give the Scale-Out File Server role:
@@ -378,13 +378,13 @@ CD $ScriptFolder
 
 ## Next steps
 
-After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/library/dn894707.aspx).
+After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11)).
 
-## See also
+## Additional References
 
 -   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 -   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
--   [To RDMA, or not to RDMA – that is the question](https://blogs.technet.microsoft.com/filecab/2017/03/27/to-rdma-or-not-to-rdma-that-is-the-question/) (TechNet blog)
+-   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

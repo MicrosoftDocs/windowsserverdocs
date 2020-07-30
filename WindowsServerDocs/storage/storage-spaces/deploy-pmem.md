@@ -1,13 +1,12 @@
 ---
 title: Understand and deploy persistent memory
 description: Detailed info on what persistent memory is and how to set it up with storage spaces direct in Windows Server 2019.
-keywords: Storage Spaces Direct,persistent memory,pmem, storage, S2D
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 1/27/2020 
+ms.date: 1/27/2020
 ms.localizationpriority: medium
 ---
 # Understand and deploy persistent memory
@@ -32,13 +31,13 @@ Any storage system that provides fault tolerance necessarily makes distributed c
 
 If you watch the video closely, you'll notice that what's even more jaw-dropping is the latency. Even at over 13.7 M IOPS, the file system in Windows is reporting latency that's consistently less than 40 µs! (That's the symbol for microseconds, one-millionth of a second.) This speed is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
 
-Together, Storage Spaces Direct in Windows Server 2019 and Intel® Optane™ DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than two years ago.
+Together, Storage Spaces Direct in Windows Server 2019 and Intel&reg; Optane&trade; DC persistent memory deliver breakthrough performance. This industry-leading HCI benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than two years ago.
 
 ![IOPS gains](media/deploy-pmem/iops-gains.png)
 
-The test hardware was a 12-server cluster that was configured to use three-way mirroring and delimited ReFS volumes, **12** x Intel® S2600WFT, **384 GiB** memory, 2 x 28-core “CascadeLake,” **1.5 TB** Intel® Optane™ DC persistent memory as cache, **32 TB** NVMe (4 x 8 TB Intel® DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps.
+The test hardware was a 12-server cluster that was configured to use three-way mirroring and delimited ReFS volumes, **12** x Intel&reg; S2600WFT, **384 GiB** memory, 2 x 28-core "CascadeLake," **1.5 TB** Intel&reg; Optane&trade; DC persistent memory as cache, **32 TB** NVMe (4 x 8 TB Intel&reg; DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps.
 
-The following table shows the full performance numbers.  
+The following table shows the full performance numbers.
 
 | Benchmark                   | Performance         |
 |-----------------------------|---------------------|
@@ -48,24 +47,24 @@ The following table shows the full performance numbers.
 
 ### Supported hardware
 
-The following table shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016.  
+The following table shows supported persistent memory hardware for Windows Server 2019 and Windows Server 2016.
 
 | Persistent Memory Technology                                      | Windows Server 2016 | Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
 | **NVDIMM-N** in persistent mode                                  | Supported                | Supported                |
-| **Intel Optane™ DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
-| **Intel Optane™ DC Persistent Memory** in Memory Mode | Supported            | Supported                |
+| **Intel Optane&trade; DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
+| **Intel Optane&trade; DC Persistent Memory** in Memory Mode | Supported            | Supported                |
 
-> [!NOTE]  
+> [!NOTE]
 > Intel Optane supports both *Memory* (volatile) and *App Direct* (persistent) modes.
-   
-> [!NOTE]  
-> When you restart a system that has multiple Intel® Optane™ PMem modules in App Direct mode that are divided into multiple namespaces, you might lose access to some or all of the related logical storage disks. This issue occurs on Windows Server 2019 versions that are older than version 1903.
->   
+
+> [!NOTE]
+> When you restart a system that has multiple Intel&reg; Optane&trade; PMem modules in App Direct mode that are divided into multiple namespaces, you might lose access to some or all of the related logical storage disks. This issue occurs on Windows Server 2019 versions that are older than version 1903.
+>
 > This loss of access occurs because a PMem module is untrained or otherwise fails when the system starts. In such a case, all the storage namespaces on any PMem module on the system fail, including namespaces that do not physically map to the failed module.
->   
+>
 > To restore access to all the namespaces, replace the failed module.
->   
+>
 > If a module fails on Windows Server 2019 version 1903 or newer versions, you lose access to only namespaces that physically map to the affected module. Other namespaces are not affected.
 
 Now, let's dive into how you configure persistent memory.
@@ -85,7 +84,7 @@ DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds Unsa
 3          252 GB Healthy      None          True         {1020, 1120}      0
 ```
 
-We can see that the logical PMem disk #2 uses the physical devices Id20 and Id120, and logical PMem disk #3 uses the physical devices Id1020 and Id1120.  
+We can see that the logical PMem disk #2 uses the physical devices Id20 and Id120, and logical PMem disk #3 uses the physical devices Id1020 and Id1120.
 
 To retrieve further information about the interleaved set that a logical drive uses, run the **Get-PmemPhysicalDevice** cmdlet:
 
@@ -248,7 +247,7 @@ SerialNumber               HealthStatus OperationalStatus  OperationalDetails
 802c-01-1602-117cb64f      Warning      Predictive Failure {Threshold Exceeded,NVDIMM_N Error}
 ```
 
-**HealthStatus** shows whether the PMem disk is healthy.  
+**HealthStatus** shows whether the PMem disk is healthy.
 
 The **UnsafeshutdownCount** value tracks the number of shutdowns that may cause data loss on this logical disk. It is the sum of the unsafe shutdown counts of all the underlying PMem devices of this disk. For more information about the health status, use the **Get-PmemPhysicalDevice** cmdlet to find information such as **OperationalStatus**.
 
@@ -284,7 +283,7 @@ Remove the persistent memory disk(s)?
 Removing the persistent memory disk. This may take a few moments.
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Removing a persistent memory disk causes data loss on that disk.
 
 Another cmdlet you might need is **Initialize-PmemPhysicalDevice**. This cmdlet initializes the label storage areas on the physical persistent memory devices, and can clear corrupted label storage information on the PMem devices.
@@ -301,10 +300,10 @@ Initializing the physical persistent memory device. This may take a few moments.
 Initializing the physical persistent memory device. This may take a few moments.
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > **Initialize-PmemPhysicalDevice** causes data loss in persistent memory. Use it as a last resort to fix persistent memory-related issues.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Storage-class Memory (NVDIMM-N) Health Management in Windows](storage-class-memory-health.md)

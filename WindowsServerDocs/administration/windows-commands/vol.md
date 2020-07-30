@@ -1,12 +1,8 @@
 ---
 title: vol
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for vol, which displays the disk volume label and serial number, if they exist.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 398b3aa1-2442-42be-a4fb-78701080b0df
 author: coreyp-at-msft
@@ -27,13 +23,13 @@ Displays the disk volume label and serial number, if they exist.  If used withou
 vol [<Drive>:]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
 |\<Drive>:|Specifies the drive that contains the disk for which you want to display the volume label and serial number.|
 |/?|Displays help at the command prompt.|
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

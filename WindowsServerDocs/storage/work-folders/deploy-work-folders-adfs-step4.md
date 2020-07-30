@@ -26,7 +26,7 @@ This topic describes the fourth step in deploying Work Folders with Active Direc
 -   [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set Up Clients](deploy-work-folders-adfs-step5.md)  
 
 > [!NOTE]
->   The instructions covered in this section are for a Windows Server 2019 or Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+>   The instructions covered in this section are for a Windows Server 2019 or Windows Server 2016 environment. If you're using Windows Server 2012 R2, follow the [Windows Server 2012 R2 instructions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn747208(v=ws.11)).
 
 To set up Web Application Proxy for use with Work Folders, use the following procedures.  
   
@@ -149,4 +149,3 @@ Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Se
 ## See Also  
 [Work Folders Overview](Work-Folders-Overview.md)  
   
-

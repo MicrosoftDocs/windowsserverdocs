@@ -25,7 +25,7 @@ We use this example in the rest of this document. However, one can customize thi
 
 
 ##  Create the required groups necessary to grant users permissions 
-1. Create a [Group Managed Service Account](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). The gMSA account is used to allow the JEA user to access network resources as other machines or web services. It provides a domain identity which can be used to authenticate against resources on any machine within the domain. The gMSA account is granted the necessary administrative rights later in the setup. For this example, we call the account **gMSAContoso**. 
+1. Create a [Group Managed Service Account](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md). The gMSA account is used to allow the JEA user to access network resources as other machines or web services. It provides a domain identity which can be used to authenticate against resources on any machine within the domain. The gMSA account is granted the necessary administrative rights later in the setup. For this example, we call the account **gMSAContoso**. 
 2. Create an Active Directory group can be populated with users that need to be granted the rights to the delegated commands. In this example, help desk personnel are granted permissions to read, update, and reset the ADFS lockout state. We refer to this group throughout the example as **JEAContoso**. 
 
 ### Install the gMSA account on the ADFS Server: 
@@ -60,7 +60,7 @@ If the farm is not using delegated administration, grant the gMSA account admin 
  
 ### Create the JEA Role File 
  
-On the AD FS server, create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](https://docs.microsoft.com/powershell/jea/role-capabilities). 
+On the AD FS server, create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](/powershell/jea/role-capabilities). 
  
 The commandlets delegated in this example are `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity`. 
 
@@ -76,7 +76,7 @@ VisibleCmdlets = 'Reset-AdfsAccountLockout', 'Get-ADFSAccountActivity', 'Set-ADF
 
 
 ### Create the JEA Session Configuration File 
-Follow the instructions to create the [JEA session configuration](https://docs.microsoft.com/powershell/jea/session-configurations) file. The configuration file determines who can use the JEA endpoint, and what capabilities they have access to. 
+Follow the instructions to create the [JEA session configuration](/powershell/jea/session-configurations) file. The configuration file determines who can use the JEA endpoint, and what capabilities they have access to. 
 
 Role capabilities are referenced by the flat name (filename without the extension) of the role capability file. If multiple role capabilities are available on the system with the same flat name, PowerShell uses its implicit search order to select the effective role capability file. It does not give access to all role capability files with the same name. 
 
@@ -96,7 +96,7 @@ RoleDefinitions = @{ JEAcontoso = @{ RoleCapabilityFiles = 'C:\Program Files\Win
 
 Save the session configuration file. 
  
-It is strongly recommended to [test your session configuration file](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Test-PSSessionConfigurationFile?view=powershell-5.1) if you have edited the pssc file manually using a text editor to ensure the syntax is correct. If a session configuration file does not pass this test, it is not successfully registered on the system.  
+It is strongly recommended to [test your session configuration file](/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile?view=powershell-5.1) if you have edited the pssc file manually using a text editor to ensure the syntax is correct. If a session configuration file does not pass this test, it is not successfully registered on the system.  
  
 ### Install the JEA session configuration on the AD FS Server 
 

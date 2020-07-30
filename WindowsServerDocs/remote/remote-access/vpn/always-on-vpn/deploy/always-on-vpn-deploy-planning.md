@@ -6,8 +6,8 @@ ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 11/05/2018
 ---
 # Step 1. Plan the Always On VPN deployment

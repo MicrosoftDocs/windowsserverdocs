@@ -1,12 +1,8 @@
 ---
 title: Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
 author: coreyp-at-msft
@@ -31,7 +27,7 @@ Beginning with  Windows Server 2008 R2  and  Windows 7 , Windows AppLocker can b
 
     -   [Best practices](software-restriction-policies-technical-overview.md#BKMK_Best_Practices)
 
-    -   [How Software Restriction Policies Work](https://technet.microsoft.com/library/cc786941(v=WS.10).aspx)
+    -   [How Software Restriction Policies Work](/previous-versions/windows/it-pro/windows-server-2003/cc786941(v=ws.10))
 
 2.  Open Software Restriction Policies.
 
@@ -60,5 +56,3 @@ Beginning with  Windows Server 2008 R2  and  Windows 7 , Windows AppLocker can b
         -   [To prevent software restriction policies from applying to local administrators](administer-software-restriction-policies.md#BKMK_Prevent_Admin)
 
 7.  Test the policy.
-
-

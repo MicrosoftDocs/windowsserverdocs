@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 

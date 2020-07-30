@@ -1,14 +1,12 @@
 ---
 ms.assetid: 22347a94-aeea-44b4-85fb-af2c968f432a
 title: Deploy Security Auditing with Central Audit Policies (Demonstration Steps)
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

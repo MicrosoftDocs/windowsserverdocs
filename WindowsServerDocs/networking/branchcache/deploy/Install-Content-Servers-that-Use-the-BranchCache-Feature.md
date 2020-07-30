@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 0f00ae6e-ae1b-41e3-8c50-65226b5b9c9e
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Install Content Servers that Use the BranchCache Feature
 

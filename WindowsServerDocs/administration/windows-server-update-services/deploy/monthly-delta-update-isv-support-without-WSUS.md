@@ -1,11 +1,8 @@
 ---
 title: Monthly Delta update ISV support without WSUS
-description: "Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can temporarily use Monthly Delta update instead of WSUS Express update delivery to reduce package size"
+description: Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can temporarily use Monthly Delta update instead of WSUS Express update delivery to reduce package size
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: sakitong
 ms.author: coreyp
@@ -33,7 +30,7 @@ Monthly Delta update is new, and an interim solution for ISVs who do not have WS
 >[!IMPORTANT]
 >**Delta update is available for servicing of Windows 10, version 1607 (Anniversary Update), version 1703 (Creators Update), and version 1709 (Fall Creators Update).** For releases after version 1709, you will need to implement a deployment infrastructure that supports [Express update delivery](express-update-delivery-ISV-support.md) to continue taking advantage of incremental updates.
 
-By using Monthly Delta update, packages will only contain one month's updates. Monthly Cumulative contains all the updates up to that update release, resulting in a large file that grows each month. Both Delta and Monthly updates are released on the second Tuesday of each month, also known as "Update Tuesday." The following table compares Delta and Cumulative updates:
+By using Monthly Delta update, packages will only contain one month's updates. Monthly Cumulative contains all the updates up to that update release, resulting in a large file that grows each month. Both Delta and Monthly updates are released on the second Tuesday of each month, also known as Update Tuesday. The following table compares Delta and Cumulative updates:
 
 |                    | Monthly **Delta** update                                                                                                                                                                                                       | Monthly **Cumulative** update                                                                                                                                                                                             |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

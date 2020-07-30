@@ -1,7 +1,6 @@
 ---
 title: Cluster to Cluster Storage Replica cross region in Azure
 description: Cluster to Cluster Storage Replication cross region in Azure
-keywords: Storage Replica, Server Manager, Windows Server, Azure, Cluster, cross region, different region
 author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
@@ -129,7 +128,7 @@ Watch the video below for a complete walk-through of the process.
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```
 
 12. Run the following command from any one node **azcross1**/**azcross2**
@@ -138,7 +137,7 @@ Watch the video below for a complete walk-through of the process.
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.0.0.10" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```
 
     Make sure both clusters can connect / communicate with each other.
@@ -156,11 +155,11 @@ Watch the video below for a complete walk-through of the process.
 13. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**,**azcrosssa**) in Azure, one for each cluster in each resource group (**SR-AZ2AZ**, **SR-AZCROSS**).
    
     - Copy the storage account name and key from "access keys"
-    - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it. 
+    - Create the cloud witness from "failover cluster manager" and use the above account name and key to create it. 
 
 14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step
 
-15. Start Windows PowerShell and use the [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
+15. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
  
 16. Configure cluster-to-cluster storage replica.
     Grant access from one cluster to another cluster in both directions:

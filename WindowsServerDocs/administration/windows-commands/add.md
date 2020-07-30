@@ -1,14 +1,10 @@
 ---
 title: add
-description: "Windows Commands topic for **add** - Mirrors the simple volume with focus to the specified disk."
-ms.custom: na
+description: Reference article for the add command, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 6ac1f002-9702-4b55-8e4e-2098f3bb4fa9
+ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,10 +13,43 @@ ms.date: 10/16/2017
 
 # add
 
+Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. If used without subcommands, **add** lists the current volumes and aliases.
 
+> [!NOTE]
+> Aliases are not added to the alias environment until the shadow copy is created. Aliases that you need immediately should be added by using **add alias**.
 
-Mirrors the simple volume with focus to the specified disk.
+## Syntax
 
-> [!IMPORTANT]
-> This DiskPart command is not available in any edition of Windows Vista.
+```
+add
+add volume <volume> [provider <providerid>]
+add alias <aliasname> <aliasvalue>
+```
 
+### Parameters
+
+| Parameter | Description |
+| ---------- | ----------- |
+| volume | Adds a volume to the Shadow Copy Set, which is the set of volumes to be shadow copied. See [add volume](add-volume.md) for syntax and parameters. |
+| alias | Adds the given name and value to the alias environment. See [add alias](add-alias.md) for syntax and parameters. |
+| /? | Displays help at the command line. |
+
+## Examples
+
+To display the volumes added and the aliases that are currently in the environment, type:
+
+```
+add
+```
+
+The following output shows that drive C has been added to the Shadow Copy Set:
+
+```
+Volume c: alias System1    GUID \\?\Volume{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}\
+1 volume in Shadow Copy Set.
+No Diskshadow aliases in the environment.
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

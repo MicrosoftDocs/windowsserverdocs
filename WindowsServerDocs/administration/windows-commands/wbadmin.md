@@ -1,12 +1,12 @@
 ---
 title: wbadmin
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for wbadmin, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 4b0b3f32-d21f-4861-84bb-b2eadbf1e7b8
 author: coreyp-at-msft
@@ -45,7 +45,7 @@ You must run **wbadmin** from an elevated command prompt. (To open an elevated c
 |[Wbadmin restore catalog](wbadmin-restore-catalog.md)|Recovers a backup catalog from a specified storage location in the case where the backup catalog on the local computer has been corrupted.|
 |[Wbadmin delete catalog](wbadmin-delete-catalog.md)|Deletes the backup catalog on the local computer. Use this subcommand only if the backup catalog on this computer is corrupted and you have no backups stored at another location that you can use to restore the catalog.|
 
-#### Additional references
+## Additional References
 
 -   [Backup and Recovery](https://go.microsoft.com/fwlink/?LinkID=195054)
--   [Windows Server Backup Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj902428.aspx)
+-   [Windows Server Backup Cmdlets in Windows PowerShell](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)

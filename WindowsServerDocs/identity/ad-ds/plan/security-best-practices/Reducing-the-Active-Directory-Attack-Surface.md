@@ -1,14 +1,12 @@
 ---
 ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Reducing the Active Directory Attack Surface
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

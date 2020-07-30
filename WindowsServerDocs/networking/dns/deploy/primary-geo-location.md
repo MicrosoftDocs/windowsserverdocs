@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
 

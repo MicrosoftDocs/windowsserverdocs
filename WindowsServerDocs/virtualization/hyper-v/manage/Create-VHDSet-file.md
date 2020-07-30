@@ -20,6 +20,9 @@ VHD Set files use a new VHD file type, .VHDS. VHD Set files store checkpoint inf
 
 Hyper-V handles all aspects of managing the checkpoint chains and merging the shared VHD set. Management software can run disk operations like online resizing on VHD Set files in the same way it does for .VHDX files. This means that management software doesn't need to know about the VHD Set file format.
 
+> [!NOTE]  
+> It's important to evaluate the impact of VHD Set files before deployment into production. Make sure that there is no performance or functional degradation in your environment, such as disk latency.
+
 ## Create a VHD Set file from Hyper-V Manager
 
 1.	Open Hyper-V Manager. Click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.

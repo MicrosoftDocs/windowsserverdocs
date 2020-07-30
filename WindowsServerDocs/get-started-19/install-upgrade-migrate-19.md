@@ -1,6 +1,6 @@
 ---
 title: Install, upgrade, or migrate to Windows Server 2019
-description: "How to clean install, in-place upgrade or migrate to, Windows Server"
+description: How to clean install, in-place upgrade or migrate to, Windows Server
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -21,7 +21,7 @@ Is it time to move to a newer version of Windows Server? Depending on what you'r
 
 ## Clean install
 
-The simplest way to install Windows Server is to perform a clean installation, where you install on a blank server or overwrite an existing operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2006124), [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418), and [Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).
+The simplest way to install Windows Server is to perform a clean installation, where you install on a blank server or overwrite an existing operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2006124), [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)), and [Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)).
 
 ## In-place upgrade
 
@@ -31,7 +31,7 @@ For step-by-step guidance on upgrading, review the [Windows Server upgrade conte
 
 ## Cluster OS rolling upgrade
 
-Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 and Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
+Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 and Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).
 
 ## Migration
 

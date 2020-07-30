@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: aedef092-8445-4e53-b9d4-525ecd98b02d
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/13/2018
 ---
 

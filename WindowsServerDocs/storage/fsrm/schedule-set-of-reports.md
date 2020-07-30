@@ -50,7 +50,7 @@ Scheduled reports are saved in a default location, which you can specify in the 
 
 6. To deliver copies of the reports to administrators by e-mail:
 
-   - On the **Delivery** tab, select the **Send reports to the following administrators** check box, and then enter the names of the administrative accounts that will receive reports. 
+   - On the **Delivery** tab, select the **Send reports to the following administrators** check box, and then enter the names of the administrative accounts that will receive reports.
    - Use the format <em>account@domain</em>, and use semicolons to separate multiple accounts.
 
 7. To schedule the reports:
@@ -72,7 +72,7 @@ The report task is added to the **Storage Reports Management** node. Tasks are i
 
 In addition, you can view the current status of the report (whether or not the report is running), the last run time and the result of that run, and the next scheduled run time.
 
-## See also
+## Additional References
 
 -   [Storage Reports Management](storage-reports-management.md)
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)

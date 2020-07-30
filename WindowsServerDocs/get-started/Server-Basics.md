@@ -1,8 +1,7 @@
 ---
 title: Get Started
-description: "Basics for Server: system requirements, release notes, upgrade options"
+description: Basics for Server 2016 - System requirements, release notes, upgrade options
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: get-started
 ms.date: 03/16/2018
@@ -16,7 +15,7 @@ ms.localizationpriority: medium
 >Applies To: Windows Server 2016
 
 > [!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows Server) for specific information.
 
 ![Icon showing a box with a checkmark](../media/landing-icons/getstarted.png) This collection contains detailed information to help you determine if you're ready to move to Windows Server 2016. Once you've checked the system requirements, upgrade options, and other information about moving to Windows Server 2016, you're ready to go back to the main [Windows Server 2016](Windows-Server-2016.md) hub and start down the path to installing the best edition and installation option for your needs. 
 
@@ -47,5 +46,3 @@ Does SQL work on Windows Server 2016? What steps are needed to get Exchange runn
 
 ## [Server Activation Guide](Server-2016-activation.md)
 Basic information on activation of Windows Server 2016 itself and other operating systems by using Windows Server 2016.
-
-

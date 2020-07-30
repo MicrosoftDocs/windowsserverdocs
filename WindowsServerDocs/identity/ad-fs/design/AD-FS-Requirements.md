@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8ce6e7c4-cf8e-4b55-980c-048fea28d50f
 title: Federation Server Farm Using SQL Server
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -77,9 +75,9 @@ The following minimum and recommended hardware requirements apply to the AD FS f
 |Disk space|32 GB|100 GB|  
   
 ## <a name="BKMK_3"></a>Software requirements  
-The following AD FS requirements are for the server functionality that is built into the Windows Server® 2012 R2 operating system:  
+The following AD FS requirements are for the server functionality that is built into the Windows Server&reg; 2012 R2 operating system:  
   
--   For extranet access, you must deploy the Web Application Proxy role service \- part of the Windows Server® 2012 R2 Remote Access server role. Prior versions of a federation server proxy are not supported with AD FS in Windows Server® 2012 R2.  
+-   For extranet access, you must deploy the Web Application Proxy role service \- part of the Windows Server&reg; 2012 R2 Remote Access server role. Prior versions of a federation server proxy are not supported with AD FS in Windows Server&reg; 2012 R2.  
   
 -   A federation server and the Web Application Proxy role service cannot be installed on the same computer.  
   
@@ -90,6 +88,11 @@ Domain controllers in all user domains and the domain to which the AD FS servers
   
 > [!NOTE]  
 > All support for environments with Windows Server 2003 domain controllers will end after the Extended Support End Date for Windows Server 2003. Customers are strongly recommended to upgrade their domain controllers as soon as possible. Visit [this page](https://support.microsoft.com/lifecycle/search/default.aspx?sort=PN&alpha=Windows+Server+2003&Filter=FilterNO) for additional information on Microsoft Support Lifecycle. For issues discovered that are specific to Windows Server 2003 domain controller environments, fixes will be issued only for security issues and if a fix can be issued prior to the expiry of Extended Support for Windows Server 2003.  
+
+
+
+>[!NOTE]
+> AD FS requires a full writable Domain Controller to function as opposed to a Read-Only Domain Controller. If a planned topology includes a Read-Only Domain controller, the Read-Only domain controller can be used for authentication but LDAP claims processing will require a connection to the writable domain controller.
   
 **Domain functional\-level requirements**  
   
@@ -107,7 +110,7 @@ Most AD FS features do not require AD DS functional\-level modifications to oper
   
 -   Any standard service account can be used as a service account for AD FS. Group Managed Service accounts are also supported. This requires at least one domain controller \(it is recommended that you deploy two or more\) that is running Windows Server 2012 or higher.  
   
--   For Kerberos authentication to function between domain\-joined clients and AD FS, the ‘HOST\/<adfs\_service\_name>' must be registered as a SPN on the service account. By default, AD FS will configure this when creating a new AD FS farm if it has sufficient permissions to perform this operation.  
+-   For Kerberos authentication to function between domain\-joined clients and AD FS, the 'HOST\/<adfs\_service\_name>' must be registered as a SPN on the service account. By default, AD FS will configure this when creating a new AD FS farm if it has sufficient permissions to perform this operation.  
   
 -   The AD FS service account must be trusted in every user domain that contains users authenticating to the AD FS service.  
   
@@ -179,7 +182,7 @@ Several key browsers and platforms have undergone validation for rendering and f
 AD FS creates session\-based and persistent cookies that must be stored on client computers to provide sign\-in, sign\-out, single sign\-on \(SSO\), and other functionality. Therefore, the client browser must be configured to accept cookies. Cookies that are used for authentication are always Secure Hypertext Transfer Protocol \(HTTPS\) session cookies that are written for the originating server. If the client browser is not configured to allow these cookies, AD FS cannot function correctly. Persistent cookies are used to preserve user selection of the claims provider. You can disable them by using a configuration setting in the configuration file for the AD FS sign\-in pages. Support for TLS\/SSL is required for security reasons.  
   
 ## <a name="BKMK_extranet"></a>Extranet requirements  
-To provide extranet access to the AD FS service, you must deploy the Web Application Proxy role service as the extranet facing role that proxies authentication requests in a secure manner to the AD FS service. This provides isolation of the AD FS service endpoints as well as isolation of all security keys \(such as token signing certificates\) from requests that originate from the internet. In addition, features such as Soft Extranet Account Lockout require the use of the Web Application Proxy. For more information about Web Application Proxy, see [Web Application Proxy](https://technet.microsoft.com/library/dn584107.aspx).  
+To provide extranet access to the AD FS service, you must deploy the Web Application Proxy role service as the extranet facing role that proxies authentication requests in a secure manner to the AD FS service. This provides isolation of the AD FS service endpoints as well as isolation of all security keys \(such as token signing certificates\) from requests that originate from the internet. In addition, features such as Soft Extranet Account Lockout require the use of the Web Application Proxy. For more information about Web Application Proxy, see [Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584107(v=ws.11)).  
   
 If you want to use a third\-party proxy for extranet access, this third\-party proxy must support the protocol defined in [http:\/\/download.microsoft.com\/download\/9\/5\/E\/95EF66AF\-9026\-4BB0\-A41D\-A4F81802D92C\/%5bMS\-ADFSPIP%5d.pdf](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf).  
   
@@ -191,7 +194,10 @@ Configuring the following network services appropriately is critical for success
 Both the firewall located between the Web Application Proxy and the federation server farm and the firewall between the clients and the Web Application Proxy must have TCP port 443 enabled inbound.  
   
 In addition, if client user certificate authentication \(clientTLS authentication using X509 user certificates\) is required, AD FS in Windows Server 2012 R2 requires that TCP port 49443 be enabled inbound on the firewall between the clients and the Web Application Proxy. This is not required on the firewall between the Web Application Proxy and the federation servers\).  
-  
+
+> [!NOTE]
+> Also make sure that port 49443 is not used by any other services on the AD FS and Web Application Proxy server.
+
 **Configuring DNS**  
   
 -   For intranet access, all clients accessing AD FS service within the internal corporate network \(intranet\) must be able to resolve the AD FS service name \(name provided by the SSL certificate\) to the load balancer for the AD FS servers or the AD FS server.  
@@ -202,9 +208,9 @@ In addition, if client user certificate authentication \(clientTLS authenticatio
   
 -   For Windows Integrated authentication to work inside the network and outside the network for a subset of endpoints exposed through the Web Application Proxy, you must use an A record \(not CNAME\) to point to the load balancers.  
   
-For information on configuring corporate DNS for the federation service and Device Registration Service, see [Configure Corporate DNS for the Federation Service and DRS](https://technet.microsoft.com/library/dn486786.aspx).  
+For information on configuring corporate DNS for the federation service and Device Registration Service, see [Configure Corporate DNS for the Federation Service and DRS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486786(v=ws.11)).  
   
-For information on configuring corporate DNS for Web Application proxies, see the “Configure DNS” section in [Step 1: Configure the Web Application Proxy Infrastructure](https://technet.microsoft.com/library/dn383644.aspx).  
+For information on configuring corporate DNS for Web Application proxies, see the "Configure DNS" section in [Step 1: Configure the Web Application Proxy Infrastructure](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383644(v=ws.11)).  
   
 For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=75282](https://go.microsoft.com/fwlink/?LinkId=75282).  
   
@@ -212,7 +218,7 @@ For information about how to configure a cluster IP address or cluster FQDN usin
 AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md).  
   
 > [!NOTE]  
-> AD FS automatically creates an “Active Directory” attribute store, by default. Attribute store requirements depend on whether your organization is acting as the account partner \(hosting the federated users\) or the resource partner \(hosting the federated application\).  
+> AD FS automatically creates an "Active Directory" attribute store, by default. Attribute store requirements depend on whether your organization is acting as the account partner \(hosting the federated users\) or the resource partner \(hosting the federated application\).  
   
 **LDAP Attribute Stores**  
   
@@ -335,8 +341,8 @@ The following table provides additional cryptography support information on the 
 |AES256KeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#kw\-aes256](http://www.w3.org/2001/04/xmlenc#kw-aes256)|256|Supported algorithm for Encrypting the symmetric key that encrypts the security token.|  
 |RsaV15KeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#rsa\-1\_5](http://www.w3.org/2001/04/xmlenc#rsa-1_5)|1024|Supported algorithm for Encrypting the symmetric key that encrypts the security token.|  
 |RsaOaepKeyWrap \- [http:\/\/www.w3.org\/2001\/04\/xmlenc\#rsa\-oaep\-mgf1p](http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p)|1024|Default. Supported algorithm for Encrypting the symmetric key that encrypts the security token.|  
-|SHA1\-[http:\/\/www.w3.org\/PICS\/DSig\/SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/SHA1_1_0.html)|N\/A|Used by AD FS Server in artifact SourceId generation:  In this scenario, the STS uses SHA1 \(per the recommendation in the SAML 2.0 standard\) to create a short 160 bit value for the artifact sourceiD.<br /><br />Also used by the ADFS web agent \(legacy component from WS2003 timeframe\) to identify changes in a “last updated” time value so that it knows when to update information from the STS.|  
-|SHA1withRSA\-<br /><br />[http:\/\/www.w3.org\/PICS\/DSig\/RSA\-SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html)|N\/A|Used in cases when AD FS Server validates the signature of SAML AuthenticationRequest, sign the artifact resolution request or response, create token\-signing certificate.<br /><br />In these cases, SHA256 is the default, and SHA1 is only used if the partner \(relying party\) cannot support SHA256 and must use SHA1.|  
+|SHA1\-[http:\/\/www.w3.org\/PICS\/DSig\/SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/SHA1_1_0.html)|N\/A|Used by AD FS Server in artifact SourceId generation:  In this scenario, the STS uses SHA1 \(per the recommendation in the SAML 2.0 standard\) to create a short 160 bit value for the artifact sourceiD.<p>Also used by the ADFS web agent \(legacy component from WS2003 timeframe\) to identify changes in a "last updated" time value so that it knows when to update information from the STS.|  
+|SHA1withRSA\-<p>[http:\/\/www.w3.org\/PICS\/DSig\/RSA\-SHA1\_1\_0.html](http://www.w3.org/PICS/DSig/RSA-SHA1_1_0.html)|N\/A|Used in cases when AD FS Server validates the signature of SAML AuthenticationRequest, sign the artifact resolution request or response, create token\-signing certificate.<p>In these cases, SHA256 is the default, and SHA1 is only used if the partner \(relying party\) cannot support SHA256 and must use SHA1.|  
   
 ## <a name="BKMK_13"></a>Permissions requirements  
 The administrator that performs the installation and the initial configuration of AD FS must have domain administrator permissions in the local domain \(in other words, the domain to which the federation server is joined to.\)  
@@ -344,4 +350,3 @@ The administrator that performs the installation and the initial configuration o
 ## See Also  
 [AD FS Design Guide in Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
   
-

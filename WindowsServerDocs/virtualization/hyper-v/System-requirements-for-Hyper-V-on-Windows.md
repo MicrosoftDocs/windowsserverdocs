@@ -1,14 +1,12 @@
 ---
 title: System requirements for Hyper-V on Windows Server
-description: "Lists the hardware and firmware requirements for Hyper-V in Windows Server"
+description: Lists the hardware and firmware requirements for Hyper-V in Windows Server
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 9/30/2016
 ---

@@ -299,7 +299,7 @@ One way to improve protection in virtualized environments is to segment the netw
 ### Other GDPR considerations for servers
 The GDPR includes explicit requirements for breach notification where a personal data breach means, “_a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed._”  Obviously, you can't begin to move forward to meet the stringent GDPR notification requirements within 72 hours if you cannot detect the breach in the first place.
 
-As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](http://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
+As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](https://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
 
 > “_Unlike pre-breach, post-breach assumes a breach has already occurred – acting as a flight recorder and Crime Scene Investigator (CSI). Post-breach provides security teams the information and toolset needed to identify, investigate, and respond to attacks that otherwise will stay undetected and below the radar._”
 

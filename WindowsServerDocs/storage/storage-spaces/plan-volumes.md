@@ -3,7 +3,7 @@ ms.assetid: 342173ca-4e10-44f4-b2c9-02a6c26f7a4a
 title: Planning volumes in Storage Spaces Direct
 ms.prod: windows-server
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
@@ -193,7 +193,7 @@ For simplicity, this example uses decimal (base-10) units throughout, meaning 1 
 
 See [Creating volumes in Storage Spaces Direct](create-volumes.md).
 
-### See also
+### Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Choosing drives for Storage Spaces Direct](choosing-drives.md)

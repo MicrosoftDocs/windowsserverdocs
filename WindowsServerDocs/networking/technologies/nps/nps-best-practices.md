@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Network Policy Server Best Practices
@@ -92,7 +92,7 @@ Following are the best practices for using NPS in large organizations.
 
 - Use a user principal name to refer to users whenever possible. A user can have the same user principal name regardless of domain membership. This practice provides scalability that might be required in organizations with a large number of domains.
 
-- If you installed Network Policy Server \(NPS\) on a computer other than a domain controller and the NPS is receiving a large number of authentication requests per second, you can improve NPS performance by increasing the number of concurrent authentications allowed between the NPS and the domain controller. For more information, see 
+- If you installed Network Policy Server \(NPS\) on a computer other than a domain controller and the NPS is receiving a large number of authentication requests per second, you can improve NPS performance by increasing the number of concurrent authentications allowed between the NPS and the domain controller. For more information, see [Increase Concurrent Authentications Processed by NPS](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-concurrent-auth).
 
 ## Security issues
 

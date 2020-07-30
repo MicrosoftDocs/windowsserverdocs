@@ -1,14 +1,12 @@
 ---
 ms.assetid: 3d770385-9834-4ebe-b66c-b684e0245971
 title: Create a Rule to Permit or Deny Users Based on an Incoming Claim
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -112,7 +110,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ## Additional references 
 [Configure Claim Rules](Configure-Claim-Rules.md)  
  
-[Checklist: Creating Claim Rules for a Relying Party Trust](https://technet.microsoft.com/library/ee913578.aspx)  
+[Checklist: Creating Claim Rules for a Relying Party Trust](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913578(v=ws.11))  
   
 [When to Use an Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

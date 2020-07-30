@@ -1,12 +1,12 @@
 ---
 title: replace
 description: Learn how to use the replace command to replace files.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 6143661e-d90f-4812-b265-6669b567dd1f
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 07/11/2018
 
 Replaces files. If used with the **/a** option, **replace** adds new files to a directory instead of replacing existing files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +30,7 @@ replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/a] [/p] [/r] [/w]
 replace [<Drive1>:][<Path1>]<FileName> [<Drive2>:][<Path2>] [/p] [/r] [/s] [/w] [/u] 
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -75,6 +75,6 @@ To update all the versions of a file named Phones.cli (which appear in multiple 
 
 `replace a:\phones.cli c:\ /s`
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

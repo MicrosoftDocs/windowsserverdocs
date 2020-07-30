@@ -1,16 +1,13 @@
 ---
 title: Plan for Hyper-V security in Windows Server
-description: "Provides a lists of security considerations for Hyper-v hosts and virtual machines"
+description: Provides a lists of security considerations for Hyper-v hosts and virtual machines
 ms.prod: windows-server
-ms.service: na
-ms.suite: na
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
 manager: dongill
 author: larsiwer
-ms.author: kathyDav
+ms.author: kathydav
 ms.date: 08/03/2018
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: tcmsetup
 description: Learn how to set up and disable the TAPI client.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 15e0c10f-996f-4301-92e5-943f7ee8212d
 
@@ -29,7 +29,7 @@ tcmsetup [/q] [/x] /c <Server1> [<Server2> …]
 tcmsetup  [/q] /c /d
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -48,13 +48,12 @@ tcmsetup  [/q] /c /d
 -   Before a client user can use a phone or line on a TAPI server, the telephony server administrator must assign the user to the phone or line.
 -   The list of telephony servers that is created by this command replaces any existing list of telephony servers available to the client. You cannot use this command to add to the existing list.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)
+[Command shell overview](/previous-versions/windows/it-pro/windows-server-2003/cc737438(v=ws.10))
 
-[Specify telephony servers on a client computer](https://technet.microsoft.com/library/cc759226(v=ws.10).aspx)
+[Specify telephony servers on a client computer](/previous-versions/windows/it-pro/windows-server-2003/cc759226(v=ws.10))
 
-[Assign a telephony user to a line or phone](https://technet.microsoft.com/library/cc736875(v=ws.10).aspx)
-
+[Assign a telephony user to a line or phone](/previous-versions/windows/it-pro/windows-server-2003/cc736875(v=ws.10))

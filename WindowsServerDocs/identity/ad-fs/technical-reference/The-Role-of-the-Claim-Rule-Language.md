@@ -1,6 +1,5 @@
 ---
 title: The Role of the Claim Rule Language
-description:
 author: billmath
 ms.author: billmath
 manager: femila
@@ -156,6 +155,4 @@ exists([issuer == "MSFT"])
 The rule body can contain only a single issuance statement. If conditions are used without using the Exists function, the rule body is executed once for each time that the conditions part is matched.  
 
 ## Additional references  
-[Create a Rule to Send Claims Using a Custom Rule](https://technet.microsoft.com/library/dd807049.aspx)  
-
-
+[Create a Rule to Send Claims Using a Custom Rule](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807049(v=ws.11))  

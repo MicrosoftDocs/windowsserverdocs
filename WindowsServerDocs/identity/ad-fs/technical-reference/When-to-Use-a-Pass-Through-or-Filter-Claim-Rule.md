@@ -1,14 +1,12 @@
 ---
 ms.assetid: 606df285-259c-4c6b-8583-9aca1d614c43
 title: When to Use a Pass Through or Filter Claim Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -73,7 +71,7 @@ You create this rule using either the claim rule language or using the Pass Thro
   
 -   Pass through only claim values that start with a specific value  
   
-For more instructions on how to create this template, see [Create a Rule to Pass Through or Filter an Incoming Claim](https://technet.microsoft.com/library/dd807060.aspx) in the AD FS Deployment Guide.  
+For more instructions on how to create this template, see [Create a Rule to Pass Through or Filter an Incoming Claim](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807060(v=ws.11)) in the AD FS Deployment Guide.  
   
 ## Using the claim rule language  
 If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see When to Use a Custom Rule.  
@@ -82,13 +80,13 @@ If a claim should be sent only when the claim value matches a custom pattern, yo
 A simple filtering rule would filter claims based on one of the properties outlined above. For example, the following rule will pass through all e\-mail claims:  
   
 ```  
-c:[type == “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress”]  => issue(claim  = c);  
+c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"]  => issue(claim  = c);  
 ```  
   
 Filters can be logically AND\-ed together. For example, the following rule will accept all e\-mail claims with value johndoe@fabrikam.com:  
   
 ```  
-c:[type == “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress”, value == “johndoe@fabrikam.com “]  => issue(claim  = c);  
+c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress", value == "johndoe@fabrikam.com "]  => issue(claim  = c);  
 ```  
   
 In the above examples the filters always used an equality operator. The claim rule language supports the following operators:  
@@ -104,7 +102,7 @@ In the above examples the filters always used an equality operator. The claim ru
 For example, the following rule will accept all e\-mail claims not issued by the local federation server that have a suffix of boeing.com:  
   
 ```  
-c:[type == “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress”, value =~ “^.*@boeing\.com$” , issuer != “LOCAL AUTHORITY”]  => issue(claim  = c);  
+c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress", value =~ "^.*@boeing\.com$" , issuer != "LOCAL AUTHORITY"]  => issue(claim  = c);  
 ```  
   
 ### Best practices for creating custom rules  
@@ -116,7 +114,6 @@ A filter can be applied to one or more of the properties of each claim, as descr
 |      Type      |                                                                                                                                                                                        The claim type \(usually represented as an Uri\) reflects an implicit agreement between partners in a Federation about what kind of information is conveyed in the claim. For example, claims of type http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/emailaddress will contain the e\-mail address of the user.                                                                                                                                                                                         |
 |     Value      |                                                                                                                                                                                                                                                                   The value of the claim. For example, a claim of type http:\/\/schemas.xmlsoap.org\/ws\/2005\/05\/identity\/claims\/emailaddress may have a value of johndoe@fabrikam.com                                                                                                                                                                                                                                                                    |
 |   ValueType    |                                                                                                                                                                                                  The ValueType represents how the information contained in the claim's Value is to be interpreted. Typically the ValueType will be set to http:\/\/www.w3.org\/2001\/XMLSchema\#string, but the claim value could contain Base64Binary encoded data \(for example, an image\) or a date, Boolean, and so on.                                                                                                                                                                                                  |
-|     Issuer     | The issuer represents the party that last issued the claims about the user. If the claims are obtained at a claims provider federation server the issuer of all claims is going to be set to “LOCAL AUTHORITY”. If the claims were received by a Federation Provider federation server, the issuer of the claims is going to be set to the claims provider identifier of the claims provider that signed the token. Thus, when processing rules on claims received from a claims provider the issuer of all claims is going to be set to the same value. When authoring rules for a relying party, the issuer property can be used to distinguish between claims originating from different claims providers. |
+|     Issuer     | The issuer represents the party that last issued the claims about the user. If the claims are obtained at a claims provider federation server the issuer of all claims is going to be set to "LOCAL AUTHORITY". If the claims were received by a Federation Provider federation server, the issuer of the claims is going to be set to the claims provider identifier of the claims provider that signed the token. Thus, when processing rules on claims received from a claims provider the issuer of all claims is going to be set to the same value. When authoring rules for a relying party, the issuer property can be used to distinguish between claims originating from different claims providers. |
 | OriginalIssuer |                                                                                                   This claim property is meant to convey which federation server originally issued the claim. Since the issuer property of claims is set to the last federation server that signed the token, the original issuer is useful in scenarios where a claim has flowed through more than one federation server \(For example, a relying party that receives a token from a federation provider federation server might be interested which particular claims provider federation server authenticated the user\)                                                                                                   |
 |   Properties   |                                                                                                                             In addition to the five properties outlined above, each claim also has a property bag where named properties can be stored. These properties are not serialized in the token and only make sense for passing information between components of the claims issuance pipeline within the scope of a single federation server. For example, setting a property during claims provider rules processing and then referring to it in relying party rules.                                                                                                                              |
-

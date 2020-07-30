@@ -4,7 +4,7 @@ description: Processor performance considerations in Hyper-V performance tuning
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -64,7 +64,7 @@ Virtual NUMA and Dynamic Memory features cannot be used at the same time. A virt
 
 For more info on Virtual NUMA, see [Hyper-V Virtual NUMA Overview](https://technet.microsoft.com/library/dn282282.aspx).
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

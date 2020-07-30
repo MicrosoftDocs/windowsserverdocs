@@ -1,6 +1,6 @@
 ---
 title: Server Core App Compatibility Feature on Demand (FOD)
-description: "How to install Windows Server Features on Demand"
+description: How to install Windows Server Features on Demand
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -18,7 +18,7 @@ ms.date: 06/07/2019
 The **Server Core App Compatibility Feature on Demand** is an optional feature package that can be added to Windows Server 2019 Server Core installations, or Windows Server Semi-Annual Channel, at any time.
 
 For more information on Features on Demand (FOD), see [Features On
-Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
+Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
 ## Why install the App Compatibility FOD?
 
@@ -99,7 +99,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 8. After the progress bar completes, restart the operating system.
 
-   For more information about DISM commands, see [Use DISM in Windows PowerShell](https://docs.microsoft.com/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14)
+   For more information about DISM commands, see [Use DISM in Windows PowerShell](/windows-hardware/manufacture/desktop/use-dism-in-windows-powershell-s14)
 
 ## To optionally add Internet Explorer 11 to Server Core (after adding the Server Core App Compatibility FOD)
 
@@ -119,7 +119,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 4. Run the following command, using the `$package_path` variable to enter the path to the Internet Explorer cab file:
 
     ```PowerShell
-    $package_path = "D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
+    $package_path = D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab
 
     Add-WindowsPackage -Online -PackagePath $package_path
     ```
@@ -139,14 +139,14 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 - If you choose to also install the Internet Explorer 11 optional package, note that double clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with IE**, or you can open it directly from Internet Explorer **File** -> **Open**.
 
-- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is absolutely necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps) to add IIS Management Console.
+- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is absolutely necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps) to add IIS Management Console.
 
 - As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions. 
     
-  - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017).
-  - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017).
+  - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017).
+  - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017).
 
-## <a id="add-capabilities"> Adding capabilities and optional packages to an offline WIM Server Core image
+## <a id=add-capabilities> Adding capabilities and optional packages to an offline WIM Server Core image
 
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
@@ -166,7 +166,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 Use the `$install_wim_path` variable to enter the path to the Install.wim file, located inside the \Sources folder of the ISO file.
 
    ```PowerShell
-   $install_wim_path = "C:\SetupFiles\WindowsServer\sources\install.wim"
+   $install_wim_path = C:\SetupFiles\WindowsServer\sources\install.wim
 
    Get-WindowsImage -ImagePath $install_wim_path
    ```
@@ -177,8 +177,8 @@ Use the `$install_wim_path` variable to enter the path to the Install.wim file, 
    - `$mount_folder variable` - Specify the folder to use when accessing the contents of the Install.wim file.
 
    ```PowerShell
-   $image_name = "Windows Server Datacenter"
-   $mount_folder = "c:\test\offline"
+   $image_name = Windows Server Datacenter
+   $mount_folder = c:\test\offline
 
    Mount-WindowsImage -ImagePath $install_wim_path -Name $image_name -path $mount_folder
    ```
@@ -190,9 +190,9 @@ Use the `$install_wim_path` variable to enter the path to the Install.wim file, 
    - `$fod_drive` - Specify the drive letter of the mounted Server FOD image.
 
    ```PowerShell
-   $capability_name = "ServerCore.AppCompatibility~~~~0.0.1.0"
-   $package_path = "D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
-   $fod_drive = "d:\"
+   $capability_name = ServerCore.AppCompatibility~~~~0.0.1.0
+   $package_path = D:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab
+   $fod_drive = d:\
 
    Add-WindowsCapability -Path $mount_folder -Name $capability_name -Source $fod_drive -LimitAccess
    Add-WindowsPackage -Path $mount_folder -PackagePath $package_path

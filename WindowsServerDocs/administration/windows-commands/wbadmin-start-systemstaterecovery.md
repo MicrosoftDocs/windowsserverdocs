@@ -1,12 +1,8 @@
 ---
 title: wbadmin start systemstaterecovery
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for wbadmin start systemstaterecovery, which performs a system state recovery to a location, and from a backup, that you specify.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
 author: coreyp-at-msft
@@ -26,7 +22,7 @@ Performs a system state recovery to a location and from a backup that you specif
 
 To perform a system state recovery with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt**, and then click **Run as administrator**.)
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -54,7 +50,7 @@ wbadmin start systemstaterecovery
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -67,19 +63,19 @@ wbadmin start systemstaterecovery
 |-autoReboot|Specifies to restart the system at the end of the system state recovery operation. This parameter is valid only for a recovery to the original location. We do not recommend you use this parameter if you need to perform steps after the recovery operation.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-- To perform a system state recovery of the backup from 03/31/2013 at 9:00 A.M., type:  
+- To perform a system state recovery of the backup from 03/31/2013 at 9:00 A.M., type:
   ```
   wbadmin start systemstaterecovery -version:03/31/2013-09:00
-  ```  
-- To perform a system state recovery of the backup from 04/30/2013 at 9:00 A.M. that is stored on the shared resource \\\\servername\share for server01, type:  
+  ```
+- To perform a system state recovery of the backup from 04/30/2013 at 9:00 A.M. that is stored on the shared resource \\\\servername\share for server01, type:
   ```
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet
+-   [Start-WBSystemStateRecovery](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10)) cmdlet

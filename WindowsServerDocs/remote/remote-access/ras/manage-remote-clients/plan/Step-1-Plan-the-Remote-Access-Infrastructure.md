@@ -2,16 +2,12 @@
 title: Step 1 Plan the Remote Access Infrastructure
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 1 Plan the Remote Access Infrastructure
 
@@ -50,9 +46,9 @@ When you plan your network, you need to consider the network adapter topology, s
   
     DirectAccess uses IPv6 with IPsec to create a secure connection between DirectAccess client computers and the internal corporate network. However, DirectAccess does not necessarily require connectivity to the IPv6 Internet or native IPv6 support on internal networks. Instead, it automatically configures and uses IPv6 transition technologies to tunnel IPv6 traffic across the IPv4 Internet (6to4, Teredo, or IP-HTTPS) and across your IPv4-only intranet (NAT64 or ISATAP). For an overview of these transition technologies, see the following resources:  
   
-    -   [IPv6 Transition Technologies](https://technet.microsoft.com/library/bb726951.aspx)  
+    -   [IPv6 Transition Technologies](/previous-versions//bb726951(v=technet.10))  
   
-    -   [IP-HTTPS Tunneling Protocol Specification](https://msdn.microsoft.com/library/dd358571.aspx)  
+    -   [IP-HTTPS Tunneling Protocol Specification](/previous-versions//bb726951(v=technet.10))  
   
 3.  Configure required adapters and addressing according to the following table. For deployments that are behind a NAT device using a single network adapter, configure your IP addresses by using only the **Internal network adapter** column.  
   
@@ -135,7 +131,7 @@ The certification authority (CA) requirements for each of these scenarios is sum
 ||Public CA: We recommend that you use a public CA to issue the IP-HTTPS certificate, this ensures that the CRL distribution point is available externally.||  
   
 #### Plan computer certificates for IPsec authentication  
-If you are using certificate-based IPsec authentication, the Remote Access server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to use Group Policy to configure automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](https://technet.microsoft.com/library/cc770357.aspx).  
+If you are using certificate-based IPsec authentication, the Remote Access server and clients are required to obtain a computer certificate. The simplest way to install the certificates is to use Group Policy to configure automatic enrollment for computer certificates. This ensures that all domain members obtain a certificate from an enterprise CA. If you do not have an enterprise CA set up in your organization, see [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770357(v=ws.10)).  
   
 This certificate has the following requirements:  
   
@@ -255,7 +251,7 @@ If multiple domains and Windows Internet Name Service (WINS) are deployed in you
   
 -   By deploying a WINS forward lookup zone in the DNS. When trying to resolve computername.dns.zone1.corp.contoso.com, the request is directed to the WINS server that is only using the computer name. The client thinks it is issuing a regular DNS A records request, but it is actually a NetBIOS request.  
   
-    For more information, see [Managing a Forward Lookup Zone](https://technet.microsoft.com/library/cc816891(WS.10).aspx).  
+    For more information, see [Managing a Forward Lookup Zone](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816891(v=ws.10)).  
   
 -   By adding a DNS suffix (for example, dns.zone1.corp.contoso.com) to the default domain GPO.  
   
@@ -449,5 +445,3 @@ If a backup is available, you can restore the GPO from the backup. If there is n
   
 3.  You will see an error message that the GPO is not found. Click **Remove configuration settings**. After completion, the server will be restored to an unconfigured state, and you can reconfigure the settings.  
   
-
-

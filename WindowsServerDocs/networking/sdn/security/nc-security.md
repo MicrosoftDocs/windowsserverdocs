@@ -1,13 +1,13 @@
 ---
 title: Network Controller Security
 description: You can use this topic to learn how to configure security for all communication between Network Controller and other software and devices. 
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/30/2018
 ---
 

@@ -1,17 +1,10 @@
 ---
 title: Using ETW to troubleshoot LDAP connections
 description: How to turn on and use ETW to trace LDAP connections between AD DS domain controllers.
-audience: Admin
-ms.custom:
-- CI ID 110964
-- CSSTroubleshoot 
 author: Teresa-Motiv
 manager: dcscontentpm
 ms.prod: windows-server-dev
 ms.technology: active-directory-lightweight-directory-services
-ms.tgt_platform: multiple
-keywords:
-- event tracing LDAP
 audience: Admin
 ms.author: v-tea
 ms.topic: article
@@ -20,7 +13,7 @@ ms.date: 11/22/2019
 
 # Using ETW to troubleshoot LDAP connections
 
-[Event Tracing for Windows (ETW)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal) can be a valuable troubleshooting tool for Active Directory Domain Services (AD DS). You can use ETW to trace the Lightweight Directory Access Protocol ([LDAP](https://docs.microsoft.com/previous-versions/windows/desktop/ldap/lightweight-directory-access-protocol-ldap-api)) communications between Windows clients and LDAP servers, including AD DS domain controllers.
+[Event Tracing for Windows (ETW)](/windows/win32/etw/event-tracing-portal) can be a valuable troubleshooting tool for Active Directory Domain Services (AD DS). You can use ETW to trace the Lightweight Directory Access Protocol ([LDAP](/previous-versions/windows/desktop/ldap/lightweight-directory-access-protocol-ldap-api)) communications between Windows clients and LDAP servers, including AD DS domain controllers.
 
 ## How to turn on ETW and start a trace
 

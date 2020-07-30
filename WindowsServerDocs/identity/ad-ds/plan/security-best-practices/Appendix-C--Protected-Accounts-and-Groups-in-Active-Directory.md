@@ -1,14 +1,12 @@
 ---
 ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: Appendix C - Protected Accounts and Groups in Active Directory
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Appendix C: Protected Accounts and Groups in Active Directory
@@ -37,8 +35,6 @@ The following table contains the protected groups in Active Directory listed by 
 |Domain Admins|Domain Admins|Domain Admins|Domain Admins|
 |Domain Controllers|Domain Controllers|Domain Controllers|Domain Controllers|
 |Enterprise Admins|Enterprise Admins|Enterprise Admins|Enterprise Admins|
-||||Enterprise Key Admins|
-||||Key Admins|
 |Krbtgt|Krbtgt|Krbtgt|Krbtgt|
 |Print Operators|Print Operators|Print Operators|Print Operators|
 |||Read-only Domain Controllers|Read-only Domain Controllers|
@@ -68,7 +64,7 @@ The range of values is in seconds from 60 to 7200 (one minute to two hours). To 
 
 A better approach to testing AdminSDHolder changes is to run SDProp manually, which causes the task to run immediately but does not affect scheduled execution. Running SDProp manually is performed slightly differently on domain controllers running Windows Server 2008 and earlier than it is on domain controllers running Windows Server 2012 or Windows Server 2008 R2.  
 
-Procedures for running SDProp manually on older operating systems are provided in [Microsoft Support article 251343](https://support.microsoft.com/kb/251343), and following are step-by-step instructions for older and newer operating systems. In either case, you must connect to the rootDSE object in Active Directory and perform a modify operation with a null DN for the rootDSE object, specifying the name of the operation as the attribute to modify. For more information about modifiable operations on the rootDSE object, see [rootDSE Modify Operations](https://msdn.microsoft.com/library/cc223297.aspx) on the MSDN website.  
+Procedures for running SDProp manually on older operating systems are provided in [Microsoft Support article 251343](https://support.microsoft.com/kb/251343), and following are step-by-step instructions for older and newer operating systems. In either case, you must connect to the rootDSE object in Active Directory and perform a modify operation with a null DN for the rootDSE object, specifying the name of the operation as the attribute to modify. For more information about modifiable operations on the rootDSE object, see [rootDSE Modify Operations](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) on the MSDN website.  
 
 ###### Running SDProp Manually in Windows Server 2008 or Earlier
 

@@ -1,12 +1,12 @@
 ---
 title: verify
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for verify, which tells **cmd** whether to verify that your files are written correctly to a disk.
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: dfe8bc91-d948-4e47-84ad-a79a60506ffa
 
@@ -22,7 +22,7 @@ ms.date: 10/16/2017
 
 Tells **cmd** whether to verify that your files are written correctly to a disk. If used without parameters, **verify** displays the current setting.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,14 +30,14 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 verify [on | off]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
 |[on \| off]|Switches the **verify** setting on or off.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display the current **verify** setting, type:
 ```
@@ -48,6 +48,6 @@ To turn the **verify** setting on, type:
 Verify on
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,14 +1,13 @@
 ---
 title: Windows 8.1 should be configured with the recommended amount of memory
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 4972101a-c266-4045-bdd6-4e75a9cd750e
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows 8.1 should be configured with the recommended amount of memory

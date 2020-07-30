@@ -1,47 +1,60 @@
 ---
 title: ftp get
-description: "Windows Commands topic for ftp get"
-ms.custom: na
+description: Reference article for the ftp get command, which copies a remote file to the local computer using the current file transfer type.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: d70355c4-58ef-43e0-916b-c7ecf77e6ee4 vhorne
+ms.assetid: d70355c4-58ef-43e0-916b-c7ecf77e6ee4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: get
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp get
 
-Copies a remote file to the local computer using the current file transfer type.   
-## Syntax  
-```  
-get <remoteFile> [<LocalFile>]  
-```  
-### Parameters  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-|   Parameter   |                                                              Description                                                               |
-|---------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| <remoteFile>  |                                                   Specifies the remote file to copy.                                                   |
-| [<LocalFile>] | Specifies the name of the file to use on the local computer. If *LocalFile* is not specified, the file is given the *remoteFile* name. |
+Copies a remote file to the local computer using the current file transfer type.
 
-## Remarks  
-The **get** command is identical to the **recv** command.  
-## <a name="BKMK_Examples"></a>Examples  
-copy **test.txt** to the local computer using the current file transfer type.  
-```  
-get test.txt  
-```  
-copy **test.txt** to the local computer as **test1.txt** using the current file transfer type.  
-```  
-Get test.txt test1.txt  
-```  
-## additional references  
--   [ftp: ascii](ftp-ascii.md)  
--   [ftp: binary](ftp-binary.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+> [!NOTE]
+> This command is the same as the [ftp recv command](ftp-recv.md).
+
+## Syntax
+
+```
+get <remotefile> [<localfile>]
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<remotefile>` | Specifies the remote file to copy. |
+| `[<localfile>]` | Specifies the name of the file to use on the local computer. If *localfile* isn't specified, the file is given the name of the *remotefile*. |
+
+### Examples
+
+To copy *test.txt* to the local computer using the current file transfer, type:
+
+```
+get test.txt
+```
+
+To copy *test.txt* to the local computer as *test1.txt* using the current file transfer, type:
+
+```
+get test.txt test1.txt
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ftp recv command](ftp-recv.md)
+
+- [ftp ascii command](ftp-ascii.md)
+
+- [ftp binary command](ftp-binary.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getpriority
-description: "Windows Commands topic for **bitsadmin getpriority** - Retrieves the priority of the specified job."
-ms.custom: na
+description: Reference article for the bitsadmin getpriority command, which retrieves the priority of the specified job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
@@ -21,26 +17,39 @@ Retrieves the priority of the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetPriority <Job>
+bitsadmin /getpriority <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+#### Output
 
-The priority is either **FOREGROUND**, **HIGH**, **NORMAL**, **LOW**, or **UNKNOWN**.
+The returned priority for this command can be:
 
-## <a name="BKMK_examples"></a>Examples
+- **FOREGROUND**
 
-The following example retrieves the priority for the job named *myDownloadJob*.
+- **HIGH**
+
+- **NORMAL**
+
+- **LOW**
+
+- **UNKNOWN**
+
+## Examples
+
+To retrieve the priority for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetPriority myDownloadJob
+bitsadmin /getpriority myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

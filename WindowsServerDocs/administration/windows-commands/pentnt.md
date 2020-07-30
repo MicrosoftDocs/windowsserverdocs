@@ -1,14 +1,10 @@
 ---
 title: pentnt
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the pentnt command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: c0455cd4-ad6b-4945-bcc8-ed621a00b530
+ms.assetid: 4911e640-aa7f-4afb-abc2-5eefc7010204
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,8 +13,13 @@ ms.date: 10/16/2017
 
 # pentnt
 
+> Applies To: Windows Server 2003, Windows Server 2003 R2, Windows Server 2003 with SP1, Windows Server 2003 with SP2
 
+>[!IMPORTANT]
+> This command has been deprecated.
 
-Pentnt is deprecated, and is not guaranteed to be supported in future releases of Windows.
+Detects floating point division error (if present) in the Pentium chip, disables floating point hardware, and turns on floating point emulation. For descriptions and usage information, see [pentnt](/previous-versions/orphan-topics/ws.10/cc755868(v=ws.10)).
 
-This tool is included in Windows Server 2003. For more information see [Pentnt](https://technet.microsoft.com/library/cc755868(v=ws.10).aspx).
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

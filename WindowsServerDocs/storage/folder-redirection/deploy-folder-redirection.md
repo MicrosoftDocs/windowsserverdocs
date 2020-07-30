@@ -1,17 +1,17 @@
 ---
-title: Deploy Folder Redirection with Offline Files
+title: Deploy Folder Redirection with Offline FilesDeploy Folder Redirection with Offline Files
 description: How to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
 ---
 # Deploy Folder Redirection with Offline Files
 
->Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server (Semi-annual Channel)
+> Applies to: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server (Semi-annual Channel)
 
 This topic describes how to use Windows Server to deploy Folder Redirection with Offline Files to Windows client computers.
 
@@ -24,7 +24,7 @@ For a list of recent changes to this topic, see [Change history](#change-history
 
 ### Hardware requirements
 
-Folder Redirection requires an x64-based or x86-based computer; it is not supported by Windows® RT.
+Folder Redirection requires an x64-based or x86-based computer; it is not supported by Windows&reg; RT.
 
 ### Software requirements
 
@@ -77,9 +77,9 @@ Here's how to create a file share on Windows Server 2019, Windows Server 2016, a
 7. On the **Permissions** page, select **Customize permissions…**. The Advanced Security Settings dialog box appears.
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described Table 1 and shown in Figure 1, removing permissions for unlisted groups and accounts, and adding special permissions to the Folder Redirection Users group that you created in Step 1.
-    
+
     ![Setting the permissions for the redirected folders share](media/deploy-folder-redirection/setting-the-permissions-for-the-redirected-folders-share.png)
-    
+
     **Figure 1** Setting the permissions for the redirected folders share
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** Folder Usage value.
 11. If you chose the **SMB Share - Advanced** profile, on the **Quota** page, optionally select a quota to apply to users of the share.
@@ -89,11 +89,10 @@ Here's how to create a file share on Windows Server 2019, Windows Server 2016, a
 
 | User Account  | Access  | Applies to  |
 | --------- | --------- | --------- |
-| User Account | Access | Applies to |
 | System     | Full control        |    This folder, subfolders and files     |
 | Administrators     | Full Control       | This folder only        |
 | Creator/Owner     |   Full Control      |   Subfolders and files only      |
-| Security group of users needing to put data on share (Folder Redirection Users)     |   List folder / read data *(Advanced permissions)* <br /><br />Create folders / append data *(Advanced permissions)* <br /><br />Read attributes *(Advanced permissions)* <br /><br />Read extended attributes *(Advanced permissions)* <br /><br />Read permissions *(Advanced permissions)*      |  This folder only       |
+| Security group of users needing to put data on share (Folder Redirection Users)     |   List folder / read data *(Advanced permissions)* <p>Create folders / append data *(Advanced permissions)* <p>Read attributes *(Advanced permissions)* <p>Read extended attributes *(Advanced permissions)* <p>Read permissions *(Advanced permissions)*      |  This folder only       |
 | Other groups and accounts     |  None (remove)       |         |
 
 ## Step 3: Create a GPO for Folder Redirection
@@ -111,11 +110,11 @@ Here's how to create a GPO for Folder Redirection:
 7. In the **Security Filtering** section, select **Add**.
 8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 1 (for example, **Folder Redirection Users**), and then select **OK**.
 9. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
-    
+
     This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016).
 
 > [!IMPORTANT]
-> Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), you now must give the Authenticated Users group delegated Read permissions to the Folder Redirection GPO - otherwise the GPO won't get applied to users, or if it's already applied, the GPO is removed, redirecting folders back to the local PC. For more info, see [Deploying Group Policy Security Update MS16-072](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/).
+> Due to the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), you now must give the Authenticated Users group delegated Read permissions to the Folder Redirection GPO - otherwise the GPO won't get applied to users, or if it's already applied, the GPO is removed, redirecting folders back to the local PC. For more info, see [Deploying Group Policy Security Update MS16-072](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/deploying-group-policy-security-update-ms16-072-kb3163622/ba-p/400434).
 
 ## Step 4: Configure folder redirection with Offline Files
 
@@ -123,7 +122,7 @@ After creating a GPO for Folder Redirection settings, edit the Group Policy sett
 
 > [!NOTE]
 > Offline Files is enabled by default for redirected folders on Windows client computers, and disabled on computers running Windows Server, unless changed by the user. To use Group Policy to control whether Offline Files is enabled, use the **Allow or disallow use of the Offline Files feature** policy setting.
-> For information about some of the other Offline Files Group Policy settings, see [Enable Advanced Offline Files Functionality](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>), and [Configuring Group Policy for Offline Files](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>).
+> For information about some of the other Offline Files Group Policy settings, see [Enable Advanced Offline Files Functionality](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>), and [Configuring Group Policy for Offline Files](</previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>).
 
 Here's how to configure Folder Redirection in Group Policy:
 
@@ -159,7 +158,7 @@ Here's how to test Folder Redirection:
 
 1. Sign in to a primary computer (if you enabled primary computer support) with a user account for which you have enabled Folder Redirection.
 2. If the user has previously signed in to the computer, open an elevated command prompt, and then type the following command to ensure that the latest Group Policy settings are applied to the client computer:
-    
+
     ```PowerShell
     gpupdate /force
     ```
@@ -193,6 +192,6 @@ The following table summarizes some of the most important changes to this topic.
 * [Folder Redirection, Offline Files, and Roaming User Profiles](folder-redirection-rup-overview.md)
 * [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 * [Enable Advanced Offline Files Functionality](enable-always-offline.md)
-* [Microsoft's Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
-* [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
-* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
+* [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
+* [Sideload Apps with DISM](</previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
+* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](/windows/win32/appxpkg/troubleshooting)

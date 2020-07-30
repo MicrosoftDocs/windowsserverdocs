@@ -1,12 +1,8 @@
 ---
-title: The progress Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: progress
+description: Reference article for progress, which displays progress while a command is running.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ce5e77b-e13f-4ac3-948d-31770a6c7e25
 author: coreyp-at-msft
@@ -15,11 +11,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# The progress Command
+# progress
 
-
-
-Displays progress while a command is being executed. You can use **/progress** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
+Displays progress while a command is running. You can use **/progress** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
 
 ## Syntax
 
@@ -31,5 +25,5 @@ WDSUTIL /progress <commands>
 
 To initialize the server and display progress, type:
 ```
-WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:"C:\RemoteInstall"
+WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:C:\RemoteInstall
 ```

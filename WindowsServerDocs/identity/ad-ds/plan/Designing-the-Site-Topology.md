@@ -1,7 +1,6 @@
 ---
 ms.assetid: eeb919de-e21e-48d8-8186-e42adec6933f
 title: Designing the Site Topology
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -28,7 +27,7 @@ Designing a site topology helps you efficiently route client queries and Active 
   
 -   Optimize the ability of client computers to locate the nearest resources, such as domain controllers and Distributed File System (DFS) servers. This helps to reduce network traffic over slow wide area network (WAN) links, improve logon and logoff processes, and speed up file download operations.  
   
-Before you begin to design your site topology, you must understand your physical network structure. In addition, you must first design your Active Directory logical structure, including the administrative hierarchy, forest plan, and domain plan for each forest. You must also complete your Domain Name System (DNS) infrastructure design for AD DS. For more information about designing your Active Directory logical structure and DNS infrastructure, see [Designing the Logical Structure for Windows Server 2008 AD DS](https://technet.microsoft.com/library/cc770806.aspx).  
+Before you begin to design your site topology, you must understand your physical network structure. In addition, you must first design your Active Directory logical structure, including the administrative hierarchy, forest plan, and domain plan for each forest. You must also complete your Domain Name System (DNS) infrastructure design for AD DS. For more information about designing your Active Directory logical structure and DNS infrastructure, see [Designing the Logical Structure for Windows Server 2008 AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770806(v=ws.10)).  
   
 After you complete your site topology design, you must verify that your domain controllers meet the hardware requirements for  Windows Server 2008 Standard ,  Windows Server 2008 Enterprise , and  Windows Server 2008 Datacenter .  
   
@@ -48,5 +47,3 @@ After you complete your site topology design, you must verify that your domain c
   
 -   [Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design](../../ad-ds/plan/Finding-Additional-Resources-for-Windows-Server-2008-Active-Directory-Site-Topology-Design.md)  
   
-
-

@@ -1,12 +1,8 @@
 ---
 title: shadow
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for shadow, which enables you to remotely control an active session of another user on a Remote Desktop Session Host server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f81d9717-6883-4e14-9508-4b2a87e48ea7 Lizap
 author: coreyp-at-msft
@@ -16,17 +12,18 @@ ms.date: 10/16/2017
 ---
 # shadow
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Enables you to remotely control an active session of another user on a Remote Desktop Session Host (rd Session Host) server.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to remotely control an active session of another user on a Remote Desktop Session Host server.
+
+
 
 ## Syntax
 ```
 shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 ```
 
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |\<SessionName>|Specifies the name of the session that you want to remotely control.|
@@ -44,7 +41,7 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   The console session can neither remotely control another session nor can it be remotely controlled by another session.
 -   When you want to end remote control (shadowing), press CTRL+\* (by using \* from the numeric keypad only).
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 -   To shadow session 93, type:
     ```
     shadow 93
@@ -54,6 +51,6 @@ shadow {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
     shadow ACCTG01
     ```
 
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[Remote Desktop Services &#40;Terminal Services&#41; Command Reference](remote-desktop-services-terminal-services-command-reference.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+[Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

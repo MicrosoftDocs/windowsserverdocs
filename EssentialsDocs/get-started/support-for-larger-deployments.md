@@ -1,12 +1,7 @@
 ---
 title: "Support for larger deployments"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97
 author: nnamuhcs
@@ -18,7 +13,7 @@ manager: dongill
 
 >Applies To: Windows Server 2016 Essentials
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The features described in this topic only work on Windows Server 2016 with the Essentials Experience role enabled, and not with the Windows Server 2016 Essentials SKU.
 
 
@@ -56,7 +51,7 @@ Windows Server 2016 Essentials supports 500 users and 500  devices. Making this 
 
 A screenshot showing the use of the Search feature of the Windows Server Essentials dashboard to search for the string "d5c". The results of this search include two files and folders and two users.
 
-> [!NOTE]  
+> [!NOTE]
 > While the supported user and device limit has increased for Windows Server Essentials Server role, the supported limit for client back-up remains at 75.
 
 See also

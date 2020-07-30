@@ -27,7 +27,7 @@ These repos are actively managed and includes the source for Windows Server cont
 
 ## Markdown info
 
-For info on how to use Markdown on Docs.microsoft.com topics, see [Docs markdown reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master). The publicly accessible version of this content is here: [Public Docs markdown reference](https://docs.microsoft.com/contribute/how-to-write-use-markdown).
+For info on how to use Markdown on Docs.microsoft.com topics, see [Docs markdown reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master). The publicly accessible version of this content is here: [Public Docs markdown reference](https://docs.microsoft.com/contribute/markdown-reference).
 
 ## License
 

@@ -1,12 +1,8 @@
 ---
 title: NTLM Overview
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-kerberos
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
 author: coreyp-at-msft
@@ -46,10 +42,10 @@ The following table lists relevant resources for NTLM and other Windows authenti
 
 |Content type|References|
 |--------|-------|
-|**Product evaluation**|[Introducing the Restriction of NTLM Authentication](https://technet.microsoft.com/library/dd560653.aspx)<br /><br />[Changes in NTLM Authentication](https://technet.microsoft.com/library/dd566199.aspx)|
-|**Planning**|[IT Infrastructure Threat Modeling Guide](https://technet.microsoft.com/library/dd941826.aspx)<br /><br />[Threats and Countermeasures: Security Settings in Windows Server 2003 and Windows XP](https://technet.microsoft.com/library/dd162275.aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 and Windows Vista](https://technet.microsoft.com/library/dd349791.aspx)<br /><br />[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 R2 and Windows 7](https://technet.microsoft.com/library/hh125921.aspx)|
-|**Deployment**|[Extended Protection for Authentication](https://support.microsoft.com/kb/968389)<br /><br />[Auditing and restricting NTLM usage guide](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)<br /><br />[Ask the Directory Services Team : NTLM Blocking and You: Application Analysis and Auditing Methodologies in Windows 7](https://blogs.technet.com/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)<br /><br />[Windows Authentication Blog](https://blogs.technet.com/authentication/)<br /><br />[Configuring MaxConcurrentAPI for NTLM pass\-through authentication](https://social.technet.microsoft.com/wiki/contents/articles/9759.configuring-maxconcurrentapi-for-ntlm-pass-through-authentication.aspx)|
-|**Development**|[Microsoft NTLM \(Windows\)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)<br /><br />[\[MS\-NLMP\]: NT LAN Manager \(NTLM\) Authentication Protocol Specification](https://msdn.microsoft.com/library/cc236621(PROT.10).aspx)<br /><br />[\[MS\-NNTP\]: NT LAN Manager \(NTLM\) Authentication: Network News Transfer Protocol \(NNTP\) Extension](https://msdn.microsoft.com/library/cc236774(PROT.10).aspx)<br /><br />[\[MS\-NTHT\]: NTLM Over HTTP Protocol Specification](https://msdn.microsoft.com/library/cc237488(PROT.10).aspx)|
+|**Product evaluation**|[Introducing the Restriction of NTLM Authentication](https://technet.microsoft.com/library/dd560653.aspx)<p>[Changes in NTLM Authentication](https://technet.microsoft.com/library/dd566199.aspx)|
+|**Planning**|[IT Infrastructure Threat Modeling Guide](https://technet.microsoft.com/library/dd941826.aspx)<p>[Threats and Countermeasures: Security Settings in Windows Server 2003 and Windows XP](https://technet.microsoft.com/library/dd162275.aspx)<p>[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 and Windows Vista](https://technet.microsoft.com/library/dd349791.aspx)<p>[Threats and Countermeasures Guide: Security Settings in Windows Server 2008 R2 and Windows 7](https://technet.microsoft.com/library/hh125921.aspx)|
+|**Deployment**|[Extended Protection for Authentication](https://support.microsoft.com/kb/968389)<p>[Auditing and restricting NTLM usage guide](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)<p>[Ask the Directory Services Team : NTLM Blocking and You: Application Analysis and Auditing Methodologies in Windows 7](https://blogs.technet.com/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)<p>[Windows Authentication Blog](https://blogs.technet.com/authentication/)<p>[Configuring MaxConcurrentAPI for NTLM pass-through authentication](https://support.microsoft.com/help/2688798/how-to-do-performance-tuning-for-ntlm-authentication-by-using-the-maxc)|
+|**Development**|[Microsoft NTLM \(Windows\)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)<p>[\[MS\-NLMP\]: NT LAN Manager \(NTLM\) Authentication Protocol Specification](https://msdn.microsoft.com/library/cc236621(PROT.10).aspx)<p>[\[MS\-NNTP\]: NT LAN Manager \(NTLM\) Authentication: Network News Transfer Protocol \(NNTP\) Extension](https://msdn.microsoft.com/library/cc236774(PROT.10).aspx)<p>[\[MS\-NTHT\]: NTLM Over HTTP Protocol Specification](https://msdn.microsoft.com/library/cc237488(PROT.10).aspx)|
 |**Troubleshooting**|Not yet available|
 |**Community resources**|[Is this horse dead yet: NTLM Bottlenecks and the RPC runtime](https://blogs.technet.com/b/askds/archive/2011/09/15/is-this-horse-dead-yet-ntlm-bottlenecks-and-the-rpc-runtime.aspx)|
 

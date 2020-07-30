@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getreplydata
-description: "Windows Commands topic for **bitsadmin getreplydata** - Retrieves the server's reply data in hexadecimal format."
-ms.custom: na
+description: Reference article for the bitsadmin getreplydata command, which retrieves the server's upload-reply data in hexadecimal format for the job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 819f97d5-b255-4b2d-9f63-0daa73915434
 author: coreyp-at-msft
@@ -17,33 +13,33 @@ ms.date: 10/16/2017
 
 # bitsadmin getreplydata
 
-Retrieves the server's reply data in hexadecimal format.
+Retrieves the server's upload-reply data in hexadecimal format for the job.
 
-**BITS 1.2 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.2 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /GetReplyData <Job>
+bitsadmin /getreplydata <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+## Examples
 
-Valid only for upload-reply jobs.
+To retrieve the upload-reply data for the job named *myDownloadJob*:
 
-## <a name="BKMK_examples"></a>Examples
-
-The following example retrieves the reply data for the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /GetReplyData myDownloadJob
+bitsadmin /getreplydata myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

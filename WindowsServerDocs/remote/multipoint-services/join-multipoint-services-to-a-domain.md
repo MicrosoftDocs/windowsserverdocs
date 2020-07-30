@@ -1,13 +1,9 @@
 ---
 title: Join MultiPoint Services to a domain (optional)
 Description: Provides the steps to join MultiPoint Services to your domain
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 623b7c21-dcbb-402e-8b5a-8e434cd225bd
 author: evaseydl
@@ -31,4 +27,4 @@ If you will access your MultiPoint Services computer over an Active Directory do
 5.  After the computer restarts, log on as Administrator and wait for MultiPoint Manager to open.  
   
 > [!IMPORTANT]  
-> To ensure that your MultiPoint Services domain deployment works correctly, you will need to configure a couple of group policies and update the Registry. For information, see [Configure group policies for a domain deployment](https://technet.microsoft.com/library/dn265982.aspx).  
+> To ensure that your MultiPoint Services domain deployment works correctly, you will need to configure a couple of group policies and update the Registry. For information, see [Configure group policies for a domain deployment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265982(v=ws.11)).  

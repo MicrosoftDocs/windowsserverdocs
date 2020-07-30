@@ -1,48 +1,48 @@
 ---
 title: Assign a mount point folder path to a drive.
-description: This article describes how to assign a mount point folder path (rather than a drive letter) to a drive. 
-keywords: virtualization, security, malware
-ms.date: 06/07/2019
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+description: This article describes how to assign a mount point folder path (rather than a drive letter) to a drive.
+ms.date: 06/07/2020
+ms.prod: windows-server
+ms.technology: storage
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
-# Assign a mount point folder path to a drive
+# Mount a drive in a folder
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can use Disk Management to assign a mount point folder path (rather than a drive letter) to the drive. Mount point folder paths are available only on empty folders on basic or dynamic NTFS volumes.
+You can use Disk Management to mount (make a drive accessible) in a folder rather than a drive letter if you want. This makes the drive appear as just another folder. You can mount drives only in empty folders on basic or dynamic NTFS volumes.
 
-## Assigning a mount point folder path to a drive
+## Mounting a drive in an empty folder
 
 > [!NOTE]
 > You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to complete these steps.
 
-#### To assign a mount point folder path to a drive by using the Windows interface
+### To mount a drive in an empty folder by using the Windows interface
 
-1.  In Disk Manager, right-click the partition or volume where you want to assign the mount point folder path. 
-2. Click **Change Drive Letter and Paths** and then click **Add**. 
+1.  In Disk Manager, right-click the partition or volume that has the folder in which you want to mount the drive.
+2. Click **Change Drive Letter and Paths** and then click **Add**.
 3. Click **Mount in the following empty NTFS folder**.
 4. Type the path to an empty folder on an NTFS volume, or click **Browse** to locate it.
 
-#### To assign a mount point folder path to a drive using a command line
+### To mount a drive in an empty folder using a command line
 
 1.  Open a command prompt and type `diskpart`.
 
 2.  At the **DISKPART** prompt, type `list volume`, making note of the volume number you want to assign the path to.
 
-3.  At the **DISKPART** prompt, type `select volume <volumenumber>`. 
-
-4. Select the simple volume *volumenumber* that you want to assign the path to.
+3.  At the **DISKPART** prompt, type `select volume <volumenumber>`, specifying the volume number that you want to assign the path to.
 
 5.  At the **DISKPART** prompt, type `assign [mount=<path>]`.
 
-#### To remove a mount point folder path to a drive
+### To remove a mount point
 
--   To remove the mount point folder path, click it and then click **Remove**.
+To remove the mount point so that the drive is no longer accessible via a folder:
+
+1. Select and hold (or right-click) the drive mounted to a folder, and then select **Change Drive Letters and Paths**.
+2. Select the folder from the list, and then select **Remove**.
 
 | Value | Description |
 | --- | --- |
@@ -59,7 +59,5 @@ You can use Disk Management to assign a mount point folder path (rather than a d
 -   When assigning a mount point folder path to a drive, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors would be listed as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
 -   You can also create a mounted drive using the [mountvol](https://go.microsoft.com/fwlink/?linkid=64111) command.
 
-## See also
--   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
-
-
+## Additional References
+-   [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))

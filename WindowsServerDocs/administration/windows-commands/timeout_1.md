@@ -1,15 +1,10 @@
 ---
 title: timeout
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for timeout, which pauses the command processor for the specified number of seconds.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e26b4a84-0e30-46e1-aa10-0667b7d3cb4c
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -18,19 +13,17 @@ ms.date: 10/16/2017
 
 # timeout
 
-
-
 Pauses the command processor for the specified number of seconds.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
 ```
-timeout /t <TimeoutInSeconds> [/nobreak] 
+timeout /t <TimeoutInSeconds> [/nobreak]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,7 +37,7 @@ timeout /t <TimeoutInSeconds> [/nobreak]
 -   A user keystroke resumes the command processor execution immediately, even if the timeout period has not expired.
 -   When used in conjunction with the **sleep** command, **timeout** is similar to the **pause** command.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To pause the command processor for ten seconds, type:
 ```
@@ -59,6 +52,6 @@ To pause the command processor indefinitely until a key is pressed, type:
 timeout /t -1
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

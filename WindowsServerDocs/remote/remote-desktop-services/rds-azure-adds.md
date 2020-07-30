@@ -1,14 +1,10 @@
 ---
 title: Azure AD Domain Services and Remote Desktop Services
 description: Learn how to integrate Azure AD Domain Services into your RDS deployment.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 10/02/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 author: christianmontoya
 ms.localizationpriority: medium

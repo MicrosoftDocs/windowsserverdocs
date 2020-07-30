@@ -1,12 +1,7 @@
 ---
 title: "Azure Site Recovery Services integration"
 description: "Describes how to use Windows Server Essentials"
-ms.custom: na
 ms.date: 10/01/2016
-ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 262701a6-8a97-4c4e-bfbf-9f8007c308d6
 author: nnamuhcs
@@ -38,7 +33,7 @@ After subscription and region selection, a new tab will appear in the **Windows 
 
 ### Enabling guest virtual machines for protection
 
-Upon selection of a virtual machine present in the Azure Recovery window, you can click **Enable Replication to Azure** on the right side of the dashboard to prepare and copy the virtual machine ™s image to Azure:
+Upon selection of a virtual machine present in the Azure Recovery window, you can click **Enable Replication to Azure** on the right side of the dashboard to prepare and copy the virtual machine &trade;s image to Azure:
 
 ![A screenshot showing the Enable Replication To Azure dialog. A progress bar is displayed as a host is being added.](media/azure-site-recovery-5.PNG)
 

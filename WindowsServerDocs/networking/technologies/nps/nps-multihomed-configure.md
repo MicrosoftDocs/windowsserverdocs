@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d9d9e9ac-4859-4522-89ed-a23092c9e12a
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Configure NPS on a Multihomed Computer

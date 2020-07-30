@@ -7,8 +7,8 @@ ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 ms.localizationpriority: medium 
 ms.date: 06/11/2018
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ---
 # Troubleshoot Always On VPN 
 
@@ -30,7 +30,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
     - If you know which tunnel to use for your deployment, set the type of VPN to that particular tunnel type on the VPN client side.
 
-    - By making a VPN connection with a particular tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, “GRE blocked for PPTP”).
+    - By making a VPN connection with a particular tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, "GRE blocked for PPTP").
 
     - This error also occurs when the VPN server cannot be reached or the tunnel connection fails.
 
@@ -108,7 +108,7 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 
 The application logs on client computers record most of the higher-level details of VPN connection events.
 
-Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://msdn.microsoft.com/library/windows/desktop/bb530704.aspx).
+Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](/previous-versions//mt728163(v=technet.10)).
 
 ## NPS logs
 
@@ -122,7 +122,7 @@ ComputerName,ServiceName,Record-Date,Record-Time,Packet-Type,User-Name,Fully-Qua
 
 If you paste this heading row as the first line of the log file, then import the file into Microsoft Excel, the columns will be properly labeled.
 
-The NPS logs can be helpful in diagnosing policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](https://technet.microsoft.com/library/cc771748.aspx).
+The NPS logs can be helpful in diagnosing policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771748(v=ws.10)).
 
 ## VPN_Profile.ps1 script issues
 

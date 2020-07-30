@@ -1,14 +1,12 @@
 ---
 ms.assetid: 96b9f4e6-f01c-4517-8299-017d187d447e
 title: Create a Rule to Send an Authentication Method Claim
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -287,9 +285,9 @@ Depending on the requirements of your organization, use one of the following pro
 ## Additional references 
 [Configure Claim Rules](Configure-Claim-Rules.md)  
 
-[Checklist: Creating Claim Rules for a Relying Party Trust](https://technet.microsoft.com/library/ee913578.aspx)  
+[Checklist: Creating Claim Rules for a Relying Party Trust](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913578(v=ws.11))  
 
-[Checklist: Creating Claim Rules for a Claims Provider Trust](https://technet.microsoft.com/library/ee913564.aspx)  
+[Checklist: Creating Claim Rules for a Claims Provider Trust](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913564(v=ws.11))  
 
 [When to Use an Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

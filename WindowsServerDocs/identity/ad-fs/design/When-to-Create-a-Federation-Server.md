@@ -1,14 +1,12 @@
 ---
 ms.assetid: 824005ae-c3c1-459b-9baa-1660158918ab
 title: When to Create a Federation Server
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

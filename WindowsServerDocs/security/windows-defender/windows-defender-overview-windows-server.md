@@ -1,12 +1,8 @@
 ---
 title: Windows Defender Overview for Windows Server 
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-windows-defender
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
 author: coreyp-at-msft

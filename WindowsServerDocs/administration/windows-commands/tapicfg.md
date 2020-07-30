@@ -1,12 +1,12 @@
 ---
 title: tapicfg
 description: Learn how to manage a TAPI application directory partition.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: c0e642ce-5d98-4edb-9a65-1dff09aef4e1
 author: coreyp-at-msft
@@ -16,9 +16,9 @@ ms.date: 07/11/2018
 ---
 # tapicfg
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Creates, removes, or displays a TAPI application directory partition, or sets a default TAPI application directory partition. TAPI 3.1 clients can use the information in this application directory partition with the directory service locator service to find and communicate with TAPI directories.You can also use **tapicfg** to create or remove service connection points, which enable TAPI clients to efficiently locate TAPI application directory partitions in a domain. For more information, see remarks. To view the command syntax, click a command. 
+Creates, removes, or displays a TAPI application directory partition, or sets a default TAPI application directory partition. TAPI 3.1 clients can use the information in this application directory partition with the directory service locator service to find and communicate with TAPI directories.You can also use **tapicfg** to create or remove service connection points, which enable TAPI clients to efficiently locate TAPI application directory partitions in a domain. For more information, see remarks. To view the command syntax, click a command.
 -   [tapicfg install](#BKMK_install)
 -   [tapicfg remove](#BKMK_remove)
 -   [tapicfg publishscp](#BKMK_publishscp)
@@ -33,12 +33,12 @@ Creates a TAPI application directory partition.
 ```
 tapicfg install /directory:<PartitionName> [/server:<DCName>] [/forcedefault]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |install /directory:\<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition to be created. This name must be a fully qualified domain name.|
 |/server: \<DCName>|Specifies the DNS name of the domain controller on which the TAPI application directory partition is created. If the domain controller name is not specified, the name of the local computer is used.|
-|/forcedefault|Specifies that this directory is the default TAPI application directory partition for the domain. There can be multiple TAPI application directory partitions in a domain.<br /><br />if this directory is the first TAPI application directory partition created on the domain, it is automatically set as the default, regardless of whether you use the **/forcedefault** option.|
+|/forcedefault|Specifies that this directory is the default TAPI application directory partition for the domain. There can be multiple TAPI application directory partitions in a domain.<p>if this directory is the first TAPI application directory partition created on the domain, it is automatically set as the default, regardless of whether you use the **/forcedefault** option.|
 |/?|Displays help at the command prompt.|
 
 ## <a name="BKMK_remove"></a>tapicfg remove
@@ -48,7 +48,7 @@ Removes a TAPI application directory partition.
 ```
 tapicfg remove /directory:<PartitionName>
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |remove /directory:\<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition to be removed. Note that this name must be a fully qualified domain name.|
@@ -61,7 +61,7 @@ Creates a service connection point to publish a TAPI application directory parti
 ```
 tapicfg publishscp /directory:<PartitionName> [/domain:<DomainName>] [/forcedefault]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |publishscp /directory:\<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition that the service connection point will publish.|
@@ -76,7 +76,7 @@ Removes a service connection point for a TAPI application directory partition.
 ```
 tapicfg removescp /directory:<PartitionName> [/domain:<DomainName>]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |removescp /directory:\<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition for which a service connection point is removed.|
@@ -90,7 +90,7 @@ Displays the names and locations of the TAPI application directory partitions in
 ```
 tapicfg show [/defaultonly][ /domain:<DomainName>]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/defaultonly|Displays the names and locations of only the default TAPI application directory partition in the domain.|
@@ -102,9 +102,9 @@ Sets the default TAPI application directory partition for the domain.
 
 ### Syntax
 ```
-tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]  
+tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]
 ```
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |makedefault /directory:\<PartitionName>|Required. Specifies the DNS name of the TAPI application directory partition set as the default partition for the domain. Note that this name must be a fully qualified domain name. Specifies the DNS name of the domain for which the TAPI application directory partition is set as the default. If the domain name is not specified, the name of the local domain is used.|
@@ -130,5 +130,5 @@ To display the name of the default TAPI application directory partition for the 
 ```
 tapicfg show /defaultonly
 ```
-## Additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

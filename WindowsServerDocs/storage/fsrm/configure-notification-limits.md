@@ -1,6 +1,6 @@
 ---
 title: Configure Notification Limits
-description: This article describes how to add time limits to various notification types 
+description: This article describes how to add time limits to various notification types
 ms.date: 7/7/2017
 ms.prod: windows-server
 ms.technology: storage
@@ -33,9 +33,9 @@ A default 60-minute limit is set for each notification type, but you can change 
 3.  Click **OK**.
 
 > [!Note]
-> To customize time limits that are associated with notifications for a specific quota or file screen, you can use the File Server Resource Manager command-line tools **Dirquota.exe** and **Filescrn.exe**, or use the [File Server Resource Manager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager) cmdlets.
+> To customize time limits that are associated with notifications for a specific quota or file screen, you can use the File Server Resource Manager command-line tools **Dirquota.exe** and **Filescrn.exe**, or use the [File Server Resource Manager](/powershell/module/fileserverresourcemanager/?view=win10-ps) cmdlets.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Command-Line Tools](command-line-tools.md)

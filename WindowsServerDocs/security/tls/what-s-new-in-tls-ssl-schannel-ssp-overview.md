@@ -1,17 +1,13 @@
 ---
 title:  TLS - SSL (Schannel SSP) Overview
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
 author: justinha
 ms.author: justinha
-manager: brianlic-msft
+manager: brianlic
 ms.date: 05/16/2018
 ---
 # Overview of TLS - SSL (Schannel SSP)
@@ -65,6 +61,10 @@ In Windows Server 2012 and Windows 8, changes were made to the underlying authen
 -   The behavior to send the Trusted Issuer List by default is off: Default value of the SendTrustedIssuerList registry key is now 0 (off by default) instead of 1.
 
 -   Compatibility to previous versions of Windows operating systems is preserved.
+
+> [!NOTE]
+> If System Mapper is enabled by the client application and you have configured `SendTrustedIssuers`, that system mapper will add `CN=NT Authority` to the issuers list.
+
 
 **What value does this add?**
 
@@ -141,8 +141,5 @@ Applications that use DTLS over UDP can use the SSPI model in Windows Server 201
 ### <a name="BKMK_Deprecated"></a>Deprecated functionality
 In the Schannel SSP for Windows Server 2012 and Windows 8, there are no deprecated features or functionality.
 
-## See also
--   [Private Cloud Security Model - Wrapper Functionality](https://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)
-
-
-
+## Additional References
+-   [Private Cloud Security Model - Wrapper Functionality](https://docs.microsoft.com/archive/blogs/cloudsolutions/cloud-services-foundation-reference-architecture-overview)

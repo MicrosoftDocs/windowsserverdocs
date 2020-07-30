@@ -7,13 +7,16 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/07/2019
+ms.date: 03/10/2020
 ---
 
 # Extending volumes in Storage Spaces Direct
 > Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides instructions for resizing volumes on a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster by using Windows Admin Center.
+
+> [!WARNING]
+> **Not supported: resizing the underlying storage used by Storage Spaces Direct.** If you are running Storage Spaces Direct in a virtualized storage environment, including in Azure, resizing or changing the characteristics of the storage devices used by the virtual machines isn't supported and will cause data to become inaccessible. Instead, follow the instructions in the [Add servers or drives](add-nodes.md) section to add additional capacity before extending volumes.
 
 Watch a quick video on how to resize a volume.
 
@@ -56,7 +59,7 @@ To follow associations between objects in the stack, pipe one **Get-** cmdlet in
 For example, here's how to get from a virtual disk up to its volume:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
+Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume
 ```
 
 ### Step 1 – Resize the virtual disk
@@ -66,7 +69,7 @@ The virtual disk may use storage tiers, or not, depending on how it was created.
 To check, run the following cmdlet:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-StorageTier 
+Get-VirtualDisk <FriendlyName> | Get-StorageTier
 ```
 
 If the cmdlet returns nothing, the virtual disk doesn't use storage tiers.
@@ -121,7 +124,7 @@ $VirtualDisk = Get-VirtualDisk <FriendlyName>
 # Get its partition
 $Partition = $VirtualDisk | Get-Disk | Get-Partition | Where PartitionNumber -Eq 2
 
-# Resize to its maximum supported size 
+# Resize to its maximum supported size
 $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).SizeMax
 ```
 
@@ -134,7 +137,7 @@ That's it!
 > [!TIP]
 > You can verify the volume has the new size by running **Get-Volume**.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)

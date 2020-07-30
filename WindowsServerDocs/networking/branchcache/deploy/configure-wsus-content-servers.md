@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 9724aa8d-e4ae-404c-bee6-cef1534cd3ca
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Configure Windows Server Update Services (WSUS) Content Servers
 

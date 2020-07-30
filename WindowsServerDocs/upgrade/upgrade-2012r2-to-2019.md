@@ -1,7 +1,7 @@
 ---
 title: Upgrade Windows Server 2012 R2 to Windows Server 2019 | Microsoft Docs
 description: Learn how to perform an in-place upgrade to go from Windows Server 2012 R2 to Windows Server 2019. 
-ms.prod: windows server
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman

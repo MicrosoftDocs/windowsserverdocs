@@ -1,6 +1,5 @@
 ---
 title: Single log-out for OpenID Connect with AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila

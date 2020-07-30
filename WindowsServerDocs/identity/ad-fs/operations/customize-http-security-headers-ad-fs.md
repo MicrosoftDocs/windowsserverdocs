@@ -85,7 +85,7 @@ This HTTP security response header is used to communicate to the browser whether
  
 - **deny** – The page in a frame will not be displayed. This is the default and recommended setting.  
 - **sameorigin** – The page will only be displayed in the frame if the origin is the same as the origin of the web page. The option is not very useful unless all ancestors are also in the same origin.  
-- **allow-from <specified origin>** - The page will only be displayed in the frame if the origin (eg, https://www.".com) matches the specific origin in the header. 
+- **allow-from <specified origin>** - The page will only be displayed in the frame if the origin (eg, https://www.".com) matches the specific origin in the header. This may be supported by limited browsers.
 
 #### X-Frame-Options Customization  
 By default, header will be set to deny; however, admins can modify the value through the `Set-AdfsResponseHeaders` cmdlet.  

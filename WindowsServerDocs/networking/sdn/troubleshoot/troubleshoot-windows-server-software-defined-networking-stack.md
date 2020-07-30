@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot the Windows Server Software Defined Networking Stack
 description: This Windows Server guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
-manager: ravirao
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
-ms.author: pashort
-author: JMesser81
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/14/2018
 
 ---
@@ -524,7 +524,7 @@ Checking if physical nics support jumbo packets on host
 Physical Nic  <NIC> Ethernet Adapter #2 can support SDN traffic. Encapoverhead value set on the nic is  160
 Cannot send jumbo packets to the destination. Physical switch ports may not be configured to support jumbo packets.
 
-# TODO: Success Results aftering updating MTU on physical switch ports
+
 ```
 
 *Remediation*

@@ -1,14 +1,13 @@
 ---
 title: Windows Server 2016 should be configured with the recommended amount of memory
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 7860e609-d278-42a3-85a4-ca92c8b6b2ad
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows Server 2016 should be configured with the recommended amount of memory

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
 title: AD FS Rapid Restore Tool
-description:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 07/02/2019
+ms.date: 04/24/2019
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
@@ -21,16 +19,19 @@ The new AD FS Rapid Restore tool provides a way to restore AD FS data without re
 The AD FS Rapid Restore tool can be used in the following scenarios:
 
 1. Quickly restore AD FS functionality after a problem
-	- Use the tool to create a cold standby installation of AD FS that can be quickly deployed in place of the online AD FS server
+    - Use the tool to create a cold standby installation of AD FS that can be quickly deployed in place of the online AD FS server
 2. Deploy identical test and production environments
-	- Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
+    - Use the tool to quickly create an accurate copy of the production AD FS in a test environment, or to quickly deploy a validated test configuration to production
+3. Migrate from a SQL based configuration to WID and vice versa
+    - Use the tool to move from a SQL based farm configuration to WID or vice versa. 
+
 
 >[!NOTE] 
 >If you are using SQL Merge Replication or Always on Availablity Groups, the Rapid Restore tool is not supported. We recommend using SQL based backups and a backup of the SSL certificate as an alternative.
 
 ## What is backed up
 The tool backs up the following AD FS configuration
-	
+    
 - AD FS configuration database (SQL or WID)
 - Configuration file (located in AD FS folder)
 - Automatically generated token signing and decrypting certificates and private keys (from the Active Directory DKM container)
@@ -63,7 +64,7 @@ To backup the Active Directory DKM container (required in the default AD FS conf
 
 The backup will be named according to the pattern "adfsBackup_ID_Date-Time". It will contain the version number, date and time that the backup was done.
 The cmdlet takes the following parameters:
-	
+    
 Parameter Sets
 
 ![AD FS Rapid Restore Tool](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
@@ -115,7 +116,7 @@ Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorage
 
 ### Backup the AD FS configuration without the DKM to the File System
 
-```powershell 	
+```powershell     
 Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
 ```
 
@@ -219,10 +220,21 @@ Every time a backup or restore is performed a log file is created. These can be 
 
 ## Version Release History
 
+### Version 1.0.82.3
+Release: April 2020
+
+**Fixed issues:**
+
+
+- Added support for CNG based certificates
+
+
 ### Version 1.0.82.0
 Release: July 2019
 
 **Fixed issues:**
+
+
 - Bug fix for AD FS service account names that contain LDAP escape characters
 
 
@@ -247,10 +259,10 @@ Release: August 2018
 
 **Fixed issues:**
 * Update the encryption algorithms so that the application is FIPS compliant
-	
-	>[!NOTE]
-	> Old backups will not work with the new version due to changes in encryption algorithms as per FIPS compliance
-	
+    
+    >[!NOTE]
+    > Old backups will not work with the new version due to changes in encryption algorithms as per FIPS compliance
+    
 * Add support for SQL clusters that use merge replication
 
 ### Version: 1.0.72.0
@@ -265,7 +277,7 @@ Release: July 2018
 
 **Fixed issues:**
 
-   - Bug fix: handle service account passwords that have special characters in them (ie, ‘&')
+   - Bug fix: handle service account passwords that have special characters in them (ie, '&')
    - Bug fix: restoration fails because Microsoft.IdentityServer.Servicehost.exe.config is being used by another process
 
 

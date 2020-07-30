@@ -1,14 +1,13 @@
 ---
 title: Avoid using VHD-format differencing virtual hard disks on virtual machines that run server workloads in a production environment
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 272de33d-2708-4679-8564-ee28848a2839
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Avoid using VHD-format differencing virtual hard disks on virtual machines that run server workloads in a production environment

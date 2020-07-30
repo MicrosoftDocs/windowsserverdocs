@@ -1,13 +1,11 @@
 ---
 ms.assetid: a2f23877-30a7-439f-817d-387da9e00e86
 title: Configure a Computer for the Federation Server Proxy Role
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

@@ -1,14 +1,10 @@
 ---
 title: Create virtual machines for Remote Desktop
 description: Create VMs to host Remote Desktop components in the cloud.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b0f62d6f-0915-44ca-afef-be44a922e20e
 author: lizap
@@ -22,9 +18,9 @@ Use the following steps to create the virtual machines in the tenant's environme
   
 For this example of a basic deployment, the minimum of 3 virtual machines will be created. One virtual machine will host the Remote Desktop (RD) Connection Broker and License Server role services and a file share for the deployment. A second virtual machine will host the RD Gateway and Web Access role services.  A third virtual machine host the RD Session Host role service. For very small deployments, you can reduce VM costs by using AAD App Proxy to eliminate all public endpoints from the deployment and combining all the role services onto a single VM. For larger deployments, you can install the various role services on individual virtual machines to allow better scaling.  
   
-This section outlines the steps necessary to deploy virtual machines for each role based on Windows Server images in the [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/). If you need to create virtual machines from a custom image, which requires PowerShell, check out [Create a Windows VM with Resource Manager and PowerShell](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-ps-create/). Then return here to attach Azure data disks for the file share and enter an external URL for your deployment.  
+This section outlines the steps necessary to deploy virtual machines for each role based on Windows Server images in the [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/). If you need to create virtual machines from a custom image, which requires PowerShell, check out [Create a Windows VM with Resource Manager and PowerShell](/azure/virtual-machines/windows/quick-create-powershell). Then return here to attach Azure data disks for the file share and enter an external URL for your deployment.  
   
-1. [Create Windows virtual machines](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/) to host the RD Connection Broker, RD License Server, and File server.  
+1. [Create Windows virtual machines](/azure/virtual-machines/windows/quick-create-portal) to host the RD Connection Broker, RD License Server, and File server.  
   
    For our purpose, we used the following naming conventions:  
    - RD Connection Broker, License Server, and File Server:   
@@ -77,4 +73,3 @@ This section outlines the steps necessary to deploy virtual machines for each ro
 5. Enter an external URL/DNS name for your deployment to access it externally:  
    1.  In the Azure portal, click **Browse > Resource groups**, click the resource group for the deployment, and then click the public IP address you created for RD Web Access and RD Gateway.  
    2.  Click **Configuration**, enter a DNS name label (like contoso), and then click **Save**. This DNS name label (contoso.westus.cloudapp.azure.com) is the DNS name that you'll use to connect to your RD Web Access and RD Gateway server.  
-

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 3647b7e3-54a4-46c6-ab68-82fcf3bfacda
 title: Active Directory Forest-Wide Updates
-description: 
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 10/29/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Forest-Wide Updates
@@ -17,9 +15,9 @@ ms.technology: identity-adds
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2019.
 
-Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
+Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
-For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](https://msdn.microsoft.com/library/aa374928(VS.85).aspx). For more information about how to interpret the security ID (SID) strings, see [SID strings](https://msdn.microsoft.com/library/aa379602(VS.85).aspx).
+For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](/windows/win32/secauthz/ace-strings). For more information about how to interpret the security ID (SID) strings, see [SID strings](/windows/win32/secauthz/sid-strings).
 
 ## Windows Server 2016: Forest-wide updates
 
@@ -57,8 +55,8 @@ After the operations that are performed by the **forestprep** command in Windows
 |**Operation 85**: {2972d92d-a07a-44ac-9cb0-bf243356f345}|Created a new object CN=Claim Types,CN=Claims Configuration,CN=Services in the Configuration partition.|-   objectClass: msDS-ClaimTypes<br />-   showInAdvancedViewOnly: True|(A;;RPLCLORC;;;AU)<br />(A;;RPWPCRLCLOCCDCRCWDWOSW;;;EA)<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY)|
 |**Operation 86**: {09a49cb3-6c54-4b83-ab20-8370838ba149}|Created a new object CN=Resource Properties,CN=Claims Configuration,CN=Services in the Configuration partition.|-   objectClass: msDS-ResourceProperties<br />-   showInAdvancedViewOnly: True|(A;;RPLCLORC;;;AU)<br />(A;;RPWPCRLCLOCCDCRCWDWOSW;;;EA)<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY)|
 |**Operation 87**: {77283e65-ce02-4dc3-8c1e-bf99b22527c2}|Created a new container CN=Resource Property Lists,CN=Claims Configuration,CN=Services in the Configuration partition.|-   objectClass: container<br />-   showInAdvancedViewOnly: True|(A;;RPLCLORC;;;AU)<br />(A;;RPWPCRLCLOCCDCRCWDWOSW;;;EA)<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY)|
-|**Operation 88**: {0afb7f53-96bd-404b-a659-89e65c269420}|Created a new object CN=Sam-Domain in the Schema partition.|N/A|Created the following access control entry (ACE) to grant Write Property to Principal Self on the object:<br /><br />(OA;CIIO;WP;ea1b7b93-5e48-46d5-bc6c-4df4fda78a35;bf967a86-0de6-11d0-a285-00aa003049e2;PS)|
-|**Operation 89**: {c7f717ef-fdbe-4b4b-8dfc-fa8b839fbcfa}|Created a new object CN=Domain-DNS in the Schema partition.|N/A|Created the following access control entry (ACE) to grant Write Property to Principal Self on the object:<br /><br />(OA;CIIO;WP;ea1b7b93-5e48-46d5-bc6c-4df4fda78a35;bf967a86-0de6-11d0-a285-00aa003049e2;PS)|
+|**Operation 88**: {0afb7f53-96bd-404b-a659-89e65c269420}|Created a new object CN=Sam-Domain in the Schema partition.|N/A|Created the following access control entry (ACE) to grant Write Property to Principal Self on the object:<p>(OA;CIIO;WP;ea1b7b93-5e48-46d5-bc6c-4df4fda78a35;bf967a86-0de6-11d0-a285-00aa003049e2;PS)|
+|**Operation 89**: {c7f717ef-fdbe-4b4b-8dfc-fa8b839fbcfa}|Created a new object CN=Domain-DNS in the Schema partition.|N/A|Created the following access control entry (ACE) to grant Write Property to Principal Self on the object:<p>(OA;CIIO;WP;ea1b7b93-5e48-46d5-bc6c-4df4fda78a35;bf967a86-0de6-11d0-a285-00aa003049e2;PS)|
 |**Operation 90**: {00232167-f3a4-43c6-b503-9acb7a81b01c}|Call back function to upgrade display specifiers.|N/A|N/A|
 |**Operation 91**: {73a9515b-511c-44d2-822b-444a33d3bd33}|Created a new container CN=Microsoft SPP,CN=Services in the Configuration partition.|-   objectClass: container<br />-   showInAdvancedViewOnly: True|(A;;RPLCLORC;;;AU)<br />(A;;RPWPCRLCLOCCRCWDWOSW;;;EA)<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY)|
 |**Operation 92**: {e0c60003-2ed7-4fd3-8659-7655a7e79397}|Created a new Activation Objects container CN=Activation Objects,CN=Microsoft SPP,CN=Services in the Configuration partition.|-   objectClass: msSPP-ActivationObjectsContainer<br />-   showInAdvancedViewOnly: True|(A;;RPLCLORC;;;AU)<br />(A;;RPWPCRLCLOCCRCWDWOSW;;;EA)<br />(A;;RPWPCRLCLOCCDCRCWDWOSDDTSW;;;SY)|

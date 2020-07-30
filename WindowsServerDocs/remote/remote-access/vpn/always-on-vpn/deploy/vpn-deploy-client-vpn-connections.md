@@ -7,8 +7,8 @@ ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.reviewer: deverette
 ---
 # Step 6. Configure Windows 10 client Always On VPN connections
@@ -35,7 +35,7 @@ You use ProfileXML in all the delivery methods this deployment describes, includ
 
 - **Windows Management Instrumentation (WMI)-to-CSP bridge**. The second method of configuring the ProfileXML CSP node is to use the WMI-to-CSP bridge—a WMI class called **MDM_VPNv2_01**—that can access the VPNv2 CSP and the ProfileXML node. When you create a new instance of that WMI  class, WMI uses the CSP to create the VPN profile when using Windows PowerShell and Configuration Manager.
 
-Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-profile-xsd).
+Even though these configuration methods differ, both require a properly formatted XML VPN profile. To use the ProfileXML VPNv2 CSP setting, you construct XML by using the ProfileXML schema to configure the tags necessary for the simple deployment scenario. For more information, see [ProfileXML XSD](/windows/client-management/mdm/vpnv2-profile-xsd).
 
 Below you find each of the required settings and its corresponding ProfileXML tag. You configure each setting in a specific tag within the ProfileXML schema, and not all of them are found under the native profile. For additional tag placement, see the ProfileXML schema.
 
@@ -94,7 +94,7 @@ ProfileXML elements:
 
 You can use simple tags to configure some VPN authentication mechanisms. However, EAP and PEAP are more involved. The easiest way to create the XML markup is to configure a VPN client with its EAP settings, and then export that configuration to XML.
 
-For more information about EAP settings, see [EAP configuration](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/eap-configuration).
+For more information about EAP settings, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
 ## Manually create a template connection profile
 
@@ -171,7 +171,7 @@ However, if you haven't restarted the computer since configuring certificate aut
     a. In the **Connect to these servers** box, type the name of the NPS server that you retrieved from the NPS server authentication settings earlier in this section (for example, NPS01).
 
     >[!NOTE]
-    >The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that “The connection was prevented because of a policy configured on your RAS/VPN server.”
+    >The server name you type must match the name in the certificate. You recovered this name earlier in this section. If the name does not match, the connection will fail, stating that "The connection was prevented because of a policy configured on your RAS/VPN server."
 
     b.  Under Trusted Root Certification Authorities, select the root CA that issued the NPS server's certificate (for example, contoso-CA).
 
@@ -232,7 +232,7 @@ Use the **VPN_Profile.ps1** script in Windows PowerShell or Microsoft Endpoint C
 >[!NOTE]
 >To view the full example script, see the section [MakeProfile.ps1 Full Script](#makeprofileps1-full-script).
 
-#### Parameters
+##### Parameters
 
 Configure the following parameters:
 
@@ -258,7 +258,7 @@ The following are example values for parameters used in the commands below. Ensu
 
 ```xml
 $TemplateName = 'Template'
-$ProfileName = 'Contoso AlwaysOn VPN'
+$ProfileName = 'Contoso%20AlwaysOn%20VPN'
 $Servers = 'vpn.contoso.com'
 $DnsSuffix = 'corp.contoso.com'
 $DomainName = '.corp.contoso.com'
@@ -390,12 +390,12 @@ try
     $InstanceId = $deleteInstance.InstanceID
     if ("$InstanceId" -eq "$ProfileNameEscaped")
     {
-    	$session.DeleteInstance($namespaceName, $deleteInstance, $options)
-    	$Message = "Removed $ProfileName profile $InstanceId"
-    	Write-Host "$Message"
+        $session.DeleteInstance($namespaceName, $deleteInstance, $options)
+        $Message = "Removed $ProfileName profile $InstanceId"
+        Write-Host "$Message"
     } else {
-    	$Message = "Ignoring existing VPN profile $InstanceId"
-    	Write-Host "$Message"
+        $Message = "Ignoring existing VPN profile $InstanceId"
+        Write-Host "$Message"
     }
   }
 }
@@ -543,47 +543,47 @@ The following example script includes all of the code examples from previous sec
  
       try
       {
- 	`$deleteInstances = `$session.EnumerateInstances(`$namespaceName, `$className, `$options)
- 	foreach (`$deleteInstance in `$deleteInstances)
- 	{
- 		`$InstanceId = `$deleteInstance.InstanceID
- 		if (`"`$InstanceId`" -eq `"`$ProfileNameEscaped`")
- 		{
- 			`$session.DeleteInstance(`$namespaceName, `$deleteInstance, `$options)
- 			`$Message = `"Removed `$ProfileName profile `$InstanceId`"
- 			Write-Host `"`$Message`"
- 		} else {
- 			`$Message = `"Ignoring existing VPN profile `$InstanceId`"
- 			Write-Host `"`$Message`"
- 		}
- 	}
+     `$deleteInstances = `$session.EnumerateInstances(`$namespaceName, `$className, `$options)
+     foreach (`$deleteInstance in `$deleteInstances)
+     {
+         `$InstanceId = `$deleteInstance.InstanceID
+         if (`"`$InstanceId`" -eq `"`$ProfileNameEscaped`")
+         {
+             `$session.DeleteInstance(`$namespaceName, `$deleteInstance, `$options)
+             `$Message = `"Removed `$ProfileName profile `$InstanceId`"
+             Write-Host `"`$Message`"
+         } else {
+             `$Message = `"Ignoring existing VPN profile `$InstanceId`"
+             Write-Host `"`$Message`"
+         }
+     }
       }
       catch [Exception]
       {
- 	`$Message = `"Unable to remove existing outdated instance(s) of `$ProfileName profile: `$_`"
- 	Write-Host `"`$Message`"
- 	exit
+     `$Message = `"Unable to remove existing outdated instance(s) of `$ProfileName profile: `$_`"
+     Write-Host `"`$Message`"
+     exit
       }
  
       try
       {
- 	`$newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance `$className, `$namespaceName
- 	`$property = [Microsoft.Management.Infrastructure.CimProperty]::Create(`"ParentID`", `"`$nodeCSPURI`", `"String`", `"Key`")
- 	`$newInstance.CimInstanceProperties.Add(`$property)
- 	`$property = [Microsoft.Management.Infrastructure.CimProperty]::Create(`"InstanceID`", `"`$ProfileNameEscaped`", `"String`",      `"Key`")
- 	`$newInstance.CimInstanceProperties.Add(`$property)
- 	`$property = [Microsoft.Management.Infrastructure.CimProperty]::Create(`"ProfileXML`", `"`$ProfileXML`", `"String`", `"Property`")
- 	`$newInstance.CimInstanceProperties.Add(`$property)
- 	`$session.CreateInstance(`$namespaceName, `$newInstance, `$options)
- 	`$Message = `"Created `$ProfileName profile.`"
+     `$newInstance = New-Object Microsoft.Management.Infrastructure.CimInstance `$className, `$namespaceName
+     `$property = [Microsoft.Management.Infrastructure.CimProperty]::Create(`"ParentID`", `"`$nodeCSPURI`", `"String`", `"Key`")
+     `$newInstance.CimInstanceProperties.Add(`$property)
+     `$property = [Microsoft.Management.Infrastructure.CimProperty]::Create(`"InstanceID`", `"`$ProfileNameEscaped`", `"String`",      `"Key`")
+     `$newInstance.CimInstanceProperties.Add(`$property)
+     `$property = [Microsoft.Management.Infrastructure.CimProperty]::Create(`"ProfileXML`", `"`$ProfileXML`", `"String`", `"Property`")
+     `$newInstance.CimInstanceProperties.Add(`$property)
+     `$session.CreateInstance(`$namespaceName, `$newInstance, `$options)
+     `$Message = `"Created `$ProfileName profile.`"
 
- 	Write-Host `"`$Message`"
+     Write-Host `"`$Message`"
       }
       catch [Exception]
       {
- 	`$Message = `"Unable to create `$ProfileName profile: `$_`"
- 	Write-Host `"`$Message`"
- 	exit
+     `$Message = `"Unable to create `$ProfileName profile: `$_`"
+     Write-Host `"`$Message`"
+     exit
       }
  
       `$Message = `"Script Complete`"
@@ -709,17 +709,17 @@ To use Configuration Manager to deploy a Remote Access Always On VPN profile to 
 
 4.  On the Membership Rules page, complete the following steps:
 
-	a.  In **Membership rules**, click **Add Rule**, and click **Direct Rule**. In this example, you're adding individual users to the user collection. However, you might use a query rule to add users to this collection dynamically for a larger-scale deployment.
+    a.  In **Membership rules**, click **Add Rule**, and click **Direct Rule**. In this example, you're adding individual users to the user collection. However, you might use a query rule to add users to this collection dynamically for a larger-scale deployment.
 
-	b.  On the **Welcome** page, click **Next**.
+    b.  On the **Welcome** page, click **Next**.
 
-	c.  On the Search for Resources page, in **Value**, type the name of the user you want to add. The resource name includes the user's domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string “lori,” type **%lori%**. Click **Next**.
+    c.  On the Search for Resources page, in **Value**, type the name of the user you want to add. The resource name includes the user's domain. To include results based on a partial match, insert the **%** character at either end of your search criterion. For example, to find all users containing the string "lori," type **%lori%**. Click **Next**.
 
-	d.  On the Select Resources page, select the users you want to add to the group, and click **Next**.
+    d.  On the Select Resources page, select the users you want to add to the group, and click **Next**.
 
-	e.  On the Summary page, click **Next**.
+    e.  On the Summary page, click **Next**.
 
-	f.  On the Completion page, click **Close**.
+    f.  On the Completion page, click **Close**.
 
 6.  Back on the Membership Rules page of the Create User Collection Wizard, click **Next**.
 
@@ -862,18 +862,18 @@ Create the VPN device configuration policy to configure the Windows 10 client co
 
 ### Create the Always On VPN configuration policy
 
-1.	Sign into the [Azure portal](https://portal.azure.com/).
+1.    Sign into the [Azure portal](https://portal.azure.com/).
 
-2.	Go to **Intune** > **Device Configuration** > **Profiles**.
+2.    Go to **Intune** > **Device Configuration** > **Profiles**.
 
-3.	Click **Create Profile** to start the Create profile Wizard.
+3.    Click **Create Profile** to start the Create profile Wizard.
 
-4.	Enter a **Name** for the VPN profile and (optionally) a description.
+4.    Enter a **Name** for the VPN profile and (optionally) a description.
 
 1.   Under **Platform**, select **Windows 10 or later**, and choose **VPN** from the Profile type drop-down.
 
      >[!TIP]
-     >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
+     >If you are creating a custom VPN profileXML, see [Apply ProfileXML using Intune](/windows/security/identity-protection/vpn/vpn-profile-options#apply-profilexml-using-intune) for the instructions.
 
 2. Under the **Base VPN** tab, verify or set the following settings:
 
@@ -931,5 +931,5 @@ You are done deploying Always On VPN.  For other features you can configure, see
 
 |If you want to...  |Then see...  |
 |---------|---------|
-|Configure Conditional Access for VPN    |[Step 7. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
+|Configure Conditional Access for VPN    |[Step 7. (Optional) Configure conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md): In this step, you can fine-tune how authorized VPN users access your resources using [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Azure AD conditional access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure Active Directory (Azure AD) connected application.         |
 |Learn more about the advanced VPN features  |[Advanced VPN Features](always-on-vpn-adv-options.md#advanced-vpn-features): This page provides guidance on how to enable VPN Traffic Filters, how to configure Automatic VPN connections using App-Triggers, and how to configure NPS to only allow VPN Connections from clients using certificates issued by Azure AD.        |

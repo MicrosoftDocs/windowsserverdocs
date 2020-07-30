@@ -1,14 +1,12 @@
 ---
 ms.assetid: 173b72c1-ac83-4f42-abab-cf58f43769f0
 title: Determining the Number of Forests Required
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -61,11 +59,9 @@ This support limitation exists because:
   
 ## In this section  
   
--   [Forest Design Models](https://technet.microsoft.com/library/cc770439.aspx)  
+-   [Forest Design Models](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770439(v=ws.10))  
   
 -   [Mapping Design Requirements to Forest Design Models](Forest-Design-Models.md)  
   
 -   [Using the Organizational Domain Forest Model](../../ad-ds/plan/Using-the-Organizational-Domain-Forest-Model.md)  
   
-
-

@@ -1,13 +1,9 @@
 ---
 title: What's New in the Windows Console in Windows Server 2016
-description: "Lists the important new features in the Windows Server 2016 console."
-ms.custom: na
+description: Lists the important new features in the Windows Server 2016 console.
 ms.prod: windows-server
 ms.technology: server-general
-ms.reviewer: na
-ms.suite: na
 ms.date: 10/04/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: jaimeo
@@ -62,7 +58,7 @@ There are many new options for selecting text and lines, as well as for marking 
 
 **For developers:** If a conflict occurs, you can typically control the behavior of the application's use of line input, processed input, and echo input modes with the SetConsoleMode() API. If you run in processed input mode, the shortcuts below apply, but in other modes, your application must handle them. Any key combinations not listed here function as they did in previous versions of the console. You can also try to resolve conflicts with various settings on the **Options** tab. If all else fails, you can always revert to the original console.  
 
-You can now use "click-and-drag" selection outside of QuickEdit mode, and this selection can select text across lines as in Notepad, rather than just a rectangular block. Copy operations no longer require you to remove line breaks. In addition to "click-and-drag" selection, these key combinations are available:  
+You can now use click-and-drag selection outside of QuickEdit mode, and this selection can select text across lines as in Notepad, rather than just a rectangular block. Copy operations no longer require you to remove line breaks. In addition to click-and-drag selection, these key combinations are available:  
 
 **Text selection**  
 
@@ -78,7 +74,7 @@ You can now use "click-and-drag" selection outside of QuickEdit mode, and this s
 |If the cursor is **not** in the line currently being edited, use this command to extend the selection to the left margin.|SHIFT+HOME|  
 |Extend the selection down one screen|SHIFT+PAGE DOWN|  
 |Extend the selection up one screen|SHIFT+PAGE UP|  
-|Extend the selection one word to the right. (You can define the delimiters for "word" with the WordDelimiters registry key.)|CTRL+SHIFT+RIGHT ARROW|  
+|Extend the selection one word to the right. (You can define the delimiters for word with the WordDelimiters registry key.)|CTRL+SHIFT+RIGHT ARROW|  
 |Extend the selection one word to the left|CTRL+SHIFT+HOME|  
 |Extend the selection to the beginning of the screen buffer|CTRL+SHIFT+END|  
 |Select all text after the prompt, if the cursor is in the current line and the line is not empty|CTRL+A|  

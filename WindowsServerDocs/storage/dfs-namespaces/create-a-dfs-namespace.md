@@ -13,9 +13,9 @@ ms.author: jgerend
 
 > Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session. 
+To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session.
 
-The DFSN Windows PowerShell module was introduced in Windows Server 2012. 
+The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
 Alernatively, you can use the following procedure to create a namespace after installing the role service.
 
@@ -32,11 +32,9 @@ Alernatively, you can use the following procedure to create a namespace after in
 > [!IMPORTANT]
 > Do not attempt to create a domain-based namespace using the Windows Server 2008 mode unless the forest functional level is Windows Server 2003 or higher. Doing so can result in a namespace for which you cannot delete DFS folders, yielding the following error message: "The folder cannot be deleted. Cannot complete this function".
 
-## See also
+## Additional References
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Choose a Namespace Type](choose-a-namespace-type.md)
 -   [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md).
-
-

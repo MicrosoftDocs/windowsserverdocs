@@ -1,13 +1,11 @@
 ---
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
 title: Join a Computer to a Domain
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---

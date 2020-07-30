@@ -1,12 +1,8 @@
 ---
-title: Using the add-DriverPackage Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: add-DriverPackage
+description: Reference article for add-DriverPackage, which adds a driver package to the server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3ac9e8d5-63ec-4ce8-86fc-85d28011050b
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the add-DriverPackage Command
-
-
+# add-DriverPackage
 
 Adds a driver package to the server.
 
@@ -27,7 +21,7 @@ Adds a driver package to the server.
 WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Architecture:{x86 | ia64 | x64}] [/DriverGroup:<Group Name>] [/Name:<Friendly Name>]
 ```
 
-## Parameters
+### Parameters
 
 |          Parameter           |                                                              Description                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -37,17 +31,17 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 | [/DriverGroup:\<Group Name>] |                             Specifies the name of the driver group to which the package should be added.                              |
 |   [/Name:\<Friendly Name>]   |                                           States the friendly name for the driver package.                                            |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To add a driver package, type one of the following:
 ```
-WDSUTIL /verbose /Add-DriverPackage /InfFile:"C:\Temp\Display.inf"
+WDSUTIL /verbose /Add-DriverPackage /InfFile:C:\Temp\Display.inf
 ```
 ```
-WDSUTIL /Add-DriverPackage /Server:MyWDSServer /InfFile:"C:\Temp\Display.inf" /Architecture:x86 /DriverGroup:x86Drivers /Name:"Display Driver"
+WDSUTIL /Add-DriverPackage /Server:MyWDSServer /InfFile:C:\Temp\Display.inf /Architecture:x86 /DriverGroup:x86Drivers /Name:Display Driver
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

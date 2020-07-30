@@ -1,14 +1,12 @@
 ---
 ms.assetid: 846c3680-b321-47da-8302-18472be42421
 title: Deploy Claims Across Forests (Demonstration Steps)
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -64,7 +62,7 @@ Use the following information to complete this scenario:
 |Objects|Details|  
 |-----------|-----------|  
 |Users|Jeff Low, Contoso|  
-|User claims on Adatum and Contoso|ID: ad://ext/Company:ContosoAdatum,<br /><br />Source attribute: company<br /><br />Suggested values: Contoso, Adatum **Important:** You must set the ID on the 'Company' claim type on both Contoso and Adatum to be the same for the claims transformation to work.|  
+|User claims on Adatum and Contoso|ID: ad://ext/Company:ContosoAdatum,<p>Source attribute: company<p>Suggested values: Contoso, Adatum **Important:** You must set the ID on the 'Company' claim type on both Contoso and Adatum to be the same for the claims transformation to work.|  
 |Central access rule on Contoso|AdatumEmployeeAccessRule|  
 |Central access policy on Contoso|Adatum Only Access Policy|  
 |Claims Transformation policies on Adatum and Contoso|DenyAllExcept Company|  

@@ -1,12 +1,8 @@
 ---
 title: Remote Desktop clients FAQ
 description: Frequently asked questions about the Remote Desktop clients
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a 
 author: lizap

@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 58cca2b2-4ef3-4a09-a614-8bdc08d24f15
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Configure Firewalls for RADIUS Traffic

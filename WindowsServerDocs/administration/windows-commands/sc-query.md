@@ -1,12 +1,8 @@
 ---
-title: Sc query
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: Sc.exe query
+description: Learn how to obtain information about services, drivers, type of services, or type of drivers using the sc.exe utility
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 author: coreyp-at-msft
@@ -15,21 +11,17 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Sc query
-
-
+# Sc.exe query
 
 Obtains and displays information about the specified service, driver, type of service, or type of driver.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
+sc.exe [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
 ```
 
-## Parameters
+### Parameters
 
 |       Parameter        |                                                                                                                          Description                                                                                                                          |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,7 +32,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
 |     state= {active     |                                                                                                                           inactive                                                                                                                            |
 | bufsize= \<BufferSize> |                     Specifies the size (in bytes) of the enumeration buffer. The default buffer size is 1,024 bytes. You should increase the size of the enumeration buffer when the display resulting from a query exceeds 1,024 bytes.                      |
 |   ri= \<ResumeIndex>   | Specifies the index number at which enumeration is to begin or resume. The default value is **0** (zero). Use this parameter in conjunction with the **bufsize=** parameter when more information is returned by a query than the default buffer can display. |
-|  group= \<GroupName>   |                                                                             Specifies the service group to be enumerated. By default, all groups are enumerated (**group= ""**).                                                                              |
+|  group= \<GroupName>   |                                                                             Specifies the service group to be enumerated. By default, all groups are enumerated (**group= **).                                                                              |
 |           /?           |                                                                                                             Displays help at the command prompt.                                                                                                              |
 
 ## Remarks
@@ -54,45 +46,45 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
   ```  
   To display the remaining **query** information, rerun **query**, setting **bufsize=** to be the number of bytes and setting **ri=** to the specified index. For example, the remaining output would be displayed by typing the following at the command prompt:  
   ```
-  sc query bufsize= 1822 ri= 79
+  sc.exe query bufsize= 1822 ri= 79
   ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display information for active services only, type either of the following commands:
 ```
-sc query
-sc query type= service
+sc.exe query
+sc.exe query type= service
 ```
 To display information for active services, and to specify a buffer size of 2,000 bytes, type:
 ```
-sc query type= all bufsize= 2000
+sc.exe query type= all bufsize= 2000
 ```
 To display information for the WUAUSERV service, type:
 ```
-sc query wuauserv
+sc.exe query wuauserv
 ```
 To display information for all services (active and inactive), type:
 ```
-sc query state= all
+sc.exe query state= all
 ```
 To display information for all services (active and inactive), beginning at line 56, type:
 ```
-sc query state= all ri= 56
+sc.exe query state= all ri= 56
 ```
 To display information for interactive services, type:
 ```
-sc query type= service type= interact
+sc.exe query type= service type= interact
 ```
 To display information for drivers only, type:
 ```
-sc query type= driver
+sc.exe query type= driver
 ```
 To display information for drivers in the Network Driver Interface Specification (NDIS) group, type:
 ```
-sc query type= driver group= ndis
+sc.exe query type= driver group= ndis
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 98c5ef45-2bcb-4f87-86c8-5ac6c16a6097
 title: Token-Signing Certificates
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: secedit
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 58ed57ed-08e3-403d-a363-0620b358637a
 author: coreyp-at-msft
@@ -24,7 +24,7 @@ Configures and analyzes system security by comparing your current configuration 
 ## Syntax
 
 ```
-secedit 
+secedit
 [/analyze /db <database file name> /cfg <configuration file name> [/overwrite] /log <log file name> [/quiet]]
 [/configure /db <database file name> [/cfg <configuration filename>] [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]]
 [/export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>]]
@@ -33,7 +33,7 @@ secedit
 [/validate <configuration file name>]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -61,7 +61,7 @@ When a security template is created using the Security Template snap-in and the 
 > [!NOTE]
 > The Microsoft Management Console (MMC) and the Security Configuration and Analysis snap-in are not available on Server Core.
 
-#### Additional references
+## Additional References
 
 For examples of how this command can be used, see the examples section in any of the subcommand files.
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

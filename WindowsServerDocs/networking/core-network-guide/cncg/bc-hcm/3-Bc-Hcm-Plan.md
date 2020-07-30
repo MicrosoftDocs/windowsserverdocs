@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: bc44a7db-f7a5-4e95-9d95-ab8d334e885f
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # BranchCache Hosted Cache Mode Deployment Planning

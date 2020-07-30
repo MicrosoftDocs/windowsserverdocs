@@ -1,195 +1,84 @@
-### YamlMime:YamlDocument
+### YamlMime:Landing
 
-documentType: LandingData
-
-title: Remote Access Always On VPN 
+title: Always On VPN documentation # < 60 chars
+summary: Learn about the features, technology, and deployment of Always On VPN. # < 160 chars
 
 metadata:
-
-  document_id: 
-
-  title: Remote Access Always On VPN 
-
-  description: Learn about the features, technology, and deployment of Always On VPN.
-
-  text: Always On VPN provides a single, cohesive solution for remote access for all your connected devices, even personally owned devices. With Always On VPN, the connection type does not have to be exclusively user or device but can be a combination of both. For example, you could enable device authentication for remote device management, and then enable user authentication for connectivity to internal company sites and services.
-
-  keywords: Windows 10, Windows Server, Windows Server 2016, remote access, VPN
-
-  ms.localizationpriority: high
-
-  author: shortpatti
-
-  ms.author: pashort
-
-  ms.date: 11/05/2018
-
-  ms.topic: article
-
-  ms.devlang: na
-
-sections:
-
-- title: Learn about... 
-
-- items:
-
-  - type: markdown
-
-    text: Get ready to deploy Remote Access as a single tenant VPN RAS Gateway for point-to-site VPN connections, using any of the four scenarios mentioned below, for remote client computers that are running Windows 10.  If you currently use DirectAccess we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating from DirectAccess to Always On VPN.  
-
-- items:
-
-  - type: list
-
-    style: cards
-
-    className: cardsE
-
-    columns: 3
-
-    items:
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
-
-      html: <p>Learn about the Always On VPN deployment and where to get started.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-      
-      title: Begin your journey
-
-    - href: \windows-server\remote\remote-access\vpn\vpn-map-da
-
-      html: <p>Learn about the features and functionality of Always On VPN.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
-
-      title: Always On VPN features and funtionality
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-enhancements
-
-      html: <p>Learn about the key improvements in integration, security, connectivity, networking control, and compatibility.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-
-      title: Enhancements in Always On VPN
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-technology-overview
-
-      html: <p>Learch about the technologies used in the Always On VPN deployment.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_overview.svg
-
-      title: Technology overview
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-adv-options
-
-      html: <p>Learn about the advanced VPN features you can add to improve the security and availability of your VPN connection.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_advanced.svg
-
-      title: Extend Always On VPN with advanced features            
-
-- title: Get started... 
-
-  items:
-
-  - type: paragraph
-
-    text: 'Deploy Always On VPN connections for domain-joined Windows 10 client computers. You can also migrate from DirectAccess to Always On VPN and configure conditional access using Azure AD.'
-
-  - type: list
-
-    style: cards
-
-    className: cardsE
-
-    columns: 3
-
-    items:
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
-
-      html: <p>Discover what's needed to deploy VPN connections.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
-      
-      title: Deployment workflow and scenarios
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
-    
-      html: <p>Start planning and preparing your Always On VPN deployment.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_guidelines.svg
-      
-      title: Plan the Always On VPN deployment 
-
-    - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\vpn-deploy-server-infrastructure
-    
-      html: <p>Start setting up and configuring the VPN infrastructure along with the Windows 10 client VPN connectivity.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      
-      title: Deploy the VPN infrastructure
-
-    - href: \windows-server\remote\remote-access\vpn\ad-ca-vpn-connectivity-windows10
-    
-      html: <p>Fine-tune how VPN users access your resources using Azure AD conditional access.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      
-      title: Configure conditional access
-
-- items:
-
-  - type: list
-
-    style: cards
-
-    className: cardsL
-
-    items:
-
-    - title: Troubleshoot Always On VPN
-
-      html: <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues">VPN_Profile.ps1 script issues</a></p>
-
-            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues">Always On VPN client connection issues</a></p>
-
-            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#azure-ad-conditional-access-connection-issues">Azure AD Conditional Access connection issues</a></p>
-
-            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes">Error codes</a></p><br>
-
-            <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs">Log files</a></p></div>
-
-    - title: Additional resources 
-
-      html: <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide">Windows 10 VPN Technical Guide</a></p>
-        
-            <p><a class="barLink" href="https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp">VPNv2 CSP</a></p>
-
-            <p><a class="barLink" href="https://technet.microsoft.com/library/hh831740.aspx">Active Directory Certificate Services Overview</a></p>
-
-            <p><a class="barLink" href="https://technet.microsoft.com/library/cc730705.aspx">Certificate Templates</a></p>
-       
-            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx">Public Key Infrastructure Design Guidance</a></p><p></p>
-
-            <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx">AD CS Step by Step Guide - Two Tier PKI Hierarchy Deployment</a></p>
+  title: Always On VPN documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn about the features, technology, and deployment of Always On VPN. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: eross-msft #Required; your GitHub user alias, with correct capitalization.
+  ms.author: lizross #Required; microsoft alias of author; optional team alias.
+  ms.date: 06/10/2020 #Required; mm/dd/yyyy format.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About Always On VPN
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Always On VPN features and funtionality
+            url: ../vpn-map-da.md
+          - text: Technology overview
+            url: ./always-on-vpn-technology-overview.md
+          - text: Enhancements in Always On VPN
+            url: ./always-on-vpn-technology-overview.md
+          - text: Advanced features of Always On VPN
+            url: ./deploy/always-on-vpn-adv-options.md
+          - text: Always On VPN deployment for Windows Server and Windows 10
+            url: ./deploy/always-on-vpn-deploy.md
+
+  # Card (optional)
+  - title: Deploy Always On VPN
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Deployment workflow and scenarios
+            url: ./deploy/always-on-vpn-deploy-deployment.md
+          - text: Plan the Always On VPN deployment
+            url: ./deploy/always-on-vpn-deploy-planning.md
+          - text: Deploy the VPN infrastructure
+            url: ./deploy/vpn-deploy-server-infrastructure.md
+          - text: Configure conditional access
+            url: ../ad-ca-vpn-connectivity-windows10.md
+
+  # Card (optional)
+  - title: Troubleshoot
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: VPN_Profile.ps1 script issues
+            url: ./deploy/always-on-vpn-deploy-troubleshooting.md#vpn_profileps1-script-issues
+          - text: Always On VPN client connection issues
+            url: ./deploy/always-on-vpn-deploy-troubleshooting.md#always-on-vpn-client-connection-issues
+          - text: Azure AD Conditional Access connection issues
+            url: ./deploy/always-on-vpn-deploy-troubleshooting.md#azure-ad-conditional-access-connection-issues
+      - linkListType: reference
+        links:
+          - text: Error codes
+            url: ./deploy/always-on-vpn-deploy-troubleshooting.md#error-codes
+          - text: Log files
+            url: ./deploy/always-on-vpn-deploy-troubleshooting.md#logs
+
+  # Card (optional)
+  - title: Additional resources
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows 10 VPN Technical Guide
+            url: /windows/access-protection/vpn/vpn-guide
+          - text: VPNv2 CSP
+            url: /windows/client-management/mdm/vpnv2-csp
+          - text: Active Directory Certificate Services
+            url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)
+          - text: Certificate Templates
+            url: /previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)
+          - text: Designing a Public Key Infrastructure
+            url: /previous-versions/windows/it-pro/windows-server-2003/cc773138(v=ws.10)
+          - text: Active Directory Certificate Services Overview
+            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)

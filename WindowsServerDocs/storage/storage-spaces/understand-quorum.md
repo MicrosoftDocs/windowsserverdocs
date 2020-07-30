@@ -1,10 +1,9 @@
 ---
 title: Understanding cluster and pool quorum
 description: Understanding Cluster and Pool Quorum, with specific examples to go over the intricacies.
-keywords: Storage Spaces Direct,Quorum,Witness,S2D,Cluster Quorum,Pool Quorum,Cluster,Pool
 ms.prod: windows-server
 ms.author: adagashe
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
@@ -56,7 +55,7 @@ But the concept of *majority* only works cleanly when the total number of nodes 
 There are two ways the cluster can make the *total number of votes* odd:
 
 1. First, it can go *up* one by adding a *witness* with an extra vote. This requires user set-up.
-2.	Or, it can go *down* one by zeroing one unlucky node's vote (happens automatically as needed).
+2.    Or, it can go *down* one by zeroing one unlucky node's vote (happens automatically as needed).
 
 Whenever surviving nodes successfully verify they are the *majority*, the definition of *majority* is updated to be among just the survivors. This allows the cluster to lose one node, then another, then another, and so forth. This concept of the *total number of votes* adapting after successive failures is known as ***Dynamic quorum***.  
 

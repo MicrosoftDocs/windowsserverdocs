@@ -1,12 +1,8 @@
 ---
 title: setx
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for setx, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ef37482f-f8a8-4765-951a-2518faac3f44
 author: coreyp-at-msft
@@ -17,21 +13,19 @@ ms.date: 10/16/2017
 
 # setx
 
-
-
 Creates or modifies environment variables in the user or system environment, without requiring programming or scripting. The **Setx** command also retrieves the values of registry keys and writes them to text files.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
 ```
 setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] <Variable> <Value> [/m]
 setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] [<Variable>] /k <Path> [/m]
-setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName> {[<Variable>] {/a <X>,<Y> | /r <X>,<Y> "<String>"} [/m] | /x} [/d <Delimiters>]
+setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName> {[<Variable>] {/a <X>,<Y> | /r <X>,<Y> <String>} [/m] | /x} [/d <Delimiters>]
 ```
 
-## Parameters
+### Parameters
 
 |         Parameter          |                                                                                                                                              Description                                                                                                                                              |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,10 +37,10 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 |         /k \<Path>         | Specifies that the variable is set based on information from a registry key. The p*ath* uses the following syntax:</br>`\\<HIVE>\<KEY>\...\<Value>`</br>For example, you might specify the following path:</br>`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName` |
 |      /f \<File name>       |                                                                                                                               Specifies the file that you want to use.                                                                                                                                |
 |        /a \<X>,<Y>         |                                                                                                                    Specifies absolute coordinates and offset as search parameters.                                                                                                                    |
-|   /r \<X>,<Y> "<String>"   |                                                                                                            Specifies relative coordinates and offset from **String** as search parameters.                                                                                                            |
+|   /r \<X>,<Y> <String>   |                                                                                                            Specifies relative coordinates and offset from **String** as search parameters.                                                                                                            |
 |             /m             |                                                                                                Specifies to set the variable in the system environment. The default setting is the local environment.                                                                                                 |
 |             /x             |                                                                                                       Displays file coordinates, ignoring the **/a**, **/r**, and **/d** command-line options.                                                                                                        |
-|      /d \<Delimiters>      |                    Specifies delimiters such as "**,**" or "**\\**" to be used in addition to the four built-in delimiters — SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built-in delimiters.                    |
+|      /d \<Delimiters>      |                    Specifies delimiters such as **,** or **\\** to be used in addition to the four built-in delimiters — SPACE, TAB, ENTER, and LINEFEED. Valid delimiters include any ASCII character. The maximum number of delimiters is 15, including built-in delimiters.                    |
 |             /?             |                                                                                                                                 Displays help at the command prompt.                                                                                                                                  |
 
 ## Remarks
@@ -61,7 +55,7 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 -   REG_DWORD registry values are extracted and used in hexadecimal mode.
 -   File mode supports the parsing of carriage return and line feed (CRLF) text files only.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To set the MACHINE environment variable in the local environment to the value Brand1, type:
 ```
@@ -69,7 +63,7 @@ setx MACHINE Brand1
 ```
 To set the MACHINE environment variable in the system environment to the value Brand1 Computer, type:
 ```
-setx MACHINE "Brand1 Computer" /m
+setx MACHINE Brand1 Computer /m
 ```
 To set the MYPATH environment variable in the local environment to use the search path defined in the PATH environment variable, type:
 ```
@@ -77,7 +71,7 @@ setx MYPATH %PATH%
 ```
 To set the MYPATH environment variable in the local environment to use the search path defined in the PATH environment variable after replacing **~** with **%**, type:
 ```
-setx MYPATH ~PATH~ 
+setx MYPATH ~PATH~
 ```
 To set the MACHINE environment variable in the local environment to Brand1 on a remote computer named Computer1, type:
 ```
@@ -89,19 +83,19 @@ setx /s computer1 /u maindom\hiropln /p p@ssW23 MYPATH %PATH%
 ```
 To set the TZONE environment variable in the local environment to the value found in the **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName** registry key, type:
 ```
-setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName 
+setx TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
 ```
 To set the TZONE environment variable in the local environment of a remote computer named Computer1 to the value found in the **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName** registry key, type:
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23 TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName 
+setx /s computer1 /u maindom\hiropln /p p@ssW23 TZONE /k HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation\StandardName
 ```
 To set the BUILD environment variable in the system environment to the value found in the **HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber** registry key, type:
 ```
-setx BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber" /m
+setx BUILD /k HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber /m
 ```
 To set the BUILD environment variable in the system environment of a remote computer named Computer1 to the value found in the **HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\CurrentBuildNumber** registry key, type:
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23  BUILD /k "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\CurrentBuildNumber" /m
+setx /s computer1 /u maindom\hiropln /p p@ssW23  BUILD /k HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\CurrentBuildNumber /m
 ```
 To display the contents of a file named Ipconfig.out, along with the contents' corresponding coordinates, type:
 ```
@@ -111,19 +105,19 @@ To set the IPADDR environment variable in the local environment to the value fou
 ```
 setx IPADDR /f ipconfig.out /a 5,11
 ```
-To set the OCTET1 environment variable in the local environment to the value found at the coordinate 5,3 in the file Ipconfig.out with delimiters **"#$\*."**, type:
+To set the OCTET1 environment variable in the local environment to the value found at the coordinate 5,3 in the file Ipconfig.out with delimiters **#$\*.**, type:
 ```
-setx OCTET1 /f ipconfig.out /a 5,3 /d "#$*." 
+setx OCTET1 /f ipconfig.out /a 5,3 /d #$*.
 ```
-To set the IPGATEWAY environment variable in the local environment to the value found at the coordinate 0,7 with respect to the coordinate of "Gateway" in the file Ipconfig.out, type:
+To set the IPGATEWAY environment variable in the local environment to the value found at the coordinate 0,7 with respect to the coordinate of Gateway in the file Ipconfig.out, type:
 ```
-setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway 
+setx IPGATEWAY /f ipconfig.out /r 0,7 Gateway
 ```
 To display the contents of a file named Ipconfig.out — along with the contents' corresponding coordinates — on a computer named Computer1, type:
 ```
-setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x 
+setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,12 +1,8 @@
 ---
 title: Remote Desktop - Allow access to your PC
 description: Learn about your options for remotely accessing your PC
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
 author: lizap
@@ -59,6 +55,6 @@ You should ensure that every account that has access to your PC is configured wi
 
 ## Why allow connections only with Network Level Authentication? 
 
-If you want to restrict who can access your PC, choose to allow access only with Network Level Authentication (NLA). When you enable this option, users have to authenticate themselves to the network before they can connect to your PC. Allowing connections only from computers running Remote Desktop with NLA is a more secure authentication method that can help protect your computer from malicious users and software. To learn more about NLA and Remote Desktop, check out [Configure NLA for RDS Connections](https://technet.microsoft.com/library/cc732713(v=ws.11).aspx).
+If you want to restrict who can access your PC, choose to allow access only with Network Level Authentication (NLA). When you enable this option, users have to authenticate themselves to the network before they can connect to your PC. Allowing connections only from computers running Remote Desktop with NLA is a more secure authentication method that can help protect your computer from malicious users and software. To learn more about NLA and Remote Desktop, check out [Configure NLA for RDS Connections](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732713(v=ws.11)).
 
 If you're remotely connecting to a PC on your home network from outside of that network, don't select this option.

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8f994e2e-6c07-43f0-aef4-75f8b2c9a144
 title: Maintaining a More Secure Environment
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -16,7 +14,7 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Ten: Technology is not a panacea.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Ten: Technology is not a panacea.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))  
   
 When you have created a manageable, secure environment for your critical business assets, your focus should shift to ensuring that it is maintained securely. Although you've been given specific technical controls to increase the security of your AD DS installations, technology alone will not protect an environment in which IT does not work in partnership with the business to maintain a secure, usable infrastructure. The high level recommendations in this section are meant to be used as guidelines that you can use to develop not only effective security, but effective lifecycle management.  
   
@@ -71,5 +69,3 @@ By integrating business information with your infrastructure, you can use that b
   
 Let's say Executive A is normally located in Chicago and uses a secured workstation to access business-critical data from his desk, and an event is triggered by a failed attempt to access the data from an unsecured workstation located in Atlanta. If you are able to verify that the executive is currently in Atlanta, you can resolve the event by contacting the executive or the executive's assistant to determine if the access failure was the result of the executive forgetting to use the secured workstation to access the data. By constructing a program that uses the approaches described in [Planning for Compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md), you can begin to build a database of expected behaviors for the most "important" accounts in your Active Directory installation that can potentially help you more quickly discover and respond to attacks.  
   
-
-

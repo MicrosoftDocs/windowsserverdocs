@@ -1,14 +1,12 @@
 ---
 ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN and UPN uniqueness
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -38,7 +36,7 @@ Duplicate UPN values break synchronization between on-premises AD and Office 365
 |UPN uniqueness|Duplicate UPNs break synchronization of on-premises AD accounts with Windows Azure AD-based services such as Office 365.|  
 |SPN uniqueness|Kerberos requires SPNs for mutual authentication.  Duplicate SPNs result in authentication failures.|  
   
-For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](https://msdn.microsoft.com/library/dn392337.aspx).  
+For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](/openspecs/windows_protocols/ms-adts/3c154285-454c-4353-9a99-fb586e806944).  
   
 ## Symptoms  
 Error codes 8467 or 8468 or their hex, symbolic or string equivalents are logged in various on-screen dialogues and in event ID 2974 in the Directory Services event log. The attempt to create a duplicate UPN or SPN is blocked only under the following circumstances:  
@@ -348,7 +346,7 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
   
 **Optionally**  
   
-1.  Verify with the classroom instructor that it is ok to enable the *[AD Recycle Bin](https://technet.microsoft.com/library/jj574144.aspx#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.  
+1.  Verify with the classroom instructor that it is ok to enable the *[AD Recycle Bin](../../get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-.md#BKMK_EnableRecycleBin)* in Active Directory Administrative Center.  If so, move on to the next step.  
   
 2.  Populate the UPN on a user account  
   
@@ -360,5 +358,3 @@ Experiment with SPN and UPN uniqueness.  Follow these prompts, or complete your 
   
 6.  Imagine you have just been presented with the error you see in the previous step.  (and don't have a history of the steps you just performed)Your goal is to complete the restore of the account.  See the workbook for example steps.  
   
-
-

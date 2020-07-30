@@ -1,7 +1,6 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Lockout Protection
-description:
 author: billmath
 ms.author: billmath
 manager: mtilman
@@ -30,7 +29,7 @@ Extranet Smart Lockout in AD FS 2019 adds the following advantages compared to A
 ### Configuration information
 When ESL is enabled, a new table in the Artifact database, AdfsArtifactStore.AccountActivity, is created and a node is selected in the AD FS farm as the “User Activity” master. In a WID configuration, this node is always the primary node. In a SQL configuration, one node is selected to be the User Activity master.  
 
-To view the node selected as the User Activity master. Get-AdfsFarmInformation.FarmRoles
+To view the node selected as the User Activity master. (Get-AdfsFarmInformation).FarmRoles
 
 All secondary nodes will contact the master node on each fresh login through Port 80 to learn the latest value of the bad password counts and new familiar location values, and update that node after the login is processed.
 
@@ -147,7 +146,7 @@ When configuring the Extranet Smart Lockout, follow best practices for setting t
 
 `ExtranetObservationWindow (new-timespan -Minutes 30)`
 
-`ExtranetLockoutThreshold: – 2x AD Threshold Value`
+`ExtranetLockoutThreshold: Half of AD Threshold Value`
 
 AD value: 20, ExtranetLockoutThreshold: 10
 
@@ -232,9 +231,13 @@ This behavior can be overridden by passing the -Server parameter.
 ## Event Logging & User Activity Information for AD FS Extranet Lockout
 
 ### Connect Health
-The recommended way to monitor user account activity is through Connect Health. Connect Health generates downloadable reporting on Risky IPs and bad password attempts. Each item in the Risky IP report shows aggregated information about failed AD FS sign-in activities which exceed designated threshold. Email notifications can be set to alert administrators as soon as this occurs with customizable email settings. For additional information and setup instructions, visit the [Connect Health documentation](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs).
+The recommended way to monitor user account activity is through Connect Health. Connect Health generates downloadable reporting on Risky IPs and bad password attempts. Each item in the Risky IP report shows aggregated information about failed AD FS sign-in activities which exceed designated threshold. Email notifications can be set to alert administrators as soon as this occurs with customizable email settings. For additional information and setup instructions, visit the [Connect Health documentation](/azure/active-directory/hybrid/how-to-connect-health-adfs).
 
 ### AD FS Extranet Smart Lockout events.
+
+>[!NOTE]
+> Troubleshoot Extranet Smart lockout with the [AD FS Help Extranet Lockout troubleshooting guide](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8)
+
 For Extranet Smart Lockout events to be written, ESL must be enabled in ‘log-only' or ‘enforce' mode and ADFS security auditing is enabled.
 AD FS will write extranet lockout events to the security audit log:
 - When a user is locked out (reaches the lockout threshold for unsuccessful login attempts)
@@ -277,7 +280,7 @@ A: If the clients connect directly to the ADFS servers and not via Web Applicati
 A: ESL will work well to prevent Exchange Online or other legacy authentication brute force attack scenarios. A legacy authentication has an “Activity ID” of 00000000-0000-0000-0000-000000000000. In these attacks, the bad actor is taking advantage of Exchange Online basic authentication (also known as legacy authentication) so that the client IP address appears as a Microsoft one. The Exchange online servers in the cloud proxy the authentication verification on behalf of the Outlook client. In these scenarios, the IP address of the malicious submitter will be in the x-ms-forwarded-client-ip and the Microsoft Exchange Online server IP will be in the x-ms-client-ip value.
 Extranet Smart Lockout checks network IPs, forwarded IPs, the x-forwarded-client-IP, and the x-ms-client-ip value. If the request is successful, all the IPs are added to the familiar list. If a request comes in and any of the presented IPs are not in the familiar list then the request will be marked as unfamiliar. The familiar user will be able to sign in successfully while requests from the unfamiliar locations will be blocked.  
 
-**Q: Can I estimate the size of the ADFSArtifactStore before enabling ESL?
+**Can I estimate the size of the ADFSArtifactStore before enabling ESL?**
 
 A: With ESL enabled, AD FS tracks the account activity and known locations for users in the ADFSArtifactStore database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the ADFSArtifactStore database to grow at a rate of up to 1GB per 100,000 users. If the AD FS farm is using the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data\. To prevent filling this drive, ensure you have a minimum of 5GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to an additional 1GB of RAM for user populations of 500,000 or less.
 
@@ -285,6 +288,6 @@ A: With ESL enabled, AD FS tracks the account activity and known locations for u
 ## Additional references  
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
+[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

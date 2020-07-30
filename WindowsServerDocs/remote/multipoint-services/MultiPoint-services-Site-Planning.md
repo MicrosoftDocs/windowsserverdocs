@@ -1,13 +1,9 @@
 ---
 title: MultiPoint Services Site Planning
 description: Planning information for MultiPoint Services deployments in Windows Server 2016
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evaseydl

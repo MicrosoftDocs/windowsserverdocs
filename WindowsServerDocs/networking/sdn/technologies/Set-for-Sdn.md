@@ -1,17 +1,13 @@
 ---
 title: Switch Embedded Teaming for SDN
 description: You can use this topic for a brief overview of Switch Embedded Teaming in Windows Server 2016.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aa5b5d11-3921-44f9-8e14-e378c75fca76
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ---
 # Switch Embedded Teaming for SDN
 

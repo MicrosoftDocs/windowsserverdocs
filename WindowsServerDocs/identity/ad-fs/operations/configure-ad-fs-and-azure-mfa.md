@@ -1,7 +1,6 @@
 ---
 ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
 title: Configure AD FS 2016 and Azure MFA
-description:
 ms.author: billmath
 author: billmath
 manager: mtillman
@@ -61,7 +60,7 @@ As described above, any AD FS user who has not yet registered (configured MFA ve
 The following pre-requisites are required when using Azure MFA for authentication with AD FS:  
   
 - An [Azure subscription with Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
-- [Azure Multi-Factor Authentication](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
+- [Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) 
 
 
 > [!NOTE]
@@ -71,8 +70,8 @@ The following pre-requisites are required when using Azure MFA for authenticatio
    - The server needs to be able to communicate with the following URLs over port 443.
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
-- Your on-premises environment is [federated with Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  
-- [Windows Azure Active Directory Module for Windows PowerShell](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).  
+- Your on-premises environment is [federated with Azure AD.](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs)  
+- [Windows Azure Active Directory Module for Windows PowerShell](/powershell/module/azuread/?view=azureadps-2.0).  
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.  
 - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.
 
@@ -99,7 +98,7 @@ Note that TenantID is the name of your directory in Azure AD.  Use the following
 In order to enable the AD FS servers to communicate with the Azure Multi-Factor Auth Client, you need to add the credentials to the Service Principal for the Azure Multi-Factor Auth Client. The certificates generated using the `New-AdfsAzureMFaTenantCertificate` cmdlet will serve as these credentials. Do the following using PowerShell to add the new credentials to the Azure Multi-Factor Auth Client Service Principal.  
 
 > [!NOTE]
-> In order to complete this step you need to connect to your instance of Azure AD with PowerShell using `Connect-MsolService`.  These steps assume you have already connected via PowerShell.  For information see [`Connect-MsolService`.](https://msdn.microsoft.com/library/dn194123.aspx)  
+> In order to complete this step you need to connect to your instance of Azure AD with PowerShell using `Connect-MsolService`.  These steps assume you have already connected via PowerShell.  For information see [`Connect-MsolService`.](/previous-versions/azure/dn194123(v=azure.100))  
 
 **Set the certificate as the new credential against the Azure Multi-Factor Auth Client**  
 
@@ -113,9 +112,9 @@ In order to enable the AD FS servers to communicate with the Azure Multi-Factor 
   
 ## Configure the AD FS Farm  
   
-Once you have completed the previous section on each AD FS server, set the Azure tenant information using the [Set-AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. This cmdlet needs to be executed only once for an AD FS farm.
+Once you have completed the previous section on each AD FS server, set the Azure tenant information using the [Set-AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. This cmdlet needs to be executed only once for an AD FS farm.
 
-Open a PowerShell prompt and enter your own *tenantId* with the [Set-AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. For customers that use Microsoft Azure Government cloud, add the `-Environment USGov` parameter:
+Open a PowerShell prompt and enter your own *tenantId* with the [Set-AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. For customers that use Microsoft Azure Government cloud, add the `-Environment USGov` parameter:
 
 > [!NOTE]
 > You need to restart the AD FS service on each server in the farm before these changes take affect. For minimal impact, take each AD FS server out of the NLB rotation one at a time and wait for all connections to drain.
@@ -126,7 +125,7 @@ Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f
 
 ![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
 
-Windows Server without the latest service pack doesn't support the `-Environment` parameter for the [Set-AdfsAzureMfaTenant](https://docs.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or you aren't in the Azure Government cloud:
+Windows Server without the latest service pack doesn't support the `-Environment` parameter for the [Set-AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or you aren't in the Azure Government cloud:
 
 1. Open **Registry Editor** on the AD FS server.
 1. Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ADFS`. Create the following registry key values:
@@ -156,11 +155,14 @@ On each AD FS server, in the local computer My store, there will be a self signe
 
 If the validity period of your certificates is nearing its end, start the renewal process by generating a new Azure MFA certificate on each AD FS server. In a PowerShell command window, generate a new certificate on each AD FS server using the following cmdlet:
 
+> [!CAUTION]
+> If your certificate has already expired, don't add the `-Renew $true` parameter to the following command. In this scenario, the existing expired certificate is replaced with a new one instead of being left in place and an additional certificate created.
+
 ```
 PS C:\> $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such as contoso.onmicrosoft.com> -Renew $true
 ```
 
-As a result of this cmdlet, a new certificate that is valid from 2 days in the future to 2 days + 2 years will be generated.  AD FS and Azure MFA operations will not be affected by this cmdlet or the new certificate. (Note: the 2 day delay is intentional and provides time to execute the steps below to configure the new certificate in the tenant before AD FS starts using it for Azure MFA.)
+If the certificate hasn't already expired, a new certificate that is valid from 2 days in the future to 2 days + 2 years is generated. AD FS and Azure MFA operations aren't affected by this cmdlet or the new certificate. (Note: the 2 day delay is intentional and provides time to execute the steps below to configure the new certificate in the tenant before AD FS starts using it for Azure MFA.)
 
 ### Configure each new AD FS Azure MFA certificate in the Azure AD tenant
 
@@ -170,7 +172,7 @@ Using the Azure AD PowerShell module, for each new certificate (on each AD FS se
 PS C:/> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
 ```
 
-`$newcert` is the new certificate. The base64 encoded certificate can be obtained by exporting the certificate (without the private key) as a DER encoded file and opening in Notepad.exe, then copy/pasting to the PowerShell session and assigning to the variable `$newcert`.
+If your previous certificate had already expired, restart the AD FS service to pick up the new certificate. You don't need to restart the AD FS service if you renewed a certificate before it expired.
 
 ### Verify that the new certificate(s) will be used for Azure MFA
 

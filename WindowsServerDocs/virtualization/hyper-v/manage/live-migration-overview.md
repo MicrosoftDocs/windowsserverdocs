@@ -1,10 +1,8 @@
 ---
 title: Live Migration Overview
-description: "Gives overview of live migration functionality in Windows Server 2016."
+description: Gives overview of live migration functionality in Windows Server 2016.
 ms.prod: windows-server
-ms.service: na
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5cc875ab-05c4-439e-b27d-6bfc77054660
 author: johncslack

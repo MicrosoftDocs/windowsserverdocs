@@ -1,16 +1,17 @@
 ---
 title: Failover Clustering system log events
 description: A list of Failover Clustering events in the Windows Server System log. These events can be used to troubleshoot a cluster.
-ms.prod: windows-server-threshold 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage-failover-clustering 
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+manager: lizross
+ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
 ---
 # Failover Clustering system log events
 
->Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic lists the Failover Clustering events from the Windows Server System
 log (viewable in Event Viewer). These events all share the event source of
@@ -988,7 +989,7 @@ adapters.
 ### Event 1568: RES_CLOUD_WITNESS_CANT_COMMUNICATE_TO_AZURE
 
 Cloud witness resource could not reach Microsoft Azure storage
-services.<br><br>Cluster resource: %1 <br>Cluster node: %2 
+services.<br><br>Cluster resource: %1 <br>Cluster node: %2
 
 #### Guidance
 
@@ -1010,7 +1011,7 @@ to check your network configuration.
 
 Cloud witness resource failed to authenticate with Microsoft Azure storage
 services. An access denied error was returned while attempting to contact the
-Microsoft Azure storage account. <br><br>Cluster resource: %1 
+Microsoft Azure storage account. <br><br>Cluster resource: %1
 
 #### Guidance
 
@@ -1193,7 +1194,7 @@ failure. When the problem is resolved, you can retry the drain operation.
 
 The cluster service was unable to reach any available domain controller on the
 domain. This may impact functionality that is dependent on Cluster network name
-authentication.<br><br>DC Server: %1 
+authentication.<br><br>DC Server: %1
 
 #### Guidance
 
@@ -2035,7 +2036,7 @@ job is completed. This snapshot exceeded the time that is expected for a
 snapshot to exist. Verify with the backup application that backup jobs are
 completing successfully.
 
-## See also
+## Additional References
 
 -   [Detailed event info for Failover Clustering components in Windows Server
-    2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))
+    2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))

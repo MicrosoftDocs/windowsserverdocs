@@ -3,7 +3,7 @@ ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
 ms.prod: windows-server
 ms.author: cosdar
-ms.manager: dongill
+manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
@@ -25,7 +25,7 @@ Adding servers, often called scaling out, adds storage capacity and can improve 
 
 Typical deployments are simple to scale out by adding servers. There are just two steps:
 
-1. Run the [cluster validation wizard](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) using the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell (run as Administrator). Include the new server *\<NewNode>* you wish to add.
+1. Run the [cluster validation wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) using the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell (run as Administrator). Include the new server *\<NewNode>* you wish to add.
 
    ```PowerShell
    Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
@@ -115,7 +115,7 @@ For this, you will need to update your **StorageTier** templates to have both *P
 
 #### Option 3
 
-You may find it easiest to simply remove the existing tier template and create the two new ones. This will not affect any pre-existing volumes which were created by refering the tier template: it's just a template.
+You may find it easiest to simply remove the existing tier template and create the two new ones. This will not affect any pre-existing volumes which were created by referring the tier template: it's just a template.
 
 ```PowerShell
 Remove-StorageTier -FriendlyName Capacity
@@ -175,7 +175,7 @@ To scale up, connect the drives and verify that Windows discovers them. They sho
 Get-PhysicalDisk | Select SerialNumber, CanPool, CannotPoolReason
 ```
 
-Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/). At this point, you're finished and ready to [extend your volumes](resize-volumes.md) or [create new ones](create-volumes.md).
+Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959). At this point, you're finished and ready to [extend your volumes](resize-volumes.md) or [create new ones](create-volumes.md).
 
 If the drives don't appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management** or with the **Reset-PhysicalDisk** cmdlet.
 
@@ -194,7 +194,7 @@ Optimization uses two jobs - one called *Optimize* and one called *Rebalance* - 
 Get-StorageJob
 ```
 
-You can manually optimize a storage pool with the [Optimize-StoragePool](https://docs.microsoft.com/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. Here's an example:
+You can manually optimize a storage pool with the [Optimize-StoragePool](/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. Here's an example:
 
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool

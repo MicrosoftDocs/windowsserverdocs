@@ -1,4 +1,4 @@
-# [Networking](Networking.md)
+# [Networking documentation](index.yml)
 ## [Windows Server supported networking scenarios](windows-server-supported-networking-scenarios.md)
 
 ## [What's new in networking](What-s-New-in-Networking.md)
@@ -93,6 +93,12 @@
 #### [DHCP subnet selection options](technologies/dhcp/dhcp-subnet-options.md)
 #### [DHCP logging events for DNS record registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
+### [Troubleshoot DHCP issues](../troubleshoot/troubleshoot-dhcp-issue.md)
+#### [Dynamic Host Configuration Protocol (DHCP) Basics](../troubleshoot/dynamic-host-configuration-protocol-basics.md)
+#### [General guidance to troubleshoot DHCP](../troubleshoot/general-guidance-to-troubleshoot-dhcp.md)
+##### [How to use automatic TCP/IP addressing without a DHCP server](../troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh.md)
+#### [Troubleshoot problems on the DHCP client](../troubleshoot/troubleshoot-problems-on-dhcp-client.md)
+#### [Troubleshoot problems on the DHCP server](../troubleshoot/troubleshoot-problems-on-dhcp-server.md)
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 ### [Network offload and optimization technologies](technologies/hpn/network-offload-and-optimization.md)
@@ -204,6 +210,7 @@
 ### [Network Shell (Netsh) example batch file](technologies/netsh/netsh-wins.md)
 ### [Netsh http commands](technologies/netsh/netsh-http.md)
 ### [Netsh interface portproxy commands](technologies/netsh/netsh-interface-portproxy.md)
+### [Netsh mbn commands](technologies/netsh/netsh-mbn.md)
 
 ## [Network subsystem performance tuning](technologies/network-subsystem/net-sub-performance-top.md)
 ### [Choosing a network adapter](technologies/network-subsystem/net-sub-choose-nic.md)
@@ -222,7 +229,7 @@
 #### [How QoS policy works](technologies/qos/qos-policy-works.md)
 #### [QoS policy architecture](technologies/qos/qos-policy-architecture.md)
 #### [QoS policy scenarios](technologies/qos/qos-policy-scenarios.md)
-###[Manage QoS policy](technologies/qos/qos-policy-manage.md)
+### [Manage QoS policy](technologies/qos/qos-policy-manage.md)
 #### [QoS policy events and errors](technologies/qos/qos-policy-errors.md)
 ### [QoS policy FAQ](technologies/qos/qos-policy-faq.md)
 

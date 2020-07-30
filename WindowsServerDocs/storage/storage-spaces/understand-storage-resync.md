@@ -1,7 +1,6 @@
 ---
 title: Understand and see storage resync
 description: Detailed info on when storage resync happens and how to see it in Windows Server 2019.
-keywords: Storage Spaces Direct,storage resync,resync, storage, S2D
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
@@ -14,15 +13,15 @@ ms.localizationpriority: medium
 
 >Applies to: Windows Server 2019
 
-Storage resync alerts are a new capability of [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server 2019 that allows the Health Service to throw a fault when your storage is resyncing. The alert is useful in notifying you when resync is happening, so that you don't accidentally take more servers down (which could cause multiple fault domains to be affected, resulting in your cluster going down). 
+Storage resync alerts are a new capability of [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server 2019 that allows the Health Service to throw a fault when your storage is resyncing. The alert is useful in notifying you when resync is happening, so that you don't accidentally take more servers down (which could cause multiple fault domains to be affected, resulting in your cluster going down).
 
 This topic provides background and steps to understand and see storage resync in a Windows Server failover cluster with Storage Spaces Direct.
 
 ## Understanding resync
 
-Let's start with a simple example to understand how storage gets out of sync. Keep in mind that any shared-nothing (local drives only) distributed storage solution exhibits this behavior. As you will see below, if one server node goes down, then its drives won't be updated until it comes back online - this is true for any hyper-converged architecture. 
+Let's start with a simple example to understand how storage gets out of sync. Keep in mind that any shared-nothing (local drives only) distributed storage solution exhibits this behavior. As you will see below, if one server node goes down, then its drives won't be updated until it comes back online - this is true for any hyper-converged architecture.
 
-Suppose that we want to store the string "HELLO". 
+Suppose that we want to store the string "HELLO".
 
 ![ASCII of string "hello"](media/understand-storage-resync/hello.png)
 
@@ -34,7 +33,7 @@ Suppose we update our string from "HELLO" to "HELP!" at this time.
 
 ![ASCII of string "help!"](media/understand-storage-resync/help.png)
 
-Once we update the string, copy #2 and #3 will be succesfully updated. However, copy #1 still cannot be accessed because server #1 is down temporarily (for maintanence). 
+Once we update the string, copy #2 and #3 will be successfully updated. However, copy #1 still cannot be accessed because server #1 is down temporarily (for maintanence).
 
 ![Gif of writing to copy #2 and #2"](media/understand-storage-resync/write.gif)
 
@@ -56,7 +55,7 @@ To view this fault in PowerShell, run:
 Get-HealthFault
 ```
 
-This is a new fault in Windows Server 2019, and will appear in PowerShell, in the cluster validation report, and anywhere else that builds on Health faults. 
+This is a new fault in Windows Server 2019, and will appear in PowerShell, in the cluster validation report, and anywhere else that builds on Health faults.
 
 To get a deeper view, you can query the time series database in PowerShell as follows:
 
@@ -81,7 +80,7 @@ By showing the overall storage resync progress, you can accurately know how much
 
 ![Image of alert in Windows Admin Center"](media/understand-storage-resync/alert.png)
 
-The alert is useful in notifying you when resync is happening, so that you don't accidentally take more servers down (which could cause multiple fault domains to be affected, resulting in your cluster going down). 
+The alert is useful in notifying you when resync is happening, so that you don't accidentally take more servers down (which could cause multiple fault domains to be affected, resulting in your cluster going down).
 
 If you navigate to the *Servers* page in Windows Admin Center, click on *Inventory*, and then choose a specific server, you can get a more detailed view of how this storage resync looks on a per-server basis. If you navigate to your server and look at the *Storage* chart, you will see the amount of data that needs to be repaired in a *purple* line with exact number right above. This amount will increase when the server is down (more data needs to be resynced), and gradually decrease when the server comes back online (data is being synced). When the amount of data that needs to be repair is 0, your storage is done resyncing - you are now free to take a server down if you need to. A screenshot of this experience in Windows Admin Center is shown below:
 
@@ -106,7 +105,7 @@ Regeneration          00:01:19              Running               50            
 
 This view is a lot more granular since the storage jobs listed are per volume, you can see the list of jobs that are running, and you can track their individual progress. This cmdlet works on both Windows Server 2016 and 2019.
 
-## See also
+## Additional References
 
 - [Taking a server offline for maintenance](maintain-servers.md)
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

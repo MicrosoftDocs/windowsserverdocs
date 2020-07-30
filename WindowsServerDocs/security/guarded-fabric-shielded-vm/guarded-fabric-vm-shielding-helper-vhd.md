@@ -1,11 +1,11 @@
 ---
 title: Shielded VMs - Preparing a VM Shielding Helper VHD
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
@@ -15,7 +15,7 @@ ms.date: 08/29/2018
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 > [!IMPORTANT]
-> Before beginning these procedures, ensure that you have installed the latest cumulative update for Windows Server 2016 or are using the latest Windows 10 [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520). Otherwise, the procedures will not work. 
+> Before beginning these procedures, ensure that you have installed the latest cumulative update for Windows Server 2016 or are using the latest Windows 10 [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520). Otherwise, the procedures will not work.
 
 This section outlines steps performed by a hosting service provider to enable support for converting existing VMs to shielded VMs.
 
@@ -54,7 +54,7 @@ In the VMM Console, open the settings pane and then **Host Guardian Service Sett
 
 ![VMM - Host Guardian Service Settings](../media/Guarded-Fabric-Shielded-VM/guarded-host-vmm-hgs-settings-01.png)
 
-## See also
+## Additional References
 
 - [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

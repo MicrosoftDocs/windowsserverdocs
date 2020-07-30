@@ -1,14 +1,12 @@
 ---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What's New in Active Directory Domain Services Installation and Removal
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # What's New in Active Directory Domain Services Installation and Removal
@@ -223,7 +221,7 @@ If you experience this problem, check the dcpromo.log file in the %systemroot%\d
    DC2.contoso.com  
    ```  
 
-   If the error is caused by specifying a local Administrator account and password, in order to recover you need to reinstall the operating system, [perform metadata cleanup](https://technet.microsoft.com/library/cc816907(WS.10).aspx) of the account for the domain controller that failed to complete installation, and then retry the AD DS installation using Domain Admin credentials. Restarting the server will not correct this error condition because the server will indicate that AD DS is installed even though the installation did not finish successfully.  
+   If the error is caused by specifying a local Administrator account and password, in order to recover you need to reinstall the operating system, [perform metadata cleanup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10)) of the account for the domain controller that failed to complete installation, and then retry the AD DS installation using Domain Admin credentials. Restarting the server will not correct this error condition because the server will indicate that AD DS is installed even though the installation did not finish successfully.  
 
 ### <a name="BKMK_nonnormalDNSNameWarning"></a>Active Directory Domain Services Configuration Wizard warns when a non-normalized DNS name is specified
 
@@ -242,4 +240,4 @@ The following example explains one of the issues that can happen when using an I
 
 If the warning appears in the Prerequisites Check page in the Active Directory Domain Services Configuration Wizard, return to the Deployment Configuration page and specify a normalized DNS domain name. If you are installing a new domain using Windows PowerShell, specify a normalized DNS name for the -DomainName option.  
 
-For more information about IDNs, see [Handling Internationalized Domain Names (IDNs)](https://msdn.microsoft.com/library/windows/desktop/dd318142(v=vs.85).aspx).  
+For more information about IDNs, see [Handling Internationalized Domain Names (IDNs)](/windows/win32/intl/handling-internationalized-domain-names--idns).  

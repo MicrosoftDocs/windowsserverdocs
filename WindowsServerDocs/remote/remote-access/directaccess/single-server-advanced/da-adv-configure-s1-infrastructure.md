@@ -2,16 +2,12 @@
 title: Step 1 Configure Advanced DirectAccess Infrastructure
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 1 Configure Advanced DirectAccess Infrastructure
 
@@ -133,30 +129,30 @@ When using additional firewalls, apply the following internal network firewall e
 ## <a name="ConfigCAs"></a>1.5 Configure CAs and certificates  
 Remote Access in  Windows Server 2012  allows you to choose between using certificates for computer authentication or using a built in Kerberos proxy that authenticates using user names and passwords. You must also configure an IP-HTTPS certificate on the DirectAccess server.  
   
-For more information, see [Active Directory Certificate Services](https://technet.microsoft.com/library/cc770357.aspx).  
+For more information, see [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770357(v=ws.10)).  
   
 ### 1.5.1 Configure IPsec authentication  
 A computer certificate is required on the DirectAccess server and on all DirectAccess clients to use IPsec authentication. The certificate must be issued by an internal certification authority (CA), and DirectAccess servers and DirectAccess clients must trust the CA chain that issues root and intermediate certificates.  
   
 ##### To configure IPsec authentication  
   
-1.  In the internal CA, decide if you will use the **Computer** certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](https://technet.microsoft.com/library/cc731705.aspx).  
+1.  In the internal CA, decide if you will use the **Computer** certificate template, or if you will create a new certificate template as described in [Creating Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731705(v=ws.10)).  
   
     > [!NOTE]  
     > If you create a new template, it must be configured for Client Authentication.  
   
-2.  Deploy the certificate template, if required. For more information, see [Deploying Certificate Templates](https://technet.microsoft.com/library/cc770794.aspx).  
+2.  Deploy the certificate template, if required. For more information, see [Deploying Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770794(v=ws.10)).  
   
-3.  Configure the certificate template for autoenrollment, if required. For more information, see [Configure Certificate Autoenrollment](https://technet.microsoft.com/library/cc731522.aspx).  
+3.  Configure the certificate template for autoenrollment, if required. For more information, see [Configure Certificate Autoenrollment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731522(v=ws.11)).  
   
 ### <a name="ConfigCertTemp"></a>1.5.2 Configure certificate templates  
 When you use an internal CA to issue certificates, you must configure a certificate template for the IP-HTTPS certificate and the network location server website certificate.  
   
 ##### To configure a certificate template  
   
-1.  In the internal CA, create a certificate template as described in [Creating Certificate Templates](https://technet.microsoft.com/library/cc731705.aspx).  
+1.  In the internal CA, create a certificate template as described in [Creating Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731705(v=ws.10)).  
   
-2.  Deploy the certificate template as described in [Deploying Certificate Templates](https://technet.microsoft.com/library/cc770794.aspx).  
+2.  Deploy the certificate template as described in [Deploying Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770794(v=ws.10)).  
   
 ### 1.5.3 Configure the IP-HTTPS certificate  
 Remote Access requires an IP-HTTPS certificate to authenticate IP-HTTPS connections to the DirectAccess server. There are three certificate options that are available for IP-HTTPS authentication:  
@@ -350,7 +346,7 @@ A minimum of two Group Policy Objects are required to deploy Remote Access:
   
 When you configure Remote Access, the wizard automatically creates the required Group Policy Objects. However, if your organization enforces a naming convention, you can type a name in the GPO dialog box in the Remote Access Management console. For more information, see 2.7. Configuration summary and alternate GPOs. If you have created permissions, the GPO will be created. If you do not have the required permissions to create GPOs, they must be created prior to configuring Remote Access.  
   
-To create Group Policy Objects, see [Create and Edit a Group Policy Object](https://technet.microsoft.com/library/cc754740.aspx).  
+To create Group Policy Objects, see [Create and Edit a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754740(v=ws.11)).  
   
 > [!IMPORTANT]  
 > Administrators can manually link the DirectAccess Group Policy Objects to an organizational unit (OU) by following these steps:  
@@ -358,7 +354,7 @@ To create Group Policy Objects, see [Create and Edit a Group Policy Object](http
 > 1.  Before you configure DirectAccess, link the created GPOs to the respective OUs.  
 > 2.  When you configure DirectAccess, specify a security group for the client computers.  
 > 3.  The Remote Access administrator may or may not have permissions to link the Group Policy Objects to the domain. In either case, the Group Policy Objects will be configured automatically. If the GPOs are already linked to an OU, the links will not be removed, and the GPOs will not be linked to the domain. For a server GPO, the OU must contain the server computer object, or the GPO will be linked to the root of the domain.  
-> 4.  If you did not link to the OU before running the DirectAccess Wizard, after the configuration is complete, the domain administrator can link the DirectAccess Group Policy Objects to the required OUs. The link to the domain can be removed. For more information, see [Link a Group Policy Object](https://technet.microsoft.com/library/cc732979.aspx).  
+> 4.  If you did not link to the OU before running the DirectAccess Wizard, after the configuration is complete, the domain administrator can link the DirectAccess Group Policy Objects to the required OUs. The link to the domain can be removed. For more information, see [Link a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732979(v=ws.11)).  
   
 > [!NOTE]  
 > If a Group Policy Object was created manually, it is possible that the Group Policy Object will not be available during the DirectAccess configuration. The Group Policy Object may not have been replicated to the closest domain controller to the management computer. In this event, the administrator can wait for replication to complete, or force the replication.  
@@ -370,13 +366,13 @@ In a deployment that uses staging and production GPOs, the domain administrator 
   
 2.  For each GPO that is requested by the Remote Access administrator, create a pair of GPOs with different names. The first will be used as the staging GPO, and the second as the production GPO.  
   
-    To create Group Policy Objects, see [Create and Edit a Group Policy Object](https://technet.microsoft.com/library/cc754740.aspx).  
+    To create Group Policy Objects, see [Create and Edit a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754740(v=ws.11)).  
   
-3.  To link the production GPOs, see [Link a Group Policy Object](https://technet.microsoft.com/library/cc732979).  
+3.  To link the production GPOs, see [Link a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732979(v=ws.11)).  
   
-4.  Grant the Remote Access administrator **Edit settings, delete and modify security** permissions on all of the staging GPOs. For more informantion, see [Delegate Permissions for a Group or User on a Group Policy Object](https://technet.microsoft.com/library/cc754542).  
+4.  Grant the Remote Access administrator **Edit settings, delete and modify security** permissions on all of the staging GPOs. For more informantion, see [Delegate Permissions for a Group or User on a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754542(v=ws.11)).  
   
-5.  Deny the Remote Access administrator permissions to link GPOs in all domains (or verify that the Remote Access administrator doesn"t have such permissions). For more information, see [Delegate Permissions to Link Group Policy Objects](https://technet.microsoft.com/library/cc755086).  
+5.  Deny the Remote Access administrator permissions to link GPOs in all domains (or verify that the Remote Access administrator doesn"t have such permissions). For more information, see [Delegate Permissions to Link Group Policy Objects](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755086(v=ws.11)).  
   
 When Remote Access administrators configure Remote Access, they should always specify only the staging GPOs (not the production GPOs). This is true in the initial configuration of Remote Access and when performing additional configuration operations where additional GPOs are required; for example, when adding entry points in a multisite deployment or enabling client computers in additional domains.  
   
@@ -551,5 +547,3 @@ The following are required for either type of certificate, if they do not alread
   
 -   [Step 2: Configure Advanced DirectAccess Servers](da-adv-configure-s2-servers.md)  
   
-
-

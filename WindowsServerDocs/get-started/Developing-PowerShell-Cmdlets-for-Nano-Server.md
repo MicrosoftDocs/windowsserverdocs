@@ -1,11 +1,9 @@
 ---
 title: Developing PowerShell Cmdlets for Nano Server
-description: "porting CIM, .NET cmdlets, C++ "
+description: porting CIM, .NET cmdlets, C++ 
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
 author: jaimeo
@@ -68,7 +66,7 @@ CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] C
 ```  
 When getting a list of available modules, you can filter the list by PowerShell edition.  
 ```powershell  
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Desktop"  
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Desktop  
   
     Directory: C:\Program Files\WindowsPowerShell\Modules  
   
@@ -77,21 +75,21 @@ ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------  
 Manifest   1.0        ModuleWithPSEditions  
   
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Core" | % CompatiblePSEditions  
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Core | % CompatiblePSEditions  
 Desktop  
 Core  
   
 ```  
 Script authors can prevent a script from executing unless it is run on a compatible edition of PowerShell using the PSEdition parameter on a #requires statement.  
 ```powershell  
-Set-Content C:\script.ps1 -Value "#requires -PSEdition Core  
-Get-Process -Name PowerShell"  
+Set-Content C:\script.ps1 -Value #requires -PSEdition Core  
+Get-Process -Name PowerShell  
 Get-Content C:\script.ps1  
 #requires -PSEdition Core  
 Get-Process -Name PowerShell  
   
 C:\script.ps1  
-C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.  
+C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a #requires statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.  
 At line:1 char:1  
 + C:\script.ps1  
 + ~~~~~~~~~~~~~  
@@ -132,14 +130,14 @@ Generally, these cmdlets should work in Nano Server without any conversion neces
 ### Building C++ for Nano Server  
 To get C++ DLLs working on Nano Server, compile them for Nano Server rather than for a specific edition.  
   
-For prerequisites and a walkthrough of developing C++ on Nano Server, see [Developing Native Apps on Nano Server](https://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx).  
+For prerequisites and a walkthrough of developing C++ on Nano Server, see [Developing Native Apps on Nano Server](/archive/blogs/nanoserver/developing-native-apps-on-nano-server).  
   
   
 ## Porting .NET cmdlets  
 Most C# code is supported on Nano Server. You can use [ApiPort](https://github.com/Microsoft/dotnet-apiport) to scan for incompatible APIs.  
   
 ### Powershell Core SDK  
-The module "Microsoft.PowerShell.NanoServer.SDK" is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
+The module Microsoft.PowerShell.NanoServer.SDK is available in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.PowerShell.NanoServer.SDK/) to facilitate developing .NET cmdlets using Visual Studio 2015 Update 2 that target the versions of CoreCLR and PowerShell Core available in Nano Server. You can install the module using PowerShellGet with this command:  
   
 `Find-Module Microsoft.PowerShell.NanoServer.SDK -Repository PSGallery | Install-Module -Scope <scope>`  
   
@@ -172,7 +170,7 @@ You can search in the API catalog for .NET Core or disassemble Core CLR referenc
 ### PInvoke  
 In the Core CLR that Nano Server uses, some fundamental DLLs such as kernel32.dll and advapi32.dll were split into numerous API sets, so you'll need to ensure that your PInvokes reference the correct API. Any incompatibility will manifest as a runtime error.  
   
-For a list of native APIs supported on Nano Server, see [Nano Server APIs](https://msdn.microsoft.com/library/mt588480(v=vs.85).aspx).  
+For a list of native APIs supported on Nano Server, see [Nano Server APIs](/previous-versions/windows/desktop/legacy/mt588480(v=vs.85)).  
   
 ### Building C# for Nano Server  
   
@@ -208,7 +206,7 @@ public class TestNetConnectionResult
 '@  
 # Create object and set properties  
 $result = New-Object TestNetConnectionResult  
-$result.ComputerName = "Foo"  
+$result.ComputerName = Foo  
 $result.RemoteAddress = 1.1.1.1  
   
 ```  
@@ -225,7 +223,7 @@ class TestNetConnectionResult
 }  
 # Create object and set properties  
 $result = [TestNetConnectionResult]::new()  
-$result.ComputerName = "Foo"  
+$result.ComputerName = Foo  
 $result.RemoteAddress = 1.1.1.1  
   
 ```  
@@ -236,7 +234,7 @@ To remotely debug a script, connect to the remote computer using `Enter-PSsessio
   
 ### Migrating from WMI .NET to MI .NET  
   
-[WMI .NET](https://msdn.microsoft.com/library/mt481551(v=vs.110).aspx) is not supported, so all cmdlets using the old API must migrate to the supported WMI API: [MI. NET](https://msdn.microsoft.com/library/dn387184(v=vs.85).aspx). You can access MI .NET directly through C# or through the cmdlets in the CimCmdlets module.   
+[WMI .NET](/dotnet/api/?view=netframework-4.7.1) is not supported, so all cmdlets using the old API must migrate to the supported WMI API: [MI. NET](/previous-versions//dn387184(v=vs.85)). You can access MI .NET directly through C# or through the cmdlets in the CimCmdlets module.   
   
 ### CimCmdlets module  
   
@@ -247,5 +245,3 @@ The WMI v1 cmdlets (e.g., Get-WmiObject) are not supported on Nano Server. Howev
 WMI .NET wraps the WMIv1 interface, while MI .NET wraps the WMIv2 (CIM) interface. The classes exposed might be different, but the underlying operations are very similar. You enumerate or get instances of objects and invoke operations on them to accomplish tasks.   
   
   
-
-

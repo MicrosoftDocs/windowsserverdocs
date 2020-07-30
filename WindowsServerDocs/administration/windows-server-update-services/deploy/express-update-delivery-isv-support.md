@@ -1,11 +1,8 @@
 ---
 title: Express update delivery ISV support
-description: "Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can configure Express update delivery using WSUS"
+description: Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can configure Express update delivery using WSUS
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: sakitong
 ms.author: coreyp
@@ -52,11 +49,11 @@ ISVs can use WSUS and the WU client to support Express update delivery. Microsof
    - The ISV client agent determines which updates to approve, and when do download and install updates
    - The WU client determines byte ranges to download and initiates the download request
 
-### <a name="BKMK_1"></a>Step 1: Configure WSUS
+### <a name=BKMK_1></a>Step 1: Configure WSUS
 
 WSUS serves as the interface to Windows Update and manages all metadata describing Express packages that need to be downloaded. If you need to deploy, see [**Overview of Windows Server Update Services 3.0 SP2**](https://technet.microsoft.com/library/dd939931(v=ws.10).aspx). Once WSUS has been deployed, the primary consideration is whether or not to store update content locally on the WSUS server. When configuring WSUS, we recommend not storing updates locally. This assumes that you already have software directing deployment of these packages in your environment. For more about how to configure WSUS local storage, see [**Determine Where to Store Updates**](https://technet.microsoft.com/library/cc720494(v=ws.10).aspx).
 
-### <a name="BKMK_2"></a>Step 2: Specify and Populate the ISV File Cache 
+### <a name=BKMK_2></a>Step 2: Specify and Populate the ISV File Cache 
 
 #### Specify the ISV File Cache
 
@@ -79,7 +76,7 @@ There are two options when setting up the alternate download location for the IS
 > [!IMPORTANT]
 > The ISV file cache requires the following:                                                          
 > - The server must be HTTP 1.1 compliant per the RFC: <http://www.w3.org/Protocols/rfc2616/rfc2616.html>                                                                                                                                                                
-> Specifically, the web server needs to support                                                                                                                                                                                                                                       [**HEAD**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) and [**GET**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.htm) requests<br>                                                                                                                                                                                                                                                                                                  - Partial Range requests<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - Do not use "Transfer-Encoding:chunked"                                                                                                 
+> Specifically, the web server needs to support                                                                                                                                                                                                                                       [**HEAD**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) and [**GET**](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.htm) requests<br>                                                                                                                                                                                                                                                                                                  - Partial Range requests<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   - Keep-alive<br>                                                                                                                                                                                                                                                                                                                                                                                                                            - Do not use Transfer-Encoding:chunked                                                                                                 
 
 #### Populate the ISV File Cache
 
@@ -99,7 +96,7 @@ The ISV file cache must be populated with files associated with the updates to b
 
      Have HTTP server (or localhost) redirect **HTTP GET** requests, which reference the MU folder path and file name, to the ISV file location.
 
-### <a name="BKMK_3"></a>Step 3: Set up an ISV client agent to direct WU client operations
+### <a name=BKMK_3></a>Step 3: Set up an ISV client agent to direct WU client operations
 
 The ISV client agent orchestrates the download and installation of approved updates using the following recommended workflow:
 

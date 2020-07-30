@@ -1,14 +1,12 @@
 ---
 ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
 title: Delegating Administration of Default Containers and OUs
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -48,7 +46,7 @@ By default, several well-known users and groups and built-in accounts are create
   
 |Well-known users and groups|Built-in accounts|  
 |--------------------------------|----------------------|  
-|Cert Publishers<br /><br />Domain Controllers<br /><br />Group Policy Creator Owners<br /><br />KRBTGT<br /><br />Domain Guests<br /><br />Administrator<br /><br />Domain Admins<br /><br />Schema Admins (forest root domain only)<br /><br />Enterprise Admins (forest root domain only)<br /><br />Domain Users|Administrator<br /><br />Guest<br /><br />Guests<br /><br />Account Operators<br /><br />Administrators<br /><br />Backup Operators<br /><br />Incoming Forest Trust Builders<br /><br />Print Operators<br /><br />Pre-Windows 2000 Compatible Access<br /><br />Server Operators<br /><br />Users|  
+|Cert Publishers<p>Domain Controllers<p>Group Policy Creator Owners<p>KRBTGT<p>Domain Guests<p>Administrator<p>Domain Admins<p>Schema Admins (forest root domain only)<p>Enterprise Admins (forest root domain only)<p>Domain Users|Administrator<p>Guest<p>Guests<p>Account Operators<p>Administrators<p>Backup Operators<p>Incoming Forest Trust Builders<p>Print Operators<p>Pre-Windows 2000 Compatible Access<p>Server Operators<p>Users|  
   
 ## Domain Controller OU  
 When domain controllers are added to the domain, their computer objects are automatically added to the Domain Controller OU. This OU has a default set of policies applied to it. To ensure that these policies are applied uniformly to all domain controllers, we recommend that you not move the computer objects of the domain controllers out of this OU. Failure to apply the default policies can cause a domain controller to fail to function properly.  

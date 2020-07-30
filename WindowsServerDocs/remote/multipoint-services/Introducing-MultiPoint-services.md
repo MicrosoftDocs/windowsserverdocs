@@ -1,13 +1,9 @@
 ---
 title: Introducing MultiPoint Services
 description: Provides an overview of MultiPoint Services, a way to let multiple users share a system
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cbef744-4661-4ba9-9e2b-0bbd8854fd5c
 author: evaseydl

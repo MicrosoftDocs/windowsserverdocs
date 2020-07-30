@@ -1,14 +1,13 @@
 ---
 ms.assetid: 66fa945e-598d-4f18-b603-97a39ce0d836
 title: Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)
-description: "This topic explains how to create a staged RODC account and then attach a server to that account during RODC installation. This topic also explains how to install an RODC without performing a staged installation."
+description: This topic explains how to create a staged RODC account and then attach a server to that account during RODC installation. This topic also explains how to install an RODC without performing a staged installation.
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -29,12 +28,12 @@ The following diagram illustrates the Active Directory Domain Services Read-Only
   
 ![Install RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/adds_stagedcreation.png)  
   
-## <a name="BKMK_StagePS"></a>Stage RODC Windows PowerShell  
+## <a name=BKMK_StagePS></a>Stage RODC Windows PowerShell  
   
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
-|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<br /><br />***-DomainControllerAccountName***<br /><br />***-DomainName***<br /><br />***-SiteName***<br /><br />*-AllowPasswordReplicationAccountName*<br /><br />***-Credential***<br /><br />*-DelegatedAdministratorAccountName*<br /><br />*-DenyPasswordReplicationAccountName*<br /><br />*-NoGlobalCatalog*<br /><br />*-InstallDNS*<br /><br />-ReplicationSourceDC|  
+|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<p>***-DomainControllerAccountName***<p>***-DomainName***<p>***-SiteName***<p>*-AllowPasswordReplicationAccountName*<p>***-Credential***<p>*-DelegatedAdministratorAccountName*<p>*-DenyPasswordReplicationAccountName*<p>*-NoGlobalCatalog*<p>*-InstallDNS*<p>-ReplicationSourceDC|  
   
 > [!NOTE]  
 > The **-credential** argument is only required if you are not already logged on as a member of the Domain Admins group.  
@@ -44,12 +43,12 @@ The diagram below illustrates the Active Directory Domain Services configuration
   
 ![Install RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/adds_stageddeploy_beta1.png)  
   
-## <a name="BKMK_AttachPS"></a>Attach RODC Windows PowerShell  
+## <a name=BKMK_AttachPS></a>Attach RODC Windows PowerShell  
   
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
-|Install-AddsDomaincontroller|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-ApplicationPartitionsToReplicate*<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />*-InstallationMediaPath*<br /><br />*-LogPath*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />***-UseExistingAccount***|  
+|Install-AddsDomaincontroller|-SkipPreChecks<p>***-DomainName***<p>*-SafeModeAdministratorPassword*<p>*-ApplicationPartitionsToReplicate*<p>*-CreateDNSDelegation*<p>***-Credential***<p>-CriticalReplicationOnly<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>*-InstallationMediaPath*<p>*-LogPath*<p>-Norebootoncompletion<p>*-ReplicationSourceDC*<p>*-SystemKey*<p>*-SYSVOLPath*<p>***-UseExistingAccount***|  
   
 > [!NOTE]  
 > The **-credential** argument is only required if you are not already logged on as a member of the Domain Admins group.  
@@ -59,7 +58,7 @@ The diagram below illustrates the Active Directory Domain Services configuration
   
 You perform the staging operation of a read-only domain controller computer account by opening the Active Directory Administrative Center (**Dsac.exe**). Click the name of the domain in the navigation pane. Double-click **Domain Controllers** in the management list. Click **Pre-create a Read-only domain controller account** in the tasks pane.  
   
-For more information about the Active Directory Administrative Center, see [Advanced AD DS Management Using Active Directory Administrative Center &#40;Level 200&#41;](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) and review [Active Directory Administrative Center: Getting Started](https://technet.microsoft.com/library/dd560651(WS.10).aspx).  
+For more information about the Active Directory Administrative Center, see [Advanced AD DS Management Using Active Directory Administrative Center &#40;Level 200&#41;](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md) and review [Active Directory Administrative Center: Getting Started](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560651(v=ws.10)).  
   
 If you have experience creating read-only domain controllers, you will discover that the installation wizard has the same graphical interface as seen when using the older Active Directory Users and Computers snap-in from Windows Server 2008 and uses the same code, which includes exporting the configuration in the unattend file format used by the obsolete dcpromo.  
   
@@ -90,7 +89,7 @@ The equivalent ADDSDeployment Windows PowerShell argument is:
   
 Keep in mind that the staging system is a direct port from Windows Server 2008 R2 and does not provide the new Adprep functionality. If you plan to deploy staged RODC accounts, you must either first deploy an un-staged RODC in that domain so that the automatic rodcprep operation runs, or manually run adprep.exe /rodcprep first.  
   
-Otherwise, you will receive error "You will not be able to install a read-only domain controller in this domain because "adprep /rodcprep" was not yet run".  
+Otherwise, you will receive error You will not be able to install a read-only domain controller in this domain because adprep /rodcprep was not yet run.  
   
 ![Install RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCPrepNotRunError.png)  
   
@@ -225,7 +224,7 @@ Install-AddsDomainController
 ### Domain Controller Options  
 ![Install RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage2DCOptions.png)  
   
-The **Domain Controller Options** page shows the domain controller options for the new domain controller. When this page loads, the Active Directory Domain Services Configuration Wizard sends an LDAP query to an existing domain controller to check for unoccupied accounts. If the query finds an unoccupied domain controller computer account that shares the same name as the current computer, then the wizard displays an informational message at the top of the page that reads "**A Pre-created RODC account that matches the name of the target server exists in the directory. Choose whether to use this existing RODC account or reinstall this domain controller**." The wizard uses the **Use existing RODC account** as the default configuration.  
+The **Domain Controller Options** page shows the domain controller options for the new domain controller. When this page loads, the Active Directory Domain Services Configuration Wizard sends an LDAP query to an existing domain controller to check for unoccupied accounts. If the query finds an unoccupied domain controller computer account that shares the same name as the current computer, then the wizard displays an informational message at the top of the page that reads **A Pre-created RODC account that matches the name of the target server exists in the directory. Choose whether to use this existing RODC account or reinstall this domain controller**. The wizard uses the **Use existing RODC account** as the default configuration.  
   
 > [!IMPORTANT]  
 > You can use the **Reinstall this domain controller** option when a domain controller has suffered a physical problem and cannot return to functionality. This saves time when configuring the replacement domain controller, by leaving the domain controller computer account and object metadata in Active Directory. Install the new computer with the *same name*, and promote it as a domain controller in the domain. The **Reinstall this domain controller** option is unavailable if you removed the domain controller object's metadata from Active Directory (metadata cleanup).  
@@ -261,7 +260,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
 For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string:  
   
 ```  
--safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
+-safemodeadministratorpassword (read-host -prompt Password: -assecurestring)  
   
 ```  
   
@@ -271,14 +270,14 @@ For example, you can manually prompt for a password by using the **Read-Host** c
 You can also provide a secure string as a converted clear-text variable, although this is highly discouraged.  
   
 ```  
--safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
+-safemodeadministratorpassword (convertto-securestring Password1 -asplaintext -force)  
 ```  
   
 Finally, you could store the obfuscated password in a file, and then reuse it later, without the clear text password ever appearing. For example:  
   
 ```  
-$file = "c:\pw.txt"  
-$pw = read-host -prompt "Password:" -assecurestring  
+$file = c:\pw.txt  
+$pw = read-host -prompt Password: -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
   
 -safemodeadministratorpassword (Get-Content $File | ConvertTo-SecureString)  
@@ -296,8 +295,8 @@ The **Additional Options** page provides configuration options to name a domain 
 You can also choose to install the domain controller using backed up media using the Install from media (IFM) option. The **Install from media** checkbox provides a browse option once selected and you must click **Verify** to ensure the provided path is valid media.
 
 Guidelines for the IFM source:
-•	Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
-•	The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
+*    Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
+*    The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
 
 For more information about changes in IFM, see [Ntdsutil.exe Install from Media Changes](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM). If using media protected with a SYSKEY, Server Manager prompts for the image's password during verification. 
   
@@ -336,10 +335,10 @@ Import-Module ADDSDeployment
 Install-ADDSDomainController `  
 -Credential (Get-Credential) `  
 -CriticalReplicationOnly:$false `  
--DatabasePath "C:\Windows\NTDS" `  
--DomainName "corp.contoso.com" `  
--LogPath "C:\Windows\NTDS" `  
--SYSVOLPath "C:\Windows\SYSVOL" `  
+-DatabasePath C:\Windows\NTDS `  
+-DomainName corp.contoso.com `  
+-LogPath C:\Windows\NTDS `  
+-SYSVOLPath C:\Windows\SYSVOL `  
 -UseExistingAccount:$true `  
 -Norebootoncompletion:$false  
 -Force:$true  
@@ -418,7 +417,7 @@ The following diagram illustrates the Active Directory Domain Services configura
 |||  
 |-|-|  
 |**ADDSDeployment Cmdlet**|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|  
-|Install-AddsDomainController|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />***-SiteName***<br /><br />*-ApplicationPartitionsToReplicate*<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />*-CriticalReplicationOnly*<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-DNSOnNetwork<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-AllowPasswordReplicationAccountName*<br /><br />*-DelegatedAdministratorAccountName*<br /><br />*-DenyPasswordReplicationAccountName*<br /><br />***-ReadOnlyReplica***|  
+|Install-AddsDomainController|-SkipPreChecks<p>***-DomainName***<p>*-SafeModeAdministratorPassword*<p>***-SiteName***<p>*-ApplicationPartitionsToReplicate*<p>*-CreateDNSDelegation*<p>***-Credential***<p>*-CriticalReplicationOnly*<p>*-DatabasePath*<p>*-DNSDelegationCredential*<p>-DNSOnNetwork<p>*-InstallationMediaPath*<p>*-InstallDNS*<p>*-LogPath*<p>-MoveInfrastructureOperationMasterRoleIfNecessary<p>*-NoGlobalCatalog*<p>-Norebootoncompletion<p>*-ReplicationSourceDC*<p>-SkipAutoConfigureDNS<p>*-SystemKey*<p>*-SYSVOLPath*<p>*-AllowPasswordReplicationAccountName*<p>*-DelegatedAdministratorAccountName*<p>*-DenyPasswordReplicationAccountName*<p>***-ReadOnlyReplica***|  
   
 > [!NOTE]  
 > The **-credential** argument is only required if you are not already logged on as a member of the Domain Admins group.  
@@ -479,7 +478,7 @@ The **SafeModeAdministratorPassword** argument's operation is special:
 For example, you can manually prompt for a password by using the **Read-Host** cmdlet to prompt the user for a secure string:  
   
 ```  
--safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
+-safemodeadministratorpassword (read-host -prompt Password: -assecurestring)  
   
 ```  
   
@@ -489,14 +488,14 @@ For example, you can manually prompt for a password by using the **Read-Host** c
 You can also provide a secure string as a converted clear-text variable, although this is highly discouraged.  
   
 ```  
--safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
+-safemodeadministratorpassword (convertto-securestring Password1 -asplaintext -force)  
 ```  
   
 Finally, you could store the obfuscated password in a file, and then reuse it later, without the clear text password ever appearing. For example:  
   
 ```  
-$file = "c:\pw.txt"  
-$pw = read-host -prompt "Password:" -assecurestring  
+$file = c:\pw.txt  
+$pw = read-host -prompt Password: -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
   
 -safemodeadministratorpassword (Get-Content $File | ConvertTo-SecureString)  
@@ -554,8 +553,8 @@ The **Additional Options** page provides configuration options to name a domain 
 You can also choose to install the domain controller using backed up media using the Install from media (IFM) option. The **Install from media** checkbox provides a browse option once selected and you must click **Verify** to ensure the provided path is valid media.
 
 Guidelines for the IFM source:
-•	Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
-•	The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
+*    Media used by the IFM option is created with Windows Server Backup or Ntdsutil.exe from another existing Windows Server Domain Controller with the same operating system version only. For example, you cannot use a Windows Server 2008 R2 or previous operating system to create media for a Windows Server 2012 domain controller.
+*    The IFM source data should be from a writable Domain Controller. While a source from RODC will technically work to create a new RODC, there are false positive replication warnings that the IFM source RODC is not replicating.
 
 For more information about changes in IFM, see [Ntdsutil.exe Install from Media Changes](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM). If using media protected with a SYSKEY, Server Manager prompts for the image's password during verification.
   
@@ -614,18 +613,18 @@ The **Review Options** page in Server Manager also offers an optional **View Scr
   
 Import-Module ADDSDeployment  
 Install-ADDSDomainController `  
--AllowPasswordReplicationAccountName @("CORP\Allowed RODC Password Replication Group", "CORP\Chicago RODC Admins", "CORP\Chicago RODC Users and Computers") `  
+-AllowPasswordReplicationAccountName @(CORP\Allowed RODC Password Replication Group, CORP\Chicago RODC Admins, CORP\Chicago RODC Users and Computers) `  
 -Credential (Get-Credential) `  
 -CriticalReplicationOnly:$false `  
--DatabasePath "C:\Windows\NTDS" `  
--DelegatedAdministratorAccountName "CORP\Chicago RODC Admins" `  
--DenyPasswordReplicationAccountName @("BUILTIN\Administrators", "BUILTIN\Server Operators", "BUILTIN\Backup Operators", "BUILTIN\Account Operators", "CORP\Denied RODC Password Replication Group") `  
--DomainName "corp.contoso.com" `  
+-DatabasePath C:\Windows\NTDS `  
+-DelegatedAdministratorAccountName CORP\Chicago RODC Admins `  
+-DenyPasswordReplicationAccountName @(BUILTIN\Administrators, BUILTIN\Server Operators, BUILTIN\Backup Operators, BUILTIN\Account Operators, CORP\Denied RODC Password Replication Group) `  
+-DomainName corp.contoso.com `  
 -InstallDNS:$true `  
--LogPath "C:\Windows\NTDS" `  
+-LogPath C:\Windows\NTDS `  
 -ReadOnlyReplica:$true `  
--SiteName "Default-First-Site-Name" `  
--SYSVOLPath "C:\Windows\SYSVOL"  
+-SiteName Default-First-Site-Name `  
+-SYSVOLPath C:\Windows\SYSVOL  
 -Force:$true  
   
 ```  
@@ -689,4 +688,3 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
   
 The **Results** page shows the success or failure of the promotion and any important administrative information. The domain controller will automatically reboot after 10 seconds.  
   
-

@@ -27,11 +27,12 @@ To begin developing with the SDK, download and install the following prerequisit
 
 * [Windows Admin Center](https://aka.ms/WACDownloadPage) (GA or preview version)
 * Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
+* [Node.js](https://nodejs.org/en/download/releases/) (version 10.3.0)
 * [Node Package Manager](https://npmjs.com/get-npm) (8.12.0 or later)
 * [Nuget](https://www.nuget.org/downloads) (for publishing extensions)
 
 > [!NOTE]
-> You need to install and run Windows Admin Center in Dev Mode to follow the steps below. Dev Mode allows Windows Admin Center to load unsigned extension packages.
+> You need to install and run Windows Admin Center in Dev Mode to follow the steps below. Dev Mode allows Windows Admin Center to load unsigned extension packages. Windows Admin Center can only be installed in Dev Mode on a Windows 10 machine. 
 >
 >  To enable Dev Mode, install Windows Admin Center from the command line with the parameter DEV_MODE=1. In the example below, replace ```<version>``` with the version you are installing, i.e. ```WindowsAdminCenter1809.msi```.
 >
@@ -44,7 +45,7 @@ Next, install or update dependencies required for your projects, with Node Packa
 ```
 npm install -g npm
 
-npm install -g @angular/cli@1.6.5
+npm install -g @angular/cli@7.1.2
 
 npm install -g gulp
 npm install -g typescript
@@ -53,7 +54,7 @@ npm install -g windows-admin-center-cli
 ```
 
 >[!NOTE]
->You can install a later version of @angular/cli, however be aware that if you install a version greater than 1.6.5, you will receive a warning during the gulp build step that the local cli version does not match the installed version.
+>You can install a later version of @angular/cli, however be aware that if you install a version greater than 7.1.2, you will receive a warning during the gulp build step that the local cli version does not match the installed version.
 
 ## Next steps
 

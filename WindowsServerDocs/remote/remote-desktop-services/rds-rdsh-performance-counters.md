@@ -1,24 +1,24 @@
 ---
-title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts 
+title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts
 description: Is your app running slow on RDS? Learn about performance counters you can use to diagnose app performance problems on RDSH
 ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
 ---
+
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 
 > Applies to: Windows Server 2019, Windows 10
 
 One of the most difficult problems to diagnose is poor application performance—the applications are running slow or don't respond. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics and then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This makes it hard to read the data and correlate it with the reported issue. To help you solve your app performance issues quickly, we've added some new performance counters (available [to download](#download-windows-server-insider-software) through the [Windows Insider Program](https://insider.windows.com)) that measure user input flows.
 
->[!NOTE]
->The User Input Delay counter is only compatible with:
+> [!NOTE]
+> The User Input Delay counter is only compatible with:
 > - Windows Server 2019 or later
 > - Windows 10, version 1809 or later
 
@@ -28,7 +28,7 @@ The following image shows a rough representation of user input flow from client 
 
 ![Remote Desktop - User input flows from the users Remote Desktop client to the application](./media/rds-user-input.png)
 
-The User Input Delay counter measures the max delta (within an interval of time) between the input being queued and when it's picked up by the app in a [traditional message loop](https://msdn.microsoft.com/library/windows/desktop/ms644927.aspx#loop), as shown in the following flow chart:
+The User Input Delay counter measures the max delta (within an interval of time) between the input being queued and when it's picked up by the app in a [traditional message loop](/windows/win32/winmsg/about-messages-and-message-queues#message-loop), as shown in the following flow chart:
 
 ![Remote Desktop - User input Delay performance counter flow](./media/rds-user-input-delay.png)
 
@@ -36,9 +36,9 @@ One important detail of this counter is that it reports the maximum user input d
 
 For example, in the following table, the user input delay would be reported as 1,000 ms within this interval. The counter reports the slowest user input delay in the interval because the user's perception of "slow" is determined by the slowest input time (the maximum) they experience, not the average speed of all total inputs.
 
-|Number| 0 | 1 | 2 |
-|------|---|---|---|
-|Delay |16 ms| 20 ms| 1,000 ms|
+| Number |   0   |   1   |    2     |
+| ------ | ----- | ----- | -------- |
+| Delay  | 16 ms | 20 ms | 1,000 ms |
 
 ## Enable and use the new performance counters
 
@@ -48,7 +48,7 @@ To use these new performance counters, you must first enable a registry key by r
 reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCounter" /t REG_DWORD /d 0x1 /f
 ```
 
->[!NOTE]
+> [!NOTE]
 > If you're using Windows 10, version 1809 or later or Windows Server 2019 or later, you won't need to enable the registry key.
 
 Next, restart the server. Then, open the Performance Monitor, and select the plus sign (+), as shown in the following screen shot.
@@ -63,12 +63,12 @@ After doing that, you should see the Add Counters dialog, where you can select *
 
 If you select **User Input Delay per Process**, you'll see the **Instances of the selected object** (in other words, the processes) in ```SessionID:ProcessID <Process Image>``` format.
 
-For example, if the Calculator app is running in a [Session ID 1](https://msdn.microsoft.com/library/ms524326.aspx), you'll see ```1:4232 <Calculator.exe>```.
+For example, if the Calculator app is running in a [Session ID 1](/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), you'll see ```1:4232 <Calculator.exe>```.
 
 > [!NOTE]
 > Not all processes are included. You won't see any processes that are running as SYSTEM.
 
-The counter starts reporting user input delay as soon as you add it. Note that the maximum scale is set to 100 (ms) by default. 
+The counter starts reporting user input delay as soon as you add it. Note that the maximum scale is set to 100 (ms) by default.
 
 ![Remote Desktop - An example of activity for the User Input Delay per process in the Performance Monitor](./media/rds-sample-user-input-delay-perfmon.png)
 
@@ -76,15 +76,15 @@ Next, let's look at the **User Input Delay per Session**. There are instances fo
 
 This table shows a visual example of these instances. (You can get the same information in Perfmon by switching to the Report graph type.)
 
-|Type of counter|Instance name|Reported delay (ms)|
-|---------------|-------------|-------------------|
-|User Input Delay per process|1:4232 <Calculator.exe>|	200|
-|User Input Delay per process|2:1000 <Calculator.exe>|	16|
-|User Input Delay per process|1:2000 <Calculator.exe>|	32|
-|User Input Delay per session|1|	200|
-|User Input Delay per session|2|	16|
-|User Input Delay per session|Average| 	108|
-|User Input Delay per session|Max| 	200|
+| Type of counter | Instance name | Reported delay (ms) |
+| --------------- | ------------- | ------------------- |
+| User Input Delay per process | 1:4232 <Calculator.exe> |    200 |
+| User Input Delay per process | 2:1000 <Calculator.exe> |     16 |
+| User Input Delay per process | 1:2000 <Calculator.exe> |     32 |
+| User Input Delay per session | 1 |    200 |
+| User Input Delay per session | 2 |     16 |
+| User Input Delay per session | Average |     108 |
+| User Input Delay per session | Max |     200 |
 
 ## Counters used in an overloaded system
 
@@ -115,8 +115,8 @@ To fix this, you can set the following registry key to match the interval (in mi
 "LagCounterInterval"=dword:00005000
 ```
 
->[!NOTE]
->If you're using Windows 10, version 1809 or later or Windows Server 2019 or later, you don't need to set LagCounterInterval to fix the performance counter.
+> [!NOTE]
+> If you're using Windows 10, version 1809 or later or Windows Server 2019 or later, you don't need to set LagCounterInterval to fix the performance counter.
 
 We've also added a couple of keys you might find helpful under the same registry key:
 
@@ -130,11 +130,11 @@ This is what it looks like if you turn both keys on:
 
 ## Using the new counters with non-Microsoft tools
 
-Monitoring tools can consume this counter by using the [Perfmon API](https://msdn.microsoft.com/library/windows/desktop/aa371903.aspx).
+Monitoring tools can consume this counter by [Using Performance Counters](/windows/win32/perfctrs/using-performance-counters).
 
 ## Download Windows Server Insider software
 
-Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
+Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
 
 ## Share your feedback
 

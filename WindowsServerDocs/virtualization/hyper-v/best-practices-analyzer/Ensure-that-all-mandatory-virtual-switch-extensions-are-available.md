@@ -1,14 +1,13 @@
 ---
 title: Ensure that all mandatory virtual switch extensions are available
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 2f2f2698-f5ec-4cad-aa64-d6987e8142a1
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Ensure that all mandatory virtual switch extensions are available

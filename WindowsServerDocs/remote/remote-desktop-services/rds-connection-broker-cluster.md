@@ -1,14 +1,10 @@
 ---
 title: Add an RD Connection Broker server to configure high availability in RDS
 description: Learn how to add an RD Connection Broker to an RDS deployment for high availability.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/10/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
@@ -23,7 +19,7 @@ You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster
 
 Set up a server to act as a second RD Connection Broker—this can be either a physical server or a VM.
 
-Set up a database for the Connection Broker. You can use [Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-get-started/#create-a-new-aure-sql-database) instance or SQL Server in your local environment. We talk about using Azure SQL below, but the steps still apply to SQL Server. You'll need to find the connection string for the database and make sure you have the correct ODBC driver.
+Set up a database for the Connection Broker. You can use [Azure SQL Database](/azure/azure-sql/database/single-database-create-quickstart#create-a-new-aure-sql-database) instance or SQL Server in your local environment. We talk about using Azure SQL below, but the steps still apply to SQL Server. You'll need to find the connection string for the database and make sure you have the correct ODBC driver.
 
 ## Step 1: Configure the database for the Connection Broker
 
@@ -68,7 +64,7 @@ If you are using Azure infrastructure, you can create an [Azure load balancer](#
       4. Select **Static** for the **IP address assignment** and enter a **Private IP address** that is not currently in use (for example, 10.0.0.32).   
       5. Select the appropriate **Subscription**, the **Resource group** with all of your resources, and the appropriate **Location**.   
       6. Select **Create**.   
-2. Create a [probe](https://azure.microsoft.com/documentation/articles/load-balancer-custom-probe-overview/) to monitor which servers are active:   
+2. Create a [probe](/azure/load-balancer/load-balancer-custom-probe-overview) to monitor which servers are active:   
       1. In Azure portal, click **Browse > Load Balancers**, and then click the load balancer you just created, (for example, CBLB). Click **Settings**.   
       2. Click **Probes > Add**.   
       3. Enter a name for the probe (for example, **RDP**), select **TCP** as the **Protocol**, enter **3389** for the **Port**, and then click **OK**.   
@@ -81,7 +77,7 @@ If you are using Azure infrastructure, you can create an [Azure load balancer](#
       1. In **Settings**, click **Load balancing rules**, and then click **Add**.   
       2. Enter a name (for example, RDP), select **TCP** for the **Protocol**, enter **3389** for both **Port** and **Backend port**, and click **OK**.   
 5. Add a DNS record for the Load Balancer:   
-      1. Connect to the RDMS server virtual machine (for example, Contoso-CB1). Check out the [Prepare the RD Connection Broker VM](Prepare-the-RD-Connection-Broker-VM-for-Remote-Desktop.md) article for steps on how you connect to the VM.   
+      1. Connect to the RDMS server virtual machine (for example, Contoso-CB1). Check out the [Prepare the RD Connection Broker VM](./rds-prepare-vms.md) article for steps on how you connect to the VM.   
       2. In Server Manager, click **Tools > DNS**.   
       3. In the left-hand pane, expand **DNS**, click the DNS machine, click **Forward Lookup Zones**, and then click your domain name (for example, Contoso.com). (It might take a few seconds to process the query to the DNS server for the information.)  
       4. Click **Action > New Host (A or AAAA)**.   
@@ -122,4 +118,3 @@ For example, if the IP addresses for the two RD Connection Broker virtual machin
    3. Page through wizard until you get to Server Selection, then select the newly created RD Connection Broker server (for example, Contoso-CB2).
    4. Complete the wizard, accepting the default values.
 4. Configure trusted certificates on RD Connection Broker servers and clients.
-

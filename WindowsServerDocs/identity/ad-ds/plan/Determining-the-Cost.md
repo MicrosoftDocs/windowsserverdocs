@@ -1,7 +1,6 @@
 ---
 ms.assetid: e3ea1f67-60d4-4566-b24c-37faa95c3b2a
 title: Determining the Cost
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman

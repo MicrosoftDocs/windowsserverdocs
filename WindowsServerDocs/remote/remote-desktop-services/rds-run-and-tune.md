@@ -1,14 +1,10 @@
 ---
 title: RDS - Run and tune
 description: Provides management information for Remote Desktop Services.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 02/08/2017  
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79909767-a4c3-4ecf-8d3f-77d37a663153
 author: spatnaik

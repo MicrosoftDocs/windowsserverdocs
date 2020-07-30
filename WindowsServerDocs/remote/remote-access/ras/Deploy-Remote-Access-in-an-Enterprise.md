@@ -2,16 +2,12 @@
 title: Deploy Remote Access in an Enterprise
 description: This topic provides an introduction to the DirectAccess scenario in Windows Server 2016 for the Enterprise.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Deploy Remote Access in an Enterprise
 
@@ -25,11 +21,11 @@ This topic provides an introduction to the DirectAccess scenario for the Enterpr
   
 ## Before you begin deploying, see the list of unsupported configurations, known issues, and prerequisites  
   
--   [DirectAccess Unsupported Configurations](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
+-   [DirectAccess Unsupported Configurations](../directaccess/directaccess-unsupported-configurations.md)  
   
--   [DirectAccess Known Issues](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-known-issues)  
+-   [DirectAccess Known Issues](../directaccess/directaccess-known-issues.md)  
   
--   [Prerequisites for Deploying DirectAccess) Prerequisites](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/prerequisites-for-deploying-directaccess)  
+-   [Prerequisites for Deploying DirectAccess) Prerequisites](../directaccess/prerequisites-for-deploying-directaccess.md)  
   
 ## <a name="BKMK_OVER"></a>Scenario description  
 Remote access includes a number of enterprise features, including deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing (NLB) or an external load balancer, setting up a multisite deployment with Remote Access servers situated in dispersed geographical locations, and deploying DirectAccess with two-factor client authentication using a one-time password (OTP).  
@@ -61,11 +57,9 @@ The following table lists the roles and features used in the enterprise scenario
   
 |Role/feature|How it supports this scenario|  
 |---------|-----------------|  
-|Remote Access server role|The role is installed and uninstalled using the Server Manager console. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server features:<br /><br />-   Internet Information Services (IIS) - This feature is required to configure the network location server and default web probe.<br />-   Group Policy Management Console feature - feature is required by DirectAccess to create and manage the Group Policy Objects (GPOs) in Active Directory and must be installed as a required feature for the server role.|  
-|Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />1.  Remote Access GUI and Command Line Tools<br />2.  Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />1.  Group Policy Management Console<br />2.  RAS Connection Manager Administration Kit (CMAK)<br />3.  Windows PowerShell 3.0<br />4.  Graphical Management Tools and Infrastructure|  
+|Remote Access server role|The role is installed and uninstalled using the Server Manager console. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<p>1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN-DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing-RRAS routing features are managed in the legacy Routing and Remote Access console.<p>The Remote Access Server Role is dependent on the following server features:<p>-   Internet Information Services (IIS) - This feature is required to configure the network location server and default web probe.<br />-   Group Policy Management Console feature - feature is required by DirectAccess to create and manage the Group Policy Objects (GPOs) in Active Directory and must be installed as a required feature for the server role.|  
+|Remote Access Management Tools feature|This feature is installed as follows:<p>-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<p>The Remote Access Management Tools feature consists of the following:<p>1.  Remote Access GUI and Command Line Tools<br />2.  Remote Access module for Windows PowerShell<p>Dependencies include:<p>1.  Group Policy Management Console<br />2.  RAS Connection Manager Administration Kit (CMAK)<br />3.  Windows PowerShell 3.0<br />4.  Graphical Management Tools and Infrastructure|  
 |Windows NLB|This feature allows the load balancing of multiple Remote Access servers.|  
   
 
   
-
-

@@ -1,17 +1,13 @@
 ---
 title: Transport Layer Security protocol
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de510bb0-a9f6-4bbe-8f8a-8dd7473bbae8
 author: justinha
 ms.author: justinha
-manager: brianlic-msft
+manager: brianlic
 ms.date: 05/16/2018
 ---
 # Transport Layer Security protocol

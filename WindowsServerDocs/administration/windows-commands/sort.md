@@ -1,12 +1,8 @@
 ---
 title: sort
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for sort, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 77116469-4790-4442-8a21-9fa73b65ef9f
 author: coreyp-at-msft
@@ -17,11 +13,9 @@ ms.date: 10/16/2017
 
 # sort
 
-
-
 Reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:][<Path1>]<FileName1>] [/t [<Drive2>:][<Path2>]] [/o [<Drive3>:][<Path3>]<FileName3>]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -55,7 +49,7 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
     The default maximum memory size when no size is specified is 90 percent of the available main memory if both the input and output are files, or 45 percent of main memory otherwise. The default setting usually gives the best performance.
 -   Using the **/l** command-line option
 
-    Currently, the only alternative to the default locale is the "C" locale, which is faster than natural language sorting (it sorts characters according to their binary encodings).
+    Currently, the only alternative to the default locale is the C locale, which is faster than natural language sorting (it sorts characters according to their binary encodings).
 -   Using redirection symbols with the **sort** command
 
     You can use the pipe symbol (**|**) to direct input data to the **sort** command from another command or to direct sorted output to another command. You can specify input and output files by using redirection symbols (**<** or **>**). It can be faster and more efficient (especially with large files) to specify the input file directly (as defined by *FileName1* in the command syntax), and then specify the output file using the **/o** parameter.
@@ -72,7 +66,7 @@ sort [/r] [/+<N>] [/m <Kilobytes>] [/l <Locale>] [/rec <Characters>] [[<Drive1>:
 
     If the sort fits within the maximum memory size (as set by default or as specified by the **/m** parameter), the sort is performed in a single pass. Otherwise, the sort is performed in two separate sort and merge passes, and the amounts of memory used for both passes are equal. When two passes are performed, the partially sorted data is stored in a temporary file on disk. If there is not enough memory to perform the sort in two passes, a run-time error is issued. If the **/m** command-line option is used to specify more memory than is truly available, performance degradation or a run-time error can occur.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 **Sorting a file**
 
@@ -82,9 +76,9 @@ To sort and display in reverse order the lines in a file named Expenses.txt, typ
 
 **Sorting the output from a command**
 
-To search a large file named Maillist.txt for the text "Jones," and to sort the results of the search, use the pipe (|) to direct the output of a **find** command to the **sort** command, as follows:
+To search a large file named Maillist.txt for the text Jones, and to sort the results of the search, use the pipe (|) to direct the output of a **find** command to the **sort** command, as follows:
 
-`find "Jones" maillist.txt | sort`
+`find Jones maillist.txt | sort`
 
 The command produces a sorted list of lines that contain the specified text.
 
@@ -96,6 +90,6 @@ To sort keyboard input and display the results alphabetically on the screen, you
 
 Then type the text that you want sorted, and press ENTER at the end of each line. When you have finished typing text, press CTRL+Z, and then press ENTER. The **sort** command displays the text you typed, sorted alphabetically.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

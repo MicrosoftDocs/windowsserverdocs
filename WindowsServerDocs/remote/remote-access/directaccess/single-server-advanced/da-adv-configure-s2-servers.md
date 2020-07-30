@@ -2,16 +2,12 @@
 title: Step 2 Configure Advanced DirectAccess Servers
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 2 Configure Advanced DirectAccess Servers
 
@@ -135,7 +131,7 @@ To deploy Remote Access, you need to configure the Remote Access server with the
   
 5.  On the **Authentication** page:  
   
-    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two-factor authentication, click **Two-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/library/hh831379.aspx).  
+    -   In **User Authentication**, click **Active Directory credentials**. To configure a deployment by using two-factor authentication, click **Two-factor authentication**. For more information, see [Deploy Remote Access with OTP authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831379(v=ws.11)).  
   
     -   For multisite and two-factor authentication deployments, you must use computer certificate authentication. Select the **Use computer certificates** check box to use computer certificate authentication, and select the IPsec root certificate.  
   
@@ -243,5 +239,3 @@ Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connecti
   
 -   [Step 3: Verify the Deployment](Step-3-Verify-the-Deployment.md)  
   
-
-

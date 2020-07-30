@@ -6,8 +6,8 @@ ms.topic: article
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Configure the Server Certificate Template
 

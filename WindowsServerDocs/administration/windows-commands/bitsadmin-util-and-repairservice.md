@@ -1,12 +1,8 @@
 ---
 title: bitsadmin util and repairservice
-description: "Windows Commands topic for **bitsadmin util and repairservice** - Command used to fix known issues with various versions of BITS service."
-ms.custom: na
+description: Reference article for the bitsadmin util and repairservice command, which fixes known issues in various versions of BITS service.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2ac7baeb-4340-4186-bfcb-66478195378d
 author: coreyp-at-msft
@@ -17,39 +13,38 @@ ms.date: 10/16/2017
 
 # bitsadmin util and repairservice
 
-If BITS fails to start, use this switch to fix known issues with various versions of BITS.
+If BITS fails to start, this switch attempts to resolve errors related to incorrect service configuration and dependencies on Windows services (such as LANManworkstation) and the network directory. This switch also generates output that indicates if the issues that were resolved.
 
-**BITSAdmin 1.5 and earlier:** Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.5 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /Util /RepairService [/Force]
+bitsadmin /util /repairservice [/force]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Force|Optional—deletes and recreates the service.|
-
-## Remarks
-
-This switch resolves errors related to incorrect service configuration and dependencies on Windows services (such as LANManworkstation) and the network directory. This switch generates output that indicates if the issues that were resolved.
+| Parameter | Description |
+| --------- | ----------- |
+| /force | Optional. Deletes and creates the service again.|
 
 > [!NOTE]
-> If BITS recreates the service, the service description string may be set to English in a localized system.
+> If BITS creates the service again, the service description string might be set to English even in a localized system.
 
-> [!IMPORTANT]
-> This command is not supported on Windows Vista.
+## Examples
 
-## <a name="BKMK_examples"></a>Examples
+To repair the BITS service configuration:
 
-The following example repairs the BITS Service configuration.
 ```
-C:\>bitsadmin /Util /RepairService
+bitsadmin /util /repairservice
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin util command](bitsadmin-util.md)
+
+- [bitsadmin command](bitsadmin.md)

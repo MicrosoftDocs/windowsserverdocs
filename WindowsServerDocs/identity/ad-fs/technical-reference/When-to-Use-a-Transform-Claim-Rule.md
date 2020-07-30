@@ -1,14 +1,12 @@
 ---
 ms.assetid: 77aa61bf-9c04-4889-a5d2-6f45bc1b8bd2
 title: When to Use a Transform Claim Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -70,16 +68,16 @@ You create this rule using either the claim rule language or using the **Transfo
   
 -   Replace incoming e\-mail suffix claims with a new e\-mail suffix  
   
-For more instructions on how to create this template, see [Create a Rule to Transform an Incoming Claim](https://technet.microsoft.com/library/dd807068.aspx) in the AD FS Deployment Guide.  
+For more instructions on how to create this template, see [Create a Rule to Transform an Incoming Claim](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807068(v=ws.11)) in the AD FS Deployment Guide.  
   
 ## Using the claim rule language  
 If the outgoing claim must be constructed from the content of more than one incoming claim, you must use a custom rule instead. If the claim value of the outgoing claim must be based on the value of the incoming claim—but with additional content—you must also use a custom rule in that context. For more information, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).  
   
 ### Examples of how to construct a transform rule syntax  
-When using the claim rule language syntax to transform claims, you can set a property of the transformed claim to a new literal value. For example, the following rule changes the value of role claims from “Administrators” to “root” while keeping the same claim type:  
+When using the claim rule language syntax to transform claims, you can set a property of the transformed claim to a new literal value. For example, the following rule changes the value of role claims from "Administrators" to "root" while keeping the same claim type:  
   
 ```  
-c:[type == “https://schemas.microsoft.com/ws/2008/06/identity/claims/role”, value == “Administrators”]  => issue(type = c.type, value = “root”);  
+c:[type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/role", value == "Administrators"]  => issue(type = c.type, value = "root");  
 ```  
   
 Regular expressions can also be used for claim transformations. For example, the following rule will set the domain in windows user name claims in DOMAIN\\USER format to FABRIKAM:  
@@ -94,10 +92,9 @@ Claims transformations can be selectively applied to claims selected using basic
 |Claim property|Description|  
 |------------------|---------------|  
 |Type, Value, ValueType|These properties will be most frequently used for assignments. At the very least type and value must be specified for the resulting transformed claim.|  
-|Issuer|While the claim rule language allows setting the Issuer of a claim, this is generally not advisable. The issuer of a claim is not serialized in the token. When a token is received the Issuer property of all claims is set to the identifier of the federation server that signed the token. Thus, setting the issuer of a claim in the rules will not have effect on the contents of the token and the setting will be lost once the claim is packaged in a token. The only scenario where setting the issuer of a claim makes sense is if it is set to a specific value in the claims provider rule set and relying party rule set is authored with rules that reference this specific value. If the Issuer property is not explicitly set to a value in a claim rule the claims issuance engine sets it to “LOCAL AUTHORITY”.|  
+|Issuer|While the claim rule language allows setting the Issuer of a claim, this is generally not advisable. The issuer of a claim is not serialized in the token. When a token is received the Issuer property of all claims is set to the identifier of the federation server that signed the token. Thus, setting the issuer of a claim in the rules will not have effect on the contents of the token and the setting will be lost once the claim is packaged in a token. The only scenario where setting the issuer of a claim makes sense is if it is set to a specific value in the claims provider rule set and relying party rule set is authored with rules that reference this specific value. If the Issuer property is not explicitly set to a value in a claim rule the claims issuance engine sets it to "LOCAL AUTHORITY".|  
 |OriginalIssuer|Similarly to Issuer, OriginalIssuer should generally not be explicitly assigned a value. Unlike Issuer, the OriginalIssuer property is serialized in the token, but the expectation of token consumers is that, if set, it will contain the identifier of the federation server that originally issued a claim.|  
 |Properties|As outlined in the previous section, the Property bag of a claim is not persisted in the token, so assignments to properties should only be done if subsequent local policies are going to reference the information stored in the property.|  
   
 For more information about how to use the claim rule language, see [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md).  
   
-

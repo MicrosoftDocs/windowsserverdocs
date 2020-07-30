@@ -1,14 +1,12 @@
 ---
 ms.assetid: 330c7b61-dde0-432f-9b74-d250ad9cc808
-title: Add sign\-in page description
-description:
+title: Add sign-in page description
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # Add sign\-in page description

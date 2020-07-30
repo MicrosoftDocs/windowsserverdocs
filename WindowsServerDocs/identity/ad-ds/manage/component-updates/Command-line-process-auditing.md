@@ -1,14 +1,12 @@
 ---
 ms.assetid: c8597cc8-bdcb-4e59-a09e-128ef5ebeaf8
 title: Command line process auditing
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -70,7 +68,7 @@ Event volume: Low to medium, depending on system usage
 |**Setting**|**Include command line in process creation events**|  
 |**Default setting**|Not Configured (not enabled)|  
 |**Supported on:**|?|  
-|**Description**|This policy setting determines what information is logged in security audit events when a new process has been created.<br /><br />This setting only applies when the Audit Process Creation policy is enabled. If you enable this policy setting the command line information for every process will be logged in plain text in the security event log as part of the Audit Process Creation event 4688, "a new process has been created," on the workstations and servers on which this policy setting is applied.<br /><br />If you disable or do not configure this policy setting, the process's command line information will not be included in Audit Process Creation events.<br /><br />Default: Not configured<br /><br />Note: When this policy setting is enabled, any user with access to read the security events will be able to read the command line arguments for any successfully created process. Command line arguments can contain sensitive or private information such as passwords or user data.|  
+|**Description**|This policy setting determines what information is logged in security audit events when a new process has been created.<p>This setting only applies when the Audit Process Creation policy is enabled. If you enable this policy setting the command line information for every process will be logged in plain text in the security event log as part of the Audit Process Creation event 4688, "a new process has been created," on the workstations and servers on which this policy setting is applied.<p>If you disable or do not configure this policy setting, the process's command line information will not be included in Audit Process Creation events.<p>Default: Not configured<p>Note: When this policy setting is enabled, any user with access to read the security events will be able to read the command line arguments for any successfully created process. Command line arguments can contain sensitive or private information such as passwords or user data.|  
   
 ![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_IncludeCLISetting.gif)  
   
@@ -96,11 +94,11 @@ The following procedure shows how to prevent conflicts by blocking the applicati
 6.  Click Enabled, and then click OK.  
   
 ## Additional Resources  
-[Audit Process Creation](https://technet.microsoft.com/library/dd941613(v=WS.10).aspx)  
+[Audit Process Creation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941613(v=ws.10))  
   
-[Advanced Security Audit Policy Step-by-Step Guide](https://technet.microsoft.com/library/dd408940(v=WS.10).aspx)  
+[Advanced Security Audit Policy Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd408940(v=ws.10))  
   
-[AppLocker: Frequently Asked Questions](https://technet.microsoft.com/library/ee619725(v=ws.10).aspx)  
+[AppLocker: Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619725(v=ws.10))  
   
 ## Try This: Explore command line process auditing  
   
@@ -119,5 +117,3 @@ The following procedure shows how to prevent conflicts by blocking the applicati
   
 4.  Execute the same script as before and observe the events  
   
-
-

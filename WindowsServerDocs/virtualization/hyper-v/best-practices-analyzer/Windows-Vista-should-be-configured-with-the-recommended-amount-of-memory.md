@@ -1,14 +1,13 @@
 ---
 title: Windows Vista should be configured with the recommended amount of memory
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 64f4e53b-4adb-4e1d-bc48-c24f5f9d222f
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows Vista should be configured with the recommended amount of memory

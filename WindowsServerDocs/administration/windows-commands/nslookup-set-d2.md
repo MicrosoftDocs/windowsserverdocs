@@ -1,12 +1,8 @@
 ---
 title: nslookup set d2
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the nslookup set d2 command, which turns the verbose debugging mode on or off.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 19e8325c-632f-4287-b4cc-10f5d59e4074
 author: coreyp-at-msft
@@ -17,9 +13,7 @@ ms.date: 10/16/2017
 
 # nslookup set d2
 
-
-
-Turns exhaustive Debugging Mode on or off. All fields of every packet are printed.
+Turns the verbose debugging mode on or off. All fields of every packet are printed.
 
 ## Syntax
 
@@ -27,14 +21,15 @@ Turns exhaustive Debugging Mode on or off. All fields of every packet are printe
 set [no]d2
 ```
 
-## Parameters
+### Parameters
 
-| Parameter |                             Description                              |
-|-----------|----------------------------------------------------------------------|
-| **nod2**  | Turns off exhaustive Debugging Mode. The default syntax is **nod2**. |
-|  **d2**   |                 Turns on exhaustive Debugging Mode.                  |
-|   {help   |                                  ?}                                  |
+| Parameter | Description |
+| ---------- | ---------- |
+| nod2 | Turns off the verbose debugging mode. This is the default value. |
+| d2 | Turns on the verbose debugging mode. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

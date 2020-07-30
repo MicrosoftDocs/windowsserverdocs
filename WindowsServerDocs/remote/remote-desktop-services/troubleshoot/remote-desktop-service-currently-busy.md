@@ -1,13 +1,8 @@
 ---
 title: On connecting, user receives Remote Desktop Service is currently busy message
 description: Troubleshooting the Remote Desktop Service is currently busy error when users start a remote desktop connection.
-audience: itpro ​
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
@@ -19,7 +14,7 @@ ms.localizationpriority: medium
 
 To determine an appropriate response to this issue, see the following:
 
-- Does the Remote Desktop Services service becomes unresponsive (for example, the remote desktop client appears to “hang” at the Welcome screen).  
+- Does the Remote Desktop Services service becomes unresponsive (for example, the remote desktop client appears to "hang" at the Welcome screen).  
    - If the service becomes unresponsive, see [RDSH server memory issue](#rdsh-server-memory-issue).
    - If the client appears to be interacting with the service normally, continue to the next step.
 - If one or more users disconnect their remote desktop sessions, can users connect again?  

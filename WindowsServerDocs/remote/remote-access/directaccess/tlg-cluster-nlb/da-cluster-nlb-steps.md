@@ -2,16 +2,12 @@
 title: Steps for Configuring the DirectAccess Cluster-NLB Test Lab
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e508d3ee-ffa6-463f-a3dd-9e35e745c005
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Steps for Configuring the DirectAccess Cluster-NLB Test Lab
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
 title: AD FS 2016 Single Sign On Settings
-description:
 author: billmath
 ms.author: billmath
 manager: femila
@@ -196,6 +195,10 @@ To Summarize:
 IF:
  - [x] Admin has enabled the KMSI feature [AND]
  - [x] User clicks the KMSI check box on the forms login page
+ 
+  
+ADFS issues a new refresh token only if the validity of the newer refresh token is longer than the previous token. The maximum lifetime of a token is is 84 days, but AD FS keeps the token valid on a 14 day sliding window. If the refresh token is valid for 8 hours, which is the regular SSO time, a new refresh token will not be issued. 
+ 
  
 **Good to Know:** <br>
 Federated users who do not have the **LastPasswordChangeTimestamp** attribute synced are issued session cookies and refresh tokens that have a **Max Age value of 12 hours**.<br>

@@ -1,13 +1,12 @@
 ---
 title: A Replica server must be configured to accept replication requests
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # A Replica server must be configured to accept replication requests

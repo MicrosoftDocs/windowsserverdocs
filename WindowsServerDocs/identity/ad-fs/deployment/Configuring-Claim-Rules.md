@@ -1,13 +1,11 @@
 ---
 ms.assetid: 46dce9d4-7293-4b1c-9710-78b04f2e347a
 title: Configuring Claim Rules
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
@@ -38,4 +36,4 @@ AD FS makes issuance decisions that are based on identity information that is pr
 
 ## Additional references  
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

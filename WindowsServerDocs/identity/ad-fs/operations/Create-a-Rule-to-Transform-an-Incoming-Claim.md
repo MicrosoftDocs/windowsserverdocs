@@ -1,14 +1,12 @@
 ---
 ms.assetid: ef83960f-d2cf-441f-b2b6-d97822ec7149
 title: Create a Rule to Transform an Incoming Claim
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 
 ---
@@ -55,7 +53,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 > [!NOTE]  
 > If you are setting up the Dynamic Access Control scenario that uses AD FS\-issued claims, first create a transform rule on the claims provider trust, and in **Incoming claim type**, type the name for the incoming claim, or, if a claim description was previously created, select it from the list. Second, in **Outgoing claim type**, select the claim URL that you want, and then create a transform rule on the relying party trust to issue the device claim.  
 >   
-> For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](https://technet.microsoft.com/library/hh831504.aspx). 
+> For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831504(v=ws.11)). 
 
 ## To create a rule to transform an incoming claim on a Claims Provider Trust in Windows Server 2016 
   
@@ -89,7 +87,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 > [!NOTE]  
 > If you are setting up the Dynamic Access Control scenario that uses AD FS\-issued claims, first create a transform rule on the claims provider trust, and in **Incoming claim type**, type the name for the incoming claim, or, if a claim description was previously created, select it from the list. Second, in **Outgoing claim type**, select the claim URL that you want, and then create a transform rule on the relying party trust to issue the device claim.  
 >   
-> For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](https://technet.microsoft.com/library/hh831504.aspx).   
+> For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831504(v=ws.11)).   
   
 ## To create a rule to transform an incoming claim in Windows Server 2012 R2 
   
@@ -126,7 +124,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 > [!NOTE]  
 > If you are setting up the Dynamic Access Control scenario that uses AD FS\-issued claims, first create a transform rule on the claims provider trust, and in **Incoming claim type**, type the name for the incoming claim, or, if a claim description was previously created, select it from the list. Second, in **Outgoing claim type**, select the claim URL that you want, and then create a transform rule on the relying party trust to issue the device claim.  
 >   
-> For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](https://technet.microsoft.com/library/hh831504.aspx).  
+> For more information about Dynamic Access Control scenarios, see [Dynamic Access Control Content Roadmap](../../solution-guides/dynamic-access-control--scenario-overview.md) or [Using AD DS Claims with AD FS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831504(v=ws.11)).  
   
 7. Click **Finish**.  
   
@@ -135,9 +133,9 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ## Additional references 
 [Configure Claim Rules](Configure-Claim-Rules.md)  
  
-[Checklist: Creating Claim Rules for a Relying Party Trust](https://technet.microsoft.com/library/ee913578.aspx)  
+[Checklist: Creating Claim Rules for a Relying Party Trust](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913578(v=ws.11))  
 
-[Checklist: Creating Claim Rules for a Claims Provider Trust](https://technet.microsoft.com/library/ee913564.aspx)  
+[Checklist: Creating Claim Rules for a Claims Provider Trust](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913564(v=ws.11))  
   
 [When to Use an Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

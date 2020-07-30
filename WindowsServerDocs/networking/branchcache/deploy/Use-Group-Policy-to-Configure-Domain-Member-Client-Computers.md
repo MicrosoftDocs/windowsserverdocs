@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 911c1538-f79d-42e9-ba38-f4618f87b008
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 06/02/2018
 ---
 # Use Group Policy to Configure Domain Member Client Computers

@@ -1,11 +1,11 @@
 ---
 title: Managing the Host Guardian Service
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ---
 
@@ -707,7 +707,7 @@ For each shielded VM, perform the following steps:
    $updatedKP = Get-Content -Path .\updatedVM001.kp
    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
    ```
-12.	Finally, start the VM and ensure it runs successfully.
+12.    Finally, start the VM and ensure it runs successfully.
 
 > [!NOTE]
 > If the VM owner sets an incorrect key protector on the VM and does not authorize your fabric to run the VM, you will be unable to start up the shielded VM.

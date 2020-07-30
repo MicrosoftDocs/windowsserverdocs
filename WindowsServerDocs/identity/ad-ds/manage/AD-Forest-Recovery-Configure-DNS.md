@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Configure DNS Server service
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

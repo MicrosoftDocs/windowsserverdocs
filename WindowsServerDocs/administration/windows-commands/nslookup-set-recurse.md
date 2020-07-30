@@ -1,12 +1,11 @@
 ---
 title: nslookup set recurse
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the nslookup set recurse command, which tells the Domain Name System (DNS) name server to query other servers if it can't find the information on the specified server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: d1b7a93f-dfb0-4ccd-b230-e0953057fada
 author: coreyp-at-msft
@@ -17,9 +16,7 @@ ms.date: 10/16/2017
 
 # nslookup set recurse
 
-
-
-Tells the Domain Name System (DNS) name server to query other servers if it does not have the information.
+Tells the Domain Name System (DNS) name server to query other servers if it can't find the information on the specified server.
 
 ## Syntax
 
@@ -27,14 +24,15 @@ Tells the Domain Name System (DNS) name server to query other servers if it does
 set [no]recurse
 ```
 
-## Parameters
+### Parameters
 
-|   Parameter   |                                                                  Description                                                                  |
-|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| **norecurse** |                Stops the Domain Name System (DNS) name server from querying other servers if it does not have the information.                |
-|  **recurse**  | Tells the Domain Name System (DNS) name server to query other servers if it does not have the information. The default syntax is **recurse**. |
-|     {help     |                                                                      ?}                                                                       |
+| Parameter | Description |
+| ---------- | ---------- |
+| norecurse | Stops the Domain Name System (DNS) name server from querying other servers if it can't find the information on the specified server. |
+| recurse | Tells the Domain Name System (DNS) name server to query other servers if it can't find the information on the specified server. This is the default value. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

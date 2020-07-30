@@ -6,8 +6,8 @@ ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # CAPolicy.inf Syntax

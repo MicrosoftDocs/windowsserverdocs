@@ -58,10 +58,9 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | Windows Server 2012 R2 | Yes | Yes |
 | Microsoft Hyper-V Server 2012 R2 | Yes | Yes |
 | Windows Server 2012 | Yes | Yes |
-| Windows Server 2008 R2 | Yes, limited functionality | N/A |
 
 > [!NOTE]
-> Windows Admin Center requires PowerShell features that are not included in Windows Server 2008 R2, 2012, and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
+> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
 > 
 > Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 > and that the version is 5.1 or higher. 

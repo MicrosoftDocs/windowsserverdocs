@@ -1,14 +1,12 @@
 ---
 ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS Operations
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # AD FS Operations
@@ -18,7 +16,7 @@ ms.technology: identity-adfs
 This document contains a list of all of the documentation operations for AD FS. 
 
 ## Service Configuration
-- [Update SSL Certificates in AD FS and WAP 2016](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
+- [Update SSL Certificates in AD FS and WAP 2016](./operations/manage-ssl-certificates-ad-fs-wap.md)
 - [AD FS Rapid Restore Tool](../ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 - [Configure alternate hostname binding for certificate authentication in AD FS](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [Add an Attribute Store](../ad-fs/operations/Add-an-Attribute-Store.md)
@@ -31,7 +29,7 @@ This document contains a list of all of the documentation operations for AD FS.
 ## Authentication Configuration
 ### Strong Authentication (MFA) & Password-less
 - [Configure External Authentication providers as primary in AD FS (2019 or later)](../ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
-- [Configure AD FS (2016 or later) and Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
+- [Configure AD FS (2016 or later) and Azure MFA](./operations/configure-ad-fs-and-azure-mfa.md)
 - [Configure Additional Authentication Methods for AD FS](../ad-fs/operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)
 
 ### Lockout protection
@@ -67,7 +65,7 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Configure AD FS to work with Aggregated federation provider (e.g. InCommon)](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 
 ## Sign-in Experience Configuration
-- [Configure AD FS 2016 Single Sign On Settings](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
+- [Configure AD FS 2016 Single Sign On Settings](./operations/ad-fs-single-sign-on-settings.md)
 - [Configure AD FS Paginated sign-in](../ad-fs/operations/AD-FS-paginated-sign-in.md)
 - [Configure AD FS user sign-in customization](../ad-fs/operations/AD-FS-user-sign-in-customization.md)
 - [Configure AD FS to Send Password Expiry Claims](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
@@ -84,5 +82,3 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Walkthrough: Workplace Join with an iOS Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
   
-
-

@@ -1,12 +1,8 @@
 ---
-title: ksetup:delenctypeattr
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: ksetup delenctypeattr
+description: Reference article for the ksetup delenctypeattr, which removes the encryption type attribute for the domain.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4fc25ef3-e271-4229-a712-72c507df55aa
 author: coreyp-at-msft
@@ -15,56 +11,60 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# ksetup:delenctypeattr
+# ksetup delenctypeattr
 
+Removes the encryption type attribute for the domain. A status message is displayed upon successful or failed completion.
 
-
-Removes the encryption type attribute for the domain. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+You can view the encryption type for the Kerberos ticket-granting ticket (TGT) and the session key, by running the **klist** command and viewing the output. You can set the domain to connect to and use, by running the `ksetup /domain <domainname>` command.
 
 ## Syntax
 
 ```
-ksetup /delenctypeattr <DomainName> 
+ksetup /delenctypeattr <domainname>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<DomainName>|Name of the domain to which you want to establish a connection. Use the fully qualified domain name or a simple form of the name, such as corp.contoso.com or contoso.|
+| Parameter | Description |
+| ----------| ----------- |
+| `<domainname>` | Name of the domain to which you want to establish a connection. You can use either the fully-qualified domain name or a simple form of the name, such as corp.contoso.com or contoso. |
 
-## Remarks
+### Examples
 
-To view the encryption type for the Kerberos ticket-granting ticket (TGT) and the session key, run the **klist** command and view the output.
+To determine the current encryption types that are set on this computer, type:
 
-A status message is displayed upon successful or failed completion.
-
-To set the domain that you want to connect to and use, run the **ksetup /domain \<DomainName>** command.
-
-## <a name="BKMK_Examples"></a>Examples
-
-Determine the current encryption types that are set on this computer:
 ```
 klist
 ```
-Set the domain to mit.contoso.com:
+
+To set the domain to mit.contoso.com, type:
+
 ```
 ksetup /domain mit.contoso.com
 ```
-Verify what the encryption type attribute is for the domain:
+
+To verify what the encryption type attribute is for the domain, type:
+
 ```
 ksetup /getenctypeattr mit.contoso.com
 ```
-Remove the set encryption type attribute for the domain mit.contoso.com:
+
+To remove the set encryption type attribute for the domain mit.contoso.com, type:
+
 ```
 ksetup /delenctypeattr mit.contoso.com
 ```
 
-#### Additional references
+## Additional References
 
--   [Klist](klist.md)
--   [Ksetup:domain](ksetup-domain.md)
--   [Ksetup:addenctypeattr](ksetup-addenctypeattr.md)
--   [Ksetup:setenctypeattr](ksetup-setenctypeattr.md)
--   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [klist command](klist.md)
+
+- [ksetup command](ksetup.md)
+
+- [ksetup domain command](ksetup-domain.md)
+
+- [ksetup addenctypeattr command](ksetup-addenctypeattr.md)
+
+- [ksetup setenctypeattr command](ksetup-setenctypeattr.md)

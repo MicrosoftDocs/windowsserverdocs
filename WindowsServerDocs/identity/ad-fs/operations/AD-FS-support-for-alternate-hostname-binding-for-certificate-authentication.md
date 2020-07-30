@@ -1,14 +1,12 @@
 ---
 ms.assetid: 4b71b212-7e5b-4fad-81ee-75b3d1f27869
 title: AD FS support for alternate hostname binding for certificate authentication
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # AD FS support for alternate hostname binding for certificate authentication
@@ -38,4 +36,4 @@ When prompted, click Yes to confirm.  And that should  be it.
 
 ## Additional references
 
-* [Managing SSL Certificates in AD FS and WAP in Windows Server 2016](../operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
+* [Managing SSL Certificates in AD FS and WAP in Windows Server 2016](./manage-ssl-certificates-ad-fs-wap.md)

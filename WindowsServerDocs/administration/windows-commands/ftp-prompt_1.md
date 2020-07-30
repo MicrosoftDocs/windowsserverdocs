@@ -1,37 +1,41 @@
 ---
-title: ftp prompt_1
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: ftp prompt
+description: Reference article for the ftp prompt command, which toggles Prompt mode on and off.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 930df39b-45c4-4e0b-bfe2-1d1963be817a vhorne
+ms.assetid: 930df39b-45c4-4e0b-bfe2-1d1963be817a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: prompt_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp prompt
 
-Toggles between **prompt** mode on and off.   
-## Syntax  
-```  
-prompt  
-```  
-### Parameters  
-none  
-## Remarks  
-- By default, **prompt** is on.  
-- **ftp** prompts during multiple file transfers to allow you to selectively retrieve or store files.  **Mget** and **mput** transfer all files if **prompt** is off.  
-  ## <a name="BKMK_Examples"></a>Examples  
-  Toggle prompt mode on and off.  
-  ```  
-  prompt  
-  ```  
-  ## additional references  
-- [Command-Line Syntax Key](command-line-syntax-key.md)  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Toggles Prompt mode on and off. By default, Prompt mode is turned on. If Prompt mode is turned on, the ftp command prompts during multiple file transfers to allow you to selectively retrieve or store files.
+
+> [!NOTE]
+> You can use the [ftp mget](ftp-mget.md) and [ftp mput](ftp-mput_1.md) commands to transfer all files when Prompt mode is turned off.
+
+## Syntax
+
+```
+prompt
+```
+
+### Examples
+
+To toggle Prompt mode on and off, type:
+
+```
+prompt
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

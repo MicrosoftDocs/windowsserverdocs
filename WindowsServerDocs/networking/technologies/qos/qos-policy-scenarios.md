@@ -6,8 +6,8 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # QoS Policy Scenarios

@@ -1,21 +1,19 @@
 ---
 ms.assetid: 97999892-29c6-4076-be19-5e5259d8ada6
 title: Deploying Federation Servers
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
 # Interoperating with AD FS 1.x
 
-For interoperability between Active Directory Federation Services \(AD FS\) in Windows Server® 2012 and AD FS 1.*x*, complete one or more of the following tasks, depending on the needs of your organization:  
+For interoperability between Active Directory Federation Services \(AD FS\) in Windows Server&reg; 2012 and AD FS 1.*x*, complete one or more of the following tasks, depending on the needs of your organization:  
   
--   Plan for interoperability between AD FS in  Windows Server 2012  and previous versions of AD FS, and learn more about the Name ID claim type. For more information, see [Planning for Interoperability with AD FS 1.x](https://technet.microsoft.com/library/ff678040.aspx).  
+-   Plan for interoperability between AD FS in  Windows Server 2012  and previous versions of AD FS, and learn more about the Name ID claim type. For more information, see [Planning for Interoperability with AD FS 1.x](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff678040(v=ws.11)).  
   
 -   If you will be sending claims from an AD FS Federation Service in  Windows Server 2012  that can be consumed by an AD FS 1.*x* Federation Service, see [Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service](Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md).  
   
@@ -39,4 +37,3 @@ Although most of the AD FS 1.*x* Federation Service settings work in a similar
 ## See Also  
 [AD FS and AD FS 1.x Interoperability](https://go.microsoft.com/fwlink/?LinkId=200776)  
   
-

@@ -1,12 +1,8 @@
 ---
-title: Using the add Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: Using the add command
+description: Reference article for the various add commands.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6fcdd154-baaf-4288-a355-2a95a3028bce
 author: coreyp-at-msft
@@ -14,9 +10,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the add Command
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# Using the add command
+
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Subcommands
 |Subcommand|Description|

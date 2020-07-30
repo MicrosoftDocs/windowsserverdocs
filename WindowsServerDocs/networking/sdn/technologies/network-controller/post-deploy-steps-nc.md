@@ -1,13 +1,13 @@
 ---
 title: Post-Deployment Steps for Network Controller
 description: This topic provides certificate configuration instructions for non-Kerberos deployments of Network Controller in Windows Server 2016 Datacenter.
-manager: brianlic
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: eea0aca9-8d89-48fb-8068-fca40c90d34b
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ---
 # Post-Deployment Steps for Network Controller
 

@@ -1,16 +1,12 @@
 ---
 title: Create root certificates for VPN authentication with Azure AD
 description: 'Azure AD uses the VPN certificate to sign certificates issued to Windows 10 clients when authenticating to Azure AD for VPN connectivity. The certificate marked as Primary is the Issuer that Azure AD uses.'
-services: active-directory
 ms.prod: windows-server
 ms.technology: networking-ras
-
-ms.workload: identity
-
 ms.topic: article
 ms.date: 06/28/2019
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---
@@ -41,8 +37,9 @@ The VPN client then sends the certificate issues by Azure AD to the VPN for cred
 
 1. Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
 2. On the left menu, click **Azure Active Directory**.
-3. On the **Azure Active Directory** page, in the **Manage** section, click **Conditional access**.
-4. On the **Conditional access** page, in the **Manage** section, click **VPN connectivity (preview)**.
+3. On the **Azure Active Directory** page, in the **Manage** section, click **Security**.
+4. On the **Security** page, in the **Protect** section, click **Conditional Access**.
+5. On the **Conditional Access | Policies** page, in the **Manage** section, click **VPN Connectivity**.
 5. On the **VPN connectivity** page, click **New certificate**.
 6. On the **New** page, perform the following steps:
    a. For **Select duration**, select either 1, 2 or 3 years.

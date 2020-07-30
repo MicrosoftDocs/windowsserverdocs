@@ -1,12 +1,12 @@
 ---
 title: schtasks
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 2e713203-3dd8-491b-b9e1-9423618dc7e8
 author: coreyp-at-msft
@@ -34,19 +34,19 @@ To view the command syntax, click one of the following commands:
 - **SchTasks.exe** performs the same operations as **Scheduled Tasks** in **Control Panel**. You can use these tools together and interchangeably.
 - **Schtasks** replaces **At.exe**, a tool included in previous versions of Windows. Although **At.exe** is still included in the Windows Server 2003 family, **schtasks** is the recommended command-line task scheduling tool.
 - The parameters in a **schtasks** command can appear in any order. Typing **schtasks** without any parameters performs a query.
-- Permissions for **schtasks**  
+- Permissions for **schtasks**
   -   You must have permission to run the command. Any user can schedule a task on the local computer, and they can view and change the tasks that they scheduled. Members of the Administrators group can schedule, view, and change all tasks on the local computer.
   -   To schedule, view, or change a task on a remote computer, you must be member of the Administrators group on the remote computer, or you must use the **/u** parameter to provide the credentials of an Administrator of the remote computer.
   -   You can use the **/u** parameter in a **/create** or **/change** operation only when the local and remote computers are in the same domain or the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer cannot authenticate the user account specified and it cannot verify that the account is a member of the Administrators group.
   -   The task must have permission to run. The permissions required vary with the task. By default, tasks run with the permissions of the current user of the local computer, or with the permissions of the user specified by the **/u** parameter, if one is included. To run a task with permissions of a different user account or with system permissions, use the **/ru** parameter.
 - To verify that a scheduled task ran or to find out why a scheduled task did not run, see the Task Scheduler service transaction log, *SystemRoot*\SchedLgU.txt. This log records attempted runs initiated by all tools that use the service, including **Scheduled Tasks** and **SchTasks.exe**.
-- On rare occasions, task files become corrupted. Corrupted tasks do not run. When you try to perform an operation on corrupted tasks, **SchTasks.exe** displays the following error message:  
+- On rare occasions, task files become corrupted. Corrupted tasks do not run. When you try to perform an operation on corrupted tasks, **SchTasks.exe** displays the following error message:
   ```
   ERROR: The data is invalid.
-  ```  
+  ```
   You cannot recover corrupted tasks. To restore the task scheduling features of the system, use **SchTasks.exe** or **Scheduled Tasks** to delete the tasks from the system and reschedule them.
 
-## <a name="BKMK_create"></a>schtasks create
+## <a name=BKMK_create></a>schtasks create
 
 Schedules a task.
 
@@ -71,7 +71,7 @@ Schedules a task.
 -   [To schedule a task that runs more than one program](#BKMK_multi_progs)
 -   [To schedule a task that runs on a remote computer](#BKMK_remote)
 
-### <a name="BKMK_syntax"></a>Combined syntax and parameter descriptions
+### <a name=BKMK_syntax></a>Combined syntax and parameter descriptions
 
 #### Syntax
 
@@ -79,7 +79,7 @@ Schedules a task.
 schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]] [/ru {[<Domain>\]<User> | System}] [/rp <Password>] [/mo <Modifier>] [/d <Day>[,<Day>...] | *] [/m <Month>[,<Month>...]] [/i <IdleTime>] [/st <StartTime>] [/ri <Interval>] [{/et <EndTime> | /du <Duration>} [/k]] [/sd <StartDate>] [/ed <EndDate>] [/it] [/z] [/f]
 ```
 
-#### Parameters
+##### Parameters
 
 ##### /sc \<ScheduleType>
 
@@ -127,7 +127,7 @@ Runs the task with permissions of the specified user account. By default, the ta
 |       Value        |                                                    Description                                                    |
 |--------------------|-------------------------------------------------------------------------------------------------------------------|
 | [\<Domain>\]<User> |                                       Specifies an alternate user account.                                        |
-|    System or ""    | Specifies the local System account, a highly privileged account used by the operating system and system services. |
+|    System or     | Specifies the local System account, a highly privileged account used by the operating system and system services. |
 
 ##### /rp \<Password>
 
@@ -162,7 +162,7 @@ Specifies a day (or days) of the week or a day (or days) of a month. Valid only 
 |---------------|------------------------------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    WEEKLY     |               1 - 52               | MON - SUN[,MON - SUN...] |                                                                                                     \*                                                                                                      |
 |    MONTHLY    | FIRST, SECOND, THIRD, FOURTH, LAST |        MON - SUN         |                                                                                   Required for a specific week schedule.                                                                                    |
-|    MONTHLY    |          None or {1 - 12}          |          1 - 31          | Optional and valid only with no modifier (**/mo**) parameter (a specific date schedule) or when the **/mo** is 1 - 12 (an "every \<N> months" schedule). The default is day 1 (the first day of the month). |
+|    MONTHLY    |          None or {1 - 12}          |          1 - 31          | Optional and valid only with no modifier (**/mo**) parameter (a specific date schedule) or when the **/mo** is 1 - 12 (an every \<N> months schedule). The default is day 1 (the first day of the month). |
 
 ##### /m Month[,Month...]
 
@@ -185,21 +185,21 @@ Specifies the repetition interval in minutes. This is not applicable for schedul
 Specifies the time of day that a minute or hourly task schedule ends in \<HH:MM> 24-hour format. After the specified end time, **schtasks** does not start the task again until the start time recurs. By default, task schedules have no end time. This parameter is optional and valid only with a MINUTE or HOURLY schedule.
 
 For an example, see:
--   "To schedule a task that runs every 100 minutes during non-business hours" in the **To schedule a task that runs every** \<N> **minutes** section.
+-   To schedule a task that runs every 100 minutes during non-business hours in the **To schedule a task that runs every** \<N> **minutes** section.
 
 ##### /du \<Duration>
 
 Specifies a maximum length of time for a minute or hourly schedule in \<HHHH:MM> 24-hour format. After the specified time elapses, **schtasks** does not start the task again until the start time recurs. By default, task schedules have no maximum duration. This parameter is optional and valid only with a MINUTE or HOURLY schedule.
 
 For an example, see:
--   "To schedule a task that runs every 3 hours for 10 hours" in the **To schedule a task that runs every** \<N> **hours** section.
+-   To schedule a task that runs every 3 hours for 10 hours in the **To schedule a task that runs every** \<N> **hours** section.
 
 ##### /k
 
 Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, **schtasks** does not start the program again after it reaches the time specified by **/et** or **/du**, but it does not stop the program if it is still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule.
 
 For an example, see:
--   "To schedule a task that runs every 100 minutes during non-business hours" in the **To schedule a task that runs every** \<N> **minutes** section.
+-   To schedule a task that runs every 100 minutes during non-business hours in the **To schedule a task that runs every** \<N> **minutes** section.
 
 ##### /sd \<StartDate>
 
@@ -233,13 +233,13 @@ The valid date formats are listed in the following table. Use the format most si
 
 ##### /it
 
-Specifies to run the task only when the "run as" user (the user account under which the task runs) is logged on to the computer. This parameter has no effect on tasks that run with system permissions.
+Specifies to run the task only when the run as user (the user account under which the task runs) is logged on to the computer. This parameter has no effect on tasks that run with system permissions.
 
-By default, the "run as" user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the "run as" user is the account specified by the **/ru** parameter.
+By default, the run as user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the run as user is the account specified by the **/ru** parameter.
 
 For examples, see:
--   "To schedule a task that runs every 70 days if I am logged on" in the **To schedule a task that runs every** *N* **days** section.
--   "To run a task only when a particular user is logged on" in the **To schedule a task that runs with different permissions** section.
+-   To schedule a task that runs every 70 days if I am logged on in the **To schedule a task that runs every** *N* **days** section.
+-   To run a task only when a particular user is logged on in the **To schedule a task that runs with different permissions** section.
 
 ##### /z
 
@@ -253,7 +253,7 @@ Specifies to create the task and suppress warnings if the specified task already
 
 Displays help at the command prompt.
 
-### <a name="BKMK_minutes"></a>To schedule a task that runs every N minutes
+### <a name=BKMK_minutes></a>To schedule a task that runs every N minutes
 
 #### Minute Schedule Syntax
 
@@ -273,17 +273,17 @@ The following command schedules a security script, Sec.vbs, to run every 20 minu
 
 Because the command does not include a starting date or time, the task starts 20 minutes after the command completes, and runs every 20 minutes thereafter whenever the system is running. Notice that the security script source file is located on a remote computer, but that the task is scheduled and executes on the local computer.
 ```
-schtasks /create /sc minute /mo 20 /tn "Security Script" /tr \\central\data\scripts\sec.vbs
+schtasks /create /sc minute /mo 20 /tn Security Script /tr \\central\data\scripts\sec.vbs
 ```
 
 #### To schedule a task that runs every 100 minutes during non-business hours
 
 The following command schedules a security script, Sec.vbs, to run on the local computer every 100 minutes between 5:00 P.M. and 7:59 A.M. each day. The command uses the **/sc** parameter to specify a minute schedule and the **/mo** parameter to specify an interval of 100 minutes. It uses the **/st** and **/et** parameters to specify the start time and end time of each day's schedule. It also uses the **/k** parameter to stop the script if it is still running at 7:59 A.M. Without **/k**, **schtasks** would not start the script after 7:59 A.M., but if the instance started at 6:20 A.M. was still running, it would not stop it.
 ```
-schtasks /create /tn "Security Script" /tr sec.vbs /sc minute /mo 100 /st 17:00 /et 08:00 /k
+schtasks /create /tn Security Script /tr sec.vbs /sc minute /mo 100 /st 17:00 /et 08:00 /k
 ```
 
-### <a name="BKMK_hours"></a>To schedule a task that runs every N hours
+### <a name=BKMK_hours></a>To schedule a task that runs every N hours
 
 #### Hourly Schedule Syntax
 
@@ -303,14 +303,14 @@ The following command schedules the MyApp program to run every five hours beginn
 
 Because the local computer is set to use the **English (Zimbabwe)** option in **Regional and Language Options** in **Control Panel**, the format for the start date is MM/DD/YYYY (03/01/2002).
 ```
-schtasks /create /sc hourly /mo 5 /sd 03/01/2002 /tn "My App" /tr c:\apps\myapp.exe
+schtasks /create /sc hourly /mo 5 /sd 03/01/2002 /tn My App /tr c:\apps\myapp.exe
 ```
 
 #### To schedule a task that runs every hour at five minutes past the hour
 
 The following command schedules the MyApp program to run hourly beginning at five minutes past midnight. Because the **/mo** parameter is omitted, the command uses the default value for the hourly schedule, which is every (1) hour. If this command runs after 12:05 A.M., the program does not run until the next day.
 ```
-schtasks /create /sc hourly /st 00:05 /tn "My App" /tr c:\apps\myapp.exe
+schtasks /create /sc hourly /st 00:05 /tn My App /tr c:\apps\myapp.exe
 ```
 
 #### To schedule a task that runs every 3 hours for 10 hours
@@ -319,11 +319,11 @@ The following command schedules the MyApp program to run every 3 hours for 10 ho
 
 The command uses the **/sc** parameter to specify an hourly schedule and the **/mo** parameter to specify the interval of 3 hours. It uses the **/st** parameter to start the schedule at midnight and the **/du** parameter to end the recurrences after 10 hours. Because the program runs for just a few minutes, the **/k** parameter, which stops the program if it is still running when the duration expires, is not necessary.
 ```
-schtasks /create /tn "My App" /tr myapp.exe /sc hourly /mo 3 /st 00:00 /du 0010:00
+schtasks /create /tn My App /tr myapp.exe /sc hourly /mo 3 /st 00:00 /du 0010:00
 ```
 In this example, the task runs at 12:00 A.M., 3:00 A.M., 6:00 A.M., and 9:00 A.M. Because the duration is 10 hours, the task is not run again at 12:00 P.M. Instead, it starts again at 12:00 A.M. the next day.
 
-### <a name="BKMK_days"></a>To schedule a task that runs every N days
+### <a name=BKMK_days></a>To schedule a task that runs every N days
 
 #### Daily Schedule Syntax
 
@@ -339,33 +339,33 @@ In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modif
 
 #### To schedule a task that runs every day
 
-The following example schedules the MyApp program to run once a day, every day, at 8:00 A.M. until December 31, 2002. Because it omits the **/mo** parameter, the default interval of 1 is used to run the command every day.
+To schedules the MyApp program to run once a day, every day, at 8:00 A.M. until December 31, 2002. Because it omits the **/mo** parameter, the default interval of 1 is used to run the command every day.
 
 In this example, because the local computer system is set to the **English (United Kingdom)** option in **Regional and Language Options** in **Control Panel**, the format for the end date is DD/MM/YYYY (31/12/2002)
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc daily /st 08:00 /ed 31/12/2002
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc daily /st 08:00 /ed 31/12/2002
 ```
 
 #### To schedule a task that runs every 12 days
 
-The following example schedules the MyApp program to run every twelve days at 1:00 P.M. (13:00) beginning on December 31, 2002. The command uses the **/mo** parameter to specify an interval of two (2) days and the **/sd** and **/st** parameters to specify the date and time.
+To schedules the MyApp program to run every twelve days at 1:00 P.M. (13:00) beginning on December 31, 2002. The command uses the **/mo** parameter to specify an interval of two (2) days and the **/sd** and **/st** parameters to specify the date and time.
 
 In this example, because the system is set to the **English (Zimbabwe)** option in **Regional and Language Options** in **Control Panel**, the format for the end date is MM/DD/YYYY (12/31/2002)
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc daily /mo 12 /sd 12/31/2002 /st 13:00
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc daily /mo 12 /sd 12/31/2002 /st 13:00
 ```
 
 #### To schedule a task that runs every 70 days if I am logged on
 
 The following command schedules a security script, Sec.vbs, to run every 70 days. The command uses the **/mo** parameter to specify an interval of 70 days. It also uses the **/it** parameter to specify that the task runs only when the user under whose account the task runs is logged onto the computer. Because the task will run with the permissions of my user account, then the task will run only when I am logged on.
 ```
-schtasks /create /tn "Security Script" /tr sec.vbs /sc daily /mo 70 /it
+schtasks /create /tn Security Script /tr sec.vbs /sc daily /mo 70 /it
 ```
 
 > [!NOTE]
 > To identify tasks with the interactive-only (**/it**) property, use a verbose query **(/query /v**). In a verbose query display of a task with **/it**, the **Logon Mode** field has a value of **Interactive only**.
 
-### <a name="BKMK_weeks"></a>To schedule a task that runs every N weeks
+### <a name=BKMK_weeks></a>To schedule a task that runs every N weeks
 
 #### Weekly Schedule Syntax
 
@@ -389,17 +389,17 @@ This command also uses the **/s** parameter to specify the remote computer and t
 
 Also, because the command is run remotely, all paths in the command, including the path to MyApp.exe, refer to paths on the remote computer.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc weekly /mo 6 /s Server16 /u Admin01
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 6 /s Server16 /u Admin01
 ```
 
 #### To schedule a task that runs every other week on Friday
 
 The following command schedules a task to run every other Friday. It uses the **/mo** parameter to specify the two-week interval and the **/d** parameter to specify the day of the week. To schedule a task that runs every Friday, omit the **/mo** parameter or set it to 1.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc weekly /mo 2 /d FRI
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 2 /d FRI
 ```
 
-### <a name="BKMK_months"></a>To schedule a task that runs every N months
+### <a name=BKMK_months></a>To schedule a task that runs every N months
 
 #### Syntax
 
@@ -417,14 +417,14 @@ In this schedule type, the **/sc monthly** parameter is required. The **/mo** (m
 
 The following command schedules the MyApp program to run on the first day of every month. Because a value of 1 is the default for both the **/mo** (modifier) parameter and the **/d** (day) parameter, these parameters are omitted from the command.
 ```
-schtasks /create /tn "My App" /tr myapp.exe /sc monthly
+schtasks /create /tn My App /tr myapp.exe /sc monthly
 ```
 
 #### To schedule a task that runs every three months
 
 The following command schedules the MyApp program to run every three months. It uses the **/mo** parameter to specify the interval.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /mo 3
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 3
 ```
 
 #### To schedule a task that runs at midnight on the 21st day of every other month
@@ -433,10 +433,10 @@ The following command schedules the MyApp program to run every other month on th
 
 The command uses the **/mo** parameter to specify the monthly interval (every two months), the **/d** parameter to specify the date, and the **/st** to specify the time. It also uses the **/sd** and **/ed** parameters to specify the start date and end date, respectively. Because the local computer is set to the **English (South Africa)** option in **Regional and Language Options** in **Control Panel**, the dates are specified in the local format, YYYY/MM/DD.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00:00 /sd 2002/07/01 /ed 2003/06/30 
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00:00 /sd 2002/07/01 /ed 2003/06/30
 ```
 
-### <a name="BKMK_spec_day"></a>To schedule a task that runs on a specific day of the week
+### <a name=BKMK_spec_day></a>To schedule a task that runs on a specific day of the week
 
 #### Weekly Schedule Syntax
 
@@ -446,7 +446,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc weekly [/d {<MON - SUN>[,MON -
 
 #### Remarks
 
-The "day of the week" schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (\*). The default is MON (Monday). The every day option (**/d \***) is equivalent to scheduling a daily task.
+The day of the week schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is 1 (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (\*). The default is MON (Monday). The every day option (**/d \***) is equivalent to scheduling a daily task.
 
 #### Examples
 
@@ -454,17 +454,17 @@ The "day of the week" schedule is a variation of the weekly schedule. In a weekl
 
 The following command schedules the MyApp program to run every week on Wednesday. The command uses the **/d** parameter to specify the day of the week. Because the command omits the **/mo** parameter, the task runs every week.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc weekly /d WED
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /d WED
 ```
 
 #### To schedule a task that runs every eight weeks on Monday and Friday
 
 The following command schedules a task to run on Monday and Friday of every eighth week. It uses the **/d** parameter to specify the days and the **/mo** parameter to specify the eight-week interval.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc weekly /mo 8 /d MON,FRI
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 8 /d MON,FRI
 ```
 
-### <a name="BKMK_spec_week"></a>To schedule a task that runs on a specific week of the month
+### <a name=BKMK_spec_week></a>To schedule a task that runs on a specific week of the month
 
 #### Specific Week Syntax
 
@@ -482,17 +482,17 @@ In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) par
 
 The following command schedules the MyApp program to run on the second Sunday of every month. It uses the **/mo** parameter to specify the second week of the month and the **/d** parameter to specify the day.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /mo SECOND /d SUN
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo SECOND /d SUN
 ```
 
 #### To schedule a task for the first Monday in March and September
 
 The following command schedules the MyApp program to run on the first Monday in March and September. It uses the **/mo** parameter to specify the first week of the month and the **/d** parameter to specify the day. It uses **/m** parameter to specify the month, separating the month arguments with a comma.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /mo FIRST /d MON /m MAR,SEP
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo FIRST /d MON /m MAR,SEP
 ```
 
-### <a name="BKMK_spec_date"></a>To schedule a task that runs on a specific date each month
+### <a name=BKMK_spec_date></a>To schedule a task that runs on a specific date each month
 
 #### Specific date syntax
 
@@ -512,17 +512,17 @@ The **/m** (month) parameter is optional for this schedule type and the default 
 
 The following command schedules the MyApp program to run on the first day of every month. Because the default modifier is none (no modifier), the default day is day 1, and the default month is every month, the command does not need any additional parameters.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly
 ```
 
 #### To schedule a task for the 15th days of May and June
 
 The following command schedules the MyApp program to run on May 15 and June 15 at 3:00 P.M. (15:00). It uses the **/m** parameter to specify the date and the **/m** parameter to specify the months. It also uses the **/st** parameter to specify the start time.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /d 15 /m MAY,JUN /st 15:00
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /d 15 /m MAY,JUN /st 15:00
 ```
 
-### <a name="BKMK_last_day"></a>To schedule a task that runs on the last day of a month
+### <a name=BKMK_last_day></a>To schedule a task that runs on the last day of a month
 
 #### Last day syntax
 
@@ -540,17 +540,17 @@ In the last day schedule type, the **/sc monthly** parameter, the **/mo LASTDAY*
 
 The following command schedules the MyApp program to run on the last day of every month. It uses the **/mo** parameter to specify the last day and the **/m** parameter with the wildcard character (*) to indicate that the program runs every month.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /mo lastday /m *
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo lastday /m *
 ```
 
 #### To schedule a task at 6:00 P.M. on the last days of February and March
 
 The following command schedules the MyApp program to run on the last day of February and the last day of March at 6:00 P.M. It uses the **/mo** parameter to specify the last day, the **/m** parameter to specify the months, and the **/st** parameter to specify the start time.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /mo lastday /m FEB,MAR /st 18:00
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo lastday /m FEB,MAR /st 18:00
 ```
 
-### <a name="BKMK_once"></a>To schedule a task that runs once
+### <a name=BKMK_once></a>To schedule a task that runs once
 
 #### Syntax
 
@@ -572,10 +572,10 @@ The following command schedules the MyApp program to run at midnight on January 
 
 Because the local computer uses the **English (United States)** option in **Regional and Language Options** in **Control Panel**, the format for the start date is MM/DD/YYYY.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc once /sd 01/01/2003 /st 00:00
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc once /sd 01/01/2003 /st 00:00
 ```
 
-### <a name="BKMK_startup"></a>To schedule a task that runs every time the system starts
+### <a name=BKMK_startup></a>To schedule a task that runs every time the system starts
 
 #### Syntax
 
@@ -595,10 +595,10 @@ The following command schedules the MyApp program to run every time the system s
 
 Because the local computer is uses the **English (United States)** option in **Regional and Language Options** in **Control Panel**, the format for the start date is MM/DD/YYYY.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc onstart /sd 03/15/2001
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onstart /sd 03/15/2001
 ```
 
-### <a name="BKMK_logon"></a>To schedule a task that runs when a user logs on
+### <a name=BKMK_logon></a>To schedule a task that runs when a user logs on
 
 #### Syntax
 
@@ -608,7 +608,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc onlogon [/sd <StartDate>] [/it
 
 #### Remarks
 
-The "on logon" schedule type schedules a task that runs whenever any user logs on to the computer. In the "on logon" schedule type, the **/sc onlogon** parameter is required. The **/sd** (start date) parameter is optional and the default is the current date.
+The on logon schedule type schedules a task that runs whenever any user logs on to the computer. In the on logon schedule type, the **/sc onlogon** parameter is required. The **/sd** (start date) parameter is optional and the default is the current date.
 
 #### Examples
 
@@ -616,10 +616,10 @@ The "on logon" schedule type schedules a task that runs whenever any user logs o
 
 The following command schedules a batch file to run every time a user (any user) logs on to the remote computer. It uses the **/s** parameter to specify the remote computer. Because the command is remote, all paths in the command, including the path to the batch file, refer to a path on the remote computer.
 ```
-schtasks /create /tn "Start Web Site" /tr c:\myiis\webstart.bat /sc onlogon /s Server23
+schtasks /create /tn Start Web Site /tr c:\myiis\webstart.bat /sc onlogon /s Server23
 ```
 
-### <a name="BKMK_idle"></a>To schedule a task that runs when the system is idle
+### <a name=BKMK_idle></a>To schedule a task that runs when the system is idle
 
 #### Syntax
 
@@ -629,7 +629,7 @@ schtasks /create /tn <TaskName> /tr <TaskRun> /sc onidle /i {1 - 999} [/sd <Star
 
 #### Remarks
 
-The "on idle" schedule type schedules a task that runs whenever there is no user activity during the time specified by the **/i** parameter. In the "on idle" schedule type, the **/sc onidle** parameter and the **/i** parameter are required. The **/sd** (start date) is optional and the default is the current date.
+The on idle schedule type schedules a task that runs whenever there is no user activity during the time specified by the **/i** parameter. In the on idle schedule type, the **/sc onidle** parameter and the **/i** parameter are required. The **/sd** (start date) is optional and the default is the current date.
 
 #### Examples
 
@@ -637,12 +637,12 @@ The "on idle" schedule type schedules a task that runs whenever there is no user
 
 The following command schedules the MyApp program to run whenever the computer is idle. It uses the required **/i** parameter to specify that the computer must remain idle for ten minutes before the task starts.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc onidle /i 10
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onidle /i 10
 ```
 
-### <a name="BKMK_now"></a>To schedule a task that runs now
+### <a name=BKMK_now></a>To schedule a task that runs now
 
-**Schtasks** does not have a "run now" option, but you can simulate that option by creating a task that runs once and starts in a few minutes.
+**Schtasks** does not have a run now option, but you can simulate that option by creating a task that runs once and starts in a few minutes.
 
 #### Syntax
 
@@ -658,10 +658,10 @@ The following command schedules a task to run once, on November 13, 2002 at 2:18
 
 Because the local computer is uses the **English (United States)** option in **Regional and Language Options** in **Control Panel**, the format for the start date is MM/DD/YYYY.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc once /st 14:18 /sd 11/13/2002
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc once /st 14:18 /sd 11/13/2002
 ```
 
-### <a name="BKMK_diff_perms"></a>To schedule a task that runs with different permissions
+### <a name=BKMK_diff_perms></a>To schedule a task that runs with different permissions
 
 You can schedule tasks of all types to run with permissions of an alternate account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the **/ru** parameter is required and the **/rp** parameter is optional.
 
@@ -671,12 +671,12 @@ You can schedule tasks of all types to run with permissions of an alternate acco
 
 The following command schedules the MyApp program to run on the local computer. It uses the **/ru** to specify that the task should run with the permissions of the user's Administrator account (Admin06). In this example, the task is scheduled to run every Tuesday, but you can use any schedule type for a task run with alternate permissions.
 ```
-schtasks /create /tn "My App" /tr myapp.exe /sc weekly /d TUE /ru Admin06
+schtasks /create /tn My App /tr myapp.exe /sc weekly /d TUE /ru Admin06
 ```
-In response, **SchTasks.exe** prompts for the "run as" password for the Admin06 account and then displays a success message.
+In response, **SchTasks.exe** prompts for the run as password for the Admin06 account and then displays a success message.
 ```
 Please enter the run as password for Admin06: ********
-SUCCESS: The scheduled task "My App" has successfully been created.
+SUCCESS: The scheduled task My App has successfully been created.
 ```
 
 #### To run a task with alternate permissions on a remote computer
@@ -687,7 +687,7 @@ The command uses the **/sc** parameter to specify a daily schedule and **/mo** p
 
 The command uses the **/s** parameter to provide the name of the remote computer and the **/u** parameter to specify an account with permission to schedule a task on the remote computer (Admin01 on the Marketing computer). It also uses the **/ru** parameter to specify that the task should run with the permissions of the user's non-Administrator account (User01 in the Reskits domain). Without the **/ru** parameter, the task would run with the permissions of the account specified by **/u**.
 ```
-schtasks /create /tn "My App" /tr myapp.exe /sc daily /mo 4 /s Marketing /u Marketing\Admin01 /ru Reskits\User01
+schtasks /create /tn My App /tr myapp.exe /sc daily /mo 4 /s Marketing /u Marketing\Admin01 /ru Reskits\User01
 ```
 **Schtasks** first requests the password of the user named by the **/u** parameter (to run the command) and then requests the password of the user named by the **/ru** parameter (to run the task). After authenticating the passwords, **schtasks** displays a message indicating that the task is scheduled.
 ```
@@ -695,7 +695,7 @@ Type the password for Marketing\Admin01:********
 
 Please enter the run as password for Reskits\User01: ********
 
-SUCCESS: The scheduled task "My App" has successfully been created.
+SUCCESS: The scheduled task My App has successfully been created.
 ```
 
 #### To run a task only when a particular user is logged on
@@ -706,14 +706,14 @@ The command uses the **/sc** parameter to specify a weekly schedule, the **/d** 
 
 The command uses the **/s** parameter to provide the name of the remote computer and the **/u** parameter to specify an account with permission to schedule a task on the remote computer. It also uses the **/ru** parameter to configure the task to run with the permissions of the administrator of the Public computer (Public\Admin01) and the **/it** parameter to indicate that the task runs only when the Public\Admin01 account is logged on.
 ```
-schtasks /create /tn "Check Admin" /tr AdminCheck.exe /sc weekly /d FRI /st 04:00 /s Public /u Domain3\Admin06 /ru Public\Admin01 /it
+schtasks /create /tn Check Admin /tr AdminCheck.exe /sc weekly /d FRI /st 04:00 /s Public /u Domain3\Admin06 /ru Public\Admin01 /it
 ```
 **Note**
 -   To identify tasks with the interactive-only (**/it**) property, use a verbose query **(/query /v**). In a verbose query display of a task with **/it**, the **Logon Mode** field has a value of **Interactive only**.
 
-### <a name="BKMK_sys_perms"></a>To schedule a task that runs with system permissions
+### <a name=BKMK_sys_perms></a>To schedule a task that runs with system permissions
 
-Tasks of all types can run with permissions of the System account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the **/ru system** (or **/ru ""**) parameter is required and the **/rp** parameter is not valid.
+Tasks of all types can run with permissions of the System account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the **/ru system** (or **/ru **) parameter is required and the **/rp** parameter is not valid.
 
 **Important**
 -   The System account does not have interactive logon rights. Users cannot see or  interact with programs or tasks run with system permissions.
@@ -731,12 +731,12 @@ The following command schedules the MyApp program to run on the local computer w
 
 The command uses the **/ru System** parameter to specify the system security context. Because system tasks do not use a password, the **/rp** parameter is omitted.
 ```
-schtasks /create /tn "My App" /tr c:\apps\myapp.exe /sc monthly /d 15 /ru System
+schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /d 15 /ru System
 ```
 In response, **SchTasks.exe** displays an informational message and a success message. It does not prompt for a password.
 ```
-INFO: The task will be created under user name ("NT AUTHORITY\SYSTEM").
-SUCCESS: The Scheduled task "My App" has successfully been created.
+INFO: The task will be created under user name (NT AUTHORITY\SYSTEM).
+SUCCESS: The Scheduled task My App has successfully been created.
 ```
 
 #### To run a task with system permissions on a remote computer
@@ -747,39 +747,39 @@ The command uses the **/tn** parameter to name the task and the **/tr** paramete
 
 The command uses the **/s** parameter to provide the name of the remote computer and the **/u** parameter to specify an account with permission to schedule a task on the remote computer. It also uses the **/ru** parameter to specify that the task should run under the System account. Without the **/ru** parameter, the task would run with the permissions of the account specified by **/u**.
 ```
-schtasks /create /tn "My App" /tr myapp.exe /sc daily /st 04:00 /s Finance01 /u Admin01 /ru System
+schtasks /create /tn My App /tr myapp.exe /sc daily /st 04:00 /s Finance01 /u Admin01 /ru System
 ```
 **Schtasks** requests the password of the user named by the **/u** parameter and, after authenticating the password, displays a message indicating that the task is created and that it will run with permissions of the System account.
 ```
 Type the password for Admin01:**********
 
-INFO: The Schedule Task "My App" will be created under user name ("NT AUTHORITY\
-SYSTEM").
-SUCCESS: The scheduled task "My App" has successfully been created.
+INFO: The Schedule Task My App will be created under user name (NT AUTHORITY\
+SYSTEM).
+SUCCESS: The scheduled task My App has successfully been created.
 ```
 
-### <a name="BKMK_multi_progs"></a>To schedule a task that runs more than one program
+### <a name=BKMK_multi_progs></a>To schedule a task that runs more than one program
 
 Each task runs only one program. However, you can create a batch file that runs multiple programs and then schedule a task to run the batch file. The following procedure demonstrates this method:
 1. Create a batch file that starts the programs you want to run.
 
-   In this example, you create a batch file that starts Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe).  
+   In this example, you create a batch file that starts Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe).
    - Open a text editor, such as Notepad.
-   - Type the name and fully qualified path to the executable file for each program. In this case, the file includes the following statements.  
+   - Type the name and fully qualified path to the executable file for each program. In this case, the file includes the following statements.
      ```
-     C:\Windows\System32\Eventvwr.exe 
+     C:\Windows\System32\Eventvwr.exe
      C:\Windows\System32\Perfmon.exe
-     ```  
+     ```
    - Save the file as MyApps.bat.
 2. Use **Schtasks.exe** to create a task that runs MyApps.bat.
 
-   The following command creates the Monitor task, which runs whenever anyone logs on. It uses the **/tn** parameter to name the task, and the **/tr** parameter to run MyApps.bat. It uses the **/sc** parameter to indicate the OnLogon schedule type and the **/ru** parameter to run the task with the permissions of the user's Administrator account.  
+   The following command creates the Monitor task, which runs whenever anyone logs on. It uses the **/tn** parameter to name the task, and the **/tr** parameter to run MyApps.bat. It uses the **/sc** parameter to indicate the OnLogon schedule type and the **/ru** parameter to run the task with the permissions of the user's Administrator account.
    ```
    schtasks /create /tn Monitor /tr C:\MyApps.bat /sc onlogon /ru Reskit\Administrator
-   ```  
+   ```
    As a result of this command, whenever a user logs on to the computer, the task starts both Event Viewer and System Monitor.
 
-### <a name="BKMK_remote"></a>To schedule a task that runs on a remote computer
+### <a name=BKMK_remote></a>To schedule a task that runs on a remote computer
 
 To schedule a task to run on a remote computer, you must add the task to the remote computer's schedule. Tasks of all types can be scheduled on a remote computer, but the following conditions must be met.
 -   You must have permission to schedule the task. As such, you must be logged on to the local computer with an account that is a member of the Administrators group on the remote computer, or you must use the **/u** parameter to provide the credentials of an Administrator of the remote computer.
@@ -794,7 +794,7 @@ The following command schedules the MyApp program to run on the SRV01 remote com
 
 Please note that when scheduling tasks on a remote computer, all parameters refer to the remote computer. Therefore, the executable file specified by the **/tr** parameter refers to the copy of MyApp.exe on the remote computer.
 ```
-schtasks /create /s SRV01 /tn "My App" /tr "c:\program files\corpapps\myapp.exe" /sc daily /mo 10
+schtasks /create /s SRV01 /tn My App /tr c:\program files\corpapps\myapp.exe /sc daily /mo 10
 ```
 In response, **schtasks** displays a success message indicating that the task is scheduled.
 
@@ -802,7 +802,7 @@ In response, **schtasks** displays a success message indicating that the task is
 
 The following command schedules the MyApp program to run on the SRV06 remote computer every three hours. Because Administrator permissions are required to schedule a task, the command uses the **/u** and **/p** parameters to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). By default, these permissions are also used to run the task. However, because the task does not need Administrator permissions to run, the command includes the **/u** and **/rp** parameters to override the default and run the task with permission of the user's non-Administrator account on the remote computer.
 ```
-schtasks /create /s SRV06 /tn "My App" /tr "c:\program files\corpapps\myapp.exe" /sc hourly /mo 3 /u reskits\admin01 /p R43253@4$ /ru SRV06\user03 /rp MyFav!!Pswd
+schtasks /create /s SRV06 /tn My App /tr c:\program files\corpapps\myapp.exe /sc hourly /mo 3 /u reskits\admin01 /p R43253@4$ /ru SRV06\user03 /rp MyFav!!Pswd
 ```
 In response, **schtasks** displays a success message indicating that the task is scheduled.
 
@@ -810,15 +810,15 @@ In response, **schtasks** displays a success message indicating that the task is
 
 The following command schedules the MyApp program to run on the SRV02 remote computer on the last day of every month. Because the local current user (user03) is not an Administrator of the remote computer, the command uses the **/u** parameter to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). The Administrator account permissions will be used to schedule the task and to run the task.
 ```
-schtasks /create /s SRV02 /tn "My App" /tr "c:\program files\corpapps\myapp.exe" /sc monthly /mo LASTDAY /m * /u reskits\admin01
+schtasks /create /s SRV02 /tn My App /tr c:\program files\corpapps\myapp.exe /sc monthly /mo LASTDAY /m * /u reskits\admin01
 ```
 Because the command did not include the **/p** (password) parameter, **schtasks** prompts for the password. Then it displays a success message and, in this case, a warning.
 ```
 Type the password for reskits\admin01:********
 
-SUCCESS: The scheduled task "My App" has successfully been created.
+SUCCESS: The scheduled task My App has successfully been created.
 
-WARNING: The Scheduled task "My App" has been created, but may not run because
+WARNING: The Scheduled task My App has been created, but may not run because
 the account information could not be set.
 ```
 This warning indicates that the remote domain could not authenticate the account specified by the **/u** parameter. In this case, the remote domain could not authenticate the user account because the local computer is not a member of a domain that the remote computer domain trusts. When this occurs, the task job appears in the list of scheduled tasks, but the task is actually empty and it will not run.
@@ -872,7 +872,7 @@ Power Management: Disabled
 -   Each task runs only one program. However, you can create a batch file that starts multiple tasks, and then schedule a task that runs the batch file.
 -   You can test a task as soon as you create it. Use the **run** operation to test the task and then check the SchedLgU.txt file (*SystemRoot*\SchedLgU.txt) for errors.
 
-## <a name="BKMK_change"></a>schtasks change
+## <a name=BKMK_change></a>schtasks change
 
 Changes one or more of the following properties of a task.
 -   The program that the task runs (**/tr**).
@@ -886,7 +886,7 @@ Changes one or more of the following properties of a task.
 schtasks /change /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]] [/ru {[<Domain>\]<User> | System}] [/rp <Password>] [/tr <TaskRun>] [/st <StartTime>] [/ri <Interval>] [{/et <EndTime> | /du <Duration>} [/k]] [/sd <StartDate>] [/ed <EndDate>] [/{ENABLE | DISABLE}] [/it] [/z]
 ```
 
-### Parameters
+#### Parameters
 
 |          Term           |                                                                                                                                                                                                                                                                                                                                     Definition                                                                                                                                                                                                                                                                                                                                      |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -906,7 +906,7 @@ schtasks /change /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Passwo
 |     /ed \<EndDate>      |                                                                                                                                                                                                                                                                                                 Specifies the last date on which the task should be run. The format is MM/DD/YYYY.                                                                                                                                                                                                                                                                                                  |
 |         /ENABLE         |                                                                                                                                                                                                                                                                                                                       Specifies to enable the scheduled task.                                                                                                                                                                                                                                                                                                                       |
 |        /DISABLE         |                                                                                                                                                                                                                                                                                                                      Specifies to disable the scheduled task.                                                                                                                                                                                                                                                                                                                       |
-|           /it           | Specifies to run the scheduled task only when the "run as" user (the user account under which the task runs) is logged on to the computer.</br>This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You cannot use a change command to remove the interactive-only property from a task.</br>By default, the "run as" user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the "run as" user is the account specified by the **/ru** parameter. |
+|           /it           | Specifies to run the scheduled task only when the run as user (the user account under which the task runs) is logged on to the computer.</br>This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You cannot use a change command to remove the interactive-only property from a task.</br>By default, the run as user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the run as user is the account specified by the **/ru** parameter. |
 |           /z            |                                                                                                                                                                                                                                                                                                          Specifies to delete the task upon the completion of its schedule.                                                                                                                                                                                                                                                                                                          |
 |           /?            |                                                                                                                                                                                                                                                                                                                        Displays help at the command prompt.                                                                                                                                                                                                                                                                                                                         |
 
@@ -925,11 +925,11 @@ schtasks /change /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Passwo
 
 The following command changes the program that the Virus Check task runs from VirusCheck.exe to VirusCheck2.exe. This command uses the **/tn** parameter to identify the task and the **/tr** parameter to specify the new program for the task. (You cannot change the task name.)
 ```
-schtasks /change /tn "Virus Check" /tr C:\VirusCheck2.exe
+schtasks /change /tn Virus Check /tr C:\VirusCheck2.exe
 ```
 In response, **SchTasks.exe** displays the following success message:
 ```
-SUCCESS: The parameters of the scheduled task "Virus Check" have been changed.
+SUCCESS: The parameters of the scheduled task Virus Check have been changed.
 ```
 As a result of this command, the Virus Check task now runs VirusCheck2.exe.
 
@@ -943,7 +943,7 @@ schtasks /change /tn RemindMe /s Svr01 /rp p@ssWord3
 ```
 In response, **SchTasks.exe** displays the following success message:
 ```
-SUCCESS: The parameters of the scheduled task "RemindMe" have been changed.
+SUCCESS: The parameters of the scheduled task RemindMe have been changed.
 ```
 As a result of this command, the RemindMe task now runs under its original user account, but with a new password.
 
@@ -955,36 +955,36 @@ The command uses the **/tn** parameter to identify the task. It uses the **/tr**
 
 The **/ru**, and **/rp** parameter, which provides the password for the user account, is omitted. You must provide a password for the account, but you can use the **/ru**, and **/rp** parameter and type the password in clear text, or wait for **SchTasks.exe** to prompt you for a password, and then enter the password in obscured text.
 ```
-schtasks /change /tn ChkNews /tr "c:\program files\Internet Explorer\iexplore.exe" /ru DomainX\Admin01
+schtasks /change /tn ChkNews /tr c:\program files\Internet Explorer\iexplore.exe /ru DomainX\Admin01
 ```
 In response, **SchTasks.exe** requests the password for the user account. It obscures the text you type, so the password is not visible.
 ```
-Please enter the password for DomainX\Admin01: 
+Please enter the password for DomainX\Admin01:
 ```
 Note that the **/tn** parameter identifies the task and that the **/tr** and **/ru** parameters change the properties of the task. You cannot use another parameter to identify the task and you cannot change the task name.
 
 In response, **SchTasks.exe** displays the following success message:
 ```
-SUCCESS: The parameters of the scheduled task "ChkNews" have been changed.
+SUCCESS: The parameters of the scheduled task ChkNews have been changed.
 ```
 As a result of this command, the ChkNews task now runs Internet Explorer with the permissions of an Administrator account.
 
 ### To change a program to the System account
 
-The following command changes the SecurityScript task so that it runs with permissions of the System account. It uses the **/ru ""** parameter to indicate the System account.
+The following command changes the SecurityScript task so that it runs with permissions of the System account. It uses the **/ru ** parameter to indicate the System account.
 ```
-schtasks /change /tn SecurityScript /ru ""
+schtasks /change /tn SecurityScript /ru
 ```
 In response, **SchTasks.exe** displays the following success message:
 ```
-INFO: The run as user name for the scheduled task "SecurityScript" will be changed to "NT AUTHORITY\SYSTEM".
-SUCCESS: The parameters of the scheduled task "SecurityScript" have been changed.
+INFO: The run as user name for the scheduled task SecurityScript will be changed to NT AUTHORITY\SYSTEM.
+SUCCESS: The parameters of the scheduled task SecurityScript have been changed.
 ```
 Because tasks run with System account permissions do not require a password, **SchTasks.exe** does not prompt for one.
 
 ### To run a program only when I am logged on
 
-The following command adds the interactive-only property to MyApp, an existing task. This property assures that the task runs only when the "run as" user, that is, the user account under which the task runs, is logged on to the computer.
+The following command adds the interactive-only property to MyApp, an existing task. This property assures that the task runs only when the run as user, that is, the user account under which the task runs, is logged on to the computer.
 
 The command uses the **/tn** parameter to identify the task and the **/it** parameter to add the interactive-only property to the task. Because the task already runs with the permissions of my user account, I do not need to change the **/ru** parameter for the task.
 ```
@@ -992,10 +992,10 @@ schtasks /change /tn MyApp /it
 ```
 In response, **SchTasks.exe** displays the following success message.
 ```
-SUCCESS: The parameters of the scheduled task "MyApp" have been changed.
+SUCCESS: The parameters of the scheduled task MyApp have been changed.
 ```
 
-## <a name="BKMK_run"></a>schtasks run
+## <a name=BKMK_run></a>schtasks run
 
 Starts a scheduled task immediately. The **run** operation ignores the schedule, but uses the program file location, user account, and password saved in the task to run the task immediately.
 
@@ -1005,7 +1005,7 @@ Starts a scheduled task immediately. The **run** operation ignores the schedule,
 schtasks /run /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-### Parameters
+#### Parameters
 
 |         Term          |                                                                                                                                                                 Definition                                                                                                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1025,13 +1025,13 @@ schtasks /run /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 
 ### To run a task on the local computer
 
-The following command starts the "Security Script" task.
+The following command starts the Security Script task.
 ```
-schtasks /run /tn "Security Script"
+schtasks /run /tn Security Script
 ```
 In response, **SchTasks.exe** starts the script associated with the task and displays the following message:
 ```
-SUCCESS: Attempted to run the scheduled task "Security Script".
+SUCCESS: Attempted to run the scheduled task Security Script.
 ```
 As the message implies, **schtasks** tries to start the program, but it cannot very that the program actually started.
 
@@ -1043,11 +1043,11 @@ schtasks /run /tn Update /s Svr01
 ```
 In this case, **SchTasks.exe** displays the following error message:
 ```
-ERROR: Unable to run the scheduled task "Update".
+ERROR: Unable to run the scheduled task Update.
 ```
 To find the cause of the error, look in the Scheduled Tasks transaction log, C:\Windows\SchedLgU.txt on Svr01. In this case, the following entry appears in the log:
 ```
-"Update.job" (update.exe) 3/26/2001 1:15:46 PM ** ERROR **
+Update.job (update.exe) 3/26/2001 1:15:46 PM ** ERROR **
 The attempt to log on to the account associated with the task failed, therefore, the task did not run.
 The specific error is:
 0x8007052e: Logon failure: unknown user name or bad password.
@@ -1059,11 +1059,11 @@ schtasks /change /tn Update /s Svr01 /ru Administrator /rp PassW@rd3
 ```
 After the **change** command completes, the **run** command is repeated. This time, the Update.exe program starts and **SchTasks.exe** displays the following message:
 ```
-SUCCESS: Attempted to run the scheduled task "Update".
+SUCCESS: Attempted to run the scheduled task Update.
 ```
 As the message implies, **schtasks** tries to start the program, but it cannot very that the program actually started.
 
-## <a name="BKMK_end"></a>schtasks end
+## <a name=BKMK_end></a>schtasks end
 
 Stops a program started by a task.
 
@@ -1073,7 +1073,7 @@ Stops a program started by a task.
 schtasks /end /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-### Parameters
+#### Parameters
 
 |         Term          |                                                                                                                                                               Definition                                                                                                                                                                |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1093,11 +1093,11 @@ schtasks /end /tn <TaskName> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>
 
 The following command stops the instance of Notepad.exe that was started by the My Notepad task:
 ```
-schtasks /end /tn "My Notepad"
+schtasks /end /tn My Notepad
 ```
 In response, **SchTasks.exe** stops the instance of Notepad.exe that the task started, and it displays the following success message:
 ```
-SUCCESS: The scheduled task "My Notepad" has been terminated successfully.
+SUCCESS: The scheduled task My Notepad has been terminated successfully.
 ```
 
 ### To end a task on a remote computer
@@ -1108,10 +1108,10 @@ schtasks /end /tn InternetOn /s Svr01
 ```
 In response, **SchTasks.exe** stops the instance of Internet Explorer that the task started, and it displays the following success message:
 ```
-SUCCESS: The scheduled task "InternetOn" has been terminated successfully.
+SUCCESS: The scheduled task InternetOn has been terminated successfully.
 ```
 
-## <a name="BKMK_delete"></a>schtasks delete
+## <a name=BKMK_delete></a>schtasks delete
 
 Deletes a scheduled task.
 
@@ -1121,7 +1121,7 @@ Deletes a scheduled task.
 schtasks /delete /tn {<TaskName> | *} [/f] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-### Parameters
+#### Parameters
 
 |         Term          |                                                                                                                                                                 Definition                                                                                                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1141,14 +1141,14 @@ schtasks /delete /tn {<TaskName> | *} [/f] [/s <Computer> [/u [<Domain>\]<User> 
 
 ### To delete a task from the schedule of a remote computer
 
-The following command deletes the "Start Mail" task from the schedule of a remote computer. It uses the **/s** parameter to identify the remote computer.
+The following command deletes the Start Mail task from the schedule of a remote computer. It uses the **/s** parameter to identify the remote computer.
 ```
-schtasks /delete /tn "Start Mail" /s Svr16
+schtasks /delete /tn Start Mail /s Svr16
 ```
 In response, **SchTasks.exe** displays the following confirmation message. To delete the task, press Y<strong>.</strong> To cancel the command, type **n**:
 ```
-WARNING: Are you sure you want to remove the task "Start Mail" (Y/N )? 
-SUCCESS: The scheduled task "Start Mail" was successfully deleted.
+WARNING: Are you sure you want to remove the task Start Mail (Y/N )?
+SUCCESS: The scheduled task Start Mail was successfully deleted.
 ```
 
 ### To delete all tasks scheduled for the local computer
@@ -1159,9 +1159,9 @@ schtasks /delete /tn * /f
 ```
 In response, **SchTasks.exe** displays the following success messages indicating that the only task scheduled, SecureScript, is deleted.
 
-`SUCCESS: The scheduled task "SecureScript" was successfully deleted.`
+`SUCCESS: The scheduled task SecureScript was successfully deleted.`
 
-## <a name="BKMK_query"></a>schtasks query
+## <a name=BKMK_query></a>schtasks query
 
 Displays tasks scheduled to run on the computer.
 
@@ -1171,12 +1171,12 @@ Displays tasks scheduled to run on the computer.
 schtasks [/query] [/fo {TABLE | LIST | CSV}] [/nh] [/v] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
 ```
 
-### Parameters
+#### Parameters
 
 |         Term          |                                                                                                                                                                 Definition                                                                                                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       [/query]        |                                                                                                                        The operation name is optional. Typing **schtasks** without any parameters performs a query.                                                                                                                         |
-|      /fo {TABLE       |                                                                                                                                                                    LIST                                                                                                                                                                     |
+|      /fo \<format>    |  Specifies the output format. The valid values are TABLE, LIST, and CSV                                                                                                                                 |
 |          /nh          |                                                                                                            Omits column headings from the table display. This parameter is valid with the **TABLE** and **CSV** output formats.                                                                                                             |
 |          /v           |                                                                                                         Adds advanced properties of the tasks to the display.</br>Queries using **/v** should be formatted as **LIST** or **CSV**.                                                                                                          |
 |    /s \<Computer>     |                                                                                                           Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer.                                                                                                           |
@@ -1257,6 +1257,6 @@ schtasks /query /s Reskit16 /fo csv /nh >> \\svr01\data\tasklogs\p0102.csv
 ```
 In response, **SchTasks.exe** adds the tasks scheduled for the Reskit16 computer to the p0102.csv file on the local computer, Svr01.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

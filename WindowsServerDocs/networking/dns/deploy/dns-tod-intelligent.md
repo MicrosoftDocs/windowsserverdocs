@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 

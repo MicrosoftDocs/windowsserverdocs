@@ -12,7 +12,9 @@ ms.prod: windows-server
 
 Here's a listing of our latest released features:
 
-- Version [1910](https://aka.ms/wac1910) is the most recent GA release - it introduces several new Azure hybrid services and brings features that were previously in preview to the GA channel.
+- Version [2007](https://aka.ms/wac2007) is the most recent GA release - it includes support for the new Azure Stack HCI and new features for several tools.
+- Version [1910.2](https://aka.ms/wac1910.2) includes updates to the platform’s accessibility and numerous bug fixes
+- Version [1910](https://aka.ms/wac1910) introduces several new Azure hybrid services and brings features that were previously in preview to the GA channel.
 - Version [1909](https://aka.ms/wac1909) introduces the Azure VM specific connection type and unifies the connection types for traditional failover clusters and HCI clusters.
 - Version [1908](https://aka.ms/wac1908) added visual updates, Packetmon, FlowLog Audit, Azure Monitor onboarding for clusters, and support for WinRM over HTTPS (port 5986.)
 - Version [1907](https://aka.ms/wac1907) added Azure cost estimate links and made improvements to import/export and tagging of virtual machines.

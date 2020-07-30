@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Seizing an Operations Master Role 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

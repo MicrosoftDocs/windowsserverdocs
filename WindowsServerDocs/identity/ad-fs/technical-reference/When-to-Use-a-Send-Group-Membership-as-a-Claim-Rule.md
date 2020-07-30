@@ -1,14 +1,12 @@
 ---
 ms.assetid: af16e847-47c2-461e-9df1-cc352a322043
 title: When to Use a Send Group Membership as a Claim Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -57,7 +55,7 @@ You create this rule using either the claim rule language or by using the Send L
   
 -   Specify an outgoing claim value  
   
-For more information about how to create this rule, see [Create a Rule to Send Group Membership as a Claim](https://technet.microsoft.com/library/ee913569.aspx).  
+For more information about how to create this rule, see [Create a Rule to Send Group Membership as a Claim](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913569(v=ws.11)).  
   
 ## Using the claim rule language  
 If you want to issue claims based on an incoming SID other than a group SID, use the Transform an Incoming Claim rule template. If the administrator wants to retrieve the names for all the groups that the user is a member of, use the Send LDAP Attributes as Claims rule template instead with the **tokenGroups** attribute.  
@@ -71,6 +69,5 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", 
 ```  
   
 ## Additional references  
-[Create a Rule to Send LDAP Attributes as Claims](https://technet.microsoft.com/library/dd807115.aspx)  
+[Create a Rule to Send LDAP Attributes as Claims](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807115(v=ws.11))  
   
-

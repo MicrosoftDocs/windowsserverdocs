@@ -1,12 +1,8 @@
 ---
 title: Protected Users Security Group
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
 author: coreyp-at-msft
@@ -113,11 +109,11 @@ Two operational administrative logs are available to help troubleshoot events th
 
 |Event ID and Log|Description|
 |----------|--------|
-|104<br /><br />**ProtectedUser-Client**|Reason: The security package on the client does not contain the credentials.<br /><br />The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package does not cache the credentials that are needed to authenticate to the server.<br /><br />Displays the package name, user name, domain name, and server name.|
-|304<br /><br />**ProtectedUser-Client**|Reason: The security package does not store the Protected User's credentials.<br /><br />An informational event is logged in the client to indicate that the security package does not cache the user's sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<br /><br />Displays the package name, user name, and domain name.|
-|100<br /><br />**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account that is in the Protected Users security group.<br /><br />An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<br /><br />Displays the account name and device name.|
-|104<br /><br />**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<br /><br />Kerberos preauthentication failed because DES and RC4 encryption types cannot be used when the account is a member of the Protected Users security group.<br /><br />(AES is acceptable.)|
-|303<br /><br />**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|
+|104<p>**ProtectedUser-Client**|Reason: The security package on the client does not contain the credentials.<p>The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package does not cache the credentials that are needed to authenticate to the server.<p>Displays the package name, user name, domain name, and server name.|
+|304<p>**ProtectedUser-Client**|Reason: The security package does not store the Protected User's credentials.<p>An informational event is logged in the client to indicate that the security package does not cache the user's sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<p>Displays the package name, user name, and domain name.|
+|100<p>**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account that is in the Protected Users security group.<p>An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<p>Displays the account name and device name.|
+|104<p>**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<p>Kerberos preauthentication failed because DES and RC4 encryption types cannot be used when the account is a member of the Protected Users security group.<p>(AES is acceptable.)|
+|303<p>**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|
 
 
 ## Additional resources

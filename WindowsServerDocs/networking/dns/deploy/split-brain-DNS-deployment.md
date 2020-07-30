@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Use DNS Policy for Split\-Brain DNS Deployment
 

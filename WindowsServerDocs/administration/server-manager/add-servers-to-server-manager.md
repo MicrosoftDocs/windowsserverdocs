@@ -1,12 +1,12 @@
 ---
 title: Add Servers to Server Manager
-description: "Server Manager"
-ms.custom: na
+description: Server Manager
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
 author: coreyp-at-msft
@@ -36,7 +36,7 @@ This topic contains the following sections.
 
 -   [Provide credentials with the Manage As command](#BKMK_creds)
 
-## <a name="BKMK_creds"></a>Provide credentials with the Manage As command
+## <a name=BKMK_creds></a>Provide credentials with the Manage As command
 As you add remote servers to Server Manager, some of the servers that you add might require different user account credentials to access or manage them. To specify credentials for a managed server that are different from those you use to log on to the computer on which you are running Server Manager, use the **Manage As** command after you add a server to Server Manager, which is accessible by right-clicking the entry for a managed server in the **Servers** tile of a role or group home page. Clicking **Manage As** opens the **Windows Security** dialog box, in which you can provide a user name that has access rights on the managed server, in one of the following formats.
 
 -   *User name*
@@ -58,7 +58,7 @@ After you add servers to manage by following procedures in this topic, but befor
 > [!NOTE]
 > Roles and features that do not support the **Manage As** command include Remote Desktop Services (RDS) and IP address Management (IPAM) Server. If you cannot manage the remote RDS or IPAM server by using the same credentials you are using on the computer on which you are running Server Manager, try adding the account you typically use to manage these remote servers to the Administrators group on the computer that is running Server Manager. Then, log on to the computer that is running Server Manager with the account you use to manage the remote server that is running rdS or IPAM.
 
-## <a name="BKMK_add"></a>Add servers to manage
+## <a name=BKMK_add></a>Add servers to manage
 You can add servers to Server Manager to manage by using any of three methods in the **add Servers** dialog box.
 
 -   **Active Directory Domain Services** add servers to manage that active directory finds in the same domain as the local computer.

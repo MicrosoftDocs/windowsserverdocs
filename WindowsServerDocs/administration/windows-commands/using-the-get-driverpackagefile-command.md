@@ -1,12 +1,8 @@
 ---
-title: Using the get-DriverPackageFile Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: get-DriverPackageFile
+description: Reference article for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f01a2c67-7e9c-4aad-b625-383f5a1fca25
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the get-DriverPackageFile Command
-
-
+# get-DriverPackageFile
 
 Displays information about a driver package, including the drivers and files it contains.
 
@@ -27,7 +21,7 @@ Displays information about a driver package, including the drivers and files it 
 WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
 ```
 
-## Parameters
+### Parameters
 
 |         Parameter         |                              Description                               |
 |---------------------------|------------------------------------------------------------------------|
@@ -35,13 +29,13 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 |    [/Architecture:{x86    |                                  ia64                                  |
 |     [/Show: {Drivers      |                                 Files                                  |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To view information about a driver file, type:
 ```
-WDSUTIL /Get-DriverPackageFile /InfFile:"C:\temp\1394.inf" /Architecture:x86
+WDSUTIL /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

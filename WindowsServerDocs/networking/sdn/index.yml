@@ -1,175 +1,67 @@
-### YamlMime:YamlDocument
+### YamlMime:Landing
 
-documentType: LandingData
-
-title: Software Defined Networking (SDN) 
+title: Software Defined Networking (SDN) # < 60 chars
+summary: Learn about the features, technology, and deployment of Software Defined Networking (SDN). # < 160 chars
 
 metadata:
+  title: Software Defined Networking (SDN) # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn about the features, technology, and deployment of Software Defined Networking (SDN). # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: AnirbanPaul #Required; your GitHub user alias, with correct capitalization.
+  ms.author: anpaul #Required; microsoft alias of author; optional team alias.
+  ms.date: 06/12/2020 #Required; mm/dd/yyyy format.
 
-  document_id: 
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
-  title: Software Defined Networking (SDN) 
-
-  description: Learn about the features, technology, and deployment of Software Defined Networking (SDN).
-
-  text: Software Defined Networking (SDN) lets you dynamically manage your datacenter networking to meet workload and app requirements. Network policies can be implemented consistently, at scale, even as you deploy new workloads or move workloads across virtual or physical networks.
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: About Software Defined Networking
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Software Defined Networking (SDN) overview
+            url: \windows-server\networking\sdn\software-defined-networking
+          - text: Security for SDN
+            url: \windows-server\networking\sdn\security\sdn-security-top
+      - linkListType: whats-new
+        links:
+          - text: What's New in SDN for Windows Server 2019
+            url: \windows-server\networking\sdn\sdn-whats-new
+      - linkListType: concept
+        links:
+          - text: Key components of SDN architecture
+            url: \windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies
+      - linkListType: video
+        links:
+          - text: Microsoft SDN Mechanics
+            url: https://youtu.be/f501zUUcXD0
   
-  keywords: Windows Server, Windows Server 2016, software defined networking, sdn
+  # Card (optional)
+  - title: Get started
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Plan an SDN infrastructure
+            url: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
+          - text: Deploy an SDN infrastructure
+            url: \windows-server\networking\sdn\deploy\Deploy-a-Software-Defined-Network-Infrastructure
+          - text: Manage an SDN infrastructure 
+            url: \windows-server\networking\sdn\manage\manage-sdn
+      - linkListType: overview
+        links:
+          - text: Troubleshoot and diagnose an SDN infrastructure 
+            url: \windows-server\networking\sdn\troubleshoot\troubleshoot-windows-server-software-defined-networking-stack
+  
+  # Card (optional)
+  - title: SDN learning resources
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in VMM
+            url: https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/
+          - text: Microsoft Software Defined Networking Datasheet
+            url: https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf
 
-  ms.localizationpriority: medium
-
-  author: shortpatti
-
-  ms.author: pashort
-
-  ms.date: 09/04/2018
-
-  ms.topic: article
-
-  ms.devlang: na
-
-sections:
-
-- title: Learn about... 
-
-- items:
-
-  - type: markdown
-
-    text: Get ready to implement Software Defined Networking, which virtualizes your network to abstract physical hardware network elements such as switches and routers. 
-
-- items:
-
-  - type: list
-
-    style: cards
-
-    className: cardsE
-
-    columns: 3
-
-    items:
-
-    - href: \windows-server\networking\sdn\sdn-whats-new
-
-      html: <p>Learn about the new and updated features of SDN.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-      
-      title: What's New in SDN for Windows Server 2019
-
-    - href: \windows-server\networking\sdn\software-defined-networking
-
-      html: <p>Learn how you can centrally configure and manage physical and virtual network devices.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_overview.svg
-
-      title: Software Defined Networking (SDN) overview
-
-    - href: \windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies
-
-      html: <p>Learn about the SDN technologies included in Windows Server 2016.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_tools.svg
-
-      title: Key components of SDN architecture
-
-    - href: \windows-server\networking\sdn\security\sdn-security-top
-
-      html: <p>Learn about implementing and managing security for SDN, including authentication and virtual encryption.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_security-management.svg
-
-      title: Security for SDN
-
-    - href: https://youtu.be/f501zUUcXD0
-
-      html: <p>Watch Windows Server SDN engineer Greg Cusanza and Matt McSpirit to demonstrate the Software Defined Networking capabilities in Windows Server 2016.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_video.svg
-
-      title: Microsoft SDN Mechanics      
-
-- title: Get started... 
-
-  items:
-
-  - type: paragraph
-
-    text: 'Plan, configure, and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter.'
-
-  - type: list
-
-    style: cards
-
-    className: cardsE
-
-    columns: 3
-
-    items:
-
-    - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
-
-      html: <p>Discover what's needed to deploy an SDN infrastructure.</p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_design.svg
-      
-      title: Plan an SDN infrastructure
-
-    - href: \windows-server\networking\sdn\deploy\Deploy-a-Software-Defined-Network-Infrastructure
-
-      html: <p>Deploy all the technologies you need for a fully functional infrastructure. </p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_deploy.svg
-      
-      title: Deploy an SDN infrastructure 
-
-    - href: \windows-server\networking\sdn\manage\manage-sdn
-
-      html: <p> </p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_management.svg
-      
-      title: Manage an SDN infrastructure 
-
-    - href: \windows-server\networking\sdn\troubleshoot\troubleshoot-windows-server-software-defined-networking-stack
-
-      html: <p> </p>
-
-      image:
-
-        src: https://docs.microsoft.com/media/common/i_debug.svg
-      
-      title: Troubleshoot and diagnose an SDN infrastructure 
-
-- items:
-
-  - type: list
-
-    style: cards
-
-    className: cardsL
-
-    items:
-
-    - title: SDN learning resources
-
-      html: <p><a class="barLink" href="https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/">Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in VMM</a></p></div>
-
-            <p><a class="barLink" href="https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf/">Microsoft Software Defined Networking Datasheet</a></p></div>

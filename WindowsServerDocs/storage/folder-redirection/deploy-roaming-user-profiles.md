@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
 ms.prod: windows-server
@@ -48,7 +48,7 @@ Roaming User Profiles has the following software requirements:
     - If the file share uses DFS Replication to replicate the contents with another server, users must be able to access only the source server to prevent users from making conflicting edits on different servers.
     - If the file share is clustered, disable continuous availability on the file share to avoid performance issues.
 - To use primary computer support in Roaming User Profiles, there are additional client computer and Active Directory schema requirements. For more information, see [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md).
-- The layout of a user's Start menu won't roam on Windows 10, Windows Server 2019, or Windows Server 2016 if they're using more than one PC, Remote Desktop Session Host, or Virtualized Desktop Infrastructure (VDI) server. As a workaround, you can specify a Start layout as described in this topic. Or you can make use of user profile disks, which properly roam Start menu settings when used with Remote Desktop Session Host servers or VDI servers. For more info, see [Easier User Data Management with User Profile Disks in Windows Server 2012](https://blogs.technet.microsoft.com/enterprisemobility/2012/11/13/easier-user-data-management-with-user-profile-disks-in-windows-server-2012/).
+- The layout of a user's Start menu won't roam on Windows 10, Windows Server 2019, or Windows Server 2016 if they're using more than one PC, Remote Desktop Session Host, or Virtualized Desktop Infrastructure (VDI) server. As a workaround, you can specify a Start layout as described in this topic. Or you can make use of user profile disks, which properly roam Start menu settings when used with Remote Desktop Session Host servers or VDI servers. For more info, see [Easier User Data Management with User Profile Disks in Windows Server 2012](https://techcommunity.microsoft.com/t5/microsoft-security-and/easier-user-data-management-with-user-profile-disks-in-windows/ba-p/247555).
 
 ### Considerations when using Roaming User Profiles on multiple versions of Windows
 
@@ -72,7 +72,7 @@ To make these changes, use the following procedure.
     - Windows 8.1, or Windows Server 2012 R2: install the software update described in article [2887595](https://support.microsoft.com/kb/2887595) in the Microsoft Knowledge Base (when released).
     - Windows 8 or Windows Server 2012: install the software update described in article [2887239](https://support.microsoft.com/kb/2887239) in the Microsoft Knowledge Base.
 
-2. On all computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 on which you will use Roaming User Profiles, use Registry Editor or Group Policy to create the following registry key DWORD Value and set it to `1`. For information about creating registry keys by using Group Policy, see [Configure a Registry Item](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
+2. On all computers running Windows 8.1, Windows 8, Windows Server 2012 R2, or Windows Server 2012 on which you will use Roaming User Profiles, use Registry Editor or Group Policy to create the following registry key DWORD Value and set it to `1`. For information about creating registry keys by using Group Policy, see [Configure a Registry Item](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
 
     ```
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProfSvc\Parameters\UseProfilePathExtensionVersion
@@ -125,9 +125,9 @@ Here's how to create a file share on Windows Server:
 7. On the **Permissions** page, select **Customize permissions…**. The Advanced Security Settings dialog box appears.
 8. Select **Disable inheritance**, and then select **Convert inherited permissions into explicit permission on this object**.
 9. Set the permissions as described in [Required permissions for the file share hosting roaming user profiles](#required-permissions-for-the-file-share-hosting-roaming-user-profiles) and shown in the following screen shot, removing permissions for unlisted groups and accounts, and adding special permissions to the Roaming User Profiles Users and Computers group that you created in Step 1.
-    
+
     ![Advanced Security Settings window showing permissions as described in Table 1](media/advanced-security-user-profiles.jpg)
-    
+
     **Figure 1** Setting the permissions for the roaming user profiles share
 10. If you chose the **SMB Share - Advanced** profile, on the **Management Properties** page, select the **User Files** Folder Usage value.
 11. If you chose the **SMB Share - Advanced** profile, on the **Quota** page, optionally select a quota to apply to users of the share.
@@ -158,11 +158,11 @@ Here's how to create a GPO for Roaming User Profiles:
 7. In the **Security Filtering** section, select **Add**.
 8. In the **Select User, Computer, or Group** dialog box, type the name of the security group you created in Step 1 (for example, **Roaming User Profiles Users and Computers**), and then select **OK**.
 9. Select the **Delegation** tab, select **Add**, type **Authenticated Users**, select **OK**, and then select **OK** again to accept the default Read permissions.
-    
+
     This step is necessary due to security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016).
 
 >[!IMPORTANT]
->Due to the security changes made in [MS16-072A](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016), you now must give the Authenticated Users group delegated Read permissions to the GPO - otherwise the GPO won't get applied to users, or if it's already applied, the GPO is removed, redirecting user profiles back to the local PC. For more info, see [Deploying Group Policy Security Update MS16-072](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/).
+>Due to the security changes made in [MS16-072A](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14%2c-2016), you now must give the Authenticated Users group delegated Read permissions to the GPO - otherwise the GPO won't get applied to users, or if it's already applied, the GPO is removed, redirecting user profiles back to the local PC. For more info, see [Deploying Group Policy Security Update MS16-072](/archive/blogs/askds/deploying-group-policy-security-update-ms16-072-kb3163622).
 
 ## Step 5: Optionally set up Roaming User Profiles on user accounts
 
@@ -176,16 +176,16 @@ Here's how to set up Roaming User Profiles on user accounts:
 1. In Active Directory Administration Center, navigate to the **Users** container (or OU) in the appropriate domain.
 2. Select all users to which you want to assign a roaming user profile, right-click the users and then select **Properties**.
 3. In the **Profile** section, select the **Profile path:** checkbox and then enter the path to the file share where you want to store the user's roaming user profile, followed by `%username%` (which is automatically replaced with the user name the first time the user signs in). For example:
-    
+
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
-    
-    To specify a mandatory roaming user profile, specify the path to the NTuser.man file that you created previously, for example, `fs1.corp.contoso.comUser Profiles$default`. For more information, see [Create mandatory user profiles](https://docs.microsoft.com/windows/client-management/mandatory-user-profile).
+
+    To specify a mandatory roaming user profile, specify the path to the NTuser.man file that you created previously, for example, `fs1.corp.contoso.comUser Profiles$default`. For more information, see [Create mandatory user profiles](/windows/client-management/mandatory-user-profile).
 4. Select **OK**.
 
 > [!NOTE]
 > By default, deployment of all Windows® Runtime-based (Windows Store) apps is allowed when using Roaming User Profiles. However, when using a special profile, apps are not deployed by default. Special profiles are user profiles where changes are discarded after the user signs out:
-> <br><br>To remove restrictions on app deployment for special profiles, enable the **Allow deployment operations in special profiles** policy setting (located in Computer Configuration\Policies\Administrative Templates\Windows Components\App Package Deployment). However, deployed apps in this scenario will leave some data stored on the computer, which could accumulate, for example, if there are hundreds of users of a single computer. To clean up apps, locate or develop a tool that uses the [CleanupPackageForUserAsync](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.cleanuppackageforuserasync.aspx) API to clean up app packages for users who no longer have a profile on the computer.
-> <br><br>For additional background information about Windows Store apps, see [Manage Client Access to the Windows Store](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh832040(v=ws.11)>).
+> <br><br>To remove restrictions on app deployment for special profiles, enable the **Allow deployment operations in special profiles** policy setting (located in Computer Configuration\Policies\Administrative Templates\Windows Components\App Package Deployment). However, deployed apps in this scenario will leave some data stored on the computer, which could accumulate, for example, if there are hundreds of users of a single computer. To clean up apps, locate or develop a tool that uses the [CleanupPackageForUserAsync](/uwp/api/Windows.Management.Deployment.PackageManager?view=winrt-19041#windows_management_deployment_packagemanager_cleanuppackageforuserasync_system_string_system_string_) API to clean up app packages for users who no longer have a profile on the computer.
+> <br><br>For additional background information about Windows Store apps, see [Manage Client Access to the Windows Store](</previous-versions/windows/it-pro/windows-8.1-and-8/hh832040(v=ws.11)>).
 
 ## Step 6: Optionally set up Roaming User Profiles on computers
 
@@ -210,7 +210,7 @@ Here's how to set up Roaming User Profiles on computers:
 
     `\\fs1.corp.contoso.com\User Profiles$\%username%`
 
-    To specify a mandatory roaming user profile, which is a preconfigured profile to which users cannot make permanent changes (changes are reset when the user signs out), specify the path to the NTuser.man file that you created previously, for example, `\\fs1.corp.contoso.com\User Profiles$\default`. For more information, see [Creating a Mandatory User Profile](https://docs.microsoft.com/windows/client-management/mandatory-user-profile).
+    To specify a mandatory roaming user profile, which is a preconfigured profile to which users cannot make permanent changes (changes are reset when the user signs out), specify the path to the NTuser.man file that you created previously, for example, `\\fs1.corp.contoso.com\User Profiles$\default`. For more information, see [Creating a Mandatory User Profile](/windows/client-management/mandatory-user-profile).
 8. Select **OK**.
 
 ## Step 7: Optionally specify a Start layout for Windows 10 PCs
@@ -220,10 +220,10 @@ You can use Group Policy to apply a specific Start menu layout so that users see
 To specify a Start layout, do the following:
 
 1. Update your Windows 10 PCs to Windows 10 version 1607 (also known as the Anniversary Update) or newer, and install the March 14th, 2017 cumulative update ([KB4013429](https://support.microsoft.com/kb/4013429)) or newer.
-2. Create a full or partial Start menu layout XML file. To do so, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+2. Create a full or partial Start menu layout XML file. To do so, see [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout).
     * If you specify a *full* Start layout, a user can't customize any part of the Start menu. If you specify a *partial* Start layout, users can customize everything but the locked groups of tiles you specify. However, with a partial Start layout, user customizations to the Start menu won't roam to other PCs.
-3. Use Group Policy to apply the customized Start layout to the GPO you created for Roaming User Profiles. To do so, see [Use Group Policy to apply a customized Start layout in a domain](https://docs.microsoft.com/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment).
-4. Use Group Policy to set the following registry value on your Windows 10 PCs. To do so, see [Configure a Registry Item](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
+3. Use Group Policy to apply the customized Start layout to the GPO you created for Roaming User Profiles. To do so, see [Use Group Policy to apply a customized Start layout in a domain](/windows/configuration/customize-windows-10-start-screens-by-using-group-policy#bkmk-domaingpodeployment).
+4. Use Group Policy to set the following registry value on your Windows 10 PCs. To do so, see [Configure a Registry Item](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753092(v=ws.11)>).
 
 | **Action**   | **Update**                  |
 | ------------ | ------------                |
@@ -234,10 +234,10 @@ To specify a Start layout, do the following:
 | Value data   | **1** (or **0** to disable) |
 | Base         | **Decimal**                 |
 
-5. (Optional) Enable first-time logon optimizations to make signing in faster for users. To do so, see [Apply policies to improve sign-in time](https://docs.microsoft.com/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
+5. (Optional) Enable first-time logon optimizations to make signing in faster for users. To do so, see [Apply policies to improve sign-in time](/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
 6. (Optional) Further decrease sign-in times by removing unnecessary apps from the Windows 10 base image you use to deploy client PCs. Windows Server 2019 and Windows Server 2016 don't have any pre-provisioned apps, so you can skip this step on server images.
-    - To remove apps, use the [Remove-AppxProvisionedPackage](https://docs.microsoft.com/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed you can script the removal of these apps using the [Remove-AppxPackage](https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=win10-ps).
-    
+    - To remove apps, use the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed you can script the removal of these apps using the [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage?view=win10-ps).
+
       - Microsoft.windowscommunicationsapps\_8wekyb3d8bbwe
       - Microsoft.BingWeather\_8wekyb3d8bbwe
       - Microsoft.DesktopAppInstaller\_8wekyb3d8bbwe
@@ -273,7 +273,7 @@ Here's how to test Roaming User Profiles:
 
 1. Sign in to a primary computer (if you enabled primary computer support) with a user account for which you have enabled Roaming User Profiles enabled. If you enabled Roaming User Profiles on specific computers, sign in to one of these computers.
 2. If the user has previously signed in to the computer, open an elevated command prompt, and then type the following command to ensure that the latest Group Policy settings are applied to the client computer:
-    
+
     ```PowerShell
     GpUpdate /Force
     ```
@@ -315,19 +315,19 @@ The following table lists the location of Roaming User Profiles on various versi
 Here are some ways to work around Start menu layouts getting reset after an in-place upgrade:
 
 - If only one user ever uses the device and the IT Admin uses a managed OS deployment strategy such as Configuration Manager they can do the following:
-    
-  1. Export the Start menu layout with Export-Startlayout before the upgrade 
-  2. Import the Start menu layout with Import-StartLayout after OOBE but before the user signs in  
- 
-     > [!NOTE] 
+
+  1. Export the Start menu layout with Export-Startlayout before the upgrade
+  2. Import the Start menu layout with Import-StartLayout after OOBE but before the user signs in
+
+     > [!NOTE]
      > Importing a StartLayout modifies the Default User profile. All user profiles created after the import has occurred will get the imported Start-Layout.
- 
-- IT Admins can opt to manage Start's Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start's layout. The partial lockdown scenario allows user to make changes to a specific area of Start. For more info, see [Customize and export Start layout](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
-        
+
+- IT Admins can opt to manage Start's Layout with Group Policy. Using Group Policy provides a centralized management solution to apply a standardized Start Layout to users. There are 2 modes to modes to using Group Policy for Start management. Full Lockdown and Partial Lockdown. The full lockdown scenario prevents the user from making any changes to Start's layout. The partial lockdown scenario allows user to make changes to a specific area of Start. For more info, see [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout).
+
    > [!NOTE]
    > User made changes in the partial lockdown scenario will still be lost during upgrade.
 
-- Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact. 
+- Let the Start layout reset occur and allow end users to reconfigure Start. A notification email or other notification can be sent to end users to expect their Start layouts to be reset after the OS upgrade to minimized impact.
 
 ## Change history
 
@@ -352,7 +352,7 @@ The following table summarizes some of the most important changes to this topic.
 
 - [Deploy Folder Redirection, Offline Files, and Roaming User Profiles](deploy-folder-redirection.md)
 - [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
-- [Implementing User State Management](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784645(v=ws.10)>)
-- [Microsoft's Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/)
-- [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
-- [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx)
+- [Implementing User State Management](</previous-versions/windows/it-pro/windows-server-2003/cc784645(v=ws.10)>)
+- [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
+- [Sideload Apps with DISM](</previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>)
+- [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](/windows/win32/appxpkg/troubleshooting)

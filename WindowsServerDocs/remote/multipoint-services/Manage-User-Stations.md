@@ -1,12 +1,8 @@
 ---
 title: Manage User Stations
 description: Learn how to manage user stations in MultiPoint Services
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b418578d-3a4c-49b0-90db-8389b320b2f6
 author: lizap

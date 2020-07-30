@@ -1,22 +1,33 @@
 ---
 title: What's new in the Windows Store client
 description: Learn about recent changes to the Remote Desktop client for Windows Store
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/02/2020
+ms.date: 04/20/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Store client
 
 We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.1.1215
+
+*Date published: 04/20/2020*
+
+- Updated the user agent string for Windows Virtual Desktop.
+
+## Updates for version 10.1.1195
+
+*Date published: 03/06/2020*
+
+- Audio from the session now continues to play even when the app is minimized or in the background.
+- Fixed an issue where the toggle keys (caps lock, num lock, and so on) went out of sync between the local and remote PCs.
+- Performance improvements on 64-bit devices.
+- Fixed a crash that occurred whenever the app was suspended.
 
 ## Updates for version 10.1.1107
 

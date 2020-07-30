@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Perform initial recovery
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -54,7 +53,7 @@ Then perform the following steps. Procedures for performing certain steps are in
 4. If you suspect that the forest-wide failure was related to network intrusion or malicious attack, reset the account passwords for all administrative accounts, including members of the Enterprise Admins, Domain Admins, Schema Admins, Server Operators, Account Operators groups, and so on. The reset of administrative account passwords should be completed before additional domain controllers are installed during the next phase of the forest recovery. 
 5. On the first restored DC in the forest root domain, seize all domain-wide and forest-wide operations master roles. Enterprise Admins and Schema Admins credentials are needed to seize forest-wide operations master roles. 
   
-     In each child domain, seize domain-wide operations master roles. Although you might retain the operations master roles on the restored DC only temporarily, seizing these roles assures you regarding which DC hosts them at this point in the forest recovery process. As part of your post-recovery process, you can redistribute the operations master roles as needed. For more information about seizing operations master roles, see [Seizing an operations master role](AD-forest-recovery-seizing-operations-master-role.md). For recommendations about where to place operations master roles, see [What Are Operations Masters?](https://technet.microsoft.com/library/cc779716.aspx). 
+     In each child domain, seize domain-wide operations master roles. Although you might retain the operations master roles on the restored DC only temporarily, seizing these roles assures you regarding which DC hosts them at this point in the forest recovery process. As part of your post-recovery process, you can redistribute the operations master roles as needed. For more information about seizing operations master roles, see [Seizing an operations master role](AD-forest-recovery-seizing-operations-master-role.md). For recommendations about where to place operations master roles, see [What Are Operations Masters?](/previous-versions/windows/it-pro/windows-server-2003/cc779716(v=ws.10)). 
   
 6. Clean up metadata of all other writeable DCs in the forest root domain that you are not restoring from backup (all writeable DCs in the domain except for this first DC). If you use the version of Active Directory Users and Computers or Active Directory Sites and Services that is included with Windows Server 2008 or later or RSAT for Windows Vista or later, metadata cleanup is performed automatically when you delete a DC object. In addition, the server object and computer object for the deleted DC are also deleted automatically. For more information, see [Cleaning metadata of removed writable DCs](AD-Forest-Recovery-Cleaning-Metadata.md). 
   
@@ -67,9 +66,9 @@ Then perform the following steps. Procedures for performing certain steps are in
     > [!NOTE]
     > If the restored DC runs Windows Server 2008, you need to install the hotfix in KB article [975654](https://support.microsoft.com/kb/975654) or connect the server to an isolated network temporarily in order to install DNS server. The hotfix is not required for any other versions of Windows Server. 
   
-     In the forest root domain, configure the restored DC with its own IP address (or a loopback address, such as 127.0.0.1) as its preferred DNS server. You can configure this setting in the TCP/IP properties of the local area network (LAN) adapter. This is the first DNS server in the forest. For more information, see [Configure TCP/IP to use DNS](https://technet.microsoft.com/library/cc779282\(WS.10\).aspx). 
+     In the forest root domain, configure the restored DC with its own IP address (or a loopback address, such as 127.0.0.1) as its preferred DNS server. You can configure this setting in the TCP/IP properties of the local area network (LAN) adapter. This is the first DNS server in the forest. For more information, see [Configure TCP/IP to use DNS](/previous-versions/windows/it-pro/windows-server-2003/cc779716(v=ws.10)). 
   
-     In each child domain, configure the restored DC with the IP address of the first DNS server in the forest root domain as its preferred DNS server. You can configure this setting in the TCP/IP properties of the LAN adapter. For more information, see [Configure TCP/IP to use DNS](https://technet.microsoft.com/library/cc779282\(WS.10\).aspx). 
+     In each child domain, configure the restored DC with the IP address of the first DNS server in the forest root domain as its preferred DNS server. You can configure this setting in the TCP/IP properties of the LAN adapter. For more information, see [Configure TCP/IP to use DNS](/previous-versions/windows/it-pro/windows-server-2003/cc779716(v=ws.10)). 
   
      In the _msdcs and domain DNS zones, delete NS records of DCs that no longer exist after metadata cleanup. Check if the SRV records of the cleaned up DCs have been removed. To help speed up DNS SRV record removal, run:  
   
@@ -107,7 +106,7 @@ Then perform the following steps. Procedures for performing certain steps are in
   
      If you did restore a DC that was a global catalog—either inadvertently or because that was the solitary backup that you trusted—we recommend that you prevent the occurrence of lingering objects by disabling the global catalog soon after the restore operation is complete. Disabling the global catalog flag will result in the computer losing all its partial replicas (partitions) and relegating itself to regular DC status. 
   
-13. Configure Windows Time Service. In the forest root domain, configure the PDC emulator to synchronize time from an external time source. For more information, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191%28v=ws.10%29). 
+13. Configure Windows Time Service. In the forest root domain, configure the PDC emulator to synchronize time from an external time source. For more information, see [Configure the Windows Time service on the PDC emulator in the Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731191%28v=ws.10%29). 
   
 ## Reconnect each restored writeable domain controller to a common network
 

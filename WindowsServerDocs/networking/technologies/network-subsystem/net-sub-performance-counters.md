@@ -5,9 +5,9 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
-manager: brianlic
-ms.author: pashort
-author: shortpatti
+manager: dcscontentpm
+ms.author: v-tea
+author: Teresa-Motiv
 ---
 
 # Network-Related Performance Counters

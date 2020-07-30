@@ -69,7 +69,7 @@ By creating file screens exclusively from templates, you can centrally manage yo
 
 11. After you have selected all the file template properties that you want to use, click **OK** to save the template.
 
-## See also
+## Additional References
 
 -   [File Screening Management](file-screening-management.md)
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)

@@ -2,16 +2,12 @@
 title: Deploy a Single DirectAccess Server Using the Getting Started Wizard
 description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
 
@@ -92,8 +88,8 @@ The following table lists the roles and features required for the scenario:
   
 |Role/feature|How it supports this scenario|  
 |---------|-----------------|  
-|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<br /><br />1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN. DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing. RRAS routing features are managed in the legacy Routing and Remote Access console.<br /><br />The Remote Access Server Role is dependent on the following server roles/features:<br /><br />-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the Remote Access server, and the default web probe.<br />-   Windows Internal Database. Used for local accounting on the Remote Access server.|  
-|Remote Access Management Tools feature|This feature is installed as follows:<br /><br />-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<br /><br />The Remote Access Management Tools feature consists of the following:<br /><br />-   Remote Access GUI<br />-   Remote Access module for Windows PowerShell<br /><br />Dependencies include:<br /><br />-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
+|Remote Access role|The role is installed and uninstalled using the Server Manager console or Windows PowerShell. This role encompasses both DirectAccess, which was previously a feature in Windows Server 2008 R2, and Routing and Remote Access Services which was previously a role service under the Network Policy and Access Services (NPAS) server role. The Remote Access role consists of two components:<p>1.  DirectAccess and Routing and Remote Access Services (RRAS) VPN. DirectAccess and VPN are managed together in the Remote Access Management console.<br />2.  RRAS Routing. RRAS routing features are managed in the legacy Routing and Remote Access console.<p>The Remote Access Server Role is dependent on the following server roles/features:<p>-   Internet Information Services (IIS) Web Server - This feature is required to configure the network location server on the Remote Access server, and the default web probe.<br />-   Windows Internal Database. Used for local accounting on the Remote Access server.|  
+|Remote Access Management Tools feature|This feature is installed as follows:<p>-   It is installed by default on a Remote Access server when the Remote Access role is installed, and supports the Remote Management console user interface and Windows PowerShell cmdlets.<br />-   It can be optionally installed on a server not running the Remote Access server role. In this case it is used for remote management of a Remote Access computer running DirectAccess and VPN.<p>The Remote Access Management Tools feature consists of the following:<p>-   Remote Access GUI<br />-   Remote Access module for Windows PowerShell<p>Dependencies include:<p>-   Group Policy Management Console<br />-   RAS Connection Manager Administration Kit (CMAK)<br />-   Windows PowerShell 3.0<br />-   Graphical Management Tools and Infrastructure|  
   
 ## <a name="BKMK_HARD"></a>Hardware requirements  
 Hardware requirements for this scenario include the following:  
@@ -144,10 +140,8 @@ The following table provides links to additional resources.
   
 |Content type|References|  
 |--------|-------|  
-|**Remote Access on TechNet**|[Remote Access TechCenter](https://technet.microsoft.com/network/bb545655.aspx)|  
-|**Tools and settings**|[Remote Access PowerShell cmdlets](https://technet.microsoft.com/library/hh918399.aspx)|  
+|**Remote Access on TechNet**|[Remote Access TechCenter](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn756544(v=ws.11))|  
+|**Tools and settings**|[Remote Access PowerShell cmdlets](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn756544(v=ws.11))|  
 |**Community resources**|[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Related technologies**|[How IPv6 works](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
+|**Related technologies**|[How IPv6 works](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10))|  
   
-
-

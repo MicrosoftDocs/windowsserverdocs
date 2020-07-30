@@ -1,12 +1,8 @@
 ---
 title: taskkill
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for taskkill, which ends one or more tasks or processes.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2b71e792-08b6-46d4-95a5-cb6336a79524
 author: coreyp-at-msft
@@ -16,9 +12,10 @@ ms.date: 10/16/2017
 ---
 # taskkill
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **taskkill** replaces the **kill** tool.
+
 For examples of how to use this command, see [Examples](#examples).
 
 ## Syntax
@@ -27,7 +24,7 @@ For examples of how to use this command, see [Examples](#examples).
 taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Filter>] [...] [/pid <ProcessID> | /im <ImageName>]} [/f] [/t]
 ```
 
-## Parameters
+### Parameters
 
 |         Parameter         |                                                                                                                                        Description                                                                                                                                        |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -70,29 +67,29 @@ To end the processes with process IDs 1230, 1241, and 1253, type:
 taskkill /pid 1230 /pid 1241 /pid 1253
 ```
 
-To forcefully end the process "Notepad.exe" if it was started by the system, type:
+To forcefully end the process Notepad.exe if it was started by the system, type:
 
 ```
-taskkill /f /fi "USERNAME eq NT AUTHORITY\SYSTEM" /im notepad.exe
+taskkill /f /fi USERNAME eq NT AUTHORITY\SYSTEM /im notepad.exe
 ```
 
-To end all processes on the remote computer "Srvmain" with an image name beginning with "note," while using the credentials for the user account Hiropln, type:
+To end all processes on the remote computer Srvmain with an image name beginning with note, while using the credentials for the user account Hiropln, type:
 
 ```
-taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi "IMAGENAME eq note*" /im *
+taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi IMAGENAME eq note* /im *
 ```
 
 To end the process with the process ID 2134 and any child processes that it started, but only if those processes were started by the Administrator account, type:
 
 ```
-taskkill /pid 2134 /t /fi "username eq administrator"
+taskkill /pid 2134 /t /fi username eq administrator
 ```
 
 To end all processes that have a process ID greater than or equal to 1000, regardless of their image names, type:
 
 ```
-taskkill /f /fi "PID ge 1000" /im *
+taskkill /f /fi PID ge 1000 /im *
 ```
 
-#### additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

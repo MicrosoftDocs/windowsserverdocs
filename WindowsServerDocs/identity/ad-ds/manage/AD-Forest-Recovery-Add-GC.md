@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Adding the GC 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

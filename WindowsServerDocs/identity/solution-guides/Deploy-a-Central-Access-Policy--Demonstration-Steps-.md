@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8738c03d-6ae8-49a7-8b0c-bef7eab81057
 title: Deploy a Central Access Policy (Demonstration Steps)
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -37,9 +35,9 @@ This section provides the high-level series of steps that aid in the planning ph
 |-|--------|-----------|  
 |1.1|Business determines that a central access policy is needed|To protect finance information that is stored on file servers, the finance department security operations is working with central information security to specify the need for a central access policy.|  
 |1.2|Express the access policy|Finance documents should only be read by members of the Finance department. Members of the Finance department should only access documents in their own country. Only Finance Administrators should have write-access. An exception will be allowed for members of the FinanceException group. This group will have Read access.|  
-|1.3|Express the access policy in  Windows Server 2012  constructs|Targeting:<br /><br />-   Resource.Department Contains Finance<br /><br />Access rules:<br /><br />-   Allow read User.Country=Resource.Country AND User.department = Resource.Department<br />-   Allow Full control User.MemberOf(FinanceAdmin)<br /><br />Exception:<br /><br />Allow read memberOf(FinanceException)|  
-|1.4|Determine the file properties required for the policy|Tag files with:<br /><br />-   Department<br />-   Country|  
-|1.5|Determine the claim types and groups required for the policy|Claim types:<br /><br />-   Country<br />-   Department<br /><br />User groups:<br /><br />-   FinanceAdmin<br />-   FinanceException|  
+|1.3|Express the access policy in  Windows Server 2012  constructs|Targeting:<p>-   Resource.Department Contains Finance<p>Access rules:<p>-   Allow read User.Country=Resource.Country AND User.department = Resource.Department<br />-   Allow Full control User.MemberOf(FinanceAdmin)<p>Exception:<p>Allow read memberOf(FinanceException)|  
+|1.4|Determine the file properties required for the policy|Tag files with:<p>-   Department<br />-   Country|  
+|1.5|Determine the claim types and groups required for the policy|Claim types:<p>-   Country<br />-   Department<p>User groups:<p>-   FinanceAdmin<br />-   FinanceException|  
 |1.6|Determine the servers on which to apply this policy|Apply the policy on all finance file servers.|  
 
 ## <a name="BKMK_1.3"></a>Implement: Configure the components and policy  
@@ -47,8 +45,8 @@ This section presents an example that deploys a central access policy for financ
 
 |No|Step|Example|  
 |------|--------|-----------|  
-|2.1|Create claim types|Create the following claim types:<br /><br />-   Department<br />-   Country|  
-|2.2|Create resource properties|Create and enable the following resource properties:<br /><br />-   Department<br />-   Country|  
+|2.1|Create claim types|Create the following claim types:<p>-   Department<br />-   Country|  
+|2.2|Create resource properties|Create and enable the following resource properties:<p>-   Department<br />-   Country|  
 |2.3|Configure a central access rule|Create a Finance Documents rule that includes the policy determined in the previous section.|  
 |2.4|Configure a central access policy (CAP)|Create a CAP called Finance Policy and add the Finance Documents rule to that CAP.|  
 |2.5|Target central access policy to the file servers|Publish the Finance Policy CAP to the file servers.|  
@@ -92,7 +90,7 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 
 
 > [!TIP]  
-> You can use the Windows PowerShell History Viewer in Active Directory Administrative Center to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](https://technet.microsoft.com/library/hh831702)  
+> You can use the Windows PowerShell History Viewer in Active Directory Administrative Center to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](../ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-.md)  
 
 The next step is to create resource properties. In the following procedure you create a resource property that is automatically added to the Global Resource Properties list on the domain controller, so that it is available to the file server.  
 
@@ -411,7 +409,7 @@ Set-ADCentralAccessRule
 ```  
 
 > [!NOTE]  
-> In the above cmdlet example, the Server value reflects the Server in the test lab environment. You can use the Windows PowerShell History Viewer to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](https://technet.microsoft.com/library/hh831702)  
+> In the above cmdlet example, the Server value reflects the Server in the test lab environment. You can use the Windows PowerShell History Viewer to look up the Windows PowerShell cmdlets for each procedure you perform in Active Directory Administrative Center. For more information, see [Windows PowerShell History Viewer](../ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-.md)  
 
 In this proposed permissions set, members of the FinanceException group will have Full Access to files from their own country when they access them through a device from the same country as the document. Audit entries are available in the File Servers security log when someone from the Finance department attempts to access files. However, security settings are not enforced until the policy is promoted from staging.  
 
@@ -431,5 +429,3 @@ In the next procedure, you verify the results of the staging policy. You access 
 
 ## Next Steps  
 If you have a central server management system such as System Center Operations Manager, you can also configuring monitoring for events. This allows Administrators to monitor the effects of central access policies before enforcing them.  
-
-

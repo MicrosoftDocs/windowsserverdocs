@@ -1,14 +1,12 @@
 ---
 ms.assetid: 4981b32f-741e-4afc-8734-26a8533ac530
 title: Integrating AD DS into an Existing DNS Infrastructure
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -30,7 +28,7 @@ When integrating AD DS with an existing DNS namespace, we recommend that you do 
 -   Configure the zone containing the Active Directory forest-wide locator records (that is, the _msdcs.*forestname* zone) to replicate to every DNS server in the forest by using the forest-wide DNS application directory partition.  
   
     > [!NOTE]  
-    > When the DNS Server service is installed with the Active Directory Domain Services Installation Wizard (we recommend this option), all the previous tasks are performed automatically. For more information, see [Deploying a Windows Server 2008 Forest Root Domain](https://technet.microsoft.com/library/cc731174.aspx).  
+    > When the DNS Server service is installed with the Active Directory Domain Services Installation Wizard (we recommend this option), all the previous tasks are performed automatically. For more information, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10)).  
   
     > [!NOTE]  
     > AD DS uses forest-wide locator records to enable replication partners to find each other and to enable clients to find global catalog servers. AD DS stores the forest-wide locator records in the _msdcs.*forestname* zone. Because the information in the zone must be widely available, this zone is replicated to all DNS servers in the forest by means of the forest-wide DNS application directory partition.  
@@ -58,5 +56,3 @@ Clients can still be located by either name. Any existing DNS, DHCP, or integrat
   
 If you want to take advantage of Kerberos authentication when connecting to a server running Windows 2000, Windows Server 2003, or  Windows Server 2008 , you must make sure that the client connects to the server by using the primary name.  
   
-
-

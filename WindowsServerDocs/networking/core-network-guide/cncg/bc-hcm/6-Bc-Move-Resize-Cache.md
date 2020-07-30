@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Move and Resize the Hosted Cache \(Optional\)

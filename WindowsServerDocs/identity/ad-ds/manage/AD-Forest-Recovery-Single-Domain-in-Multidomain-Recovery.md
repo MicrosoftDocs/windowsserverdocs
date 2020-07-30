@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Recovering a single domain in a multidomain forest
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -40,7 +39,7 @@ The source for the lingering object cleanup must be a DC in the recovered domain
 
 Removing lingering objects is advantageous for larger organizations that cannot risk the down time associated with the other options.  
 
-For more information, see [Use Repadmin to remove lingering objects](https://technet.microsoft.com/library/cc785298.aspx).
+For more information, see [Use Repadmin to remove lingering objects](/previous-versions/windows/it-pro/windows-server-2003/cc785298(v=ws.10)).
 
 ## Next Steps
 

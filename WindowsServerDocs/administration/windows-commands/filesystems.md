@@ -1,12 +1,8 @@
 ---
 title: filesystems
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the filesystems command, which displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c4915a6-bd20-4af6-a94a-5fc7c20410bf
 author: coreyp-at-msft
@@ -17,9 +13,9 @@ ms.date: 10/16/2017
 
 # filesystems
 
-
-
 Displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume.
+
+A volume must be selected for this operation to succeed. Use the [select volume command](select-volume.md) to select a volume and shift the focus to it.
 
 ## Syntax
 
@@ -27,9 +23,6 @@ Displays information about the current file system of the volume with focus and 
 filesystems
 ```
 
-## Remarks
+## Additional References
 
--   A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
-
-#### Additional references
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

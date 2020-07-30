@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-You can find the removed and deprecated features for each of these Windows Server releases.  
+You can find the removed and deprecated features for each of these Windows Server releases.
 
 Long-Term Servicing Channel (LTSC) releases:
 
@@ -28,6 +28,6 @@ Semi-Annual Channel releases:
 
 Windows Server Semi-Annual Channel releases deliver new operating system capabilities at a faster pace. A new release comes out every six months and is supported for 18 months. Check [Windows Server release information](../get-started/windows-server-release-info.md) and [Lifecycle Support Page](https://support.microsoft.com/lifecycle) for support dates and always use the latest release if possible.
 
-## See also
+## Additional References
 
 - [What's new in Windows Server](../get-started/whats-new-in-windows-server.md)

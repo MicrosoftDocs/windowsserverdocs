@@ -1,12 +1,12 @@
 ---
 title: secedit:generaterollback
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
 author: coreyp-at-msft
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to generate a rollback template for a specified configuration template. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to generate a rollback template for a specified configuration template.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ Allows you to generate a rollback template for a specified configuration templat
 Secedit /generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback template file name> [/log <log file name>] [/quiet]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -43,18 +43,18 @@ If the path for the log file is not provided, the default log file, (*systemroot
 
 Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-The successful running of this command will state "The task has completed successfully." and logs only the mismatches between the stated security template and security policy configuration. It lists these mismatches in the scesrv.log.
+The successful running of this command will state The task has completed successfully. and logs only the mismatches between the stated security template and security policy configuration. It lists these mismatches in the scesrv.log.
 
 If an existing rollback template is specified, this command will overwrite it. You can create a new rollback template with this command. No additional parameters are needed for either condition.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 After creating the security template using the Security Configuration and Analysis snap-in, SecTmplContoso.inf, create the rollback configuration file to save the original settings. Write out the action to the FY11 log file.
 ```
 Secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcontoso.inf /rbk sectmplcontosoRBK.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit](secedit.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

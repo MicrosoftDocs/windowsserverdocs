@@ -1,18 +1,12 @@
 ---
 title: Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 description: 'An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate) of the client and verifies that certificates have been revoked.'
-services: active-directory
 ms.prod: windows-server
 ms.technology: networking-ras
-documentationcenter: ''
-ms.assetid: 
-ms.workload: identity
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.date: 07/13/2018
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium 
 ms.reviewer: deverette
 ---
@@ -48,7 +42,7 @@ Since the authentication method is EAP-TLS, this registry value is only needed u
 
 5. Select **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
 
-For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](https://technet.microsoft.com/library/bb680540.aspx).
+For more information, see [How to Enable or Disable Certificate Revocation Checking (CRL) on Clients](/previous-versions/system-center/configuration-manager-2007/bb680540(v=technet.10)).
 
 
 |Registry Path  |EAP Extension  |

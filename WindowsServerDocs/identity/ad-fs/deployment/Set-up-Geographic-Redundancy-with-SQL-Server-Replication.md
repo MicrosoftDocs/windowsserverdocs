@@ -1,12 +1,10 @@
 ---
 title: Setup Geographic Redundancy with SQL Server Replication
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: active-directory-federation-services
 ms.author: billmath
 ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
@@ -18,14 +16,14 @@ ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
 > [!IMPORTANT]  
 > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 or higher.
   
-If you are using SQL Server as your AD FS configuration database, you can set up geo\-redundancy for your AD FS farm using SQL Server replication. Geo\-redundancy replicates data between two geographically distant sites so that applications can switch from one site to another. This way, in case of the failure of one site, you can still have all the configuration data available at the second site. For more information, see the “SQL Server geographic redundancy section” in [Federation Server Farm Using SQL Server](../design/Federation-Server-Farm-Using-SQL-Server.md).  
+If you are using SQL Server as your AD FS configuration database, you can set up geo\-redundancy for your AD FS farm using SQL Server replication. Geo\-redundancy replicates data between two geographically distant sites so that applications can switch from one site to another. This way, in case of the failure of one site, you can still have all the configuration data available at the second site. For more information, see the "SQL Server geographic redundancy section" in [Federation Server Farm Using SQL Server](../design/Federation-Server-Farm-Using-SQL-Server.md).  
   
 ## Prerequisites  
-Install and configure a SQL server farm. For more information, see [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://technet.microsoft.com/evalcenter/hh225126.aspx). On the initial SQL Server, make sure that the SQL Server Agent service is running and set to automatic start.  
+Install and configure a SQL server farm. For more information, see [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://www.microsoft.com/en-us/evalcenter/). On the initial SQL Server, make sure that the SQL Server Agent service is running and set to automatic start.  
   
 ## Create the second \(replica\) SQL Server for geo\-redundancy  
   
-1. Install SQL Server \(for more information, see [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://technet.microsoft.com/evalcenter/hh225126.aspx). Copy the resulting CreateDB.sql and SetPermissions.sql script files to the replica SQL server.  
+1. Install SQL Server \(for more information, see [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://www.microsoft.com/en-us/evalcenter/). Copy the resulting CreateDB.sql and SetPermissions.sql script files to the replica SQL server.  
   
 2. Ensure SQL Server Agent service is running and set to automatic start  
   
@@ -113,7 +111,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
    ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql26.png) </br> 
   
 4. On the **Merge Agent Location** page, select **Run each agent at its Subscriber \(pull subscriptions\)** \(the default\) and click **Next**.  
-   ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql27.png) </br> This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](https://technet.microsoft.com/library/ms151191.aspx). </br>
+   ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql27.png) </br> This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-ver15). </br>
  
 5. On the **Subscribers** page, select **AdfsConfigurationV3** as the subscriber database and click **Next**.  
    ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql28.png) </br> 
@@ -129,7 +127,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
   
 9. On **Subscription Type**, choose **Client** and click **Next**.  
   
-   Implications of this are documented [here](https://technet.microsoft.com/library/ms151191.aspx) and [here](https://technet.microsoft.com/library/ms151170.aspx).  Essentially, we take the simple “first to publisher wins” conflict resolution and we do not need to republish to other subscribers.  
+   Implications of this are documented [here](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-ver15) and [here](/sql/relational-databases/replication/subscribe-to-publications?view=sql-server-ver15).  Essentially, we take the simple "first to publisher wins" conflict resolution and we do not need to republish to other subscribers.  
    ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql33.png) </br>
    
 10. On the **Wizard Actions** page, ensure **Create the subscription** is checked and click **Next**. 
@@ -157,12 +155,12 @@ Make sure that you created the publisher settings on the initial SQL Server as d
   
 1.  Create a new login on the primary and replica SQL Server called CONTOSO\\sqlagent \(the name of the new domain user created and configured on the **Agent Security** page in the procedures above.\)  
   
-2.  In SQL Server, right\-click the login you created, and select Properties, then under the **User Mapping** tab, map this login to **AdfsConfiguration** and **AdfsArtifact** databases with public and db\_genevaservice roles. Also map this login to distribution database and add db\_owner role for both distribution and adfsconfiguration tables.  Do this as applicable on both primary and replica SQL server. For more information, see [Replication Agent Security Model](https://technet.microsoft.com/library/ms151868.aspx).  
+2.  In SQL Server, right\-click the login you created, and select Properties, then under the **User Mapping** tab, map this login to **AdfsConfiguration** and **AdfsArtifact** databases with public and db\_genevaservice roles. Also map this login to distribution database and add db\_owner role for both distribution and adfsconfiguration tables.  Do this as applicable on both primary and replica SQL server. For more information, see [Replication Agent Security Model](/sql/relational-databases/replication/security/replication-agent-security-model?view=sql-server-ver15).  
   
 3.  Give the corresponding domain account read and write permissions on the share configured as distributor.  Make sure that you set read and write permissions both on the share permissions and the local file permissions.  
   
 ## Configure AD FS node\(s\) to point to the SQL Server replica farm  
-Now that you have set up geo redundancy, the AD FS farm nodes can be configured to point to your replica SQL Server farm using the standard AD FS “join” farm capabilities, either from the AD FS Configuration Wizard UI or using Windows PowerShell.  
+Now that you have set up geo redundancy, the AD FS farm nodes can be configured to point to your replica SQL Server farm using the standard AD FS "join" farm capabilities, either from the AD FS Configuration Wizard UI or using Windows PowerShell.  
   
 If you use the AD FS Configuration Wizard UI, select **Add a federation server to a federation server farm**. **Do NOT** select **Create the first federation server in a federation server farm**.  
   

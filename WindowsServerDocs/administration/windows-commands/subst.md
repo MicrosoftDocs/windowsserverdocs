@@ -1,12 +1,12 @@
 ---
 title: subst
 description: Learn how to associate a path with a drive letter.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
 author: coreyp-at-msft
@@ -21,7 +21,7 @@ ms.date: 10/16/2017
 
 Associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -30,7 +30,7 @@ subst [<Drive1>: [<Drive2>:]<Path>]
 subst <Drive1>: /d
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -69,6 +69,6 @@ Instead of typing the full path, you can reach this directory by typing the lett
 z: 
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

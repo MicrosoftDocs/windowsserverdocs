@@ -1,14 +1,10 @@
 ---
 title: RDS - Build and deploy
 description: Steps to build a Remote Desktop deployment
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/18/2017  
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 176ae424-96e9-4c78-88f5-da418e76c3d7
 author: lizap
@@ -25,7 +21,7 @@ See [Remote Desktop Services architecture](desktop-hosting-logical-architecture.
 Have an existing Remote Desktop deployment built on a previous version of Windows Server? Check out your options for moving to WIndows Server 2016, where you can take advantage of new and better functionality around performance and scale:
 
 - [Migrate your RDS deployment to Windows Server 2016](migrate-rds-role-services.md)
-- [Upgrade your RDS deployment to Windows Server 2016](upgrade-to-rds-2016.md)
+- [Upgrade your RDS deployment to Windows Server 2016](./upgrade-to-rds.md)
 
 Want to create a new Remote Desktop deployment? Use the following information to deploy Remote Desktop in Windows Server 2016:
 

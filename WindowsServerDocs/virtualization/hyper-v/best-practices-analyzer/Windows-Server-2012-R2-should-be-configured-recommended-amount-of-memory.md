@@ -1,14 +1,13 @@
 ---
 title: Windows Server 2012 R2 should be configured with the recommended amount of memory
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: b383a3c9-3ab6-442e-abd8-0942a32b60f8
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows Server 2012 R2 should be configured with the recommended amount of memory

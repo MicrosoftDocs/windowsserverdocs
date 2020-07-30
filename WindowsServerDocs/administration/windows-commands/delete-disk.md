@@ -1,12 +1,8 @@
 ---
 title: delete disk
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the delete disk command, which deletes a missing dynamic disk from the list of disks.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
 author: coreyp-at-msft
@@ -17,11 +13,10 @@ ms.date: 10/16/2017
 
 # delete disk
 
-
-
 Deletes a missing dynamic disk from the list of disks.
 
-For instructions regarding how to use this command, see [Remove a Missing Dynamic Disk](https://go.microsoft.com/fwlink/?LinkId=207055) (https://go.microsoft.com/fwlink/?LinkId=207055).
+> [!NOTE]
+> For detailed instructions about how to use this command, see [Remove a Missing Dynamic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753029(v=ws.11)).
 
 ## Syntax
 
@@ -29,21 +24,23 @@ For instructions regarding how to use this command, see [Remove a Missing Dynami
 delete disk [noerr] [override]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
-|override|Enables DiskPart to delete all simple volumes on the disk. If the disk contains half of a mirrored volume, the half of the mirror on the disk is deleted. The delete disk override command fails if the disk is a member of a RAID-5 volume.|
+| Parameter | Description |
+| --------- | ----------- |
+| noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
+| override | Enables DiskPart to delete all simple volumes on the disk. If the disk contains half of a mirrored volume, the half of the mirror on the disk is deleted. The delete disk override command fails if the disk is a member of a RAID-5 volume. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To delete a missing dynamic disk from the list of disks, type:
+
 ```
 delete disk
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
+- [delete command](delete.md)

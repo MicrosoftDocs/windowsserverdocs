@@ -2,16 +2,12 @@
 title: Step 2 Plan the RADIUS Server Deployment
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d6ad863-02a5-49b0-9aff-d189e78b2b80
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 2 Plan the RADIUS Server Deployment
 
@@ -34,9 +30,7 @@ Note the following when planning a RADIUS server for OTP authentication:
   
 -   When you deploy the RADIUS server, you configure a shared secret and the port number for RADIUS traffic. Make a note of these details; they are required when you configure the Remote Access server.  
   
-You can view an example test lab guide that sets up OTP authentication with an RSA SecurID server in [Test Lab Guide: Demonstrate DirectAccess with OTP authentication and RSA SecurID](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/tlg-otp-securid/test-lab-guide-demonstrate-directaccess-with-otp-authentication-and-rsa-securid).  
+You can view an example test lab guide that sets up OTP authentication with an RSA SecurID server in [Test Lab Guide: Demonstrate DirectAccess with OTP authentication and RSA SecurID](../../../directaccess/tlg-otp-securid/test-lab-guide-demonstrate-directaccess-with-otp-authentication-and-rsa-securid.md).  
   
   
   
-
-

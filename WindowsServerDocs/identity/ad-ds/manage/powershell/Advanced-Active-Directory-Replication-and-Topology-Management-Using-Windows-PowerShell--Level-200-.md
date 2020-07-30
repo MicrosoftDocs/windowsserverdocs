@@ -1,14 +1,12 @@
 ---
 ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -131,7 +129,7 @@ get-adobject -filter 'objectclass -eq "group"' | Get-ADReplicationAttributeMetad
   
 ![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdClass.png)  
   
-For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).  
+For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).  
   
 Alternatively, to find out every group that has Tony Wang as a member and when the group was last modified:  
   
@@ -266,4 +264,3 @@ get-adreplicationsite -filter * -property subnets | where-object {!$_.subnets -e
 ## See Also  
 [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)  
   
-

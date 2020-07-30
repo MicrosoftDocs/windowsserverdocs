@@ -1,14 +1,12 @@
 ---
 ms.assetid: 38bbc002-a8fa-4211-9328-4ef67fca0acf
 title: Customization for Localization 
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # Customization for Localization 
@@ -36,7 +34,7 @@ The following shows some additional code examples.
     Set-AdfsGlobalWebContent -ErrorPageDescriptionText "Il s'agit de description de page erreur de Contoso" –locale "fr"  
  
   
-If you want to customize the web content to languages other than English that requires the input of Unicode, we recommend that you use the Windows PowerShell ISE. For additional information see [Introducing the Windows PowerShell ISE](https://technet.microsoft.com/library/dd315244.aspx).  
+If you want to customize the web content to languages other than English that requires the input of Unicode, we recommend that you use the Windows PowerShell ISE. For additional information see [Introducing the Windows PowerShell ISE](/previous-versions/mt707506(v=msdn.10)).  
 
 ## Additional references 
 [AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md) 

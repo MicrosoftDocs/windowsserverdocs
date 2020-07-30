@@ -43,7 +43,7 @@ When you create a quota, you choose a quota path, which is a volume or folder th
 
 7.  Click **Create**.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -   [Create an Auto Apply Quota](create-auto-apply-quota.md)

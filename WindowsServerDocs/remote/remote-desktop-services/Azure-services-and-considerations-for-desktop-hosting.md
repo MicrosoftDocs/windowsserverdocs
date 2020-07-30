@@ -1,14 +1,10 @@
 ---
 title: Azure services and considerations for desktop hosting
 description: Learn about considerations unique to Azure with a Remote Desktop hosting solution.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 07/06/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
 author: heidilohr
@@ -30,7 +26,7 @@ For more information, visit the [Microsoft Azure](https://www.azure.microsoft.co
 
 The tenant's components run on virtual machines that communicate with each other on an isolated network. During the deployment process, you can externally access these virtual machines through the Azure Load Balancer using Remote Desktop Protocol endpoints or a Remote PowerShell endpoint. Once a deployment is complete, these endpoints will typically be deleted to reduce the attack surface area. The only endpoints will be the HTTPS and UDP endpoints created for the virtual machine running the RD Web and RD Gateway components. This allows clients on the internet to connect to sessions running in the tenant's desktop hosting service. If a user opens an application that connects to the internet, such as a web browser, the connections will be passed through the Azure Load Balancer.  
   
-For more information, see [What is Azure Load Balancer?](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-load-balance/)
+For more information, see [What is Azure Load Balancer?](/azure/load-balancer/load-balancer-overview)
   
 ## Security considerations
 
@@ -43,9 +39,9 @@ This Azure Desktop Hosting Reference Architecture Guide is designed to provide a
   
 For more information, see the following articles:
 
-- [Security and protection](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831778(v=ws.11))  
-- [Security best practices for IIS 8](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj635855(v=ws.11))  
-- [Secure Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831360(v=ws.11))  
+- [Security and protection](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831778(v=ws.11))  
+- [Security best practices for IIS 8](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635855(v=ws.11))  
+- [Secure Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831360(v=ws.11))  
   
 ## Design considerations
 
@@ -59,13 +55,13 @@ It's important to consider the constraints of Microsoft Azure Infrastructure Ser
   
 For more information, see the following articles:
 
-- [Sizes for Cloud Services](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs)  
+- [Sizes for Cloud Services](/azure/cloud-services/cloud-services-sizes-specs)  
 - [Microsoft Azure virtual machine pricing details](https://azure.microsoft.com/pricing/details/virtual-machines/)  
-- [Hyper-V overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))  
-- [Azure Storage scalability and performance targets](https://docs.microsoft.com/azure/storage/common/storage-scalability-targets)  
+- [Hyper-V overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831531(v=ws.11))  
+- [Azure Storage scalability and performance targets](/azure/storage/common/storage-scalability-targets)  
 
 ## Azure Active Directory Application Proxy
 
 Azure Active Directory (AD) Application Proxy is a service provided in paid SKUs of Azure AD that allow users to connect to internal applications through Azure's own reverse-proxy service. This allows the RD Web and RD Gateway endpoints to be hidden inside of the virtual network, eliminating the need to be exposed to the internet by a public IP address. Hosters can use Azure AD Application Proxy to condense the number of virtual machines in the tenant's environment while still maintaining a full deployment. Azure AD Application Proxy also enables many of the benefits that Azure AD provides, such as conditional access and multi-factor authentication.
 
-For more information, see [Get started with Application Proxy and install the connector](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-enable).
+For more information, see [Get started with Application Proxy and install the connector](/azure/active-directory/manage-apps/application-proxy-enable).

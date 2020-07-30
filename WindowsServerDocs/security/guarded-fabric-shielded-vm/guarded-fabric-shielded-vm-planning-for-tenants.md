@@ -1,11 +1,11 @@
 ---
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
+ms.author: nirb
 ms.technology: security-guarded-fabric
 ---
 
@@ -50,7 +50,7 @@ Shielded VMs are protected from virtualization fabric attack vectors using encry
 
 **How many owner keys should you have?** You can use a single owner key or multiple owner keys. Best practices recommend a single owner key for a group of VMs that share the same security, trust or risk level, and for administrative control. You can share a single owner key for all your domain-joined shielded VMs and escrow that owner key to be managed by the domain administrators.
 
-**Can I use my own keys for the Host Guardian?** Yes, you can “Bring Your Own” key to the hosting provider and use that key for your shielded VMs. This enables you to use your specific keys (vs. using the hosting provider key) and can be used when you have specific security or regulations that you need to abide by. For key hygiene purposes, the Host Guardian keys should be different than the Owner key.
+**Can I use my own keys for the Host Guardian?** Yes, you can "Bring Your Own" key to the hosting provider and use that key for your shielded VMs. This enables you to use your specific keys (vs. using the hosting provider key) and can be used when you have specific security or regulations that you need to abide by. For key hygiene purposes, the Host Guardian keys should be different than the Owner key.
 
 ## Shielding data
 

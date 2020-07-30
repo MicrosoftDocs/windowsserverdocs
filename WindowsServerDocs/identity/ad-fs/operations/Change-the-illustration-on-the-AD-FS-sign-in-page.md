@@ -1,14 +1,12 @@
 ---
 ms.assetid: a4526500-24b3-423d-805c-24b0d8061aba
 title: Change the illustration on the AD FS sign-in page
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # Change the illustration on the AD FS sign-in page

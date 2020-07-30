@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getfilestransferred
-description: "Windows Commands topic for **bitsadmin getfilestransferred** - Retrieves the number of files transferred for the specified job."
-ms.custom: na
+description: Reference article for the bitsadmin getfilestransferred command, which retrieves the number of files transferred for the specified job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e282815c-938b-4ac0-a09d-9baafb656dcb
 author: coreyp-at-msft
@@ -17,29 +13,30 @@ ms.date: 10/16/2017
 
 # bitsadmin getfilestransferred
 
-
-
 Retrieves the number of files transferred for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetFilesTransferred <Job>
+bitsadmin /getfilestransferred <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example retrieves the number of files transferred in the job named *myDownloadJob*.
+To retrieve the number of files transferred in the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetFilesTransferred myDownloadJob
+bitsadmin /getfilestransferred myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

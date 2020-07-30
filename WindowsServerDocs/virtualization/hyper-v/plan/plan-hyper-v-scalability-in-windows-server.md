@@ -1,13 +1,11 @@
 ---
 title: Plan for Hyper-V scalability in Windows Server 2016 and Windows Server 2019
-description: "Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory and how many virtual processors."
+description: Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory and how many virtual processors.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 09/28/2016
 
@@ -46,7 +44,7 @@ These maximums apply to each Hyper-V host.
   
 |Component|Maximum|Notes|  
 |-------------|-----------|---------|  
-|Logical processors|512|Both of these must be enabled in the firmware:<br /><br />- Hardware-assisted virtualization<br />- Hardware-enforced Data Execution Prevention (DEP)<br /><br />The host OS (root partition) will only see maximum 320 logical processors|  
+|Logical processors|512|Both of these must be enabled in the firmware:<p>- Hardware-assisted virtualization<br />- Hardware-enforced Data Execution Prevention (DEP)<p>The host OS (root partition) will only see maximum 320 logical processors|  
 |Memory|24 TB|None.|  
 |Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|For details, see [NIC Teaming](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|  
 |Physical network adapters|No limits imposed by Hyper-V.|None.|  

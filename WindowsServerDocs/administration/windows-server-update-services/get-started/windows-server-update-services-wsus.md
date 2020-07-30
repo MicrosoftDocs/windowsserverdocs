@@ -1,11 +1,8 @@
 ---
 title: Get started with Windows Server Update Services (WSUS)
-description: "Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications"
+description: Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
 author: coreyp-at-msft
@@ -15,7 +12,7 @@ ms.date: 5/22/2017
 ---
 # Windows Server Update Services (WSUS)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
 

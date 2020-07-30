@@ -1,21 +1,17 @@
 ---
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
 title: Web Application Proxy in Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: 
-ms.suite: na
 ms.technology: web-app-proxy
-ms.tgt_pltfrm: na
 ms.topic: article
-author: kgremban
+ms.author: kgremban
+author: eross-msft
 ---
 # Web Application Proxy in Windows Server
 
 >Applies To: Windows Server&reg; 2016
 
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**  
   
 The content in this section describes what's new and changed in the Web Application Proxy for Windows Server 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.  
   
@@ -45,7 +41,7 @@ The content in this section describes what's new and changed in the Web Applicat
   
 - New debug log for better troubleshooting and improved service log for complete audit trail and improved error handling  
   
-  For more information on troubleshooting, see [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
+  For more information on troubleshooting, see [Troubleshooting Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))  
   
 - Administrator Console UI improvements  
   
@@ -53,11 +49,9 @@ The content in this section describes what's new and changed in the Web Applicat
   
 ## See Also  
   
--   [What's New in Windows Server 2016](https://technet.microsoft.com/library/dn765472.aspx)  
+-   [What's New in Windows Server 2016](../../../get-started/whats-new-in-windows-server-2016.md)  
   
 -   [Publishing Applications using AD FS Preauthentication](../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
--   [Troubleshooting Web Application Proxy](https://technet.microsoft.com/library/dn770156.aspx)  
+-   [Troubleshooting Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))  
   
-
-

@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Invalidating the RID Pool
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

@@ -1,12 +1,12 @@
 ---
 title: Keyboard Shortcuts for Server Manager
-description: "Server Manager"
-ms.custom: na
+description: Server Manager
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
 author: coreyp-at-msft

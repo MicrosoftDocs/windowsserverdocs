@@ -1,13 +1,9 @@
 ---
 title: Migrate to MultiPoint Services in Windows Server 2016
 description: Learn how to migrate from a previous version of MultiPoint Services  
-ms.custom: na
 ms.date: 07/29/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16c217ad-700a-48a3-8398-4a7f7e9edb52
 author: lizap
@@ -27,7 +23,7 @@ Before you begin the migration process, please note the following:
 - The migration process does not automatically gather or record settings for applications on the MultiPoint Services role. You should create a customized migration plan for any applications that you want to migrate. This is also true when using the virtual desktops feature in MultiPoint Services.
 - This guide does not provide guidance for moving data saved in user or shared folders on the MultiPoint server. This applies to regular stations and virtual desktop stations.
 - This guide does not contain instructions on how to migrate when the source server is running multiple roles. If your server is running multiple roles, you need to design a custom migration procedure that is specific to your server environment, based on information provided in the role migration guides.
-- This guide does not contain information for migrating Remote Desktop Services CALS. For this information, see [Migrate Remote Desktop Services Client Access Licenses (RDS CALs)](https://technet.microsoft.com/library/dd851844.aspx).
+- This guide does not contain information for migrating Remote Desktop Services CALS. For this information, see [Migrate Remote Desktop Services Client Access Licenses (RDS CALs)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd851844(v=ws.11)).
 
 ## Supported migration scenarios for MultiPoint Services in Windows Server 2016
 The MultiPoint Service role services is available in Windows Server 2016 Standard and Datacenter. This migration guide describes how to migrate the Multipoint Services role services from a source server running Windows Server 2016 to a destination server running the same version.

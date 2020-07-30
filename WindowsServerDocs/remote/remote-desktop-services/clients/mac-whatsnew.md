@@ -1,17 +1,13 @@
 ---
 title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/06/2020
+ms.date: 04/08/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -20,11 +16,41 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
 
+## Updates for version 10.3.9
+
+*Date published: 4/6/20*
+
+In this release we've made some changes to improve interoperability with the [Windows Virtual Desktop service](https://azure.microsoft.com/services/virtual-desktop/). In addition, we've included the following updates:
+
+- Control+Option+Delete now triggers the Ctrl+Alt+Del sequence (previously required pressing the Fn key).
+- Fixed the keyboard mode notification color scheme for Light mode.
+- Addressed scenarios where connections initiated using the GatewayAccessToken RDP file property didn't work.
+
+>[!NOTE]
+>This is the last release that will be compatible with macOS 10.12.
+
+## Updates for version 10.3.8
+
+*Date published: 2/12/20*
+
+It's time for our first release of 2020!
+
+With this update, you can switch between Scancode (Ctrl+Command+K) and Unicode (Ctrl+Command+U) modes when entering keyboard input. Unicode mode allows extended characters to be typed using the Option key on a Mac keyboard. For example, on a US Mac keyboard, Option+2 will enter the trademark (&trade;) symbol. You can also enter accented characters in Unicode mode. For example, on a US Mac keyboard, entering Option+E and the "A" key at the same time will enter the character "á" on your remote session.
+
+Other updates in this release include:
+
+- Cleaned up the workspace refresh experience and UI.
+- Addressed a smart card redirection issue that caused the remote session to stop responding at the sign-in screen when the "Checking Status" message appeared.
+- Reduced time to create temporary files used for clipboard-based file copy and paste.
+- Temporary files used for clipboard file copy and paste are now deleted automatically when you exit the app, instead of relying on macOS to delete them.
+- PC bookmark actions are now rendered at the top-right corner of thumbnails.
+- Made fixes to address issues reported through crash telemetry.
+
 ## Updates for version 10.3.7
 
 *Date published: 1/6/20*
 
-In our final update of the year, we finetuned some code and fixed the following behaviors:
+In our final update of the year, we fine-tuned some code and fixed the following behaviors:
 
 - Copying things from the remote session to a network share or USB drive no longer creates empty files.
 - Specifying an empty password in a user account no longer causes a double certificate prompt.
@@ -253,7 +279,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 
 *Date published: 08/06/2018*
 
-- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: “AzureAD\user” or “AzureAD\user@domain”.
+- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: "AzureAD\user" or "AzureAD\user@domain".
 - Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0
@@ -304,7 +330,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - You can now start a connection by pressing ENTER on a desktop tile.
 - When you're in full screen view, CMD+M now correctly maps to WIN+M.
 - The Connection Center, Preferences, and About windows now respond to CMD+M.
-- You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources** page.
+- You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources*- page.
 - Fixed an issue where a new remote resources feed showed up empty in the Connection Center until after you refreshed.
 
 ## Updates for version 10.1.6

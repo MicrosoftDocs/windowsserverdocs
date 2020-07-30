@@ -33,15 +33,15 @@ By disabling a namespace server's or folder target's referral, you can prevent u
 
 
 > [!TIP]
-> To enable or disable referrals by using Windows PowerShell, use the [Set-DfsnRootTarget –State](https://technet.microsoft.com/library/jj884266.aspx) or [Set-DfsnServerConfiguration](https://technet.microsoft.com/library/jj884277.aspx) cmdlets, which were introduced in Windows Server 2012.
+> To enable or disable referrals by using Windows PowerShell, use the [Set-DfsnRootTarget –State](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11)) or [Set-DfsnServerConfiguration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11)) cmdlets, which were introduced in Windows Server 2012.
 
 ## Enable client failback
 
-If a target becomes unavailable, you can configure clients to fail back to the target after it is restored. For failback to work, client computers must meet the requirements listed in the following topic: [Review DFS Namespaces Client Requirements](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx).
+If a target becomes unavailable, you can configure clients to fail back to the target after it is restored. For failback to work, client computers must meet the requirements listed in the following topic: [Review DFS Namespaces Client Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)).
 
 
 > [!NOTE]
-> To enable client failback on a namespace root by using Windows PowerShell, use the [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx) cmdlet. To enable client failback on a DFS folder, use the [Set-DfsnFolder](https://technet.microsoft.com/library/jj884283.aspx) cmdlet.
+> To enable client failback on a namespace root by using Windows PowerShell, use the [Set-DfsnRoot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)) cmdlet. To enable client failback on a DFS folder, use the [Set-DfsnFolder](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)) cmdlet.
 
 
 ## To enable client failback for a namespace root
@@ -62,8 +62,8 @@ Folders with targets inherit client failback settings from the namespace root. I
 
 3.  On the **Referrals** tab, click the **Clients fail back to preferred targets** check box.
 
-## See also 
+## Additional References
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
--   [Review DFS Namespaces Client Requirements](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx)
+-   [Review DFS Namespaces Client Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11))
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)

@@ -1,12 +1,12 @@
 ---
 title: tasklist
 description: Learn how to display a list of the processes running on the local or remote computer.
-ms.custom: na
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8dbe30ee-1484-46be-917b-5ca3ff4fdc9c
 author: coreyp-at-msft
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 Displays a list of currently running processes on the local computer or on a remote computer. **Tasklist** replaces the **tlist** tool.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -27,7 +27,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module> | /svc | /v}] [/fo {table | list | csv}] [/nh] [/fi <Filter> [/fi <Filter> [ ... ]]]
 ```
 
-## Parameters
+### Parameters
 
 |          Parameter           |                                                                                                                                            Description                                                                                                                                             |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -89,6 +89,6 @@ To list the processes on the remote computer "Srvmain," using the credentials of
 tasklist /s srvmain /u maindom\hiropln /p p@ssW23
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

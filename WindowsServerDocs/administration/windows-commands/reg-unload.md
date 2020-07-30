@@ -1,12 +1,8 @@
 ---
 title: reg unload
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the reg unload command, which removes a section of the registry loaded using the reg load operation.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1d07791d-ca27-454e-9797-27d7e84c5048
 author: coreyp-at-msft
@@ -17,44 +13,43 @@ ms.date: 10/16/2017
 
 # reg unload
 
-
-
 Removes a section of the registry that was loaded using the **reg load** operation.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-reg unload <KeyName>
+reg unload <keyname>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<KeyName>|Specifies the full path of the subkey to be unloaded. For specifying remote computers, include the computer name (in the format \\\\ComputerName\) as part of the *KeyName*. Omitting \\\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are HKLM and HKU.|
-|/?|Displays help for **reg unload** at the command prompt.|
+| Parameter | Description |
+|--|--|
+| `<keyname>` | Specifies the full path of the subkey. To specify a remote computer, include the computer name (in the format `\\<computername>\`) as part of the *keyname*. Omitting `\\<computername>\` causes the operation to default to the local computer. The *keyname* must include a valid root key. Valid root keys for the local computer are: **HKLM**, **HKCU**, **HKCR**, **HKU**, and **HKCC**. If a remote computer is specified, valid root keys are: **HKLM** and **HKU**. If the registry key name contains a space, enclose the key name in quotes. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
+#### Remarks
 
-The following table lists the return values for the **reg unload** option.
+- The return values for the **reg unload** operation are:
 
-|Value|Description|
-|-----|-----------|
-|0|Success|
-|1|Failure|
+    | Value | Description |
+    |--|--|
+    | 0 | Success |
+    | 1 | Failure |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To unload the hive TempHive in the file HKLM, type:
+
 ```
-REG UNLOAD HKLM\TempHive
+reg unload HKLM\TempHive
 ```
 
 > [!CAUTION]
-> Do not edit the registry directly unless you have no alternative. The registry editor bypasses standard safeguards, allowing settings that can degrade performance, damage your system, or even require you to reinstall Windows. You can safely alter most registry settings by using the programs in Control Panel or Microsoft Management Console (MMC). If you must edit the registry directly, back it up first.
+> Don't edit the registry directly unless you have no alternative. The registry editor bypasses standard safeguards, allowing settings that can degrade performance, damage your system, or even require you to reinstall Windows. You can safely alter most registry settings by using the programs in Control Panel or Microsoft Management Console (MMC). If you must edit the registry directly, back it up first.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [reg load command](reg-load.md)

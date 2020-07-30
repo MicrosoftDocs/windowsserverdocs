@@ -1,14 +1,12 @@
 ---
 ms.assetid: 606f4196-b579-4806-a462-3abd4d93e87c
 title: When to Use a Send LDAP Attributes as Claims Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -53,7 +51,7 @@ You can create this rule by using either the claim rule language or by using the
   
 -   Mapping of LDAP attributes to outgoing claim types  
   
-For more information about how to create this rule, see [Create a Rule to Send LDAP Attributes as Claims](https://technet.microsoft.com/library/dd807115.aspx).  
+For more information about how to create this rule, see [Create a Rule to Send LDAP Attributes as Claims](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807115(v=ws.11)).  
   
 ## Using the claim rule language  
 If the query to Active Directory, AD DS, or Active Directory Lightweight Directory Services \(AD LDS\) must compare against an LDAP attribute other than **samAccountname**, you must use a custom rule instead. If there is no Windows Account Name claim in the input set, you must also use a custom rule to specify the claim to use for querying AD DS or AD LDS.  
@@ -119,7 +117,7 @@ The previous query is made up of the following three parts:
 -   Active Directory domain—You specify the last part of the query only when the attribute store is Active Directory. \(It is not necessary when you query other attribute stores.\) This part of the query is used to specify the user account in the form domain\\name. The Active Directory attribute store uses the domain part to determine the appropriate domain controller to connect to and run the query and request the attributes.  
   
 ### Example: How to use two custom rules to extract the manager e\-mail from an attribute in Active Directory  
-The following two custom rules, when used together in the order shown below, query Active Directory for the **manager** attribute of the user account \(Rule 1\) and then use that attribute to query the user account of the manager for the **mail** attribute \(Rule 2\). Finally, the **mail** attribute is issued as a “ManagerEmail” claim. In summary, Rule 1 queries Active Directory and passes the result of the query to Rule 2, which then extracts the manager e\-mail values.  
+The following two custom rules, when used together in the order shown below, query Active Directory for the **manager** attribute of the user account \(Rule 1\) and then use that attribute to query the user account of the manager for the **mail** attribute \(Rule 2\). Finally, the **mail** attribute is issued as a "ManagerEmail" claim. In summary, Rule 1 queries Active Directory and passes the result of the query to Rule 2, which then extracts the manager e\-mail values.  
   
 For example, when these rules finish running, a claim is issued that contains the manager's e\-mail address for a user in the corp.fabrikam.com domain.  
   
@@ -145,6 +143,5 @@ param = regexreplace(c1.Value, ".*DC=(?<domain>.+),DC=corp,DC=fabrikam,DC=com", 
 > These rules work only if the user's manager is in the same domain as the user \(corp.fabrikam.com in this example\).  
   
 ## Additional references  
-[Create a Rule to Send LDAP Attributes as Claims](https://technet.microsoft.com/library/dd807115.aspx)  
+[Create a Rule to Send LDAP Attributes as Claims](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807115(v=ws.11))  
   
-

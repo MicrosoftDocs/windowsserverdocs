@@ -4,7 +4,7 @@ description: LDAP considerations in Active Directory workloads
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
+ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -93,10 +93,10 @@ For more info, see the following:
 
 -   [Indexed Attributes](https://msdn.microsoft.com/library/windows/desktop/ms677112.aspx)
 
-## See also
+## Additional References
 
 - [Performance tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
-- [Troubleshooting ADDS performance](troubleshoot.md) 
+- [Troubleshooting ADDS performance](troubleshoot.md)
 - [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)

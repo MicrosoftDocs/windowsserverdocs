@@ -1,12 +1,8 @@
 ---
 title: wbadmin get versions
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for wbadmin get versions, which lists details about the available backups that are stored on the local computer or another computer.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
 author: coreyp-at-msft
@@ -23,8 +19,6 @@ Lists details about the available backups that are stored on the local computer 
 
 To get details about available backups using this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt **Command Prompt** and then click **Run as administrator**.)
 
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
-
 ## Syntax
 
 ```
@@ -33,7 +27,7 @@ wbadmin get versions
 [-machine:BackupMachineName]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,7 +38,7 @@ wbadmin get versions
 
 To list items available for recovery from a specific backup, use **wbadmin get items**.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To see a list of available backups that are stored on volume h, type:
 ```
@@ -55,8 +49,8 @@ To see a list of available backups that are stored in the remote shared folder \
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBBackupTarget](https://technet.microsoft.com/library/jj902447.aspx) cmdlet
+-   [Get-WBBackupTarget](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) cmdlet

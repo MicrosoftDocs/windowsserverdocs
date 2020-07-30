@@ -1,14 +1,12 @@
 ---
 ms.assetid: 85ca191c-0cc7-4453-a72c-42060ddf2ea2
 title: Executive Summary
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

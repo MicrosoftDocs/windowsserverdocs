@@ -2,16 +2,12 @@
 title: STEP 1 Complete the DirectAccess Configuration
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a815bc0d-4b4f-432e-85f0-23b2cc67d827
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # STEP 1 Complete the DirectAccess Configuration
 

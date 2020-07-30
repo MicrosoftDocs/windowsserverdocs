@@ -1,13 +1,9 @@
 ---
 title: Hardware Requirements and Performance Recommendations
 description: Provides hardware and performance requirements and recommendations for MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
 author: evaseydl
@@ -35,9 +31,9 @@ To achieve good performance with your MultiPoint Services system under various l
   
 |Application Scenario|Up to 5 Stations|6-8 Stations|9-12 Stations|13-16 Stations|17-20 Stations|21-24 Stations|  
 |------------------------|----------------------|-------------------|------------------|-------------------|-------------------|-----------------|  
-|**Productivity**<br /><br />Office, web browsing, line-of-business applications|CPU: 2C<br /><br />RAM: 2 GB|CPU: 2C<br /><br />RAM: 4 GB|CPU: 4C<br /><br />RAM: 6 GB|CPU: 4C<br /><br />RAM: 8 GB|CPU: 4C+MT or 6C<br /><br />RAM: 10 GB| CPU: 6C+MT<br /><br />RAM: 12 GB|
-|**Mixed**<br /><br />Office, web browsing, line-of-business applications,  and occasional video use by some users|CPU: 2C<br /><br />RAM: 2 GB|CPU: 2C<br /><br />RAM: 4 GB|CPU: 4C<br /><br />RAM: 6 GB|CPU: 4C+MT or 6C<br /><br />RAM: 8 GB|CPU: 6C+MT<br /><br />RAM: 10 GB| CPU: 6C+MT<br /><br />RAM: 12 GB| 
-|**Video intensive**<br /><br />Office, web browsing, line-of-business applications,  and frequent video use by all users **Note:** Video testing was performed using 360p H.264 video at native resolution.|CPU: 4C+MT<br /><br />RAM: 2 GB|CPU: 6C+MT<br /><br />RAM: 4 GB|CPU: 8C+MT<br /><br />RAM: 6 GB|CPU: 12C+MT<br /><br />RAM: 8 GB|CPU: 16C+MT<br /><br />RAM: 10 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended| CPU: 20C+MT<br /><br />RAM: 12 GB<br /><br />-   Thin Client: RemoteFX<br />-   USB video not recommended|   
+|**Productivity**<p>Office, web browsing, line-of-business applications|CPU: 2C<p>RAM: 2 GB|CPU: 2C<p>RAM: 4 GB|CPU: 4C<p>RAM: 6 GB|CPU: 4C<p>RAM: 8 GB|CPU: 4C+MT or 6C<p>RAM: 10 GB| CPU: 6C+MT<p>RAM: 12 GB|
+|**Mixed**<p>Office, web browsing, line-of-business applications,  and occasional video use by some users|CPU: 2C<p>RAM: 2 GB|CPU: 2C<p>RAM: 4 GB|CPU: 4C<p>RAM: 6 GB|CPU: 4C+MT or 6C<p>RAM: 8 GB|CPU: 6C+MT<p>RAM: 10 GB| CPU: 6C+MT<p>RAM: 12 GB| 
+|**Video intensive**<p>Office, web browsing, line-of-business applications,  and frequent video use by all users **Note:** Video testing was performed using 360p H.264 video at native resolution.|CPU: 4C+MT<p>RAM: 2 GB|CPU: 6C+MT<p>RAM: 4 GB|CPU: 8C+MT<p>RAM: 6 GB|CPU: 12C+MT<p>RAM: 8 GB|CPU: 16C+MT<p>RAM: 10 GB<p>-   Thin Client: RemoteFX<br />-   USB video not recommended| CPU: 20C+MT<p>RAM: 12 GB<p>-   Thin Client: RemoteFX<br />-   USB video not recommended|   
   
 ## Minimum recommended hardware for running full Windows 10 virtual desktops  
 Running a full virtual operating system instance for each station is more compute resource-intensive than running the default MultiPoint desktop sessions, so the host hardware requirements per station are higher:  

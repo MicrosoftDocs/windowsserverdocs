@@ -1,7 +1,5 @@
 ---
-ms.assetid: 
 title: Client Access Control policies in Active Directory Federation Services 2.0
-description:
 author: billmath
 ms.author: billmath
 manager: femila
@@ -262,15 +260,14 @@ To enable the logging of audit events to the security log on an AD FS server, fo
 
 ### Event Logging
 
-By default, failed requests are logged to the application event log located under Applications and Services Logs \ AD FS 2.0 \ Admin.For more information on event logging for AD FS, see [Set up AD FS 2.0 event logging](https://technet.microsoft.com/library/adfs2-troubleshooting-configuring-computers.aspx).
+By default, failed requests are logged to the application event log located under Applications and Services Logs \ AD FS 2.0 \ Admin.For more information on event logging for AD FS, see [Set up AD FS 2.0 event logging](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641696(v=ws.10)).
 
 ### Configuring Verbose AD FS Tracing Logs
 
-AD FS tracing events are logged to the AD FS 2.0 debug log. To enable tracing, see [Configure debug tracing for AD FS 2.0](https://technet.microsoft.com/library/adfs2-troubleshooting-configuring-computers.aspx).
+AD FS tracing events are logged to the AD FS 2.0 debug log. To enable tracing, see [Configure debug tracing for AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641696(v=ws.10)).
 
 After you have enabled tracing, use the following command line syntax to enable the verbose logging level:
 wevtutil.exe sl “AD FS 2.0 Tracing/Debug” /l:5  
 
 ## Related
 For more information on the new claim types see [AD FS Claims Types](AD-FS-Claims-Types.md).
-

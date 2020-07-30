@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 7e79c66a-8555-4d8e-8691-d6c37377aab4
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Prehash and Preload Content on the Hosted Cache Server \(Optional\)

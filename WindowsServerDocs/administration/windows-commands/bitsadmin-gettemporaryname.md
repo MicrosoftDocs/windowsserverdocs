@@ -1,12 +1,8 @@
 ---
 title: bitsadmin gettemporaryname
-description: "Windows Commands topic for **bitsadmin gettemporaryname** - Reports the temporary filename of the given file within the job."
-ms.custom: na
+description: Reference article for the bitsadmin gettemporaryname command, which reports the temporary filename of the given file within the job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68925edc-a801-4292-a812-7471c4f60fdd
 author: coreyp-at-msft
@@ -17,30 +13,31 @@ ms.date: 10/16/2017
 
 # bitsadmin gettemporaryname
 
-
-
 Reports the temporary filename of the given file within the job.
 
 ## Syntax
 
 ```
-bitsadmin /GetTemporaryName <Job> <file index> 
+bitsadmin /gettemporaryname <job> <file_index>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|File index|Starts from 0|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
+| file_index | Starts from 0. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example reports the temporary filename of file 2 for the job named *myJob*.
+To report the temporary filename of file 2 for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetTemporaryName myJob 1 
+bitsadmin /gettemporaryname myDownloadJob 1
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

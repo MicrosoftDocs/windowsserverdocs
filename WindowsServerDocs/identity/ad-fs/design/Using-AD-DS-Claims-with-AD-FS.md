@@ -1,14 +1,12 @@
 ---
 ms.assetid: 460792e4-9f1d-4e7b-b6b2-53e057f839df
 title: AD FS Deployment Topology Considerations
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -18,7 +16,7 @@ ms.technology: identity-adfs
 You can enable richer access control for federated applications by using Active Directory Domain Services \(AD DS\)\-issued user and device claims together with Active Directory Federation Services \(AD FS\).  
   
 ## About Dynamic Access Control  
-In Windows Server® 2012, the Dynamic Access Control feature enables organizations to grant access to files based on user claims \(which are sourced by user account attributes\) and device claims \(which are sourced by computer account attributes\) that are issued by Active Directory Domain Services \(AD DS\). AD DS issued claims are integrated into Windows integrated authentication through the Kerberos authentication protocol.  
+In Windows Server&reg; 2012, the Dynamic Access Control feature enables organizations to grant access to files based on user claims \(which are sourced by user account attributes\) and device claims \(which are sourced by computer account attributes\) that are issued by Active Directory Domain Services \(AD DS\). AD DS issued claims are integrated into Windows integrated authentication through the Kerberos authentication protocol.  
   
 For more information about Dynamic Access Control, see [Dynamic Access Control Content Roadmap](../../solution-guides/Dynamic-Access-Control--Scenario-Overview.md#BKMK_APP).  
   

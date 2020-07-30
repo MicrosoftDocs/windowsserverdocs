@@ -1,12 +1,8 @@
 ---
 title: xcopy
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for xcopy, which copies files and directories, including subdirectories.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft
@@ -14,6 +10,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 01/05/2019
 ---
+
 # xcopy
 
 Copies files and directories, including subdirectories.
@@ -26,7 +23,7 @@ For examples of how to use this command, see [Examples](#examples).
 Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-DD-YYYY]] [/u] [/i] [/s [/e]] [/t] [/k] [/r] [/h] [{/a | /m}] [/n] [/o] [/x] [/exclude:FileName1[+[FileName2]][+[FileName3]] [{/y | /-y}] [/z] [/b] [/j]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -49,8 +46,8 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/k|Copies files and retains the read-only attribute on *Destination* files if present on the *Source* files. By default, **xcopy** removes the read-only attribute.|
 |/r|Copies read-only files.|
 |/h|Copies files with hidden and system file attributes. By default, **xcopy** does not copy hidden or system files|
-|/a|Copies only *Source* files that have their archive file attributes set. **/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Additional references](#additional-references).|
-|/m|Copies *Source* files that have their archive file attributes set. Unlike **/a**, **/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Additional references](#additional-references).|
+|/a|Copies only *Source* files that have their archive file attributes set. **/a** does not modify the archive file attribute of the source file. For information about how to set the archive file attribute by using **attrib**, see [Additional References](#additional-references).|
+|/m|Copies *Source* files that have their archive file attributes set. Unlike **/a**, **/m** turns off archive file attributes in the files that are specified in the source. For information about how to set the archive file attribute by using **attrib**, see [Additional References](#additional-references).|
 |/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the *Destination* file system. The *Destination* file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
@@ -87,17 +84,17 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 - Specifying whether *Destination* is a file or directory
 
   If *Destination* does not contain an existing directory and does not end with a backslash (\), the following message appears:
-  
+
   ```
   Does <Destination> specify a file name or directory name on the target(F = file, D = directory)?
-  ```  
-  
+  ```
+
 Press F if you want the file or files to be copied to a file. Press D if you want the file or files to be copied to a directory.
 
   You can suppress this message by using the **/i** command-line option, which causes **xcopy** to assume that the destination is a directory if the source is more than one file or a directory.
 - Using the **xcopy** command to set archive attribute for *Destination* files
 
-  The **xcopy** command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Additional references](#additional-references).
+  The **xcopy** command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Additional References](#additional-references).
 
 - Comparing **xcopy** and **diskcopy**
 
@@ -105,7 +102,7 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 
 - Exit codes for **xcopy**
 
-  To process exit codes returned by **xcopy**, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Additional references](#additional-references). The following table lists each exit code and a description.  
+  To process exit codes returned by **xcopy**, use the **ErrorLevel** parameter on the **if** command line in a batch program. For an example of a batch program that processes exit codes using **if**, see [Additional References](#additional-references). The following table lists each exit code and a description.
 
   |Exit code|Description|
   |---------|-----------|
@@ -120,7 +117,7 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 **1.** To copy all the files and subdirectories (including any empty subdirectories) from drive A to drive B, type:
 
 ```
-xcopy a: b: /s /e 
+xcopy a: b: /s /e
 ```
 
 **2.** To include any system or hidden files in the previous example, add the<strong>/h</strong> command-line option as follows:
@@ -179,7 +176,7 @@ goto exit
 :abort
 echo You pressed CTRL+C to end the copy operation.
 goto exit
-:exit 
+:exit
 ```
 
 To use the preceding batch program to copy all files in the C:\Prgmcode directory and its subdirectories to drive B, type:
@@ -190,7 +187,7 @@ copyit c:\prgmcode b:
 
 The command interpreter substitutes **C:\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **/e** and **/s** command-line options. If **xcopy** encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **IF ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
 
-**9.** This example all the non-empty directories, plus files whose name match the pattern given with the asterisk symbol.
+**9.** This example copies all the non-empty directories, plus files whose name match the pattern given with the asterisk symbol.
 
 ```
 xcopy .\toc*.yml ..\..\Copy-To\ /S /Y
@@ -202,14 +199,14 @@ rem  .\d2\toc.yml
 rem  3 File(s) copied
 ```
 
-In the preceding example, this particular source parameter value **.\\toc\*.yml** copy the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
+In the preceding example, this particular source parameter value **.\\toc\*.yml** copies the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
 
-#### Additional references
+## Additional References
 
--   [Copy](copy.md)
--   [Move](move.md)
--   [Dir](dir.md)
--   [Attrib](attrib.md)
--   [Diskcopy](diskcopy.md)
--   [If](if.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Copy](copy.md)
+- [Move](move.md)
+- [Dir](dir.md)
+- [Attrib](attrib.md)
+- [Diskcopy](diskcopy.md)
+- [If](if.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -229,6 +229,7 @@ The following features are supported in Files:
 - Upload a file or folder
 - Rename a file or folder
 - Extract a zip file
+- Copy and move files and folders
 - View file or folder properties
 - Add, edit, or remove file shares
 - Modify user and group permissions on file shares
@@ -394,6 +395,7 @@ The following features are supported in Services:
 - View details of a service
 - Start a service
 - Pause a service
+- Restart a service
 - Edit the properties of a service
 
 [**View feedback and proposed features for Services**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BServices%5D).

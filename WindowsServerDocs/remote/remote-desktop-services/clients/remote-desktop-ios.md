@@ -1,18 +1,14 @@
 ---
 title: Get started with the iOS client
 description: Learn how to set up the Remote Desktop client for iOS
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
-author: lizap
-manager: dongill
-ms.author: elizapo
-date: 08/27/2019
+author: Heidilohr
+manager: lizross
+ms.author: helohr
+ms.date: 07/16/2020
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client
@@ -24,120 +20,86 @@ You can use the Remote Desktop client for iOS to work with Windows apps, resourc
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
-> - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md)
+> - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
 > - The iOS client supports devices running iOS 6.x and newer.
-
-## Get the Remote Desktop Beta client and start using it
-The iOS Beta client available today through Apple TestFlight supports connections to Windows Virtual Desktop resources.
-
-### Download the Remote Desktop iOS Beta client from Apple TestFlight
-Here's how to set up the Remote Desktop Beta client on your iOS device:
-
-1. Install the [Apple TestFlight](https://apps.apple.com/us/app/testflight/id899247664) app on your iOS device.
-2. On your iOS device, open a browser and navigate to [aka.ms/rdiosbeta](https://aka.ms/rdiosbeta).
-3. Under the label **Step 2 Join the Beta** select **Start Testing**.
-4. When you are redirected to the TestFlight app, select **Accept** and then **Install** the client.
-
-### Add a connection to a PC
-To create a remote connection to a PC:
-
-1. In the Connection Center, tap **+**, and then tap **Add PC**.
-2. Enter the name of the remote PC into **PC Name**. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-3. Select the **User Account** you'll use to access the remote PC.
-   - Select **Ask Every Time** for the client to ask for your credentials every time you connect to the remote PC.
-   - Select **Add User Account** to save an account that you use frequently so you don't have to enter credentials every time you sign in. Follow [these instructions](#manage-your-user-accounts) to manage your user accounts.
-4. You can also set the following optional parameters:
-   - In **Friendly Name**, you can enter an easier-to-remember name for the PC you're connecting to.
-   - **Admin Mode** lets you connect to an admin session on the remote PC.
-   - **Swap Mouse Buttons** switches the commands sent by right and left mouse gestures. Ideal for left-handed users.
-   - The **Gateway** is the Remote Desktop gateway you'll use to connect to a computer from an external network. Contact your system administrator for more information.
-   - **Sound** selects the device your remote session uses for audio. You can choose to play sound on your local device, the remote device, or not at all.
-   - **Microphone** enables microphone redirection. This setting is disabled by default.
-   - **Camera** enables camera redirection. This setting is disabled by default.
-   - **Clipboard** enables clipboard redirection. This setting is enabled by default.
-   - **Storage** enables local storage redirection. This setting is disabled by default.
-5. Select **Save** to add the remote PC connection.
-
-### Add remote resources
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The iOS client supports resources published from **Remote Desktop Services** and **Windows Virtual Desktop** deployments. To add remote resources:
-
-1. In the Connection Center tap **+**, and then tap **Add Workspace**.
-2. Enter the **Feed URL**. This can be a URL or email address:
-   - The **URL** is the RD Web Access server's URL, provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use `https://rdweb.wvd.microsoft.com`.
-   - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
-3. Tap **Next**.
-4. Provide your sign in information when prompted. This can vary based on the deployment and can include:
-   - **User name**, the user name that has permission to access the resources.
-   - **Password**, the password associated with the user name.
-   - **Additional factor**, which you may be prompted for if authentication was configured that way by your admin.
-5. Tap **Save**.
-
-The remote resources will be displayed in the Connection Center.
 
 ## Get the Remote Desktop client and start using it
 
+This section will tell you how to download and set up the Remote Desktop client for iOS.
+
 ### Download the Remote Desktop client from the iOS store
 
-Follow these steps to get started with Remote Desktop on your iOS device:
+First you'll need to download the client and configure your PC to connect to remote resources.
 
-1. Download the Microsoft Remote Desktop client from [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
+To download the client:
+
+1. Download the Microsoft Remote Desktop client from the [iOS App Store](https://aka.ms/rdios) or [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
 2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
-3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or a [remote resource](#add-a-remote-resource). You use a connection to connect to a directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
-### Add a Remote Desktop connection
+### Add a PC
 
-To create a remote desktop connection:
+After you've downloaded the client and configured your PC to accept remote connections, it's time to actually add a PC.
 
-1. In the Connection Center tap **+**, and then tap **Add PC or Server**.
-2. Enter the following information for the remote desktop connection:
-   - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-   - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or `user_name@domain.com`. You can also specify whether to prompt for a user name and password.
+To add a PC:
+
+1. In the Connection Center, tap **+**, then tap **Add PC**.
+2. Enter the following information:
+   - **PC name** – the name of the computer. The PC name can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
+   - **User name** – The user name you'll use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or `user_name@domain.com`. You can also select **Ask when required** to be prompted for a user name and password when necessary.
 3. You can also set the following additional options:
-   - **Friendly name (optional)** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
+   - **Friendly name (optional)** – An easy-to-remember name for the PC you're connecting to. You can use any string, but if you don't specify a friendly name, the PC name is displayed instead.
    - **Gateway (optional)** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
    - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
-   - **Swap mouse buttons** – Whenever a mouse gesture would send a command with the left mouse button, it sends the same command with the right mouse button instead. This is necessary if the remote PC is configured for left-handed mouse mode.
+   - **Swap mouse buttons** – Whenever a mouse gesture would send a command with the left mouse button, it sends the same command with the right mouse button instead. Swapping mouse buttons is necessary if the remote PC is configured for left-handed mouse mode.
    - **Admin Mode** - Connect to an administration session on a server running Windows Server 2003 or later.
+   - **Clipboard** - Choose whether to redirect text and images in your clipboard to your PC.
+   - **Storage** - Choose whether to redirect storage to your PC.
 4. Tap **Save**.
 
-Need to edit these settings? Press and hold the desktop you want to edit, and then tap the settings icon.
+Need to edit these settings? Press and hold the desktop you want to edit, then tap the settings icon.
 
-### Add a remote resource
+### Add a workspace
 
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.
+To get a list of managed resources you can access on your iOS, add a workspace by subscribing to the feed provided by your admin.
 
-- The URL displays the link to the RD Web Access server that gives you access to RemoteApp and Desktop Connections.
-- The configured RemoteApp and Desktop Connections are listed.
+To add a workspace:
 
-To add a remote resource:
+1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
+2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
+   - If you use a URL, use the one your admin gave you.
+      - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
+        - For the Fall 2019 version, use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+        - For the Spring 2020 version, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+   - If you use an email address, enter your email address. Entering your email address tells the client ot search for a URL associated with your email address if your admin configured the server that way.
+3. Tap **Next**.
+4. Provide your credentials when prompted.
+   - For **User name**, give the user name of an account with permission to access resources.
+   - For **Password**, give the password for the account.
+   - You may also be prompted to give additional information depending on the settings your admin configured authentication with.
+5. Tap **Save**.
 
-1. On the Connection Center screen, tap **+**, and then tap **Add Remote Resources**.
-2. Enter information for the remote resource:
-   - **Feed URL** - The URL of the RD Web Access server. You can also enter your corporate email account in this field – this tells the client to search for the RD Web Access Server associated with your email address.
-   - **User name** - The user name to use for the RD Web Access server you are connecting to.
-   - **Password** - The password to use for the RD Web Access server you are connecting to.
-3. Tap **Save**.
+After you've finished, the Connection Center should display the remote resources.
 
-The remote resources will be displayed in the Connection Center.
+Once subscribed to a feed, the feed's content will update automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your administrator.
 
 ## Manage your user accounts
 
-When you connect to a desktop or remote resources, you can save the user accounts to select from again.
+When you connect to a PC or workspace, you can save the user accounts to select from again.
 
 To create a new user account:
 
 1. In the Connection Center, tap **Settings**, and then tap **User Accounts**.
 2. Tap **Add User Account**.
 3. Enter the following information:
-   - **User Name** - The name of the user to save for use with a remote connection. You can enter the user name in any of the following formats: user_name, domain\user_name, or user_name@domain.com.
-   - **Password** - The password for the user you specified. Every user account that you want to save to use for remote connections needs to have an associated password.
+   - **User Name** - The name of the user to save for use with a remote connection. You can enter the user name in any of the following formats: `user_name`, `domain\user_name`, or `user_name@domain.com`.
+   - **Password** - The password for the user you specified.
 4. Tap **Save**.
 
 To delete a user account:
 
 1. In the Connection Center, tap **Settings**, and then tap **User Accounts**.
 2. Select the account you would like to delete.
-3. Tap **Delete**.   
+3. Tap **Delete**.
 
 ## Connect to an RD Gateway to access internal assets
 
@@ -146,72 +108,72 @@ A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a
 To set up a new gateway:
 
 1. In the Connection Center, tap **Settings** > **Gateways**.
-2. Tap **Add Remote Desktop gateway**.
+2. Tap **Add gateway**.
 3. Enter the following information:
-   - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example, **RDGateway:443** or **10.0.0.1:443**).
-   - **User name** - The user name and password to be used for the Remote Desktop gateway you are connecting to. You can also select **Use connection credentials** to use the same user name and password as those used for the remote desktop connection.
+   - **Gateway name** – The name of the computer you want to use as a gateway. The gateway name can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example, **RDGateway:443** or **10.0.0.1:443**).
+   - **User name** - The user name and password to be used for the Remote Desktop gateway you're connecting to. You can also select **Use connection credentials** to use the same user name and password that you used for the remote desktop connection.
 
 ## Navigate the Remote Desktop session
-When you start a remote desktop session, there are tools available that you can use to navigate the session.
 
-### Start a Remote Desktop Connection
+This section describes tools you can use to help navigate your Remote Desktop session.
+
+### Start a Remote Desktop connection
 
 1. Tap the remote desktop connection to start the remote desktop session.
-2. If you are asked to verify the certificate for the remote desktop, tap **Accept**. You can choose to always accept by sliding the  **Don't ask me again for connections to this computer** toggle to **ON**.
+2. If you're asked to verify the certificate for the remote desktop, tap **Accept**. To accept by default, set  **Don't ask me again for connections to this computer** to **On**.
 
-### Connection Bar
+### Connection bar
 
 The connection bar gives you access to additional navigation controls.
 
-- **Pan Control**: The pan control enables the screen to be enlarged and moved around. Note that pan control is only available using direct touch.
-   - Enable / Disable the pan control: Tap the pan icon in the connection bar to display the pan control and zoom the screen. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
-   - Use the pan control: Tap and hold the pan control and then drag in the direction you want to move the screen.
-   - Move the pan control: Double tap and hold the pan control to move the control on the screen.
+- **Pan Control**: The pan control enables the screen to be enlarged and moved around. Pan control is only available using direct touch.
+   - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control. The screen will zoom in while the pan control is active. the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
+   - To use the pan control, tap and hold the pan control. While holding, drag your fingers in the direction you want to move the screen.
+   - To move the pan control, double-tap and hold the pan control to move the control on the screen.
 - **Connection name**: The current connection name is displayed. Tap the connection name to display the session selection bar.
 - **Keyboard**: Tap the keyboard icon to display or hide the keyboard. The pan control is displayed automatically when the keyboard is displayed.
-- **Move the connection bar**: Tap and hold the connection bar, and then drag and drop to a new location at the top of the screen.
+- **Move the connection bar**: Tap and hold the connection bar. While holding the bar, drag it over to its new location. Let go of the bar to place it at the new location.
 
 ### Session selection
+
 You can have multiple connections open to different PCs at the same time. Tap the connection bar to display the session selection bar on the left-hand side of the screen. The session selection bar enables you to view your open connections and switch between them.
 
-- Switch between apps in an open remote resource session.
+Here's what you can do with the session selection bar:
 
-    When you are connected to remote resources, you can switch between open applications within that session by tapping the expander menu and choosing from the list of available items.
-- Start a new session
-
-  You can start new applications or desktop sessions from within your current connection: tap **Start New**, and then choose from the list of available items.
-
-- Disconnection a session
-
-  To disconnect a session tap X in the left-hand side of the session tile.
+- To switch between apps in an open remote resource session, tap the expander menu and choose an app from the list.
+- Tap **Start New** to start a new session, then choose a session from the list of available sessions.
+- Tap the **X** icon on the left side of the session tile to disconnect from your session.
 
 ### Command bar
 
-The command bar replaced the Utility bar starting in version 8.0.1. You can switch between the mouse modes and return to the connection center from the command bar.
+The command bar replaced the Utility bar starting in version 8.0.1. You can use the command bar to switch between mouse modes and return to the connection center.
 
 ## Use touch gestures and mouse modes in a remote session
 
 The client uses standard touch gestures. You can also use touch gestures to replicate mouse actions on the remote desktop. The mouse modes available are defined in the table below.
 
 > [!NOTE]
-> Interacting with Windows 8 or newer the native touch gestures are supported in Direct Touch mode. For more information on Windows 8 gestures see [Touch: Swipe, tap, and beyond](https://windows.microsoft.com/windows-8/touch-swipe-tap-beyond).
+> In Windows 8 or later, the native touch gestures are supported in Direct Touch mode. For more information on Windows 8 gestures, see [Touch: Swipe, tap, and beyond](https://windows.microsoft.com/windows-8/touch-swipe-tap-beyond).
 
 | Mouse mode    | Mouse operation      | Gesture                                                    |
 |---------------|----------------------|------------------------------------------------------------|
-| Direct touch  | Left click           | 1 finger tap                                               |
-| Direct touch  | Right click          | 1 finger tap and hold                                      |
-| Mouse pointer | Left click           | 1 finger tap                                               |
-| Mouse pointer | Left click and drag  | 1 finger double tap and hold, then drag                    |
-| Mouse pointer | Right click          | 2 finger tap                                               |
-| Mouse pointer | Right click and drag | 2 finger double tap and hold, then drag                    |
-| Mouse pointer | Mouse wheel          | 2 finger tap and hold, then drag up or down                |
-| Mouse pointer | Zoom                 | Pinch 2 fingers to zoom in or spread 2 fingers to zoom out |
+| Direct touch  | Left-click           | Tap with one finger                                               |
+| Direct touch  | Right-click          | Tap and hold with one finger                                      |
+| Mouse pointer | Left-click           | Tap with one finger                                               |
+| Mouse pointer | Left-click and drag  | Tap and hold with one finger, then drag                   |
+| Mouse pointer | Right-click          | Tap with two fingers                                              |
+| Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                    |
+| Mouse pointer | Mouse wheel          | Double-tap and hold with two fingers, then drag up or down                |
+| Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and spread fingers apart to zoom in |
 
 ## Supported input devices
 
-The [Remote Desktop iOS beta client](https://aka.ms/rdiosbeta) supports the Swiftpoint GT and ProPoint physical mice. Swiftpoint is offering an [exclusive discount](https://www.swiftpoint.com/microsoft/) on the GT for iOS beta client users.
+The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS.
 
-The iOS client currently only supports Swiftpoint mice. Refer to the [What's new in the iOS client](ios-whatsnew.md) page and the [iOS App Store](https://aka.ms/rdios) for news about support for other devices in the future.
+For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
+
+> [!TIP]
+> Swiftpoint is offering an [exclusive discount on the ProPoint mouse](https://www.swiftpoint.com/microsoft) for iOS client users.
 
 ## Use a keyboard in a remote session
 
@@ -221,20 +183,7 @@ For on-screen keyboards, use the button on the right edge of the bar above the k
 
 If Bluetooth is enabled for your iOS device, the client automatically detects the Bluetooth keyboard.
 
-Be aware that, due to limitations on the OS, special keys such as Ctrl, Option, and Function will not work as expected with a Bluetooth keyboard. The following keys work:
-
-- Alphanumeric keys
-- Cursor keys
-- Tab: Tab works, but Shift+Tab does not work
-- Home / Pos1: Alt+Left = Home
-- End: Alt+Right = End
-- Page Up: Alt+Up = Page Up
-- Page Down: Alt+Down = Page Down
-- Select All: Command+A = Ctrl+A (Select all in most programs)
-- Cut: Command+X = Ctrl+X (Cut in most programs)
-- Copy: Command+C = Ctrl+C (Copy in most programs)
-- Paste: Command+V = Ctrl+V (Paste in most programs)
-- Symbols: Alt+Alphanumeric keys will produce different symbols depending on the language configured
+While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 
 > [!TIP]
-> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](https://docs.microsoft.com/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

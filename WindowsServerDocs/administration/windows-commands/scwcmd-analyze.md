@@ -1,12 +1,12 @@
 ---
 title: Scwcmd analyze
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4
 author: coreyp-at-msft
@@ -17,9 +17,9 @@ ms.date: 10/16/2017
 
 # Scwcmd: analyze
 
-> Applies To: Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2012 R2, Windows Server 2012
 
-Determines whether a computer is in compliance with a policy. Results are returned in an .xml file. Also accepts a list of computer names as input. To view the results in your browser, use **scwcmd view** and specify **%windir%\security\msscw\TransformFiles\scwanalysis.xsl** as the .xsl transform. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Determines whether a computer is in compliance with a policy. Results are returned in an .xml file. Also accepts a list of computer names as input. To view the results in your browser, use **scwcmd view** and specify **%windir%\security\msscw\TransformFiles\scwanalysis.xsl** as the .xsl transform.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 <ResultDir>] [/u:<UserName>] [/pw:<Password>] [/t:<Threads>] [/l] [/e]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -48,7 +48,7 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 
 Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 To analyze a security policy against the file webpolicy.xml, type:
 ```
@@ -70,6 +70,6 @@ To analyze a security policy for the WebServers OU against the file webpolicy.xm
 scwcmd analyze /ou:OU=WebServers,DC=Marketing,DC=ABCCompany,DC=com /p:webpolicy.xml /u:DomainAdmin
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

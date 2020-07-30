@@ -1,12 +1,8 @@
 ---
 title: bitsadmin list
-description: "Windows Commands topic for **bitsadmin list** - lists the transfer jobs owned by the current user."
-ms.custom: na
+description: Reference article for the bitsadmin list command, which lists the transfer jobs owned by the current user.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1416965e-e0e6-49cf-b1d4-b286d3cf8716
 author: coreyp-at-msft
@@ -17,34 +13,31 @@ ms.date: 10/16/2017
 
 # bitsadmin list
 
-
-
 Lists the transfer jobs owned by the current user.
 
 ## Syntax
 
 ```
-bitsadmin /List [/allusers][/verbose]
+bitsadmin /list [/allusers][/verbose]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/Allusers|Optional—lists jobs for all users|
-|/Verbose|Optional—provides detailed information for each job.|
+| Parameter | Description |
+| -------------- | -------------- |
+| /allusers | Optional. Lists jobs for all users. You must have administrator privileges to use this parameter. |
+| /verbose | Optional. Provides detailed information about each job. |
 
-## Remarks
+## Examples
 
-You must have administrator privileges to use the /allusers parameter
+To retrieve information about jobs owned by the current user.
 
-## <a name="BKMK_examples"></a>Examples
-
-The following example retrieves information about jobs owned by the current user.
 ```
-C:\>bitsadmin /List 
+bitsadmin /list
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -2,16 +2,12 @@
 title: Troubleshooting Enabling OTP
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Troubleshooting Enabling OTP
 
@@ -97,7 +93,5 @@ The Certificate Templates MMC snap-in in Windows Server 2003 doesn't allow you t
   
 **Solution**  
   
-Install Certificate Templates snap-in on a post-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](https://technet.microsoft.com/library/cc732445.aspx).  
+Install Certificate Templates snap-in on a post-Windows Server 2003 server and use it to configure the OTP logon template, see [Install the Certificate Templates Snap-In](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732445(v=ws.11)).  
   
-
-

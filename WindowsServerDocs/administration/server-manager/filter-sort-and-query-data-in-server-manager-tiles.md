@@ -1,12 +1,12 @@
 ---
 title: Filter, sort, and query Data in Server Manager Tiles
-description: "Server Manager"
-ms.custom: na
+description: Server Manager
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
 author: coreyp-at-msft
@@ -28,7 +28,7 @@ This topic contains the following sections.
   
 -   [create and run custom queries on tile data](#BKMK_query)  
   
-## <a name="BKMK_tiles"></a>Filter list entries in tiles  
+## <a name=BKMK_tiles></a>Filter list entries in tiles  
 The **Filter** text box is a quick way of reducing the list of entries that are displayed in a tile to only those entries that contain a specified text string.  
   
 #### To apply a filter to the list of entries in a tile  
@@ -43,10 +43,10 @@ The **Filter** text box is a quick way of reducing the list of entries that are 
   
 4.  To clear the filter, delete the string in the filter box, or click **X**.  
   
-## <a name="BKMK_sort"></a>sort list entries in tiles  
+## <a name=BKMK_sort></a>sort list entries in tiles  
 sort list entries in Server Manager tiles by clicking column headings. Clicking a column heading the first time sorts column values in ascending alphanumeric order (arrow pointing up); clicking again sorts column values in descending alphanumeric order (arrow pointing down).  
   
-## <a name="BKMK_query"></a>create and run custom queries on tile data  
+## <a name=BKMK_query></a>create and run custom queries on tile data  
 You can create custom queries in the Events, Performance, Best Practices Analyzer, Services, or Roles and Features tiles in Server Manager. By default, the area of the tile toolbar in which you select criteria to build a custom query is hidden; click **expand** (chevron button at right edge of tile toolbar) to display query criteria.  
   
 #### To create a custom query for tile data  

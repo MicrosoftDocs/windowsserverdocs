@@ -1,7 +1,6 @@
 ---
 title: Cluster to cluster Storage Replica within the same region in Azure
 description: Cluster to cluster Storage Replication within the same region in Azure
-keywords: Storage Replica, Server Manager, Windows Server, Azure, Cluster, the same region
 author: arduppal
 ms.author: arduppal
 ms.date: 04/26/2019
@@ -98,7 +97,7 @@ Part two
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
 14. Run the following command from any one node **az2az3**/**az2az4**. 
@@ -108,7 +107,7 @@ Part two
     $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
     $ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
     [int]$ProbePort = 59999
-    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```   
     Make sure both clusters can connect / communicate with each other. 
 
@@ -124,11 +123,11 @@ Part two
 15. Create cloud witnesses for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**, **az2azcw2**) in azure one for each cluster in the same resource group (**SR-AZ2AZ**).
 
     - Copy the storage account name and key from "access keys"
-    - Create the cloud witness from “failover cluster manager” and use the above account name and key to create it.
+    - Create the cloud witness from "failover cluster manager" and use the above account name and key to create it.
 
 16. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step.
 
-17. Start Windows PowerShell and use the [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long-running performance evaluation mode.
+17. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long-running performance evaluation mode.
 
 18. Configure cluster-to-cluster Storage Replica.
    

@@ -1,12 +1,8 @@
 ---
 title: nslookup set port
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the nslookup set port command, which changes the default TCP/UDP Domain Name System (DNS) name server port to the specified value.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dab7a09-d400-4062-b863-2d32c191c3bd
 author: coreyp-at-msft
@@ -17,23 +13,22 @@ ms.date: 10/16/2017
 
 # nslookup set port
 
-
-
-Changes the default TCP/UDP Domain Name System (DNS) name server port to the value specified.
+Changes the default TCP/UDP Domain Name System (DNS) name server port to the specified value.
 
 ## Syntax
 
 ```
-set port=<Port>
+set port=<port>
 ```
 
-## Parameters
+### Parameters
 
-| Parameter |                                          Description                                          |
-|-----------|-----------------------------------------------------------------------------------------------|
-|  \<Port>  | Specifies the new value for the default TCP/UDP DNS name server port. The default port is 53. |
-|   {help   |                                              ?}                                               |
+| Parameter | Description |
+| ---------- | ---------- |
+| `<port>` | Specifies the new value for the default TCP/UDP DNS name server port. The default port is **53**. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

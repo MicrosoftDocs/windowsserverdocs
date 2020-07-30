@@ -1,12 +1,8 @@
 ---
 title: shrink
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for DiskPart shrink, which reduces the size of the selected volume by the amount you specify.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec87cc7c-9846-465e-a10d-4ee10db4f4e6
 author: coreyp-at-msft
@@ -16,7 +12,7 @@ ms.date: 10/16/2017
 ---
 # shrink
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Diskpart shrink command reduces the size of the selected volume by the amount you specify. This command makes free disk space available from the unused space at the end of the volume.
 
@@ -25,7 +21,7 @@ The Diskpart shrink command reduces the size of the selected volume by the amoun
 shrink [desired=<n>] [minimum=<n>] [nowait] [noerr]
 shrink querymax [noerr]
 ```
-## Parameters
+### Parameters
 
 |  Parameter  |                                                                                             Description                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,7 +40,7 @@ shrink querymax [noerr]
 - if a minimum amount is specified but not enough free space is available, the command will fail.
 - A volume must be selected for this operation to succeed. Use the **select volume** command to select a volume and shift the focus to it.
 - This command does not operate on original equipment manufacturer (OEM) partitions, Extensible Firmware Interface (EFI) system partitions, or recovery partitions.
-  ## <a name="BKMK_examples"></a>Examples
+  ## Examples
   To reduce the size of the selected volume by the largest possible amount between 250 and 500 megabytes, type:
   ```
   shrink desired=500 minimum=250
@@ -54,4 +50,4 @@ shrink querymax [noerr]
   shrink querymax
   ```
 
-[Resize-Partition](https://technet.microsoft.com/library/hh848680.aspx)
+[Resize-Partition](/powershell/module/storage/resize-partition?view=win10-ps)

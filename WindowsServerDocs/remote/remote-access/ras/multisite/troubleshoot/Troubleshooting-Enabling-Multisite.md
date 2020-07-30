@@ -2,16 +2,12 @@
 title: Troubleshooting Enabling Multisite
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Troubleshooting Enabling Multisite
 
@@ -144,7 +140,5 @@ This may be caused by an unexpected entry point table configuration in the clien
   
 Review the entry point table configuration in all client GPOs and fix any inconsistencies in the multisite configuration between the different instances of the client GPOs and the DirectAccess configuration. Use the `Get-DaEntryPointTableItem` cmdlet with the name of the client GPO to get the entry point table on the client. Use the `Get-NetIPHttpsConfiguration` cmdlet to get all the IP-HTTPS profiles for all the entry points.  
   
-For further information, see [DirectAccess Client Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh848426).  
+For further information, see [DirectAccess Client Cmdlets in Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj591658(v=ws.11)).  
   
-
-

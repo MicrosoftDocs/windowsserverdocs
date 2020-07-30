@@ -1,12 +1,8 @@
 ---
 title: Subcommand set-DriverPackage
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for Subcommand set-DriverPackage, which renames and/or enables or disables a driver package on a server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 11804bb6-ca29-4461-8c63-5131748cd742
 author: coreyp-at-msft
@@ -17,8 +13,6 @@ ms.date: 10/16/2017
 
 # Subcommand: set-DriverPackage
 
-
-
 Renames and/or enables or disables a driver package on a server.
 
 ## Syntax
@@ -27,7 +21,7 @@ Renames and/or enables or disables a driver package on a server.
 WDSUTIL /Set-DriverPackage [/Server:<Server name>] {/DriverPackage:<Name> | /PackageId:<ID>} [/Name:<New Name>] [/Enabled:{Yes | No}
 ```
 
-## Parameters
+### Parameters
 
 |        Parameter         |                                                                                                                                                                                                               Description                                                                                                                                                                                                                |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -37,7 +31,7 @@ WDSUTIL /Set-DriverPackage [/Server:<Server name>] {/DriverPackage:<Name> | /Pac
 |   [/Name:\<New Name>]    |                                                                                                                                                                                              Specifies the new name for the driver package.                                                                                                                                                                                              |
 |      [/Enabled:{Yes      |                                                                                                                                                                                                                   No}                                                                                                                                                                                                                    |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To change settings about a package, type one of the following:
 ```
@@ -47,6 +41,6 @@ WDSUTIL /Set-DriverPackage /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318} /Na
 WDSUTIL /Set-DriverPackage /DriverPackage:MyDriverPackage /Name:NewName /Enabled:Yes
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

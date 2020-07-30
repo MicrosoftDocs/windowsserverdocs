@@ -1,13 +1,9 @@
 ---
 title: Deploy a new Windows MultiPoint Services system
 description: Steps required to deploy a new MultiPoint Services environment
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bac9d1b-bd21-4bc8-8f72-0dd9bb2b3f5d
 author: evaseydl

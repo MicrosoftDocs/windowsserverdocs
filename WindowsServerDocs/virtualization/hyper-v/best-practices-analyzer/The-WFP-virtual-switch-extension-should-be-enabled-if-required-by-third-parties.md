@@ -1,14 +1,13 @@
 ---
 title: The WFP virtual switch extension should be enabled if it is required by third party extensions
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 8aa8a9a5-e3fa-4c9b-8331-ba5a3de22429
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # The WFP virtual switch extension should be enabled if it is required by third party extensions
@@ -46,7 +45,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 3.  Run this command after replacing External with the name  of your external switch:  
   
 ```  
-Enable-VMSwitchExtension -VMSwitchName External -Name "Microsoft Windows Filtering Platform"  
+Enable-VMSwitchExtension -VMSwitchName External -Name Microsoft Windows Filtering Platform  
 ```  
   
 ## See Also  

@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 56c915ec-edb1-43b0-8ad2-c93841bb566f
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Move File Servers to the BranchCache File Servers Organizational Unit
 

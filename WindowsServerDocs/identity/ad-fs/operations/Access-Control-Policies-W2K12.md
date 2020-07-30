@@ -1,7 +1,6 @@
 ---
 ms.assetid: 5728847d-dcef-4694-9080-d63bfb1fe24b
 title: Access Control Policies in AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
@@ -384,4 +383,4 @@ The policies described in this article should always be used with another authen
  The value of the claim is the name of the AD FS service that received the request.  
 
 ## See Also  
- [AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+ [AD FS Operations](../ad-fs-operations.md)

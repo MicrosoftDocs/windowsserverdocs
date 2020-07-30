@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getproxybypasslist
-description: "Windows Commands topic for **bitsadmin getproxybypasslist** - Retrieves the proxy bypass list for the specified job."
-ms.custom: na
+description: Reference article for the bitsadmin getproxybypasslist command, which retrieves the proxy bypass list for the specified job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 50959be3-7014-4bc9-9a7b-68f1ff94a94a
 author: coreyp-at-msft
@@ -22,26 +18,29 @@ Retrieves the proxy bypass list for the specified job.
 ## Syntax
 
 ```
-bitsadmin /GetProxyBypassList <Job>
+bitsadmin /getproxybypasslist <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+### Remarks
 
-The bypass list contains the host names or IP addresses, or both, that are not to be routed through a proxy. The list can contain "\<local>" to refer to all servers on the same LAN. The list can be semicolon or space-delimited.
+The bypass list contains the host names or IP addresses, or both, that are not to be routed through a proxy. The list can contain `<local>` to refer to all servers on the same LAN. The list can be semicolon (;) or space-delimited.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example retrieves the proxy bypass list for the job named *myDownloadJob*.
+To retrieve the proxy bypass list for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetProxyBypassList myDownloadJob
+bitsadmin /getproxybypasslist myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

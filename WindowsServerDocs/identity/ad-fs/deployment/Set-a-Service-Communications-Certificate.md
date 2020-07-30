@@ -1,13 +1,11 @@
 ---
 ms.assetid: 638c89bd-87e6-484b-9d2e-8ae2a74227e5
 title: Set a Service Communications Certificate
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
@@ -18,7 +16,7 @@ ms.author: billmath
 Federation servers in Active Directory Federation Services \(AD FS\) use the service communications certificate to secure Web services traffic for Secure Sockets Layer \(SSL\) communication with Web clients or with federation server proxies.
 
 > [!NOTE]  
-> The Service Communications Certificate is not the same as an SSL Certificate. To change the AD FS SSL certificate, you will need to use Powershell. Follow the guidance in this [article](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap).
+> The Service Communications Certificate is not the same as an SSL Certificate. To change the AD FS SSL certificate, you will need to use Powershell. Follow the guidance in this [article](../operations/manage-ssl-certificates-ad-fs-wap.md).
 
 
 You can use the following procedure to change the service communications certificate with the AD FS Management snap\-in.  
@@ -41,4 +39,4 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ## Additional references  
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)  
 
-[Certificate Requirements for Federation Servers](https://technet.microsoft.com/library/dd807040.aspx)  
+[Certificate Requirements for Federation Servers](../design/certificate-requirements-for-federation-servers.md)  

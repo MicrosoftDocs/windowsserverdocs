@@ -1,12 +1,8 @@
 ---
-title: Using the New Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: Using the new command
+description: Reference article for New, which creates capture and discover images, multicast transmissions, and namespaces.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f06f310-c585-42f4-9d15-4680b4a3355d
 author: coreyp-at-msft
@@ -14,11 +10,13 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# Using the New Command
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# Using the new command
 
-creates capture and discover images, multicast transmissions, and namespaces.
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Creates capture and discover images, multicast transmissions, and namespaces.
+
 ## Subcommands
 |Subcommand|Description|
 |-------|--------|

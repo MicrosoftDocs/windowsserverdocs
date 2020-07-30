@@ -6,8 +6,8 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d268dc57-78f8-47ba-9a7a-a607e8b9225c
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross 
+author: eross-msft
 ---
 
 # Export an NPS Configuration for Import on Another Server

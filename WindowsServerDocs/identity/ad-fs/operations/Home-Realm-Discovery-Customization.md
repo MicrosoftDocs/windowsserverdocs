@@ -1,14 +1,12 @@
 ---
 ms.assetid: 626e33fc-4ac2-4d38-9ac9-addaa4c8d9bb
 title: Home Realm Discovery Customization 
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

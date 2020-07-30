@@ -6,8 +6,8 @@ ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 07/19/2018
 ---
 # Copy the CA Certificate and CRL to the Virtual Directory

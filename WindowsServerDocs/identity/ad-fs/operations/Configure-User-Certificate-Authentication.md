@@ -1,7 +1,6 @@
 ---
 ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
-description:
 author: jenfieldmsft
 ms.author: billmath
 manager: samueld
@@ -24,18 +23,21 @@ User Certificate authentication is used mainly in 2 use cases
 4) If using AD FS in alternate certificate authentication mode, ensure that your AD FS and WAP servers have SSL certificates that contain the AD FS hostname prefixed with "certauth", for example "certauth.fs.contoso.com", and that traffic to this hostname is allowed through the firewall
 5) If using certificate authentication from the extranet, ensure that at least one AIA and at least one CDP or OCSP location from the list specified in your certificates are accessible from the internet.
 6) Also for Azure AD certificate authentication, for Exchange ActiveSync clients, the client certificate must have the users routable email address in Exchange online in either the Principal Name or the RFC822 Name value of the Subject Alternative Name field. (Azure Active Directory maps the RFC822 value to the Proxy Address attribute in the directory.)
+7) AD FS does not support Username Hints with SmartCard/Certificate based authentication. 
 
 
 ## Configure AD FS for user certificate authentication  
 
 Enable user certificate authentication as an intranet or extranet authentication method in AD FS, using either the AD FS Management console or the PowerShell cmdlet `Set-AdfsGlobalAuthenticationPolicy`.
 
-If you are configuring AD FS for Azure AD certificate authentication, ensure that you have configured the [Azure AD settings](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules required](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) for certificate Issuer and Serial Number
+If you are configuring AD FS for Azure AD certificate authentication, ensure that you have configured the [Azure AD settings](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules required](/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) for certificate Issuer and Serial Number
 
 Additionally, there some optional aspects.
 - If you wish to use claims based on certificate fields and extensions in addition to EKU (claim type https://schemas.microsoft.com/2012/12/certificatecontext/extension/eku), configure additional claim pass through rules on the Active Directory claims provider trust.  See below for a complete list of available certificate claims.  
 - If you need to restrict access based on the type of cert, you can use the additional properties on the certificate in AD FS issuance authorization rules for the application. Common scenarios are "only allow certificates provisioned by an MDM provider" or "only allow smart card certificates"
-- Configure allowed issuing certification authorities for client certificates using the guidance under "Management of trusted issuers for client authentication" in [this article](https://technet.microsoft.com/library/dn786429(v=ws.11).aspx).
+>[!IMPORTANT]
+> Customers using device code flow for authentication and performing device authentication using an IDP other than Azure AD (e.g AD FS) will not be able to enforce device based access (e.g. only allow managed devices using a 3rd party MDM service) for Azure AD resources. To protect access to your corporate resources in Azure AD and prevent any data leakage, customers should configure Azure AD device based Conditional Access (i.e. “Require device to be marked complaint” grant control in Azure AD Conditional Access).
+- Configure allowed issuing certification authorities for client certificates using the guidance under "Management of trusted issuers for client authentication" in [this article](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786429(v=ws.11)).
 - You may want to consider modifying the sign-in pages to suit the needs of your end users when doing certificate authentication. Common cases are to (a) Change 'Sign-in with your X509 certificate' to something more end user friendly
 
 ## Configure Seamless Certificate Authentication for Chrome browser on Windows Desktops
@@ -70,7 +72,7 @@ Certificate Revocation Lists (CRL) are endpoints that are encoded into the user 
 Every AD FS and WAP server will need to reach the CRL endpoint to validate if the cert that was presented to it is still valid and has not been revoked. CRL validation can occur over HTTPS, HTTP, LDAP or via OCSP (Online Certificate Status Protocol). If AD FS/WAP servers cannot reach the endpoint, the authentication will fail. Follow the steps below to troubleshoot it. 
 1) Consult with your PKI engineer to determine the CRL endpoints used to revoke user certificates from your PKI system. 
 2)	On each AD FS/WAP server ensure that the CRL endpoints are reachable via the protocol used (typically HTTPS or HTTP)
-3)	For advanced validation, [enable CAPI2 event logging](https://blogs.msdn.microsoft.com/benjaminperkins/2013/09/30/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues/) on each AD FS/WAP server
+3)	For advanced validation, [enable CAPI2 event logging](/archive/blogs/benjaminperkins/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues) on each AD FS/WAP server
 4) Check for Event ID 41 (Verify Revocation) in the CAPI2 operational logs
 5) Check for `‘\<Result value="80092013"\>The revocation function was unable to check revocation because the revocation server was offline.\</Result\>'`
 
@@ -134,4 +136,4 @@ These are rare occurrences
 
 ## Related Links
 * [Configure alternate hostname binding for AD FS certificate authentication](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)
-* [Configure certificate authorities in Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities)
+* [Configure certificate authorities in Azure AD](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities)

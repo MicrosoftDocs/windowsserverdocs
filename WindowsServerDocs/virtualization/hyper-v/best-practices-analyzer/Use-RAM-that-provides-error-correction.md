@@ -1,14 +1,13 @@
 ---
 title: Use RAM that provides error correction
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Use RAM that provides error correction

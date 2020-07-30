@@ -1,14 +1,12 @@
 ---
 ms.assetid: 102eeeb1-6c55-42a2-b321-71a7dab46146
 title: Access Control Policies in AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # Access Control Policies in Windows Server 2016 AD FS
@@ -37,20 +35,20 @@ To create a policy template, an administrator needs to first specify under which
   
 |Permit Users|Except| 
 | --- | --- | 
- |From **specific** network|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
-|From **specific** groups|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
-|From devices with **specific** trust levels|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
-|With **specific** claims in the request|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
-|And require multi-factor authentication|From **specific** network<br /><br />From **specific** groups<br /><br />From devices with **specific** trust levels<br /><br />With **specific** claims in the request|  
+ |From **specific** network|From **specific** network<p>From **specific** groups<p>From devices with **specific** trust levels<p>With **specific** claims in the request|  
+|From **specific** groups|From **specific** network<p>From **specific** groups<p>From devices with **specific** trust levels<p>With **specific** claims in the request|  
+|From devices with **specific** trust levels|From **specific** network<p>From **specific** groups<p>From devices with **specific** trust levels<p>With **specific** claims in the request|  
+|With **specific** claims in the request|From **specific** network<p>From **specific** groups<p>From devices with **specific** trust levels<p>With **specific** claims in the request|  
+|And require multi-factor authentication|From **specific** network<p>From **specific** groups<p>From devices with **specific** trust levels<p>With **specific** claims in the request|  
   
 If an administrator selects multiple conditions, they are of **AND** relationship. Actions are mutually exclusive and for one policy rule you can only choose one action. If admin selects multiple exceptions, they are of an **OR** relationship. A couple of policy rule examples are shown below:  
   
 |**Policy**|**Policy rules**|
 | --- | --- |  
-|Extranet access requires MFA<br /><br />All users are permitted|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />**Rule#2**<br /><br />from **intranet**<br /><br />Permit|  
-|External access are not permitted except non-FTE<br /><br />Intranet access for FTE on workplace joined device are permitted|**Rule #1**<br /><br />From **extranet**<br /><br />and from **non-FTE** group<br /><br />Permit<br /><br />**Rule #2**<br /><br />from **intranet**<br /><br />and from **workplace joined** device<br /><br />and from **FTE** group<br /><br />Permit|  
-|Extranet access requires MFA except "service admin"<br /><br />All users are permitted to access|**Rule #1**<br /><br />from **extranet**<br /><br />and with MFA<br /><br />Permit<br /><br />Except **service admin group**<br /><br />**Rule #2**<br /><br />always<br /><br />Permit|  
-|non-work place joined device accessing from extranet requires MFA<br /><br />Permit AD fabric for intranet and extranet access|**Rule #1**<br /><br />from **intranet**<br /><br />And from **AD Fabric** group<br /><br />Permit<br /><br />**Rule #2**<br /><br />from **extranet**<br /><br />and from **non-workplace joined** device<br /><br />and from **AD Fabric** group<br /><br />and with MFA<br /><br />Permit<br /><br />**Rule #3**<br /><br />from **extranet**<br /><br />and from **workplace joined** device<br /><br />and from **AD Fabric** group<br /><br />Permit|  
+|Extranet access requires MFA<p>All users are permitted|**Rule #1**<p>from **extranet**<p>and with MFA<p>Permit<p>**Rule#2**<p>from **intranet**<p>Permit|  
+|External access are not permitted except non-FTE<p>Intranet access for FTE on workplace joined device are permitted|**Rule #1**<p>From **extranet**<p>and from **non-FTE** group<p>Permit<p>**Rule #2**<p>from **intranet**<p>and from **workplace joined** device<p>and from **FTE** group<p>Permit|  
+|Extranet access requires MFA except "service admin"<p>All users are permitted to access|**Rule #1**<p>from **extranet**<p>and with MFA<p>Permit<p>Except **service admin group**<p>**Rule #2**<p>always<p>Permit|  
+|non-work place joined device accessing from extranet requires MFA<p>Permit AD fabric for intranet and extranet access|**Rule #1**<p>from **intranet**<p>And from **AD Fabric** group<p>Permit<p>**Rule #2**<p>from **extranet**<p>and from **non-workplace joined** device<p>and from **AD Fabric** group<p>and with MFA<p>Permit<p>**Rule #3**<p>from **extranet**<p>and from **workplace joined** device<p>and from **AD Fabric** group<p>Permit|  
   
 ## Parameterized policy template vs non-parameterized policy template  
 Access control policies can be  
@@ -176,5 +174,4 @@ From here you can select the access control policy and apply it to the applicati
 ![access control policies](media/Access-Control-Policies-in-AD-FS/ADFSACP15.PNG)  
   
 ## See Also  
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
-
+[AD FS Operations](../ad-fs-operations.md) 

@@ -1,13 +1,11 @@
 ---
 ms.assetid: 026747c7-4c34-41c7-b7ea-27f9a7f64a35
 title: Add a Host (A) Resource Record to Corporate DNS for a Federation Server
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
@@ -35,6 +33,5 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 ## Additional references  
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[Name Resolution Requirements for Federation Servers](https://technet.microsoft.com/library/dd807055.aspx)  
+[Name Resolution Requirements for Federation Servers](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807055(v=ws.11))  
   
-

@@ -1,12 +1,11 @@
 ---
 title: Performance history for virtual machines
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
@@ -61,7 +60,7 @@ In addition, all virtual hard disk (VHD) series, such as `vhd.iops.total`, are a
 
 ## Usage in PowerShell
 
-Use the [Get-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) cmdlet:
+Use the [Get-VM](/powershell/module/hyper-v/get-vm) cmdlet:
 
 ```PowerShell
 Get-VM <Name> | Get-ClusterPerf
@@ -70,6 +69,6 @@ Get-VM <Name> | Get-ClusterPerf
    > [!NOTE]
    > The Get-VM cmdlet only returns virtual machines on the local (or specified) server, not across the cluster.
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

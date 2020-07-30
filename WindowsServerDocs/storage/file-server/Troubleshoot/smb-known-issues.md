@@ -3,7 +3,6 @@ title: SMB known issues
 description: List of the SMB known issues.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019

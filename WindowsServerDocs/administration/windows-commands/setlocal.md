@@ -1,15 +1,10 @@
 ---
 title: setlocal
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for setlocal, which starts localization of environment variables in a batch file.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4e4b6d3-3f1a-4851-a782-25ee2470e16e
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -18,11 +13,9 @@ ms.date: 10/16/2017
 
 # setlocal
 
-
-
 Starts localization of environment variables in a batch file. Localization continues until a matching **endlocal** command is encountered or the end of the batch file is reached.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -53,15 +46,15 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
     You can have more than one **setlocal** or **endlocal** command in a batch program (that is, nested commands).
 -   Testing for command extensions in batch files
 
-    The **setlocal** command sets the ERRORLEVEL variable. If you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** (zero). Otherwise, it is set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:  
+    The **setlocal** command sets the ERRORLEVEL variable. If you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** (zero). Otherwise, it is set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:
     ```
     setlocal enableextensions
     verify other 2>nul
     if errorlevel 1 echo Unable to enable extensions
-    ```  
+    ```
     Because **cmd** does not set the ERRORLEVEL variable when command extensions are disabled, the **verify** command initializes the ERRORLEVEL variable to a nonzero value when you use it with an invalid argument. Also, if you use the **setlocal** command with arguments {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**} and it does not set the ERRORLEVEL variable to **1**, command extensions are not available.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 You can localize environment variables in a batch file, as shown in the following sample script:
 ```
@@ -78,6 +71,6 @@ endlocal
 start notepad c:\superapp.out
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

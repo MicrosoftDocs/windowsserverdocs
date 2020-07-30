@@ -8,9 +8,6 @@ manager: dcscontentpm
 ms.date: 11/22/2019
 ms.topic: article
 ms.prod: windows-server
-audience: Admin
-ms.custom:
-- CSSTroubleshoot 
 ms.technology: identity-adds
 ---
 
@@ -27,4 +24,4 @@ Repadmin.exe and Dcdiag.exe are available on all domain controllers that run Win
 
 Another useful technology is Event Tracing for Windows (ETW). You can use ETW to troubleshoot LDAP communications among the domain controllers. For more information, see [Using ETW to troubleshoot LDAP connections](../manage/troubleshoot/troubleshoot-ldap-using-etw.md).
 
-You can also install Remote Server Administration Tools (RSAT) on a member server that is running Windows 10. For information about how to install RSAT, see [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+You can also install Remote Server Administration Tools (RSAT) on a member server that is running Windows 10. For information about how to install RSAT, see [Remote Server Administration Tools](../../../remote/remote-server-administration-tools.md).

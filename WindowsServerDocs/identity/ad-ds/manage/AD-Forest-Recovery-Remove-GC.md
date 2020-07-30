@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Remove the global catalog
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

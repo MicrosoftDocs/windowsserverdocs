@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Verify Replication 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -26,7 +25,7 @@ If the first recovered DC logs Event ID 4614 (“the domain controller is waitin
 1. When DFSR Event 4612 appears on the first restored DC perform a manual authoritative restore as described in [2218556: How to force an authoritative and non-authoritative synchronization for DFSR-replicated SYSVOL (like "D4/D2" for FRS)](https://support.microsoft.com/kb/2218556) (https://support.microsoft.com/kb/2218556).  
 2. Set **SysvolReady Flag** to 1 manually, as described in [947022 The NETLOGON share is not present after you install Active Directory Domain Services on a new full or read-only Windows Server 2008-based domain controller](https://support.microsoft.com/kb/947022).  
 
-You can also create a diagnostic report DFS Replication. For more information, see [Create a Diagnostic Report for DFS Replication](https://technet.microsoft.com/library/cc754227.aspx) and [DFS Step-by-Step Guide for Windows Server 2008](https://technet.microsoft.com/library/cc732863\(WS.10\).aspx). If the server is running Windows Server 2008 R2, you can use [dfsrdiag.exe ReplicationState command line switch](https://blogs.technet.com/b/filecab/archive/2009/05/28/dfsrdiag-exe-replicationstate-what-s-dfsr-up-to.aspx).  
+You can also create a diagnostic report DFS Replication. For more information, see [Create a Diagnostic Report for DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)) and [DFS Step-by-Step Guide for Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)). If the server is running Windows Server 2008 R2, you can use [dfsrdiag.exe ReplicationState command line switch](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)).  
 
 You can also run the Replications test using dcdiag.exe to check for replication errors. For more information, see Knowledge Base [article 249256](https://support.microsoft.com/kb/249256).
 

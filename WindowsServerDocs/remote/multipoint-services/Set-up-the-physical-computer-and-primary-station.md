@@ -1,13 +1,9 @@
 ---
 title: Set up the physical computer and primary station
 description: Learn how to set up your first system, the primary station, in MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e83b126-ce9a-4cd7-a0bd-6627c9e0f81b
 author: evaseydl

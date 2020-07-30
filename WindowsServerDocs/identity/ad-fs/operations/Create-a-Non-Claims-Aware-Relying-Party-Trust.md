@@ -1,14 +1,12 @@
 ---
 ms.assetid: 7b7ae389-5032-44f7-9c0a-94398c3e4d88
 title: Create a Non-Claims Aware Relying Party Trust
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -49,4 +47,4 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ![relying party](media/Create-a-Non-Claims-Aware-Relying-Party-Trust/addnon6.PNG)  
   
 ## See Also  
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
+[AD FS Operations](../ad-fs-operations.md) 

@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - FAQ 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

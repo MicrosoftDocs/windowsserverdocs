@@ -1,14 +1,10 @@
 ---
 title: Remote Desktop Services - GPU acceleration
 description: Planning information to help you choose the right graphics virtualization option for your RDS deployment.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/21/2019
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
 author: lizap

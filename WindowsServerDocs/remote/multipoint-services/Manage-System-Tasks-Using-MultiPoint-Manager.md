@@ -1,12 +1,8 @@
 ---
 title: Manage System Tasks Using MultiPoint Manager
 description: Overview of management tasks in MultiPoint Manager
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: efb34298-391c-4435-afdf-1a749f1ce224
 author: lizap

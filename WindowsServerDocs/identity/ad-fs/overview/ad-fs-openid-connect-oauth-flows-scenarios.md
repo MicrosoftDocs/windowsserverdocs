@@ -1,7 +1,6 @@
 ---
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
 title: AD FS OpenID Connect/OAuth flows and Application Scenarios
-description:
 author: billmath
 ms.author: billmath
 manager: femila
@@ -220,13 +219,13 @@ Host: https://webapi.com
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q... 
  ```
 
-### Refresh the access token 
- 
+### Refresh Token Grant Flow
+ 
 Access_tokens are short lived, and you must refresh them after they expire to continue accessing resources. You can do so by submitting another POST request to the `/token` endpoint, this time providing the refresh_token instead of the code. Refresh tokens are valid for all permissions that your client has already received access token for. 
  
 Refresh tokens do not have specified lifetimes. Typically, the lifetimes of refresh tokens are relatively long. However, in some cases, refresh tokens expire, are revoked, or lack sufficient privileges for the desired action. Your application needs to expect and handle errors returned by the token issuance endpoint correctly.  
  
-Although refresh tokens aren't revoked when used to acquire new access tokens, you are expected to discard the old refresh token. The OAuth 2.0 spec says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." 
+Although refresh tokens aren't revoked when used to acquire new access tokens, you are expected to discard the old refresh token. As per the OAuth 2.0 spec says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." AD FS issues refresh token when the new refresh token lifetime is longer than previous refresh token lifetime.  To view additional information on AD FS refresh token lifetimes, visit [AD FS Single Sign On Settings](../operations/ad-fs-single-sign-on-settings.md).
  
 ```
 // Line breaks for legibility only 
@@ -287,7 +286,7 @@ The steps that follow constitute the OBO flow and are explained with the help of
 
   1. The client application makes a request to API A with token A.  
   Note: While configuring OBO flow in AD FS make sure scope `user_impersonation` is selected and client do request `user_impersonation` scope in the request. 
-  2. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A. For more details refer to On-Behalf Of sample here Add link.  
+  2. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A.
   3. The AD FS token issuance endpoint validates API A's credentials with token A and issues the access token for API B (token B). 
   4. Token B is set in the authorization header of the request to API B. 
   5. Data from the secured resource is returned by API B. 

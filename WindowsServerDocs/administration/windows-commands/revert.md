@@ -1,12 +1,12 @@
 ---
 title: revert
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 75ad40e4-502a-401e-b11e-8b31e00424b5
 author: coreyp-at-msft
@@ -27,12 +27,12 @@ Reverts a volume back to a specified shadow copy. This is supported only for sha
 revert <ShadowCopyID>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
 |\<ShadowCopyID>|Specifies the shadow copy ID to revert the volume to.|
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

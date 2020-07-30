@@ -1,12 +1,8 @@
 ---
 title: bitsadmin util and version
-description: "Windows Commands topic for **bitsadmin util and version** - Displays the version of BITS service."
-ms.custom: na
+description: Reference article for the bitsadmin util and version command, which displays the version of BITS service.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98f17328-dfbd-4cbb-93c1-b8d424bc3f0a
 author: coreyp-at-msft
@@ -19,28 +15,33 @@ ms.date: 10/16/2017
 
 Displays the version of BITS service (for example, 2.0).
 
-**BITSAdmin 1.5 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.5 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /Util /Version [/Verbose]
+bitsadmin /util /version [/verbose]
 ```
 
-## Remarks
+### Parameters
 
-The **Verbose** switch performs the following:
--   Displays the file version for each BITS related DLL
--   Verifies the BITS Service can be started
--   Displays BITS Group Policy values (Windows Vista only)
+| Parameter | Description |
+| --------- | ----------- |
+| /verbose | Use this switch to display the file version for each BITS-related DLL and to verify whether the BITS service can start.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example the version of the BITS Service.
+To display the version of the BITS Service.
+
 ```
-C:\>bitsadmin /Util /Version
+bitsadmin /util /version
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin util command](bitsadmin-util.md)
+
+- [bitsadmin command](bitsadmin.md)

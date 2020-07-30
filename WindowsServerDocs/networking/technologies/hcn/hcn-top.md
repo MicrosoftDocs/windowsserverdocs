@@ -3,6 +3,7 @@ title: Host Compute Network (HCN) service API for VMs and containers
 description: Host Compute Network (HCN) service API is a public-facing Win32 API that provides platform-level access to manage the virtual networks, virtual network endpoints, and associated policies. Together this provides connectivity and security for virtual machines (VMs) and containers running on a Windows host. 
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 
@@ -15,15 +16,15 @@ Host Compute Network (HCN) service API is a public-facing Win32 API that provide
 Developers use the HCN service API to manage networking for VMs and containers in their application workflows. The HCN API has been designed to provide the best experience for developers. End-users do not interact with these APIs directly.  
 
 ## Features of the HCN Service API
--	Implemented as C API hosted by the Host Network Service (HNS) on the OnCore/VM.
+-    Implemented as C API hosted by the Host Network Service (HNS) on the OnCore/VM.
 
--	Provides the ability to create, modify, delete, and enumerate HCN objects such as networks, endpoints, namespaces, and policies. Operations perform on handles to the objects (e.g., a network handle), and internally these handles are implemented using RPC context handles.
+-    Provides the ability to create, modify, delete, and enumerate HCN objects such as networks, endpoints, namespaces, and policies. Operations perform on handles to the objects (e.g., a network handle), and internally these handles are implemented using RPC context handles.
 
--	Schema-based. Most functions of the API define input and output parameters as strings containing the arguments of the function call as JSON documents. The JSON documents are based on strongly typed and versioned schemas, these schemas are part of the public documentation. 
+-    Schema-based. Most functions of the API define input and output parameters as strings containing the arguments of the function call as JSON documents. The JSON documents are based on strongly typed and versioned schemas, these schemas are part of the public documentation. 
 
--	A subscription/callback API is provided to enable clients to register for notifications of service-wide events such as network creations and deletions.
+-    A subscription/callback API is provided to enable clients to register for notifications of service-wide events such as network creations and deletions.
 
--	HCN API works in Desktop Bridge (a.k.a. Centennial) apps running in system services. The API checks the ACL by retrieving the user token from the caller.
+-    HCN API works in Desktop Bridge (a.k.a. Centennial) apps running in system services. The API checks the ACL by retrieving the user token from the caller.
 
 >[!TIP]
 >The HCN service API is supported in background tasks and non-foreground windows. 
@@ -39,23 +40,20 @@ The host compute service allows callers to create and manage both virtual machin
 Configuration documents based on well-defined schemas is an established industry standard in the virtualization space. Most virtualization solutions, such as Docker and Kubernetes, provide APIs based on configuration documents. Several industry initiatives, with the participation of Microsoft, drive an ecosystem for defining and validating these schemas, such as [OpenAPI](https://www.openapis.org/).  These initiatives also drive the standardization of specific schema definitions for the schemas used for containers, such as [Open Container Initiative (OCI)](https://www.opencontainers.org/).
 
 The language used for authoring configuration documents is [JSON](https://tools.ietf.org/html/rfc8259), which you use in combination with:
--	Schema definitions that define an object model for the document
--	Validation of whether a JSON document conforms to a schema
--	Automated conversion of JSON documents to and from native representations of these schemas in the programming languages used by the callers of the APIs 
+-    Schema definitions that define an object model for the document
+-    Validation of whether a JSON document conforms to a schema
+-    Automated conversion of JSON documents to and from native representations of these schemas in the programming languages used by the callers of the APIs 
 
 Frequently used schema definitions are [OpenAPI](https://www.openapis.org/) and [JSON Schema](http://json-schema.org/), which lets you specify the detailed definitions of the properties in a document, for example:
--	The valid set of values for a property, such as 0-100 for a property representing a percentage.
--	The definition of enumerations, which are represented as a set of valid strings for a property.
--	A regular expression for the expected format of a string. 
+-    The valid set of values for a property, such as 0-100 for a property representing a percentage.
+-    The definition of enumerations, which are represented as a set of valid strings for a property.
+-    A regular expression for the expected format of a string. 
 
 As part of documenting the HCN APIs, we are planning to publish the schema of our JSON documents as an OpenAPI Specification. Based on this specification, language-specific representations of the schema can allow for type-safe use of the schema objects in the programming language used by the client. 
 
 ### Example 
 
 The following is an example of this workflow for the object representing an SCSI controller in the configuration document of a VM. 
-
-In the Windows source code, we define schemas using .mars files:
-onecore/vm/dv/net/hns/schema/mars/Schema/HCN.Schema.Network.mars
 
 ```
 enum IpamType
@@ -110,7 +108,7 @@ class Route
 ```
 
 >[!TIP]
->The [NewIn(“2.0”) annotations are part of the versioning support for the schema definitions.
+>The [NewIn("2.0") annotations are part of the versioning support for the schema definitions.
 
 From this internal definition, we generate the OpenAPI specifications for the schema:
 

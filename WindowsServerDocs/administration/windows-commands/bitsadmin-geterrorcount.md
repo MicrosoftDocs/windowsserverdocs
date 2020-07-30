@@ -1,12 +1,8 @@
 ---
 title: bitsadmin geterrorcount
-description: "Windows Commands topic for **bitsadmin geterrorcount** - Retrieves a count of the number of times the specified job generated a transient error."
-ms.custom: na
+description: Reference article for the bitsadmin geterrorcount command, which retrieves a count of the number of times the specified job generated a transient error.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8840ae78-52b0-4c7e-b592-0547359a237e
 author: coreyp-at-msft
@@ -17,29 +13,30 @@ ms.date: 10/16/2017
 
 # bitsadmin geterrorcount
 
-
-
 Retrieves a count of the number of times the specified job generated a transient error.
 
 ## Syntax
 
 ```
-bitsadmin /GetErrorCount <Job>
+bitsadmin /geterrorcount <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example retrieves error count information for the job named *myDownloadJob*.
+To retrieve error count information for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetErrorCount myDownloadJob
+bitsadmin /geterrorcount myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

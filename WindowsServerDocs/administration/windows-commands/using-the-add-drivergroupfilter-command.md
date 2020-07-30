@@ -1,12 +1,8 @@
 ---
-title: Using the add-DriverGroupFilter Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: add-DriverGroupFilter
+description: Reference article for add-DriverGroupFilter, which adds a filter to a driver group on a server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the add-DriverGroupFilter Command
-
-
+# add-DriverGroupFilter
 
 Adds a filter to a driver group on a server.
 
@@ -27,7 +21,7 @@ Adds a filter to a driver group on a server.
 WDSUTIL /Add-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>] /FilterType:<Filter Type> /Policy:{Include | Exclude} /Value:<Value> [/Value:<Value> ...]
 ```
 
-## Parameters
+### Parameters
 
 |         Parameter          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -37,7 +31,7 @@ WDSUTIL /Add-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>]
 |     [/Policy:{Include      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Exclude}]                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |     [/Value:\<Value>]      | Specifies the client value that corresponds to **/FilterType**. You can specify multiple values for a single type. See the following list for valid values for **ChassisType**. For information about obtaining the values for all other filter types, see [Driver Group Filters](https://go.microsoft.com/fwlink/?LinkID=155158) (<https://go.microsoft.com/fwlink/?LinkID=155158>).</br>**Other**</br>**UnknownChassis**</br>**Desktop**</br>**LowProfileDesktop**</br>**PizzaBox**</br>**MiniTower**</br>**Tower**</br>**Portable**</br>**Laptop**</br>**Notebook**</br>**Handheld**</br>**DockingStation**</br>**AllInOne**</br>**SubNotebook**</br>**SpaceSaving**</br>**LunchBox**</br>**MainSystemChassis**</br>**ExpansionChassis**</br>**SubChassis**</br>**BusExpansionChassis**</br>**PeripheralChassis**</br>**StorageChassis**</br>**RackMountChassis**</br>**SealedCaseComputer**</br>**MultiSystemChassis**</br>**CompactPci**</br>**AdvancedTca** |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To add a filter to a driver group, type one of the following:
 ```
@@ -47,7 +41,7 @@ WDSUTIL /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufactu
 WDSUTIL /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer /Policy:Include /Value:Name1 /FilterType:ChassisType /Policy:Exclude /Value:Tower /Value:MiniTower
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

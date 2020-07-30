@@ -1,40 +1,48 @@
 ---
-title: ftp mput_1
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: ftp mput
+description: Reference article for the ftp mput command, which copies local files to the remote computer using the current file transfer type.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198 vhorne
+ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: mput_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp mput
 
-Copies local files to the remote computer using the current file transfer type.   
-## Syntax  
-```  
-mput <LocalFile>[ ]  
-```  
-### Parameters  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-|  Parameter  |                       Description                        |
-|-------------|----------------------------------------------------------|
-| <LocalFile> | Specifies the local file to copy to the remote computer. |
+Copies local files to the remote computer using the current file transfer type.
 
-## <a name="BKMK_Examples"></a>Examples  
-copy **Program1.exe** and **Program2.exe** to the remote computer using the current file transfer type.  
-```  
-mput Program1.exe Program2.exe  
-```  
-## additional references  
--   [ftp: ascii](ftp-ascii.md)  
--   [ftp: binary](ftp-binary.md)  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+
+```
+mput <localfile>[ ]
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<localfile>` | Specifies the local file to copy to the remote computer. |
+
+### Examples
+
+To copy *Program1.exe* and *Program2.exe* to the remote computer using the current file transfer type, type:
+
+```
+mput Program1.exe Program2.exe
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ftp ascii command](ftp-ascii.md)
+
+- [ftp binary command](ftp-binary.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

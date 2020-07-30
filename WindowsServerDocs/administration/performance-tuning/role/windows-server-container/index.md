@@ -4,7 +4,7 @@ description: Performance tuning recommendations for containers on Windows Server
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: DavSo; Ericam; YaShi
+ms.author: davso; ericam; yashi
 author: akino
 ms.date: 10/16/2017
 ---

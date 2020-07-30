@@ -1,12 +1,8 @@
 ---
 title: bitsadmin getvalidationstate
-description: "Windows Commands topic for **bitsadmin getvalidationstate** - Reports the content validation state of the given file within the job. "
-ms.custom: na
+description: Reference article for the bitsadmin getvalidationstate command, which reports the content validation state of the given file within the job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6ada3f1f-9967-4262-9d22-ed641e23f516
 author: coreyp-at-msft
@@ -17,30 +13,31 @@ ms.date: 10/16/2017
 
 # bitsadmin getvalidationstate
 
-
-
 Reports the content validation state of the given file within the job.
 
 ## Syntax
 
 ```
-bitsadmin /GetValidationState <Job> <file index> 
+bitsadmin /getvalidationstate <job> <file_index>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|File index|Starts from 0|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
+| file_index | Starts from 0. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example gets the content validation state of file 2 within the job named *myJob*.
+To retrieve the content validation state of file 2 within the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetValidationState myJob 1
+bitsadmin /getvalidationstate myDownloadJob 1
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

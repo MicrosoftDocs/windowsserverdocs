@@ -1,14 +1,12 @@
 ---
 ms.assetid: 8b15d44e-e4e6-4510-aa91-cc7ec7161b0a
 title: The Role of the Claims Engine
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

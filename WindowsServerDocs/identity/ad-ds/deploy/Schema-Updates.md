@@ -8,7 +8,6 @@ manager: daveba
 ms.date: 12/02/2019
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Windows Server Active Directory schema updates
@@ -1415,7 +1414,7 @@ changetype: ntdsSchemaAdd
 objectClass: attributeSchema
 cn: ms-DS-Maximum-Registration-Inactivity-Period
 adminDisplayName: ms-DS-Maximum-Registration-Inactivity-Period
-adminDescription: The maximum ammount of days used to detect inactivty of registration objects.
+adminDescription: The maximum amount of days used to detect inactivty of registration objects.
 ldapDisplayName: msDS-MaximumRegistrationInactivityPeriod
 attributeId: 1.2.840.113556.1.4.2242
 omSyntax: 2
@@ -4649,7 +4648,7 @@ changetype: ntdsSchemaAdd
 objectClass: attributeSchema
 ldapDisplayName: msDS-IsPrimaryComputerFor
 adminDisplayName: ms-DS-Is-Primary-Computer-For
-adminDescription: Backlink atribute for msDS-IsPrimaryComputer.
+adminDescription: Backlink attribute for msDS-IsPrimaryComputer.
 attributeId: 1.2.840.113556.1.4.2168
 attributeSyntax: 2.5.5.1
 omSyntax: 127
@@ -5903,7 +5902,7 @@ systemFlags: 2
 # Add these two objects first. If the DC is running a 1717.IDS schema,
 # these were deleted just before this. So add them first so that
 # the system does not run without them for long
-# They are not dependant on any schema changes
+# They are not dependent on any schema changes
 
 dn: CN=container-Display,CN=409,CN=DisplaySpecifiers,CN=Configuration,DC=X
 changetype: add
@@ -31835,7 +31834,7 @@ attributeDisplayNames: mobile,Mobile Number
 attributeDisplayNames: otherMobile,Mobile Number (Others)
 -
 
-# The following add is preceded by a delete seperately since some DCs may have it.
+# The following add is preceded by a delete separately since some DCs may have it.
 # If not, this is just skipped
 
 dn: CN=Contact-Display,CN=409,CN=DisplaySpecifiers,CN=Configuration,DC=X
@@ -39551,7 +39550,7 @@ changetype: ntdsSchemaAdd
 objectClass: attributeSchema
 ldapDisplayName: macAddress
 adminDisplayName: macAddress
-adminDescription: MAC address in maximal, colon seperated hex notation
+adminDescription: MAC address in maximal, colon separated hex notation
 attributeId: 1.3.6.1.1.1.1.22
 attributeSyntax: 2.5.5.5
 omSyntax: 22
@@ -41418,7 +41417,7 @@ changetype: ntdsSchemaAdd
 objectClass: classSchema
 ldapDisplayName: ipNetwork
 adminDisplayName: ipNetwork
-adminDescription: Abstraction of a network. The distinguished value of the cn attribute denotes the network's cannonical name
+adminDescription: Abstraction of a network. The distinguished value of the cn attribute denotes the network's canonical name
 governsId: 1.3.6.1.1.1.2.7
 objectClassCategory: 1
 rdnAttId: 2.5.4.3

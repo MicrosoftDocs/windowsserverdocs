@@ -4,7 +4,6 @@ description: How to obtain and install a Server Core installation on Windows Ser
 ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jasongerend
@@ -19,17 +18,17 @@ ms.localizationpriority: medium
 When you install Windows Server for the first time, you have the following installation options:
 
 >[!NOTE]
-> In the following list, editions without “Desktop Experience” are the Server Core installation options
+> In the following list, editions without "Desktop Experience" are the Server Core installation options
 
--	Windows Server Standard
--	Windows Server Standard with Desktop Experience
--	Windows Server Datacenter
--	Windows Server Datacenter with Desktop Experience
+-    Windows Server Standard
+-    Windows Server Standard with Desktop Experience
+-    Windows Server Datacenter
+-    Windows Server Datacenter with Desktop Experience
 
 When you install Windows Server (Semi-Annual Channel), you have the following installation options:
 
--	Windows Server Standard 
--	Windows Server Datacenter
+-    Windows Server Standard 
+-    Windows Server Datacenter
 
 The Server Core option reduces the space required on disk and the potential attack surface, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additional user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md). 
 

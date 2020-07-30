@@ -1,12 +1,8 @@
 ---
 title: wbadmin get disks
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for wbadmin get disks, which lists the internal and external disks that are currently online for the local computer.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 320edef1-df11-446b-a183-9f81811ef938
 author: coreyp-at-msft
@@ -29,12 +25,12 @@ To list the disks that are online with this subcommand, you must be a member of 
 wbadmin get disks
 ```
 
-## Parameters
+### Parameters
 
 This subcommand has no parameters.
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBDisk](https://technet.microsoft.com/library/jj902446.aspx) cmdlet
+-   [Get-WBDisk](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) cmdlet

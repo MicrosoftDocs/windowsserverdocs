@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Backing up a full server 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

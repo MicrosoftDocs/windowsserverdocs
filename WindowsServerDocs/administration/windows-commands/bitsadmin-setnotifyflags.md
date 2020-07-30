@@ -1,12 +1,8 @@
 ---
 title: bitsadmin setnotifyflags
-description: "Windows Commands topic for **bitsadmin setnotifyflags** - Sets the event notification flags for the specified job."
-ms.custom: na
+description: Reference article for the bitsadmin setnotifyflags command, which sets the event notification flags for the specified job.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d5763d95-94a6-45ca-9e03-891c20047e06
 author: coreyp-at-msft
@@ -22,32 +18,26 @@ Sets the event notification flags for the specified job.
 ## Syntax
 
 ```
-bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
+bitsadmin /setnotifyflags <job> <notifyflags>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|NotifyFlags|See Remarks|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| notifyflags | Can include one or more of the following notification flags, including:<ul><li>**1.** Generates an event when all files in the job have been transferred.</li><li>**2.** Generates an event when an error occurs.</li><li>**3.** Generates an event when all files have completed transfer or when an error occurs.</li><li>**4.** Disables notifications.</li></ul> |
 
-## Remarks
+## Examples
 
-The **NotifyFlags** parameter can contain one or more of the following notification flags.
+To set the notification flags to generate an event when an error occurs, for a job named *myDownloadJob*:
 
-|-----|-----|
-|1|Generate an event when all files in the job have been transferred.|
-|2|Generate an event when an error occurs.|
-|4|Disable notifications.|
-
-## <a name="BKMK_examples"></a>Examples
-
-The following example sets the notify flags for transferred and error events job for job named *myDownloadJob*.
 ```
-C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
+bitsadmin /setnotifyflags myDownloadJob 2
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

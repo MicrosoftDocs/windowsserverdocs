@@ -2,16 +2,12 @@
 title: Step 2 Plan Advanced DirectAccess Deployments
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 2 Plan Advanced DirectAccess Deployments
 
@@ -97,7 +93,7 @@ Consider the following decisions when you are planning to deploy your DirectAcce
   
     Decide how DirectAccess clients will authenticate to the DirectAccess server:  
   
-    -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](https://technet.microsoft.com/library/hh831379.aspx).  
+    -   **User authentication**. You can enable users to authenticate with Active Directory credentials or with two-factor authentication. For more information about authenticating with two-factor authentication, see [Deploy Remote Access with OTP authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831379(v=ws.11)).  
   
     -   **Computer authentication**. You can configure computer authentication to use certificates or to use the DirectAccess server as a Kerberos proxy on behalf of the client. For more information, see [1.3 Plan certificate requirements](da-adv-plan-s1-infrastructure.md#13-plan-certificate-requirements).  
   
@@ -146,5 +142,3 @@ If the VPN connection lists its default gateway as empty or all zeros (0.0.0.0),
   
 -   [Step 1: Plan the DirectAccess Infrastructure](da-adv-plan-s1-infrastructure.md)  
   
-
-

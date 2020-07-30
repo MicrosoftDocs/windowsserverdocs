@@ -1,12 +1,8 @@
 ---
 title: Attach additional stations to your MultiPoint server
 description: Add more stations to your MultiPoint Services deployment
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d78ebf4e-0968-4014-9a42-9f75cc50cb52
 author: evaseydl

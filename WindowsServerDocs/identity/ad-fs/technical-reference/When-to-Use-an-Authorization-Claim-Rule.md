@@ -1,14 +1,12 @@
 ---
 ms.assetid: b734cbcb-342c-4a28-8ab5-b9cd990bb1c2
 title: When to Use an Authorization Claim Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -52,7 +50,7 @@ When you use the Permit or Deny Users Based on an Incoming Claim rule template t
   
 If you want to use the deny condition yet also enable access to the relying party for specific users, you must later explicitly add authorization rules with the permit condition to enable those users access to the relying party.  
   
-If a user is denied access when the claims issuance engine processes the rule set, further rules processing shuts down, and AD FS returns an “Access denied” error to the user's request.  
+If a user is denied access when the claims issuance engine processes the rule set, further rules processing shuts down, and AD FS returns an "Access denied" error to the user's request.  
   
 ## Authorizing users  
 In AD FS, authorization rules are used to issue a permit or deny claim that will determine whether a user or a group of users \(depending on the claim type used\) will be allowed to access Web\-based resources in a given relying party or not. Authorization rules can only be set on relying party trusts.  
@@ -88,7 +86,7 @@ You can create both authorization rules using either the claim rule language or 
   
 -   Deny access to users with this incoming claim  
   
-For more instructions on how to create this template, see [Create a Rule to Permit All Users](https://technet.microsoft.com/library/ee913577.aspx) or [Create a Rule to Permit or Deny Users Based on an Incoming Claim](https://technet.microsoft.com/library/ee913594.aspx) in the AD FS Deployment Guide.  
+For more instructions on how to create this template, see [Create a Rule to Permit All Users](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913577(v=ws.11)) or [Create a Rule to Permit or Deny Users Based on an Incoming Claim](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ee913594(v=ws.11)) in the AD FS Deployment Guide.  
   
 ## Using the claim rule language  
 If a claim should be sent only when the claim value matches a custom pattern, you must use a custom rule. For more information, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).  
@@ -99,7 +97,7 @@ When using the claim rule language syntax to authorize claims, a claim can also 
 ```  
 [type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",   
 value == "urn:federation:authentication:windows" ]  
-&& [type == "http://schemas.xmlsoap.org/claims/Group ", value == “editors”]   
+&& [type == "http://schemas.xmlsoap.org/claims/Group ", value == "editors"]   
 => issue(type = "http://schemas.xmlsoap.org/claims/authZ", value = "Granted");  
 ```  
   
@@ -144,4 +142,3 @@ When you want to specify which user or users can create a proxy trust for a give
   
 For more information about how to use the claim rule language, see [The Role of the Claim Rule Language](The-Role-of-the-Claim-Rule-Language.md).  
   
-

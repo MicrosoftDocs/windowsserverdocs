@@ -1,12 +1,8 @@
 ---
 title: nslookup set all
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the nslookup set all command, which outputs the current configuration setting values.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 04b695cb-38b2-4adf-aa55-9d1b628eb8ac
 author: coreyp-at-msft
@@ -17,26 +13,21 @@ ms.date: 10/16/2017
 
 # nslookup set all
 
-
-
-Prints the current values of the configuration settings.
+Outputs the current configuration setting values, including the default server and computer (the host).
 
 ## Syntax
 
 ```
-set all 
+set all
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
-|-----------|-------------|
-|   {help   |     ?}      |
+| --------- | ----------- |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-## Remarks
+## Additional References
 
--   **Set all** also prints information about the default server and computer (that is, the host).
-
-#### Additional references
-
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

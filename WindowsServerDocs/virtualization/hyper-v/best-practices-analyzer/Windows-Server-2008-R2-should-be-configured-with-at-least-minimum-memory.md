@@ -1,14 +1,13 @@
 ---
 title: Windows Server 2008 R2 should be configured with at least the minimum amount of memory
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 12418668-52d3-4e70-b56f-85dcb144a8c0
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows Server 2008 R2 should be configured with at least the minimum amount of memory

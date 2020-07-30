@@ -1,15 +1,12 @@
 ---
 title: Collect diagnostic data with Storage Spaces Direct
 description: Understanding Storage Spaces Direct Data Collection Tools, with specific examples of how to run and use them.
-keywords: Storage Spaces,Data Collection,Troubleshooting,event channels,Get-SDDCDiagnosticInfo
-ms.assetid: 
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 10/24/2018
-ms.localizationpriority: 
 ---
 # Collect diagnostic data with Storage Spaces Direct
 
@@ -29,12 +26,15 @@ There are two methods of installing the script, both of which are outlines below
 
 The [PowerShell Gallery](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) is a snapshot of the GitHub Repo. Note that installing items from the PowerShell Gallery requires the latest version of the PowerShellGet module, which is available in Windows 10, in Windows Management Framework (WMF) 5.0, or in the MSI-based installer (for PowerShell 3 and 4).
 
+We install the latest version of the [Microsoft Networking Diagnostics tools](https://www.powershellgallery.com/packages/MSFT.Network.Diag) during this process as well since Get-SDDCDiagnosticInfo relies on this. This manifest module contains network diagnostic and troubleshooting tool, which are maintained by the Microsoft Core Networking Product Group at Microsoft.
+
 You can install the module by running following command in PowerShell with administrator privileges:
 
 ``` PowerShell
 Install-PackageProvider NuGet -Force
 Install-Module PrivateCloud.DiagnosticInfo -Force
 Import-Module PrivateCloud.DiagnosticInfo -Force
+Install-Module -Name MSFT.Network.Diag
 ```
 
 To update the module, run the following command in PowerShell:

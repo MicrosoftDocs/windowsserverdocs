@@ -2,16 +2,12 @@
 title: Remote Access Server Role Documentation
 description: This topic provides links to documentation for Remote Access in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c6df007-4c39-4b72-9f2c-b2c9b2825c2f
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Remote Access Server Role Documentation
 

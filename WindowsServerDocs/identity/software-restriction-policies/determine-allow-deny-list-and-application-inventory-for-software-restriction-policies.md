@@ -1,12 +1,8 @@
 ---
 title: Determine Allow-Deny List and Application Inventory for Software Restriction Policies
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0abb73b6-b5d8-4505-8ab1-2f29e4bf0411
 author: coreyp-at-msft
@@ -46,9 +42,9 @@ To effectively use the Allow default rule, you need to determine exactly which a
 
 2.  Create the following registry value in order to enable the advanced logging feature and set the path to where the log file should be written.
 
-    **"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\ CodeIdentifiers"**
+    **"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers"**
 
-    String Value: *NameLogFile path to NameLogFile*
+    String Value: *LogFileName path to LogFileName*
 
     Because SRP is evaluating all applications when they run, an entry is written to the log file *NameLogFile* each time that application is run.
 
@@ -67,5 +63,4 @@ To effectively use the Allow default rule, you need to determine exactly which a
     An example of the output written to a log file:
 
 **explorer.exe (PID = 4728) identifiedC:\Windows\system32\onenote.exe as Unrestricted usingpath rule, Guid ={320bd852-aa7c-4674-82c5-9a80321670a3}**    All applications and associated code that SRP checks and set to block will be noted in the log file, which you then can use to determine which executables should be considered for your Allowed list.
-
 

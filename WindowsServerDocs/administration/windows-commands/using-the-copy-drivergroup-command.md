@@ -1,12 +1,8 @@
 ---
-title: Using the copy-DriverGroup Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
+title: copy-DriverGroup
+description: Reference article for copy-DriverGroup, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0aaf6fa5-8b5b-4a1e-ae9b-8b5c6d89f571
 author: coreyp-at-msft
@@ -15,9 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Using the copy-DriverGroup Command
-
-
+# copy-DriverGroup
 
 Duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 
@@ -27,7 +21,7 @@ Duplicates an existing driver group on the server including the filters, driver 
 WDSUTIL /Copy-DriverGroup [/Server:<Server name>] /DriverGroup:<Source Group Name> /GroupName:<New Group Name>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -35,7 +29,7 @@ WDSUTIL /Copy-DriverGroup [/Server:<Server name>] /DriverGroup:<Source Group Nam
 |/DriverGroup:\<Source Group Name>|Specifies the name of the source driver group.|
 |/GroupName:\<New Group Name>|Specifies the name of the new driver group.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To copy a driver group, type one of the following:
 ```
@@ -45,6 +39,6 @@ WDSUTIL /Copy-DriverGroup /Server:MyWdsServer /DriverGroup:PrinterDrivers /Group
 WDSUTIL /Copy-DriverGroup /DriverGroup:PrinterDrivers /GroupName:ColorPrinterDrivers
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

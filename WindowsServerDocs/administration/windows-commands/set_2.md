@@ -1,12 +1,8 @@
 ---
 title: set_2
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for set_2, which sets the context, options, verbose mode, and metadata file for shadow copy creation.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: acf24663-1a50-4321-b48d-1717655e9476
 author: coreyp-at-msft
@@ -16,8 +12,6 @@ ms.date: 10/16/2017
 ---
 
 # set_2
-
-
 
 Sets the context, options, verbose mode, and metadata file for shadow copy creation. If used without parameters, **set** lists all current settings.
 
@@ -41,6 +35,6 @@ set metadata <MetaData.cab>
 |metadata|Sets the name and location of the shadow creation metadata file. See [Set metadata](set-metadata.md) for syntax and parameters.|
 |/?|Displays help at the command prompt.|
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

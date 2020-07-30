@@ -1,14 +1,12 @@
 ---
 ms.assetid: 20d183f0-ef94-44bb-9dfc-ed93799dd1a6
 title: When to Use a Custom Claim Rule
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -58,7 +56,7 @@ This rule template provides the following options:
   
 -   Type one or more optional conditions and an issuance statement using the AD FS claim rule language  
   
-For more instructions for creating a custom rule using this template, see [Create a Rule to Send Claims Using a Custom Rule](https://technet.microsoft.com/library/dd807049.aspx) in the AD FS Deployment Guide.  
+For more instructions for creating a custom rule using this template, see [Create a Rule to Send Claims Using a Custom Rule](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807049(v=ws.11)) in the AD FS Deployment Guide.  
   
 For a better understanding of how the claim rule language works, view the claim rule language syntax of other rules that already exist in the snap\-in by clicking the **View Rule Language** tab in the properties for that rule. Using the information in this section and the syntax information on this tab can provide insight into how to construct your own custom rules.  
   
@@ -67,12 +65,12 @@ For more information about how to use the claim rule language, see [The Role of 
 ## Using the claim rule language  
   
 ### Example: How to combine first and last names based on a user's name attribute values  
-The following rule syntax combines first and last names from attribute values in a given attribute store. The policy engine forms a cartesian product of the matches for each condition. For example, the output for first name {“Frank”, “Alan”} and last names {“Miller”, “Shen”} is {“Frank Miller”, “Frank Shen”, “Alan Miller”, “Alan Shen”}:  
+The following rule syntax combines first and last names from attribute values in a given attribute store. The policy engine forms a cartesian product of the matches for each condition. For example, the output for first name {"Frank", "Alan"} and last names {"Miller", "Shen"} is {"Frank Miller", "Frank Shen", "Alan Miller", "Alan Shen"}:  
   
 ```  
 c1:[type == "http://exampleschema/firstname" ]  
 &&  c2:[type == "http://exampleschema/lastname",]   
-=> issue(type = "http://exampleschema/name", value = c1.value + “  “ + c2.value);  
+=> issue(type = "http://exampleschema/name", value = c1.value + "  " + c2.value);  
 ```  
   
 ### Example: How to issue a manager claim based on whether users have direct reports  
@@ -80,7 +78,7 @@ The following rule issues a manager claim only if the user has direct reports:
   
 ```  
 c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] => add(store = "SQL Store", types = ("http://schemas.xmlsoap.org/claims/Reports"), query = "SELECT Reports FROM dbo.DirectReports WHERE UserName = {0}", param = c.value );  
-count([type == “http://schemas.xmlsoap.org/claims/Reports“] ) > 0 => issue(= "http://schemas.xmlsoap.org/claims/ismanager", value = "true");  
+count([type == "http://schemas.xmlsoap.org/claims/Reports"] ) > 0 => issue(= "http://schemas.xmlsoap.org/claims/ismanager", value = "true");  
 ```  
   
 ### Example: How to issue a PPID claim based on an LDAP attribute  
@@ -99,4 +97,3 @@ Common attributes that can be used to uniquely identify the user for this query 
   
 -   **samaccountname**  
   
-

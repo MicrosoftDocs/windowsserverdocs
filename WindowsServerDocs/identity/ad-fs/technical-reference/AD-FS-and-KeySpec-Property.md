@@ -1,6 +1,5 @@
 ---
 title: Active Directory Federation Services and certificate Key Specification property Information
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017

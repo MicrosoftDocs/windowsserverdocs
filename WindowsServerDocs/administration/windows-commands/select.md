@@ -1,12 +1,12 @@
 ---
 title: select
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 9eeb40c0-4258-46e2-8dbc-94f63497e771
 author: coreyp-at-msft
@@ -30,7 +30,7 @@ select volume
 select vdisk
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,7 +44,7 @@ select vdisk
 -   If a volume is selected with a corresponding partition, the partition will be automatically selected.
 -   If a partition is selected with a corresponding volume, the volume will be automatically selected.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

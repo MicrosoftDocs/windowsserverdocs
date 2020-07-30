@@ -5,9 +5,9 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
-manager: brianlic
-ms.author: pashort
-author: shortpatti
+manager: dcscontentpm
+ms.author: v-tea
+author: Teresa-Motiv
 ---
 
 # Choosing a Network Adapter
@@ -19,7 +19,7 @@ You can use this topic to learn some of the features of network adapters that mi
 Network-intensive applications require high-performance network adapters. This section explores some considerations for choosing network adapters, as well as how to configure different network adapter settings to achieve the best network performance.
 
 > [!TIP]
->  You can configure network adapter settings by using Windows PowerShell. For more information, see [Network Adapter Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj134956.aspx).
+>  You can configure network adapter settings by using Windows PowerShell. For more information, see [Network Adapter Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/netadapter).
 
 ##  <a name="bkmk_offload"></a> Offload Capabilities
 
@@ -60,13 +60,13 @@ The following cmdlets allow you to see and modify RSS parameters per network ada
 >[!NOTE]
 >For a detailed command reference for each cmdlet, including syntax and parameters, you can click the following links. In addition, you can pass the cmdlet name to **Get-Help** at the Windows PowerShell prompt for details on each command.  
 
-- [Disable-NetAdapterRss](https://technet.microsoft.com/library/jj130892). This command disables RSS on the network adapter that you specify.
+- [Disable-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Disable-NetAdapterRss). This command disables RSS on the network adapter that you specify.
 
-- [Enable-NetAdapterRss](https://technet.microsoft.com/library/jj130859). This command enables RSS on the network adapter that you specify.
+- [Enable-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterRss). This command enables RSS on the network adapter that you specify.
   
-- [Get-NetAdapterRss](https://technet.microsoft.com/library/jj130912). This command retrieves RSS properties of the network adapter that you specify.
+- [Get-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Get-NetAdapterRss). This command retrieves RSS properties of the network adapter that you specify.
   
-- [Set-NetAdapterRss](https://technet.microsoft.com/library/jj130863). This command sets the RSS properties on the network adapter that you specify.  
+- [Set-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterRss). This command sets the RSS properties on the network adapter that you specify.  
 
 #### RSS profiles
 
@@ -95,27 +95,27 @@ Following are the additional **Set-NetAdapterRss** parameters that you can use t
 
 - **\* MaxProcessors**: Sets the maximum number of RSS processors to be used. This ensures that application traffic is bound to a maximum number of processors on a given interface. Example syntax:
 
-     `Set-NetAdapterRss –Name “Ethernet” –MaxProcessors <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –MaxProcessors <value>`
 
 - **\* BaseProcessorGroup**: Sets the base processor group of a NUMA node. This impacts the processor array that is used by RSS. Example syntax:
 
-     `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorGroup <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorGroup <value>`
   
 - **\* MaxProcessorGroup**: Sets the Max processor group of a NUMA node. This impacts the processor array that is used by RSS. Setting this would restrict a maximum processor group so that load balancing is aligned within a k-group. Example syntax:
 
-     `Set-NetAdapterRss –Name “Ethernet” –MaxProcessorGroup <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –MaxProcessorGroup <value>`
 
 - **\* BaseProcessorNumber**: Sets the base processor number of a NUMA node. This impacts the processor array that is used by RSS. This allows partitioning processors across network adapters. This is the first logical processor in the range of RSS processors that is assigned to each adapter. Example syntax:
 
-     `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorNumber <Byte Value>`
+     `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorNumber <Byte Value>`
 
 - **\* NumaNode**: The NUMA node that each network adapter can allocate memory from. This can be within a k-group or from different k-groups. Example syntax:
 
-     `Set-NetAdapterRss –Name “Ethernet” –NumaNodeID <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –NumaNodeID <value>`
 
 - **\* NumberofReceiveQueues**: If your logical processors seem to be underutilized for receive traffic \(for example, as viewed in Task Manager\), you can try increasing the number of RSS queues from the default of 2 to the maximum that is supported by your network adapter. Your network adapter may have options to change the number of RSS queues as part of the driver. Example syntax:
 
-     `Set-NetAdapterRss –Name “Ethernet” –NumberOfReceiveQueues <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –NumberOfReceiveQueues <value>`
 
 For more information, click the following link to download [Scalable Networking: Eliminating the Receive Processing Bottleneck—Introducing RSS](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc) in Word format.
   
@@ -185,7 +185,7 @@ In the previous scenario, IPv4 RSC is supported and operational in the interface
 Following is example output when you run the Get-NetAdapterStatistics cmdlet.
 
 ```  
-PS C:\Users\Administrator> $x = Get-NetAdapterStatistics “myAdapter”   
+PS C:\Users\Administrator> $x = Get-NetAdapterStatistics "myAdapter"   
 PS C:\Users\Administrator> $x.rscstatistics  
   
 CoalescedBytes       : 0  
@@ -207,28 +207,28 @@ A few network adapters actively manage their resources to achieve optimum perfor
 
 Configuring network adapter resources is simplified by the use of the following Windows PowerShell cmdlets.
 
-- [Get-NetAdapterAdvancedProperty](https://technet.microsoft.com/library/jj130901.aspx)
+- [Get-NetAdapterAdvancedProperty](https://docs.microsoft.com/powershell/module/netadapter/Get-NetAdapterAdvancedProperty)
 
-- [Set-NetAdapterAdvancedProperty](https://technet.microsoft.com/library/jj130894.aspx)
+- [Set-NetAdapterAdvancedProperty](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterAdvancedProperty)
 
-- [Enable-NetAdapter](https://technet.microsoft.com/library/jj130876.aspx)
+- [Enable-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapte)
 
-- [Enable-NetAdapterBinding](https://technet.microsoft.com/library/jj130913.aspx)
+- [Enable-NetAdapterBinding](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterBinding)
 
-- [Enable-NetAdapterChecksumOffload](https://technet.microsoft.com/library/jj130918.aspx)
+- [Enable-NetAdapterChecksumOffload](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
 
-- [Enable-NetAdapterIPSecOffload](https://technet.microsoft.com/library/jj130890.aspx)
+- [Enable-NetAdapterIPSecOffload](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
 
-- [Enable-NetAdapterLso](https://technet.microsoft.com/library/jj130922.aspx)
+- [Enable-NetAdapterLso](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterLso)
 
-- [Enable-NetAdapterPowerManagement](https://technet.microsoft.com/library/jj130907.aspx)
+- [Enable-NetAdapterPowerManagement](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterPowerManagement)
 
-- [Enable-NetAdapterQos](https://technet.microsoft.com/library/jj130866.aspx)
+- [Enable-NetAdapterQos](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterQos)
 
-- [Enable-NetAdapterRDMA](https://technet.microsoft.com/library/jj130909.aspx)
+- [Enable-NetAdapterRDMA](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterRDMA)
 
-- [Enable-NetAdapterSriov](https://technet.microsoft.com/library/jj130899.aspx)
+- [Enable-NetAdapterSriov](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterSriov)
 
-For more information, see [Network Adapter Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj134956.aspx).
+For more information, see [Network Adapter Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/netadapter).
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

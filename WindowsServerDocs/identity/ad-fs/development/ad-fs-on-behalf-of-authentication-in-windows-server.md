@@ -1,14 +1,12 @@
 ---
 ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
 title: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later
-description:
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -51,7 +49,7 @@ WebAPIOBO | Backend web api that is used by ToDoService to perform the requisite
 
 ## Setting up the development box
 
-This walk-through uses Visual Studio 2015. The project heavily uses Active Directory Authentication Library (ADAL). To learn about ADAL please read [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/azure/mt417579.aspx)
+This walk-through uses Visual Studio 2015. The project heavily uses Active Directory Authentication Library (ADAL). To learn about ADAL please read [Active Directory Authentication Library .NET](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
 
 The sample also uses SQL LocalDB v11.0. Install the SQL LocalDB prior to working on the sample.
 
@@ -346,7 +344,7 @@ with
 
 **Modify the claim used for Name**
 
-From AD FS we are issuing the Nmae claim but we are not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurrences of NameIdentifier wiht Name.
+From AD FS we are issuing the Nmae claim but we are not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurrences of NameIdentifier with Name.
 
 **Modify Post routine and CallGraphAPIOnBehalfOfUser()**
 

@@ -29,13 +29,11 @@ Use the following procedure to create a folder in a namespace using DFS Manageme
 
 
 > [!TIP]
-> To create a folder in a namespace by using Windows PowerShell, use the [New-DfsnFolder](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnfolder)
+> To create a folder in a namespace by using Windows PowerShell, use the [New-DfsnFolder](/powershell/module/dfsn/new-dfsnfolder)
 cmdlet. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
 
-## See also
+## Additional References
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
-
-

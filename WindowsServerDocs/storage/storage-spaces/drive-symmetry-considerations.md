@@ -1,16 +1,15 @@
 ---
-title: Drive symmetry considerations for Storage Spaces Direct 
+title: Drive symmetry considerations for Storage Spaces Direct
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
-# Drive symmetry considerations for Storage Spaces Direct 
+# Drive symmetry considerations for Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
@@ -160,7 +159,7 @@ This isn't supported. The number of drives of each type should be the same in ev
 All servers have only HDD drives connected.
 
 |Server 1|Server 2|Server 3|
-|-|-|-| 
+|-|-|-|
 |18 x HDD (capacity) |18 x HDD (capacity)|18 x HDD (capacity)|
 
 This isn't supported. You need to add a minimum of two cache drives (NvME or SSD) attached to each of the servers.
@@ -176,7 +175,7 @@ To recap, every server in the cluster should have the same types of drives and t
 | Same drive models in every server        | Recommended   |
 | Same drive sizes in every server         | Recommended   |
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

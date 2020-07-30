@@ -1,14 +1,12 @@
 ---
 ms.assetid: 7f6b27e5-dc55-4ffc-8e76-6d57e65a870b
 title: Appendix A Dynamic Access Control Glossary
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

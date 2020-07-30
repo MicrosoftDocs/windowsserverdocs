@@ -5,7 +5,7 @@ ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee
-ms.author: RoopeshB, NedPyle
+ms.author: roopeshb, nedpyle
 ms.date: 10/16/2017
 ---
 # Performance Tuning NFS File Servers

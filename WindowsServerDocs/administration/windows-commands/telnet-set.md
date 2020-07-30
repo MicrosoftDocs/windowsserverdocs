@@ -1,14 +1,10 @@
 ---
 title: telnet set
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for telnet set, which sets options.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e vhorne
+ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -16,14 +12,15 @@ ms.date: 10/16/2017
 ---
 # telnet: set
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Sets options.   
-## Syntax  
-```  
-set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] [logging] [mode {console | stream}] [ntlm] [term {ansi | vt100 | vt52 | vtnt}] [?]  
-```  
-### Parameters  
+Sets options.
+
+## Syntax
+```
+set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] [logging] [mode {console | stream}] [ntlm] [term {ansi | vt100 | vt52 | vtnt}] [?]
+```
+#### Parameters
 
 |                    Parameter                     |                                                                                                                                              Description                                                                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,13 +36,13 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 | term {ansi &#124; vt100 &#124; vt52 &#124; vtnt} |                                                                                                                                        Sets the terminal type.                                                                                                                                        |
 |                        ?                         |                                                                                                                                    Displays help for this command.                                                                                                                                    |
 
-## Remarks  
-1. You can use the **unset** command to turn off an option that was previously set.  
-2. On non-English versions of telnet, the **codeset** <option> is available. **Codeset** <option> sets the current code set to an option, which can be any one of the following: **shift JIS**, **Japanese EUC**, **JIS Kanji**, **JIS Kanji (78)**, **DEC Kanji**, **NEC Kanji**. You should set the same code set on the remote computer.  
-   ## <a name="BKMK_Examples"></a>Examples  
-   Set the log file and begin logging to the local file tnlog.txt  
-   ```  
-   set logfile tnlog.txt  
-   ```  
-   ## additional references  
-3. [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Remarks
+1. You can use the **unset** command to turn off an option that was previously set.
+2. On non-English versions of telnet, the **codeset** <option> is available. **Codeset** <option> sets the current code set to an option, which can be any one of the following: **shift JIS**, **Japanese EUC**, **JIS Kanji**, **JIS Kanji (78)**, **DEC Kanji**, **NEC Kanji**. You should set the same code set on the remote computer.
+   ## Examples
+   Set the log file and begin logging to the local file tnlog.txt
+   ```
+   set logfile tnlog.txt
+   ```
+   ## Additional References
+3. - [Command-Line Syntax Key](command-line-syntax-key.md)

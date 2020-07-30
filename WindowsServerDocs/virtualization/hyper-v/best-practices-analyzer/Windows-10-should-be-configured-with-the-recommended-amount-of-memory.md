@@ -1,14 +1,13 @@
 ---
 title: Windows 10 should be configured with the recommended amount of memory
-description: "Gives instructions to resolve the issue reported by this Best Practices Analyzer rule."
+description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 0c810b82-b06a-4382-b598-5c642e8534be
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows 10 should be configured with the recommended amount of memory

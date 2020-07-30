@@ -1,12 +1,8 @@
 ---
 title: Edit Server Settings
 description: Learn about MultiPoint Services settings
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
 author: lizap
@@ -26,7 +22,7 @@ The following table describes the different settings that you can change for you
 |Allow monitoring of this computer's desktops|Allows you to control whether desktops can be monitored on the MultiPoint Services system. If this setting is off (not selected), desktops of stations (both local and remote) that are connected to the computer that is running MultiPoint Services will not display in the Home tab of MultiPoint Manager (including on a different computer if the computer is being remotely managed).|  
 |Always start in console mode|Enables the RemoteFX technology, which is designed to allow faster and more efficient Remote Desktop sessions by offloading processing to the CPU and GPU. If you are connecting to MultiPoint Services using a RemoteFX-capable client, you may be able to achieve better performance using this option. The benefits depend on the capabilities of your server and network. For example, this depends in part on whether the time spent doing additional processing to compress the data stream is less than the time that is saved by transmitting less data.|  
 |Do not show privacy notification at first user logon|When a user logs on to a MultiPoint station for the first time, a notification displays to advise the user that their station activities may be monitored.|  
-|Assign a unique IP to each station|Assigns a unique IP address to each station. By default, MultiPoint Services has one IP address, which is shared with all sessions that are running on the system. This configuration, however, can cause some application compatibility problems. For example, if an application requires a unique IP address, it may not run properly on MultiPoint Services. Selecting this option, also known as IP virtualization, can resolve this problem.<br /><br />IP virtualization is also useful for monitoring active sessions on MultiPoint Services. Some monitoring tools report usage according to the IP address. To enable session monitoring, you can use IP virtualization to assign a unique IP address to each session. Note that if you select this option, each new session receives a unique IP address. Any existing sessions continue to use the shared IP address until they are logged off and logged back on.|  
+|Assign a unique IP to each station|Assigns a unique IP address to each station. By default, MultiPoint Services has one IP address, which is shared with all sessions that are running on the system. This configuration, however, can cause some application compatibility problems. For example, if an application requires a unique IP address, it may not run properly on MultiPoint Services. Selecting this option, also known as IP virtualization, can resolve this problem.<p>IP virtualization is also useful for monitoring active sessions on MultiPoint Services. Some monitoring tools report usage according to the IP address. To enable session monitoring, you can use IP virtualization to assign a unique IP address to each session. Note that if you select this option, each new session receives a unique IP address. Any existing sessions continue to use the shared IP address until they are logged off and logged back on.|  
 |Allow IM between MultiPoint Dashboard and a user session on this computer|Enables chat between MultiPoint Manager and user session on this computer. For more information see [Use IM](Use-IM.md).|  
 |Allow orchestration of administrator and MultiPoint Dashboard user sessions|When enabled, allows administrators to use the MultiPoint Dashboard for session orchestration. These sessions display as thumbnails.|  
 |Allow stations to use GPU hardware rendering|Controls whether stations can use the system's graphics processing unit (GPU).|   

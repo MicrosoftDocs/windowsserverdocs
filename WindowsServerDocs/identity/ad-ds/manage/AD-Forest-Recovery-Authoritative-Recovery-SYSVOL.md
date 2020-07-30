@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Authoritative sync of SYSVOL
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

@@ -2,7 +2,7 @@
 title: Nested resiliency for Storage Spaces Direct
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: dansimp
+manager: dansimp
 ms.technology: storagespaces
 ms.topic: article
 author: cosmosdarwin
@@ -51,7 +51,7 @@ Storage Spaces Direct in Windows Server 2019 offers two new resiliency options i
 
   ![Nested two-way mirror](media/nested-resiliency/nested-two-way-mirror.png)
 
-- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](storage-spaces-fault-tolerance.md#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](https://docs.microsoft.com/windows-server/storage/refs/mirror-accelerated-parity).
+- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](storage-spaces-fault-tolerance.md#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
   ![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
@@ -87,13 +87,13 @@ First, create new storage tier templates using the `New-StorageTier` cmdlet. You
 
 If your capacity drives are hard disk drives (HDD), launch PowerShell as Administrator and run:
 
-```PowerShell 
+```PowerShell
 # For mirror
 New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirror -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
 
 # For parity
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk 
-``` 
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
+```
 
 If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead. Do not modify the other parameters.
 
@@ -122,7 +122,7 @@ New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFrie
 
 ### Step 3: Continue in Windows Admin Center
 
-Volumes that use nested resiliency appear in [Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) with clear labeling, as in the screenshot below. Once they're created, you can manage and monitor them using Windows Admin Center just like any other volume in Storage Spaces Direct.
+Volumes that use nested resiliency appear in [Windows Admin Center](../../manage/windows-admin-center/overview.md) with clear labeling, as in the screenshot below. Once they're created, you can manage and monitor them using Windows Admin Center just like any other volume in Storage Spaces Direct.
 
 ![](media/nested-resiliency/windows-admin-center.png)
 
@@ -179,7 +179,7 @@ No. To replace a server node and its drives, follow this order:
 
 For details see the [Remove servers](remove-servers.md) topic.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Understand fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance.md)

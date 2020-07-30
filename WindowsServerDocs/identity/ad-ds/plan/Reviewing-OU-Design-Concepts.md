@@ -1,14 +1,12 @@
 ---
 ms.assetid: 41b56704-c6f9-4d29-af97-62123e300565
 title: Reviewing OU Design Concepts
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 

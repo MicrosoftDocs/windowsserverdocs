@@ -1,12 +1,13 @@
 ---
 title: Deploying a two-node clustered file server
+description: This article describes creating a two-node file server cluster
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 02/01/2019
-description: This article describes creating a two-node file server cluster
 ---
 # Deploying a two-node clustered file server
 
@@ -50,7 +51,7 @@ The following list describes shared folder configuration functionality that is i
 
 For a failover cluster in Windows Server 2016 or Windows Server 2019 to be considered an officially supported solution by Microsoft, the solution must meet the following criteria.
 
-- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2016, this is the “Certified for Windows Server 2016” logo. For Windows Server 2019, this is the “Certified for Windows Server 2019” logo. For more information about what hardware and software systems have been certified, please visit the Microsoft [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx) site.
+- All hardware and software components must meet the qualifications for the appropriate logo. For Windows Server 2016, this is the "Certified for Windows Server 2016" logo. For Windows Server 2019, this is the "Certified for Windows Server 2019" logo. For more information about what hardware and software systems have been certified, please visit the Microsoft [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx) site.
 
 - The fully configured solution (servers, network, and storage) must pass all tests in the validation wizard, which is part of the failover cluster snap-in.
 
@@ -65,10 +66,10 @@ The following will be needed for a two-node failover cluster.
 
 - **Device Controllers or appropriate adapters for storage:**
     - **Serial Attached SCSI or Fibre Channel:** If you are using Serial Attached SCSI or Fibre Channel, in all clustered servers, all components of the storage stack should be identical. It is required that the multipath I/O (MPIO) software and Device Specific Module (DSM) software components be identical.  It is recommended that the mass-storage device controllers—that is, the host bus adapter (HBA), HBA drivers, and HBA firmware—that are attached to cluster storage be identical. If you use dissimilar HBAs, you should verify with the storage vendor that you are following their supported or recommended configurations.
-    - **iSCSI:** If you are using iSCSI, each clustered server must have one or more network adapters or host bus adapters that are dedicated to the ISCSI storage. The network you use for iSCSI cannot be used for network communication. In all clustered servers, the network adapters you use to connect to the iSCSI storage target should be identical, and we recommend that you use Gigabit Ethernet or higher.  
+    - **iSCSI:** If you are using iSCSI, each clustered server must have one or more network adapters or host bus adapters that are dedicated to the ISCSI storage. The network you use for iSCSI cannot be used for network communication. In all clustered servers, the network adapters you use to connect to the iSCSI storage target should be identical, and we recommend that you use Gigabit Ethernet or higher.
 
 - **Storage:** You must use shared storage that is certified for Windows Server 2016 or Windows Server 2019.
-  
+
     For a two-node failover cluster, the storage should contain at least two separate volumes (LUNs) if using a witness disk for quorum. The witness disk is a disk in the cluster storage that is designated to hold a copy of the cluster configuration database. For this two-node cluster example, the quorum configuration will be Node and Disk Majority. Node and Disk Majority means that the nodes and the witness disk each contain copies of the cluster configuration, and the cluster has quorum as long as a majority (two out of three) of these copies are available. The other volume (LUN) will contain the files that are being shared to users.
 
     Storage requirements include the following:
@@ -76,7 +77,7 @@ The following will be needed for a two-node failover cluster.
     - To use the native disk support included in failover clustering, use basic disks, not dynamic disks.
     - We recommend that you format the partitions with NTFS (for the witness disk, the partition must be NTFS).
     - For the partition style of the disk, you can use either master boot record (MBR) or GUID partition table (GPT).
-    - The storage must respond correctly to specific SCSI commands, the storage must follow the standard called SCSI Primary Commands-3 (SPC-3). In particular, the storage must support Persistent Reservations as specified in the SPC-3 standard. 
+    - The storage must respond correctly to specific SCSI commands, the storage must follow the standard called SCSI Primary Commands-3 (SPC-3). In particular, the storage must support Persistent Reservations as specified in the SPC-3 standard.
     -  The miniport driver used for the storage must work with the Microsoft Storport storage driver.
 
 ## Deploying storage area networks with failover clusters
@@ -248,7 +249,7 @@ Before creating a cluster, we strongly recommend that you validate your configur
     ```
 4. To view the results of the tests after you close the wizard, see the file specified (in SystemRoot\Cluster\Reports\), then make any necessary changes in the configuration and rerun the tests.
 
-For more info, see [Validating a Failover Cluster Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
+For more info, see [Validating a Failover Cluster Configuration](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
 
 ### Step 4: Create the Cluster
 
@@ -287,7 +288,7 @@ The following will create a cluster out of the machines and configuration you ha
 
 3. Run the following command to create the cluster if you are using DHCP for IP Addresses.  For example, the machine names are NODE1 and NODE2, and the name of the cluster will be CLUSTER.
 
-   ```PowerShell    
+   ```PowerShell
    New-Cluster -Name CLUSTER -Node "NODE1","NODE2"
    ```
 

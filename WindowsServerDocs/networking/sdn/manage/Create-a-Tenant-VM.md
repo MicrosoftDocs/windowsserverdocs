@@ -1,17 +1,13 @@
 ---
 title: Create a VM and connect to a tenant virtual network or VLAN
 description: In this topic, we show you how to create a tenant VM and connect it to either a virtual network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network (VLAN).
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/24/2018
 ---
 # Create a VM and connect to a tenant virtual network or VLAN
@@ -51,7 +47,7 @@ Ensure that you have already created a Virtual Network before using this example
 2. Get the virtual network that contains the subnet to which you want to connect the network adapter.
 
    ```Powershell 
-   $vnet = get-networkcontrollervirtualnetwork -connectionuri $uri -ResourceId “Contoso_WebTier”
+   $vnet = get-networkcontrollervirtualnetwork -connectionuri $uri -ResourceId "Contoso_WebTier"
    ```
 
 3. Create a network interface object in Network Controller.
@@ -71,14 +67,14 @@ Ensure that you have already created a Virtual Network before using this example
    $ipconfiguration = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfiguration
    $ipconfiguration.resourceid = "MyVM_IP1"
    $ipconfiguration.properties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationProperties
-   $ipconfiguration.properties.PrivateIPAddress = “24.30.1.101”
+   $ipconfiguration.properties.PrivateIPAddress = "24.30.1.101"
    $ipconfiguration.properties.PrivateIPAllocationMethod = "Static"
     
    $ipconfiguration.properties.Subnet = new-object Microsoft.Windows.NetworkController.Subnet
    $ipconfiguration.properties.subnet.ResourceRef = $vnet.Properties.Subnets[0].ResourceRef
     
    $vmnicproperties.IpConfigurations = @($ipconfiguration)
-   New-NetworkControllerNetworkInterface –ResourceID “MyVM_Ethernet1” –Properties $vmnicproperties –ConnectionUri $uri
+   New-NetworkControllerNetworkInterface –ResourceID "MyVM_Ethernet1" –Properties $vmnicproperties –ConnectionUri $uri
    ```
 
 4. Get the InstanceId for the network interface from Network Controller.
@@ -97,7 +93,7 @@ Ensure that you have already created a Virtual Network before using this example
     
    $FeatureId = "9940cd46-8b06-43bb-b9d5-93d50381fd56"
     
-   $vmNics = Get-VMNetworkAdapter -VMName “MyVM”
+   $vmNics = Get-VMNetworkAdapter -VMName "MyVM"
     
    $CurrentFeature = Get-VMSwitchExtensionPortFeature -FeatureId $FeatureId -VMNetworkAdapter $vmNics
     
@@ -128,7 +124,7 @@ Ensure that you have already created a Virtual Network before using this example
 6. Start the VM.
 
    ```PowerShell
-    Get-VM -Name “MyVM” | Start-VM 
+    Get-VM -Name "MyVM" | Start-VM 
    ```
 
 You have successfully created a VM, connected the VM to a tenant Virtual Network, and started the VM so that it can process tenant workloads.
@@ -149,7 +145,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 2. Set the VLAN ID on the VM network adapter.
 
    ```PowerShell
-   Set-VMNetworkAdapterIsolation –VMName “MyVM” -AllowUntaggedTraffic $true -IsolationMode VLAN -DefaultIsolationId 123
+   Set-VMNetworkAdapterIsolation –VMName "MyVM" -AllowUntaggedTraffic $true -IsolationMode VLAN -DefaultIsolationId 123
    ```
 
 3. Get the logical network subnet and create the network interface. 
@@ -168,14 +164,14 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
     $ipconfiguration = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfiguration
     $ipconfiguration.resourceid = "MyVM_Ip1"
     $ipconfiguration.properties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationProperties
-    $ipconfiguration.properties.PrivateIPAddress = “10.127.132.177”
+    $ipconfiguration.properties.PrivateIPAddress = "10.127.132.177"
     $ipconfiguration.properties.PrivateIPAllocationMethod = "Static"
 
     $ipconfiguration.properties.Subnet = new-object Microsoft.Windows.NetworkController.Subnet
     $ipconfiguration.properties.subnet.ResourceRef = $logicalnet.Properties.Subnets[0].ResourceRef
 
     $vmnicproperties.IpConfigurations = @($ipconfiguration)
-    $vnic = New-NetworkControllerNetworkInterface –ResourceID “MyVM_Ethernet1” –Properties $vmnicproperties –ConnectionUri $uri
+    $vnic = New-NetworkControllerNetworkInterface –ResourceID "MyVM_Ethernet1" –Properties $vmnicproperties –ConnectionUri $uri
 
     $vnic.InstanceId
    ```
@@ -186,7 +182,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
    #The hardcoded Ids in this section are fixed values and must not change.
    $FeatureId = "9940cd46-8b06-43bb-b9d5-93d50381fd56"
 
-   $vmNics = Get-VMNetworkAdapter -VMName “MyVM”
+   $vmNics = Get-VMNetworkAdapter -VMName "MyVM"
 
    $CurrentFeature = Get-VMSwitchExtensionPortFeature -FeatureId $FeatureId -VMNetworkAdapter $vmNic
         
@@ -217,7 +213,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 5. Start the VM.
 
    ```PowerShell
-   Get-VM -Name “MyVM” | Start-VM 
+   Get-VM -Name "MyVM" | Start-VM 
    ```
 
 You have successfully created a VM, connected the VM to a VLAN, and started the VM so that it can process tenant workloads.

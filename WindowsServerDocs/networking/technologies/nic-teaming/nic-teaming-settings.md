@@ -2,16 +2,12 @@
 title: NIC Teaming settings
 description:  In this topic, we give you an overview of the NIC Team properties such as teaming and load balancing modes. We also give you details about the Standby adapter setting and the Primary team interface property. If you have at least two network adapters in a NIC Team, you do not need to designate a Standby adapter for fault tolerance.
 manager: dougkim
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-nict
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/13/2018
 ---
 
@@ -108,7 +104,7 @@ After you click the highlighted link, the following **New Team Interface** dialo
   
 If you are using VLANs, you can use this dialog box to specify a VLAN number.  
   
-Whether or  not you are using VLANs, you can specify a tNIC name for the NIC Team.  
+Whether or not you are using VLANs, you can specify a NIC name for the NIC Team.  
   
 
 

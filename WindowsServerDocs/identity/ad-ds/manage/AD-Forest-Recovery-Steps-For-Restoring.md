@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Steps for Restoring the forest 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

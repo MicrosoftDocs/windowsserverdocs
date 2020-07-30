@@ -1,12 +1,8 @@
 ---
 title: Work with Video Devices
 description: Learn how video monitors and projectors work with stations in MultiPoint Services
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2f7f5a97-efd2-4184-8ad3-cf029d615eab
 author: lizap
@@ -47,9 +43,9 @@ When using either option, note the following:
   
 -   You may need to obtain adapter or converter devices to convert between DVI and VGA plugs.  
   
--   Use of a “Y” splitter cable may decrease video quality on both video devices.  
+-   Use of a "Y" splitter cable may decrease video quality on both video devices.  
   
--   When using both a projector and a monitor via a “Y” splitter cable, MultiPoint Services adjusts the screen resolution of both devices to the lowest maximum resolution of either device—most typically the projector.  
+-   When using both a projector and a monitor via a "Y" splitter cable, MultiPoint Services adjusts the screen resolution of both devices to the lowest maximum resolution of either device—most typically the projector.  
   
 -   MultiPoint Services does not support extending a single station's display across multiple monitors.  
   

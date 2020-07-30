@@ -1,12 +1,8 @@
 ---
 title: nslookup set vc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the nslookup set vc command, which specifies whether to use a virtual circuit when sending requests to the server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e9232c92-cd8d-4eff-8ae5-0647bd03bdcb
 author: coreyp-at-msft
@@ -17,9 +13,7 @@ ms.date: 10/16/2017
 
 # nslookup set vc
 
-
-
-Specifies to use or not use a virtual circuit when sending requests to the server.
+Specifies whether to use a virtual circuit when sending requests to the server.
 
 ## Syntax
 
@@ -27,14 +21,16 @@ Specifies to use or not use a virtual circuit when sending requests to the serve
 set [no]vc
 ```
 
-## Parameters
+### Parameters
 
-| Parameter |                                              Description                                               |
-|-----------|--------------------------------------------------------------------------------------------------------|
-| **novc**  | Specifies to never use a virtual circuit when sending requests to the server. The default is **novc**. |
-|  **vc**   |             Specifies to always use a virtual circuit when sending requests to the server.             |
-|   {help   |                                                   ?}                                                   |
 
-#### Additional references
+| Parameter | Description |
+| ---------- | ---------- |
+| novc | Specifies to never use a virtual circuit when sending requests to the server. This is the default value. |
+| vc | Specifies to always use a virtual circuit when sending requests to the server. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,5 @@
 ---
 title: AD Forest Recovery - Resetting the krbtgt password 
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman

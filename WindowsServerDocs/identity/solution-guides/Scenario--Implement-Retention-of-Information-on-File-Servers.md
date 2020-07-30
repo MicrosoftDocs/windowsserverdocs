@@ -1,14 +1,12 @@
 ---
 ms.assetid: 81c55015-82e5-4ba1-b15e-cc7b49af28fc
 title: Scenario Implement Retention of Information on File Servers
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -38,9 +36,7 @@ The following table lists the features that are part of this scenario and descri
   
 |Feature|How it supports this scenario|  
 |-----------|---------------------------------|  
-|[File Server Resource Manager Overview](https://technet.microsoft.com/library/hh831701.aspx)|File Classification Infrastructure is a feature that is included in File Server Resource Manager.|  
-|[File and Storage Services Overview](https://technet.microsoft.com/library/hh831487.aspx)|File Server Resource Manager is a feature that is included with the File Services server role.|  
+|[File Server Resource Manager Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11))|File Classification Infrastructure is a feature that is included in File Server Resource Manager.|  
+|[File and Storage Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))|File Server Resource Manager is a feature that is included with the File Services server role.|  
   
   
-
-

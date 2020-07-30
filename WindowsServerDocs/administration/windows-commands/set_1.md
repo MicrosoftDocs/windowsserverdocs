@@ -1,15 +1,10 @@
 ---
 title: set
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for set, which displays, sets, or removes cmd.exe environment variables.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -18,11 +13,9 @@ ms.date: 10/16/2017
 
 # set
 
+Displays, sets, or removes cmd.exe environment variables. If used without parameters, **set** displays the current environment variable settings.
 
 
-Displays, sets, or removes CMD.EXE environment variables. If used without parameters, **set** displays the current environment variable settings.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -32,7 +25,7 @@ set [/p] <Variable>=[<PromptString>]
 set /a <Variable>=<Expression>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -51,7 +44,7 @@ set /a <Variable>=<Expression>
   When command extensions are enabled (the default) and you run **set** with a value, it displays all of the variables that begin with that value.
 - Using special characters
 
-  The characters **<**, **>**, **|**, **&**, **^** are special command shell characters, and they must be preceded by the escape character (**^**) or enclosed in quotation marks when used in *String* (for example, **"StringContaining&Symbol"**). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value.
+  The characters **<**, **>**, **|**, **&**, **^** are special command shell characters, and they must be preceded by the escape character (**^**) or enclosed in quotation marks when used in *String* (for example, **StringContaining&Symbol**). If you use quotation marks to enclose a string that contains one of the special characters, the quotation marks are set as part of the environment variable value.
 - Using environment variables
 
   Use environment variables to control the behavior of some batch files and programs and to control the way Windows and the MS-DOS subsystem appears and works. The **set** command is often used in the Autoexec.nt file to set environment variables.
@@ -65,7 +58,7 @@ set /a <Variable>=<Expression>
   If you specify only a variable and an equal sign (without *String*) for the **set** command, the *String* value associated with the variable is cleared (as if the variable is not there).
 - Using **/a**
 
-  The following table lists the operators supported for **/a** in descending order of precedence.  
+  The following table lists the operators supported for **/a** in descending order of precedence.
 
   |        Operator         | Operation performed  |
   |-------------------------|----------------------|
@@ -101,7 +94,7 @@ set /a <Variable>=<Expression>
 
   The **set** command, with different parameters, is available from the Recovery Console.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To set an environment variable named TEST^1, type:
 ```
@@ -111,11 +104,11 @@ set testVar=test^^1
 > [!NOTE]
 > The **set** command assigns everything that follows the equal sign (=) to the value of the variable. If you type:
 > ```
-> set testVar="test^1"
+> set testVar=test^1
 > ```
 > You get the following result:
 > ```
-> testVar="test^1"
+> testVar=test^1
 > ```
 > To set an environment variable named TEST&1, type:
 > ```
@@ -141,12 +134,12 @@ set
 ```
 To display a list of all of the environment variables that begin with the letter P, type:
 ```
-set p 
+set p
 ```
 
 > [!NOTE]
 > This command requires command extensions, which are enabled by default.
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

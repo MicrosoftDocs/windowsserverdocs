@@ -1,14 +1,8 @@
 ---
 title: How to Configure Protected Accounts
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: na
-ms.suite: na
 ms.technology: security-auditing
-ms.tgt_pltfrm: na
 ms.topic: article
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

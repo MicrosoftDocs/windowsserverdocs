@@ -1,12 +1,12 @@
 ---
 title: secedit:import
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 1dd59d4c-9d48-444a-871b-b957eb682597
 author: coreyp-at-msft
@@ -19,7 +19,7 @@ ms.date: 10/16/2017
 
 
 
-Imports security settings stored in an inf file previously exported from the database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Imports security settings stored in an inf file previously exported from the database configured with security templates.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ Imports security settings stored in an inf file previously exported from the dat
 Secedit /import /db <database file name> /cfg <configuration file name> [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
 ```
 
-### Parameters
+#### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -47,7 +47,7 @@ If the path for the log file is not provided, the default log file, (*systemroot
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 
 Export the security database and the domain security policies to an inf file and then import that file to a different database in order to replicate the security policy settings on another computer.
 ```
@@ -58,10 +58,10 @@ Import just the security policies portion of the file to a different database on
 Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies\SecContoso.inf /areas securitypolicy /log C:\Security\FY11\SecAnalysisContosoFY12.log /quiet
 ```
 
-#### Additional references
+## Additional References
 
 -   [Secedit:export](secedit-export.md)
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Secedit:validate](secedit-validate.md)
 -   [Secedit](secedit.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

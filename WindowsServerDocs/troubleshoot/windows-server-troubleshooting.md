@@ -1,17 +1,9 @@
 ---
 title: Troubleshooting Windows Server
 description: Get links to troubleshooting articles for Windows Server issues
-layout: LandingPage
 ms.prod: windows-server
-ms.custom: 
-- CI 113175
-- CSSTroubleshooting
-audience: Admin
-ms.service: na
-manager: 
 ms.technology: server-general
 ms.date: 1/24/2020
-ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
 ---
@@ -40,17 +32,17 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot startup and restart
 
-- [Advanced troubleshooting for Windows startup](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup.md)
-- [How to determine the appropriate page file size for 64-bit versions of Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size.md)
-- [Generate a kernel or complete crash dump](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump.md)
-- [Introduction to the page file](https://docs.microsoft.com/windows/client-management/introduction-page-file.md)
-- [Configure system failure and recovery options in Windows](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options.md)
-- [Advanced troubleshooting for Windows boot problems](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems.md)
-- [Advanced troubleshooting for Windows-based computer freeze](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze.md)
-- [Advanced troubleshooting for stop error or blue screen error](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors.md)
-- [Advanced troubleshooting for stop error 7B or Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device.md)
-- [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart.md)
-- [Stop error occurs when you update the in-box Broadcom network adapter driver](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update.md)
+- [Advanced troubleshooting for Windows startup](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup)
+- [How to determine the appropriate page file size for 64-bit versions of Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)
+- [Generate a kernel or complete crash dump](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump)
+- [Introduction to the page file](https://docs.microsoft.com/windows/client-management/introduction-page-file)
+- [Configure system failure and recovery options in Windows](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options)
+- [Advanced troubleshooting for Windows boot problems](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems)
+- [Advanced troubleshooting for Windows-based computer freeze](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze)
+- [Advanced troubleshooting for stop error or blue screen error](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors)
+- [Advanced troubleshooting for stop error 7B or Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device)
+- [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart)
+- [Stop error occurs when you update the in-box Broadcom network adapter driver](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update)
 
 ## Troubleshoot AD forest recovery
 
@@ -110,6 +102,19 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Troubleshooting a Failover Cluster using Windows Error Reporting](https://docs.microsoft.com/windows-server/failover-clustering/troubleshooting-using-wer-reports)
 - [Cluster-Aware Updating - Frequently Asked Questions](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating-faq)
+- [Troubleshooting cluster issue with Event ID 1135](https://docs.microsoft.com/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135)
+- [Having a problem with nodes being removed from active Failover Cluster membership](https://docs.microsoft.com/windows-server/troubleshoot/problem-nodes-failover-cluster)
+- [Nodes being removed from Failover Cluster membership on VMWare ESX](https://docs.microsoft.com/windows-server/troubleshoot/nodes-failover-cluster-vmware)
+- [IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds](https://docs.microsoft.com/windows-server/troubleshoot/iaas-sql-failover-cluster)
+
+## Troubleshoot DHCP
+
+- [Troubleshooting guide for Dynamic Host Configuration Protocol (DHCP)](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-dhcp-issue)
+- [DHCP (Dynamic Host Configuration Protocol) Basics](https://docs.microsoft.com/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics)
+- [General guidance to troubleshoot DHCP](https://docs.microsoft.com/windows-server/troubleshoot/general-guidance-to-troubleshoot-dhcp)
+- [How to use automatic TCP/IP addressing without a DHCP server](https://docs.microsoft.com/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh)
+- [Troubleshoot problems on the DHCP client](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-problems-on-dhcp-client)
+- [Troubleshoot problems on the DHCP server](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-problems-on-dhcp-server)
 
 ## Troubleshoot FSRM
 

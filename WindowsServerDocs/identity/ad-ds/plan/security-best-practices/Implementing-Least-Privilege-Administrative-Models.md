@@ -1,21 +1,19 @@
 ---
 ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementing Least-Privilege Administrative Models
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 # Implementing Least-Privilege Administrative Models
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The following excerpt is from [The Administrator Accounts Security Planning Guide](https://technet.microsoft.com/library/cc162797.aspx), first published on April 1, 1999:
+The following excerpt is from [The Administrator Accounts Security Planning Guide](/previous-versions/tn-archive/cc162797(v=technet.10)), first published on April 1, 1999:
 
 > "Most security-related training courses and documentation discuss the implementation of a principle of least privilege, yet organizations rarely follow it. The principle is simple, and the impact of applying it correctly greatly increases your security and reduces your risk. The principle states that all users should log on with a user account that has the absolute minimum permissions necessary to complete the current task and nothing more. Doing so provides protection against malicious code, among other attacks. This principle applies to computers and the users of those computers.   
 > "One reason this principle works so well is that it forces you to do some internal research. For example, you must determine the access privileges that a computer or user really needs, and then implement them. For many organizations, this task might initially seem like a great deal of work; however, it is an essential step to successfully secure your network environment.
@@ -104,7 +102,7 @@ Should a member server or workstation become disjoined from the domain with no o
 
 ### Securing Local Privileged Accounts and Groups in Active Directory
 
-*Law Number Six: A computer is only as secure as the administrator is trustworthy.* - [Ten Immutable Laws of Security (Version 2.0)](https://technet.microsoft.com/security/hh278941.aspx)  
+*Law Number Six: A computer is only as secure as the administrator is trustworthy.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)  
 
 The information provided here is intended to give general guidelines for securing the highest privilege built-in accounts and groups in Active Directory. Detailed step-by-step instructions are also provided in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md), [Appendix E: Securing Enterprise Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md), [Appendix F: Securing Domain Admins Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md), and in [Appendix G: Securing Administrators Groups in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md).  
 
@@ -229,7 +227,7 @@ Administrators are, by default, the owners of most of the AD DS objects in their
 > [!NOTE]  
 > When you implement restrictions on the Administrators group in GPOs, Windows applies the settings to members of a computer's local Administrators group in addition to the domain's Administrators group. Therefore, you should use caution when implementing restrictions on the Administrators group. Although prohibiting network, batch and service logons for members of the Administrators group is advised wherever it is feasible to implement, do not restrict local logons or logons through Remote Desktop Services. Blocking these logon types can block legitimate administration of a computer by members of the local Administrators group. The following screenshot shows configuration settings that block misuse of built-in local and domain Administrator accounts, in addition to misuse of built-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computer's Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.  
 >
-> ![least priviledge admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_3.gif)  
+> ![least privilege admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_3.gif)  
 
 ### Role-Based Access Controls (RBAC) for Active Directory
 
@@ -275,7 +273,7 @@ If you implement native RBAC and PIM, however, you should consider creating acco
 
 ### Implementing Robust Authentication Controls
 
-*Law Number Six: There really is someone out there trying to guess your passwords.* - [10 Immutable Laws of Security Administration](https://technet.microsoft.com/library/cc722488.aspx)  
+*Law Number Six: There really is someone out there trying to guess your passwords.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))  
 
 Pass-the-hash and other credential theft attacks are not specific to Windows operating systems, nor are they new. The first pass-the-hash attack was created in 1997. Historically, however, these attacks required customized tools, were hit-or-miss in their success, and required attackers to have a relatively high degree of skill. The introduction of freely available, easy-to-use tooling that natively extracts credentials has resulted in an exponential increase in the number and success of credential theft attacks in recent years. However, credential theft attacks are by no means the only mechanisms by which credentials are targeted and compromised.  
 
@@ -293,7 +291,7 @@ In cases in which long, complex passwords have proven difficult to implement bec
 
 Another benefit of implementing smart cards or other certificate-based authentication mechanisms is the ability to leverage Authentication Mechanism Assurance to protect sensitive data that is accessible to VIP users. Authentication Mechanism Assurance is available in domains in which the functional level is set to Windows Server 2012 or Windows Server 2008 R2. When it is enabled, Authentication Mechanism Assurance adds an administrator-designated global group membership to a user's Kerberos token when the user's credentials are authenticated during logon using a certificate-based logon method.  
 
-This makes it possible for resource administrators to control access to resources, such as files, folders, and printers, based on whether the user logs on using a certificate-based logon method, in addition to the type of certificate used. For example, when a user logs on by using a smart card, the user's access to resources on the network can be specified as different from what the access is when the user does not use a smart card (that is, when the user logs on by entering a user name and password). For more information about Authentication Mechanism Assurance, see the [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](https://technet.microsoft.com/library/dd378897.aspx).  
+This makes it possible for resource administrators to control access to resources, such as files, folders, and printers, based on whether the user logs on using a certificate-based logon method, in addition to the type of certificate used. For example, when a user logs on by using a smart card, the user's access to resources on the network can be specified as different from what the access is when the user does not use a smart card (that is, when the user logs on by entering a user name and password). For more information about Authentication Mechanism Assurance, see the [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378897(v=ws.10)).  
 
 #### Configuring Privileged Account Authentication
 
@@ -309,7 +307,7 @@ Although a thorough discussion of attacks against public key infrastructures (PK
 
 When a certificate is presented for authentication to a domain-joined system, the contents of the Subject or the Subject Alternative Name (SAN) attribute in the certificate are used to map the certificate to a user object in Active Directory. Depending on the type of certificate and how it is constructed, the Subject attribute in a certificate typically contains a user's common name (CN), as shown in the following screenshot.  
 
-![least priviledge admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)  
+![least privilege admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)  
 
 By default, Active Directory constructs a user's CN by concatenating the account's first name + " "+ last name. However, CN components of user objects in Active Directory are not required or guaranteed to be unique, and moving a user account to a different location in the directory changes the account's distinguished name (DN), which is the full path to the object in the directory, as shown in the bottom pane of the previous screenshot.  
 

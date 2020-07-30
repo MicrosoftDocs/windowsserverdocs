@@ -1,7 +1,6 @@
 ---
 ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Configure Authentication Policies
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,7 +8,6 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-
 ---
 
 # Configure Authentication Policies
@@ -126,7 +124,7 @@ Membership in Administrators, or equivalent, on the local computer is the minimu
 
 
 ~~~
-$MfaClaimRule = “c:[Type == ‘“https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'”, Value =~ ‘“^(?i) <group_SID>$'”] => issue(Type = ‘“https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'”, Value ‘“https://schemas.microsoft.com/claims/multipleauthn'”);” 
+$MfaClaimRule = "c:[Type == '"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'", Value =~ '"^(?i) <group_SID>$'"] => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value '"https://schemas.microsoft.com/claims/multipleauthn'");" 
 
 Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules $MfaClaimRule
 ~~~
@@ -141,8 +139,8 @@ Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationR
 
 
 ~~~
-$MfaClaimRule = “c:[Type == ‘" https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'", Value == ‘"group_SID'"]  
- => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn'");”  
+$MfaClaimRule = "c:[Type == '" https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid'", Value == '"group_SID'"]  
+ => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = '"https://schemas.microsoft.com/claims/multipleauthn'");"  
 
 Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 ~~~
@@ -157,8 +155,8 @@ Set-AdfsAdditionalAuthenticationRule $MfaClaimRule
 
 
 ~~~
-$MfaClaimRule = “c:[Type == ‘" https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork'", Value == ‘"true_or_false'"]  
- => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn'");”  
+$MfaClaimRule = "c:[Type == '" https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork'", Value == '"true_or_false'"]  
+ => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = '"https://schemas.microsoft.com/claims/multipleauthn'");"  
 
 Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 ~~~
@@ -174,8 +172,8 @@ Set-AdfsAdditionalAuthenticationRule $MfaClaimRule
 
 
 ~~~
-$MfaClaimRule = "c:[Type == ‘" https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser'", Value == ‘"true_or_false"']  
- => issue(Type = ‘"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = ‘"https://schemas.microsoft.com/claims/multipleauthn'");"  
+$MfaClaimRule = "c:[Type == '" https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser'", Value == '"true_or_false"']  
+ => issue(Type = '"https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod'", Value = '"https://schemas.microsoft.com/claims/multipleauthn'");"  
 
 Set-AdfsAdditionalAuthenticationRule $MfaClaimRule  
 ~~~
@@ -225,7 +223,7 @@ Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com
 
    ```  
 
-     $GroupAuthzRule = "@RuleTemplate = `“Authorization`” @RuleName = `"Foo`" c:[Type == `"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value =~ `"^(?i)<group_SID>$`"] =>issue(Type = `"https://schemas.microsoft.com/authorization/claims/deny`", Value = `"DenyUsersWithClaim`");"  
+     $GroupAuthzRule = "@RuleTemplate = `"Authorization`" @RuleName = `"Foo`" c:[Type == `"https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid`", Value =~ `"^(?i)<group_SID>$`"] =>issue(Type = `"https://schemas.microsoft.com/authorization/claims/deny`", Value = `"DenyUsersWithClaim`");"  
    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –IssuanceAuthorizationRules $GroupAuthzRule  
    ```  
 
@@ -250,7 +248,7 @@ Set-AdfsAdditionalAuthenticationRule "c:[Type == `"https://schemas.microsoft.com
    ```  
    $GroupAuthzRule = "@RuleTemplate = `"Authorization`"  
    @RuleName = `"PermitAccessWithMFA`"  
-   c:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)https://schemas\.microsoft\.com/claims/multipleauthn$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = ‘“PermitUsersWithClaim'");"  
+   c:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)https://schemas\.microsoft\.com/claims/multipleauthn$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = '"PermitUsersWithClaim'");"  
 
    ```  
 
@@ -293,10 +291,10 @@ c:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregist
 2. In the same Windows PowerShell command window, run the following command.  
 
    ```  
-   $GroupAuthzRule = ‘@RuleTemplate = “Authorization”  
-   @RuleName = “RequireMFAOnRegisteredWorkplaceJoinedDevice”  
+   $GroupAuthzRule = '@RuleTemplate = "Authorization"  
+   @RuleName = "RequireMFAOnRegisteredWorkplaceJoinedDevice"  
    c1:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Value =~ `"^(?i)http://schemas\.microsoft\.com/claims/multipleauthn$`"] &&  
-   c2:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$”] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
+   c2:[Type == `"https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser`", Value =~ `"^(?i)true$"] => issue(Type = "https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
 
    ```  
 
@@ -325,4 +323,4 @@ c2:[Type == `"https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`",
 
 ## Additional references  
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

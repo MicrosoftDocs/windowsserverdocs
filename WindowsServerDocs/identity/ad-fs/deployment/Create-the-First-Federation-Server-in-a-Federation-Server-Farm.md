@@ -1,13 +1,11 @@
 ---
 ms.assetid: 5e334c4e-75a7-453c-83e8-5ab4243cc685
 title:  Create the First Federation Server in a Federation Server Farm
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
@@ -19,7 +17,7 @@ After you install the Federation Service role service and configure the required
 The act of creating the first federation server in a farm also creates a new Federation Service and makes this computer the primary federation server. This means that this computer will be configured with a read\/write copy of the AD FS configuration database. All other federation servers in this farm must replicate any changes that are made on the primary federation server to their read\-only copies of the AD FS configuration database that they store locally. For more information about this replication process, see [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 > [!NOTE]  
-> For the Federated Web Single\-Sign\-On \(SSO\) design, you must have at least one federation server in the account partner organization and at least one federation server in the resource partner organization. For more information, see [Where to Place a Federation Server](https://technet.microsoft.com/library/dd807127.aspx).  
+> For the Federated Web Single\-Sign\-On \(SSO\) design, you must have at least one federation server in the account partner organization and at least one federation server in the resource partner organization. For more information, see [Where to Place a Federation Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807127(v=ws.11)).  
   
 Membership in Domain Admins, or a delegated domain account that has been granted write access to the Program Data container in Active Directory, is the minimum required to complete this procedure.  
   
@@ -62,4 +60,3 @@ Membership in Domain Admins, or a delegated domain account that has been granted
 ## Additional references  
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)  
   
-

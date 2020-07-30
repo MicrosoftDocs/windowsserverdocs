@@ -1,6 +1,6 @@
 ---
 title: File Management Tasks
-description: This article describes the process of automating file management tasks 
+description: This article describes the process of automating file management tasks
 ms.date: 7/7/2017
 ms.prod: windows-server
 ms.technology: storage
@@ -36,7 +36,7 @@ This section includes the following topics:
 > [!Note]
 > To set e-mail notifications and certain reporting capabilities, you must first configure the general File Server Resource Manager options.
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 

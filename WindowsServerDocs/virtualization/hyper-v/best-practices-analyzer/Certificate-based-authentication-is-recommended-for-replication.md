@@ -1,14 +1,13 @@
 ---
 title: Certificate-based authentication is recommended for replication
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Certificate-based authentication is recommended for replication

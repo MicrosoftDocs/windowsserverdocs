@@ -1,12 +1,8 @@
 ---
 title: Administer Software Restriction Policies
-description: "Windows Server Security"
-ms.custom: na
+description: Windows Server Security
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
 author: coreyp-at-msft

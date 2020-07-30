@@ -1,18 +1,14 @@
 ---
 title: Get started with the Android client
 description: General information about the Android client.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2019
+ms.date: 07/16/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Android client
@@ -33,7 +29,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 Here's how to set up the Remote Desktop client on your Android device:
 
-1. Download the Microsoft Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android).
+1. Download the Microsoft Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx).
 2. Launch **RD client** from your list of apps.
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or [remote resources](#add-remote-resources). You use a connection to connect directly to a Windows PC and remote resources to access apps and desktops published to you by an admin.
 
@@ -66,7 +62,7 @@ Need to edit these settings? Tap the **More options** menu (**...**) next to the
 Want to remove the connection? Again, tap the **More options** menu (**...**), and then tap **Remove**.
 
 >[!TIP]
-> If you get error 0xf07 about a bad password ("We couldn't connect to the remote PC because the password associated with the user account has expired"), change your password and try again.
+> If you get error 0xf07 about a bad password (We couldn't connect to the remote PC because the password associated with the user account has expired), change your password and try again.
 
 ### Add remote resources
 
@@ -74,7 +70,9 @@ Remote resources are RemoteApp programs, session-based desktops, and virtual des
 
 1. In the Connection Center, tap **+**, and then tap **Remote Resource Feed**.
 2. Enter the **Feed URL**. This can be a URL or email address:
-   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use `https://rdweb.wvd.microsoft.com`.
+   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs depending on which version you're using:
+     - If you're using the Fall 2019 version, use: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+     - If you're using the Spring 2020 version, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
 3. Tap **Next**.
 4. Provide your sign in information when prompted. This can vary based on the deployment and can include:
@@ -97,7 +95,7 @@ The Remote Desktop client supports pinning connections to your home screen by us
 
 1. Tap **Apps** to launch the apps menu.
 2. Tap **Widgets**.
-3. Swipe through the widgets and look for the Remote Desktop icon with the description: “Pin Remote Desktop.”
+3. Swipe through the widgets and look for the Remote Desktop icon with the description: Pin Remote Desktop.
 4. Tap and hold that Remote Desktop widget and move it to the home screen.
 5. When you release the icon, you'll see the saved remote desktops. Choose the connection that you want to save to your home screen.
 
@@ -124,12 +122,12 @@ To change the display settings tap **Settings**, and then tap **Display** from t
 You can set the following display settings:
 
 - **Orientation** sets the preferred orientation (landscape or portrait) for your session.
-  
+
   >[!NOTE]
   > If you connect to a PC running Windows 8 or earlier, the session won't scale correctly if the orientation of the device changes. To make the client scale correctly, disconnect from the PC, then reconnect in the orientation you want to use. You can also ensure correct scaling by using a PC with Windows 10 instead.
 
 - **Resolution** sets the remote resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual connection, this setting won't change that.
-  
+
   >[!NOTE]
   >When you change the display settings, the changes only apply to new connections you make after the you changed the setting. To apply your changes to the session you're currently connected to, refresh your session by disconnecting and reconnecting.
 
@@ -179,7 +177,7 @@ Here's a brief introduction to how to open and navigate your Remote Desktop sess
 ### Start a Remote Desktop connection
 
 1. Tap **the name of your Remote Desktop connection** to start the session.
-2. If you're asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don’t ask me again for connections to this computer** to always accept the certificate by default.
+2. If you're asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don't ask me again for connections to this computer** to always accept the certificate by default.
 
 ### Connection bar
 
@@ -223,3 +221,11 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 | Mouse pointer | Right-click          | Tap with two fingers                                                    |
 | Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                         |
 | Mouse pointer | Mouse wheel          | Tap and hold with two fingers, then drag up or down                     |
+
+## Join the Beta channel
+
+If you want access to the latest features before anyone else, or want to help identify issues before new versions are released, then the Beta channel is for you! The Beta channel is also a great way for enterprise admins to validate new versions of the Android client for users in their environment.
+
+To join the Beta, simply provide consent to access preview versions and download the client. You'll receive preview versions directly through the Google Play Store.
+
+[Join the Beta](https://play.google.com/apps/testing/com.microsoft.rdc.androidx)

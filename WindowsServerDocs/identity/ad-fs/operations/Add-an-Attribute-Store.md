@@ -1,14 +1,12 @@
 ---
 ms.assetid: c60227a8-7b44-40f8-b807-a6532851a4a6
 title: Add an Attribute Store
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -46,6 +44,6 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
   
 ## Additional references  
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)
   
 [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md)  

@@ -1,12 +1,12 @@
 ---
 title: Install or Uninstall Roles, Role Services, or Features
-description: "Server Manager"
-ms.custom: na
+description: Server Manager
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
 author: coreyp-at-msft

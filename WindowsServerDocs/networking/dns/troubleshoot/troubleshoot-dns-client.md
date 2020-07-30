@@ -2,7 +2,6 @@
 title: Troubleshooting DNS clients
 description: This article introduces how to troubleshoot DNS issue from client-side.
 manager: dcscontentpm
-ms.prod: 
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
@@ -59,19 +58,19 @@ If the DNS client can ping the DNS server computer, try to use the following `ns
 ```cmd
 nslookup <client>
 ```
-  
+
 For example, if the client computer is named **client1**, run this command:
-  
+
 ```cmd
 nslookup client1
 ```
-  
+
 If a successful response is not returned, try to run the following command:
-  
+
 ```cmd
 nslookup <fqdn of client>
 ```
-  
+
 For example, if the FQDN is **client1.corp.contoso.com**, run this command:
 
 ```cmd
@@ -81,7 +80,7 @@ nslookup client1.corp.contoso.com.
 > [!NOTE]
 > You must include the trailing period when you run this test.
 
-If Windows successfully finds the FQDN but cannot find the short name, check the DNS Suffix configuration on the DNS tab of the Advanced TCP/IP Settings of the NIC. For more information, see [Configuring DNS Resolution](https://docs.microsoft.com/previous-versions/tn-archive/dd163570(v=technet.10)#configuring-dns-resolution).
+If Windows successfully finds the FQDN but cannot find the short name, check the DNS Suffix configuration on the DNS tab of the Advanced TCP/IP Settings of the NIC. For more information, see [Configuring DNS Resolution](/previous-versions/tn-archive/dd163570(v=technet.10)#configuring-dns-resolution).
 
 #### Test the DNS server
 
@@ -114,12 +113,12 @@ nslookup app1.corp.contoso.com
 nslookup <external name>
 ```
 
-For example: 
+For example:
 ```cmd
 nslookup bing.com
 ```
 
-If all four of these tests were successful, run `ipconfig /displaydns` and check the output for the name that failed. If you see "Name does not exist" under the failing name, a negative response was returned from a DNS server and was cached on the client. 
+If all four of these tests were successful, run `ipconfig /displaydns` and check the output for the name that failed. If you see "Name does not exist" under the failing name, a negative response was returned from a DNS server and was cached on the client.
 
 To resolve the issue, clear the cache by running `ipconfig /flushdns`.
 

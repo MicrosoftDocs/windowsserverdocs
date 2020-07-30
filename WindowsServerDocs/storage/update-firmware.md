@@ -3,7 +3,7 @@ ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: Updating drive firmware
 ms.prod: windows-server
 ms.author: toklima
-ms.manager: dmoss
+manager: dmoss
 ms.technology: storage-spaces
 ms.topic: article
 author: toklima
@@ -24,11 +24,11 @@ To use Windows Server to update drive firmware, you must have supported drives. 
 Contact your solution vendor for info about whether your hardware supports Windows updating the drive firmware.
 Here are links to the various requirements:
 
--   SATA: [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) - in the **[If Implemented\] Firmware Download & Activate** section
+-   SATA: [Device.Storage.Hd.Sata](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragehdsata) - in the **[If Implemented\] Firmware Download & Activate** section
     
--   SAS: [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) - in the **[If Implemented\] Firmware Download & Activate** section
+-   SAS: [Device.Storage.Hd.Sas](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragehdsas) - in the **[If Implemented\] Firmware Download & Activate** section
 
--   NVMe: [Device.Storage.ControllerDrive.NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) - in sections **5.7** and **5.8**.
+-   NVMe: [Device.Storage.ControllerDrive.NVMe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragecontrollerdrivenvme) - in sections **5.7** and **5.8**.
 
 ## PowerShell cmdlets
 
@@ -99,7 +99,7 @@ Once a server is in production, it's a good idea to make as few changes to the s
 
 1. Review the firmware release notes and confirm that the update addresses issues that could affect your environment, and that the firmware doesn't contain any known issues that could adversely affect you.
 
-2. Install the firmware on a server in your lab that has identical drives (including the revision of the drive if there are multiple revisions of the same drive), and test the drive under load with the new firmware. For info about doing synthetic load testing, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/library/dn894707.aspx).
+2. Install the firmware on a server in your lab that has identical drives (including the revision of the drive if there are multiple revisions of the same drive), and test the drive under load with the new firmware. For info about doing synthetic load testing, see [Test Storage Spaces Performance Using Synthetic Workloads](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11)).
 
 ## Automated firmware updates with Storage Spaces Direct
 

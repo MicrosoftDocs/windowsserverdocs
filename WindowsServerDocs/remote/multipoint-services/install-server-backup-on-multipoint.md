@@ -1,13 +1,9 @@
 ---
 title: Install Server Backup on your MultiPoint server
 description: Walks you through the steps to install the backup and recovery tools
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4331370-ba07-4529-92ab-db14a41bfc3b
 author: evaseydl
@@ -54,4 +50,4 @@ Use the following procedures to set up the type of backup you require.
   
 ## Configure backups using Windows Server Backup  
   
--   Follow the guidance in [Backing Up Your Server](https://technet.microsoft.com/library/cc753528.aspx). 
+-   Follow the guidance in [Backing Up Your Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753528(v=ws.11)). 

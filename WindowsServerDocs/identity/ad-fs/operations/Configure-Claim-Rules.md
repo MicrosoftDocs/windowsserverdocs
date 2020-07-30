@@ -1,14 +1,12 @@
 ---
 ms.assetid: 9cafa3e1-8118-4a75-a7c2-1dbe40b1a444
 title: Configure Claims Rules
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
@@ -38,4 +36,4 @@ The following topics will assist you in creating the rules that AD FS will proce
 -   [Create a Rule to Send Claims Using a Custom Rule](Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
 
 ## See Also  
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md) 
+[AD FS Operations](../ad-fs-operations.md) 

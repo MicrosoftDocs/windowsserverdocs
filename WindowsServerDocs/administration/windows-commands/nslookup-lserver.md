@@ -1,12 +1,8 @@
 ---
 title: nslookup lserver
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the nslookup lserver command, which changes the initial server to the specified Domain Name System (DNS) domain.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
 author: coreyp-at-msft
@@ -14,24 +10,31 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # nslookup lserver
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Changes the default server to the specified Domain Name System (DNS) domain.
+Changes the initial server to the specified Domain Name System (DNS) domain.
+
+This command uses the initial server to look up the information about the specified DSN domain. If you want to lookup information using the current default server, use the [nslookup server](nslookup-server.md) command.
+
 ## Syntax
-```
-lserver <DNSDomain> 
-```
-## Parameters
 
-|    Parameter    |                      Description                      |
-|-----------------|-------------------------------------------------------|
-|   <DNSDomain>   | Specifies the new DNS domain for the default server.  |
-| {help &#124; ?} | Displays a short summary of **nslookup** subcommands. |
+```
+lserver <DNSdomain>
+```
 
-## Remarks
-- The **lserver** command uses the initial server to look up the information about the specified DNS domain. This is in contrast to the **server** command, which uses the current default server.
-  ## additional references
-  [Command-Line Syntax Key](command-line-syntax-key.md)
-  [nslookup server](nslookup-server.md)
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<DNSdomain>` | Specifies the DNS domain for the initial server. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [nslookup server](nslookup-server.md)

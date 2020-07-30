@@ -1,64 +1,79 @@
 ---
 title: logman update counter
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for the logman update counter command, which updates an existing counter data collector's properties.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 607df6d5-876c-428d-a0b3-f59cb244e2ce britw
+ms.assetid: 607df6d5-876c-428d-a0b3-f59cb244e2ce
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # logman update counter
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Update an existing counter data collector's properties.  
+Updates an existing counter data collector's properties.
 
-## Syntax  
-```  
-logman update counter <[-n] <name>> [options]  
-```  
-## Parameters  
+## Syntax
 
-|                    Parameter                     |                                                                               Description                                                                               |
-|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                        /?                        |                                                                    Displays context-sensitive help.                                                                     |
-|                -s <computer name>                |                                                          Perform the command on the specified remote computer.                                                          |
-|                 -config <value>                  |                                                         Specifies the settings file containing command options.                                                         |
-|                   [-n] <name>                    |                                                                       Name of the target object.                                                                        |
-| -f <bin&#124;bincirc&#124;csv&#124;tsv&#124;sql> |                                                            Specifies the log format for the data collector.                                                             |
-|             -[-]u <user [password]>              | Specifies the user to Run As. Entering a \* for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
-|    -m <[start] [stop] [[start] [stop] [...]]>    |                                                change to manual start or stop instead of a scheduled begin or end time.                                                 |
-|                -rf <[[hh:]mm:]ss>                |                                                        Run the data collector for the specified period of time.                                                         |
-|        -b <M/d/yyyy h:mm:ss[AM&#124;PM]>         |                                                              Begin collecting data at the specified time.                                                               |
-|        -e <M/d/yyyy h:mm:ss[AM&#124;PM]>         |                                                               End data collection at the specified time.                                                                |
-|                -si <[[hh:]mm:]ss>                |                                                 Specifies the sample interval for performance counter data collectors.                                                  |
-|              -o <path&#124;dsn!log>              |                                              Specifies the output log file or the DSN and log set name in a SQL database.                                               |
-|                      -[-]r                       |                                                  Repeat the data collector daily at the specified begin and end times.                                                  |
-|                      -[-]a                       |                                                                     append to an existing log file.                                                                     |
-|                      -[-]ow                      |                                                                     Overwrite an existing log file.                                                                     |
-|           -[-]v <nnnnnn&#124;mmddhhmm>           |                                                   attach file versioning information to the end of the log file name.                                                   |
-|                  -[-]rc <task>                   |                                                         Run the command specified each time the log is closed.                                                          |
-|                 -[-]max <value>                  |                                                 Maximum log file size in MB or maximum number of records for SQL logs.                                                  |
-|              -[-]cnf <[[hh:]mm:]ss>              |     When time is specified, create a new file when the specified time has elapsed. When time is not specified, create a new file when the maximum size is exceeded.     |
-|                        -y                        |                                                             Answer yes to all questions without prompting.                                                              |
-|                  -cf <filename>                  |                       Specifies the file listing performance counters to collect. The file should contain one performance counter name per line.                        |
-|               -c <path [path [ ]]>               |                                                              Specifies performance counter(s) to collect.                                                               |
-|                   -sc <value>                    |                                      Specifies the maximum number of samples to collect with a performance counter data collector.                                      |
+```
+logman update counter <[-n] <name>> [options]
+```
 
-## Remarks  
-Where [-] is listed, an extra - negates the option.  
-## <a name="BKMK_examples"></a>Examples  
-The following command updates the data collector perf_log, changing the sample interval to 10 and the log format to CSV and adding versioning to the log file name in the format mmddhhmm.  
-```  
-logman update perf_log -si 10 -f csv -v mmddhhmm  
-```  
-#### additional references  
-[logman](logman.md)  
-[logman create counter](logman-create-counter.md)  
+### Parameters
+
+
+| Parameter | Description |
+| --------- | ----------- |
+| -s `<computer name>` | Perform the command on the specified remote computer. |
+| -config `<value>` | Specifies the settings file containing command options. |
+| [-n] `<name>` | Name of the target object. |
+| -f `<bin|bincirc>` | Specifies the log format for the data collector. |
+| -[-]u `<user [password]>` | Specifies the user to Run As. Entering an `*` for the password produces a prompt for the password. The password is not displayed when you type it at the password prompt. |
+| -m `<[start] [stop] [[start] [stop] [...]]>` | Changes to manual start or stop instead of a scheduled begin or end time. |
+| -rf `<[[hh:]mm:]ss>` | Runs the data collector for the specified period of time. |
+| -b `<M/d/yyyy h:mm:ss[AM|PM]>` | Begins collecting data at the specified time. |
+| -e `<M/d/yyyy h:mm:ss[AM|PM]>` | Ends data collection at the specified time. |
+| -si `<[[hh:]mm:]ss>` | Specifies the sample interval for performance counter data collectors. |
+| -o `<path|dsn!log>` | Specifies the output log file or the DSN and log set name in a SQL database. |
+| -[-]r | Repeats the data collector daily at the specified begin and end times. |
+| -[-]a | Appends an existing log file. |
+| -[-]ow | Overwrites an existing log file. |
+| -[-]v `<nnnnnn|mmddhhmm>` | Attaches file versioning information to the end of the log file name. |
+| -[-]rc `<task>` | Runs the command specified each time the log is closed. |
+| -[-]max `<value>` | Maximum log file size in MB or maximum number of records for SQL logs. |
+| -[-]cnf `<[[hh:]mm:]ss>` | When time is specified, create a new file when the specified time has elapsed. When time is not specified, create a new file when the maximum size is exceeded. |
+| -y | Answers yes to all questions without prompting. |
+| -cf `<filename>` | Specifies the file listing performance counters to collect. The file should contain one performance counter name per line. |
+| -c `<path [path [ ]]>` | Specifies performance counter(s) to collect. |
+| -sc `<value>` | Specifies the maximum number of samples to collect with a performance counter data collector. |
+| /? | Displays context-sensitive help. |
+
+#### Remarks
+
+- Where [-] is listed, adding an extra hyphen (-) negates the option.
+
+### Examples
+
+To create a counter called *perf_log* using the % Processor time counter from the Processor(_Total) counter category, type:
+
+```
+logman create counter perf_log -c \Processor(_Total)\% Processor time
+```
+
+To update an existing counter called *perf_log*, changing the sample interval to 10, the log format to CSV, and adding versioning to the log file name in the format mmddhhmm, type:
+
+```
+logman update counter perf_log -si 10 -f csv -v mmddhhmm
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [logman create counter command](logman-create-counter.md)
+
+- [logman command](logman.md)

@@ -1,12 +1,12 @@
 ---
 title: Manage the Local Server and the Server Manager Console
-description: "Server Manager"
-ms.custom: na
+description: Server Manager
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
 author: coreyp-at-msft
@@ -36,7 +36,7 @@ This topic contains the following sections.
 
 -   [Manage roles on role home pages](#BKMK_roles)
 
-## <a name="BKMK_shutdown"></a>Shut down the local server
+## <a name=BKMK_shutdown></a>Shut down the local server
 The **Tasks** menu in the local server **Properties** tile lets you start a Windows PowerShell session on the local server, open the **computer Management** mmc snap-in, or open mmc snap-ins for roles or features that are installed on the local server. You can also shut down the local server by using the **Shut Down Local Server** command in this **Tasks** menu. The **Shut Down Local Server** command is also available for the local server in the **Servers** tile on the **All Servers** page, or on any role or group page in which the local server is represented.
 
 Shutting down the local server by using this method, unlike shutting down Windows Server 2016 from the **start** screen, opens the **Shut Down Windows** dialog box, which lets you specify reasons for shutdown in the **shutdown Event Tracker** area.
@@ -44,7 +44,7 @@ Shutting down the local server by using this method, unlike shutting down Window
 > [!NOTE]
 > Only members of the Administrators group can shut down or restart a server. Standard users cannot shut down or restart a server. Clicking the **Shut Down Local Server** command logs standard users off server sessions. This matches the experience of a standard user running the **Alt+F4** shutdown command from the server desktop.
 
-## <a name="BKMK_props"></a>Configure Server Manager properties
+## <a name=BKMK_props></a>Configure Server Manager properties
 You can view or change the following settings in the **Properties** tile on the **Local Server** page. To change a setting's value, click the hypertext value of the setting.
 
 > [!NOTE]
@@ -75,7 +75,7 @@ You can view or change the following settings in the **Properties** tile on the 
 |Installed memory (RAM)|This read-only field displays the amount of available RAM, in gigabytes.|
 |Total disk space|This read-only field displays the amount of available disk space, in gigabytes.|
 
-## <a name="BKMK_managesm"></a>Manage the Server Manager console
+## <a name=BKMK_managesm></a>Manage the Server Manager console
 Global settings that apply to the entire Server Manager console, and to all remote servers that have been added to the Server Manager server pool, are found in the heading bars at the top of the Server Manager console window.
 
 ### add servers to Server Manager
@@ -111,7 +111,7 @@ The **Do not start Server Manager automatically at logon** check box in the **Se
 ### Zoom in or out
 To zoom in or out on your view of the Server Manager console, you can either use the **Zoom** commands on the **View** menu, or press **Ctrl+Plus (+)** to zoom in and **Ctrl+Minus (-)** to zoom out.
 
-## <a name="BKMK_tools"></a>Customize tools that are displayed in the Tools menu
+## <a name=BKMK_tools></a>Customize tools that are displayed in the Tools menu
 The **Tools** menu in Server Manager includes soft links to shortcuts in the **Administrative Tools** folder in **Control Panel/System and Security**. The **Administrative Tools** folder contains a list of shortcuts or LNK files to available management tools, such as mmc snap-ins. Server Manager populates the **Tools** menu with links to those shortcuts, and copies the folder structure of the **Administrative Tools** folder to the **Tools** menu. By default, tools in the Administrative Tools folder are arranged in a flat list, sorted by type and by name. In the Server Manager**Tools** menu, items are sorted only by name, not by type.
 
 To customize the **Tools** menu, copy tool or script shortcuts that you want to use to the **Administrative Tools** folder. You can also organize your shortcuts in folders, which create cascading menus in the **Tools** menu. additionally, if you want to restrict access to the custom tools on the **Tools** menu, you can set user access rights on both your custom tool folders in Administrative Tools, or directly on the original tool or script files.
@@ -152,7 +152,7 @@ The following procedure describes how to create an example folder called *MyTool
 
 8.  Refresh or restart Server Manager, if necessary, to see your custom tool shortcut in the **Tools** menu.
 
-## <a name="BKMK_roles"></a>Manage roles on role home pages
+## <a name=BKMK_roles></a>Manage roles on role home pages
 After you add servers to the Server Manager server pool, and Server Manager collects inventory data about servers in your pool, Server Manager adds pages to the navigation pane for roles that are discovered on managed servers. The **Servers** tile on role pages lists managed servers that are running the role. By default, **Events**, **Best Practices Analyzer**, **Services**, and **Performance** tiles display data for all servers that are running the role; selecting specific servers in the **Servers** tile limits the scope of events, services, performance counters, and BPA results to selected servers only. Management tools are typically available in the Server Manager console **Tools** menu, after a role or feature has been installed or discovered on a managed server. You can also right-click server entries in the **Servers** tile for a role or group, and then start the management tool that you want to use.
 
 In Windows Server 2016, the following roles and feature have management tools that are integrated into Server Manager console as pages.

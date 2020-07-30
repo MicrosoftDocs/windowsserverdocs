@@ -7,20 +7,20 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 06/06/2019
+ms.date: 02/25/2020
 ---
 # Creating volumes in Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-This topic describes how to create volumes on a Storage Spaces Direct cluster by using Windows Admin Center, PowerShell, or Failover Cluster Manager.
+This topic describes how to create volumes on a Storage Spaces Direct cluster by using Windows Admin Center and PowerShell.
 
 > [!TIP]
 > If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md) first.
 
 ## Create a three-way mirror volume
 
-To create a three-way mirror volume in Windows Admin Center: 
+To create a three-way mirror volume in Windows Admin Center:
 
 1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
 2. On the Volumes page, select the **Inventory** tab, and then select **Create volume**.
@@ -143,43 +143,9 @@ To create tiered volumes, reference these tier templates using the **StorageTier
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 
-## Create volumes using Failover Cluster Manager
-
-You can also create volumes using the *New Virtual Disk Wizard (Storage Spaces Direct)* followed by the *New Volume Wizard* from Failover Cluster Manager, although this workflow has many more manual steps and is not recommended.
-
-There are three major steps:
-
-### Step 1: Create virtual disk
-
-![New Virtual Disk](media/creating-volumes/GUI-Step-1.png)
-
-1. In Failover Cluster Manager, navigate to **Storage** -> **Pools**.
-2. Select **New Virtual Disk** from the Actions pane on the right, or right-click the pool and select **New Virtual Disk**.
-3. Select the storage pool and click **OK**. The *New Virtual Disk Wizard (Storage Spaces Direct)* will open.
-4. Use the wizard to name the virtual disk and specify its size.
-5. Review your selections and click **Create**.
-6. Be sure to check the box marked **Create a volume when this wizard closes** before closing.
-
-### Step 2: Create volume
-
-The *New Volume Wizard* will open.
-
-7. Select the virtual disk you just created and click **Next**.
-8. Specify the volume's size (default: the same size as the virtual disk) and click **Next**. 
-9. Assign the volume to a drive letter or choose **Don't assign to a drive letter** and click **Next**.
-10. Specify the filesystem to use, leave the allocation unit size as *Default*, name the volume, and click **Next**.
-11. Review your selections and click **Create**, then **Close**.
-
-### Step 3: Add to cluster shared volumes
-
-![Add to Cluster Shared Volumes](media/creating-volumes/GUI-Step-2.png)
-
-12. In Failover Cluster Manager, navigate to **Storage** -> **Disks**.
-13. Select the virtual disk you just created and select **Add to Cluster Shared Volumes** from the Actions pane on the right, or right-click the virtual disk and select **Add to Cluster Shared Volumes**.
-
 You're done! Repeat as needed to create more than one volume.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)

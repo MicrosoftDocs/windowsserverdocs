@@ -1,14 +1,13 @@
 ---
 title: Virtual machines should be backed up at least once every week
-description: "Online version of the text for this Best Practices Analyzer rule."
+description: Online version of the text for this Best Practices Analyzer rule.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 7dbd3dfc-c873-4a77-89f7-3166e18d9531
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
 ---
 # Virtual machines should be backed up at least once every week

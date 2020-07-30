@@ -1,14 +1,12 @@
 ---
 ms.assetid: 03c82f43-ae2d-4038-b286-ae3858aed35a
 title: Configure AD FS to Send Password Expiry Claims
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 # Configure AD FS to Send Password Expiry Claims
@@ -20,8 +18,8 @@ To configure AD FS to send password expiry claims to a relying party trust, you 
 
 ```
 @RuleName = "Issue Password Expiry Claims"
-c1:[Type == "https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
- => issue(store = "_PasswordExpiryStore", types = ("https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "https://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "https://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
+c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
+ => issue(store = "_PasswordExpiryStore", types = ("http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "http://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "http://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
 ```
 
 > [!NOTE]
@@ -31,4 +29,4 @@ c1:[Type == "https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
 > There is a 14 days window so the sent claims will only be populated if the password is expiring within 14 days.
 
 ## See Also
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

@@ -40,7 +40,7 @@ This topic discusses the steps needed to deploy Work Folders. It assumes that yo
   
 - Subject alternative names (SANs) must be present on the certificate listing the server name for each sync server in use.
 
-  The Work Folders Certificate Management [blog](https://blogs.technet.microsoft.com/filecab/2013/08/09/work-folders-certificate-management/) provides additional information on using certificates with Work Folders.
+  The Work Folders Certificate Management [blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) provides additional information on using certificates with Work Folders.
   
 ## Step 2: Create DNS records  
  To allow users to sync across the Internet, you must create a Host (A) record in public DNS to allow Internet clients to resolve your Work Folders URL. This DNS record should resolve to the external interface of the reverse proxy server.  
@@ -169,7 +169,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 4. On the **Select the server and path** page, specify where to store the sync share. If you already have a file share created for this user data, you can choose that share. Alternatively you can create a new folder.  
   
    > [!NOTE]
-   >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](https://technet.microsoft.com/library/jj635722.aspx) cmdlet to create a file share, preferably with access-based enumeration enabled.  
+   >  By default, sync shares aren't directly accessible via a file share (unless you pick an existing file share). If you want to make a sync share accessible via a file share, use the **Shares** tile of Server Manager or the [New-SmbShare](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) cmdlet to create a file share, preferably with access-based enumeration enabled.  
   
 5. On the **Specify the structure for user folders** page, choose a naming convention for user folders within the sync share. There are two options available:  
   
@@ -191,11 +191,11 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
    -   **Automatically lock screen, and require a password** Requests that client PCs and devices automatically lock their screens after 15 minutes, require a six-character or longer password to unlock the screen, and activate a device lockout mode after 10 failed retries  
   
        > [!IMPORTANT]
-       >  To enforce password policies for Windows 7 PCs and for non-administrators on domain-joined PCs, use Group Policy password policies for the computer domains and exclude these domains from the Work Folders password policies. You can exclude domains by using the [Set-Syncshare -PasswordAutoExcludeDomain](https://technet.microsoft.com/library/dn296649\(v=wps.630\).aspx) cmdlet after creating the sync share. For information about setting Group Policy password policies, see [Password Policy](https://technet.microsoft.com/library/hh994572(v=ws.11).aspx).  
+       >  To enforce password policies for Windows 7 PCs and for non-administrators on domain-joined PCs, use Group Policy password policies for the computer domains and exclude these domains from the Work Folders password policies. You can exclude domains by using the [Set-Syncshare -PasswordAutoExcludeDomain](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) cmdlet after creating the sync share. For information about setting Group Policy password policies, see [Password Policy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh994572(v=ws.11)).  
   
 9. Review your selections and complete the wizard to create the sync share.
 
-You can create sync shares using Windows PowerShell by using the [New-SyncShare](https://technet.microsoft.com/library/dn296635.aspx) cmdlet. Below is an example of this method:  
+You can create sync shares using Windows PowerShell by using the [New-SyncShare](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh994572(v=ws.11)) cmdlet. Below is an example of this method:  
   
 ```powershell  
 New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"  
@@ -204,7 +204,7 @@ New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
 The example above creates a new sync share named *Share01* with the path *K:\Share-1*, and access granted to the group named *HR Sync Share Users*  
   
 > [!TIP]
->  After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](https://technet.microsoft.com/library/cc732074.aspx) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](https://technet.microsoft.com/windows-server-docs/identity/solution-guides/dynamic-access-control--scenario-overview) for more sophisticated file classification tasks.  
+>  After you create sync shares you can use File Server Resource Manager functionality to manage the data in the shares. For example, you can use the **Quota** tile inside the Work Folders page in Server Manager to set quotas on the user folders. You can also use [File Screening Management](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732074(v=ws.11)) to control the types of files that Work Folders will sync, or you can use the scenarios described in [Dynamic Access Control](../../identity/solution-guides/dynamic-access-control--scenario-overview.md) for more sophisticated file classification tasks.  
   
 ## Step 8: Optionally specify a tech support email address   
  After installing Work Folders on a file server, you probably want to specify an administrative contact email address for the server. To add an email address, use the following procedure:  
@@ -223,10 +223,10 @@ The example above creates a new sync share named *Share01* with the path *K:\Sha
  If you are hosting multiple sync servers in your environment, you should configure server automatic discovery by populating the **msDS-SyncServerURL** property on user accounts in AD DS.  
   
 >[!NOTE]
->The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Azure AD Application Proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that's not accessible through the reverse proxy solution. When using Web Application Proxy or Azure AD Application Proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Azure AD Application Proxy](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/).
+>The msDS-SyncServerURL property in Active Directory should not be defined for remote users that are accessing Work Folders through a reverse proxy solution such as Web Application Proxy or Azure AD Application Proxy. If the msDS-SyncServerURL property is defined, the Work Folders client will try to access an internal URL that's not accessible through the reverse proxy solution. When using Web Application Proxy or Azure AD Application Proxy, you need to create unique proxy applications for each Work Folders server. For more details, see [Deploying Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md) or [Deploying Work Folders with Azure AD Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 
- Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](https://technet.microsoft.com/library/dd464018.aspx).  
+ Before you can do so, you must install a Windows Server 2012 R2 domain controller or update the forest and domain schemas by using the `Adprep /forestprep` and `Adprep /domainprep` commands. For information on how to safely run these commands, see [Running Adprep](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).  
   
  You probably also want to create a security group for file server administrators and give them delegated permissions to modify this particular user attribute, as described in Step 5 and Step 6. Without these steps you would need to get a member of the Domain Admins or Enterprise Admins group to configure automatic discovery for each user.  
   
@@ -262,9 +262,9 @@ Set-ADUser –Add @{"msDS-SyncServerURL"=$SyncServerURL}
 
 To enable remote users to access their files, you need to publish the Work Folders server through a reverse proxy, making Work Folders available externally on the Internet. You can use Web Application Proxy, Azure Active Directory Application Proxy, or another reverse proxy solution.  
   
-To configure Work Folders access using AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/publishing-applications-using-ad-fs-preauthentication).
+To configure Work Folders access using AD FS and Web Application Proxy, see [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md). For background information about Web Application Proxy, see [Web Application Proxy in Windows Server 2016](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md). For details on publishing applications such as Work Folders on the Internet using Web Application Proxy, see [Publishing Applications using AD FS Preauthentication](../../remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md).
  
-To configure Work Folders access using Azure Active Directory Application Proxy, see [Enable remote access to Work Folders using Azure Active Directory Application Proxy](https://blogs.technet.microsoft.com/filecab/?p=7945) 
+To configure Work Folders access using Azure Active Directory Application Proxy, see [Enable remote access to Work Folders using Azure Active Directory Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) 
   
 ## Step 11: Optionally use Group Policy to configure domain-joined PCs  
 
@@ -281,7 +281,7 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 - "Force automatic setup for all users" policy setting in Computer Configuration\Policies\Administrative Templates\Windows Components\WorkFolders  
   
 > [!NOTE]
->  These policy settings are available only when editing Group Policy from a computer running Group Policy Management on Windows 8.1, Windows Server 2012 R2 or later. Versions of Group Policy Management from earlier operating systems do not have this setting available. These policy settings do apply to Windows 7 PCs on which the [Work Folders for Windows 7](https://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) app has been installed.  
+>  These policy settings are available only when editing Group Policy from a computer running Group Policy Management on Windows 8.1, Windows Server 2012 R2 or later. Versions of Group Policy Management from earlier operating systems do not have this setting available. These policy settings do apply to Windows 7 PCs on which the [Work Folders for Windows 7](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) app has been installed.  
   
 ##  <a name="BKMK_LINKS"></a> See also  
  For additional related information, see the following resources.  
@@ -290,5 +290,5 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 |------------------|----------------|  
 |**Understanding**|-   [Work Folders](work-folders-overview.md)|  
 |**Planning**|-   [Designing a Work Folders Implementation](plan-work-folders.md)|
-|**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://blogs.technet.com/b/filecab/archive/2013/10/09/a-new-user-attribute-for-work-folders-server-url.aspx) (blog post)|  
-|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](https://technet.microsoft.com/library/jj966264(v=ws.11).aspx)<br />-   [Sync Share Cmdlets](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)|
+|**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|  
+|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264(v=ws.11))<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/?view=win10-ps)|

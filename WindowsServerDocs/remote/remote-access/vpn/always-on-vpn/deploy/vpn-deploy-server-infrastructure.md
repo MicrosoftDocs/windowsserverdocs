@@ -4,10 +4,9 @@ description: In this step, you install and configure the server-side components 
 ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: 
 ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
@@ -89,7 +88,7 @@ Since the RRAS server is not domain joined, autoenrollment cannot be used to enr
 6. From an elevated command prompt, navigate to the folder that contains the VPNGateway.req file created in the previous step and type:
 
    ```
-   certreq -attrib “CertificateTemplate:[Customer]VPNGateway” -submit VPNgateway.req VPNgateway.cer
+   certreq -attrib "CertificateTemplate:[Customer]VPNGateway" -submit VPNgateway.req VPNgateway.cer
    ```
 
 7. If prompted by the Certification Authority List window, select the appropriate Enterprise CA to service the certificate request.
@@ -104,7 +103,7 @@ Since the RRAS server is not domain joined, autoenrollment cannot be used to enr
     certreq -accept VPNGateway.cer
     ```
 
-11. Run the Certificates MMC snap-in as described [here](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
+11. Run the Certificates MMC snap-in as described [here](/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
 
 12. Ensure that a valid certificate exists for the RRAS server with the following properties:
 
@@ -196,7 +195,7 @@ You also add a group containing VPN servers and another group containing NPS ser
 
 ## Create the User Authentication template
 
-In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate's overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate's overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
 
 >[!IMPORTANT] 
 >Microsoft Platform Crypto Provider" requires a TPM chip, in the case that you are running a VM and you get the following error: "Can not find a valid CSP in the local machine" when trying to manually enroll the certificate you need to check "Microsoft Software Key Storage Provider" and have it second in order after "Microsoft Platform Crypto Provider" in the Cryptography tab in certificate properties.

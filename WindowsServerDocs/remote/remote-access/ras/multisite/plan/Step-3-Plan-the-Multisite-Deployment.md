@@ -2,16 +2,12 @@
 title: Step 3 Plan the Multisite Deployment
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 3 Plan the Multisite Deployment
 
@@ -254,7 +250,7 @@ The transition from an IPv4-only to an IPv6-only corporate network cannot be don
   
 When you have completed the transition, you can uninstall the first DirectAccess deployment. When uninstalling, the following issues may occur:  
   
--   If the deployment was configured to support only clients on mobile computers, the WMI filter will be deleted. If the client security groups of the second deployment include desktop computers, the DirectAccess client GPO will not filter desktop computers and may cause issues on them. If a mobile computers filter is needed, recreate it by following the instructions on [Create WMI Filters for the GPO](https://technet.microsoft.com/library/cc947846.aspx).  
+-   If the deployment was configured to support only clients on mobile computers, the WMI filter will be deleted. If the client security groups of the second deployment include desktop computers, the DirectAccess client GPO will not filter desktop computers and may cause issues on them. If a mobile computers filter is needed, recreate it by following the instructions on [Create WMI Filters for the GPO](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc947846(v=ws.10)).  
   
 -   If both deployments were originally created on the same Active Directory domain, the DNS probe entry which points to localhost will be deleted and may cause client connectivity issues. For example, clients may connect using IP-HTTPS rather than Teredo, or switch between DirectAccess multisite entry points. In this case, you must add the following DNS entry to the corporate DNS:  
   
@@ -268,5 +264,3 @@ When you have completed the transition, you can uninstall the first DirectAccess
   
   
   
-
-

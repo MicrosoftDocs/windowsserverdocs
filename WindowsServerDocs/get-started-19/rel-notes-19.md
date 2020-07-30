@@ -1,6 +1,6 @@
 ---
 title: Release Notes - Important issues in Windows Server 2019
-description: "Summarizes critical issues requiring workarounds to avoid crashes, hanging, installation failure and data loss"
+description: Summarizes critical issues requiring workarounds to avoid crashes, hanging, installation failure and data loss
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -30,7 +30,7 @@ The following known issues are present in Windows Server 2019.
 
 ### Copyright
 
-This document is provided "as-is". Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
+This document is provided as-is. Information and views expressed in this document, including URL and other Internet Web site references, may change without notice.  
 
 This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

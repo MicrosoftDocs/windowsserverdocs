@@ -1,17 +1,13 @@
 ---
 title: Internal DNS Service (iDNS) for SDN
 description: This topic explains how you can provide DNS services to your hosted tenant workloads by using Internal DNS (iDNS), which is integrated with Software Defined Networking in Windows Server 2016.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ---
 # Internal DNS Service (iDNS) for SDN
 
@@ -85,24 +81,24 @@ You can deploy a DNS server by using the following example Windows PowerShell co
 This script segment is a REST call that is made by the administrator to Network Controller, informing it about the iDNS zone configuration - such as the IP address of the iDNSServer and the zone that is used to host the iDNS names. 
 
 ```
-	Url: https://<url>/networking/v1/iDnsServer/configuration
+    Url: https://<url>/networking/v1/iDnsServer/configuration
 Method: PUT
 {
-	  "properties": {
-	    "connections": [
-	      {
-	        "managementAddresses": [
-	          "10.0.0.9"
-	        ],
-	        "credential": {
-	          "resourceRef": "/credentials/iDnsServer-Credentials"
-	        },
-	        "credentialType": "usernamePassword"
-	      }
-	    ],
-	    "zone": "contoso.local"
-	  }
-	}
+      "properties": {
+        "connections": [
+          {
+            "managementAddresses": [
+              "10.0.0.9"
+            ],
+            "credential": {
+              "resourceRef": "/credentials/iDnsServer-Credentials"
+            },
+            "credentialType": "usernamePassword"
+          }
+        ],
+        "zone": "contoso.local"
+      }
+    }
 ```
 
 >[!NOTE]
@@ -139,14 +135,14 @@ The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge b
 
 - Registry Key = HKLM\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService
 - ValueName = "MAC"
-- ValueData = “aa-bb-cc-aa-bb-cc”
+- ValueData = "aa-bb-cc-aa-bb-cc"
 - ValueType = "String"
 
 **IDNS Server Address:** A comma separated list of iDNS Servers.
 
 - Registry Key: HKLM\SYSTEM\CurrentControlSet\Services\DNSProxy\Parameters
 - ValueName = "Forwarders"
-- ValueData = “10.0.0.9”
+- ValueData = "10.0.0.9"
 - ValueType = "String"
 
 

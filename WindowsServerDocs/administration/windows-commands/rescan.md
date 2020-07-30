@@ -1,12 +1,12 @@
 ---
 title: rescan
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for **** -
+
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
+
+
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
+
 ms.topic: article
 ms.assetid: 87d7f7a1-104c-4a5d-b4ec-7d532263888c
 author: coreyp-at-msft
@@ -27,7 +27,7 @@ Locates new disks that may have been added to the computer.
 rescan
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

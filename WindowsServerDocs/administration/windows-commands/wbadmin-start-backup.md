@@ -1,12 +1,8 @@
 ---
 title: wbadmin start backup
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for wbadmin start backup, which creates a backup using specified parameters.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 56f3e752-d99a-4c3d-8e97-10303c37dd78
 author: coreyp-at-msft
@@ -17,13 +13,9 @@ ms.date: 10/16/2017
 
 # wbadmin start backup
 
-
-
 Creates a backup using specified parameters. If no parameters are specified and you have created a scheduled daily backup, this subcommand creates the backup by using the settings for the scheduled backup. If parameters are specified, it creates a Volume Shadow Copy Service (VSS) copy backup and will not update the history of the files that are being backed up.
 
 To create a one-time backup with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt** and then click **Run as administrator**.)
-
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -54,11 +46,11 @@ Wbadmin start backup
 [-user:<UserName>]
 [-password:<Password>]
 [-noInheritAcl]
-[-vssFull | -vssCopy] 
+[-vssFull | -vssCopy]
 [-quiet]
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -77,7 +69,7 @@ Wbadmin start backup
 |-vssCopy|For Windows 7 and Windows Server 2008 R2 and later, performs a copy backup using VSS. All files are backed up but the history of the files being backup up is not updated so you preserve the all the information on which files where changed, deleted, and so on, as well as any application log files. Using this type of backup does not affect the sequence of incremental and differential backups that might happen independent of this copy backup. This is the default value.</br>Warning: A copy backup cannot be used for incremental or differential backups or restores.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 The following examples show how the **wbadmin start backup** command can be used in different backup scenarios:
 
@@ -102,7 +94,7 @@ Scenario #1
   wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
   ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

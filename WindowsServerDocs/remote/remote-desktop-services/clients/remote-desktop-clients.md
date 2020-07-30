@@ -1,12 +1,8 @@
 ---
 title: Remote Desktop clients
 description: Learn about the different Remote Desktop clients available for all your devices
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8 
 author: HeidiLohr

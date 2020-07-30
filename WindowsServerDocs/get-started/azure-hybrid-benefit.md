@@ -5,8 +5,8 @@ ms.prod: windows-server
 ms.date: 11/10/2017
 ms.technology: server-general
 ms.topic: article
-author: greg-lindsay
-ms.author: greg-lindsay
+author: eross-msft
+ms.author: chrisrin
 ms.localizationpriority: high
 ---
 

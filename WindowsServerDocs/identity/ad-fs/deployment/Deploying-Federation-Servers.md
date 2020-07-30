@@ -1,13 +1,11 @@
 ---
 ms.assetid: c4d83dd3-2846-4658-8b9c-93901ee69766
 title: Deploying Federation Servers
-description:
 author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ms.author: billmath
 ---
@@ -17,7 +15,7 @@ ms.author: billmath
 To deploy federation servers in Active Directory Federation Services \(AD FS\), complete each of the tasks in [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md).  
   
 > [!NOTE]  
-> When you use this checklist, we recommend that you first read the references to federation server planning in the [AD FS Design Guide in Windows Server 2012](https://technet.microsoft.com/library/dd807036.aspx) before you begin the procedures for configuring the servers. Following the checklist in this way provides a better understanding of the design and deployment process for federation servers.  
+> When you use this checklist, we recommend that you first read the references to federation server planning in the [AD FS Design Guide in Windows Server 2012](../design/ad-fs-design-guide-in-windows-server-2012.md) before you begin the procedures for configuring the servers. Following the checklist in this way provides a better understanding of the design and deployment process for federation servers.  
   
 ## About federation servers  
 Federation servers are computers running  Windows Server 2008  with the AD FS software installed that have been configured to act in the federation server role. Federation servers authenticate or route requests from user accounts in other organizations and from client computers that can be located anywhere on the Internet.  

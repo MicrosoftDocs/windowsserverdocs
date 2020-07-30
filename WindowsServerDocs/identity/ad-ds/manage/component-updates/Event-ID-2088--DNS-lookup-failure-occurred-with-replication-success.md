@@ -1,14 +1,12 @@
 ---
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: Event ID 2088 - DNS lookup failure occurred with replication success
-description:
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
 
@@ -23,20 +21,20 @@ ms.technology: identity-adds
     <para>The following is an example of the event text: </para>
     <code>Log Name: Directory Service
 
-	Source: Microsoft-Windows-ActiveDirectory_DomainService
-	Date: 3/15/2008  9:20:11 AM
-	Event ID: 2088
-	Task Category: DS RPC Client 
-	Level: Warning
-	Keywords: Classic
-	User: ANONYMOUS LOGON
-	Computer: DC3.contoso.com
-	Description:
-	Active Directory could not use DNS to resolve the IP address of the 
-	source domain controller listed below. To maintain the consistency 
-	of Security groups, group policy, users and computers and their passwords, 
-	Active Directory Domain Services successfully replicated using the NetBIOS 
-	or fully qualified computer name of the source domain controller. 
+    Source: Microsoft-Windows-ActiveDirectory_DomainService
+    Date: 3/15/2008  9:20:11 AM
+    Event ID: 2088
+    Task Category: DS RPC Client 
+    Level: Warning
+    Keywords: Classic
+    User: ANONYMOUS LOGON
+    Computer: DC3.contoso.com
+    Description:
+    Active Directory could not use DNS to resolve the IP address of the 
+    source domain controller listed below. To maintain the consistency 
+    of Security groups, group policy, users and computers and their passwords, 
+    Active Directory Domain Services successfully replicated using the NetBIOS 
+    or fully qualified computer name of the source domain controller. 
 
 Invalid DNS configuration may be affecting other essential operations on 
 member computers, domain controllers or application servers in this 

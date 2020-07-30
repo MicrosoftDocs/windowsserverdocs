@@ -1,19 +1,18 @@
 ---
 ms.assetid: 7dd905ea-4235-4519-8400-31b4fa0ed1bf
 title: Enabling Clients to Locate the Next Closest Domain Controller
-description:
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adds
 ---
+
 # Enabling Clients to Locate the Next Closest Domain Controller
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If you have a domain controller that runs Windows Server 2008 or newer, you can make it possible for client computers that run Windows Vista or newer or Windows Server 2008 or newer to locate domain controllers more efficiently by enabling the **Try Next Closest Site** Group Policy setting. This setting improves the Domain Controller Locator (DC Locator) by helping to streamline network traffic, especially in large enterprises that have many branch offices and sites.
 
@@ -27,7 +26,7 @@ By default, the **Try Next Closest Site** setting is not enabled. When the setti
 - If no domain controller is available in the same site, try to find any domain controller in the domain.
 
 > [!NOTE]
-> This is the same algorithm that DC Locator used in previous versions of Active Directory. For more information, see the article [How DNS Support for Active Directory Works](https://go.microsoft.com/fwlink/?LinkId=108587).
+> This is the same algorithm that DC Locator used in previous versions of Active Directory. For more information, see the article [How DNS Support for Active Directory Works](/previous-versions/windows/it-pro/windows-server-2003/cc759550(v=ws.10)).
 
 If you enable the **Try Next Closest Site** setting, DC Locator uses the following algorithm to locate a domain controller:
 
@@ -50,4 +49,4 @@ If the setting is not enabled, the client tries to find a domain controller in S
 > [!NOTE]
 > The **Try Next Closest Site** setting works in coordination with automatic site coverage. For example, if the next closest site has no domain controller, DC Locator tries to find the domain controller that performs automatic site coverage for that site.
 
-To apply the **Try Next Closest Site** setting, you can create a Group Policy object (GPO) and link it to the appropriate object for your organization, or you can modify the Default Domain Policy to have it affect all clients that run Windows Vista or newer and Windows Server 2008 or newer in the domain. For more information about how to set the **Try Next Closest Site** setting, see [Enable Clients to Locate a Domain Controller in the Next Closest Site](https://technet.microsoft.com/library/cc772592.aspx).
+To apply the **Try Next Closest Site** setting, you can create a Group Policy object (GPO) and link it to the appropriate object for your organization, or you can modify the Default Domain Policy to have it affect all clients that run Windows Vista or newer and Windows Server 2008 or newer in the domain. For more information about how to set the **Try Next Closest Site** setting, see [Enable Clients to Locate a Domain Controller in the Next Closest Site](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772592(v=ws.10)).

@@ -1,25 +1,23 @@
 ---
 ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: When to Use Identity Delegation
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 
 # When to Use Identity Delegation
   
 ## What is identity delegation?  
-Identity delegation is a feature of Active Directory Federation Services \(AD FS\) that allows administrator\-specified accounts to impersonate users. The account that impersonates the user is called the *delegate*. This delegation capability is critical for many distributed applications for which there is a series of access control checks that must be made sequentially for each application, database, or service that is in the authorization chain for the originating request. Many real\-world scenarios exist in which a Web application “front end” must retrieve data from a more secure “back end”, such as a Web service that is connected to a Microsoft SQL Server database.  
+Identity delegation is a feature of Active Directory Federation Services \(AD FS\) that allows administrator\-specified accounts to impersonate users. The account that impersonates the user is called the *delegate*. This delegation capability is critical for many distributed applications for which there is a series of access control checks that must be made sequentially for each application, database, or service that is in the authorization chain for the originating request. Many real\-world scenarios exist in which a Web application "front end" must retrieve data from a more secure "back end", such as a Web service that is connected to a Microsoft SQL Server database.  
   
 For example, an existing parts\-ordering Web site can be enhanced programmatically so that it allows partner organizations to view their own purchase history and account status. For security reasons, all partner financial data is stored in a secure database on a dedicated Structured Query Language \(SQL\) server. In this situation, the code in the front\-end application knows nothing about the partner organization's financial data. Therefore, it must retrieve that data from another computer elsewhere on the network that hosts \(in this case\) the Web service for the parts database \(the back end\).  
   
-For this data\-retrieval process to succeed, some succession of authorization “hand\-shaking” must take place between the Web application and the Web service for the parts database, as shown in the following illustration.  
+For this data\-retrieval process to succeed, some succession of authorization "hand\-shaking" must take place between the Web application and the Web service for the parts database, as shown in the following illustration.  
   
 ![identity delegation](media/adfs2_identitydelegationconcept.gif)  
   

@@ -1,14 +1,12 @@
 ---
 ms.assetid: 2bac7744-9de3-491a-b0a2-4e843cec7344
 title: Add Help Desk Link 
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-
 ms.technology: identity-adfs
 ---
 

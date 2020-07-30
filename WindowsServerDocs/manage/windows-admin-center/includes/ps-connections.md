@@ -7,7 +7,7 @@ Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\Connect
 Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 # Import connections (including tags) from a .csv file
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files, and remove any connections that are not explictly in the imported file using the -prune switch parameter 
+# Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file using the -prune switch parameter 
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv" -prune
 ```
 ### CSV file format for importing connections

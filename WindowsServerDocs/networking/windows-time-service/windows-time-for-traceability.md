@@ -1,8 +1,7 @@
 ---
-ms.assetid: 
 title: Windows Time for Traceability
 description: Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC. 
-author: shortpatti
+author: dcuomo
 ms.author: dacuo
 manager: dougkim
 ms.date: 10/17/2018
@@ -123,7 +122,7 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |||
 |---|---|
 |Event description |System clock frequency adjusted |
-|Details |System clock frequency is constantly modified by W32time when the clock is in close synchronization. We want to capture “reasonably significant” adjustments made to the clock frequency without overrunning the event log. |
+|Details |System clock frequency is constantly modified by W32time when the clock is in close synchronization. We want to capture "reasonably significant" adjustments made to the clock frequency without overrunning the event log. |
 |Throttling mechanism  |All clock adjustments below TimeAdjustmentAuditThreshold (min = 128 part per million, default = 800 part per million) are not logged.<br><br>2 PPM change in clock frequency with current granularity yields 120 µsec/sec change in clock accuracy.<br><br>On a synchronized system, the majority of the adjustments are below this level. If you want finer tracking, this setting can be adjusted down or you can use PerfCounters, or you can do both. |
 
 # [263](#tab/263)

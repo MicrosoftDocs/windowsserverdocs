@@ -2,16 +2,12 @@
 title: Step 2 Configure the Multisite Infrastructure
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Step 2 Configure the Multisite Infrastructure
 
@@ -34,7 +30,7 @@ All entry points can reside in a single Active Directory site. Therefore, at lea
 
 Membership in the **Enterprise Admins** group in the forest or the **Domain Admins** group in the forest root domain, or equivalent, at a minimum is required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).  
 
-For more information, see [Adding a Site to the Forest](https://technet.microsoft.com/library/cc732761.aspx).  
+For more information, see [Adding a Site to the Forest](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732761(v=ws.11)).  
 
 ### To configure additional Active Directory sites  
   
@@ -91,7 +87,7 @@ To configure a multisite deployment in a single domain, it is recommended that y
   
 To perform this procedure, at a minimum you must be a member of the Domain Admins group in the domain in which the domain controller is being installed.  
   
-For more information, see [Installing an Additional Domain Controller](https://technet.microsoft.com/library/cc733027.aspx).
+For more information, see [Installing an Additional Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733027(v=ws.10)).
   
 ### To configure additional domain controllers  
   
@@ -205,7 +201,7 @@ When you configure Remote Access, the wizard automatically creates the required 
 > [!IMPORTANT]  
 > After manually creating the GPOs for Remote Access you must allow sufficient time for Active Directory and DFS replication to the domain controller in the Active Directory site that is associated with the Remote Access server. If Remote Access automatically created the Group Policy Objects, then no wait time is required.  
   
-To create Group Policy Objects, see [Create and Edit a Group Policy Object](https://technet.microsoft.com/library/cc754740.aspx).  
+To create Group Policy Objects, see [Create and Edit a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754740(v=ws.11)).  
   
 ### <a name="DCMaintandDowntime"></a>Domain controller maintenance and downtime  
 When a domain controller running as the PDC emulator, or domain controllers managing server GPOs experience downtime, it is not possible to load or modify the Remote Access configuration. This does not affect client connectivity if other domain controllers are available.  
@@ -216,7 +212,7 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
 > This operation can be performed only by a domain administrator. The impact of changing the primary domain controller is not confined to Remote Access; therefore, use caution when transferring the PDC emulator role.  
   
 > [!NOTE]  
-> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](https://technet.microsoft.com/library/jj134176.aspx).  
+> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134176(v=ws.11)).  
   
 #### <a name="TransferPDC"></a>To transfer the PDC emulator role  
   
@@ -235,7 +231,7 @@ To load or modify the Remote Access configuration, you can transfer the PDC emul
   
 #### <a name="ChangeDC"></a>To change the domain controller that manages server GPOs  
   
--   Run the Windows PowerShell cmdlet  `HYPERLINK "https://technet.microsoft.com/library/hh918412.aspx" Set-DAEntryPointDC` on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.  
+-   Run the Windows PowerShell cmdlet  [Set-DAEntryPointDC](/powershell/module/remoteaccess/set-daentrypointdc) on the Remote Access server and specify the unreachable domain controller name for the *ExistingDC* parameter. This command modifies the domain controller association for the server GPOs of the entry points that are currently managed by that domain controller.
   
     -   To replace the unreachable domain controller "dc1.corp.contoso.com" with the domain controller "dc2.corp.contoso.com", do the following:  
   
@@ -294,7 +290,7 @@ Domain controller association information is stored both in the registry of the 
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution  
-When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is  HYPERLINK "<https://technet.microsoft.com/library/cc978016.aspx>" closest to the Remote Access server when creating its server GPO.  
+When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is [closest to the Remote Access server](/previous-versions/windows/it-pro/windows-2000-server/cc978016(v=technet.10)) when creating its server GPO.  
   
 In some scenarios, it may be required to manually modify the domain controller that manages a server GPO in order to optimize configuration distribution time:  
   
@@ -307,7 +303,7 @@ In some scenarios, it may be required to manually modify the domain controller t
 In these scenarios, run the PowerShell cmdlet `Set-DAEntryPointDC` on the Remote Access server and specify the name of the entry point you want to optimize using the parameter *EntryPointName*. You should do this only after the GPO data from the domain controller currently storing the server GPO was already fully replicated to the desired new domain controller.  
   
 > [!NOTE]  
-> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](https://technet.microsoft.com/library/jj134176.aspx).  
+> Before modifying domain controller association, make sure that all of the GPOs in the Remote Access deployment have been replicated to all of the domain controllers in the domain. If the GPO is not synchronized, recent configuration changes may be lost after modifying domain controller association, which may lead to a corrupt configuration. To verify GPO synchronization, see [Check Group Policy Infrastructure Status](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134176(v=ws.11)).  
   
 To optimize the configuration distribution time, do one of the following:  
   
@@ -330,4 +326,3 @@ To optimize the configuration distribution time, do one of the following:
   
 -   [Step 3: Configure the multisite deployment](Step-3-Configure-the-Multisite-Deployment.md)  
 -   [Step 1: Implement a single server Remote Access deployment](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
-

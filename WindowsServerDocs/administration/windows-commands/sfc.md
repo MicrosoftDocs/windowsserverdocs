@@ -1,12 +1,8 @@
 ---
 title: sfc
-description: "Windows Commands topic for **** - "
-ms.custom: na
+description: Reference article for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c58c25da-e028-42a6-9e10-973484a4b953
 author: coreyp-at-msft
@@ -16,17 +12,17 @@ ms.date: 10/16/2017
 ---
 # sfc
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 ```
 sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir=<offline windows directory> /offbootdir=<offline boot directory>]
 ```
 
-### Parameters
+#### Parameters
 |Parameter|Description|
 |-------|--------|
 |/scannow|Scans the integrity of all protected system files and repairs files with problems when possible.|
@@ -45,7 +41,7 @@ sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir
 -   for more information about **sfc** on Windows Server 2003, see [article 310747](https://go.microsoft.com/fwlink/?LinkId=227069) in the Microsoft Knowledge Base.
 -   for more information about **sfc** on  Windows Server  2008 , and  Windows Server  2008 R2 , see [System File Checker](https://go.microsoft.com/fwlink/?LinkId=227071).
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 To verify the **kernel32.dll file**, type:
 ```
 sfc /verifyfile=c:\windows\system32\kernel32.dll
@@ -55,6 +51,6 @@ To setup offline repair of the **kernel32.dll** file with an offline boot direct
 sfc /scanfile=d:\windows\system32\kernel32.dll /offbootdir=d:\ /offwindir=d:\windows
 ```
 
-## Additional references
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 

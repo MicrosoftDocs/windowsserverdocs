@@ -1,13 +1,9 @@
 ---
 title: Selecting Hardware for Your MultiPoint Services System
 description: Hardware considerations for MultiPoint Services
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
 author: evaseydl
@@ -176,11 +172,11 @@ MultiPoint Services supports peripheral devices that are connected to a station 
 **Available to all stations** A USB device that is plugged into the computer \(for example, not through a station hub\) is available to all stations. Depending on the device, it can be used by multiple users at one time, or only one user can access it at a time. The following table explains how USB devices can be accessed.  
   
 > [!NOTE]  
-> The “Connected to Host Computer” column in the table refers to the behavior when the computer running MultiPoint Services is running in station mode with stations. If you are running in console mode, the peripherals that are plugged anywhere behave in the same way as a standard server in a console session.  
+> The "Connected to Host Computer" column in the table refers to the behavior when the computer running MultiPoint Services is running in station mode with stations. If you are running in console mode, the peripherals that are plugged anywhere behave in the same way as a standard server in a console session.  
   
 ||Connected to Host Computer|Connected to Station Hub or Downstream Hub|  
 |-|------------------------------|----------------------------------------------|  
-|Keyboard|Not functional, unless it is part of a PS/2 station. |Available to individual station<br /><br />Cannot be connected to a downstream hub|  
+|Keyboard|Not functional, unless it is part of a PS/2 station. |Available to individual station<p>Cannot be connected to a downstream hub|  
 |Mouse|Not functional, unless it is part of a PS/2 station. |Available to individual station|  
 |Speaker/headphones|Not functional, unless it is part of a PS/2 station.|Available to individual station|  
 |USB storage device|Available to all stations|Available to individual station|  
@@ -190,7 +186,7 @@ MultiPoint Services supports peripheral devices that are connected to a station 
 ## <a name="BKMK_SelectingRDP-over-LAN-connectedstationhardware"></a>Selecting RDP\-over\-LAN\-connected station hardware  
 Any LAN client that can connect to Remote Desktop Services, by using Remote Desktop Protocol, can become a MultiPoint Services station.  
   
-If you want the LAN client to only be used as a MultiPoint station, you may want to “lock down” your LAN client. For example, configure your thin client so that it can only connect to a MultiPoint Services session, or configure your desktop computers so that access to desktop icons and Start Menu items such as a web browser is removed to prevent direct Internet access. You can make these configurations using your LAN client configuration tools or group or local policies.  
+If you want the LAN client to only be used as a MultiPoint station, you may want to "lock down" your LAN client. For example, configure your thin client so that it can only connect to a MultiPoint Services session, or configure your desktop computers so that access to desktop icons and Start Menu items such as a web browser is removed to prevent direct Internet access. You can make these configurations using your LAN client configuration tools or group or local policies.  
   
 ## Selecting audio devices  
 It is important to make sure that when you select audio devices, they can be plugged into the station hub, USB zero client or LAN client. Some USB hubs, USB zero clients, and LAN clients have an analog audio jack that can be used with traditional analog audio devices \(such as headphones or earbuds\). Station hubs that do not have analog jacks can use USB audio devices.  

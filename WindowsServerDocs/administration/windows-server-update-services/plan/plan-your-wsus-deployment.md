@@ -1,8 +1,7 @@
 ---
 title: Plan Your WSUS Deployment
-description: "Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics"
+description: Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
@@ -13,7 +12,7 @@ ms.date: 05/24/2018
 ---
 # Plan your WSUS deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
@@ -31,7 +30,7 @@ The first step in the deployment of Windows Server Update Services (WSUS) is to 
 
 ### System Requirements
 
-Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
+Hardware and database software requirements are driven by the number of client computers being updated in your organization.  Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
 -   Server hardware requirements to enable WSUS role are bound to hardware requirements. The minimum hardware requirements for WSUS are:
 
@@ -39,9 +38,12 @@ Before you enable the WSUS server role, confirm that the server meets the system
 
     -   **Memory:** WSUS requires an additional 2 GB of RAM more than what is required by the server and all other services or software.
 
-    -   **Available disk space:** 10 GB (40 GB or greater is recommended)
+    -   **Available disk space:** 40 GB or greater is recommended
 
-    -   **Network adapter:** 100 megabits per second (Mbps) or greater
+    -   **Network adapter:** 100 megabits per second (Mbps) or greater (1GB is recommended)
+
+> [!NOTE]
+> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rullup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.
 
 -   Software Requirements:
 
@@ -95,7 +97,7 @@ Be aware that configuring client computers (including servers) to update by usin
    > [!NOTE]
    > Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
 
-3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
+3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
    - [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) - VL access is required
    - OEM Portal - OEM access is required
    - MSDN Download - MSDN subscription is required
@@ -107,15 +109,7 @@ WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
 
--   Microsoft SQL Server 2017
-
--   Microsoft SQL Server 2016
-
--   Microsoft SQL Server 2014
-
--   Microsoft SQL Server 2012
-
--   Microsoft SQL Server 2008 R2
+-   Any supported Microsoft SQL Server version. For more information, see [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle).
 
 The following editions of SQL Server are supported by WSUS:
 
@@ -166,7 +160,7 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 
 -   You can scale WSUS for a large organization that has more client computers than one WSUS server can effectively manage.
 
-> [!NOTE] 
+> [!NOTE]
 > We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments that have a hierarchy of five levels deep have been tested by Microsoft.
 >
 > Also, downstream servers must be at the same version or an earlier version of WSUS as the upstream server synchronization source.
@@ -209,7 +203,7 @@ Windows Server Update Services (WSUS) uses two types of storage systems: a datab
 Updates are composed of two parts: metadata that describes the update, and the files that are required to install the update. Update metadata is typically much smaller than the actual update, and it is stored in the WSUS database. Update files are stored on a local WSUS server or on a Microsoft Update Web server.
 
 ### WSUS database
-WSUS requires a database for each WSUS server. WSUS supports the use of a database that resides on a different computer than the WSUS server, with some restrictions. For a list of supported databases and remote database limitations, see section "1.1 Review initial considerations and system requirements," in this guide.
+WSUS requires a database for each WSUS server. WSUS supports the use of a database that resides on a different computer than the WSUS server, with some restrictions. For a list of supported databases and remote database limitations, see section 1.1 Review initial considerations and system requirements, in this guide.
 
 The WSUS database stores the following information:
 
@@ -427,7 +421,7 @@ By default, the products to be updated are Windows and Office, and the default c
 ### Installation
 Updates typically consist of new versions of files that already exist on the computer that is being updated. On a binary level, these existing files might not differ very much from updated versions. The express installation files feature identifies the exact bytes between versions, creates and distributes updates of only those differences, and then merges the existing file together with the updated bytes.
 
-Sometimes this feature is called "delta delivery" because it downloads only the delta (difference) between two versions of a file. Express installation files are larger than the updates that are distributed to client computers because the express installation file contains all possible versions of each file that is to be updated.
+Sometimes this feature is called delta delivery because it downloads only the delta (difference) between two versions of a file. Express installation files are larger than the updates that are distributed to client computers because the express installation file contains all possible versions of each file that is to be updated.
 
 You can use express installation files to limit the bandwidth that is consumed on the local network, because WSUS transmits only the delta applicable to a particular version of an updated component. However, this comes at the cost of additional bandwidth between your WSUS server, any upstream WSUS servers, and Microsoft Update, and requires additional local disk space. By default, WSUS does not use express installation files.
 
