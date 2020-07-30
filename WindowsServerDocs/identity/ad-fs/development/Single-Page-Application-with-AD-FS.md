@@ -53,7 +53,9 @@ We will be using the sample application created for integrating Azure AD into an
 
 From your shell or command line:
 
-    git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp.git
+```
+git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp.git
+```
 
 ## About the Code
 The key files containing authentication logic are the following:

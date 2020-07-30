@@ -302,7 +302,7 @@ All other ida:XXXXXXX keys in the **appsettings** node can be commented out or d
     });
     ```
 
-with
+    with
 
     ```
     app.UseActiveDirectoryFederationServicesBearerAuthentication(
@@ -480,7 +480,6 @@ public async Task Post(TodoItem todo)
 ```
 
 ## Running the solution
-
 
 By default visual studio is configured to run one project when you hit debug to run.
 

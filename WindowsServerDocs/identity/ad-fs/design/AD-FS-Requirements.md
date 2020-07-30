@@ -161,14 +161,14 @@ When AD FS authentication is performed via a browser or browser control, your br
 
 Several key browsers and platforms have undergone validation for rendering and functionality the details of which are listed below. Browsers and devices that not covered in this table are still supported if they meet the requirements listed above:
 
-|**Browsers**|**Platforms**|
+| **Browsers** | **Platforms** |
 |--|--|
-|IE 10.0|Windows 7, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2|
-|IE 11.0|Windows7, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2|
-|Windows Web Authentication Broker|Windows 8.1|
-|Firefox [v21]|Windows 7, Windows 8.1|
-|Safari [v7]|iOS 6, Mac OS-X 10.7|
-|Chrome [v27]|Windows 7, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Mac OS-X 10.7|
+| IE 10.0 | Windows 7, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 |
+| IE 11.0 | Windows7, Windows 8.1, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 |
+| Windows Web Authentication Broker | Windows 8.1 |
+| Firefox [v21] | Windows 7, Windows 8.1 |
+| Safari [v7] | iOS 6, Mac OS-X 10.7 |
+| Chrome [v27] | Windows 7, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Mac OS-X 10.7 |
 
 > [!IMPORTANT]
 > Known issue - Firefox: Workplace Join functionality that identifies the device using device certificate is not functional on Windows platforms. Firefox does not currently support performing SSL client certificate authentication using certificates provisioned to the user certificate store on Windows clients.

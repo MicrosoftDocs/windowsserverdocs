@@ -240,7 +240,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 3.  Note the ‘todo' for the **Resources.FormPageHtml** element above.
 
-   You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
+    You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
 
     ```
     class MyAdapter : IAuthenticationAdapter
@@ -287,6 +287,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     }
 
     }
+    ```
 
 13. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
 
@@ -323,13 +324,13 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
    Ensure your GetFormHtml code resolves the name of the new resource correctly by the resources file (.resx file) name prefix followed by the name of the resource itself:
 
-    ```
+```
     public string GetFormHtml(int lcid)
     {
     string htmlTemplate = Resources.MfaFormHtml; //Resxfilename.resourcename
     return htmlTemplate;
     }
-    ```
+```
 
    You should now be able to build.
 

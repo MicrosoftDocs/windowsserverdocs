@@ -91,7 +91,7 @@ This section shows how to configure a Native App to sign-in user and retrieve to
 2. Open the sample using Visual Studio
 
 3. Open the App.config file. Modify the following:
-   - ida:Authority - enter https://[your AD FS hostname]/adfs
+   - ida:Authority - enter h`ttps://[your AD FS hostname]/adfs`
    - ida:ClientId - enter the **Client Identifier** value from #3 in App Registration in AD FS section above.
    - ida:RedirectUri - enter the **Redirect URI** value from #3 in App Registration in AD FS section above.
    - todo:TodoListResourceId – enter the **Identifier** value from #4 in App Registration in AD FS section above
@@ -101,10 +101,9 @@ This section shows how to configure a Native App to sign-in user and retrieve to
 
  4. Open the Web.config file. Modify the following:
     - ida:Audience - enter the **Identifier** value from #4 in App Registration in AD FS section above
-    - ida: AdfsMetadataEndpoint - enter https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml
+    - ida: AdfsMetadataEndpoint - enter `https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml`
 
       ![code config](media/adfs-msal-native-app-web-api/native13.png)
-
 
 ## Test the sample
 This section shows how to test the sample configured above.
@@ -127,13 +126,13 @@ This section shows how to test the sample configured above.
 
      ![App test](media/adfs-msal-native-app-web-api/native17.png)
 
-    If you don't see the native app screen, search and remove *msalcache.bin files from the folder where project repo is saved on your system.
+   If you don't see the native app screen, search and remove `*msalcache.bin` files from the folder where project repo is saved on your system.
 
-  6. You will be re-directed to the AD FS sign-in page. Go ahead and sign in.
+  1. You will be re-directed to the AD FS sign-in page. Go ahead and sign in.
 
       ![App test](media/adfs-msal-native-app-web-api/native18.png)
 
-  7. Once signed-in, enter text **Build Native App to Web Api** in the **Create a To Do item**. Click **Add item**.  This will call the **To Do List Service (Web API)** and add the item in the cache.
+  2. Once signed-in, enter text **Build Native App to Web Api** in the **Create a To Do item**. Click **Add item**.  This will call the **To Do List Service (Web API)** and add the item in the cache.
 
        ![App test](media/adfs-msal-native-app-web-api/native19.png)
 
