@@ -1,5 +1,5 @@
 ---
-title: AD Forest Recovery - Backing up a full server 
+title: AD Forest Recovery - Backing up a full server
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,11 +9,12 @@ ms.prod: windows-server
 ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
 ms.technology: identity-adds
 ---
-# AD Forest Recovery - Backing up a full server  
+
+# AD Forest Recovery - Backing up a full server
 
 >Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
-A full server backup is recommended to prepare for a forest recovery because it can be restored to different hardware or a different operating system instance.  Using Windows Server Backup you can perform a full backup of your server. 
+A full server backup is recommended to prepare for a forest recovery because it can be restored to different hardware or a different operating system instance.  Using Windows Server Backup you can perform a full backup of your server.
 
 ## Windows Server Backup
 
@@ -22,7 +23,7 @@ Windows Server Backup is not installed by default. In Windows Server 2016 and Wi
 >[!NOTE]
 >Please be aware that the steps may vary slightly between Windows Server 2016 and Windows Server 2012 R2.
 
-For steps to install it in Windows Server 2008 and Windows Server 2008 R2, see [Installing Windows Server Backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10)).  
+For steps to install it in Windows Server 2008 and Windows Server 2008 R2, see [Installing Windows Server Backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10)).
 
 ### To install Windows Server Backup
 
@@ -41,7 +42,7 @@ For steps to install it in Windows Server 2008 and Windows Server 2008 R2, see [
 1. Open **Server Manager**, click **Tools**, and then click **Windows Server Backup**.
    - In Windows Server 2008 R2 and Windows Server 2008, click **Start**, point to **Administrative Tools**, and then click **Windows Server Backup**.
 
-   ![Install Backup](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png) 
+   ![Install Backup](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png)
 
 2. If you are prompted, in the **User Account Control** dialog box, provide Backup Operator credentials, and then click **OK**.
 3. Click **Local Backup**.
@@ -69,8 +70,8 @@ For steps to install it in Windows Server 2008 and Windows Server 2008 R2, see [
 Wbadmin.exe is a command-line utility that enables you to back up and restore your operating system, volumes, files, folders, and applications from a command prompt.
 
 ### To perform a full server backup using Wbadmin.exe
-  
-- Open an elevated command prompt, type the following command and press ENTER:  
+
+- Open an elevated command prompt, type the following command and press ENTER:
 
    ```
    wbadmin start backup -backuptarget:<Drive_letter_to store_backup>: -include:<Drive_letter_to_include>:

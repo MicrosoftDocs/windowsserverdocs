@@ -436,10 +436,9 @@ Install-addsforest
 
 The **Install-AddsForest** cmdlet only has two phases (prerequisite checking and installation). The two figures below show the installation phase with the minimum required argument of **-domainname**.
 
-|||
-|-|-|
-|ADDSDeployment Cmdlet|Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.)|
-|Install-Addsforest|-Confirm<p>*-CreateDNSDelegation*<p>*-DatabasePath*<p>*-DomainMode*<p>***-DomainName***<p>***-DomainNetBIOSName***<p>*-DNSDelegationCredential*<p>*-ForestMode*<p>-Force<p>*-InstallDNS*<p>*-LogPath*<p>-NoDnsOnNetwork<p>-NoRebootOnCompletion<p>*-SafeModeAdministratorPassword*<p>-SkipAutoConfigureDNS<p>-SkipPreChecks<p>*-SYSVOLPath*<p>*-Whatif*|
+| ADDSDeployment Cmdlet | Arguments (**Bold** arguments are required. *Italicized* arguments can be specified by using Windows PowerShell or the AD DS Configuration Wizard.) |
+|--|--|
+| Install-Addsforest | -Confirm<p>*-CreateDNSDelegation*<p>*-DatabasePath*<p>*-DomainMode*<p>***-DomainName***<p>***-DomainNetBIOSName***<p>*-DNSDelegationCredential*<p>*-ForestMode*<p>-Force<p>*-InstallDNS*<p>*-LogPath*<p>-NoDnsOnNetwork<p>-NoRebootOnCompletion<p>*-SafeModeAdministratorPassword*<p>-SkipAutoConfigureDNS<p>-SkipPreChecks<p>*-SYSVOLPath*<p>*-Whatif* |
 
 > [!NOTE]
 > The **-DomainNetBIOSName** argument is required if you want to change the automatically generated 15-character name based on the DNS domain name prefix or if the name exceeds 15 characters.
