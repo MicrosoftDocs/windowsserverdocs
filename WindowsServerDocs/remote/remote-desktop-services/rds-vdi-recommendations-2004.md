@@ -66,22 +66,19 @@ With image-based non-persistent (NP) virtual desktop environments, the base imag
 One important aspect of NP virtual desktop that is based on a single image, is servicing.  Updates to the operating system (OS) and components of the OS are delivered usually once per month.  With image based virtual desktop environment, there are a set of processes that must be performed to get updates to the image:
 
 - On a given host, all the VMs on that host, based from the base image must be shut down / turned off. This means the users are redirected to other VMs.
-	-In some implementations, this is referred to as “draining”.  The virtual machine or session host, when set to draining mode, stops accepting new requests, but continues servicing users currently connected to the device.
-	-In draining mode, when the last user logs off the device, that device is then ready for servicing operations.
--The base image is then opened and started up.  All maintenance activities are then performed, such as OS updates, .NET updates, app updates, etc.
--Any new settings that need to be applied are applied at this time.
--Any other maintenance is performed at this time.
--The base image is then shut down.
--The base image is sealed and set to go back into production.
--Users are allowed to log back on.
+
+- In some implementations, this is referred to as “draining”.  The virtual machine or session host, when set to draining mode, stops accepting new requests, but continues servicing users currently connected to the device.
+
+- In draining mode, when the last user logs off the device, that device is then ready for servicing operations.
+- The base image is then opened and started up.  All maintenance activities are then performed, such as OS updates, .NET updates, app updates, etc.
+- Any new settings that need to be applied are applied at this time.
+- Any other maintenance is performed at this time.
+- The base image is then shut down.
+- The base image is sealed and set to go back into production.
+- Users are allowed to log back on.
 
 > [!NOTE]
-> Windows 10 performs a set of maintenance tasks, automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
->
-```PowerShell
-Get-ScheduledTask | Where-Object {$_.Settings.MaintenanceSettings}
-```
->
+> Windows 10 performs a set of maintenance tasks, automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command: <p>**Get-ScheduledTask | Where-Object {$_.Settings.MaintenanceSettings}**
 
 One of the challenges with non-persistent virtual desktop is that when a user logs off, nearly all the operating system (OS) activity is discarded.  The user’s profile and/or state may be saved to a centralized location, but the virtual machine itself discards nearly all changes that were made since last boot. Therefore, optimizations intended for a Windows computer that saves state from one session to the next are not applicable.
 
@@ -159,22 +156,22 @@ UWP apps that are not needed are still in the file system consuming a small amou
 Run the following command to enumerate provisioned UWP apps from a running OS, as in this truncated example output from PowerShell:
 
 ```powershell
-    Get-AppxProvisionedPackage -Online
+Get-AppxProvisionedPackage -Online
 
-    DisplayName  : Microsoft.3DBuilder
-    Version      : 13.0.10349.0  
-    Architecture : neutral
-    ResourceId   : \~ 
-    PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
-    Regions      :
+DisplayName  : Microsoft.3DBuilder
+Version      : 13.0.10349.0  
+Architecture : neutral
+ResourceId   : \~ 
+PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
+Regions      :
 
-    DisplayName  : Microsoft.Appconnector
-    Version      : 2015.707.550  
-    Architecture : neutral
-    ResourceId   : \~ 
-    PackageName  : Microsoft.Appconnector_2015.707.550.0_neutral_\~_8wekyb3d8bbwe
-    Regions      :
-    ...
+DisplayName  : Microsoft.Appconnector
+Version      : 2015.707.550  
+Architecture : neutral
+ResourceId   : \~ 
+PackageName  : Microsoft.Appconnector_2015.707.550.0_neutral_\~_8wekyb3d8bbwe
+Regions      :
+...
 ```
 UWP apps that are provisioned to a system can be removed during OS installation as part of a task sequence, or later after the OS is installed. This may be the preferred method because it makes the overall process of creating and/or maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build you edit an existing script rather than repeat the process from scratch. Here are some links to information on this topic:
 
@@ -199,7 +196,7 @@ As a final note on this topic, each UWP app should be evaluated for applicabilit
 
 ### Managing Optional Features with PowerShell
 
-Microsoft: [https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx)
+Microsoft: [Windows 10: Managing Optional Features with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx)
 
 You can manage Windows Optional Features using PowerShell. To enumerate currently installed Windows Features, run the following PowerShell command:
 
@@ -219,14 +216,12 @@ Examples of disabling features in the virtual desktop image:
 Disable-WindowsOptionalFeature -Online -FeatureName "WindowsMediaPlayer"
 ```
 
-Next, you may want to remove teh WIndows Media Player package.
+Next, you may want to remove the Windows Media Player package.
 
 ```powershell
 
 PS C:\> Get-WindowsPackage -Online -PackageName *media*
 
-PS C:\Windows\system32> Get-WindowsPackage -Online -PackageName *media*       
-                                                                                                                                                                 
 PackageName              : Microsoft-Windows-MediaPlayer-Package~31bf3856ad364e35~amd64~~10.0.19041.153
 Applicable               : True
 Copyright                : Copyright (c) Microsoft Corporation. All Rights Reserved
@@ -675,7 +670,8 @@ The above article contains procedures to service the ‘gold’ virtual desktop 
 #### Client network performance tuning by registry settings
 There are some registry settings that can increase network performance. This is especially important in environments where the virtual desktop device or physical computer has a workload that is primarily network based.  The settings in this section are recommended to tune performance for the networking workload profile, by setting up additional buffering and caching of things like directory entries and so on.
 
-> [!NOTE]Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
+> [!NOTE]
+> Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
 
 The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/) information, published on Microsoft.com by the Windows Product Group.
 
@@ -724,9 +720,10 @@ The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.mic
 Disk cleanup can be especially helpful with gold/master image virtual desktop implementations. After the gold/master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup.  The optimization scripts on Github.com have PowerShell code to perform common disk cleanup tasks
 
 > [!NOTE]
-Disk cleanup settings and are in the Settings category ‘System’ called ‘Storage’. The technology ‘Storage Sense’ by default runs when a low disk free space threshold is reached.
-Microsoft has provided guidance on using ‘Storage Sense’ with Azure custom VHD images.  You can locate that guidance here:<p>
-[Prepare and customize a master VHD image](https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-customize-master-image)<p>“For Windows Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**”
+> Disk cleanup settings and are in the Settings category ‘System’ called ‘Storage’. The technology ‘Storage Sense’ by default runs when a low disk free space threshold is reached.<p>
+> Microsoft has provided guidance on using ‘Storage Sense’ with Azure custom VHD images.  You can locate that guidance here:<p>
+> [Prepare and customize a master VHD image](https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-customize-master-image)<p>
+> “For Windows Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**”
 
 Here are suggestions for various disk cleanup tasks.  These should all be tested before implementing:
 
