@@ -43,14 +43,14 @@ This section provides the high-level series of steps that aid in the planning ph
 ## <a name="BKMK_1.3"></a>Implement: Configure the components and policy
 This section presents an example that deploys a central access policy for finance documents.
 
-| Step # | Step | Example |  |
-|--|--|--|--|
-| 2.1 | Create claim types | Create the following claim types:<p>-   Department<br />-   Country |  |
-| 2.2 | Create resource properties | Create and enable the following resource properties:<p>-   Department<br />-   Country |  |
-| 2.3 | Configure a central access rule | Create a Finance Documents rule that includes the policy determined in the previous section. |  |
-| 2.4 | Configure a central access policy (CAP) | Create a CAP called Finance Policy and add the Finance Documents rule to that CAP. |  |
-| 2.5 | Target central access policy to the file servers | Publish the Finance Policy CAP to the file servers. |  |
-| 2.6 | Enable KDC Support for claims, compound authentication and Kerberos armoring. | Enable KDC Support for claims, compound authentication and Kerberos armoring for contoso.com. |  |
+| Step # | Step | Example |
+|--|--|--|
+| 2.1 | Create claim types | Create the following claim types:<p>-   Department<br />-   Country |
+| 2.2 | Create resource properties | Create and enable the following resource properties:<p>-   Department<br />-   Country |
+| 2.3 | Configure a central access rule | Create a Finance Documents rule that includes the policy determined in the previous section. |
+| 2.4 | Configure a central access policy (CAP) | Create a CAP called Finance Policy and add the Finance Documents rule to that CAP. |
+| 2.5 | Target central access policy to the file servers | Publish the Finance Policy CAP to the file servers. |
+| 2.6 | Enable KDC Support for claims, compound authentication and Kerberos armoring. | Enable KDC Support for claims, compound authentication and Kerberos armoring for contoso.com. |
 
 In the following procedure, you create two claim types: Country and Department.
 

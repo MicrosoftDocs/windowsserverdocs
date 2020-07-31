@@ -9771,6 +9771,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/networking/technologies/vpn-stub.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/vpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vswitch-stub.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
       "redirect_url": "/windows-server/windows-server",
       "redirect_document_id": false

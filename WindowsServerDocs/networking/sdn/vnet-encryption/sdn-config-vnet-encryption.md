@@ -192,18 +192,18 @@ Each host must have an encryption certificate installed. You can use the same ce
 After you install the certificate on each of the Hyper-V hosts connected to the network controller, you must now configure the network controller to use it.  To do this, you must create a credential object containing the certificate thumbprint from the machine with the Network Controller PowerShell modules installed.
 
 ```
-    # Replace with thumbprint from your certificate
-    $thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"
+# Replace with thumbprint from your certificate
+$thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"
 
-    # Replace with your Network Controller URI
-    $uri = "https://nc.contoso.com"
+# Replace with your Network Controller URI
+$uri = "https://nc.contoso.com"
 
-    Import-module networkcontroller
+Import-module networkcontroller
 
-    $credproperties = new-object Microsoft.Windows.NetworkController.CredentialProperties
-    $credproperties.Type = "X509Certificate"
-    $credproperties.Value = $thumbprint
-    New-networkcontrollercredential -connectionuri $uri -resourceid "EncryptedNetworkCertificate" -properties $credproperties -force
+$credproperties = new-object Microsoft.Windows.NetworkController.CredentialProperties
+$credproperties.Type = "X509Certificate"
+$credproperties.Value = $thumbprint
+New-networkcontrollercredential -connectionuri $uri -resourceid "EncryptedNetworkCertificate" -properties $credproperties -force
 ```
 
 > [!TIP]
@@ -240,4 +240,4 @@ This step assumes you have already created a virtual network name "My Network" a
     New-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId $vnet.ResourceId -Properties $vnet.Properties -force
     ```
 
-_**Congratulations!**_ You're done once you complete these steps.
+*Congratulations!** You're done once you complete these steps.
