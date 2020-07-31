@@ -9772,12 +9772,12 @@
     },
     {
       "source_path": "WindowsServerDocs/security/group-managed-service-accounts/active-directory-domain-services-overview.md",
-      "redirect_url": "identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/security/credentials-protection-and-management/how-to-configure-protected-accounts.md",
-      "redirect_url": "identity/ad-ds/manage/How-to-Configure-Protected-Accounts",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts",
       "redirect_document_id": true
     },
     {
