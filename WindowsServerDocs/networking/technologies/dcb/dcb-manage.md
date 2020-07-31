@@ -21,10 +21,10 @@ This topic provides you with instructions on how to use Windows PowerShell comma
 For information on prerequisites for using and how to install DCB, see [Install Data Center Bridging (DCB) in Windows Server 2016 or Windows 10](dcb-install.md).
 
 
-## DCB configurations 
+## DCB configurations
 
 Prior to Windows Server 2016, all DCB configuration was applied universally to
-all network adapters that supported DCB. 
+all network adapters that supported DCB.
 
 In Windows Server 2016, you can apply DCB configurations either to the Global Policy Store or to individual Policy Store\(s\). When Individual Policies are applied they override all Global Policy settings.
 
@@ -53,24 +53,24 @@ To enforce operating system configurations of traffic class, PFC, and applicatio
 >DCB Windows PowerShell command names include “QoS” instead of “DCB” in the name string. This
 is because QoS and DCB are integrated in Windows Server 2016 to provide a seamless QoS management experience.
 
-    
+```powershell
     Set-NetQosDcbxSetting -Willing $FALSE
-    
+
     Confirm
     Are you sure you want to perform this action?
     Set-NetQosDcbxSetting -Willing $false
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
-    
+```
 
 To display the state of the Willing bit setting, you can use the following command:
 
-    
+```powershell
     Get-NetQosDcbxSetting
-    
+
     Willing PolicySetIfIndex IfAlias
     ------- ---------------- -------
-    False   Global  
-    
+    False   Global
+```
 
 ## DCB Configuration on Network Adapters
 
@@ -81,16 +81,14 @@ DCB configurations include the following steps.
 1.  Configure DCB settings at the system level, which includes:
 
 	a. Traffic Class Management
-	
+
 	b. Priority Flow Control (PFC) Settings
-	
+
 	c. Application Priority Assignment
-	
+
 	d. DCBX settings
 
 2. Configure DCB on the network adapter.
-
-
 
 ##  DCB Traffic Class management
 
@@ -100,13 +98,13 @@ Following are example Windows PowerShell commands for Traffic Class management.
 
 You can use the **New-NetQosTrafficClass** command to create a traffic class.
 
-    
+```powershell
     New-NetQosTrafficClass -Name SMB -Priority 4 -BandwidthPercentage 30 -Algorithm ETS
-    
+
     Name Algorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ---- --------- ------------ -------- ---------------- -------
     SMB  ETS   30   4Global
-      
+```
 
 By default, all 802.1p values are mapped to a default traffic class, which has 100% of the bandwidth of the physical link. The **New-NetQosTrafficClass** command creates a new traffic class, to which any packet that is tagged with 802.1p priority value 4 is mapped. The Transmission Selection Algorithm \(TSA\) is ETS and has 30% of the bandwidth.
 
@@ -118,37 +116,42 @@ The sum of the bandwidth reservations for all created traffic classes may not ex
 
 You can use the **Get-NetQosTrafficClass** command to view traffic classes.
 
+```powershell
     Get-NetQosTrafficClass
-    
+
     NameAlgorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ------------- ------------ -------- ---------------- -------
     [Default]   ETS   70   0-3,5-7  Global
-    SMB ETS   30   4Global  
-    
+    SMB ETS   30   4Global
+```
+
 ### Modify a Traffic Class
 
-You can use the **Set-NetQosTrafficClass** command to create a traffic class. 
+You can use the **Set-NetQosTrafficClass** command to create a traffic class.
 
+```powershell
     Set-NetQosTrafficClass -Name SMB -BandwidthPercentage 50
+```
 
 You can then use the **Get-NetQosTrafficClass** command to view settings.
 
+```powershell
     Get-NetQosTrafficClass
-    
+
     NameAlgorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ------------- ------------ -------- ---------------- -------
     [Default]   ETS   50   0-3,5-7  Global
-    SMB ETS   50   4Global   
-    
+    SMB ETS   50   4Global
+```
 
 After you create a traffic class, you can change its settings independently. The
 settings you can change include:
 
-1. Bandwidth allocation \(-BandwidthPercentage\)
+1. Bandwidth allocation (-BandwidthPercentage)
 
-2. TSA (\-Algorithm\)
+2. TSA (-Algorithm)
 
-3. Priority mapping \(-Priority\)
+3. Priority mapping (-Priority)
 
 ### Remove a Traffic Class
 
@@ -157,27 +160,27 @@ You can use the **Remove-NetQosTrafficClass** command to delete a traffic class.
 >[!IMPORTANT]
 >You cannot remove the default traffic class.
 
-
+```powershell
     Remove-NetQosTrafficClass -Name SMB
 
 You can then use the **Get-NetQosTrafficClass** command to view settings.
-    
+
     Get-NetQosTrafficClass
-    
+
     NameAlgorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ------------- ------------ -------- ---------------- -------
     [Default]   ETS   100  0-7  Global
-    
+```
 
 After you remove a traffic class, the 802.1p value mapped to that traffic class is remapped to the default traffic class. Any bandwidth that was reserved for a traffic class is returned to the default traffic class allocation when the traffic class is removed.
 
 ## Per-Network Interface Policies
 
-All of the above examples set Global policies. Following are examples of how you can set and get per-NIC policies. 
+All of the above examples set Global policies. Following are examples of how you can set and get per-NIC policies.
 
 The “PolicySet” field changes from Global to AdapterSpecific. When AdapterSpecific policies are shown, the Interface Index \(ifIndex\) and Interface Name \(ifAlias\) are also displayed.
 
-```
+```powershell
 PS C:\> Get-NetQosTrafficClass
 
 Name        Algorithm Bandwidth(%) Priority         PolicySet        IfIndex IfAlias
@@ -222,7 +225,6 @@ Name        Algorithm Bandwidth(%) Priority         PolicySet        IfIndex IfA
 [Default]   ETS       70           0-3,5-7          AdapterSpecific  4       M1
 SMBforM1    ETS       30           4                AdapterSpecific  4       M1
 
-
 ```
 
 ## Priority Flow Control settings:
@@ -231,7 +233,7 @@ Following are command examples for Priority Flow Control settings. These setting
 
 ### Enable and Display Priority Flow Control for Global and Interface Specific use cases
 
-```
+```powershell
 PS C:\> Enable-NetQosFlowControl -Priority 4
 PS C:\> Enable-NetQosFlowControl -Priority 3 -InterfaceAlias M1
 PS C:\> Get-NetQosFlowControl
@@ -258,14 +260,12 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 4          False      AdapterSpecific  4       M1
 5          False      AdapterSpecific  4       M1
 6          False      AdapterSpecific  4       M1
-7          False      AdapterSpecific  4       M1  
-
+7          False      AdapterSpecific  4       M1
 ```
-
 
 ### Disable Priority Flow Control (Global and Interface Specific)
 
-```
+```powershell
 PS C:\> Disable-NetQosFlowControl -Priority 4
 PS C:\> Disable-NetQosFlowControl -Priority 3 -InterfaceAlias m1
 PS C:\> Get-NetQosFlowControl
@@ -281,7 +281,6 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 6          False      Global
 7          False      Global
 
-
 PS C:\> Get-NetQosFlowControl -InterfaceAlias M1
 
 Priority   Enabled    PolicySet        IfIndex IfAlias
@@ -293,8 +292,7 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 4          False      AdapterSpecific  4       M1
 5          False      AdapterSpecific  4       M1
 6          False      AdapterSpecific  4       M1
-7          False      AdapterSpecific  4       M1  
-
+7          False      AdapterSpecific  4       M1
 ```
 
 ##  Application Priority assignment
@@ -303,7 +301,7 @@ Following are examples of Priority assignment.
 
 ### Create QoS Policy
 
-```
+```powershell
 PS C:\> New-NetQosPolicy -Name "SMB Policy" -SMB -PriorityValue8021Action 4
 
 Name           : SMB Policy
@@ -312,7 +310,6 @@ NetworkProfile : All
 Precedence     : 127
 Template       : SMB
 PriorityValue  : 4
-
 ```
 
 The previous command creates a new policy for SMB. –SMB is an inbox filter that matches TCP port 445 (reserved for SMB). If a packet is sent to TCP port 445 it will be tagged by the operating system with 802.1p value of 4 before the packet is passed to a network miniport driver.
@@ -325,7 +322,7 @@ In addition to the default filters, you can classify traffic by application's ex
 
 **By executable name**
 
-```
+```powershell
 PS C:\> New-NetQosPolicy -Name background -AppPathNameMatchCondition "C:\Program files (x86)\backup.exe" -PriorityValue8021Action 1
 
 Name           : background
@@ -335,13 +332,11 @@ Precedence     : 127
 AppPathName    : C:\Program files (x86)\backup.exe
 JobObject      :
 PriorityValue  : 1
-
 ```
-
 
 **By IP address port or protocol**
 
-```
+```powershell
 PS C:\> New-NetQosPolicy -Name "Network Management" -IPDstPrefixMatchCondition 10.240.1.0/24 -IPProtocolMatchCondition both -NetworkProfile all -PriorityValue8021Action 7
 
 Name           : Network Management
@@ -352,12 +347,11 @@ JobObject      :
 IPProtocol     : Both
 IPDstPrefix    : 10.240.1.0/24
 PriorityValue  : 7
-
 ```
 
 ### Display QoS Policy
 
-```
+```powershell
 PS C:\> Get-NetQosPolicy
 
 Name           : background
@@ -384,15 +378,13 @@ Precedence     : 127
 Template       : SMB
 JobObject      :
 PriorityValue  : 4
-
 ```
 
 ### Modify QoS Policy
 
 You can modify QoS policies as shown below.
 
-
-```
+```powershell
 PS C:\> Set-NetQosPolicy -Name "Network Management" -IPSrcPrefixMatchCondition 10.235.2.0/24 -IPProtocolMatchCondition both -PriorityValue8021Action 7
 PS C:\> Get-NetQosPolicy
 
@@ -405,33 +397,30 @@ IPProtocol     : Both
 IPSrcPrefix    : 10.235.2.0/24
 IPDstPrefix    : 10.240.1.0/24
 PriorityValue  : 7
-
-
 ```
 
 ### Remove QoS Policy
 
-```
+```powershell
 PS C:\> Remove-NetQosPolicy -Name "Network Management"
 
 Confirm
 Are you sure you want to perform this action?
 Remove-NetQosPolicy -Name "Network Management" -Store GPO:localhost
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y  
-
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
 ```
 
 ## DCB configuration on network adapters
 
-DCB configuration on network adapters is independent of DCB configuration at the system level described above. 
+DCB configuration on network adapters is independent of DCB configuration at the system level described above.
 
-Regardless of whether DCB is installed in Windows Server 2016, you can always run the following commands. 
+Regardless of whether DCB is installed in Windows Server 2016, you can always run the following commands.
 
 If you configure DCB from a switch and rely on DCBX to propagate the configurations to network adapters, you can examine what configurations are received and enforced on the network adapters from the operating system side after you enable DCB on the network adapters.
 
 ###  <a name="bkmk_enabledcb"></a>Enable and Display DCB Settings on  Network Adapters
 
-```
+```powershell
 PS C:\> Enable-NetAdapterQos M1
 PS C:\> Get-NetAdapterQos
 
@@ -452,13 +441,11 @@ OperationalFlowControl     : All Priorities Disabled
 OperationalClassifications : Protocol  Port/Type Priority
                              --------  --------- --------
                              Default             1
-
-
 ```
 
 ### Disable DCB on Network Adapters
 
-```
+```powershell
 PS C:\> Disable-NetAdapterQos M1
 PS C:\> Get-NetAdapterQos M1
 
@@ -468,9 +455,9 @@ Capabilities :                       Hardware     Current
                                      --------     -------
                MacSecBypass        : NotSupported NotSupported
                DcbxSupport         : None         None
-               NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0  
-
+               NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0
 ```
+
 ## <a name="bkmk_wps"></a>Windows PowerShell Commands for DCB
 
 There are DCB Windows PowerShell commands for both Windows Server 2016 and Windows Server 2012 R2. You can use all of the commands for Windows Server 2012 R2 in Windows Server 2016.
