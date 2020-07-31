@@ -9781,6 +9781,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/remote/remote-access/da-stub.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess.md",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/security/group-managed-service-accounts/active-directory-domain-services-overview.md",
       "redirect_url": "/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
       "redirect_document_id": false
