@@ -14,10 +14,10 @@ layout: LandingPage
 
 # Windows 10, version 1909 and Windows Server, version 1909
 
-Find information on known issues and the status of the rollout for Windows 10, version 1909 and Windows Server, version 1909. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).<p><table border = "0" class="box-info has-overflow-hidden"><tr><td class="alert is-success"><div>The Windows release health dashboard is always evolving. <a href=" https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRwd7AYyoiC5Ovm9mXkcWyfRUNlZLSFdNMjRNQTdZTllHNUFBWERLSDFISi4u" target="_blank">Take our short survey</a> and let us know how we can improve.</div></td></tr></table></p>
+Find information on known issues and the status of the rollout for Windows 10, version 1909 and Windows Server, version 1909. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s). Want the latest Windows release health updates? Follow <a href="https://twitter.com/windowsupdate" rel="noopener noreferrer" target="_blank">@WindowsUpdate</a> on Twitter.</p>
 
  <table border = '0' class='box-info has-overflow-hidden'><tr>
-<td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of May 27, 2020</strong></div><div>Windows 10, version 1909 is designated ready for broad deployment for all users via Windows Update.</div><div><br></div><div>We recommend commercial customers running earlier versions of Windows 10 nearing end of support begin broad deployments of Windows 10, version 1909 in their organizations.</div><div>&nbsp;</div><div><strong>Note&nbsp;</strong>follow&nbsp;<a href="https://twitter.com/windowsupdate" rel="noopener noreferrer" target="_blank"><strong>@WindowsUpdate</strong></a>&nbsp;on Twitter to find out when new content is published to the release information dashboard.</div>
+<td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of May 27, 2020</strong></div><div>Windows 10, version 1909 is designated ready for broad deployment for all users via Windows Update.</div><div><br></div><div>We recommend commercial customers running earlier versions of Windows 10 nearing end of support begin broad deployments of Windows 10, version 1909 in their organizations.</div>
 </td></tr></table>
 
 |               |               |               |               |               |

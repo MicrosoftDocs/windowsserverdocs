@@ -14,10 +14,10 @@ layout: LandingPage
 
 # Windows 10, version 1903 and Windows Server, version 1903
 
-Find information on known issues and the status of the rollout for Windows 10, version 1903 and Windows Server, version 1903. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).<p><table border = "0" class="box-info has-overflow-hidden"><tr><td class="alert is-success"><div>The Windows release health dashboard is always evolving. <a href=" https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRwd7AYyoiC5Ovm9mXkcWyfRUNlZLSFdNMjRNQTdZTllHNUFBWERLSDFISi4u" target="_blank">Take our short survey</a> and let us know how we can improve.</div></td></tr></table></p>
+Find information on known issues and the status of the rollout for Windows 10, version 1903 and Windows Server, version 1903. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s). Want the latest Windows release health updates? Follow <a href="https://twitter.com/windowsupdate" rel="noopener noreferrer" target="_blank">@WindowsUpdate</a> on Twitter.</p>
 
  <table border = '0' class='box-info has-overflow-hidden'><tr>
-<td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of May 27, 2020:</strong>&nbsp;&nbsp;&nbsp;</div><div>Windows 10, version 1903 (the May 2019 Update) is designated ready for broad deployment for all users via Windows Update.</div><div><br></div><div><strong>Note </strong>Follow <a href="https://twitter.com/windowsupdate" rel="noopener noreferrer" target="_blank">@WindowsUpdate</a> to find out when new content is published to the release information dashboard.</div>
+<td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of May 27, 2020:</strong>&nbsp;&nbsp;&nbsp;</div><div>Windows 10, version 1903 (the May 2019 Update) is designated ready for broad deployment for all users via Windows Update.</div>
 </td></tr></table>
 
 |               |               |               |               |               |
