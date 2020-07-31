@@ -1,6 +1,6 @@
 ---
-title: Develop a tool extension
-description: Develop a tool extension Windows Admin Center SDK (Project Honolulu)
+title: Install extension payload on a managed node
+description: Instructions about how to install extension payload on a managed node
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -15,6 +15,7 @@ ms.prod: windows-server
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
 ## Setup
+
 > [!NOTE]
 > To follow this guide, you will need build 1.2.1904.02001 or higher. To check your build number open Windows Admin Center and click the question mark in the top right.
 
@@ -25,7 +26,7 @@ If you haven't already, create a [tool extension](../develop-tool.md) for Window
 | ```{!Company Name}``` | Your company name (with spaces) | ```Contoso``` |
 | ```{!Tool Name}``` | Your tool name (with spaces) | ```InstallOnNode``` |
 
-Inside your tool extension folder create a ```Node``` folder (```{!Tool Name}\Node```). Anything placed in this folder will be copied to the managed node when using this API. Add any files necessary for your use case. 
+Inside your tool extension folder create a ```Node``` folder (```{!Tool Name}\Node```). Anything placed in this folder will be copied to the managed node when using this API. Add any files necessary for your use case.
 
 Also create a ```{!Tool Name}\Node\installNode.ps1``` script. This script will be ran on the managed node once all files are copied from the ```{!Tool Name}\Node``` folder to the managed node. Add any additional logic for your use case. An example ```{!Tool Name}\Node\installNode.ps1``` file:
 
@@ -131,10 +132,10 @@ export class DefaultModule { }
 
 The last step is building a NuGet package with the files we have added and then installing that package in Windows Admin Center.
 
-Follow the [Publishing Extensions](../publish-extensions.md) guide if you have not created an extension package before. 
+Follow the [Publishing Extensions](../publish-extensions.md) guide if you have not created an extension package before.
 > [!IMPORTANT]
-> In your .nuspec file for this extension, it is important that the ```<id>``` value matches the name in your project's ```manifest.json``` and the ```<version>``` matches what was added to ```\src\app\default.component.ts```. Also add an entry under ```<files>```: 
-> 
+> In your .nuspec file for this extension, it is important that the ```<id>``` value matches the name in your project's ```manifest.json``` and the ```<version>``` matches what was added to ```\src\app\default.component.ts```. Also add an entry under ```<files>```:
+>
 > ```<file src="Node\**\*.*" target="Node" />```.
 
 ``` xml
@@ -150,7 +151,7 @@ Follow the [Publishing Extensions](../publish-extensions.md) guide if you have n
     <licenseUrl>http://YourLicenseLink</licenseUrl>
     <iconUrl>http://YourLogoLink</iconUrl>
     <description>Install on node extension by Contoso</description>
-    <copyright>(c) Contoso. All rights reserved.</copyright> 
+    <copyright>(c) Contoso. All rights reserved.</copyright>
   </metadata>
     <files>
     <file src="bundle\**\*.*" target="ux" />
@@ -160,4 +161,4 @@ Follow the [Publishing Extensions](../publish-extensions.md) guide if you have n
 </package>
 ```
 
-Once this package is created, add a path to that feed. In Windows Admin Center go to Settings > Extensions > Feeds and add the path to where that package exists. When your extension is done being installed, you should be able to click the ```install``` button and the API will be called.  
+Once this package is created, add a path to that feed. In Windows Admin Center go to Settings > Extensions > Feeds and add the path to where that package exists. When your extension is done being installed, you should be able to click the ```install``` button and the API will be called.
