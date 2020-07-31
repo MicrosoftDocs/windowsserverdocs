@@ -9771,6 +9771,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/active-directory-domain-services-overview.md",
+      "redirect_url": "identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/credentials-protection-and-management/how-to-configure-protected-accounts.md",
+      "redirect_url": "identity/ad-ds/manage/How-to-Configure-Protected-Accounts",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
       "redirect_url": "/windows-server/windows-server",
       "redirect_document_id": false
