@@ -214,6 +214,8 @@ New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Serve
 
 For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterfileserverrole?view=win10-ps) and [Add-ClusterGenericApplicationRole](https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=win10-ps).
 
+After the AD Detached failover Cluster is created backup the certificate with private key exportable option. Open MMC ==>File ==>Add remove Snap in ==>Certificates==>Services Accounts==>Next==>Local Computer==>Cluster Service==>Certificates==>Clussvc\Personal==>Select Certificate right click==>export ==>Next==>Yes export the Private Key ==>PfX Format==>Choose Password or you can add group ==>Next==>Select path where you want to store certificate==>Next ==>Finish. "More details have been documented in Internal Article https://internal.support.services.microsoft.com/en-US/help/4569891"
+
 ## More information
 
   - [Failover Clustering](failover-clustering.md)
