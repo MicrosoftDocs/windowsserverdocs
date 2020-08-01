@@ -1,5 +1,5 @@
 ---
-title: copy
+title: Using the copy command
 description: Reference article for copy, which copies an image or a driver group.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -10,7 +10,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# copy
+
+# Using the copy command
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

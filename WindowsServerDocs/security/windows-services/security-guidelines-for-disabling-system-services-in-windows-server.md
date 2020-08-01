@@ -239,7 +239,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 | **Installation**   | Only with Desktop Experience
 | **Startup type**   | Manual
 | **Recommendation** | OK to disable
-| **Comments**       | OK to disable if not used. Another disabling mechanism: [Disabling Bluetooth and Infrared Beaming](https://docs.microsoft.com/previous-versions/tn-archive/dd252791(v=technet.10))
+| **Comments**       | OK to disable if not used. Another disabling mechanism: [Disabling Bluetooth and Infrared Beaming](/previous-versions/tn-archive/dd252791(v=technet.10))
 |||
 
 

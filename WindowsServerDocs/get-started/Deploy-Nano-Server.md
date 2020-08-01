@@ -11,6 +11,7 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ---
+
 # Deploy Nano Server
 
 > Applies To: Windows Server 2016
@@ -27,7 +28,6 @@ The Nano Server Image Builder is a tool that helps you create a custom Nano Serv
 Obtain the tool from the [Download Center](https://www.microsoft.com/download/details.aspx?id=54065).
 
 The tool also requires [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.comwindows/hardware/windows-assessment-deployment-kit).
-
 
 Nano Server Image Builder creates customized Nano Server images in VHD, VHDX, or ISO formats and can create bootable USB media to deploy Nano server or detect the hardware configuration of a server. It also can do the following:
 
@@ -51,13 +51,13 @@ If any of these are unfamiliar to you, review the remainder of this topic and th
 
 ## <a name=BKMK_CreateImage></a>Creating a custom Nano Server image
 
-For Windows Server 2016, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a subfolder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.
+For Windows Server 2016, Nano Server is distributed on the physical media, where you will find a **NanoServer** folder; this contains a .wim image and a sub-folder called **Packages**. It is these package files that you use to add server roles and features to the VHD image, which you then boot to.
 
 You can also find and install these packages with the NanoServerPackage provider of PackageManagement (OneGet) PowerShell module. See the Installing roles and features online section of this topic.
 
 This table shows the roles and features that are available in this release of Nano Server, along with the Windows PowerShell options that will install the packages for them. Some packages are installed directly with their own Windows PowerShell switches (such as -Compute); others you install by passing package names to the -Package parameter, which you can combine in a comma-separated list. You can dynamically list available packages using the Get-NanoServerPackage cmdlet.
 
-|| Role or feature | Option |
+| Role or feature | Option |
 |--|--|
 | Hyper-V role (including NetQoS) | -Compute |
 | Failover Clustering and other components, detailed after this table | -Clustering |
@@ -77,10 +77,10 @@ This table shows the roles and features that are available in this release of Na
 | BitLocker, trusted platform module (TPM), volume encryption, platform identification, cryptography providers, and other functionality related to secure startup | -Package Microsoft-NanoServer-SecureStartup-Package |
 | Hyper-V support for Shielded VMs | -Package Microsoft-NanoServer-ShieldedVM-Package<p>**Note:** This package is only available for the Datacenter edition of Nano Server. |
 | Simple Network Management Protocol (SNMP) agent | -Package Microsoft-NanoServer-SNMP-Agent-Package.cab<p>**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](#BKMK_online) for details. |
-| IPHelper service which provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS | -Package Microsoft-NanoServer-IPHelper-Service-Package.cab<p>**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](#BKMK_online) for details. ||
+| IPHelper service which provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS | -Package Microsoft-NanoServer-IPHelper-Service-Package.cab<p>**Note:** Not included with Windows Server 2016 installation media. Available online only. See [Installing roles and features online](#BKMK_online) for details. |
 
 > [!NOTE]
-> When you install packages with these options, a corresponding language pack is also installed based on selected server media locale. You can find the available language packs and their locale abbreviations in the installation media in subfolders named for the locale of the image.
+> When you install packages with these options, a corresponding language pack is also installed based on selected server media locale. You can find the available language packs and their locale abbreviations in the installation media in sub-folders named for the locale of the image.
 
 > [!NOTE]
 > When you use the -Storage parameter to install File Services, File Services is not actually enabled. Enable this feature from a remote computer with Server Manager.
@@ -111,7 +111,9 @@ This table shows the roles and features that are available in this release of Na
 
 This example creates a GPT-based VHDX image with a given computer name and including Hyper-V guest drivers, starting with Nano Server installation media on a network share. In an elevated Windows PowerShell prompt, start with this cmdlet:
 
-`Import-Module <Server media location>\NanoServer\NanoServerImageGenerator; New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\server_en-us -BasePath .\Base -TargetPath .\FirstStepsNano.vhdx -ComputerName FirstStepsNano`
+```powershell
+Import-Module <Server media location>\NanoServer\NanoServerImageGenerator; New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\server_en-us -BasePath .\Base -TargetPath .\FirstStepsNano.vhdx -ComputerName FirstStepsNano
+```
 
 The cmdlet will accomplish all of these tasks:
 
@@ -154,7 +156,9 @@ If you do not specify a computer name, a random name will be generated.
 
 To create a Nano Server image to serve as a Hyper-V host, run the following:
 
-`New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.wim -ComputerName <computer name> -OEMDrivers -Compute -Clustering`
+```powershell
+New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.wim -ComputerName <computer name> -OEMDrivers -Compute -Clustering`
+```
 
 Where
 - MediaPath is the root of the DVD media or ISO image containing Windows Server 2016 .

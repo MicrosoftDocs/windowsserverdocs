@@ -23,7 +23,7 @@ In simplest terms, a PAW is a hardened and locked down workstation designed to p
 > [!NOTE]
 > The PAW architecture doesn't require a 1:1 mapping of accounts to workstations, though this is a common configuration. PAW creates a trusted workstation environment that can be used by one or more accounts.
 
-In order to provide the greatest security, PAWs should always run the most up-to-date and secure operating system available: Microsoft strongly recommends Windows 10 Enterprise, which includes several additional security features not available in other editions (in particular, [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) and [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)).
+In order to provide the greatest security, PAWs should always run the most up-to-date and secure operating system available: Microsoft strongly recommends Windows 10 Enterprise, which includes several additional security features not available in other editions (in particular, [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) and [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
 > [!NOTE]
 > Organizations without access to Windows 10 Enterprise can use Windows 10 Pro, which includes many of the critical foundational technologies for PAWs, including Trusted Boot, BitLocker, and Remote Desktop.  Education customers can use Windows 10 Education.  Windows 10 Home should not be used for a PAW.
@@ -505,8 +505,10 @@ In this section, you will create a new "PAW Configuration - User" GPO which prov
 In this section, we will configure group policies to prevent privileged administrative accounts from logging onto lower tier hosts.
 
 1. Create the new **Restrict Workstation Logon** GPO - this setting will restrict Tier 0 and Tier 1 administrator accounts from logging onto standard workstations.  This GPO should be linked to the "Workstations" top-level OU and have the following settings:
+
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
-     ```
+
+      ```
      Enterprise Admins
      Domain Admins
      Schema Admins
@@ -524,48 +526,50 @@ In this section, we will configure group policies to prevent privileged administ
      > [!NOTE]
      > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
-         Other Delegated Groups
+      Other Delegated Groups
 
      > [!NOTE]
      > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
-         Tier 1 Admins
+      Tier 1 Admins
 
      > [!NOTE]
      > This Group was created earlier in Phase 1.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service,  select **Define these policy settings** and add the Tier 0 and Tier 1 groups:
-     ```
-     Enterprise Admins
-     Domain Admins
-     Schema Admins
-     BUILTIN\Administrators
-     Account Operators
-     Backup Operators
-     Print Operators
-     Server Operators
-     Domain Controllers
-     Read-Only Domain Controllers
-     Group Policy Creators Owners
-     Cryptographic Operators
-     ```
+      ```
+      Enterprise Admins
+      Domain Admins
+      Schema Admins
+      BUILTIN\Administrators
+      Account Operators
+      Backup Operators
+      Print Operators
+      Server Operators
+      Domain Controllers
+      Read-Only Domain Controllers
+      Group Policy Creators Owners
+      Cryptographic Operators
+      ```
 
      > [!NOTE]
      > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
-         Other Delegated Groups
+      Other Delegated Groups
 
      > [!NOTE]
      > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
-         Tier 1 Admins
+      Tier 1 Admins
 
      > [!NOTE]
      > Note: This Group was created earlier in Phase 1
 
 2. Create the new **Restrict Server Logon** GPO - this setting will restrict Tier 0 administrator accounts from logging onto Tier 1 servers.  This GPO should be linked to the "Tier 1 Servers" top-level OU and have the following settings:
+
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
-     ```
+
+   ```
      Enterprise Admins
      Domain Admins
      Schema Admins
@@ -589,6 +593,7 @@ In this section, we will configure group policies to prevent privileged administ
      > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service, select **Define these policy settings** and add the Tier 0 groups:
+
      ```
      Enterprise Admins
      Domain Admins
@@ -607,12 +612,13 @@ In this section, we will configure group policies to prevent privileged administ
      > [!NOTE]
      > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
-         Other Delegated Groups
+      Other Delegated Groups
 
      > [!NOTE]
      > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on locally, select **Define these policy settings** and add the Tier 0 groups:
+
      ```
      Enterprise Admins
      Domain Admins
@@ -631,7 +637,7 @@ In this section, we will configure group policies to prevent privileged administ
      > [!NOTE]
      > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
-         Other Delegated Groups
+      Other Delegated Groups
 
      > [!NOTE]
      > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
@@ -778,7 +784,7 @@ Enable this feature on your existing servers and workstations, then enforce the 
       2. Download the PAW *proxy.pac* file from [TechNet Gallery](https://aka.ms/pawmedia) and publish it on an internal website.
 
          > [!NOTE]
-         > You will need to update the *proxy.pac* file after downloading to ensure that it is up-to-date and complete.  
+         > You will need to update the *proxy.pac* file after downloading to ensure that it is up-to-date and complete.
          > Microsoft publishes all current Office 365 and Azure URLs in the Office [Support Center](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US). These instructions assume that you will be using Internet Explorer (or Microsoft Edge) for administration of Office 365, Azure, and other cloud services. Microsoft recommends configuring similar restrictions for any 3rd party browsers that you require for administration. Web browsers on PAWs should only be used for administration of cloud services, and never for general web browsing.
          >
          > You may need to add other valid Internet destinations to add to this list for other IaaS provider, but do not add productivity, entertainment, news, or search sites to this list.
@@ -819,36 +825,36 @@ Enable this feature on your existing servers and workstations, then enforce the 
 
          **Policies:**
 
-         |||
-         |-|-|
-         |CM Windows 10 - Domain Security|N/A - Do Not Link Now|
-         |SCM Windows 10 TH2 - Computer|Admin\Tier 0\Devices|
-         ||Admin\Tier 1\Devices|
-         ||Admin\Tier 2\Devices|
-         |SCM Windows 10 TH2- BitLocker|Admin\Tier 0\Devices|
-         ||Admin\Tier 1\Devices|
-         ||Admin\Tier 2\Devices|
-         |SCM Windows 10 - Credential Guard|Admin\Tier 0\Devices|
-         ||Admin\Tier 1\Devices|
-         ||Admin\Tier 2\Devices|
-         |SCM Internet Explorer - Computer|Admin\Tier 0\Devices|
-         ||Admin\Tier 1\Devices|
-         ||Admin\Tier 2\Devices|
-         |PAW Configuration - Computer|Admin\Tier 0\Devices (Existing)|
-         ||Admin\Tier 1\Devices (New Link)|
-         ||Admin\Tier 2\Devices (New Link)|
-         |RestrictedAdmin Required - Computer|Admin\Tier 0\Devices|
-         ||Admin\Tier 1\Devices|
-         ||Admin\Tier 2\Devices|
-         |SCM Windows 10 - User|Admin\Tier 0\Devices|
-         ||Admin\Tier 1\Devices|
-         ||Admin\Tier 2\Devices|
-         |SCM Internet Explorer - User|Admin\Tier 0\Devices|
-         ||Admin\Tier 1\Devices|
-         ||Admin\Tier 2\Devices|
-         |PAW Configuration - User|Admin\Tier 0\Devices (Existing)|
-         ||Admin\Tier 1\Devices (New Link)|
-         ||Admin\Tier 2\Devices (New Link)|
+         | Policy Name | Link |
+         |--|--|
+         | CM Windows 10 - Domain Security | N/A - Do Not Link Now |
+         | SCM Windows 10 TH2 - Computer | Admin\Tier 0\Devices |
+         |  | Admin\Tier 1\Devices |
+         |  | Admin\Tier 2\Devices |
+         | SCM Windows 10 TH2- BitLocker | Admin\Tier 0\Devices |
+         |  | Admin\Tier 1\Devices |
+         |  | Admin\Tier 2\Devices |
+         | SCM Windows 10 - Credential Guard | Admin\Tier 0\Devices |
+         |  | Admin\Tier 1\Devices |
+         |  | Admin\Tier 2\Devices |
+         | SCM Internet Explorer - Computer | Admin\Tier 0\Devices |
+         |  | Admin\Tier 1\Devices |
+         |  | Admin\Tier 2\Devices |
+         | PAW Configuration - Computer | Admin\Tier 0\Devices (Existing) |
+         |  | Admin\Tier 1\Devices (New Link) |
+         |  | Admin\Tier 2\Devices (New Link) |
+         | RestrictedAdmin Required - Computer | Admin\Tier 0\Devices |
+         |  | Admin\Tier 1\Devices |
+         |  | Admin\Tier 2\Devices |
+         | SCM Windows 10 - User | Admin\Tier 0\Devices |
+         |  | Admin\Tier 1\Devices |
+         |  | Admin\Tier 2\Devices |
+         | SCM Internet Explorer - User | Admin\Tier 0\Devices |
+         |  | Admin\Tier 1\Devices |
+         |  | Admin\Tier 2\Devices |
+         | PAW Configuration - User | Admin\Tier 0\Devices (Existing) |
+         |  | Admin\Tier 1\Devices (New Link) |
+         |  | Admin\Tier 2\Devices (New Link) |
 
          > [!NOTE]
          > The "SCM Windows 10 - Domain Security" GPO may be linked to the domain independently of PAW, but will affect the entire domain.
@@ -1097,4 +1103,4 @@ Once the template disk and shielding data file are ready, you can deploy an admi
 
 [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378897(v=ws.10))
 
-[Trusted Platform Module](C:/sd/docs/p_ent_keep_secure/p_ent_keep_secure/trusted_platform_module_technology_overview.xml)
+[Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview)

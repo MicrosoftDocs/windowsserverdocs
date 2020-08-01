@@ -1,4 +1,4 @@
---- 
+---
 title: Migrating Roles and Features
 description: Info on how to migrate roles and features to a newer version of Windows Server.
 ms.prod: windows-server
@@ -21,7 +21,7 @@ The migration guides support migrations of specified roles and features from one
 
 ## Before you begin
 
-Before you begin migrating roles and features, verify that both source and destination servers are running the most current service packs that are available for their operating systems. 
+Before you begin migrating roles and features, verify that both source and destination servers are running the most current service packs that are available for their operating systems.
 
 > [!NOTE]
 > Whenever you migrate or upgrade to any version of Windows Server, you should review and understand the [support lifecycle policy](https://support.microsoft.com/lifecycle) and timeframe for that version and plan accordingly. You can [search for the lifecycle information](https://support.microsoft.com/lifecycle) for the particular Windows Server release that you are interested in.
@@ -57,7 +57,7 @@ Follow the steps in these guides to migrate roles and features from servers that
 - [Migrate Cluster Roles to Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn530779(v=ws.11))
 - [Migrate DHCP Server to Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn495425(v=ws.11))
 
-An e-book of Windows Server 2012 R2 and Windows Server 2012 migration guides is now available. For more information, and to download the e-book, see the [E-Book Gallery for Microsoft Technologies](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#MigrateRoles).
+An e-book of Windows Server 2012 R2 and Windows Server 2012 migration guides is now available. For more information, and to download the e-book, see the [E-Book Gallery for Microsoft Technologies](https://download.microsoft.com/download/8/D/3/8D33661A-7E21-4FEE-9AAA-C17C3004B5AA/Windows-Migration-and-Upgrade-Guide.pdf).
 
 ## Windows Server 2012
 
@@ -74,7 +74,7 @@ Follow the steps in these guides to migrate roles and features from servers that
 - [Migrate Windows Server Update Services to Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852339(v=ws.11))
 - [Upgrade Active Directory Domain Controllers to Windows Server 2012](../identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012.md)
 - [Migrating Clustered Services and Applications to Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486790(v=ws.11))
- 
+
 
 For additional migration resources, visit [Migrate Roles and Features to Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134039(v=ws.11)).
 
@@ -98,5 +98,5 @@ Follow the steps in these guides to migrate roles and features from servers that
 - [RRAS Migration Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee822825(v=ws.10))
 - [Windows Server Migration Common Tasks and Information](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff400258(v=ws.10))
 - [Windows Server Update Services 3.0 SP2 Migration Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee822826(v=ws.10))
- 
+
 For additional migration resources, visit [Migrate Roles and Features to Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd365353(v=ws.10)).

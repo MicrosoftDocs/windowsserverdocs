@@ -1,11 +1,11 @@
 ---
 title: Overview of file sharing using the SMB 3 protocol in Windows Server
 description: An overview of using the SMB 3 protocol for file shares and file serving with Windows Server.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.prod: windows-server
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+ms.technology: storage
 ms.date: 01/10/2020
 ms.localizationpriority: medium
 ---
@@ -41,7 +41,7 @@ The following sections describe functionality that was added in SMB 3 and subseq
 
 | Feature/functionality  | New or updated  | Summary  |
 | --------- | --------- | --------- |
-| Guest access to file shares is disabled | New | The SMB client no longer allows the following actions: Guest account access to a remote server; Fallback to the Guest account after invalid credentials are provided. For details, see [Guest access in SMB2 disabled by default in Windows](https://support.microsoft.com/help/4046019/guest-access-in-smb2-disabled-by-default-in-windows-10-and-windows-ser). | 
+| Guest access to file shares is disabled | New | The SMB client no longer allows the following actions: Guest account access to a remote server; Fallback to the Guest account after invalid credentials are provided. For details, see [Guest access in SMB2 disabled by default in Windows](https://support.microsoft.com/help/4046019/guest-access-in-smb2-disabled-by-default-in-windows-10-and-windows-ser). |
 | SMB global mapping | New | Maps a remote SMB share to a drive letter that is accessible to all users on the local host, including containers. This is required to enable container I/O on the data volume to traverse the remote mount point. Be aware that when using SMB global mapping for containers, all users on the container host can access the remote share. Any application running on the container host also have access to the mapped remote share. For details, see [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct, SMB Global Mapping](https://techcommunity.microsoft.com/t5/failover-clustering/container-storage-support-with-cluster-shared-volumes-csv/ba-p/372140). |
 | SMB dialect control | New | You can now set registry values to control the minimum SMB version (dialect) and maximum SMB version used. For details, see [Controlling SMB Dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024). |
 
@@ -68,7 +68,7 @@ For additional details, see the blog post [What’s new in SMB 3.1.1 in the Wind
 | SMB Direct     |   Updated      | Improves performance for small I/O workloads by increasing efficiency when hosting workloads with small I/Os (such as an online transaction processing (OLTP) database in a virtual machine). These improvements are evident when using higher speed network interfaces, such as 40 Gbps Ethernet and 56 Gbps InfiniBand.  |
 | SMB bandwidth limits | New | You can now use [Set-SmbBandwidthLimit](/powershell/module/smbshare/set-smbbandwidthlimit) to set bandwidth limits in three categories: VirtualMachine (Hyper-V over SMB traffic), LiveMigration (Hyper-V Live Migration traffic over SMB), or Default (all other types of SMB traffic).
 
-For more information on new and changed SMB functionality in Windows Server 2012 R2, see [What's New in SMB in Windows Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>).
+For more information on new and changed SMB functionality in Windows Server 2012 R2, see [What's New in SMB in Windows Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>).
 
 ## Features added in SMB 3.0 with Windows Server 2012 and Windows 8
 
@@ -116,7 +116,7 @@ The following list provides additional resources on the web about SMB and relate
 * [Storage in Windows Server](../storage.yml)
 * [Scale-Out File Server for Application Data](../../failover-clustering/sofs-overview.md)
 * [Improve Performance of a File Server with SMB Direct](smb-direct.md)
-* [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
-* [Deploy SMB Multichannel](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
-* [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
-* [SMB: Troubleshooting Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)
+* [Deploy Hyper-V over SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+* [Deploy SMB Multichannel](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>)
+* [Deploying Fast and Efficient File Servers for Server Applications](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+* [SMB: Troubleshooting Guide](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>)

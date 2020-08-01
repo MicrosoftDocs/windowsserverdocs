@@ -10,6 +10,7 @@ author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
 ---
+
 # Linux Software Repository for Microsoft Products
 
 ## Overview
@@ -22,7 +23,7 @@ Microsoft's Linux Software Repository is comprised of multiple sub-repositories:
 
  - mssql-server - These repositories contain packages for Microsoft SQL Server on Linux - See also: [SQL Server on Linux](https://www.microsoft.com/sql-server/sql-server-vnext-including-Linux).
 
-> [!Note]
+> [!NOTE]
 > Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
 
 ## Configuring the repositories
@@ -31,55 +32,38 @@ Repositories can be configured automatically by installing the Linux package tha
 
 ### Enterprise Linux (RHEL and variants)
 
- - Enterprise Linux 6 (EL6)
+- Enterprise Linux 6 (EL6)<p>sudo rpm -Uvh https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
 
-        sudo rpm -Uvh https://packages.microsoft.com/config/rhel/6/packages-microsoft-prod.rpm
+- Enterprise Linux 7 (EL7)<p>sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 
- - Enterprise Linux 7 (EL7)
-
-        sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
-
- - Enterprise Linux 8 (EL8)
-
-        sudo rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
+ - Enterprise Linux 8 (EL8)<p>sudo rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
 
 ### Ubuntu
 
- - Ubuntu 16.04 (Xenial)
+ - Ubuntu 16.04 (Xenial)<p>curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod<p>sudo apt-get update
 
-        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-        sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod
-        sudo apt-get update
-
- - Ubuntu 18.04 (Bionic)
-
-        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-        sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
-        sudo apt-get update
-
- - Ubuntu 20.04 (Disco)
-
-        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-        sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod
-        sudo apt-get update
+ - Ubuntu 18.04 (Bionic)<p>curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod<p>sudo apt-get update
+ 
+ - Ubuntu 20.04 (Disco)<p>curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod<p>sudo apt-get update
 
 ### SUSE Linux Enterprise 12
 
-        sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
+sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
+
 
 ## Manual Configuration
 
 The repository configuration files are available from [packages.microsoft.com/config](https://packages.microsoft.com/config/). The name and location of these files can be located using the following URI naming convention:
 
-        https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
+https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
 
 **Package and Repository Signing Key**
 
- - Microsoft's GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
- - Public Key ID: Microsoft (Release signing) <gpgsecurity@microsoft.com>
- - Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
+- Microsoft's GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
+- Public Key ID: Microsoft (Release signing) <gpgsecurity@microsoft.com>
+- Public Key Fingerprint: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
-### Examples:
+### Examples
 
  - RHEL/CentOS 7
 
