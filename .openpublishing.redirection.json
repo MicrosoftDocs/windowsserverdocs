@@ -38,27 +38,22 @@
     {
       "source_path": "WindowsServerDocs/networking/sdn/plan/Plan-Software-Defined-Networking.md",
       "redirect_url": "/windows-server/networking/sdn/plan/Deploy-a-Software-Defined-Network-Infrastructure",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
       "redirect_url": "/windows-server/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-and-optimization-technologies.md",
       "redirect_url": "/windows-server/networking/technologies/network-offload-and-optimization-technologies",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
       "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/windows-insider/Whats-new-wip-at-work.md",
-      "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/whats-new-wip-at-work",
-      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/plan/security-best-practices/Understanding-Active-Directory-Domain-Services--AD-DS--Functional-Levels.md.md",
@@ -68,7 +63,7 @@
     {
       "source_path": "WindowsServerDocs/windows-insider/index.md",
       "redirect_url": "https://docs.microsoft.com/windows-insider/at-work/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service.md",
@@ -393,12 +388,12 @@
     {
       "source_path": "WindowsServerDocs/security/windows-defender/automatic-exclusions-for-windows-defender.md",
       "redirect_url": "windows/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/windows-defender/windows-defender-events.md",
       "redirect_url": "/windows/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/windows-server-versions.md",
@@ -1243,7 +1238,7 @@
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/Add-RD-Web-and-Gateway-server-to-the-RDS-deployment.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/Add-RD-Web-and-Gateway-server-to-the-RDS-deployment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md",
@@ -1328,7 +1323,7 @@
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-RemoteApp-programs.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/Deploy-RemoteApp-programs",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-your-Remote-Desktop-environment.md",
@@ -1393,7 +1388,7 @@
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/Prepare-your-virtual-machines-for-Remote-Desktop.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/Prepare-your-virtual-machines-for-Remote-Desktop",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-activate-license-server.md",
@@ -1443,17 +1438,17 @@
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-office-vdi-rdsh.md",
       "redirect_url": "/deployoffice/rds-office-vdi-rdsh",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-outlook-data-fslogix.md",
       "redirect_url": "/deployoffice/rds-outlook-search",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-onedrive-for-business.md",
       "redirect_url": "/deployoffice/rds-onedrive-business-vdi",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-personal-session-desktops.md",
@@ -1478,7 +1473,7 @@
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-cater-to-users.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-cater-to-users",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-choose-how-you-pay.md",
@@ -2343,7 +2338,7 @@
     {
       "source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md",
       "redirect_url": "/windows-server/administration/server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor-users-guide.md",
@@ -2353,7 +2348,7 @@
     {
       "source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor.md",
       "redirect_url": "/windows-server/administration/server-performance-advisor/server-performance-advisor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/software-inventory-logging/manage-software-inventory-logging.md",
@@ -2388,7 +2383,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/a-z-list.md",
       "redirect_url": "/windows-server/administration/windows-commands/a-z-list",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/active.md",
@@ -2708,7 +2703,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bitsadmin-get-priority.md",
       "redirect_url": "/windows-server/administration/windows-commands/bitsadmin-get-priority",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bitsadmin-getaclflags.md",
@@ -3338,7 +3333,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/command-line-reference_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/command-line-reference_1",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/command-line-syntax-key.md",
@@ -3983,7 +3978,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--.mdir_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/ftp--ir_1",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--append.md",
@@ -4162,18 +4157,18 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp-.mdelete_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp-elete_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mdelete_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp-.mdir.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp-ir",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mdir",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp-.mdir_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp-ir_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mdir_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp-append.md",
@@ -4362,13 +4357,13 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp.mdelete_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftpelete_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mdelete_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp.mdir.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftpir",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mdir",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftype.md",
@@ -5513,7 +5508,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/reg-flags.md",
       "redirect_url": "/windows-server/administration/windows-commands/reg-flags",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/reg-import.md",
@@ -6868,7 +6863,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/winrm.md",
       "redirect_url": "/windows-server/administration/windows-commands/winrm.",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/winrs.md",
@@ -6888,7 +6883,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/wlbs_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/wlbs_1",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/wmic.md",
@@ -7003,7 +6998,7 @@
     {
       "source_path": "WindowsServerDocs/management/management-and-automation.md",
       "redirect_url": "/windows-server/administration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/manage/viewing-and-managing-updates.md",
@@ -7893,7 +7888,7 @@
     {
       "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configure-the-first-hgs-node.md",
       "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-the-first-hgs-node",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuring-fabric-dns.md",
@@ -8148,7 +8143,7 @@
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd.md",
@@ -8258,7 +8253,7 @@
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md",
       "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Both-Perimeter-Network-and-Internet-Clients",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/manage/windows-admin-center/license/windows-pre-release-extension-eula.md",
@@ -8313,7 +8308,7 @@
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/configure-ad-fs-extranet-lockout.md",
       "redirect_url": "/windows-server/identity/ad-fs/operations/configure-ad-fs-extranet-lockout-protection",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/trusted-platform-module/user-account-control/how-user-account-control-works.md",
@@ -8323,7 +8318,7 @@
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/auditing-enhancements-to-ad-fs-in-windows-server-2016.md",
       "redirect_url": "/windows-server/identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server-2016",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/operations/set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2.md",
@@ -8452,8 +8447,8 @@
     },
     {
       "source_path": "WindowsServerDocs/administration/get-started-with-smt.md",
-      "redirect_url": "https://blogs.technet.microsoft.com/servermanagement/2017/05/17/smt-preview-service-is-being-retired-on-june-30-2017/",
-      "redirect_document_id": true
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/what-s-new-in-windows-server-2016.md",
@@ -8638,7 +8633,7 @@
     {
       "source_path": "WindowsServerDocs/azure-stack-hci/index.md",
       "redirect_url": "https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/set-up-hgs-for-always-encrypted-in-sql-server.md",
@@ -8648,7 +8643,7 @@
     {
       "source_path": "WindowsServerDocs/networking/Networking.md",
       "redirect_url": "https://docs.microsoft.com/windows-server/networking",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "EssentialsDocs/index.md",
@@ -9521,6 +9516,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep.exe.md",
+      "redirect_url": "WindowsServerDocs/identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/remote/multipoint-services/manage-client-access-licenses-with-multipoint-services.md",
       "redirect_url": "manage-client-access-licenses",
       "redirect_document_id": false
@@ -9771,14 +9771,19 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/active-directory-domain-services-overview.md",
-      "redirect_url": "/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
-      "redirect_document_id": true
+      "source_path": "WindowsServerDocs/networking/technologies/vpn-stub.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/vpn-top",
+      "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/security/credentials-protection-and-management/how-to-configure-protected-accounts.md",
-      "redirect_url": "/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts",
-      "redirect_document_id": true
+      "source_path": "WindowsServerDocs/networking/technologies/vswitch-stub.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/da-stub.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess.md",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",

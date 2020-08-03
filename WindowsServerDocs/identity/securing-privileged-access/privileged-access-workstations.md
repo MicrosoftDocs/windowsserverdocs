@@ -569,7 +569,7 @@ In this section, we will configure group policies to prevent privileged administ
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
 
-   ```
+      ```
      Enterprise Admins
      Domain Admins
      Schema Admins
@@ -587,14 +587,14 @@ In this section, we will configure group policies to prevent privileged administ
      > [!NOTE]
      > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
-         Other Delegated Groups
+      Other Delegated Groups
 
      > [!NOTE]
      > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service, select **Define these policy settings** and add the Tier 0 groups:
 
-     ```
+      ```
      Enterprise Admins
      Domain Admins
      Schema Admins
@@ -607,7 +607,7 @@ In this section, we will configure group policies to prevent privileged administ
      Read-Only Domain Controllers
      Group Policy Creators Owners
      Cryptographic Operators
-     ```
+      ```
 
      > [!NOTE]
      > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.

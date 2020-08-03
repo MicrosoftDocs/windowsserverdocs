@@ -54,7 +54,7 @@ Click next and then complete the wizard.
 The demo application uses the value in NameIdentifier claim at various places. Unlike Azure AD, AD FS does not issue a NameIdentifier claim by default. Therefore, we need to add a claim rule to issue the NameIdentifier claim so that the application can use the correct value. In this example, the given name of the user is issued as the NameIdentifier value for the user in the token.
 To configure the claim rule, open the application group just created, and double click on the Web API. Select the Issuance Transform Rules tab and then click on Add Rule button. In the type of claim rule, choose Custom claim rule and then add the claim rule as shown below.
 
-```  
+```
 c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"), query = ";givenName;{0}", param = c.Value);
 ```
@@ -63,13 +63,13 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsacco
 
 ### Modify the application code
 
-This section discusses how to download the sample Web API and modify it in Visual Studio.   We will be using the Azure AD sample that is [here](https://github.com/Azure-Samples/active-directory-dotnet-native-desktop).  
+This section discusses how to download the sample Web API and modify it in Visual Studio.   We will be using the Azure AD sample that is [here](https://github.com/Azure-Samples/active-directory-dotnet-native-desktop).
 
-To download the sample project, use Git Bash and type the following:  
+To download the sample project, use Git Bash and type the following:
 
-```  
-git clone https://github.com/Azure-Samples/active-directory-dotnet-native-desktop  
-```  
+```
+git clone https://github.com/Azure-Samples/active-directory-dotnet-native-desktop
+```
 
 #### Modify ToDoListClient
 
@@ -93,24 +93,23 @@ The following code changes are needed in order to get the above information to t
 
   ![App config](media/native-client-with-ad-fs-2016/app_configfile.PNG)
 
-
 **MainWindow.xaml.cs**
 
 * Comment the line for aadInstance as below
 
-        // private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];
+    `// private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];`
 
 * Add the value for authority as below
 
-        private static string authority = ConfigurationManager.AppSettings["ida:Authority"];
+    `private static string authority = ConfigurationManager.AppSettings["ida:Authority"];`
 
 * Delete the line for creating the **authority** value from aadInstance and tenant
 
-        private static string authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
+    `private static string authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);`
 
 * In the function **MainWindow**, change the authContext instantiation to
 
-        authContext = new AuthenticationContext(authority,false);
+   `authContext = new AuthenticationContext(authority,false);`
 
     ADAL does not support validating AD FS as authority and therefore we have to pass a false value flag for validateAuthority parameter.
 
@@ -128,11 +127,11 @@ Two files need changes in this project – Web.config and Startup.Auth.cs. Web.C
 
 ![Web config](media/native-client-with-ad-fs-2016/webconfig.PNG)
 
-
 **Startup.Auth.cs**
 
 Modify the ConfigureAuth function as below
 
+```
     public void ConfigureAuth(IAppBuilder app)
     {
         app.UseActiveDirectoryFederationServicesBearerAuthentication(
@@ -147,6 +146,7 @@ Modify the ConfigureAuth function as below
 
             });
     }
+```
 
 Essentially, we are configuring the authentication to use AD FS and further provide information about the AD FS metadata, and to validate the token, the audience claim should be the value expected by the Web API.
 Running the application
@@ -164,4 +164,4 @@ In this step, the native application redirected to AD FS and got an ID token and
 ![Sign-in](media/native-client-with-ad-fs-2016/clienttodoadd.png)
 
 ## Next Steps
-[AD FS Development](../../ad-fs/AD-FS-Development.md)  
+[AD FS Development](../../ad-fs/AD-FS-Development.md)

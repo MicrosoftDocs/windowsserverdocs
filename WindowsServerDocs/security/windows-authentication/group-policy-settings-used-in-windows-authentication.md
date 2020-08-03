@@ -19,7 +19,7 @@ This reference topic for the IT professional describes the use and impact of Gro
 You can manage authentication in Windows operating systems by adding user, computer, and service accounts to groups, and then by applying authentication policies to those groups. These policies are defined as local security policies and as administrative templates, also known as Group Policy settings. Both sets can be configured and distributed throughout your organization by using Group Policy.
 
 > [!NOTE]
-> Features introduced in  Windows Server 2012 R2 , let you configure authentication policies for targeted services or applications, commonly called authentication silos, by using protected accounts. For information about how to do this in Active Directory, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+> Features introduced in  Windows Server 2012 R2 , let you configure authentication policies for targeted services or applications, commonly called authentication silos, by using protected accounts. For information about how to do this in Active Directory, see [How to Configure Protected Accounts](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
 For example, you can apply the following policies to groups, based on their function in the organization:
 

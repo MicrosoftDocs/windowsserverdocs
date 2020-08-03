@@ -14,7 +14,4 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-There are no changes to adprep /rodcprep in Windows Server 2012 R2 or in Windows Server 2012.  
-  
-
-
+There are no changes to adprep /rodcprep in Windows Server 2012 R2 or in Windows Server 2012.

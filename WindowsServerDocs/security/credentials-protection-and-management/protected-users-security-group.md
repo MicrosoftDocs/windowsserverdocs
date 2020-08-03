@@ -41,10 +41,10 @@ Requirements to provide domain controller protection for members of the Protecte
 
 ### Adding Protected User global security group to down-level domains
 
-Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded. 
+Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded.
 
 > [!Note]
-> The domain controllers will not support domain protections. 
+> The domain controllers will not support domain protections.
 
 Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
@@ -102,7 +102,7 @@ Accounts that are members of the Protected Users group that authenticate to a  W
 
 Non-configurable settings to the TGTs expiration are established for every account in the Protected Users group. Normally, the domain controller sets the TGTs lifetime and renewal, based on the domain policies, **Maximum lifetime for user ticket** and **Maximum lifetime for user ticket renewal**. For the Protected Users group, 600 minutes is set for these domain policies.
 
-For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+For more information, see [How to Configure Protected Accounts](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
 ## Troubleshooting
 Two operational administrative logs are available to help troubleshoot events that are related to Protected Users. These new logs are located in Event Viewer and are disabled by default, and are located under **Applications and Services Logs\Microsoft\Windows\Authentication**.
@@ -122,4 +122,4 @@ Two operational administrative logs are available to help troubleshoot events th
 
 - [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md)
 
-- [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
+- [How to Configure Protected Accounts](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts)

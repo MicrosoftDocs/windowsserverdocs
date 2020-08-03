@@ -6,7 +6,7 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d268dc57-78f8-47ba-9a7a-a607e8b9225c
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 
@@ -14,7 +14,7 @@ author: eross-msft
 
 Applies To: Windows Server 2016
 
-You can export the entire NPS configuration — including RADIUS clients and servers, network policy, connection request policy, registry, and logging configuration — from one NPS for import on another NPS. 
+You can export the entire NPS configuration — including RADIUS clients and servers, network policy, connection request policy, registry, and logging configuration — from one NPS for import on another NPS.
 
 Use one of the following tools to export the NPS configuration:
 
@@ -33,9 +33,11 @@ Because NPS configurations are not encrypted in the exported XML file, sending i
 
 For Windows Server 2012 and later operating system versions, you can export the NPS configuration using Windows PowerShell.
 
-The command syntax for exporting the NPS configuration is as follows. 
+The command syntax for exporting the NPS configuration is as follows.
 
-    Export-NpsConfiguration -Path <filename>
+```powershell
+Export-NpsConfiguration -Path <filename>
+```
 
 The following table lists parameters for the **Export-NpsConfiguration** cmdlet in Windows PowerShell. Parameters in bold are required.
 
@@ -47,11 +49,13 @@ The following table lists parameters for the **Export-NpsConfiguration** cmdlet 
 
 To complete this procedure, you must be a member of the Administrators group.
 
-### Export Example 
+### Export Example
 
 In the following example, the NPS configuration is exported to an XML file located on the local drive. To run this command, run Windows PowerShell as Administrator on the source NPS, type the following command, and press Enter.
 
-`Export-NpsConfiguration –Path c:\config.xml` 
+```powershell
+Export-NpsConfiguration –Path c:\config.xml
+```
 
 For more information, see [Export-NpsConfiguration](https://technet.microsoft.com/library/jj872749.aspx).
 
@@ -59,21 +63,25 @@ After you have exported the NPS configuration, copy the XML file to the destinat
 
 The command syntax for importing the NPS configuration on the destination server is as follows.
 
-    Import-NpsConfiguration [-Path] <String> [ <CommonParameters>]
+```powershell
+Import-NpsConfiguration [-Path] <String> [ <CommonParameters>]
+```
 
 ### Import Example
 
 The following command imports settings from the file named C:\Npsconfig.xml to NPS. To run this command, run Windows PowerShell as Administrator on the destination NPS, type the following command, and press Enter.
 
-    PS C:\> Import-NpsConfiguration -Path "C:\Npsconfig.xml"
+```powershell
+Import-NpsConfiguration -Path "C:\Npsconfig.xml"
+```
 
 For more information, see [Import-NpsConfiguration](https://technet.microsoft.com/library/jj872750.aspx).
 
 ## Export and Import the NPS configuration by using Netsh
 
-You can use Network Shell \(Netsh\) to export the NPS configuration by using the **netsh nps export** command.
+You can use Network Shell (Netsh) to export the NPS configuration by using the **netsh nps export** command.
 
-When the **netsh nps import** command is run, NPS is automatically refreshed with the updated configuration settings. You do not need to stop NPS on the destination computer to run the **netsh nps import** command, however if the NPS console or NPS MMC snap-in is open during the configuration import, changes to the server configuration are not visible until you refresh the view. 
+When the **netsh nps import** command is run, NPS is automatically refreshed with the updated configuration settings. You do not need to stop NPS on the destination computer to run the **netsh nps import** command, however if the NPS console or NPS MMC snap-in is open during the configuration import, changes to the server configuration are not visible until you refresh the view.
 
 > [!NOTE]
 > When you use the **netsh nps export** command, you are required to provide the command parameter **exportPSK** with the value **YES**. This parameter and value explicitly state that you understand that you are exporting the NPS configuration, and that the exported XML file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups.
@@ -86,15 +94,16 @@ To complete this procedure, you must be a member of the Administrators group.
 
 1. On the source NPS, open **Command Prompt**, type **netsh**, and then press Enter.
 
-2. At the **netsh** prompt, type **nps**, and then press Enter. 
+2. At the **netsh** prompt, type **nps**, and then press Enter.
 
-3. At the **netsh nps** prompt, type **export filename=**"*path\file.xml*" **exportPSK=YES**, where *path* is the folder location where you want to save the NPS configuration file, and *file* is the name of the XML file that you want to save. Press Enter. 
+3. At the **netsh nps** prompt, type **export filename=**"*path\file.xml*" **exportPSK=YES**, where *path* is the folder location where you want to save the NPS configuration file, and *file* is the name of the XML file that you want to save. Press Enter.
 
-This stores configuration settings \(including registry settings\) in an XML file. The path can be relative or absolute, or it can be a Universal Naming Convention \(UNC\) path. After you press Enter, a message appears indicating whether the export to file was successful.
+    This stores configuration settings (including registry settings) in an XML file. The path can be relative or absolute, or it can be a Universal Naming Convention (UNC) path. After you press Enter, a message appears indicating whether the export to file was successful.
 
 4. Copy the file you created to the destination NPS.
 
 5. At a command prompt on the destination NPS, type **netsh nps import filename=**"*path\file.xml*", and then press Enter. A message appears indicating whether the import from the XML file was successful.
 
-For more information about netsh, see [Network Shell (Netsh)](../netsh/netsh.md).
+## Additional references
 
+- [Network Shell (Netsh)](../netsh/netsh.md)

@@ -1,5 +1,5 @@
 ---
-title: Windows Server 2016 improvements
+title: Windows Server 2016 time improvements
 description: Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.
 author: dcuomo
 ms.author: dacuo
@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: networking
 ---
 
-# Windows Server 2016 improvements
+# Windows Server 2016 time improvements
 
 This article includes information about improvements made in Windows Server 2016.
 
