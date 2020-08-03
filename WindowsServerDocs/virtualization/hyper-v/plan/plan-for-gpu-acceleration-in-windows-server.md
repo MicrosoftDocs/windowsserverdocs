@@ -62,17 +62,17 @@ For more information, see these topics:
 
 Consider the following functionality and support differences between graphics virtualization technologies when planning your deployment:
 
-|                       | RemoteFX vGPU                                                                       | Discrete Device Assignment                                                          |
-|-----------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| GPU resource model    | Dedicated or shared                                                                 | Dedicated only                                                                      |
-| VM density            | High (one or more GPUs to many VMs)                                                 | Low (one or more GPUs to one VM)                                                    |
-| App compatibility     | DX 11.1, OpenGL 4.4, OpenCL 1.1                                                     | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA)                       |
-| AVC444                | Enabled by default                                                                  | Available through Group Policy                                                      |
-| GPU VRAM              | Up to 1 GB dedicated VRAM                                                           | Up to VRAM supported by the GPU                                                     |
-| Frame rate            | Up to 30fps                                                                         | Up to 60fps                                                                         |
-| GPU driver in guest   | RemoteFX 3D adapter display driver (Microsoft)                                      | GPU vendor driver (NVIDIA, AMD, Intel)                                              |
-| Host OS support       | Windows Server 2016                                                                 | Windows Server 2016; Windows Server 2019                                            |
-| Guest OS support      | Windows Server 2012 R2; Windows Server 2016; Windows 7 SP1; Windows 8.1; Windows 10 | Windows Server 2012 R2; Windows Server 2016; Windows Server 2019; Windows 10; Linux |
-| Hypervisor            | Microsoft Hyper-V                                                                   | Microsoft Hyper-V                                                                   |
-| GPU hardware          | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro)                         | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro)                         |
-| Server hardware       | No special requirements                                                             | Modern server, exposes IOMMU to OS (usually SR-IOV compliant hardware)              |
+| Description | RemoteFX vGPU | Discrete Device Assignment |
+|--|--|--|
+| GPU resource model | Dedicated or shared | Dedicated only |
+| VM density | High (one or more GPUs to many VMs) | Low (one or more GPUs to one VM) |
+| App compatibility | DX 11.1, OpenGL 4.4, OpenCL 1.1 | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) |
+| AVC444 | Enabled by default | Available through Group Policy |
+| GPU VRAM | Up to 1 GB dedicated VRAM | Up to VRAM supported by the GPU |
+| Frame rate | Up to 30fps | Up to 60fps |
+| GPU driver in guest | RemoteFX 3D adapter display driver (Microsoft) | GPU vendor driver (NVIDIA, AMD, Intel) |
+| Host OS support | Windows Server 2016 | Windows Server 2016; Windows Server 2019 |
+| Guest OS support | Windows Server 2012 R2; Windows Server 2016; Windows 7 SP1; Windows 8.1; Windows 10 | Windows Server 2012 R2; Windows Server 2016; Windows Server 2019; Windows 10; Linux |
+| Hypervisor | Microsoft Hyper-V | Microsoft Hyper-V |
+| GPU hardware | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro) | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro) |
+| Server hardware | No special requirements | Modern server, exposes IOMMU to OS (usually SR-IOV compliant hardware) |
