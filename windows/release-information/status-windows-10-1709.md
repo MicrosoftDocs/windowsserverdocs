@@ -14,7 +14,7 @@ layout: LandingPage
 
 # Windows 10, version 1709 and Windows Server, version 1709
 
-Find information on known issues for Windows 10, version 1709 and Windows Server, version 1709. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s).<p><table border = "0" class="box-info has-overflow-hidden"><tr><td class="alert is-success"><div>The Windows release health dashboard is always evolving. <a href=" https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRwd7AYyoiC5Ovm9mXkcWyfRUNlZLSFdNMjRNQTdZTllHNUFBWERLSDFISi4u" target="_blank">Take our short survey</a> and let us know how we can improve.</div></td></tr></table></p>
+Find information on known issues for Windows 10, version 1709 and Windows Server, version 1709. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s). Want the latest Windows release health updates? Follow <a href="https://twitter.com/windowsupdate" rel="noopener noreferrer" target="_blank">@WindowsUpdate</a> on Twitter.</p>
 
 |               |               |               |               |               |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
