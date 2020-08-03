@@ -19,6 +19,12 @@ DHCP is an Internet Engineering Task Force (IETF) standard that is designed to r
 
 The following sections provide information about new features and changes in functionality for DHCP.
 
+## New DHCP Client-side features in the Windows 10 May 2020 Update 
+
+The DHCP client in Windows 10 has been updated in the 10 May 2020 Update (also referred to as Windows 10, version 2004). When you're running a Windows client and connect to the internet via a tethered Android phone, the connection should be marked as "metered". Previously, the connections were marked as unmetered. Note that not all Android tethered phones will be detected as metered, and some other networks may also show up as metered.
+
+Additionally, the traditional Client Vendor Name has been updated for some Windows-based devices. This value used to be simply MSFT 5.0. Some devices will now show up as MSFT 5.0 XBOX.
+
 ## DHCP Subnet Selection Options
 
 DHCP now supports option 82 \(sub-option 5\). You can use this option to allow DHCP proxy clients and relay agents to request an IP address for a specific subnet.
