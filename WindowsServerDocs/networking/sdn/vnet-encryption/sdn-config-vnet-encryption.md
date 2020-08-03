@@ -121,7 +121,7 @@ Each host must have an encryption certificate installed. You can use the same ce
     ----                -------------         ------ ----
     -a----        9/22/2017   4:54 PM            543 EncryptedVirtualNetworks.cer
     -a----        9/22/2017   4:54 PM           1706 EncryptedVirtualNetworks.pfx
-```
+    ```
 
 1. Installing on a Hyper-V host
 
@@ -192,12 +192,12 @@ Each host must have an encryption certificate installed. You can use the same ce
 After you install the certificate on each of the Hyper-V hosts connected to the network controller, you must now configure the network controller to use it.  To do this, you must create a credential object containing the certificate thumbprint from the machine with the Network Controller PowerShell modules installed.
 
 ```
-///Replace with thumbprint from your certificate
+///Replace with the thumbprint from your certificate
 $thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"
 
-///Replace with your Network Controller URI
 $uri = "https://nc.contoso.com"
 
+///Replace with your Network Controller URI
 Import-module networkcontroller
 
 $credproperties = new-object Microsoft.Windows.NetworkController.CredentialProperties
