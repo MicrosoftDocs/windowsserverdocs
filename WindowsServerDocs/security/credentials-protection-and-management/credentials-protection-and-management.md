@@ -60,7 +60,7 @@ The new Active Directory object class, Authentication Policy, allows you to appl
 
 For more information, see [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md).
 
-For more information how to configure protected accounts, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+For more information how to configure protected accounts, see [How to Configure Protected Accounts](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
 ## Additional References
 For more information about the LSA and the LSASS, see the [Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn169029(v=ws.10).aspx).

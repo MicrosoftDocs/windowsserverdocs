@@ -24,7 +24,9 @@ When network traffic routes are chosen and you have configured the **InterfaceMe
 
 The following Windows PowerShell command example shows use of this parameter.
 
-    Set-NetIPInterface -InterfaceIndex 12 -InterfaceMetric 15
+```powershell
+Set-NetIPInterface -InterfaceIndex 12 -InterfaceMetric 15
+```
 
 The order in which adapters appear in a list is determined by the IPv4 or IPv6 interface metric.  For more information, see [GetAdaptersAddresses function](https://msdn.microsoft.com/library/windows/desktop/aa365915%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 

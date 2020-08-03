@@ -11,7 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# online disk
+# online volume
 
 Takes the offline volume to the online state. This command works on volumes that have failed, are failing, or are in failed redundancy state.
 
