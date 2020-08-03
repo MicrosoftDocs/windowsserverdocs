@@ -319,6 +319,7 @@ This walk-through uses Visual Studio 2012.  The project can be built using any d
 
 13. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
 
+       ```html
        <div id="loginArea">
         <form method="post" id="loginForm" >
         <!-- These inputs are required by the presentation framework. Do not modify or remove -->
@@ -341,6 +342,7 @@ This walk-through uses Visual Studio 2012.  The project can be built using any d
         AuthPage.submitAnswer = function () { return true; };
         //]]>
         </script></div>
+       ```
 
 14. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
 
