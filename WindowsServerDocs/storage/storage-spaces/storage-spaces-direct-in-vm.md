@@ -19,7 +19,7 @@ You can deploy Storage Spaces Direct (sometimes called S2D) on a cluster of phys
 
 To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared Disks](/azure/virtual-machines/windows/disks-shared).
 
-![](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
+![Storage Spaces Direct diagram](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
 ## Deploying in Azure Iaas VM guest clusters
 

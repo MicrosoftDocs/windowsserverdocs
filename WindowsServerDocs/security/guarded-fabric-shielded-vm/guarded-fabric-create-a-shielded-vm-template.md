@@ -52,15 +52,19 @@ Perform the following steps on a computer running Windows Server 2016, Windows 1
 
 2. To administer the server locally, install the **Shielded VM Tools** feature from **Remote Server Administration Tools** on the server.
 
-        Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
+    Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
 
     You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
 
-3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
+3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the host and tenant, you might consider issuing this certificate from your PKI.
 
     If you are setting up a test environment and just want to use a self-signed certificate to prepare your template disk, run a command similar to the following:
 
-        New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
+    New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
 
 4. Start the **Template Disk Wizard** from the **Administrative Tools** folder on the Start menu or by typing **TemplateDiskWizard.exe** into a command prompt.
 

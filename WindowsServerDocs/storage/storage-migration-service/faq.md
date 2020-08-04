@@ -46,28 +46,28 @@ The Storage Migration Service doesn't currently migrate domain controllers in Wi
 
 Storage Migration Service migrates all flags, settings, and security of SMB shares. That list of flags that Storage Migration Service migrates includes:
 
-    - Share State
-    - Availability Type
-    - Share Type
-    - Folder Enumeration Mode *(aka Access-Based Enumeration or ABE)*
-    - Caching Mode
-    - Leasing Mode
-    - Smb Instance
-    - CA Timeout
-    - Concurrent User Limit
-    - Continuously Available
-    - Description
-    - Encrypt Data
-    - Identity Remoting
-    - Infrastructure
-    - Name
-    - Path
-    - Scoped
-    - Scope Name
-    - Security Descriptor
-    - Shadow Copy
-    - Special
-    - Temporary
+- Share State
+- Availability Type
+- Share Type
+- Folder Enumeration Mode *(aka Access-Based Enumeration or ABE)*
+- Caching Mode
+- Leasing Mode
+- Smb Instance
+- CA Timeout
+- Concurrent User Limit
+- Continuously Available
+- Description
+- Encrypt Data
+- Identity Remoting
+- Infrastructure
+- Name
+- Path
+- Scoped
+- Scope Name
+- Security Descriptor
+- Shadow Copy
+- Special
+- Temporary
 
 ## Can I consolidate multiple servers into one server?
 

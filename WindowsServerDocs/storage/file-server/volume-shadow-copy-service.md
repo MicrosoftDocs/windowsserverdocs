@@ -18,7 +18,6 @@ Backing up and restoring critical business data can be very complex due to the f
 
   - If the data set is large, it can be difficult to back up all of it at one time.
 
-
 Correctly performing backup and restore operations requires close coordination between the backup applications, the line-of-business applications that are being backed up, and the storage management hardware and software. The Volume Shadow Copy Service (VSS), which was introduced in Windows Server® 2003, facilitates the conversation between these components to allow them to work better together. When all the components support VSS, you can use them to back up your application data without taking the applications offline.
 
 VSS coordinates the actions that are required to create a consistent shadow copy (also known as a snapshot or a point-in-time copy) of the data that is to be backed up. The shadow copy can be used as-is, or it can be used in scenarios such as the following:
@@ -57,7 +56,7 @@ A complete VSS solution requires all of the following basic parts:
 
 The following diagram illustrates how the VSS service coordinates with requesters, writers, and providers to create a shadow copy of a volume.
 
-![](media/volume-shadow-copy-service/Ee923636.94dfb91e-8fc9-47c6-abc6-b96077196741(WS.10).jpg)
+![Architectural diagram of Volume Shadow Copy Service](media/volume-shadow-copy-service/Ee923636.94dfb91e-8fc9-47c6-abc6-b96077196741(WS.10).jpg)
 
 **Figure 1**   Architectural diagram of Volume Shadow Copy Service
 
@@ -65,7 +64,7 @@ The following diagram illustrates how the VSS service coordinates with requester
 
 This section puts the various roles of the requester, writer, and provider into context by listing the steps that need to be taken to create a shadow copy. The following diagram shows how the Volume Shadow Copy Service controls the overall coordination of the requester, writer, and provider.
 
-![](media/volume-shadow-copy-service/Ee923636.1c481a14-d6bc-4796-a3ff-8c6e2174749b(WS.10).jpg)
+![Diagram how Volume Shadow Copy Service works](media/volume-shadow-copy-service/Ee923636.1c481a14-d6bc-4796-a3ff-8c6e2174749b(WS.10).jpg)
 
 **Figure 2** Shadow copy creation process
 
@@ -304,7 +303,7 @@ With the Volume Shadow Copy Service and a storage array with a hardware provider
 
 3.  The data is now ready to be used.
 
-![](media/volume-shadow-copy-service/Ee923636.633752e0-92f6-49a7-9348-f451b1dc0ed7(WS.10).jpg)
+![Diagram how to transport a shadow copy between two servers](media/volume-shadow-copy-service/Ee923636.633752e0-92f6-49a7-9348-f451b1dc0ed7(WS.10).jpg)
 
 **Figure 3**   Shadow copy creation and transport between two servers
 
@@ -572,7 +571,7 @@ The following table lists the minimum supported operating system versions for VS
 </colgroup>
 <thead>
 <tr class="header">
-<th><img src="media/volume-shadow-copy-service/Dd560667.note(WS.10).gif" />Note</th>
+<th>Note</th>
 </tr>
 </thead>
 <tbody>
