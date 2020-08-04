@@ -66,7 +66,7 @@ This condition is when you check the health of a storage-class memory device and
 
 The following table lists some info about this condition.
 
-| | Description |
+| Heading | Description |
 | --- | --- |
 | Likely condition | NVDIMM-N Warning Threshold breached |
 | Root Cause | NVDIMM-N devices track various thresholds, such as temperature, NVM lifetime, and/or energy source lifetime. When one of those thresholds is exceeded, the operating system is notified. |
@@ -86,7 +86,7 @@ This condition is when you check the health of a storage-class memory device and
 
 The following table lists some info about this condition.
 
-| | Description |
+| Heading | Description |
 | --- | --- |
 | Likely condition | Loss of Persistence / Backup Power |
 |Root Cause|NVDIMM-N devices rely on a back-up power source for their persistence – usually a battery or super-cap. If this back-up power source is unavailable or the device cannot perform a backup for any reason (Controller/Flash Error), data is at risk and Windows will prevent any further writes to the affected devices. Reads are still possible to evacuate data.|
@@ -106,7 +106,7 @@ This condition is when a storage-class memory device is shown with a capacity of
 
 The following table lists some info about this condition.
 
-||Description|
+|Heading|Description|
 |---|---|
 |Likely condition|BIOS Did Not Expose NVDIMM-N to OS|
 |Root Cause|NVDIMM-N devices are DRAM based. When a corrupt DRAM address is referenced, most CPUs will initiate a machine check and restart the server. Some server platforms then un-map the NVDIMM, preventing the OS from accessing it and potentially causing another machine check. This may also occur if the BIOS detects that the NVDIMM-N has failed and needs to be replaced.|
@@ -126,7 +126,7 @@ This condition is when you check the health of a storage-class memory device and
 
 The following table lists some info about this condition.
 
-||Description|
+|Heading|Description|
 |---|---|
 |Likely condition|Backup/Restore Failure|
 |Root Cause|A failure in the backup or restore procedure will likely result in all data on the NVDIMM-N to be lost. When the operating system loads, it will appear as a brand new NVDIMM-N without a partition or file system and surface as RAW, meaning it doesn't have a file system.|

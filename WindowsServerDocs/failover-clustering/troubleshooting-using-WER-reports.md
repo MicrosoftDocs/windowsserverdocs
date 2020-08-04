@@ -3,11 +3,11 @@ title: Troubleshooting a Failover Cluster using Windows Error Reporting
 description: Troubleshooting a Failover Cluster using WER Reports, with specific details on how to gather reports and diagnose common issues.
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
-ms.author: vpetter
-author: dcuomo
+ms.author: johnmar
+author: JohnMarlin-MSFT
 ms.date: 03/27/2018
 ---
-# Troubleshooting a Failover Cluster using Windows Error Reporting 
+# Troubleshooting a Failover Cluster using Windows Error Reporting
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server
 
@@ -222,7 +222,7 @@ Volume Serial Number is 4031-E397
 Next, start triaging from the **Report.wer** file — this will tell you what failed.
 
 ```
-EventType=Failover_clustering_resource_error 
+EventType=Failover_clustering_resource_error
 <skip>
 Sig[0].Name=ResourceType
 Sig[0].Value=Physical Disk
@@ -400,9 +400,9 @@ We can cross-examine this with the thread from the **memory.hdmp** file:
 ```
 # 21  Id: 1d98.2718 Suspend: 0 Teb: 0000000b`f1f7b000 Unfrozen
 # Child-SP          RetAddr           Call Site
-00 0000000b`f3c7ec38 00007ff8`455d25ca ntdll!ZwDelayExecution+0x14 
-01 0000000b`f3c7ec40 00007ff8`2ef19710 KERNELBASE!SleepEx+0x9a 
-02 0000000b`f3c7ece0 00007ff8`3bdf7fbf clusres!ResHardDiskOnlineOrTurnOffMMThread+0x2b0 
-03 0000000b`f3c7f960 00007ff8`391eed34 resutils!ClusWorkerStart+0x5f 
+00 0000000b`f3c7ec38 00007ff8`455d25ca ntdll!ZwDelayExecution+0x14
+01 0000000b`f3c7ec40 00007ff8`2ef19710 KERNELBASE!SleepEx+0x9a
+02 0000000b`f3c7ece0 00007ff8`3bdf7fbf clusres!ResHardDiskOnlineOrTurnOffMMThread+0x2b0
+03 0000000b`f3c7f960 00007ff8`391eed34 resutils!ClusWorkerStart+0x5f
 04 0000000b`f3c7f9d0 00000000`00000000 vfbasics+0xed34
 ```
