@@ -131,4 +131,4 @@ For more information about creating VDI deployment of Remote Desktop Services, c
 
 ## Using Remote Desktop Services with application proxy services
 
-You can use Remote Desktop Services, except for the web client, with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-application-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.
+You can use Remote Desktop Services with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-application-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.
