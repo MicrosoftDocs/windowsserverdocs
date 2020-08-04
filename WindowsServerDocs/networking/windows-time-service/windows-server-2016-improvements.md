@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
 ---
-
 # Windows Server 2016 time improvements
 
 This article includes information about improvements made in Windows Server 2016.

@@ -392,7 +392,9 @@ For example, if you create two host vNICs for SMB\-Direct, as in the section [Cr
 
 Adding to the script in that section, you can use the following Windows PowerShell commands.
 
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_1 –ManagementOS –PhysicalNetAdapterName “SLOT 2”
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_2 –ManagementOS –PhysicalNetAdapterName “SLOT 3”
+```powershell
+Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_1 –ManagementOS –PhysicalNetAdapterName “SLOT 2”
+Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_2 –ManagementOS –PhysicalNetAdapterName “SLOT 3”
+```
 
 This topic is examined in more depth in section 4.2.5 of the [Windows Server 2016 NIC and Switch Embedded Teaming User Guide](https://gallery.technet.microsoft.com/Windows-Server-2016-839cb607?redir=0).
