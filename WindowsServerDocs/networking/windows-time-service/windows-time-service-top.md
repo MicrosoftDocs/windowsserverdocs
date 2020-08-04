@@ -1,6 +1,6 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
-title: Windows Time Service
+title: Windows Time Service (W32Time)
 author: dcuomo
 ms.author: dacuo
 manager: dougkim
