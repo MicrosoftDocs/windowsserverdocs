@@ -10,20 +10,20 @@ ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
-# Configure the fabric DNS for guarded hosts
+# Configure the fabric DNS for guarded hosts (AD)
 
 >Applies To: Windows Server 2016
 
 
 >[!IMPORTANT]
->AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
+>AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.
 
-A fabric administrator needs to configure the fabric DNS takes to allow guarded hosts to resolve the HGS cluster. 
+A fabric administrator needs to configure the fabric DNS takes to allow guarded hosts to resolve the HGS cluster.
 The HGS cluster must already be [set up by the HGS administrator](/WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 
 
 
-[!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)] 
+[!INCLUDE [Configure fabric DNS](../../../includes/guarded-fabric-configure-fabric-dns.md)]
 
 
 ## Next step
