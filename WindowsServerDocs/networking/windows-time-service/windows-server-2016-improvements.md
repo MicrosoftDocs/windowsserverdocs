@@ -1,5 +1,5 @@
 ---
-title: Time improvements for Windows Server 2016
+title: Time accuracy improvements for Windows Server 2016
 description: Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.
 author: dcuomo
 ms.author: dacuo
@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: networking
 ---
 
-# Time improvements for Windows Server 2016
+# Time accuracy improvements for Windows Server 2016
 
 Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC. NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response. However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency. Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock. Additionally, the source we use for accurate time references an improved API which gives us better resolution. With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
 
