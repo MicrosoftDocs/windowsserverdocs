@@ -19,7 +19,7 @@ The Windows Time service is a component that uses a plug-in model for client and
 > [!NOTE]
 > For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
 
-In this topic, we discuss ... these topics as they relate to enabling accurate time: 
+In this topic, we discuss ... these topics as they relate to enabling accurate time:
 
 - Improvements
 - Measurements
@@ -28,7 +28,7 @@ In this topic, we discuss ... these topics as they relate to enabling accurate t
 > [!IMPORTANT]
 > An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf).  This document provides more details about our testing and measurement methodologies.
 
-> [!NOTE] 
+> [!NOTE]
 > The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
 
 ## Domain Hierarchy
@@ -40,7 +40,7 @@ Domain and Standalone configurations work differently.
 
 Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
-> [!NOTE] 
+> [!NOTE]
 > For more information about the domain hierarchy and scoring system, see the ["What is Windows Time Service?"](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/) blog post.
 
 > [!NOTE]
@@ -53,9 +53,9 @@ In every case for accurate time, there are three critical factors:
 2. **Stable client clock** - A stable client clocks assures that the natural drift of the oscillator is containable.  NTP uses multiple samples from potentially multiple NTP servers to condition and discipline your local computers clock.  It does not step the time changes, but rather slows or speeds up the local clock so that you approach the accurate time quickly and stay accurate between NTP requests.  However, if the client computer clock's oscillator is not stable, then more fluctuations in between adjustments can occur and the algorithms Windows uses to condition the clock don't work accurately.  In some cases, firmware updates might be needed for accurate time.
 3. **Symmetrical NTP communication** - It is critical that the connection for NTP communication is symmetrical.  NTP uses calculations to adjust the time that assume the network patch is symmetrical.  If the path the NTP packet takes going to the server takes a different amount of time to return, the accuracy is affected.  For example, the path could change due to changes in network topology, or packets being routed through devices that have different interface speeds.
 
-For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time's ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings. 
+For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time's ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings.
 
-## Why is time important?  
+## Why is time important?
 There are many different reasons you might need accurate time.  The typical case for Windows is Kerberos, which requires 5 minutes of accuracy between the client and server.  However, there are many other areas that can be affected by time accuracy including:
 
 
@@ -65,10 +65,10 @@ There are many different reasons you might need accurate time.  The typical case
 - Cryptography Algorithms
 - Distributed systems like Cluster/SQL/Exchange and Document DBs
 - Blockchain framework for bitcoin transactions
-- Distributed Logs and Threat Analysis 
+- Distributed Logs and Threat Analysis
 - AD Replication
 - PCI (Payment Card Industry), currently 1 second accuracy
 
+## Additional references
 
-
-[!INCLUDE [windows-server-2016-improvements](windows-server-2016-improvements.md)]
+- [Time accuracy improvements for Windows Server 2016](windows-server-2016-improvements.md)]
