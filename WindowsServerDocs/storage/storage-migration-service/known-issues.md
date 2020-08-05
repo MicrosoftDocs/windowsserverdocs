@@ -162,6 +162,7 @@ When using the Storage Migration Service to transfer files to a new destination,
 ```
 ### DFSR Debug Log
 
+```
    20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found.
 
    Local ACL hash:1BCDFE03-A18BCE01-D1AE9859-23A0A5F6
@@ -175,6 +176,7 @@ When using the Storage Migration Service to transfer files to a new destination,
    FileSizeLow:1131654
    FileSizeHigh:0
    Attributes:32
+```
 
 This issue is fixed by the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update.
 
