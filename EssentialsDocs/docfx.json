@@ -7,7 +7,6 @@
             ],
             "exclude": [
                "**/obj/**",
-               "window-server-docs/essentials/**",
                "**/includes/**"
             ]
          }
@@ -20,7 +19,6 @@
             ],
             "exclude": [
                "**/obj/**",
-               "window-server-docs/essentials/**",
                "**/includes/**"
             ]
          }
@@ -36,20 +34,20 @@
       },
       "fileMetadata": {
          "ms.prod": {
-            "EssentialsDocs/get-started/*.md": "windows-server",
-            "EssentialsDocs/install/*.md": "windows-server",
-            "EssentialsDocs/manage/*.md": "windows-server",
-            "EssentialsDocs/migrate/*.md": "windows-server",
-            "EssentialsDocs/support/*.md": "windows-server",
-            "EssentialsDocs/use/*.md": "windows-server"
+            "get-started/*.md": "windows-server",
+            "install/*.md": "windows-server",
+            "manage/*.md": "windows-server",
+            "migrate/*.md": "windows-server",
+            "support/*.md": "windows-server",
+            "use/*.md": "windows-server"
          },
          "ms.technology": {
-            "EssentialsDocs/get-started/*.md": "essentials",
-            "EssentialsDocs/install/*.md": "essentials",
-            "EssentialsDocs/manage/*.md": "essentials",
-            "EssentialsDocs/migrate/*.md": "essentials",
-            "EssentialsDocs/support/*.md": "essentials",
-            "EssentialsDocs/use/*.md": "essentials"
+            "get-started/*.md": "essentials",
+            "install/*.md": "essentials",
+            "manage/*.md": "essentials",
+            "migrate/*.md": "essentials",
+            "support/*.md": "essentials",
+            "use/*.md": "essentials"
          }
       },
        "template": [],
