@@ -18,7 +18,7 @@ This topic provides general instructions for using the Repair Anywhere Access wi
 The Repair Anywhere Access wizard attempts to identify and repair issues with your router, domain name, or firewall that are preventing network users from remotely accessing server resources.
 
 > [!NOTE]
-> For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://docs.microsoft.com/answers/topics/windows-server-essentials.html). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
+> For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](/answers/topics/windows-server-essentials.html). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
 
 ## To repair Anywhere Access
 
@@ -45,4 +45,4 @@ The Repair Anywhere Access wizard attempts to identify and repair issues with yo
 
 - [Troubleshoot your firewall](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
 
-- Check the [Windows Server Essentials Forum](https://docs.microsoft.com/answers/topics/windows-server-essentials.html) for the most recent issues reported by the  Windows Server Essentials community.
+- Check the [Windows Server Essentials Forum](/answers/topics/windows-server-essentials.html) for the most recent issues reported by the  Windows Server Essentials community.

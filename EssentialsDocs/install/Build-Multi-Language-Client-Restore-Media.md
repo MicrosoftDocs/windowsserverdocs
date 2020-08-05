@@ -14,7 +14,7 @@ manager: dongill
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](https://technet.microsoft.com/library/jj126995) before you add the  Windows Server Essentials langauage pack into install.wim.
+>  You must first create a multilingual Windows image as described in the [Walkthrough: Multilingual Windows Image Creation](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) before you add the  Windows Server Essentials langauage pack into install.wim.
 
  When building the multi-language server installation DVD, the language packs will be installed for Server install.wim. The localized resources for restore wizard will be installed as part of language pack.
 
@@ -85,4 +85,3 @@ manager: dongill
  [Additional Customizations](Additional-Customizations.md)
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-

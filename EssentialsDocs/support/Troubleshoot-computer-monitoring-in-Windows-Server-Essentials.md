@@ -16,7 +16,7 @@ manager: dongill
 This topic provides troubleshooting for issues encountered while monitoring the health status of computers in the Alert Viewer and through email notifications in  Windows Server Essentials.
 
 > [!NOTE]
-> For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://docs.microsoft.com/answers/topics/windows-server-essentials.html). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
+> For the most current troubleshooting information from the  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](/answers/topics/windows-server-essentials.html). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
 
 ## Troubleshooting email notifications for alerts
 

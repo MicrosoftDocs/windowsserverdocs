@@ -34,7 +34,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 
 ##### To back up the Source Server
 
-1.  Perform a full backup of the Source Server. For more information about backing up Windows Small Business Server 2011 Essentials, see [Learn more about setting up server backup](https://technet.microsoft.com/library/server-backup-support-1.aspx).
+1.  Perform a full backup of the Source Server. For more information about backing up Windows Small Business Server 2011 Essentials, see [Learn more about setting up server backup](/previous-versions/windows/it-pro/windows-server-essentials-sbs/ff402413(v=ws.11)).
 
 2.  Verify that the backup ran successfully. To test the integrity of the backup, select random files from your backup, restore them to an alternate location, and then confirm that the restored files are the same as the original files.
 
@@ -187,4 +187,3 @@ Complete the following preliminary steps to ensure that the settings and data on
 
 > [!NOTE]
 >  If you used the Windows Small Business Server 2011 Essentials SDK to develop a customized system health or alert add-In, and you want to continue to use the add-in with  Windows Server Essentials, you must also update the add-in and deploy it on the Destination Server.
-

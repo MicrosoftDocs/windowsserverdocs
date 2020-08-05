@@ -79,7 +79,7 @@ manager: dongill
    >  You can also use your own public certificate. To know what certificate is required, on the **Quick Start** page, click the **Acquire Certificate** link.
 
    > [!NOTE]
-   >   Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](https://msdn.microsoft.com/library/azure/dn169036.aspx).
+   >   Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](/previous-versions/azure/dn169036(v=azure.100)).
 
 7. After you select the certificate, click **OK** (check mark).
 

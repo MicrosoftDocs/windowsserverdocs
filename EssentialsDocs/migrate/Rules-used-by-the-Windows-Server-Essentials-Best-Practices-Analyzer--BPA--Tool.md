@@ -520,7 +520,7 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 
  **Impact:**  If the Administrator creates an alert and configures the alert to run when the Administrator is not logged on, the alert will fail with an error code of 2147943785.
 
- **Resolution:**  For information about how to give the built-in Administrators group permission to log on as a batch job, see [Give the built-in Administrator group the right to log on as a batch job](https://technet.microsoft.com/library/jj635076) (https://technet.microsoft.com/library/jj635076).
+ **Resolution:**  For information about how to give the built-in Administrators group permission to log on as a batch job, see [Give the built-in Administrator group the right to log on as a batch job](/previous-versions/orphan-topics/ws.11/jj635076(v=ws.11)) (https://technet.microsoft.com/library/jj635076).
 
 ### The Windows Firewall is turned off
  **Issue:**  Windows Firewall is turned off. The default value is on.

@@ -146,7 +146,7 @@ manager: dongill
 > [!NOTE]
 > Your network configuration should follow the supported network requirements for Windows Server Essentials. There should be only one router on your network.
 
- If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see the [Small Business Server forum](https://docs.microsoft.com/answers/topics/windows-small-business-server.html).
+ If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see the [Small Business Server forum](/answers/topics/windows-small-business-server.html).
 
 ###  <a name="BKMK_ReplaceRouter"></a> Replace a router
  Replace the router according to the manufacturer's instructions, and then run the Set Up Your Router Wizard to configure the new router.

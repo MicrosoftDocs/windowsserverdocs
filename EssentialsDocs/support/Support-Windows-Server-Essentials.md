@@ -75,13 +75,13 @@ This section provides information to help you troubleshoot common problems that 
 
 ## Ask a question in the forums
 
-- [Windows Server Essentials General](https://docs.microsoft.com/answers/topics/windows-server-essentials.html)
+- [Windows Server Essentials General](/answers/topics/windows-server-essentials.html)
 
-- [Windows SBS 2011 Essentials](https://docs.microsoft.com/answers/topics/windows-small-business-server.html)
+- [Windows SBS 2011 Essentials](/answers/topics/windows-small-business-server.html)
 
-- [Small Business Server](https://docs.microsoft.com/answers/topics/windows-small-business-server.html)
+- [Small Business Server](/answers/topics/windows-small-business-server.html)
 
-- [Windows Server Forums](https://docs.microsoft.com/answers/topics/windows-server.html)
+- [Windows Server Forums](/answers/topics/windows-server.html)
 
 ## Get additional help
 
@@ -105,7 +105,7 @@ This section provides information to help you troubleshoot common problems that 
 
 - [Support for small businesses](https://smallbusiness.support.microsoft.com/contact)
 
-- [Windows Server Essentials and Small Business Server Blog](https://blogs.technet.com/b/sbs/)
+- [Windows Server Essentials and Small Business Server Blog](/archive/blogs/sbs/)
 
 ## End-to-end solution guides
 
