@@ -34,20 +34,10 @@
       },
       "fileMetadata": {
          "ms.prod": {
-            "get-started/*.md": "windows-server",
-            "install/*.md": "windows-server",
-            "manage/*.md": "windows-server",
-            "migrate/*.md": "windows-server",
-            "support/*.md": "windows-server",
-            "use/*.md": "windows-server"
+            "**/*.md": "windows-server",
          },
          "ms.technology": {
-            "get-started/*.md": "essentials",
-            "install/*.md": "essentials",
-            "manage/*.md": "essentials",
-            "migrate/*.md": "essentials",
-            "support/*.md": "essentials",
-            "use/*.md": "essentials"
+            "**/*.md": "essentials",
          }
       },
        "template": [],
