@@ -34,10 +34,10 @@
       },
       "fileMetadata": {
          "ms.prod": {
-            "**/*.md": "windows-server",
+            "**/*.md": "windows-server"
          },
          "ms.technology": {
-            "**/*.md": "essentials",
+            "**/*.md": "essentials"
          }
       },
        "template": [],

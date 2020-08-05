@@ -41,16 +41,16 @@ manager: jasgro
 
 ## End-to-end solution guides
 
--    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](https://technet.microsoft.com/library/dn582043.aspx).
+-    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](/previous-versions/orphan-topics/ws.11/dn582043(v=ws.11)).
 
--    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](https://technet.microsoft.com/library/dn629457.aspx).
+-    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn629457(v=ws.11)).
 
--    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](https://technet.microsoft.com/library/dn747893.aspx).
+-    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn747893(v=ws.11)).
 
 ## Additional References
 
--   [Windows Server TechNet Library](https://technet.microsoft.com/library/bb625087.aspx)
+-   [Windows Server TechNet Library](/windows-server/windows-server-versions)
 
--   [The Windows Server Essentials and Windows Small Business Server Blog](https://blogs.technet.com/b/sbs/)
+-   [The Windows Server Essentials and Windows Small Business Server Blog](/archive/blogs/sbs/)
 
--   [Windows Server Essentials (Small Business Server) TechNet Library](https://technet.microsoft.com/library/cc514417.aspx)
+-   [Windows Server Essentials (Small Business Server) TechNet Library](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10))

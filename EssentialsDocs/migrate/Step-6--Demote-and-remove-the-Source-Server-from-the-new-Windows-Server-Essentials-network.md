@@ -74,7 +74,7 @@ After you finish installing  Windows Server Essentials and you complete the migr
 
 4. The process may require you to log off and log on again to finish. Click **Yes** to confirm.
 
-   If you are migrating from Windows Server Essentials or its previous versions, to demote the server, see [Remove Active Directory Domain Services](https://technet.microsoft.com/library/hh472163.aspx). After you add the Source Server as a member of a workgroup and disconnect it from the network, you must remove it from AD DS on the Destination Server.
+   If you are migrating from Windows Server Essentials or its previous versions, to demote the server, see [Remove Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472163(v=ws.11)). After you add the Source Server as a member of a workgroup and disconnect it from the network, you must remove it from AD DS on the Destination Server.
 
    If you are migrating from  Windows Server Essentials, use Server Manager to remove the Active Directory Domain Services role, thereby demoting the domain controller on the Source Server using the following procedure:
 
@@ -101,4 +101,3 @@ After you finish installing  Windows Server Essentials and you complete the migr
 
 
 To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
-

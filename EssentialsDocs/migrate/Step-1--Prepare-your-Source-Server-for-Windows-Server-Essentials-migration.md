@@ -39,12 +39,12 @@ This topic explains how to back up the Source Server, evaluate the Source Server
 
    |Product|Resource|
    |---|---|
-   |Windows Small Business Server 2003|[Backing Up and Restoring Windows Small Business Server 2003](https://msdn.microsoft.com/library/cc875809.aspx)
+   |Windows Small Business Server 2003|[Backing Up and Restoring Windows Small Business Server 2003](/previous-versions/tn-archive/cc875809(v=technet.10))
    |Windows Small Business Server 2008|[Backing Up and Restoring Data on Windows Small Business Server 2008](https://technet.microsoft.com/library/cc527505\(WS.10\).aspx)
    |Windows Server 2008 Foundation|[Backup and Recovery](https://technet.microsoft.com/library/cc754097\(WS.10\).aspx)
-   |Windows Small Business Server 2011 Essentials|[Learn more about setting up server backup](https://technet.microsoft.com/library/server-backup-support-1.aspx)
-   |Windows Small Business Server 2011 Standard|[Managing Server Backup](https://technet.microsoft.com/library/cc527488.aspx)
-   |Windows Server Essentials|[Manage Backup and Restore in Windows Server Essentials](https://technet.microsoft.com/library/jj713536.aspx)
+   |Windows Small Business Server 2011 Essentials|[Learn more about setting up server backup](/previous-versions/windows/it-pro/windows-server-essentials-sbs/ff402413(v=ws.11))
+   |Windows Small Business Server 2011 Standard|[Managing Server Backup](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc527488(v=ws.11))
+   |Windows Server Essentials|[Manage Backup and Restore in Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10))
 
 ###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a> Install the most recent service packs
  You must install the latest updates and service packs on the Source Server prior to migration.
@@ -167,17 +167,17 @@ To view the description and the solutions for an issue, click the issue in the r
  If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in [Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](https://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) to start the email migration to Office 365. We recommend that you complete the email migration before you install  Windows Server Essentials.
 
 > [!NOTE]
->  The step to remove the on-premises Exchange Server on the Source Server is mandatory if you intend to integrate  Windows Server Essentials with Office 365. For information about how to migrate Exchange Server public folders to Office 365,  see the blog post [Microsoft Exchange 2013 Public Folders Migration Scripts for Office 365](https://blogs.technet.com/b/fmustafa/archive/2013/04/11/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365.aspx).
+>  The step to remove the on-premises Exchange Server on the Source Server is mandatory if you intend to integrate  Windows Server Essentials with Office 365. For information about how to migrate Exchange Server public folders to Office 365,  see the blog post [Microsoft Exchange 2013 Public Folders Migration Scripts for Office 365](/archive/blogs/fmustafa/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365).
 >
 >  After you complete the installation, you should turn on the Office 365 Integration feature in  Windows Server Essentials by running the **Integrate with Microsoft Office 365** task.
 
 > [!IMPORTANT]
->  To allow the Office 365 migration tool to connect to the Exchange Server that is running on the Source Server, you must enable RPC over HTTP on the Source Server. For information about how to enable RPC over HTTP, see [How to Deploy RPC over HTTP for the First Time in Small Business Server 2003 (Standard or Premium)](https://technet.microsoft.com/library/bb123622%28EXCHG.65%29.aspx). If you cannot successfully run the Office 365 migration tool after you enable RPC over HTTP, view the **ValidPorts** setting in the registry at HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy, and make sure that the fully qualified domain name (FQDN) for the Source Server is listed. If the FQDN is not listed, add it manually by using the following example:
+>  To allow the Office 365 migration tool to connect to the Exchange Server that is running on the Source Server, you must enable RPC over HTTP on the Source Server. For information about how to enable RPC over HTTP, see [How to Deploy RPC over HTTP for the First Time in Small Business Server 2003 (Standard or Premium)](/previous-versions/tn-archive/bb123622(v=exchg.65)). If you cannot successfully run the Office 365 migration tool after you enable RPC over HTTP, view the **ValidPorts** setting in the registry at HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy, and make sure that the fully qualified domain name (FQDN) for the Source Server is listed. If the FQDN is not listed, add it manually by using the following example:
 >
 >  remote. *contoso*.com:6001-6002;remote. *contoso*.com:6004 (replace *contoso* with the name of your domain).
 
 #### Migrate email to another on-premises Exchange Server
- For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server Essentials](https://technet.microsoft.com/library/jj200172.aspx). We recommend that you set up the new on-premises Exchange Server after you install  Windows Server Essentials, and then finish the email migration before demoting the Source Server.
+ For information about how to migrate email to another on-premises Exchange Server, see [Integrate an On-Premises Exchange Server with Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200172(v=ws.11)). We recommend that you set up the new on-premises Exchange Server after you install  Windows Server Essentials, and then finish the email migration before demoting the Source Server.
 
 > [!NOTE]
 >  The Windows Small Business Server POP3 Connector is not included with Exchange Server. After you migrate email data to another Exchange Server, you can no longer use the POP3 Connector feature.
@@ -189,4 +189,3 @@ To view the description and the solutions for an issue, click the issue in the r
  You have prepared your Source Server for migration to  Windows Server Essentials.  Now go to [Step 2: Install Windows Server Essentials as a new replica domain controller](Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md).
 
 To view all the steps, see [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
-
