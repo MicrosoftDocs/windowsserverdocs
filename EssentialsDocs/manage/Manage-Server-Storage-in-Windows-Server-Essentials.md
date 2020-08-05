@@ -190,7 +190,7 @@ manager: dongill
 > [!NOTE]
 >  If you configure Storage Spaces on a server running  Windows Server Essentials, you cannot perform a Factory Reset with the **Clean Data** option. The workaround for this issue is to first remove Storage Spaces and then perform a Factory Reset with the **Clean Data** option.
 
- For more information about Storage Spaces, see [Storage Spaces Frequently Asked Questions (FAQ)](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-faq).
+ For more information about Storage Spaces, see [Storage Spaces Frequently Asked Questions (FAQ)](/windows-server/storage/storage-spaces/storage-spaces-direct-faq).
 
 ##  <a name="BKMK_6"></a> Create a storage space
  To begin working with Storage Spaces on server, the following minimum requirements must be met:

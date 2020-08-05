@@ -141,7 +141,7 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 
 1. **Buy a domain name.** That is, register it with a domain registrar or DNS hosting provider.
 
-   -   Pick a domain name that works with  Office 365. You can use a 2nd-level domain name ?for example, buycontoso.com ?but not a 3rd-level domain name ?for example, marketing.contoso.com. For more information about choosing a domain to use in  Office 365, see [Domains](https://technet.microsoft.com/library/office-365-domains.aspx).
+   -   Pick a domain name that works with  Office 365. You can use a 2nd-level domain name ?for example, buycontoso.com ?but not a 3rd-level domain name ?for example, marketing.contoso.com. For more information about choosing a domain to use in  Office 365, see [Domains](/office365/servicedescriptions/office-365-platform-service-description/domains).
 
    -   Buy it from a domain registrar that allows the domain name server (DNS) records required by  Office 365. To find out which domain registrars allow the required DNS records, see [How to buy a domain name](https://office.microsoft.com/office365-suite-help/how-to-buy-a-domain-name-HA102819883.aspx?CTT=5&origin=HA102818660). If you already registered your domain with a different registrar, don't worry; you can transfer the domain to a different registrar when you link the domain to  Office 365.
 
@@ -279,9 +279,9 @@ When you integrate your  Windows Server Essentials server with Microsoft  Office
 
 ## Additional References
 
--   [Services Integration Overview for Windows Server Essentials - Part 1](https://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)
+-   [Services Integration Overview for Windows Server Essentials - Part 1](/archive/blogs/sbs/services-integration-overview-for-windows-server-2012-r2-essentials-part-1)
 
--   [Services Integration Overview for Windows Server Essentials - Part 2](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)
+-   [Services Integration Overview for Windows Server Essentials - Part 2](/archive/blogs/sbs/services-integration-overview-for-windows-server-2012-r2-essentials-part-2)
 
 -   [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)
 
