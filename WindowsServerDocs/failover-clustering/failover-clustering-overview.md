@@ -1,11 +1,11 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
-title: Failover Clustering  
+title: Failover Clustering
 ms.prod: windows-server
 ms.topic: landing-page
 manager: lizross
 author: JasonGerend
-ms.author: jgerend  
+ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 06/06/2019
 ms.localizationpriority: high
@@ -34,7 +34,7 @@ Failover Clustering has many practical applications, including:
 | [Cluster sets](../storage/storage-spaces/cluster-sets.md)                  |                             |[Deploy a file share witness](file-share-witness.md) |
 | [Cluster affinity](cluster-affinity.md)                                     |                            | [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md) |
 |                                                                             |                            | [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md) |
-|                                                                            |                             | [Deploy an Active Directory Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
+|                                                                            |                             | [Deploy an Active Directory Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
 
 |**Manage**  |  **Tools and settings**  |  **Community resources**       |
 | ------------- |  -------------- | --------------------- |

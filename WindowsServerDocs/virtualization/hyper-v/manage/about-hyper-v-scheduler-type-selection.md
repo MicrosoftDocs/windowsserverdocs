@@ -101,9 +101,9 @@ Deploying Hyper-V hosts with the maximum security posture requires use of the hy
 
 The guest virtual machine SMT configuration is set on a per-VM basis. The host administrator can inspect and configure a VM's SMT configuration to select from the following options:
 
-    1. Configure VMs to run as SMT-enabled, optionally inheriting the host SMT topology automatically
+1. Configure VMs to run as SMT-enabled, optionally inheriting the host SMT topology automatically
 
-    2. Configure VMs to run as non-SMT
+2. Configure VMs to run as non-SMT
 
 The SMT configuaration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done by using the VM Settings or PowerShell.
 
@@ -117,11 +117,11 @@ Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <0, 1, 2>
 
 Where:
 
-    0 = Inherit SMT topology from the host (this setting of HwThreadCountPerCore=0 is not supported on Windows Server 2016)
+- 0 = Inherit SMT topology from the host (this setting of HwThreadCountPerCore=0 is not supported on Windows Server 2016)
 
-    1 = Non-SMT
+- 1 = Non-SMT
 
-    Values > 1 = the desired number of SMT threads per core. May not exceed the number of physical SMT threads per core.
+- Values > 1 = the desired number of SMT threads per core. May not exceed the number of physical SMT threads per core.
 
 To read the SMT settings for a guest virtual machine, open a PowerShell window with sufficient permissions, and type:
 
@@ -133,7 +133,7 @@ Note that guest VMs configured with HwThreadCountPerCore = 0 indicates that SMT 
 
 ### Guest VMs may observe changes to CPU topology across VM mobility scenarios
 
-The OS and applications in a VM may see changes to both host and VM settings before and after VM lifecycle events such as live migration or save and restore operations. During an operation in which VM state is saved and restored, both the VM's HwThreadCountPerCore setting and the realized value (that is, the computed combination of the VM's setting and source host's configuration) are migrated. The VM will continue running with these settings on the destination host. At the point the VM is shutdown and re-started, it's possible that the realized value observed by the VM will change. This should be benign, as OS and application layer software should look for CPU topology information as part of their normal startup and initialization code flows. However, because these boot time initialization sequences are skipped during live migration or save/restore operations, VMs that undergo these state transitions could observe the originally computed realized value until they are shut down and re-started.  
+The OS and applications in a VM may see changes to both host and VM settings before and after VM lifecycle events such as live migration or save and restore operations. During an operation in which VM state is saved and restored, both the VM's HwThreadCountPerCore setting and the realized value (that is, the computed combination of the VM's setting and source host's configuration) are migrated. The VM will continue running with these settings on the destination host. At the point the VM is shutdown and re-started, it's possible that the realized value observed by the VM will change. This should be benign, as OS and application layer software should look for CPU topology information as part of their normal startup and initialization code flows. However, because these boot time initialization sequences are skipped during live migration or save/restore operations, VMs that undergo these state transitions could observe the originally computed realized value until they are shut down and re-started.
 
 ### Alerts regarding non-optimal VM configurations
 

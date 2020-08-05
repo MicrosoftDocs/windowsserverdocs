@@ -14,81 +14,61 @@ ms.technology: identity-adds
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-    
-    <developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">
-      <introduction>
-    <para>When a destination domain controller running Windows Server 2003 with Service Pack 1 (SP1) receives Event ID 2088 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record to an IP address for the source domain controller failed. However, the destination domain controller tried other means to resolve the name and succeeded by using either the fully qualified domain name (FQDN) or the NetBIOS name of the source domain controller. Although replication was successful, the Domain Name System (DNS) problem should be diagnosed and resolved. </para>
-    <para>The following is an example of the event text: </para>
-    <code>Log Name: Directory Service
+When a destination domain controller running Windows Server 2003 with Service Pack 1 (SP1) receives Event ID 2088 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record to an IP address for the source domain controller failed. However, the destination domain controller tried other means to resolve the name and succeeded by using either the fully qualified domain name (FQDN) or the NetBIOS name of the source domain controller. Although replication was successful, the Domain Name System (DNS) problem should be diagnosed and resolved.
 
-    Source: Microsoft-Windows-ActiveDirectory_DomainService
-    Date: 3/15/2008  9:20:11 AM
-    Event ID: 2088
-    Task Category: DS RPC Client 
-    Level: Warning
-    Keywords: Classic
-    User: ANONYMOUS LOGON
-    Computer: DC3.contoso.com
-    Description:
-    Active Directory could not use DNS to resolve the IP address of the 
-    source domain controller listed below. To maintain the consistency 
-    of Security groups, group policy, users and computers and their passwords, 
-    Active Directory Domain Services successfully replicated using the NetBIOS 
-    or fully qualified computer name of the source domain controller. 
+The following is an example of the event text:
 
-Invalid DNS configuration may be affecting other essential operations on 
-member computers, domain controllers or application servers in this 
-Active Directory Domain Services forest, including logon authentication 
-or access to network resources. 
+```
+Log Name: Directory Service
+Source: Microsoft-Windows-ActiveDirectory_DomainService
+Date: 3/15/2008  9:20:11 AM
+Event ID: 2088
+Task Category: DS RPC Client
+Level: Warning
+Keywords: Classic
+User: ANONYMOUS LOGON
+Computer: DC3.contoso.com
+Description:
+Active Directory could not use DNS to resolve the IP address of the source domain controller listed below. To maintain the consistency of Security groups, group policy, users and computers and their passwords, Active Directory Domain Services successfully replicated using the NetBIOS or fully qualified computer name of the source domain controller.
+```
 
-You should immediately resolve this DNS configuration error so that 
-this domain controller can resolve the IP address of the source 
-domain controller using DNS. 
+Invalid DNS configuration may be affecting other essential operations on member computers, domain controllers or application servers in this Active Directory Domain Services forest, including logon authentication or access to network resources.
 
-Alternate server name: 
-  DC1 
-Failing DNS host name: 
-  4a8717eb-8e58-456c-995a-c92e4add7e8e._msdcs.contoso.com 
+You should immediately resolve this DNS configuration error so that this domain controller can resolve the IP address of the source domain controller using DNS.
 
-NOTE: By default, only up to 10 DNS failures are shown for any given 
-12 hour period, even if more than 10 failures occur.  To log all 
-individual failure events, set the following diagnostics registry 
-value to 1: 
+Alternate server name: DC1
+Failing DNS host name: 4a8717eb-8e58-456c-995a-c92e4add7e8e._msdcs.contoso.com
 
-Registry Path: 
-HKLM\System\CurrentControlSet\Services\NTDS\Diagnostics\22 DS RPC Client 
+NOTE: By default, only up to 10 DNS failures are shown for any given 12 hour period, even if more than 10 failures occur.  To log all individual failure events, set the following diagnostics registry value to 1:
 
-User Action: 
+Registry Path: HKLM\System\CurrentControlSet\Services\NTDS\Diagnostics\22 DS RPC Client
 
-1) If the source domain controller is no longer functioning or its 
-operating system has been reinstalled with a different computer 
-name or NTDSDSA object GUID, remove the source domain controller's 
-metadata with ntdsutil.exe, using the steps outlined in MSKB article 216498. 
+User Action:
 
-2) Confirm that the source domain controller is running Active Directory 
-and is accessible on the network by typing "net view \\&lt;source DC name&gt;" 
-or "ping &lt;source DC name&gt;". 
+1) If the source domain controller is no longer functioning or its
+operating system has been reinstalled with a different computer
+name or NTDSDSA object GUID, remove the source domain controller's
+metadata with ntdsutil.exe, using the steps outlined in MSKB article 216498.
 
-3) Verify that the source domain controller is using a valid DNS server 
-for DNS services, and that the source domain controller's host record 
-and CNAME record are correctly registered, using the DNS Enhanced 
-version of DCDIAG.EXE available on <https://www.microsoft.com/dns> 
+2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \\<source DC name>" or "ping <source DC name>".
 
-dcdiag /test:dns 
+3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using the DNS Enhanced version of DCDIAG.EXE available on <https://www.microsoft.com/dns>
 
-4) Verify that this destination domain controller is using a 
-valid DNS server for DNS services, by running the DNS Enhanced 
-version of DCDIAG.EXE command on the console of the destination 
-domain controller, as follows: 
+dcdiag /test:dns
 
-dcdiag /test:dns 
+4) Verify that this destination domain controller is using a
+valid DNS server for DNS services, by running the DNS Enhanced
+version of DCDIAG.EXE command on the console of the destination
+domain controller, as follows:
 
-5) For further analysis of DNS error failures see KB 824449: 
-<https://support.microsoft.com/?kbid=824449> 
+dcdiag /test:dns
 
-Additional Data 
-Error value: 
-11004 The requested name is valid, but no data of the requested 
+5) For further analysis of DNS error failures see KB 824449:
+<https://support.microsoft.com/?kbid=824449>
+
+Additional Data
+Error value:
+11004 The requested name is valid, but no data of the requested
 type was found</code>
   </introduction>
   <section>
@@ -105,5 +85,3 @@ type was found</code>
   </section>
   <relatedTopics />
 </developerConceptualDocument>
-
-

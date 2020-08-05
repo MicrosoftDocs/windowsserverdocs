@@ -4,7 +4,6 @@ description: Describes common issues that may occur during the MAK activation pr
 ms.topic: troubleshooting
 ms.date: 10/3/2019
 ms.technology: server-general
-ms.topic: article
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm

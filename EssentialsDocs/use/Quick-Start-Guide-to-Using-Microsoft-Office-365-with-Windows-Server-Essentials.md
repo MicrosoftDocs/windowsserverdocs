@@ -2,7 +2,6 @@
 title: "Quick Start Guide to Using Microsoft Office 365 with Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d
 author: nnamuhcs

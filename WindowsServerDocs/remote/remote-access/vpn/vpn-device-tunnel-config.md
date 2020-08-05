@@ -8,13 +8,13 @@ ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ---
 # Configure VPN device tunnels in Windows 10
 
 >Applies to: Windows 10 version 1709
 
-Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: 
+Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels:
 
 - _Device tunnel_ connects to specified VPN servers before users log on to the device. Pre-login connectivity scenarios and device management purposes use device tunnel.
 
@@ -28,7 +28,7 @@ Device tunnel can only be configured on domain-joined devices running Windows 10
 
 
 ## Device Tunnel Requirements and Features
-You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections. 
+You must enable machine certificate authentication for VPN connections and define a root certification authority for authenticating incoming VPN connections.
 
 ```PowerShell
 $VPNRootCertAuthority = "Common Name of trusted root certification authority"
@@ -40,7 +40,7 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 ## VPN Device Tunnel Configuration
 
-The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and Microsoft Endpoint Configuration Manager update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios. 
+The sample profile XML below provides good guidance for scenarios where only client initiated pulls are required over the device tunnel.  Traffic filters are leveraged to restrict the device tunnel to management traffic only.  This configuration works well for Windows Update, typical Group Policy (GP) and Microsoft Endpoint Configuration Manager update scenarios, as well as VPN connectivity for first logon without cached credentials, or password reset scenarios.
 
 For server-initiated push cases, like Windows Remote Management (WinRM), Remote GPUpdate, and remote Configuration Manager update scenarios – you must allow inbound traffic on the device tunnel, so traffic filters cannot be used.  If in the device tunnel profile you turn on traffic filters, then the Device Tunnel denies inbound traffic.  This limitation is going to be removed in future releases.
 
@@ -50,40 +50,40 @@ For server-initiated push cases, like Windows Remote Management (WinRM), Remote 
 Following is the sample VPN profileXML.
 
 ``` xml
-<VPNProfile>  
-  <NativeProfile>  
-<Servers>vpn.contoso.com</Servers>  
-<NativeProtocolType>IKEv2</NativeProtocolType>  
-<Authentication>  
-  <MachineMethod>Certificate</MachineMethod>  
-</Authentication>  
-<RoutingPolicyType>SplitTunnel</RoutingPolicyType>  
+<VPNProfile>
+  <NativeProfile>
+<Servers>vpn.contoso.com</Servers>
+<NativeProtocolType>IKEv2</NativeProtocolType>
+<Authentication>
+  <MachineMethod>Certificate</MachineMethod>
+</Authentication>
+<RoutingPolicyType>SplitTunnel</RoutingPolicyType>
  <!-- disable the addition of a class based route for the assigned IP address on the VPN interface -->
-<DisableClassBasedDefaultRoute>true</DisableClassBasedDefaultRoute>  
-  </NativeProfile> 
-  <!-- use host routes(/32) to prevent routing conflicts -->  
-  <Route>  
-<Address>10.10.0.2</Address>  
-<PrefixSize>32</PrefixSize>  
-  </Route>  
-  <Route>  
-<Address>10.10.0.3</Address>  
-<PrefixSize>32</PrefixSize>  
-  </Route>  
-<!-- traffic filters for the routes specified above so that only this traffic can go over the device tunnel --> 
-  <TrafficFilter>  
-<RemoteAddressRanges>10.10.0.2, 10.10.0.3</RemoteAddressRanges>  
+<DisableClassBasedDefaultRoute>true</DisableClassBasedDefaultRoute>
+  </NativeProfile>
+  <!-- use host routes(/32) to prevent routing conflicts -->
+  <Route>
+<Address>10.10.0.2</Address>
+<PrefixSize>32</PrefixSize>
+  </Route>
+  <Route>
+<Address>10.10.0.3</Address>
+<PrefixSize>32</PrefixSize>
+  </Route>
+<!-- traffic filters for the routes specified above so that only this traffic can go over the device tunnel -->
+  <TrafficFilter>
+<RemoteAddressRanges>10.10.0.2, 10.10.0.3</RemoteAddressRanges>
   </TrafficFilter>
-<!-- need to specify always on = true --> 
-  <AlwaysOn>true</AlwaysOn> 
-<!-- new node to specify that this is a device tunnel -->  
+<!-- need to specify always on = true -->
+  <AlwaysOn>true</AlwaysOn>
+<!-- new node to specify that this is a device tunnel -->
  <DeviceTunnel>true</DeviceTunnel>
 <!--new node to register client IP address in DNS to enable manage out -->
 <RegisterDNS>true</RegisterDNS>
 </VPNProfile>
 ```
 
-Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
+Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://docs.microsoft.com/answers/topics/windows-server-infrastructure.html).
 
 ```
  <!-- inside/outside detection -->

@@ -39,19 +39,25 @@
       "_op_documentIdPathDepotMapping": {
           "manage/windows-admin-center/license/": {
             "depot_name": "MSDN.WindowsServerDocs-pr",
-            "folder_relative_path_in_docset": "licensing/" 
+            "folder_relative_path_in_docset": "licensing/"
            }
         }
-    },
-    "fileMetadata": {
-      "feedback_product_url": {
-        "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
-        "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
-      }
-    },
+      },
+      "fileMetadata": {
+        "feedback_product_url": {
+          "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
+          "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
+        },
+        "ms.prod": {
+          "EssentialsDocs/**/*.md": "windows-server"
+        },
+        "ms.technology": {
+          "EssentialsDocs/**/*.md": "essentials"
+        }
+      },
     "template": [
-      null
+      "docs.html"
     ],
     "dest": "windows-server"
+    }
   }
-}

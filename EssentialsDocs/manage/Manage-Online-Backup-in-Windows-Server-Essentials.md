@@ -2,7 +2,6 @@
 title: "Manage Online Backup in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 95a9f593-fad7-4335-bd4d-c7bb8c033efb
 author: nnamuhcs
@@ -80,7 +79,7 @@ manager: dongill
    >  You can also use your own public certificate. To know what certificate is required, on the **Quick Start** page, click the **Acquire Certificate** link.
 
    > [!NOTE]
-   >   Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](https://msdn.microsoft.com/library/azure/dn169036.aspx).
+   >   Azure requires an x.509 v2 certificate with a public key. For more information, see [Manage vault certificates](/previous-versions/azure/dn169036(v=azure.100)).
 
 7. After you select the certificate, click **OK** (check mark).
 

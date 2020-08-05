@@ -46,28 +46,28 @@ The Storage Migration Service doesn't currently migrate domain controllers in Wi
 
 Storage Migration Service migrates all flags, settings, and security of SMB shares. That list of flags that Storage Migration Service migrates includes:
 
-    - Share State
-    - Availability Type
-    - Share Type
-    - Folder Enumeration Mode *(aka Access-Based Enumeration or ABE)*
-    - Caching Mode
-    - Leasing Mode
-    - Smb Instance
-    - CA Timeout
-    - Concurrent User Limit
-    - Continuously Available
-    - Description
-    - Encrypt Data
-    - Identity Remoting
-    - Infrastructure
-    - Name
-    - Path
-    - Scoped
-    - Scope Name
-    - Security Descriptor
-    - Shadow Copy
-    - Special
-    - Temporary
+- Share State
+- Availability Type
+- Share Type
+- Folder Enumeration Mode *(aka Access-Based Enumeration or ABE)*
+- Caching Mode
+- Leasing Mode
+- Smb Instance
+- CA Timeout
+- Concurrent User Limit
+- Continuously Available
+- Description
+- Encrypt Data
+- Identity Remoting
+- Infrastructure
+- Name
+- Path
+- Scoped
+- Scope Name
+- Security Descriptor
+- Shadow Copy
+- Special
+- Temporary
 
 ## Can I consolidate multiple servers into one server?
 
@@ -177,7 +177,7 @@ To file bugs:
 To get support:
 
  - Post a question on the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server)
- - Post on the [Windows Server 2019 Technet Forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=ws2019&filter=alltypes&sort=lastpostdesc)
+ - Post on the [Windows Server 2019 forum](https://docs.microsoft.com/answers/topics/windows-server-2019.html)
  - Open a support case via [Microsoft Support](https://support.microsoft.com)
 
 ## Additional References

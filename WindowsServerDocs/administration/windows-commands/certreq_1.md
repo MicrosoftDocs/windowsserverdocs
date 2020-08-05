@@ -336,10 +336,8 @@ The following articles contain examples of certreq usage:
 
 - [How to create a web server SSL certificate manually](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-create-a-web-server-ssl-certificate-manually/ba-p/1128529)
 
-- [Request an AMT Provisioning Certificate Using a Windows Server 2008 CA](https://social.technet.microsoft.com/wiki/contents/articles/548.request-an-amt-provisioning-certificate-using-a-windows-server-2008-ca.aspx)
+- [Certificate Enrollment for System Center Operations Manager Agent](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
 
-- [Certificate Enrollment for System Center Operations Manager Agent](https://social.technet.microsoft.com/wiki/contents/articles/2017.certificate-enrollment-for-system-center-operations-manager-agent.aspx)
-
-- [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
+- [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 
 - [How to enable LDAP over SSL with a third-party certification authority](https://support.microsoft.com/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority)

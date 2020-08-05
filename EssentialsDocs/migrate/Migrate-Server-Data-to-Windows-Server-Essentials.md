@@ -2,7 +2,6 @@
 title: "Migrate Server Data to Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: dff2bf27-5d97-409b-81e8-286f7d933d90
 author: nnamuhcs
@@ -48,11 +47,11 @@ The following guides provide information about how to migrate to Windows Server 
 
 ## End-to-end solution guides
 
--    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](https://technet.microsoft.com/library/dn582043.aspx).
+-    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](/previous-versions/orphan-topics/ws.11/dn582043(v=ws.11)).
 
--    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](https://technet.microsoft.com/library/dn629457.aspx).
+-    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn629457(v=ws.11)).
 
--    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](https://technet.microsoft.com/library/dn747893.aspx).
+-    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn747893(v=ws.11)).
 
 ## See also
 

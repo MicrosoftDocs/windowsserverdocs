@@ -342,7 +342,8 @@ To enable authenticated communication with the HCP services, we need to create 3
     - CloudPrintResourceId = The Application ID URI of the Enterprise Cloud Print app. You can find this under Azure Active Directory > App registrations > Select the Enterprise Cloud Print app > Overview. **It must be exactly the same with the trailing /**.
     - DiscoveryMaxPrinterLimit = \<a positive integer\>.
 
-> Note: If you are using Microsoft Intune service, you can find these settings under the Cloud Printer category.
+> [!NOTE]
+> If you are using Microsoft Intune service, you can find these settings under the Cloud Printer category.
 
 |Intune Display Name                     |Policy                         |
 |----------------------------------------|-------------------------------|
@@ -353,21 +354,22 @@ To enable authenticated communication with the HCP services, we need to create 3
 |Maximum printers to query(Mobile only)  |DiscoveryMaxPrinterLimit       |
 |Printer discovery service resource URI  |MopriaDiscoveryResourceId      |
 
-> Note: If the Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to [this](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority) for additional info.
+> [!NOTE]
+> If the Cloud Print policy group is not available, but the MDM provider supports OMA-URI settings, then you can set the same policies.  Please refer to [this](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority) for additional info.
 
-    - Values for OMA-URI
-        - CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
-            - Value = https://login.microsoftonline.com/<Azure AD Directory ID>
-        - CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId
-            - Value = <Azure AD Native App's Application ID>
-        - CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint
-            - Value = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing /)
-        - MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId
-            - Value = The Application ID URI of the Mopria Discovery Service app
-        - CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId
-            - Value = The Application ID URI of the Enterprise Cloud Print app
-        - DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit
-            - Value = A positive integer
+- Values for OMA-URI
+  - CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
+    - Value = `https://login.microsoftonline.com/<Azure AD Directory ID>`
+  - CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId
+    - Value = `<Azure AD Native App's Application ID>`
+  - CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint
+    - Value = External URL of the Mopria Discovery Service app (must be exactly the same but without the trailing `/`)
+  - MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId
+    - Value = The Application ID URI of the Mopria Discovery Service app
+  - CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId
+    - Value = The Application ID URI of the Enterprise Cloud Print app
+  - DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit
+    - Value = A positive integer
 
 ### Step 7 - Publish the shared printer
 

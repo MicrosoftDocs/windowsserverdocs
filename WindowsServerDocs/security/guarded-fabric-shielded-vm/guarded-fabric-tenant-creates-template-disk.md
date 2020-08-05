@@ -59,13 +59,17 @@ Perform the following steps on a computer running Windows Server 2016 (does not 
 
 2. Install the **Shielded VM Tools** feature from **Remote Server Administration Tools** on the machine.
 
-        Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
+    Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
 
 3. Obtain or create a certificate to sign the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be incorporated into a shielding data file, which authorizes the disk as a trusted disk. Therefore, it is important to obtain this certificate from a certificate authority that you and your hosting service provider trust. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
 
     If you are setting up a test environment and just want to use a self-signed certificate to sign your template disk, run a command similar to the following on your machine:
 
-        New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
+    New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
 
 4. Start the **Template Disk Wizard** from the **Administrative Tools** folder on the Start menu or by typing **TemplateDiskWizard.exe** into a command prompt.
 

@@ -2,7 +2,6 @@
 title: "Use Remote Web Access in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
 author: nnamuhcs
@@ -19,7 +18,6 @@ manager: dongill
   Remote Web Access helps you stay connected to your Windows Server Essentials network when you are away. When you log on to Remote Web Access, you can connect to the computers on your Windows Server Essentials network, open the Dashboard to manage your Windows Server Essentials network, and access all of the shared folders and media files on the server.
 
  This topic includes the following sections:
-
 
 -   [Connect to Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_Connect)
 
@@ -124,7 +122,7 @@ manager: dongill
 
 #### Upload files
 
-###### To upload files
+##### To upload files
 
 1. In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.
 
@@ -145,7 +143,7 @@ manager: dongill
 > [!NOTE]
 >  Uploading of multiple files is natively supported in web browsers that are compatible with HTML5. This tool is only necessary when the web browser does not support HTML5.
 
-###### To upload files using the Easy File Upload tool
+##### To upload files using the Easy File Upload tool
 
 1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.
 
@@ -163,7 +161,7 @@ manager: dongill
 
 #### Download files or folders
 
-###### To download a single file
+##### To download a single file
 
 1. In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.
 
@@ -199,7 +197,7 @@ manager: dongill
 
   Before the actual download begins, the exe or zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.
 
-###### To download multiple files or folders
+##### To download multiple files or folders
 
 1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared-folder link. A list of the files and folders in that shared folder is displayed.
 
@@ -220,13 +218,13 @@ manager: dongill
 
  If you select multiple files or folders to download, you can receive a self-extracting compressed executable file (.exe) or a compressed (.zip) file.
 
-###### To retrieve a file from the compressed (.exe) file
+##### To retrieve a file from the compressed (.exe) file
 
 1.  On your computer, double-click the compressed file to open it.
 
 2.  Follow the instructions to extract the files to a folder on your computer.
 
-###### To retrieve a file from the compressed (.zip) file
+##### To retrieve a file from the compressed (.zip) file
 
 1.  On your computer, double-click the compressed file to open it.
 
@@ -239,10 +237,9 @@ manager: dongill
  You can use Remote Web Access to create new folders in an existing shared folder, to rename files and folders, to move and copy files and folders, and to delete files and folders on your server.
 
 > [!NOTE]
-<<<<<<< HEAD
->  To add new shared folders on a server that is running Windows Server Essentials, you must use the Dashboard. To connect to the server console from Remote Web Access, on the **Computers** tab, click the server name, click **Connect**, and then follow the instructions for logging on to the server. For information about how to create shared folders, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).
+> To add new shared folders on a server that is running Windows Server Essentials, you must use the Dashboard. To connect to the server console from Remote Web Access, on the **Computers** tab, click the server name, click **Connect**, and then follow the instructions for logging on to the server. For information about how to create shared folders, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).
 
-##### To create a new folder
+#### To create a new folder
 
 1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
 
@@ -258,7 +255,7 @@ manager: dongill
 
 3.  Type a new name in the text box, and then click **OK**.
 
-##### To move files or folders
+#### To move files or folders
 
 1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
 
@@ -352,108 +349,3 @@ manager: dongill
 
 -   [Use Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
 
-=======
->  To add new shared folders on a server that is running Windows Server Essentials, you must use the Dashboard. To connect to the server console from Remote Web Access, on the **Computers** tab, click the server name, click **Connect**, and then follow the instructions for logging on to the server. For information about how to create shared folders, see [Add or move a server folder](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md#BKMK_5).
-
-##### To create a new folder
-
-1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
-
-2.  On the task bar, click **New Folder**.
-
-3.  Type a name for the folder, and then click **OK**.
-
-##### To rename a file or folder
-
-1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
-
-2.  Right-click the file or folder that you want to rename, and then click **Rename**.
-
-3.  Type a new name in the text box, and then click **OK**.
-
-##### To move files or folders
-
-1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
-
-2.  Select the check box next to the files or folders that you want to move, right-click one of the selected files or folders, and then click **Cut**.
-
-3.  Right-click the folder that you want to move the files or folders to, and then click **Paste**.
-
-##### To delete a file or folder
-
-1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
-
-2.  Select the check box next to the files or folders that you want to delete, right-click one of the selected files or folders, and then click **Delete**.
-
-3.  To confirm that you want to delete the selected files and folders, click **Yes**.
-
-##### To copy files or folders
-
-1.  In Remote Web Access, click the **Shared Folders** tab, and then click a shared folder link. A list of the files and folders in that shared folder is displayed.
-
-2.  Select the check box next to the files or folders that you want to copy, right-click one of the selected files or folders, and then click **Copy**.
-
-3.  Right-click the folder that you want to copy the files or folders to, and then click **Paste**.
-
-##  <a name="BKMK_ConnectMobile"></a> Connect from a mobile device
-
-
--   [Use Remote Web Access from a mobile device](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_8)
-
--   [Supported Web browsers for mobile devices](Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_9)
-
-
-###  <a name="BKMK_8"></a> Use Remote Web Access from a mobile device
- You can log on to Remote Web Access from your smart phone to view the files and folders in the shared folders on the server.
-
-> [!NOTE]
->  You can also download and use the My Server app for Windows Server Essentials from the [Windows Phone Marketplace](http://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a) to access your shared folders and media files that are stored on the server.
-
-##### To log on to Remote Web Access from a mobile device
-
-1.  Open a Web browser and type **https://**_<YourDomainName\>_**/remote** in the address bar.  Make sure that you include the s in https.
-
-2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of Remote Web Access.
-
-##### To switch to the desktop version of Remote Web Access
-
-1.  Open a Web browser and type **https://**_<YourDomainName\>_**/remote** in the address bar.  Make sure that you include the s in https.
-
-2.  On the  Remote Web Access logon page, type your user name and password in the text boxes, click **View desktop version**, and then click the arrow. You are logged on to the desktop version of Remote Web Access.
-
-##### To return to the mobile version of Remote Web Access
-
-1. Log off.
-
-2. Open a Web browser and type **https://**_<YourDomainName\>_**/remote/m** in the address bar. Make sure that you include the s in https.
-
-3. The mobile version of  Remote Web Access is displayed. On the  Remote Web Access logon page, type your user name and password in the text boxes, and then click the arrow. You are logged on to the mobile version of  Remote Web Access.
-
-   You can search for files and folders in the shared folders on the server.
-
-###  <a name="BKMK_9"></a> Supported Web browsers for mobile devices
- Supported web browsers for mobile devices include:
-
--   Internet Explorer Mobile 6.0 or later
-
--   Safari
-
--   Blackberry
-
--   Symbian 6.0 or later
-
--   Android
-
--   Google Chrome
-
--   Firefox
-
-## See also
-
--   [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md)
-
--   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
-
--   [Use Windows Server Essentials](Use-Windows-Server-Essentials.md)
-
->>>>>>> 97724df67237ac603cf9eb996732230bdb7c0b88

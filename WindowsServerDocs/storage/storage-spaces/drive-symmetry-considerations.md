@@ -168,12 +168,12 @@ This isn't supported. You need to add a minimum of two cache drives (NvME or SSD
 
 To recap, every server in the cluster should have the same types of drives and the same number of each type. It's supported to mix-and-match drive models and drive sizes as needed, with the considerations above.
 
-| Constraint                               |               |
-|------------------------------------------|---------------|
-| Same types of drives in every server     | **Required**  |
-| Same number of each type in every server | **Required**  |
-| Same drive models in every server        | Recommended   |
-| Same drive sizes in every server         | Recommended   |
+| Constraint | State |
+|--|--|
+| Same types of drives in every server | **Required** |
+| Same number of each type in every server | **Required** |
+| Same drive models in every server | Recommended |
+| Same drive sizes in every server | Recommended |
 
 ## Additional References
 

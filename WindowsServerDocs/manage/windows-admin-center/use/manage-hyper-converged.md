@@ -272,7 +272,7 @@ You can also configure the virtual network when creating a virtual machine.
 
 ![Monitor SDN infrastructure](../media/manage-hyper-converged/sdn-monitoring.png)
 
-## Feedback
+## Give us feedback
 
 It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
 

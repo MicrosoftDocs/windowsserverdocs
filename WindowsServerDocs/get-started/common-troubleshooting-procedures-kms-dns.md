@@ -3,7 +3,6 @@ title: Guidelines for troubleshooting DNS-related activation issues
 ms.topic: troubleshooting
 ms.date: 09/10/2019
 ms.technology: server-general
-ms.topic: article
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
