@@ -40,7 +40,7 @@ manager: dongill
 
  For more information about the hardware requirements, see the [Windows Server Catalog](https://www.windowsservercatalog.com/).
 
- All server hardware should meet the requirements established for the  Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](https://msdn.microsoft.com/windows/hardware/gg487403.aspx).
+ All server hardware should meet the requirements established for the  Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](/previous-versions/windows/hardware/hck/dn641155(v=vs.85)).
 
 > [!IMPORTANT]
 > Dynamic disks are not supported on Windows Server Essentials.
@@ -49,6 +49,4 @@ manager: dongill
 
 -   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
 
--   [System Requirements for Windows Server Essentials](system-requirements.md) 
-
-
+-   [System Requirements for Windows Server Essentials](system-requirements.md)
