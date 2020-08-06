@@ -1,6 +1,6 @@
 ---
 ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
-title: Federation Server Farm Using WID
+title: AD FS Federation Server Farm Using WID
 author: billmath
 ms.author: billmath
 manager: femila

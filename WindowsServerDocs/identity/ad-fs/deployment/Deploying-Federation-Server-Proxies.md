@@ -1,6 +1,6 @@
 ---
 ms.assetid: 1b21b0a9-1fe6-4fd1-8a25-92e578d774ed
-title: Deploying Federation Server Proxies
+title: Deploying Federation Server Proxies in AD FS
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -10,7 +10,7 @@ ms.technology: identity-adfs
 ms.author: billmath
 ---
 
-# Deploying Federation Server Proxies
+# Deploying Legacy AD FS Federation Server Proxies
 
 To deploy federation server proxies in Active Directory Federation Services \(AD FS\), complete each of the tasks in [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md).  
   

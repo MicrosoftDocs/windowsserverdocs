@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# Federation Server Farm Using SQL Server
+# Legacy AD FS Federation Server Farm Using SQL Server
 
 This topology for Active Directory Federation Services \(AD FS\) differs from the federation server farm using Windows Internal Database \(WID\) deployment topology in that it does not replicate the data to each federation server in the farm. Instead, all federation servers in the farm can read and write data into a common database that is stored on a server running Microsoft SQL Server that is located in the corporate network.
 

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 97999892-29c6-4076-be19-5e5259d8ada6
-title: Deploying Federation Servers
+title: Interoperating with AD FS 1.x
 author: billmath
 manager: femila
 ms.date: 05/31/2017
