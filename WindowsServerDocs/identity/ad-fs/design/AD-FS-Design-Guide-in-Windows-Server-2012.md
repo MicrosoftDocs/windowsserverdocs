@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# AD FS Design Guide in Windows Server 
+# AD FS Legacy Design Guide in Windows Server 
 
 
   

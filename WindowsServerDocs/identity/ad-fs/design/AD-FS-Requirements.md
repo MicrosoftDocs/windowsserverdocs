@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# AD FS Requirements
+# AD FS Requirements for Windows Server
 
 The following are the various requirements that you must conform to when deploying AD FS:
 

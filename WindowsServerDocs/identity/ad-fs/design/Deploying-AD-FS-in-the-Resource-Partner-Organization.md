@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# Deploying AD FS in the Resource Partner Organization
+# Deploying Legacy AD FS in the Resource Partner Organization
 
 The resource partner organization in Active Directory Federation Services \(AD FS\) represents the organization whose Web servers may be protected by a resource\-side federation server. The federation server at the resource partner uses the security tokens that are produced by the account partner to provide claims to the Web servers that are located in the resource partner.  
   
