@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# Migrate an AD FS 2.0 WID farm  
+# Migrate an AD FS 2.0 SQL farm  
 This document provides detailed information on migrating an AD FS 2.0 SQL farm to Windows Server 2012.
 
 

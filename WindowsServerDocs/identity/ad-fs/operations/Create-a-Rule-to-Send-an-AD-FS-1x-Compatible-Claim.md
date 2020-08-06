@@ -1,6 +1,6 @@
 ---
 ms.assetid: 0039fbbb-b981-4526-a550-f3456ff27635
-title: Create a Rule to Transform an Incoming Claim
+title: Create a Rule to Send an AD FS 1.x Compatible Claim
 author: billmath
 ms.author: billmath
 manager: femila

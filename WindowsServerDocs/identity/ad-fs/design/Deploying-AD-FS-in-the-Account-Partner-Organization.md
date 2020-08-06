@@ -1,6 +1,6 @@
 ---
 ms.assetid: 8c3536b7-d091-4ee6-ad04-24713f070862
-title: Deploying AD FS in the Account Partner Organization
+title: Deploying Legacy AD FS in the Account Partner Organization
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# Deploying AD FS in the Account Partner Organization
+# Deploying Legacy AD FS in the Account Partner Organization
 
 An account partner in Active Directory Federation Services \(AD FS\) represents the organization in the federation trust relationship that physically stores user accounts in a supported attribute store. For more information about which attribute stores are supported, see [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md).  
   
