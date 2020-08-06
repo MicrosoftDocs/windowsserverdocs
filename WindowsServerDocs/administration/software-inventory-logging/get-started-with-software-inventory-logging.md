@@ -1,9 +1,7 @@
 ---
 title: Get Started with Software Inventory Logging
 description: Describes how to install and start using Software Inventory Logging
-
-ms.prod: windows-server
-ms.technology: manage-software-inventory-logging
+-software-inventory-logging
 
 
 

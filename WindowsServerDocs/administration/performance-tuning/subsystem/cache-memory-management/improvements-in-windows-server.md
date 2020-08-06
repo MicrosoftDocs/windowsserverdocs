@@ -1,8 +1,6 @@
 ---
 title: Cache and Memory Manager Improvements
 description: Cache and Memory Manager Improvements in Windows Server 2016
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: pavel; atales
 author: phstee

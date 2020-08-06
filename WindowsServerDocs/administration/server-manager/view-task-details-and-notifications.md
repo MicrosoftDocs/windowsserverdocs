@@ -2,10 +2,8 @@
 title: View Task details and Notifications
 description: Server Manager
 
-ms.prod: windows-server
 
-
-ms.technology: manage-server-manager
+-server-manager
 
 ms.topic: article
 ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3

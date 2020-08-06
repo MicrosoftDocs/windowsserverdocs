@@ -4,7 +4,6 @@ description: A description of the vssadmin resize shadowstorage command.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 03/05/2020
 ms.localizationpriority: medium
 ---

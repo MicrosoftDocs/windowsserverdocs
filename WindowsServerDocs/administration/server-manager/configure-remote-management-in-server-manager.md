@@ -2,10 +2,8 @@
 title: Configure remote Management in Server Manager
 description: Server Manager
 
-ms.prod: windows-server
 
-
-ms.technology: manage-server-manager
+-server-manager
 
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
@@ -161,7 +159,7 @@ In Windows Server 2016, Server Manager relies on Windows remote Management (WinR
 
     > [!NOTE]
     > This setting disables remote management as part of the operating system setup process. Configuring this setting does not prevent an administrator from enabling Server Manager remote management on a server after operating system setup is complete. Administrators can enable Server Manager remote management again by using steps in [To configure Server Manager remote management by using the Windows interface](#to-enable-server-manager-remote-management-by-using-the-windows-interface) or [To enable Server Manager remote management by using Windows PowerShell](#to-enable-server-manager-remote-management-by-using-windows-powershell) in this topic.
-    > 
+    >
     > If you disable remote management by default as part of an unattended installation, and do not enable remote management on the server again after installation, servers to which this answer file is applied cannot be fully managed by using Server Manager. Servers that are running Windows Server 2016,  Windows Server 2012 R2 , or  Windows Server 2012 (and that have remote management disabled by default) generate manageability status errors in the Server Manager console after they are added to the Server Manager server pool.
 
 ## Windows remote Management (WinRM) listener settings

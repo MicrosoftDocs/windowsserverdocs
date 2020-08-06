@@ -4,7 +4,6 @@ description: Reference article for the fsutil repair command, which administers 
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: 62d77150-1d9e-4069-ab4a-299f33024912
 ms.topic: article
 ms.date: 10/16/2017

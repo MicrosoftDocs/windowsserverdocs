@@ -4,7 +4,6 @@ description: Reference article for the fsutil objectid command, which manages ob
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: 693ab895-9d0c-47c1-9f52-df5cd287842a
 ms.topic: article
 ms.date: 10/16/2017

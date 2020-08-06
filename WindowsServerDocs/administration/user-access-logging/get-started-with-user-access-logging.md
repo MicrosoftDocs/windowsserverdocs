@@ -1,9 +1,7 @@
 ---
 title: Get Started with User Access Logging
 desctription: Describes the User Access Logging feature and how to start using it.
-
-ms.prod: windows-server
-ms.technology: manage-user-access-logging
+-user-access-logging
 
 
 

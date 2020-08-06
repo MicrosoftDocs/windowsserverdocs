@@ -2,10 +2,8 @@
 title: View and Configure Performance Event and Service Data
 description: Server Manager
 
-ms.prod: windows-server
 
-
-ms.technology: manage-server-manager
+-server-manager
 
 ms.topic: article
 ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1

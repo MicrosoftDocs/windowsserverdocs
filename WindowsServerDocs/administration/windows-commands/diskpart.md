@@ -1,7 +1,6 @@
 ---
 title: diskpart
 description: Reference article for the diskpart command interpreter, which helps you manage your computer's drives.
-ms.technology: storage
 author: jasongerend
 manager: elizapo
 ms.author: jgerend

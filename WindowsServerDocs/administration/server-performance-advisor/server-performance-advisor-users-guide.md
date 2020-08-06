@@ -7,8 +7,6 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: manage
 ---
 # Server Performance Advisor User's Guide
 
@@ -101,7 +99,7 @@ The following are the target scenarios for SPA:
     **Note**
     SPA is not designed to be a debugging or metering tool. Furthermore, from the perspective of the servers, it can be considered a read-only tool, and it does not modify the servers  configurations.
 
-     
+
 
 * **Performance index monitoring**
 
@@ -163,7 +161,7 @@ You also need to install SQL Server 2008 R2 Express on the same computer where S
 **Note**
 SPA does not include SQL Server or the .NET Framework as part of the SPA installation package. After installing Microsoft SQL Server 2008 R2 and .NET Framework 4.0, we recommend that you run Windows Update before installing SPA.
 
- 
+
 
 Because users can create and manage databases with SPA, the user account that is used to run SPA should have the same administrator privileges as SQL Server.
 
@@ -181,7 +179,7 @@ The SPA console uses the same account to read logs and import them into database
     **Note**
     ETW implements a circular buffer to store the trace and moves them to the shared folder when possible. If the server is busy or the write operation is slow, ETW drops the traces when the buffer is full. It is IMPORTANT that the shared folder is located on a server with fast I/O access. We recommend that each target server has a shared folder to minimize data loss caused by slow file I/O.
 
-     
+
 
 * For PLA to access target servers, set the Windows Firewall to allow remote Performance Logs and Alerts access on target servers. PLA uses TCP port 139.
 
@@ -202,7 +200,7 @@ if you want to run data analysis against the console computer, you need to run S
 
 if you want to run the IIS SPA Advisor Pack against your servers, you need to enable WMI query and ETW trace for the IIS server. You can do this by enabling **Tracing** under the **Health and Diagnostics** role service and **IIS Management Scripts and Tools** under **Management Tools** of the **Web Server (IIS)** server role.
 
- 
+
 
 ### Creating your first project
 
@@ -225,14 +223,14 @@ After everything is set up, you can create your first SPA project. As described 
     **Note**
     The default instance name for a SQL Server 2008 R2 Express installation is SQLExpress. For an instance of SQL Server 2008 R2 Express that is installed on the local computer, the database would typically default to **localhost\\SQLExpress**. However, it may have been changed during SQL Server installation, so you need to make sure that you use the right SQL Server instance name.
 
-     
+
 
 4.  Provide the database name. Only letters, digits, and underscores (\_) are allowed as valid characters for a database name. A reasonable suggestion for the SPA database name would be **SPA**. If you enter an invalid name, a red error icon appears. The associated tooltip gives the reason for the validation failure.
 
     **Note**
     It is IMPORTANT to remember the database name and the server instance name, because these are the only identifiers for your project. You need to provide this information if you want to switch to this database.
 
-     
+
 
 5.  After you provide the server instance name and database name, the First time Use Wizard generates the location for the database file.
 
@@ -241,28 +239,28 @@ After everything is set up, you can create your first SPA project. As described 
     **Note**
     if this step fails, an error message appears. Some of the common issues are: Console cannot connect to the SQL Server instance, insufficient privileges to create database, or the database name already exists.
 
-     
+
 
 7.  When the previous step succeeds, you see the **Provision advisor pack** page. It lists all the advisor packs that are available on your computer. SPA automatically scans the folder named **APs** under the SPA root directory. It lists the full name, version, and author for each advisor pack.
 
     **Note**
     for more info about how the full name and version are used in SPA, see [Managing advisor packs](#bkmk-manageadvisorpacks)
 
-     
+
 
 8.  Choose which advisor packs you want to provision in the project database, and then click **Next**. Or you can click **Skip** to move to the next step without provisioning any advisor packs.
 
     **Note**
     You can provision advisor packs any time you are using the tool. For more information, see [Managing advisor packs](#bkmk-manageadvisorpacks).
 
-     
+
 
 9.  On the **add servers** page, for each server to be added to the target server list, there are two mandatory fields to fill: **Name of the server** and **File Share Location**.
 
     **Note**
     There is also a **remark** field, which is primarily used to classify or find the server. In instances where you have many servers, you can import a comma separated value (.csv) file which contains the server name, result folder, and optional remark field. The **remark** field is used to describe the server and the term can be used to filter servers for data collection. If you are initializing the servers through the .csv file, a parsing error within the file does not load the servers.
 
-     
+
 
 10. Several configurations need to be set to enable PLA data collection, as described in [Setting up SPA](#bkmk-setupspa). The **add server** page provides a test configuration capability to help you troubleshoot configuration issues. select the check box associated with the computer, and then click **Test Connectivity**. SPA tries to generate a data collector set on target servers, and it tries import the results back to the database. If everything is correct, the **Status** shows **Pass**. If it fails, a tooltip appears that describes the reason for the failure.
 
@@ -284,7 +282,7 @@ Every time the SPA console launches, the last project that was used by the curre
     **Note**
     if you recently changed a system setting, we recommend that you run the analysis again to evaluate the overall impact of the change and get an updated report of the system state. SPA does not track configuration changes to the system under test.
 
-     
+
 
 * **Current Status** Shows the status of performance analysis tasks currently running on the server. You can cancel a running task by clicking the **Cancel** icon, which is designated by a red X.
 
@@ -303,7 +301,7 @@ To run performance analysis on target servers, select the servers that you want 
 **Note**
 if you select a server that has a recurring performance analysis running, the **remove Recurrence** button allows you to cancel the recurring data collection. SPA does not allow multiple data collection sessions at the same time on the same computer.
 
- 
+
 
 ## <a href="" id="bkmk-viewingreports"></a>Viewing reports
 
@@ -452,7 +450,7 @@ Reports can be removed to minimize the number of reports that need to be managed
 **Note**
 deleted reports cannot be undeleted.
 
- 
+
 
 ### Exporting and importing reports
 
@@ -478,7 +476,7 @@ New advisor packs can be released by Microsoft or by non-Microsoft developers. A
     **Note**
     This dialog box is similar to the **Provision advisor pack** page in the First time Use Wizard. It shows a list of advisor packs that are available to manage. Each advisor pack in the list has properties such as name, installed version, version, and author. Name is the full name of the advisor pack, and installed version is the version of this advisor pack that has already been provisioned in the project. If the advisor pack is not provisioned in the current database, the installed version text box displays **Not Installed**. The version field indicates the version of this advisor pack, which is filed under the advisor packs folder.
 
-     
+
 
 3.  select the advisor pack from the list. If the advisor pack has not been provisioned or if there is a newer version in the advisor packs folder than the one in the database, the **Provision** button is enabled. Click the **Provision** button.
 
@@ -503,7 +501,7 @@ You can modify threshold values by clicking the rule name in a single or side-by
     **Note**
     You are presented with a list of all rules that are included in the advisor pack. The check box on the left of the advisor pack name indicates if the rule is enabled. If a rule is disabled, it is hidden from all reports.
 
-     
+
 
 2.  Click the specific rule that you want to modify. The **Rule details** form for the selected rule opens.
 
@@ -565,7 +563,7 @@ SPA provides basic capabilities for managing target servers. You can choose to a
     **Note**
     This field uses a free text format, so you can use it as a description field. Or use this field to tag the servers so they can be found easily in the main window, or to group servers, for example, by location or server role.
 
-     
+
 
 4.  if you want to use SPA with a large number of servers, SPA supports a Comma Separated Value (.csv) format for import. The file must contain at least two fields: **Server** and **File Share Location**. The third field, **remark** is optional, but it is recommended to organize your servers. You can also export the server list to a .csv file to determine the appropriate format or back up your server configuration.
 
@@ -614,13 +612,13 @@ User credentials can be encrypted and cached through Windows PowerShell. These c
 ``` syntax
 $fileName = 'D:\temp\operator.txt'
 $userName = 'domainname\operator'
- 
+
 # save credential to file
 $(Get-Credential).Password | convertFrom-SecureString | Set-Content $fileName
- 
+
 # load credential from file
 $credential = New-Object System.Management.Automation.PsCredential $userName, $(Get-Content $fileName | convertTo-SecureString)
- 
+
 # run command
 .\start-SpaAnalysis  ServerName: Server1  Credential: $credential  AdvisorPackName:Microsoft.ServerPerformanceAdvisor.CoreOS.V1 10  Duration:10  SqlInstanceName: .\SQLExpress  SqlDatabaseName:SPA8294
 ```
@@ -652,7 +650,7 @@ FROM (
       AND Name = N'% Processor time' AND CpuId = N'_Total'
    GROUP BY __MachineName
 ) t
-OrdER BY t.AverageCpu DESC 
+OrdER BY t.AverageCpu DESC
 ```
 
 ### Working with multiple projects
@@ -666,7 +664,7 @@ When you choose to create a new project database or open a different project dat
 **Note**
 SQL Server 2008 R2 Express has a 10 GB database limit. By using multiple projects, you can use one or more SQL Server databases and stay under the 10 GB SQL Server 2008 R2 Express limit.
 
- 
+
 
 ### Logging and debugging
 

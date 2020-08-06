@@ -1,8 +1,6 @@
 ---
 title: Hardware considerations in AD performance tuning
 description: Hardware considerations in AD performance tuning
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
