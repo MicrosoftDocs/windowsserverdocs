@@ -2,10 +2,8 @@
 title: tftp
 description: Transfer files to and from a remote computer.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef

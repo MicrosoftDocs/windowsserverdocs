@@ -1,8 +1,6 @@
 ---
 title: verifier
 description: Reference article for verifier, which runs the Driver verifier manager.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 782173d6-f196-4bc4-a547-76109829453c
 

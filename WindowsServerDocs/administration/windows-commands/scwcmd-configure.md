@@ -2,10 +2,8 @@
 title: Scwcmd configure
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 6528b9dc-3d82-4228-b734-ed717458d74c

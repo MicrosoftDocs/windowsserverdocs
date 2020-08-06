@@ -2,10 +2,8 @@
 title: reset session
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9

@@ -1,8 +1,6 @@
 ---
 title: rdpsign
 description: Reference article for the rdpsign command, which enables you to digitally sign a Remote Desktop Protocol (.rdp) file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4a6fa8ce-3d32-49a5-b056-bcc1a23391f5
 author: coreyp-at-msft

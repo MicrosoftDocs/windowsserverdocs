@@ -1,8 +1,6 @@
 ---
 title: nlbmgr
 description: Reference article for the nlbmgr command, which helps you to configure and manage your Network Load Balancing clusters and all cluster hosts from a single computer, using the Network Load Balancing Manager.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 89cb8590-b7cf-4a27-89fa-0fa62ea1a1ca
 author: coreyp-at-msft

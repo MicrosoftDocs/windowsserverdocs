@@ -1,8 +1,6 @@
 ---
 title: atmadm
 description: Reference article for the atmadm command, which monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 37156c2e-c4d4-4fd8-a03d-245fb60bf996
 author: coreyp-at-msft

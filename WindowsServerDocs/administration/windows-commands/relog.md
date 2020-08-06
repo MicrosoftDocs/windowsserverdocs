@@ -1,8 +1,6 @@
 ---
 title: relog
 description: Reference article for the relog command, which extracts performance counter information from the performance counter log files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 7480f6c0-9953-4d70-9b1c-b27e09d8db13
 author: coreyp-at-msft

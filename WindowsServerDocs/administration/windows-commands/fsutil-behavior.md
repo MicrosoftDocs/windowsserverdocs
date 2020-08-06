@@ -1,7 +1,6 @@
 ---
 title: fsutil behavior
 description: Reference article for the fsutil behavior command, which queries or sets NTFS volume behavior.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

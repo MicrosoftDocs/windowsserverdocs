@@ -1,10 +1,8 @@
 ---
 title: Services for Network File System Command Reference
 description: Reference article for **** -
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c

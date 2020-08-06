@@ -1,7 +1,6 @@
 ---
 title: fsutil repair
 description: Reference article for the fsutil repair command, which administers and monitors NTFS self-healing repair operations.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

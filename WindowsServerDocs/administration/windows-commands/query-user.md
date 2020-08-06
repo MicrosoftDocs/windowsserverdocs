@@ -1,8 +1,6 @@
 ---
 title: query user
 description: Reference article for the query user command, which displays information about user sessions on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: a670fb78-c055-464a-b61d-3a85632c52c5
 author: coreyp-at-msft

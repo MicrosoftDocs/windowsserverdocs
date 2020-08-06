@@ -1,8 +1,6 @@
 ---
 title: icacls
 description: Reference article for the icacls command, which displays or modifies discretionary access control lists (DACL) on specified files, and applies stored DACLs to files in specified directories.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
 author: coreyp-at-msft

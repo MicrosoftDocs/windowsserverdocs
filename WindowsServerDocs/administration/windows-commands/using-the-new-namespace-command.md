@@ -1,8 +1,6 @@
 ---
 title: new-Namespace
 description: Reference article for new-Namespace, which creates and configures a new namespace.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 6df60703-30bd-4d59-a8d9-9fe3efe96add
 author: coreyp-at-msft

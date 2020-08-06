@@ -1,8 +1,6 @@
 ---
 title: change logon
 description: Reference article for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 41466260-aee9-4333-bcb6-178112c22afd
 author: coreyp-at-msft

@@ -2,10 +2,8 @@
 title: secedit:generaterollback
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680

@@ -2,10 +2,8 @@
 title: Scwcmd analyze
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4

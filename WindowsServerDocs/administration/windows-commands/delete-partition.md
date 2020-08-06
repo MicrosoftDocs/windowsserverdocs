@@ -1,8 +1,6 @@
 ---
 title: delete partition
 description: Reference article for the delete partition command, which deletes the partition with focus.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
 author: coreyp-at-msft

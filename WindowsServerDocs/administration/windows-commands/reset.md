@@ -2,10 +2,8 @@
 title: reset
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: afbdab44-199c-4e11-884f-e96804965c21

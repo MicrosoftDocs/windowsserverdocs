@@ -1,8 +1,6 @@
 ---
 title: diantz
 description: Reference article for the diantz command, which packages existing files into a cabinet (.cab) file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 218ed5d7-1203-4d68-ad9b-65cdd022d54f
 author: coreyp-at-msft

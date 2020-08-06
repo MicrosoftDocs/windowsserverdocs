@@ -2,10 +2,8 @@
 title: secedit:configure
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3

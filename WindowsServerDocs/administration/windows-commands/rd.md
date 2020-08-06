@@ -1,8 +1,6 @@
 ---
 title: rd
 description: Reference article for the rd command, which deletes a directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 42e672f6-5bc2-4c16-af25-18e7ed2dd555
 author: coreyp-at-msft

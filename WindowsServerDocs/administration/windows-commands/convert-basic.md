@@ -1,8 +1,6 @@
 ---
 title: convert basic
 description: Reference article for the convert basic command, which converts an empty dynamic disk to a basic disk.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 61329896-3b56-4959-8d58-45cbe18ba860
 author: coreyp-at-msft

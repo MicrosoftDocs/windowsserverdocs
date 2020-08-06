@@ -1,8 +1,6 @@
 ---
 title: online
 description: Reference article for the online command, which takes an offline disk or volume to the online state.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: aacc3f75-bbc8-4ae2-bf92-420a82594da2
 author: coreyp-at-msft

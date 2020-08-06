@@ -1,7 +1,6 @@
 ---
 title: Vssadmin resize shadowstorage
 description: A description of the vssadmin resize shadowstorage command.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend

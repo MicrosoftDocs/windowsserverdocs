@@ -1,8 +1,6 @@
 ---
 title: bitsadmin transfer
 description: Reference article for the bitsadmin transfer command, which transfers one or more files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: fe302141-b33a-4a05-835e-dc4fc4db7d5a
 author: coreyp-at-msft

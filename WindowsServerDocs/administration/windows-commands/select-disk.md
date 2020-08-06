@@ -2,10 +2,8 @@
 title: select disk
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: a0da614b-09d9-433b-b4eb-9127f84431cb

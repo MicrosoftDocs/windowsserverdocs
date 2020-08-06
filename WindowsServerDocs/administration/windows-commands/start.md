@@ -1,8 +1,6 @@
 ---
 title: start
 description: Reference article for start, which starts a separate Command Prompt window to run a specified program or command.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
 author: coreyp-at-msft

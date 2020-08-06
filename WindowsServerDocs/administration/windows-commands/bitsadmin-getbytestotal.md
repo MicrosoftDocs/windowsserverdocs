@@ -1,8 +1,6 @@
 ---
 title: bitsadmin getbytestotal
 description: Reference article for the bitsadmin getbytestotal command, which Retrieves the size of the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 784e0bfa-7b09-4262-9104-adbc9beb479b
 author: coreyp-at-msft

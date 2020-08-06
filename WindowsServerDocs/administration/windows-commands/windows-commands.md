@@ -1,14 +1,12 @@
 ---
 title: Windows commands
 description: Reference
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.date: 06/29/2020
-ms.prod: windows-server
 ---
 
 # Windows commands

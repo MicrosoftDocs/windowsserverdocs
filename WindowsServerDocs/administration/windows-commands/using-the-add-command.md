@@ -1,8 +1,6 @@
 ---
 title: Using the add command
 description: Reference article for the various add commands.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 6fcdd154-baaf-4288-a355-2a95a3028bce
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: bitsadmin geterror
 description: Reference article for the bitsadmin geterror command, which retrieves detailed error information for the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: cbe5bca1-d2dd-4ce6-903f-f85de4a2ec6a
 author: coreyp-at-msft

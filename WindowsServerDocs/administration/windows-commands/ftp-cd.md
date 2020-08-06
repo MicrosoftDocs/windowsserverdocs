@@ -1,8 +1,6 @@
 ---
 title: ftp cd
 description: Reference article for the ftp cd command, which changes the working directory on the remote computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: a574855a-31b4-45c6-bce2-581c7231c99b
 author: coreyp-at-msft

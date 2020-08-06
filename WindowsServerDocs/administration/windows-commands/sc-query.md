@@ -1,8 +1,6 @@
 ---
 title: Sc.exe query
 description: Learn how to obtain information about services, drivers, type of services, or type of drivers using the sc.exe utility
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 author: coreyp-at-msft
@@ -40,11 +38,11 @@ sc.exe [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [ty
 - Without a space between a parameter and its value (that is, **type= own**, not **type=own**), the operation will fail.
 - The **query** operation displays the following information about a service: SERVICE_NAME (service's registry subkey name), TYPE, STATE (as well as states which are not available), WIN32_EXIT_B, SERVICE_EXIT_B, CHECKPOINT, and WAIT_HINT.
 - The **type=** parameter can be used twice in some cases. The first appearance of the **type=** parameter specifies whether to query services, drivers, or both (**all**). The second appearance of the **type=** parameter specifies a type from the **create** operation to further narrow a query's scope.
-- When the display resulting from a **query** command exceeds the size of the enumeration buffer, a message similar to the following is displayed:  
+- When the display resulting from a **query** command exceeds the size of the enumeration buffer, a message similar to the following is displayed:
   ```
   Enum: more data, need 1822 bytes start resume at index 79
-  ```  
-  To display the remaining **query** information, rerun **query**, setting **bufsize=** to be the number of bytes and setting **ri=** to the specified index. For example, the remaining output would be displayed by typing the following at the command prompt:  
+  ```
+  To display the remaining **query** information, rerun **query**, setting **bufsize=** to be the number of bytes and setting **ri=** to the specified index. For example, the remaining output would be displayed by typing the following at the command prompt:
   ```
   sc.exe query bufsize= 1822 ri= 79
   ```

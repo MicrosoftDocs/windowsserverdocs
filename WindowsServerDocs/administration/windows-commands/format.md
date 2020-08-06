@@ -1,7 +1,6 @@
 ---
 title: format
 description: Reference article for the format command, which formats a disk to accept Windows files.
-ms.prod: windows-server
 manager: dongill
 ms.author: jgerend
 ms.technology: storage

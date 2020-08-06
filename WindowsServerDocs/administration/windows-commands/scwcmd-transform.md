@@ -2,10 +2,8 @@
 title: Scwcmd transform
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 640dd892-0bb9-416d-8318-60a26605bcf4

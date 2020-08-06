@@ -1,8 +1,6 @@
 ---
 title: winsat mfmedia
 description: Reference for winsat mfmedia, which measures the performance of video decoding (playback) using the Media Foundation framework.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 09a3b3dd-f746-4e6e-b684-76a9bde0c78d
 author: coreyp-at-msft
@@ -45,7 +43,7 @@ winsat mfmedia <parameters>
 
 ## Examples
 
-- To runs the assessment with the input file that is used during a **winsat formal** assessment, without employing the Media Foundation Protected Media Pipeline (MFPMP), on a computer where c:\windows is the location of the Windows folder.  
+- To runs the assessment with the input file that is used during a **winsat formal** assessment, without employing the Media Foundation Protected Media Pipeline (MFPMP), on a computer where c:\windows is the location of the Windows folder.
   ```
   winsat mfmedia -input c:\windows\performance\winsat\winsat.wmv -nopmp
   ```

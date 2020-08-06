@@ -1,8 +1,6 @@
 ---
 title: ftp verbose
 description: Reference article for the ftp verbose command, which toggles verbose mode.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 59febc81-0b14-487e-8aa3-642f59d0b34f
 author: coreyp-at-msft

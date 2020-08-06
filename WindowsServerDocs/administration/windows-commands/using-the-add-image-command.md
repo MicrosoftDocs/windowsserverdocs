@@ -1,8 +1,6 @@
 ---
 title: add-Image
 description: Reference article for add-Image, which adds images to a Windows Deployment Services server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: d5b6f4da-90ba-4b0e-9423-66c8ef5172e2
 author: coreyp-at-msft

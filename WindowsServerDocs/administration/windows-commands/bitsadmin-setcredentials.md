@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setcredentials
 description: Reference article for the bitsadmin setcredentials command, which adds credentials to a job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 3cd099a4-9e85-46d8-8527-edb6dfab7f97
 author: coreyp-at-msft

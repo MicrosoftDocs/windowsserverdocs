@@ -1,8 +1,6 @@
 ---
 title: qprocess
 description: Reference article for the qprocess command, which displays information about processes that are running on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 9825cb01-11e0-4cd1-8142-57910e2f4056
 author: coreyp-at-msft

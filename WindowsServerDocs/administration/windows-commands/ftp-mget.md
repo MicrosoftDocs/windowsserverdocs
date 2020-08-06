@@ -1,8 +1,6 @@
 ---
 title: ftp mget
 description: Reference article for the ftp mget command, which copies remote files to the local computer using the current file transfer type.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 6c85ae96-ec51-48a9-a227-7f02c7332c69
 author: coreyp-at-msft

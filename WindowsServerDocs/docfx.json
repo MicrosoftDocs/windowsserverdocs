@@ -49,12 +49,16 @@
           "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
         },
         "ms.prod": {
-          "EssentialsDocs/**/*.md": "windows-server"
+          "EssentialsDocs/**/*.md": "windows-server",
+          "administration/**/*.md": "windows-server"
         },
         "ms.technology": {
-          "EssentialsDocs/**/*.md": "essentials"
-        }
-      },
+          "EssentialsDocs/**/*.md": "essentials",
+          "administration/**/*.md": "administration",
+          "administration/windows-commands/*.md": "windows-commands",
+          "administration/windows-server-update-services/*.md": "wsus"
+          }
+        },
     "template": [
       "docs.html"
     ],

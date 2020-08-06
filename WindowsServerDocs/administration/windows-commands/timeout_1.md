@@ -1,8 +1,6 @@
 ---
 title: timeout
 description: Reference article for timeout, which pauses the command processor for the specified number of seconds.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: e26b4a84-0e30-46e1-aa10-0667b7d3cb4c
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: tracert
 description: Reference article for tracert, which determines the path taken to a destination, by sending Internet Control Message Protocol (ICMP) echo requests or ICMPv6 messages to the destination with incrementally increasing time to Live (TTL) field values.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 9032a032-2e5e-49d4-9e86-f821600e4ba6
 author: coreyp-at-msft
