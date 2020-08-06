@@ -1,8 +1,6 @@
 ---
 title: exit
 description: Reference article for exit, which exits the command interpreter.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: d3cee4a2-6210-46f0-b8e4-7381c3c4e530
 author: coreyp-at-msft

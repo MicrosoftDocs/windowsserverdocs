@@ -1,8 +1,6 @@
 ---
 title: remove-ImageGroup
 description: Reference article for remove-ImageGroup, which removes an image group from a server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 5b2c9813-5df2-4272-8449-26f3bb16f82b
 author: coreyp-at-msft

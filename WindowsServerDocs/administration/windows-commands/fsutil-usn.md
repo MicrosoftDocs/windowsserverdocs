@@ -1,7 +1,6 @@
 ---
 title: fsutil usn
 description: Reference article for the fsutil usn command, which manages the update sequence number (USN) change journal.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

@@ -1,8 +1,6 @@
 ---
 title: add-DriverGroupPackage
 description: Reference article for add-DriverGroupPackage, which adds a driver package to a driver group.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 7cd323ae-9049-448e-a460-6c7d6462d4c8
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: automount
 description: Reference article for the automount command, which enables or disables the automount feature.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4635fc91-a477-4f17-8dcc-aa08854bfe45
 author: coreyp-at-msft

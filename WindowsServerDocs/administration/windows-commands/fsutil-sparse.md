@@ -1,7 +1,6 @@
 ---
 title: fsutil sparse
 description: Reference article for the fsutil sparse command, which manages sparse files.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

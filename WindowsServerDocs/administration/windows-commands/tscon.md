@@ -1,8 +1,6 @@
 ---
 title: tscon
 description: Reference article for tscon, which connects to another session on a Remote Desktop Session Host (rd Session Host) server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
 author: coreyp-at-msft

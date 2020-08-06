@@ -2,10 +2,8 @@
 title: rpcping
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 7382aa0d-90fc-47c0-84b3-15f52dd656d0

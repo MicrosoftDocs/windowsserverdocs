@@ -1,8 +1,6 @@
 ---
 title: Using the copy command
 description: Reference article for copy, which copies an image or a driver group.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 5228b72f-659f-4692-960b-0fae0d16cf2e
 author: coreyp-at-msft

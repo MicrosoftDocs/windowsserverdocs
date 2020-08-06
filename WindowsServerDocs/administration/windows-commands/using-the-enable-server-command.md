@@ -1,8 +1,6 @@
 ---
 title: enable-Server
 description: Reference article for enable-Server, which enables all services for Windows Deployment Services.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 939ffbfb-cf3c-4310-9627-6e7e0c0644d6
 author: coreyp-at-msft

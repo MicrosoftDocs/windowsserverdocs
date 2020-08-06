@@ -1,8 +1,6 @@
 ---
 title: recover (DiskPart)
 description: Reference article for the DiskPart recover command, which refreshes the state of all disks in a disk group, attempt to recover disks in an invalid disk group, and resynchronizes mirrored volumes and RAID-5 volumes that have stale data.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 8cc3a73d-9456-41a0-b375-2b4cc37c3992
 author: coreyp-at-msft

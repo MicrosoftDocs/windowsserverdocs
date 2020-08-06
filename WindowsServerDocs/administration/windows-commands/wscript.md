@@ -1,8 +1,6 @@
 ---
 title: wscript
 description: Reference article for wscript, which provides an environment in which users can execute scripts in a variety of languages that use a variety of object models to perform tasks.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 2fbaf193-cdbd-414c-84c9-bb5720f84c29
 author: coreyp-at-msft

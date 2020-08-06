@@ -2,10 +2,8 @@
 title: route_ws2008
 description: Learn how to modify and display entries in the local IP routing table.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: afcd666c-0cef-47c2-9bcc-02d202b983b3

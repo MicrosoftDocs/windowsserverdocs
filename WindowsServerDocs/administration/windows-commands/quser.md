@@ -1,8 +1,6 @@
 ---
 title: quser
 description: Reference article for the quser command, which displays information about user sessions on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 8056204f-ed11-4c91-bb1d-c799283a48a4
 author: coreyp-at-msft

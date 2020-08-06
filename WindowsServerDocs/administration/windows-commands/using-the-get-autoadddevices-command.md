@@ -1,8 +1,6 @@
 ---
 title: get-AutoaddDevices
 description: Reference article for get-AutoaddDevices, which displays all computers that are in the Auto-add database on a Windows Deployment Services server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
 author: coreyp-at-msft

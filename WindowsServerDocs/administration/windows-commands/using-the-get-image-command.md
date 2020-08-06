@@ -1,8 +1,6 @@
 ---
 title: get-Image
 description: Reference article for get-Image, which retrieves information about an image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: title
 description: Reference article for title, which creates a title for the Command Prompt window.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c0bbe8bd-201a-4b6c-b617-5d9809881dc8
 author: coreyp-at-msft

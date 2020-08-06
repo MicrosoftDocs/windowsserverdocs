@@ -1,8 +1,6 @@
 ---
 title: ftype
 description: Reference article for the ftype command, which displays or modifies file type used in file name extension associations.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
 author: coreyp-at-msft

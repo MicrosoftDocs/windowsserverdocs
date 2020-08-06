@@ -1,8 +1,6 @@
 ---
 title: ftp put
 description: Reference article for the ftp put command, which copies a local file to the remote computer using the current file transfer type.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 95cc1e3f-523d-4374-98b8-16e6c276b2ca
 author: coreyp-at-msft

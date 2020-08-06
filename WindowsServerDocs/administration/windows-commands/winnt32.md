@@ -1,8 +1,6 @@
 ---
 title: winnt32
 description: Reference article for winnt32, which performs an installation of, or upgrade to, a product in Windows Server 2003.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 5a0a6fb3-ba4e-4ace-8984-7f6d3875560e
 author: coreyp-at-msft

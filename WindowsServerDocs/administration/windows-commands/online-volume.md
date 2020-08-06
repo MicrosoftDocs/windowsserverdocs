@@ -1,8 +1,6 @@
 ---
 title: online volume
 description: Reference article for the online volume command, which takes the offline volume to the online state.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
 author: coreyp-at-msft

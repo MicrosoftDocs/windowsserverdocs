@@ -1,7 +1,6 @@
 ---
 title: Fsutil fsinfo
 description: Reference article for the fsutil fsinfo command, which lists all drives, queries the drive type, queries volume information, queries NTFS-specific volume information, or queries file system statistics.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima

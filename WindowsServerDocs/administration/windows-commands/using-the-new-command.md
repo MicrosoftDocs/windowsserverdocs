@@ -1,8 +1,6 @@
 ---
 title: Using the new command
 description: Reference article for New, which creates capture and discover images, multicast transmissions, and namespaces.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 0f06f310-c585-42f4-9d15-4680b4a3355d
 author: coreyp-at-msft

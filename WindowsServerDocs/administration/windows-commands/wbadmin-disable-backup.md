@@ -1,8 +1,6 @@
 ---
 title: wbadmin disable backup
 description: Reference article for wbadmin disable backup, which stops running the existing scheduled daily backups.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 5176cbd9-0696-4b3f-9c35-272dd84f7898
 author: coreyp-at-msft

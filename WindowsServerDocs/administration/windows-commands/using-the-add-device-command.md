@@ -1,8 +1,6 @@
 ---
 title: add-Device
 description: Reference article for add-Device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 1e599cc4-464a-421b-b6bb-c101af154131
 author: coreyp-at-msft
