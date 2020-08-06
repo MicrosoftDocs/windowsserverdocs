@@ -2,10 +2,8 @@
 title: rwinsta
 description: Learn how to reset an RDSH sessionf from the command line.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 82bee0e4-1c2c-43fe-afd3-04a6ce0f4518

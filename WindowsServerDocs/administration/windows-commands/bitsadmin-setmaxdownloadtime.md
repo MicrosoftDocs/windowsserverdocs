@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setmaxdownloadtime
 description: Reference article for the bitsadmin setmaxdownloadtime command, which sets the download timeout in seconds.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 16b96cf1-5738-415c-9b9d-c4ea8d5e4fec
 author: coreyp-at-msft

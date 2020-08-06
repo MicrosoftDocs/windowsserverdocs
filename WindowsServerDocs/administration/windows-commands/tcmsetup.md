@@ -2,10 +2,8 @@
 title: tcmsetup
 description: Learn how to set up and disable the TAPI client.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 15e0c10f-996f-4301-92e5-943f7ee8212d
@@ -25,7 +23,7 @@ Sets up or disables the TAPI client.
 ## Syntax
 
 ```
-tcmsetup [/q] [/x] /c <Server1> [<Server2> …] 
+tcmsetup [/q] [/x] /c <Server1> [<Server2> …]
 tcmsetup  [/q] /c /d
 ```
 

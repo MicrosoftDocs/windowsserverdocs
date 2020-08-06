@@ -1,11 +1,9 @@
 ---
 title: Vssadmin
 description: An overview of the vssadmin commands.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.date: 05/18/2018
 ms.localizationpriority: medium
 ---

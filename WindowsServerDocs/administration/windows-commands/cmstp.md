@@ -1,8 +1,6 @@
 ---
 title: cmstp
 description: Reference article for cmstp, which installs or removes a Connection Manager service profile.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 34aad544-11c3-4e85-8bbf-5bc5a971da93
 author: coreyp-at-msft

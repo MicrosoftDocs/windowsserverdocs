@@ -1,8 +1,6 @@
 ---
 title: type
 description: Reference article for type, which displays the contents of a text file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c44fe905-a865-4c97-8cc5-fb95fec7d4d5
 author: coreyp-at-msft

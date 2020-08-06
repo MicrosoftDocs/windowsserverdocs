@@ -1,8 +1,6 @@
 ---
 title: ksetup setrealmflags
 description: Reference article for the ksetup setrealmflags command, which sets realm flags for the specified realm.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: bcb2824e-fba7-4ebe-be62-e62b4fae5b17
 author: coreyp-at-msft

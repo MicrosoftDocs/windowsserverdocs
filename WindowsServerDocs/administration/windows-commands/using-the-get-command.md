@@ -1,8 +1,6 @@
 ---
 title: Using the get command
 description: Reference article for get, which retrieves properties or attributes about the specified object.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: fbd44c67-0670-4dfe-a1c0-2ab8abe327b5
 author: coreyp-at-msft

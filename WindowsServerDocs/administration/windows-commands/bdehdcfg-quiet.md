@@ -1,8 +1,6 @@
 ---
 title: bdehdcfg quiet
 description: Reference article for the bdehdcfg quiet command, which tells bdehdcfg to not display all actions and errors.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 7f75b702-890b-4ff9-805c-edf5cadd8822
 author: coreyp-at-msft

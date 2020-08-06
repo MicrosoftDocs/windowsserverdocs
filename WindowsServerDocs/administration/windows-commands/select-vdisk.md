@@ -2,10 +2,8 @@
 title: select vdisk
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 8808872a-3523-4205-a6c6-83fa738ee37a

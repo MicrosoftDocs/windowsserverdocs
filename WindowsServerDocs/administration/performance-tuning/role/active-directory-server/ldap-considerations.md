@@ -1,8 +1,6 @@
 ---
 title: LDAP considerations in ADDS performance tuning
 description: LDAP considerations in Active Directory workloads
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee

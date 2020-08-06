@@ -1,8 +1,6 @@
 ---
 title: robocopy
 description: Learn how to use the robocopy command in Windows and Windows Server to copy files
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: jasongerend
@@ -170,7 +168,7 @@ Value | Description
 
 ### Remarks
 
--   The **/mir** option is equivalent to the **/e** plus **/purge** options with one small difference in behavior:  
+-   The **/mir** option is equivalent to the **/e** plus **/purge** options with one small difference in behavior:
     -   With the **/e** plus **/purge** options, if the destination directory exists, the destination directory security settings are not overwritten.
     -   With the **/mir** option, if the destination directory exists, the destination directory security settings are overwritten.
 

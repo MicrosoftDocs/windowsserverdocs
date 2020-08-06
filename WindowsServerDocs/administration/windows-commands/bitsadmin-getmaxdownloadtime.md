@@ -2,7 +2,6 @@
 title: bitsadmin getmaxdownloadtime
 description: Reference article for the bitsadmin getmaxdownloadtime command, which retrieves the download timeout in seconds.
 ms.prod: windows-servemr
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: cdce64f6-7125-489d-be3c-4af1dfc8c46a
 author: coreyp-at-msft

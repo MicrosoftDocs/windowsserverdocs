@@ -2,10 +2,8 @@
 title: rpcinfo
 description: Learn how to list the programs on a remote computer.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 7c342232-a8f0-42ff-8f11-d18c4981f5ca

@@ -1,8 +1,6 @@
 ---
 title: ftp rmdir
 description: Reference article for the ftp rmdir command, which deletes a root directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: cf4778a4-9534-49c7-a061-850dc3504a67
 author: coreyp-at-msft

@@ -1,12 +1,6 @@
 ---
 title: Configure Features on Demand in Windows Server
 description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 author: coreyp-at-msft
@@ -108,7 +102,7 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
 
     > [!NOTE]
     > You must add the `computerName` parameter if you are running the cmdlet from a computer that is running Windows 8.1 or Windows 8.
-    > 
+    >
     > if you enter the name of a VHD file from a network share, that share must grant **Read** and **Write** permissions to the computer account of the server that you selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.
 
     ```

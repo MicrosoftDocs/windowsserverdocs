@@ -1,8 +1,6 @@
 ---
 title: manage-bde on
 description: Reference article for the manage-bde on command, which encrypts the drive and turns on BitLocker.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: f6a12814-df74-416c-a04a-62ea8512263e
 author: coreyp-at-msft

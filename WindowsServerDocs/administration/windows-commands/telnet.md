@@ -1,8 +1,6 @@
 ---
 title: telnet
 description: Reference article for telnet, which communicates with a computer running the telnet Server service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: b70a6156-9413-4300-84ce-a34c467e2b4e
 author: coreyp-at-msft

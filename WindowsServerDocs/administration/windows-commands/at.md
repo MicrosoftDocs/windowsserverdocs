@@ -1,8 +1,6 @@
 ---
 title: at
 description: Reference article for the at command, which schedules commands and programs to run on a computer at a specified time and date.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ff18fd16-9437-4c53-8794-bfc67f5256b3
 author: coreyp-at-msft

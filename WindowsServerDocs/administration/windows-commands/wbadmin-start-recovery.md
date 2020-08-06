@@ -1,8 +1,6 @@
 ---
 title: wbadmin start recovery
 description: Reference article for wbadmin start recovery, which runs a recovery operation based on the parameters that you specify.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 52381316-a0fa-459f-b6a6-01e31fb21612
 author: coreyp-at-msft

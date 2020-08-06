@@ -1,8 +1,6 @@
 ---
 title: cmd
 description: Reference article for the cmd command, which starts a new instance of the command interpreter, Cmd.exe.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
 author: coreyp-at-msft

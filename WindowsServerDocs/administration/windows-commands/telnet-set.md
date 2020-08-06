@@ -1,8 +1,6 @@
 ---
 title: telnet set
 description: Reference article for telnet set, which sets options.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: Manage Windows Server
 description: Learns about tools, recommendations and guidance on managing Windows Server
-ms.prod: windows-server
-ms.technology: manage
 ms.topic: article
 author: lizap
 ms.author: elizapo

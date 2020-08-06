@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-Image
 description: Reference article for Subcommand set-Image, which changes the attributes of an image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
-title: Performance Tuning Software Defined Networks  
+title: Performance Tuning Software Defined Networks
 description: Software Defined Network (SDN) performance tuning guidelines
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: grcusanz; anpaul
 author: phstee
@@ -29,7 +27,7 @@ The guidance provided in the Hyper-V network I/O performance section of the [Per
 
 ### Physical Network Adapter (NIC) Teaming
 
-For best performance and fail-over capabilities, it is recommended that you configure the physical network adapters to be teamed.  When using SDN you must create the team with Switch Embedded Teaming (SET).  
+For best performance and fail-over capabilities, it is recommended that you configure the physical network adapters to be teamed.  When using SDN you must create the team with Switch Embedded Teaming (SET).
 
 The optimal number of team members is two as virtualized traffic will be spread across both of the team members for both inbound and outbound directions.  You can have more than two team members; however inbound traffic will be spread over at most two of the adapters.  Outbound traffic will always be spread across all adapters if the default of dynamic load balancing remains configured on the virtual switch.
 
@@ -50,7 +48,7 @@ For best performance, if VXLAN is returned then you must make sure your physical
 
 Encapsulation results in extra bytes being added to each packet.  In order to avoid fragmentation of these packets, the physical network must be configured to use jumbo frames.  An MTU value of 9234 is the recommended size for either VXLAN or NVGRE and must be configured on the physical switch for the physical interfaces of the host ports (L2) and the router interfaces (L3) of the VLANs over which encapsulated packets will be sent.  This includes the Transit, HNV Provider and Management networks.
 
-MTU on the Hyper-V host is configured through the network adapter, and the Network Controller Host Agent running on the Hyper-V host will adjust for the encapsulation overhead automatically if supported by the network adapter driver.  
+MTU on the Hyper-V host is configured through the network adapter, and the Network Controller Host Agent running on the Hyper-V host will adjust for the encapsulation overhead automatically if supported by the network adapter driver.
 
 Once traffic egresses from the virtual network via a Gateway, the encapsulation is removed and the original MTU as sent from the VM is used.
 

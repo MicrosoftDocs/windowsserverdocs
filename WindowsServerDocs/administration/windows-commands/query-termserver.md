@@ -1,8 +1,6 @@
 ---
 title: query termserver
 description: Reference article for the query termserver command, which displays a list of all Remote Desktop Session Host servers on the network.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 3b89d3b4-236f-4376-90b6-939a0ec4b288
 author: coreyp-at-msft

@@ -1,12 +1,6 @@
 ---
 title: Manage Multiple, remote Servers with Server Manager
 description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
 ms.topic: article
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
 author: coreyp-at-msft
@@ -184,7 +178,7 @@ You can restart a remote server from the **Servers** tile of a role or group pag
 
 > [!IMPORTANT]
 > Restarting a remote server forces the server to restart, even if users are still logged on to the remote server, and even if programs with unsaved data are still open. This behavior is different from shutting down or restarting the local computer, on which you would be prompted to save unsaved program data, and verify that you wanted to force logged-on users to log off. Be sure that you can force other users to log off of remote servers, and that you can discard unsaved data in programs that are running on the remote servers.
-> 
+>
 > if an automatic refresh occurs in Server Manager while a managed server is shutting down and restarting, refresh and manageability status errors can occur for the managed server, because Server Manager cannot connect to the remote server until it is finished restarting.
 
 #### To restart remote servers in Server Manager

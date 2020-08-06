@@ -1,9 +1,7 @@
 ---
 title: Get started with Setup and Boot Event Collection
 description: Setting up Setup and Boot Event Collection collectors and targets
-ms.prod: windows-server
 manager: DonGill
-ms.technology: server-sbec
 ms.localizationpriority: medium
 ms.date: 10/16/2017
 ms.topic: get-started-article

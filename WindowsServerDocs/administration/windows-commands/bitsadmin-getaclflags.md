@@ -1,8 +1,6 @@
 ---
 title: bitsadmin getaclflags
 description: Reference article for the bitsadmin getaclflags command, which retrieves the access control list (ACL) propagations flags.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 99266def-7479-4430-a61c-98ec433fa88b
 author: coreyp-at-msft

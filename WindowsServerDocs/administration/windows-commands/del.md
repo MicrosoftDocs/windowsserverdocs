@@ -1,8 +1,6 @@
 ---
 title: del
 description: Reference article for the del command, which deletes one or more files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 346eede2-2085-44f5-9936-6877b5d5a833
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: wbadmin delete catalog
 description: Reference article for wbadmin delete catalog, which deletes the backup catalog that is stored on the local computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: d3041407-4577-4716-a39f-2c8ab48818d1
 author: coreyp-at-msft

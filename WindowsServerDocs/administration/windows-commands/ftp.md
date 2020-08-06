@@ -1,8 +1,6 @@
 ---
 title: ftp
 description: Reference article for the ftp command, which transfers files to and from a computer running a File Transfer Protocol (ftp) server service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
 author: coreyp-at-msft
