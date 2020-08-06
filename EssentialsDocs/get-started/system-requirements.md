@@ -32,7 +32,7 @@ manager: dongill
 |---------------|-----------------|
 |Network adapter|Gigabit Ethernet adapter (10/100/1000baseT PHY/MAC)|
 |Internet|Some functionality may require Internet access (fees may apply) or a Microsoft account|
-|Supported Client operating systems|Windows 8.1, Windows 8, Windows 7, Macintosh OS X versions 10.5 to 10.8.<br /><br /> **Note:** Some features require professional or higher editions.<br /><br /> 1 GB of available hard drive space (a portion of this disk will be freed after installation)|
+|Supported Client operating systems| Windows 10, Windows 8.1, Windows 8, Windows 7, Macintosh OS X versions 10.5 to 10.8.<br /><br /> **Note:** Some features require professional or higher editions.<br /><br /> 1 GB of available hard drive space (a portion of this disk will be freed after installation)|
 |Router|A router or firewall that supports IPv4 NAT or IPv6|
 |Additional requirements|DVD-ROM drive|
 
