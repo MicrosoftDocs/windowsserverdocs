@@ -1,10 +1,6 @@
 ---
 title: Filter, sort, and query Data in Server Manager Tiles
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
 author: coreyp-at-msft

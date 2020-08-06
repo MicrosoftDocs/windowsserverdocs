@@ -1,10 +1,6 @@
 ---
 title: Install or Uninstall Roles, Role Services, or Features
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
 author: coreyp-at-msft

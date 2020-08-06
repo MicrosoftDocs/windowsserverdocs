@@ -1,10 +1,6 @@
 ---
 title: Manage Multiple, remote Servers with Server Manager
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
 author: coreyp-at-msft

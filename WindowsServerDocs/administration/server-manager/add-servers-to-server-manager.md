@@ -1,10 +1,6 @@
 ---
 title: Add Servers to Server Manager
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
 author: coreyp-at-msft
@@ -13,6 +9,7 @@ manager: dongill
 ms.localizationpriority: medium
 ms.date: 02/01/2018
 ---
+
 # Add Servers to Server Manager
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012

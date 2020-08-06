@@ -1,10 +1,6 @@
 ---
 title: Configure Features on Demand in Windows Server
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 author: coreyp-at-msft

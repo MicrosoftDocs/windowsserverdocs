@@ -1,10 +1,6 @@
 ---
 title: Manage the Local Server and the Server Manager Console
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
 author: coreyp-at-msft

@@ -1,10 +1,6 @@
 ---
 title: View and Configure Performance Event and Service Data
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1
 author: coreyp-at-msft

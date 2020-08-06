@@ -1,10 +1,6 @@
 ---
 title: Configure remote Management in Server Manager
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
 author: coreyp-at-msft
