@@ -14,14 +14,12 @@ ms.date: 10/16/2017
 # wbadmin delete systemstatebackup
 
 
-
 Deletes the system state backups that you specify. If the specified volume contains backups other than system state backups of your local server, those backups will not be deleted.
 
 > [!NOTE]
 > Windows Server Backup does not back up or recover registry user hives (HKEY_CURRENT_USER) as part of system state backup or system state recovery.
 
 To delete a system state backup with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt**, and then click **Run as administrator**.)
-
 
 
 ## Syntax
@@ -58,12 +56,12 @@ To delete all system state backups, except the three most recent, type:
 ```
 wbadmin delete systemstatebackup -keepVersions:3
 ```
-To delete the oldest system state backup stored on disk f, type:
+To delete the oldest system state backup stored on disk f:, type:
 ```
-wbadmin delete systemstatebackup -backupTarget:f -deleteOldest
+wbadmin delete systemstatebackup -backupTarget:f:\ -deleteOldest
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Wbadmin](wbadmin.md)
+- [Wbadmin](wbadmin.md)
