@@ -1,6 +1,6 @@
 ---
 ms.assetid: 8ce6e7c4-cf8e-4b55-980c-048fea28d50f
-title: Federation Server Farm Using SQL Server
+title: AD FS Requirements for Windows Server
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# AD FS Requirements
+# AD FS Requirements for Windows Server
 
 The following are the various requirements that you must conform to when deploying AD FS:
 
