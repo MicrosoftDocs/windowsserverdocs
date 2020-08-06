@@ -1,10 +1,6 @@
 ---
 title: Server Manager
 description: Server Manager
-
-
--server-manager
-
 ms.topic: article
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
 author: coreyp-at-msft
