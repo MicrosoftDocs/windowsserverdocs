@@ -1,6 +1,6 @@
 ---
 ms.assetid: 460792e4-9f1d-4e7b-b6b2-53e057f839df
-title: AD FS Deployment Topology Considerations
+title: Using AD DS Claims with AD FS
 author: billmath
 ms.author: billmath
 manager: femila

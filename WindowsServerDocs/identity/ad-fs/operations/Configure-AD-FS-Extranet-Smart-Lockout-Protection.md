@@ -1,6 +1,6 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
-title: Configure AD FS Extranet Lockout Protection
+title: Configure AD FS Extranet Smart Lockout Protection
 author: billmath
 ms.author: billmath
 manager: mtilman
