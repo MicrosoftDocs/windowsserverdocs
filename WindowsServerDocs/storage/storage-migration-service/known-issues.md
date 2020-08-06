@@ -24,7 +24,7 @@ The Storage Migration Service contains event logs for the Orchestrator service a
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService
 - Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService-Proxy
 
-If you need to gather these logs for offline viewing or to send to Microsoft Support, there is an open-source PowerShell script available on GitHub:
+If you need to gather these logs for offline viewing or to send to Microsoft Support, there's an open-source PowerShell script available on GitHub:
 
  [Storage Migration Service Helper](https://aka.ms/smslogs)
 
@@ -52,7 +52,7 @@ This issue is caused by a servicing issue in the Evaluation media of Windows Ser
 
 To work around this issue for evaluation, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and don't activate it. Without activation, all editions of Windows Server operate in evaluation mode for 180 days.
 
-We have fixed this issue in a later release of Windows Server.
+We've fixed this issue in a later release of Windows Server.
 
 ## Storage Migration Service times out downloading the transfer error CSV
 
@@ -62,7 +62,7 @@ When using Windows Admin Center or PowerShell to download the transfer operation
 Transfer Log - Please check file sharing is allowed in your firewall. : This request operation sent to net.tcp://localhost:28940/sms/service/1/transfer did not receive a reply within the configured timeout (00:01:00). The time allotted to this operation may have been a portion of a longer timeout. This may be because the service is still processing the operation or because the service was unable to send a reply message. Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
 ```
 
-This issue is caused by an extremely large number of transferred files that cannot be filtered in the default one minute timeout allowed by Storage Migration Service.
+This issue is caused by an extremely large number of transferred files that can't be filtered in the default one minute timeout allowed by Storage Migration Service.
 
 To work around this issue:
 
@@ -112,9 +112,9 @@ Warning: The destination proxy wasn't found.
 
 If you have not installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, or the destination computer is Windows Server 2016 or Windows Server 2012 R2, this behavior is by design. We recommend migrating to a Windows Server 2019 computer with the proxy installed for significantly improved transfer performance.
 
-## Certain files do not inventory or transfer, error 5 "Access is denied"
+## Certain files don't inventory or transfer, error 5 "Access is denied"
 
-When inventorying or transferring files from source to destination computers, files from which a user has removed Administrators group permissions fail to migrate. Examining the Storage Migration Service-Proxy debug shows:
+When inventorying or transferring files from source to destination computers, files from which a user has removed permissions for the Administrators group fail to migrate. Examining the Storage Migration Service-Proxy debug shows:
 
 ```
 Log Name: Microsoft-Windows-StorageMigrationService-Proxy/Debug
@@ -146,39 +146,39 @@ To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Bui
 
 When using the Storage Migration Service to transfer files to a new destination, then configuring DFS Replication to replicate that data with an existing server through preseeded replication or DFS Replication database cloning, all files experience a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using Storage Migration Service to transfer them. Examining the files with ICACLS or the DFS Replication database cloning debug log reveals:
 
+### Source file
 ```
-Source file:
-
   icacls d:\test\Source:
 
-  icacls d:\test\thatcher.png /save out.txt /t
-  thatcher.png
+  icacls d:\test\thatcher.png /save out.txt /t thatcher.png
   D:AI(A;;FA;;;BA)(A;;0x1200a9;;;DD)(A;;0x1301bf;;;DU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)
-
-Destination file:
-
-  icacls d:\test\thatcher.png /save out.txt /t
-  thatcher.png
-  D:AI(A;;FA;;;BA)(A;;0x1301bf;;;DU)(A;;0x1200a9;;;DD)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)**S:PAINO_ACCESS_CONTROL**
-
-DFSR Debug Log:
-
-    20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found.
-
-    Local ACL hash:1BCDFE03-A18BCE01-D1AE9859-23A0A5F6
-    LastWriteTime:20190308 18:09:44.876
-    FileSizeLow:1131654
-    FileSizeHigh:0
-    Attributes:32
-
-    Clone ACL hash:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B**
-    LastWriteTime:20190308 18:09:44.876
-    FileSizeLow:1131654
-    FileSizeHigh:0
-    Attributes:32
 ```
 
-This issue is fixed by the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update
+### Destination file
+
+```
+  icacls d:\test\thatcher.png /save out.txt /t thatcher.png
+  D:AI(A;;FA;;;BA)(A;;0x1301bf;;;DU)(A;;0x1200a9;;;DD)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)**S:PAINO_ACCESS_CONTROL**
+```
+### DFSR Debug Log
+
+```
+   20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found.
+
+   Local ACL hash:1BCDFE03-A18BCE01-D1AE9859-23A0A5F6
+   LastWriteTime:20190308 18:09:44.876
+   FileSizeLow:1131654
+   FileSizeHigh:0
+   Attributes:32
+
+   Clone ACL hash:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B**
+   LastWriteTime:20190308 18:09:44.876
+   FileSizeLow:1131654
+   FileSizeHigh:0
+   Attributes:32
+```
+
+This issue is fixed by the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update.
 
 ## Error "Couldn't transfer storage on any of the endpoints" when transferring from Windows Server 2008 R2
 
@@ -189,11 +189,11 @@ Couldn't transfer storage on any of the endpoints.
 0x9044
 ```
 
-This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. Irrespective of Storage Migration Service, we always recommend patching a Windows Server 2008 R2 computer for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
+This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. It's especially important to keep a Windows Server 2008 R2 computer updated for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
 
 ## Error "Couldn't transfer storage on any of the endpoints" and "Check if the source device is online - we couldn't access it."
 
-When attempting to transfer data from a source computer, some or all shares do not transfer, with summary error:
+When attempting to transfer data from a source computer, some or all shares don't transfer, with the error:
 
 ```
 Couldn't transfer storage on any of the endpoints.
@@ -310,7 +310,7 @@ As an alternative workaround:
 2. Run the following Storage Migration Service PowerShell command on the orchestrator computer:
 
    ```PowerShell
-   Register-SMSProxy -ComputerName *destination server* -Force
+   Register-SMSProxy -ComputerName <destination server> -Force
    ```
 ## Error "Dll was not found" when running inventory from a cluster node
 
@@ -339,7 +339,7 @@ Uninstalling Windows Server cumulative updates may prevent the Storage Migration
 
 1. Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
-     ```
+     ```DOS
      TAKEOWN /d y /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
 
      MD c:\ProgramData\Microsoft\StorageMigrationService\backup
@@ -377,7 +377,7 @@ at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeCluster
 at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
 ```
 
-This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the destination cluster netname and IP address to match the original source.
+This issue is caused by a missing API in older versions of Windows Server. Currently there's no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the destination cluster netname and IP address to match the original source.
 
 ## Cutover hangs on "38% Mapping network interfaces on the source computer..." when using static IPs
 
@@ -420,16 +420,14 @@ There are two solutions for this issue:
 
 After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server.
 
-This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](./faq.md#optimizing-inventory-and-transfer-performance).
+This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#optimizing-inventory-and-transfer-performance).
 
 ## Data does not transfer, user renamed when migrating to or from a domain controller
 
 After starting the transfer from or to a domain controller:
 
  1. No data is migrated and no shares are created on the destination.
-
- 2. There is a red error symbol shown in Windows Admin Center with no error message
-
+ 2. There's a red error symbol shown in Windows Admin Center with no error message
  3. One or more AD users and Domain Local groups have their name and/or pre-Windows 2000 logon attribute changed
 
  4. You see event 3509 on the Storage Migration Service orchestrator:
@@ -530,7 +528,7 @@ Stack trace:
 
 At this stage, Storage Migration Service orchestrator is attempting remote registry reads to determine source machine configuration, but is being rejected by the source server saying the registry path does not exist. This can be caused by:
 
- - The Remote Registry service is not running on the source computer.
+ - The Remote Registry service isn't running on the source computer.
  - firewall does not allow remote registry connections to the source server from the Orchestrator.
  - The source migration account does not have remote registry permissions to connect to the source computer.
  - The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
@@ -562,7 +560,7 @@ Guidance: Confirm that the Netlogon service on the computer is reachable through
 
 This issue is caused by Group Policy that sets the following registry value on the source computer: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFilterPolicy = 0"
 
-This setting is not part of standard Group Policy, it's an add-on configured using the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319):
+This setting isn't part of standard Group Policy, it's an add-on configured using the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319):
 
 - Windows Server 2012 R2: "Computer Configuration\Administrative Templates\SCM: Pass the Hash Mitigations\Apply UAC restrictions to local accounts on network logons"
 
@@ -580,8 +578,7 @@ To work around this issue, use one of the following options:
 
 ## Inventory or transfer fail when using credentials from a different domain
 
-When attempting to run inventory or transfer with the Storage Migration Service and targeting a Windows Server while using migration credentials from a different domain than the targeted server, you receive one or more of the following errors
-
+When attempting to run inventory or transfer with the Storage Migration Service and targeting a Windows Server while using migration credentials from a different domain than the targeted server, you receive the following errors
 ```
 Exception from HRESULT:0x80131505
 
