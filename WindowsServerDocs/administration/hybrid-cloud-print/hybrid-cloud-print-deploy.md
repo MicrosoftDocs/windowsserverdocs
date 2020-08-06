@@ -1,8 +1,6 @@
 ---
 title: Deploy Windows Server Hybrid Cloud Print
 description: How to set up Microsoft Hybrid Cloud Print
-ms.prod: windows-server
-ms.technology: windows server 2016
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
 ms.topic: how-to
 author: msjimwu

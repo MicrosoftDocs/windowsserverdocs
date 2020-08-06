@@ -1,12 +1,6 @@
 ---
 title: Troubleshoot Software Inventory Logging
 description: Describes how to resolve common Software Inventory Logging deployment issues.
-
-ms.prod: windows-server
-ms.technology: manage-software-inventory-logging
-
-
-
 ms.topic: article
 author: brentfor
 ms.author: coreyp

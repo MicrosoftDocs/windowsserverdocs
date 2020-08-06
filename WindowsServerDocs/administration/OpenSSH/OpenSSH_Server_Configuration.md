@@ -4,7 +4,6 @@ description: Configuration information about OpenSSH Server for Windows 10 1809 
 ms.date: 09/27/2018
 ms.topic: conceptual
 contributor: maertendMSFT
-ms.product: windows-server
 author: maertendmsft
 ---
 

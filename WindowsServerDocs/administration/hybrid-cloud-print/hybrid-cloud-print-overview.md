@@ -1,8 +1,6 @@
 ---
 title: Windows Server Hybrid Cloud Print overview
 description: Hybrid Cloud Print allows IT Pros to support print requirements for BYOD or domain joined devices.
-ms.prod: windows-server
-ms.technology: server-general
 ms.topic: conceptual
 author: trudyha
 ms.author: trudyha

@@ -1,8 +1,6 @@
 ---
 title: Overview about power and performance tuning for the Windows Server
 description: Overview about Processor Power Management (PPM) tuning for the Windows Server.
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: conceptual
 ms.author: qizha;tristanb
 author: phstee
