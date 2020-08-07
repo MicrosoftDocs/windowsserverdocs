@@ -29,7 +29,7 @@ For step-by-step guidance on upgrading, review the [Windows Server upgrade conte
 
 ## Cluster OS rolling upgrade
 
-Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 and Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).
+Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 and Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
 ## Migration
 

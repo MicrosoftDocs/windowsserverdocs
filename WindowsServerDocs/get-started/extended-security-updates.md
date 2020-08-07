@@ -93,7 +93,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     If the team doesn't approve your request, you'll see the following error:
 
-    [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://docs.microsoft.com/windows-server/get-started/extended-security-updates)
+    [The resource type could not be found in the namespace 'Microsoft.WindowsESU']()
 
 6. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.
 

@@ -126,7 +126,7 @@ To perform management tasks on remote servers by using Server Manager, remote se
 
     -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
 
-    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](https://msdn.microsoft.com/library/aa389286.aspx) on MSDN.
+    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](/windows/win32/wmisdk/connecting-to-wmi-remotely-with-vbscript) on MSDN.
 
 ## <a name=BKMK_tasks></a>Tasks that you can perform in Server Manager
 Server Manager makes server administration more efficient by allowing administrators to do tasks in the following table by using a single tool. In  Windows Server 2012 R2  and  Windows Server 2012 , both standard users of a server and members of the Administrators group can perform management tasks in Server Manager, but by default, standard users are prevented from performing some tasks, as shown in the following table.
@@ -231,5 +231,3 @@ You can export Server Manager settings, make Server Manager settings portable, o
     -   %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
 
     -   %*localappdata*%\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
-
-

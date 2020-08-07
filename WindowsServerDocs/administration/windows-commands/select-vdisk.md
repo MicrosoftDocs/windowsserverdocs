@@ -59,6 +59,4 @@ select vdisk file=c:\test\test.vhd
 
 -   [Merge vdisk](merge-vdisk.md)
 
--   [list_1](list_1.md)
-
-
+-   [list_1](./list.md)

@@ -40,10 +40,10 @@ By using the CAU PowerShell cmdlets that are listed in the following table, you 
 
 |Cmdlet|Description|
 |----------|---------------|
-|[Add-CauClusterRole](https://docs.microsoft.com/powershell/module/clusterawareupdating/add-cauclusterrole)|Adds the CAU clustered role that provides the self\-updating functionality to the specified cluster.|
-|[Invoke-CauRun](https://docs.microsoft.com/powershell/module/clusterawareupdating/invoke-caurun)|Performs a scan of cluster nodes for applicable updates and installs those updates through an Updating Run on the specified cluster.|
-|[Invoke-CauScan](https://docs.microsoft.com/powershell/module/clusterawareupdating/invoke-causcan)|Performs a scan of cluster nodes for applicable updates and returns a list of the initial set of updates that would be applied to each node in the specified cluster.|
-|[Set-CauClusterRole](https://docs.microsoft.com/powershell/module/clusterawareupdating/set-cauclusterrole)|Sets configuration properties for the CAU clustered role on the specified cluster.|
+|[Add-CauClusterRole](/powershell/module/clusterawareupdating/add-cauclusterrole)|Adds the CAU clustered role that provides the self\-updating functionality to the specified cluster.|
+|[Invoke-CauRun](/powershell/module/clusterawareupdating/invoke-caurun)|Performs a scan of cluster nodes for applicable updates and installs those updates through an Updating Run on the specified cluster.|
+|[Invoke-CauScan](/powershell/module/clusterawareupdating/invoke-causcan)|Performs a scan of cluster nodes for applicable updates and returns a list of the initial set of updates that would be applied to each node in the specified cluster.|
+|[Set-CauClusterRole](/powershell/module/clusterawareupdating/set-cauclusterrole)|Sets configuration properties for the CAU clustered role on the specified cluster.|
 
 If you do not specify a CAU plug\-in parameter by using these cmdlets, the default is the plug\-in **Microsoft.WindowsUpdatePlugin**.
 
@@ -75,9 +75,9 @@ The plug\-ins that CAU installs \(**Microsoft.WindowsUpdatePlugin** and **Micros
 
 |Cmdlet|Description|
 |----------|---------------|
-|[Get-CauPlugin](https://docs.microsoft.com/powershell/module/clusterawareupdating/get-cauplugin)|Retrieves information about one or more software updating plug\-ins that are registered on the local computer.|
-|[Register-CauPlugin](https://docs.microsoft.com/powershell/module/clusterawareupdating/register-cauplugin)|Registers a CAU software updating plug\-in on the local computer.|
-|[Unregister-CauPlugin](https://docs.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin)|Removes a software updating plug\-in from the list of plug\-ins that can be used by CAU. **Note:** The plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and the **Microsoft.HotfixPlugin**\) cannot be unregistered.|
+|[Get-CauPlugin](/powershell/module/clusterawareupdating/get-cauplugin)|Retrieves information about one or more software updating plug\-ins that are registered on the local computer.|
+|[Register-CauPlugin](/powershell/module/clusterawareupdating/register-cauplugin)|Registers a CAU software updating plug\-in on the local computer.|
+|[Unregister-CauPlugin](/powershell/module/clusterawareupdating/unregister-cauplugin)|Removes a software updating plug\-in from the list of plug\-ins that can be used by CAU. **Note:** The plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and the **Microsoft.HotfixPlugin**\) cannot be unregistered.|
 
 ## <a name="BKMK_WUP"></a>Using the Microsoft.WindowsUpdatePlugin
 
@@ -398,7 +398,6 @@ You must enable the **File Server Remote Management \(SMB\-in\)** rule in Window
 
 -   [Cluster-Aware Updating Overview](cluster-aware-updating.md)
 
--   [Cluster-Aware Updating Windows PowerShell Cmdlets](https://docs.microsoft.com/powershell/module/clusterawareupdating)
+-   [Cluster-Aware Updating Windows PowerShell Cmdlets](/powershell/module/clusterawareupdating)
 
--   [Cluster-Aware Updating Plug-in Reference](https://msdn.microsoft.com/library/hh418084.aspx)
-
+-   [Cluster-Aware Updating Plug-in Reference](/previous-versions/windows/desktop/mscs/cluster-aware-update-plug-in-interfaces-and-classes)

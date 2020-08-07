@@ -10,7 +10,7 @@ author: heidilohr
 >Applies To: Windows Server 2008
 
 >[!NOTE]
->This information applies to Windows Server 2008. For information about Server Core in Windows Server, see [What is the Server Core Installation in Windows Server](https://docs.microsoft.com/windows-server/administration/server-core/what-is-server-core).
+>This information applies to Windows Server 2008. For information about Server Core in Windows Server, see [What is the Server Core Installation in Windows Server](./what-is-server-core.md).
 
 The Server Core option is a new minimal installation option that is available when you are deploying the Standard, Enterprise, or Datacenter edition of Windows Server 2008. Server Core provides you with a minimal installation of Windows Server 2008 that supports installing only certain server roles, as described later in this chapter. Contrast this with the Full installation option for Windows Server 2008, which supports installing all available server roles and also other Microsoft or third-party server applications, such as Microsoft Exchange Server or SAP.
 

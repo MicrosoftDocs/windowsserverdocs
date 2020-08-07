@@ -186,6 +186,6 @@ You can provide optional **Location** or **Description** metadata for any fault 
 [![Click to see a short video demonstrating the value of adding location descriptors to fault domains](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
 ## See Also
-- [Get started with Windows Server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19)
-- [Get started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics)
+- [Get started with Windows Server 2019](../get-started-19/get-started-19.md)
+- [Get started with Windows Server 2016](../get-started/server-basics.md)
 -   [Storage Spaces Direct Overview](../storage/storage-spaces/storage-spaces-direct-overview.md)

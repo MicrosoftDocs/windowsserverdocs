@@ -224,7 +224,7 @@ To find information about a specific command, in the following A-Z menu, click t
   - [bootcfg raw](bootcfg-raw.md)
   - [bootcfg rmsw](bootcfg-rmsw.md)
   - [bootcfg timeout](bootcfg-timeout.md)
-- [break](break_1.md)
+- [break](./break.md)
 
 ### C
 
@@ -325,7 +325,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [eventtriggers](eventtriggers.md)
 - [Evntcmd](evntcmd.md)
 - [exec](exec.md)
-- [exit](exit_2.md)
+- [exit](./exit.md)
 - [expand](expand.md)
 - [expand vdisk](expand-vdisk.md)
 - [expose](expose.md)
@@ -401,7 +401,7 @@ To find information about a specific command, in the following A-Z menu, click t
   - [ftp type](ftp-type.md)
   - [ftp user](ftp-user.md)
   - [ftp verbose](ftp-verbose_1.md)
-  - [ftp mdelete](ftp-.mdelete_1.md)
+  - [ftp mdelete](./ftp.mdelete_1.md)
   - [ftp mdir](ftp.mdir.md)
 - [ftype](ftype.md)
 - [fveupdate](fveupdate.md)

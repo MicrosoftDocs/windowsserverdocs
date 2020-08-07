@@ -85,7 +85,7 @@ The configuration options covered in this document include:
 Software Inventory Logging daily collection and forward over the network must be enabled on a computer running Windows Server 2012 R2 to log software inventory.
 
 > [!NOTE]
-> You can use the **[Get-SilLogging](https://technet.microsoft.com/library/dn283396.aspx)** PowerShell cmdlet to retrieve information about the Software Inventory Logging Service, including whether it is running or stopped.
+> You can use the **[Get-SilLogging](/previous-versions/windows/powershell-scripting/dn283396(v=wps.630))** PowerShell cmdlet to retrieve information about the Software Inventory Logging Service, including whether it is running or stopped.
 
 #### To Start Software Inventory Logging
 
@@ -93,7 +93,7 @@ Software Inventory Logging daily collection and forward over the network must be
 
 2.  Open PowerShell as an Administrator.
 
-3.  At the PowerShell prompt, type **[Start-SilLogging](https://technet.microsoft.com/library/dn283391.aspx)**
+3.  At the PowerShell prompt, type **[Start-SilLogging](/previous-versions/windows/powershell-scripting/dn283391(v=wps.630))**
 
 > [!NOTE]
 > It is possible to set the target without setting a certificate thumbprint, but if you do, the forwards will fail and data will be stored locally for up to a default value of 30 days (after which it will be deleted). Once a valid certificate hash is set for the target (and corresponding valid certificate installed in the LocalMachine/Personal store), data stored locally will be forwarded to the target as long as the target is configured to accept this data with this certificate (see [Software Inventory Logging Aggregator](Software-Inventory-Logging-Aggregator.md) for more information).
@@ -104,7 +104,7 @@ Software Inventory Logging daily collection and forward over the network must be
 
 2.  Open PowerShell as an Administrator.
 
-3.  At the PowerShell prompt, type **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)**
+3.  At the PowerShell prompt, type **[Stop-SilLogging](/previous-versions/windows/powershell-scripting/dn283394(v=wps.630))**
 
 ## Configuring Software Inventory Logging
 There are three steps to configuring Software Inventory Logging to forward data to an aggregation server over time:
@@ -120,7 +120,7 @@ It is best to complete these steps before using **Start-SilLogging**.  If you wa
 For a comprehensive guide to setting up the SIL framework as a whole, see [Software Inventory Logging Aggregator](software-inventory-logging-aggregator.md).  In particular, if **Publish-SilData** produces an error, or SIL Logging fails otherwise, see the troubleshooting section .
 
 ## <a name="BKMK_Step2"></a>Software Inventory Logging over time
-If Software Inventory Logging was started by an administrator, hourly collection and forwarding of the data to the aggregation server (target URI) commences. The first forward will be a complete data set of the same data that [Get-SilData](https://technet.microsoft.com/library/dn283388.aspx) retrieves and displays on the console at a point in time. Thereafter, at each interval, SIL will make a check of the data and only forward a small identifying acknowledgment to the target aggregation server if there is no change in the data since the last collection. If any value has changed, SIL will again send a complete data set.
+If Software Inventory Logging was started by an administrator, hourly collection and forwarding of the data to the aggregation server (target URI) commences. The first forward will be a complete data set of the same data that [Get-SilData](/previous-versions/windows/powershell-scripting/dn283388(v=wps.630)) retrieves and displays on the console at a point in time. Thereafter, at each interval, SIL will make a check of the data and only forward a small identifying acknowledgment to the target aggregation server if there is no change in the data since the last collection. If any value has changed, SIL will again send a complete data set.
 
 > [!IMPORTANT]
 > If at any interval the target URI is unreachable or the data transfer over the network is unsuccessful for any reason, data collected will be stored locally for up to a default value of 30 days (after which time it will be deleted). On the next successful forward of data to the target aggregation server, all data stored locally will be forwarded and local cached data will be deleted.
@@ -128,19 +128,19 @@ If Software Inventory Logging was started by an administrator, hourly collection
 ## <a name="BKMK_Step3"></a>Displaying Software Inventory Logging data
 In addition to the PowerShell cmdlets described in the previous section, six additional cmdlets can be used to collect Software Inventory Logging data:
 
--   **[Get-SilComputer](https://technet.microsoft.com/library/dn283392.aspx)**: Displays the point in time values for specific server and operating system-related data, as well as the FQDN or hostname of the physical host, if available.
+-   **[Get-SilComputer](/previous-versions/windows/powershell-scripting/dn283392(v=wps.630))**: Displays the point in time values for specific server and operating system-related data, as well as the FQDN or hostname of the physical host, if available.
 
--   **[Get-SilComputerIdentity (KB 3000850)](https://technet.microsoft.com/library/dn858074.aspx)**: Displays identifiers used by SIL for individual servers.
+-   **[Get-SilComputerIdentity (KB 3000850)](/previous-versions/windows/powershell-scripting/dn858074(v=wps.630))**: Displays identifiers used by SIL for individual servers.
 
--   **[Get-SilData](https://technet.microsoft.com/library/dn283388.aspx)**: Displays a point in time collection of all Software Inventory Logging data.
+-   **[Get-SilData](/previous-versions/windows/powershell-scripting/dn283388(v=wps.630))**: Displays a point in time collection of all Software Inventory Logging data.
 
--   **[Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx)**: Displays the point in time identity of all software installed on the computer.
+-   **[Get-SilSoftware](/previous-versions/windows/powershell-scripting/dn283397(v=wps.630))**: Displays the point in time identity of all software installed on the computer.
 
--   **[Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx)**: Displays the total number of unique client device requests and client user requests of the server from two days prior.
+-   **[Get-SilUalAccess](/previous-versions/windows/powershell-scripting/dn283389(v=wps.630))**: Displays the total number of unique client device requests and client user requests of the server from two days prior.
 
--   **[Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx)**: Displays the point in time list of all Windows updates installed on the computer.
+-   **[Get-SilWindowsUpdate](/previous-versions/windows/powershell-scripting/dn283393(v=wps.630))**: Displays the point in time list of all Windows updates installed on the computer.
 
-A typical use case scenario for Software Inventory Logging cmdlets would be for an administrator to query Software Inventory Logging for a point in time collection of all Software Inventory Logging data using [Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx).
+A typical use case scenario for Software Inventory Logging cmdlets would be for an administrator to query Software Inventory Logging for a point in time collection of all Software Inventory Logging data using [Get-SilSoftware](/previous-versions/windows/powershell-scripting/dn283397(v=wps.630)).
 
 **Output Example**
 
@@ -194,7 +194,7 @@ Software Inventory Logging is not intended to be a mission critical component. I
 
 #### To delete data logged by Software Inventory Logging
 
-1. In PowerShell, stop Software Inventory Logging with the **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** command.
+1. In PowerShell, stop Software Inventory Logging with the **[Stop-SilLogging](/previous-versions/windows/powershell-scripting/dn283394(v=wps.630))** command.
 
 2. Open Windows Explorer.
 
@@ -217,17 +217,17 @@ Data logged by SIL, but stored locally (if the forward to the target URI fails),
 ## <a name="BKMK_Step7"></a>Software Inventory Logging Security
 Administrative privileges on the local server are required to successfully retrieve data from Software Inventory Logging WMI and PowerShell APIs.
 
-To successfully leverage the full capability of the Software Inventory Logging feature to forward data to an aggregation point continually over time (at hourly intervals), an administrator needs to employ client certificates to ensure secure SSL sessions for transfer of data over HTTPS. A basic overview of HTTPS authentication can be found here: [HTTPS authentication](https://technet.microsoft.com/library/cc736680(v=WS.10).aspx).
+To successfully leverage the full capability of the Software Inventory Logging feature to forward data to an aggregation point continually over time (at hourly intervals), an administrator needs to employ client certificates to ensure secure SSL sessions for transfer of data over HTTPS. A basic overview of HTTPS authentication can be found here: [HTTPS authentication](/previous-versions/windows/it-pro/windows-server-2003/cc736680(v=ws.10)).
 
 Any data stored locally on a Windows Server (only occurs if the feature is started but the target is unreachable for any reason) is only accessible with administrative privileges on the local server.
 
 ## <a name="BKMK_Step8"></a>Working with date and time settings in Windows Server 2012 R2 Software Inventory Logging
 
--   When using [Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TimeOfDay to set the time SIL logging runs, you must specify a date and time. The calendar date will be set and logging will not occur until the date is reached, in local system time.
+-   When using [Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -TimeOfDay to set the time SIL logging runs, you must specify a date and time. The calendar date will be set and logging will not occur until the date is reached, in local system time.
 
--   When using [Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx), or [Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx), "InstallDate" will always show 12:00:00AM, a meaningless value.
+-   When using [Get-SilSoftware](/previous-versions/windows/powershell-scripting/dn283397(v=wps.630)), or [Get-SilWindowsUpdate](/previous-versions/windows/powershell-scripting/dn283393(v=wps.630)), "InstallDate" will always show 12:00:00AM, a meaningless value.
 
--   When using [Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx), "SampleDate" will always show 11:59:00PM, a meaningless value.  Date is the pertinent data for these cmdlet queries.
+-   When using [Get-SilUalAccess](/previous-versions/windows/powershell-scripting/dn283389(v=wps.630)), "SampleDate" will always show 11:59:00PM, a meaningless value.  Date is the pertinent data for these cmdlet queries.
 
 ## <a name="BKMK_Step10"></a>Enabling and Configuring Software Inventory Logging in a Mounted Virtual Hard Disk
 Software Inventory Logging also supports configuration and enablement on offline virtual machines. The practical uses for this are intended to cover both ‘gold image' setup for wide deployment across data centers, as well as configuring end user images going from a premises to a cloud deployment.
@@ -236,20 +236,20 @@ To support these uses, Software Inventory Logging has registry entries associate
 
 | Function | Value Name | Data | Corresponding Cmdlet (available only in the running OS) |
 | --- | --- | --- | --- |
-|Start/Stop Feature|CollectionState|1 or 0|[Start-SilLogging](https://technet.microsoft.com/library/dn283391.aspx), [Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)|
-|Specifies target aggregation point on the network|TargetUri|string|[Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TargetURI|
-|Specifies Certificate Thumbprint or Hash of the certificate used for SSL authentication for the target web server|CertificateThumbprint|string|[Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -CertificateThumbprint|
-|Specifies the date and time that the feature should start (if value set is in the future according to local system time)|CollectionTime|Default:  2000-01-01T03:00:00|[Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TimeOfDay|
+|Start/Stop Feature|CollectionState|1 or 0|[Start-SilLogging](/previous-versions/windows/powershell-scripting/dn283391(v=wps.630)), [Stop-SilLogging](/previous-versions/windows/powershell-scripting/dn283394(v=wps.630))|
+|Specifies target aggregation point on the network|TargetUri|string|[Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -TargetURI|
+|Specifies Certificate Thumbprint or Hash of the certificate used for SSL authentication for the target web server|CertificateThumbprint|string|[Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -CertificateThumbprint|
+|Specifies the date and time that the feature should start (if value set is in the future according to local system time)|CollectionTime|Default:  2000-01-01T03:00:00|[Set-SilLogging](/previous-versions/windows/powershell-scripting/dn283387(v=wps.630)) -TimeOfDay|
 
 To modify these values on an offline VHD (VM OS not running), a VHD must be first mounted and then the following commands can be used to make changes:
 
--   [Reg load](https://technet.microsoft.com/library/cc742053.aspx)
+-   [Reg load](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc742053(v=ws.11))
 
--   [Reg delete](https://technet.microsoft.com/library/cc742145.aspx)
+-   [Reg delete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc742145(v=ws.11))
 
--   [Reg add](https://technet.microsoft.com/library/cc742162.aspx)
+-   [Reg add](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc742162(v=ws.11))
 
--   [Reg unload](https://technet.microsoft.com/library/cc742043.aspx)
+-   [Reg unload](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc742043(v=ws.11))
 
 Software Inventory Logging will check these values when the OS starts, and execute accordingly.
 
@@ -285,6 +285,6 @@ Below are two examples of what the output on the PowerShell console would look l
 ## See Also
 [Get Started with Software Inventory Logging](get-started-with-software-inventory-logging.md)
 [Software Inventory Logging Aggregator](software-inventory-logging-aggregator.md)
-[Software Inventory Logging Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)
+[Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
 [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx)
 [Export-BinaryMiLog](https://technet.microsoft.com/library/dn262591.aspx)

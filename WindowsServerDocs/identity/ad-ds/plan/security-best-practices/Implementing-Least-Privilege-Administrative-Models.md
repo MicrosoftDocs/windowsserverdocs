@@ -271,7 +271,7 @@ If you implement native RBAC and PIM, however, you should consider creating acco
 
 ### Implementing Robust Authentication Controls
 
-*Law Number Six: There really is someone out there trying to guess your passwords.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))
+*Law Number Six: There really is someone out there trying to guess your passwords.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 Pass-the-hash and other credential theft attacks are not specific to Windows operating systems, nor are they new. The first pass-the-hash attack was created in 1997. Historically, however, these attacks required customized tools, were hit-or-miss in their success, and required attackers to have a relatively high degree of skill. The introduction of freely available, easy-to-use tooling that natively extracts credentials has resulted in an exponential increase in the number and success of credential theft attacks in recent years. However, credential theft attacks are by no means the only mechanisms by which credentials are targeted and compromised.
 

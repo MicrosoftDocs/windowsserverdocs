@@ -63,7 +63,7 @@ To resolve this problem, grant System Administrator permissions to a user accoun
 
 ## Some services are not running. Check the following services:
 
-- **Selfupdate:** See [Automatic Updates Must Be Updated](https://technet.microsoft.com/library/cc708554(v=ws.10).aspx) for information about troubleshooting the Selfupdate service.
+- **Selfupdate:** See [Automatic Updates Must Be Updated](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708554(v=ws.10)) for information about troubleshooting the Selfupdate service.
 
 - **WSSUService.exe:** This service facilitates synchronization. If you have problems with synchronization, access WSUSService.exe by clicking **start**, pointing to **Administrative Tools**, clicking **Services**, and then finding **Windows Server Update Service** in the list of services. Do the following:
 

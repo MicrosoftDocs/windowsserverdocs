@@ -72,7 +72,7 @@ To use CAU, install the Failover Clustering feature in Windows Server and create
 
 To install the Failover Clustering feature, you can use the following tools:
 - Add Roles and Features Wizard in Server Manager
-- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/Install-WindowsFeature?view=winserver2012r2-ps&viewFallbackFrom=win10-ps) Windows PowerShell cmdlet
+- [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature?view=winserver2012r2-ps&viewFallbackFrom=win10-ps) Windows PowerShell cmdlet
 - Deployment Image Servicing and Management (DISM) command-line tool
 
 For more information, see [Install the Failover Clustering feature](create-failover-cluster.md#install-the-failover-clustering-feature).
@@ -93,9 +93,9 @@ You must install the Failover Clustering Tools as follows to support the differe
 ### Enabling self-updating mode
 To enable the self-updating mode, you must add the Cluster-Aware Updating clustered role to the failover cluster. To do so, use one of the following methods:
 - In Server Manager, select **Tools** > **Cluster-Aware Updating**, then in the Cluster-Aware Updating window, select **Configure cluster self-updating options**.
-- In a PowerShell session, run the [Add-CauClusterRole](https://docs.microsoft.com/powershell/module/clusterawareupdating/Add-CauClusterRole?view=win10-ps) cmdlet.
+- In a PowerShell session, run the [Add-CauClusterRole](/powershell/module/clusterawareupdating/Add-CauClusterRole?view=win10-ps) cmdlet.
 
-To uninstall CAU, uninstall the Failover Clustering feature or Failover Clustering Tools by using Server Manager, the [Uninstall-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/Uninstall-WindowsFeature?view=win10-ps) cmdlet, or the DISM command\-line tools.
+To uninstall CAU, uninstall the Failover Clustering feature or Failover Clustering Tools by using Server Manager, the [Uninstall-WindowsFeature](/powershell/module/servermanager/Uninstall-WindowsFeature?view=win10-ps) cmdlet, or the DISM command\-line tools.
 
 ### Additional requirements and best practices
 
@@ -126,8 +126,6 @@ The following links provide more information about using Cluster-Aware Updating.
 
 -   [How CAU Plug\-ins Work](cluster-aware-updating-plug-ins.md)
 
--   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
+-   [Cluster\-Aware Updating Cmdlets in Windows PowerShell](/powershell/module/clusterawareupdating/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
 
 -   [Cluster\-Aware Updating Plug\-in Reference](/previous-versions/windows/desktop/mscs/cluster-aware-update-plug-in-interfaces-and-classes)
-
-

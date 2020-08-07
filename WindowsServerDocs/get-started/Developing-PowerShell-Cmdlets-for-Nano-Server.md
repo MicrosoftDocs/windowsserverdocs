@@ -232,7 +232,7 @@ To remotely debug a script, connect to the remote computer using `Enter-PSsessio
 
 ### Migrating from WMI .NET to MI .NET
 
-[WMI .NET](/dotnet/api/?view=netframework-4.7.1) is not supported, so all cmdlets using the old API must migrate to the supported WMI API: [MI. NET](/previous-versions//dn387184(v=vs.85)). You can access MI .NET directly through C# or through the cmdlets in the CimCmdlets module.
+[WMI .NET](/dotnet/api/?view=netframework-4.7.1) is not supported, so all cmdlets using the old API must migrate to the supported WMI API: [MI. NET](/previous-versions/dn387184(v=vs.85)). You can access MI .NET directly through C# or through the cmdlets in the CimCmdlets module.
 
 ### CimCmdlets module
 

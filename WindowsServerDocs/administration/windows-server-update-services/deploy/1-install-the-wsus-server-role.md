@@ -15,7 +15,7 @@ ms.date: 10/16/2017
 The next step in the deployment of your WSUS server is to install the WSUS server role. The following procedure describes how to install the WSUS server role by using Server Manager.
 
 > [!IMPORTANT]
-> This installation procedure only covers how to install WSUS using Windows Internal Database (WID). The procedures to install WSUS using Microsoft SQL Server are documented in [the WSUS forum](https://docs.microsoft.com/answers/topics/windows-server-update-services.html).
+> This installation procedure only covers how to install WSUS using Windows Internal Database (WID). The procedures to install WSUS using Microsoft SQL Server are documented in [the WSUS forum](/answers/topics/windows-server-update-services.html).
 
 ### To install the WSUS server role
 
@@ -55,4 +55,3 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 
 > [!IMPORTANT]
 > At this point the installation process is finished, however for WSUS to be functional you need to proceed to [Step 2: Configure WSUS](2-configure-wsus.md).
-

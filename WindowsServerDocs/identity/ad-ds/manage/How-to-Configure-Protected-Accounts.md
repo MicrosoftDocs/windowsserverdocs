@@ -109,7 +109,7 @@ Accounts for services and computers cannot be members of **Protected Users**. Th
 -   Reject RC4 in Kerberos pre-authentication: not configurable.
 
     > [!NOTE]
-    > Although it is possible to [change the configuration of supported encryption types](https://blogs.msdn.com/b/openspecification/archive/2011/05/31/windows-configurations-for-kerberos-supported-encryption-type.aspx), it is not recommended to change those settings for computer accounts without testing in the target environment.
+    > Although it is possible to [change the configuration of supported encryption types](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type), it is not recommended to change those settings for computer accounts without testing in the target environment.
 
 -   Restrict user tickets (TGTs) to an initial 4-hour lifetime: Use Authentication Policies.
 

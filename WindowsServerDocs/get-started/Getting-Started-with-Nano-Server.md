@@ -37,7 +37,7 @@ Because Nano Server is optimized as a lightweight operating system for running c
 - Nano Server is headless; there is no local logon capability or graphical user interface.
 - Only 64-bit applications, tools, and agents are supported.
 - Nano Server cannot serve as an Active Directory domain controller.
-- Group Policy is not supported. However, you can use [Desired State Configuration](/previous-versions//dn387184(v=vs.85)) to apply settings at scale.
+- Group Policy is not supported. However, you can use [Desired State Configuration](/previous-versions/dn387184(v=vs.85)) to apply settings at scale.
 - Nano Server cannot be configured to use a proxy server to access the internet.
 - NIC Teaming (specifically, load balancing and failover, or LBFO) is not supported. Switch-embedded teaming (SET) is supported instead.
 - Microsoft Endpoint Configuration Manager and System Center Data Protection Manager are not supported.
@@ -73,9 +73,4 @@ Since Nano Server is new for Windows Server 2016, there isn't an upgrade path fr
 Since Nano Server is new for Windows Server 2016, there isn't migration path from older operating system versions to Nano Server.
 
 -------------------------------------
-If you need a different installation option, you can head [back to the main Windows Server 2016 page](windows-server-2016.md)
-
-
-
-
-
+If you need a different installation option, you can head [back to the main Windows Server 2016 page](../index.yml)
