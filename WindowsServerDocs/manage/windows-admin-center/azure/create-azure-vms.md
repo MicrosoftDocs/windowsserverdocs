@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Windows Admin Center-managed workloads like [Storage Migration Service](../../../storage/storage-migration-service/overview.md) and [Storage Replica](../../../storage/storage-replica/storage-replica-overview.md). Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system. You can also deploy new Azure VMs without a workload from the Windows Admin Center Connections page.
 
-Windows Admin Center also manages a variety of Azure services. [Learn more about the Azure integration options available with Windows Admin Center](../plan/azure-integration-options.md).
+Windows Admin Center also manages a variety of Azure services. [Learn more about the Azure integration options available with Windows Admin Center](./index.md).
 
 If you want to lift and shift virtual machines to Azure instead of creating new ones, consider using Azure Migrate. For more info, see [Azure Migrate overview](https://go.microsoft.com/fwlink/?linkid=2056064).
 
@@ -33,8 +33,8 @@ Creating a new Azure VM from within Windows Admin Center requires that you have:
 
 - An [Azure subscription](https://azure.microsoft.com).
 - A [Windows Admin Center gateway registered with Azure](azure-integration.md)
-- An existing [Azure resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/overview) where you have Create permissions.
-- An existing [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) and subnet.
+- An existing [Azure resource group](/azure/azure-resource-manager/management/overview) where you have Create permissions.
+- An existing [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) and subnet.
 - An [Azure Express Route](https://azure.microsoft.com/services/expressroute/) or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the virtual network and subnet that allows connectivity from Azure VMs to your on-premises clients, domain controllers, the Windows Admin Center computer, and any servers requiring communication with this VM as part of a workload deployment. For instance, to use the Storage Migration Service to migrate storage to an Azure VM, the orchestrator computer and the source computer must both be able to contact the destination Azure VM you are migrating to.
 
 ## Usage

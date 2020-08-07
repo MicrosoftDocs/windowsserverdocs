@@ -35,7 +35,7 @@ You can create query filters with any logical combination (AND/OR/NOT) of the fo
 The following examples show you how to create filters for DNS policy that either block or allow DNS name resolution queries.
 
 >[!NOTE]
->The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+>The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 ## <a name="bkmk_block1"></a>Block queries from a domain
 

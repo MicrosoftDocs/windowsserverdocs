@@ -47,7 +47,7 @@ If your target VMs (the VMs you want to manage with Windows Admin Center) have p
 
 ### Connecting to VMs without a public IP
 
-If your target Azure VMs don't have public IPs, and you want to manage these VMs from a Windows Admin Center gateway deployed in your on-premises network, you need to configure your on-premises network to have connectivity to the VNet on which the target VMs are connected. There are 3 ways you can do this: ExpressRoute, Site-to-Site VPN, or Point-to-Site VPN. [Learn which connectivity option makes sense in your environment.](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-plan-design)
+If your target Azure VMs don't have public IPs, and you want to manage these VMs from a Windows Admin Center gateway deployed in your on-premises network, you need to configure your on-premises network to have connectivity to the VNet on which the target VMs are connected. There are 3 ways you can do this: ExpressRoute, Site-to-Site VPN, or Point-to-Site VPN. [Learn which connectivity option makes sense in your environment.](/azure/vpn-gateway/vpn-gateway-plan-design)
 
 >[!TIP]
 >If you wish to use a Point-to-Site VPN to connect your Windows Admin Center gateway to an Azure VNet to manage Azure VMs in that VNet, you can use the [Azure Network Adapter](https://aka.ms/WACNetworkAdapter) feature in Windows Admin Center. To do so, connect to the server on which Windows Admin Center is installed, navigate to the Network tool and select "Add Azure Network Adapter". When you provide the necessary details and click "Set up", Windows Admin Center will configure a Point-to-Site VPN to the Azure VNet you specify, after which, you can connect to and manage Azure VMs from your on-premises Windows Admin Center gateway.
@@ -62,7 +62,7 @@ If you run into any issues, consult [Troubleshoot Windows Admin Center](../suppo
 
 You can manage Azure VMs without any on-premises dependency by deploying Windows Admin Center in the VNet where your target VMs are connected.
 
-To manage VMs outside of the VNet on which the Windows Admin Center gateway is deployed, you must establish VNet-to-VNet connectivity between the VNet of the Windows Admin Center gateway and the VNet of the target servers. You can establish this connectivity with VNet Peering, VNet-to-VNet connection, or a Site-to-Site connection. [Learn more about which VNet-to-VNet connectivity option makes sense in your environment.](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal)
+To manage VMs outside of the VNet on which the Windows Admin Center gateway is deployed, you must establish VNet-to-VNet connectivity between the VNet of the Windows Admin Center gateway and the VNet of the target servers. You can establish this connectivity with VNet Peering, VNet-to-VNet connection, or a Site-to-Site connection. [Learn more about which VNet-to-VNet connectivity option makes sense in your environment.](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal)
 
 Windows Admin Center can be installed on an existing or newly deployed VM in your environment. The VM that you choose for Windows Admin Center installation must have a public IP and DNS name.
 

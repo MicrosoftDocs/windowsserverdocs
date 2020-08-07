@@ -30,7 +30,7 @@ To achieve high availability and scalability, Network Controller relies on Servi
 As a platform, Service Fabric provides functionality that is required for building a scalable distributed system. It provides service hosting on multiple operating system instances, synchronizing state information between instances, electing a leader, failure detection, load balancing, and more.
 
 >[!NOTE]
->For information about Service Fabric in Azure, see [Overview of Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).
+>For information about Service Fabric in Azure, see [Overview of Azure Service Fabric](/azure/service-fabric/service-fabric-overview).
 
 When you deploy Network Controller on multiple machines, Network Controller runs as a single Service Fabric application on a Service Fabric cluster. You can form a Service Fabric cluster  by connecting a set of operating system instances.
 
@@ -73,7 +73,7 @@ Service Fabric modularity uses service model schemas to maximize the ease of dev
 
 ## Network Controller Deployment Options
 
-To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN network controller in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller).
+To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN network controller in the VMM fabric](/system-center/vmm/sdn-controller?view=sc-vmm-2019).
 
 To deploy Network Controller using scripts, see [Deploy a Software Defined Network Infrastructure Using Scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 

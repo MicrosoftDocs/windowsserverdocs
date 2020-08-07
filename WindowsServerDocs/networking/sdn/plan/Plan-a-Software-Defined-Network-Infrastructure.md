@@ -238,7 +238,7 @@ Role|vCPU requirements|Memory requirements|Disk requirements|
 |RAS Gateway BGP router for SLB/MUX peering<p>(alternatively use ToR switch as BGP Router)|2 vCPUs|2 GB|75 GB for the OS drive|
 
 
-If you use VMM for deployment, additional infrastructure virtual machine resources are required for VMM and other non-SDN infrastructure. For additional information, see [Minimum Hardware Recommendations for System Center Technical Preview.](https://technet.microsoft.com/library/dn997303.aspx)
+If you use VMM for deployment, additional infrastructure virtual machine resources are required for VMM and other non-SDN infrastructure. For additional information, see [Minimum Hardware Recommendations for System Center Technical Preview.](/system-center/)
 
 ## Extending your infrastructure
 The sizing and resource requirements for your infrastructure are dependent on the tenant workload virtual machines that you plan to host. The CPU, memory, and disk requirements for the infrastructure virtual machines (for example: network controller, SLB, gateway, etc.) are listed in the previous table. You can add more of these infrastructure virtual machines to scale out as needed. However, any tenant virtual machines running on the Hyper-V hosts have their own CPU, memory, and disk requirements that you must consider.
@@ -248,7 +248,4 @@ When the tenant workload virtual machines begin to consume too many resources on
 
 ## See Also
 [Installation and Preparation Requirements for Deploying Network Controller](Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
-[Software Defined Networking &#40;SDN&#41;](../Software-Defined-Networking--SDN-.md)
-
-
-
+[Software Defined Networking &#40;SDN&#41;](../software-defined-networking.md)

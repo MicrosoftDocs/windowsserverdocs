@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 
-Windows Admin Center and any extensions should follow [Microsoft's voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human) so that the experience is easy to use and friendly. This style guide builds on these voice principles as well as the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/), so make sure to check out both of those resources for info on such things as [accessibility](https://docs.microsoft.com/style-guide/accessibility/accessibility-guidelines-requirements), [acronyms](https://docs.microsoft.com/style-guide/acronyms), and [word choice](https://docs.microsoft.com/style-guide/word-choice/) such as [please](https://docs.microsoft.com/style-guide/a-z-word-list-term-collections/p/please), and [sorry](https://docs.microsoft.com/style-guide/a-z-word-list-term-collections/s/sorry).
+Windows Admin Center and any extensions should follow [Microsoft's voice principles](/style-guide/brand-voice-above-all-simple-human) so that the experience is easy to use and friendly. This style guide builds on these voice principles as well as the [Microsoft Writing Style Guide](/style-guide/welcome/), so make sure to check out both of those resources for info on such things as [accessibility](/style-guide/accessibility/accessibility-guidelines-requirements), [acronyms](/style-guide/acronyms), and [word choice](/style-guide/word-choice/) such as [please](/style-guide/a-z-word-list-term-collections/p/please), and [sorry](/style-guide/a-z-word-list-term-collections/s/sorry).
 
 ## Buttons
 
@@ -24,7 +24,7 @@ Windows Admin Center and any extensions should follow [Microsoft's voice princip
 
 ## Capitalization
 
-We follow the Microsoft style for [Capitalization](https://docs.microsoft.com/style-guide/capitalization) - use sentence-style capitalization for pretty much everything.
+We follow the Microsoft style for [Capitalization](/style-guide/capitalization) - use sentence-style capitalization for pretty much everything.
 
 | UI element              |Capitalization|Comments|
 |-------------------------|--------------|--------|
@@ -212,7 +212,7 @@ Null state occurs when customer data or content is absent from an app or feature
 ## Punctuation
 
 - No ending punctuation (periods, question marks) for headings or incomplete sentences. An exception is in a confirmation dialog where the heading asks the question
-- Use Microsoft Style Guide's guidance on [periods](https://docs.microsoft.com/style-guide/punctuation/periods) and [question marks](https://docs.microsoft.com/style-guide/punctuation/question-marks).
+- Use Microsoft Style Guide's guidance on [periods](/style-guide/punctuation/periods) and [question marks](/style-guide/punctuation/question-marks).
 
 ## Status messages
 

@@ -18,7 +18,7 @@ You can use the topics in this section to manage Software Defined Networking, in
 >For additional Software Defined Networking documentation, you can use the following library sections.
 >- [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
 >- [Plan SDN](../plan/plan-a-software-defined-network-infrastructure.md)
->- [Deploy SDN](../deploy/Deploy-Software-Defined-Networking.md)
+>- [Deploy SDN](../deploy/deploy-a-software-defined-network-infrastructure.md)
 >- [Security for SDN](../security/sdn-security-top.md)
 >- [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
@@ -27,4 +27,3 @@ This section contains the following topics.
 - [Manage Tenant Virtual Networks](Manage-Tenant-Virtual-Networks.md)
 - [Manage Tenant Workloads](Manage-Tenant-Workloads.md)
 - [Update, Backup, and Restore Software Defined Networking Infrastructure](Update-Backup-Restore.md)
-

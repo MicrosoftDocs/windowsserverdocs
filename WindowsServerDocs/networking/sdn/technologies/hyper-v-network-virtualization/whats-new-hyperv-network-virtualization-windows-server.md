@@ -53,4 +53,4 @@ HNV implements correct L2 Ethernet headers to ensure interoperability with third
 
 -   [Hyper-V Network Virtualization technical details](hyperv-network-virtualization-technical-details-windows-server.md)
 
--   [Software Defined Networking](../../Software-Defined-Networking--SDN-.md)
+-   [Software Defined Networking](../../software-defined-networking.md)

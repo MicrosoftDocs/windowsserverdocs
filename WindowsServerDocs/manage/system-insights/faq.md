@@ -13,15 +13,15 @@ ms.date: 5/23/2018
 
 ## How can you use System Insights with Azure Monitor or System Center Operations Manager?
 
-[Azure Monitor](https://azure.microsoft.com/services/monitor/) and [System Center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-1807) provide operational information across your deployments to help you manage your infrastructure. System Insights, in contrast, is a Windows Server feature that introduces local predictive analytics capabilities. Together, System Insights and Azure Monitor or SCOM can help surface the predictions across a population of devices:
+[Azure Monitor](https://azure.microsoft.com/services/monitor/) and [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807) provide operational information across your deployments to help you manage your infrastructure. System Insights, in contrast, is a Windows Server feature that introduces local predictive analytics capabilities. Together, System Insights and Azure Monitor or SCOM can help surface the predictions across a population of devices:
 
  Azure Monitor or SCOM can key off the events created by System Insights, as System Insights outputs the result of each prediction to the event log. They can surface these machine-specific predictions across a fleet of Windows Servers, enabling you to have a unified view of these predictions across a group of server instances.
 
- See the channel and event IDs for each prediction [here](https://docs.microsoft.com/windows-server/manage/system-insights/managing-capabilities#retrieving-capability-results).
+ See the channel and event IDs for each prediction [here](./managing-capabilities.md#retrieving-capability-results).
 
 ## How does System Insights relate to Windows ML?
 
-[Windows ML](https://docs.microsoft.com/windows/uwp/machine-learning/) is a platform that enables developers to import and score pre-trained machine learning models on Windows devices. These models benefit from hardware acceleration, and they can be scored locally.
+[Windows ML](/windows/uwp/machine-learning/) is a platform that enables developers to import and score pre-trained machine learning models on Windows devices. These models benefit from hardware acceleration, and they can be scored locally.
 
 System Insights is a feature in Windows Server 2019 that offers local predictive capabilities together with a complete management experience, including PowerShell and Windows Admin Center integration.
 

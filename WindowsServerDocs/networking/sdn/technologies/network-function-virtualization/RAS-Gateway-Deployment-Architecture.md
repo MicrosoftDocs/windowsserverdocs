@@ -85,7 +85,7 @@ When you sign a new customer and add the customer as a new tenant in your datace
     > -   After Network Controller has configured a RAS Gateway and Route Reflector for the tenant, whenever the same tenant requires a new site-to-site VPN connection, Network Controller checks for the available capacity on this RAS Gateway VM. If the original gateway can service the required capacity, the new network connection is also configured on the same RAS Gateway VM. If the RAS Gateway VM cannot handle additional capacity, Network Controller selects a new available RAS Gateway VM and configures the new connection on it. This new RAS Gateway VM associated with the tenant becomes the Route Reflector client of the original tenant RAS Gateway Route Reflector.
     > -   Because RAS Gateway pools are behind Software Load Balancers (SLBs), the tenants' site-to-site VPN addresses each use a single public IP address, called a virtual IP address (VIP), which is translated by the SLBs into a datacenter-internal IP address, called a dynamic IP address (DIP), for a RAS Gateway that routes traffic for the Enterprise tenant. This public-to-private IP address mapping by SLB ensures that the site-to-site VPN tunnels are correctly established between the Enterprise sites and the CSP RAS Gateways and Route Reflectors.
     >
-    >     For more information about SLB, VIPs, and DIPs, see [Software Load Balancing &#40;SLB&#41; for SDN](../../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
+    >     For more information about SLB, VIPs, and DIPs, see [Software Load Balancing &#40;SLB&#41; for SDN](./software-load-balancing-for-sdn.md).
 
 5.  After the site-to-site VPN tunnel between the Enterprise site and the CSP datacenter RAS Gateway is established for the new tenant, the static routes that are associated with the tunnels are automatically provisioned on both the Enterprise and CSP sides of the tunnel.
 
@@ -148,8 +148,3 @@ When your tenant has multiple Enterprise sites, the tenant can configure all sit
 **Fast Remediation of Gateway Failure**
 
 To ensure a fast failover response, you can configure the BGP Keepalive parameter time between edge routes and the control router to a short time interval, such as less than or equal to ten seconds. With this short keep alive interval, if a RAS Gateway BGP edge router fails, the failure is quickly detected and Network Controller follows the steps provided in previous sections. This advantage might reduce the need for a separate failure detection protocol, such as Bidirectional Forwarding Detection (BFD) protocol.
-
-
-
-
-

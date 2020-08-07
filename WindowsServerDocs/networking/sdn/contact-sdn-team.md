@@ -25,10 +25,10 @@ Go [here](https://github.com/Microsoft/SDN/issues) to submit issues to the SDN t
 
 > GitHub is the best place to contact us about topics that involve more detail than the kinds of things you could easily fit in a Tweet. *Need help with your SDN deployment? Unsure about how our features could suit your organization's unique needs? Being held up by a potential bug?* All good reasons to get in touch with us by submitting a GitHub issue.
 
-## [Microsoft Docs](https://docs.microsoft.com/)
-Our [Container Networking documentation](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) can be found on [Microsoft Docs (docs.microsoft.com)](https://docs.microsoft.com/), which has **built-in commenting functionality**. To leave or to reply to a comment on Microsoft Docs just sign in, scroll down to the bottom of the Microsoft Docs page that you wish to reference, then make and submit your comment there.
+## [Microsoft Docs](/)
+Our [Container Networking documentation](/virtualization/windowscontainers/manage-containers/container-networking) can be found on [Microsoft Docs (docs.microsoft.com)](/), which has **built-in commenting functionality**. To leave or to reply to a comment on Microsoft Docs just sign in, scroll down to the bottom of the Microsoft Docs page that you wish to reference, then make and submit your comment there.
 
-> [Microsoft Docs](https://docs.microsoft.com/) is Microsoft's new unified documentation site. While most of our team's [SDN documentation](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) remains on TechNet, our [Container Networking documentation](https://docs.microsoft.com/virtualization/windowscontainers) is now on Microsoft Docs.
+> [Microsoft Docs](/) is Microsoft's new unified documentation site. While most of our team's [SDN documentation](./software-defined-networking.md) remains on TechNet, our [Container Networking documentation](/virtualization/windowscontainers) is now on Microsoft Docs.
 >
 > *In general, If you run into a topic on Microsoft Docs that sparks a question or leaves you wanting more, just leave a comment on that page to share your feedback with the Microsoft team that can help.*
 

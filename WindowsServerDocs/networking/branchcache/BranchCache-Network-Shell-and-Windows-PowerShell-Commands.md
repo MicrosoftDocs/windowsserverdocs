@@ -17,12 +17,9 @@ In future versions of Windows, Microsoft might remove the netsh functionality fo
 
 Windows PowerShell and netsh command references are at the following locations. Although both command references were published for operating systems earlier than Windows Server 2016, these references are accurate for this operating system.
 
--   [Netsh Commands for BranchCache in Windows Server 2008 R2](https://technet.microsoft.com/library/dd979561(v=ws.10))
+-   [Netsh Commands for BranchCache in Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979561(v=ws.10))
 
--   [BranchCache Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/branchcache/?view=win10-ps)
+-   [BranchCache Cmdlets in Windows PowerShell](/powershell/module/branchcache/?view=win10-ps)
 
 > [!TIP]
 > To view a list of Windows PowerShell commands for BranchCache at the Windows PowerShell prompt, type `Get-Command -Module BranchCache` at the Windows PowerShell prompt, and then press ENTER.
-
-
-
