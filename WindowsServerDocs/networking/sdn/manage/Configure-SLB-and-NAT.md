@@ -2,7 +2,6 @@
 title: Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
 description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
 manager: grcusanz
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
 ms.author: anpaul

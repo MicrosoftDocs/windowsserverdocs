@@ -1,7 +1,6 @@
 ---
 title: Configure Windows 10 Client Always On VPN Connections
 description: In this step, you learn about the ProfileXML options and schema, and configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
-ms.technology: networking-ras
 ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42

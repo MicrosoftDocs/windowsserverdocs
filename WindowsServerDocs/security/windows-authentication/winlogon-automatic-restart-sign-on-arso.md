@@ -1,6 +1,5 @@
 ---
 title: Winlogon Automatic Restart Sign-On (ARSO)
-ms.technology: security-auditing
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
 author: coreyp-at-msft

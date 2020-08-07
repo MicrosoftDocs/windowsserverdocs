@@ -2,7 +2,6 @@
 title: Upgrade and Conversion Options for Windows Server 2016
 description: Explains all supported upgrade paths to Windows Server 2016.
 ms.date: 01/18/2017
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: jaimeo

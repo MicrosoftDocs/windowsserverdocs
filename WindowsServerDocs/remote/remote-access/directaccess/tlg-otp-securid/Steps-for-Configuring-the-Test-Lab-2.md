@@ -2,7 +2,6 @@
 title: Steps for Configuring the Test Lab with OTP Authentication and RSA SecurID
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 0a40183c-afd1-43ca-b306-05745640a37d
 ms.author: lizross

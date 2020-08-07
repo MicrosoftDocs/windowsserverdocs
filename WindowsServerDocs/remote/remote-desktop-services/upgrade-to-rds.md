@@ -1,7 +1,6 @@
 ---
 title: Upgrading your Remote Desktop Services deployments to Windows Server 2016
 description: This article describes how to upgrade your existing Remote Desktop Services deployments to Windows Server 2016.
-ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 03/20/2018
 ms.topic: article

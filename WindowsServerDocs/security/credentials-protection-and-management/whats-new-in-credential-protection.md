@@ -1,7 +1,6 @@
 ---
 title: What's new in Credential Protection
 description: Windows Server Security
-ms.technology: security-credential-protection
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f297
 author: gitmichiko

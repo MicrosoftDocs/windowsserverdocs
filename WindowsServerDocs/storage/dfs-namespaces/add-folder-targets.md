@@ -3,7 +3,6 @@ title: Add Folder Targets
 description: This topic describes how to add folder targets (UNC paths)
 ms.author: jgerend
 manager: brianlic
-ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms-date: 06/05/2017

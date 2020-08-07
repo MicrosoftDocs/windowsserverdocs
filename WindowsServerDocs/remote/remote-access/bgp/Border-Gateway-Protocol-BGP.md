@@ -2,7 +2,6 @@
 title: Border Gateway Protocol (BGP)
 description: You can use this topic to gain an understanding of Border Gateway Protocol (BGP) in Windows Server 2016, including BGP supported deployment topologies and BGP features and capabilities.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
 ms.author: lizross

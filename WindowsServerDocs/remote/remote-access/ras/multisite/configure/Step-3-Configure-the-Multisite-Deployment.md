@@ -2,7 +2,6 @@
 title: Step 3 Configure the Multisite Deployment
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
 ms.author: lizross

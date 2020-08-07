@@ -1,7 +1,6 @@
 ---
 title: Software only (SO) features and technologies
 description: These features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features require some tuning of the NIC for optimal operation. Examples of these include Hyper-v features such as Virtual Machine Quality of Service (vmQoS), Access Control Lists (ACLs), and non-Hyper-V features like NIC Teaming.
-ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim

@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 #  Prepare to migrate a stand-alone AD FS federation server or a single-node AD FS farm

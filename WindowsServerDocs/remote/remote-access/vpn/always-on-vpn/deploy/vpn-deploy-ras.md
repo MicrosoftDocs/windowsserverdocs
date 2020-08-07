@@ -1,7 +1,6 @@
 ---
 title: Configure the Remote Access Server for Always On VPN
 description: RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features.
-ms.technology: networking-ras
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: v-tea

@@ -1,7 +1,6 @@
 ---
 title: Supported Windows 10 security configurations for Remote Desktop Services VDI
 description: Provides information about supported configurations for Windows 10 VDI with RDS in Windows Server 2016.
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 10/27/2016
 ms.topic: article

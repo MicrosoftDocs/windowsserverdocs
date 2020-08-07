@@ -8,7 +8,6 @@ manager: mtillman
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Winlogon automatic restart sign-on (ARSO)

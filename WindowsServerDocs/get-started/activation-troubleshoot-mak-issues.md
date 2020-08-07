@@ -3,7 +3,6 @@ title: MAK activation known issues
 description: Describes common issues that may occur during the MAK activation process, and provides resolutions and guidance
 ms.topic: troubleshooting
 ms.date: 10/3/2019
-ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm

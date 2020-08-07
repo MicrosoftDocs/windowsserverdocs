@@ -2,7 +2,6 @@
 title: Update and install device drivers if needed
 description: Learn how to check and update device drivers in MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 16be3ef9-a05b-4621-a431-5806b567e997
 author: evaseydl

@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/08/2018
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Enabling Clients to Locate the Next Closest Domain Controller

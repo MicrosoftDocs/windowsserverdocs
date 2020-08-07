@@ -3,7 +3,6 @@ ms.assetid: 1368bc83-9121-477a-af09-4ae73ac16789
 title: Choosing drives for Storage Spaces Direct
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/01/2020

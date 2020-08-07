@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 10/24/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Using an Azure AD UX Web Theme in Active Directory Federation Services

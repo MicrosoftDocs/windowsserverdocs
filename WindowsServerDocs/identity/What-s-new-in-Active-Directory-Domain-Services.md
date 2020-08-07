@@ -1,7 +1,6 @@
 ---
 ms.assetid: 9a06cd41-426f-4cb9-89cf-f5be730e0b79
 title: What's new in Active Directory Domain Services
-ms.technology: active-directory-domain-services
 ms.topic: article
 author: Femila
 ms.author: billmath

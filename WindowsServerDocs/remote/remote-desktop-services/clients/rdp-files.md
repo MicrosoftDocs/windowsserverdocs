@@ -1,7 +1,6 @@
 ---
 title: Supported Remote Desktop RDP file settings
 description: Learn about the RDP file settings for Remote Desktop
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross

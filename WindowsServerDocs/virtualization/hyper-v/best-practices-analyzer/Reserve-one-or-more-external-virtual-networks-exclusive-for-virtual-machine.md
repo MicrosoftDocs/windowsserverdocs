@@ -2,7 +2,6 @@
 title: Reserve one or more external virtual networks for exclusive use by virtual machines
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9

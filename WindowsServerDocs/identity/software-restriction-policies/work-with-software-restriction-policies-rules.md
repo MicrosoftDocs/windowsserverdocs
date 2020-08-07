@@ -1,7 +1,6 @@
 ---
 title: Work with Software Restriction Policies Rules
 description: Windows Server Security
-ms.technology: security-software-restriction-policies
 ms.topic: article
 ms.assetid: 4a8047d5-9bb9-4bed-bc8f-583a237731e2
 author: coreyp-at-msft

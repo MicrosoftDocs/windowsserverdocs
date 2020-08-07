@@ -3,7 +3,6 @@ ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 title: Deploy a cloud witness for a Failover Cluster
 manager: lizross
 ms.author: jgerend
-ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
 ms.date: 01/18/2019

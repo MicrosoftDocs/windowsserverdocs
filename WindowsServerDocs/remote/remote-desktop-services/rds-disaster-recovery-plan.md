@@ -1,7 +1,6 @@
 ---
 title: Create your disaster recovery plan
 description: Learn how to create a disaster recovery plan for your RDS deployment.
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 05/05/2017
 ms.topic: article

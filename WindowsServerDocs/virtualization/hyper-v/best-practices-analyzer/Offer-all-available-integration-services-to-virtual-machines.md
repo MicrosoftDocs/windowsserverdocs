@@ -2,7 +2,6 @@
 title: Offer all available integration services to virtual machines
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2

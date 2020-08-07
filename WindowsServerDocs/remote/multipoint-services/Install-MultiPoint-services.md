@@ -2,7 +2,6 @@
 title: Install MultiPoint Services
 description: Learn how to install and configure MultiPoint Services in Windows Server 2016
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: f6f8970b-de3f-4255-b2a1-5472a16ed02f
 author: evaseydl

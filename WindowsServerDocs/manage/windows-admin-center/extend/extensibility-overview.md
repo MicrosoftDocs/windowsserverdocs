@@ -1,7 +1,6 @@
 ---
 title: Extensions for Windows Admin Center
 description: Extensions for Windows Admin Center SDK (Project Honolulu)
-ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol

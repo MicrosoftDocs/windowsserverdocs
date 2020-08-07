@@ -2,7 +2,6 @@
 title: Step 1 Configure the DirectAccess Infrastructure
 description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 5dc529f7-7bc3-48dd-b83d-92a09e4055c4
 ms.author: lizross

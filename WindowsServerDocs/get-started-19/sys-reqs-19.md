@@ -1,7 +1,6 @@
 ---
 title: Windows Server 2019 System Requirements
 description: Minimum requirements for storage, CPU, network, memory, RAM in a clean installation of Windows Server 2019.
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131f860e
 author: jasongerend

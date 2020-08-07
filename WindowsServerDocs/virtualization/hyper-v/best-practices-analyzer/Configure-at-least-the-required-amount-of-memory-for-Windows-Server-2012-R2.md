@@ -2,7 +2,6 @@
 title: Configure at least the required amount of memory for a virtual machine running Windows Server 2012 R2 and enabled for Dynamic Memory
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: a0e69661-6a1d-4b31-b727-f2429f3977d0

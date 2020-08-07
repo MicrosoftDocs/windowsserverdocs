@@ -1,7 +1,6 @@
 ---
 title: Connecting Windows Server to Azure hybrid services
 description: You can extend on-premises deployments of Windows Server to the cloud by using Azure hybrid services.
-ms.technology: manage
 ms.topic: article
 author: jasongerend
 ms.author: jgerend

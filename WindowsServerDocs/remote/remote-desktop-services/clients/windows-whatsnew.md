@@ -1,7 +1,6 @@
 ---
 title: What's new in the Windows Store client
 description: Learn about recent changes to the Remote Desktop client for Windows Store
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross

@@ -2,7 +2,6 @@
 title: Known issues with Storage Replica
 manager: siroy
 ms.author: nedpyle
-ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
 ms.date: 06/25/2019

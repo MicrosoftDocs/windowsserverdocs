@@ -2,7 +2,6 @@
 title: Frequently Asked Questions about Storage Replica
 manager: siroy
 ms.author: nedpyle
-ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/15/2020

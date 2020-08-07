@@ -2,7 +2,6 @@
 title: Use DNS Policy for Applying Filters on DNS Queries
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: lizross

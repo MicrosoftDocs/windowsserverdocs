@@ -1,7 +1,6 @@
 ---
 ms.assetid: 350aa5a3-5938-4921-93dc-289660f26bad
 title: What's new in Failover Clustering in Windows Server
-ms.technology: storage-failover-clustering
 ms.topic: get-started-article
 manager: lizross
 author: JasonGerend

@@ -2,7 +2,6 @@
 title: Set Access Scope for DNS Resource Records
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: a96a8752-5678-49c5-b069-d2cce8042a51
 ms.author: lizross

@@ -1,7 +1,6 @@
 ---
 title: iSCSI Target Server Scalability Limits
 TOCTitle: iSCSI Target Server Scalability Limits
-ms.technology: storage-iscsi
 ms.topic: article
 author: JasonGerend
 manager: dougkim

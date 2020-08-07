@@ -1,7 +1,6 @@
 ---
 title: Windows Server 2019 Gateway Performance
 manager: grcusanz
-ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul

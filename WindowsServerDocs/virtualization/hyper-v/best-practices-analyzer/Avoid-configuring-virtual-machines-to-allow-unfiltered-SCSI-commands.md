@@ -2,7 +2,6 @@
 title: Avoid configuring virtual machines to allow unfiltered SCSI commands
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: dd4a3d78-a77f-451e-a383-d5cf45ea17cf

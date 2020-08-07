@@ -2,7 +2,6 @@
 title: Configuration Requirements
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: aaabdf3b-d926-48d9-9d01-358668da88ba
 ms.author: lizross

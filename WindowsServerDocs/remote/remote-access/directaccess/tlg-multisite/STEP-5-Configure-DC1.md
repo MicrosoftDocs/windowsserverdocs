@@ -2,7 +2,6 @@
 title: STEP 5 Configure DC1
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 70357156-fcb0-4346-a61e-4ea963e3ffb0
 ms.author: lizross

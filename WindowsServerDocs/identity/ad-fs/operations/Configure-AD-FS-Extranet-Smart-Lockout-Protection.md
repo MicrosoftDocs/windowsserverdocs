@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtilman
 ms.date: 05/20/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # AD FS Extranet Lockout and Extranet Smart Lockout

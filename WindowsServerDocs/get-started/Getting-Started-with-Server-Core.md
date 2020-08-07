@@ -2,7 +2,6 @@
 title: Install Server Core
 description: How to obtain and install a Server Core installation on Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel).
 ms.date: 05/21/2019
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
 author: jasongerend

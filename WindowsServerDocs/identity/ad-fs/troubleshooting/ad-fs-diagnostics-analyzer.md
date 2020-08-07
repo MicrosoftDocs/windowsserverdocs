@@ -7,7 +7,6 @@ manager: mtillman
 ms.reviewer: anandyadavMSFT
 ms.date: 03/29/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # AD FS Help Diagnostics Analyzer

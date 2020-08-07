@@ -2,7 +2,6 @@
 title: Collect diagnostic data with Storage Spaces Direct
 description: Understanding Storage Spaces Direct Data Collection Tools, with specific examples of how to run and use them.
 ms.author: adagashe
-ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 10/24/2018

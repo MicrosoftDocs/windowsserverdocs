@@ -1,7 +1,6 @@
 ---
 title: User access options with Windows Admin Center
 description: User access options and identity providers with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl

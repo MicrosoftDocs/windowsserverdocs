@@ -1,7 +1,6 @@
 ---
 title: Transport Layer Security (TLS) registry settings
 description: Windows Server Security
-ms.technology: security-tls-ssl
 ms.topic: article
 author: justinha
 ms.author: justinha

@@ -2,7 +2,6 @@
 title: Update or Delete a User Account
 description: Learn how to update or delete a user in MultiPoint Services
 ms.date: 07/11/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: f7f55a35-c932-482c-97d4-ef3c1f390cbf
 author: lizap

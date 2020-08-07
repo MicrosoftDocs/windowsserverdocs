@@ -2,7 +2,6 @@
 title: Troubleshoot an OTP Deployment
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4b9569b8-a366-43ad-a52a-b35d88a08d41
 ms.author: lizross

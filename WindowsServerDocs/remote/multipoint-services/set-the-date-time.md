@@ -2,7 +2,6 @@
 title: Set the date, time, and time zone
 description: Learn how to set the date, time, and time zone in MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 22a87c5f-3bfc-4da1-9905-24f768ede959
 author: evaseydl

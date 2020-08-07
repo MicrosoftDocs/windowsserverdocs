@@ -2,7 +2,6 @@
 title: Troubleshooting DirectAccess
 description: This topic provides information about troubleshooting DirectAccess deployments in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 61040e19-5960-4eb0-b612-d710627988f7
 ms.author: lizross

@@ -1,7 +1,6 @@
 ---
 title: Additional Remote Desktop Resources
 description: Provides links to where to get more information and help about RDS.
-ms.technology: remote-desktop-services
 ms.author: evas
 ms.date: 11/21/2018
 ms.topic: article

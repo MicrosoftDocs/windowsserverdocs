@@ -1,7 +1,6 @@
 ---
 title: Enable or Disable Disk Protection
 description: Learn how to use disk protection with MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 00aba4c4-0244-4b39-8c85-c46fd96e1d6a
 author: lizap

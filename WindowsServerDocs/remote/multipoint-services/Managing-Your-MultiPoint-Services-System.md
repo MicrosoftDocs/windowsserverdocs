@@ -1,7 +1,6 @@
 ---
 title: Managing Your MultiPoint Services System
 description: Learn how to manage MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 8c7ffe24-f4e5-4fbf-b445-d860f935e4f3
 author: lizap

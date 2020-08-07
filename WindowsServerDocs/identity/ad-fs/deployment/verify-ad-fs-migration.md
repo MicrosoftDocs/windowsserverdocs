@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Verify the AD FS 2.0 migration to Windows Server 2012 R2

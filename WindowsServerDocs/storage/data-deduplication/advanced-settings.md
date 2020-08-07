@@ -1,7 +1,6 @@
 ---
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: Advanced Data Deduplication settings
-ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl

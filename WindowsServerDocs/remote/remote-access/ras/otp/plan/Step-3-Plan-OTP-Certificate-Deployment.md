@@ -2,7 +2,6 @@
 title: Step 3 Plan OTP Certificate Deployment
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 ms.author: lizross

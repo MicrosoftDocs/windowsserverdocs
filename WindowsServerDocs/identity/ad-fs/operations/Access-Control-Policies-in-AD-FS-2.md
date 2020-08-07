@@ -5,7 +5,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 # Client Access Control policies in AD FS 2.0
 A client access policies in Active Directory Federation Services 2.0 allow you to restrict or grant users access to resources.  This document describes how to enable client access policies in AD FS 2.0 and how to configure the most common scenarios.

@@ -2,7 +2,6 @@
 title: Monitor connected remote clients for activity and status
 description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
 ms.author: lizross

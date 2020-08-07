@@ -4,8 +4,7 @@ description: Provides information for Hyper-V host administrators on the use of 
 author: allenma
 ms.author: allenma
 ms.date: 08/14/2018
-ms.topic: article-hyper-v
-ms.technology: virtualization
+ms.topic: article
 ms.localizationpriority: low
 ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069
 ---

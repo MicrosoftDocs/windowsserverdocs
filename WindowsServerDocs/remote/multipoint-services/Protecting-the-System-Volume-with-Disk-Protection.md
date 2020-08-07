@@ -2,7 +2,6 @@
 title: Protecting the System Volume with Disk Protection
 description: Provides information about disk protection for MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 18694665-ed65-4d84-8505-f460cf3df907
 author: evaseydl

@@ -2,7 +2,6 @@
 title: Hardware Requirements and Performance Recommendations
 description: Provides hardware and performance requirements and recommendations for MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 99a5c9c2-270f-4753-a28c-434882c03125
 author: evaseydl

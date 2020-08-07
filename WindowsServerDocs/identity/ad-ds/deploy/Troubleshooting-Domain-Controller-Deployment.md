@@ -6,7 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 03/20/2019
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Troubleshooting Domain Controller Deployment

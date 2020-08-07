@@ -2,7 +2,6 @@
 title: A team bound to a virtual switch should only have one exposed team interface
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 1074f086-1a2e-42e1-b58c-f55e657d5ce1

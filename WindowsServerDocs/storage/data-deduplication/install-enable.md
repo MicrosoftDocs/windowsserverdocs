@@ -1,7 +1,6 @@
 ---
 ms.assetid: 07d6b251-c492-4d9f-bcc4-031023695b24
 title: Installing and enabling Data Deduplication
-ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl

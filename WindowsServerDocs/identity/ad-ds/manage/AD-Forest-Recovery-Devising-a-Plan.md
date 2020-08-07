@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 17381f30-55f2-4e00-977a-b701675fa4ff
-ms.technology: identity-adds
 ---
 # AD Forest Recovery - Devising an AD Forest Recovery Plan
 

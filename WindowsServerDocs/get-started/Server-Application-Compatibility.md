@@ -2,7 +2,6 @@
 title: Microsoft Server Application Compatibility
 description: Compatibility chart for Server 2016 and Microsoft server applications.
 ms.date: 08/01/2018
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 2afe7c32-1fda-4441-989b-1415dabddc72
 author: jaimeo

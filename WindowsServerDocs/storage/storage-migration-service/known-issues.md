@@ -6,7 +6,6 @@ ms.author: nedpyle
 manager: tiaascs
 ms.date: 07/29/2020
 ms.topic: article
-ms.technology: storage
 ---
 # Storage Migration Service known issues
 

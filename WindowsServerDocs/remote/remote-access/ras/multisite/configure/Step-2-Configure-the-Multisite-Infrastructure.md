@@ -2,7 +2,6 @@
 title: Step 2 Configure the Multisite Infrastructure
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 ms.author: lizross

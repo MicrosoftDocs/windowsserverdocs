@@ -2,7 +2,6 @@
 title: Storage Quality of Service
 manager: dongill
 ms.author: JGerend
-ms.technology: storage-qos
 ms.topic: get-started-article
 ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: kumudd

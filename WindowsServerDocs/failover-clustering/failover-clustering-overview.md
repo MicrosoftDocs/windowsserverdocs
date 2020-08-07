@@ -5,7 +5,6 @@ ms.topic: landing-page
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage-failover-clustering
 ms.date: 06/06/2019
 ms.localizationpriority: high
 ---

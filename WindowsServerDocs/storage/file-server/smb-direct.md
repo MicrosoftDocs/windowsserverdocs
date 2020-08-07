@@ -4,7 +4,6 @@ description: Describes the SMB Direct feature in Windows Server 2012 R2, Windows
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
 ---

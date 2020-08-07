@@ -2,7 +2,6 @@
 title: Windows Server Installation and Upgrade
 description: How to install, upgrade, or migrate to a newer version of Windows Server.
 ms.date: 05/14/2019
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 98f876bd-63ff-4c3a-95d4-a8dd8d0d119c
 author: jasongerend

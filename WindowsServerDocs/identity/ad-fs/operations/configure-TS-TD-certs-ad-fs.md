@@ -6,7 +6,6 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/23/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Obtain and Configure TS and TD Certificates for AD FS

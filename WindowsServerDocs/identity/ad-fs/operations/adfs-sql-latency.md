@@ -6,7 +6,6 @@ ms.author: billmath
 manager: daveba
 ms.date: 06/20/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 

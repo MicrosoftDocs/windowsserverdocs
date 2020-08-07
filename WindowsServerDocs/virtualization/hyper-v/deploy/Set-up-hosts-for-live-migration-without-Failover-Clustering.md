@@ -2,7 +2,6 @@
 title: Set up hosts for live migration without Failover Clustering
 description: Gives instructions for setting up live migration in a non-clustered environment
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 author: kbdazure

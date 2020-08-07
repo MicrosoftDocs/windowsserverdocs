@@ -4,7 +4,6 @@ description: This topic is part of the guide Deploy Server Certificates for 802.
 manager: dougkim
 ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
-ms.technology: networking
 ms.author: lizross
 author: eross-msft
 ms.date: 07/26/2018

@@ -2,7 +2,6 @@
 title: Step 2 Configure Advanced DirectAccess Servers
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
 ms.author: lizross

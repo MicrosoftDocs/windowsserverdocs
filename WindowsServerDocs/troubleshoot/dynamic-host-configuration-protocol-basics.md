@@ -2,7 +2,6 @@
 title: DHCP (Dynamic Host Configuration Protocol) Basics
 description:
 manager: dcscontentpm
-ms.technology: server-general
 ms.date: 5/26/2020
 ms.topic: troubleshoot
 author: Deland-Han

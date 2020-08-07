@@ -2,7 +2,6 @@
 title: Create a File Screen
 description: This article describes how to create a file screen
 ms.date: 7/7/2017
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

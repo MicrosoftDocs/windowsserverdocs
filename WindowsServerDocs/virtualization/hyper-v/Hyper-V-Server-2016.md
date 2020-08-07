@@ -3,7 +3,6 @@ title: Microsoft Hyper-V Server 2016
 
 
 
-ms.technology: compute-hyper-v
 
 ms.topic: get-started-article
 ms.assetid: f815ada0-4c63-4e73-9c24-dc5eb21526c7

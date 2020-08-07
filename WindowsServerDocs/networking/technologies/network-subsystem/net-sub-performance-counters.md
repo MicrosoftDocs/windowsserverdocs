@@ -1,7 +1,6 @@
 ---
 title: Network-Related Performance Counters
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
-ms.technology: networking
 ms.topic: article
 ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: dcscontentpm

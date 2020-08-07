@@ -4,7 +4,6 @@ description: Describes how to deploy Storage Spaces on a stand-alone Windows Ser
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage-spaces
 ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---

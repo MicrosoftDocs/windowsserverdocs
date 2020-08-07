@@ -1,7 +1,6 @@
 ---
 ms.assetid: 87174225-a60f-4718-b4cc-9b172f205b72
 title: Change history for storage topics
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

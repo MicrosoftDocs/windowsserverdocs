@@ -6,7 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Support for using Hyper-V Replica for virtualized domain controllers

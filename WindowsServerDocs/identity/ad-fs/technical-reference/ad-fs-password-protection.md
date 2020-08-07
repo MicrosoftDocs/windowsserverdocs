@@ -6,7 +6,6 @@ manager: mtillman
 ms.reviewer: andandyMSFT
 ms.date: 11/15/2018
 ms.topic: article
-ms.technology: identity-adfs
 ms.author: billmath
 ---
 

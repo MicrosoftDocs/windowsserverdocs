@@ -1,7 +1,6 @@
 ---
 title: Adjust the failover baseline network threshold
 description: This article introduces solutions for adjusting the threshold of failover cluster networks.
-ms.technology: server-general
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan

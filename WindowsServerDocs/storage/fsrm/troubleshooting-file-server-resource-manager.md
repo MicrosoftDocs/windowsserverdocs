@@ -2,7 +2,6 @@
 title: Troubleshooting File Server Resource Manager
 description: This article describes how to troubleshoot common issues when using file server resource manager
 ms.date: 7/7/2017
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

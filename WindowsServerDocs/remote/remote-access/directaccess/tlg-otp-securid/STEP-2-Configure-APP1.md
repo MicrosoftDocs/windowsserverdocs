@@ -2,7 +2,6 @@
 title: STEP 2 Configure APP1
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 19a7a4a6-9a04-42ea-a5d0-ecb28a34dbaa
 ms.author: lizross

@@ -2,7 +2,6 @@
 title: Managing Remote Storage Resources
 description: This article describes how to manage storage resources on a remote computer
 ms.date: 7/7/2017
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

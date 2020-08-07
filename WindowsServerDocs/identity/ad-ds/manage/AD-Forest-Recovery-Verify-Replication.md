@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5
-ms.technology: identity-adds
 ---
 # Resources to verify replication is working
 

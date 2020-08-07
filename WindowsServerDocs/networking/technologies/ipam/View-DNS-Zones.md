@@ -2,7 +2,6 @@
 title: View DNS Zones
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: lizross

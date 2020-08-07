@@ -2,7 +2,6 @@
 title: Plan Deployment for Remote Management of DirectAccess Clients
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ab518c0d-a496-414e-b9c7-f4378d8b13aa
 ms.author: lizross

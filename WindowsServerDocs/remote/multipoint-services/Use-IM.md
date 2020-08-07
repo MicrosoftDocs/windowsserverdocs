@@ -1,7 +1,6 @@
 ---
 title: Use IM
 description: Learn how to use instant messaging in MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 475cde97-d05c-4589-afa9-96db891bd271
 author: lizap

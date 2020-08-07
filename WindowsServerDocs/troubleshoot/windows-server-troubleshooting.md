@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting Windows Server
 description: Get links to troubleshooting articles for Windows Server issues
-ms.technology: server-general
 ms.date: 1/24/2020
 author: kaushika-msft
 ms.author: kaushika

@@ -4,7 +4,6 @@ ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
 manager: alanth
 author: justinha
-ms.technology: security-authentication
 ms.date: 11/09/2016
 ---
 

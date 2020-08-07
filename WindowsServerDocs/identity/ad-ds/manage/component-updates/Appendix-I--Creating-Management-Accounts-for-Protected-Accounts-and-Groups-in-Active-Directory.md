@@ -6,7 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.technology: identity-adds
 ---
 # Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory
 

@@ -2,7 +2,6 @@
 title: Security for SDN
 description: You can use the topics in this section to learn about security in Software Defined Networking \(SDN\) in Windows Server 2016 Datacenter.
 manager: grcusanz
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 763d11a8-4225-4d96-b56f-1ec62e256bfd
 ms.author: anpaul

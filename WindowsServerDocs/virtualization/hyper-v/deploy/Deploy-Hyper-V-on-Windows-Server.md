@@ -2,7 +2,6 @@
 title: Deploy Hyper-V on Windows Server
 description: Gives links to articles on deploying Hyper-V
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: e13abdca-5412-4c0a-99f3-2ab83666ec66
 author: kbdazure

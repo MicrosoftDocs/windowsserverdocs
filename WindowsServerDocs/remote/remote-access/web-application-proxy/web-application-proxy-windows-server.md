@@ -6,7 +6,6 @@ author: eross-msft
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
-ms.technology: web-app-proxy
 ---
 
 # Web Application Proxy in Windows Server 2016

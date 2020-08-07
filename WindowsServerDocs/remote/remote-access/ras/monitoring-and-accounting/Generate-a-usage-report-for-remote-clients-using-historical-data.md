@@ -2,7 +2,6 @@
 title: Generate a usage report for remote clients using historical data
 description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
 ms.author: lizross

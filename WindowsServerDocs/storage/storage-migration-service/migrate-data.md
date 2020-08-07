@@ -6,7 +6,6 @@ ms.author: jgerend
 manager: elizapo
 ms.date: 03/25/2020
 ms.topic: article
-ms.technology: storage
 ---
 # Use Storage Migration Service to migrate a server
 

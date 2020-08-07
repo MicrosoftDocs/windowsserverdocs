@@ -1,7 +1,6 @@
 ---
 title: Remove node from active failover cluster membership
 description: This article addresses the issue of finding nodes removed from active failover cluster membership.
-ms.technology: server-general
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan

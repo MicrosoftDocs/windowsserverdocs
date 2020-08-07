@@ -5,7 +5,6 @@ ms.author: billmath
 manager: femila
 ms.date: 11/17/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 #  Single log-out for OpenID Connect with AD FS

@@ -1,7 +1,6 @@
 ---
 title: Set Up a Station
 description: Learn how to set up a a station in MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: dce05b6c-795e-43b2-9920-026550b873c5
 author: lizap

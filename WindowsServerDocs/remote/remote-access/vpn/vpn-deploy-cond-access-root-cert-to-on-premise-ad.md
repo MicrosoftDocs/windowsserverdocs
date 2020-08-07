@@ -1,6 +1,5 @@
 ---
 title: Deploy Conditional Access root certificates to on-premises AD
-ms.technology: networking-ras
 ms.topic: article
 ms.date: 06/28/2019
 ms.author: v-tea

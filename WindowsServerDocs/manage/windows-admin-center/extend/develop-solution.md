@@ -1,7 +1,6 @@
 ---
 title: Develop a solution extension
 description: Develop a solution extension Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

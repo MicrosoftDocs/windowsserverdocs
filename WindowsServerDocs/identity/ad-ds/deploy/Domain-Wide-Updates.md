@@ -7,7 +7,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 10/29/2018
 ms.topic: article
-ms.technology: identity-adds
 ---
 # Domain-wide schema updates
 

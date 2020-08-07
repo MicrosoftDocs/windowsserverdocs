@@ -6,7 +6,6 @@ ms.author: jgerend
 manager: elizapo
 ms.date: 03/26/2020
 ms.topic: article
-ms.technology: storage
 ---
 # Storage Migration Service overview
 

@@ -1,7 +1,6 @@
 ---
 title: Plan the Always On VPN Deployment
 description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
 ms.localizationpriority: medium

@@ -1,7 +1,6 @@
 ---
 title: Migrate your Remote Desktop Services deployment to Windows Server 2016
 description: This article describes how to migrate your Remote Desktop Services deployment to new Windows Server 2016 servers.
-ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 11/01/2016
 ms.topic: article

@@ -5,7 +5,6 @@ ms.author: billmath
 manager: daveba
 ms.date: 01/20/2020
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Setting up an AD FS Deployment with AlwaysOn Availability Groups

@@ -1,7 +1,6 @@
 ---
 title: Netsh Commands for Hypertext Transfer Protocol (HTTP)
 description: Use netsh http to query and configure HTTP.sys settings and parameters.
-ms.technology: networking
 ms.topic: article
 manager: dougkim
 ms.author: lizross

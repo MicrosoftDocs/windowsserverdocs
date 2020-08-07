@@ -1,7 +1,6 @@
 ---
 title: Windows Authentication Architecture
 description: Windows Server Security
-ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: 07c9d6bb-9b03-407d-89b6-97c7551b256b
 author: coreyp-at-msft

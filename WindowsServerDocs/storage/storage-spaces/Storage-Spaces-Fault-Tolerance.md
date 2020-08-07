@@ -2,7 +2,6 @@
 title: Fault tolerance and storage efficiency in Storage Spaces Direct
 ms.author: cosmosdarwin
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/11/2017

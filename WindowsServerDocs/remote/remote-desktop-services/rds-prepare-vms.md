@@ -1,7 +1,6 @@
 ---
 title: Prepare your virtual machines for Remote Desktop
 description: Get your VMs ready for Remote Desktop components
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/21/2017
 ms.topic: article

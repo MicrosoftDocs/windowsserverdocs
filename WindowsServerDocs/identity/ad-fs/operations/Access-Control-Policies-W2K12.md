@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 06/05/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Access Control Policies in Windows Server 2012 R2 and Windows Server 2012 AD FS

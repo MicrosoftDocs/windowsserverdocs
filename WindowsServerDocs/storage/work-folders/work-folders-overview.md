@@ -1,7 +1,6 @@
 ---
 ms.assetid: c91c7196-ee0d-4856-8cfb-4c38494ccf1f
 title: Work Folders overview
-ms.technology: storage-work-folders
 ms.topic: article
 author: JasonGerend
 manager: dougkim

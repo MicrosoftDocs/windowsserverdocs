@@ -1,7 +1,6 @@
 ---
 title: Monitor servers and configure alerts with Azure Monitor from Windows Admin Center
 description: Windows Admin Center (Project Honolulu) integrates with Azure Monitor
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl

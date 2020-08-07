@@ -1,7 +1,6 @@
 ---
 title: What's new in Windows Server 2019
 description: An overview of new features in Windows Server 2019, including Desktop Experience, Storage Migration Service, System Insights, Azure Network Adapter, improvements to Storage Spaces Direct, and other changes.
-ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend

@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 3bd6c1d0-d316-4b03-b7b4-557d4537635c
-ms.technology: identity-adds
 ---
 # AD Forest Recovery - Resetting the krbtgt password
 

@@ -1,7 +1,6 @@
 ---
 title: Quality of Service (QoS) Policy
 description: This topic provides an overview of Quality of Service (QoS) Policy, which allows you to use Group Policy to prioritize network traffic bandwidth of specific applications and services in Windows Server 2016.
-ms.technology: networking
 ms.topic: article
 ms.assetid: 16918506-102c-482e-89d3-004ad8d6aabe
 manager: brianlic

@@ -2,7 +2,6 @@
 title: Remote Access
 description: This topic provides an overview of the Remote Access server role in Windows Server 2016.
 manager: dougkim
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: lizross

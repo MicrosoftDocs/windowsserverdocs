@@ -2,7 +2,6 @@
 title: Configure BranchCache Client Computers
 description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
 manager: brianlic
-ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: e16dbea9-0f0a-41db-b460-14a1a7ad7540
 ms.author: lizross

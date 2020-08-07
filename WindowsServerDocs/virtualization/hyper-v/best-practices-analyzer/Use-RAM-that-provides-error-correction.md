@@ -2,7 +2,6 @@
 title: Use RAM that provides error correction
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a

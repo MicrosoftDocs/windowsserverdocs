@@ -5,7 +5,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/28/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # AD FS and banned IP addresses

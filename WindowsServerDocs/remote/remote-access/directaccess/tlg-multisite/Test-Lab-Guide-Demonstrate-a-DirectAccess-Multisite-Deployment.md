@@ -2,7 +2,6 @@
 title: Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e
 ms.author: lizross

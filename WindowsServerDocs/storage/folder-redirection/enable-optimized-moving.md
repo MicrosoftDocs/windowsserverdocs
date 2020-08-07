@@ -4,7 +4,6 @@ description: How to perform an optimized move of redirected folders to a new fil
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---

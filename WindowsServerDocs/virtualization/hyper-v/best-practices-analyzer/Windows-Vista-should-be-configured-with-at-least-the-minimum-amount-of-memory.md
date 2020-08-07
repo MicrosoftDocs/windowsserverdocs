@@ -2,7 +2,6 @@
 title: Windows Vista should be configured with at least the minimum amount of memory
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2

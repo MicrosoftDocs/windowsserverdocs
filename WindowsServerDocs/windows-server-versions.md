@@ -1,11 +1,6 @@
 ---
 title: Windows Server technical content for IT Administrators - Windows Server
 description: Get Windows Server technical articles for current and previous releases plus product evaluations for IT Professionals.
-
-
-
-ms.technology: server-general
-
 ms.topic: article
 ms.date: 01/17/2018
 ms.assetid: 0c3dc323-8beb-4d7d-a2e0-12bda848ddcb

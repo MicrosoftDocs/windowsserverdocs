@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # What's new in Active Directory Domain Services for Windows Server 2016

@@ -1,7 +1,6 @@
 ---
 title: Using PowerShell in your extension
 description: Using PowerShell in your extension Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

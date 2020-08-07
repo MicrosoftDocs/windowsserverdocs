@@ -1,7 +1,6 @@
 ---
 title: Develop an extension for Windows Admin Center
 description: Develop an extension for Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

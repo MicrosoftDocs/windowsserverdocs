@@ -5,7 +5,6 @@ ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
 author: nirb-ms
 ms.author: nirb
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 

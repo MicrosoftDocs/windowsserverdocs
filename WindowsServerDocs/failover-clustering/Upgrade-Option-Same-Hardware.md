@@ -2,7 +2,6 @@
 title: Upgrading Failover Clusters Using the Same Hardware
 description: This article describes upgrading a 2-node Failover Cluster using the same hardware
 manager: eldenc
-ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar

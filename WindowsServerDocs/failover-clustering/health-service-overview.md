@@ -2,7 +2,6 @@
 title: Health Service in Windows Server
 manager: eldenc
 ms.author: cosdar
-ms.technology: storage-health-service
 ms.topic: article
 ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin

@@ -2,7 +2,6 @@
 title: Install Nano Server
 description: Clean installation, upgrade, migration, and evaluation of Nano Server
 manager: dougkim
-ms.technology: server-nano
 ms.date: 09/06/2017
 ms.topic: get-started-article
 ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf

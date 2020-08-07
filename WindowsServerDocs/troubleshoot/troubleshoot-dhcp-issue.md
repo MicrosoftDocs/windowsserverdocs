@@ -3,7 +3,6 @@ title: Troubleshooting guide for Dynamic Host Configuration Protocol (DHCP)
 description: This artilce introduces troubleshooting guide for DHCP issues.
 ms.service: na
 manager: dcscontentpm
-ms.technology: server-general
 ms.date: 5/26/2020
 ms.topic: article
 author: Deland-Han

@@ -2,7 +2,6 @@
 title: Glossary
 description: Defines words, terms, and concepts in MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 807bce1d-b993-49c6-9783-b01a3c55846c
 author: evaseydl

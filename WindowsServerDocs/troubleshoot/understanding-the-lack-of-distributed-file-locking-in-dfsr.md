@@ -1,7 +1,6 @@
 ---
 title: Understanding (the Lack of) Distributed File Locking in DFSR
 description: This article discusses the absence of a multi-host distributed file locking mechanism within Windows, and specifically within folders replicated by DFSR.
-ms.technology: server-general
 ms.date: 06/10/2020
 author: Deland-Han
 ms.author: delhan

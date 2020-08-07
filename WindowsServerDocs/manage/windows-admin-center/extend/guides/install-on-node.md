@@ -1,7 +1,6 @@
 ---
 title: Install extension payload on a managed node
 description: Instructions about how to install extension payload on a managed node
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

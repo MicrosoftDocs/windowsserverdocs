@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/21/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - Events and Logging

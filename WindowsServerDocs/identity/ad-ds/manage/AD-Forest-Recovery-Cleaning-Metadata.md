@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: e7543381-4081-407f-adad-a9de792c6616
-ms.technology: identity-adds
 ---
 # AD Forest Recovery - Cleaning metadata of removed writable domain controllers
 

@@ -1,7 +1,6 @@
 ---
 title: Understanding Windows Admin Center Extensions
 description: Understanding Windows Admin Center SDK Extensions (Project Honolulu)
-ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol

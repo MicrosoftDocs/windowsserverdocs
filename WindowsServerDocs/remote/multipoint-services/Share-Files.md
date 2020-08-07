@@ -1,7 +1,6 @@
 ---
 title: Share Files
 description: Learn how to share files in MultiPoint Services by using shared folders and the network
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 5e138e01-39e3-4d60-ad3c-5a33b1e0b076
 author: lizap

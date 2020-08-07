@@ -1,7 +1,6 @@
 ---
 title: Gateway bandwidth allocation
 manager: grcusanz
-ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul

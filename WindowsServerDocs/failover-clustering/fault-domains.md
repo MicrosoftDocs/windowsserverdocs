@@ -3,7 +3,6 @@ ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: Fault domain awareness
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-failover-clustering
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/16/2016

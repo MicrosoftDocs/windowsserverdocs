@@ -1,7 +1,6 @@
 ---
 title: Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus
 description: Windows Server Security
-ms.technology: security-software-restriction-policies
 ms.topic: article
 ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
 author: coreyp-at-msft

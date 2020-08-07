@@ -2,7 +2,6 @@
 title: Install Server with Desktop Experience
 description: Explains how to obtain and install a Server with Desktop Experience installation
 ms.date: 01/18/2017
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 author: jaimeo

@@ -4,7 +4,6 @@ description: An explanation of the SMB Encryption feature in Windows Server 2012
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,6 @@
 title: Plan for Hyper-V on Windows Server 2016
 description: Gives links to articles on planning considerations for Hyper-V
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: fba1e964-3ac3-4852-83dc-eb20752765fd
 author: kbdazure

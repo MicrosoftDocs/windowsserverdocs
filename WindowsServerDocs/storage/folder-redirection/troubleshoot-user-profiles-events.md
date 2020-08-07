@@ -4,7 +4,6 @@ description: How to troubleshoot problems loading and unloading user profiles by
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
 ---

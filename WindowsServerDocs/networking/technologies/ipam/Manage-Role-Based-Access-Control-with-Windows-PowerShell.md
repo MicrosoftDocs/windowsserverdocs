@@ -2,7 +2,6 @@
 title: Manage Role Based Access Control with Windows PowerShell
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 ms.author: lizross

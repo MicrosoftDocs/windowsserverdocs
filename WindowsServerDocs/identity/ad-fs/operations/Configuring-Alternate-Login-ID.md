@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
 

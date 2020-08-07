@@ -2,7 +2,6 @@
 title: Set up an RDP-over-LAN connected station in MultiPoint Services
 description: Learn how to set up an RDP-over-LAN system in MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 60e1a025-c2fb-4708-a3ff-c44c223a3224
 author: evaseydl

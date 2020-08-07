@@ -2,7 +2,6 @@
 title: STEP 3 Configure DC1
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
 ms.author: lizross

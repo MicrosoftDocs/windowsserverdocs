@@ -2,7 +2,6 @@
 title: Show All Stations
 description: Learn how to view all stations in MultiPoint Services
 ms.date: 07/07/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 4fcb5354-b7cd-4015-b9e7-42aef98b55f7
 author: lizap

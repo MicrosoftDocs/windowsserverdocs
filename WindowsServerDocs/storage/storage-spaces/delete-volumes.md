@@ -5,7 +5,6 @@ ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend
 manager: daveba
-ms.technology: storage-spaces
 ms.date: 05/07/2019
 ---
 

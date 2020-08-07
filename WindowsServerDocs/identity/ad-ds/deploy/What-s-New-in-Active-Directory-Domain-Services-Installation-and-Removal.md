@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.technology: identity-adds
 ---
 # What's New in Active Directory Domain Services Installation and Removal
 

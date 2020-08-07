@@ -5,7 +5,6 @@ author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 02/24/2020
 ms.topic: article
-ms.technology: networking
 ---
 
 # Windows Time service tools and settings

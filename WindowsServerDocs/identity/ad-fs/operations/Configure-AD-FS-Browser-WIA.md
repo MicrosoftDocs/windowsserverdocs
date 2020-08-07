@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 03/20/2020
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Configure browsers to use Windows Integrated Authentication (WIA) with AD FS

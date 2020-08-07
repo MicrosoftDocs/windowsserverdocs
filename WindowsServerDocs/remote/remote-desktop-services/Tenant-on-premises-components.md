@@ -1,7 +1,6 @@
 ---
 title: Tenant on-premises components
 description: Describes the on-premises components in your RDS deployment.
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.topic: article

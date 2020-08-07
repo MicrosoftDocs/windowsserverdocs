@@ -2,7 +2,6 @@
 title: Configure at least the required amount of memory for a virtual machine running Windows 7 and enabled for Dynamic Memory
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 119965bf-6154-414d-b3a1-aa5b30eac5f6

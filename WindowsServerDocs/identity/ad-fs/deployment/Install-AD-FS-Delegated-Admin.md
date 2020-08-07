@@ -6,9 +6,8 @@ author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 04/01/2020
-ms.topic: article-threshold
+ms.topic: article
 
-ms.technology: identity-adfs
 ---
 
 # Creating an AD FS Farm without domain admin privileges

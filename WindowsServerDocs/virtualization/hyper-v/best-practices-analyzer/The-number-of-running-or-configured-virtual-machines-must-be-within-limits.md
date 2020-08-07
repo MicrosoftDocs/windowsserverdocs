@@ -2,7 +2,6 @@
 title: The number of running or configured virtual machines must be within supported limits
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b

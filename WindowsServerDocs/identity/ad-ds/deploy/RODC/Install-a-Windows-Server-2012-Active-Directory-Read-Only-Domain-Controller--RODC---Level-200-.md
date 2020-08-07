@@ -7,7 +7,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)

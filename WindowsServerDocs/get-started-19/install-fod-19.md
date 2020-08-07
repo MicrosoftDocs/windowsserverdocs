@@ -1,7 +1,6 @@
 ---
 title: Server Core App Compatibility Feature on Demand (FOD)
 description: How to install Windows Server Features on Demand
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 author: jasongerend

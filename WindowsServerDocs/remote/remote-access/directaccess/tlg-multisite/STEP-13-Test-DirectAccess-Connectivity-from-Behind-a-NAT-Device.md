@@ -2,7 +2,6 @@
 title: STEP 13 Test DirectAccess Connectivity from Behind a NAT Device
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 796825c3-5e3e-4745-a921-25ab90b95ede
 ms.author: lizross

@@ -5,7 +5,6 @@ ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
 ms.author: nirb
-ms.technology: security-guarded-fabric
 ---
 
 # Guarded Fabric and Shielded VM Planning Guide for Tenants

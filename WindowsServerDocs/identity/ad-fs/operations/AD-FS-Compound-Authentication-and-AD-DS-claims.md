@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 09/07/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 # Compound authentication and AD DS claims in AD FS
 Windows Server 2012 enhances Kerberos authentication by introducing compound authentication.  Compound authentication enables a Kerberos Ticket-Granting Service (TGS) request to include two identities:

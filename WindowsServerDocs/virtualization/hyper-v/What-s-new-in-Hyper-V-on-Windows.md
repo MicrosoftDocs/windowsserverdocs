@@ -2,7 +2,6 @@
 title: What's new in Hyper-V on Windows Server 2016
 description: Gives a summary of the new features in Hyper-V
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: kbdazure

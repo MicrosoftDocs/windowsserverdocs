@@ -6,7 +6,6 @@ author: billmath
 manager: mtillman
 ms.date: 01/28/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 # Configure Azure MFA as authentication provider with AD FS
 

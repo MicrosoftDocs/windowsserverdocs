@@ -2,7 +2,6 @@
 title: All networks for live migration traffic should have a link speed of at least 1 Gbps
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 89411b63-bec8-463d-b486-107548ed440e

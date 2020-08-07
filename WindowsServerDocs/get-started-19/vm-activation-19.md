@@ -2,7 +2,6 @@
 title: Automatic virtual machine activation
 TOCTitle: Automatic VM Activation
 description: How to activate VMs in Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
-ms.technology: server-general
 ms.topic: article
 author: lizap
 ms.author: elizapo

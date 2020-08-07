@@ -1,7 +1,6 @@
 ---
 title: Getting Started with MultiPoint Services
 description: Introduces MultiPoint Services and gets you started using it.
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: aca5f0be-f253-46b5-b1e7-0bffa15f3227
 author: lizap

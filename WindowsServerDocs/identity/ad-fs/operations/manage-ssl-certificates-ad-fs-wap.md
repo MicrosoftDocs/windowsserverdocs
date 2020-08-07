@@ -7,7 +7,6 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/02/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Managing SSL Certificates in AD FS and WAP in Windows Server 2016

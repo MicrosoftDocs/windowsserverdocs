@@ -1,7 +1,6 @@
 ---
 title: iSCSI Target Server Overview
 TOCTitle: iSCSI Target Server
-ms.technology: storage-iscsi
 ms.topic: article
 author: JasonGerend
 manager: dougkim

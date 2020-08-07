@@ -2,7 +2,6 @@
 title: Windows Server 2012 should be configured with the recommended amount of memory
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 12d0b473-cf6a-4746-b03d-2ceeb701c5d0

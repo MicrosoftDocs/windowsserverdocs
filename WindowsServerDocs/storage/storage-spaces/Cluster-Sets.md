@@ -1,7 +1,6 @@
 ---
 title: Cluster Sets
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar

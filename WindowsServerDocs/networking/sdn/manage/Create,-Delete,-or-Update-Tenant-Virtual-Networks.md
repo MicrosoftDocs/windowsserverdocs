@@ -2,7 +2,6 @@
 title: Create, delete, or update tenant virtual network
 description: In this topic, you learn how to create, delete, and update Hyper-V Network Virtualization Virtual Networks after you deploy Software Defined Networking (SDN). Hyper-V Network Virtualization helps you isolate tenant networks so that each tenant network is a separate entity. Each entity has no cross-connection possibility unless you configure public access workloads.
 manager: grcusanz
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
 ms.author: anpaul

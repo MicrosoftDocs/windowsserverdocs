@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Build a server side application using OAuth confidential clients with AD FS 2016 or later

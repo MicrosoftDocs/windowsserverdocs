@@ -1,7 +1,6 @@
 ---
 title: Virtual Receive Side Scaling (vRSS)
 description: Learn about Virtual Receive Side Scaling (vRSS) in Windows Server and how to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM. You can also configure mulitple physical cores for a host virtual Network Interface Card (vNIC).
-ms.technology: networking
 ms.topic: article
 ms.assetid: 9be477b3-f81d-4e84-a6b0-ac4c1ea97715
 ms.date: 09/05/2018

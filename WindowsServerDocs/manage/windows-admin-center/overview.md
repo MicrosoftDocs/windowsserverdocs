@@ -1,7 +1,6 @@
 ---
 title: Windows Admin Center Overview
 description: Learn how to manage Windows Server using Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

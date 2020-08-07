@@ -1,7 +1,6 @@
 ---
 title: Security and Assurance
 description: An overview of Security in Windows Server 2016
-ms.technology: techgroup-security
 ms.topic: article
 ms.date: 07/27/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21

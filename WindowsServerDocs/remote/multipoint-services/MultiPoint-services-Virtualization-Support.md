@@ -2,7 +2,6 @@
 title: MultiPoint Services Virtualization Support
 description: Describes how to use MultiPoint Services with Hyper-V
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 3f0864b8-a087-4890-94ef-05efbd3c4241
 author: evaseydl

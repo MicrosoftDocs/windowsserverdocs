@@ -1,7 +1,6 @@
 ---
 title: What type of installation is right for you
 description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins.
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

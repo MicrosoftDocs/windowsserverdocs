@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 09/19/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Configure 3rd party authentication providers as primary authentication in AD FS 2019

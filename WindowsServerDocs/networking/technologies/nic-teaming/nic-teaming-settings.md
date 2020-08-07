@@ -2,7 +2,6 @@
 title: NIC Teaming settings
 description:  In this topic, we give you an overview of the NIC Team properties such as teaming and load balancing modes. We also give you details about the Standby adapter setting and the Primary team interface property. If you have at least two network adapters in a NIC Team, you do not need to designate a Standby adapter for fault tolerance.
 manager: dougkim
-ms.technology: networking-nict
 ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: lizross

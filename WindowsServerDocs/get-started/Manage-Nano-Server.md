@@ -2,7 +2,6 @@
 title: Manage Nano Server
 description: updates, servicing packages, networking tracing, performance monitoring
 manager: DonGill
-ms.technology: server-nano
 ms.date: 09/06/2017
 ms.topic: get-started-article
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e

@@ -3,7 +3,6 @@ title: Understanding cluster and pool quorum
 description: Understanding Cluster and Pool Quorum, with specific examples to go over the intricacies.
 ms.author: adagashe
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 01/18/2019

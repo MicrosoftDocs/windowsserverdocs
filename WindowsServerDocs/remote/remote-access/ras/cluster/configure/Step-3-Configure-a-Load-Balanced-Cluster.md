@@ -2,7 +2,6 @@
 title: Step 3 Configure a Load-Balanced Cluster
 description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
 ms.author: lizross

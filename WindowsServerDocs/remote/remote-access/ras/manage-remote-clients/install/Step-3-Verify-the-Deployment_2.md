@@ -2,7 +2,6 @@
 title: Step 3 Verify the Deployment
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 6a78a078-d2e7-4cbd-b8d5-20cfb6d1524b
 ms.author: lizross

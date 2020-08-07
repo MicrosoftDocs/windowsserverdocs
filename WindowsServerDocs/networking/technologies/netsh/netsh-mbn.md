@@ -1,7 +1,6 @@
 ---
 title: Netsh Commands for Mobile Broadband Network (MBN)
 description: Use netsh mbn to query and configure mobile broadband settings and parameters.
-ms.technology: networking
 ms.topic: article
 author: apdutta
 ms.date: 02/20/2020

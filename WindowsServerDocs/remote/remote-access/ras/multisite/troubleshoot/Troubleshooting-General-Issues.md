@@ -2,7 +2,6 @@
 title: Troubleshooting General Issues
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 354ae5e3-bae1-44f9-afd7-7eaba70f2346
 ms.author: lizross

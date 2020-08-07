@@ -4,7 +4,6 @@ description: How to disable Offline Files caching on individual folders that are
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---

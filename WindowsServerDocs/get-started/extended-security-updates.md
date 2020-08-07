@@ -1,7 +1,6 @@
 ---
 title: Windows Server 2008 and 2008 R2 extended security updates
 description: Learn how to use Extended Security Updates (ESU) for Windows Server 2008 and 2008 R2 after the end of their support lifecycle.
-ms.technology: server-general
 ms.mktglfcycl: manage
 author: iainfoulds
 ms.author: iainfou

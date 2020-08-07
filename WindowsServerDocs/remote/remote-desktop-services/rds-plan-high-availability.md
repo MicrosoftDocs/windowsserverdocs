@@ -1,7 +1,6 @@
 ---
 title: Remote Desktop Services - High availability
 description: Planning information about setting up a highly available RDS deployment.
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: ec630ea0-ab80-4dfe-a25f-f4f601651f72
 author: lizap

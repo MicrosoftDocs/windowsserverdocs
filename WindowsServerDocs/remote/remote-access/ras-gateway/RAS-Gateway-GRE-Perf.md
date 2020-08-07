@@ -2,7 +2,6 @@
 title: RAS Gateway GRE Tunnel Throughput and Performance
 description: This topic, which is intended for Information Technology (IT) professionals, provides throughput performance information about RAS Gateway Generic Routing Encapsulation (GRE) tunnels.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
 ms.author: lizross

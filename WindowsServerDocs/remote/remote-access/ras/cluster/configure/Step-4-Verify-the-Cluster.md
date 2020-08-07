@@ -2,7 +2,6 @@
 title: Step 4 Verify the Cluster
 description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: f22dcf10-b453-4664-a9ef-e40e95c72f63
 ms.author: lizross

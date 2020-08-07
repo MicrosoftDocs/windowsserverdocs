@@ -1,7 +1,6 @@
 ---
 title: Manage Servers with Windows Admin Center
 description: Manage Servers with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

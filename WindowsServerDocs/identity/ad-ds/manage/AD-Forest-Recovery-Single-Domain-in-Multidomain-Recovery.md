@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 267541be-2ea7-4af6-ab34-8b5a3fedee2d
-ms.technology: identity-adds
 ---
 # AD Forest Recovery - Recovering a single domain in a multidomain forest
 

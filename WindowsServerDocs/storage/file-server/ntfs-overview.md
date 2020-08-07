@@ -4,7 +4,6 @@ description: An explanation of what NTFS is.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 06/17/2019
 ms.localizationpriority: medium
 ---

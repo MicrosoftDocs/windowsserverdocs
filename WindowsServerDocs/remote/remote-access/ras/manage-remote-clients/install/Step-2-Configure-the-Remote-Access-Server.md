@@ -2,7 +2,6 @@
 title: Step 2 Configure the Remote Access Server
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 ms.author: lizross

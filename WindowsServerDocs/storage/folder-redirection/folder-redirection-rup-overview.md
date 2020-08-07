@@ -4,7 +4,6 @@ description: An overview of Folder Redirection, Offline Files, and Roaming User 
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
 ---

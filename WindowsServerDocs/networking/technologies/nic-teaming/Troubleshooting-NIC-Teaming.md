@@ -2,7 +2,6 @@
 title: Troubleshooting NIC Teaming
 description: This topic provides information about troubleshooting NIC Teaming in Windows Server 2016.
 manager: dougkim
-ms.technology: networking-nict
 ms.topic: article
 ms.assetid: fdee02ec-3a7e-473e-9784-2889dc1b6dbb
 ms.author: lizross

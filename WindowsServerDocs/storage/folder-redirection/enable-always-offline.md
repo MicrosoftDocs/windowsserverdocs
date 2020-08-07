@@ -4,7 +4,6 @@ description: How to use the Always Offline mode of Offline Files to provide fast
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---

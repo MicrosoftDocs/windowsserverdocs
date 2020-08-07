@@ -5,7 +5,6 @@ ms.author: jgerend
 manager: dmoss
 ms.date: 10/16/2018
 ms.topic: article
-ms.technology: storage
 ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 ---
 

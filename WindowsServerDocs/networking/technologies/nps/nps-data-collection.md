@@ -6,7 +6,6 @@ manager: mtillman
 ms.author: joflore
 ms.reviewer: richagi
 ms.custom: it-pro
-ms.technology: networking
 ms.topic: article
 ms.date: 05/01/2018
 

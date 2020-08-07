@@ -2,7 +2,6 @@
 title: Enable file sharing
 description: Learn about file sharing in MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 508ad056-8e0c-4d59-a4fa-05775a54125d
 author: evaseydl

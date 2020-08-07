@@ -2,7 +2,6 @@
 title: Configure Datacenter Firewall Access Control Lists (ACLs)
 description: You can apply specific ACLs to network interfaces.  If ACLs are also set on the virtual subnet to which the network interface is connected, both ACLs are applied, but the network interface ACLs are prioritized above the virtual subnet ACLs.
 manager: grcusanz
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 25f18927-a63e-44f3-b02a-81ed51933187
 ms.author: anpaul

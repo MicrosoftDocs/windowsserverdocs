@@ -7,7 +7,6 @@ manager: femila
 ms.date: 06/27/2017
 ms.topic: article
 ms.custom: it-pro
-ms.technology: identity-adfs
 ---
 
 # Active Directory Federation Services prompt=login parameter support

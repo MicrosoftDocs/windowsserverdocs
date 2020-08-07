@@ -1,7 +1,6 @@
 ---
 title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts
 description: Is your app running slow on RDS? Learn about performance counters you can use to diagnose app performance problems on RDSH
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
 ms.topic: article

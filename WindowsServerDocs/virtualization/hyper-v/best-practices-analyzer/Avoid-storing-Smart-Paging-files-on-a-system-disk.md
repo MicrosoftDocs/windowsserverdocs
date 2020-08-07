@@ -2,7 +2,6 @@
 title: Avoid storing Smart Paging files on a system disk
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 9b57c9b8-76c5-43c7-bfa6-2c95b3cb6510

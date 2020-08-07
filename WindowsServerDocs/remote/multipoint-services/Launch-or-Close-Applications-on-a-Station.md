@@ -1,7 +1,6 @@
 ---
 title: Launch or Close Applications on a Station
 description: Learn how to work with applications in MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: efede045-c20b-4541-9db0-dc96848b987a
 author: lizap

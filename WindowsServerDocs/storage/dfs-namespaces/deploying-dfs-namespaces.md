@@ -2,7 +2,6 @@
 title: Deploying DFS Namespaces
 description: This article describes how to deploy DFS namespaces
 ms.date: 6/5/2017
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

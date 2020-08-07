@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 04/24/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 # AD FS Rapid Restore Tool
 

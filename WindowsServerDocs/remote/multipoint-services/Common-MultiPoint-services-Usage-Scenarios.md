@@ -1,7 +1,6 @@
 ---
 title: Common MultiPoint Services Usage Scenarios
 description: Learn about common uses for MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 9aefaf1b-3ba2-4f41-9068-9629a28157ad
 author: evaseydl

@@ -7,7 +7,6 @@ manager: femila
 ms.date: 03/16/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.technology: identity-adds
 ---
 
 # Identity and Access in Windows Server 2016

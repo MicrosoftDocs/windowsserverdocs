@@ -2,7 +2,6 @@
 title: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
 ms.author: lizross

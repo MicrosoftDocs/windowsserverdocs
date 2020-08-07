@@ -5,7 +5,6 @@ ms.assetid: e060e052-39a0-4154-90bb-b97cc6dde68e
 manager: dongill
 author: justinha
 ms.author: justinha
-ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
 ---
 

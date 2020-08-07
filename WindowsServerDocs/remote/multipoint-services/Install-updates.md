@@ -2,7 +2,6 @@
 title: Install updates
 description: Learn how to install updates to MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: b201be28-b2d9-403c-a5e9-739d64c1b296
 author: evaseydl

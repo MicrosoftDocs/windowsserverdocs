@@ -1,7 +1,6 @@
 ---
 title: Sync your file server with the cloud by using Azure File Sync
 description: Use Azure File Sync to centralize your organization's file shares in Azure, while keeping the flexibility, performance, and compatibility of an on-premises file server. Azure File Sync transforms Windows Server into a quick cache of your Azure file share with the optional cloud tiering feature.
-ms.technology: manage
 ms.topic: article
 author: fauhse
 ms.author: fauhse

@@ -6,7 +6,6 @@ ms.author: billmath
 manager: daveba
 ms.date: 05/23/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Build a Custom Authentication Method for AD FS in Windows Server

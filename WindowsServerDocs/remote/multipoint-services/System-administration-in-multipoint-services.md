@@ -2,7 +2,6 @@
 title: System administration in MultiPoint Services
 description: Navigational topic for administration information for MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 8fce1bcf-5459-43a2-957e-c1bc1749bca2
 author: evaseydl

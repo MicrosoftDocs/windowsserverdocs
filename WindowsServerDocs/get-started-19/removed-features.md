@@ -2,7 +2,6 @@
 title: Features removed or planned for replacement in Windows Server
 description: Summary of topics listing the features and functionalities in Windows Server that have either been removed from the product or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment.
 ms.date: 08/22/2019
-ms.technology: server-general
 ms.topic: article
 author: rick-man
 ms.author: rickman

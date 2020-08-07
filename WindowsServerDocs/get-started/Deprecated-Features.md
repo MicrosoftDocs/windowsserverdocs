@@ -1,7 +1,6 @@
 ---
 title: Features Removed or Deprecated in Windows Server 2016
 description: A list of features and functionalities in Windows Server 2016 that have either been removed from the product in the current release or are planned for potential removal in subsequent releases (deprecated). It is intended for IT professionals who are updating operating systems in a commercial environment.
-ms.technology: server-general
 ms.topic: article
 ms.date: 08/22/2019
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437

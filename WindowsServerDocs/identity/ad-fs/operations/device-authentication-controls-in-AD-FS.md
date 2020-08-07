@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/09/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Device authentication controls in AD FS

@@ -2,7 +2,6 @@
 title: Set Access Scope for a DNS Zone
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: 6a211dde-80eb-4888-b5bb-4e28fe8dc7df
 ms.author: lizross

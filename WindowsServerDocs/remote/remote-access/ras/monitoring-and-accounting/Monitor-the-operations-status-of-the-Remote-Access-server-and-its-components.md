@@ -2,7 +2,6 @@
 title: Monitor the operations status of the Remote Access server and its components
 description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 ms.author: lizross

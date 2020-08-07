@@ -1,6 +1,5 @@
 ---
 title: How to Configure Protected Accounts
-ms.technology: security-auditing
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp

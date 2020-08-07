@@ -2,7 +2,6 @@
 title: Migrating Roles and Features
 description: Info on how to migrate roles and features to a newer version of Windows Server.
 ms.date: 08/28/2019
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 0f78ef4c-dd12-4b1b-8c6e-251dd803c5d1
 author: jasongerend

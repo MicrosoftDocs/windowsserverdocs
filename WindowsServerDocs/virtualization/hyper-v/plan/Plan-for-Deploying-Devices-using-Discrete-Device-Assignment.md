@@ -1,14 +1,12 @@
 ---
 title: Plan for deploying devices using Discrete Device Assignment
 description: Learn about how DDA works in Windows Server
-
-ms.technology: hyper-v
-
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.date: 08/21/2019
 ---
+
 # Plan for Deploying Devices using Discrete Device Assignment
 >Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
 

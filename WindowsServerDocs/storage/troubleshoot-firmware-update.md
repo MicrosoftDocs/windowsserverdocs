@@ -3,7 +3,6 @@ ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
 title: Troubleshooting drive firmware updates
 ms.author: toklima
 manager: masriniv
-ms.technology: storage
 ms.topic: article
 author: toklima
 ms.date: 04/18/2017

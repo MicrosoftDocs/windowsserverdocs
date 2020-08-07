@@ -2,7 +2,6 @@
 title: Plan an Advanced DirectAccess Deployment
 description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
 ms.author: lizross

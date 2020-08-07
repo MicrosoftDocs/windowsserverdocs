@@ -1,7 +1,6 @@
 ---
 title: Always On VPN Deployment for Windows Server and Windows 10
 description: You can use this deployment to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 ms.localizationpriority: medium

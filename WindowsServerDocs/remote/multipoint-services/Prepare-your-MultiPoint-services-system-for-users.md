@@ -2,7 +2,6 @@
 title: Prepare your Windows MultiPoint Services system for users
 description: Navigation topic for planning user management in MultiPoint Services
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: e392f423-a64b-4825-91ab-334058721c4d
 author: lizap

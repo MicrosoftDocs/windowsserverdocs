@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Create a Rule to Permit or Deny Users Based on an Incoming Claim

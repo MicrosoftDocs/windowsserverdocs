@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 02/01/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Configure AD FS Extranet Lockout Protection

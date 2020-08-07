@@ -5,7 +5,6 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 12/06/2019
 ms.topic: article
-ms.technology: storage-spaces
 manager: brianlic
 ---
 # Troubleshoot Storage Spaces and Storage Spaces Direct health and operational states

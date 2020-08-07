@@ -1,7 +1,6 @@
 ---
 title: Welcome to Remote Desktop Services in Windows Server 2016
 description: Provides an overview of Remote Desktop Services
-ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 02/22/2017
 ms.topic: article

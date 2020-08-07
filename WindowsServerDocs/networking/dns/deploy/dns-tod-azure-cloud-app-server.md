@@ -2,7 +2,6 @@
 title: DNS Responses Based on Time of Day with an Azure Cloud App Server
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
 ms.author: lizross

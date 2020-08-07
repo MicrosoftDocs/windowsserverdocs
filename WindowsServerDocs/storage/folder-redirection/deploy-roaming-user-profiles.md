@@ -1,7 +1,6 @@
 ---
 title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

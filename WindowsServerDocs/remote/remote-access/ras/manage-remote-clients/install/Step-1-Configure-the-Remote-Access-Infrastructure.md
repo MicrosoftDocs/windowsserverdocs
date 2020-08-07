@@ -2,7 +2,6 @@
 title: Step 1 Configure the Remote Access Infrastructure
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 0e7d1f5b-c939-47ca-892f-5bb285027fbc
 ms.author: lizross

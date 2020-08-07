@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 04/24/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 # User privacy and AD FS
 

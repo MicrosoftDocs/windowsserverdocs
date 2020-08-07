@@ -3,7 +3,6 @@ ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
 ms.author: cosdar
 manager: dongill
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 11/06/2017

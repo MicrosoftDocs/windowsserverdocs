@@ -2,7 +2,6 @@
 title: PVLAN configuration on a virtual switch must be consistent
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 4db63bcc-7a54-4f19-98a6-c274c3956d51

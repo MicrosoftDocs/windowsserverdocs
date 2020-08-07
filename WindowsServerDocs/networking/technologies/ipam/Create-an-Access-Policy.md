@@ -2,7 +2,6 @@
 title: Create an Access Policy
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
 ms.author: lizross

@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.technology: identity-adds
 ---
 # AD Forest Recovery - Adding the GC
 

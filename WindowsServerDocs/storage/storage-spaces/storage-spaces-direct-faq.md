@@ -2,7 +2,6 @@
 title: Storage Spaces Direct - Frequently asked questions
 description: Learn how about Storage Spaces Direct
 ms.author: kaushik
-ms.technology: storage-spaces
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018

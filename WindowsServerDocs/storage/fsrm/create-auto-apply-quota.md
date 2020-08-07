@@ -2,7 +2,6 @@
 title: Create an Auto Apply Quota
 description: This article describes how to create auto apply quotas based on a quota template
 ms.date: 7/7/2017
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

@@ -2,7 +2,6 @@
 title: Manage Remote Access
 description: This topic provides information on how to manage Remote Access in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
 ms.author: lizross

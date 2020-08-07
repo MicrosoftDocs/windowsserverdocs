@@ -2,7 +2,6 @@
 title: Steps for migrating MultiPoint Services
 description: Walks you through the steps to migrate to MultiPoint Services in Windows Server 2016
 ms.date: 07/29/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 3ee77efa-7cc5-4ddf-aaff-b5634a717014
 author: lizap

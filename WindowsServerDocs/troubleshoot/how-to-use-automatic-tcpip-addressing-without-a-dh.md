@@ -2,7 +2,6 @@
 title: How to use automatic TCP/IP addressing without a DHCP server
 description: Introduce how to use automatic TCP/IP addressing without a DHCP server.
 manager: dcscontentpm
-ms.technology: server-general
 ms.date: 5/26/2020
 ms.topic: troubleshoot
 author: Deland-Han

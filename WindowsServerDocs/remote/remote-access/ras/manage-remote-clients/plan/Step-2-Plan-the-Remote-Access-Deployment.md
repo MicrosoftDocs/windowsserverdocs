@@ -2,7 +2,6 @@
 title: Step 2 Plan the Remote Access Deployment
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 ms.author: lizross

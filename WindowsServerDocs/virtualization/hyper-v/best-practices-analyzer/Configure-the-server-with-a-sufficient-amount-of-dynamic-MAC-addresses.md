@@ -2,7 +2,6 @@
 title: Configure the server with a sufficient amount of dynamic MAC addresses
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe

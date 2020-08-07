@@ -1,7 +1,6 @@
 ---
 title: Add printers
 description: Add a printer for your MultiPoint Services users.
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: e1f6d3ca-8caf-4aa0-b0ea-93cdfd3f3f37
 author: evaseydl

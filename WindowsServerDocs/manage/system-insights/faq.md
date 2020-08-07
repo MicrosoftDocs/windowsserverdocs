@@ -1,7 +1,6 @@
 ---
 title: System Insights FAQ
 description: System Insights FAQ
-ms.technology: system-insights
 ms.topic: article
 author: gawatu
 ms.author: gawatu

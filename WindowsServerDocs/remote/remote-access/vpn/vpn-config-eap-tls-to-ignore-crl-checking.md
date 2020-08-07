@@ -1,7 +1,6 @@
 ---
 title: Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 description: 'An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate) of the client and verifies that certificates have been revoked.'
-ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/13/2018
 ms.author: v-tea

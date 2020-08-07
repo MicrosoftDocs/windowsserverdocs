@@ -7,7 +7,6 @@ manager: mtillman
 ms.date: 04/29/2020
 ms.topic: article
 ms.reviewer: anandy
-ms.technology: identity-adfs
 ---
 
 # Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016 or later

@@ -2,7 +2,6 @@
 title: Windows Server 2016 Products and Editions
 description: Explains differences in the Windows Server Standard and Windows Server Datacenter editions
 ms.date: 10/04/2019
-ms.technology: server-general
 ms.topic: article
 ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
 author: jasongerend

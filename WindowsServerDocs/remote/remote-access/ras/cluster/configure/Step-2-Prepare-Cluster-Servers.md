@@ -2,7 +2,6 @@
 title: Step 2 Prepare Cluster Servers
 description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 ms.author: lizross

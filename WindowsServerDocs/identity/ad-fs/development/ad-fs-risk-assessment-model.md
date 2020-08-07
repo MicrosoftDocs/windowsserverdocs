@@ -5,7 +5,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 05/05/2020
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 

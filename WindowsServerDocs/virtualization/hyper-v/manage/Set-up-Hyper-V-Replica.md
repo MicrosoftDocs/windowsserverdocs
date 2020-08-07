@@ -1,6 +1,5 @@
 ---
 title: Set up Hyper-V Replica
-ms.technology: compute-hyper-v
 description: Gives instructions for setting up Replica, testing failover, and doing a first replication.
 manager: dongill
 ms.topic: article

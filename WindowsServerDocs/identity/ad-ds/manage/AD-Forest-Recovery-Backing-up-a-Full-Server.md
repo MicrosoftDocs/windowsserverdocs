@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
-ms.technology: identity-adds
 ---
 
 # AD Forest Recovery - Backing up a full server

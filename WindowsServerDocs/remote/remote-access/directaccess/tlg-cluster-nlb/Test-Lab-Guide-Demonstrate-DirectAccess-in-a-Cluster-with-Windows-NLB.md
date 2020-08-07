@@ -2,7 +2,6 @@
 title: Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: db15dcf5-4d64-48d7-818a-06c2839e1289
 ms.author: lizross

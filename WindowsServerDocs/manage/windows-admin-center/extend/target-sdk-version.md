@@ -1,7 +1,6 @@
 ---
 title: Target a different version of the Windows Admin Center SDK
 description: Target a different version of the Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

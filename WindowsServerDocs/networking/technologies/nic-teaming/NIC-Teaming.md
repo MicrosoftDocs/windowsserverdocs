@@ -2,7 +2,6 @@
 title: NIC Teaming
 description: In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
 manager: dougkim
-ms.technology: networking-nict
 ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
 ms.author: lizross

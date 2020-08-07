@@ -1,7 +1,6 @@
 ---
 title: Windows Admin Center SDK Case Study - NEC
 description: Windows Admin Center SDK Case Study - NEC
-ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol

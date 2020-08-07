@@ -2,7 +2,6 @@
 title: DirectAccess
 description: You can use this topic for a brief overview of DirectAccess in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 6b71d18e-1939-4fc0-bb42-29e0e5ffc8da
 ms.author: lizross

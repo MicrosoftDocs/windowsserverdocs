@@ -1,7 +1,6 @@
 ---
 title: Control your tool's visibility in a solution
 description: Control your tool's visibility in a solution Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

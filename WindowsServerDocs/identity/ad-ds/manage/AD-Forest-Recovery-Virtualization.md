@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
-ms.technology: identity-adds
 ---
 # Active Directory Forest Recovery Virtualization
 

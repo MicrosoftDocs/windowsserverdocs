@@ -2,7 +2,6 @@
 title: Developing for Nano Server
 description: PowerShell remoting and CIM sessions
 manager: DonGill
-ms.technology: server-nano
 ms.date: 09/06/2017
 ms.topic: get-started-article
 ms.assetid: 57079470-a1c1-4fdc-af15-1950d3381860

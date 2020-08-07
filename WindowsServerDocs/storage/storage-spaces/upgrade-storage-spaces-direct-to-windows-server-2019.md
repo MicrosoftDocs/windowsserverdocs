@@ -6,7 +6,6 @@ ms.author: robhind
 manager: eldenc
 ms.date: 03/06/2019
 ms.topic: article
-ms.technology: storage-spaces
 ---
 # Upgrade a Storage Spaces Direct cluster to Windows Server 2019
 

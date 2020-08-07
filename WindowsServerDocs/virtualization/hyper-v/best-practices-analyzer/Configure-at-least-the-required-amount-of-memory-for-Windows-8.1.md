@@ -2,7 +2,6 @@
 title: Configure at least the required amount of memory for a virtual machine running Windows 8.1 and enabled for Dynamic Memory
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: d43a62f5-75ff-4b50-9687-3e58f42c0f4f

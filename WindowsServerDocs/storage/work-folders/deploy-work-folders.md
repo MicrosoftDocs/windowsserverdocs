@@ -1,7 +1,6 @@
 ---
 ms.assetid: d2429185-9720-4a04-ad94-e89a9350cdba
 title: Deploying Work Folders
-ms.technology: storage-work-folders
 ms.topic: article
 author: JasonGerend
 manager: dongill

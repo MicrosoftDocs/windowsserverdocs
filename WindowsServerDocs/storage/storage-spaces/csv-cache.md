@@ -2,7 +2,6 @@
 title: Storage Spaces Direct in-memory read cache
 ms.author: eldenc
 manager: siroy
-ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 02/20/2019

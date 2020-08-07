@@ -1,7 +1,6 @@
 ---
 ms.assetid: a7c39656-81ee-4c2b-80ef-4d017dd11b07
 title: Planning a Work Folders deployment
-ms.technology: storage-work-folders
 ms.topic: article
 author: JasonGerend
 manager: dongill

@@ -2,7 +2,6 @@
 title: Avoid mapping one storage path to multiple resource pools
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 24992453-762b-4892-9a50-55d237b9b7f2

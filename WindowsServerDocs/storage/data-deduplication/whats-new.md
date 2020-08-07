@@ -1,7 +1,6 @@
 ---
 ms.assetid: d11acbc2-40c6-4ab2-9514-2bc3ad81499a
 title: What's New in Data Deduplication
-ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl

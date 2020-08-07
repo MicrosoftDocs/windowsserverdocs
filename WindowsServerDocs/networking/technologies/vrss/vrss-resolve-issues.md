@@ -1,7 +1,6 @@
 ---
 title: Resolve vRSS issues
 description: Resolve vRSS issues if you do not see vRSS load balancing traffic to the VM LPs.
-ms.technology: networking
 ms.topic: article
 ms.localizationpriority: medium
 manager: dougkim

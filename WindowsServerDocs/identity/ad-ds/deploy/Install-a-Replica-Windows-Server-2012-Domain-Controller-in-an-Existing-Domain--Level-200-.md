@@ -6,7 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)

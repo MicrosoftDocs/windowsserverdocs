@@ -2,7 +2,6 @@
 title: Step 2 Configure the Basic DirectAccess Server
 description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
 ms.author: lizross

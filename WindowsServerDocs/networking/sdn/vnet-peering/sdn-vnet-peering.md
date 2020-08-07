@@ -1,7 +1,6 @@
 ---
 title: Virtual network peering
 manager: grcusanz
-ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul

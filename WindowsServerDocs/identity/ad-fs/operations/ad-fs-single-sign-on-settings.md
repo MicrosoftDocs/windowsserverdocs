@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 08/17/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 # AD FS Single Sign-On Settings
 

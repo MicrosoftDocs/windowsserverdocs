@@ -2,7 +2,6 @@
 title: Avoid pausing a virtual machine
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4

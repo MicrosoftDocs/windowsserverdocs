@@ -5,7 +5,6 @@ ms.assetid: 87089ebc-b953-4aa3-96b5-966cf91acb02
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 

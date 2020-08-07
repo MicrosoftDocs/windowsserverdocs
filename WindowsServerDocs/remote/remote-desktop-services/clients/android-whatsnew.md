@@ -4,7 +4,6 @@ description: Learn about recent changes to the Remote Desktop client for Android
 
 
 
-ms.technology: remote-desktop-services
 
 ms.topic: article
 author: heidilohr

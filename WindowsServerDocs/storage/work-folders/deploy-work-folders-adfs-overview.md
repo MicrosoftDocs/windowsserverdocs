@@ -1,6 +1,5 @@
 ---
 title: Deploy Work Folders with AD FS and Web Application Proxy Overview
-ms.technology: storage-work-folders
 ms.topic: article
 ms.assetid: ea19f0f0-6cc0-4322-b387-c0873f7795ad
 manager: klaasl

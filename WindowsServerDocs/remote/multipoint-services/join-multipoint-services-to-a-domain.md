@@ -2,7 +2,6 @@
 title: Join MultiPoint Services to a domain (optional)
 Description: Provides the steps to join MultiPoint Services to your domain
 ms.date: 07/22/2016
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 623b7c21-dcbb-402e-8b5a-8e434cd225bd
 author: evaseydl

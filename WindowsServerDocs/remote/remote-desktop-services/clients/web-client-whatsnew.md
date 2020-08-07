@@ -1,7 +1,6 @@
 ---
 title: What's new in the web client
 description: Learn about recent changes to the Remote Desktop web client
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross

@@ -2,7 +2,6 @@
 title: Configure virtual machines to use SR-IOV only when supported by the guest operating system
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 33cf5b68-e43e-47ef-adbc-6b266c1d4dce

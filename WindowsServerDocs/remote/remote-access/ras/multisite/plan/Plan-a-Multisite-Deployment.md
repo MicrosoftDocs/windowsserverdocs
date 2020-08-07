@@ -2,7 +2,6 @@
 title: Plan a Multisite Deployment
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
 ms.author: lizross

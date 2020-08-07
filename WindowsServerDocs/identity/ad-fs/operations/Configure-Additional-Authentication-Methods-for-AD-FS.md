@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 07/26/2019
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Configure Additional Authentication Methods for AD FS

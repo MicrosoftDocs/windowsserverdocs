@@ -2,7 +2,6 @@
 title: Supported FreeBSD virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: shirgall

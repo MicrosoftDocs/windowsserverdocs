@@ -1,7 +1,6 @@
 ---
 title: Deploy Windows Admin Center with High Availability
 description: Deploy Windows Admin Center with High Availability (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew

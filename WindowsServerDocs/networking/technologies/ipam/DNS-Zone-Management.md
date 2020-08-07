@@ -2,7 +2,6 @@
 title: DNS Zone Management
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: de3dc14b-164a-49f1-8a57-b9e788046c23
 ms.author: lizross

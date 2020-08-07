@@ -2,7 +2,6 @@
 title: Install and Configure Deployment for Remote Management of DirectAccess Clients
 description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
 ms.author: lizross

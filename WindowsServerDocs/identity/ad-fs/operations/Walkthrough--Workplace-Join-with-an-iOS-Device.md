@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 10/18/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Walkthrough: Workplace Join with an iOS Device

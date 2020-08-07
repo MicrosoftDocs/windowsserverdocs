@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 07/07/2017
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
-ms.technology: identity-adds
 ---
 # AD Forest Recovery - Windows Server 2003 Recovery
 

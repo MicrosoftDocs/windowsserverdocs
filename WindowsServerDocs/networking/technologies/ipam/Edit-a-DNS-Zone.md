@@ -2,7 +2,6 @@
 title: Edit a DNS Zone
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
 ms.author: lizross

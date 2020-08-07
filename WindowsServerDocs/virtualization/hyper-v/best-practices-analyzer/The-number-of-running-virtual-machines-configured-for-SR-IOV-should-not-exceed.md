@@ -2,7 +2,6 @@
 title: The number of running virtual machines configured for SR-IOV should not exceed the number of virtual functions available to the virtual machines
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 8bd4af5e-9e7d-4710-8950-39435a8bb373

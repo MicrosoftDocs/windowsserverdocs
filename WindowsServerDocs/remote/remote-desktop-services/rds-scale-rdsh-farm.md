@@ -1,7 +1,6 @@
 ---
 title: Scale out your RDS deployment by adding an RD Session Host farm
 description: Add a second RD Session Host to yur RDS environment.
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/10/2017
 ms.topic: article

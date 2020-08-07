@@ -5,7 +5,6 @@ author: arduppal
 ms.author: arduppal
 ms.date: 04/26/2019
 ms.topic: article
-ms.technology: storage-replica
 manager: mchad
 ---
 # Cluster to cluster Storage Replica within the same region in Azure

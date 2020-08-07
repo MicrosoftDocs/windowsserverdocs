@@ -1,7 +1,6 @@
 ---
 title: Add high availability to the RD Web and Gateway web front
 description: Provides steps for installing the RD Web and Gateway servers in an RDS deployment.
-ms.technology: remote-desktop-services
 ms.topic: article
 author: lizap
 ms.author: elizapo

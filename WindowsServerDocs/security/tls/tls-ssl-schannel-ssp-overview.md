@@ -1,7 +1,6 @@
 ---
 title: TLS/SSL overview (Schannel SSP)
 description: Windows Server Security
-ms.technology: security-tls-ssl
 ms.topic: article
 ms.assetid: 1b7b0432-1bef-4912-8c9a-8989d47a4da9
 author: coreyp-at-msft

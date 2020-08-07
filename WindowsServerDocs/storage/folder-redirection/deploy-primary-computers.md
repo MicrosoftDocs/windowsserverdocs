@@ -4,7 +4,6 @@ description: How to enable primary computer support and designate primary comput
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
 ---

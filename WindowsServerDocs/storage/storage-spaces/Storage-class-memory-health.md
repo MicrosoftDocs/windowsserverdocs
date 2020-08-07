@@ -3,7 +3,6 @@ ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Storage-class Memory (NVDIMM-N) Health Management in Windows
 ms.author: jgerend
 manager: dongill
-ms.technology: storage-spaces
 ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019

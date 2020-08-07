@@ -2,7 +2,6 @@
 title: Configure an Existing File Server as a Content Server
 description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
 manager: brianlic
-ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: bdac7d2a-25b4-4f61-bed1-b290700c18f3
 ms.author: lizross

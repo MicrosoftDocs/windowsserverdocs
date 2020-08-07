@@ -1,7 +1,6 @@
 ---
 title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar

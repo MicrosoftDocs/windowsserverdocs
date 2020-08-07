@@ -6,7 +6,6 @@ ms.author: dacuo
 manager: dougkim
 ms.date: 10/17/2018
 ms.topic: article
-ms.technology: networking
 ---
 
 # Support boundary for high-accuracy time

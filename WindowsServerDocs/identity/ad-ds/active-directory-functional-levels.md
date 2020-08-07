@@ -8,7 +8,6 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.custom: it-pro
 ms.reviewer: maheshu
-ms.technology: identity-adds
 ---
 # Forest and Domain Functional Levels
 

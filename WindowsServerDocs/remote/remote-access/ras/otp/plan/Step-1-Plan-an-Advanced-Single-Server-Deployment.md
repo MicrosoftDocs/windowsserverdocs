@@ -2,7 +2,6 @@
 title: Step 1 Plan an Advanced Single Server Deployment
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 96538cbb-7d6c-4860-9ec7-b1834284ad10
 ms.author: lizross

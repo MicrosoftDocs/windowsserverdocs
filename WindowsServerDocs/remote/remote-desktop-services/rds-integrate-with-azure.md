@@ -1,7 +1,6 @@
 ---
 title: RDS - Integration with Azure services
 description: Learn how to integrate RDS into your Azure deployment, and Azure into your RDS deployment.
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/18/2017
 ms.topic: article

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 5b5bab7a-727b-47ce-8efa-1d37a9639cba
 title: Virtual Machine Load Balancing deep-dive
-ms.technology: storage-failover-clustering
 ms.topic: article
 author: bhattacharyaz
 manager: eldenc

@@ -2,7 +2,6 @@
 title: Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 10c7a49c-5671-4bec-b562-13fdd67f4629
 ms.author: lizross

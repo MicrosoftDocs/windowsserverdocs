@@ -1,7 +1,6 @@
 ---
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Data Deduplication Overview
-ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
 manager: klaasl

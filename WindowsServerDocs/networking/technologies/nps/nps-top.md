@@ -2,7 +2,6 @@
 title: Network Policy Server (NPS)
 description: This topic provides an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019, and includes links to additional guidance about NPS.
 manager: dougkim
-ms.technology: networking
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: lizross

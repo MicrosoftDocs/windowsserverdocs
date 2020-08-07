@@ -2,7 +2,6 @@
 title: STEP 6 Install and Configure 2-DC1
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
 ms.author: lizross

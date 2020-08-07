@@ -1,7 +1,6 @@
 ---
 title: Get started with the Windows Desktop client
 description: Basic information about the Windows Desktop client.
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross

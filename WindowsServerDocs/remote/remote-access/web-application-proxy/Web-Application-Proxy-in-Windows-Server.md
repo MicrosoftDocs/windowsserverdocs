@@ -1,7 +1,6 @@
 ---
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
 title: Web Application Proxy in Windows Server
-ms.technology: web-app-proxy
 ms.topic: article
 ms.author: kgremban
 author: eross-msft

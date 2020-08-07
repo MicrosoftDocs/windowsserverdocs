@@ -1,7 +1,6 @@
 ---
 title: Create virtual machines for Remote Desktop
 description: Create VMs to host Remote Desktop components in the cloud.
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
 ms.topic: article

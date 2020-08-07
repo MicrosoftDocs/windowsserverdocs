@@ -2,7 +2,6 @@
 title: Windows Server 2012 R2 should be configured with at least the minimum amount of memory
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 01da6f02-1a5f-4d3e-9bef-4d122a91c5c2

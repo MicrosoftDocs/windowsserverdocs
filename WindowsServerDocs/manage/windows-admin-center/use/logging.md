@@ -1,7 +1,6 @@
 ---
 title: Event logging
 description: Event logging from Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl

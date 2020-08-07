@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/03/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - AD FS metadata endpoints

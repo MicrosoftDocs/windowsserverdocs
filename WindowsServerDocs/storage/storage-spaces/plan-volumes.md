@@ -3,7 +3,6 @@ ms.assetid: 342173ca-4e10-44f4-b2c9-02a6c26f7a4a
 title: Planning volumes in Storage Spaces Direct
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 06/28/2019

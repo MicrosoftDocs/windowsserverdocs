@@ -1,7 +1,6 @@
 ---
 title: Enabling the extension discovery banner
 description: Enabling the extension discovery banner
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol

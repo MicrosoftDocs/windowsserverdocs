@@ -1,7 +1,6 @@
 ---
 title: Develop a gateway plugin
 description: Develop a gateway plugin Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu

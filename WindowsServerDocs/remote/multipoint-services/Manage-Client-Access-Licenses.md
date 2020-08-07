@@ -1,7 +1,6 @@
 ---
 title: Manage Client Access Licenses
 description: Learn how to work with CALs in MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 675e089e-d841-401e-bba7-69f3929ef609
 author: lizap

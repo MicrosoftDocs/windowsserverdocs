@@ -2,7 +2,6 @@
 title: Hyper-V Network Virtualization
 description: This topic provides links to content about Hyper-V Network Virtualization in Windows Server 2016.
 manager: grcusanz
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 ms.author: anpaul

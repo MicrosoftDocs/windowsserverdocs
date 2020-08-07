@@ -1,7 +1,6 @@
 ---
 title: Allow one account to have multiple sessions
 description: Let a user access multiple systems at the same time.
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: f14cf1bd-f176-4de4-b27d-f3d8e6334158
 author: lizap

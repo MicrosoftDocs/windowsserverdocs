@@ -1,7 +1,6 @@
 ---
 title: Remap All Stations
 description: Learn how to remap stations in MultiPoint Services
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 5460bced-9a3b-4660-9d20-3b14df509dfc
 author: lizap

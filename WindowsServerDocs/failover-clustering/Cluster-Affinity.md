@@ -1,7 +1,6 @@
 ---
 title: Cluster affinity
 manager: eldenc
-ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar

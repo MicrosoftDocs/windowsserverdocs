@@ -3,7 +3,6 @@ title: Resolve Windows activation error codes
 description: Learn how to troubleshoot activation error codes
 ms.topic: troubleshooting
 ms.date: 9/18/2019
-ms.technology: server-general
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium

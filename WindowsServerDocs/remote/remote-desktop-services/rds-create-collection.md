@@ -1,7 +1,6 @@
 ---
 title: Create a Remote Desktop Services collection
 description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 10/22/2019
 ms.topic: article

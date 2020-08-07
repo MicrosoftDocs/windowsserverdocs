@@ -1,7 +1,6 @@
 ---
 title: Virtual Private Networking (VPN)
 description: You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
-ms.technology: networking
 ms.topic: article
 ms.assetid: cd4908f0-0d6f-4c02-8f98-4dc88c3dcb65
 ms.date: 11/05/2018

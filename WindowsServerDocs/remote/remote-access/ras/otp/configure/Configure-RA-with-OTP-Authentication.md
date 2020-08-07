@@ -2,7 +2,6 @@
 title: Configure Remote Access with OTP Authentication
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 82505b18-dd77-4dd1-aa27-b2962b8241ca
 ms.author: lizross

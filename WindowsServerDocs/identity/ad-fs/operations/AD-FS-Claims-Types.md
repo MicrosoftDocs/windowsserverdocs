@@ -5,7 +5,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 

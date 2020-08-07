@@ -5,7 +5,6 @@ author: dcuomo
 ms.author: dacuo
 ms.date: 06/06/2020
 ms.topic: article
-ms.technology: networking
 ---
 
 # Insider preview

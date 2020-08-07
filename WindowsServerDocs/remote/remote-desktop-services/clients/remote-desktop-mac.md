@@ -1,7 +1,6 @@
 ---
 title: Get started with the macOS client
 description: Learn how to set up the Remote Desktop client for Mac
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap

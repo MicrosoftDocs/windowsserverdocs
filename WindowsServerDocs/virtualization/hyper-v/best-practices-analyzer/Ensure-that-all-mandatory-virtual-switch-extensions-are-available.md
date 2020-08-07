@@ -2,7 +2,6 @@
 title: Ensure that all mandatory virtual switch extensions are available
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 2f2f2698-f5ec-4cad-aa64-d6987e8142a1

@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.technology: identity-adfs
 ---
 
 # Build a web application using OpenID Connect with AD FS 2016 and later

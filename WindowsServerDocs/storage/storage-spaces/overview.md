@@ -2,7 +2,6 @@
 title: Storage Spaces overview
 ms.author: jgerend
 manager: dougkim
-ms.technology: storage-file-systems
 ms.topic: article
 author: jasongerend
 ms.date: 05/22/2018

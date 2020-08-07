@@ -2,7 +2,6 @@
 title: Health Service faults
 manager: eldenc
 ms.author: cosdar
-ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017

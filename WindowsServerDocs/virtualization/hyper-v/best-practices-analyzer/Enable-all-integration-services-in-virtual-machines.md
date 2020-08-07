@@ -2,7 +2,6 @@
 title: Enable all integration services in virtual machines
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 16e202ad-3795-40c9-8176-7ca319e56d26

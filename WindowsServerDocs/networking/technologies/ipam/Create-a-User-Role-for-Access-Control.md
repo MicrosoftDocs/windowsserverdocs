@@ -2,7 +2,6 @@
 title: Create a User Role for Access Control
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
 ms.author: lizross

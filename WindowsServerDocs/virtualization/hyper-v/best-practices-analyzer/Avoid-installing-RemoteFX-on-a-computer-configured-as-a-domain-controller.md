@@ -2,7 +2,6 @@
 title: Avoid installing RemoteFX on a computer that is configured as an Active Directory domain controller
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: da58694e-91f6-45d8-a599-18966db165f4

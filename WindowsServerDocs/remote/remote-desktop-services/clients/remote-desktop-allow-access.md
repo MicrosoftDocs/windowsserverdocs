@@ -1,7 +1,6 @@
 ---
 title: Remote Desktop - Allow access to your PC
 description: Learn about your options for remotely accessing your PC
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
 author: lizap

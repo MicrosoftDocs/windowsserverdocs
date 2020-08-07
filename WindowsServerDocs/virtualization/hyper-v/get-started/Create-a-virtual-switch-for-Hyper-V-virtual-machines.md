@@ -2,7 +2,6 @@
 title: Create a virtual switch for Hyper-V virtual machines
 description: Gives instructions on creating a virtual switch using Hyper-V Manager or Windows PowerShell
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: get-started-article
 ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: kbdazure

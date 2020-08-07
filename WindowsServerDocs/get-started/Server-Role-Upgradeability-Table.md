@@ -2,7 +2,6 @@
 title: Server Role Upgrade and Migration Matrix for Windows Server 2016
 description: Shows which server roles can be upgraded or migrated to Windows Server 2016.
 ms.date: 10/05/2016
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 7e031a64-b1e6-4cf6-994a-e7c575835f6a
 author: jaimeo

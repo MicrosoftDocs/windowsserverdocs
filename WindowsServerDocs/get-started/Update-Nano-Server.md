@@ -2,7 +2,6 @@
 title: Updating Nano Server
 description:
 manager: DonGill
-ms.technology: server-nano
 ms.date: 09/06/2017
 ms.topic: get-started-article
 author: jaimeo

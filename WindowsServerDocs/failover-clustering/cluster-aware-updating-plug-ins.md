@@ -7,7 +7,6 @@ manager: lizross
 ms.author: jgerend
 author: JasonGerend
 ms.date: 04/28/2017
-ms.technology: storage-failover-clustering
 ---
 # How Cluster-Aware Updating plug-ins work
 

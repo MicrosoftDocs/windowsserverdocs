@@ -2,7 +2,6 @@
 title: What's New in Windows Server 2016
 description: What are the new features in compute, identity, management, automation, networking, security, storage.
 ms.date: 05/21/2019
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jasongerend

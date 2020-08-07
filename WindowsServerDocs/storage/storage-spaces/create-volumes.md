@@ -5,7 +5,6 @@ ms.reviewer: cosmosdarwin
 author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.date: 02/25/2020
 ---
 # Creating volumes in Storage Spaces Direct

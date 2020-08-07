@@ -6,7 +6,6 @@ manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 47a471fb-3b0b-4aa8-8525-1c92d0d51e93
-ms.technology: identity-adds
 ---
 # AD Forest Recovery - Procedures
 

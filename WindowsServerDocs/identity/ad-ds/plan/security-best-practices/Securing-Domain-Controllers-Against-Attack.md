@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 06/18/2017
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Securing Domain Controllers Against Attack

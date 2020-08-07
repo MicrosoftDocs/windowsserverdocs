@@ -5,7 +5,6 @@ author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
 ms.topic: article
-ms.technology: storage-replica
 manager: mchad
 ---
 # Cluster to Cluster Storage Replica cross region in Azure

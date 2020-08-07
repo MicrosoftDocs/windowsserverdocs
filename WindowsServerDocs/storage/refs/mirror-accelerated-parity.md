@@ -2,7 +2,6 @@
 title: Mirror-accelerated parity
 ms.author: gawatu
 manager: masriniv
-ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
 ms.date: 10/17/2018

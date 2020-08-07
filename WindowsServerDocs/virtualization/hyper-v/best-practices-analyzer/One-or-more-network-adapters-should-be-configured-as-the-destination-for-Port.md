@@ -2,7 +2,6 @@
 title: One or more network adapters should be configured as the destination for Port Mirroring
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: b83c166d-f010-47c4-a4bb-02167f2e3361

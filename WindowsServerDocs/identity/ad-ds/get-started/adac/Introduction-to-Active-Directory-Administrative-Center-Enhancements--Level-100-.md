@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.technology: identity-adds
 ---
 
 # Introduction to Active Directory Administrative Center Enhancements (Level 100)

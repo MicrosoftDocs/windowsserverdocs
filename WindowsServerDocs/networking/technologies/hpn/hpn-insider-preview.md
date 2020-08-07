@@ -6,7 +6,6 @@ author: eross-msft
 ms.author: lizross
 ms.date: 09/12/2018
 ms.topic: article
-ms.technology: networking
 ---
 
 # New HPN Features in Windows Server 2019

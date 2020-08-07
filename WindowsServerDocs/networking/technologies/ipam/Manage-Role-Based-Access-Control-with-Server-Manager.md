@@ -2,7 +2,6 @@
 title: Manage Role Based Access Control with Server Manager
 description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
 manager: brianlic
-ms.technology: networking-ipam
 ms.topic: article
 ms.assetid: 77b6ac92-eaff-46d7-95db-ee6fc96742ed
 ms.author: lizross

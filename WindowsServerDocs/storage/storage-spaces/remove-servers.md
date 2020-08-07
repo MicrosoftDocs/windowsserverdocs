@@ -3,7 +3,6 @@ title: Removing servers in Storage Spaces Direct
 ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 description: How to remove servers from a Storage Spaces Direct cluster in Windows Server.

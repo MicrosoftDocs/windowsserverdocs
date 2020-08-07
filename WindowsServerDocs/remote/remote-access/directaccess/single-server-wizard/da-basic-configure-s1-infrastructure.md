@@ -2,7 +2,6 @@
 title: Step 1 Configure the Basic DirectAccess Infrastructure
 description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
 ms.author: lizross

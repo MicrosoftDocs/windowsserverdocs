@@ -1,7 +1,6 @@
 ---
 title: MultiPoint Services user accounts
 description: Learn about user accounts in MultiPoint Services, especially which kind to use for different scenarios
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 7f3c6ce5-9b7c-45a0-83c5-3f9b9f5f48d4
 author: lizap

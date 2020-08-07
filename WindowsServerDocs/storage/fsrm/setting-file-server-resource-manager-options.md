@@ -2,7 +2,6 @@
 title: Setting File Server Resource Manager Options
 description: This article describes how to set file server resource manager options
 ms.date: 7/7/2017
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

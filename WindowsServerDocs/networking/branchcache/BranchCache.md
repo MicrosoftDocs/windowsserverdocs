@@ -2,7 +2,6 @@
 title: BranchCache
 description: This topic provides an overview of BranchCache in Windows Server 2016
 manager: brianlic
-ms.technology: networking-bc
 ms.topic: article
 ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
 ms.author: lizross

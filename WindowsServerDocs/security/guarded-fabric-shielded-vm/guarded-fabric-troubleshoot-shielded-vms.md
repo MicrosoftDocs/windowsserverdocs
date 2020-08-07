@@ -4,7 +4,6 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 10/3/2018
 ---
 

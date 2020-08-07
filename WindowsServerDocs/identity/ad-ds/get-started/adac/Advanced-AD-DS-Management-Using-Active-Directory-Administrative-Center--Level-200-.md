@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.technology: identity-adds
 ---
 # Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 

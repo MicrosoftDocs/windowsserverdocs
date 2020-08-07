@@ -2,7 +2,6 @@
 title: Compression is recommended for replication traffic
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: cf8be6e9-2909-4e4a-bb63-d1e1ebbc6930

@@ -1,7 +1,6 @@
 ---
 title: Publishing Extensions for Windows Admin Center
 description: Publishing Extensions for Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol

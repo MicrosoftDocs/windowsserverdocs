@@ -2,7 +2,6 @@
 title: STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
 manager: brianlic
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
 ms.author: lizross

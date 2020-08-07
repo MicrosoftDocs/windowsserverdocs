@@ -1,7 +1,6 @@
 ---
 title: Log off or Disconnect User Sessions
 description: Learn how to manually log off a user
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 3e9bbcdc-e33b-481e-8b46-787a4f6d58bc
 author: lizap

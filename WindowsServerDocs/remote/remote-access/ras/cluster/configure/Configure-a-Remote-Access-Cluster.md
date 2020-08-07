@@ -2,7 +2,6 @@
 title: Configure a Remote Access Cluster
 description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
 manager: dougkim
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: e8df3619-f365-4070-8117-888c88db13eb
 ms.author: lizross

@@ -1,7 +1,6 @@
 ---
 title: QoS Frequently Asked Questions
 description: This topic provides answers to questions about Quality of Service (QoS) Policy in Windows Server 2016.
-ms.technology: networking
 ms.topic: article
 ms.assetid: 74c97a14-b957-4568-b48e-8963a674fdb3
 manager: brianlic

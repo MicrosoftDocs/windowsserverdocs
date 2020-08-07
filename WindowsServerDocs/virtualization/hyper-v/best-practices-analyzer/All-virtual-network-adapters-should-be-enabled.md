@@ -2,7 +2,6 @@
 title: All virtual network adapters should be enabled
 description: Online version of the text for this Best Practices Analyzer rule.
 manager: dongill
-ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48
