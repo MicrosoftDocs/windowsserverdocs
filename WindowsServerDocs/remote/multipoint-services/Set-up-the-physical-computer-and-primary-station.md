@@ -15,7 +15,7 @@ A *station* is an endpoint by which MultiPoint Services is accessed. The *primar
 
 The primary station must be a direct-video-connected station. The following procedure describes how to connect the needed hardware to your MultiPoint Services computer.
 
-For more information about stations, see [MultiPoint Stations](multipoint-services-stations.md). For help with making hardware selections, see [Selecting Hardware for Your MultiPoint Services System](Selecting-Hardware-for-Your-MultiPoint-services-System.md). For information about connecting other stations types to MultiPoint Services, see [Attach additional stations to your MultiPoint Services computer](Attach-additional-stations-to-your-MultiPoint-services-computer.md).
+For more information about stations, see [MultiPoint Stations](multipoint-services-stations.md). For help with making hardware selections, see [Selecting Hardware for Your MultiPoint Services System](./select-hardware-mps.md). For information about connecting other stations types to MultiPoint Services, see [Attach additional stations to your MultiPoint Services computer](./multipoint-attach-additional-stations.md).
 
 > [!NOTE]
 > To create a video-connected station, you must use a Latin keyboard (such as an English- or Spanish-language keyboard).

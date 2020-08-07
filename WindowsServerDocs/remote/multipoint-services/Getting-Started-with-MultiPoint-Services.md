@@ -85,7 +85,7 @@ For more information about how to save and manage private and public content, se
 
 ## See Also
 [Managing Your MultiPoint Server System](managing-your-multipoint-services-system.md)
-[Important Information about Software License Compliance](Important-Information-about-Software-License-Compliance.md)
+[Important Information about Software License Compliance](./multipoint-software-license-compliance.md)
 [Manage System Tasks Using MultiPoint Manager](Manage-System-Tasks-Using-MultiPoint-Manager.md)
 [Manage User Files](Manage-User-Files.md)
 [Manage User Desktops](manage-user-desktops-using-multipoint-dashboard.md)
@@ -98,4 +98,3 @@ For more information about how to save and manage private and public content, se
 [Manage User Desktops Using MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)
 [Manage MultiPoint Systems Using MultiPoint Dashboard](Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md)
 [Troubleshooting](Troubleshooting.md)
-

@@ -26,4 +26,4 @@ Use the following information to learn about the tasks that you can perform in M
 
 ## Additional References
 
-- [MultiPoint Services](https://docs.microsoft.com/windows-server/remote/multipoint-services/introducing-multipoint-services)
+- [MultiPoint Services](./introducing-multipoint-services.md)

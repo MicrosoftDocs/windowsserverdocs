@@ -23,9 +23,9 @@ This document addresses the following factors to consider when you are planning 
 
 -   What type of desktops to use with your MultiPoint Services system: Will you need sessions, virtual machines, or Windows PCs?
 
--   [Selecting Hardware for Your MultiPoint Services System](Selecting-Hardware-for-Your-MultiPoint-services-System.md): What hardware decisions should you make?
+-   [Selecting Hardware for Your MultiPoint Services System](./select-hardware-mps.md): What hardware decisions should you make?
 
--   [Hardware Requirements and Performance Recommendations](Hardware-Requirements-and-Performance-Recommendations.md): What hardware is required for MultiPoint Services?
+-   [Hardware Requirements and Performance Recommendations](./hardware-and-performance-recommendations.md): What hardware is required for MultiPoint Services?
 
 -   [MultiPoint Services Site Planning](MultiPoint-services-Site-Planning.md): Where will the computers that are running MultiPoint Services and their stations be located, and how will they be configured?
 

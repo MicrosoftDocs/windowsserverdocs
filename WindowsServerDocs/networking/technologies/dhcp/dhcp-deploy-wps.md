@@ -227,7 +227,7 @@ This deployment requires one physical server, one virtual switch, two virtual se
 On your physical server, in Hyper-V Manager, create the following items.
 
 1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs will receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
-1. One VM running Windows Server 2016 configured as a domain controller with Active Directory Domain Services that is connected to the Internal virtual switch you created. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01).
+1. One VM running Windows Server 2016 configured as a domain controller with Active Directory Domain Services that is connected to the Internal virtual switch you created. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](../../core-network-guide/core-network-guide.md#BKMK_deployADDNS01).
 1. One VM running Windows Server 2016 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
 1. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
@@ -250,7 +250,7 @@ To deploy DHCP in a test lab with physical servers, you need the following resou
 This deployment requires one hub or switch, two physical servers and one physical client:
 
 1. One Ethernet hub or switch to which you can connect the physical computers with Ethernet cables
-2. One physical computer running Windows Server 2016 configured as a domain controller with Active Directory Domain Services. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01).
+2. One physical computer running Windows Server 2016 configured as a domain controller with Active Directory Domain Services. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](../../core-network-guide/core-network-guide.md#BKMK_deployADDNS01).
 3. One physical computer running Windows Server 2016 that you will configure as a DHCP server by using this guide.
 4. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
@@ -287,7 +287,7 @@ For example, before you run the commands, you should replace example values in t
 
 You can install the DHCP server role on a physical computer or on a virtual machine \(VM\) that is installed on a Hyper\-V host. If you are installing DHCP on a VM and you want the DHCP server to provide IP address assignments to computers on the physical network to which the Hyper-V host is connected, you must connect the VM virtual network adapter to a Hyper-V Virtual Switch that is **External**.
 
-For more information, see the section **Create a Virtual Switch with Hyper-V Manager** in the topic [Create a virtual network](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/connect-to-network).
+For more information, see the section **Create a Virtual Switch with Hyper-V Manager** in the topic [Create a virtual network](/virtualization/hyper-v-on-windows/quick-start/connect-to-network).
 
 ### Run Windows PowerShell as an Administrator
 
@@ -314,8 +314,8 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 10.0.0.2
 
 For more information about these commands, see the following topics.
 
-- [New-NetIPAddress](https://docs.microsoft.com/powershell/module/nettcpip/New-NetIPAddress)
-- [Set-DnsClientServerAddress](https://docs.microsoft.com/powershell/module/dnsclient/Set-DnsClientServerAddress)
+- [New-NetIPAddress](/powershell/module/nettcpip/New-NetIPAddress)
+- [Set-DnsClientServerAddress](/powershell/module/dnsclient/Set-DnsClientServerAddress)
 
 **Rename the computer**
 
@@ -328,8 +328,8 @@ Restart-Computer
 
 For more information about these commands, see the following topics.
 
-- [Rename-Computer](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/rename-computer)
-- [Restart-Computer](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-computer)
+- [Rename-Computer](/powershell/module/microsoft.powershell.management/rename-computer)
+- [Restart-Computer](/powershell/module/microsoft.powershell.management/restart-computer)
 
 ### Join the computer to the domain \(Optional\)
 
@@ -347,7 +347,7 @@ Restart-Computer
 
 For more information about the Add-Computer command, see the following topic.
 
-- [Add-Computer](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1)
+- [Add-Computer](/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1)
 
 ### Install DHCP
 
@@ -359,7 +359,7 @@ Install-WindowsFeature DHCP -IncludeManagementTools
 
 For more information about this command, see the following topic.
 
-- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature)
+- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)
 
 ### Create DHCP security groups
 
@@ -380,7 +380,7 @@ Restart-Service dhcpserver
 For more information about these commands, see the following topics.
 
 - [Network Shell (Netsh)](../netsh/netsh.md)
-- [Restart-Service](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-service)
+- [Restart-Service](/powershell/module/microsoft.powershell.management/restart-service)
 
 ### Authorize the DHCP server in Active Directory \(Optional\)
 
@@ -414,8 +414,8 @@ IPAddress	DnsName
 
 For more information about these commands, see the following topics.
 
-- [Add-DhcpServerInDC](https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverindc)
-- [Get-DhcpServerInDC](https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverindc)
+- [Add-DhcpServerInDC](/powershell/module/dhcpserver/add-dhcpserverindc)
+- [Get-DhcpServerInDC](/powershell/module/dhcpserver/get-dhcpserverindc)
 
 ### Notify Server Manager that post\-install DHCP configuration is complete \(Optional\)
 
@@ -429,7 +429,7 @@ Set-ItemProperty –Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerM
 
 For more information about this command, see the following topic.
 
-- [Set-ItemProperty](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-itemproperty)
+- [Set-ItemProperty](/powershell/module/microsoft.powershell.management/set-itemproperty)
 
 ### Set server level DNS dynamic update configuration settings \(Optional\)
 
@@ -448,8 +448,8 @@ Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.co
 
 For more information about these commands, see the following topics.
 
-- [Set-DhcpServerv4DnsSetting](https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
-- [Set-DhcpServerDnsCredential](https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverdnscredential)
+- [Set-DhcpServerv4DnsSetting](/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
+- [Set-DhcpServerDnsCredential](/powershell/module/dhcpserver/set-dhcpserverdnscredential)
 
 ### Configure the Corpnet Scope
 
@@ -464,9 +464,9 @@ Set-DhcpServerv4OptionValue -DnsDomain corp.contoso.com -DnsServer 10.0.0.2
 
 For more information about these commands, see the following topics.
 
-- [Add-DhcpServerv4Scope](https://docs.microsoft.com/powershell/module/dhcpserver/Add-DhcpServerv4Scope)
-- [Add-DhcpServerv4ExclusionRange](https://docs.microsoft.com/powershell/module/dhcpserver/Add-DhcpServerv4ExclusionRange)
-- [Set-DhcpServerv4OptionValue](https://docs.microsoft.com/powershell/module/dhcpserver/Set-DhcpServerv4OptionValue)
+- [Add-DhcpServerv4Scope](/powershell/module/dhcpserver/Add-DhcpServerv4Scope)
+- [Add-DhcpServerv4ExclusionRange](/powershell/module/dhcpserver/Add-DhcpServerv4ExclusionRange)
+- [Set-DhcpServerv4OptionValue](/powershell/module/dhcpserver/Set-DhcpServerv4OptionValue)
 
 ### Configure the Corpnet2 Scope \(Optional\)
 
@@ -491,7 +491,7 @@ If the client does not receive an IP address from your DHCP server, perform the 
 
 1. Ensure that the Ethernet cable is plugged into both the computer and the Ethernet switch, hub,  or router.
 2. If you plugged the client computer into a network segment that is separated from the DHCP server by a router, ensure that the router is configured to forward DHCP messages.
-3. Ensure that the DHCP server is authorized in Active Directory by running the following command to retrieve the list of authorized DHCP servers from Active Directory. [Get-DhcpServerInDC](https://docs.microsoft.com/powershell/module/dhcpserver/Get-DhcpServerInDC).
+3. Ensure that the DHCP server is authorized in Active Directory by running the following command to retrieve the list of authorized DHCP servers from Active Directory. [Get-DhcpServerInDC](/powershell/module/dhcpserver/get-dhcpserverindc).
 4. Ensure that your scopes are activated by opening the DHCP console \(Server Manager, **Tools**, **DHCP**\), expanding the server tree to review scopes, then right\-clicking each scope. If the resulting menu includes the selection **Activate**, click **Activate**. \(If the scope is already activated, the menu selection reads **Deactivate**.\)
 
 ## <a name="bkmk_dhcpwps"></a>Windows PowerShell Commands for DHCP
@@ -501,14 +501,14 @@ The following reference provides command descriptions and syntax for all DHCP Se
 > [!NOTE]
 > You can not use Windows Server 2016 commands in Windows Server 2012 R2.
 
-- [DhcpServer Module](https://docs.microsoft.com/powershell/module/dhcpserver/)
+- [DhcpServer Module](/powershell/module/dhcpserver/)
 
 The following reference provides command descriptions and syntax for all DHCP Server Windows PowerShell commands for Windows Server 2012 R2. The topic lists commands in alphabetical order based on the verb at the beginning of the commands, such as **Get** or **Set**.
 
 > [!NOTE]
 > You can use Windows Server 2012 R2 commands in Windows Server 2016.
 
-- [DHCP Server Cmdlets in Windows PowerShell](https://docs.microsoft.com/windows-server/networking/technologies/dhcp/dhcp-deploy-wps)
+- [DHCP Server Cmdlets in Windows PowerShell]()
 
 ## <a name="bkmk_list"></a>List of Windows PowerShell Commands in this guide
 

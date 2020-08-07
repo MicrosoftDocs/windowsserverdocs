@@ -14,4 +14,4 @@ Before you start using your MultiPoint Services system, it's a good idea to do s
 Use the following information:
 
 [Configure Disk Protection](Configure-Disk-Protection-in-MultiPoint-services.md)
-[Install Server Backup on your MultiPoint Services computer](Install-Server-Backup-on-your-MultiPoint-services-computer.md)
+[Install Server Backup on your MultiPoint Services computer](./install-server-backup-on-multipoint.md)

@@ -185,7 +185,7 @@ You can enable or disable a specific Windows optional feature as in this example
 Enable-WindowsOptionalFeature -Online -FeatureName "DirectPlay"
 ```
 
-For more about this, see the [Windows a PowerShell forum](https://docs.microsoft.com/answers/topics/windows-server-powershell.ht).
+For more about this, see the [Windows a PowerShell forum](/answers/topics/windows-server-powershell.ht).
 
 #### Enable or disable Windows features by using DISM
 

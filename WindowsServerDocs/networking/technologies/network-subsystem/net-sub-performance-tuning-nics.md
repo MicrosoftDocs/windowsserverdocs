@@ -76,7 +76,7 @@ Many network adapters provide options to optimize operating system-induced laten
 
 Following are some performance tuning suggestions for microsecond-sensitive networks.
 
-- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](https://docs.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options).
+- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
 - Set the operating system power management profile to **High Performance System**.
    > [!NOTE]
@@ -216,8 +216,8 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 
 For more information about these cmdlets, see the following articles:
 
-- [Get-NetTCPSetting](https://docs.microsoft.com/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
-- [Set-NetTCPSetting](https://docs.microsoft.com/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
+- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
+- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
 
 #### Autotuning levels
 
@@ -373,6 +373,6 @@ All of these settings were located in the following registry subkey:
 Windows Vista and Windows Server 2008 introduced the Windows Filtering Platform (WFP). WFP provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
 
 > [!NOTE]
-> A poorly-written WFP filter can significantly decrease a server's networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://docs.microsoft.com/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp) in the Windows Dev Center.
+> A poorly-written WFP filter can significantly decrease a server's networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp) in the Windows Dev Center.
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

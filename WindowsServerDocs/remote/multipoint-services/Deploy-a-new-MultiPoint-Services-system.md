@@ -17,7 +17,7 @@ The topics in this section explain how to set up your MultiPoint Services System
 ## In this section
 For the initial installation, we recommend that you perform the tasks in the order in which they are presented.
 
-1.  [Collect hardware and device drivers needed for the installation](Collect-hardware-and-device-drivers-needed-for-the-installation.md)
+1.  [Collect hardware and device drivers needed for the installation](./multipoint-hardware-device-drivers.md)
 
 2.  [Set up the physical computer and primary station](Set-up-the-physical-computer-and-primary-station.md)
 
@@ -25,14 +25,14 @@ For the initial installation, we recommend that you perform the tasks in the ord
 
 4.  [Update and install device drivers if needed](Update-and-install-device-drivers-if-needed.md)
 
-5.  [Set the date, time, and time zone](Set-the-date--time--and-time-zone.md)
+5.  [Set the date, time, and time zone](./set-the-date-time.md)
 
-6.  [Join the MultiPoint Services system to a domain - optional](Join-the-MultiPoint-services-computer-to-a-domain--optional-.md)
+6.  [Join the MultiPoint Services system to a domain - optional](./join-multipoint-services-to-a-domain.md)
 
 7.  [Install updates](Install-updates.md)
 
-8.  [Attach additional stations to your MultiPoint Services computer](Attach-additional-stations-to-your-MultiPoint-services-computer.md)
+8.  [Attach additional stations to your MultiPoint Services computer](./multipoint-attach-additional-stations.md)
 
-9. [Activate Windows Server 2016 and add Remote Desktop Services CALs](manage-client-access-licenses-with-multipoint-services.md)
+9. [Activate Windows Server 2016 and add Remote Desktop Services CALs](./manage-client-access-licenses.md)
 
-10. [Install software on your MultiPoint Services system](Install-software-on-your-MultiPoint-Services-system.md)
+10. [Install software on your MultiPoint Services system](./install-software-on-multipoint.md)

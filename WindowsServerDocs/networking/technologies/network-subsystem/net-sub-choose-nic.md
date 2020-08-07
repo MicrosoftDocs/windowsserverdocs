@@ -17,7 +17,7 @@ You can use this topic to learn some of the features of network adapters that mi
 Network-intensive applications require high-performance network adapters. This section explores some considerations for choosing network adapters, as well as how to configure different network adapter settings to achieve the best network performance.
 
 > [!TIP]
->  You can configure network adapter settings by using Windows PowerShell. For more information, see [Network Adapter Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/netadapter).
+>  You can configure network adapter settings by using Windows PowerShell. For more information, see [Network Adapter Cmdlets in Windows PowerShell](/powershell/module/netadapter).
 
 ##  <a name="bkmk_offload"></a> Offload Capabilities
 
@@ -58,13 +58,13 @@ The following cmdlets allow you to see and modify RSS parameters per network ada
 >[!NOTE]
 >For a detailed command reference for each cmdlet, including syntax and parameters, you can click the following links. In addition, you can pass the cmdlet name to **Get-Help** at the Windows PowerShell prompt for details on each command.
 
-- [Disable-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Disable-NetAdapterRss). This command disables RSS on the network adapter that you specify.
+- [Disable-NetAdapterRss](/powershell/module/netadapter/Disable-NetAdapterRss). This command disables RSS on the network adapter that you specify.
 
-- [Enable-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterRss). This command enables RSS on the network adapter that you specify.
+- [Enable-NetAdapterRss](/powershell/module/netadapter/Enable-NetAdapterRss). This command enables RSS on the network adapter that you specify.
 
-- [Get-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Get-NetAdapterRss). This command retrieves RSS properties of the network adapter that you specify.
+- [Get-NetAdapterRss](/powershell/module/netadapter/Get-NetAdapterRss). This command retrieves RSS properties of the network adapter that you specify.
 
-- [Set-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterRss). This command sets the RSS properties on the network adapter that you specify.
+- [Set-NetAdapterRss](/powershell/module/netadapter/Set-NetAdapterRss). This command sets the RSS properties on the network adapter that you specify.
 
 #### RSS profiles
 
@@ -205,28 +205,28 @@ A few network adapters actively manage their resources to achieve optimum perfor
 
 Configuring network adapter resources is simplified by the use of the following Windows PowerShell cmdlets.
 
-- [Get-NetAdapterAdvancedProperty](https://docs.microsoft.com/powershell/module/netadapter/Get-NetAdapterAdvancedProperty)
+- [Get-NetAdapterAdvancedProperty](/powershell/module/netadapter/Get-NetAdapterAdvancedProperty)
 
-- [Set-NetAdapterAdvancedProperty](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterAdvancedProperty)
+- [Set-NetAdapterAdvancedProperty](/powershell/module/netadapter/Set-NetAdapterAdvancedProperty)
 
-- [Enable-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapte)
+- [Enable-NetAdapter](/powershell/module/netadapter/Enable-NetAdapte)
 
-- [Enable-NetAdapterBinding](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterBinding)
+- [Enable-NetAdapterBinding](/powershell/module/netadapter/Enable-NetAdapterBinding)
 
-- [Enable-NetAdapterChecksumOffload](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
+- [Enable-NetAdapterChecksumOffload](/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
 
-- [Enable-NetAdapterIPSecOffload](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
+- [Enable-NetAdapterIPSecOffload](/powershell/module/netadapter/Enable-NetAdapterChecksumOffload)
 
-- [Enable-NetAdapterLso](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterLso)
+- [Enable-NetAdapterLso](/powershell/module/netadapter/Enable-NetAdapterLso)
 
-- [Enable-NetAdapterPowerManagement](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterPowerManagement)
+- [Enable-NetAdapterPowerManagement](/powershell/module/netadapter/Enable-NetAdapterPowerManagement)
 
-- [Enable-NetAdapterQos](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterQos)
+- [Enable-NetAdapterQos](/powershell/module/netadapter/Enable-NetAdapterQos)
 
-- [Enable-NetAdapterRDMA](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterRDMA)
+- [Enable-NetAdapterRDMA](/powershell/module/netadapter/Enable-NetAdapterRDMA)
 
-- [Enable-NetAdapterSriov](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterSriov)
+- [Enable-NetAdapterSriov](/powershell/module/netadapter/Enable-NetAdapterSriov)
 
-For more information, see [Network Adapter Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/netadapter).
+For more information, see [Network Adapter Cmdlets in Windows PowerShell](/powershell/module/netadapter).
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

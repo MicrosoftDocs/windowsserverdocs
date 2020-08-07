@@ -18,5 +18,5 @@ IP Address Management (IPAM) is an integrated suite of tools to enable end-to-en
 >
 > - [What's New in IPAM](../../technologies/ipam/What-s-New-in-IPAM.md)
 > - [Manage IPAM](../../technologies/ipam/Manage-IPAM.md)
-> - [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/?view=win10-ps)
+> - [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/?view=win10-ps)
 > - Video: [Windows Server 2016: DNS management in IPAM](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)

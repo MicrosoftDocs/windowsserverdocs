@@ -12,7 +12,7 @@ ms.author: evas
 If you will access your MultiPoint Services computer over an Active Directory domain, your next step is to add the computer to the domain.
 
 > [!IMPORTANT]
-> You must verify your time zone before you join the computer to a domain. For instructions, see [Set the date, time, and time zone](Set-the-date--time--and-time-zone.md).
+> You must verify your time zone before you join the computer to a domain. For instructions, see [Set the date, time, and time zone](./set-the-date-time.md).
 
 1.  From the **Start** screen, open **Control Panel**. Click **System and Security**, and then click **System**.
 

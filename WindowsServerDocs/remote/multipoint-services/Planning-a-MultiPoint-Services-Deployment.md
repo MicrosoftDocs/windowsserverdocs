@@ -16,8 +16,8 @@ Use the following information to plan your deployment:
 -   [Introducing MultiPoint Services](Introducing-MultiPoint-services.md)
 -   [Common Usage Scenarios](Common-MultiPoint-services-Usage-Scenarios.md)
 -   [MultiPoint Stations](MultiPoint-services-Stations.md)
--   [Selecting Hardware for Your MultiPoint Services System](Selecting-Hardware-for-Your-MultiPoint-services-System.md)
--   [Hardware Requirements and Performance Recommendations](Hardware-Requirements-and-Performance-Recommendations.md)
+-   [Selecting Hardware for Your MultiPoint Services System](./select-hardware-mps.md)
+-   [Hardware Requirements and Performance Recommendations](./hardware-and-performance-recommendations.md)
 -   [MultiPoint Services Site Planning](MultiPoint-services-Site-Planning.md)
 -   [Network Considerations and User Accounts](Network-Considerations-and-User-Accounts.md)
 -   [Storing Files with MultiPoint Services](Storing-Files-with-MultiPoint-services.md)
@@ -26,4 +26,4 @@ Use the following information to plan your deployment:
 -   [Application Considerations](Application-Considerations.md)
 -   [Predeployment Checklist](Predeployment-Checklist.md)
 
-You can also visit the [MultiPoint Services](https://docs.microsoft.com/windows-server/remote/multipoint-services/introducing-multipoint-services).
+You can also visit the [MultiPoint Services](./introducing-multipoint-services.md).

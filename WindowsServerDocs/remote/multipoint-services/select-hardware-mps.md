@@ -46,7 +46,7 @@ Use the following information to make hardware decisions:
 
 A MultiPoint Services system is a multiple\-user environment, with all users connected to a single host computer. This increases the CPU usage because all users share the same computer. Some tasks, such as multimedia programs \(for example, media players or video\-editing software\), have larger processing demands. Therefore, make sure to select a CPU that can handle the processing requirements for the number of users and types of user scenarios that it will need to support.
 
-MultiPoint Services requires an x64\-based CPU, and must meet the system requirements for the computer as described in [Hardware Requirements and Performance Recommendations](Hardware-Requirements-and-Performance-Recommendations.md).
+MultiPoint Services requires an x64\-based CPU, and must meet the system requirements for the computer as described in [Hardware Requirements and Performance Recommendations](./hardware-and-performance-recommendations.md).
 
 The following types of processors have been tested to be used on a MultiPoint Services system with high\-demand processing programs, such as multimedia programs:
 

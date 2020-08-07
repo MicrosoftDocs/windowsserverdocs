@@ -81,7 +81,7 @@ Following is the sample VPN profileXML.
 </VPNProfile>
 ```
 
-Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://docs.microsoft.com/answers/topics/windows-server-infrastructure.html).
+Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](/answers/topics/windows-server-infrastructure.html).
 
 ```
  <!-- inside/outside detection -->
