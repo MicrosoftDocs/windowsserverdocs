@@ -96,19 +96,19 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 The following example shows which physical disks are available in the primordial pool.
 
 ```PowerShell
-Get-StoragePool -IsPrimordial $true | Get-PhysicalDisk | Where-Object CanPool -eq $True
+Get-StoragePool -IsPrimordial $true | Get-PhysicalDisk -CanPool $True
 ```
 
 The following example creates a new storage pool named *StoragePool1* that uses all available disks.
 
 ```PowerShell
-New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName “Storage Spaces*” –PhysicalDisks (Get-PhysicalDisk –CanPool $True)
+New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk –CanPool $True)
 ```
 
 The following example creates a new storage pool, *StoragePool1*, that uses four of the available disks.
 
 ```PowerShell
-New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName “Storage Spaces*” –PhysicalDisks (Get-PhysicalDisk PhysicalDisk1, PhysicalDisk2, PhysicalDisk3, PhysicalDisk4)
+New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk PhysicalDisk1, PhysicalDisk2, PhysicalDisk3, PhysicalDisk4)
 ```
 
 The following example sequence of cmdlets shows how to add an available physical disk *PhysicalDisk5* as a hot spare to the storage pool *StoragePool1*.
