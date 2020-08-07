@@ -87,7 +87,7 @@ Configure network settings on virtual machines with the following settings:
 
 ### Configure DNS
 
-Use the Server Manager and the DNS management console or Windows PowerShell to install the following server roles and create a static DNS zone on each of two servers.
+Use Server Manager and the DNS management console or Windows PowerShell to install the following server roles and create a static DNS zone on each of two servers.
 
 1.	DC001, DC002
   - Install Active Directory Domain Services and promote to domain controller (optional)
@@ -226,7 +226,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 7.	Enable the Ethernet adapter on DC001 again and confirm that the BGP session is restored and clients receive DNS responses from DC001 again.
 
 > [!NOTE]
-> A specific client will tend to use the same back-end DNS server if it is available. This creates a consistent path for the client. For more information, see section 4.4.3 of RFC4786: [Equal-Cost Paths](https://tools.ietf.org/html/rfc4786#page-10).
+> If a load balancer is not used, an individual client will use the same back-end DNS server if it is available. This creates a consistent BGP path for the client. For more information, see section 4.4.3 of RFC4786: [Equal-Cost Paths](https://tools.ietf.org/html/rfc4786#page-10).
 
 ## Frequently asked questions
 
