@@ -50,7 +50,7 @@ This guide also provides instructions on how to deploy three types of content se
 
 -   **File server-based content servers**. These content servers must be running Windows Server 2016,  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2  versions that support BranchCache and upon which the File Services server role is installed. In addition, the **BranchCache for network files** role service of the File Services server role must be installed and configured. These content servers send content to BranchCache client computers using the Server Message Block (SMB) protocol.
 
-For more information, see [Operating system versions for BranchCache](../branchcache.md#a-namebkmkosaoperating-system-versions-for-branchcache).
+For more information, see [Operating system versions for BranchCache](../branchcache.md#bkmk_os).
 
 ### BranchCache deployment requirements
 

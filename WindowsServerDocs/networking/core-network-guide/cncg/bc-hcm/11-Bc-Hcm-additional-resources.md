@@ -13,7 +13,7 @@ author: eross-msft
 
 For more information about the technologies that are discussed in this guide, see the following resources:
 
-- [BranchCache](../../../branchcache/branchcache.md#a-namebkmkwhatawhat-is-branchcache) in Windows Server 2016
+- [BranchCache](../../../branchcache/branchcache.md#bkmk_what) in Windows Server 2016
 
 - [Install and Configure Content Servers](../../../branchcache/deploy/install-and-configure-content-servers.md)
 

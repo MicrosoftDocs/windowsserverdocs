@@ -63,7 +63,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * [Check the Windows version](#check-the-windows-version)
 * Did you add an inbound port rule for HTTPS?
-* [Learn more about installing Windows Admin Center in an Azure VM](../azure/azure-integration.md#use-a-windows-admin-center-gateway-deployed-in-azure)
+* [Learn more about installing Windows Admin Center in an Azure VM](../azure/azure-integration.md)
 
 ### Check the Windows version
 
