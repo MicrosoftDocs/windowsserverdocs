@@ -1,6 +1,5 @@
 ---
-title: Troubleshoot Shielded VMs 
-ms.prod: windows-server
+title: Troubleshoot Shielded VMs
 ms.topic: article
 manager: dongill
 author: rpsqrd

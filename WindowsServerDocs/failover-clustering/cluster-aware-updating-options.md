@@ -3,7 +3,6 @@ ms.assetid: 2f4b6641-0ec2-4b1c-85fb-a1f1d16685c8
 title: Cluster-Aware Updating advanced options and updating run profiles
 description: How to configure advanced options and updating run profiles for Cluster-Aware Updating (CAU)
 ms.topic: article
-ms.prod: windows-server
 manager: lizross
 ms.author: jgerend
 author: JasonGerend

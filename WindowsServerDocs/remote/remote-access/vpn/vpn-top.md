@@ -1,14 +1,13 @@
 ---
 title: Virtual Private Networking (VPN)
 description: You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
-ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: cd4908f0-0d6f-4c02-8f98-4dc88c3dcb65
 ms.date: 11/05/2018
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ---
 
 # Virtual Private Networking (VPN)
@@ -33,7 +32,7 @@ When you install the **DirectAccess and VPN (RAS)** role service, you are deploy
 >You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking (SDN), or as a DirectAccess server. For more information, see [RAS Gateway](../ras-gateway/ras-gateway.md), [Software Defined Networking (SDN)](../../../networking/sdn/software-defined-networking.md), and [DirectAccess](../directaccess/directaccess.md).
 
 ## Related topics
-- [Always On VPN features and functionality](vpn-map-da.md): In this topic, you learn about the features and functionality of Always On VPN. 
+- [Always On VPN features and functionality](vpn-map-da.md): In this topic, you learn about the features and functionality of Always On VPN.
 
 - [Configure VPN Device Tunnels in Windows 10](vpn-device-tunnel-config.md): Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels: _device tunnel_ and _user tunnel_. Device tunnel is used for pre-logon connectivity scenarios and device management purposes. User tunnel allows users to access organization resources through VPN servers.
 

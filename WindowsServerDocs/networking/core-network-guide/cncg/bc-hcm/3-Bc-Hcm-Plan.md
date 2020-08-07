@@ -2,7 +2,6 @@
 title: BranchCache Hosted Cache Mode Deployment Planning
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
 manager: brianlic
-ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: article
 ms.assetid: bc44a7db-f7a5-4e95-9d95-ab8d334e885f
@@ -32,7 +31,7 @@ Before you deploy your hosted cache server, you must plan the following items:
 - [Plan prehashing and data package creation on content servers](#bkmk_prehash)
 
 ## <a name="bkmk_basic"></a>Plan basic server configuration
-  
+
 If you are planning on using an existing server in your branch office as your hosted cache server, you do not need to perform this planning step, because the computer is already named and has an IP address configuration.
 
 After you install Windows Server 2016 on your hosted cache server, you must rename the computer and assign and configure a static IP address for the local computer.
@@ -43,7 +42,7 @@ After you install Windows Server 2016 on your hosted cache server, you must rena
 ## <a name="bkmk_domain"></a>Plan domain access
 
 If you are planning on using an existing server in your branch office as your hosted cache server, you do not need to perform this planning step, unless the computer is not currently joined to the domain.
-  
+
 To log on to the domain, the computer must be a domain member computer and the user account must be created in AD DS before the logon attempt. In addition, you must join the computer to the domain with an account that has the appropriate group membership.
 
 ## <a name="bkmk_cachelocation"></a>Plan the location and size of the hosted cache
@@ -60,7 +59,7 @@ Plan the folder location and sharing permissions for the shared folder. In addit
 
 ## <a name="bkmk_prehash"></a>Plan prehashing and data package creation on content servers
 
-Before you prehash content on your content servers, you must identify the folders and files that contain content that you want to add to the data package. 
+Before you prehash content on your content servers, you must identify the folders and files that contain content that you want to add to the data package.
 
 In addition, you must plan on the local folder location where you can store the data packages before copying them to the hosted cache server.
 

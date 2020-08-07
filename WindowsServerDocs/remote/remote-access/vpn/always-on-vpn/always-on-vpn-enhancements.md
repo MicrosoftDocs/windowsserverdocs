@@ -1,13 +1,12 @@
 ---
 title: Always On VPN enhancements
-description: Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision. 
-ms.prod: windows-server
+description: Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 ms.technology: networking-ras
 ms.topic: article
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.date: 11/05/2018
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ---
 
 # Always On VPN enhancements
@@ -23,7 +22,7 @@ Always On VPN has many benefits over the Windows VPN solutions of the past. The 
 
 - **Security:** Always On VPN has new, advanced security capabilities to restrict the type of traffic, which applications can use the VPN connection, and which authentication methods you can use to initiate the connection. When the connection is active most of the time, it is especially important to secure the connection. For more details, see [VPN authentication options](/windows/security/identity-protection/vpn/vpn-authentication).
 
-- **VPN Connectivity:** Always On VPN, with or without Device Tunnel provides auto-trigger capability. Before Always On VPN, the ability to trigger an automatic connection through either user or device authentication was not possible.  
+- **VPN Connectivity:** Always On VPN, with or without Device Tunnel provides auto-trigger capability. Before Always On VPN, the ability to trigger an automatic connection through either user or device authentication was not possible.
 
 - **Networking control:** Always On VPN allows administrators to specify routing policies at a more granular level—even down to the individual application—which is perfect for line-of-business (LOB) apps that require special remote access.  Always On VPN is also fully compatible with both Internet Protocol version 4 (IPv4) and version 6 (IPv6). Unlike DirectAccess, there is no specific dependency on IPv6.
 
@@ -77,7 +76,7 @@ The following are some of the networking improvements in Always On VPN:
 | **Application-specific routing policies** |                            In addition to defining global VPN connection routing policies for internet and intranet traffic separation, it is possible to add routing policies to control the use of split tunnel or force tunnel configurations on a per-application basis. This option gives you more granular control over which apps are allowed to interact with which resources through the VPN tunnel.                             |
 |           **Exclusion routes**            |                 Always On VPN supports the ability to specify exclusion routes that specifically control routing behavior to define which traffic should traverse the VPN only and not go over the physical network interface.<p><p>***Notes:***<br>- Exclusion routes currently work for traffic within the same subnet as the client, for example, LinkLocal.<br>- Exclusion routes only work in a Split Tunnel setup.                  |
 
-## Configuration and compatibility 
+## Configuration and compatibility
 
 The following are some of the configuration and compatibility improvements in Always On VPN:
 

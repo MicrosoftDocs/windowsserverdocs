@@ -2,7 +2,6 @@
 title: Deploy Multiple Remote Access Servers in a Multisite Deployment
 description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2

@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 03/16/2018
 ms.topic: article
-ms.prod: windows-server
 ms.localizationpriority: medium
 ms.technology: identity-adds
 ---
@@ -22,10 +21,10 @@ ms.technology: identity-adds
 
 
 ## [What's new in Active Directory Federation Services for Windows Server 2016](ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)
-An overview of all of the new features available for AD FS in Windows Server 2016.  
+An overview of all of the new features available for AD FS in Windows Server 2016.
 
 ## [What's new in Active Directory Domain Services for Windows Server 2016](whats-new-active-directory-domain-services.md)
-Lists all the new features available for AD DS in Windows Server 2016.  
+Lists all the new features available for AD DS in Windows Server 2016.
 
 ## [Privileged Access Management for Active Directory Domain Services &#40;AD DS&#41;](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
 Privileged Access Management (PAM) for Active Directory Domain Services (AD DS) is a solution that is based on Microsoft Identity Manager (MIM) and Windows Server 2012 R2 and Windows Server 2016.
@@ -37,10 +36,10 @@ Windows 10 provides you the ability to leverage Azure Active Directory. Windows 
 Detailed documentation on all of the features available for AD DS in Windows Server 2016.
 
 ## [Active Directory Federation Services](Active-Directory-Federation-Services.md)
-Detailed documentation on all of the features available for AD FS in Windows Server 2016.  
+Detailed documentation on all of the features available for AD FS in Windows Server 2016.
 
-## Solutions and Scenario Guides  
-* [Secure access to company resources from any location on any device](/previous-versions/windows/it-pro/solutions-guidance/dn550982(v=ws.11))  
-*  [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](./ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md)  
-* [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](./ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications.md)  
+## Solutions and Scenario Guides
+* [Secure access to company resources from any location on any device](/previous-versions/windows/it-pro/solutions-guidance/dn550982(v=ws.11))
+*  [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](./ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications.md)
+* [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](./ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications.md)
 * [Manage Risk with Conditional Access Control](./ad-fs/operations/manage-risk-with-conditional-access-control.md)

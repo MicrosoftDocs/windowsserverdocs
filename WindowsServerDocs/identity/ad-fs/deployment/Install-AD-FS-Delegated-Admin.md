@@ -6,8 +6,7 @@ author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 04/01/2020
-ms.topic: article
-ms.prod: windows-server-threshold
+ms.topic: article-threshold
 
 ms.technology: identity-adfs
 ---
@@ -162,7 +161,7 @@ if ($pscmdlet.ShouldProcess("$ou", "Creating DKM container and assinging access"
     }
     else
     {
-        write-verbose "ADFS administrator account is a standard AD user"    
+        write-verbose "ADFS administrator account is a standard AD user"
         $objUser = New-Object System.Security.Principal.NTAccount($AdfsAdministratorAccount)
         $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
     }

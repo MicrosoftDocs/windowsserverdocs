@@ -1,6 +1,5 @@
 ---
 title: Install HGS in an existing bastion forest
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

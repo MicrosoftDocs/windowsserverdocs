@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Prepare your environment for Windows Admin Center

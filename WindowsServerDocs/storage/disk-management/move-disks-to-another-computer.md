@@ -2,12 +2,11 @@
 title: Move disks to another computer
 description: This article describes how to move disks to another computer
 ms.date: 10/12/2017
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.technology: storage
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 
 # Move disks to another computer
@@ -53,14 +52,14 @@ Uninstall the disks you want to move using Device Manager.
 
 ## Detect new disks
 
-1. On the new computer, open Disk Management. 
+1. On the new computer, open Disk Management.
 2. Click **Action** and then click **Rescan Disks**.
-3. Right-click any disk marked **Foreign**. 
+3. Right-click any disk marked **Foreign**.
 4. Click **Import Foreign Disks** and then follow the on-screen instructions.
 
 ## Additional considerations
 
--   When moved to another computer, basic volumes receive the next available drive letter on that computer. 
+-   When moved to another computer, basic volumes receive the next available drive letter on that computer.
 -   Dynamic volumes retain the drive letter they had on the previous computer. If a dynamic volume did not have a drive letter on the previous computer, it will not receive a drive letter when moved to another computer. If the drive letter is already used on the computer where a volume is moved, the volume receives the next available drive letter.
 
 -   If an administrator has used either the **mountvol /n** or the **diskpart automount** command to prevent new volumes from being added to the system, volumes moved from another computer are prevented from being mounted and from receiving a drive letter. To use the volume, you must manually mount the volume and assign it a drive letter using Disk Management or the **DiskPart** and **mountvol** commands.

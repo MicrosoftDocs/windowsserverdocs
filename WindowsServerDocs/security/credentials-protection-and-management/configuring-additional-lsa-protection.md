@@ -1,7 +1,6 @@
 ---
 title: Configuring Additional LSA Protection
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-credential-protection
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
@@ -38,7 +37,7 @@ For an LSA plug-in or driver to successfully load as a protected process, it mus
 #### Recommended practices
 Use the following list to thoroughly test that LSA protection is enabled before you broadly deploy the feature:
 
--   Identify all of the LSA plug-ins and drivers that are in use within your organization. 
+-   Identify all of the LSA plug-ins and drivers that are in use within your organization.
     This includes non-Microsoft drivers or plug-ins such as smart card drivers and cryptographic plug-ins, and any internally developed software that is used to enforce password filters or password change notifications.
 
 -   Ensure that all of the LSA plug-ins are digitally signed with a Microsoft certificate so that the plug-in will not fail to load.
@@ -77,7 +76,7 @@ After this, you may see these events in Event Viewer: Microsoft-Windows-Codeinte
 
 > [!IMPORTANT]
 > These operational events are not generated when a kernel debugger is attached and enabled on a system.
-> 
+>
 > If a plug-in or driver contains Shared Sections, Event 3066 is logged with Event 3065. Removing the Shared Sections should prevent both the events from occurring unless the plug-in does not meet the Microsoft signing level requirements.
 
 To enable audit mode for multiple computers in a domain, you can use the Registry Client-Side Extension for Group Policy to deploy the Lsass.exe audit-level registry value. You need to modify HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe registry key.

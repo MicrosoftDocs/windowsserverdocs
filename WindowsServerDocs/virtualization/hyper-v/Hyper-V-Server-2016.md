@@ -1,7 +1,6 @@
 ---
 title: Microsoft Hyper-V Server 2016
 
-ms.prod: windows-server
 
 
 ms.technology: compute-hyper-v

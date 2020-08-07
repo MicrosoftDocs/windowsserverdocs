@@ -1,7 +1,6 @@
 ---
 title: Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 description: Lists the versions of Linux integration services for supported CentOS and Red Hat Enterprise distributions
-ms.prod: windows-server
 ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
@@ -44,11 +43,11 @@ In this section:
 
 ## RHEL/CentOS 8.x Series
 
-|       **Feature**     |       **Windows Server version**      |       **8.1**     |       **8.0**     | 
+|       **Feature**     |       **Windows Server version**      |       **8.1**     |       **8.0**     |
 |-----------------------|---------------------------------------|-------------------|-------------------|
 |       **Availability**        |   |   |
 |       **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019, 2016, 2012 R2 | &#10004; | &#10004;
-|       Windows Server 2016 Accurate Time       | 2019, 2016 | &#10004; | &#10004; 
+|       Windows Server 2016 Accurate Time       | 2019, 2016 | &#10004; | &#10004;
 |       **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |  |
 |       Jumbo frames        | 2019, 2016, 2012 R2 | &#10004; | &#10004;|
 |       VLAN tagging and trunking       | 2019, 2016, 2012 R2 | &#10004;  | &#10004; |
@@ -79,7 +78,7 @@ In this section:
 |       Hyper-V Sockets | 2019, 2016 | &#10004;  | &#10004; |
 |       PCI Passthrough/DDA | 2019, 2016 | &#10004; | &#10004; |
 | **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** | |  |
-|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 14  | &#10004; Note 14   
+|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 14  | &#10004; Note 14
 |       Secure boot | 2019, 2016 |  &#10004; |  &#10004; |
 
 

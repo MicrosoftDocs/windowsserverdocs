@@ -6,12 +6,11 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/21/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - Certificates
-AD FS requires the following certificates in order to work correctly.  If any of these have not been setup or configured properly then issues can arise.  
+AD FS requires the following certificates in order to work correctly.  If any of these have not been setup or configured properly then issues can arise.
 
 ## Required certificates
 AD FS requires the following certificates:
@@ -61,4 +60,3 @@ The following table is a list of common errors and possible causes.
 ## Next Steps
 
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
- 

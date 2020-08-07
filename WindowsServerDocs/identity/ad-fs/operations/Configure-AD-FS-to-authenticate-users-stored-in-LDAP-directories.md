@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Configure AD FS to authenticate users stored in LDAP directories in Windows Server 2016 or later
@@ -71,16 +70,16 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
    Add-AdfsLocalClaimsProviderTrust -Name "Vendors" -Identifier "urn:vendors" -Type Ldap
 
    # Connection info
-   -LdapServerConnection $vendorDirectory 
+   -LdapServerConnection $vendorDirectory
 
    # How to locate user objects in directory
-   -UserObjectClass inetOrgPerson -UserContainer "CN=VendorsContainer,CN=VendorsPartition" -LdapAuthenticationMethod Basic 
+   -UserObjectClass inetOrgPerson -UserContainer "CN=VendorsContainer,CN=VendorsPartition" -LdapAuthenticationMethod Basic
 
    # Claims for authenticated users
-   -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName) 
+   -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName)
 
    # General claims provider properties
-   -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true 
+   -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true
 
    # Optional - supply user name suffix if you want to use Ws-Trust
    -OrganizationalAccountSuffix "vendors.contoso.com"

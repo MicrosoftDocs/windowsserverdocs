@@ -1,7 +1,6 @@
 ---
 title: Manage Transport Layer Security (TLS)
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-tls-ssl
 ms.topic: article
 author: justinha

@@ -1,6 +1,5 @@
 ---
 title: Initialize HGS using host key attestation
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

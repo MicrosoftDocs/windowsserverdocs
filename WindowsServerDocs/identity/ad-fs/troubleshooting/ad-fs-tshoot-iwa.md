@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/21/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -38,7 +37,7 @@ You can verify the SPN by looking at the properties of the AD FS service account
 ![integrated](media/ad-fs-tshoot-iwa/iwa1.png)
 
 ## Channel Binding Token
-Currently, when a client application authenticates itself to the server using Kerberos, Digest, or NTLM using HTTPS, a Transport Level Security (TLS) channel is first established and authentication takes place using this channel. 
+Currently, when a client application authenticates itself to the server using Kerberos, Digest, or NTLM using HTTPS, a Transport Level Security (TLS) channel is first established and authentication takes place using this channel.
 
 The Channel Binding Token is a property of the TLS-secured outer channel, and is used to bind the outer channel to a conversation over the client-authenticated inner channel.
 
@@ -62,9 +61,9 @@ By default, Internet explorer will be have the following way:
 
 There are 2 main things that can prevent this from happeing.
    - Enable Integrated Windows Authentication is not checked in the properties of IE.  This located under Internet Options -> Advanced -> Security.
-   
+
    ![integrated](media/ad-fs-tshoot-iwa/iwa4.png)
-   
+
    - Security zones are not configured properly
        - FQDNs are not in the intranet zone
        - AD FS URL is not in the intranet zone.

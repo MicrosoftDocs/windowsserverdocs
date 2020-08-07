@@ -2,7 +2,6 @@
 title: Troubleshoot the Windows Server Software Defined Networking Stack
 description: This Windows Server guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
 manager: grcusanz
-ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5

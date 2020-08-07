@@ -1,7 +1,6 @@
 ---
 title: Upgrade and Conversion Options for Windows Server 2016
 description: Explains all supported upgrade paths to Windows Server 2016.
-ms.prod: windows-server
 ms.date: 01/18/2017
 ms.technology: server-general
 ms.topic: article
@@ -30,13 +29,13 @@ and Migration](./installation-and-upgrade.md).
 
 - **Upgrade** means moving from your existing operating system release to a more recent release while staying on the same hardware. (This is sometimes called in-place upgrade.) For example, if your server is running Windows Server 2012, or Windows Server 2012 R2, you can upgrade it to Windows Server 2016. You can upgrade from an evaluation version of the operating system to a retail version, from an older retail version to a newer version, or, in some cases, from a volume-licensed edition of the operating system to an ordinary retail edition.
 
-> [!IMPORTANT]  
-> Upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.  
+> [!IMPORTANT]
+> Upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, **you can only perform conversion from evaluation to retail** with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
 
 ## Upgrading previous retail versions of Windows Server to Windows Server 2016
@@ -56,8 +55,8 @@ If you do not see your current version in the left column, upgrading to this rel
 
 If you see more than one edition in the right column, upgrading to **either** edition from the same starting version is supported.
 
-|If you are running this edition:|You can upgrade to these editions:|  
-|-------------------|----------|  
+|If you are running this edition:|You can upgrade to these editions:|
+|-------------------|----------|
 |Windows Server 2012 Standard|Windows Server 2016 Standard or Datacenter|
 |Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|
 |Windows Server 2012 R2 Standard|Windows Server 2016 Standard or Datacenter|
@@ -77,7 +76,7 @@ Even in supported upgrade paths from previous retail versions to Windows Server 
 
 You can convert the evaluation version of Windows Server 2016 Standard to either Windows Server 2016 Standard (retail) or Datacenter (retail). Similarly, you can convert the evaluation version of Windows Server 2016 Datacenter to the retail version.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 Before you attempt to convert from evaluation to retail, verify that your server is actually running an evaluation version. To do this, do either of the following:
@@ -100,7 +99,7 @@ If the server is running an evaluation version of Windows Server 2016 Standard o
 
 For the evaluation version of Windows Server 2016 Standard, you can also convert to the retail version of Windows Server 2016 Datacenter in one step using this same command and the appropriate product key.
 
-> [!TIP] 
+> [!TIP]
 > For more information about Dism.exe, see [DISM Command-line options](https://go.microsoft.com/fwlink/?LinkId=192466).
 
 ## Converting a current retail edition to a different current retail edition

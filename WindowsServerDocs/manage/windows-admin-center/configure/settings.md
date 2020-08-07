@@ -7,7 +7,6 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 04/12/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Windows Admin Center Settings

@@ -1,7 +1,6 @@
 ---
 title: Remote Desktop Services architecture
 description: Architecture diagrams for RDS
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 02/10/2017

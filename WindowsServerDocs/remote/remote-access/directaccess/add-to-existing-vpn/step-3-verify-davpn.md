@@ -2,7 +2,6 @@
 title: Step 3 Verify the Remote Access (VPN) Deployment
 description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
 ms.technology: networking-da
 ms.topic: article
 ms.assetid: 43ac612e-2e77-418c-8171-ebb2086b7cb6

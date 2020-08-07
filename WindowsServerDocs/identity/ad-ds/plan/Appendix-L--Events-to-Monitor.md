@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 07/30/2018
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adds
 ---
 # Appendix L: Events to Monitor

@@ -2,7 +2,6 @@
 title: What's New in DHCP
 description: This topic provides an overview of new features for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
@@ -19,7 +18,7 @@ DHCP is an Internet Engineering Task Force (IETF) standard that is designed to r
 
 The following sections provide information about new features and changes in functionality for DHCP.
 
-## New DHCP Client-side features in the Windows 10 May 2020 Update 
+## New DHCP Client-side features in the Windows 10 May 2020 Update
 
 The DHCP client in Windows 10 has been updated in the 10 May 2020 Update (also referred to as Windows 10, version 2004). When you're running a Windows client and connect to the internet via a tethered Android phone, the connection should be marked as "metered". Previously, the connections were marked as unmetered. Note that not all Android tethered phones will be detected as metered, and some other networks may also show up as metered.
 

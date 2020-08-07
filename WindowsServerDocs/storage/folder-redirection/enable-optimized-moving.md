@@ -1,11 +1,10 @@
 ---
 title: Enable optimized moves of redirected folders
 description: How to perform an optimized move of redirected folders to a new file share.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---

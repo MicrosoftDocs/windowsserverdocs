@@ -1,6 +1,5 @@
 ---
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
@@ -28,20 +27,20 @@ How you implement the Host Guardian Service and guarded Hyper-V hosts will depen
 1. TPM-trusted attestation
 
     If your goal is to help protect virtual machines from malicious admins or a compromised fabric, then you will use TPM-trusted attestation. This option works well for multi-tenant hosting scenarios as well as for high-value assets in enterprise environments, such as domain controllers or content servers like SQL or SharePoint.
-    Hypervisor-protected code integrity (HVCI) policies are measured and their validity enforced by HGS before the host is permitted to run shielded VMs. 
+    Hypervisor-protected code integrity (HVCI) policies are measured and their validity enforced by HGS before the host is permitted to run shielded VMs.
 
 2. Host key attestation
 
-    If your requirements are primarily driven by compliance that requires virtual machines be encrypted both at rest as well as in-flight, then you will use host key attestation. This option works well for general purpose datacenters where you are comfortable with Hyper-V host and fabric administrators having access to the guest operating systems of virtual machines for day-to-day maintenance and operations. 
+    If your requirements are primarily driven by compliance that requires virtual machines be encrypted both at rest as well as in-flight, then you will use host key attestation. This option works well for general purpose datacenters where you are comfortable with Hyper-V host and fabric administrators having access to the guest operating systems of virtual machines for day-to-day maintenance and operations.
 
-    In this mode, the fabric admin is solely responsible for ensuring the health of the Hyper-V hosts. 
-    Since HGS plays no part in deciding what is or is not allowed to run, malware and debuggers will function as designed. 
-    
-    However, debuggers that attempt to attach directly to a process (such as WinDbg.exe) are blocked for shielded VMs because the VM's worker process (VMWP.exe) is a protected process light (PPL). 
-    Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked. 
+    In this mode, the fabric admin is solely responsible for ensuring the health of the Hyper-V hosts.
+    Since HGS plays no part in deciding what is or is not allowed to run, malware and debuggers will function as designed.
+
+    However, debuggers that attempt to attach directly to a process (such as WinDbg.exe) are blocked for shielded VMs because the VM's worker process (VMWP.exe) is a protected process light (PPL).
+    Alternative debugging techniques, such as those used by LiveKd.exe, are not blocked.
     Unlike shielded VMs, the worker process for encryption supported VMs does not run as a PPL so traditional debuggers like WinDbg.exe will continue to function normally.
 
-    A similar attestation mode named Admin-trusted attestation (Active Directory-based) is deprecated beginning with Windows Server 2019. 
+    A similar attestation mode named Admin-trusted attestation (Active Directory-based) is deprecated beginning with Windows Server 2019.
 
 The trust level you choose will dictate the hardware requirements for your Hyper-V hosts as well as the policies that you apply on the fabric. If necessary, you can deploy your guarded fabric using existing hardware and admin-trusted attestation and then convert it to TPM-trusted attestation when the hardware has been upgraded and you need to strengthen fabric security.
 
@@ -51,7 +50,7 @@ If you have an existing fabric (Hyper-V or otherwise), it is very likely that yo
 
 ## HGS admin planning for the Host Guardian Service
 
-Deploy the Host Guardian Service (HGS) in a highly secure environment, whether that be on a dedicated physical server, a shielded VM, a VM on an isolated Hyper-V host (separated from the fabric it's protecting), or one logically separated by using a different Azure subscription.   
+Deploy the Host Guardian Service (HGS) in a highly secure environment, whether that be on a dedicated physical server, a shielded VM, a VM on an isolated Hyper-V host (separated from the fabric it's protecting), or one logically separated by using a different Azure subscription.
 
 | Area | Details |
 |------|---------|

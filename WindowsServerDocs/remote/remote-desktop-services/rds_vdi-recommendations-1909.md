@@ -1,7 +1,6 @@
 ---
 title: Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role
 description: Recommended settings and configuration to minimize overhead for Windows 10, version 1909 desktops used as VDI images.
-ms.prod: windows-server
 ms.reviewer: robsmi
 ms.technology: remote-desktop-services
 ms.author: helohr

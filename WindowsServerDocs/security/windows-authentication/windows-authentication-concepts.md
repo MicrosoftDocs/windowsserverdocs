@@ -1,7 +1,6 @@
 ---
 title: Windows Authentication Concepts
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: 29d1db15-cae0-4e3d-9d8e-241ac206bb8b

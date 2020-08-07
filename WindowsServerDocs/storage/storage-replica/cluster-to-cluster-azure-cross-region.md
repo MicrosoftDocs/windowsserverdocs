@@ -5,7 +5,6 @@ author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
 ms.topic: article
-ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
 ---
@@ -59,11 +58,11 @@ Watch the video below for a complete walk-through of the process.
    Connect all the nodes to the domain and provide administrator privileges to the previously created user.
 
    Change the DNS Server of the virtual network to domain controller private IP address.
-   - In the example, the domain controller **az2azDC** has private IP address (10.3.0.8). In the Virtual Network (**az2az-Vnet** and **azcross-VNET**) change DNS Server 10.3.0.8. 
+   - In the example, the domain controller **az2azDC** has private IP address (10.3.0.8). In the Virtual Network (**az2az-Vnet** and **azcross-VNET**) change DNS Server 10.3.0.8.
 
      In the example, connect all the nodes to "contoso.com" and provide administrator privileges to "contosoadmin".
-   - Login as contosoadmin from all the nodes. 
- 
+   - Login as contosoadmin from all the nodes.
+
 6. Create the clusters (**SRAZC1**, **SRAZCross**).
 
    Below is the PowerShell commands for the example
@@ -91,11 +90,11 @@ Watch the video below for a complete walk-through of the process.
       - Create Health Probe: port 59999
       - Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
-   Provide the Cluster IP address as static private IP address for the load balancer. 
+   Provide the Cluster IP address as static private IP address for the load balancer.
       - azlbazcross => Frontend IP: 10.0.0.10 (Pick up an unused IP address from the Virtual network (**azcross-VNET**) subnet)
       - Create Backend Pool for each load balancer. Add the associated cluster nodes.
       - Create Health Probe: port 59999
-      - Create Load Balance Rule: Allow HA ports, with enabled Floating IP. 
+      - Create Load Balance Rule: Allow HA ports, with enabled Floating IP.
 
 9. Create [Virtual network gateway](https://ms.portal.azure.com/#create/Microsoft.VirtualNetworkGateway-ARM) for Vnet-to-Vnet connectivity.
 
@@ -107,20 +106,20 @@ Watch the video below for a complete walk-through of the process.
 
    - Create a Vnet-to-Vnet connection from first Virtual network gateway to second Virtual network gateway. Provide a shared key
 
-   - Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway. Provide the same shared key as provided in the step above. 
+   - Create a Vnet-to-Vnet connection from second Virtual network gateway to first Virtual network gateway. Provide the same shared key as provided in the step above.
 
 10. On each cluster node, open port 59999 (Health Probe).
 
     Run the following command on each node:
 
     ```powershell
-      netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any 
+      netsh advfirewall firewall add rule name=PROBEPORT dir=in protocol=tcp action=allow localport=59999 remoteip=any profile=any
     ```
 
 11. Instruct the cluster to listen for Health Probe messages on Port 59999 and respond from the node that currently owns this resource.
 
-    Run it once from any one node of the cluster, for each cluster. 
-    
+    Run it once from any one node of the cluster, for each cluster.
+
     In our example, make sure to change the "ILBIP" according to your configuration values. Run the following command from any one node **az2az1**/**az2az2**
 
     ```PowerShell
@@ -128,7 +127,7 @@ Watch the video below for a complete walk-through of the process.
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
 12. Run the following command from any one node **azcross1**/**azcross2**
@@ -137,7 +136,7 @@ Watch the video below for a complete walk-through of the process.
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.0.0.10" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
     Make sure both clusters can connect / communicate with each other.
@@ -149,18 +148,18 @@ Watch the video below for a complete walk-through of the process.
       Get-Cluster -Name SRAZC1 (ran from azcross1)
     ```
     ```powershell
-      Get-Cluster -Name SRAZCross (ran from az2az1) 
+      Get-Cluster -Name SRAZCross (ran from az2az1)
     ```
 
 13. Create cloud witness for both clusters. Create two [storage accounts](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) (**az2azcw**,**azcrosssa**) in Azure, one for each cluster in each resource group (**SR-AZ2AZ**, **SR-AZCROSS**).
-   
+
     - Copy the storage account name and key from "access keys"
-    - Create the cloud witness from "failover cluster manager" and use the above account name and key to create it. 
+    - Create the cloud witness from "failover cluster manager" and use the above account name and key to create it.
 
 14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step
 
 15. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
- 
+
 16. Configure cluster-to-cluster storage replica.
     Grant access from one cluster to another cluster in both directions:
 

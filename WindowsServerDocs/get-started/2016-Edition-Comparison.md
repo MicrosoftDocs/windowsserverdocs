@@ -1,7 +1,6 @@
 ---
 title: Windows Server 2016 Products and Editions
-description: Explains differences in the Windows Server Standard and Windows Server Datacenter editions 
-ms.prod: windows-server
+description: Explains differences in the Windows Server Standard and Windows Server Datacenter editions
 ms.date: 10/04/2019
 ms.technology: server-general
 ms.topic: article
@@ -14,11 +13,11 @@ ms.localizationpriority: medium
 # Comparison of Standard and Datacenter editions of Windows Server 2016
 
 > Applies To: Windows Server 2016
-  
+
 ## Locks and Limits
 
 | Locks and Limits | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| ------------------- |---------- | --------------------------- |  
+| ------------------- |---------- | --------------------------- |
 | Maximum number of users | Based on CALs   | Based on CALs     |
 | Maximum SMB connections | 16,777,216      | 16,777,216          |
 | Maximum RRAS connections| unlimited       | unlimited         |
@@ -35,8 +34,8 @@ ms.localizationpriority: medium
 
 ## Server roles
 
-| Windows Server roles available     | Role services | Windows Server 2016 Standard | Windows Server 2016 Datacenter |  
-| -------------------                | ----------    | ----------                   | ---------------------------    |  
+| Windows Server roles available     | Role services | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| -------------------                | ----------    | ----------                   | ---------------------------    |
 | Active Directory Certificate Services|              | Yes                          | Yes                            |
 | Active Directory Domain Services    |               | Yes                          | Yes                            |
 | Active Directory Federation Services|               | Yes                          | Yes                            |
@@ -74,8 +73,8 @@ ms.localizationpriority: medium
 
 ## Features
 
-|Windows Server Features installable with Server Manager (or PowerShell)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
-|-------------------|----------|---------------------------|  
+|Windows Server Features installable with Server Manager (or PowerShell)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
+|-------------------|----------|---------------------------|
 |.NET Framework 3.5|Yes|Yes|
 |.NET Framework 4.6|Yes|Yes|
 |Background Intelligent Transfer Service (BITS)|Yes|Yes|
@@ -138,8 +137,8 @@ ms.localizationpriority: medium
 |WoW64 support|Installed|Installed|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 
-|Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
-|-------------------|----------|---------------------------|  
+|Features available generally|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
+|-------------------|----------|---------------------------|
 |Best Practices Analyzer|Yes|Yes|
 |Direct Access|Yes|Yes|
 |Dynamic Memory (in virtualization)|Yes|Yes|

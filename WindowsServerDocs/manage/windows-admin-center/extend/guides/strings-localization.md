@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Strings and localization in Windows Admin Center #
@@ -33,7 +32,7 @@ Generates the following accessor structure:
 MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 ```
 
-## Add Other Languages for Localization ## 
+## Add Other Languages for Localization ##
 
 For localization to other languages, a strings.resjson file needs to be created for each language. These files need to be places in ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson```. The available languages with corresponding folders are:
 
@@ -43,11 +42,11 @@ For localization to other languages, a strings.resjson file needs to be created 
 | Deutsch | de-DE |
 | English | en-US |
 | Español | es-ES |
-| Français | fr-FR | 
-| Magyar | hu-HU | 
+| Français | fr-FR |
+| Magyar | hu-HU |
 | Italiano | it-IT |
-| 日本語 | ja-JP | 
-| 한국어 | ko-KR | 
+| 日本語 | ja-JP |
+| 한국어 | ko-KR |
 | Nederlands | nl-NL |
 | Polski | pl-PL |
 | Português (Brasil) | pt-BR |
@@ -60,16 +59,16 @@ For localization to other languages, a strings.resjson file needs to be created 
 > [!NOTE]
 > If your file structure needs are different inside of loc/output, you will need to adjust the localeOffset for the gulp task ‘generate-resjson-json-localized' that is in the gulpfile.js. This offset is how deep into the loc folder it should start searching for strings.resjson files.
 
-Each strings.resjson file will be formatted in the same way as previously mentioned at the top of this guide. 
+Each strings.resjson file will be formatted in the same way as previously mentioned at the top of this guide.
 
-For example, to include a localization for Español include this entry in ```\loc\output\HelloWorld\es-ES\strings.resjson```: 
+For example, to include a localization for Español include this entry in ```\loc\output\HelloWorld\es-ES\strings.resjson```:
 ```json
 "HelloWorld_cim_title": "CIM Componente",
 ```
 Anytime that you added localized strings, gulp generate must be ran again in order to have them appear. Run:
 ``` cmd
-gulp generate 
+gulp generate
 ```
 
 To confirm that your strings have been generated navigate to ```\src\app\assets\strings\{!LanguageFolder}\strings.resjson```. Your newly added entry will appear in this file.
-Now if you switch the language option in Windows Admin Center, you will be able to see the localized strings in your extension. 
+Now if you switch the language option in Windows Admin Center, you will be able to see the localized strings in your extension.

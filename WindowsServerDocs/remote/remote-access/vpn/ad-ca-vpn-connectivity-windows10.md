@@ -1,10 +1,9 @@
 ---
 title: Conditional access for VPN connectivity using Azure AD
 description: In this optional step, you can fine-tune how authorized VPN users access your resources using Azure Active Directory (Azure AD) conditional access.
-ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.date: 06/28/2019
@@ -40,7 +39,7 @@ An EAP-TLS client cannot connect unless the NPS server completes a revocation ch
 
 ## [Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
-In this step, you configure root certificates for VPN authentication with Azure AD, which automatically creates a VPN server cloud app in the tenant.  
+In this step, you configure root certificates for VPN authentication with Azure AD, which automatically creates a VPN server cloud app in the tenant.
 
 To configure conditional access for VPN connectivity, you need to:
 

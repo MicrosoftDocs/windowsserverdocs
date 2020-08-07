@@ -7,7 +7,6 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 06/2/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # BiitOps Changes Extension
 

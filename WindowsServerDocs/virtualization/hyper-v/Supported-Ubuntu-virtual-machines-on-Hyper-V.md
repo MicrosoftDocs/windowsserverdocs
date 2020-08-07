@@ -1,7 +1,6 @@
 ---
 title: Supported Ubuntu virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
-ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v
 ms.topic: article

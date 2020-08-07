@@ -1,10 +1,9 @@
 ---
-title: Always On VPN features 
-description: In this topic, you learn about the features and functionality of Always On VPN. 
-ms.prod: windows-server
+title: Always On VPN features
+description: In this topic, you learn about the features and functionality of Always On VPN.
 ms.technology: networking
 ms.topic: article
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.date: 11/05/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
 ms.author: v-tea
@@ -18,10 +17,10 @@ author: Teresa-MOTIV
 - [**Previous:** Always On VPN Deployment for Windows Server and Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)
 - [**Next:** Learn about the Always On VPN Enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
 
-In this topic, you learn about the features and functionalities of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionalities used in remote access solutions. 
+In this topic, you learn about the features and functionalities of Always On VPN.  The following table is not an exhaustive list, however, it does include some of the most common features and functionalities used in remote access solutions.
 
 > [!TIP]
-> If you currently use DirectAccess, we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating from DirectAccess to Always On VPN.  
+> If you currently use DirectAccess, we recommend that you investigate the Always On VPN functionality carefully to determine if it addresses all of your remote access needs before migrating from DirectAccess to Always On VPN.
 
 |                                                   Functional area                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                     Always On VPN                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

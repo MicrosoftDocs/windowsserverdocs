@@ -1,6 +1,5 @@
 ---
 title: Storage Spaces Direct overview
-ms.prod: windows-server
 ms.author: cosdar
 manager: dongill
 ms.technology: storage-spaces

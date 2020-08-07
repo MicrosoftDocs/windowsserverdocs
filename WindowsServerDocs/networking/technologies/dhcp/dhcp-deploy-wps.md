@@ -1,7 +1,6 @@
 ---
 title: Deploy DHCP Using Windows PowerShell
 description: You can use this topic to deploy a Windows Server 2016 Internet Protocol (IP) version 4 DHCP server that provides automatic IP addresses and DHCP options to IPv4 DHCP clients connected to one or more subnets on your network.
-ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
@@ -56,7 +55,7 @@ For TCP/IP-based networks, DHCP reduces the complexity and amount of administrat
 
 ### TCP/IP overview
 
-By default, all versions of Windows Server and Windows Client operating systems have TCP/IP settings for IP version 4 network connections configured to automatically obtain an IP address and other information, called DHCP options, from a DHCP server. Because of this, you do not need to configure TCP/IP settings manually unless the computer is a server computer or other device that requires a manually configured, static IP address. 
+By default, all versions of Windows Server and Windows Client operating systems have TCP/IP settings for IP version 4 network connections configured to automatically obtain an IP address and other information, called DHCP options, from a DHCP server. Because of this, you do not need to configure TCP/IP settings manually unless the computer is a server computer or other device that requires a manually configured, static IP address.
 
 For example, it is recommended that you manually configure the IP address of the DHCP server, and the IP addresses of DNS servers and domain controllers that are running Active Directory Domain Services \(AD DS\).
 
@@ -207,7 +206,7 @@ Additional example configuration items for AD DS and DNS are provided in the fol
 
 ## <a name="bkmk_lab"></a>Using This Guide in a Test Lab
 
-You can use this guide to deploy DHCP in a test lab before you deploy in a production environment. 
+You can use this guide to deploy DHCP in a test lab before you deploy in a production environment.
 
 > [!NOTE]
 > If you do not want to deploy DHCP in a test lab, you can skip to the section [Deploy DHCP](#bkmk_deploy).
@@ -230,7 +229,7 @@ On your physical server, in Hyper-V Manager, create the following items.
 
 1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs will receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
 1. One VM running Windows Server 2016 configured as a domain controller with Active Directory Domain Services that is connected to the Internal virtual switch you created. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01).
-1. One VM running Windows Server 2016 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created. 
+1. One VM running Windows Server 2016 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
 1. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 **Standalone DHCP server deployment**
@@ -270,7 +269,7 @@ This deployment requires one hub or switch, one physical server, and one physica
 
 ## <a name="bkmk_deploy"></a>Deploy DHCP
 
-This section provides example Windows PowerShell commands that you can use to deploy DHCP on one server. Before you run these example commands on your server, you must modify the commands to match your network and environment. 
+This section provides example Windows PowerShell commands that you can use to deploy DHCP on one server. Before you run these example commands on your server, you must modify the commands to match your network and environment.
 
 For example, before you run the commands, you should replace example values in the commands for the following items:
 
@@ -341,7 +340,7 @@ If you are installing your DHCP server in an Active Directory domain environment
 Add-Computer CORP
 ```
 
-When prompted, type the credentials for a domain user account that has permission to join a computer to the domain. 
+When prompted, type the credentials for a domain user account that has permission to join a computer to the domain.
 
 ```
 Restart-Computer
@@ -391,7 +390,7 @@ If you are installing DHCP in a domain environment, you must perform the followi
 > [!NOTE]
 > Unauthorized DHCP servers that are installed in Active Directory domains cannot function properly, and do not lease IP addresses to DHCP clients. The automatic disabling of unauthorized DHCP servers is a security feature that prevents unauthorized DHCP servers from assigning incorrect IP addresses to clients on your network.
 
-You can use the following command to add the DHCP server to the list of authorized DHCP servers in Active Directory. 
+You can use the following command to add the DHCP server to the list of authorized DHCP servers in Active Directory.
 
 > [!NOTE]
 > If you do not have a domain environment, do not run this command.
@@ -442,11 +441,11 @@ Set-DhcpServerv4DnsSetting -ComputerName "DHCP1.corp.contoso.com" -DynamicUpdate
 ```
 
 You can use the following command to configure the credentials that the DHCP server uses to register or unregister client records on a DNS server. This example saves a credential on a DHCP server. The first command uses **Get-Credential** to create a **PSCredential** object, and then stores the object in the **$Credential** variable. The command prompts you for user name and password, so ensure that you provide credentials for an account that has permission to update resource records on your DNS server.
- 
+
 ```
 $Credential = Get-Credential
 Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.contoso.com"
-``` 
+```
 
 For more information about these commands, see the following topics.
 
@@ -458,7 +457,7 @@ For more information about these commands, see the following topics.
 After DHCP installation is completed, you can use the following commands to configure and activate the Corpnet scope, create an exclusion range for the scope, and configure the DHCP options default gateway, DNS server IP address, and DNS domain name.
 
 ```
-Add-DhcpServerv4Scope -name "Corpnet" -StartRange 10.0.0.1 -EndRange 10.0.0.254 -SubnetMask 255.255.255.0 -State Active    
+Add-DhcpServerv4Scope -name "Corpnet" -StartRange 10.0.0.1 -EndRange 10.0.0.254 -SubnetMask 255.255.255.0 -State Active
 Add-DhcpServerv4ExclusionRange -ScopeID 10.0.0.0 -StartRange 10.0.0.1 -EndRange 10.0.0.15
 Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.0.1 -ScopeID 10.0.0.0 -ComputerName DHCP1.corp.contoso.com
 Set-DhcpServerv4OptionValue -DnsDomain corp.contoso.com -DnsServer 10.0.0.2

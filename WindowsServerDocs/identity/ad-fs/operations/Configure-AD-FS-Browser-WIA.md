@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 03/20/2020
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Introducing Token Binding
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
 manager: alanth
@@ -13,7 +12,7 @@ ms.date: 11/09/2016
 
 >Applies To: Windows Server 2016 and Windows 10
 
-The Token Binding protocol allows applications and services to cryptographically bind their security tokens to the TLS layer to mitigate token theft and replay attacks. 
+The Token Binding protocol allows applications and services to cryptographically bind their security tokens to the TLS layer to mitigate token theft and replay attacks.
 The long-lived, uniquely identifiable TLS [RFC5246] bindings can span multiple TLS sessions and connections.
 
 Version support:
@@ -35,7 +34,7 @@ Version support:
     - WinInet & HTTP.SYS support of token binding over HTTP updated [[draft-ietf-tokbind-https-06]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/06/)
     - Windows devices with Virtualization-based security enabled will keep the token binding keys in a protected environment that is isolated from the running operating system
 
-Information about ASP .NET support can be found at the [.NET Framework Reference Source](https://referencesource.microsoft.com/#System.Web/ITlsTokenBindingInfo.cs,4a5e5668f5c31170). 
+Information about ASP .NET support can be found at the [.NET Framework Reference Source](https://referencesource.microsoft.com/#System.Web/ITlsTokenBindingInfo.cs,4a5e5668f5c31170).
 
 For information about .NET Framework, see the following topics:
 

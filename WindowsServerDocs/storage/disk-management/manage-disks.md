@@ -2,12 +2,11 @@
 title: Manage disks
 description: This article describes how to manage disks
 ms.date: 06/07/2019
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.technology: storage
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 # Manage disks
 

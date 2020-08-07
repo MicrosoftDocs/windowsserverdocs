@@ -6,7 +6,6 @@ author: eross-msft
 ms.author: lizross
 ms.date: 09/12/2018
 ms.topic: article
-ms.prod: windows-server
 ms.technology: networking
 ---
 
@@ -17,7 +16,7 @@ ms.technology: networking
 
 >Applies to: Windows Server 2019
 
-In the past, Virtual Machine Queues and Virtual Machine Multi-Queues enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a large undertaking; often more than the IT administrator intended to spend. 
+In the past, Virtual Machine Queues and Virtual Machine Multi-Queues enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a large undertaking; often more than the IT administrator intended to spend.
 
 Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as required. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators.
 

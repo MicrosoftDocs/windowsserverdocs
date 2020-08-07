@@ -1,6 +1,5 @@
 ---
 title: Upgrade a guarded fabric to Windows Server 2019
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

@@ -6,7 +6,6 @@ ms.author: nedpyle
 manager: siroy
 ms.date: 06/02/2020
 ms.topic: article
-ms.prod: windows-server
 ms.technology: storage
 ---
 # Storage Migration Service frequently asked questions (FAQ)

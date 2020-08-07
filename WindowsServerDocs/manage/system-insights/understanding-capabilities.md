@@ -1,7 +1,6 @@
 ---
 title: Understanding capabilities
 description: This topic defines the concept of capabilities in System Insights and introduces the default capabilities available in Windows Server 2019.
-ms.prod: windows-server
 ms.technology: system-insights
 ms.topic: article
 author: gawatu

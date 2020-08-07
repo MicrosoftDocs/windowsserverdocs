@@ -1,7 +1,6 @@
 ---
 title: Securing privileged access
 description: Phased approach to securing privileged access
-ms.prod: windows-server
 ms.topic: conceptual
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
 ms.date: 02/25/2019
@@ -63,7 +62,7 @@ The roadmap of Microsoft recommendations is broken into 3 phases:
 * [Phase 3: Ongoing](#phase-3-security-improvement-and-sustainment)
    * Security improvement and sustainment.
 
-The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation. 
+The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation.
 
 Microsoft recommends you follow this roadmap to secure privileged access against determined adversaries. You may adjust this roadmap to accommodate your existing capabilities and specific requirements in your organizations.
 

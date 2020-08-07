@@ -2,7 +2,6 @@
 title: What's New in Hyper-V Network Virtualization in Windows Server 2016
 description: This topic provides information about new features in Hyper-V Network Virtualization in Windows Server 2016
 manager: grcusanz
-ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe

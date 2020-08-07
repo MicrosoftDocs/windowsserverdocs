@@ -1,7 +1,6 @@
 ---
 title: Use personal session desktops with Remote Desktop Services
 description: Learn how to share personalized, assigned desktops through RDS.
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 author: lizap
@@ -13,7 +12,7 @@ manager: dongill
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
-You can deploy server-based personal desktops in a cloud-computing environment by using personal session desktops.  (A cloud-computing environment has a separation between the fabric Hyper-V servers and the guest virtual machines, such as Microsoft Azure Cloud or the Microsoft Cloud Platform.) The personal session desktop capability extends the session-based desktop deployment scenario in Remote Desktop Services to create a new type of session collection where each user is assigned to their own personal session host with administrative rights. 
+You can deploy server-based personal desktops in a cloud-computing environment by using personal session desktops.  (A cloud-computing environment has a separation between the fabric Hyper-V servers and the guest virtual machines, such as Microsoft Azure Cloud or the Microsoft Cloud Platform.) The personal session desktop capability extends the session-based desktop deployment scenario in Remote Desktop Services to create a new type of session collection where each user is assigned to their own personal session host with administrative rights.
 
 Use the following information to create and manage a personal session desktop collection.
 
@@ -30,7 +29,7 @@ Use the **Set-RDPersonalSessionDesktopAssignment** cmdlet to manually assign a u
 
 -CollectionName \<string\>
 
--ConnectionBroker \<string\> 
+-ConnectionBroker \<string\>
 
 -User \<string\>
 
@@ -50,7 +49,7 @@ The **Import-RDPersonalSessionDesktopAssignment** cmdlet imports associations be
 -Path \<string>
 
 **–Path** specifies the path and file name of a file to import.
- 
+
 ## Removing a User Assignment from a Personal Session Host
 Use the **Remove-RDPersonalSessionDesktopAssignment** cmdlet to remove the association between a personal session desktop and a user. The cmdlet supports the following parameters:
 
@@ -77,7 +76,7 @@ Use the **Get-RDPersonalSessionDesktopAssignment** cmdlet to get a list of perso
 
 -Name \<string\>
 
-You can run the cmdlet to query by collection name, user name, or by session desktop name. If you specify only the **–CollectionName** parameter, the cmdlet returns a list of session hosts and associated users. If you also specify the **–User** parameter, the session host associated with that user is returned. If you provide the **–Name** parameter, the user associated with that session host is returned. 
+You can run the cmdlet to query by collection name, user name, or by session desktop name. If you specify only the **–CollectionName** parameter, the cmdlet returns a list of session hosts and associated users. If you also specify the **–User** parameter, the session host associated with that user is returned. If you provide the **–Name** parameter, the user associated with that session host is returned.
 
 
 The **Export-RDPersonalPersonalDesktopAssignment** cmdlet exports the current associations between users and personal virtual desktops to a text file. The cmdlet supports the following parameters:

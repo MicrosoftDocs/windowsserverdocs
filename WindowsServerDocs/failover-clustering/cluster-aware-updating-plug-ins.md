@@ -3,7 +3,6 @@ ms.assetid: d44d4430-41e2-483a-9685-92610cdef32a
 title: How Cluster-Aware Updating plug-ins work
 description: How to use plug-ins to coordinate updates when using Cluster-Aware Updating in Windows Server to install updates on a cluster.
 ms.topic: article
-ms.prod: windows-server
 manager: lizross
 ms.author: jgerend
 author: JasonGerend

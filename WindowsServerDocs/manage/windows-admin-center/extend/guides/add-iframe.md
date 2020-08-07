@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Add an iFrame to a tool extension
@@ -22,7 +21,7 @@ If you haven't already, follow the directions in [develop a tool extension](../d
 
 ## Add a module to your project ##
 
-Add a new [empty module](add-module.md) to your project, to which we will add an iFrame in the next step.  
+Add a new [empty module](add-module.md) to your project, to which we will add an iFrame in the next step.
 
 ## Add an iFrame to your module ##
 
@@ -33,7 +32,7 @@ In \src\app\, browse into your module folder, then open file ```{!module-name}.c
 | Value | Explanation | Example filename |
 | ----- | ----------- | ------- |
 | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.component.html``` |
-    
+
 Add the following content to the html file:
 
 ``` html
@@ -45,4 +44,4 @@ Add the following content to the html file:
 That's it, you've added an iFrame to your extension.  Next, you can [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
 
 > [!Note]
-> Content Security Policy (CSP) settings could prevent some sites from rendering in an iFrame within Windows Admin Center. You can learn more about this [here](https://content-security-policy.com/). 
+> Content Security Policy (CSP) settings could prevent some sites from rendering in an iFrame within Windows Admin Center. You can learn more about this [here](https://content-security-policy.com/).

@@ -1,11 +1,10 @@
 ---
 title: SMB security enhancements
 description: An explanation of the SMB Encryption feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+ms.technology: storage
 ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---
@@ -37,17 +36,17 @@ You can enable SMB Encryption for the entire file server or only for specific fi
 ### Enable SMB Encryption with Windows PowerShell
 
 1. To enable SMB Encryption for an individual file share, type the following script on the server:
-    
+
     ```PowerShell
     Set-SmbShare –Name <sharename> -EncryptData $true
     ```
 2. To enable SMB Encryption for the entire file server, type the following script on the server:
-    
+
     ```PowerShell
     Set-SmbServerConfiguration –EncryptData $true
     ```
 3. To create a new SMB file share with SMB Encryption enabled, type the following script:
-    
+
     ```PowerShell
     New-SmbShare –Name <sharename> -Path <pathname> –EncryptData $true
     ```

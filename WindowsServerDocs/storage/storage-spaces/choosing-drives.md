@@ -1,7 +1,6 @@
 ---
 ms.assetid: 1368bc83-9121-477a-af09-4ae73ac16789
 title: Choosing drives for Storage Spaces Direct
-ms.prod: windows-server
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces

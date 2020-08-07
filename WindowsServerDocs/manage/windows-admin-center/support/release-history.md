@@ -6,7 +6,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/06/2020
-ms.prod: windows-server
 ---
 # Windows Admin Center release history
 

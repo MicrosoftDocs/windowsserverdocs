@@ -2,7 +2,6 @@
 title: Configure virtual network peering
 description: Configuring the virtual network peering involves creating two virtual networks that get peered.
 manager: grcusanz
-ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.author: anpaul
@@ -33,30 +32,30 @@ In this procedure, you use Windows PowerShell to create two virtual networks, ea
 In this step, you use Windows PowerShell find the HNV provider logical network to create the first virtual network with one subnet. The following example script creates Contoso's virtual network with one subnet.
 
 ``` PowerShell
-#Find the HNV Provider Logical Network  
+#Find the HNV Provider Logical Network
 
-$logicalnetworks = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri  
-foreach ($ln in $logicalnetworks) {  
-   if ($ln.Properties.NetworkVirtualizationEnabled -eq "True") {  
-      $HNVProviderLogicalNetwork = $ln  
-   }  
-}   
+$logicalnetworks = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri
+foreach ($ln in $logicalnetworks) {
+   if ($ln.Properties.NetworkVirtualizationEnabled -eq "True") {
+      $HNVProviderLogicalNetwork = $ln
+   }
+}
 
-#Create the Virtual Subnet  
+#Create the Virtual Subnet
 
-$vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet  
-$vsubnet.ResourceId = "Contoso"  
-$vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties  
+$vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet
+$vsubnet.ResourceId = "Contoso"
+$vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties
 $vsubnet.Properties.AddressPrefix = "24.30.1.0/24"
-$uri=”https://restserver”  
+$uri=”https://restserver”
 
-#Create the Virtual Network  
+#Create the Virtual Network
 
-$vnetproperties = new-object Microsoft.Windows.NetworkController.VirtualNetworkProperties  
-$vnetproperties.AddressSpace = new-object Microsoft.Windows.NetworkController.AddressSpace  
-$vnetproperties.AddressSpace.AddressPrefixes = @("24.30.1.0/24")  
-$vnetproperties.LogicalNetwork = $HNVProviderLogicalNetwork  
-$vnetproperties.Subnets = @($vsubnet)  
+$vnetproperties = new-object Microsoft.Windows.NetworkController.VirtualNetworkProperties
+$vnetproperties.AddressSpace = new-object Microsoft.Windows.NetworkController.AddressSpace
+$vnetproperties.AddressSpace.AddressPrefixes = @("24.30.1.0/24")
+$vnetproperties.LogicalNetwork = $HNVProviderLogicalNetwork
+$vnetproperties.Subnets = @($vsubnet)
 New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri -Properties $vnetproperties
 ```
 
@@ -66,21 +65,21 @@ In this step, you create a second virtual network with one subnet. The following
 
 ``` PowerShell
 
-#Create the Virtual Subnet  
+#Create the Virtual Subnet
 
-$vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet  
-$vsubnet.ResourceId = "Woodgrove"  
-$vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties  
-$vsubnet.Properties.AddressPrefix = "24.30.2.0/24"  
+$vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet
+$vsubnet.ResourceId = "Woodgrove"
+$vsubnet.Properties = new-object Microsoft.Windows.NetworkController.VirtualSubnetProperties
+$vsubnet.Properties.AddressPrefix = "24.30.2.0/24"
 $uri=”https://restserver”
 
-#Create the Virtual Network  
+#Create the Virtual Network
 
-$vnetproperties = new-object Microsoft.Windows.NetworkController.VirtualNetworkProperties  
-$vnetproperties.AddressSpace = new-object Microsoft.Windows.NetworkController.AddressSpace  
-$vnetproperties.AddressSpace.AddressPrefixes = @("24.30.2.0/24")  
-$vnetproperties.LogicalNetwork = $HNVProviderLogicalNetwork  
-$vnetproperties.Subnets = @($vsubnet)  
+$vnetproperties = new-object Microsoft.Windows.NetworkController.VirtualNetworkProperties
+$vnetproperties.AddressSpace = new-object Microsoft.Windows.NetworkController.AddressSpace
+$vnetproperties.AddressSpace.AddressPrefixes = @("24.30.2.0/24")
+$vnetproperties.LogicalNetwork = $HNVProviderLogicalNetwork
+$vnetproperties.Subnets = @($vsubnet)
 New-NetworkControllerVirtualNetwork -ResourceId "Woodgrove_VNet1" -ConnectionUri $uri -Properties $vnetproperties
 ```
 
@@ -117,23 +116,23 @@ New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId
 In this step, you configure the peering between the second virtual network and the first virtual network you created in steps 1 and 2 above. The following example script establishes virtual network peering from **Woodgrove_vnet1** to **Contoso_vnet1**.
 
 ```PowerShell
-$peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties 
+$peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties
 $vnet2=Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Contoso_VNet1"
-$peeringProperties.remoteVirtualNetwork = $vnet2 
+$peeringProperties.remoteVirtualNetwork = $vnet2
 
-# Indicates whether communication between the two virtual networks is allowed 
-$peeringProperties.allowVirtualnetworkAccess = $true 
+# Indicates whether communication between the two virtual networks is allowed
+$peeringProperties.allowVirtualnetworkAccess = $true
 
 # Indicates whether forwarded traffic will be allowed across the vnets
-$peeringProperties.allowForwardedTraffic = $true 
+$peeringProperties.allowForwardedTraffic = $true
 
 # Indicates whether the peer virtual network can access this virtual network's gateway
-$peeringProperties.allowGatewayTransit = $false 
+$peeringProperties.allowGatewayTransit = $false
 
 # Indicates whether this virtual network will use peer virtual network's gateway
-$peeringProperties.useRemoteGateways =$false 
+$peeringProperties.useRemoteGateways =$false
 
-New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId “Woodgrove_vnet1” -ResourceId “WoodgrovetoContoso” -Properties $peeringProperties 
+New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId “Woodgrove_vnet1” -ResourceId “WoodgrovetoContoso” -Properties $peeringProperties
 
 ```
 

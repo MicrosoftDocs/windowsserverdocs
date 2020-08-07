@@ -1,6 +1,5 @@
 ---
-title: Initialize the HGS cluster using key mode in a bastion forest 
-ms.prod: windows-server
+title: Initialize the HGS cluster using key mode in a bastion forest
 ms.topic: article
 manager: dongill
 author: rpsqrd
@@ -12,14 +11,14 @@ ms.date: 08/29/2018
 # Initialize the HGS cluster using key mode in an existing bastion forest
 
 > Applies to: Windows Server 2019
-> 
+>
 > [!div class="step-by-step"]
 > [« Install HGS in a new forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
 > [Create host key »](guarded-fabric-create-host-key.md)
 
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
-[!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 
+[!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
 Before you continue, ensure that you have prestaged your cluster objects for the Host Guardian Service and granted the logged in user **Full Control** over the VCO and CNO objects in Active Directory.
 The virtual computer object name needs to be passed to the `-HgsServiceName` parameter, and the cluster name to the `-ClusterName` parameter.

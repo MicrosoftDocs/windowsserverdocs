@@ -1,7 +1,6 @@
 ---
 title: Choosing a Network Adapter
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
-ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
@@ -26,58 +25,58 @@ Network-intensive applications require high-performance network adapters. This s
 Offloading tasks from the central processing unit \(CPU\) to the network adapter can reduce CPU usage on the server, which improves the overall system performance.
 
 The network stack in Microsoft products can offload one or more tasks to a network adapter if you select a network adapter that has the appropriate offload capabilities. The following table provides a brief overview of different offload capabilities that are available in Windows Server 2016.
-  
+
 |Offload type|Description|
-|------------------|-----------------|  
-|Checksum calculation for TCP|The network stack can offload the calculation and validation of Transmission Control Protocol \(TCP\) checksums on send and receive code paths. It can also offload the calculation and validation of IPv4 and IPv6 checksums on send and receive code paths.|  
+|------------------|-----------------|
+|Checksum calculation for TCP|The network stack can offload the calculation and validation of Transmission Control Protocol \(TCP\) checksums on send and receive code paths. It can also offload the calculation and validation of IPv4 and IPv6 checksums on send and receive code paths.|
 |Checksum calculation for UDP |The network stack can offload the calculation and validation of User Datagram Protocol \(UDP\) checksums on send and receive code paths.|
 |Checksum calculation for IPv4 |The network stack can offload the calculation and validation of IPv4 checksums on send and receive code paths. |
-|Checksum calculation for IPv6 |The network stack can offload the calculation and validation of IPv6 checksums on send and receive code paths. | 
-|Segmentation of large TCP packets|The TCP/IP transport layer supports Large Send Offload v2 (LSOv2). With LSOv2, the TCP/IP transport layer can offload the segmentation of large TCP packets to the network adapter.|  
-|Receive Side Scaling \(RSS\)|RSS is a network driver technology that enables the efficient distribution of network receive processing across multiple CPUs in multiprocessor systems. More detail about RSS is provided later in this topic.|  
-|Receive Segment Coalescing \(RSC\)|RSC is the ability to group packets together to minimize the header processing that is necessary for the host to perform. A maximum of 64 KB of received payload can be coalesced into a single larger packet for processing. More detail about RSC is provided later in this topic.|  
-  
+|Checksum calculation for IPv6 |The network stack can offload the calculation and validation of IPv6 checksums on send and receive code paths. |
+|Segmentation of large TCP packets|The TCP/IP transport layer supports Large Send Offload v2 (LSOv2). With LSOv2, the TCP/IP transport layer can offload the segmentation of large TCP packets to the network adapter.|
+|Receive Side Scaling \(RSS\)|RSS is a network driver technology that enables the efficient distribution of network receive processing across multiple CPUs in multiprocessor systems. More detail about RSS is provided later in this topic.|
+|Receive Segment Coalescing \(RSC\)|RSC is the ability to group packets together to minimize the header processing that is necessary for the host to perform. A maximum of 64 KB of received payload can be coalesced into a single larger packet for processing. More detail about RSC is provided later in this topic.|
+
 ###  <a name="bkmk_rss"></a> Receive Side Scaling
 
-Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, and Windows Server 2008 support Receive Side Scaling \(RSS\). 
+Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, and Windows Server 2008 support Receive Side Scaling \(RSS\).
 
-Some servers are configured with multiple logical processors that share hardware resources \(such as a physical core\) and which are treated as Simultaneous Multi-Threading \(SMT\) peers. Intel Hyper-Threading Technology is an example. RSS directs network processing to up to one logical processor per core. For example, on a server with Intel Hyper-Threading, 4 cores, and 8 logical processors, RSS uses no more than 4 logical processors for network processing.  
+Some servers are configured with multiple logical processors that share hardware resources \(such as a physical core\) and which are treated as Simultaneous Multi-Threading \(SMT\) peers. Intel Hyper-Threading Technology is an example. RSS directs network processing to up to one logical processor per core. For example, on a server with Intel Hyper-Threading, 4 cores, and 8 logical processors, RSS uses no more than 4 logical processors for network processing.
 
-RSS distributes incoming network I/O packets among logical processors so that packets which belong to the same TCP connection are processed on the same logical processor, which preserves ordering. 
+RSS distributes incoming network I/O packets among logical processors so that packets which belong to the same TCP connection are processed on the same logical processor, which preserves ordering.
 
-RSS also load balances UDP unicast and multicast traffic, and it routes related flows \(which are determined by hashing the source and destination addresses\) to the same logical processor, preserving the order of related arrivals. This helps improve scalability and performance for receive-intensive scenarios for servers that have fewer network adapters than they do eligible logical processors. 
+RSS also load balances UDP unicast and multicast traffic, and it routes related flows \(which are determined by hashing the source and destination addresses\) to the same logical processor, preserving the order of related arrivals. This helps improve scalability and performance for receive-intensive scenarios for servers that have fewer network adapters than they do eligible logical processors.
 
 #### Configuring RSS
 
-In Windows Server 2016, you can configure RSS by using Windows PowerShell cmdlets and RSS profiles. 
+In Windows Server 2016, you can configure RSS by using Windows PowerShell cmdlets and RSS profiles.
 
 You can define RSS profiles by using the **–Profile** parameter of the **Set-NetAdapterRss** Windows PowerShell cmdlet.
 
 **Windows PowerShell commands for RSS configuration**
 
 The following cmdlets allow you to see and modify RSS parameters per network adapter.
-  
+
 >[!NOTE]
->For a detailed command reference for each cmdlet, including syntax and parameters, you can click the following links. In addition, you can pass the cmdlet name to **Get-Help** at the Windows PowerShell prompt for details on each command.  
+>For a detailed command reference for each cmdlet, including syntax and parameters, you can click the following links. In addition, you can pass the cmdlet name to **Get-Help** at the Windows PowerShell prompt for details on each command.
 
 - [Disable-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Disable-NetAdapterRss). This command disables RSS on the network adapter that you specify.
 
 - [Enable-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Enable-NetAdapterRss). This command enables RSS on the network adapter that you specify.
-  
+
 - [Get-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Get-NetAdapterRss). This command retrieves RSS properties of the network adapter that you specify.
-  
-- [Set-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterRss). This command sets the RSS properties on the network adapter that you specify.  
+
+- [Set-NetAdapterRss](https://docs.microsoft.com/powershell/module/netadapter/Set-NetAdapterRss). This command sets the RSS properties on the network adapter that you specify.
 
 #### RSS profiles
 
 You can use the **–Profile** parameter of the Set-NetAdapterRss cmdlet to specify which logical processors are assigned to which network adapter. Available values for this parameter are:
 
 - **Closest**. Logical processor numbers that are near the network adapter's base RSS processor are preferred. With this profile, the operating system might rebalance logical processors dynamically based on load.
-  
+
 - **ClosestStatic**. Logical processor numbers near the network adapter's base RSS processor are preferred. With this profile, the operating system does not rebalance logical processors dynamically based on load.
-  
+
 - **NUMA**. Logical processor numbers are generally selected on different NUMA nodes to distribute the load. With this profile, the operating system might rebalance logical processors dynamically based on load.
-  
+
 - **NUMAStatic**. This is the **default profile**. Logical processor numbers are generally selected on different NUMA nodes to distribute the load. With this profile, the operating system will not rebalance logical processors dynamically based on load.
 
 - **Conservative**. RSS uses as few processors as possible to sustain the load. This option helps reduce the number of interrupts.
@@ -100,7 +99,7 @@ Following are the additional **Set-NetAdapterRss** parameters that you can use t
 - **\* BaseProcessorGroup**: Sets the base processor group of a NUMA node. This impacts the processor array that is used by RSS. Example syntax:
 
      `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorGroup <value>`
-  
+
 - **\* MaxProcessorGroup**: Sets the Max processor group of a NUMA node. This impacts the processor array that is used by RSS. Setting this would restrict a maximum processor group so that load balancing is aligned within a k-group. Example syntax:
 
      `Set-NetAdapterRss –Name "Ethernet" –MaxProcessorGroup <value>`
@@ -118,15 +117,15 @@ Following are the additional **Set-NetAdapterRss** parameters that you can use t
      `Set-NetAdapterRss –Name "Ethernet" –NumberOfReceiveQueues <value>`
 
 For more information, click the following link to download [Scalable Networking: Eliminating the Receive Processing Bottleneck—Introducing RSS](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc) in Word format.
-  
+
 #### Understanding RSS Performance
 
 Tuning RSS requires understanding the configuration and the load-balancing logic. To verify that the RSS settings have taken effect, you can review the output when you run the **Get-NetAdapterRss** Windows PowerShell cmdlet. Following is example output of this cmdlet.
-  
+
 ```
 
-PS C:\Users\Administrator> get-netadapterrss  
-Name                           : testnic 2  
+PS C:\Users\Administrator> get-netadapterrss
+Name                           : testnic 2
 InterfaceDescription           : Broadcom BCM5708C NetXtreme II GigE (NDIS VBD Client) #66
 Enabled                        : True
 NumberOfReceiveQueues          : 2
@@ -134,14 +133,14 @@ Profile                        : NUMAStatic
 BaseProcessor: [Group:Number]  : 0:0
 MaxProcessor: [Group:Number]   : 0:15
 MaxProcessors                  : 8
-  
+
 IndirectionTable: [Group:Number]:
-     0:0    0:4    0:0    0:4    0:0    0:4    0:0    0:4  
-…   
-(# indirection table entries are a power of 2 and based on # of processors)  
-…   
-                          0:0    0:4    0:0    0:4    0:0    0:4    0:0    0:4  
-```  
+     0:0    0:4    0:0    0:4    0:0    0:4    0:0    0:4
+…
+(# indirection table entries are a power of 2 and based on # of processors)
+…
+                          0:0    0:4    0:0    0:4    0:0    0:4    0:0    0:4
+```
 
 In addition to echoing parameters that were set, the key aspect of the output is the indirection table output. The indirection table displays the hash table buckets that are used to distribute incoming traffic. In this example, the n:c notation designates the Numa K-Group:CPU index pair that is used to direct incoming traffic. We see exactly 2 unique entries (0:0 and 0:4), which represent k-group 0/cpu0 and k-group 0/cpu 4, respectively.
 
@@ -152,12 +151,12 @@ To fully utilize the CPUs, the number of RSS Receive Queues must be equal to or 
 #### NIC Teaming and RSS
 
 RSS can be enabled on a network adapter that is teamed with another network interface card using NIC Teaming. In this scenario, only the underlying physical network adapter can be configured to use RSS. A user cannot set RSS cmdlets on the teamed network adapter.
-  
+
 ###  <a name="bkmk_rsc"></a> Receive Segment Coalescing (RSC)
 
 Receive Segment Coalescing \(RSC\) helps performance by reducing the number of IP headers that are processed for a given amount of received data. It should be used to help scale the performance of received data by grouping \(or coalescing\) the smaller packets into larger units.
 
-This approach can affect latency with benefits mostly seen in throughput gains. RSC is recommended to increase throughput for received heavy workloads. Consider deploying network adapters that support RSC. 
+This approach can affect latency with benefits mostly seen in throughput gains. RSC is recommended to increase throughput for received heavy workloads. Consider deploying network adapters that support RSC.
 
 On these network adapters, ensure that RSC is on \(this is the default setting\), unless you have specific workloads \(for example, low latency, low throughput networking\) that show benefit from RSC being off.
 
@@ -167,16 +166,16 @@ You can diagnose RSC by using the Windows PowerShell cmdlets **Get-NetAdapterRsc
 
 Following is example output when you run the Get-NetAdapterRsc cmdlet.
 
-```  
+```
 
-PS C:\Users\Administrator> Get-NetAdapterRsc  
-  
-Name                       IPv4Enabled  IPv6Enabled  IPv4Operational IPv6Operational               IPv4FailureReason              IPv6Failure  
-                                            Reason  
-----                           -----------  -----------  --------------- --------------- ----------------- ------------  
-Ethernet                       True         False        True            False                  NoFailure       NicProperties  
-  
-```  
+PS C:\Users\Administrator> Get-NetAdapterRsc
+
+Name                       IPv4Enabled  IPv6Enabled  IPv4Operational IPv6Operational               IPv4FailureReason              IPv6Failure
+                                            Reason
+----                           -----------  -----------  --------------- --------------- ----------------- ------------
+Ethernet                       True         False        True            False                  NoFailure       NicProperties
+
+```
 
 The **Get** cmdlet shows whether RSC is enabled in the interface and whether TCP enables RSC to be in an operational state. The failure reason provides details about the failure to enable RSC on that interface.
 
@@ -184,16 +183,16 @@ In the previous scenario, IPv4 RSC is supported and operational in the interface
 
 Following is example output when you run the Get-NetAdapterStatistics cmdlet.
 
-```  
-PS C:\Users\Administrator> $x = Get-NetAdapterStatistics "myAdapter"   
-PS C:\Users\Administrator> $x.rscstatistics  
-  
-CoalescedBytes       : 0  
-CoalescedPackets     : 0  
-CoalescingEvents     : 0  
-CoalescingExceptions : 0  
-  
-```  
+```
+PS C:\Users\Administrator> $x = Get-NetAdapterStatistics "myAdapter"
+PS C:\Users\Administrator> $x.rscstatistics
+
+CoalescedBytes       : 0
+CoalescedPackets     : 0
+CoalescingEvents     : 0
+CoalescingExceptions : 0
+
+```
 
 #### RSC and Virtualization
 

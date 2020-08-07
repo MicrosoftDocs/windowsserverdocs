@@ -1,6 +1,5 @@
 ---
 title: Known issues with Storage Replica
-ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica

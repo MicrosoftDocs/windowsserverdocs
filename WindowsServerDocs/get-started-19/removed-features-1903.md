@@ -1,7 +1,6 @@
 ---
 title: Features removed or planned for replacement starting with Windows Server, version 1903
 description: The following is a list of features and functionalities in Windows Server, version 1903 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment.
-ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 ms.date: 10/15/2019
@@ -19,9 +18,9 @@ Also see [Features removed or planned for replacement in Windows Server](removed
 
 ## Features we're no longer developing
 
-We're no longer actively developing these features and may remove them from a future update. Some features have been replaced with other features or functionality, while others are now available from different sources. 
+We're no longer actively developing these features and may remove them from a future update. Some features have been replaced with other features or functionality, while others are now available from different sources.
 
-If you have feedback about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). 
+If you have feedback about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
 
 
 |                         Feature                         |                                                                                                                                                                                                                                                                                                                                                                                                                           Instead you can use                                                                                                                                                                                                                                                                                                                                                                                                                            |

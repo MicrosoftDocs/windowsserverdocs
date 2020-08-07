@@ -1,7 +1,6 @@
 ---
 title: Remote Desktop Services - Access from anywhere
 description: Planning information for an RD Gateway
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 5c38fab1-3586-4b7a-8bf0-7d85a8d5361d

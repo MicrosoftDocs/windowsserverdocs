@@ -1,7 +1,6 @@
 ---
 title: Geo-redundant RDS data centers in Azure
 description: Learn how to create an RDS deployment that uses multiple data centers to provide high availability across geographic locations.
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
@@ -48,28 +47,28 @@ Create the following resources in Azure to create a geo-redundant multi-data cen
 4. A VNet in RG B - make sure to use an address space that does not overlap the deployment in RG A.
 5. A [VNet-to-VNet connection](/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps) between the two resource groups.
 6. Two AD virtual machines in an availability set in RG B - make sure the VM names are different from the AD VMs in RG A. Deploy two Windows Server 2016 VMs in a single availability set, install the Active Directory Domain Services role, and then promote them to the domain controller in the domain you created in step 1.
-7. A second highly-available RDS deployment in RG B. 
+7. A second highly-available RDS deployment in RG B.
    1. Use the [RDS farm deployment using existing active directory](https://azure.microsoft.com/resources/templates/rds-deployment-existing-ad/) template again, but this time make the following changes. (To customize the template, select it in the gallery, click **Deploy to Azure** and then **Edit template**.)
-      1. Adjust the address space of the DNS server private IP to correspond to the VNet in RG B. 
-      
+      1. Adjust the address space of the DNS server private IP to correspond to the VNet in RG B.
+
          Search for "dnsServerPrivateIp" in variables. Edit the default IP (10.0.0.4) to correspond to the address space you defined in the VNet in RG B.
-   
+
       2. Edit the computer names so that they don't collide with those in the deployment in RG A.
-      
+
          Locate the VMs in the **Resources** section of the template. Change the **computerName** field under **osProfile**. For example, "gateway" can become"gateway**-b**"; "[concat('rdsh-', copyIndex())]" can become "[concat('rdsh-b-', copyIndex())]", and "broker" can become "broker**-b**".
-      
+
          (You can also change the names of the VMs manually after you run the template.)
    2. As in step 3 above, use the information in [Remote Desktop Services - High availability](rds-plan-high-availability.md) to configure the other RDS components for high availability.
 8. A Storage Spaces Direct scale-out file server with Storage Replica across the two deployments. Use the [PowerShell script](https://github.com/robotechredmond/301-s2d-sr-dr-md/tree/master/scripts) to deploy the [template](https://github.com/robotechredmond/301-s2d-sr-dr-md) across the resource groups.
 
    > [!NOTE]
-   > You can provision storage manually (instead of using the PowerShell script and template): 
+   > You can provision storage manually (instead of using the PowerShell script and template):
    >1. Deploy a [two-node Storage Spaces Direct SOFS](rds-storage-spaces-direct-deployment.md) in RG A to store your user profile disks (UPDs).
    >2. Deploy a second, identical Storage Spaces Direct SOFS in RG B - make sure to use the same amount of storage in each cluster.
    >3. Set up [Storage Replica with asynchronous replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md) between the two.
 
 ### Enable UPDs
-Storage Replica replicates data from a source volume (associated with the primary/active deployment) to a destination volume (associated with the secondary/passive deployment). By design, the destination cluster appears as **Online (No Access)** - Storage Replica dismounts the destination volumes and their drive letters or mount points. This means that enabling UPDs for the secondary deployment by providing the file share path will fail, because the volume is not mounted. 
+Storage Replica replicates data from a source volume (associated with the primary/active deployment) to a destination volume (associated with the secondary/passive deployment). By design, the destination cluster appears as **Online (No Access)** - Storage Replica dismounts the destination volumes and their drive letters or mount points. This means that enabling UPDs for the secondary deployment by providing the file share path will fail, because the volume is not mounted.
 
 Want to learn more about managing replication? Check out [Cluster to cluster Storage Replication](../../storage/storage-replica/cluster-to-cluster-storage-replication.md).
 
@@ -89,27 +88,27 @@ To enable UPDs on both deployments, do the following:
    ```
 
 
-### Azure Traffic Manager 
+### Azure Traffic Manager
 
-Create an [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) profile, and make sure to select the **Priority** routing method. Set the two endpoints to the public IP addresses of each deployment. Under **Configuration**, change the protocol to HTTPS (instead of HTTP) and the port to 443 (instead of 80). Take note of the **DNS time to live**, and set it appropriately for your failover needs. 
+Create an [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) profile, and make sure to select the **Priority** routing method. Set the two endpoints to the public IP addresses of each deployment. Under **Configuration**, change the protocol to HTTPS (instead of HTTP) and the port to 443 (instead of 80). Take note of the **DNS time to live**, and set it appropriately for your failover needs.
 
 Note that Traffic Manager requires endpoints to return 200 OK in response to a GET request in order to be marked as "healthy." The publicIP object created from the RDS templates will function, but do not add a path addendum. Instead, you can give end users the Traffic Manager URL with "/RDWeb" appended, for example: ```http://deployment.trafficmanager.net/RDWeb```
 
-By deploying Azure Traffic Manager with the Priority routing method, you prevent end users from accessing the passive deployment while the active deployment is functional. If end users access the passive deployment and the Storage Replica direction hasn't been switched for failover, the user sign-in hangs as the deployment tries and fails to access the file share on the passive Storage Spaces Direct cluster - eventually the deployment will give up and give the user a temporary profile.  
+By deploying Azure Traffic Manager with the Priority routing method, you prevent end users from accessing the passive deployment while the active deployment is functional. If end users access the passive deployment and the Storage Replica direction hasn't been switched for failover, the user sign-in hangs as the deployment tries and fails to access the file share on the passive Storage Spaces Direct cluster - eventually the deployment will give up and give the user a temporary profile.
 
-### Deallocate VMs to save resources 
-After you configure both deployments, you can optionally shut down and deallocate the secondary RDS infrastructure and RDSH VMs to save cost on these VMs. The Storage Spaces Direct SOFS and AD server VMs must always stay running in the secondary/passive deployment to enable user account and profile synchronization.  
+### Deallocate VMs to save resources
+After you configure both deployments, you can optionally shut down and deallocate the secondary RDS infrastructure and RDSH VMs to save cost on these VMs. The Storage Spaces Direct SOFS and AD server VMs must always stay running in the secondary/passive deployment to enable user account and profile synchronization.
 
-When a failover occurs, you'll need to start the deallocated VMs. This deployment configuration has the advantage of being lower cost, but at the expense of fail-over time. If a catastrophic failure occurs in the active deployment, you'll have to manually start the passive deployment, or you'll need an automation script to detect the failure and start the passive deployment automatically. In either case, it may take several minutes to get the passive deployment running and available for users to sign in, resulting in some downtime for the service. This downtime depends on the amount of time it takes to start the RDS infrastructure and RDSH VMs (typically 2-4 minutes, if the VMs are started in parallel rather than serially), and the time to bring the passive cluster online (which depends on the size of the cluster, typically 2-4 minutes for a 2-node cluster with 2 disks per node). 
+When a failover occurs, you'll need to start the deallocated VMs. This deployment configuration has the advantage of being lower cost, but at the expense of fail-over time. If a catastrophic failure occurs in the active deployment, you'll have to manually start the passive deployment, or you'll need an automation script to detect the failure and start the passive deployment automatically. In either case, it may take several minutes to get the passive deployment running and available for users to sign in, resulting in some downtime for the service. This downtime depends on the amount of time it takes to start the RDS infrastructure and RDSH VMs (typically 2-4 minutes, if the VMs are started in parallel rather than serially), and the time to bring the passive cluster online (which depends on the size of the cluster, typically 2-4 minutes for a 2-node cluster with 2 disks per node).
 
-### Active Directory 
-The Active Directory servers in each deployment are replicas within the same Forest/Domain. Active Directory has a built-in synchronization protocol to keep the four domain controllers in sync. However, there may be some lag so that if a new user is added to one AD server, it may take some time to replicate across all the AD servers in the two deployments. Consequently, be sure to warn users to not try to sign in immediately after being added to the domain. 
+### Active Directory
+The Active Directory servers in each deployment are replicas within the same Forest/Domain. Active Directory has a built-in synchronization protocol to keep the four domain controllers in sync. However, there may be some lag so that if a new user is added to one AD server, it may take some time to replicate across all the AD servers in the two deployments. Consequently, be sure to warn users to not try to sign in immediately after being added to the domain.
 
-### RD License Server 
-Provide a [per-user RD CAL](rds-client-access-license.md) for each named user that is authorized to access the geo-redundant deployment. Distribute the per user CALs evenly across the two RD License Servers in the active deployment. Then, duplicate these CALs to the two RD License Servers in the passive deployment. Because the CALs are duplicated between the active and passive deployment, at any given time only one deployment can be active with users connecting; otherwise, you violate the license agreement.  
+### RD License Server
+Provide a [per-user RD CAL](rds-client-access-license.md) for each named user that is authorized to access the geo-redundant deployment. Distribute the per user CALs evenly across the two RD License Servers in the active deployment. Then, duplicate these CALs to the two RD License Servers in the passive deployment. Because the CALs are duplicated between the active and passive deployment, at any given time only one deployment can be active with users connecting; otherwise, you violate the license agreement.
 
-### Image Management 
-As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/), but note that the passive deployment's RDS infrastructure and RDSH VMs must be running to run the template. 
+### Image Management
+As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/), but note that the passive deployment's RDS infrastructure and RDSH VMs must be running to run the template.
 
 ## Failover
 
@@ -124,7 +123,7 @@ You can learn more in [Cluster to cluster Storage Replication](../../storage/sto
 Azure Traffic Manager automatically recognizes that the primary deployment failed and that the secondary deployment is healthy (in the RD Gateway VMs have been started in RG B) and directs user traffic to the secondary deployment. Users can use the same Traffic Manager URL to continue working on their remote resources, enjoying a consistent experience. Note that the client DNS cache will not update the record for the duration of the TTL set in Azure Traffic Manager configuration.
 
 ### Test failover
-In a Storage Replica partnership, only one volume (the source) can be active at a time. This means when you switch the SR Partnership direction, the volume in the primary deployment (RG A) becomes the destination of replication and is therefore hidden. Thus, any users connecting to RG A will no longer have access to their UPDs stored on the SOFS in RG A. 
+In a Storage Replica partnership, only one volume (the source) can be active at a time. This means when you switch the SR Partnership direction, the volume in the primary deployment (RG A) becomes the destination of replication and is therefore hidden. Thus, any users connecting to RG A will no longer have access to their UPDs stored on the SOFS in RG A.
 
 To test the failover while allowing users to continue logging in:
 1. Start the infrastructure VMs and RDSH VMs in RG B.
@@ -145,13 +144,13 @@ RG B is now the active primary deployment. To switch back to RG A as the primary
 2. Re-enable the endpoint of RG A in the Azure Traffic Manager profile:
 
    ```powershell
-   Enable-AzureRmTrafficManagerEndpoint -Name publicIpA -Type AzureEndpoints -ProfileName MyTrafficManagerProfile -ResourceGroupName RGA 
+   Enable-AzureRmTrafficManagerEndpoint -Name publicIpA -Type AzureEndpoints -ProfileName MyTrafficManagerProfile -ResourceGroupName RGA
    ```
 
 ## Considerations for on-premises deployments
 
 While an on-premises deployment couldn't use the Azure Quickstart Templates referenced in this article, you can implement all the infrastructure roles manually. In an on-premises deployment where cost is not driven by Azure consumption, consider using an active-active model for quicker failover.
 
-You can use Azure Traffic Manager with on-premises endpoints, but it requires an Azure subscription. Alternatively, for the DNS provided to end users, give them a CNAME record that simply directs users to the primary deployment. In the case of failover, modify the DNS CNAME record to redirect to the secondary deployment. In this way, the end user uses a single URL, just like with Azure Traffic Manager, that directs the user to the appropriate deployment. 
+You can use Azure Traffic Manager with on-premises endpoints, but it requires an Azure subscription. Alternatively, for the DNS provided to end users, give them a CNAME record that simply directs users to the primary deployment. In the case of failover, modify the DNS CNAME record to redirect to the secondary deployment. In this way, the end user uses a single URL, just like with Azure Traffic Manager, that directs the user to the appropriate deployment.
 
 If you are interested in creating an on-premises-to-Azure-site model, consider using [Azure Site Recovery](/azure/site-recovery/site-recovery-overview).

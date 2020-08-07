@@ -1,7 +1,6 @@
 ---
 title: Security and Assurance
 description: An overview of Security in Windows Server 2016
-ms.prod: windows-server
 ms.technology: techgroup-security
 ms.topic: article
 ms.date: 07/27/2018
@@ -10,7 +9,7 @@ author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
 ---
-# Security and Assurance in Windows Server 
+# Security and Assurance in Windows Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -24,31 +23,31 @@ ms.localizationpriority: medium
 This blog post from the Windows Server security team highlights many of the improvements in Windows Server that increase security for hosting and hybrid cloud environments.
 
 ### [Datacenter and Private Cloud Security Blog](https://blogs.technet.microsoft.com/datacentersecurity/)
-This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team.                                    
+This is the central blog site for technical content from the Microsoft Datacenter and Private Cloud Security team.
 
 ### [Addressing emerging threats and landscape shifts](https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be)
 In this 6-minute video, Anders Vinberg provides an overview of Microsoft's security and assurance strategy, and discusses industry trends and landscape shifts as they relate to security. He then focuses on Microsoft's key initiatives to protect workloads from the underlying fabric, and protect against direct attacks from privileged accounts. Finally, in case of breach, he explains how new detection and forensic capabilities can help better identify the threat.
 
 ### [Protecting Your Datacenter and Cloud from Emerging Threats blog post](https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx)
-This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.                   
+This blog post discusses how you can use Microsoft technologies to protect your datacenter and cloud investments from emerging threats.
 
 ### [Security and Assurance Overview session at Ignite](https://channel9.msdn.com/events/ignite/2015/brk2482)
-This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.                                                                   
+This Ignite session addresses persistent threats, insider breaches, organized cybercrime, and securing the Microsoft Cloud Platform (on-premises and connected services with Azure). It includes scenarios for securing workloads, large enterprise tenants, and service providers.
 
 ## Secure virtualization with Shielded VMs
 
 ### [Shielded VM in Channel 9](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
-A walkthrough of Shielded VM technology and benefits.                           
+A walkthrough of Shielded VM technology and benefits.
 
 ### [Shielded VM Demo](https://www.youtube.com/watch?v=xip5Qtk-7d8)
-This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.                                   
+This 4-minute video describes the value of shielded VMs and the differences between a shielded VM and a non-shielded VM.
 
 ### [Shielded Virtual Machines in Windows Server video walkthrough](http://microsoft-cloud.cloudguides.com/Guides/Shielded Virtual Machines in Windows Server.htm)
 This video walkthrough shows how the Host Guardian Service enables shielded virtual machines so that sensitive data is protected from unauthorized access by Hyper-V host administrators.
 
 ### [Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Ignite Video)](https://channel9.msdn.com/events/ignite/2015/brk3457)
 
-This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs.                
+This Ignite presentation discusses enhancements in Hyper-V, Virtual Machine Manager, and a new Host Guardian Server role to enable shielded VMs.
 
 ### [Guarded Fabric Deployment Guide](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview)
 This guide provides installation and validation information for Windows Server and System Center Virtual Machine Manager for Guarded Fabric Hosts and Shielded VMs.
@@ -60,14 +59,14 @@ This guide provides best practices for running shielded virtual machines in bran
 This guide provides information about how to resolve issues you may encounter in your Shielded VM environment.
 
 ### [Shielded VM Article](http://windowsitpro.com/hyper-v/super-secure-hyper-v-environments-shielded-vms-2016)
-This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.                                         
+This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.
 
 ## Privileged Access Management
 ### [Securing Privileged Access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)
-A road-map for how you can secure your privileged access. This road-map is built based on the combined expertise of the server security team, Microsoft IT, Azure team and the Microsoft Consulting Services                           
+A road-map for how you can secure your privileged access. This road-map is built based on the combined expertise of the server security team, Microsoft IT, Azure team and the Microsoft Consulting Services
 
 ### [Just in Time Administration with Microsoft Identity Manager](https://technet.microsoft.com/library/mt150258.aspx)
-This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.                                                                    
+This article discusses features and capabilities included in Microsoft Identity Manager, including support for Just In Time (JIT) Privileged Access Management.
 
 ### [Protecting Windows and Microsoft Azure Active Directory with Privileged Access Management](https://channel9.msdn.com/events/ignite/2015/brk3873)
 This Ignite presentation covers Microsoft's strategy and investments in Windows Server, PowerShell, Active Directory, Identity Manager, and Azure Active Directory for addressing the risks of administrator access through stronger authentication, and managing access using Just in Time and Just Enough Administration (JEA).
@@ -76,7 +75,7 @@ This Ignite presentation covers Microsoft's strategy and investments in Windows 
 This document shares the vision and technical details of Just Enough Administration, a PowerShell toolkit designed to help organizations reduce risk by restricting operators to the only access required to perform specific tasks.
 
 ### [Just Enough Administration demo video](https://www.youtube.com/watch?v=xnBrbkY9P20)
-Just Enough Administration demo walkthrough.                                                                                                                  
+Just Enough Administration demo walkthrough.
 ## Credential Protection
 
 ### [Protect derived domain credentials with Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard)
@@ -85,7 +84,7 @@ Credential Guard uses virtualization-based security to isolate secrets so that o
 ### [Protect Remote Desktop credentials with Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard)
 Remote Credential Guard helps you protect your credentials over a Remote Desktop connection by redirecting the Kerberos requests back to the device that's requesting the connection. It also provides single sign on experiences for Remote Desktop sessions.                                                                                                        |
 ### [Credential Guard demo video](https://www.youtube.com/watch?v=eUpKOGSl7yk)
-This 5-minute video demos Credential Guard and Remote Credential Guard.         
+This 5-minute video demos Credential Guard and Remote Credential Guard.
 
 ## Hardening the OS and applications
 ### [Windows Defender Application Control (WDAC) Deployment Guide](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
@@ -111,7 +110,7 @@ This Ignite presentation discusses how you can use Operational Insights to perfo
 The Microsoft Operations Management Suite (OMS) Security and Audit solution processes security logs and firewall events from on-premises and cloud environments to analyze and detect malicious behavior.
 
 ### [OMS and Windows Server](https://www.youtube.com/watch?v=_SaDw1dRy2k)
-This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server.  
+This 3-minute video shows how OMS can help detect potential malicious behavior that is blocked by Windows Server.
 
 ### [Microsoft Advanced Threat Analytics](https://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx)
 This blog post discusses Microsoft Advanced Threat Analytics, an on-premises product that uses Active Directory network traffic and SIEM data to discover and alert on potential threats.
@@ -125,7 +124,7 @@ This 3-minute video presents an overview of how Microsoft is adding threat analy
 This overview discusses Datacenter Firewall, a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.
 
 ### [What's New in DNS in Windows Server](https://technet.microsoft.com/windows-server-docs/networking/dns/what-s-new-in-dns-server)
-This overview topic provides brief descriptions of new capabilities in DNS, along with links for more information.                                                                           
+This overview topic provides brief descriptions of new capabilities in DNS, along with links for more information.
 
 ## Mapping security features to compliance regulations
 

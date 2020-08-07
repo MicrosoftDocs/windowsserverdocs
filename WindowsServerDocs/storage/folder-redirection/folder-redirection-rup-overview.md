@@ -1,7 +1,6 @@
 ---
 title: Folder Redirection, Offline Files, and Roaming User Profiles overview
 description: An overview of Folder Redirection, Offline Files, and Roaming User Profiles technologies.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend

@@ -2,7 +2,6 @@
 title: Manage tenant workloads
 description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
 manager: grcusanz
-ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 16359b15-a0e4-4f42-9d70-6ef0d851d219

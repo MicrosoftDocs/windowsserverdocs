@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Windows Admin Center Case Studies
@@ -29,7 +28,7 @@ ms.prod: windows-server
 
 [Ava6](http://www.avassys.com/) is an IT consulting company that specializes in design, evaluation, and integration of IT infrastructure, specifically virtualization, networking, storage, backup, and cloud computing.
 
-Ava6 uses Windows Server 2016 Core, Hyper-V, Failover Clustering, and S2D. 
+Ava6 uses Windows Server 2016 Core, Hyper-V, Failover Clustering, and S2D.
 
 ### **The Challenge**
 
@@ -77,7 +76,7 @@ Convergent Computing has three distinct environments: hosted, secured, and web o
 
 Convergent Computing uses Windows Admin Center to manage three environments with 40+ hosts running 200+ workloads.
 
-Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization. 
+Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization.
 
 ## FZI Research Center for Information Technology
 
@@ -136,7 +135,7 @@ Inside Technologies is using Windows Admin Center to manage their customers remo
 ## <a id="secureguard-copa-data"></a>SecureGUARD / COPA-DATA
 
 [SecureGUARD GmbH](http://www.secureguard.at/) helps companies solve complex IT problems in security and cloud infrastructure with a series of products and custom engineering services. SecureGUARD builds IT security appliances and Microsoft Windows Server based appliances, more recently building rack-level converged appliances for cloud infrastructures. SecureGUARD is a Microsoft Gold Partner in Application Development and Datacenter.
- 
+
 [COPA-DATA](https://www.copadata.com) develops the software solution “zenon” that allows for end-to-end industrial IoT solutions - from the field level up to the cloud and to mobile devices. COPA-DATA has deployed systems worldwide to companies in the Food & Beverage, Energy & Infrastructure, Automotive and Pharmaceutical sectors.
 
 ### **The Challenge**

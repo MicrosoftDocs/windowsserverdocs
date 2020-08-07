@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting Windows Server
 description: Get links to troubleshooting articles for Windows Server issues
-ms.prod: windows-server
 ms.technology: server-general
 ms.date: 1/24/2020
 author: kaushika-msft
@@ -10,8 +9,8 @@ ms.author: kaushika
 # Troubleshooting Windows Server components
 
 > [!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com.  
->   
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com.
+>
 > You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
 
 Microsoft regularly releases both updates for Windows Server. To ensure your servers can receive future updates, including security updates, it's important to keep your servers updated. Check out [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history) for a complete list of released updates.

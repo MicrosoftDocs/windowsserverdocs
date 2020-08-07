@@ -2,11 +2,10 @@
 title: Configure Remote RADIUS Server Groups
 description: This topic provides information on how to configure Remote RADIUS Server Groups in Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: ca125e57-249c-4d97-85d1-2929cbf871f1
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 
@@ -27,7 +26,7 @@ When you configure NPS as a RADIUS proxy, you create a new connection request po
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
-### To add a remote RADIUS server group 
+### To add a remote RADIUS server group
 
 1. In Server Manager, click **Tools**, and then click **Network Policy Server** to open the NPS console.
 2. In the console tree, double-click **RADIUS Clients and Servers**, right-click **Remote RADIUS Server Groups**, and then click **New**.

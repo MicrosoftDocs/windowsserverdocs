@@ -1,7 +1,6 @@
 ---
 title: What's New in Windows Server, version 2004
 description: New features in Windows Server, version 2004
-ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: Heidilohr

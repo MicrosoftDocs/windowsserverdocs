@@ -1,7 +1,6 @@
 ---
 title: Windows Authentication Overview
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: 485a0774-0785-457f-a964-0e9403c12bb1

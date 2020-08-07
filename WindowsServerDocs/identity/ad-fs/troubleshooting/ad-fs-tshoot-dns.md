@@ -6,11 +6,10 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
-# AD FS Troubleshooting - DNS 
+# AD FS Troubleshooting - DNS
 One of the first things to check, if AD FS is not working or responding, is DNS name resolution.  These are basic tests to determine if the AD FS servers or WAP servers are being found on your network.  For internal users, these tests should resolve to the AD FS servers (STS).    For external users, these tests should resolve to the WAP servers.
 
 The remainder of this document will show how to do some quick name resolution checks using command-line tools.

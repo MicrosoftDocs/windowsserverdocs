@@ -6,7 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adds
 ---
 
@@ -37,14 +36,14 @@ Active Directory also includes:
 
 ## Understanding Active Directory
  This section provides links to core Active Directory concepts:
- 
-* [Active Directory Structure and Storage Technologies](/previous-versions/windows/it-pro/windows-server-2003/cc759186(v=ws.10))
-* [Domain Controller Roles](/previous-versions/windows/it-pro/windows-server-2003/cc786438(v=ws.10)) 
-* [Active Directory Schema](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771796(v=ws.10))
-* [Understanding Trusts](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771568(v=ws.10)) 
-* [Active Directory Replication Technologies](/previous-versions/windows/it-pro/windows-server-2003/cc776877(v=ws.10)) 
-* [Active Directory Search and Publication Technologies](/previous-versions/windows/it-pro/windows-server-2003/cc775686(v=ws.10)) 
-* [Interoperating with DNS and Group Policy](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd197486(v=ws.10))
-* [Understanding Schema](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)) 
 
-For a detailed list of Active Directory concepts, see [Understanding Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc781408(v=ws.10)). 
+* [Active Directory Structure and Storage Technologies](/previous-versions/windows/it-pro/windows-server-2003/cc759186(v=ws.10))
+* [Domain Controller Roles](/previous-versions/windows/it-pro/windows-server-2003/cc786438(v=ws.10))
+* [Active Directory Schema](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771796(v=ws.10))
+* [Understanding Trusts](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771568(v=ws.10))
+* [Active Directory Replication Technologies](/previous-versions/windows/it-pro/windows-server-2003/cc776877(v=ws.10))
+* [Active Directory Search and Publication Technologies](/previous-versions/windows/it-pro/windows-server-2003/cc775686(v=ws.10))
+* [Interoperating with DNS and Group Policy](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd197486(v=ws.10))
+* [Understanding Schema](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))
+
+For a detailed list of Active Directory concepts, see [Understanding Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc781408(v=ws.10)).

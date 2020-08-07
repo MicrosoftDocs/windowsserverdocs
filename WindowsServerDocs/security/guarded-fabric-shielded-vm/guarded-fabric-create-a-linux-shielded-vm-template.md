@@ -1,6 +1,5 @@
 ---
 title: Create a Linux shielded VM template disk
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
 manager: dongill
@@ -12,7 +11,7 @@ ms.date: 08/29/2018
 
 # Create a Linux shielded VM template disk
 
-> Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), 
+> Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel),
 
 This topic explains how to prepare a template disk for Linux shielded VMs that can be used to instantiate one or more tenant VMs.
 
@@ -135,7 +134,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     ```
 
 14. When you're done customizing the Linux OS, locate the lsvmprep installation program on your system and run it.
-    
+
     ```bash
     # The path below may change based on the version of lsvmprep installed
     # Run "find /opt -name lsvmprep" to locate the lsvmprep executable
@@ -146,7 +145,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 
 16. If you took any checkpoints of your VM (including automatic checkpoints created by Hyper-V with the Windows 10 Fall Creators Update), be sure to delete them before continuing.
     Checkpoints create differencing disks (.avhdx) that are not supported by the Template Disk Wizard.
-    
+
     To delete checkpoints, open **Hyper-V Manager**, select your VM,  right click the topmost checkpoint in the Checkpoints pane, then click **Delete Checkpoint Subtree**.
 
     ![Delete all checkpoints for your template VM in Hyper-V manager](../media/Guarded-Fabric-Shielded-VM/delete-checkpoints-lsvm-template.png)

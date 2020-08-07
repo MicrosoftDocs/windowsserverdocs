@@ -1,7 +1,6 @@
 ---
 title: IIS on Nano Server
 description: Details for configuring IIS on Nano Server
-ms.prod: windows-server
 manager: DonGill
 ms.technology: server-nano
 ms.topic: article

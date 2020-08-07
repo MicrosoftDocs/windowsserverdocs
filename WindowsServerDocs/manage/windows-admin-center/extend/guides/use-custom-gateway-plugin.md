@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Use a custom gateway plugin in your tool extension
@@ -22,7 +21,7 @@ If you haven't already, follow the directions in [develop a tool extension](../d
 
 ## Add a module to your project ##
 
-If you haven't already, add a new [empty module](add-module.md) to your project, which we will use in the next step.  
+If you haven't already, add a new [empty module](add-module.md) to your project, which we will use in the next step.
 
 ## Add integration to custom gateway plugin ##
 
@@ -43,7 +42,7 @@ import { AjaxResponse, Observable } from 'rxjs';
 export class PluginService {
     constructor(private appContextService: AppContextService, private http: Http) {
     }
-    
+
     public getGatewayRestResponse(): Observable<any> {
         let callUrl = this.appContextService.activeConnection.nodeName;
 

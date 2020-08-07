@@ -2,7 +2,6 @@
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: Data Deduplication interoperability
 ms.technology: storage-deduplication
-ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
@@ -16,7 +15,7 @@ ms.date: 09/16/2016
 ## Supported
 
 ### ReFS
-Data Deduplication is supported as of Windows Server 2019. 
+Data Deduplication is supported as of Windows Server 2019.
 
 ### Failover Clustering
 
@@ -37,18 +36,18 @@ You can optimize data access over the network by enabling [BranchCache](../../ne
 Data Deduplication works with Distributed File System (DFS) Replication. Optimizing or unoptimizing a file will not trigger a replication because the file does not change. DFS Replication uses Remote Differential Compression (RDC), not the chunks in the chunk store, for over-the-wire savings. The files on the replica can also be optimized by using deduplication if the replica is using Data Deduplication.
 
 ### Quotas
-Data Deduplication does not support creating a hard quota on a volume root folder that also has deduplication enabled. When a hard quota is present on a volume root, the actual free space on the volume and the quota-restricted space on the volume are not the same. This may cause deduplication optimization jobs to fail. It is possible however to creating a soft quota on a volume root that has deduplication enabled. 
+Data Deduplication does not support creating a hard quota on a volume root folder that also has deduplication enabled. When a hard quota is present on a volume root, the actual free space on the volume and the quota-restricted space on the volume are not the same. This may cause deduplication optimization jobs to fail. It is possible however to creating a soft quota on a volume root that has deduplication enabled.
 
 When quota is enabled on a deduplicated volume, quota uses the logical size of the file rather than the physical size of the file. Quota usage (including any quota thresholds) does not change when a file is processed by deduplication. All other quota functionality, including volume-root soft quotas and quotas on subfolders, works normally when using deduplication.
 
 ### Windows Server Backup
 Windows Server Backup can back up an optimized volume as-is (that is, without removing deduplicated data). The following steps show how to back up a volume and how to restore a volume or selected files from a volume.
-1. Install Windows Server Backup.  
+1. Install Windows Server Backup.
     ```PowerShell
     Install-WindowsFeature -Name Windows-Server-Backup
     ```
 
-2. Back up the E: volume to another volume by running the following command, substituting the correct volume names for your situation.  
+2. Back up the E: volume to another volume by running the following command, substituting the correct volume names for your situation.
     ```PowerShell
     wbadmin start backup –include:E: -backuptarget:F: -quiet
     ```
@@ -65,7 +64,7 @@ Windows Server Backup can back up an optimized volume as-is (that is, without re
     wbadmin start recovery –version:02/16/2012-06:22 -itemtype:Volume  -items:E: -recoveryTarget:E:
     ```
 
-    **--OR--**  
+    **--OR--**
 
     Restore a particular folder (in this case, the E:\Docs folder):
     ```PowerShell

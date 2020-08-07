@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting Converged NIC Configurations
 description: This topic is part of the Converged NIC Configuration Guide for Windows Server 2016.
-ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164

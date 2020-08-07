@@ -1,7 +1,6 @@
 ---
 ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
-ms.prod: windows-server
 ms.author: cosdar
 manager: dongill
 ms.technology: storage-spaces
@@ -39,7 +38,7 @@ Typical deployments are simple to scale out by adding servers. There are just tw
 2. Run the following cmdlet on the cluster to finish adding the server:
 
 ```
-Add-ClusterNode -Name NewNode 
+Add-ClusterNode -Name NewNode
 ```
 
    >[!NOTE]
@@ -53,7 +52,7 @@ With two servers, you can only create two-way mirrored volumes (compare with dis
 
 Two-way mirrored volumes cannot be upgraded in-place to three-way mirroring. Instead, you can create a new volume and migrate (copy, such as by using [Storage Replica](../storage-replica/server-to-server-storage-replication.md)) your data to it, and then remove the old volume.
 
-To begin creating three-way mirrored volumes, you have several good options. You can use whichever you prefer. 
+To begin creating three-way mirrored volumes, you have several good options. You can use whichever you prefer.
 
 #### Option 1
 
@@ -78,7 +77,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 Set **PhysicalDiskRedundancy = 2** on the **StorageTier** template called *Capacity*, and then create volumes by referencing the tier.
 
 ```PowerShell
-Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2 
+Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2
 
 New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes <Size>
 ```
@@ -129,7 +128,7 @@ That's it! You are now ready to create mirror-accelerated parity volumes by refe
 #### Example
 
 ```PowerShell
-New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes <Size, Size> 
+New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes <Size, Size>
 ```
 
 ### Beyond 4 servers: greater parity efficiency
@@ -147,13 +146,13 @@ If your deployment uses chassis or rack fault tolerance, you must specify the ch
 1. Create a temporary fault domain for the node by opening an elevated PowerShell session and then using the following command, where *\<NewNode>* is the name of the new cluster node:
 
    ```PowerShell
-   New-ClusterFaultDomain -Type Node -Name <NewNode> 
+   New-ClusterFaultDomain -Type Node -Name <NewNode>
    ```
 
 2. Move this temporary fault-domain into the chassis or rack where the new server is located in the real world, as specified by *\<ParentName>*:
 
    ```PowerShell
-   Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
+   Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName>
    ```
 
    For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).

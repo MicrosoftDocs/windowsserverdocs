@@ -1,7 +1,6 @@
 ---
 title: Network File System overview
 description: Explains what Network File System is.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend

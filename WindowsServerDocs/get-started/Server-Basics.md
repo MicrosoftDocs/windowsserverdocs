@@ -1,7 +1,6 @@
 ---
 title: Get Started with Windows Server 2016
 description: Basics for Server 2016 - System requirements, release notes, upgrade options
-ms.prod: windows-server
 manager: dongill
 ms.technology: get-started
 ms.date: 03/16/2018

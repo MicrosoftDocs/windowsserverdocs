@@ -1,6 +1,5 @@
 ---
 title: Health Service in Windows Server
-ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service

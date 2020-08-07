@@ -1,7 +1,6 @@
 ---
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment.
-ms.prod: windows-server
 ms.author:
 ms.technology: storage-spaces
 ms.topic: article

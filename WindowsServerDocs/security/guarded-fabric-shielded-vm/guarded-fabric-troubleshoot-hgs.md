@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting the Host Guardian Service
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill
@@ -134,7 +133,7 @@ The attestation signer certificate is created and renewed behind the scenes on H
 To refresh the attestation signer certificate, run the following command in an elevated PowerShell prompt.
 
 ```powershell
-Start-ScheduledTask -TaskPath \Microsoft\Windows\HGSServer -TaskName 
+Start-ScheduledTask -TaskPath \Microsoft\Windows\HGSServer -TaskName
 AttestationSignerCertRenewalTask
 ```
 

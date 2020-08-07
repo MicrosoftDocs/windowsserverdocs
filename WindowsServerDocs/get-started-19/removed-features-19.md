@@ -1,7 +1,6 @@
 ---
 title: Features removed or planned for removal in Windows Server 2019
 description: Learn about the Features and functionalities removed or planned for removal starting with Windows Server 2019.
-ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
@@ -20,7 +19,7 @@ Each release of Windows Server adds new features and functionality; we also occa
 > - You can get early access to Windows Server builds by joining the [Windows Insider program](https://insider.windows.com) - this is a great way to test feature changes.
 > - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server](removed-features.md).
 
-**The list is subject to change and might not include every affected feature or functionality.** 
+**The list is subject to change and might not include every affected feature or functionality.**
 
 ## Features we removed in this release
 
@@ -35,9 +34,9 @@ We're removing the following features and functionalities from the installed pro
 
 ## Features we're no longer developing
 
-We're no longer actively developing these features and may remove them from a future update. Some features have been replaced with other features or functionality, while others are now available from different sources. 
+We're no longer actively developing these features and may remove them from a future update. Some features have been replaced with other features or functionality, while others are now available from different sources.
 
-If you have feedback about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). 
+If you have feedback about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
 
 | Feature      | Instead you can use... |
 | ----------- | --------------------- |

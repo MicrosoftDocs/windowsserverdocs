@@ -2,7 +2,6 @@
 title: STEP 7 Install and Configure 2-APP1
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
 ms.topic: article
 ms.technology: networking-da
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6

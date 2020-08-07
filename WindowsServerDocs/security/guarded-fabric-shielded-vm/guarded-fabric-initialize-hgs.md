@@ -1,6 +1,5 @@
 ---
 title: Initialize HGS
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

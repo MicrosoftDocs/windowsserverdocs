@@ -1,6 +1,5 @@
 ---
 title: Storage Spaces overview
-ms.prod: windows-server
 ms.author: jgerend
 manager: dougkim
 ms.technology: storage-file-systems

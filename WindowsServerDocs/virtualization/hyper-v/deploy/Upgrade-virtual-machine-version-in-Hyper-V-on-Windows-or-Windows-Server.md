@@ -1,7 +1,6 @@
 ---
 title: Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server
 description: Gives instructions and considerations for upgrading the version of a virtual machine
-ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v
 ms.topic: article

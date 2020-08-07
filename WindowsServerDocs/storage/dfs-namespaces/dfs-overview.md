@@ -1,6 +1,5 @@
 ---
 title: DFS Namespaces overview
-ms.prod: windows-server
 ms.author: jgerend
 manager: daveba
 ms.technology: storage

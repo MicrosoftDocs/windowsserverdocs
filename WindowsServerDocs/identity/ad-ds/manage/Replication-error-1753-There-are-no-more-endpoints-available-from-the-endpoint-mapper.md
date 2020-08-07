@@ -6,7 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adds
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
@@ -65,7 +64,7 @@ Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTO
 
 ```
 Default-First-Site-NameCONTOSO-DC1
-DSA Options: IS_GC 
+DSA Options: IS_GC
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
@@ -218,13 +217,13 @@ In the portqry output, note the port numbers dynamically registered by the "MS N
 
 ```
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\pipe\lsass] 
+ncacn_np:CONTOSO-DC01[\pipe\lsass]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\PIPE\protected_storage] 
+ncacn_np:CONTOSO-DC01[\PIPE\protected_storage]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_ip_tcp:CONTOSO-DC01[49156] 
+ncacn_ip_tcp:CONTOSO-DC01[49156]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_http:CONTOSO-DC01[49157] 
+ncacn_http:CONTOSO-DC01[49157]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
 ncacn_http:CONTOSO-DC01[6004]
 ```

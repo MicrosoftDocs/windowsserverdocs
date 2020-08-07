@@ -1,7 +1,6 @@
 ---
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: Advanced Data Deduplication settings
-ms.prod: windows-server
 ms.technology: storage-deduplication
 ms.topic: article
 author: wmgries
@@ -27,7 +26,7 @@ Data Deduplication jobs are scheduled via Windows Task Scheduler and can be view
 
 The most common reason for changing when Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Data Deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weekends and after 7:00 PM on weeknights. To change the schedule, run the following PowerShell cmdlets in an Administrator context.
 
-1. Disable the scheduled hourly [Optimization](understand.md#job-info-optimization) jobs.  
+1. Disable the scheduled hourly [Optimization](understand.md#job-info-optimization) jobs.
 	```PowerShell
 	Set-DedupSchedule -Name BackgroundOptimization -Enabled $false
 	Set-DedupSchedule -Name PriorityOptimization -Enabled $false
@@ -44,7 +43,7 @@ The most common reason for changing when Data Deduplication jobs run is to ensur
 	New-DedupSchedule -Name "NightlyOptimization" -Type Optimization -DurationHours 11 -Memory 100 -Cores 100 -Priority High -Days @(1,2,3,4,5) -Start (Get-Date "2016-08-08 19:00:00")
     ```
 
-	>[!NOTE]  
+	>[!NOTE]
 	> The *date* part of the `System.Datetime` provided to `-Start` is irrelevant (as long as it's in the past), but the *time* part specifies when the job should start.
 4. Create a weekly Garbage Collection job that runs on Saturday starting at 7:00 AM with high priority and all the CPUs and memory available on the system.
 	```PowerShell
@@ -312,18 +311,18 @@ For example, you may want to disable full Garbage Collection. More information a
 </table>
 
 ## <a id="faq"></a>Frequently asked questions
-<a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting, and now jobs are slow or don't finish, or my workload performance has decreased. Why?**  
+<a id="faq-use-responsibly"></a>**I changed a Data Deduplication setting, and now jobs are slow or don't finish, or my workload performance has decreased. Why?**
 These settings give you a lot of power to control how Data Deduplication runs. Use them responsibly, and [monitor performance](run.md#monitoring-dedup).
 
-<a id="faq-running-dedup-jobs-manually"></a>**I want to run a Data Deduplication job right now, but I don't want to create a new schedule--can I do this?**  
+<a id="faq-running-dedup-jobs-manually"></a>**I want to run a Data Deduplication job right now, but I don't want to create a new schedule--can I do this?**
 Yes, [all jobs can be run manually](run.md#running-dedup-jobs-manually).
 
-<a id="faq-full-v-regular-gc"></a>**What is the difference between full and regular Garbage Collection?**  
+<a id="faq-full-v-regular-gc"></a>**What is the difference between full and regular Garbage Collection?**
 There are two types of [Garbage Collection](understand.md#job-info-gc):
 
 - *Regular Garbage Collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular Garbage Collection compacts a chunk store container only if a minimum percentage of the chunks are unreferenced. This type of Garbage Collection runs much faster and uses fewer resources than full Garbage Collection. The default schedule of the regular Garbage Collection job is to run once a week.
 - *Full Garbage Collection* does a much more thorough job of finding unreferenced chunks and freeing more disk space. Full Garbage Collection compacts every container even if just a single chunk in the container is unreferenced. Full Garbage Collection will also free space that may have been in use if there was a crash or power failure during an Optimization job. Full Garbage Collection jobs will recover 100 percent of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a regular Garbage Collection job. The full Garbage Collection job will typically find and release up to 5 percent more of the unreferenced data than a regular Garbage Collection job. The default schedule of the full Garbage Collection job is to run every fourth time Garbage Collection is scheduled.
 
-<a id="faq-why-disable-full-gc"></a>**Why would I want to disable full Garbage Collection?**  
-- Garbage Collection could adversely affect the volume's lifetime shadow copies and the size of incremental backup. High churn or I/O-intensive workloads may see a degradation in performance by full Garbage Collection jobs.           
+<a id="faq-why-disable-full-gc"></a>**Why would I want to disable full Garbage Collection?**
+- Garbage Collection could adversely affect the volume's lifetime shadow copies and the size of incremental backup. High churn or I/O-intensive workloads may see a degradation in performance by full Garbage Collection jobs.
 - You can manually run a full Garbage Collection job from PowerShell to clean up leaks if you know your system crashed.

@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 3/29/2019
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)

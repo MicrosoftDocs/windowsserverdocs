@@ -6,7 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # AD FS user sign-in customization
@@ -16,9 +15,9 @@ AD FS provides a number of options for administrators to customize and tailor th
 
 
 
-![AD FS customization](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png) 
-    
-  
+![AD FS customization](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
+
+
 
 
 

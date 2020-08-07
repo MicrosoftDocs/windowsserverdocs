@@ -7,7 +7,6 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Configure User Access Control and Permissions
 

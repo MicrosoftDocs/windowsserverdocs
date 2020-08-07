@@ -2,7 +2,6 @@
 title: Steps for migrating MultiPoint Services
 description: Walks you through the steps to migrate to MultiPoint Services in Windows Server 2016
 ms.date: 07/29/2016
-ms.prod: windows-server
 ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 3ee77efa-7cc5-4ddf-aaff-b5634a717014
@@ -35,7 +34,7 @@ Before you can import the VDI template from the source server, enabled virtual d
 4. Click **Import virtual desktop template**. Follow the instructions to import the template from the source server.
 
 > [!NOTE]
-> When you import a virtual desktop template,  any customization applied to the template will be reset. 
+> When you import a virtual desktop template,  any customization applied to the template will be reset.
 
 ## Next step
 [Validate your new MultiPoint Services deployment.](multipoint-services-post-migration-steps.md)

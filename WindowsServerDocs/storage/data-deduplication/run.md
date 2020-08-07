@@ -2,7 +2,6 @@
 ms.assetid: f15c02d7-1cbd-4eba-a571-0ea34ab93ef4
 title: Running Data Deduplication
 ms.technology: storage-deduplication
-ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
@@ -36,7 +35,7 @@ Because Data Deduplication uses a post-processing model, it is important that [D
 * For the [Garbage Collection job](understand.md#job-info-gc), look at `LastGarbageCollectionResult` (0 = Success), `LastGarbageCollectionResultMessage`, and `LastGarbageCollectionTime` (should be recent).
 * For the [Integrity Scrubbing job](understand.md#job-info-scrubbing), look at `LastScrubbingResult` (0 = Success), `LastScrubbingResultMessage`, and `LastScrubbingTime` (should be recent).
 
-> [!Note]  
+> [!Note]
 > More detail on job successes and failures can be found in the Windows Event Viewer under `\Applications and Services Logs\Windows\Deduplication\Operational`.
 
 ### <a id="monitoring-dedup-optimization-rates"></a>Optimization rates
@@ -55,9 +54,9 @@ To turn off Data Deduplication, run the [Unoptimization job](understand.md#job-i
 Start-DedupJob -Type Unoptimization -Volume <Desired-Volume>
 ```
 
-> [!Important]  
+> [!Important]
 > The Unoptimization job will fail if the volume does not have sufficient space to hold the unoptimized data.
 
 ## <a id="faq"></a>Frequently Asked Questions
-**Is there a System Center Operations Manager Management Pack available to monitor Data Deduplication?**  
+**Is there a System Center Operations Manager Management Pack available to monitor Data Deduplication?**
 Yes. Data Deduplication can be monitored through the System Center Management Pack for File Server. For more information, see the  [Guide for System Center Management Pack for File Server 2012 R2](https://download.microsoft.com/download/6/F/7/6F7A33B9-9383-48ED-9252-23C2C8AD1BDA/MPGuide_FileServer2012R2.doc) document.

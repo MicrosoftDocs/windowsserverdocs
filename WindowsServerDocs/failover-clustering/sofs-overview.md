@@ -1,7 +1,6 @@
 ---
 title: Scale-Out File Server for application data overview
 description: Overview of the Scale-Out File Server feature for Windows Server 201 R2 and Windows Server 2012.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend

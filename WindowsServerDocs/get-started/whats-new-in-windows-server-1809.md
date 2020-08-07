@@ -1,7 +1,6 @@
 ---
 title: What's New in Windows Server, version 1809
 description: New features in Windows Server, version 1809
-ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
@@ -18,17 +17,17 @@ To learn about the latest features in Windows, see [What's New in Windows Server
 
 ## Container networking with Kubernetes
 
-[Container networking with Kubernetes](../networking/sdn/technologies/containers/container-networking-overview.md) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins. 
+[Container networking with Kubernetes](../networking/sdn/technologies/containers/container-networking-overview.md) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
 Additionally, customers deploying workloads on Kubernetes network security to protect both Linux and Windows services using embedded tooling.
 
 ## Group managed service accounts for containers
 
-Windows Server, version 1809 has improvements in the scalability and reliability of containers 
-that use group managed service accounts (gMSA) to access network resources. 
+Windows Server, version 1809 has improvements in the scalability and reliability of containers
+that use group managed service accounts (gMSA) to access network resources.
 
 ## Host device access for containers
 
-Simple buses can be assigned to process-isolated Windows Server containers. 
+Simple buses can be assigned to process-isolated Windows Server containers.
 Applications running in containers that need to talk over SPI, I2C, GPIO, and UART/COM are now able to do so.
 
 ## Additional features
@@ -43,7 +42,7 @@ In addition to features that are new in Windows Server version 1809, the followi
 * [Server Core App Compatibility feature on demand (FOD)](../get-started-19/install-fod-19.md)
 * [Storage Migration Service (SMS)](../storage/whats-new-in-storage.md#storage-spaces-direct)
 * Storage Replica
-* System Insights 
+* System Insights
 * Windows Defender Advanced Threat Protection (ATP)
 * Windows Defender ATP Exploit Guard
 * [Windows Time Service](../networking/windows-time-service/insider-preview.md)

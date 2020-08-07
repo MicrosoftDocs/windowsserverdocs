@@ -1,7 +1,6 @@
 ---
 title: iSCSI Target Server Overview
 TOCTitle: iSCSI Target Server
-ms.prod: windows-server
 ms.technology: storage-iscsi
 ms.topic: article
 author: JasonGerend
@@ -34,5 +33,5 @@ If you enable guest clustering, you need to provide block storage. Any servers r
 
 ## See Also
 
-[iSCSI Target Block Storage, How To](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848268(v%3dws.11))  
+[iSCSI Target Block Storage, How To](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848268(v%3dws.11))
 [What's New in iSCSI Target Server in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn305893(v%3dws.11))

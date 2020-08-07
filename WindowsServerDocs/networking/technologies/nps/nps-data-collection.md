@@ -6,7 +6,6 @@ manager: mtillman
 ms.author: joflore
 ms.reviewer: richagi
 ms.custom: it-pro
-ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.date: 05/01/2018
@@ -33,7 +32,7 @@ This document explains how to find user information collected by the Network Pol
 
 ## Gather data from NPS
 
-If accounting data is enabled and configured, then records of a user's NPS authentication attempts can be obtained from SQL Server or the log files depending on the configuration. 
+If accounting data is enabled and configured, then records of a user's NPS authentication attempts can be obtained from SQL Server or the log files depending on the configuration.
 
 If accounting data is configured for SQL Server, query for all records WHERE User_Name = `'<username>'`.
 

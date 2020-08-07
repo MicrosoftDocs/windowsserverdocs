@@ -1,6 +1,5 @@
 ---
 title: Guarded Fabric and Shielded VMs overview
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

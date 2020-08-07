@@ -1,7 +1,6 @@
 ---
 title: Networking
 description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016.
-ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.date: 05/08/2018

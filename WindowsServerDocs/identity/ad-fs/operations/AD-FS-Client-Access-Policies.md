@@ -5,31 +5,30 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # Controlling Access to Organizational Data with Active Directory Federation Services
 
-This document provides an overview of access control with AD FS across on premises, hybrid and cloud scenarios.  
+This document provides an overview of access control with AD FS across on premises, hybrid and cloud scenarios.
 
-## AD FS and Conditional Access to On Premises Resources 
+## AD FS and Conditional Access to On Premises Resources
 Since the introduction of Active Directory Federation Services, authorization policies have been available to restrict or allow users access to resources based on attributes of the request and the resource.  As AD FS has moved from version to version, how these policies are implemented has changed.  For detailed information on access control features by version see:
 - [Access Control Policies in AD FS in Windows Server 2016](Access-Control-Policies-in-AD-FS.md)
 - [Access control in AD FS in Windows Server 2012 R2](Manage-Risk-with-Conditional-Access-Control.md)
 
 
-## AD FS and Conditional Access in a Hybrid Organization  
+## AD FS and Conditional Access in a Hybrid Organization
 
 AD FS provides the on premises component of conditional access policy in a hybrid scenario. AD FS based authorization rules should be used for non Azure AD resources, such as on premises applications federated directly to AD FS.  The cloud component is provided by [Azure AD Conditional Access](/azure/active-directory/active-directory-conditional-access).  Azure AD Connect provides the control plane connecting the two.
 
-For example, when you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.  
+For example, when you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.
 
-![conditional access](../deployment/media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
+![conditional access](../deployment/media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
 
 ### The evolution of Client Access Policies for Office 365
-Many of you are using client access policies with AD FS to limit access to Office 365 and other Microsoft Online services based on factors such as the location of the client and the type of client application being used.  
+Many of you are using client access policies with AD FS to limit access to Office 365 and other Microsoft Online services based on factors such as the location of the client and the type of client application being used.
 - [Client access policies in Windows Server 2012 R2 AD FS](Access-Control-Policies-W2K12.md)
 - [Client access policies in AD FS 2.0](Access-Control-Policies-in-AD-FS-2.md)
 

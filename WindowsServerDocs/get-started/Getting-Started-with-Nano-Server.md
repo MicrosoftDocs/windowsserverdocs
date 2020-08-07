@@ -1,7 +1,6 @@
 ---
 title: Install Nano Server
 description: Clean installation, upgrade, migration, and evaluation of Nano Server
-ms.prod: windows-server
 manager: dougkim
 ms.technology: server-nano
 ms.date: 09/06/2017
@@ -16,22 +15,22 @@ ms.localizationpriority: medium
 >Applies To: Windows Server 2016
 
 > [!IMPORTANT]
-> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means. 
+> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
 
-Windows Server 2016 offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server. When it does restart, it restarts much faster. The Nano Server installation option is available for Standard and Datacenter editions of Windows Server 2016.  
+Windows Server 2016 offers a new installation option: Nano Server. Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server. When it does restart, it restarts much faster. The Nano Server installation option is available for Standard and Datacenter editions of Windows Server 2016.
 
-Nano Server is ideal for a number of scenarios:  
-  
--   As a compute host for Hyper-V virtual machines, either in clusters or not  
-  
--   As a storage host for Scale-Out File Server.  
-  
--   As a DNS server  
-  
--   As a web server running Internet Information Services (IIS)  
-  
--   As a host for applications that are developed using cloud application patterns and run in a container or virtual machine guest operating system  
-  
+Nano Server is ideal for a number of scenarios:
+
+-   As a compute host for Hyper-V virtual machines, either in clusters or not
+
+-   As a storage host for Scale-Out File Server.
+
+-   As a DNS server
+
+-   As a web server running Internet Information Services (IIS)
+
+-   As a host for applications that are developed using cloud application patterns and run in a container or virtual machine guest operating system
+
 ## Important differences in Nano Server
 
 Because Nano Server is optimized as a lightweight operating system for running cloud-native applications based on containers and micro-services or as an agile and cost-effective datacenter host with a dramatically smaller footprint, there are important differences in Nano Server versus Server Core or Server with Desktop Experience installations:
@@ -62,10 +61,10 @@ You can obtain a 180-day-licensed evaluation copy of Windows Server from [Window
 ### Clean installation
 Because you install Nano Server by configuring a VHD, a clean installation is the quickest and simplest deployment method.
 
-- To get started quickly with a basic deployment of Nano Server using DHCP to obtain an IP address, see the [Nano Server Quick Start](Nano-Server-Quick-Start.md) 
+- To get started quickly with a basic deployment of Nano Server using DHCP to obtain an IP address, see the [Nano Server Quick Start](Nano-Server-Quick-Start.md)
 - If you're already familiar with the basics of Nano Server, the more detailed topics starting with [Deploy Nano Server](Deploy-Nano-Server.md) offer a full set of instructions for customizing images, working with domains, installing packages for server roles and other features both online and offline, and much more.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016. For Nano Server, see the Managing updates in Nano Server section of [Manage Nano Server](Manage-Nano-Server.md).
 
 ### Upgrade
@@ -73,11 +72,11 @@ Since Nano Server is new for Windows Server 2016, there isn't an upgrade path fr
 
 ### Migration
 Since Nano Server is new for Windows Server 2016, there isn't migration path from older operating system versions to Nano Server.
-  
+
 -------------------------------------
-If you need a different installation option, you can head [back to the main Windows Server 2016 page](windows-server-2016.md) 
-
-  
+If you need a different installation option, you can head [back to the main Windows Server 2016 page](windows-server-2016.md)
 
 
- 
+
+
+

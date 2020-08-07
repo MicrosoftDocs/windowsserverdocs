@@ -1,7 +1,6 @@
 ---
 title: Virtual machine sizing
 description: Size recommendations for each workload type.
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 12/02/2019

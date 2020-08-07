@@ -1,7 +1,6 @@
 ---
 title: Get started with the Android client
 description: General information about the Android client.
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8

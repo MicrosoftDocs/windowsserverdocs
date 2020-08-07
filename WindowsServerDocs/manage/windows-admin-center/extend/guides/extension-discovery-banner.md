@@ -7,7 +7,6 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Enabling the extension discovery banner
 

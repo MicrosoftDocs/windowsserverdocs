@@ -1,7 +1,6 @@
 ---
 title: What's New for Managed Service Accounts
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-gmsa
 ms.topic: article
 ms.assetid: 2f2a8b6b-c152-4c40-b712-bfabff0e408b

@@ -7,7 +7,6 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 ms.localizationpriority: low
-ms.prod: windows-server
 ---
 # Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center
 
@@ -19,14 +18,14 @@ Windows Admin Center streamlines the process of replicating your virtual machine
 
 Use the following information to configure replication settings and create a recovery plan from within the Azure portal, enabling Windows Admin Center to start VM replication and protect your VMs.
 
-## What is Azure Site Recovery and how does it work with Windows Admin Center? 
+## What is Azure Site Recovery and how does it work with Windows Admin Center?
 
 **Azure Site Recovery** is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster.  [Learn more about Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).
 
 Azure Site Recovery consists of two components: **replication** and **failover**. The replication portion protects your VMs in case of disaster by replicating the target VM's VHD to an Azure storage account. You can then failover these VMs and run them in Azure in the event of a disaster. You can also perform a test failover without impacting your primary VMs to test the recovery process in Azure.
 
 Completing setup for the replication component alone is sufficient to protect your VM in the case of disaster. However, you won't be able to start the VM in Azure until you configure the failover portion. You can set up the failover portion when you want to failover to an Azure VM - this isn't required as part of the initial setup. If the host server goes down and you haven't yet configured the failover component, you can configure it at that time and access the workloads of the protected VM. However, it's a good practice to configure the failover related settings before a disaster.
- 
+
 
 ## Prerequisites and planning
 
@@ -36,7 +35,7 @@ Completing setup for the replication component alone is sufficient to protect yo
 
 ## Step 1: Set up VM protection on your target host
 
-> [!NOTE] 
+> [!NOTE]
 > You need to do this step once per host server or cluster containing VMs targeted for protection.
 
 1. Navigate to the server or cluster hosting VMs you want to protect (either with Server Manager or Hyper-Converged Cluster Manager).
@@ -53,7 +52,7 @@ Completing setup for the replication component alone is sufficient to protect yo
 
 7. Select **Setup ASR**.
 8. Wait until you see the notification: **Site Recovery Setting Completed**.
- 
+
 This could take up to 10 minutes. You can watch the progress by going to **Notifications** (the bell icon at the top right).
 
 >[!NOTE]
@@ -68,9 +67,9 @@ This could take up to 10 minutes. You can watch the progress by going to **Notif
 
     If you want to use a premium storage account, [create one in the Azure portal](https://docs.microsoft.com/azure/storage/common/storage-premium-storage). The **Create New** option provided in the Windows Admin Center pane creates a standard storage account.
 
-5. Enter the name of the **Storage Account** to use for this VM's replication, and select **Protect VM**. This step enables replication for the selected Virtual Machine. 
+5. Enter the name of the **Storage Account** to use for this VM's replication, and select **Protect VM**. This step enables replication for the selected Virtual Machine.
 
-6. ASR will start replication. Replication is completed and the VM is protected when the value in the **Protected** column of the **Virtual Machine Inventory** grid changes to **Yes**. This can take several minutes.  
+6. ASR will start replication. Replication is completed and the VM is protected when the value in the **Protected** column of the **Virtual Machine Inventory** grid changes to **Yes**. This can take several minutes.
 
 ## Step 3: Configure and run a test failover in the Azure portal
 

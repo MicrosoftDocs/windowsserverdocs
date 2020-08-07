@@ -1,7 +1,6 @@
 ---
 title: Install Server Core
 description: How to obtain and install a Server Core installation on Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel).
-ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
 ms.topic: article
@@ -14,7 +13,7 @@ ms.localizationpriority: medium
 # Install Server Core
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
-  
+
 When you install Windows Server for the first time, you have the following installation options:
 
 >[!NOTE]
@@ -27,10 +26,10 @@ When you install Windows Server for the first time, you have the following insta
 
 When you install Windows Server (Semi-Annual Channel), you have the following installation options:
 
--    Windows Server Standard 
+-    Windows Server Standard
 -    Windows Server Datacenter
 
-The Server Core option reduces the space required on disk and the potential attack surface, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additional user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md). 
+The Server Core option reduces the space required on disk and the potential attack surface, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additional user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md).
 
 With the Server Core option, the standard user interface (the Desktop Experience) is not installed; you manage the server using the command line, Windows PowerShell, or by remote methods.
 

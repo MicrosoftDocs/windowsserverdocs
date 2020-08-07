@@ -6,7 +6,6 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.prod: windows-server
 ms.date: 05/31/2019
 ---
 # Connecting Windows Server to Azure hybrid services

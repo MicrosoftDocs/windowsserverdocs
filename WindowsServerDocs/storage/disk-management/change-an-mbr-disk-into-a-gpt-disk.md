@@ -2,12 +2,11 @@
 title: Change a Master Boot Record (MBR) into a GUID partition table (GPT) disk
 description: Describes how to change a Master boot record (MBR) into a GUID partition table (GPT) disk
 ms.date: 06/07/2019
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.technology: storage
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 # Convert an MBR disk into a GPT disk
 

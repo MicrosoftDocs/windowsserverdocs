@@ -2,7 +2,6 @@
 title: Overview of the Test Lab Scenario OTP Authentication and RSA SecurID
 description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
 ms.technology: networking-da
 ms.topic: article
 ms.assetid: ce584811-b209-48fe-ab2b-4c399bd0bd79

@@ -1,6 +1,5 @@
 ---
 title: Taking a Storage Spaces Direct server offline for maintenance
-ms.prod: windows-server
 ms.author: eldenc
 manager: eldenc
 ms.technology: storage-spaces

@@ -6,22 +6,21 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
 # AD FS Design
 
 
-  
+
 -   [AD FS Design Guide](../ad-fs/design/AD-FS-Design-Guide.md)
 
-  
 
-  
-## See Also  
-For capacity planning for AD FS in Windows Server 2016 see the [AD FS capacity planning worksheet.](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)  
-  
-[Active Directory Federation Services Overview](../Active-Directory-Federation-Services.md)  
-  
+
+
+## See Also
+For capacity planning for AD FS in Windows Server 2016 see the [AD FS capacity planning worksheet.](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)
+
+[Active Directory Federation Services Overview](../Active-Directory-Federation-Services.md)
+
 

@@ -1,6 +1,5 @@
 ---
 title: Storage Spaces Direct Hardware Requirements
-ms.prod: windows-server
 description: Minimum hardware requirements for testing Storage Spaces Direct.
 ms.author: eldenc
 manager: eldenc
@@ -54,19 +53,19 @@ In addition, the following requirements apply:
 
 ## Networking
 
-Storage Spaces Direct requires a reliable high bandwidth, low latency network connection between each node.  
+Storage Spaces Direct requires a reliable high bandwidth, low latency network connection between each node.
 
 Minimum interconnect for small scale 2-3 node
 - 10 Gbps network interface card (NIC), or faster
 - Two or more network connections from each node recommended for redundancy and performance
 
-Recommended interconnect for high performance, at scale, or deployments of 4+ 
+Recommended interconnect for high performance, at scale, or deployments of 4+
 - NICs that are remote-direct memory access (RDMA) capable, iWARP (recommended) or RoCE
 - Two or more network connections from each node recommended for redundancy and performance
 - 25 Gbps NIC or faster
 
 Switched or switchless node interconnects
-- Switched: Network switches must be properly configured to handle the bandwidth and networking type.  If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important. 
+- Switched: Network switches must be properly configured to handle the bandwidth and networking type.  If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important.
 - Switchless: Nodes can be interconnected using direct connections, avoiding using a switch.  It is required that every node have a direct connection with every other node of the cluster.
 
 

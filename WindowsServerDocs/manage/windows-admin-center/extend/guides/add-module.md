@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Add a module to a tool extension
@@ -78,7 +77,7 @@ Use the same module name that you used in the step above.
             // if the component has child components that need to be routed to, include them in the children array.
             children: [
                 {
-                    path: '', 
+                    path: '',
                     redirectTo: 'base',
                     pathMatch: 'full'
                 }
@@ -138,7 +137,7 @@ Open file ```{!module-name}.component.ts```, found with the following naming con
 | Value | Explanation | Example filename |
 | ----- | ----------- | ------- |
 | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.component.ts``` |
-    
+
 Modify content in the file to the following:
 
 ``` ts
@@ -161,14 +160,14 @@ Open file ```app-routing.module.ts```, and modify the default path so it will lo
 
 ``` ts
     {
-        path: '', 
+        path: '',
         loadChildren: 'app/{!module-name}/{!module-name}.module#{!ModuleName}Module'
     },
 ```
 Here's an example of an updated default path:
 ``` ts
     {
-        path: '', 
+        path: '',
         loadChildren: 'app/manage-foo-works-portal/manage-foo-works-portal.module#ManageFooWorksPortalModule'
     },
 ```

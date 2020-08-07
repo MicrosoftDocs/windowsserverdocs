@@ -6,7 +6,6 @@ ms.author: billmath
 manager: daveba
 ms.date: 01/22/2020
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Work with USB Devices
 description: Learn how USB devices work with MultiPoint Services
-ms.prod: windows-server
 ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: a33f2b83-bbc2-4fc1-8a94-aaa985dfe1f9

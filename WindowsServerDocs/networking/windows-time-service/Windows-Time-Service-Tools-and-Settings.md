@@ -5,7 +5,6 @@ author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 02/24/2020
 ms.topic: article
-ms.prod: windows-server
 ms.technology: networking
 ---
 

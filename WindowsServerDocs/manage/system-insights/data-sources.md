@@ -1,7 +1,6 @@
 ---
 title: System Insights data sources
 description: When writing a new capability in System Insights, you can specify existing or new data sources to collect locally and analyze. This topic describes the data sources that you can choose when registering a new capability.
-ms.prod: windows-server
 ms.technology: system-insights
 ms.topic: article
 author: gawatu

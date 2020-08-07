@@ -1,7 +1,6 @@
 ---
 title: PowerShell on Nano Server
 description: Differences in the reduced set of PowerShell features on Nano Server
-ms.prod: windows-server
 manager: DonGill
 ms.technology: server-nano
 ms.topic: article

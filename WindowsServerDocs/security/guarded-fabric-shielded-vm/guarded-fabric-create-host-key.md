@@ -1,6 +1,5 @@
 ---
 title: Create a host key and add it to HGS
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill

@@ -2,7 +2,6 @@
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Data Deduplication Overview
 ms.technology: storage-deduplication
-ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
@@ -11,13 +10,13 @@ ms.date: 05/09/2017
 ---
 # Data Deduplication Overview
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel), 
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel),
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
 Data Deduplication, often called Dedup for short, is a feature that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
 
-> [!Important]  
+> [!Important]
 > [KB4025334](https://support.microsoft.com/kb/4025334) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016 and Windows Server 2019.
 
 ## <a name="why-is-dedup-useful"></a>Why is Data Deduplication useful?
@@ -37,7 +36,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
 | Virtualization libraries | ISOs, virtual hard disk files, etc.  | 80-95%                |
 | General file share | All the above                           | 50-60%                |
 
-## <a id="when-can-dedup-be-used"></a>When can Data Deduplication be used?  
+## <a id="when-can-dedup-be-used"></a>When can Data Deduplication be used?
 <table>
     <tbody>
         <tr>
@@ -51,7 +50,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
                     <li><a href="https://technet.microsoft.com/library/dn265974.aspx">Work Folders</a></li>
                     <li>Software development shares</li>
                 </ul>
-                General purpose file servers are a good candidate for Data Deduplication because multiple users tend to have many copies or versions of the same file. Software development shares benefit from Data Deduplication because many binaries remain essentially unchanged from build to build. 
+                General purpose file servers are a good candidate for Data Deduplication because multiple users tend to have many copies or versions of the same file. Software development shares benefit from Data Deduplication because many binaries remain essentially unchanged from build to build.
             </td>
         </tr>
         <tr>

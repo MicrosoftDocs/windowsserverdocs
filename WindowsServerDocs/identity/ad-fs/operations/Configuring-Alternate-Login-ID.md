@@ -6,14 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Configuring Alternate Login ID
 
 
 ## What is Alternate Login ID?
-In most scenarios, users use their UPN (User Principal Names) to login to their accounts. However, in some environments due to corporate policies or on-premises line-of-business application dependencies, the users may be using some other form of sign-in. 
+In most scenarios, users use their UPN (User Principal Names) to login to their accounts. However, in some environments due to corporate policies or on-premises line-of-business application dependencies, the users may be using some other form of sign-in.
 
 >[!NOTE]
 >Microsoft's recommended best practices are to match UPN to primary SMTP address. This article addresses the small percentage of customers that cannot remediate UPN's to match.
@@ -24,9 +23,9 @@ Active Directory Federation Services (AD FS) enables federated applications usin
 
 ## Alternate id in Azure AD
 An organization may have to use alternate ID in the following scenarios:
-1. The on-premises domain name is non-routable, ex. Contoso.local and as a result the default user principal name is non-routable (jdoe@contoso.local). Existing UPN cannot be changed due to local application dependencies or company policies. Azure AD and Office 365 require all domain suffixes associated with Azure AD directory to be fully internet routable. 
+1. The on-premises domain name is non-routable, ex. Contoso.local and as a result the default user principal name is non-routable (jdoe@contoso.local). Existing UPN cannot be changed due to local application dependencies or company policies. Azure AD and Office 365 require all domain suffixes associated with Azure AD directory to be fully internet routable.
 2. The on-premises UPN is not same as the user's email address and to sign-in to Office 365, users use email address and UPN cannot be used due to organizational constraints.
-   In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs. 
+   In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs.
 
 ## End-User Experience with Alternate Login ID
 The end-user experience varies depending on the authentication method used with alternate login id.  Currently there three different ways in which using alternate login id can be achieved.  They are:
@@ -56,7 +55,7 @@ When Azure AD Connect is provided details about AD FS environment, it automatica
 In order to configure alternate login ID, you must perform the following tasks:
 Configure your AD FS claims provider trusts to enable alternate login ID
 
-1.  If you have Server 2012R2, ensure you have KB2919355 installed on all the AD FS servers. You can get it via Windows Update Services or download it directly. 
+1.  If you have Server 2012R2, ensure you have KB2919355 installed on all the AD FS servers. You can get it via Windows Update Services or download it directly.
 
 2.  Update the AD FS configuration by running the following PowerShell cmdlet on any of the federation servers in your farm (if you have a WID farm, you must run this command on the primary AD FS server in your farm):
 
@@ -154,22 +153,22 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 
 |Client|Support statement|Remarks|
 | ----- | -----|-----|
-|Microsoft Teams|Supported|<li>Microsoft Teams supports AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth) and Modern Authentication.</li><li> Core Microsoft Teams such as Channels, chats and files functionalities does work with Alternate Login ID.</li><li>1st and 3rd party apps must be separately investigated by the customer. This is because each application has their own supportability authentication protocols.</li>|     
+|Microsoft Teams|Supported|<li>Microsoft Teams supports AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth) and Modern Authentication.</li><li> Core Microsoft Teams such as Channels, chats and files functionalities does work with Alternate Login ID.</li><li>1st and 3rd party apps must be separately investigated by the customer. This is because each application has their own supportability authentication protocols.</li>|
 |OneDrive for Business|Supported - client-side registry key recommended |With Alternate ID configured you see the on-premises UPN is pre-populated In the verification field. This needs to be changed to the alternate Identity that is being used. We recommend using the client side registry key noted in this article: Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online.|
-|OneDrive for Business Mobile Client|Supported|| 
+|OneDrive for Business Mobile Client|Supported||
 |Office 365 Pro Plus activation page|Supported - client-side registry key recommended|With Alternate ID configured you see the on-premises UPN is pre-populated in the verification field. This needs to be changed to the alternate Identity that is being used. We recommend using the client-side registry key noted in this article: Office 2013 and Lync 2013 periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online.|
 
 ### Exchange and Skype for Business Clients
 
 |Client|Support Statement - with HMA|Support Statement - without HMA|
 | ----- |----- | ----- |
-|Outlook|Supported, no extra prompts|Supported</br></br>With **Modern Authentication** for Exchange Online: Supported</br></br>With **regular authentication** for Exchange Online: Supported with following caveats:</br><li>You must be on a domain joined machine and connected to the corporate network </li><li>You can only use Alternate ID in environments that do not allow external access for mailbox users. This means that users can only authenticate to their mailbox in a supported way when they are connected and joined to the corporate network, on a VPN, or connected via Direct Access machines, but you get a couple of extra prompts when configuring your Outlook profile.| 
+|Outlook|Supported, no extra prompts|Supported</br></br>With **Modern Authentication** for Exchange Online: Supported</br></br>With **regular authentication** for Exchange Online: Supported with following caveats:</br><li>You must be on a domain joined machine and connected to the corporate network </li><li>You can only use Alternate ID in environments that do not allow external access for mailbox users. This means that users can only authenticate to their mailbox in a supported way when they are connected and joined to the corporate network, on a VPN, or connected via Direct Access machines, but you get a couple of extra prompts when configuring your Outlook profile.|
 |Hybrid Public Folders|Supported, no extra prompts.|With **Modern Authentication** for Exchange Online: Supported</br></br>With **regular authentication** for Exchange Online: Not Supported</br></br><li>Hybrid Public Folders are not able to expand if Alternate ID's are used and therefore should not be used today with regular authentication methods.|
 |Cross premises Delegation|See [Configure Exchange to support delegated mailbox permissions in a hybrid deployment](/exchange/hybrid-deployment/set-up-delegated-mailbox-permissions)|See [Configure Exchange to support delegated mailbox permissions in a hybrid deployment](/exchange/hybrid-deployment/set-up-delegated-mailbox-permissions)|
-|Archive mailbox access (Mailbox on-premises - archive in the cloud)|Supported, no extra prompts|Supported - Users get an extra prompt for credentials when accessing the archive, they have to provide their alternate ID when prompted.| 
+|Archive mailbox access (Mailbox on-premises - archive in the cloud)|Supported, no extra prompts|Supported - Users get an extra prompt for credentials when accessing the archive, they have to provide their alternate ID when prompted.|
 |Outlook Web Access|Supported|Supported|
 |Outlook Mobile Apps for Android, IOS, and Windows Phone|Supported|Supported|
-|Skype for Business/ Lync|Supported, with no extra prompts|Supported (except as noted) but there is a potential for user confusion.</br></br>On mobile clients, Alternate Id is supported only if SIP address= email address = Alternate ID.</br></br> Users may need to sign-in twice to the Skype for Business desktop client, first using the on-premises UPN and then using the Alternate ID. (Note that the "Sign-in address" is actually the SIP address which may not be the same as the "User name", though often is). When first prompted for a User name, the user should enter the UPN, even if it is incorrectly pre-populated with the Alternate ID or SIP address. After the user clicks sign-in with the UPN, the User name prompt reappears, this time prepopulated with the UPN. This time the user must replace this with the Alternate ID and click Sign in to complete the sign in process. On mobile clients, users should enter the on-premises user ID in the advanced page, using SAM-style format (domain\username), not UPN format.</br></br>After successful sign-in, if Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for where the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID. If the Mailbox is on-premises you need to provide the on-premises UPN.| 
+|Skype for Business/ Lync|Supported, with no extra prompts|Supported (except as noted) but there is a potential for user confusion.</br></br>On mobile clients, Alternate Id is supported only if SIP address= email address = Alternate ID.</br></br> Users may need to sign-in twice to the Skype for Business desktop client, first using the on-premises UPN and then using the Alternate ID. (Note that the "Sign-in address" is actually the SIP address which may not be the same as the "User name", though often is). When first prompted for a User name, the user should enter the UPN, even if it is incorrectly pre-populated with the Alternate ID or SIP address. After the user clicks sign-in with the UPN, the User name prompt reappears, this time prepopulated with the UPN. This time the user must replace this with the Alternate ID and click Sign in to complete the sign in process. On mobile clients, users should enter the on-premises user ID in the advanced page, using SAM-style format (domain\username), not UPN format.</br></br>After successful sign-in, if Skype for Business or Lync says "Exchange needs your credentials", you need to provide the credentials that are valid for where the mailbox is located. If the mailbox is in the cloud you need to provide the Alternate ID. If the Mailbox is on-premises you need to provide the on-premises UPN.|
 
 ## Additional Details & Considerations
 

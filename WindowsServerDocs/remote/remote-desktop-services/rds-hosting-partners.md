@@ -1,10 +1,9 @@
 ---
 title: RDS - Partners for hosting desktops and apps
 description: List of partners who can host desktops and apps using RDS.
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 04/27/2017  
+ms.date: 04/27/2017
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
@@ -21,10 +20,10 @@ If you are a Microsoft partner and want to be included in the list of partners w
 3. Take the [technical assessment](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=1660&rowId=2220&trackPathId=9871).
 4. Make sure you meet the [requirements for the Cloud Platform competency](https://partner.microsoft.com/membership/cloud-platform-competency).
 
-Already a Microsoft Partner and have questions? Contact the Remote Desktop team at <rdhostingpartners@microsoft.com>.  
+Already a Microsoft Partner and have questions? Contact the Remote Desktop team at <rdhostingpartners@microsoft.com>.
 
 
-## Partners who have passed the learning path assessment 
+## Partners who have passed the learning path assessment
 
 If you are a customer looking for a partner to help you host Windows desktops and applications in Azure for your users, we have compiled a list of partners who have passed the assessment. Here is a [list of those partners](rds-hosting-partners.md), as of 03/28/2017, that you can download.
 

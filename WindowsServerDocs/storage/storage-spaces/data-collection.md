@@ -1,7 +1,6 @@
 ---
 title: Collect diagnostic data with Storage Spaces Direct
 description: Understanding Storage Spaces Direct Data Collection Tools, with specific examples of how to run and use them.
-ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
@@ -18,7 +17,7 @@ Given that the logs and other information that **Get-SDDCDiagnosticInfo** are de
 
 ## Installing Get-SDDCDiagnosticInfo
 
-The **Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. **Get-PCStorageDiagnosticInfo**, previously known as **Test-StorageHealth**) can be used to gather logs for and perform health checks for Failover Clustering (Cluster, Resources, Networks, Nodes), Storage Spaces (Physical Disks, Enclosures, Virtual Disks), Cluster Shared Volumes, SMB File Shares, and Deduplication. 
+The **Get-SDDCDiagnosticInfo** PowerShell cmdlet (a.k.a. **Get-PCStorageDiagnosticInfo**, previously known as **Test-StorageHealth**) can be used to gather logs for and perform health checks for Failover Clustering (Cluster, Resources, Networks, Nodes), Storage Spaces (Physical Disks, Enclosures, Virtual Disks), Cluster Shared Volumes, SMB File Shares, and Deduplication.
 
 There are two methods of installing the script, both of which are outlines below.
 
@@ -59,7 +58,7 @@ if (Test-Path $env:SystemRoot\System32\WindowsPowerShell\v1.0\Modules\$module) {
     Remove-Module $module -ErrorAction SilentlyContinue
 } else {
     Import-Module $module -ErrorAction SilentlyContinue
-} 
+}
 if (-not ($m = Get-Module $module -ErrorAction SilentlyContinue)) {
     $md = "$env:ProgramFiles\WindowsPowerShell\Modules"
 } else {
@@ -71,7 +70,7 @@ cp -Recurse $env:TEMP\$module-master\$module $md -Force -ErrorAction Stop
 rm -Recurse $env:TEMP\$module-master,$env:TEMP\master.zip
 Import-Module $module -Force
 
-``` 
+```
 
 If you need to get this module on an offline cluster, download the zip, move it to your target server node, and install the module.
 
@@ -100,7 +99,7 @@ Get-SDDCDiagnosticInfo
 To save results to a specified folder:
 
 ``` PowerShell
-Get-SDDCDiagnosticInfo -WriteToPath D:\Folder 
+Get-SDDCDiagnosticInfo -WriteToPath D:\Folder
 ```
 
 Here is an example of how this looks on a real cluster:
@@ -134,15 +133,15 @@ Let's generate a report into a text file
 #generate report and save to text file
     $report=Show-SddcDiagnosticReport -Path D:\SDDCDiagTemp
     $report | out-file d:\SDDCReport.txt
-    
+
 ```
 
 For reference, here is a link to the [sample report](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/SDDCReport.txt) and [sample zip](https://github.com/Microsoft/WSLab/blob/dev/Scenarios/S2D%20Tools/Get-SDDCDiagnosticInfo/HealthTest-S2D-Cluster-20180522-1546.ZIP).
 
-To view this in Windows Admin Center (version 1812 onwards), navigate to the *Diagnostics* tab. As you see in the screenshot below, you can 
+To view this in Windows Admin Center (version 1812 onwards), navigate to the *Diagnostics* tab. As you see in the screenshot below, you can
 
 - Install diagnostic tools
-- Update them (if they are out-of-date), 
+- Update them (if they are out-of-date),
 - Schedule daily diagnostic runs (these have a low impact on your system, usually take <5 minutes in the background, and won't take up more than 500mb on your cluster)
 - View previously collected diagnostic information if you need to give it to support or analyze it yourself.
 
@@ -173,13 +172,13 @@ This report is being continually updated to include more useful information. For
 The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
 ## How to consume the XML files from Get-PCStorageDiagnosticInfo
-You can consume the data from the XML files provided in data collected by the **Get-PCStorageDiagnosticInfo** cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs. 
+You can consume the data from the XML files provided in data collected by the **Get-PCStorageDiagnosticInfo** cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs.
 
-To see the results of these outputs, open a PowerShell window and run the following steps. 
+To see the results of these outputs, open a PowerShell window and run the following steps.
 
 ```PowerShell
 ipmo storage
-$d = import-clixml <filename> 
+$d = import-clixml <filename>
 $d
 ```
 

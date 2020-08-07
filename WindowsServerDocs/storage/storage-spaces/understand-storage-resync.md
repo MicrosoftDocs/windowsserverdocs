@@ -1,7 +1,6 @@
 ---
 title: Understand and see storage resync
 description: Detailed info on when storage resync happens and how to see it in Windows Server 2019.
-ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article

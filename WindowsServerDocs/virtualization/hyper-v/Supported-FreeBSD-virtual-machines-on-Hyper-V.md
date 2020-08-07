@@ -1,7 +1,6 @@
 ---
 title: Supported FreeBSD virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
-ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v
 ms.topic: article
@@ -84,7 +83,7 @@ The following feature distribution map indicates the features in each version. T
     # dd if=/dev/da1 of=/dev/da1 count=0
     # gpart recover da1
     ```
-   
+
 **Additional Notes**: The feature matrix of 10 stable and 11 stable is same with FreeBSD 11.1 release. In addition, FreeBSD 10.2 and previous versions (10.1, 10.0, 9.x, 8.x) are end of life. Please refer [here](https://security.freebsd.org/) for an up-to-date list of supported releases and the latest security advisories.
 
 ## See Also

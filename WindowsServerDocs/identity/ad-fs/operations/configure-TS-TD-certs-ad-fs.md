@@ -6,7 +6,6 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -22,15 +21,15 @@ For additional information see [Certificate Requirements](../design/ad-fs-requir
 By default, AD FS is configured to generate token signing and token decryption certificates automatically, both at the initial configuration time and when the certificates are approaching their expiration date.
 
 You can run the following Windows PowerShell command: `Get-AdfsProperties`.
-  
+
   ![Get-ADFSProperties](media/configure-TS-TD-certs-ad-fs/ts1.png)
-  
+
 The AutoCertificateRollover property describes whether AD FS is configured to renew token signing and token decrypting certificates automatically.
 
 If AutoCertificateRollover is set to TRUE, the AD FS certificates will be renewed and configured in AD FS automatically. Once the new certificate is configured, in order to avoid an outage, you must ensure that each federation partner (represented in your AD FS farm by either relying party trusts or claims provider trusts) is updated with this new certificate.
-    
+
 If AD FS is not configured to renew token signing and token decrypting certificates automatically (if AutoCertificateRollover is set to False), AD FS will not automatically generate or start using new token signing or token decrypting certificates. You will have to perform these tasks manually.
-    
+
 If AD FS is configured to renew token signing and token decrypting certificates automatically (AutoCertificateRollover is set to TRUE), you can determine when they will be renewed:
 
 CertificateGenerationThreshold describes how many days in advance of the certificate's Not After date a new certificate will be generated.
@@ -38,7 +37,7 @@ CertificateGenerationThreshold describes how many days in advance of the certifi
 CertificatePromotionThreshold determines how many days after the new certificate is generated that it will be promoted to be the primary certificate (in other words, AD FS will start using it to sign tokens it issues and decrypt tokens from identity providers).
 
 ![Get-ADFSProperties](media/configure-TS-TD-certs-ad-fs/ts2.png)
-  
+
 If AD FS is configured to renew token signing and token decrypting certificates automatically (AutoCertificateRollover is set to TRUE), you can determine when they will be renewed:
 
  - **CertificateGenerationThreshold** describes how many days in advance of the certificate's Not After date a new certificate will be generated.

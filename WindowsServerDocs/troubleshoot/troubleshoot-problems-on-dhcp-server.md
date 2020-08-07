@@ -1,7 +1,6 @@
 ---
 title: Troubleshoot problems on the DHCP server
 description: This artilce introduces how to troubleshoot problems on the DHCP server and collect data.
-ms.prod: windows-server
 ms.service: na
 manager: dcscontentpm
 ms.technology: server-general

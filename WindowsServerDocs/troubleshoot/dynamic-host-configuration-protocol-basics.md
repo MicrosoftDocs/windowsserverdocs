@@ -1,7 +1,6 @@
 ---
 title: DHCP (Dynamic Host Configuration Protocol) Basics
 description:
-ms.prod: windows-server
 manager: dcscontentpm
 ms.technology: server-general
 ms.date: 5/26/2020

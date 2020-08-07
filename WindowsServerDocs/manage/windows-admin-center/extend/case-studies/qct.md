@@ -7,7 +7,6 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 06/14/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # QCT Management Suite Extension
 

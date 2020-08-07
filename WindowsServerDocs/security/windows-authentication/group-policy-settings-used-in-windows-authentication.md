@@ -1,7 +1,6 @@
 ---
 title: Group Policy Settings Used in Windows Authentication
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: 9e237f89-45b1-4a4e-9b72-11dc7d6a470b

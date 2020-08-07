@@ -1,7 +1,6 @@
 ---
 title: Deploy Nano Server
 description: Explains creating and deploying custom images, packages, drivers, domains, roles, features
-ms.prod: windows-server
 manager: DonGill
 ms.technology: server-nano
 ms.date: 09/06/2017

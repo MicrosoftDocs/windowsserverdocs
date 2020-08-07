@@ -1,7 +1,6 @@
 ---
 title: Netsh Commands for Mobile Broadband Network (MBN)
 description: Use netsh mbn to query and configure mobile broadband settings and parameters.
-ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 author: apdutta
@@ -14,7 +13,7 @@ ms.date: 02/20/2020
 Use **netsh mbn** to query and configure mobile broadband settings and parameters.
 
 > [!TIP]
-> You can get help on the netsh mbn command by using 
+> You can get help on the netsh mbn command by using
 >
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh mbn /?
 
@@ -222,7 +221,7 @@ disconnect interface="Cellular"
 
 ## dump
 
-Displays a configuration script. 
+Displays a configuration script.
 
 Creates a script that contains the current configuration.  If saved to a file, this script can be used to restore altered configuration settings.
 
@@ -524,7 +523,7 @@ The available netsh mbn set commands are:
 - [tracing](#tracing)
 - [visibleproviders](#visibleproviders)
 
-### acstate  
+### acstate
 
 Shows the Mobile Broadband data auto connect state for the given interface.
 
@@ -662,7 +661,7 @@ show dmprofiles [[name=]<string>] [[interface=]<string>]
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Optional |
 
 **Remarks**
-    
+
 Shows the profile data or lists the profiles on the system.
 
 If profile name is given then the content of the profile will be displayed. Otherwise profiles will be listed for the interface.
@@ -784,7 +783,7 @@ show netlteattachinfo [interface=]<string>
 show netlteattachinfo interface="Cellular"
 ```
 
-### pin      
+### pin
 
 Shows the pin information for the given interface.
 
@@ -808,7 +807,7 @@ show pin interface="Cellular"
 ```
 
 
-### pinlist  
+### pinlist
 
 Shows the pin list information for the given interface.
 
@@ -856,7 +855,7 @@ show preferredproviders interface="Cellular"
 ```
 
 
-### profiles 
+### profiles
 
 Shows a list of profiles configured on the system.
 
@@ -881,7 +880,7 @@ If profile name is given then the content of the profile will be displayed. Othe
 If interface name is given, only the specified profile on the given interface will be listed. Otherwise, first matched profile will be displayed.
 
 If the purpose is provided, only profiles with the matching purpose GUID will be displayed.  Otherwise, profiles will not be filtered by purpose.  The string can either be a GUID with curly brackets or one of the following strings: internet, supl, mms, ims, or allhost.
-	
+
 **Example**
 
 ```powershell
@@ -938,7 +937,7 @@ show provisionedcontexts interface="Cellular"
 ```
 
 
-### purpose  
+### purpose
 
 Shows the purpose group GUIDs that can be used to filter profiles on the device. There are no parameters for this command.
 
@@ -949,7 +948,7 @@ show purpose
 ```
 
 
-### radio    
+### radio
 
 Shows the radio state information for the given interface.
 
@@ -997,7 +996,7 @@ show readyinfo interface="Cellular"
 ```
 
 
-### signal   
+### signal
 
 Shows the signal information for the given interface.
 
@@ -1093,14 +1092,14 @@ show smsconfig interface="Cellular"
 ```
 
 
-### tracing  
+### tracing
 
 Shows whether Mobile Broadband tracing is enabled or disabled.
 
 **Syntax**
 
 ```powershell
-show tracing 
+show tracing
 ```
 
 

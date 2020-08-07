@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 08/07/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Modify root navigation behavior for a solution extension

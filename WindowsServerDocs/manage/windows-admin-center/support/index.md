@@ -7,7 +7,6 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 04/12/2019
-ms.prod: windows-server
 ---
 # Windows Admin Center support policy
 

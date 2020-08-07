@@ -6,7 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 10/29/2018
 ms.topic: article
-ms.prod: windows-server
 ms.custom: it-pro
 ms.reviewer: maheshu
 ms.technology: identity-adds
@@ -127,7 +126,7 @@ Supported Domain Controller Operating System:
 
 ### Windows Server 2008 forest functional level features
 
-* All of the features that are available at the Windows Server 2003 forest functional level, but no additional features are available. 
+* All of the features that are available at the Windows Server 2003 forest functional level, but no additional features are available.
 
 ### Windows Server 2008 domain functional level features
 
@@ -139,7 +138,7 @@ Supported Domain Controller Operating System:
       > Beginning with Windows Server 2012 R2, File Replication Service (FRS) is deprecated. A new domain that is created on a domain controller that runs at least Windows Server 2012 R2 must be set to the Windows Server 2008 domain functional level or higher.
 
   * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. Domain-based namespaces in Windows Server 2008 mode also require the forest to use the Windows Server 2003 forest functional level. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
-  * Advanced Encryption Standard (AES 128 and AES 256) support for the Kerberos protocol. In order for TGTs to be issued using AES, the domain functional level must be Windows Server 2008 or higher and the domain password needs to be changed. 
+  * Advanced Encryption Standard (AES 128 and AES 256) support for the Kerberos protocol. In order for TGTs to be issued using AES, the domain functional level must be Windows Server 2008 or higher and the domain password needs to be changed.
     * For more information, see [Kerberos Enhancements](/previous-versions/windows/it-pro/windows-vista/cc749438(v=ws.10)).
 
       > [!NOTE]
@@ -176,7 +175,7 @@ Supported Domain Controller Operating System:
       - The intersite topology generator (ISTG) uses improved algorithms that scale to support forests with a greater number of sites than AD DS can support at the Windows 2000 forest functional level. The improved ISTG election algorithm is a less-intrusive mechanism for choosing the ISTG at the Windows 2000 forest functional level.
    * The ability to create instances of the dynamic auxiliary class named **dynamicObject** in a domain directory partition
    * The ability to convert an **inetOrgPerson** object instance into a **User** object instance, and to complete the conversion in the opposite direction
-   * The ability to create instances of new group types to support role-based authorization. 
+   * The ability to create instances of new group types to support role-based authorization.
       - These types are called application basic groups and LDAP query groups.
    * Deactivation and redefinition of attributes and classes in the schema. The following attributes can be reused: ldapDisplayName, schemaIdGuid, OID, and mapiID.
    * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
@@ -220,5 +219,5 @@ Supported Domain Controller Operating System:
 
 ## Next Steps
 
-* [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))  
+* [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))
 * [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11))

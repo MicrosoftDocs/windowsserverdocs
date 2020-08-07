@@ -6,7 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/18/2018
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 

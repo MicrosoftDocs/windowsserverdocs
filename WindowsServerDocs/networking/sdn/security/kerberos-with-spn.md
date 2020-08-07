@@ -1,8 +1,7 @@
 ---
 title: Kerberos with Service Principal Name (SPN)
-description: Network Controller supports multiple authentication methods for communication with management clients. You can use Kerberos based authentication, X509 certificate-based authentication. You also have the option to use no authentication for test deployments. 
+description: Network Controller supports multiple authentication methods for communication with management clients. You can use Kerberos based authentication, X509 certificate-based authentication. You also have the option to use no authentication for test deployments.
 manager: grcusanz
-ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
@@ -55,7 +54,7 @@ The Network Controller automatically configures the SPN. All you need to do is t
 
 On a **NEW** Windows Server 2019 deployment, if you chose Kerberos for REST client authentication and don't grant permission for Network Controller nodes to register or modify the SPN, REST operations on Network Controller fails preventing you from managing the SDN.
 
-For an upgrade from Windows Server 2016 to Windows Server 2019, and you chose Kerberos for REST client authentication, REST operations do not get blocked, ensuring transparency for existing production deployments. 
+For an upgrade from Windows Server 2016 to Windows Server 2019, and you chose Kerberos for REST client authentication, REST operations do not get blocked, ensuring transparency for existing production deployments.
 
 If SPN is not registered, REST client authentication uses NTLM, which is less secure. You also get a critical event in the Admin channel of **NetworkController-Framework** event channel asking you to provide permissions to the Network Controller nodes to register SPN. Once you provide permission, Network Controller registers the SPN automatically, and all client operations use Kerberos.
 

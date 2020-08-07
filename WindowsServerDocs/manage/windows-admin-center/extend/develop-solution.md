@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Develop a solution extension
@@ -52,7 +51,7 @@ Here's an example usage:
 wac create --company "Contoso Inc" --solution "Contoso Foo Works Suite" --tool "Manage Foo Works"
 ```
 
-This creates a new folder inside the current working directory using the name you specified for your solution, copies all the necessary template files into your project, and configures the files with your company, solution, and tool name.  
+This creates a new folder inside the current working directory using the name you specified for your solution, copies all the necessary template files into your project, and configures the files with your company, solution, and tool name.
 
 Next, change directory into the folder just created, then install required local dependencies by running the following command:
 
@@ -60,7 +59,7 @@ Next, change directory into the folder just created, then install required local
 npm install
 ```
 
-Once this completes, you've set up everything you need to load your new extension into Windows Admin Center. 
+Once this completes, you've set up everything you need to load your new extension into Windows Admin Center.
 
 ## Add content to your extension
 
@@ -70,7 +69,7 @@ Now that you've created an extension with the Windows Admin Center CLI, you are 
 - Add an [iFrame](guides/add-iframe.md)
 - Create a [custom connection provider](guides/create-connection-provider.md)
 - Modify [root navigation behavior](guides/modify-root-navigation.md)
- 
+
 Even more examples can be found our [GitHub SDK site](https://aka.ms/wacsdk):
 -  [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a fully functioning extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.
 

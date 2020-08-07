@@ -1,7 +1,6 @@
 ---
 title: Overview of Active Directory Domain Services
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-auditing
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca

@@ -1,13 +1,12 @@
 ---
 title: Create OMA-DM based VPNv2 Profiles to Windows 10 devices
 description: 'You can use one of two methods to create OMA-DM based VPNv2 profiles. '
-ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/13/2018
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 
@@ -18,21 +17,21 @@ ms.reviewer: deverette
 - [**Previous:** Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 - [**Next:** Learn how conditional access for VPN works](/windows/access-protection/vpn/vpn-conditional-access)
 
-In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use Microsoft Endpoint Configuration Manager or PowerShell script to create VPNv2 profiles, see [VPNv2 CSP settings](/windows/client-management/mdm/vpnv2-csp) for more details. 
+In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use Microsoft Endpoint Configuration Manager or PowerShell script to create VPNv2 profiles, see [VPNv2 CSP settings](/windows/client-management/mdm/vpnv2-csp) for more details.
 
 ## Managed Deployment using Intune
 
-Everything discussed in this section is the minimum needed to make VPN work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO. Integrate the settings below into the VPN profile you created earlier under [Step 5. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md).  In this example, we are integrating them into the [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune) policy. 
+Everything discussed in this section is the minimum needed to make VPN work with Conditional Access. It does not cover Split Tunneling, Using WIP, creating custom Intune device configuration profiles to get AutoVPN working, or SSO. Integrate the settings below into the VPN profile you created earlier under [Step 5. Configure Windows 10 Client Always On VPN Connections](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md).  In this example, we are integrating them into the [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune) policy.
 
 **Prerequisite:**
 
-Windows 10 client computer has already been configured with a VPN connection using Intune.   
+Windows 10 client computer has already been configured with a VPN connection using Intune.
 
 
 **Procedure:**
 
 1. In the Azure portal, select **Intune** > **Device Configuration** > **Profiles** and select the VPN profile you created earlier in [Configure the VPN client by using Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune).
-    
+
 2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the AAD Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 
     >[!NOTE]
@@ -47,7 +46,7 @@ Windows 10 client computer has already been configured with a VPN connection usi
     ```
 
 4. Select the **Conditional Access** blade and toogle **Conditional access for this VPN connection** to **Enabled**.
-   
+
    Enabling this setting changes the **\<DeviceCompliance>\<Enabled>true\</Enabled>** setting in the VPNv2 Profile XML.
 
     ![Conditional Access for Always On VPN - Properties](../../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
@@ -77,7 +76,7 @@ If the VPN profile does not show up on the client device, under Settings\\Networ
 
 ## Next steps
 
-You are done configuring the VPN profile to use Azure AD conditional access. 
+You are done configuring the VPN profile to use Azure AD conditional access.
 
 |If you want to...  |Then see...  |
 |---------|---------|
@@ -89,6 +88,6 @@ You are done configuring the VPN profile to use Azure AD conditional access.
 
 - [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp):  This topic provides you with an overview of VPNv2 CSP. The VPNv2 configuration service provider allows the mobile device management (MDM) server to configure the VPN profile of the device.
 
-- [Configure Windows 10 Client Always On VPN Connections](./always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md): This topic provides information about the ProfileXML options and schema, and how to create the ProfileXML VPN. After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection. 
+- [Configure Windows 10 Client Always On VPN Connections](./always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md): This topic provides information about the ProfileXML options and schema, and how to create the ProfileXML VPN. After setting up the server infrastructure, you must configure the Windows 10 client computers to communicate with that infrastructure with a VPN connection.
 
 - [Configure the VPN client by using Intune](./always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune): This topic provides information on how to deploy Windows 10 Remote Access Always On VPN profiles. Intune now uses Azure AD groups. If Azure AD Connect synced the VPN Users group from on-premises to Azure AD, then there is no need for configuring the VPN client using Intune.

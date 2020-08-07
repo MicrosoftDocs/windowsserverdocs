@@ -1,6 +1,5 @@
 ---
 title: Mirror-accelerated parity
-ms.prod: windows-server
 ms.author: gawatu
 manager: masriniv
 ms.technology: storage-file-systems

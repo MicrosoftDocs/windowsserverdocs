@@ -6,7 +6,6 @@ ms.author: jgerend
 manager: elizapo
 ms.date: 03/26/2020
 ms.topic: article
-ms.prod: windows-server
 ms.technology: storage
 ---
 # Storage Migration Service overview
@@ -130,7 +129,7 @@ Windows Admin Center version 1910 allows you to deploy Azure virtual machines. T
 
    Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
-   
+
 If you want to lift and shift virtual machines to Azure without migrating to a later operating system, consider using Azure Migrate. For more info, see [Azure Migrate overview](https://go.microsoft.com/fwlink/?linkid=2056064).
 
 ## What's new in Storage Migration Service

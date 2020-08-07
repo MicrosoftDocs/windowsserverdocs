@@ -6,23 +6,22 @@ ms.author: billmath
 manager: femila
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 # Compound authentication and AD DS claims in AD FS
-Windows Server 2012 enhances Kerberos authentication by introducing compound authentication.  Compound authentication enables a Kerberos Ticket-Granting Service (TGS) request to include two identities: 
+Windows Server 2012 enhances Kerberos authentication by introducing compound authentication.  Compound authentication enables a Kerberos Ticket-Granting Service (TGS) request to include two identities:
 
 - the identity of the user
-- the identity of the user's device.  
+- the identity of the user's device.
 
-Windows accomplishes compound authentication by extending [Kerberos Flexible Authentication Secure Tunneling (FAST), or Kerberos armoring](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)). 
+Windows accomplishes compound authentication by extending [Kerberos Flexible Authentication Secure Tunneling (FAST), or Kerberos armoring](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)).
 
 AD FS 2012 and later versions allows consumption of AD DS issued user or device claims that reside in a Kerberos authentication ticket. In previous versions of AD FS, the claims engine could only read user and group security IDs (SIDs) from Kerberos but was not able to read any claims information contained within a Kerberos ticket.
 
 You can enable richer access control for federated applications by using Active Directory Domain Services (AD DS)-issued user and device claims together, with Active Directory Federation Services (AD FS).
 
 ## Requirements
-1.	The Computers accessing federated applications, must Authenticate to AD FS using **Windows Integrated Authentication**. 
+1.	The Computers accessing federated applications, must Authenticate to AD FS using **Windows Integrated Authentication**.
 	- Windows Integrated Authentication is only available when connecting to the Backend AD FS Servers.
 	- Computers must be able to reach the Backend AD FS Servers for Federation Service Name
 	- AD FS Servers must offer Windows Integrated Authentication as a Primary Authentication method in its Intranet settings.
@@ -32,7 +31,7 @@ You can enable richer access control for federated applications by using Active 
 3.	The Domain housing the AD FS Servers must have the **KDC support for claims compound authentication and Kerberos armoring** policy setting applied to the Domain Controllers.
 
 ## Steps for configuring AD FS in Windows Server 2012 R2
-Use the following steps for configuring compound authentication and claims 
+Use the following steps for configuring compound authentication and claims
 
 ### Step 1:  Enable KDC support for claims, compound authentication, and Kerberos armoring on the Default Domain Controller Policy
 1.  In Server Manager, select Tools, **Group Policy Management**.
@@ -84,7 +83,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 1. Add the following Claim Description to the farm. This Claim Description is not present by default in ADFS 2012 R2 and needs to be manually added.
 2. In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
 3. Enter the following information in the claim description
-   - Display Name: 'Windows device group' 
+   - Display Name: 'Windows device group'
    - Claim Description: '<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>' `
 4. Place a check in both boxes.
 5. Click **OK**.
@@ -94,7 +93,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 6. Using PowerShell you can use the **Add-AdfsClaimDescription** cmdlet.
    ``` powershell
    Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
-   -ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
+   -ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device'
    ```
 
 
@@ -104,21 +103,21 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 
 ### Step 6:  Enable the compound authentication bit on the msDS-SupportedEncryptionTypes attribute
 
-1.	Enable compound authentication bit on the msDS-SupportedEncryptionTypes attribute on the account you designated to run the AD FS service using the **Set-ADServiceAccount** PowerShell cmdlet.  
+1.	Enable compound authentication bit on the msDS-SupportedEncryptionTypes attribute on the account you designated to run the AD FS service using the **Set-ADServiceAccount** PowerShell cmdlet.
 
 >[!NOTE]
 >If you change the service account, then you must manually enable compound authentication by running the **Set-ADUser -compoundIdentitySupported:$true** Windows PowerShell cmdlets.
 
 ``` powershell
-Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
+Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true
 ```
 2. Restart the ADFS Service.
 
 >[!NOTE]
->Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error – 
+>Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error –
 **Install-ADServiceAccount : Cannot install service account. Error Message: 'The provided context did not match the target.'**.
 >
->**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims. 
+>**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims.
 Set-ADServiceAccount -Identity 'ADFS Service Account' -CompoundIdentitySupported:$false
 Install the gMSA on the new Server and then enable CompoundIdentitySupported back to $True.
 Disabling CompoundIdentitySupported and then reenabling does not need ADFS service to be restarted.
@@ -130,7 +129,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 3.  On the **Edit Claim Rules for Active Director** click **Add Rule**.
 4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
-6.  Click **Finish**.  Click **Apply** and **Ok**. 
+6.  Click **Finish**.  Click **Apply** and **Ok**.
 ![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc7.png)
 
 ### Step 8: On the Relying Party where the ‘WindowsDeviceGroup' claims are expected, add a similar ‘Pass-through' Or ‘Transform' claim rule.
@@ -178,21 +177,21 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 
 ### Step 4:  Enable the compound authentication bit on the msDS-SupportedEncryptionTypes attribute
 
-1.	Enable compound authentication bit on the msDS-SupportedEncryptionTypes attribute on the account you designated to run the AD FS service using the **Set-ADServiceAccount** PowerShell cmdlet.  
+1.	Enable compound authentication bit on the msDS-SupportedEncryptionTypes attribute on the account you designated to run the AD FS service using the **Set-ADServiceAccount** PowerShell cmdlet.
 
 >[!NOTE]
 >If you change the service account, then you must manually enable compound authentication by running the **Set-ADUser -compoundIdentitySupported:$true** Windows PowerShell cmdlets.
 
 ``` powershell
-Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
+Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true
 ```
 2. Restart the ADFS Service.
 
 >[!NOTE]
->Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error – 
+>Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error –
 **Install-ADServiceAccount : Cannot install service account. Error Message: 'The provided context did not match the target.'**.
 >
->**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims. 
+>**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims.
 Set-ADServiceAccount -Identity 'ADFS Service Account' -CompoundIdentitySupported:$false
 Install the gMSA on the new Server and then enable CompoundIdentitySupported back to $True.
 Disabling CompoundIdentitySupported and then reenabling does not need ADFS service to be restarted.
@@ -204,7 +203,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 3.  On the **Edit Claim Rules for Active Director** click **Add Rule**.
 4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
-6.  Click **Finish**.  Click **Apply** and **Ok**. 
+6.  Click **Finish**.  Click **Apply** and **Ok**.
 
 
 ### Step 6: On the Relying Party where the ‘WindowsDeviceGroup' claims are expected, add a similar ‘Pass-through' Or ‘Transform' claim rule.

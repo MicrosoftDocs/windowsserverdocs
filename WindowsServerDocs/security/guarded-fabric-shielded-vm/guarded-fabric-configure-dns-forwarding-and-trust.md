@@ -1,6 +1,5 @@
 ---
 title: Configure DNS forwarding and domain trust
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd

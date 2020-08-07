@@ -7,7 +7,6 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 03/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # User access options with Windows Admin Center
@@ -28,7 +27,7 @@ Windows Admin Center defines two roles for access to the gateway service: gatewa
 **Gateway administrators** can configure who gets access as well as how users will authenticate to the gateway.
 
 >[!NOTE]
-> If there are no access groups defined in Windows Admin Center, the roles will reflect the Windows account access to the gateway server. 
+> If there are no access groups defined in Windows Admin Center, the roles will reflect the Windows account access to the gateway server.
 
 [Configure gateway user and administrator access in Windows Admin Center.](../configure/user-access-control.md)
 

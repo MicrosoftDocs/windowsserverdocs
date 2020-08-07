@@ -5,7 +5,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/28/2018
 ms.topic: article
-ms.prod: windows-server
 ms.technology: identity-adfs
 ---
 
@@ -40,7 +39,7 @@ PS C:\ >Set-AdfsProperties -RemoveBannedIps "1.2.3.4"
 To read the current set of banned IP addresses, use the below Powershell cmdlet:
 
 ``` powershell
-PS C:\ >Get-AdfsProperties 
+PS C:\ >Get-AdfsProperties
 ```
 
 Example output:
@@ -51,7 +50,7 @@ BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 
 
 
-## Additional references  
+## Additional references
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
 [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)

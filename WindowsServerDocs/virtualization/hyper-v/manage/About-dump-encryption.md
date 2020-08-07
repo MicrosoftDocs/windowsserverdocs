@@ -1,7 +1,6 @@
 ---
 title: About dump encryption
 description: Describes how to encrypt dump files and troubleshoot encryption.
-ms.prod: windows-server
 manager: dongill
 ms.topic: article
 author: larsiwer
@@ -30,7 +29,7 @@ To simplify configuration, a [sample script](https://github.com/Microsoft/Virtua
 
 1. In a trusted environment: Create a certificate with a 2048 Bit RSA key and export the public certificate
 2. On target hosts: Import the public certificate to the local certificate store
-3. Run the sample configuration script 
+3. Run the sample configuration script
     ```
     .\Set-DumpEncryptionConfiguration.ps1 -Certificate (Cert:\CurrentUser\My\093568AB328DF385544FAFD57EE53D73EFAAF519) -Force
     ```

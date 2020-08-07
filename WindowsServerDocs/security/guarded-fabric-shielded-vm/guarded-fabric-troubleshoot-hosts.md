@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting Guarded Hosts
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 manager: dongill

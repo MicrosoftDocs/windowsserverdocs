@@ -7,7 +7,6 @@ author: jwwool
 ms.author: jeffrew
 ms.date: 07/17/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Install Windows Admin Center
 
@@ -55,7 +54,7 @@ If you have a Server Core installation of Windows Server, you can install Window
 
 Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
-```   
+```
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
 ```
 

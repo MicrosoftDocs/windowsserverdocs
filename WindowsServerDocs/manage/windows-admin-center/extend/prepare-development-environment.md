@@ -7,7 +7,6 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 09/18/2018
-ms.prod: windows-server
 ---
 
 # Prepare your development environment
@@ -32,7 +31,7 @@ To begin developing with the SDK, download and install the following prerequisit
 * [Nuget](https://www.nuget.org/downloads) (for publishing extensions)
 
 > [!NOTE]
-> You need to install and run Windows Admin Center in Dev Mode to follow the steps below. Dev Mode allows Windows Admin Center to load unsigned extension packages. Windows Admin Center can only be installed in Dev Mode on a Windows 10 machine. 
+> You need to install and run Windows Admin Center in Dev Mode to follow the steps below. Dev Mode allows Windows Admin Center to load unsigned extension packages. Windows Admin Center can only be installed in Dev Mode on a Windows 10 machine.
 >
 >  To enable Dev Mode, install Windows Admin Center from the command line with the parameter DEV_MODE=1. In the example below, replace ```<version>``` with the version you are installing, i.e. ```WindowsAdminCenter1809.msi```.
 >

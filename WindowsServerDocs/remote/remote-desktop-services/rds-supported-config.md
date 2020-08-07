@@ -1,7 +1,6 @@
 ---
 title: Supported configurations for Remote Desktop Services
 description: Provides information about supported configurations for RDS in Windows Server 2016 and Windows Server 2019.
-ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/14/2020

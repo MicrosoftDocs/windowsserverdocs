@@ -1,7 +1,6 @@
 ---
 title: NTLM Overview
 description: Windows Server Security
-ms.prod: windows-server
 ms.technology: security-kerberos
 ms.topic: article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90

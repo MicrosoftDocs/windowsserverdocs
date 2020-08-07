@@ -1,7 +1,6 @@
 ---
 title: Enable all virtual network adapters configured for a virtual machine
 description: Online version of the text for this Best Practices Analyzer rule.
-ms.prod: windows-server
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
@@ -14,30 +13,30 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).  
-  
-|Property|Details|  
-|-|-|  
-|**Operating System**|Windows Server 2016|  
-|**Product/Feature**|Hyper-V|  
-|**Severity**|Warning|  
-|**Category**|Configuration|  
-  
-In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.  
-  
-## Issue  
-  
-*One or more network adapters may be disabled in a virtual machine.*  
-  
-## Impact  
-  
-*The following virtual machines might not have network connectivity:*  
-  
-\<list of virtual machine names>  
-  
-## Resolution  
-  
-*Use Device Manager in the guest operating system to enable all virtual network adapters. If the adapter is not required, use Hyper-V Manager to remove it from the virtual machine.*  
-  
+For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+
+|Property|Details|
+|-|-|
+|**Operating System**|Windows Server 2016|
+|**Product/Feature**|Hyper-V|
+|**Severity**|Warning|
+|**Category**|Configuration|
+
+In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
+
+## Issue
+
+*One or more network adapters may be disabled in a virtual machine.*
+
+## Impact
+
+*The following virtual machines might not have network connectivity:*
+
+\<list of virtual machine names>
+
+## Resolution
+
+*Use Device Manager in the guest operating system to enable all virtual network adapters. If the adapter is not required, use Hyper-V Manager to remove it from the virtual machine.*
+
 
 

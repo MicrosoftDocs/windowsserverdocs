@@ -7,7 +7,6 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 

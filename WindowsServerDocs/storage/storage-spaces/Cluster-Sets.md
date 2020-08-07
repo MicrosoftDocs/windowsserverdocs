@@ -1,6 +1,5 @@
 ---
 title: Cluster Sets
-ms.prod: windows-server
 manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article

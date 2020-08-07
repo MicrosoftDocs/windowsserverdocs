@@ -1,8 +1,7 @@
 ---
 title: DHCP Subnet Selection Options
-description: This topic provides information about DHCP subnet selection options for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016. 
+description: This topic provides information about DHCP subnet selection options for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
 manager: dougkim
-ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: ca19e7d1-e445-48fc-8cf5-e4c45f561607
@@ -31,7 +30,7 @@ Typically, DHCP relay agents rely on the Gateway IP Address \(GIADDR\) field to 
 1. To inform the DHCP server about the subnet upon which the DHCP client that is requesting the IP address lease resides.
 2. To inform the DHCP server of the IP address to use to communicate with the relay agent.
 
-In some cases, the IP address that the relay agent uses to communicate with the DHCP server might be different than the IP address range from which the DHCP client IP address needs to be allocated. 
+In some cases, the IP address that the relay agent uses to communicate with the DHCP server might be different than the IP address range from which the DHCP client IP address needs to be allocated.
 
 The Link Selection Sub option of option 82 is useful in this situation, allowing the relay agent to explicitly state the subnet from which it wants the IP address allocated in the form of DHCP v4 option 82 sub option 5.
 
