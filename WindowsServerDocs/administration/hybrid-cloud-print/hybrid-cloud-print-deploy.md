@@ -169,7 +169,7 @@ To enable authenticated communication with the HCP services, we need to create 3
     - Install the following server roles:
         - Print Server role
         - Internet Information Service (IIS)
-    - See [Install roles, role services, and features by using the add Roles and Features Wizard](../server-manager/install-or-uninstall-roles-role-services-or-features.md#BKMK_installarfw) for details on how to install server roles.
+    - See [Install roles, role services, and features by using the add Roles and Features Wizard](../server-manager/install-or-uninstall-roles-role-services-or-features.md#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) for details on how to install server roles.
 
     ![Print Server Roles](../media/hybrid-cloud-print/PrintServer-Roles.png)
 
