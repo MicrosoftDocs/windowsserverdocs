@@ -1,5 +1,5 @@
 ---
-title: verbose
+title: Using the verbose command
 description: Reference article for verbose, which displays verbose output for a specified command.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -11,7 +11,7 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# verbose
+# Using the verbose command
 
 Displays verbose output for a specified command. You can use **/verbose** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
 
@@ -24,6 +24,7 @@ WDSUTIL /verbose <commands>
 ## Examples
 
 To delete approved computers from the Auto-Add database and show verbose output, type:
+
 ```
 WDSUTIL /Verbose /progress /Delete-AutoAddDevices /Server:MyWDSServer /DeviceType:ApprovedDevices
 ```

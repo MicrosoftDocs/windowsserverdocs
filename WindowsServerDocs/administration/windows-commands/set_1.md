@@ -15,8 +15,6 @@ ms.date: 10/16/2017
 
 Displays, sets, or removes cmd.exe environment variables. If used without parameters, **set** displays the current environment variable settings.
 
-
-
 ## Syntax
 
 ```

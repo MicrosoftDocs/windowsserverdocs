@@ -1,5 +1,5 @@
 ---
-title: Migrate the AD FS 2.0 federation server
+title: Verify the AD FS 2.0 migration to Windows Server 2012 R2
 description: Provides information on migrating an AD FS server to Windows Server 2012 R2.
 author: billmath
 ms.author: billmath

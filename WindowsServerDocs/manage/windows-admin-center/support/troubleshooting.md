@@ -28,10 +28,10 @@ This can happen if your default PowerShell module path has been modified or remo
 
 ### If you've installed Windows Admin Center as an **App on Windows 10**
 
-* Check to make sure Windows Admin Center is running. Look for the Windows Admin Center icon ![](../media/trayIcon.PNG) in the System tray or **Windows Admin Center Desktop / SmeDesktop.exe** in Task Manager. If not, launch **Windows Admin Center** from the Start Menu.
+* Check to make sure Windows Admin Center is running. Look for the Windows Admin Center icon ![Windows Admin Center icon](../media/trayIcon.PNG) in the System tray or **Windows Admin Center Desktop / SmeDesktop.exe** in Task Manager. If not, launch **Windows Admin Center** from the Start Menu.
 
-> [!NOTE] 
-> After rebooting, you must launch Windows Admin Center from the Start Menu.  
+> [!NOTE]
+> After rebooting, you must launch Windows Admin Center from the Start Menu.
 
 * [Check the Windows version](#check-the-windows-version)
 
@@ -52,7 +52,8 @@ This can happen if your default PowerShell module path has been modified or remo
 * Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
 
 * On the server, open Task Manager > Services and make sure **ServerManagementGateway / Windows Admin Center** is running.
-![](../media/Service-TaskMan.PNG)
+
+    ![Task Manager - Services tab](../media/Service-TaskMan.PNG)
 
 * Test the network connection to the Gateway (replace \<values> with the information from your deployment)
 
@@ -63,7 +64,7 @@ This can happen if your default PowerShell module path has been modified or remo
 ### If you have installed Windows Admin Center in an Azure Windows Server VM
 
 * [Check the Windows version](#check-the-windows-version)
-* Did you add an inbound port rule for HTTPS? 
+* Did you add an inbound port rule for HTTPS?
 * [Learn more about installing Windows Admin Center in an Azure VM](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
 
 ### Check the Windows version
@@ -82,7 +83,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 ### Did you upgrade your server from 2016 to 2019?
 
-* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
+* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts)
 
 ## I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
 
@@ -99,7 +100,7 @@ These three tools require the websocket protocol, which is commonly blocked by p
 
 ## I can connect to some servers, but not others
 
-* Log on to the gateway machine locally and try to ```Enter-PSSession <machine name>``` in PowerShell, replacing \<machine name> with the name of the Machine you are trying to manage in Windows Admin Center. 
+* Log on to the gateway machine locally and try to ```Enter-PSSession <machine name>``` in PowerShell, replacing \<machine name> with the name of the Machine you are trying to manage in Windows Admin Center.
 
 * If your environment uses a workgroup instead of a domain, see [using Windows Admin Center in a workgroup](#using-windows-admin-center-in-a-workgroup).
 
@@ -148,7 +149,7 @@ When installing Windows Admin Center, you are given the option to let Windows Ad
 
    > [!WARNING]
    > If the current setting of your TrustedHosts is not empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
-   > 
+   >
    > `Get-Item WSMan:localhost\Client\TrustedHosts | Out-File C:\OldTrustedHosts.txt`
 
 3. Set TrustedHosts to the NetBIOS, IP, or FQDN of the machines you
@@ -188,7 +189,7 @@ netsh http delete urlacl url=https://+:443/
 
 ## Azure features don't work properly in Edge
 
-Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding https://login.microsoftonline.com, https://login.live.com and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser. 
+Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. If you are having trouble using Azure features when using Edge, try adding https://login.microsoftonline.com, https://login.live.com and the URL of your gateway as trusted sites and to allowed sites for Edge pop-up blocker settings on your client side browser.
 
 To do this:
 1. Search for **Internet Options** in the Windows Start Menu
@@ -201,10 +202,10 @@ To do this:
 
 Please send us an email at wacFeedbackAzure@microsoft.com with the following information:
 * General issue information from the [questions listed below](#providing-feedback-on-issues).
-* Describe your issue and the steps you took to reproduce the issue. 
+* Describe your issue and the steps you took to reproduce the issue.
 * Did you previously register your gateway to Azure using the New-AadApp.ps1 downloadable script and then upgrade to version 1807? Or did you register your gateway to Azure using the UI from gateway Settings > Azure?
 * Is your Azure account associated with multiple directories/tenants?
-    * If yes: When registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure? 
+    * If yes: When registering the Azure AD application to Windows Admin Center, was the directory you used your default directory in Azure?
 * Does your Azure account have access to multiple subscriptions?
 * Does the subscription you were using have billing attached?
 * Were you logged in to multiple Azure accounts when you encountered the issue?
@@ -218,10 +219,10 @@ Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperi
 
 File a bug on our [UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5BBug%5D) that describes your issue.
 
-Please include any errors or warning you find in the event log, as well as the following information: 
+Please include any errors or warning you find in the event log, as well as the following information:
 
 * Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
-    * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center: 
+    * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center:
     * Are you using the self-signed certificate created by the installer?
     * If you are using your own certificate, does the subject name match the machine?
     * If you are using your own certificate, does it specify an alternate subject name?

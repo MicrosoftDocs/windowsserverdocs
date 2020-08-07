@@ -1,6 +1,6 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
-title: Windows Time Service Technical Reference
+title: Windows Time Service
 author: dcuomo
 ms.author: dacuo
 manager: dougkim
@@ -13,7 +13,6 @@ ms.technology: networking
 # Windows Time Service
 
 >Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
-
 
 **In this guide**
 

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
-title: How to Configure Protected Accounts
+title: Guidance about how to configure protected accounts
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -10,7 +10,7 @@ ms.prod: windows-server
 ms.technology: identity-adds
 ---
 
-# How to Configure Protected Accounts
+# Guidance about how to configure protected accounts
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

@@ -16,7 +16,7 @@ manager: dongill
 Use these procedures to troubleshoot computer backups in Windows Server Essentials, including backup configuration issues, incomplete or unsuccessful backups, backup health alerts, and issues with file, folder, or full-system restores.
 
 > [!NOTE]
-> For the most recent troubleshooting information from the Windows Server Essentials community, visit the [Windows Server Essentials Forum](https://docs.microsoft.com/answers/topics/windows-server-essentials.html).
+> For the most recent troubleshooting information from the Windows Server Essentials community, visit the [Windows Server Essentials Forum](/answers/topics/windows-server-essentials.html).
 
 ## Troubleshoot backup configuration issues for a connected computer
 

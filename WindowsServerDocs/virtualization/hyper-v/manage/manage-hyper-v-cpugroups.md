@@ -36,15 +36,15 @@ Allocation of host compute resources across CPU groups is enforced by the Hyper-
 
 The CPU group cap is calculated as G = *n* x *C*, where:
 
-    *G* is the amount of host LP we'd like to assign to the group
-    *n* is the total number of logical processors (LPs) in the group
-    *C* is the maximum CPU allocation — that is, the class of service desired for the group, expressed as a percentage of the system's total compute capacity
+- *G* is the amount of host LP we'd like to assign to the group
+- *n* is the total number of logical processors (LPs) in the group
+- *C* is the maximum CPU allocation — that is, the class of service desired for the group, expressed as a percentage of the system's total compute capacity
 
 For example, consider a CPU group configured with 4 logical processors (LPs), and a cap of 50%.
 
-    G = n * C
-    G = 4 * 50%
-    G = 2 LP's worth of CPU time for the entire group
+- G = n * C
+- G = 4 * 50%
+- G = 2 LP's worth of CPU time for the entire group
 
 In this example, the CPU group G is allocated 2 LP's worth of CPU time.
 
@@ -65,9 +65,9 @@ For simplicity's sake, let's assume each VM has 1 VP, and that our host has 8 LP
 
 To create the "B" tier, the host adminstartor sets the group cap to 50%:
 
-    G = n * C
-    G = 8 * 50%
-    G = 4 LP's worth of CPU time for the entire group
+- G = n * C
+- G = 8 * 50%
+- G = 4 LP's worth of CPU time for the entire group
 
 The host administrator adds a single "B" tier VM.
 At this point, our "B" tier VM can use at most 50% worth of the host's CPU, or the equivalent of 4 LPs in our example system.

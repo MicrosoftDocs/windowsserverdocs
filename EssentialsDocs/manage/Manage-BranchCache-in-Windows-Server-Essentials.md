@@ -95,6 +95,6 @@ BranchCache can help you optimize Internet usage, improve performance of network
 
 ## Additional References
 
--   [BranchCache Overview](https://technet.microsoft.com/library/hh831696.aspx)
+-   [BranchCache Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))
 
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)
