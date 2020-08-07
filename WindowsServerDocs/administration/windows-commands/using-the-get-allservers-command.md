@@ -1,8 +1,6 @@
 ---
 title: get-AllServers
-description: Windows Commands topic for get-AllServers, which retrieves information about all Windows Deployment Services servers. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-AllServers, which retrieves information about all Windows Deployment Services servers.
 ms.topic: article
 ms.assetid: fe2e3c69-8f2e-457d-af55-d249ebf70f53
 author: coreyp-at-msft
@@ -32,7 +30,7 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 |  [/Detailed]  | When used in conjunction with the **/Show:Images** or **/Show:All**, returns all image metadata from each image. If the **/Detailed** option is not specified, the default behavior is to return the image name, description, and file name. |
 | [/Forest:{Yes |                                                                                                                     No}]                                                                                                                     |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view information about all servers, type:
 ```

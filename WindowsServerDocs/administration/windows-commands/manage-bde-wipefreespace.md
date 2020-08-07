@@ -1,12 +1,6 @@
 ---
-title: manage-bde WipeFreeSpace
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+title: manage-bde wipefreespace
+description: Reference article for the manage-bde wipefreespace command, which wipes the free space on the volume removing any data fragments that may have existed in the space.
 ms.topic: article
 ms.assetid: b8d83a2a-c5c8-4019-9041-23d1d6abf282
 author: coreyp-at-msft
@@ -15,41 +9,51 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# manage-bde: WipeFreeSpace
+# manage-bde wipefreespace
 
-
-
-Wipes the free space on the volume removing any data fragments that may have existed in the space. Running this command on a volume that was encrypted using the Used Space Only encryption method provides the same level of protection as the Full Volume Encryption encryption method. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Wipes the free space on the volume, removing any data fragments that may have existed in the space. Running this command on a volume encrypted using the **Used Space Only** encryption method provides the same level of protection as the **Full Volume Encryption** encryption method.
 
 ## Syntax
 
 ```
-manage-bde -WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde -wipefreespace|-w [<drive>] [-cancel] [-computername <name>] [{-?|/?}] [{-help|-h}]
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Drive>|Represents a drive letter followed by a colon, a volume GUID path, or a mounted volume.|
-|-Cancel|Cancels a wipe of free space that is in process.|
-|-computername|Specifies that Manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
-|\<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
-|-? or /?|Displays brief Help at the command prompt.|
-|-help or -h|Displays complete Help at the command prompt.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<drive>` | Represents a drive letter followed by a colon. |
+| -cancel | Cancels a wipe of free space that is in process. |
+| -computername | Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command. |
+| `<name>` | Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address. |
+| -? or /? | Displays brief Help at the command prompt. |
+| -help or -h | Displays complete Help at the command prompt. |
 
-## <a name=BKMK_Examples></a>Examples
+### Examples
 
-The following example illustrates using the **-w** command to create wipe the free space on drive C.
+To wipe the free space on drive C, type:\
+
 ```
 manage-bde -w C:
 ```
-The following example illustrates using the **-w** command with the **-cancel** parameter to cancel the wipe the free space on drive C.
+
 ```
-manage-bde -w -Cancel C:
+manage-bde -wipefreespace C:
+```
+
+To cancel the wipe of tje free space on drive C, type:
+
+```
+manage-bde -w -cancel C:
+```
+
+```
+manage-bde -wipefreespace -cancel C:
 ```
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Manage-bde](manage-bde.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [manage-bde command](manage-bde.md)

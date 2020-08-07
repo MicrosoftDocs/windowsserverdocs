@@ -1,10 +1,8 @@
 ---
 title: Understanding the cache in Storage Spaces Direct
 ms.assetid: 69b1adc0-ee64-4eed-9732-0fb216777992
-ms.prod: windows-server
 ms.author: cosdar
 manager: dongill
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/17/2019
@@ -29,7 +27,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/NVMe-100px.png">
+			<img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)" >
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			NVMe (Non-Volatile Memory Express)
@@ -37,7 +35,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/SSD-100px.png">
+			<img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD" >
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			SATA/SAS SSD (Solid-State Drive)
@@ -45,7 +43,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/HDD-100px.png">
+			<img src="media/understand-the-cache/HDD-100px.png"alt="Image of HDD" >
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			HDD (Hard Disk Drive)
@@ -109,7 +107,7 @@ Storage Spaces Direct implements an algorithm that de-randomizes writes before d
 
 ### Caching in deployments with drives of all three types
 
-When drives of all three types are present, the NVMe drives provides caching for both the SSDs and the HDDs. The behavior is as described above: only writes are cached for the SSDs, and both reads and writes are cached for the HDDs. The burden of caching for the HDDs is distributed evenly among the cache drives. 
+When drives of all three types are present, the NVMe drives provides caching for both the SSDs and the HDDs. The behavior is as described above: only writes are cached for the SSDs, and both reads and writes are cached for the HDDs. The burden of caching for the HDDs is distributed evenly among the cache drives.
 
 ## Summary
 
@@ -169,7 +167,7 @@ You may choose to use the CSV cache, or not – it's up to you. It is off by def
 
 ## Manual configuration
 
-For most deployments, manual configuration is not required. In case you do need it, see the following sections. 
+For most deployments, manual configuration is not required. In case you do need it, see the following sections.
 
 If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](../../failover-clustering/health-service-overview.md#supported-components-document).
 
@@ -265,7 +263,7 @@ For example, 2 cache drives bound to 4 capacity drives results in 4 "Hybrid Disk
 
 There is no universal rule, but if too many reads are missing the cache, it may be undersized and you should consider adding cache drives to expand your cache. You can add cache drives or capacity drives independently whenever you want.
 
-## See also
+## Additional References
 
 - [Choosing drives and resiliency types](choosing-drives.md)
 - [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)

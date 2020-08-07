@@ -1,8 +1,6 @@
 ---
 title: get-AllNamespaces
-description: Windows Commands topic for get-AllNamespaces, which displays information about all namespaces on a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-AllNamespaces, which displays information about all namespaces on a server.
 ms.topic: article
 ms.assetid: e8fe896d-a69a-4180-923b-9f18185f5941
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # get-AllNamespaces
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about all namespaces on a server.
 
@@ -35,7 +33,7 @@ wdsutil /Get-AllNamespaces [/Server:<Server name>] [/ContentProvider:<name>] [/d
 |    [/details:Clients]     |                           Only supported for Windows Server 2008 R2. Displays information about client computers that are connected to the namespace.                           |                        |
 |  [/ExcludedeletePending]  |                                                              Excludes any deactivated transmissions from the list.                                                              |                        |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To view all namespaces, type:
 ```
 wdsutil /Get-AllNamespaces

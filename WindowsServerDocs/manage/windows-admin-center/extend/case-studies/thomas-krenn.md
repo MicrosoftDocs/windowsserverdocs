@@ -1,13 +1,11 @@
 ---
 title: Windows Admin Center SDK Case Study - Thomas-Krenn
 description: Windows Admin Center SDK Case Study - Thomas-Krenn
-ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/24/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Thomas-Krenn.AG Extension
 

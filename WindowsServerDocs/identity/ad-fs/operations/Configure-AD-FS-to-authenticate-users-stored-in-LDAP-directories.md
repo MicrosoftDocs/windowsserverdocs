@@ -6,17 +6,15 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
-# Configure AD FS to authenticate users stored in LDAP directories
+# Configure AD FS to authenticate users stored in LDAP directories in Windows Server 2016 or later
 
 The following topic describes the configuration required to enable your AD FS infrastructure to authenticate users whose identities are stored in Lightweight Directory Access Protocol (LDAP) v3-compliant directories.
 
 In many organizations, identity management solutions consist of a combination of Active Directory, AD LDS, or third-party LDAP directories. With the addition of AD FS support for authenticating users stored in LDAP v3-compliant directories, you can benefit from the entire enterprise-grade AD FS feature set regardless of where your user identities are stored. AD FS supports any LDAP v3-compliant directory.
 
 > [!NOTE]
-> Some of the AD FS features include single sign-on (SSO), device authentication, flexible conditional access policies, support for work-from-anywhere through the integration with the Web Application Proxy, and seamless federation with Azure AD which in turn enables you and your users to utilize the cloud, including Office 365 and other SaaS applications.  For more information, see [Active Directory Federation Services Overview](../../ad-fs/AD-FS-2016-Overview.md).
+> Some of the AD FS features include single sign-on (SSO), device authentication, flexible conditional access policies, support for work-from-anywhere through the integration with the Web Application Proxy, and seamless federation with Azure AD which in turn enables you and your users to utilize the cloud, including Office 365 and other SaaS applications.  For more information, see [Active Directory Federation Services Overview](../ad-fs-overview.md).
 
 In order for AD FS to authenticate users from an LDAP directory, you must connect this LDAP directory to your AD FS farm by creating a **local claims provider trust**.  A local claims provider trust is a trust object that represents an LDAP directory in your AD FS farm. A local claims provider trust object consists of a variety of identifiers, names, and rules that identify this LDAP directory to the local federation service.
 
@@ -71,16 +69,16 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
    Add-AdfsLocalClaimsProviderTrust -Name "Vendors" -Identifier "urn:vendors" -Type Ldap
 
    # Connection info
-   -LdapServerConnection $vendorDirectory 
+   -LdapServerConnection $vendorDirectory
 
    # How to locate user objects in directory
-   -UserObjectClass inetOrgPerson -UserContainer "CN=VendorsContainer,CN=VendorsPartition" -LdapAuthenticationMethod Basic 
+   -UserObjectClass inetOrgPerson -UserContainer "CN=VendorsContainer,CN=VendorsPartition" -LdapAuthenticationMethod Basic
 
    # Claims for authenticated users
-   -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName) 
+   -AnchorClaimLdapAttribute mail -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -LdapAttributeToClaimMapping @($GivenName, $Surname, $CommonName)
 
    # General claims provider properties
-   -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true 
+   -AcceptanceTransformRules "c:[Type != ''] => issue(claim=c);" -Enabled $true
 
    # Optional - supply user name suffix if you want to use Ws-Trust
    -OrganizationalAccountSuffix "vendors.contoso.com"
@@ -89,6 +87,4 @@ To configure your AD FS farm to authenticate users from an LDAP directory, you c
    In the example above, you are creating a local claims provider trust called "Vendors". You are specifying connection information for AD FS to connect to the LDAP directory this local claims provider trust represents by assigning `$vendorDirectory` to the `-LdapServerConnection` parameter. Note that in step one, you've assigned `$vendorDirectory` a connection string to be used when connecting to your specific LDAP directory. Finally, you are specifying that the `$GivenName`, `$Surname`, and `$CommonName` LDAP attributes (which you mapped to the AD FS claims) are to be used for conditional access control, including multi-factor authentication policies and issuance authorization rules, as well as for issuance via claims in AD FS-issued security tokens. In order to use active protocols like Ws-Trust with AD FS, you must specify the OrganizationalAccountSuffix parameter, which enables AD FS to disambiguate between local claims provider trusts when servicing an active authorization request.
 
 ## See Also
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
-
-
+[AD FS Operations](../ad-fs-operations.md)

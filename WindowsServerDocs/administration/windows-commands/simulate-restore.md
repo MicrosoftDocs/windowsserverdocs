@@ -1,8 +1,6 @@
 ---
 title: simulate restore
-description: Windows Commands topic for simulate restore, which tests writer involvement in restore sessions on the computer without issuing PreRestore or PostRestore events to writers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for simulate restore, which tests writer involvement in restore sessions on the computer without issuing PreRestore or PostRestore events to writers.
 ms.topic: article
 ms.assetid: d883d94c-3cb1-4848-9d74-1b4378044b31
 author: coreyp-at-msft

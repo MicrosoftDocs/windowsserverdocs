@@ -1,8 +1,6 @@
 ---
 title: remove-DriverGroupPackage
-description: Windows Commands topic for remove-DriverGroupPackage, which removes a driver package from a driver group on a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for remove-DriverGroupPackage, which removes a driver package from a driver group on a server.
 ms.topic: article
 ms.assetid: 2e48616d-d6a4-45f0-a5c6-efe62bf6a0ed
 author: coreyp-at-msft
@@ -31,7 +29,7 @@ WDSUTIL /Remove-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Na
 |[/DriverPackage:\<Name>]|Specifies the name of the driver package to remove.|
 |[/PackageId:\<ID>]|Specifies the Windows Deployment Services ID of the driver package to remove. You must specify this option if the driver package cannot be uniquely identified by name.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 ```
 WDSUTIL /Remove-DriverGroupPackage /DriverGroup:PrinterDrivers /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318}

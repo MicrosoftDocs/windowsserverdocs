@@ -1,8 +1,6 @@
 ---
 title: bitsadmin info
-description: Windows Commands topic for **bitsadmin info**, which displays summary information about the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin info command, which displays summary information about the specified job.
 ms.topic: article
 ms.assetid: 5c306677-0d64-41c0-8276-5bba7750cecb
 author: coreyp-at-msft
@@ -28,12 +26,12 @@ bitsadmin /info <job> [/verbose]
 | job | The job's display name or GUID. |
 | /verbose | Optional. Provides detailed information about each job. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves information about the job named *myDownloadJob*.
+To retrieve information about the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /info myDownloadJob
+bitsadmin /info myDownloadJob
 ```
 
 ## Additional References

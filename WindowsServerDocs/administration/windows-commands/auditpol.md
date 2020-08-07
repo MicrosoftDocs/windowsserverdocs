@@ -1,8 +1,6 @@
 ---
 title: auditpol
-description: Windows Commands topic for **auditpol**, which displays information about and performs functions to manipulate audit policies.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the auditpol command, which displays information about and performs functions to manipulate audit policies.
 ms.topic: article
 ms.assetid: a02cfb9d-732f-4e77-aeba-f18265daa3af
 author: coreyp-at-msft
@@ -13,9 +11,21 @@ ms.date: 10/16/2017
 
 # auditpol
 
-Displays information about and performs functions to manipulate audit policies.
+Displays information about and performs functions to manipulate audit policies, including:
 
-For examples of how this command can be used, see the Examples section in each topic.
+- Setting and querying a system audit policy.
+
+- Setting and querying a per-user audit policy.
+
+- Setting and querying auditing options.
+
+- Setting and querying the security descriptor used to delegate access to an audit policy.
+
+- Reporting or backing up an audit policy to a comma-separated value (CSV) text file.
+
+- Loading an audit policy from a CSV text file.
+
+- Configuring global resource SACLs.
 
 ## Syntax
 
@@ -23,7 +33,7 @@ For examples of how this command can be used, see the Examples section in each t
 auditpol command [<sub-command><options>]
 ```
 
-#### Parameters
+### Parameters
 
 | Sub-command | Description |
 | ----------- | ----------- |
@@ -36,24 +46,6 @@ auditpol command [<sub-command><options>]
 | /remove | Removes all per-user audit policy settings and disables all system audit policy settings. For more information, see [auditpol remove](auditpol-remove.md) for syntax and options. |
 | /resourceSACL | Configures global resource system access control lists (SACLs). **Note:** Applies only to Windows 7 and Windows Server 2008 R2. For more information, see [auditpol resourceSACL](auditpol-resourcesacl.md). |
 | /?| Displays help at the command prompt. |
-
-## Remarks
-
-The audit policy command-line tool can be used to:
-
-- Set and query a system audit policy.
-
-- Set and query a per-user audit policy.
-
-- Set and query auditing options.
-
-- Set and query the security descriptor used to delegate access to an audit policy.
-
-- Report or back up an audit policy to a comma-separated value (CSV) text file.
-
-- Load an audit policy from a CSV text file.
-
-- Configure global resource SACLs.
 
 ## Additional References
 

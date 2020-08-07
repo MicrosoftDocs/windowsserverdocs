@@ -1,8 +1,6 @@
 ---
 title: bitsadmin getclientcertificate
-description: Windows Commands topic for **bitsadmin getclientcertificate**, which retrieves the client certificate from the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin getclientcertificate command, which retrieves the client certificate from the job.
 ms.topic: article
 ms.assetid: 4fc8f408-085e-43a0-9fa8-3d798ef107b1
 author: coreyp-at-msft
@@ -27,14 +25,16 @@ bitsadmin /getclientcertificate <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the client certificate for the job named *myDownloadJob*.
+To retrieve the client certificate for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getclientcertificate myDownloadJob
+bitsadmin /getclientcertificate myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

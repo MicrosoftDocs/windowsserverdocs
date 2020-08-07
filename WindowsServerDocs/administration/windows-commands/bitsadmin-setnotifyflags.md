@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setnotifyflags
-description: Windows Commands topic for **bitsadmin setnotifyflags**, which sets the event notification flags for the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setnotifyflags command, which sets the event notification flags for the specified job.
 ms.topic: article
 ms.assetid: d5763d95-94a6-45ca-9e03-891c20047e06
 author: coreyp-at-msft
@@ -30,12 +28,14 @@ bitsadmin /setnotifyflags <job> <notifyflags>
 
 ## Examples
 
-The following example sets the notification flags to generate an event when an error occurs, for a job named *myDownloadJob*.
+To set the notification flags to generate an event when an error occurs, for a job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setnotifyflags myDownloadJob 2
+bitsadmin /setnotifyflags myDownloadJob 2
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

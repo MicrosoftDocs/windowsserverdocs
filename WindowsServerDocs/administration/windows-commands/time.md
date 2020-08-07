@@ -2,10 +2,8 @@
 title: time
 description: Learn how to set and display the system time.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 1276a257-7283-41da-ae80-fb4cfb311f9d
@@ -21,7 +19,7 @@ ms.date: 10/16/2017
 
 Displays or sets the system time. If used without parameters, **time** displays the current system time and prompts you to enter a new time.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 

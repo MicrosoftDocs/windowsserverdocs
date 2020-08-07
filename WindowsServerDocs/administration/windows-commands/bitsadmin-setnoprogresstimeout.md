@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setnoprogresstimeout
-description: Windows Commands topic for **bitsadmin setnoprogresstimeout**, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setnoprogresstimeout command, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
 ms.topic: article
 ms.assetid: 7fac50d9-cc6b-46a4-a96f-fab751ee1756
 author: coreyp-at-msft
@@ -28,7 +26,7 @@ bitsadmin /setnoprogresstimeout <job> <timeoutvalue>
 | job | The job's display name or GUID. |
 | timeoutvalue | The length of time that BITS waits to transfer a file after the first error, in seconds. |
 
-## Remarks
+### Remarks
 
 - The "no progress" timeout interval begins when the job encounters its first transient error.
 
@@ -38,12 +36,14 @@ bitsadmin /setnoprogresstimeout <job> <timeoutvalue>
 
 ## Examples
 
-The following example sets the "no progress" timeout value to 20 seconds, for the job named *myDownloadJob*.
+To set the "no progress" timeout value to 20 seconds, for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setnoprogresstimeout myDownloadJob 20
+bitsadmin /setnoprogresstimeout myDownloadJob 20
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

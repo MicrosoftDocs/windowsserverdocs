@@ -2,10 +2,8 @@
 title: rpcinfo
 description: Learn how to list the programs on a remote computer.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 7c342232-a8f0-42ff-8f11-d18c4981f5ca
@@ -16,9 +14,9 @@ ms.date: 07/11/2018
 ---
 # rpcinfo
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Lists programs on remote computers. The **rpcinfo** command-line utility makes a remote procedure call (RPC) to an RPC server and reports what it finds. 
+Lists programs on remote computers. The **rpcinfo** command-line utility makes a remote procedure call (RPC) to an RPC server and reports what it finds.
 
 ## Syntax
 ```
@@ -34,7 +32,7 @@ rpcinfo [/p [<Node>]] [/b <Program version>] [/t <Node Program> [<version>]] [/u
 |/u \<Node Program> [\<version>]|Uses the UDP transport protocol to call the specified program. You must specify both a node (computer) name and a program name. If you do not specify a version, the program calls all versions.|
 |/?|Displays help at the command prompt.|
 
-## <a name="BKMK_Examples"></a>Examples
+## Examples
 To list all programs registered with the port mapper, type:
 ```
 rpcinfo /p [<Node>]
@@ -52,5 +50,5 @@ Use User Datagram Protocol (UDP) to call a program:
 rpcinfo /u <Node Program> [<version>]
 ```
 
-## Additional references
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)

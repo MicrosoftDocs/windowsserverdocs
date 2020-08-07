@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setdescription
-description: Windows Commands topic for **bitsadmin setdescription**, which sets the description of the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setdescription command, which sets the description of the specified job.
 ms.topic: article
 ms.assetid: 1e46a5dd-4637-4a2e-b88f-d3f85b177db8
 author: coreyp-at-msft
@@ -30,12 +28,14 @@ bitsadmin /setdescription <job> <description>
 
 ## Examples
 
-The following example retrieves the description for the job named *myDownloadJob*.
+To retrieve the description for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setdescription myDownloadJob music_downloads
+bitsadmin /setdescription myDownloadJob music_downloads
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

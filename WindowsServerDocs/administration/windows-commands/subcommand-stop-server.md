@@ -1,8 +1,6 @@
 ---
 title: Subcommand stop-Server
-description: Windows Commands topic for Subcommand stop-Server, which stops all services on a Windows Deployment Services server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand stop-Server, which stops all services on a Windows Deployment Services server.
 ms.topic: article
 ms.assetid: 09f411c0-099f-4591-95fd-b77b3fd9118a
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: stop-Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops all services on a Windows Deployment Services server.
 
@@ -24,7 +22,7 @@ wdsutil [Options] /Stop-Server [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To stop the services, type one of the following:
 ```
 wdsutil /Stop-Server

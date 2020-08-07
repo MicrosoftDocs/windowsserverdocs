@@ -1,8 +1,6 @@
 ---
 title: start-server
-description: Windows Commands topic for start-server, which starts the multicast transmission, namespace, Transport Server, or all services on the Windows Deployment Services server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for start-server, which starts the multicast transmission, namespace, Transport Server, or all services on the Windows Deployment Services server.
 ms.topic: article
 ms.assetid: 7bbb68e0-1275-4c5f-b276-383a5be4534b
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # start-server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Starts the multicast transmission, namespace, Transport Server or all services on the Windows Deployment Services server.
 

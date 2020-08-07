@@ -1,8 +1,6 @@
 ---
 title: add
-description: Windows Commands topic for **add**, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the add command, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.topic: article
 ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd
 author: coreyp-at-msft
@@ -18,25 +16,23 @@ Adds volumes to the set of volumes that are to be shadow copied, or adds aliases
 > [!NOTE]
 > Aliases are not added to the alias environment until the shadow copy is created. Aliases that you need immediately should be added by using **add alias**.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
-
 ## Syntax
 
 ```
-add 
-add volume <Volume> [provider <ProviderID>] 
-add alias <AliasName> <AliasValue>
+add
+add volume <volume> [provider <providerid>]
+add alias <aliasname> <aliasvalue>
 ```
 
-## Add subcommands
+### Parameters
 
-| Subcommand | Description |
+| Parameter | Description |
 | ---------- | ----------- |
-| volume | Adds a volume to the Shadow Copy Set, which is the set of volumes to be shadow copied. See [Add volume](add-volume.md) for syntax and parameters. |
-| alias | Adds the given name and value to the alias environment. See [Add alias](add-alias.md) for syntax and parameters. |
-| `/?` | Displays help at the command line. |
+| volume | Adds a volume to the Shadow Copy Set, which is the set of volumes to be shadow copied. See [add volume](add-volume.md) for syntax and parameters. |
+| alias | Adds the given name and value to the alias environment. See [add alias](add-alias.md) for syntax and parameters. |
+| /? | Displays help at the command line. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the volumes added and the aliases that are currently in the environment, type:
 

@@ -1,11 +1,9 @@
 ---
 title: Subcommand stop-TransportServer
-description: Windows Commands topic for stop-TransportServer
-
-ms.prod: windows-server
+description: Reference article for stop-TransportServer
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
@@ -16,7 +14,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: stop-TransportServer
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops all services on a Transport Server.
 ## Syntax

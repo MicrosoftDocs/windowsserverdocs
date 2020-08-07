@@ -1,11 +1,9 @@
 ---
 title: rescan
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 87d7f7a1-104c-4a5d-b4ec-7d532263888c

@@ -1,8 +1,6 @@
 ---
 title: Set context
-description: Windows Commands topic for Set context, which sets the context for shadow copy creation.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Set context, which sets the context for shadow copy creation.
 ms.topic: article
 ms.assetid: fc16c7dd-e8f0-4c2a-8742-0bddb2848bfd
 author: coreyp-at-msft
@@ -15,7 +13,7 @@ ms.date: 10/16/2017
 
 Sets the context for shadow copy creation. If used without parameters, **set context** displays help at the command prompt.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -36,7 +34,7 @@ set context {clientaccessible | persistent [nowriters] | volatile [nowriters]}
 
 -   The *clientaccessible* context is persistent by default.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To prevent shadow copies from being deleted when you exit DiskShadow, type:
 ```

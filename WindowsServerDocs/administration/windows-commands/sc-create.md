@@ -1,12 +1,6 @@
 ---
-title: Sc create
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+title: Sc.exe create
+description: Learn how register new services with Windows Service Manager using the sc.exe utility
 ms.topic: article
 ms.assetid: 59416460-0661-4fef-85cc-73e9d8f4beb4
 author: coreyp-at-msft
@@ -15,18 +9,14 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# Sc create
-
-
+# Sc.exe create
 
 Creates a subkey and entries for a service in the registry and in the Service Control Manager database.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto }] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
+sc.exe [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys | rec | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto }] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
 ```
 
 ### Parameters
@@ -52,12 +42,12 @@ sc [<ServerName>] create [<ServiceName>] [type= {own | share | kernel | filesys 
 -   For each command-line option, the equal sign is part of the option name.
 -   A space is required between an option and its value (for example, **type= own**. If the space is omitted the operation will fail.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following examples show how you can use the **sc create** command:
+The following examples show how you can use the **sc.exe create** command:
 ```
-sc \\myserver create NewService binpath= c:\windows\system32\NewServ.exe
-sc create NewService binpath= c:\windows\system32\NewServ.exe type= share start= auto depend= +TDI NetBIOS
+sc.exe \\myserver create NewService binpath= c:\windows\system32\NewServ.exe
+sc.exe create NewService binpath= c:\windows\system32\NewServ.exe type= share start= auto depend= +TDI NetBIOS
 ```
 
 ## Additional References

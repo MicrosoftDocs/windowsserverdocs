@@ -1,8 +1,6 @@
 ---
 title: wbadmin get versions
-description: Windows Commands topic for wbadmin get versions, which lists details about the available backups that are stored on the local computer or another computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for wbadmin get versions, which lists details about the available backups that are stored on the local computer or another computer.
 ms.topic: article
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
 author: coreyp-at-msft
@@ -18,8 +16,6 @@ ms.date: 10/16/2017
 Lists details about the available backups that are stored on the local computer or another computer. When this subcommand is used without parameters, it lists all backups of the local computer, even if those backups are not available. The details provided for a backup include the backup time, the backup storage location, the version identifier (needed for the **wbadmin get items** subcommand and to perform recoveries), and the type of recoveries you can perform.
 
 To get details about available backups using this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt **Command Prompt** and then click **Run as administrator**.)
-
-For examples of how to use this subcommand, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -40,7 +36,7 @@ wbadmin get versions
 
 To list items available for recovery from a specific backup, use **wbadmin get items**.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To see a list of available backups that are stored on volume h, type:
 ```
@@ -53,6 +49,6 @@ wbadmin get versions -backupTarget:\\servername\share -machine:server01
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBBackupTarget](https://technet.microsoft.com/library/jj902447.aspx) cmdlet
+-   [Get-WBBackupTarget](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) cmdlet

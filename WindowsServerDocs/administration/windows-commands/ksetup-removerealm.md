@@ -1,12 +1,6 @@
 ---
-title: ksetup:removerealm
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+title: ksetup removerealm
+description: Reference article for the ksetup removerealm command, which deletes all information for the specified realm from the registry.
 ms.topic: article
 ms.assetid: 39f0c6f0-4c50-4781-941e-0893495405e8
 author: coreyp-at-msft
@@ -15,44 +9,39 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# ksetup:removerealm
+# ksetup removerealm
 
+Deletes all information for the specified realm from the registry.
 
+The realm name is stored in the registry under `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001` and `\CurrentControlSet\Control\Lsa\Kerberos`. This entry doesn't exist in the registry by default. You can use the [ksetup addrealmflags](ksetup-addrealmflags.md) command to populate the registry.
 
-Deletes all information for the specified realm from the registry. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+> [!IMPORTANT]
+> You can't remove the default realm name from the domain controller because this resets its DNS information, and removing it might make the domain controller unusable.
 
 ## Syntax
 
 ```
-ksetup /removerealm <RealmName>
+ksetup /removerealm <realmname>
 ```
+### Parameters
 
-#### Parameters
+| Parameter | Description |
+| --------- | ----------- |
+| `<realmname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM, and is listed as the default realm or **Realm=** when **ksetup** is run. |
 
-|Parameter|Description|
-|---------|-----------|
-|\<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM, and it is listed as the default realm when **ksetup** is run.|
+### Examples
 
-## Remarks
-
-The realm name is stored in two places in the registry: **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** and **\CurrentControlSet\Control\Lsa\Kerberos**.
-
-You cannot remove the default realm name from the domain controller because this will reset its DNS information, and removing it might make the domain controller unusable.
-
-## <a name=BKMK_Examples></a>Examples
-
-Mistakenly set the realm name by misspelling .COM on the local computer to CORP.CONTOSO.CON
-```
-ksetup /setrealm CORP.CONTOSO.CON
-```
-Remove that erroneous realm name from the local computer:
+To remove an erroneous realm name (.CON instead of .COM) from the local computer, type:
 ```
 ksetup /removerealm CORP.CONTOSO.CON
 ```
-Verify the removal by running **ksetup** and review the output.
+
+To verify the removal, you can run the **ksetup** command and review the output.
 
 ## Additional References
 
--   [Ksetup](ksetup.md)
--   [Ksetup:setrealm](ksetup-setrealm.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ksetup command](ksetup.md)
+
+- [ksetup setrealm command](ksetup-setrealm.md)

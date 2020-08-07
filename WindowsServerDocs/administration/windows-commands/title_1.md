@@ -1,8 +1,6 @@
 ---
 title: title
-description: Windows Commands topic for title, which creates a title for the Command Prompt window.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for title, which creates a title for the Command Prompt window.
 ms.topic: article
 ms.assetid: c0bbe8bd-201a-4b6c-b617-5d9809881dc8
 author: coreyp-at-msft
@@ -15,7 +13,7 @@ ms.date: 10/16/2017
 
 Creates a title for the Command Prompt window.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -35,7 +33,7 @@ title [<String>]
 -   To create window title for batch programs, include the **title** command at the beginning of a batch program.
 -   After a window title is set, you can reset it only by using the **title** command.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 In the following sample script, the title of the Command Prompt window is changed to Updating Files while the batch file executes the **copy** command. After the command is executed, the text `Files Updated` is displayed, and the title of the Command Prompt window is changed back to Command Prompt.
 ```

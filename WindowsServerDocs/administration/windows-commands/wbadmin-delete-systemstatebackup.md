@@ -1,8 +1,6 @@
 ---
 title: wbadmin delete systemstatebackup
-description: Windows Commands topic for wbadmin delete systemstatebackup, which deletes the system state backups that you specify.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for wbadmin delete systemstatebackup, which deletes the system state backups that you specify.
 ms.topic: article
 ms.assetid: 707d37cb-448d-4542-b6ac-1fc89e749788
 author: coreyp-at-msft
@@ -14,7 +12,6 @@ ms.date: 10/16/2017
 # wbadmin delete systemstatebackup
 
 
-
 Deletes the system state backups that you specify. If the specified volume contains backups other than system state backups of your local server, those backups will not be deleted.
 
 > [!NOTE]
@@ -22,7 +19,6 @@ Deletes the system state backups that you specify. If the specified volume conta
 
 To delete a system state backup with this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt**, and then click **Run as administrator**.)
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
@@ -48,7 +44,7 @@ wbadmin delete systemstatebackup
 |-machine|Specifies the computer whose system state backup you want to delete. Useful when multiple computers were backed up to the same location. Should be used when the **-backupTarget** parameter is specified.|
 |-quiet|Runs the subcommand with no prompts to the user.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To delete the system state backup created on March 31, 2013 at 10:00 AM, type:
 ```
@@ -58,12 +54,12 @@ To delete all system state backups, except the three most recent, type:
 ```
 wbadmin delete systemstatebackup -keepVersions:3
 ```
-To delete the oldest system state backup stored on disk f, type:
+To delete the oldest system state backup stored on disk f:, type:
 ```
-wbadmin delete systemstatebackup -backupTarget:f -deleteOldest
+wbadmin delete systemstatebackup -backupTarget:f:\ -deleteOldest
 ```
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Wbadmin](wbadmin.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Wbadmin](wbadmin.md)

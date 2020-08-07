@@ -1,7 +1,6 @@
 ---
 title: remove-DriverGroup
-description: Windows Commands topic for remove-DriverGroup, which removes a driver group from a server. 
-ms.prod: windows-server
+description: Reference article for remove-DriverGroup, which removes a driver group from a server.
 ms.topic: article
 ms.assetid: 1fefe9df-9782-433c-8abe-3f1a35e50da2
 author: coreyp-at-msft
@@ -27,7 +26,7 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 |/DriverGroup:\<Group Name>|Specifies the name of the driver group to remove.|
 |[/Server:\<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To remove a driver group, type one of the following:
 ```

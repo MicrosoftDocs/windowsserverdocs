@@ -1,12 +1,10 @@
 ---
 title: Troubleshooting a guarded fabric
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 55e954ec-6a5f-4b42-b6a7-1006f3e24556
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ---
 
 # Troubleshooting a Guarded Fabric
@@ -18,7 +16,7 @@ The following topics cover how to troubleshoot a guarded fabric:
 - [Troubleshooting Guarded Hosts](guarded-fabric-troubleshoot-hosts.md)
 - [Troubleshooting Shielded VMs](guarded-fabric-troubleshoot-shielded-vms.md)
 
-## See also
+## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
 - [Managing a guarded fabric](guarded-fabric-manage-overview.md)

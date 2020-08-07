@@ -1,8 +1,6 @@
 ---
 title: enable-TransportServer
-description: Windows Commands topic for enable-TransportServer, which enables all services for the Transport Server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for enable-TransportServer, which enables all services for the Transport Server.
 ms.topic: article
 ms.assetid: 9d79dba1-4b57-4a00-8cba-877e6b8618e6
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # enable-TransportServer
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables all services for the Transport Server.
 
@@ -24,7 +22,7 @@ wdsutil [Options] /Enable-TransportServer [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the Transport Server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no name is specified, the local server will be used.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To enable the services on the server, run one of the following:
 ```
 wdsutil /Enable-TransportServer

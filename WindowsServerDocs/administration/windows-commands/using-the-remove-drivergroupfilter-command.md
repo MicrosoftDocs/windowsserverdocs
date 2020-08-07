@@ -1,8 +1,6 @@
 ---
 title: remove-DriverGroupFilter
-description: Windows Commands topic for remove-DriverGroupFilter, which removes a filter rule from a driver group on a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for remove-DriverGroupFilter, which removes a filter rule from a driver group on a server.
 ms.topic: article
 ms.assetid: 837bd5d4-c79d-4714-942d-9875bd8e61dc
 author: coreyp-at-msft
@@ -31,7 +29,7 @@ WDSUTIL /Remove-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server nam
 |[/Server:\<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
 |[/FilterType:\<FilterType>]|Specifies the type of the filter to remove from the group. \<FilterType> can be one of the following:</br>**BiosVendor**</br>**BiosVersion**</br>**ChassisType**</br>**Manufacturer**</br>**Uuid**</br>**OsVersion**</br>**OsEdition**</br>**OsLanguage**|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To remove a filter, type one of the following:
 ```

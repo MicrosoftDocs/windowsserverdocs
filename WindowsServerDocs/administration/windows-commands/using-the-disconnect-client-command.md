@@ -1,8 +1,6 @@
 ---
 title: Disconnect-Client
-description: Windows Commands topic for Disconnect-Client, which disconnects a client from a multicast transmission or namespace. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Disconnect-Client, which disconnects a client from a multicast transmission or namespace.
 ms.topic: article
 ms.assetid: 876bbe6c-76ab-4de5-879b-d2066e700326
 author: coreyp-at-msft
@@ -29,7 +27,7 @@ WDSUTIL /Disconnect-Client /ClientId:<Client ID> [/Server:<Server name>] [/Force
 |[/Server:\<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |[/Force]|Stops the installation completely and does not use a fallback method. Note that Wdsmcast.exe does not support any fallback mechanism. If you do not use this option, the default behavior is as follows:</br>-   If you are using the Windows Deployment Services client, the client continues the installation by using unicasting.</br>-   If you are not using the Windows Deployment Services client, the installation fails.</br>Important: You should use this option with caution because the installation will fail and the computer could be left in an unusable state.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To disconnect a client, type:
 ```

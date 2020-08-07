@@ -1,8 +1,6 @@
 ---
 title: taskkill
-description: Windows Commands topic for taskkill, which ends one or more tasks or processes.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for taskkill, which ends one or more tasks or processes.
 ms.topic: article
 ms.assetid: 2b71e792-08b6-46d4-95a5-cb6336a79524
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # taskkill
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. **taskkill** replaces the **kill** tool.
 

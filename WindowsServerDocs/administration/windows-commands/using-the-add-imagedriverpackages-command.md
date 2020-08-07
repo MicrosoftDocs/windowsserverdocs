@@ -1,8 +1,6 @@
 ---
 title: add-ImageDriverPackages
-description: Windows Commands topic for add-ImageDriverPackages, which adds driver packages from the driver store to a boot image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-ImageDriverPackages, which adds driver packages from the driver store to a boot image.
 ms.topic: article
 ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
 author: coreyp-at-msft
@@ -12,14 +10,13 @@ ms.date: 10/16/2017
 ---
 # add-ImageDriverPackages
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds driver packages from the driver store to a boot image. The image version must be Windows 7 or Windows Server 2008 R2 or later.
-for examples of how you can use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 ```
-wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
+wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64}
 [/Filename:<File name>] /Filtertype:<Filter type> /Operator:{Equal | NotEqual | GreaterOrEqual | LessOrEqual | Contains} /Value:<Value> [/Value:<Value> ...]
 ```
 ### Parameters
@@ -35,7 +32,7 @@ wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatyp
 | /Operator:{Equal &#124; NotEqual &#124; GreaterOrEqual &#124; LessOrEqual &#124; Contains} |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             The relationship between the attribute and the values. You can only specify **Contains** with string attributes. You can only specify **GreaterOrEqual** and **LessOrEqual** with date and version attributes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |                                       /Value:<Value>                                       | Specifies the value to search for relative to the specified <attribute>. You can specify multiple values for a single **/Filtertype**. The list below outlines the attributes that you can specify for each filter. For more information about these attributes, see [Driver and Package attributes](https://go.microsoft.com/fwlink/?LinkId=166895) (<https://go.microsoft.com/fwlink/?LinkId=166895>).<p>-   PackageId - Specify a valid GUID. For example: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-   PackageName   Specify any string value.<br />-   PackageEnabled - Specify **Yes** or **No**.<br />-   Packagedateadded - Specify the date in the following format: YYYY/MM/DD<br />-   PackageInfFilename   Specify any string value.<br />-   PackageClass - Specify a valid class name or class GUID. For example: **DiskDrive**, **Net**, or {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-   PackageProvider   Specify any string value.<br />-   PackageArchitecture - Specify **x86**,  **x64**, or **ia64**.<b />-   PackageLocale - Specify a valid language identifier. For example: **en-US** or **es-ES**.<br />-   PackageSigned - Specify **Yes** or **No**.<br />-   PackagedatePublished - Specify the date in the following format: YYYY/MM/DD<br />-   Packageversion - Specify the version in the following format: a.b.x.y. For example: 6.1.0.0<br />-   Driverdescription   Specify any string value.<br />-   DriverManufacturer   Specify any string value.<br />-   DriverHardwareId - Specify any string value.<br />-   DrivercompatibleId - Specify any string value.<br />-   DriverExcludeId - Specify any string value.<br />-   DriverGroupId - Specify a valid GUID. For example: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-   DriverGroupName   Specify any string value. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To add driver packages to a boot image, type one of the following:
 ```
 wdsutil /add-ImageDriverPackagemedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /Filtertype:DriverGroupName /Operator:Equal /Value:x86Bus /Filtertype:PackageProvider /Operator:Contains /Value:Provider1 /Filtertype:Packageversion /Operator:GreaterOrEqual /Value:6.1.0.0

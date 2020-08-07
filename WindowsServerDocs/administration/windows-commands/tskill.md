@@ -1,8 +1,6 @@
 ---
 title: tskill
-description: Windows Commands topic for tskill, which ends a process running in a session on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for tskill, which ends a process running in a session on a Remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: 08986e6a-6900-4ece-85a1-8f73b14db1b3 Lizap
 author: coreyp-at-msft
@@ -12,13 +10,13 @@ ms.date: 10/16/2017
 ---
 # tskill
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends a process running in a session on a Remote Desktop Session Host server.
-for examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11)) in the Windows Server TechNet Library.
 
 ## Syntax
 ```
@@ -42,7 +40,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 - When all processes that are running in a session end, the session also ends.
 - if you use the *ProcessName* and the **/server:**<em>ServerName</em> parameters, you must also specify either the **/id:**<em>SessionID</em> or the **/a** parameter.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 - To end process 6543, type:
   ```
   tskill 6543

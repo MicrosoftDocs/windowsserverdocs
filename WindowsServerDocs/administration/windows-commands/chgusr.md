@@ -1,8 +1,6 @@
 ---
 title: chgusr
-description: Windows Commands topic for chgusr, which changes the install mode for the Remote Desktop Session Host server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the chgusr command, which changes the install mode for the Remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: f119d9d3-ed8b-42da-81f7-77591d908c83
 author: coreyp-at-msft
@@ -12,17 +10,17 @@ ms.date: 10/16/2017
 ---
 # chgusr
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Changes the install mode for the Remote Desktop Session Host server.  
+Changes the install mode for the Remote Desktop Session Host server.
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.  
+> This command has been replaced by the **change user command**. For more information, including the syntax and parameter details, see [change user command](change-user.md).
 
-## Remarks  
-This command is the same as the **change user** command.
+## Additional References
 
-## Additional References  
-- [change user](change-user.md)  
-- - [Command-Line Syntax Key](command-line-syntax-key.md)  
-- [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [change user command](change-user.md)
+
+- [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

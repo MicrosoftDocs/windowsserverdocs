@@ -1,12 +1,6 @@
 ---
 title: Configure Features on Demand in Windows Server
 description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 author: coreyp-at-msft
@@ -71,7 +65,7 @@ Two methods are available for removing feature files from Windows Server in a Fe
 
 -   The `remove` parameter of the `Uninstall-WindowsFeature` cmdlet lets you delete feature files from a server or offline virtual hard disk (VHD) that is running  Windows Server 2012 R2  or  Windows Server 2012 . Valid values for the `remove` parameter are the names of roles, role services, and features.
 
--   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. For more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](https://technet.microsoft.com/library/hh824822.aspx).
+-   Deployment Image Servicing and Management (DISM) commands let you create custom WIM files that conserve disk space by omitting feature files that are either not needed, or can be obtained from other, remote sources. For more information about using DISM to prepare custom images, see [How to Enable or Disable Windows Features](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824822(v=win.10)).
 
 ## <a name=BKMK_remove></a>Remove feature files by using Uninstall-WindowsFeature
 You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role services, and features from servers and offline VHDs that are running  Windows Server 2012 R2  or  Windows Server 2012 , and to delete feature files. You can both uninstall and delete the same roles, role services, and features in the same command if desired.
@@ -108,7 +102,7 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
 
     > [!NOTE]
     > You must add the `computerName` parameter if you are running the cmdlet from a computer that is running Windows 8.1 or Windows 8.
-    > 
+    >
     > if you enter the name of a VHD file from a network share, that share must grant **Read** and **Write** permissions to the computer account of the server that you selected to mount the VHD. User-only account access is not sufficient. The share can grant **Read** and **Write** permissions to the **Everyone** group to allow access to the VHD, but for security reasons, this is not recommended.
 
     ```
@@ -117,8 +111,6 @@ You can use the Uninstall-WindowsFeature cmdlet both to uninstall roles, role se
 
 ## See Also
 [Install or Uninstall Roles, Role Services, or Features](install-or-uninstall-roles-role-services-or-features.md)
-[Windows Server Installation Options](https://technet.microsoft.com/library/hh831786.aspx)
-[How to Enable or Disable Windows Features](https://technet.microsoft.com/library/hh824822.aspx)
-[Deployment Image Servicing and Management (DISM) Overview](https://technet.microsoft.com/library/hh825236.aspx)
-
-
+[Windows Server Installation Options](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831786(v=ws.11))
+[How to Enable or Disable Windows Features](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824822(v=win.10))
+[Deployment Image Servicing and Management (DISM) Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825236(v=win.10))

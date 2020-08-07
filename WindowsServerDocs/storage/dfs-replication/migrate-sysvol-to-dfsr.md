@@ -1,8 +1,6 @@
-﻿---
+---
 title: Migrate SYSVOL replication to DFS Replication
 ms.date: 07/02/2012
-ms.prod: windows-server
-ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
@@ -23,45 +21,45 @@ This document assumes that you have a basic knowledge of Active Directory Domain
 
 
 > [!NOTE]
-> To download a printable version of this guide, go to <a href="https://go.microsoft.com/fwlink/?linkid=150375">SYSVOL Replication Migration Guide: FRS to DFS Replication</a> (https://go.microsoft.com/fwlink/?LinkId=150375) 
+> To download a printable version of this guide, go to <a href="https://go.microsoft.com/fwlink/?linkid=150375">SYSVOL Replication Migration Guide: FRS to DFS Replication</a> (https://go.microsoft.com/fwlink/?LinkId=150375)
 <br>
 
 
 ## In this guide
 
-[SYSVOL Migration Conceptual Information](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640170(v=ws.10))
+[SYSVOL Migration Conceptual Information](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640170(v=ws.10))
 
-  - [SYSVOL Migration States](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641052(v=ws.10))  
-      
-  - [Overview of the SYSVOL Migration Procedure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639809(v=ws.10))  
-      
+  - [SYSVOL Migration States](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641052(v=ws.10))
 
-[SYSVOL Migration Procedure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639860(v=ws.10))
+  - [Overview of the SYSVOL Migration Procedure](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639809(v=ws.10))
 
-  - [Migrating to the Prepared State](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641193(v=ws.10))  
-      
-  - [Migrating to the Redirected State](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641340(v=ws.10))  
-      
-  - [Migrating to the Eliminated State](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640254(v=ws.10))  
-      
 
-[Troubleshooting SYSVOL Migration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640395(v=ws.10))
+[SYSVOL Migration Procedure](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639860(v=ws.10))
 
-  - [Troubleshooting SYSVOL Migration Issues](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639976(v=ws.10))  
-      
-  - [Rolling Back SYSVOL Migration to a Previous Stable State](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640509(v=ws.10))  
-      
+  - [Migrating to the Prepared State](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641193(v=ws.10))
 
-[SYSVOL Migration Reference Information](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640293(v=ws.10))
+  - [Migrating to the Redirected State](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641340(v=ws.10))
 
-  - [Supported SYSVOL Migration Scenarios](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639854(v=ws.10))  
-      
-  - [Verifying the State of SYSVOL Migration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639789(v=ws.10))  
-      
-  - [Dfsrmig](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd641227(v=ws.10))  
-      
-  - [SYSVOL Migration Tool Actions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd639712(v=ws.10))  
-      
+  - [Migrating to the Eliminated State](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640254(v=ws.10))
+
+
+[Troubleshooting SYSVOL Migration](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640395(v=ws.10))
+
+  - [Troubleshooting SYSVOL Migration Issues](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639976(v=ws.10))
+
+  - [Rolling Back SYSVOL Migration to a Previous Stable State](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640509(v=ws.10))
+
+
+[SYSVOL Migration Reference Information](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640293(v=ws.10))
+
+  - [Supported SYSVOL Migration Scenarios](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639854(v=ws.10))
+
+  - [Verifying the State of SYSVOL Migration](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639789(v=ws.10))
+
+  - [Dfsrmig](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641227(v=ws.10))
+
+  - [SYSVOL Migration Tool Actions](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639712(v=ws.10))
+
 
 ## Additional references
 
@@ -78,4 +76,3 @@ This document assumes that you have a basic knowledge of Active Directory Domain
 [Step-by-Step Guide for Distributed File Systems in Windows Server 2008](https://go.microsoft.com/fwlink/?linkid=85231)
 
 [FRS Technical Reference](https://go.microsoft.com/fwlink/?linkid=121764)
-

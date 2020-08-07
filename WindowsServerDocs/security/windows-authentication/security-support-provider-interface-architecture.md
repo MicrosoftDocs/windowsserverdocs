@@ -1,8 +1,6 @@
 ---
 title: Security Support Provider Interface Architecture
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
 author: coreyp-at-msft
@@ -77,19 +75,19 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Kerberos protocol and the Kerberos SSP**
 
--   [Microsoft Kerberos (Windows)](https://msdn.microsoft.com/library/aa378747(VS.85).aspx)
+-   [Microsoft Kerberos (Windows)](/windows/win32/secauthn/microsoft-kerberos)
 
 -   [\[MS-KILE\]: Kerberos Protocol Extensions](https://msdn.microsoft.com/library/cc233855(PROT.10).aspx)
 
 -   [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx)
 
--   [Kerberos SSP/AP (Windows)](https://msdn.microsoft.com/library/aa377942(VS.85).aspx)
+-   [Kerberos SSP/AP (Windows)](/windows/win32/secauthn/kerberos-ssp-ap)
 
--   [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(v=ws.10).aspx) for Windows Vista
+-   [Kerberos Enhancements](/previous-versions/windows/it-pro/windows-vista/cc749438(v=ws.10)) for Windows Vista
 
--   [Changes in Kerberos Authentication](https://technet.microsoft.com/library/dd560670(v=ws.10).aspx) for  Windows 7 
+-   [Changes in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560670(v=ws.10)) for  Windows 7
 
--   [Kerberos Authentication Technical Reference](https://technet.microsoft.com/library/cc739058(v=ws.10).aspx)
+-   [Kerberos Authentication Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc739058(v=ws.10))
 
 ### <a name="BKMK_NTLMSSP"></a>NTLM Security Support Provider
 The NTLM Security Support Provider (NTLM SSP) is a binary messaging protocol used by the Security Support Provider Interface (SSPI) to allow NTLM challenge-response authentication and to negotiate integrity and confidentiality options. NTLM is used wherever SSPI authentication is used, including for Server Message Block or CIFS authentication, HTTP Negotiate authentication  (for example, Internet Web Authentication), and the Remote Procedure Call service. The NTLM SSP includes the NTLM and NTLM version 2 (NTLMv2) authentication protocols.
@@ -110,13 +108,13 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the NTLM protocol and the NTLM SSP**
 
--   [MSV1_0 Authentication Package (Windows)](https://msdn.microsoft.com/library/aa378753(VS.85).aspx)
+-   [MSV1_0 Authentication Package (Windows)](/windows/win32/secauthn/msv1-0-authentication-package)
 
--   [Changes in NTLM Authentication](https://technet.microsoft.com/library/dd566199(v=ws.10).aspx) in  Windows 7 
+-   [Changes in NTLM Authentication](/previous-versions/windows/it-pro/windows-7/dd566199(v=ws.10)) in  Windows 7
 
--   [Microsoft NTLM (Windows)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)
+-   [Microsoft NTLM (Windows)](/windows/win32/secauthn/microsoft-ntlm)
 
--   [Auditing and restricting NTLM usage guide](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)
+-   [Auditing and restricting NTLM usage guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/jj865674(v=ws.10))
 
 ### <a name="BKMK_DigestSSP"></a>Digest Security Support Provider
 Digest authentication is an industry standard that is used for Lightweight Directory Access Protocol (LDAP) and web authentication. Digest authentication transmits credentials across the network as an MD5 hash or message digest.
@@ -133,7 +131,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Digest protocol and the Digest SSP**
 
--   [Microsoft Digest Authentication (Windows)](https://msdn.microsoft.com/library/aa378745(VS.85).aspx)
+-   [Microsoft Digest Authentication (Windows)](/windows/win32/secauthn/microsoft-digest-ssp)
 
 -   [\[MS-DPSP\]: Digest Protocol Extensions](https://msdn.microsoft.com/library/cc227906(PROT.13).aspx)
 
@@ -169,9 +167,9 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the TLS and SSL protocols and the Schannel SSP**
 
--   [Secure Channel (Windows)](https://msdn.microsoft.com/library/aa380123(VS.85).aspx)
+-   [Secure Channel (Windows)](/windows/win32/secauthn/secure-channel)
 
--   [TLS/SSL Technical Reference](https://technet.microsoft.com/library/cc784149(v=ws.10).aspx)
+-   [TLS/SSL Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc784149(v=ws.10))
 
 -   [\[MS-TLSP\]: Transport Layer Security (TLS) Profile](https://msdn.microsoft.com/library/dd207968(PROT.13).aspx)
 
@@ -188,7 +186,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Negotiate SSP**
 
--   [Microsoft Negotiate (Windows)](https://msdn.microsoft.com/library/aa378748(VS.85).aspx)
+-   [Microsoft Negotiate (Windows)](/windows/win32/secauthn/microsoft-negotiate)
 
 -   [\[MS-SPNG\]: Simple and Protected GSS-API Negotiation Mechanism (SPNEGO)  Extensions](https://msdn.microsoft.com/library/cc247021(PROT.13).aspx)
 
@@ -205,7 +203,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 -   [\[MS-CSSP\]: Credential Security Support Provider (CredSSP) Protocol Specification](https://msdn.microsoft.com/library/cc226764(PROT.13).aspx)
 
--   [Credential Security Service Provider and SSO for Terminal Services Logon](https://technet.microsoft.com/library/cc749211(v=ws.10).aspx)
+-   [Credential Security Service Provider and SSO for Terminal Services Logon](/previous-versions/windows/it-pro/windows-vista/cc749211(v=ws.10))
 
 ### <a name="BKMK_NegoExtsSSP"></a>Negotiate Extensions Security Support Provider
 Negotiate Extensions (NegoExts) is an authentication package that negotiates the use of SSPs, other than NTLM or the Kerberos protocol, for applications and scenarios implemented by Microsoft and other software companies.
@@ -237,7 +235,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the PKU2U protocol and the PKU2U SSP**
 
--   [Introducing Online Identity Integration](https://technet.microsoft.com/library/dd560662(v=ws.10).aspx)
+-   [Introducing Online Identity Integration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560662(v=ws.10))
 
 ## <a name="BKMK_SecuritySupportProviderSelection"></a>Security Support Provider selection
 The Windows SSPI can use any of the protocols that are supported through the installed Security Support Providers. However, because not all operating systems support the same SSP packages as any given computer running Windows Server, clients and servers must negotiate to use a protocol that they both support. Windows Server prefers client computers and applications to use the Kerberos protocol, a strong standards-based protocol, when possible, but the operating system continues to allow client computers and client applications that do not support the Kerberos protocol to authenticate.
@@ -274,7 +272,5 @@ The negotiate option can be used to allow the client and server to attempt to fi
 
     -   If the client computer does not support any of the listed protocols, the authentication exchange fails.
 
-## See also
-[Windows Authentication Architecture](https://technet.microsoft.com/library/dn169024(v=ws.10).aspx)
-
-
+## Additional References
+[Windows Authentication Architecture](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169024(v=ws.10))

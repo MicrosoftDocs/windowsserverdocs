@@ -1,11 +1,9 @@
 ---
 title: rundll32
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 46d9cd64-8186-4cd4-a500-44700340fe81

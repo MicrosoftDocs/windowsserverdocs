@@ -1,8 +1,6 @@
 ---
 title: Export-Image
-description: Windows Commands topic for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file.
 ms.topic: article
 ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Export-Image
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Exports an existing image from the image store to another Windows Image (.wim) file.
 
@@ -49,17 +47,17 @@ mediatype:{Boot &#124; Install}|Specifies the type of image to be exported.|
 |[/Filename:<Filename>]|if the image cannot be uniquely identified by name, the file name must be specified.|
 |/DestinationImage|Specifies the settings for the destination image. You can specify these settings using the following options:<p>-   /Filepath:<File path and name> - Specifies the full file path for the new image.<br />-   [/Name:<Name>] - Sets the display name of the image. If no name is specified, the display name of the source image will be used.<br />-   [/Description: <Description>] - Sets the description of the image.|
 |[/Overwrite:{Yes &#124; No &#124; append}]|Determines whether the file specified in the **/DestinationImage** option will be overwritten if an existing file with that name already exists at the /Filepath.<p>-   **Yes** causes the existing file to be overwritten.<br />-   **No** (the default option) causes an error to occur if a file with the same name already exists.<br />-   **append** causes the generated image to be appended as a new image within the existing .wim file.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To export a boot image, type one of the following:
 ```
 wdsutil /Export-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86 /DestinationImage /Filepath:C:\temp\boot.wim
-wdsutil /verbose /Progress /Export-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim 
+wdsutil /verbose /Progress /Export-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim
 /DestinationImage /Filepath:\\Server\Share\ExportImage.wim /Name:Exported WinPE image /Description:WinPE Image from WDS server /Overwrite:Yes
 ```
 To export an install image, type one of the following:
 ```
 wdsutil /Export-Imagmedia:Windows Vista with Officemediatype:Install /DestinationImage /Filepath:C:\Temp\Install.wim
-wdsutil /verbose /Progress /Export-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /verbose /Progress /Export-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /DestinationImage /Filepath:\\server\share\export.wim /Name:Exported Windows image /Description:Windows Vista image from WDS server /Overwrite:append
 ```
 ## Additional References

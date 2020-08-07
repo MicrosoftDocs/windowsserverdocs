@@ -1,8 +1,6 @@
 ---
 title: add-DriverGroupFilter
-description: Windows Commands topic for add-DriverGroupFilter, which adds a filter to a driver group on a server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-DriverGroupFilter, which adds a filter to a driver group on a server.
 ms.topic: article
 ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
 author: coreyp-at-msft
@@ -31,7 +29,7 @@ WDSUTIL /Add-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>]
 |     [/Policy:{Include      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Exclude}]                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |     [/Value:\<Value>]      | Specifies the client value that corresponds to **/FilterType**. You can specify multiple values for a single type. See the following list for valid values for **ChassisType**. For information about obtaining the values for all other filter types, see [Driver Group Filters](https://go.microsoft.com/fwlink/?LinkID=155158) (<https://go.microsoft.com/fwlink/?LinkID=155158>).</br>**Other**</br>**UnknownChassis**</br>**Desktop**</br>**LowProfileDesktop**</br>**PizzaBox**</br>**MiniTower**</br>**Tower**</br>**Portable**</br>**Laptop**</br>**Notebook**</br>**Handheld**</br>**DockingStation**</br>**AllInOne**</br>**SubNotebook**</br>**SpaceSaving**</br>**LunchBox**</br>**MainSystemChassis**</br>**ExpansionChassis**</br>**SubChassis**</br>**BusExpansionChassis**</br>**PeripheralChassis**</br>**StorageChassis**</br>**RackMountChassis**</br>**SealedCaseComputer**</br>**MultiSystemChassis**</br>**CompactPci**</br>**AdvancedTca** |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To add a filter to a driver group, type one of the following:
 ```

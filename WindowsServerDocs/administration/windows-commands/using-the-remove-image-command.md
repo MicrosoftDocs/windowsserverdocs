@@ -1,8 +1,6 @@
 ---
 title: remove-Image
-description: Windows Commands topic for remove-Image, which deletes an image from a server.  
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for remove-Image, which deletes an image from a server.
 ms.topic: article
 ms.assetid: ce5e2384-2264-4b22-92af-74eec8c10ae0
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # remove-Image
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes an image from a server.
 
@@ -34,7 +32,7 @@ mediatype:{Boot &#124; Install}|Specifies the type of image.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image. Because it is possible to have the same image name for different boot images in different architectures, specifying the architecture value ensures that the correct image will be removed.|
 |\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group will be used. If more than one image group exists, you must use this option to specify the image group.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To remove a boot image, type:
 ```
 wdsutil /remove-Imagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86

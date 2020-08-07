@@ -1,11 +1,9 @@
 ---
 title: retain
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: eeab0aef-2ba5-441a-a10d-bbef6f0d7e3e

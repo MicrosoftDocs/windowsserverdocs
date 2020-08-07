@@ -1,38 +1,42 @@
 ---
 title: ftp mkdir
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the ftp mkdir command, which creates a directory on the remote computer.
 ms.topic: article
-ms.assetid: 5fac19fb-6835-4011-93cc-ac62f484d5d4 vhorne
+ms.assetid: 5fac19fb-6835-4011-93cc-ac62f484d5d4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: mkdir
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp mkdir
 
-creates a directory on the remote computer.   
-## Syntax  
-```  
-mkdir <directory>  
-```  
-#### Parameters  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-|  Parameter  |                   Description                   |
-|-------------|-------------------------------------------------|
-| <directory> | Specifies the name of the new remote directory. |
+Creates a directory on the remote computer.
 
-## <a name=BKMK_Examples></a>Examples  
-create a directory called **dir1** on the remote computer.  
-```  
-mkdir dir1  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+
+```
+mkdir <directory>
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<directory>` | Specifies the name of the new remote directory. |
+
+### Examples
+
+To create a directory called *dir1* on the remote computer, type:
+
+```
+mkdir dir1
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

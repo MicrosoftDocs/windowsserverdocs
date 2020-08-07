@@ -1,34 +1,36 @@
 ---
-title: ftp disconnect_1
-description: Windows Commands topic for ftp disconnect_1
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+title: ftp disconnect
+description: Reference article for the ftp disconnect command, which disconnects from the remote computer and retains the ftp prompt.
 ms.topic: article
-ms.assetid: f91ac304-f126-49df-9ab9-b8fa2ea515fd vhorne
+ms.assetid: f91ac304-f126-49df-9ab9-b8fa2ea515fd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: disconnect_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp disconnect
 
-Disconnects from the remote computer and retains the **ftp>** prompt.   
-## Syntax  
-```  
-disconnect  
-```  
-#### Parameters  
-none  
-## <a name=BKMK_Examples></a>Examples  
-Disconnect from the remote computer and retain the **ftp>** prompt.  
-```  
-disconnect  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Disconnects from the remote computer and remains at the `ftp>` prompt.
+
+## Syntax
+
+```
+disconnect
+```
+
+### Examples
+
+To disconnect from the remote computer and remains at the `ftp>` prompt, type:
+
+```
+disconnect
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

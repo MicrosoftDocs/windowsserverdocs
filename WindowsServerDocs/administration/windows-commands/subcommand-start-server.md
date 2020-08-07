@@ -1,8 +1,6 @@
 ---
 title: Subcommand start-Server
-description: Windows Commands topic for Subcommand start-Server, which starts all services for a Windows Deployment Services server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand start-Server, which starts all services for a Windows Deployment Services server.
 ms.topic: article
 ms.assetid: 1e4343e2-0a16-4e65-8769-c09adaef5680
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: start-Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Starts all services for a Windows Deployment Services server.
 
@@ -24,7 +22,7 @@ wdsutil [Options] /start-Server [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server to be started. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To start the server, type one of the following:
 ```
 wdsutil /start-Server

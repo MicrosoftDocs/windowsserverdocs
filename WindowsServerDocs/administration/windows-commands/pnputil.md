@@ -1,12 +1,6 @@
 ---
 title: pnputil
-description: Learn how to manage the driver store with the pnputil.exe utility.
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the pnputil command, which adds driver packages, removes driver packages, and lists driver packages that are in the driver store, using the pnputil.exe utility.
 ms.topic: article
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 author: coreyp-at-msft
@@ -17,7 +11,7 @@ ms.date: 07/11/2018
 
 # pnputil
 
-Pnputil.exe is a command line utility that you can use to manage the driver store. You can use Pnputil to add driver packages, remove driver packages, and list driver packages that are in the store.
+Pnputil.exe is a command line utility that you can use to manage the driver store. You can use this command to add driver packages, remove driver packages, and list driver packages that are in the store.
 
 ## Syntax
 
@@ -27,27 +21,49 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|-a|Specifies to add the identified INF file.|
-|-d|Specifies to delete the identified INF file.|
-|-e|Specifies to enumerate all third-party INF files.|
-|-f|Specifies to force the deletion of the identified INF file. Cannot be used in conjunction with the **–i** parameter.|
-|-i|Specifies to install the identified INF file. Cannot be used in conjunction with  the **-f** parameter.|
-|/?|Displays help at the command prompt.|
+| Parameter | Description |
+|--|--|
+| -a | Specifies to add the identified INF file. |
+| -d | Specifies to delete the identified INF file. |
+| -e | Specifies to enumerate all third-party INF files. |
+| -f | Specifies to force the deletion of the identified INF file. Can't be used in conjunction with the **–i** parameter. |
+| -i | Specifies to install the identified INF file. Can't be used in conjunction with  the **-f** parameter. |
+| /? | Displays help at the command prompt. |
 
+### Examples
 
-## Examples
+To add an INF file, named USBCAM.INF, type:
 
--   pnputil.exe -a a:\usbcam\USBCAM.INF  Adds the INF file that is specified by USBCAM.INF
--   pnputil.exe -a c:\drivers\*.inf  Adds all INF files in c:\drivers\
--   pnputil.exe -i -a a:\usbcam\USBCAM.INF  Adds and installs the specified driver.
--   pnputil.exe –e  Enumerates all third-party drivers.
--   pnputil.exe -d oem0.inf  Deletes the specified.
--   pnputil.exe -f -d oem0.inf  Forces the deletion of the specified INF file.
+```
+pnputil.exe -a a:\usbcam\USBCAM.INF
+```
 
-## Additional references
+To add all INF files, located in c:\drivers, type:
+
+```
+pnputil.exe -a c:\drivers\*.inf
+```
+
+To add and install the USBCAM.INF driver, type:
+
+```
+pnputil.exe -i -a a:\usbcam\USBCAM.INF
+```
+
+To enumerate all third-party drivers, type:
+
+```
+pnputil.exe –e
+```
+
+To delete the INF file and driver named oem0.inf, type:
+
+```
+pnputil.exe -d oem0.inf
+```
+
+## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Popd](popd.md)
+- [popd command](popd.md)

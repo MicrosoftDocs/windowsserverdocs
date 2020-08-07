@@ -1,8 +1,6 @@
 ---
 title: typeperf
-description: Windows Commands topic for typeperf, which writes performance data to the command window or to a log file. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for typeperf, which writes performance data to the command window or to a log file.
 ms.topic: article
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
 author: coreyp-at-msft
@@ -14,8 +12,6 @@ ms.date: 10/16/2017
 # typeperf
 
 The **typeperf** command writes performance data to the command window or to a log file. To stop **typeperf**, press CTRL+C.
-
-For examples of how to use **typeperf**, see [Examples](#BKMK_EXAMPLES).
 
 ## Syntax
 
@@ -51,17 +47,17 @@ typeperf -qx [object] [options]
 |            -s \<computer_name>             |                   Specifies a remote computer to monitor if no computer is specified in the counter path.                    |
 |                     -y                     |                                        Answer yes to all questions without prompting.                                        |
 
-## <a name=BKMK_EXAMPLES></a>Examples
+## Examples
 
-- The following example writes the values for the local computer's performance counter **\\\\Processor(_Total)\% Processor Time** to the command window at a default sample interval of 1 second until CTRL+C is pressed.  
+- To writes the values for the local computer's performance counter **\\\\Processor(_Total)\% Processor Time** to the command window at a default sample interval of 1 second until CTRL+C is pressed.
   ```
   typeperf \Processor(_Total)\% Processor Time
-  ```  
-- The following example writes the values for the list of counters in the file **counters.txt** to the tab-delimited file **domain2.tsv** at a sample interval of 5 seconds until 50 samples have been collected.  
+  ```
+- To writes the values for the list of counters in the file **counters.txt** to the tab-delimited file **domain2.tsv** at a sample interval of 5 seconds until 50 samples have been collected.
   ```
   typeperf -cf counters.txt -si 5 -sc 50 -f TSV -o domain2.tsv
-  ```  
-- The following example queries installed counters with instances for the counter object **PhysicalDisk** and writes the resulting list to the file **counters.txt**.  
+  ```
+- To queries installed counters with instances for the counter object **PhysicalDisk** and writes the resulting list to the file **counters.txt**.
   ```
   typeperf -qx PhysicalDisk -o counters.txt
   ```

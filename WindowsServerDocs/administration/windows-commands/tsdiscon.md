@@ -1,8 +1,6 @@
 ---
 title: tsdiscon
-description: Windows Commands topic for tsdiscon, which disconnects a session from a remote Desktop Session Host server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for tsdiscon, which disconnects a session from a remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: 13139674-7dee-4965-8cac-32f4928e8b9a
 author: coreyp-at-msft
@@ -12,14 +10,14 @@ ms.date: 10/16/2017
 ---
 # tsdiscon
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disconnects a session from a Remote Desktop Session Host server.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11)) in the Windows Server TechNet Library.
 
 ## Syntax
 ```
@@ -43,7 +41,7 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 -   The **/server** parameter is required only if you use **tsdiscon** from a remote server.
 -   The console session cannot be disconnected.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 - To disconnect the current session, type:
   ```
   tsdiscon

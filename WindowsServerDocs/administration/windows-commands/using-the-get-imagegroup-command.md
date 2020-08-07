@@ -1,8 +1,6 @@
 ---
 title: get-ImageGroup
-description: Windows Commands topic for get-ImageGroup, which retrieves information about an image group and the images in it.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-ImageGroup, which retrieves information about an image group and the images in it.
 ms.topic: article
 ms.assetid: 0fc25aca-a529-44ee-bc8e-96bc8affb458
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # get-ImageGroup
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about an image group and the images within it.
 
@@ -26,7 +24,7 @@ wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 mediaGroup:<Image group name>|Specifies the name of the image group.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |[/detailed]|Returns the image metadata for each image. If this parameter is not use, the default behavior is to return only the image name, description, and file name.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To view information about an image group, type:
 ```
 wdsutil /Get-ImageGroumediaGroup:ImageGroup1

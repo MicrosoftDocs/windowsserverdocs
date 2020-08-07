@@ -1,11 +1,9 @@
 ---
 title: secedit:analyze
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 3430cf9d-1411-48b1-b5a9-2e47701dc87f
@@ -19,7 +17,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to analyze current systems settings against baseline settings that are stored in a database. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to analyze current systems settings against baseline settings that are stored in a database.
 
 ## Syntax
 
@@ -45,7 +43,7 @@ If the path for the log file is not provided, the default log file, (*systemroot
 
 In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Perform the analysis for the security parameters on the security database, SecDbContoso.sdb, you created using the Security Configuration and Analysis snap-in. Direct the output to the file SecAnalysisContosoFY11 with prompting so you can verify the command ran correctly.
 ```
@@ -59,4 +57,4 @@ Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /over
 ## Additional References
 
 -   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

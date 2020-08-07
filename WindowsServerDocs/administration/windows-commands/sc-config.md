@@ -1,12 +1,6 @@
 ---
-title: Sc config
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+title: Sc.exe config
+description: Learn how to change service configurations using the sc.exe utility
 ms.topic: article
 ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
 author: coreyp-at-msft
@@ -15,18 +9,14 @@ manager: dongill
 ms.date: 06/05/2018
 ---
 
-# Sc config
-
-
+# Sc.exe config
 
 Modifies the value of a service's entries in the registry and in the Service Control Manager database.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys | rec | adapt | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto}] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
+sc.exe [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys | rec | adapt | interact type= {own | share}}] [start= {boot | system | auto | demand | disabled | delayed-auto}] [error= {normal | severe | critical | ignore}] [binpath= <BinaryPathName>] [group= <LoadOrderGroup>] [tag= {yes | no}] [depend= <dependencies>] [obj= {<AccountName> | <ObjectName>}] [displayname= <DisplayName>] [password= <Password>]
 ```
 
 ### Parameters
@@ -52,11 +42,11 @@ sc [<ServerName>] config [<ServiceName>] [type= {own | share | kernel | filesys 
 -   For each command-line option (parameter), the equal sign is part of the option name.
 -   A space is required between an option and its value (for example, **type= own**. If the space is omitted, the operation will fail.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To specify a binary path for the NEWSERVICE service, type:
 ```
-sc config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
+sc.exe config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
 ```
 
 ## Additional References

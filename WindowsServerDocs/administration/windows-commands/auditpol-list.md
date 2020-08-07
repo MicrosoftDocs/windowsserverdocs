@@ -1,8 +1,6 @@
 ---
 title: auditpol list
-description: Windows Commands topic for **auditpol list**, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the auditpol list command, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
 ms.topic: article
 ms.assetid: 45502abe-3d6e-4e13-94f0-8e6fcb6db860
 author: coreyp-at-msft
@@ -12,9 +10,11 @@ ms.date: 10/16/2017
 ---
 # auditpol list
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Lists audit policy categories and/or subcategories, or lists users for whom a per-user audit policy is defined.
+Lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
+
+To perform *list* operations on the *per-user* policy, you must have **Read** permission for that object set in the security descriptor. You can also perform *list* operations if you have the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the overall *list* operations.
 
 ## Syntax
 
@@ -35,11 +35,7 @@ auditpol /list
 | /r | Displays the output as a report in comma-separated value (CSV) format. |
 | /? | Displays help at the command prompt. |
 
-## Remarks
-
-For all list operations for the per-user policy, you must have Read permission on that object set in the security descriptor. You can also perform list operations by possessing the **Manage auditing and security log** (SeSecurityPrivilege) user right. However, this right allows additional access that is not necessary to perform the list operation.
-
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To list all users who have a defined audit policy, type:
 
@@ -68,3 +64,5 @@ auditpol /list /subcategory:detailed Tracking,DS Access
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [auditpol commands](auditpol.md)

@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-Device
-description: Windows Commands topic for Subcommand set-Device, which changes the attributes of a prestaged computer. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand set-Device, which changes the attributes of a prestaged computer.
 ms.topic: article
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
 author: coreyp-at-msft
@@ -12,13 +10,13 @@ ms.date: 10/16/2017
 ---
 # Subcommand: set-Device
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the attributes of a prestaged computer. A prestaged computer is a computer that has been linked to a computer account object in active directory Domain Servers (AD DS). Prestaged clients are also called known computers. You can configure properties on the computer account to control the installation for the client. For example, you can configure the network boot program and the unattend file that the client should receive, as well as the server from which the client should download the network boot program.
 
 ## Syntax
 ```
-wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] 
+wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>]
 [/WdsClientUnattend:<Relative path>] [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/Domain:<Domain>] [/resetAccount]
 ```
 ### Parameters
@@ -35,7 +33,7 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 |[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that the computer will use.|
 |[/Domain:<Domain>]|Specifies the domain to be searched for the prestaged computer. The default value is the local domain.|
 |[/resetAccount]|resets the permissions on the specified computer so that anyone with the appropriate permissions can join the domain by using this account.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To set the network boot program and referral server for a computer, type:
 ```
 wdsutil /Set-Device /Device:computer1 /ReferralServer:MyWDSServer
@@ -43,7 +41,7 @@ wdsutil /Set-Device /Device:computer1 /ReferralServer:MyWDSServer
 ```
 To set various settings for a computer, type:
 ```
-wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml 
+wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml
 /User:Domain\user /JoinRights:JoinOnly /JoinDomain:No /BootImagepath:boot\x86\images\boot.wim /Domain:NorthAmerica /resetAccount
 ```
 ## Additional References

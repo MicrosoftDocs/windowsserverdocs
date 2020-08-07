@@ -1,8 +1,6 @@
 ---
-title: remove
-description: Windows Commands topic for remove, which removes various driver-related information. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+title: Using the remove command
+description: Reference article for remove, which removes various driver-related information.
 ms.topic: article
 ms.assetid: e3f1644d-6028-4c47-a9fd-227bcdcc6123
 author: coreyp-at-msft
@@ -10,9 +8,10 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# remove
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# Using the remove command
+
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Subcommands
 |Subommand|Description|

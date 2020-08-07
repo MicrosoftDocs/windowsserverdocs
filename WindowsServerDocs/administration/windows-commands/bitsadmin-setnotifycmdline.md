@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setnotifycmdline
-description: Windows Commands topic for **bitsadmin setnotifycmdline**, which sets the command-line command that will run when the job finishes transferring data, or when a job enters a state.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setnotifycmdline command, which sets the command-line command that will run when the job finishes transferring data, or when a job enters a state.
 ms.topic: article
 ms.assetid: 415ae6ef-8549-48b2-9693-2368a6e24075
 author: coreyp-at-msft
@@ -13,7 +11,7 @@ ms.date: 10/16/2017
 
 # bitsadmin setnotifycmdline
 
-Sets the command-line command that will run when the job finishes transferring data or when a job enters a specified state.
+Sets the command-line command that runs after the job finishes transferring data or after a job enters a specified state.
 
 > [!NOTE]
 > This command isn't supported by BITS 1.2 and earlier.
@@ -34,16 +32,20 @@ bitsadmin /setnotifycmdline <job> <program_name> [program_parameters]
 
 ## Examples
 
-The following example sets the command-line command used by the service to run Notepad.exe after the job named *myDownloadJob* completes.
+To run Notepad.exe at the completion of the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe NULL
+bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe NULL
 ```
 
+To show the EULA text in Notepad.exe, at the completion of the job named myDownloadJob:
+
 ```
-C:\>bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe notepad c:\eula.txt
+bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe notepad c:\eula.txt
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

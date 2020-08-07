@@ -1,8 +1,6 @@
 ---
 title: Update-ServerFiles
-description: Windows Commands topic for Update-ServerFiles, which updates files in the REMINST shared folder by using the latest files that are stored in the server's %Windir%\System32\RemInst folder.  
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Update-ServerFiles, which updates files in the REMINST shared folder by using the latest files that are stored in the server's %Windir%\System32\RemInst folder.
 ms.topic: article
 ms.assetid: 23aa79df-38c6-401e-91bd-cd23811b30b4
 author: coreyp-at-msft
@@ -27,7 +25,7 @@ WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
 |---------|-----------|
 |[/Server:\<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To update the files, type one of the following:
 ```

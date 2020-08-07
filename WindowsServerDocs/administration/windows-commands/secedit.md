@@ -1,11 +1,9 @@
 ---
 title: secedit
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 58ed57ed-08e3-403d-a363-0620b358637a
@@ -24,7 +22,7 @@ Configures and analyzes system security by comparing your current configuration 
 ## Syntax
 
 ```
-secedit 
+secedit
 [/analyze /db <database file name> /cfg <configuration file name> [/overwrite] /log <log file name> [/quiet]]
 [/configure /db <database file name> [/cfg <configuration filename>] [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]]
 [/export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>]]
@@ -64,4 +62,4 @@ When a security template is created using the Security Template snap-in and the 
 ## Additional References
 
 For examples of how this command can be used, see the examples section in any of the subcommand files.
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

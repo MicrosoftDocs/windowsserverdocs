@@ -1,8 +1,6 @@
 ---
 title: timeout
-description: Windows Commands topic for timeout, which pauses the command processor for the specified number of seconds.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for timeout, which pauses the command processor for the specified number of seconds.
 ms.topic: article
 ms.assetid: e26b4a84-0e30-46e1-aa10-0667b7d3cb4c
 author: coreyp-at-msft
@@ -15,12 +13,12 @@ ms.date: 10/16/2017
 
 Pauses the command processor for the specified number of seconds.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
 ```
-timeout /t <TimeoutInSeconds> [/nobreak] 
+timeout /t <TimeoutInSeconds> [/nobreak]
 ```
 
 ### Parameters
@@ -37,7 +35,7 @@ timeout /t <TimeoutInSeconds> [/nobreak]
 -   A user keystroke resumes the command processor execution immediately, even if the timeout period has not expired.
 -   When used in conjunction with the **sleep** command, **timeout** is similar to the **pause** command.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To pause the command processor for ten seconds, type:
 ```

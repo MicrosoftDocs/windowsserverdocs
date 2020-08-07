@@ -1,8 +1,6 @@
 ---
 title: get-Image
-description: Windows Commands topic for get-Image, which retrieves information about an image. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-Image, which retrieves information about an image.
 ms.topic: article
 ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # get-Image
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves information about an image.
 
@@ -34,7 +32,7 @@ mediatype:{Boot &#124; Install}|Specifies the type of image.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image. Because it is possible to have the same image name for boot images in different architectures, specifying the architecture value ensures that the correct image is returned.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
 |\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group is specified and only one image group exists on the server, that group will be used. If more than one image group exists on the server, you must use this parameter to specify the image group.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To retrieve information about a boot image, type one of the following:
 ```
 wdsutil /Get-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86

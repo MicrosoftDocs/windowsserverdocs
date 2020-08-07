@@ -1,8 +1,6 @@
 ---
 title: get-ImageFile
-description: Windows Commands topic for get-ImageFile, which retrieves information about the images contained in a Windows Image (.wim) file. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-ImageFile, which retrieves information about the images contained in a Windows Image (.wim) file.
 ms.topic: article
 ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
 author: coreyp-at-msft
@@ -28,7 +26,7 @@ WDSUTIL [Options] /Get-ImageFile /ImageFile:<wim file path> [/Detailed]
 |/ImageFile:\<WIM file path>|Specifies the full path and file name of the .wim file.|
 |[/Detailed]|Returns all image metadata from each image. If this option is not used, the default behavior is to return only the image name, description, and file name.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view information about an image, type:
 ```

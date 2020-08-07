@@ -1,10 +1,6 @@
 ---
 title: Deploy NVMe Storage Devices using Discrete Device Assignment
 description: Learn how to use DDA to deploy storage devices
-ms.prod: windows-server
-
-ms.technology: hyper-v
-
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
@@ -37,7 +33,7 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 The PCI Location path is required to dismount and mount the device from the Host.  An example location path looks like the following: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   More details on located the Location Path can be found here: [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
 ### Disable the Device
-Using Device Manager or PowerShell, ensure the device is “disabled.”  
+Using Device Manager or PowerShell, ensure the device is “disabled.”
 
 ### Dismount the Device
 ```

@@ -1,8 +1,6 @@
 ---
 title: bitsadmin cache and delete
-description: Windows Commands topic for **bitsadmin cache and delete**, which deletes a specific cache entry.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin cache and delete command, which deletes a specific cache entry.
 ms.topic: article
 ms.assetid: 22540273-55a5-46ea-869b-6df2aa6808a1
 author: coreyp-at-msft
@@ -27,14 +25,16 @@ bitsadmin /cache /delete recordID
 | -------------- | -------------- |
 | recordID | The GUID associated with the cache entry. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example deletes the cache entry with the RecordID of {6511FB02-E195-40A2-B595-E8E2F8F47702}.
+To delete the cache entry with the RecordID of {6511FB02-E195-40A2-B595-E8E2F8F47702}:
 
 ```
-C:\>bitsadmin /cache /delete {6511FB02-E195-40A2-B595-E8E2F8F47702}
+bitsadmin /cache /delete {6511FB02-E195-40A2-B595-E8E2F8F47702}
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin cache command](bitsadmin-cache.md)

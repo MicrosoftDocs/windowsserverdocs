@@ -2,11 +2,9 @@
 title: Network Policies
 description: This topic provides an overview of network policies for Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: e4a9b134-6d1d-40d7-a49c-5f46d5fdb419
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 
@@ -49,7 +47,7 @@ There are four categories of properties for each network policy:
 
 ### Conditions
 
- These properties allow you to specify the conditions that the connection request must have in order to match the network policy; if the conditions configured in the policy match the connection request, NPS applies the settings designated in the network policy to the connection. For example, if you specify the NAS IPv4 address as a condition of the network policy and NPS receives a connection request from a NAS that has the specified IP address, the condition in the policy matches the connection request. 
+ These properties allow you to specify the conditions that the connection request must have in order to match the network policy; if the conditions configured in the policy match the connection request, NPS applies the settings designated in the network policy to the connection. For example, if you specify the NAS IPv4 address as a condition of the network policy and NPS receives a connection request from a NAS that has the specified IP address, the condition in the policy matches the connection request.
 
 
 ### Constraints

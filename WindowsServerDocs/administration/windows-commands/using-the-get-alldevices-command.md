@@ -1,8 +1,6 @@
 ---
 title: get-AllDevices
-description: Windows Commands topic for get-AllDevices, which displays the Windows Deployment Services properties of all prestaged computers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-AllDevices, which displays the Windows Deployment Services properties of all prestaged computers.
 ms.topic: article
 ms.assetid: 5824b3d2-2df1-4ed6-a289-e6c47c13fea2
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # get-AllDevices
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the Windows Deployment Services properties of all prestaged computers. A prestaged computer is a physical computer that has been linked to a computer account in active directory Domain Services.
 
@@ -25,7 +23,7 @@ wdsutil [Options] /Get-AllDevices [/forest:{Yes | No}] [/ReferralServer:<Server 
 |-------|--------|
 |[/forest:{Yes &#124; No}]|Specifies whether Windows Deployment Services should return computers in the entire forest or the local domain. The default setting is **No**, meaning that only the computers in the local domain are returned.|
 |[/ReferralServer:<Server name>]|Returns only those computers that are prestaged for the specified server.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To view all computers, type one of the following:
 ```
 wdsutil /Get-AllDevices

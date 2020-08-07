@@ -1,8 +1,6 @@
 ---
 title: Hyper-V Configuration
 description: Hyper-V configuration considerations for performance tuning
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
@@ -33,9 +31,9 @@ The hardware considerations for servers running Hyper-V generally resemble those
 
 ## Power plan considerations
 
-As a core technology, virtualization is a powerful tool useful in increasing server workload density, reducing the number of required physical servers in your datacenter, increasing operational efficiency and reducing power consumption costs. Power management is critical for cost management. 
+As a core technology, virtualization is a powerful tool useful in increasing server workload density, reducing the number of required physical servers in your datacenter, increasing operational efficiency and reducing power consumption costs. Power management is critical for cost management.
 
-In an ideal datacenter environment, power consumption is managed by consolidating work onto machines until they're mostly busy and then turning off idle machines. If this approach is not practical, administrators can leverage power plans on the physical hosts to ensure they do not consume more power than necessary. 
+In an ideal datacenter environment, power consumption is managed by consolidating work onto machines until they're mostly busy and then turning off idle machines. If this approach is not practical, administrators can leverage power plans on the physical hosts to ensure they do not consume more power than necessary.
 
 Server power management techniques come with a cost, particularly as tenant workloads are not trusted to dictate policy about the hoster's physical infrastructure. The host layer software is left to infer how to maximize throughput while minimizing power consumption. In mostly-idle machines, this can cause the physical infrastructure to conclude that moderate power draw is appropriate, resulting in individual tenant workloads running more slowly than they might otherwise.
 
@@ -53,7 +51,7 @@ For additional recommendations and insight on leveraging power plans to optimize
 
 Windows Server 2016 feature the Server Core installation option. Server Core offers a minimal environment for hosting a select set of server roles including Hyper-V. It features a smaller disk footprint for the host OS, and a smaller attack and servicing surface. Therefore, we highly recommend that Hyper-V virtualization servers use the Server Core installation option.
 
-A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](https://technet.microsoft.com/library/hh848559.aspx) so administrators can manage it remotely.
+A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](/powershell/module/hyper-v/?view=win10-ps) so administrators can manage it remotely.
 
 ## Dedicated server role
 
@@ -63,7 +61,7 @@ System administrators should consider carefully what software is installed in th
 
 ## Guest operating systems
 
-Hyper-V supports and has been tuned for a number of different guest operating systems. The number of virtual processors that are supported per guest depends on the guest operating system. For a list of the supported guest operating systems, see [Hyper-V Overview](https://technet.microsoft.com/library/hh831531.aspx).
+Hyper-V supports and has been tuned for a number of different guest operating systems. The number of virtual processors that are supported per guest depends on the guest operating system. For a list of the supported guest operating systems, see [Hyper-V Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
 ## CPU statistics
 
@@ -82,7 +80,7 @@ You should always measure the CPU usage of the physical system by using the Hype
 - **Hyper-V Hypervisor Virtual Processor (\*)\\\\*** Measures the CPU usage of guest partitions
 
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

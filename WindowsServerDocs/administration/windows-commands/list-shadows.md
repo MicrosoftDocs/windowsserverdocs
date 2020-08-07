@@ -1,12 +1,6 @@
 ---
 title: list shadows
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the list shadows command, which lists persistent and existing non-persistent shadow copies that are on the system.
 ms.topic: article
 ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1
 author: coreyp-at-msft
@@ -17,23 +11,21 @@ ms.date: 10/16/2017
 
 # list shadows
 
-
-
 Lists persistent and existing non-persistent shadow copies that are on the system.
 
 ## Syntax
 
 ```
-list shadows {all | set <SetID> | id <ShadowID>}
+list shadows {all | set <setID> | id <shadowID>}
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|all|Lists all shadow copies.|
-|set \<SetID>|Lists shadow copies that belong to the specified Shadow Copy Set ID.|
-|id \<ShadowID>|Lists any shadow copy with the specified shadow copy ID.|
+| Parameter | Description |
+| ---------- | ---------- |
+| all | Lists all shadow copies. |
+| set `<setID>` | Lists shadow copies that belong to the specified Shadow Copy Set ID. |
+| id `<shadowID>` | Lists any shadow copy with the specified shadow copy ID. |
 
 ## Additional References
 

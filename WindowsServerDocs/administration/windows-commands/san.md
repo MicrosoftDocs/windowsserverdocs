@@ -1,11 +1,9 @@
 ---
 title: san
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: d57c2df1-eb82-4b81-b8cd-e30564c6a929
@@ -16,7 +14,7 @@ ms.date: 10/16/2017
 ---
 # san
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays or sets the storage area network (san) policy for the operating system.
 > [!NOTE]
@@ -35,7 +33,7 @@ san [policy={onlineAll | offlineAll | offlineShared}] [noerr]
 
 ## Remarks
 - if the command is given with no parameters, the current san policy is displayed.
-  ## <a name=BKMK_Examples></a>Examples
+  ## Examples
   To view the current policy, type:
   ```
   san

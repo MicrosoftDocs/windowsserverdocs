@@ -1,8 +1,6 @@
 ---
 title: dfsutil
-description: Windows Commands topic for dfsutil, which manages DFS Namespaces, servers and clients. dfsutil commands use the original Distributed File System terminology, with updated DFS Namespaces terminology provided as explanation for most commands.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the dfsutil command, which manages DFS Namespaces, servers and clients.
 ms.topic: article
 ms.assetid: ef5093a4-0d24-4b21-9d04-59933ad98e2c
 author: coreyp-at-msft
@@ -10,18 +8,16 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # dfsutil
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-The dfsutil command manages DFS Namespaces, servers and clients.
+The dfsutil command manages DFS Namespaces, servers, and clients.
 
->[!NOTE]
->The **DFS Namespaces PowerShell module** provides replacements for some of the Dfsutil parameters, while others still require you to use dfsutil. For more information about the updated PowerShell equivalents, see [DFSN](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps).
+## Functionality available in PowerShell
 
-## Parameters available in PowerShell
-
-You can use the following parameters from PowerShell:
+The [DFSN](/powershell/module/dfsn/?view=win10-ps) PowerShell module provides equivalent functionality to the following dfsutil parameters.
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -32,9 +28,9 @@ You can use the following parameters from PowerShell:
 | server | Displays or modifies namespace configuration. |
 | domain | Displays all domain-based namespaces in a domain. |
 
-## Parameters only available in dfsutil
+## Functionality available only in dfsutil
 
-You can use the following parameters only from dfsutil.
+The following functionality is available only as dfsutil parameters:
 
 | Parameter | Description |
 | --------- | ----------- |

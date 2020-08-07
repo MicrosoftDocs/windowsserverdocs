@@ -1,8 +1,6 @@
 ---
 title: uninitialize-Server
-description: Windows Commands topic for uninitialize-Server, which reverts changes made to the server during the initial server configuration.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for uninitialize-Server, which reverts changes made to the server during the initial server configuration.
 ms.topic: article
 ms.assetid: 015efb04-fe84-469f-bd81-49d0046296b2
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # uninitialize-Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Reverts changes made to the server during the initial server configuration. This includes changes made by either the **/initialize-server** option or the Windows Deployment Services mmc snap-in. Note that this command resets the server to an unconfigured state. This command does not modify the contents of the remoteInstall shared folder. Rather, it resets the server's state so that you can reinitialize the server.
 
@@ -24,7 +22,7 @@ wdsutil [Options] /Uninitialize-Server [/Server:<Server name>]
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To reinitialize the server, type one of the following:
 ```
 wdsutil /Uninitialize-Server

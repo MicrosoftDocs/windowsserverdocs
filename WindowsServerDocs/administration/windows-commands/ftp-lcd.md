@@ -1,36 +1,42 @@
 ---
 title: ftp lcd
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the ftp lcd command, which changes the working directory on the local computer.
 ms.topic: article
-ms.assetid: 60a25808-6abb-408b-8373-0bbdcd0994b4 vhorne
+ms.assetid: 60a25808-6abb-408b-8373-0bbdcd0994b4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: lcd
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp lcd
 
-changes the working directory on the local computer. By default, the working directory is the directory in which **ftp** was started.   
-## Syntax  
-```  
-lcd [<directory>]  
-```  
-#### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|[<directory>]|Specifies the directory on the local computer to which to change. If *directory* is not specified, the current working directory is changed to the default directory.|  
-## <a name=BKMK_Examples></a>Examples  
-change the working directory on the local computer to **C:\dir1**  
-```  
-lcd C:\dir1  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Changes the working directory on the local computer. By default, the working directory is the directory in which the **ftp** command was started.
+
+## Syntax
+
+```
+lcd [<directory>]
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `[<directory>]` | Specifies the directory on the local computer to which to change. If *directory* isn't specified, the current working directory is changed to the default directory. |
+
+### Examples
+
+To change the working directory on the local computer to *c:\dir1*, type:
+
+```
+lcd c:\dir1
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

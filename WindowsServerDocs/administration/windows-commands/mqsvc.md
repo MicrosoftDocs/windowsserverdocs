@@ -1,15 +1,8 @@
 ---
 title: mqsvc
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the mqsvc command, which enables apps running at different times to communicate across heterogeneous networks and systems that may be temporarily offline.
 ms.topic: article
 ms.assetid: 8bfd7874-ccb4-453f-b908-3a5b9aee0ad6
-
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -18,20 +11,16 @@ ms.date: 10/16/2017
 
 # mqsvc
 
-
-
-Message Queuing technology enables applications running at different times to communicate across heterogeneous networks and systems that may be temporarily offline. Message Queuing provides guaranteed message delivery, efficient routing, security, and priority-based messaging. It can be used to implement solutions for both asynchronous and synchronous messaging scenarios. For more information about this command, see [Message Queuing (MSMQ)](https://go.microsoft.com/fwlink/?LinkId=248723) on MSDN.
+Message Queuing technology enables apps running at different times to communicate across heterogeneous networks and systems that may be temporarily offline. Message Queuing provides guaranteed message delivery, efficient routing, security, and priority-based messaging. It can be used to implement solutions for both asynchronous and synchronous messaging scenarios. For more information about Message Queuing, see [Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)).
 
 ## Syntax
 
 ```
-Mqsvc.exe
+mqsvc.exe
 ```
-
-#### Parameters
-
-None
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [MSMQ Powershell Reference](/powershell/module/msmq/?view=win10-ps)

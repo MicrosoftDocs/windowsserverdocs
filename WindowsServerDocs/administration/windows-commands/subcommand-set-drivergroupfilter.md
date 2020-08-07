@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-DriverGroupFilter
-description: Windows Commands topic for Subcommand set-DriverGroupFilter, which adds or removes an existing driver group filter from a driver group.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand set-DriverGroupFilter, which adds or removes an existing driver group filter from a driver group.
 ms.topic: article
 ms.assetid: 829ab1f0-4514-421e-9cc0-767b238da69c
 author: coreyp-at-msft
@@ -32,7 +30,7 @@ WDSUTIL /Set-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>]
 |    [/AddValue:\<Value>]    | Specifies the new client value to add to the filter. You can specify multiple values for a single filter type. See the following list for valid attribute values for **ChassisType**. For information about obtaining the values for all other filter types, see [Driver Group Filters](https://go.microsoft.com/fwlink/?LinkID=155158) (<https://go.microsoft.com/fwlink/?LinkID=155158>).</br>**Other**</br>**UnknownChassis**</br>**Desktop**</br>**LowProfileDesktop**</br>**PizzaBox**</br>**MiniTower**</br>**Tower**</br>**Portable**</br>**Laptop**</br>**Notebook**</br>**Handheld**</br>**DockingStation**</br>**AllInOne**</br>**SubNotebook**</br>**SpaceSaving**</br>**LunchBox**</br>**MainSystemChassis**</br>**ExpansionChassis**</br>**SubChassis**</br>**BusExpansionChassis**</br>**PeripheralChassis**</br>**StorageChassis**</br>**RackMountChassis**</br>**SealedCaseComputer**</br>**MultiSystemChassis**</br>**CompactPci**</br>**AdvancedTca** |
 |  [/RemoveValue:\<Value>]   |                                                                                                                                                                                                                                                                                                                                                                                                                                     Specifies the existing client value to remove from the filter as specified with **/AddValue**.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To remove a filter, type one of the following:
 ```

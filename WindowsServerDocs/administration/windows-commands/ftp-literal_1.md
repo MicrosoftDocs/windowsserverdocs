@@ -1,41 +1,47 @@
 ---
-title: ftp literal_1
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+title: ftp literal
+description: Reference article for the ftp literal command, which sends verbatim arguments to the remote ftp server.
 ms.topic: article
-ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14 vhorne
+ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: literal_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.   
+# ftp literal
 
-## Syntax  
-```  
-literal <Argument> [ ]  
-```  
-#### Parameters  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-| Parameter  |                    Description                    |
-|------------|---------------------------------------------------|
-| <Argument> | Specifies the argument to send to the ftp server. |
+Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.
 
-## Remarks  
-The **literal** command is identical to the **quote** command.  
-## <a name=BKMK_Examples></a>Examples  
-Send a **quit** command to the remote ftp server.  
-```  
-literal quit  
-```  
-## Additional References  
--   [ftp: quote](ftp-quote.md)  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+> [!NOTE]
+> This command is the same as the [ftp quote command](ftp-quote.md).
+
+## Syntax
+
+```
+literal <argument> [ ]
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<argument>` | Specifies the argument to send to the ftp server. |
+
+### Examples
+
+To send a **quit** command to the remote ftp server, type:
+
+```
+literal quit
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ftp quote command](ftp-quote.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

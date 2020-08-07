@@ -1,10 +1,8 @@
 ---
 title: tlntadmn
-description: Windows Commands topic for tlntadmn, which administers a local or remote computer, running the telnet Server Service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for tlntadmn, which administers a local or remote computer, running the telnet Server Service.
 ms.topic: article
-ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8 vhorne
+ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -12,15 +10,15 @@ ms.date: 10/16/2017
 ---
 # tlntadmn
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Administers a local or remote computer that is running the telnet Server Service.   
+Administers a local or remote computer that is running the telnet Server Service.
 
-## Syntax  
-```  
-tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause | continue}] [-s {<SessionID> | all}] [-k {<SessionID> | all}] [-m {<SessionID> | all}  <Message>] [config [dom = <Domain>] [ctrlakeymap = {yes | no}] [timeout = <hh>:<mm>:<ss>] [timeoutactive = {yes | no}] [maxfail = <attempts>] [maxconn = <Connections>] [port = <Number>] [sec {+ | -}NTLM {+ | -}passwd] [mode = {console | stream}]] [-?]  
-```  
-#### Parameters  
+## Syntax
+```
+tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause | continue}] [-s {<SessionID> | all}] [-k {<SessionID> | all}] [-m {<SessionID> | all}  <Message>] [config [dom = <Domain>] [ctrlakeymap = {yes | no}] [timeout = <hh>:<mm>:<ss>] [timeoutactive = {yes | no}] [maxfail = <attempts>] [maxconn = <Connections>] [port = <Number>] [sec {+ | -}NTLM {+ | -}passwd] [mode = {console | stream}]] [-?]
+```
+#### Parameters
 
 |                   Parameter                    |                                                                                                                                                       Description                                                                                                                                                        |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,20 +42,20 @@ tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause
 |     config mode = {console &#124; stream}      |                                                                                                                                             Specifies the mode of operation.                                                                                                                                             |
 |                       -?                       |                                                                                                                                           Displays help at the command prompt.                                                                                                                                           |
 
-## Remarks  
--   To display the server settings, type **tlntadmn** without any parameters.  
--   To use the **tlntadmn** command, you must log on to the local computer with administrative credentials. To administer a remote computer, you must also provide administrative credentials for the remote computer. You can do so by logging on to the local computer with an account that has administrative credentials for both the local computer and the remote computer. If you cannot use this method, you can use the **-u** and **-p** parameters to provide administrative credentials for the remote computer.  
+## Remarks
+-   To display the server settings, type **tlntadmn** without any parameters.
+-   To use the **tlntadmn** command, you must log on to the local computer with administrative credentials. To administer a remote computer, you must also provide administrative credentials for the remote computer. You can do so by logging on to the local computer with an account that has administrative credentials for both the local computer and the remote computer. If you cannot use this method, you can use the **-u** and **-p** parameters to provide administrative credentials for the remote computer.
 
-## <a name=BKMK_Examples></a>Examples  
-Configure the idle session timeout to 30 minutes.  
-```  
-tlntadmn config timeout=0:30:0  
-```  
-Display active telnet sessions.  
-```  
-tlntadmn -s  
-```  
+## Examples
+Configure the idle session timeout to 30 minutes.
+```
+tlntadmn config timeout=0:30:0
+```
+Display active telnet sessions.
+```
+tlntadmn -s
+```
 
-## Additional references  
--   [telnet Operations Guide](https://technet.microsoft.com/library/cc753164(v=ws.10).aspx)  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Additional References
+-   [telnet Operations Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753164(v=ws.10))
+- [Command-Line Syntax Key](command-line-syntax-key.md)

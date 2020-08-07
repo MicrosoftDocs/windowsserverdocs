@@ -6,15 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/12/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Troubleshooting AD FS
-AD FS has a lot of moving pieces, touches many different things and has many different dependencies.  Naturally, this can give rise to various issues.  This document is designed to get you started on troubleshooting these issues.  This document will introduce you to the typical areas that you should focus on, how to enable features for additional information, and various tools that can be used to track down problems.  
+AD FS has a lot of moving pieces, touches many different things and has many different dependencies.  Naturally, this can give rise to various issues.  This document is designed to get you started on troubleshooting these issues.  This document will introduce you to the typical areas that you should focus on, how to enable features for additional information, and various tools that can be used to track down problems.
 
 >[!NOTE]
->For additional information see [ADFS Help](https://adfshelp.microsoft.com) which provides effective tools in one place that makes it easier for users and administrators to resolve authentication issues at a quicker pace. 
+>For additional information see [ADFS Help](https://adfshelp.microsoft.com) which provides effective tools in one place that makes it easier for users and administrators to resolve authentication issues at a quicker pace.
 
 
 ## What to Check First
@@ -36,4 +34,4 @@ Before you dive into in-depth troubleshooting, there are a few things that you s
 |[Claim Rules](ad-fs-tshoot-claims-rules.md)|Information on troubleshooting claim rules and their syntax|
 |[Integrated Windows Authentication](ad-fs-tshoot-iwa.md)|Information on troubleshooting integrated authentication.|
 |[Azure AD](ad-fs-tshoot-azure.md)|Information on troubleshooting AD FS interaction with Azure AD.|
-|[AD FS Diagnostics Analyzer](ad-fs-diagnostics-analyzer.md)|AD FS Help Diagnostics Analyzer can help perform basic AD FS checks using the diagnostics PowerShell module. 
+|[AD FS Diagnostics Analyzer](ad-fs-diagnostics-analyzer.md)|AD FS Help Diagnostics Analyzer can help perform basic AD FS checks using the diagnostics PowerShell module.

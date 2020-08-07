@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setproxysettings
-description: Windows Commands topic for **bitsadmin setproxysettings**, which sets the proxy settings for the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setproxysettings command, which sets the proxy settings for the specified job.
 ms.topic: article
 ms.assetid: be8edb1b-614e-4d0b-a8f8-64b4bde3e64b
 author: coreyp-at-msft
@@ -32,10 +30,10 @@ bitsadmin /setproxysettings <job> <usage> [list] [bypass]
 
 ## Examples
 
-The following example sets the proxy settings for the job named *myDownloadJob*.
+To set the proxy settings using the various usage options for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setproxysettings myDownloadJob PRECONFIG
+bitsadmin /setproxysettings myDownloadJob PRECONFIG
 ```
 
 ```
@@ -52,3 +50,5 @@ bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1,proxy2,proxy3 NULL
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

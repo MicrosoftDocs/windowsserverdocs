@@ -1,8 +1,6 @@
 ---
 title: add-ImageGroup
-description: Windows Commands topic for add-ImageGroup, which adds an image group to a Windows Deployment Services server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-ImageGroup, which adds an image group to a Windows Deployment Services server.
 ms.topic: article
 ms.assetid: 6ca88671-51de-4924-b969-88f3dfd84270
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # add-ImageGroup
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds an image group to a Windows Deployment Services server.
 
@@ -25,7 +23,7 @@ wdsutil [Options] /add-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 |-------|--------|
 mediaGroup:<Image group name>|Specifies the name of the image group to be added.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If a server name is not specified, the local server will be used.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To add an image group, type one of the following:
 ```
 wdsutil /add-ImageGroumediaGroup:ImageGroup2

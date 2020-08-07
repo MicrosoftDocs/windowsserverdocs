@@ -1,8 +1,6 @@
 ---
 title: uniqueid
-description: Windows Commands topic for uniqueid, which displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for uniqueid, which displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
 ms.topic: article
 ms.assetid: 64235a4a-b91c-46da-b9b0-68ee90571c2a
 author: coreyp-at-msft
@@ -36,7 +34,7 @@ uniqueid disk [id={<dword> | <GUID>}] [noerr]
 -   This command works on basic and dynamic disks.
 -   A disk must be selected for this command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the signature of the MBR disk with focus, type:
 ```

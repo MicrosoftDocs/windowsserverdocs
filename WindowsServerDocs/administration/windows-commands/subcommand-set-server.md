@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-Server
-description: Windows Commands topic for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
 ms.topic: article
 ms.assetid: da55c29d-a94a-4d73-877b-af480f906ca0
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: set-Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Configures the settings for a Windows Deployment Services server.
 
@@ -30,9 +28,9 @@ wdsutil [Options] /Set-Server [/Server:<Server name>]
     [/UseDhcpPorts:{Yes | No}]
     [/DhcpOption60:{Yes | No}]
     [/RpcPort:<Port number>]
-    [/PxepromptPolicy 
+    [/PxepromptPolicy
         [/Known:{OptIn | Noprompt | OptOut}]
-        [/New:{OptIn | Noprompt | OptOut}] 
+        [/New:{OptIn | Noprompt | OptOut}]
     [/BootProgram:<Relative path>]
          /Architecture:{x86 | ia64 | x64}
     [/N12BootProgram:<Relative path>]
@@ -105,7 +103,7 @@ wdsutil [Options] /Set-Server [/Server:<Server name>]
              [/Policy:{None | AutoDisconnect | Multistream}]
                  [/Threshold:<Speed in KBps>]
                  [/StreamCount:{2 | 3}]
-                 [/Fallback:{Yes | No}]    
+                 [/Fallback:{Yes | No}]
         [/forceNative]
 ```
 ### Parameters
@@ -143,7 +141,7 @@ wdsutil [Options] /Set-Server [/Server:<Server name>]
 |[/BannedGuidPolicy]|Manages the list of banned GUIDs using the following options:<p>-   [/add] /Guid:<GUID> - adds the specified GUID to the list of banned GUIDs. Any client with this GUID will be identified by its MAC address instead.<br />-   [/remove] /Guid:<GUID> - removes the specified GUID from the list of banned GUIDs.|
 |[/BcdRefreshPolicy]|Configures the settings for refreshing Bcd files using the following options:<p>-   [/Enabled:{Yes &#124; No}] - Specifies the Bcd refreshing policy. When **/Enabled** is set to **Yes**, Bcd files are refreshed at the specified time interval.<br />-   [/RefreshPeriod:<time in minutes>] - Specifies the time interval at which Bcd files are refreshed.|
 |[/Transport]|Configures the following options:<p><ul><li>[/ObtainIpv4From: {Dhcp &#124; Range}] - Specifies the source of IPv4 addresses.<p><ul><li>[/start: <starting Ipv4 address>] - Specifies the start of the IP address range. This option is required and valid only if **/ObtainIpv4From** is set to **Range**</li><li>[/End: <Ending Ipv4 address>] - Specifies the end of the IP address range. This option is required and valid only if **/ObtainIpv4From** is set to **Range**.</li></ul></li><li>[/ObtainIpv6From:Range] [/start:<start IP address>] [/End:<End IP address>]  Specifies the source of IPv6 addresses. This option only applies to Windows Server 2008 R2 and the only supported value is Range.</li><li>[/startPort: <starting port>] - Specifies the start of the port range.</li><li>[/EndPort: <Ending port>] - Specifies the end of the port range.</li><li>[/Profile: {10Mbps &#124; 100Mbps &#124; 1Gbps &#124; Custom}] - Specifies the network profile to be used. This option is only supported forservers running Windows Server 2008.</li><li>[/MulticastSessionPolicy]  Configures the transfer settings for multicast transmissions. This command is only available for Windows Server 2008 R2.<p><ul><li>[/Policy:{None &#124; AutoDisconnect &#124; Multistream}] - Determines how to handle slow clients. None means to keep all clients in one session at the same speed. AutoDisconnect means that any clients that drop below the specified /Threshold will be disconnected. Multistream means clients will be separated into multiple sessions as specified by /StreamCount.</li><li>[/Threshold:<Speed in KBps>] - for /Policy:AutoDisconnect, this option sets the minimum transfer rate in KBps. Clients that drop below this rate will be disconnected from multicast transmissions.</li><li>[/StreamCount:{2 &#124; 3}] [/Fallback:{Yes &#124; No}] - for /Policy:Multistream, this option determines the number of sessions. 2 means two sessions (fast and slow) 3 means three sessions (slow, medium, fast).</li><li>[/Fallback:{Yes&#124; No}] - Determines whether clients that are disconnected will continue the transfer using another method (if supported by the client). If you are using the WDS client, the computer will fallback to unicasting. Wdsmcast.exe does not support a fallback mechanism. This option also applies to clients that do not support Multistream. In that case, the computer will fall back to another method instead of moving to a slower transfer session.</li></ul></li></ul>|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To set the server to answer only known clients, with a response delay of 4 minutes, type:
 ```
 wdsutil /Set-Server /AnswerClients:Known /Responsedelay:4

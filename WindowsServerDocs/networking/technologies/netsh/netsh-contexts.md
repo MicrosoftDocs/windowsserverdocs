@@ -1,8 +1,6 @@
 ---
 title: Netsh Command Syntax, Contexts, and Formatting
 description: You can use this topic to learn how to enter netsh contexts and subcontexts, understand netsh syntax and command formatting, and how to run netsh commands on local and remote computers that are running Windows Server 2016 or Windows 10.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 manager: brianlic
@@ -22,7 +20,7 @@ Netsh also provides a scripting feature that allows you to run a group of comman
 
 ## Netsh contexts
 
-Netsh interacts with other operating system components by using dynamic\-link library \(DLL\) files. 
+Netsh interacts with other operating system components by using dynamic\-link library \(DLL\) files.
 
 Each netsh helper DLL provides an extensive set of features called a *context*, which is a group of commands specific to a networking server role or feature. These contexts extend the functionality of netsh by providing configuration and monitoring support for one or more services, utilities, or protocols. For example, Dhcpmon.dll provides netsh with the context and set of commands necessary to configure and manage DHCP servers.
 
@@ -35,9 +33,9 @@ Following is example output for these commands on a computer running Windows Ser
 >    ```
 >   PS C:\Windows\system32> netsh
 >   netsh>/?
->    
+>
 >    The following commands are available:
->    
+>
 >    Commands in this context:
 >    ..            - Goes up one context level.
 >    ?             - Displays a list of commands.
@@ -78,10 +76,10 @@ Following is example output for these commands on a computer running Windows Ser
 >    wfp           - Changes to the `netsh wfp' context.
 >    winhttp       - Changes to the `netsh winhttp' context.
 >    winsock       - Changes to the `netsh winsock' context.
->    
+>
 >    The following sub-contexts are available:
 >     advfirewall branchcache bridge dhcpclient dnsclient firewall http interface ipsec ipsecdosprotection lan namespace netio ras rpc trace wfp winhttp winsock
->    
+>
 >    To view help for a command, type the command, followed by a space, and then type ?.
 >    ```
 
@@ -144,7 +142,7 @@ Optional. Specifies that netsh enters the specified **netsh** context.
 
 **`Context`**
 
-Optional. Specifies the **netsh** context that you want to enter. 
+Optional. Specifies the **netsh** context that you want to enter.
 
 **`-r`**
 

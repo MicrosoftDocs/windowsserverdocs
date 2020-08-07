@@ -1,4 +1,4 @@
-# [Networking](Networking.md)
+# [Networking documentation](index.yml)
 ## [Windows Server supported networking scenarios](windows-server-supported-networking-scenarios.md)
 
 ## [What's new in networking](What-s-New-in-Networking.md)
@@ -67,7 +67,7 @@
 ####### [Configure firewall rules for non-domain members to allow BranchCache traffic](branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ###### [Verify client computer settings](branchcache/deploy/verify-Client-computer-Settings.md)
 
-## [DirectAccess](../remote/remote-access/da-stub.md) 
+## [DirectAccess](../remote/remote-access/directaccess/directaccess.md) 
 
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's new in DNS client in Windows Server](dns/What-s-New-in-DNS-Client.md)
@@ -94,6 +94,12 @@
 #### [DHCP subnet selection options](technologies/dhcp/dhcp-subnet-options.md)
 #### [DHCP logging events for DNS record registrations](technologies/dhcp/dhcp-dns-events.md)
 ### [Deploy DHCP using Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
+### [Troubleshoot DHCP issues](../troubleshoot/troubleshoot-dhcp-issue.md)
+#### [Dynamic Host Configuration Protocol (DHCP) Basics](../troubleshoot/dynamic-host-configuration-protocol-basics.md)
+#### [General guidance to troubleshoot DHCP](../troubleshoot/general-guidance-to-troubleshoot-dhcp.md)
+##### [How to use automatic TCP/IP addressing without a DHCP server](../troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh.md)
+#### [Troubleshoot problems on the DHCP client](../troubleshoot/troubleshoot-problems-on-dhcp-client.md)
+#### [Troubleshoot problems on the DHCP server](../troubleshoot/troubleshoot-problems-on-dhcp-server.md)
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 ### [Network offload and optimization technologies](technologies/hpn/network-offload-and-optimization.md)
@@ -130,7 +136,7 @@
 ### [Example of C# generated code](technologies/hcn/example-c-sharp.md)
 ### [Example of Go generated code](technologies/hcn/example-go.md)
 
-## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
+## [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md)
 
 ## [IP Address Management (IPAM)](technologies/ipam/ipam-top.md)
 ### [What's new in IPAM](technologies/ipam/What-s-New-in-IPAM.md)
@@ -224,7 +230,7 @@
 #### [How QoS policy works](technologies/qos/qos-policy-works.md)
 #### [QoS policy architecture](technologies/qos/qos-policy-architecture.md)
 #### [QoS policy scenarios](technologies/qos/qos-policy-scenarios.md)
-###[Manage QoS policy](technologies/qos/qos-policy-manage.md)
+### [Manage QoS policy](technologies/qos/qos-policy-manage.md)
 #### [QoS policy events and errors](technologies/qos/qos-policy-errors.md)
 ### [QoS policy FAQ](technologies/qos/qos-policy-faq.md)
 
@@ -299,7 +305,7 @@
 ### [Microsoft Azure and SDN](sdn/Azure_and_Sdn.md)
 ### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
 
-## [Virtual Private Networking (VPN)](technologies/vpn-stub.md)
+## [Virtual Private Networking (VPN)](../remote/remote-access/vpn/vpn-top.md)
 
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
@@ -312,4 +318,3 @@
 ### [Windows Time service technical reference](windows-time-service/windows-time-service-tech-ref.md)
 #### [How the Windows Time service works](windows-time-service/How-the-Windows-Time-Service-Works.md)
 #### [Windows Time service tools and settings](windows-time-service/Windows-Time-Service-Tools-and-Settings.md)
-

@@ -1,10 +1,8 @@
 ---
 title: Additional Remote Desktop Resources
 description: Provides links to where to get more information and help about RDS.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: evas
-ms.date: 11/21/2018  
+ms.date: 11/21/2018
 ms.topic: article
 ms.assetid: 938adb3d-71ab-488b-b2f2-57b29df210d7
 author: evaseydl

@@ -1,12 +1,6 @@
 ---
 title: manage-bde status
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the manage-bde status command, which provides information about all drives on the computer, regardless whether they are BitLocker protected.
 ms.topic: article
 ms.assetid: 1444a360-fabf-4dd3-b67f-188e6ea3fa5b
 author: coreyp-at-msft
@@ -15,48 +9,55 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# manage-bde: status
+# manage-bde status
 
+Provides information about all drives on the computer; whether or not they are BitLocker-protected, including:
 
+- Size
 
-Provides the following information about all drives on the computer; whether or not they are BitLocker-protected:
--   Size
--   BitLocker version
--   Conversion status
--   Percentage encrypted
--   Encryption method
--   Protection status
--   Lock status
--   Identification field
--   Key protectors
+- BitLocker version
 
-For examples of how this command can be used, see [Examples](#BKMK_Examples).
+- Conversion status
+
+- Percentage encrypted
+
+- Encryption method
+
+- Protection status
+
+- Lock status
+
+- Identification field
+
+- Key protectors
 
 ## Syntax
 
 ```
-manage-bde -status [<Drive>] [-protectionaserrorlevel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde -status [<drive>] [-protectionaserrorlevel] [-computername <name>] [{-?|/?}] [{-help|-h}]
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Drive>|Represents a drive letter followed by a colon.|
-|-protectionaserrorlevel|Causes the Manage-bde command-line tool to send the return code of 0 when the volume is protected and 1 when the volume is unprotected; most commonly used for batch scripts to determine if a drive is BitLocker-protected. You can also use **-p** as an abbreviated version of this command.|
-|-computername|Specifies that Manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
-|\<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
-|-? or /?|Displays brief Help at the command prompt.|
-|-help or -h|Displays complete Help at the command prompt.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<drive>` | Represents a drive letter followed by a colon. |
+| -protectionaserrorlevel | Causes the manage-bde command-line tool to send the return code of **0** if the volume is protected and **1** if the volume is unprotected; most commonly used for batch scripts to determine if a drive is BitLocker-protected. You can also use **-p** as an abbreviated version of this command. |
+| -computername | Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command. |
+| `<name>` | Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address. |
+| -? or /? | Displays brief Help at the command prompt. |
+| -help or -h | Displays complete Help at the command prompt. |
 
-## <a name=BKMK_Examples></a>Examples
+### Examples
 
-The following example illustrates using the **-status** command to display the status of drive C.
+To display the status of drive C, type:
+
 ```
 manage-bde –status C:
 ```
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Manage-bde](manage-bde.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [manage-bde command](manage-bde.md)

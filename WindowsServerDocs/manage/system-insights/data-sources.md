@@ -1,8 +1,6 @@
 ---
-title: System Insights data sources 
+title: System Insights data sources
 description: When writing a new capability in System Insights, you can specify existing or new data sources to collect locally and analyze. This topic describes the data sources that you can choose when registering a new capability.
-ms.prod: windows-server
-ms.technology: system-insights
 ms.topic: article
 author: gawatu
 ms.author: gawatu
@@ -19,8 +17,8 @@ System Insights introduces extensible data collection functionality. When writin
 ## Data sources
 When writing a new capability, you must identify the specific data sources to collect for each capability. The data sources that you specify will be collected and persisted directly on your machine, and you can choose from three types of data sources:
 
-- **Performance counters**: 
-    - Specify the counter path, name, and instances, and System Insights collects the relevant data reported by these performance counters. 
+- **Performance counters**:
+    - Specify the counter path, name, and instances, and System Insights collects the relevant data reported by these performance counters.
 
 - **System events**:
     - Specify the channel name and event ID, and System Insights will record how many times that event has occurred.
@@ -28,7 +26,7 @@ When writing a new capability, you must identify the specific data sources to co
 - **Well-known series**
     - System Insights collects some basic information on your machine for a few, well-defined resources. These series are used for the default capabilities, but they can also be used by any custom capability. These collect the following information:
 
-        - **Disk**: 
+        - **Disk**:
             - *Properties*: Guid
             - *Data*: Size
         - **Volume**:
@@ -37,11 +35,11 @@ When writing a new capability, you must identify the specific data sources to co
         - **Network Adapter**:
             - *Properties*: InterfaceGuid, InterfaceDescription, Speed
             - *Data*: Bytes Received/sec, Bytes Sent/sec, Bytes Total/sec
-        - **CPU**: 
+        - **CPU**:
             - *Properties*: -
             - *Data*: % Processor Time
 
-    - Specify a well-known series, and System Insights will return the data collected by that series. 
+    - Specify a well-known series, and System Insights will return the data collected by that series.
 
 
 ## Retention timelines and collection intervals
@@ -83,9 +81,9 @@ System Insights collects all data locally on your C drive (C:). In general, the 
 | Network well-known series | 300 KB per network adapter |
 
 >[!NOTE]
->**For the default forecasting capabilities, the maximum footprint should be less than 10 MB for most stand alone machines.** 
+>**For the default forecasting capabilities, the maximum footprint should be less than 10 MB for most stand alone machines.**
 
-## See also
+## Additional References
 To learn more about System Insights, use the following resources:
 
 - [System Insights overview](overview.md)

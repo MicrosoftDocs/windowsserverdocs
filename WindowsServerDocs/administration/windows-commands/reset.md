@@ -1,11 +1,9 @@
 ---
 title: reset
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: afbdab44-199c-4e11-884f-e96804965c21

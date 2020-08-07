@@ -1,8 +1,6 @@
 ---
 title: whoami
-description: Windows Commands topic for whoami, which displays user, group and privileges information for the user who is currently logged on to the local system.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for whoami, which displays user, group and privileges information for the user who is currently logged on to the local system.
 ms.topic: article
 ms.assetid: 6e3f4d5c-f1f5-4429-b602-afad2b3488bf
 author: coreyp-at-msft
@@ -17,7 +15,7 @@ ms.date: 10/16/2017
 
 Displays user, group and privileges information for the user who is currently logged on to the local system. If used without parameters, **whoami** displays the current domain and user name.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -42,7 +40,7 @@ whoami /all [/fo <Format>] [/nh]
 |/nh|Specifies that the column header should not be displayed in the output. This is valid only for table and CSV formats.|
 |/?|Displays help at the command prompt.|
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To display the domain and user name of the person who is currently logged on to this computer, type:
 ```

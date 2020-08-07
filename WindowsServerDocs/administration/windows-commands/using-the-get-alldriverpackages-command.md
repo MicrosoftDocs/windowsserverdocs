@@ -1,8 +1,6 @@
 ---
 title: get-AllDriverPackages
-description: Windows Commands topic for get-AllDriverPackages, which displays information about all the driver packages on a server that match the specified search criteria. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-AllDriverPackages, which displays information about all the driver packages on a server that match the specified search criteria.
 ms.topic: article
 ms.assetid: 9eb8fcb7-ef46-4c8d-9623-8969a3c8b8a4
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # get-AllDriverPackages
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about all the driver packages on a server that match the specified search criteria.
 
@@ -30,7 +28,7 @@ wdsutil /Get-AllDriverPackages [/Server:<Server name>] [/Show:{Drivers | Files |
 | /Operator:{Equal &#124; NotEqual &#124; GreaterOrEqual &#124; LessOrEqual &#124; Contains} |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Specifies the relationship between the attribute and the values. You can specify **Contains** only with string attributes. You can specify **GreaterOrEqual** and **LessOrEqual** only with date and version attributes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |                                       /Value:<Value>                                       | Specifies the value to search on for the specified <attribute>.  You can specify multiple values for a single **/Filtertype**. The list below outlines the attributes you can specify for each filter. For more information about these attributes, see [Driver and Package attributes](https://go.microsoft.com/fwlink/?LinkId=166895) (<https://go.microsoft.com/fwlink/?LinkId=166895>).<p>-   PackageId - Specify a valid GUID. For example: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-   PackageName   Specify any string value.<br />-   PackageEnabled - Specify **Yes** or **No**.<br />-   Packagedateadded - Specify the date in the following format: YYYY/MM/DD<br />-   PackageInfFilename   Specify any string value.<br />-   PackageClass - Specify a valid class name or class GUID. For example: **DiskDrive**, **Net**, or {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-   PackageProvider   Specify any string value.<br />-   PackageArchitecture - Specify **x86**, **x64**, or **ia64**.<br />-   PackagLocale - Specify a valid language identifier. For example: **en-US** or **es-ES**.<br />-   PackageSigned - Specify **Yes** or **No**.<br />-   PackagedatePublished - Specify the date in the following format: YYYY/MM/DD<br />-   Packageversion   Specify the version in the following format: a.b.x.y. For example: 6.1.0.0<br />-   Driverdescription   Specify any string value.<br />-   DriverManufacturer   Specify any string value.<br />-   DriverHardwareId - Specify any string value.<br />-   DrivercompatibleId - Specify any string value.<br />-   DriverExcludeId   Specify any string value.<br />-   DriverGroupId   Specify a valid GUID. For example: {4d36e972-e325-11ce-bfc1-08002be10318}.<br />-   DriverGroupName   Specify any string value. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To display information, type one of the following:
 ```
 wdsutil /Get-AllDriverPackages /Server:MyWdsServer /Show:All /Filtertype:DriverGroupName /Operator:Contains /Value:printer /Filtertype:PackageArchitecture /Operator:Equal /Value:x64 /Value:x86

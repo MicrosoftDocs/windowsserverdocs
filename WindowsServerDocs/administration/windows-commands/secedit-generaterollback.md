@@ -1,11 +1,9 @@
 ---
 title: secedit:generaterollback
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
@@ -19,7 +17,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to generate a rollback template for a specified configuration template. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to generate a rollback template for a specified configuration template.
 
 ## Syntax
 
@@ -47,7 +45,7 @@ The successful running of this command will state The task has completed success
 
 If an existing rollback template is specified, this command will overwrite it. You can create a new rollback template with this command. No additional parameters are needed for either condition.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 After creating the security template using the Security Configuration and Analysis snap-in, SecTmplContoso.inf, create the rollback configuration file to save the original settings. Write out the action to the FY11 log file.
 ```
@@ -57,4 +55,4 @@ Secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcont
 ## Additional References
 
 -   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

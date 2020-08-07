@@ -1,12 +1,6 @@
 ---
 title: reg restore
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the reg restore command, which writes saved subkeys and entries back to the registry.
 ms.topic: article
 ms.assetid: a51f1c0c-969b-4b76-930a-c8bb14dea26e
 author: coreyp-at-msft
@@ -17,43 +11,43 @@ ms.date: 10/16/2017
 
 # reg restore
 
-
-
 Writes saved subkeys and entries back to the registry.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-Reg restore <KeyName> <FileName>
+reg restore <keyname> <filename>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<KeyName>|Specifies the full path of the subkey to be restored. The restore operation works only with the local computer. The KeyName must include a valid root key. Valid root keys are: HKLM, HKCU, HKCR, HKU, and HKCC.|
-|\<FileName>|Specifies the name and path of the file with content to be written into the registry. This file must be created in advance with the **reg save** operation using a .hiv extension.|
-|/?|Displays help for **reg restore** at the command prompt.|
+| Parameter | Description |
+|--|--|
+| `<keyname>` | Specifies the full path of the subkey to be restored. The restore operation only works with the local computer. The *keyname* must include a valid root key. Valid root keys for the local computer are: **HKLM**, **HKCU**, **HKCR**, **HKU**, and **HKCC**. If the registry key name contains a space, enclose the key name in quotes. |
+| `<filename>` | Specifies the name and path of the file with content to be written into the registry. This file must be created in advance by using the **reg save** command, and must have a .hiv extension. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
+#### Remarks
 
--   Before editing any registry entries, save the parent subkey with the **reg save** operation. If the edit fails, restore the original subkey with the **reg restore** operation.
--   The following table lists the return values for the **reg restore** operation.
+- Before editing any registry entries, you must save the parent subkey using the **reg save** command. If the edit fails, you can then restore the original subkey using the **reg restore** operation.
 
-|Value|Description|
-|-----|-----------|
-|0|Success|
-|1|Failure|
+- The return values for the **reg restore** operation are:
 
-## <a name=BKMK_examples></a>Examples
+    | Value | Description |
+    |--|--|
+    | 0 | Success |
+    | 1 | Failure |
+
+### Examples
 
 To restore the file named NTRKBkUp.hiv into the key HKLM\Software\Microsoft\ResKit, and overwrite the existing contents of the key, type:
+
 ```
-REG RESTORE HKLM\Software\Microsoft\ResKit NTRKBkUp.hiv
+reg restore HKLM\Software\Microsoft\ResKit NTRKBkUp.hiv
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [reg save command](reg-save.md)

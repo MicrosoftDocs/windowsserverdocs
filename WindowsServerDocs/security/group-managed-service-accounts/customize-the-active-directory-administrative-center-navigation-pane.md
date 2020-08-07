@@ -1,6 +1,5 @@
 ---
 title: Customize the Active Directory Administrative Center Navigation Pane
-ms.prod: windows-server
 description: Windows Server Security
 ms.assetid: c9933d16-e153-435a-b5b7-3e594db42d5c
 author: coreyp-at-msft
@@ -39,5 +38,5 @@ ms.date: 10/12/2016
 
    By using the list view, you can take advantage of the Most Recently Used \(MRU\) list. The MRU list automatically appears under a navigation node when you visit at least one container in this navigation node. You can also view the current MRU list by expanding the breadcrumb bar at the top of the Active Directory Administrative Center window. The MRU list always contains the last three containers that you visited in a particular navigation node. Every time that you select a particular container, this container is added to the top of the MRU list and the last container in the MRU list is removed from it.
 
-  
+
 

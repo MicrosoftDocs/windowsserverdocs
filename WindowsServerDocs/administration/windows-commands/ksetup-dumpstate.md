@@ -1,12 +1,6 @@
 ---
-title: ksetup:dumpstate
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+title: ksetup dumpstate
+description: Reference article for the ksetup dumpstate commnand, which displays the current state of realm settings for all realms that are defined on the computer.
 ms.topic: article
 ms.assetid: 3ef2f7b8-97af-4f42-9542-cff324840637
 author: coreyp-at-msft
@@ -15,11 +9,9 @@ manager: dongill
 ms.date: 10/16/2017
 ---
 
-# ksetup:dumpstate
+# ksetup dumpstate
 
-
-
-Displays the current state of realm settings for all realms that are defined on the computer. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Displays the current state of realm settings for all realms that are defined on the computer. This command displays the same output as the **ksetup** command.
 
 ## Syntax
 
@@ -27,31 +19,30 @@ Displays the current state of realm settings for all realms that are defined on 
 ksetup /dumpstate
 ```
 
-#### Parameters
+### Remarks
 
-None
+- The output of this command includes the default realm (the domain that the computer is a member of) and all the realms that are defined on this computer. The following is included for each realm:
 
-## Remarks
+  - All the Key Distribution Centers (KDCs) that are associated with this realm.
 
-The output of this command includes the default realm (the domain that the computer is a member of) and all the realms that are defined on this computer. The following is included for each realm:
--   All the Key Distribution Centers (KDCs) that are associated with this realm
--   All the **set realm** flags for this realm
--   The KDC password
+  - All the **set realm** flags for this realm.
 
-This command does not display the domain name that is specified by DNS detection or by the command **ksetup /domain**.
+  - The KDC password.
 
-This command does not display the computer password that is set by using the command **ksetup /setcomputerpassword**.
+- This command doesn't display the domain name specified by DNS detection or by the command `ksetup /domain`.
 
-**Ksetup** produces the same output as **ksetup /dumpstate**.
+- This command doesn't display the computer password set by using the command `ksetup /setcomputerpassword`.
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
-Find most of the Kerberos realm configurations on a computer:
+To locate the Kerberos realm configurations on a computer, type:
+
 ```
 ksetup /dumpstate
 ```
 
 ## Additional References
 
--   [Ksetup](ksetup.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ksetup command](ksetup.md)

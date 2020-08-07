@@ -1,8 +1,6 @@
 ---
 title: Reject-AutoaddDevices
-description: Windows Commands topic for Reject-AutoaddDevices, which rejects computers that are pending administrative approval. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Reject-AutoaddDevices, which rejects computers that are pending administrative approval.
 ms.topic: article
 ms.assetid: ea25a4b2-5fad-4360-9c47-c2c9df7ea31f
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Reject-AutoaddDevices
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Rejects computers that are pending administrative approval. When the Auto-add policy is enabled, administrative approval is required before unknown computers (those that are not prestaged) can install an image. You can enable this policy using the **PXE Response** tab of the server s properties page.
 ## Syntax
@@ -24,7 +22,7 @@ wdsutil [Options] /Reject-AutoaddDevices [/Server:<Server name>] /RequestId:<Req
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/RequestId:<Request ID &#124; ALL>|Specifies the request ID assigned to the pending computer. To reject all pending computers, specify **ALL**.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To reject a single computer, type:
 ```
 wdsutil /Reject-AutoaddDevices /RequestId:12

@@ -6,15 +6,13 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # AD DS Getting Started
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Active Directory stores information about objects on the network and makes this information easy for administrators and users to find and use. Active Directory uses a structured data store as the basis for a logical, hierarchical organization of directory information.  
-  
+Active Directory stores information about objects on the network and makes this information easy for administrators and users to find and use. Active Directory uses a structured data store as the basis for a logical, hierarchical organization of directory information.
+
 | Topic | Description |
 | --------- | --------- |
 | [Active Directory Domain Services Overview](../ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview.md) | Provides information on  basic AD DS features. Includes technical concepts, links to planning and deployment.|

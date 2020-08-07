@@ -5,8 +5,6 @@ author: billmath
 manager: femila
 ms.date: 04/09/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ms.author: billmath
 ---
 
@@ -139,6 +137,9 @@ Check the WAP configuration by running the Get-WebApplicationProxyConfiguration 
 ```PowerShell
 Get-WebApplicationProxyConfiguration
 ```
+> [!NOTE]
+> Skip the next step if the ConfigurationVersion is Windows Server 2016. This is the correct value for Web Application Proxy on Windows Server 2016 / 2019.
+
 To upgrade the ConfigurationVersion of the WAP servers, run the following Powershell command.
 
 ```PowerShell
@@ -148,9 +149,9 @@ Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
 This will complete the upgrade of the WAP servers.
 
 
-> [!NOTE] 
-> A known PRT issue exists in AD FS 2019 if Windows Hello for Business with a Hybrid Certificate trust is performed. You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'. 
-> To remediate this error: 
+> [!NOTE]
+> A known PRT issue exists in AD FS 2019 if Windows Hello for Business with a Hybrid Certificate trust is performed. You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'.
+> To remediate this error:
 > 1. Launch AD FS management console. Brose to "Services > Scope Descriptions"
 > 2. Right click "Scope Descriptions" and select "Add Scope Description"
 > 3. Under name type "ugs" and Click Apply > OK

@@ -1,8 +1,6 @@
 ---
 title: bitsadmin peers and discover
-description: Windows Commands topic for **bitsadmin peers** and **discover**, which discovers peers again.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin peers and discover command, which discovers peers again.
 ms.topic: article
 ms.assetid: 254fa0a3-4501-4272-a020-6ccdb3fcb29b
 author: coreyp-at-msft
@@ -21,14 +19,18 @@ Discovers peers again.
 bitsadmin /peers /discover
 ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example discovers peers.
+To discover peers again:
 
 ```
-C:\>bitsadmin /peers /discover
+bitsadmin /peers /discover
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
+
+- [bitsadmin peers command](bitsadmin-peers.md)

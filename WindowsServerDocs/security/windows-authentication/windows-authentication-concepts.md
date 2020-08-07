@@ -1,8 +1,6 @@
 ---
 title: Windows Authentication Concepts
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: 29d1db15-cae0-4e3d-9d8e-241ac206bb8b
 author: coreyp-at-msft
@@ -48,10 +46,10 @@ Similarly, you can grant all users from a certain domain permissions to access a
 ## Credentials
 A passport and possibly associated visas are the accepted credentials for a traveler. However, those credentials might not let a traveler enter or access all resources within a country. For instance, additional credentials are required to attend a conference. In Windows, credentials can be managed to make it possible for account holders to access resources over the network without repeatedly having to supply their credentials. This type of access lets users be authenticated one time by the system to access all applications and data sources that they are authorized to use without entering another account identifier or password. The Windows platform capitalizes on the ability to use a single user identity (maintained by Active Directory) across the network by locally caching user credentials in the operating system's Local Security Authority (LSA). When a user logs on to the domain, Windows authentication packages transparently use the credentials to provide single sign-on when authenticating the credentials to network resources. For more information about credentials, see [Credentials Processes in Windows Authentication](credentials-processes-in-windows-authentication.md).
 
-A form of multi-factor authentication for the traveler might be the requirement to carry and present multiple documents to authenticate his identity such as a passport and conference registration information. Windows implements this form or authentication through smart cards, virtual smart cards, and biometric technologies. 
+A form of multi-factor authentication for the traveler might be the requirement to carry and present multiple documents to authenticate his identity such as a passport and conference registration information. Windows implements this form or authentication through smart cards, virtual smart cards, and biometric technologies.
 
 ## Security principals and accounts
-In Windows, any user, service, group, or computer that can initiate action is a security principal. Security principals have accounts, which can be local to a computer or be domain-based. For example, Windows client domain-joined computers can participate in a network domain by communicating with a domain controller even when no human user is logged on. To initiate communications, the computer must have an active account in the domain. Before accepting communications from the computer, the local security authority on the domain controller authenticates the computer's identity, and then defines the computer's security context just as it would for a human security principal. This security context defines the identity and capabilities of a user or service on a particular computer or a user, service, group, or computer on a network. For example, it defines the resources, such as a file share or printer, that can be accessed and the actions, such as Read, Write, or Modify, that can be performed by a user, service, or computer on that resource. For more information, see [Security Principals](https://technet.microsoft.com/itpro/windows/keep-secure/security-principals).
+In Windows, any user, service, group, or computer that can initiate action is a security principal. Security principals have accounts, which can be local to a computer or be domain-based. For example, Windows client domain-joined computers can participate in a network domain by communicating with a domain controller even when no human user is logged on. To initiate communications, the computer must have an active account in the domain. Before accepting communications from the computer, the local security authority on the domain controller authenticates the computer's identity, and then defines the computer's security context just as it would for a human security principal. This security context defines the identity and capabilities of a user or service on a particular computer or a user, service, group, or computer on a network. For example, it defines the resources, such as a file share or printer, that can be accessed and the actions, such as Read, Write, or Modify, that can be performed by a user, service, or computer on that resource. For more information, see [Security Principals](/windows/security/identity-protection/access-control/security-principals).
 
 An account is a means to identify a claimant--the human user or service--requesting access or resources. The traveler who holds the authentic passport possesses an account with the host country. Users, groups of users, objects, and services can all have individual accounts or share accounts. Accounts can be member of groups and can be assigned specific rights and permissions. Accounts can be restricted to the local computer, workgroup, network, or be assigned membership to a domain.
 
@@ -61,17 +59,17 @@ Standalone managed service accounts and virtual accounts were introduced in  Win
 
 For more information about accounts, see:
 
--   [Active Directory Accounts](https://technet.microsoft.com/itpro/windows/keep-secure/active-directory-accounts)
+-   [Active Directory Accounts](/windows/security/identity-protection/access-control/active-directory-accounts)
 
--   [Active Directory Security Groups](https://technet.microsoft.com/itpro/windows/keep-secure/active-directory-security-groups)
+-   [Active Directory Security Groups](/windows/security/identity-protection/access-control/active-directory-security-groups)
 
 -   [Local Accounts](https://technet.microsoft.com/itpro/windows/keep-bastion.local-accounts)
 
--   [Microsoft Accounts](https://technet.microsoft.com/itpro/windows/keep-secure/microsoft-accounts)
+-   [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts)
 
--   [Service Accounts](https://technet.microsoft.com/itpro/windows/keep-secure/service-accounts)
+-   [Service Accounts](/windows/security/identity-protection/access-control/service-accounts)
 
--   [Special Identities](https://technet.microsoft.com/itpro/windows/keep-secure/special-identities)
+-   [Special Identities](/windows/security/identity-protection/access-control/special-identities)
 
 ## Delegated authentication
 To use the travel analogy, countries might issue the same access to all members of an official governmental delegation, just as long as the delegates are well-known. This delegation lets one member act on the authority of another member. In Windows, delegated authentication occurs when a network service accepts an authentication request from a user and assumes the identity of that user in order to initiate a new connection to a second network service. To support delegated authentication, you must establish front-end or first-tier servers, such as web servers, that are responsible for handling client authentication requests and back-end or n-tier servers, such as large databases, that are responsible for storing information. You can delegate the right to set up delegated authentication to users in your organization to reduce the administrative load on your administrators.
@@ -85,19 +83,17 @@ When a trust exists between two domains, the authentication mechanisms for each 
 
 How a specific trust passes authentication requests depends on how it is configured. Trust relationships can be one-way, by providing access from the trusted domain to resources in the trusting domain, or two-way, by providing access from each domain to resources in the other domain. Trusts are also either nontransitive, in which case trust exists only between the two trust partner domains, or transitive, in which case trust automatically extends to any other domains that either of the partners trusts.
 
-For information about how a trust works, see [How Domain and Forest Trusts Work](https://technet.microsoft.com/library/cc773178(v=ws.10).aspx).
+For information about how a trust works, see [How Domain and Forest Trusts Work](/previous-versions/windows/it-pro/windows-server-2003/cc773178(v=ws.10)).
 
 ### Protocol transition
 Protocol transition assists application designers by letting applications support different authentication mechanisms at the user authentication tier and by switching to the Kerberos protocol for security features, such as mutual authentication and constrained delegation, in the subsequent application tiers.
 
-For more information about protocol transition, see [Kerberos Protocol Transition and Constrained Delegation](https://technet.microsoft.com/library/cc758097(v=ws.10).aspx).
+For more information about protocol transition, see [Kerberos Protocol Transition and Constrained Delegation](/previous-versions/windows/it-pro/windows-server-2003/cc758097(v=ws.10)).
 
 ### Constrained delegation
 Constrained delegation gives administrators the ability to specify and enforce application trust boundaries by limiting the scope where application services can act on behalf of a user. You can specify particular services from which a computer that is trusted for delegation can request resources. The flexibility to constrain authorization rights for services helps improve application security design by reducing the opportunities for compromise by untrusted services.
 
 For more information about constrained delegation, see [Kerberos Constrained Delegation Overview](../kerberos/kerberos-constrained-delegation-overview.md).
 
-## See also
+## Additional References
 [Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn269029.aspx)
-
-

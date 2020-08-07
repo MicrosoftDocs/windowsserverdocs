@@ -1,8 +1,6 @@
 ---
 title: tsecimp
-description: Windows Commands topic for tsecimp, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for tsecimp, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
 ms.topic: article
 ms.assetid: d7488ec6-0eff-45ff-89ee-9cbe752416bf
 author: coreyp-at-msft
@@ -34,7 +32,7 @@ tsecimp /d
 
 ## Remarks
 
--   The XML file from which you want to import assignment information must follow the structure described below.  
+-   The XML file from which you want to import assignment information must follow the structure described below.
     -   **UserList** element
 
         The **UserList** is the top element of the XML file.
@@ -57,16 +55,16 @@ tsecimp /d
         For each **Line** element, you can set the **Remove** attribute. If you set this attribute, the user is no longer assigned that line device. If this attribute is not set, the user gains access to that line device. No error is given if the line device is not available to the user.
 
 ## Examples
-- The following sample XML code segments illustrate correct usage of the elements defined above.  
-  - The following code removes all line devices assigned to User1.  
+- The following sample XML code segments illustrate correct usage of the elements defined above.
+  - The following code removes all line devices assigned to User1.
     ```
     <UserList>
       <User NoMerge=1>
         <DomainUser>domain1\user1</DomainUser>
       </User>
     </UserList>
-    ```  
-  - The following code removes all line devices assigned to User1 before assigning one line with address 99999. User1 will have no other lines devices assigned, regardless of whether any line devices were assigned previously.  
+    ```
+  - The following code removes all line devices assigned to User1 before assigning one line with address 99999. User1 will have no other lines devices assigned, regardless of whether any line devices were assigned previously.
     ```
     <UserList>
       <User NoMerge=1>
@@ -79,8 +77,8 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
-    ```  
-  - The following code adds one line device for User1 without deleting any previously assigned line devices.  
+    ```
+  - The following code adds one line device for User1 without deleting any previously assigned line devices.
     ```
     <UserList>
       <User>
@@ -93,8 +91,8 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
-    ```  
-  - The following code adds line address 99999 and removes line address 88888 from User1's access.  
+    ```
+  - The following code adds line address 99999 and removes line address 88888 from User1's access.
     ```
     <UserList>
       <User>
@@ -110,8 +108,8 @@ tsecimp /d
         </LineList>
       </User>
     </UserList>
-    ```  
-  - The following code adds permanent device 1000 and removes line 88888 from User1's access.  
+    ```
+  - The following code adds permanent device 1000 and removes line 88888 from User1's access.
     ```
     <UserList>
       <User>
@@ -129,7 +127,7 @@ tsecimp /d
     </UserList>
     ```
 
--   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.  
+-   The following sample output appears after the **/d** command-line option is specified to display the current TAPI configuration. For each telephony provider, the associated line devices are listed, as well as the addresses and users associated with each line device.
     ```
     NDIS Proxy TAPI Service Provider
             Line: WAN Miniport (L2TP)
@@ -151,4 +149,4 @@ tsecimp /d
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)
+[Command shell overview](/previous-versions/windows/it-pro/windows-server-2003/cc737438(v=ws.10))

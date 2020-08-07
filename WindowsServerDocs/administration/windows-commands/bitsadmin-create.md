@@ -1,8 +1,6 @@
 ---
 title: bitsadmin create
-description: Windows Commands topic for **bitsadmin create**, which creates a transfer job with the given display name.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin create command, which creates a transfer job with the given display name.
 ms.topic: article
 ms.assetid: 9a8c53af-900b-4c24-9265-5b8b08213fac
 author: coreyp-at-msft
@@ -10,13 +8,15 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
+
 # bitsadmin create
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Creates a transfer job with the given display name. Download jobs transfer data from a server to a local file. Upload jobs transfer data from a local file to a server. Upload-reply jobs transfer data from a local file to a server, and receive a reply file from the server.
+Creates a transfer job with the given display name.
 
-Use the [bitsadmin resume](bitsadmin-resume.md) switch to activate the job in the transfer queue.
+> [!NOTE]
+> The **/Upload** and **/Upload-Reply** parameter types aren't supported by BITS 1.2 and earlier.
 
 ## Syntax
 
@@ -28,17 +28,21 @@ bitsadmin /create [type] displayname
 
 | Parameter | Description |
 | ------- | -------- |
-| type | - **/Download** transfers data from a server to a local file.<p>- **/Upload** transfers data from a local file to a server.<p>- **/Upload-Reply** transfers data from a local file to a server and receives a reply file from the server.<p>This parameter defaults to **/Download** when not specified on the command line. Additionally, the **/Upload** and **/Upload-Reply** types are not available in BITS 1.2 and earlier. |
+| type | There are three types of jobs:<ul><li>**/Download.** Transfers data from a server to a local file.</li><li>**/Upload.** Transfers data from a local file to a server.</li><li>**/Upload-Reply.** Transfers data from a local file to a server and receives a reply file from the server.</li></ul>This parameter defaults to **/Download** if it's not specified. |
 | displayname | The display name assigned to the newly created job. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-Creates a download job named *myDownloadJob*.
+To create a download job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /create myDownloadJob
+bitsadmin /create myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin resume command](bitsadmin-resume.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,10 +1,8 @@
 ---
 title: Remote Desktop clients FAQ
 description: Frequently asked questions about the Remote Desktop clients
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
-ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a 
+ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
 author: lizap
 manager: dongill
 ms.author: elizapo
@@ -15,7 +13,7 @@ ms.localizationpriority: medium
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients. 
+Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients.
 
 - [Setting up](#setting-up)
 - [Connections, gateway, and networks](#connection-gateway-and-networks)
@@ -38,7 +36,7 @@ Check out the [supported configuration](remote-desktop-supported-config.md) arti
 
 I have my device set up, but I don't think the PC's ready. Help?
 
-First, have you seen the Remote Desktop Setup Wizard? It walks you through getting your PC ready for remote access. Download and run that tool on your PC to get everything set. 
+First, have you seen the Remote Desktop Setup Wizard? It walks you through getting your PC ready for remote access. Download and run that tool on your PC to get everything set.
 
 Otherwise, if you prefer to do things manually, read on.
 
@@ -68,17 +66,17 @@ For Windows 8.1, follow the instructions to allow remote connections in [Connect
 Here are some possible solutions to common problems you might encounter when trying to connect to a remote PC. If these solutions don't work, you can find more help on the [Microsoft Community website](https://go.microsoft.com/fwlink/p/?LinkId=242079).
 
 - **The remote PC can't be found.** Make sure you have the right PC name, and then check to see if you entered that name correctly. If you still can't connect, try using the IP address of the remote PC instead of the PC name.
-- **There's a problem with the network.** Make sure you have internet connection. 
+- **There's a problem with the network.** Make sure you have internet connection.
 - **The Remote Desktop port might be blocked by a firewall.** If you're using Windows Firewall, follow these steps:
 
-  1. Open Windows Firewall. 
-  2. Click **Allow an app or feature through Windows Firewall**. 
+  1. Open Windows Firewall.
+  2. Click **Allow an app or feature through Windows Firewall**.
   3. Click **Change settings**. You might be asked for an admin password or to confirm your choice.
   4. Under **Allowed apps and features**, select **Remote Desktop**, and then tap or click **OK**.
 
      If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
 - **Remote connections might not be set up on the remote PC.** To fix this, scroll back up to [How do I set up a PC for Remote Desktop?](#how-do-i-set-up-a-pc-for-remote-desktop) question in this topic.
-- **The remote PC might only allow PCs to connect that have Network Level Authentication set up.** 
+- **The remote PC might only allow PCs to connect that have Network Level Authentication set up.**
 - **The remote PC might be turned off.** You can't connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
 
 ### Why can't I find or connect to my PC?
@@ -91,7 +89,7 @@ Check the following:
    > [!IMPORTANT]
    > Using the PC name requires your network to resolve the name correctly through DNS. In many home networks, you have to use the IP address instead of the host name to connect.
 - Is the PC on a different network? Did you configure the PC to let outside connections through?  Check out [Allow access to your PC from outside your network](remote-desktop-allow-outside-access.md) for help.
-- Are you connecting to a supported Windows version? 
+- Are you connecting to a supported Windows version?
 
    > [!NOTE]
    > Windows XP Home, Windows Media Center Edition, Windows Vista Home and Windows 7 Home or Starter are not supported without 3rd party software.
@@ -186,7 +184,7 @@ This can occur in the following scenarios:
 You can fix this issue by manually setting the keyboard language for the remote session. See the steps in the next section.
 
 ### How do language settings affect keyboards in a remote session?
-There are many types of Mac keyboard layouts. Some of these are Mac specific layouts or custom layouts for which an exact match may not be available on the version of Windows you are remoting into. The remote session maps your keyboard to the best matching keyboard language available on the remote PC. 
+There are many types of Mac keyboard layouts. Some of these are Mac specific layouts or custom layouts for which an exact match may not be available on the version of Windows you are remoting into. The remote session maps your keyboard to the best matching keyboard language available on the remote PC.
 
 If your Mac keyboard layout is set to the PC version of the language keyboard (for example, French – PC) all your keys should be mapped correctly and your keyboard should just work.
 

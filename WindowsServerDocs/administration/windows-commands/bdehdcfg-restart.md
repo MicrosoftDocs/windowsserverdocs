@@ -1,8 +1,6 @@
 ---
 title: bdehdcfg restart
-description: Windows Commands topic for **bdehdcfg restart**, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bdehdcfg restart command, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
 ms.topic: article
 ms.assetid: a98b76bb-36f1-4790-b337-7dc35f606bc6
 author: coreyp-at-msft
@@ -13,25 +11,21 @@ ms.date: 10/16/2017
 
 # bdehdcfg: restart
 
-Informs the Bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. For an example of how this command can be used, see [Examples](#BKMK_Examples).
+Informs the bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. If other users are logged on to the computer and the **quiet** command is not specified, a prompt appears to confirm that the computer should be restarted.
 
 ## Syntax
 
 ```
-bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -restart
+bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge} -restart
 ```
 
 #### Parameters
 
-This command takes no additional parameters.
+This command has no additional parameters.
 
-## Remarks
+## Examples
 
-If other users are logged on to the computer and the **quiet** command is not specified, a prompt will be displayed to confirm that the computer should be restarted.
-
-## <a name="BKMK_Examples"></a>Examples
-
-The following example illustrates using the **restart** command.
+To use the **restart** command:
 
 ```
 bdehdcfg -target default -restart
@@ -41,4 +35,4 @@ bdehdcfg -target default -restart
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Bdehdcfg](bdehdcfg.md)
+- [bdehdcfg](bdehdcfg.md)

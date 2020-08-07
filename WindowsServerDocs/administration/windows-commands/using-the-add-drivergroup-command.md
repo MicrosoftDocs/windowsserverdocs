@@ -1,8 +1,6 @@
 ---
 title: add-DriverGroup
-description: Windows Commands topic for add-DriverGroup, which adds a driver group to the server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-DriverGroup, which adds a driver group to the server.
 ms.topic: article
 ms.assetid: 2a92fe8f-03f9-462a-b99e-f23275259807
 author: coreyp-at-msft
@@ -12,9 +10,9 @@ ms.date: 10/16/2017
 ---
 # add-DriverGroup
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Adds a driver group to the server. For examples of how you can use this command, see [Examples](#BKMK_examples).
+Adds a driver group to the server.
 
 ## Syntax
 ```
@@ -33,7 +31,7 @@ wdsutil /add-DriverGroup /DriverGroup:<Group Name>\n\
 | [/Policy:{Include &#124; Exclude}]  |                                                                                                                                                                                                                                                                                                                                                                                                                                                 Specifies the policy to be set on the filter. If **/Policy** is set to **Include**, client computers that match the filter are allowed to install the drivers in this group. If **/Policy** is set to **Exclude**, then client computers that match the filter are not allowed to install the drivers in this group.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |          [/Value:<Value>]           | Specifies the client value that corresponds to **/Filtertype**. You can specify multiple values for a single type. See the following list for valid values for certain filter types. The Following attributes are for **Chassistype**. For information about obtaining the values for all other filter types, see [Driver Group Filters](https://go.microsoft.com/fwlink/?LinkID=155158) (<https://go.microsoft.com/fwlink/?LinkID=155158>).<p>**Other**<p>**UnknownChassis**<p>**Desktop**<p>**LowProfileDesktop**<p>**PizzaBox**<p>**MiniTower**<p>**Tower**<p>**Portable**<p>**Laptop**<p>**Notebook**<p>**Handheld**<p>**DockingStation**<p>**AllInOne**<p>**SubNotebook**<p>**SpaceSaving**<p>**LunchBox**<p>**MainSystemChassis**<p>**ExpansionChassis**<p>**SubChassis**<p>**BusExpansionChassis**<p>**PeripheralChassis**<p>**StoraeChassis**<p>**RackmountChassis**<p>**SealedCasecomputer**<p>**MultiSystemChassis**<p>**compactPci**<p>**AdvancedTca** |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 To add a driver group, type one of the following:
 ```
 wdsutil /add-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes

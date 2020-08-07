@@ -1,8 +1,6 @@
 ---
 title: Using the add-AllDriverPackages subcommand
-description: Windows Commands topic for add-AllDriverPackages, which adds all driver packages that are stored in a folder to a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-AllDriverPackages, which adds all driver packages that are stored in a folder to a server.
 ms.topic: article
 ms.assetid: ba6641c1-d7e9-43a9-9819-702dad5484ed
 author: coreyp-at-msft
@@ -30,7 +28,7 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 |     [/Architecture:{x86      |                                                                 ia64                                                                  |
 | [/DriverGroup:\<Group Name>] |                             Specifies the name of the driver group to which the packages should be added.                             |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To add driver packages, type one of the following:
 ```
@@ -44,4 +42,4 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers\Printers /DriverGroup
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Add-WdsDriverPackage](https://technet.microsoft.com/library/dn283440.aspx)
+[Add-WdsDriverPackage](/previous-versions/windows/powershell-scripting/dn283440(v=wps.630))

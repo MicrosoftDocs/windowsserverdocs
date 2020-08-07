@@ -1,8 +1,6 @@
 ---
 title: get-DriverPackageFile
-description: Windows Commands topic for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains.
 ms.topic: article
 ms.assetid: f01a2c67-7e9c-4aad-b625-383f5a1fca25
 author: coreyp-at-msft
@@ -29,7 +27,7 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 |    [/Architecture:{x86    |                                  ia64                                  |
 |     [/Show: {Drivers      |                                 Files                                  |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To view information about a driver file, type:
 ```

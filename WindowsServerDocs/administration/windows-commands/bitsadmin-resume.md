@@ -1,8 +1,6 @@
 ---
 title: bitsadmin resume
-description: Windows Commands topic for **bitsadmin resume**, which activates a new or suspended job in the transfer queue.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin resume command, which activates a new or suspended job in the transfer queue.
 ms.topic: article
 ms.assetid: 7c7540a9-a11a-4910-923a-2a2a61cbf11d
 author: coreyp-at-msft
@@ -13,7 +11,7 @@ ms.date: 10/16/2017
 
 # bitsadmin resume
 
-Activates a new or suspended job in the transfer queue.
+Activates a new or suspended job in the transfer queue. If you resumed your job by mistake, or simply need to suspend your job, you can use the [bitsadmin suspend](bitsadmin-suspend.md) switch to suspend the job.
 
 ## Syntax
 
@@ -29,12 +27,16 @@ bitsadmin /resume <job>
 
 ## Examples
 
-The following example resumes the job named *myDownloadJob*.
+To resume the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /resume myDownloadJob
+bitsadmin /resume myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin suspend command](bitsadmin-suspend.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,8 +1,6 @@
 ---
 title: Migrating the WSUS Database from (Windows Internal Database) WID to SQL
 description: Windows Server Update Service (WSUS) topic - How to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server.
-ms.prod: windows-server
-ms.technology: manage-wsus
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 author: coreyp-at-msft
@@ -10,9 +8,10 @@ ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
 ---
->Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 # Migrating the WSUS Database from WID to SQL
+
+> Applies to: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 Use the following steps to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server.
 
@@ -62,7 +61,7 @@ From PowerShell (elevated), run:
 
 ### Copy the SUSDB files to the SQL Server
 
-1. Copy **SUSDB.mdf** and **SUSDB\_log.ldf** from the WID Data Folder (**%SystemDrive%**\**Windows\WID\Data**) to the SQL Instance Data Folder.
+1. Copy **SUSDB.mdf** and **SUSDB\_log.ldf** from the WID Data Folder (**%SystemDrive%**\\**Windows\\WID\\Data**) to the SQL Instance Data Folder.
 
 > [!TIP]
 > For example, if your SQL Instance Folder is **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL**, and the WID Data folder is **C:\Windows\WID\Data,** copy the SUSDB files from **C:\Windows\WID\Data** to **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data**
@@ -76,7 +75,7 @@ From PowerShell (elevated), run:
     ![image5](images/image5.png)
 
 > [!TIP]
-> This is also able to be done using Transact-Sql.  Please see the [SQL documentation for attaching a database](https://docs.microsoft.com/sql/relational-databases/databases/attach-a-database) for its instructions.
+> This is also able to be done using Transact-Sql.  Please see the [SQL documentation for attaching a database](/sql/relational-databases/databases/attach-a-database) for its instructions.
 >
 > Example (using paths from previous example):
 > ```sql

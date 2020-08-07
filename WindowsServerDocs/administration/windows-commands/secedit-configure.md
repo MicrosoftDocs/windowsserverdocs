@@ -1,11 +1,9 @@
 ---
 title: secedit:configure
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3
@@ -19,7 +17,7 @@ ms.date: 10/16/2017
 
 
 
-Allows you to configure the current system settings using security settings stored in a database. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Allows you to configure the current system settings using security settings stored in a database.
 
 ## Syntax
 
@@ -44,7 +42,7 @@ If the path for the log file is not provided, the default log file, (*systemroot
 
 Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
 
-## <a name=BKMK_Examples></a>Examples
+## Examples
 
 Perform the analysis for the security parameters on the security database, SecDbContoso.sdb, you created using the Security Configuration and Analysis snap-in. Direct the output to the file SecAnalysisContosoFY11 with prompting so you can verify the command ran correctly.
 ```
@@ -59,4 +57,4 @@ Secedit /configure /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /ov
 
 -   [Secedit](secedit.md)
 -   [Secedit:analyze](secedit-analyze.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

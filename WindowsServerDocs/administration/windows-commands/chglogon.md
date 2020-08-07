@@ -1,8 +1,6 @@
 ---
 title: chglogon
-description: Windows Commands topic for chglogon, which enables or disables logons from client sessions on an rd Session Host server, or displays current logon status.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the chglogon command, which enables or disables logons from client sessions on an Remote Desktop Session Host server, or displays current logon status.
 ms.topic: article
 ms.assetid: 8280c5b3-ac10-48ae-87ca-678594837f03
 ms.date: 10/16/2017
@@ -13,17 +11,17 @@ manager: dongill
 
 # chglogon
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Enables or disables logons from client sessions on an rd Session Host server, or displays current logon status.
+Enables or disables logons from client sessions on an Remote Desktop Session Host server, or displays current logon status.
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What s New in Remote Desktop Services in Windows Server 2012](https://technet.microsoft.com/library/hh831527) in the Windows Server TechNet Library.
-
-## Remarks
-This command is the same as the **change logon** command.
+> This command has been replaced by the **change log command**. For more information, including the syntax and parameter details, see [change logon command](change-logon.md).
 
 ## Additional References
-- [change logon](change-logon.md)
-- - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [change logon command](change-logon.md)
+
 - [Remote Desktop Services (Terminal Services) Command Reference](remote-desktop-services-terminal-services-command-reference.md)

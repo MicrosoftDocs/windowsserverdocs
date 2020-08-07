@@ -2,7 +2,6 @@
 title: Scripting with Storage Spaces Direct performance history
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
@@ -290,21 +289,21 @@ $Output = Invoke-Command (Get-ClusterNode).Name {
 
             $InterfaceDescription = $_.InterfaceDescription
             $LinkSpeed = $_.LinkSpeed
-    
+
             $MeasureInbound = $Inbound | Measure-Object -Property Value -Maximum
             $MaxInbound = $MeasureInbound.Maximum * 8 # Multiply to bits/sec
-    
+
             $MeasureOutbound = $Outbound | Measure-Object -Property Value -Maximum
             $MaxOutbound = $MeasureOutbound.Maximum * 8 # Multiply to bits/sec
-    
+
             $Saturated = $False
-    
+
             # Speed property is Int, e.g. 10000000000
             If (($MaxInbound -Gt (0.90 * $_.Speed)) -Or ($MaxOutbound -Gt (0.90 * $_.Speed))) {
                 $Saturated = $True
                 Write-Warning "In the last day, adapter '$InterfaceDescription' on server '$Env:ComputerName' exceeded 90% of its '$LinkSpeed' theoretical maximum bandwidth. In general, network saturation leads to higher latency and diminished reliability. Not good!"
             }
-    
+
             [PsCustomObject]@{
                 "NetAdapter"  = $InterfaceDescription
                 "LinkSpeed"   = $LinkSpeed
@@ -463,7 +462,7 @@ $Output = Invoke-Command (Get-ClusterNode).Name {
         # Return
         [String][Math]::Round($RawValue) + " " + $Labels[$i]
     }
-    
+
     Get-VM | ForEach-Object {
         $Data = $_ | Get-ClusterPerf -VMSeriesName "VM.Memory.Assigned" -TimeFrame "LastMonth"
         If ($Data) {
@@ -482,8 +481,8 @@ $Output | Sort-Object RawAvgMemoryUsage -Descending | Select-Object -First 10 | 
 
 That's it! Hopefully these samples inspire you and help you get started. With Storage Spaces Direct performance history and the powerful, scripting-friendly `Get-ClusterPerf` cmdlet, you are empowered to ask – and answer! – complex questions as you manage and monitor your Windows Server 2019 infrastructure.
 
-## See also
+## Additional References
 
-- [Getting started with Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell)
+- [Getting started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Performance history](performance-history.md)

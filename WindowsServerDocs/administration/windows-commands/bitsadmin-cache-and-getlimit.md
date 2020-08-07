@@ -1,8 +1,6 @@
 ---
 title: bitsadmin cache and getlimit
-description: Windows Commands topic for **bitsadmin cache and getlimit**, which retrieves the cache limit.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin cache and getlimit command, which retrieves the cache limit.
 ms.topic: article
 ms.assetid: 2f3e9912-928c-483b-9acb-55fa5fc975a0
 author: coreyp-at-msft
@@ -21,14 +19,16 @@ Retrieves the cache limit.
 bitsadmin /cache /getlimit
 ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the cache limit..
+To retrieve the cache limit:
 
 ```
-C:\>bitsadmin /cache /getlimit
+bitsadmin /cache /getlimit
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin cache command](bitsadmin-cache.md)

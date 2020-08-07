@@ -1,38 +1,42 @@
 ---
 title: ftp delete
-description: Windows Commands topic for ftp delete
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the ftp delete command, which deletes files on remote computers.
 ms.topic: article
-ms.assetid: 067c45f3-e4e8-4450-b8b6-836994f6adfe vhorne
+ms.assetid: 067c45f3-e4e8-4450-b8b6-836994f6adfe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: delete
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp delete
 
-deletes files on remote computers.   
-## Syntax  
-```  
-delete <remoteFile>  
-```  
-#### Parameters  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-|  Parameter   |          Description          |
-|--------------|-------------------------------|
-| <remoteFile> | Specifies the file to delete. |
+Deletes files on remote computers.
 
-## <a name=BKMK_Examples></a>Examples  
-delete the file test.txt on the remote computer.  
-```  
-delete test.txt  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+
+```
+delete <remotefile>
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<remotefile>` | Specifies the file to delete. |
+
+### Examples
+
+To delete the *test.txt* file on the remote computer, type:
+
+```
+delete test.txt
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

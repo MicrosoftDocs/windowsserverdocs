@@ -2,10 +2,8 @@
 title: tasklist
 description: Learn how to display a list of the processes running on the local or remote computer.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 8dbe30ee-1484-46be-917b-5ca3ff4fdc9c
@@ -19,7 +17,7 @@ ms.date: 10/16/2017
 
 Displays a list of currently running processes on the local computer or on a remote computer. **Tasklist** replaces the **tlist** tool.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -82,7 +80,7 @@ tasklist /s srvmain /svc /fi "MODULES eq ntdll*"
 ```
 To list the processes on the remote computer "Srvmain," using the credentials of your currently logged-on user account, type:
 ```
-tasklist /s srvmain 
+tasklist /s srvmain
 ```
 To list the processes on the remote computer "Srvmain," using the credentials of the user account Hiropln, type:
 ```

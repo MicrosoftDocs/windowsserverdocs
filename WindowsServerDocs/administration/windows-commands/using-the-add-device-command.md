@@ -1,8 +1,6 @@
 ---
 title: add-Device
-description: Windows Commands topic for add-Device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-Device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
 ms.topic: article
 ms.assetid: 1e599cc4-464a-421b-b6bb-c101af154131
 author: coreyp-at-msft
@@ -12,14 +10,13 @@ ms.date: 10/16/2017
 ---
 # add-Device
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Prestages a computer in active directory Domain Services. Prestaged computers are also called known computers. This allows you to configure properties to control the installation for the client. For example, you can configure the network boot program and the unattend file that the client should receive, as well as the server from which the client should download the network boot program.
-for examples of how you can use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 ```
-wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] [/WdsClientUnattend:<Relative path>] 
+wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] [/WdsClientUnattend:<Relative path>]
 [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/OU:<DN of OU>] [/Domain:<Domain>]
 ```
 ### Parameters
@@ -36,14 +33,14 @@ wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralSer
 |[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that this computer should use.|
 |[/OU:<DN of OU>]|The distinguished name of the organizational unit where the computer account object should be created. For example: **OU=MyOU,CN=Test, DC=Domain,DC=com**. The default location is the default computer's container.|
 |[/Domain:<Domain>]|The domain where the computer account object should be created. The default location is the local domain.|
-## <a name=BKMK_examples></a>Examples
+## Examples
 To add a computer by using a MAC address, type:
 ```
 wdsutil /add-Device /Device:computer1 /ID:00-B0-56-88-2F-DC
 ```
 To add a computer by using a GUID string, type:
 ```
-wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6} /ReferralServer:WDSServer1 /BootProgram:boot\x86\pxeboot.com 
+wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6} /ReferralServer:WDSServer1 /BootProgram:boot\x86\pxeboot.com
 /WDSClientUnattend:WDSClientUnattend\unattend.xml /User:Domain\MyUser/JoinRights:Full /BootImagepath:boot\x86\images\boot.wim /OU:OU=MyOU,CN=Test,DC=Domain,DC=com
 ```
 ## Additional References
@@ -51,4 +48,4 @@ wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6}
 [Using the get-AllDevices Command](using-the-get-alldevices-command.md)
 [Using the get-Device Command](using-the-get-device-command.md)
 [Subcommand: set-Device](subcommand-set-device.md)
-[New-WdsClient](https://technet.microsoft.com/library/dn283430.aspx)
+[New-WdsClient](/previous-versions/windows/powershell-scripting/dn283430(v=wps.630))

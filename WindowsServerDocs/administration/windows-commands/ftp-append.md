@@ -1,45 +1,49 @@
 ---
 title: ftp append
-description: Windows Commands topic for ftp append 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the ftp append command, which appends a local file to a file on the remote computer using the current file type setting.
 ms.topic: article
-ms.assetid: 7c1a133c-31dc-41a4-9eb9-258efd79804d vhorne
+ms.assetid: 7c1a133c-31dc-41a4-9eb9-258efd79804d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# ftp: append
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp append
 
-appends a local file to a file on the remote computer using the current file type setting.   
-## Syntax  
-```  
-append <LocalFile> [remoteFile]  
-```  
-#### Parameters  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-|  Parameter   |                               Description                                |
-|--------------|--------------------------------------------------------------------------|
-| <LocalFile>  |                     Specifies the local file to add.                     |
-| [remoteFile] | Specifies the file on the remote computer to which <LocalFile> is added. |
+Appends a local file to a file on the remote computer using the current file type setting.
 
-## Remarks  
-if *remoteFile* is omitted, the *LocalFile* name is used in place of the remote file name.  
-## <a name=BKMK_Examples></a>Examples  
-append file1.txt to file2.txt on the remote computer.  
-```  
-append file1.txt file2.txt  
-```  
-append the local file1.txt to a file named file1.txt on the remote computer.  
-```  
-append file1.txt  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+
+```
+append <localfile> [remotefile]
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<localfile>` | Specifies the local file to add. |
+| [remotefile] | Specifies the file on the remote computer to which <localfile> is added. If you don't use this parameter, the `<localfile>` name is used in place of the remote file name. |
+
+### Examples
+
+To append *file1.txt* to *file2.txt* on the remote computer, type:
+
+```
+append file1.txt file2.txt
+```
+
+To append the local *file1.txt* to a file named *file1.txt* on the remote computer.
+
+```
+append file1.txt
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
