@@ -57,7 +57,7 @@ As the animation shows, this option is not destructive but does require either d
 2. Use the [Cluster Migration Wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) to migrate all the resources to the new cluster. Reminder, this does not copy data, so will need to be done separately.
 3. Decommission or destroy the old cluster.
 
-In both options, the new cluster would need to have all [cluster-aware applications](https://technet.microsoft.com/aa369082(v=vs.90)) installed, drivers all up-to-date, and possibly testing to ensure all will run properly.  This is a time consuming process if data also needs to be moved.
+In both options, the new cluster would need to have all [cluster-aware applications](/previous-versions/windows/desktop/mscs/cluster-aware-applications) installed, drivers all up-to-date, and possibly testing to ensure all will run properly.  This is a time consuming process if data also needs to be moved.
 
 ## Windows Server 2019
 
@@ -133,4 +133,3 @@ If you are using the new USB witness feature, you will be unable to add the clus
 ```
 New-ClusternameAccount : Cluster name account cannot be created.  This cluster contains a file share witness with invalid permissions for a cluster of type AdministrativeAccesssPoint ActiveDirectoryAndDns. To proceed, delete the file share witness.  After this you can create the cluster name account and recreate the file share witness.  The new file share witness will be automatically created with valid permissions.
 ```
-

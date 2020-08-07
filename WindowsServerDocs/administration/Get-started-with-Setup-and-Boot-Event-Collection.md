@@ -124,9 +124,9 @@ If you aren't able to set up Windows PowerShell Remoting, you can always enable 
 
 1.  On the target computer, start Regedit.exe and find this registry key:
 
-    **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger**. Various log sessions are listed as sub-keys under this key. **Setup Platform**, **NT Kernel Logger**, and **Microsoft-Windows-Setup** are possible choices for use with Setup and Boot Event Collection, but the recommended option is **EventLog-System**. These keys are detailed in [Configuring and Starting an AutoLogger Session](https://msdn.microsoft.com/library/windows/desktop/aa363687(v=vs.85).aspx).
+    **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger**. Various log sessions are listed as sub-keys under this key. **Setup Platform**, **NT Kernel Logger**, and **Microsoft-Windows-Setup** are possible choices for use with Setup and Boot Event Collection, but the recommended option is **EventLog-System**. These keys are detailed in [Configuring and Starting an AutoLogger Session](/windows/win32/etw/configuring-and-starting-an-autologger-session).
 
-2.  In the EventLog-System key, change the value of **LogFileMode** from **0x10000180** to **0x10080180**. For more information about the details of these settings, see [Logging Mode Constants](https://msdn.microsoft.com/library/windows/desktop/aa364080(v=vs.85).aspx).
+2.  In the EventLog-System key, change the value of **LogFileMode** from **0x10000180** to **0x10080180**. For more information about the details of these settings, see [Logging Mode Constants](/windows/win32/etw/logging-mode-constants).
 
 3.  Optionally, you can also enable forwarding of bug check data to the collector computer. To do this, find the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager and create the key **Debug Print Filter** with a value of **0x1**.
 
@@ -270,7 +270,7 @@ The minimal interface offered by Nano Server can sometimes make it hard to diagn
 
 ### To configure Nano Server as a target computer
 
-1. Create your basic Nano Server image. See [Getting Started with Nano Server](https://technet.microsoft.com/library/mt126167.aspx) for details.
+1. Create your basic Nano Server image. See [Getting Started with Nano Server](../get-started/getting-started-with-nano-server.md) for details.
 
 2. Set up a collector computer as in the Configuring the collector computer section of this topic.
 
@@ -280,7 +280,7 @@ The minimal interface offered by Nano Server can sometimes make it hard to diagn
 
     2. Start a Windows PowerShell console with elevated permissions and run `Import-Module BootEventCollector`.
 
-    3. Update the Nano Server VHD registry to enable AutoLoggers. To do this, run `Enable-SbecAutoLogger -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd`. This adds a basic list of the most typical setup and boot events; you can research others  at [Controlling Event Tracing Sessions](https://msdn.microsoft.com/library/windows/desktop/aa363694(v=vs.85).aspx).
+    3. Update the Nano Server VHD registry to enable AutoLoggers. To do this, run `Enable-SbecAutoLogger -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd`. This adds a basic list of the most typical setup and boot events; you can research others  at [Controlling Event Tracing Sessions](/windows/win32/etw/controlling-event-tracing-sessions).
 
 4. Update BCD settings in the Nano Server image to enable the Events flag and set the collector computer to ensure diagnostic events are sent to the right server. Note the collector computer's IPv4 address, TCP port, and encryption key you configured in the collector's Active.XML file (described elsewhere in this topic). Use this command in a Windows PowerShell console with elevated permissions: `Enable-SbecBcd -Path C:\NanoServer\Workloads\IncludingWorkloads.vhd -CollectorIp 192.168.100.1 -CollectorPort 50000 -Key a.b.c.d`
 

@@ -82,7 +82,7 @@ If your primary workload characteristics differ significantly from the five work
 
 Due to the number and complexity of parameters, this may be a challenging task, but if you are looking for the best tradeoff between energy consumption and workload efficacy for your particular environment, it may be worth the effort.
 
- The complete set of tunable PPM parameters can be found in [Processor power management tuning](https://msdn.microsoft.com/windows/hardware/gg566941.aspx). Some of the simplest power parameters to start with could be:
+ The complete set of tunable PPM parameters can be found in [Processor power management tuning](/previous-versions/windows/hardware/design/dn613983(v=vs.85)). Some of the simplest power parameters to start with could be:
 
 -   **Processor Performance Increase Threshold and Processor Performance Increase Time** – larger values slow the perf response to increased activity
 

@@ -66,7 +66,7 @@ This issue affects Windows Server 2016 installed with the Server with Desktop Ex
 
 If you install any applications which add shortcut items inside a folder on the **Start** menu, the shortcuts won't work until you log out and log back in again.
 
-Go back to the main [Windows Server 2016](Windows-Server-2016.md) hub.
+Go back to the main [Windows Server 2016](../index.yml) hub.
 
 ## Storport Performance
 

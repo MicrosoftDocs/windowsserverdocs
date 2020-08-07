@@ -152,7 +152,7 @@ These or similar errors can occur in the following conditions.
 
 5.  Log off of the computer on which you are running Server Manager, and then log on again by using the built-in Administrator account. Repeat the preceding step, to verify that Server Manager is able to connect to and collect data from the remote server.
 
-if you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
+if you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_remote_Troubleshooting](/previous-versions/dd347642(v=technet.10)) on the Microsoft website.
 
 ### Add and manage servers in clusters
 You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters (whether the cluster nodes are physical or virtual) have some unique behaviors and management limitations in Server Manager.

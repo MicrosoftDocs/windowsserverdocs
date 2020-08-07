@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.
 
-Since version 7, Windows has been able to reduce the size of Windows Update downloads with a feature called [Express](https://technet.microsoft.com/library/cc708456(v=ws.10).aspx#Anchor_2), and although consumer devices support it by default, Windows 10 enterprise devices require Windows Server Update Services (WSUS) to take advantage of Express. If you have WSUS available, see [Express update delivery ISV support](express-update-delivery-ISV-support.md). We recommend using it to enable Express update delivery.
+Since version 7, Windows has been able to reduce the size of Windows Update downloads with a feature called [Express](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)#Anchor_2), and although consumer devices support it by default, Windows 10 enterprise devices require Windows Server Update Services (WSUS) to take advantage of Express. If you have WSUS available, see [Express update delivery ISV support](express-update-delivery-ISV-support.md). We recommend using it to enable Express update delivery.
 
 If you do not currently have WSUS installed, but you need smaller update package sizes in the interim, you can use Monthly Delta update. Delta update reduces package sizes substantially, but not as much as with WSUS Express update delivery. We recommend that you deploy WSUS Express update whenever possible for the greatest reduction in package sizes. Following is a chart comparing Delta, Cumulative and Express download sizes for Windows 10 version 1607:
 

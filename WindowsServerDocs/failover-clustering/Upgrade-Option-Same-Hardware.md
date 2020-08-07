@@ -33,11 +33,11 @@ In the example below, the name of the failover cluster is CLUSTER and the node n
 
 ## Step 1: Evict first node and upgrade to Windows Server 2016
 
-1. In Failover Cluster Manager, drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode).
+1. In Failover Cluster Manager, drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](/powershell/module/failoverclusters/suspend-clusternode).
 
     ![Drain Node](media/In-Place-Upgrade/In-Place-Upgrade-2.png)
 
-2. Evict NODE1 from the Cluster by right mouse clicking the node and selecting **More Actions** and **Evict**.  Alternatively, you can use the PowerShell command [REMOVE-CLUSTERNODE](https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusternode).
+2. Evict NODE1 from the Cluster by right mouse clicking the node and selecting **More Actions** and **Evict**.  Alternatively, you can use the PowerShell command [REMOVE-CLUSTERNODE](/powershell/module/failoverclusters/remove-clusternode).
 
     ![Drain Node](media/In-Place-Upgrade/In-Place-Upgrade-3.png)
 
@@ -77,7 +77,7 @@ Once you have verified everything is working as it should, NODE2 can be rebuilt 
 
 4. Attach the storage to NODE2. This could include reconnecting the storage cables.
 
-5. Drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](https://docs.microsoft.com/powershell/module/failoverclusters/suspend-clusternode).  Ensure all resources are online and they are functioning as should.
+5. Drain all resources from NODE1 to NODE2 by right mouse clicking on the node and selecting **Pause** and **Drain Roles**.  Alternatively, you can use the PowerShell command [SUSPEND-CLUSTERNODE](/powershell/module/failoverclusters/suspend-clusternode).  Ensure all resources are online and they are functioning as should.
 
 ## Step 3: Rebuild first node to Windows Server 2019
 
@@ -89,7 +89,7 @@ Once you have verified everything is working as it should, NODE2 can be rebuilt 
 
 4. Move all the resources to NODE1 and ensure they come online and function as necessary.
 
-5. The current cluster functional level remains at Windows 2016.  Update the functional level to Windows 2019 with the PowerShell command [UPDATE-CLUSTERFUNCTIONALLEVEL](https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel).
+5. The current cluster functional level remains at Windows 2016.  Update the functional level to Windows 2019 with the PowerShell command [UPDATE-CLUSTERFUNCTIONALLEVEL](/powershell/module/failoverclusters/update-clusterfunctionallevel).
 
 You are now running with a fully functional Windows Server 2019 Failover Cluster.
 
@@ -97,5 +97,5 @@ You are now running with a fully functional Windows Server 2019 Failover Cluster
 
 - As explained previously, disconnecting the storage may or may not be necessary.  In our documentation, we want to err on the side of caution.  Please consult with your storage vendor.
 - If your starting point is Windows Server 2008 or 2008 R2 clusters, an additional run through of steps may be needed.
-- If the cluster is running virtual machines, ensure you upgrade the virtual machine level once the cluster functional level has been done with the PowerShell command [UPDATE-VMVERSION](https://docs.microsoft.com/powershell/module/hyper-v/update-vmversion).
+- If the cluster is running virtual machines, ensure you upgrade the virtual machine level once the cluster functional level has been done with the PowerShell command [UPDATE-VMVERSION](/powershell/module/hyper-v/update-vmversion).
 - Please note that if you are running an application such as SQL Server, Exchange Server, etc, the application will not be migrated with the Copy Cluster Roles wizard.  You should consult your application vendor for proper migration steps of the application.

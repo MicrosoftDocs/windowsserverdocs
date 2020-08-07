@@ -189,7 +189,4 @@ Additional References
 
 For general information about using memory dump files, see [Overview of memory dump file options for Windows](https://support.microsoft.com/help/254649/overview-of-memory-dump-file-options-for-windows).
 
-For more information about dedicated dump files, see [How to use the DedicatedDeumpFile registry value to overcome space limitations on the system drive while capturing a system memory dump](https://blogs.msdn.microsoft.com/ntdebugging/2010/04/02/how-to-use-the-dedicateddumpfile-registry-value-to-overcome-space-limitations-on-the-system-drive-when-capturing-a-system-memory-dump/).
-
-
-
+For more information about dedicated dump files, see [How to use the DedicatedDeumpFile registry value to overcome space limitations on the system drive while capturing a system memory dump](/archive/blogs/ntdebugging/how-to-use-the-dedicateddumpfile-registry-value-to-overcome-space-limitations-on-the-system-drive-when-capturing-a-system-memory-dump).
