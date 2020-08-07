@@ -102,7 +102,7 @@ Windows Admin Center handles the configuration of CredSSP automatically after pr
 CredSSP is currently used in the following areas:
 
 - Using disaggregated SMB storage in the virtual machines tool (the example above.)
-- Using the Updates tool in either the Failover or Hyper-Converged cluster management solutions, which performs [Cluster-Aware Updating](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating)
+- Using the Updates tool in either the Failover or Hyper-Converged cluster management solutions, which performs [Cluster-Aware Updating](../../../failover-clustering/cluster-aware-updating.md)
 
 ## Are there any cloud dependencies?
 
@@ -157,4 +157,4 @@ Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point 
 
 ## I'm having an issue with Windows Admin Center, where can I get help?
 
-See our [troubleshooting guide](../use/troubleshooting.md) and our list of [known issues](../use/known-issues.md).
+See our [troubleshooting guide](../support/troubleshooting.md) and our list of [known issues](../support/known-issues.md).

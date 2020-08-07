@@ -16,7 +16,7 @@ In this topic, you deploy a Microsoft Software Defined Network (SDN) infrastruct
 
 If you want your tenant workloads to communicate outside their virtual networks, you can setup SLB NAT rules, Site-to-Site Gateway tunnels, or Layer-3 Forwarding to route between virtual and physical workloads.
 
-You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-overview).
+You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](/system-center/vmm/deploy-sdn?view=sc-vmm-2019).
 
 ## Pre-deployment
 
@@ -31,7 +31,7 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
 ### Install host networking
 
 1. Install the latest network drivers available for your NIC hardware.
-2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016](https://docs.microsoft.com/windows-server/virtualization/hyper-v/get-started/Get-started-with-Hyper-V-on-Windows).
+2. Install the Hyper-V role on all hosts (For more information, see [Get started with Hyper-V on Windows Server 2016](../../../virtualization/hyper-v/get-started/get-started-with-hyper-v-on-windows.md).
 
    ```PowerShell
    Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart
@@ -58,7 +58,7 @@ Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switc
    New-NetIPAddress -InterfaceAlias "vEthernet (<switch name>)" -IPAddress <IP> -DefaultGateway <Gateway IP> -AddressFamily IPv4 -PrefixLength <Length of Subnet Mask - for example: 24>
    ```
 
-5. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](https://technet.microsoft.com/library/hh472162.aspx) and a DNS Server.
+5. [Optional] Deploy a virtual machine to host Active Directory Domain Services ([Install Active Directory Domain Services (Level 100)](../../../identity/ad-ds/deploy/install-active-directory-domain-services--level-100-.md) and a DNS Server.
 
     a. Connect the Active Directory/DNS Server virtual machine to the Management VLAN:
 
@@ -168,7 +168,7 @@ If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the
 
 Assuming that the SDN Express script ran to completion without reporting any errors, you can perform the following step to ensure the fabric resources have been deployed correctly and are available for tenant deployment.
 
-Use [Diagnostic Tools](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack) to ensure there are no errors on any fabric resources in the network controller.
+Use [Diagnostic Tools](../troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md) to ensure there are no errors on any fabric resources in the network controller.
 
    ``Debug-NetworkControllerConfigurationState -NetworkController <FQDN of Network Controller Rest Name>``
 

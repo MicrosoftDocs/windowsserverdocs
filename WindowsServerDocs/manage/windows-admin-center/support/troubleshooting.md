@@ -63,7 +63,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * [Check the Windows version](#check-the-windows-version)
 * Did you add an inbound port rule for HTTPS?
-* [Learn more about installing Windows Admin Center in an Azure VM](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
+* [Learn more about installing Windows Admin Center in an Azure VM](../azure/azure-integration.md#use-a-windows-admin-center-gateway-deployed-in-azure)
 
 ### Check the Windows version
 
@@ -232,4 +232,3 @@ Please include any errors or warning you find in the event log, as well as the f
 * Windows [version](#check-the-windows-version) of the machine that you are **trying to manage**:
 * What browser are you using?
     * If you are using Google Chrome, what is the version? (Help > About Google Chrome)
-

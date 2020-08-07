@@ -13,7 +13,7 @@ ms.topic: article
 It is recommended that you learn about the important concepts for Active Directory Federation Services and become familiar with its feature set.
 
 > [!TIP]
-> You can find additional AD FS resource links at the [Understanding Key AD FS Concepts](https://docs.microsoft.com/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts).
+> You can find additional AD FS resource links at the [Understanding Key AD FS Concepts]().
 
 ## AD FS terminology used in this guide
 
@@ -58,5 +58,3 @@ With AD FS, organizations can bypass requests for secondary credentials by provi
 -   [Determine the Type of Claim Rule Template to Use](Determine-the-Type-of-Claim-Rule-Template-to-Use.md)
 
 -   [How URIs Are Used in AD FS](How-URIs-Are-Used-in-AD-FS.md)
-
-

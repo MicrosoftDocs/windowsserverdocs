@@ -10,9 +10,9 @@ ms.date: 03/24/2019
 
 # Monitor servers and configure alerts with Azure Monitor from Windows Admin Center
 
-[Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
+[Learn more about Azure integration with Windows Admin Center.](./index.md)
 
-[Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) is a solution that collects, analyzes, and acts on telemetry from a variety of resources, including Windows Servers and VMs, both on-premises and in the cloud. Though Azure Monitor pulls data from Azure VMs, and other Azure resources, this article focuses on how Azure Monitor works with on-premises servers and VMs, specifically with Windows Admin Center. If you're interested to learn how you can use Azure Monitor to get email alerts about your hyper-converged cluster, read about [using Azure Monitor to send emails for Health Service Faults](https://docs.microsoft.com/windows-server/storage/storage-spaces/configure-azure-monitor).
+[Azure Monitor](/azure/azure-monitor/overview) is a solution that collects, analyzes, and acts on telemetry from a variety of resources, including Windows Servers and VMs, both on-premises and in the cloud. Though Azure Monitor pulls data from Azure VMs, and other Azure resources, this article focuses on how Azure Monitor works with on-premises servers and VMs, specifically with Windows Admin Center. If you're interested to learn how you can use Azure Monitor to get email alerts about your hyper-converged cluster, read about [using Azure Monitor to send emails for Health Service Faults](../../../storage/storage-spaces/configure-azure-monitor.md).
 
 ## How does Azure Monitor work?
 ![img](../media/azure-monitor-diagram.png)
@@ -60,21 +60,21 @@ From the Overview page of a server connection, click the new button "Manage aler
 
 ### **Create email alerts**
 
-Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the Settings > Monitoring and alerts page to navigate to the Azure Portal. Admin Center automatically enables performance counters to be collected, so you can easily [create a new alert](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-log) by customizing one of many pre-defined queries, or writing your own.
+Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the Settings > Monitoring and alerts page to navigate to the Azure Portal. Admin Center automatically enables performance counters to be collected, so you can easily [create a new alert](/azure/azure-monitor/platform/alerts-log) by customizing one of many pre-defined queries, or writing your own.
 
 ### **Get a consolidated view across multiple servers **
 
-If you onboard multiple servers to a single Log Analytics workspace within Azure Monitor, you can get a consolidated view of all these servers from the [Virtual Machines Insights solution](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-overview) within Azure Monitor.  (Note that only the Performance and Maps tabs of Virtual Machines Insights for Azure Monitor will work with on-premises servers – the health tab functions only with Azure VMs.) To view this in the Azure portal, go to Azure Monitor > Virtual Machines (under Insights), and navigate to the "Performance" or "Maps" tabs.
+If you onboard multiple servers to a single Log Analytics workspace within Azure Monitor, you can get a consolidated view of all these servers from the [Virtual Machines Insights solution](/azure/azure-monitor/insights/vminsights-overview) within Azure Monitor.  (Note that only the Performance and Maps tabs of Virtual Machines Insights for Azure Monitor will work with on-premises servers – the health tab functions only with Azure VMs.) To view this in the Azure portal, go to Azure Monitor > Virtual Machines (under Insights), and navigate to the "Performance" or "Maps" tabs.
 
 ### **Visualize apps, systems, and services connected to a given server**
 
-When Admin Center onboards a server into the VM insights solution within Azure Monitor, it also lights up a capability called [Service Map](https://docs.microsoft.com/azure/azure-monitor/insights/service-map). This capability automatically discovers application components and maps the communication between services so that you can easily visualize connections between servers with great detail from the Azure portal. You can find this by going to the Azure portal > Azure Monitor > Virtual Machines (under Insights), and navigating to the "Maps" tab.
+When Admin Center onboards a server into the VM insights solution within Azure Monitor, it also lights up a capability called [Service Map](/azure/azure-monitor/insights/service-map). This capability automatically discovers application components and maps the communication between services so that you can easily visualize connections between servers with great detail from the Azure portal. You can find this by going to the Azure portal > Azure Monitor > Virtual Machines (under Insights), and navigating to the "Maps" tab.
 
 > [!NOTE]
-> The visualizations for Virtual Machines Insights for Azure Monitor are offered in 6 public regions currently.  For the latest information, check the [Azure Monitor for VMs documentation](https://docs.microsoft.com/azure/azure-monitor/insights/vminsights-onboard#log-analytics).  You must deploy the Log Analytics workspace in one of the supported regions to get the additional benefits provided by the Virtual Machines Insights solution described above.
+> The visualizations for Virtual Machines Insights for Azure Monitor are offered in 6 public regions currently.  For the latest information, check the [Azure Monitor for VMs documentation](/azure/azure-monitor/insights/vminsights-onboard#log-analytics).  You must deploy the Log Analytics workspace in one of the supported regions to get the additional benefits provided by the Virtual Machines Insights solution described above.
 
 ## Disabling Monitoring
 
 To completely disconnect your server from the Log Analytics workspace, uninstall the MMA agent. This means that this server will no longer send data to the workspace, and all the solutions installed in that workspace will no longer collect and process data from that server. However, this does not affect the workspace itself – all the resources reporting to that workspace will continue to do so. To uninstall the MMA agent within Windows Admin Center, connect to the server and then go to **Installed apps**, find the Microsoft Monitoring Agent, and then select **Remove**.
 
-If you want to turn off a specific solution within a workspace, you will need to [remove the monitoring solution from the Azure portal](https://docs.microsoft.com/azure/azure-monitor/insights/solutions#remove-a-management-solution). Removing a monitoring solution means that the insights created by that solution will no longer be generated for _any_ of the servers reporting to that workspace. For example, if I uninstall the Azure Monitor for VMs solution, I will no longer see insights about VM or server performance from any of the machines connected to my workspace.
+If you want to turn off a specific solution within a workspace, you will need to [remove the monitoring solution from the Azure portal](/azure/azure-monitor/insights/solutions#remove-a-management-solution). Removing a monitoring solution means that the insights created by that solution will no longer be generated for _any_ of the servers reporting to that workspace. For example, if I uninstall the Azure Monitor for VMs solution, I will no longer see insights about VM or server performance from any of the machines connected to my workspace.

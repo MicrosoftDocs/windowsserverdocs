@@ -49,7 +49,7 @@ Windows Admin Center has many enhancements that make your management platform [m
 
 ### **Azure integration**
 
-Windows Admin Center has many points of [integration with Azure services](../plan/azure-integration-options.md), including Azure Active Directory, Azure Backup, Azure Site Recovery, and more.
+Windows Admin Center has many points of [integration with Azure services](../azure/index.md), including Azure Active Directory, Azure Backup, Azure Site Recovery, and more.
 
 ### **Deploy hyper-converged and failover clusters**
 

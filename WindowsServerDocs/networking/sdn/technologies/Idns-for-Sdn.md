@@ -59,7 +59,7 @@ When you deploy SDN in Windows Server 2016 by using scripts, iDNS is automatical
 
 For more information, see the following topics.
 
-- [Deploy a Software Defined Network infrastructure using scripts](https://docs.microsoft.com/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)
+- [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md)
 
 
 ## Understanding iDNS Deployment Steps
@@ -102,7 +102,7 @@ Method: PUT
 ```
 
 >[!NOTE]
->This is an excerpt from the section **Configuration ConfigureIDns** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts).
+>This is an excerpt from the section **Configuration ConfigureIDns** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md).
 
 ### Step 3: Configure the iDNS Proxy Service
 The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge between the virtual networks of tenants and the physical network where the iDNS servers are located. The following registry keys must be created on every Hyper-V host.
@@ -143,7 +143,7 @@ The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge b
 - ValueType = "String"
 
 >[!NOTE]
->This is an excerpt from the section **Configuration ConfigureIDnsProxy** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts).
+>This is an excerpt from the section **Configuration ConfigureIDnsProxy** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md).
 
 ### Step 4: Restart the Network Controller Host Agent Service
 You can use the following Windows PowerShell command to restart the Network Controller Host Agent Service.
@@ -152,7 +152,7 @@ You can use the following Windows PowerShell command to restart the Network Cont
 Restart-Service nchostagent -Force
 ```
 
-For more information, see [Restart-Service](https://technet.microsoft.com/library/hh849823.aspx).
+For more information, see [Restart-Service](/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7).
 
 ### Enable firewall rules for the DNS proxy service
 You can use the following Windows PowerShell command to create a firewall rule that allows exceptions for the proxy to communicate with the VM and the iDNS server.
@@ -161,12 +161,12 @@ You can use the following Windows PowerShell command to create a firewall rule t
 Enable-NetFirewallRule -DisplayGroup 'DNS Proxy Firewall'
 ```
 
-For more information, see [Enable-NetFirewallRule](https://technet.microsoft.com/library/jj554869.aspx).
+For more information, see [Enable-NetFirewallRule](/powershell/module/netsecurity/enable-netfirewallrule?view=winserver2012r2-ps).
 
 ### Validate the iDNS Service
 To validate the iDNS Service, you must deploy a sample tenant workload.
 
-For more information, see [Create a VM and Connect to a Tenant Virtual Network or VLAN](https://technet.microsoft.com/windows-server-docs/networking/sdn/manage/create-a-tenant-vm).
+For more information, see [Create a VM and Connect to a Tenant Virtual Network or VLAN](../manage/create-a-tenant-vm.md).
 
 If you want the tenant VM to use the iDNS service, you must leave the VM network interfaces DNS Server configuration blank and allow the interfaces to use DHCP.
 
@@ -181,5 +181,4 @@ When the VM initiates a DNS query, the proxy acts as a forwarder of the query fr
 The DNS proxy also ensures that the tenant VM queries are isolated. If the iDNS server is authoritative for the query, the iDNS server responds with an authoritative response. If the iDNS server is not authoritative for the query, it performs a DNS recursion to resolve Internet names.
 
 >[!NOTE]
->This information is included in the section **Configuration AttachToVirtualNetwork** in SDNExpressTenant.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts).
-
+>This information is included in the section **Configuration AttachToVirtualNetwork** in SDNExpressTenant.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md).

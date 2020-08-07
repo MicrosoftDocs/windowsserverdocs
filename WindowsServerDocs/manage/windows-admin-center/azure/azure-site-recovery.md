@@ -11,7 +11,7 @@ ms.localizationpriority: low
 
 >Applies To: Windows Admin Center Preview, Windows Admin Center
 
-[Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
+[Learn more about Azure integration with Windows Admin Center.](./index.md)
 
 Windows Admin Center streamlines the process of replicating your virtual machines on your Hyper-V servers or clusters, making it easier to leverage the power of Azure from your own datacenter. To automate setup, you can connect the Windows Admin Center gateway to Azure.
 
@@ -19,7 +19,7 @@ Use the following information to configure replication settings and create a rec
 
 ## What is Azure Site Recovery and how does it work with Windows Admin Center?
 
-**Azure Site Recovery** is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster.  [Learn more about Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview).
+**Azure Site Recovery** is an Azure service that replicates workloads running on VMs so that your business-critical infrastructure is protected in case of a disaster.  [Learn more about Azure Site Recovery](/azure/site-recovery/site-recovery-overview).
 
 Azure Site Recovery consists of two components: **replication** and **failover**. The replication portion protects your VMs in case of disaster by replicating the target VM's VHD to an Azure storage account. You can then failover these VMs and run them in Azure in the event of a disaster. You can also perform a test failover without impacting your primary VMs to test the recovery process in Azure.
 
@@ -30,7 +30,7 @@ Completing setup for the replication component alone is sufficient to protect yo
 
 - The target servers hosting the VMs you want to protect must have Internet access to replicate to Azure.
 - [Connect your Windows Admin Center gateway to Azure](azure-integration.md).
-- [Review the capacity planning tool to evaluate the requirements for successful replication and failover](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-capacity).
+- [Review the capacity planning tool to evaluate the requirements for successful replication and failover](/azure/site-recovery/hyper-v-site-walkthrough-capacity).
 
 ## Step 1: Set up VM protection on your target host
 
@@ -62,9 +62,9 @@ This could take up to 10 minutes. You can watch the progress by going to **Notif
 1. Navigate back to the server or cluster you configured in step 2 above, and go to **Virtual Machines > Inventory**.
 2. Select the VM you want to protect.
 3. Select **More** > **Protect VM**.
-4. Review the [capacity requirements for protecting the VM](https://docs.microsoft.com/azure/site-recovery/site-recovery-capacity-planner).
+4. Review the [capacity requirements for protecting the VM](/azure/site-recovery/site-recovery-capacity-planner).
 
-    If you want to use a premium storage account, [create one in the Azure portal](https://docs.microsoft.com/azure/storage/common/storage-premium-storage). The **Create New** option provided in the Windows Admin Center pane creates a standard storage account.
+    If you want to use a premium storage account, [create one in the Azure portal](/azure/storage/common/storage-premium-storage). The **Create New** option provided in the Windows Admin Center pane creates a standard storage account.
 
 5. Enter the name of the **Storage Account** to use for this VM's replication, and select **Protect VM**. This step enables replication for the selected Virtual Machine.
 
@@ -74,13 +74,13 @@ This could take up to 10 minutes. You can watch the progress by going to **Notif
 
  Although you don't need to complete this step when starting VM replication (the VM will already be protected with just replication), we recommend you configure failover settings when you set up Azure Site Recovery. If you want to prepare for failover to an Azure VM, complete the following steps:
 
-1. [Set up an Azure network](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-prepare-azure) the failed-over VM will attach to this VNET. Note that the other steps listed in the linked page are completed automatically by Windows Admin Center;  you only need to set up the Azure network.
+1. [Set up an Azure network](/azure/site-recovery/hyper-v-site-walkthrough-prepare-azure) the failed-over VM will attach to this VNET. Note that the other steps listed in the linked page are completed automatically by Windows Admin Center;  you only need to set up the Azure network.
 
-2. [Run a test failover](https://docs.microsoft.com/azure/site-recovery/hyper-v-site-walkthrough-test-failover).
+2. [Run a test failover](/azure/site-recovery/hyper-v-site-walkthrough-test-failover).
 
 ## Step 4: Create Recovery Plans
 
-**Recovery Plan** is a feature in Azure Site Recovery that lets you failover and recover an entire application comprising a collection of VMs. While it is possible to recover protected VMs individually, by adding the VMs comprising an application to a recovery plan, you'll be able to failover the entire application through the recovery plan. You can also use the test failover feature of Recovery Plan to test the recovery of the application. Recovery Plan lets you group VMs, sequence the order in which they should be brought up during a failover, and automate additional steps to be performed as part of the recovery process. Once you've protected your VMs, you can go to the Azure Site Recovery vault in the Azure portal and create recovery plans for these VMs. [Learn more about recovery plans](https://docs.microsoft.com/azure/site-recovery/site-recovery-create-recovery-plans).
+**Recovery Plan** is a feature in Azure Site Recovery that lets you failover and recover an entire application comprising a collection of VMs. While it is possible to recover protected VMs individually, by adding the VMs comprising an application to a recovery plan, you'll be able to failover the entire application through the recovery plan. You can also use the test failover feature of Recovery Plan to test the recovery of the application. Recovery Plan lets you group VMs, sequence the order in which they should be brought up during a failover, and automate additional steps to be performed as part of the recovery process. Once you've protected your VMs, you can go to the Azure Site Recovery vault in the Azure portal and create recovery plans for these VMs. [Learn more about recovery plans](/azure/site-recovery/site-recovery-create-recovery-plans).
 
 ## Monitoring replicated VMs in Azure ##
 

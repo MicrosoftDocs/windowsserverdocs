@@ -71,7 +71,7 @@ landingContent:
           - text: Core Network Guide
             url: core-network-guide/core-network-guide-windows-server.md
           - text: DirectAccess
-            url: ../remote/remote-access/da-stub.md
+            url: ../remote/remote-access/directaccess/directaccess.md
           - text: Domain Name System (DNS)
             url: dns/dns-top.md
           - text: Dynamic Host Configuration Protocol (DHCP)
@@ -111,9 +111,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Web Application Proxy in Windows Server 2016
-            url: /windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server
+            url: ../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md
           - text: Remote Access Always On VPN Deployment Guide
-            url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy
+            url: ../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md
 
   # Card
   - title: High-Performance Networking

@@ -12,7 +12,7 @@ ms.topic: article
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))
+*Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 Disaster recovery plans in many organizations focus on recovering from regional disasters or failures that result in loss of computing services. However, when working with compromised customers, we often find that recovering from intentional compromise is absent in their disaster recovery plans. This is particularly true when the compromise results in theft of intellectual property or intentional destruction that leverages logical boundaries (such as destruction of all Active Directory domains or all servers) rather than physical boundaries (such as destruction of a datacenter). Although an organization may have incident response plans that define initial activities to take when a compromise is discovered, these plans often omit steps to recover from a compromise that affects the entire computing infrastructure.
 
@@ -27,7 +27,7 @@ To create effective defenses while still providing services to the users and bus
 Recommendations for recovering an Active Directory forest are presented in [Windows Server 2012: Planning for Active Directory Forest Recovery](https://www.microsoft.com/download/details.aspx?id=16506). You may be able to prevent your new environment from being completely compromised, but even if you can't, you will have tools to recover and regain control of your environment.
 
 ## Rethinking the Approach
-*Law Number Eight: The difficulty of defending a network is directly proportional to its complexity.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))
+*Law Number Eight: The difficulty of defending a network is directly proportional to its complexity.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 It is generally well-accepted that if an attacker has obtained SYSTEM, Administrator, root, or equivalent access to a computer, regardless of operating system, that computer can no longer be considered trustworthy, no matter how many efforts are made to "clean" the system. Active Directory is no different. If an attacker has obtained privileged access to a domain controller or a highly privileged account in Active Directory, unless you have a record of every modification the attacker makes or a known good backup, you can never restore the directory to a completely trustworthy state.
 

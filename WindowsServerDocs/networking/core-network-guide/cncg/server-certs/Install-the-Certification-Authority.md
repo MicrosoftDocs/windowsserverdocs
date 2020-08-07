@@ -14,7 +14,7 @@ author: eross-msft
 You can use this procedure to install Active Directory Certificate Services (AD CS) so that you can enroll a server certificate to servers that are running Network Policy Server (NPS), Routing and Remote Access Service (RRAS), or both.
 
 > [!IMPORTANT]
-> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the  Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide).
+> -   Before you install Active Directory Certificate Services, you must name the computer, configure the computer with a static IP address, and join the computer to the domain. For more information on how to accomplish these tasks, see the  Windows Server 2016 [Core Network Guide](../../core-network-guide.md).
 > -   To perform this procedure, the computer on which you are installing AD CS must be joined to a domain where Active Directory Domain Services (AD DS) is installed.
 
 Membership in both the **Enterprise Admins** and the root domain's **Domain Admins** group is the minimum required to complete this procedure.
@@ -31,7 +31,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 ### To install Active Directory Certificate Services
 
 > [!TIP]
-> If you want to use Windows PowerShell to install Active Directory Certificate Services, see [Install-AdcsCertificationAuthority](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) for cmdlets and optional parameters.
+> If you want to use Windows PowerShell to install Active Directory Certificate Services, see [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) for cmdlets and optional parameters.
 
 1.  Log on as a member of both the Enterprise Admins group and the root domain's Domain Admins group.
 
@@ -71,6 +71,3 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 17. On the **CA Database** page, in **Specify the database locations**, specify the folder location for the certificate database and the certificate database log. If you specify locations other than the default locations, ensure that the folders are secured with access control lists (ACLs) that prevent unauthorized users or computers from accessing the CA database and log files. Click **Next**.
 
 18. In **Confirmation**, click **Configure** to apply your selections, and then click **Close**.
-
-
-

@@ -14,10 +14,10 @@ author: eross-msft
 
 You can use this topic to learn how to configure DNS policy to load balance an application with geo-location awareness.
 
-The previous topic in this guide, [Use DNS Policy for Application Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/app-lb), uses an example of a fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named contosogiftservices.com. Contoso Gift Services load balances their online Web application between servers in North American datacenters located in Seattle, WA, Chicago, IL, and Dallas, TX.
+The previous topic in this guide, [Use DNS Policy for Application Load Balancing](./app-lb.md), uses an example of a fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named contosogiftservices.com. Contoso Gift Services load balances their online Web application between servers in North American datacenters located in Seattle, WA, Chicago, IL, and Dallas, TX.
 
 >[!NOTE]
->It is recommended that you familiarize yourself with the topic [Use DNS Policy for Application Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/app-lb) before performing the instructions in this scenario.
+>It is recommended that you familiarize yourself with the topic [Use DNS Policy for Application Load Balancing](./app-lb.md) before performing the instructions in this scenario.
 
 This topic uses the same fictional company and network infrastructure as a basis for a new example deployment that includes geo-location awareness.
 
@@ -53,7 +53,7 @@ Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet 192.0.0.0/24,182.0.0
 Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet 141.1.0.0/24,151.1.0.0/24
 ```
 
-For more information, see [Add-DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
+For more information, see [Add-DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
 
 ### <a name="bkmk_zscopes2"></a>Create the Zone Scopes
 
@@ -77,7 +77,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScop
 Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AmsterdamZoneScope"
 ```
 
-For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
 ### <a name="bkmk_records2"></a>Add Records to the Zone Scopes
 
@@ -90,7 +90,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.1" -ZoneScope "AmsterdamZoneScope"
 ```
 
-For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
 ### <a name="bkmk_policies2"></a>Create the DNS Policies
 
@@ -110,7 +110,7 @@ Add-DnsServerQueryResolutionPolicy -Name "EuropeLBPolicy" -Action ALLOW -ClientS
 Add-DnsServerQueryResolutionPolicy -Name "WorldWidePolicy" -Action ALLOW -FQDN "eq,*.contoso.com" -ZoneScope "SeattleZoneScope,1;ChicagoZoneScope,1; TexasZoneScope,1;DublinZoneScope,1;AmsterdamZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 3
 ```
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 You have now successfully created a DNS policy that provides application load balancing across Web servers that are located in five different datacenters on multiple continents.
 

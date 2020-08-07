@@ -80,7 +80,7 @@ System Insights logs an event each time a capability finishes a prediction. Thes
 | None | 132 |
 
 >[!TIP]
->Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-1807) to aggregate these events and see prediction results across a group of machines.
+>Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807) to aggregate these events and see prediction results across a group of machines.
 
 
 ## Setting a capability schedule

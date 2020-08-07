@@ -29,7 +29,7 @@ Windows Admin Center requires PowerShell features that are not included by defau
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download and install WMF 5.1](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure).
+If it is not installed, you can [download and install WMF 5.1](/powershell/scripting/wmf/setup/install-configure).
 
 ## Prepare Microsoft Hyper-V Server 2016
 
@@ -88,7 +88,7 @@ Windows Admin Center requires PowerShell features that are not included by defau
 Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
 and that the version is 5.1 or higher.
 
-If it is not installed, you can [download WMF 5.1](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure).
+If it is not installed, you can [download WMF 5.1](/powershell/scripting/wmf/setup/install-configure).
 
 ### Step 2: Enable Remote Management
 
@@ -124,4 +124,4 @@ Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin 
 Windows Admin Center uses the SMB file sharing protocol for some file copying tasks, such as when importing a certificate on a remote server. For these file copy operations to succeed, the firewall on the remote server must allow inbound connections on port 445.  You can use the Firewall tool in Windows Admin Center to verify the incoming rule for ‘File Server Remote Management (SMB-In)' is set to allow access on this port.
 
 > [!Tip]
-> Ready to install Windows Admin Center? [Download now](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center#download-now)
+> Ready to install Windows Admin Center? [Download now](../overview.md#download-now)

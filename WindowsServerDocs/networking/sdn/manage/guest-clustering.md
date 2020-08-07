@@ -20,7 +20,7 @@ The method for making the floating IP reachable is to use a Software Load Balanc
 
 ## Example: Load balancer configuration
 
-This example assumes that you've already created the VMs which will become cluster nodes, and attached them to a Virtual Network.  For guidance, refer to [Create a VM and Connect to a Tenant Virtual Network or VLAN](https://technet.microsoft.com/windows-server-docs/networking/sdn/manage/create-a-tenant-vm).
+This example assumes that you've already created the VMs which will become cluster nodes, and attached them to a Virtual Network.  For guidance, refer to [Create a VM and Connect to a Tenant Virtual Network or VLAN](./create-a-tenant-vm.md).
 
 In this example you will create a virtual IP address (192.168.2.100) to represent the floating IP address of the cluster, and configure a health probe to monitor TCP port 59999 to determine which node is the active one.
 

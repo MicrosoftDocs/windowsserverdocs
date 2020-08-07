@@ -15,7 +15,7 @@ ms.date: 08/23/2018
 Once you've created an ACL and assigned it to a virtual subnet, you might want to override that default ACL on the virtual subnet with a specific ACL for an individual network interface.  In this case, you apply specific ACLs directly to network interfaces attached to VLANs, instead of the virtual network. If you have ACLs set on the virtual subnet connected to the network interface, both ACLs are applied and prioritizes the network interface ACLs above the virtual subnet ACLs.
 
 >[!IMPORTANT]
->If you have not created an ACL and assigned it to a virtual network, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md) to  create an ACL and assign it to a virtual subnet.
+>If you have not created an ACL and assigned it to a virtual network, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](./use-acls-for-traffic-flow.md) to  create an ACL and assign it to a virtual subnet.
 
 In this topic, we show you how to add an ACL to a network interface. We also show you how to remove an ACL from a network interface using Windows PowerShell and the Network Controller REST API.
 

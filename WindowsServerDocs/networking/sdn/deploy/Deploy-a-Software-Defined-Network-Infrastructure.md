@@ -21,7 +21,7 @@ These deployments include all the technologies you need for a fully functional i
 
 
 
--   [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](https://docs.microsoft.com/system-center/vmm/deploy-sdn)
+-   [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](/system-center/vmm/deploy-sdn)
 
     Use this method if you want to incorporate System Center Virtual Machine Manger (VMM) to manage your SDN infrastructure.
 
@@ -44,7 +44,7 @@ These deployments include all the technologies you need for a fully functional i
 
 
 ## Related topics
-- [Software Defined Networking (SDN)](../Software-Defined-Networking--SDN-.md)
+- [Software Defined Networking (SDN)](../software-defined-networking.md)
 - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
 - [Plan SDN](../plan/plan-a-software-defined-network-infrastructure.md)
 - [Manage SDN](../manage/manage-sdn.md)

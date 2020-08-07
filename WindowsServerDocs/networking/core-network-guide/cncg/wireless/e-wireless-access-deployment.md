@@ -483,7 +483,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
     >[!TIP]
     >If you receive an error message indicating that a certificate cannot be found for use with the authentication method, and you have configured Active Directory Certificate Services to automatically issue certificates to RAS and IAS servers on your network, first ensure that you have followed the steps to Register NPS in Active Directory Domain Services, then use the following steps to update Group Policy: Click **Start**, click **Windows System**, click **Run**, and in **Open**, type **gpupdate**, and then press ENTER. When the command returns results indicating that both user and computer Group Policy have updated successfully, select **Microsoft: Protected EAP \(PEAP\)** again, and then click **Configure**.
     >
-    >If after refreshing Group Policy you continue to receive the error message indicating that a certificate cannot be found for use with the authentication method, the certificate is not being displayed because it does not meet the minimum server certificate requirements as documented in the Core Network Companion Guide: [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments). If this happens, you must discontinue NPS configuration, revoke the certificate issued to your NPS\(s\), and then follow the instructions to configure a new certificate by using the server certificates deployment guide.
+    >If after refreshing Group Policy you continue to receive the error message indicating that a certificate cannot be found for use with the authentication method, the certificate is not being displayed because it does not meet the minimum server certificate requirements as documented in the Core Network Companion Guide: [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md). If this happens, you must discontinue NPS configuration, revoke the certificate issued to your NPS\(s\), and then follow the instructions to configure a new certificate by using the server certificates deployment guide.
 
 7.  On the **Edit Protected EAP Properties** wizard page, in **Certificate issued**, ensure that the correct NPS certificate is selected, and then do the following:
 
@@ -548,7 +548,7 @@ After you join the computer to the domain, use this procedure to configure a Sin
 3. Join the new wireless computer to the domain \(for example, through an Ethernet connection that does not require IEEE 802.1X authentication\) and add the bootstrap wireless profile to the computer by using the **netsh wlan add profile** command.
 
     >[!NOTE]
-    >For more information, see Netsh Commands for Wireless Local Area Network \(WLAN\) at [http:\/\/technet.microsoft.com\/library\/dd744890.aspx](https://technet.microsoft.com/library/dd744890).
+    >For more information, see Netsh Commands for Wireless Local Area Network \(WLAN\) at [http:\/\/technet.microsoft.com\/library\/dd744890.aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd744890(v=ws.10)).
 
 4. Distribute the new wireless computer to the user with the procedure to “Log on to the domain using computers running Windows 10.”
 
@@ -580,7 +580,7 @@ With this method, you complete the steps in the General steps section, then you 
     >To join a computer to a domain, the user must be logged on to the computer with the local Administrator account. Alternatively, the user must provide the credentials for the local Administrator account during the process of joining the computer to the domain. In addition, the user must have a user account in the domain to which the user wants to join the computer. During the process of joining the computer to the domain, the user will be prompted for domain account credentials \(user name and password\).
 
 2. Provide your domain users with the instructions for configuring a bootstrap wireless profile, as documented in the following procedure **To configure a bootstrap wireless profile**.
-3. Additionally, provide users with both the local computer credentials \(user name and password\), and domain credentials \(domain user account name and password\) in the form *DomainName\\UserName*, as well as the procedures to “Join the computer to the domain,” and to “Log on to the domain,” as documented in the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide).
+3. Additionally, provide users with both the local computer credentials \(user name and password\), and domain credentials \(domain user account name and password\) in the form *DomainName\\UserName*, as well as the procedures to “Join the computer to the domain,” and to “Log on to the domain,” as documented in the Windows Server 2016 [Core Network Guide](../../core-network-guide.md).
 
 #### To configure a bootstrap wireless profile
 

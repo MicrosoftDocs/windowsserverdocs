@@ -26,7 +26,7 @@ By default, Windows Admin Center is connected to a NuGet feed maintained by the 
 
 ### Publishing to a different NuGet feed
 
-You may also create your own NuGet feed to publish your extensions to using one of the many [different options for setting up a private source or using a NuGet hosting service](https://docs.microsoft.com/nuget/hosting-packages/overview). The NuGet feed must support the NuGet v2 API. Since Windows Admin Center does not currently support feed authentication, the feed needs to be configured to allow read access to anyone.
+You may also create your own NuGet feed to publish your extensions to using one of the many [different options for setting up a private source or using a NuGet hosting service](/nuget/hosting-packages/overview). The NuGet feed must support the NuGet v2 API. Since Windows Admin Center does not currently support feed authentication, the feed needs to be configured to allow read access to anyone.
 
 ### Publishing to a file share
 
@@ -66,7 +66,7 @@ Using your Build infrastructure (this could be as simple as opening Visual Studi
 
 To create the NuGet package, you need to first create a .nuspec file. A .nuspec file is an XML manifest that contains NuGet package metadata. This manifest is used both to build the package and to provide information to consumers.  Place this file at the root of the "NuGet Package" folder.
 
-Here's an example .nuspec file and the list of required or recommended properties. For the full schema, see the [.nuspec reference](https://docs.microsoft.com/nuget/reference/nuspec). Save the .nuspec file to your project's root folder with a file name of your choice.
+Here's an example .nuspec file and the list of required or recommended properties. For the full schema, see the [.nuspec reference](/nuget/reference/nuspec). Save the .nuspec file to your project's root folder with a file name of your choice.
 
 > [!IMPORTANT]
 > The ```<id>``` value in the .nuspec file needs to match the ```"name"``` value in your project's ```manifest.json``` file, or else your published extension won't load successfully in Windows Admin Center.
@@ -100,7 +100,7 @@ Here's an example .nuspec file and the list of required or recommended propertie
 | Property Name | Required / Recommended | Description |
 | ---- | ---- | ---- |
 | packageType | Required | Use "WindowsAdminCenterExtension" which is the NuGet package type defined for Windows Admin Center extensions. |
-| id | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
+| id | Required | Unique Package identifier within the feed. This value needs to match the "name" value in your project's manifest.json file.  See [Choosing a unique package identifier](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) for guidance. |
 | title | Required for publishing to the Windows Admin Center feed | Friendly name for the package that is displayed in Windows Admin Center Extension Manager. |
 | version | Required | Extension version. Using [Semantic Versioning (SemVer convention)](http://semver.org/spec/v1.0.0.html) is recommended but not required. |
 | authors | Required | If publishing on behalf of your company, use your company name. |
@@ -114,7 +114,7 @@ Here's an example .nuspec file and the list of required or recommended propertie
 
 Using the .nuspec file you created above, you will now create the NuGet package .nupkg file which you can upload and publish to the NuGet feed.
 
-1. Download the nuget.exe CLI tool from the [NuGet client tools website](https://docs.microsoft.com/nuget/install-nuget-client-tools).
+1. Download the nuget.exe CLI tool from the [NuGet client tools website](/nuget/install-nuget-client-tools).
 2. Run "nuget.exe pack [.nuspec file name]" to create the .nupkg file.
 
 ### 4. Signing your extension NuGet package

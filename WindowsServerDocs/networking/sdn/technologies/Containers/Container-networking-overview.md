@@ -27,6 +27,6 @@ For enforcing isolation between containers on the same host, you create a networ
 
 ## Related topics
 
-- [Windows Container Networking](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture): Learn how to create and manage container networks for non-overlay/SDN deployments.
+- [Windows Container Networking](/virtualization/windowscontainers/container-networking/architecture): Learn how to create and manage container networks for non-overlay/SDN deployments.
 
 - [Connect container endpoints to a tenant virtual network](../../manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md): Learn how to create and manage container networks for overlay virtual networks with SDN.

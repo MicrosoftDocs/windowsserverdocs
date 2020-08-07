@@ -36,7 +36,7 @@ To operating Windows Admin Center:
 - **In other scenarios:** Connect to the Windows Admin Center gateway on a different machine from a client browser via its URL, e.g., `https://servername.contoso.com`
 
 > [!WARNING]
-> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack).
+> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
 
 ## Installation: Supported web browsers
 

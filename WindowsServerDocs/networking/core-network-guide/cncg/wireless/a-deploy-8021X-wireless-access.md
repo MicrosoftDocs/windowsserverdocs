@@ -48,7 +48,7 @@ This guide is designed for network and system administrators who have followed t
 
 The Core Network Guide is available at the following locations:
 
-- The Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide) is available in the Windows Server 2016 Technical Library.
+- The Windows Server 2016 [Core Network Guide](../../core-network-guide.md) is available in the Windows Server 2016 Technical Library.
 
 - The [Core Network Guide](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683) is also available in Word format at TechNet Gallery, at [https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683](https://gallery.technet.microsoft.com/Core-Network-Guide-for-9da2e683).
 
@@ -60,7 +60,7 @@ Network and system administrators deploying authenticated wireless must follow t
 
 This guide is available at the following location.
 
-- The Windows Server 2016 Core Network Companion Guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments?f=255&MSPPError=-2147217396) in HTML format in the Technical Library.
+- The Windows Server 2016 Core Network Companion Guide [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md?f=255&MSPPError=-2147217396) in HTML format in the Technical Library.
 
 ##### Public CA
 You can purchase server certificates from a public CA, such as VeriSign, that client computers already trust.
