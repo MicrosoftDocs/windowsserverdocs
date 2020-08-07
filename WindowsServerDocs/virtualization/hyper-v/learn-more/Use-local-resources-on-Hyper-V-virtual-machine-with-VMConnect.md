@@ -16,7 +16,7 @@ Virtual Machine Connection (VMConnect) lets you use a computer's local resources
 
 Enhanced session mode and Type clipboard text are available only for virtual machines that run recent Windows operating systems. \(See [Requirements for using local resources](#requirements-for-using-local-resources), below.\)
 
-For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/).
+For virtual machines that run Ubuntu, see [Changing Ubuntu Screen Resolution in a Hyper-V VM](/archive/blogs/virtual_pc_guy/changing-ubuntu-screen-resolution-in-a-hyper-v-vm).
 
 ## Turn on enhanced session mode on a Hyper-V host
 If your Hyper-V host runs Windows 10 or Windows 8.1, enhanced session mode is on by default, so you can skip this and move to the next section. But if your host runs Windows Server 2016 or Windows Server 2012 R2, do this first.
@@ -132,7 +132,5 @@ You might want use a computer's local resources to:
 -   Test and troubleshoot developer applications that require USB and sound redirection without using RDP.
 
 ## See Also
-[Connect to a Virtual Machine](https://technet.microsoft.com/library/cc742407.aspx)
+[Connect to a Virtual Machine](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742407(v=ws.11))
 [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
-
-

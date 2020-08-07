@@ -80,6 +80,4 @@ Next, check the Hyper-V-Hypervisor event log. If there are problems, you'll also
     2. Look for events that report problems. For example, event ID 41 indicates a problem with the BIOS configuration: "Hyper-V launch failed; Either VMX not present or not enabled in BIOS."
 
 ### See Also
-For details about using Hyper-V on Windows 10, including how to check that your computer can run Hyper-V, see [Windows 10 Hyper-V System Requirements](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_compatibility).
-
-
+For details about using Hyper-V on Windows 10, including how to check that your computer can run Hyper-V, see [Windows 10 Hyper-V System Requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).

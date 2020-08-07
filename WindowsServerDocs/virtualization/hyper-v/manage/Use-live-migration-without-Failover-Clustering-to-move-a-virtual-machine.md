@@ -68,7 +68,7 @@ Failed to establish a connection with host *computer name*: No credentials are a
 3. Check **Migrate to a computer with a different processor version**.
 4. Click **OK**.
 
-   To use Windows PowerShell, use the [Set-VMProcessor](https://technet.microsoft.com/library/hh848533.aspx) cmdlet:
+   To use Windows PowerShell, use the [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor?view=win10-ps) cmdlet:
 
    ```
    PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true

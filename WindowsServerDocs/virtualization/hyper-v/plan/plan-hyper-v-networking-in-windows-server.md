@@ -46,7 +46,7 @@ Recent Windows Server releases introduced improvements that give you more option
 
 Some features rely on specific networking configurations or do better under certain configurations. Consider these when planning or updating your network infrastructure.
 
-**Failover clustering** - It's a best practice to isolate cluster traffic and use Hyper-V Quality of Service (QoS) on the virtual switch. For details, see [Network Recommendations for a Hyper-V Cluster](https://technet.microsoft.com/library/dn550728.aspx)
+**Failover clustering** - It's a best practice to isolate cluster traffic and use Hyper-V Quality of Service (QoS) on the virtual switch. For details, see [Network Recommendations for a Hyper-V Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728(v=ws.11))
 
 **Live migration** - Use performance options to reduce network and CPU usage and the time it takes to complete a live migration. For instructions, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 

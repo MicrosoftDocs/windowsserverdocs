@@ -17,7 +17,7 @@ This article gives you details about the maximum configuration for components yo
 Maximums for memory and logical processors are the biggest increases from Windows Server 2012, in response to requests to support newer scenarios such as machine learning and data analytics. The Windows Server blog recently published the performance results of  a virtual machine with 5.5 terabytes of memory and 128 virtual processors running 4 TB in-memory database. Performance was greater than 95% of the performance of a physical server. For details, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). Other numbers are similar to those that apply to Windows Server 2012. \(Maximums for Windows Server 2012 R2 were the same as Windows Server 2012.\)
 
 > [!NOTE]
-> For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](https://technet.microsoft.com/system-center-docs/vmm/vmm). VMM is a Microsoft product for managing a virtualized data center that is sold separately.
+> For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](/system-center/vmm/overview?view=sc-vmm-2019). VMM is a Microsoft product for managing a virtualized data center that is sold separately.
 
 ## Maximums for virtual machines
 These maximums apply to each virtual machine. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)
@@ -63,5 +63,3 @@ To learn about updates to Failover Clustering, including new features for virtua
 |-------------|-----------|---------|
 |Nodes per cluster|64|Consider the number of nodes you want to reserve for failover, as well as maintenance tasks such as applying updates. We recommend that you plan for enough resources to allow for 1 node to be reserved for failover, which means it remains idle until another node is failed over to it. (This is sometimes referred to as a passive node.) You can increase this number if you want to reserve additional nodes. There is no recommended ratio or multiplier of reserved nodes to active nodes; the only requirement is that the total number of nodes in a cluster can't exceed the maximum of 64.|
 |Running virtual machines per cluster and per node|8,000 per cluster|Several factors can affect the real number of virtual machines you can run at the same time on one node, such as:<br />- Amount of physical memory being used by each virtual machine.<br />- Networking and storage bandwidth.<br />- Number of disk spindles, which affects disk I/O performance.|
-
-

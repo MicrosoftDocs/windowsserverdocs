@@ -37,7 +37,7 @@ Open a session as Administrator and run a command like the following, after repl
 Export-VM -Name \<vm name\> -Path \<path\>
 ```
 
-For details, see [Export-VM](https://docs.microsoft.com/powershell/module/hyper-v/export-vm).
+For details, see [Export-VM](/powershell/module/hyper-v/export-vm).
 
 ## Import a Virtual Machine
 
@@ -89,7 +89,7 @@ To complete a copy import and move the virtual machine files to the default Hype
 Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' -Copy -GenerateNewId
 ```
 
-For details, see [Import-VM](https://docs.microsoft.com/powershell/module/hyper-v/import-vm).
+For details, see [Import-VM](/powershell/module/hyper-v/import-vm).
 
 ### Import types
 
@@ -100,4 +100,3 @@ Hyper-V offers three import types:
 - **Restore the virtual machine** – Restore the virtual machine to a location you choose, or use the default to Hyper-V. This import type creates a copy of the exported files and moves them to the selected location. When imported, the virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already running in Hyper-V, it needs to be deleted before the import can be completed. When the import has completed, the exported files remain intact and can be removed or imported again.
 
 - **Copy the virtual machine** – This is similar to the Restore type in that you select a location for the files. The difference is that the imported virtual machine has a new unique ID, which means you can import the virtual machine to the same host multiple times.
-
