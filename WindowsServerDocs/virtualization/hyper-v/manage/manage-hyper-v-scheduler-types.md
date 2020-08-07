@@ -5,8 +5,6 @@ author: allenma
 ms.author: allenma
 ms.date: 08/14/2018
 ms.topic: article
-ms.prod: windows-server-hyper-v
-ms.technology: virtualization
 ms.localizationpriority: low
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 ---

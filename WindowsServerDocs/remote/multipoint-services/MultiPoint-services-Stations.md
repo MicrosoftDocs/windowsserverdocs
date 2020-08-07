@@ -2,8 +2,6 @@
 title: MultiPoint Stations
 description: Learn about stations in MultiPoint Services, including the different options for users
 ms.date: 07/22/2016
-ms.prod: windows-server
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
 author: evaseydl

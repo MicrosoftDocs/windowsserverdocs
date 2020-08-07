@@ -1,9 +1,7 @@
 ---
 title: Network Controller Security
-description: You can use this topic to learn how to configure security for all communication between Network Controller and other software and devices. 
+description: You can use this topic to learn how to configure security for all communication between Network Controller and other software and devices.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
 ms.author: anpaul
@@ -13,7 +11,7 @@ ms.date: 08/30/2018
 
 # Secure the Network Controller
 
-In this topic, you learn how to configure security for all communication between [Network Controller](../technologies/network-controller/network-controller.md) and other software and devices. 
+In this topic, you learn how to configure security for all communication between [Network Controller](../technologies/network-controller/network-controller.md) and other software and devices.
 
 The communication paths that you can secure include Northbound communication on the management plane, cluster communication between Network Controller virtual machines \(VMs\) in a cluster, and Southbound communication on the data plane.
 
@@ -43,7 +41,7 @@ Network Controller supports the following three modes of authentication between 
 
 3. **None**. Use None for testing purposes in a test environment and, therefore, not recommended for use in a production environment. When you choose this mode, there is no authentication performed between nodes and management clients.
 
-You can configure the Authentication mode for Northbound communication by using the Windows PowerShell command **[Install-NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontroller)** with the _ClientAuthentication_ parameter. 
+You can configure the Authentication mode for Northbound communication by using the Windows PowerShell command **[Install-NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontroller)** with the _ClientAuthentication_ parameter.
 
 
 ### Authorization
@@ -56,18 +54,18 @@ Use the following authorization methods for each of the authentication modes sup
 
 2.  **X509**. When you are using the X509 authentication method, Network Controller only accepts requests from management clients whose certificate thumbprints are known to Network Controller. You can configure these thumbprints by using the _ClientCertificateThumbprint_ parameter of the **[Install-NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontroller)** Windows PowerShell command. You can add other client thumbprints at any time by using the **[Set-NetworkController](https://docs.microsoft.com/powershell/module/networkcontroller/Set-NetworkController)** command.
 
-3.  **None**. When you choose this mode, there is no authentication performed between nodes and management clients. Use None for testing purposes in a test environment and, therefore, not recommended for use in a production environment. 
+3.  **None**. When you choose this mode, there is no authentication performed between nodes and management clients. Use None for testing purposes in a test environment and, therefore, not recommended for use in a production environment.
 
 
 ### Encryption
 
 Northbound communication uses Secure Sockets Layer \(SSL\) to create an encrypted channel between management clients and Network Controller nodes. SSL encryption for Northbound communication includes the following requirements:
 
-- All Network Controller nodes must have an identical certificate that includes the Server Authentication and Client Authentication purposes in Enhanced Key Usage \(EKU\) extensions. 
+- All Network Controller nodes must have an identical certificate that includes the Server Authentication and Client Authentication purposes in Enhanced Key Usage \(EKU\) extensions.
 
 - The URI used by management clients to communicate with Network Controller must be the certificate subject name. The certificate subject name must contain either the Fully Qualified Domain Name (FQDN) or the IP address of the Network Controller REST Endpoint.
 
-- If Network Controller nodes are on different subnets, the subject name of their certificates must be the same as the value used for the _RestName_ parameter in the **Install-NetworkController** Windows PowerShell command. 
+- If Network Controller nodes are on different subnets, the subject name of their certificates must be the same as the value used for the _RestName_ parameter in the **Install-NetworkController** Windows PowerShell command.
 
 - All of the management clients must trust the SSL certificate.
 
@@ -85,7 +83,7 @@ After the certificate is enrolled, you can configure Network Controller to use t
 
 Network Controller supports authentication, authorization, and encryption for communication between Network Controller nodes. The communication is over [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) \(WCF\) and TCP.
 
-You can configure this mode with the **ClusterAuthentication** parameter of the **Install-NetworkControllerCluster** Windows PowerShell command. 
+You can configure this mode with the **ClusterAuthentication** parameter of the **Install-NetworkControllerCluster** Windows PowerShell command.
 
 For more information, see [Install-NetworkControllerCluster](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontrollercluster).
 

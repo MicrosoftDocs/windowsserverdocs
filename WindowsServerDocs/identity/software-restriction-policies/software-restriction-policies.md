@@ -1,8 +1,6 @@
 ---
 title: Software Restriction Policies
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-software-restriction-policies
 ms.topic: article
 ms.assetid: 5c0befad-07c3-4262-b418-372d01850305
 author: coreyp-at-msft

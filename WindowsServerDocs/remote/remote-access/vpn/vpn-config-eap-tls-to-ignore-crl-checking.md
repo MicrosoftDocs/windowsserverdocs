@@ -1,13 +1,11 @@
 ---
 title: Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 description: 'An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate) of the client and verifies that certificates have been revoked.'
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/13/2018
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 
@@ -26,9 +24,9 @@ In this step, you can add **IgnoreNoRevocationCheck** and set it to allow authen
 >[!NOTE]
 >If a Windows Routing and Remote Access Server (RRAS) uses NPS to proxy RADIUS calls to a second NPS, then you must set **IgnoreNoRevocationCheck=1** on both servers.
 
-An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. By default, IgnoreNoRevocationCheck is set to 0 (disabled). Add IgnoreNoRevocationCheck and set it to 1 to allow authentication of clients when the certificate does not include CRL distribution points. 
+An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Azure AD do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. By default, IgnoreNoRevocationCheck is set to 0 (disabled). Add IgnoreNoRevocationCheck and set it to 1 to allow authentication of clients when the certificate does not include CRL distribution points.
 
-Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well. 
+Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well.
 
 **Procedure**
 

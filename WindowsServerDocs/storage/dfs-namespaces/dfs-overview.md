@@ -1,9 +1,7 @@
 ---
 title: DFS Namespaces overview
-ms.prod: windows-server
 ms.author: jgerend
 manager: daveba
-ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019

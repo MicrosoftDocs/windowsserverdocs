@@ -2,8 +2,6 @@
 title: Configure Notification Limits
 description: This article describes how to add time limits to various notification types
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

@@ -1,12 +1,10 @@
 ---
 title: Shielded VMs - Preparing a VM Shielding Helper VHD
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 

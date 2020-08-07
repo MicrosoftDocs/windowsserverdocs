@@ -1,7 +1,6 @@
 ---
 title: Enable Intel Performance Monitoring Hardware in a Hyper-V Virtual Machine
 description: How to enable Intel's Performance Monitoring Hardware in a Hyper-V Machine. Also touches on how enabling performance monitoring hardware effects live migration.
-ms.prod: windows-server
 ms.reviewer: ifufondu
 author: ifeomaufondu-ms
 ms.author: ifufondu
@@ -42,7 +41,7 @@ Set-VMProcessor MyVMName -Perfmon @("pmu")
 ```
 
 ``` Powershell
-# Enable IPT 
+# Enable IPT
 Set-VMProcessor MyVMName -Perfmon @("ipt")
 ```
 
@@ -51,8 +50,8 @@ Set-VMProcessor MyVMName -Perfmon @("ipt")
 Set-VMProcessor MyVMName -Perfmon @()
 ```
 > [!NOTE]
-> When enabling the performance monitoring components, if `"pebs"` is specified, then `"pmu"` must also be specified. 
-> PEBS is only supported on hardware that has a PMU Version >= 4. 
+> When enabling the performance monitoring components, if `"pebs"` is specified, then `"pmu"` must also be specified.
+> PEBS is only supported on hardware that has a PMU Version >= 4.
 > Enabling a component that is not supported by the host's physical processors will result in a virtual machine start failure.
 
 ## Effects of enabling performance monitoring hardware on save/restore, export, and live migration

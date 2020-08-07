@@ -1,8 +1,6 @@
 ---
 title: What's new in Windows Server 2019
 description: An overview of new features in Windows Server 2019, including Desktop Experience, Storage Migration Service, System Insights, Azure Network Adapter, improvements to Storage Spaces Direct, and other changes.
-ms.prod: windows-server
-ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -40,9 +38,9 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 
 ### Server Core app compatibility feature on demand
 
-The [Server Core App Compatibility feature on demand (FOD)](./install-fod-19.md) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.  
+The [Server Core App Compatibility feature on demand (FOD)](./install-fod-19.md) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.
 
-This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM. 
+This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM.
 
 ## Security
 
@@ -90,7 +88,7 @@ executables that can bypass CI. 
 
 ### Security with Software Defined Networking (SDN)
 
-[Security with SDN](../networking/sdn/security/sdn-security-top.md) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud. 
+[Security with SDN](../networking/sdn/security/sdn-security-top.md) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud.
 
 These security enhancements are integrated into the comprehensive SDN platform introduced in Windows Server 2016.
 
@@ -106,7 +104,7 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 - **Troubleshooting improvements**
 
-    We've also made it easier to [troubleshoot your shielded virtual machines](../security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access. 
+    We've also made it easier to [troubleshoot your shielded virtual machines](../security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access.
 
     These features do not need to be configured, and they become available automatically when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
 
@@ -183,7 +181,7 @@ Windows Server 2019 continues the improvements to compute, networking and storag
 - Deployed workloads on Kubernetes are able to use network security to protect both Linux and Windows services using embedded tooling.
 
 ### Container improvements
-    
+
 - **Improved integrated identity**
 
     We've made integrated Windows authentication in containers easier and more reliable, addressing several limitations from prior versions of Windows Server.
@@ -202,7 +200,7 @@ Windows Server 2019 continues the improvements to compute, networking and storag
 
 ### Encrypted Networks
 
-[Encrypted Networks](../networking/sdn/sdn-whats-new.md) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as **Encryption Enabled**. 
+[Encrypted Networks](../networking/sdn/sdn-whats-new.md) - Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as **Encryption Enabled**.
 It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
 ### Network performance improvements for virtual workloads
@@ -215,7 +213,7 @@ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet 
 
 ### Low Extra Delay Background Transport
 
-Low Extra Delay Background Transport (LEDBAT) is a latency optimized, network congestion control provider designed to automatically yield bandwidth to users and applications, while consuming the entire bandwidth available when the network is not in use.   
+Low Extra Delay Background Transport (LEDBAT) is a latency optimized, network congestion control provider designed to automatically yield bandwidth to users and applications, while consuming the entire bandwidth available when the network is not in use.
 This technology is intended for use in deploying large, critical updates across an IT environment without impacting customer facing services and associated bandwidth.
 
 ### Windows Time Service
@@ -230,7 +228,7 @@ The [Windows Time Service](../networking/windows-time-service/insider-preview.md
 
 ### New Deployment UI and Windows Admin Center extension for SDN
 
-Now, with Windows Server 2019, it's easy to deploy and manage through a new deployment UI and Windows Admin Center extension that enable anyone to harness the power of SDN. 
+Now, with Windows Server 2019, it's easy to deploy and manage through a new deployment UI and Windows Admin Center extension that enable anyone to harness the power of SDN.
 
 ### Persistent Memory support for Hyper-V VMs
 

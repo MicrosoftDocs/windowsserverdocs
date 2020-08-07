@@ -1,8 +1,6 @@
 ---
 title: Passwords Overview
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-kerberos
 ms.topic: article
 ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
 author: coreyp-at-msft

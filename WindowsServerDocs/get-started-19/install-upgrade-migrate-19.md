@@ -1,8 +1,6 @@
 ---
 title: Install, upgrade, or migrate to Windows Server 2019
 description: How to clean install, in-place upgrade or migrate to, Windows Server
-ms.prod: windows-server
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4e99cca754
 author: jasongerend
@@ -25,7 +23,7 @@ The simplest way to install Windows Server is to perform a clean installation, w
 
 ## In-place upgrade
 
-If you want to keep the same hardware and all the server roles you have set up without flattening the server, you'll want to do an  **In-place Upgrade**, by which you go from an older operating system to a newer one, keeping your settings, server roles, and data intact. For example, if your server is running Windows Server 2012 R2, you can upgrade it to Windows Server 2016 or Windows Server 2019. However, not every older operating system has a pathway to every newer one. 
+If you want to keep the same hardware and all the server roles you have set up without flattening the server, you'll want to do an  **In-place Upgrade**, by which you go from an older operating system to a newer one, keeping your settings, server roles, and data intact. For example, if your server is running Windows Server 2012 R2, you can upgrade it to Windows Server 2016 or Windows Server 2019. However, not every older operating system has a pathway to every newer one.
 
 For step-by-step guidance on upgrading, review the [Windows Server upgrade content](../upgrade/upgrade-overview.md).
 
@@ -35,7 +33,7 @@ Cluster OS Rolling Upgrade enables an administrator to upgrade the operating sys
 
 ## Migration
 
-Windows Server migration is when you move one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer. 
+Windows Server migration is when you move one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer.
 
 ## License conversion
 

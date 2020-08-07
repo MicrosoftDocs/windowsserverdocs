@@ -1,10 +1,8 @@
 ---
 title: What's new in Remote Desktop Services
 description: Provides description of new features RDS in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: chrimo
-ms.date: 10/11/2016  
+ms.date: 10/11/2016
 ms.topic: article
 ms.assetid: 04d52dff-e61b-4633-9908-be8600abc2ba
 author: ChristianMontoya
@@ -14,10 +12,10 @@ manager: scottman
 
 Remote Desktop Services (RDS) built on Windows Server 2016 is a virtualization platform enabling a wide range of customer scenarios. Improvements in the overall RDS solution incorporates the work done by both the Remote Desktop team and other technology partners at Microsoft. The following scenarios and technologies are new or improved in Windows Server 2016.
 
-Also be sure to check out our session from Ignite 2016: [Harness RDS improvements in Windows Server 2016](https://channel9.msdn.com/Events/Ignite/2016/BRK3098). In this video, the product team reviews all of the new and improved features in Remote Desktop Services, including vGPU support. 
+Also be sure to check out our session from Ignite 2016: [Harness RDS improvements in Windows Server 2016](https://channel9.msdn.com/Events/Ignite/2016/BRK3098). In this video, the product team reviews all of the new and improved features in Remote Desktop Services, including vGPU support.
 
 ## App Compatibility - Windows Server 2016 and Windows 10
-Built on the same foundation of Windows 10, Windows Server 2016 not only has the same look and feel you expect out of a desktop but can also run many of the same applications. Pairing Windows Server 2016 with the graphics capabilities (below) gives you an environment for all users to be productive. 
+Built on the same foundation of Windows 10, Windows Server 2016 not only has the same look and feel you expect out of a desktop but can also run many of the same applications. Pairing Windows Server 2016 with the graphics capabilities (below) gives you an environment for all users to be productive.
 
 ## Azure SQL Database - the new database for your highly available environment
 The RD Connection Broker is able to store all of the deployment information (like connection states and user/host mappings) in a shared SQL database, such as an Azure SQL database. Ditch the SQL Server Always On Availability Group deployment manual, grab the connection string to the Azure SQL database, and start using your highly available environment.
@@ -35,7 +33,7 @@ With improved connection handling, the RD Connection Broker is now able to handl
 Additional information: [Improved Remote Desktop Connection Broker Performance](https://techcommunity.microsoft.com/t5/microsoft-security-and/improved-remote-desktop-connection-broker-performance-with/ba-p/249559)
 
 ## RDP 10 - new capabilities built into the protocol
-RDP 10 now uses the H.264/AVC 444 codec, appropriately optimizing across both video and text. With this release, pen remoting is also supported. With these capabilities, your remote sessions start to feel even more like a local session.  
+RDP 10 now uses the H.264/AVC 444 codec, appropriately optimizing across both video and text. With this release, pen remoting is also supported. With these capabilities, your remote sessions start to feel even more like a local session.
 
 Additional information: [RDP 10 AVC/H.264 improvements in Windows 10 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-security-and/remote-desktop-protocol-rdp-10-avc-h-264-improvements-in-windows/ba-p/249588)
 

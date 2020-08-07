@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 07/26/2019
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Configure Additional Authentication Methods for AD FS
@@ -25,7 +23,7 @@ You can also configure and enable Microsoft and third-party authentication metho
 Below is an alphabetical list of Microsoft and third-party providers with MFA offerings currently available for AD FS in Windows Server 2012 R2.
 
 |Provider|Offering|Link to learn more|
-|-|-|-| 
+|-|-|-|
 |aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona ASM ADFS Adapter](https://www.apersona.com/adfs)|
 |Cyphercor Inc.|LoginTC Multi-Factor Authentication for AD FS|[LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|

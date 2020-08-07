@@ -1,7 +1,6 @@
 ---
 title: Windows Server, version 1803 - Features that have been removed
 description: Learn about features that will be removed or deprecated in Windows Server, version 1803, or a future release
-ms.prod: windows-server
 ms.mktglfcycl: plan
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -13,17 +12,17 @@ ms.date: 10/22/2019
 
 > Applies to: Windows Server, version 1803
 
-Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option. Here are the details about the features and functionalities that we removed in Windows Server, version 1803.   
+Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option. Here are the details about the features and functionalities that we removed in Windows Server, version 1803.
 
 > [!TIP]
 > - You can get early access to Windows Server builds by joining the [Windows Insider program](https://insider.windows.com) - this is a great way to test feature changes.
 > - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server](../get-started-19/removed-features.md).
 
-**The list is subject to change and might not include every affected feature or functionality.** 
+**The list is subject to change and might not include every affected feature or functionality.**
 
 ## Features we removed in this release
 
-We've removed the following features and functionalities from the installed product image in Windows Server, version 1803. Applications or code that depend on these features won't function in this release unless you use an alternate method.   
+We've removed the following features and functionalities from the installed product image in Windows Server, version 1803. Applications or code that depend on these features won't function in this release unless you use an alternate method.
 
 | Feature	 | Instead you can use... |
 | ----------- | -------------------- |
@@ -32,12 +31,12 @@ We've removed the following features and functionalities from the installed prod
 
 ## Features we're no longer developing
 
-We are no longer actively developing these features and may remove them from a future update. Some features have been replaced with other features or functionality, while others are now available from different sources. 
+We are no longer actively developing these features and may remove them from a future update. Some features have been replaced with other features or functionality, while others are now available from different sources.
 
 >[!NOTE]
 > Please note that some of the features and roles described below are not included in the Server Core installation option, which is provided in Windows Server, version 1803. They *are* present in the Server with Desktop Experience installation option, which we last released with Windows Server 2016 and will release again in Windows Server 2019.
 
-If you have feedback about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). 
+If you have feedback about the proposed replacement of any of these features, you can use the [Feedback Hub app](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
 
 | Feature or role	 | Instead you can use... |
 | ----------- | --------------------- |

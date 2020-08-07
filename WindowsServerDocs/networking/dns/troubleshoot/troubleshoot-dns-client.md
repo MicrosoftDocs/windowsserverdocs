@@ -2,7 +2,6 @@
 title: Troubleshooting DNS clients
 description: This article introduces how to troubleshoot DNS issue from client-side.
 manager: dcscontentpm
-ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019

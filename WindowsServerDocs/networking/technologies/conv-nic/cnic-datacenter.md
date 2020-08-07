@@ -1,8 +1,6 @@
 ---
 title: Converged NIC in a Teamed NIC configuration (datacenter)
 description: In this topic, we provide you with instructions to deploy Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming (SET).
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: f01546f8-c495-4055-8492-8806eee99862
 manager: dougkim

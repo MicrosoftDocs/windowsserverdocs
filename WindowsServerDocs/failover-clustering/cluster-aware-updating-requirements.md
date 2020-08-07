@@ -1,12 +1,10 @@
 ---
 ms.assetid: 75cc1d24-fa2f-45bd-8f3b-1bbd4a1aead0
 title: Cluster-Aware Updating requirements and best practices
-ms.prod: windows-server
 ms.topic: article
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage-failover-clustering
 ms.date: 08/06/2018
 description: Requirements for using Cluster-Aware Updating to install updates on clusters running Windows Server.
 ---

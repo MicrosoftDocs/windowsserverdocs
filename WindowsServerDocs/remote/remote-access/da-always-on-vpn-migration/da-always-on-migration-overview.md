@@ -2,8 +2,6 @@
 title: Remote Access Always On VPN migration overview
 description: Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess, and how to migrate from DirectAccess to Always On VPN.
 manager: dougkim
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: lizross
@@ -11,7 +9,7 @@ author: eross-msft
 ms.date: 05/29/2018
 ---
 
-# Overview of the DirectAccess to Always On VPN migration 
+# Overview of the DirectAccess to Always On VPN migration
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
@@ -26,13 +24,13 @@ The DirectAccess–to–Always On VPN migration process consists of four primary
 
     1.  [!INCLUDE [build-migration-rings-shortdesc-include](../includes/build-migration-rings-shortdesc-include.md)]
 
-    2.  [!INCLUDE [review-feature-mapping-shortdesc-include](../includes/review-feature-mapping-shortdesc-include.md)] 
+    2.  [!INCLUDE [review-feature-mapping-shortdesc-include](../includes/review-feature-mapping-shortdesc-include.md)]
 
-    3.  [!INCLUDE [review-the-enhancements-shortdesc-include](../includes/review-the-enhancements-shortdesc-include.md)] 
+    3.  [!INCLUDE [review-the-enhancements-shortdesc-include](../includes/review-the-enhancements-shortdesc-include.md)]
 
     4.  [!INCLUDE [review-the-technology-overview-shortdesc-include](../includes/review-the-technology-overview-shortdesc-include.md)]
 
-2.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you deploy the Always On VPN infrastructure side by side with the existing DirectAccess infrastructure.  
+2.  **Deploy a side-by-side VPN infrastructure.** After you have determined your migration phases and the features you want to include in your deployment, you deploy the Always On VPN infrastructure side by side with the existing DirectAccess infrastructure.
 
 3.  **Deploy certificates and configuration to the clients.**  Once the VPN infrastructure is ready, you create and publish the required certificates to the client. When the clients have received the certificates, you deploy the VPN_Profile.ps1 configuration script. Alternatively, you can use Intune to configure the VPN client. Use Microsoft Endpoint Configuration Manager or Microsoft Intune to monitor for successful VPN configuration deployments.
 
@@ -49,7 +47,7 @@ In this deployment scenario, you use a simple DirectAccess deployment scenario a
 
 Many DirectAccess deployment scenarios and options exist, so your implementation is likely to be different from the one described here. If so, refer to [Feature mapping between DirectAccess and Always On VPN](../vpn/vpn-map-da.md) to determine the Always On VPN feature set mapping for your current additions, and then add those features to your configuration. Also, you can refer to the [Always On VPN enhancements](../vpn/always-on-vpn/always-on-vpn-enhancements.md) to add options to your Always On VPN deployment.
 
->[!NOTE] 
+>[!NOTE]
 >For nondomain-joined devices, there are additional considerations, such as certificate enrollment. For details, see [Always On VPN Deployment for Windows Server and Windows 10](../vpn/always-on-vpn/deploy/always-on-vpn-deploy.md).
 
 ### Deployment scenario feature list

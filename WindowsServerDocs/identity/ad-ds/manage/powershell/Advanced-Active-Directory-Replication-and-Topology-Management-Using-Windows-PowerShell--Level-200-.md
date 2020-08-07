@@ -6,8 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)

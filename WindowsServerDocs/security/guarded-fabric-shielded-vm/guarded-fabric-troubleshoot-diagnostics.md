@@ -1,12 +1,10 @@
 ---
 title: Troubleshooting Using the Guarded Fabric Diagnostic Tool
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 01/14/2020
 ---
 
@@ -45,7 +43,7 @@ This means that diagnostic tools will be available on all guarded hosts, HGS nod
 
 Every host targeted by diagnostics is referred to as a "trace target."  Trace targets are identified by their hostnames and roles.  Roles describe the function a given trace target performs in a guarded fabric.  Presently, trace targets support `HostGuardianService` and `GuardedHost` roles.  Note it is possible for a host to occupy multiple roles at once and this is also supported by diagnostics, however this should not be done in production environments.  The HGS and Hyper-V hosts should be kept separate and distinct at all times.
 
-Administrators can begin any diagnostic tasks by running `Get-HgsTrace`.  This command performs two distinct functions based on the switches provided at runtime: trace collection and diagnosis.  These two combined make up the entirety of the Guarded Fabric Diagnostic Tool.  Though not explicitly required, most useful diagnostics require traces that can only be collected with administrator credentials on the trace target.  If insufficient privileges are held by the user executing trace collection, traces requiring elevation will fail while all others will pass.  This allows partial diagnosis in the event an under-privileged operator is performing triage. 
+Administrators can begin any diagnostic tasks by running `Get-HgsTrace`.  This command performs two distinct functions based on the switches provided at runtime: trace collection and diagnosis.  These two combined make up the entirety of the Guarded Fabric Diagnostic Tool.  Though not explicitly required, most useful diagnostics require traces that can only be collected with administrator credentials on the trace target.  If insufficient privileges are held by the user executing trace collection, traces requiring elevation will fail while all others will pass.  This allows partial diagnosis in the event an under-privileged operator is performing triage.
 
 ### Trace collection
 
@@ -200,7 +198,7 @@ Following the instructions to collect and assemble a trace folder specified abov
 ```PowerShell
 $hgs03 = New-HgsTraceTarget -HostName "hgs-03.secure.contoso.com" -Credential (Enter-Credential)
 Get-HgsTrace -RunDiagnostics -Target $hgs03 -Path .\FabricTraces
-``` 
+```
 
 The diagnostic cmdlet will identify all pre-collected hosts, and the one additional host that still needs to be traced and will perform the necessary tracing.  The sum of all pre-collected and freshly gathered traces will then be diagnosed.  The resulting trace folder will contain both the old and new traces.
 

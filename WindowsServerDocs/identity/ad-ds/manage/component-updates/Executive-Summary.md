@@ -6,8 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Executive Summary

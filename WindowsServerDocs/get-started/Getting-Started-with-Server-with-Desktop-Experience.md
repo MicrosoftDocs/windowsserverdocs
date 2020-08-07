@@ -1,9 +1,7 @@
 ---
 title: Install Server with Desktop Experience
-description: Explains how to obtain and install a Server with Desktop Experience installation  
-ms.prod: windows-server
+description: Explains how to obtain and install a Server with Desktop Experience installation
 ms.date: 01/18/2017
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 5b38b8a0-4dfc-4130-be00-fc58bba99595
 author: jaimeo
@@ -13,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Install Server with Desktop Experience
 > Applies To: Windows Server 2016
-  
+
 
 When you install Windows Server 2016 using the Setup wizard, you can choose between **Windows Server 2016** and **Windows Server (Server with Desktop Experience)**. The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you do not make a choice in the Setup wizard, **Windows Server 2016** is installed; this is the **Server Core** installation option.
 
@@ -36,7 +34,7 @@ The Server with Desktop Experience option installs the standard user interface a
 ### Evaluation
 You can obtain a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). Choose the **Windows Server 2016 | 64-bit ISO option** to download, or you can visit the **Windows Server 2016 | Virtual Lab**.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only perform this conversion from evaluation to retail with Windows Server 2016 that has been installed by using the Desktop Experience option (not the Server Core option). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
 
 
@@ -49,8 +47,8 @@ To install the Server with Desktop Experience installation option from the media
 
 If you already have a Full installation of the appropriate Windows Server product, you can upgrade it to a Server with Desktop Experience installation of the appropriate edition of Windows Server 2016, as indicated below.
 
-> [!IMPORTANT]  
-> In this release, upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade. Otherwise, migration is the recommended option.  
+> [!IMPORTANT]
+> In this release, upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade. Otherwise, migration is the recommended option.
 
 - In-place upgrades from 32-bit to 64-bit architectures are not supported. All editions of Windows Server 2016 are 64-bit only.
 - In-place upgrades from one language to another are not supported.
@@ -62,8 +60,8 @@ If you do not see your current version in the left column, upgrading to this rel
 
 If you see more than one edition in the right column, upgrading to **either** edition from the same starting version is supported.
 
-|If you are running this edition:|You can upgrade to these editions:|  
-|-------------------|----------|  
+|If you are running this edition:|You can upgrade to these editions:|
+|-------------------|----------|
 |Windows Server 2012 Standard|Windows Server 2016 Standard or Datacenter|
 |Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|
 |Windows Server 2012 R2 Standard|Windows Server 2016 Standard or Datacenter|
@@ -82,8 +80,8 @@ and Migration](./installation-and-upgrade.md).
 
 The ability to migrate varies among different server roles. The follwogin grid explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](./migrate-roles-and-features.md). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
 
-|Server Role|Upgradeable from Windows Server 2012 R2?|Upgradeable from Windows Server 2012?|Migration Supported?|Can migration be completed without downtime?|  
-|-------------------|----------|--------------|--------------|----------|  
+|Server Role|Upgradeable from Windows Server 2012 R2?|Upgradeable from Windows Server 2012?|Migration Supported?|Can migration be completed without downtime?|
+|-------------------|----------|--------------|--------------|----------|
 |Active Directory Certificate Services|    Yes|    Yes|    Yes|    No|
 |Active Directory Domain Services|    Yes|    Yes|    Yes|    Yes|
 |Active Directory Federation Services|    No|    No|    Yes|    No (new nodes need to be added to the farm)|
@@ -98,7 +96,7 @@ The ability to migrate varies among different server roles. The follwogin grid e
 |Windows Server Update Services|    Yes|    Yes|    Yes|    No|
 |Work Folders|    Yes|    Yes|    Yes|    Yes from WS 2012 R2 cluster when using [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).|
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Once Setup has completed and immediately after you have installed all of the server roles and features you need, check for and install updates available for Windows Server 2016 by using Windows Update or other update methods.
 
 ---------------------------------------

@@ -6,8 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # Upgrade Domain Controllers to Windows Server 2016
 
@@ -166,4 +164,4 @@ The following is a simple example of upgrading the Contoso forest from Windows S
 
 - [What's New in Active Directory Domain Services Installation and Removal](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)
 - [Install Active Directory Domain Services &#40;Level 100&#41;](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md)
-- [Windows Server 2016 Functional Levels](../active-directory-functional-levels.md)  
+- [Windows Server 2016 Functional Levels](../active-directory-functional-levels.md)

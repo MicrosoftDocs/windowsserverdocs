@@ -1,12 +1,10 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering
-ms.prod: windows-server
 ms.topic: landing-page
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage-failover-clustering
 ms.date: 06/06/2019
 ms.localizationpriority: high
 ---

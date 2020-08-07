@@ -1,8 +1,6 @@
 ---
 title: System Insights FAQ
 description: System Insights FAQ
-ms.prod: windows-server
-ms.technology: system-insights
 ms.topic: article
 author: gawatu
 ms.author: gawatu

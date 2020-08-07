@@ -2,10 +2,8 @@
 title: What's new in the Android client
 description: Learn about recent changes to the Remote Desktop client for Android
 
-ms.prod: windows-server
 
 
-ms.technology: remote-desktop-services
 
 ms.topic: article
 author: heidilohr

@@ -1,8 +1,6 @@
 ---
 title: What's New in Windows Server, version 1903 and 1909
-description: This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases. 
-ms.prod: windows-server
-ms.technology: server-general
+description: This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases.
 ms.topic: article
 author: jasongerend
 ms.author: jgerend

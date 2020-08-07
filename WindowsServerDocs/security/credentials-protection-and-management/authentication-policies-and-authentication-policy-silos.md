@@ -1,8 +1,6 @@
 ---
 title: Authentication Policies and Authentication Policy Silos
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-credential-protection
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
 author: coreyp-at-msft

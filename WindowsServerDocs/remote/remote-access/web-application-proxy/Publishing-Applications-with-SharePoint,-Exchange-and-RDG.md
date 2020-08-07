@@ -6,8 +6,6 @@ manager: mtillman
 ms.author: billmath
 ms.date: 04/30/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: web-app-proxy
 ---
 
 # Publishing Applications with SharePoint, Exchange and RDG

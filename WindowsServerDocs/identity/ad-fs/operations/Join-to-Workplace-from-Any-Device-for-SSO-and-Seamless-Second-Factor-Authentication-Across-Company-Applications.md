@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 12/05/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications

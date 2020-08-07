@@ -1,12 +1,10 @@
 ---
 title: Create a Windows shielded VM template disk
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 01/29/2019
 ---
 

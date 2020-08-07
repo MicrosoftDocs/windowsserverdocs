@@ -1,8 +1,6 @@
 ---
 title: Windows Authentication Technical Overview
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
 author: coreyp-at-msft

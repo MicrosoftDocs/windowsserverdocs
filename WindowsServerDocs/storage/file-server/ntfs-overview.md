@@ -1,11 +1,9 @@
 ---
 title: NTFS overview
 description: An explanation of what NTFS is.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.date: 06/17/2019
 ms.localizationpriority: medium
 ---

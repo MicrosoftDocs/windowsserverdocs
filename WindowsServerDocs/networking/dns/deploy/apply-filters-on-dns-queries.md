@@ -2,8 +2,6 @@
 title: Use DNS Policy for Applying Filters on DNS Queries
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: lizross
@@ -13,7 +11,7 @@ author: eross-msft
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply. 
+You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply.
 
 Query filters in DNS policy allow you to configure the DNS server to respond in a custom manner based on the DNS query and DNS client that sends the DNS query.
 
@@ -37,7 +35,7 @@ You can create query filters with any logical combination (AND/OR/NOT) of the fo
 The following examples show you how to create filters for DNS policy that either block or allow DNS name resolution queries.
 
 >[!NOTE]
->The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps). 
+>The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 ## <a name="bkmk_block1"></a>Block queries from a domain
 
@@ -48,14 +46,14 @@ The policy that you configure in this example is not created on any particular z
 The following example command configures a Server Level Policy to block any queries with the domain **suffix contosomalicious.com**.
 
 `
-Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicy" -Action IGNORE -FQDN "EQ,*.contosomalicious.com" -PassThru 
+Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicy" -Action IGNORE -FQDN "EQ,*.contosomalicious.com" -PassThru
 `
 
 >[!NOTE]
 >When you configure the **Action** parameter with the value **IGNORE**, the DNS server is configured to drop queries with no response at all. This causes the DNS client in the malicious domain to time out.
 
 ## <a name="bkmk_block2"></a>Block queries from a subnet
-With this example, you can block queries from a subnet if it is found to be infected by some malware and is trying to contact malicious sites using your DNS server. 
+With this example, you can block queries from a subnet if it is found to be infected by some malware and is trying to contact malicious sites using your DNS server.
 
 `
 Add-DnsServerClientSubnet -Name "MaliciousSubnet06" -IPv4Subnet 172.0.33.0/24 -PassThru
@@ -82,7 +80,7 @@ You can not only use DNS policy to block queries, you can use them to automatica
 The following example command allows only computers and devices in the contoso.com and child domains to query the DNS server.
 
 `
-Add-DnsServerQueryResolutionPolicy -Name "AllowListPolicyDomain" -Action IGNORE -FQDN "NE,*.contoso.com" -PassThru 
+Add-DnsServerQueryResolutionPolicy -Name "AllowListPolicyDomain" -Action IGNORE -FQDN "NE,*.contoso.com" -PassThru
 `
 
 ## <a name="bkmk_allow2"></a>Allow queries only from a subnet
@@ -96,7 +94,7 @@ Add-DnsServerQueryResolutionPolicy -Name "AllowListPolicySubnet” -Action IGNOR
 `
 
 ## <a name="bkmk_allow3"></a>Allow only certain QTypes
-You can apply Allow Lists to QTYPEs. 
+You can apply Allow Lists to QTYPEs.
 
 For example, if you have external customers querying DNS server interface 164.8.1.1, only certain QTYPEs are allowed to be queried, while there are other QTYPEs like SRV or TXT records which are used by internal servers for name resolution or for monitoring purposes.
 
@@ -104,4 +102,4 @@ For example, if you have external customers querying DNS server interface 164.8.
 Add-DnsServerQueryResolutionPolicy -Name "AllowListQType" -Action IGNORE -QType "NE,A,AAAA,MX,NS,SOA" –ServerInterface “EQ,164.8.1.1” -PassThru
 `
 
-You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries. 
+You can create thousands of DNS policies according to your traffic management requirements, and all new policies are applied dynamically - without restarting the DNS server - on incoming queries.

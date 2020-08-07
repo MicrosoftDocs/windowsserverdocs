@@ -1,9 +1,7 @@
 ---
 title: Storage Spaces Direct overview
-ms.prod: windows-server
 ms.author: cosdar
 manager: dongill
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/24/2020

@@ -1,8 +1,6 @@
 ---
 title: Getting Started with Group Managed Service Accounts
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-gmsa
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
 author: coreyp-at-msft
@@ -138,7 +136,7 @@ You can create a gMSA only if the forest schema has been updated to  Windows Ser
 Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
 > [!NOTE]
-> A value for the -Name parameter is always required (whether you specify -Name or not), with -DNSHostName, -RestrictToSingleComputer, and -RestrictToOutboundAuthentication being secondary requirements for the three deployment scenarios.    
+> A value for the -Name parameter is always required (whether you specify -Name or not), with -DNSHostName, -RestrictToSingleComputer, and -RestrictToOutboundAuthentication being secondary requirements for the three deployment scenarios.
 
 
 #### <a name="BKMK_CreateGMSA"></a>To create a gMSA using the New-ADServiceAccount cmdlet
@@ -161,7 +159,7 @@ Membership in **Domain Admins**, **Account Operators** or ability to create msDS
 
     > [!IMPORTANT]
     > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
-   
+
     **Example**
 
     Enter the command on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
@@ -188,7 +186,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
 
     > [!IMPORTANT]
     > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
-    
+
   **Example**
 
 ```PowerShell

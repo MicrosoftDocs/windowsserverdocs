@@ -2,8 +2,6 @@
 title: Create a File Screen Exception
 description: This article describes how to create a file screen exception
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

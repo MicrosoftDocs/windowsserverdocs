@@ -1,14 +1,12 @@
 ---
 title: High-performance networking
 description: This topic provides an overview of the Offload and Optimization Technologies in Windows Server 2016, and includes links to additional guidance about these technologies.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
-ms.date: 09/12/2018 
+ms.date: 09/12/2018
 ---
 
 
@@ -57,7 +55,7 @@ Address Checksum Offloads should ALWAYS be enabled no matter what workload or ci
 
 ## Interrupt Moderation (IM)
 
-IM buffers multiple received packets before interrupting the operating system. When a NIC receives a packet, it starts a timer. When the buffer is full, or the timer expires, whichever comes first, the NIC interrupts the operating system. 
+IM buffers multiple received packets before interrupting the operating system. When a NIC receives a packet, it starts a timer. When the buffer is full, or the timer expires, whichever comes first, the NIC interrupts the operating system.
 
 Many NICs support more than just on/off for Interrupt Moderation. Most NICs support the concepts of a low, medium, and high rate for IM. The different rates represent shorter or longer timers and appropriate buffer size adjustments to reduce latency (low interrupt moderation) or reduce interrupts (high interrupt moderation).
 

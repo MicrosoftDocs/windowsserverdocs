@@ -1,13 +1,11 @@
 ---
 title: Configuring user access control and permissions
 description: Learn how to configure user access control and permissions using Active Directory or Azure AD (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Configure User Access Control and Permissions
 
