@@ -185,14 +185,14 @@ In this configuration, the Time Server parameter is this host. Its Polling Frequ
 To synchronize exclusively over NTP, it is recommended to disable the TimeSync integration service in the guest.
 
 > [!NOTE]
-> Note: Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn't something that's widely available across all Linux distros yet. Please reference [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows) for more details about support distributions.
+> Note: Support for accurate time with Linux guests requires a feature that is only supported in the latest upstream Linux kernels and it isn't something that's widely available across all Linux distros yet. Please reference [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../../virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md) for more details about support distributions.
 
 #### Specify a Local Reliable Time Service Using GTIMESERV
 
 You can specify one or more domain controllers as accurate source clocks by using the GTIMESERV, Good Time Server, flags. For instance, specific domain controllers equipped with GPS hardware can be flagged as a GTIMESERV. This will insure your domain references a clock based on the GPS hardware.
 
 > [!NOTE]
-> More information about domain flags can be found in the [MS-ADTS protocol documentation](https://msdn.microsoft.com/library/mt226583.aspx).
+> More information about domain flags can be found in the [MS-ADTS protocol documentation](/openspecs/windows_protocols/ms-winerrata/fe563333-6e4f-4198-9bf5-741a523cd0d7).
 
 TIMESERV is another related Domain Services Flag which indicates whether a machine is currently authoritative, which can change if a DC loses connection. A DC in this state will return “Unknown Stratum” when queried via NTP. After trying multiple times, the DC will log System Event Time-Service Event 36.
 
@@ -203,7 +203,7 @@ w32tm /config /manualpeerlist:"master_clock1,0x8 master_clock2,0x8" /syncfromfla
 ```
 
 > [!NOTE]
-> For more information, see [Configure the Windows Time Service](https://technet.microsoft.com/library/cc731191.aspx)
+> For more information, see [Configure the Windows Time Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731191(v=ws.10))
 
 If the DC has the GPS hardware installed, you need to use these steps to disable the NTP client and enable the NTP server.
 
@@ -314,7 +314,7 @@ The MaxAllowedPhaseOffset setting is located under System\Windows Time Service u
 ## Azure and Windows IaaS considerations
 
 ### Azure Virtual Machine: Active Directory Domain Services
-If the Azure VM running Active Directory Domain Services is part of an existing on-premises Active Directory Forest, then TimeSync(VMIC), should be disabled. This is to allow all DCs in the Forest, both physical and virtual, to use a single time sync hierarchy. Refer to the best practice whitepaper [“Running Domain Controllers in Hyper-V”](https://technet.microsoft.com/library/virtual_active_directory_domain_controller_virtualization_hyperv.aspx)
+If the Azure VM running Active Directory Domain Services is part of an existing on-premises Active Directory Forest, then TimeSync(VMIC), should be disabled. This is to allow all DCs in the Forest, both physical and virtual, to use a single time sync hierarchy. Refer to the best practice whitepaper [“Running Domain Controllers in Hyper-V”](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10))
 
 ### Azure Virtual Machine: Domain-joined machine
 If you are hosting a machine which is domain joined to an existing Active Directory Forest, virtual or physical, the best practice is to disable TimeSync for the guest and ensure W32Time is configured to synchronize with its Domain Controller via configuring time for Type=NTP5
@@ -324,7 +324,7 @@ If the Azure VM is not joined to a domain, nor is it a Domain Controller, the re
 
 ## Windows Application Requiring Accurate Time
 ### Time Stamp API
-Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](https://msdn.microsoft.com/library/windows/desktop/Hh706895.aspx). This assures your application gets System Time, which is conditioned by the Windows Time service.
+Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime). This assures your application gets System Time, which is conditioned by the Windows Time service.
 
 ### UDP Performance
 If you have an application that uses UDP communication for transactions and it's important to minimize latency, there are some related registry entries you can use to configure a range of ports to be excluded from port the base filtering engine. This will improve both the latency and increase your throughput. However, changes to the registry should be limited to experienced administrators. Additionally, this work around excludes ports from being secured by the firewall. See the article reference below for more information.
@@ -377,7 +377,7 @@ Performance Monitor and the new Windows Time counters in Windows Server 2016 can
 
 There are two general standards for accurate time over the network. PTP ([Precision Time Protocol - IEEE 1588](https://www.nist.gov/el/intelligent-systems-division-73500/introduction-ieee-1588)) has tighter requirements on network infrastructure but can often provide sub-microsecond accuracy. NTP ([Network Time Protocol – RFC 1305](https://tools.ietf.org/html/rfc1305)) works on a larger variety of networks and environments, which makes it easier to manage.
 
-Windows supports Simple NTP (RFC2030) by default for non-domain joined machines. For Domain joined machines, we use a secure NTP called [MS-SNTP](https://msdn.microsoft.com/library/cc246877.aspx), which leverages domain negotiated secrets which provide a management advantage over Authenticated NTP described in RFC1305 and RFC5905.
+Windows supports Simple NTP (RFC2030) by default for non-domain joined machines. For Domain joined machines, we use a secure NTP called [MS-SNTP](/openspecs/windows_protocols/ms-sntp/8106cb73-ab3a-4542-8bc8-784dd32031cc), which leverages domain negotiated secrets which provide a management advantage over Authenticated NTP described in RFC1305 and RFC5905.
 
 Both the domain and non-domain joined protocols requires UDP port 123. For more information about NTP best practices, refer to [Network Time Protocol Best Current Practices IETF Draft](https://tools.ietf.org/html/draft-ietf-ntp-bcp-00).
 
@@ -429,7 +429,7 @@ The earth's rotation period varies over time, caused by climatic and geological 
 
 ## Secure Time Seeding
 
-W32time in Server 2016 includes the Secure Time Seeding feature. This feature determines the approximate current time from outgoing SSL connections. This time value is used to monitor the local system clock and correct any gross errors. You can read more about the feature in [this blog post](https://blogs.msdn.microsoft.com/w32time/2016/09/28/secure-time-seeding-improving-time-keeping-in-windows/). In deployments with a reliable time source(s) and well monitored machines that include monitoring for time offsets, you may choose to not use the Secure Time Seeding feature and rely on your existing infrastructure instead.
+W32time in Server 2016 includes the Secure Time Seeding feature. This feature determines the approximate current time from outgoing SSL connections. This time value is used to monitor the local system clock and correct any gross errors. You can read more about the feature in [this blog post](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows). In deployments with a reliable time source(s) and well monitored machines that include monitoring for time offsets, you may choose to not use the Secure Time Seeding feature and rely on your existing infrastructure instead.
 
 You can disable the feature with these steps:
 

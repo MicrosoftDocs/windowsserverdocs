@@ -109,11 +109,8 @@ The following Windows PowerShell cmdlet or cmdlets install the Remote Access rol
 
 ## <a name="BKMK_Links"></a>Previous step
 
--   [Step 1: Configure the DirectAccess Infrastructure](Step-1-Configure-the-DirectAccess-Infrastructure.md)
+-   [Step 1: Configure the DirectAccess Infrastructure](./da-basic-configure-s1-infrastructure.md)
 
 ## Next step
 
 -   [Step 3 Verify Basic DirectAccess Deployments](da-basic-configure-s3-verify.md)
-
-
-

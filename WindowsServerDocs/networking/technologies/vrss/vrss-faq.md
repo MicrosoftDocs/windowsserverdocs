@@ -38,7 +38,7 @@ For more information, see [Plan the Use of vRSS](vrss-plan.md).
 
 ## Is vRSS compatible with NIC Teaming?
 
-Yes. If you are using NIC Teaming, it is important that you properly configure VMQ to work with the NIC Teaming settings. For detailed information about NIC Teaming deployment and management, see [NIC Teaming](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
+Yes. If you are using NIC Teaming, it is important that you properly configure VMQ to work with the NIC Teaming settings. For detailed information about NIC Teaming deployment and management, see [NIC Teaming](../nic-teaming/nic-teaming.md).
 
 ## vRSS is enabled, but how do I know if it is working?
 

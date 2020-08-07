@@ -22,9 +22,9 @@ You can use this topic for an overview of Network Policy Server in Windows Serve
 > - [Plan Network Policy Server](nps-plan-top.md)
 > - [Deploy Network Policy Server](nps-deploy.md)
 > - [Manage Network Policy Server](nps-manage-top.md)
-> - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2016 and Windows 10
-> - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 R2 and Windows 8.1
-> - [NPS Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj872739.aspx) for Windows Server 2012 and Windows 8
+> - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](/powershell/module/nps/?view=win10-ps) for Windows Server 2016 and Windows 10
+> - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](/powershell/module/nps/?view=win10-ps) for Windows Server 2012 R2 and Windows 8.1
+> - [NPS Cmdlets in Windows PowerShell](/powershell/module/nps/?view=win10-ps) for Windows Server 2012 and Windows 8
 
 Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.
 

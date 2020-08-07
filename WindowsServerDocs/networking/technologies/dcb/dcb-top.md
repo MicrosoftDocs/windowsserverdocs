@@ -60,8 +60,8 @@ Following is a list that summarizes the functionality that is provided by DCB.
 4. Enables server administrators or network administrators to assign an application to a particular traffic class or priority based on well-known protocols, well-known TCP/UDP port, or NetworkDirect port used by that application.
 
 5. Provides DCB management through Windows Server 2016 Windows Management Instrumentation \(WMI\) and Windows PowerShell. For more information, see the section [Windows PowerShell Commands for DCB](#bkmk_wps) later in this topic, in addition to the following topics.
-	- [System-Provided DCB Components](https://msdn.microsoft.com/windows/hardware/drivers/network/system-provided-dcb-components)
-	- [NDIS QoS Requirements for Data Center Bridging](https://msdn.microsoft.com/windows/hardware/drivers/network/ndis-qos-requirements-for-data-center-bridging)
+	- [System-Provided DCB Components](/windows-hardware/drivers/network/system-provided-dcb-components)
+	- [NDIS QoS Requirements for Data Center Bridging](/windows-hardware/drivers/network/ndis-qos-requirements-for-data-center-bridging)
 
 6. Provides DCB management through Windows Server 2016 Group Policy.
 
@@ -98,10 +98,10 @@ There are DCB Windows PowerShell commands for both Windows Server 2016 and Windo
 
 The following topic for Windows Server 2016 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [DcbQoS Module](https://technet.microsoft.com/itpro/powershell/windows/dcbqos/dcbqos)
+- [DcbQoS Module](/powershell/module/dcbqos/?view=win10-ps)
 
 ### Windows Server 2012 R2 Windows PowerShell Commands for DCB
 
 The following topic for Windows Server 2012 R2 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh967440.aspx)
+- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](/powershell/module/dcbqos/?view=win10-ps&viewFallbackFrom=winserverr2-ps)

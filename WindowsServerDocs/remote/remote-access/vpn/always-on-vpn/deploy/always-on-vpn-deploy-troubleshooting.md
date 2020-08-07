@@ -106,7 +106,7 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 
 The application logs on client computers record most of the higher-level details of VPN connection events.
 
-Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](/previous-versions//mt728163(v=technet.10)).
+Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](/previous-versions/mt728163(v=technet.10)).
 
 ## NPS logs
 

@@ -37,7 +37,7 @@ Before you begin deploying this scenario, review this list for important require
 
 -   A Public Key Infrastructure must be deployed.
 
-    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](https://docs.microsoft.com/answers/topics/windows-server-2012.html)
+    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](/answers/topics/windows-server-2012.html)
 
 -   The corporate network must be IPv6 enabled. If you are using ISATAP, you should remove it and use native IPv6.
 
@@ -148,6 +148,3 @@ The following are known issues when configuring a multisite scenario:
 -   If DirectAccess was deployed when an existing ISATAP infrastructure was present, when removing an entry point that was an ISATAP host, the IPv6 address of the DNS64 service will be removed from the DNS server addresses of all DNS suffixes in the NRPT.
 
     To resolve this issue, in the **Infrastructure Server Setup** wizard, on the **DNS** page, remove the DNS suffixes that were modified and add them again with the correct DNS server addresses, by clicking **Detect** on the **DNS Server Addresses** dialog box.
-
-
-

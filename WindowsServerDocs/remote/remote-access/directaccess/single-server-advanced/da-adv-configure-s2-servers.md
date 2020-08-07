@@ -235,5 +235,4 @@ Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connecti
 
 ## Next step
 
--   [Step 3: Verify the Deployment](Step-3-Verify-the-Deployment.md)
-
+-   [Step 3: Verify the Deployment](./da-adv-configure-s3-verify.md)

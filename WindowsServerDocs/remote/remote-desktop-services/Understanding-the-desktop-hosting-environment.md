@@ -25,7 +25,7 @@ In a desktop hosting environment, the following Remote Desktop Services roles ar
   - Remote Desktop Session Host
   - Remote Desktop Web Access
 
-For a full description of each of these roles and how they interact with each other, please review the [Understanding RDS roles](Understanding-RDS-roles.md) document.
+For a full description of each of these roles and how they interact with each other, please review the [Understanding RDS roles](./desktop-hosting-service.md) document.
 
 ##  (Azure) Active Directory Domain Services
 There are multiple ways to connect to and manage Active Directory Domain Services (AD DS) for a desktop hosting environment in Azure:
@@ -66,4 +66,3 @@ Additional information
 
 ### User Profile Disks
 User profile disks allow users to save personal settings and files when they are signed in to a session on an RD Session Host server in a collection, and then have access to the same settings and files when signing in to a different RD Session Host server in the collection. When the user first signs in, a user profile disk is created on the tenant's file server, and that disk is mounted to the RD Session Host server to which the user is connected. For each subsequent sign-in, the user profile disk is mounted to the appropriate RD Session host server, and with each sign-out, it is un-mounted. The contents of the profile disk can only be accessed by that user.
-

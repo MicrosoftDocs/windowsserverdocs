@@ -162,7 +162,7 @@ Privileged identities can get compromised when organizations don't have guidelin
 
 - **Social engineering research.** Most credential threats start out by researching the organization and then conducted through social engineering. For example, an attacker may perform an email phishing attack to compromise legitimate accounts (but not necessarily elevated accounts) that have access to an organization's network. The attacker then uses these valid accounts to perform additional research on your network and to identify privileged accounts that can perform administrative tasks.
 
-- **Leverage accounts with elevated privileges.** Even with a normal, non-elevated user account in the network, attackers can gain access to accounts with elevated permissions. One of the more common methods of doing so is by using the Pass-the-Hash or Pass-the-Token attacks. For more information on the Pass-the-Hash and other credential theft techniques, see the resources on the [Pass-the-Hash (PtH) page](https://technet.microsoft.com/dn785092.aspx).
+- **Leverage accounts with elevated privileges.** Even with a normal, non-elevated user account in the network, attackers can gain access to accounts with elevated permissions. One of the more common methods of doing so is by using the Pass-the-Hash or Pass-the-Token attacks. For more information on the Pass-the-Hash and other credential theft techniques, see the resources on the [Pass-the-Hash (PtH) page](/previous-versions/dn785092(v=msdn.10)).
 
 There are of course other methods that attackers can use to identify and compromise privileged identities (with new methods being created every day). It is therefore important that you establish practices for users to log on with least-privileged accounts to reduce the ability of attackers to gain access to privileged identities. The sections below outline functionality where Windows Server can mitigate these risks.
 
@@ -206,7 +206,7 @@ Windows Defender Credential Guard uses:
 
 - TPM 2.0 either discrete or firmware (preferred - provides binding to hardware)
 
-You can use Windows Defender Credential Guard to help protect privileged identities by protecting the credentials and credential derivatives on Windows Server 2016. For more information on Windows Defender Credential Guard requirements, see [Protect derived domain credentials with Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard).
+You can use Windows Defender Credential Guard to help protect privileged identities by protecting the credentials and credential derivatives on Windows Server 2016. For more information on Windows Defender Credential Guard requirements, see [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard).
 
 #### Windows Defender Remote Credential Guard
 Windows Defender Remote Credential Guard on Windows Server 2016 and Windows 10 Anniversary Update also helps protect credentials for users with remote desktop connections. Previously, anyone using Remote Desktop Services would have to log on to their local machine and then be required to log on again when they performed a remote connection to their target machine. This second login would pass credentials to the target machine, exposing them to Pass-the-Hash or Pass-the-Ticket attacks.
@@ -221,7 +221,7 @@ With Windows Defender Remote Credential Guard, Windows Server 2016 implements si
 
 - The Remote Desktop classic Windows app is required. The Remote Desktop Universal Windows Platform app doesn't support Windows Defender Remote Credential Guard.
 
-You can enable Windows Defender Remote Credential Guard by using a registry setting on the Remote Desktop server and Group Policy or a Remote Desktop Connection parameter on the Remote Desktop client. For more information on enabling Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/access-protection/remote-credential-guard). As with Windows Defender Credential Guard, you can use Windows Defender Remote Credential Guard to help protect privileged identities on Windows Server 2016.
+You can enable Windows Defender Remote Credential Guard by using a registry setting on the Remote Desktop server and Group Policy or a Remote Desktop Connection parameter on the Remote Desktop client. For more information on enabling Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](/windows/access-protection/remote-credential-guard). As with Windows Defender Credential Guard, you can use Windows Defender Remote Credential Guard to help protect privileged identities on Windows Server 2016.
 
 ### Secure the operating system to run your apps and infrastructure
 Preventing cyber threats also requires finding and blocking malware and attacks that seek to gain control by subverting the standard operating practices of your infrastructure. If attackers can get an operating system or application to run in a non-predetermined, non-viable way, they are likely using that system to take malicious actions. Windows Server 2016 provides layers of protection that block external attackers running malicious software or exploiting vulnerabilities. The operating system takes an active role in protecting infrastructure and applications by alerting administrators to activity that indicates a system has been breached.
@@ -335,11 +335,11 @@ ATA is an on-premises product that helps detect identity compromise in an organi
 
 |Attack type |Description |
 |---------|---------|
-|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What Suspicious Activities Can ATA detect?](https://docs.microsoft.com/advanced-threat-analytics/understand-explore/ata-threats).|
+|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What Suspicious Activities Can ATA detect?](/advanced-threat-analytics/understand-explore/ata-threats).|
 |Abnormal behavior |These attacks are detected by using behavioral analysis and use machine learning to identify questionable activities, including:<ul><li>Anomalous logins</li><li>Unknown threats</li><li>Password sharing</li><li>Lateral movement</li></ul>|
 |Security issues and risks |These attacks are detected by looking at current network and system configuration, including:<ul><li>Broken trust</li><li>Weak protocols</li><li>Known protocol vulnerabilities</li></ul>|
 
-You can use ATA to help detect attackers attempting to compromise privileged identities. For more information on deploying ATA, see the Plan, Design, and Deploy topics in the [Advanced Threat Analytics documentation](https://docs.microsoft.com/advanced-threat-analytics/).
+You can use ATA to help detect attackers attempting to compromise privileged identities. For more information on deploying ATA, see the Plan, Design, and Deploy topics in the [Advanced Threat Analytics documentation](/advanced-threat-analytics/).
 
 ## Related content for associated Windows Server 2016 solutions
 
@@ -367,5 +367,3 @@ This article does not provide you with any legal rights to any intellectual prop
 Published September 2017<br>
 Version 1.0<br>
 © 2017 Microsoft. All rights reserved.
-
-

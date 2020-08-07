@@ -16,9 +16,9 @@ After you install and configure MultiPoint Services, and perform any additional 
 
 Use the following information to prepare your system:
 [Plan user accounts for your MultiPoint services environment](Plan-user-accounts-for-your-MultiPoint-services-environment.md)
-[Example scenarios for user accounts creation](Example-scenarios--MultiPoint-Services-user-accounts.md)
+[Example scenarios for user accounts creation](./multipoint-users-scenario.md)
 [Create local user accounts in MultiPoint Services](Create-local-user-accounts.md)
-[Limit users' access to the server](Limit-users--access-to-the-server-in-MultiPoint-services.md)
+[Limit users' access to the server](./limit-user-access-to-multipoint.md)
 [Configure stations for automatic logon](Configure-stations-for-automatic-logon.md)
 [Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md)
 [Enable file sharing](Enable-file-sharing-in-MultiPoint-services.md)

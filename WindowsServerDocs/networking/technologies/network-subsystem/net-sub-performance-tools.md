@@ -37,6 +37,6 @@ Microsoft Server Performance Advisor \(SPA\) helps IT administrators collect met
 
 SPA generates comprehensive diagnostic reports and charts, and it provides recommendations to help you quickly analyze issues and develop corrective actions.
 
- For more information and to download the advisor, see [Microsoft Server Performance Advisor](https://msdn.microsoft.com/library/windows/hardware/dn481522.aspx) in the Windows Hardware Dev Center.
+ For more information and to download the advisor, see [Microsoft Server Performance Advisor](/previous-versions/dn481522(v=vs.85)) in the Windows Hardware Dev Center.
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

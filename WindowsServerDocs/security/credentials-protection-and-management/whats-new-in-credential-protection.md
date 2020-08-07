@@ -19,7 +19,7 @@ Beginning with Windows 10, version 1511, Credential Manager uses virtualization-
 
 Beginning with Windows 10, version 1607, Isolated User Mode is included with Hyper-V so it no longer is installed separately for Credential Guard deployment.
 
-[Learn more about Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
+[Learn more about Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard).
 
 
 ## Remote Credential Guard for signed-in user
@@ -28,7 +28,7 @@ Beginning with Windows 10, version 1607, Remote Credential Guard protects signed
 
 Beginning with Windows 10, version 1703, Remote Credential Guard protects supplied user credentials when using Remote Desktop.
 
-[Learn more about Remote credential guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard).
+[Learn more about Remote credential guard](/windows/security/identity-protection/remote-credential-guard).
 
 ## Domain protections
 
@@ -40,7 +40,7 @@ Beginning with Windows 10 version 1507 and Windows Server 2016, if a domain-join
 
 Beginning with Windows Server 2016, KDCs support authentication using Kerberos key trust.
 
-[Learn more about public key support for domain-joined devices & Kerberos key trust](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
+[Learn more about public key support for domain-joined devices & Kerberos key trust](../kerberos/whats-new-in-kerberos-authentication.md).
 
 ### PKINIT Freshness extension support
 
@@ -48,7 +48,7 @@ Beginning with Windows 10, version 1507 and Windows Server 2016, Kerberos client
 
 Beginning with Windows Server 2016, KDCs can support the PKInit freshness extension.  By default, KDCs will not offer the PKInit freshness extension.
 
-[Learn more about PKINIT freshness extension support](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
+[Learn more about PKINIT freshness extension support](../kerberos/whats-new-in-kerberos-authentication.md).
 
 ### Rolling public key only user's NTLM secrets
 
@@ -75,4 +75,4 @@ Beginning with Windows Server 2016 domain functional level (DFL), DCs can suppor
 
 Configuration: On the authentication policy, click **Allow NTLM network authentication when the user is restricted to selected devices**.
 
-[Learn more about authentication policies](https://technet.microsoft.com/windows-server-docs/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos).
+[Learn more about authentication policies](./authentication-policies-and-authentication-policy-silos.md).

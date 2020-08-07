@@ -28,7 +28,4 @@ This guide includes the following sections:
 -   [Role-based Access Control](../../technologies/ipam/Role-based-Access-Control.md)
 
 ## See Also
-[IP Address Management &#40;IPAM&#41;](IP-Address-Management--IPAM-.md)
-
-
-
+[IP Address Management &#40;IPAM&#41;](./ipam-top.md)

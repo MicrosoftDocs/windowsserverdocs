@@ -25,7 +25,7 @@ Once you enable encryption on a subnet, all network traffic within that subnet i
 >When communicating with another VM on the same subnet, whether its currently connected or connected at a later time, the traffic gets encrypted automatically.
 
 >[!TIP]
->If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](https://docs.microsoft.com/windows-server/networking/sdn/manage/use-acls-for-traffic-flow).
+>If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](../manage/use-acls-for-traffic-flow.md).
 
 
 ## Step 1. Create the Encryption Certificate

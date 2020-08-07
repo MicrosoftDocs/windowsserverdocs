@@ -40,7 +40,7 @@ Multiprocessor or multicore VMs that are running the following Microsoft operati
 - Windows Server 2012 with the Windows Server 2012 R2 integration components installed.
 - Windows 8 with the Windows Server 2012 R2 integration components installed.
 
-For information about vRSS support for VMs running FreeBSD or Linux as a guest operating system on Hyper-V, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://docs.microsoft.com/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
+For information about vRSS support for VMs running FreeBSD or Linux as a guest operating system on Hyper-V, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../../../virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
 
 ## Hardware requirements
 

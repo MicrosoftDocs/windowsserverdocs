@@ -30,7 +30,7 @@ Following are the new and improved features for IPAM in  Windows Server 2016.
 ### <a name="EIP"></a>Enhanced IP address management
 The following features improve the IPAM address management capabilities.
 >[!NOTE]
->For the IPAM Windows PowerShell command reference, see [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/).
+>For the IPAM Windows PowerShell command reference, see [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/).
 
 #### Support for /31, /32, and /128 subnets
 IPAM in  Windows Server 2016 now supports /31, /32, and /128 subnets. For example, a two address subnet (/31 IPv4) may be required for a point-to-point link between switches. Also, some switches may require single loopback addresses (/32 for IPv4, /128 for IPv6).
@@ -44,7 +44,7 @@ If the number of available subnets is less than the number of requested subnets,
 >[!NOTE]
 >This function does not actually allocate the subnets, it only reports their availability. However, the cmdlet output can be piped to the **Add-IpamSubnet** command to create the subnet.
 
-For more information, see [Find-IpamFreeSubnet](https://docs.microsoft.com/powershell/module/ipamserver/Find-IpamFreeSubnet).
+For more information, see [Find-IpamFreeSubnet](/powershell/module/ipamserver/Find-IpamFreeSubnet).
 
 #### **Find free address ranges with Find-IpamFreeRange**
 
@@ -55,7 +55,7 @@ The command searches for a continuous series of unallocated IP addresses that ma
 > [!NOTE]
 > This function does not actually allocate the ranges, it only reports their availability. However, the cmdlet output can be piped to the **Add-IpamRange** command to create the range.
 
-For more information, see [Find-IpamFreeRange](https://docs.microsoft.com/powershell/module/ipamserver/Find-IpamFreeRange).
+For more information, see [Find-IpamFreeRange](/powershell/module/ipamserver/Find-IpamFreeRange).
 
 ### <a name="EDNS"></a>Enhanced DNS service management
 IPAM in  Windows Server 2016 now supports discovery of file-based, domain-joined DNS servers in an Active Directory forest in which IPAM is running.
@@ -116,5 +116,4 @@ You can now use Windows PowerShell to configure Role Based Access Control. You c
 
 -   DHCP scopes
 
-For more information, see [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) and [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/).
-
+For more information, see [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) and [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/).

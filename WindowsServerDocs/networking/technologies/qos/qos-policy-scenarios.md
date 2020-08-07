@@ -104,7 +104,7 @@ To complete this task, you must be able to create and deploy Group Policy Object
 
 To set up the test environment, complete the following tasks.
 
-- Create an AD DS domain with clients and users grouped into organization units. For instructions on deploying AD DS, see the [Core Network Guide](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide).
+- Create an AD DS domain with clients and users grouped into organization units. For instructions on deploying AD DS, see the [Core Network Guide](../../core-network-guide/core-network-guide.md).
 
 - Configure the routers to differentially queue based on DSCP values. For example, DSCP value 44 enters a "Platinum" queue and all others are weighted-fair-queued.
 
