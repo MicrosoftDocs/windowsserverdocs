@@ -52,13 +52,13 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 TLS/SSL ciphers should be controlled by configuring the cipher suite order. For details, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order).
 
-For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).
+For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 ## CipherSuites
 
 Configuring TLS/SSL cipher suites should be done using group policy, MDM or PowerShell, see [Configuring TLS Cipher Suite Order](manage-tls.md#configuring-tls-cipher-suite-order) for details.
 
-For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).
+For information about default cipher suites order that are used by the Schannel SSP, see [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 
 ## ClientCacheTime
@@ -118,7 +118,7 @@ Applicable versions: All versions beginning with Windows Server 2012 and Windows
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\LSA
 
-Windows Server FIPS cipher suites: See [Supported Cipher Suites and Protocols in the Schannel SSP](https://technet.microsoft.com/library/dn786419.aspx).
+Windows Server FIPS cipher suites: See [Supported Cipher Suites and Protocols in the Schannel SSP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786419(v=ws.11)).
 
 ## Hashes
 
@@ -289,7 +289,7 @@ Default server cache time: 10 hours
 This subkey controls the use of SSL 2.0.
 
 Beginning with Windows 10, version 1607 and Windows Server 2016, SSL 2.0 has been removed and is no longer supported.
-For a SSL 2.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For a SSL 2.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -320,7 +320,7 @@ The following example shows SSL 2.0 disabled in the registry:
 This subkey controls the use of SSL 3.0.
 
 Beginning with Windows 10, version 1607 and Windows Server 2016, SSL 3.0 has been disabled by default.
-For SSL 3.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For SSL 3.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -349,7 +349,7 @@ The following example shows SSL 3.0 disabled in the registry:
 
 This subkey controls the use of TLS 1.0.
 
-For TLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For TLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -378,7 +378,7 @@ The following example shows TLS 1.0 disabled in the registry:
 
 This subkey controls the use of TLS 1.1.
 
-For TLS 1.1 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For TLS 1.1 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -407,7 +407,7 @@ The following example shows TLS 1.1 disabled in the registry:
 
 This subkey controls the use of TLS 1.2.
 
-For TLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For TLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -436,7 +436,7 @@ The following example shows TLS 1.2 disabled in the registry:
 
 This subkey controls the use of DTLS 1.0.
 
-For DTLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For DTLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -465,7 +465,7 @@ The following example shows DTLS 1.0 disabled in the registry:
 
 This subkey controls the use of DTLS 1.2.
 
-For DTLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159.aspx).
+For DTLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 
 Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
@@ -490,5 +490,3 @@ If an SSPI app explicitly requests to use DTLS 1.2, it may be negotiated.
 The following example shows DTLS 1.1 disabled in the registry:
 
 ![DTLS 1.1 disabled](images/dtls-11-registry-setting.png)
-
-

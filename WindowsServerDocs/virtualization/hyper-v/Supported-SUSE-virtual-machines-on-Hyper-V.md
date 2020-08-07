@@ -95,7 +95,7 @@ SLES12+ is 64-bit only.
 
 ## See Also
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

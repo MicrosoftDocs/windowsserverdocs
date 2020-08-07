@@ -17,7 +17,7 @@ The default installation will set up a new forest dedicated for HGS and configur
 This option is recommended because the environment is self-contained and known to be secure when it is created.
 
 The only technical requirement for installing HGS in an existing forest is that it be added to the root domain; non-root domains are not supported. But there are also operational requirements and security-related best practices for using an existing forest.
-Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM).
+Suitable forests are purposely built to serve one sensitive function, such as the forest used by [Privileged Access Management for AD DS](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) or an [Enhanced Security Administrative Environment (ESAE) forest](../../identity/securing-privileged-access/securing-privileged-access-reference-material.md#ESAE_BM).
 Such forests usually exhibit the following characteristics:
 
 - They have few admins (separate from fabric admins)
@@ -33,5 +33,3 @@ Choose the installation option that best suits your environment:
 
 - [Install HGS in its own dedicated forest](guarded-fabric-install-hgs-default.md)
 - [Install HGS in an existing bastion forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
-
-

@@ -134,6 +134,4 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 |Term|Definition|
 |----|-------|
-|Autologon|Autologon is a feature that has been present in Windows for several releases.  It is a documented feature of Windows that even has tools such as Autologon for Windows v3.01 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<p>It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret.|
-
-
+|Autologon|Autologon is a feature that has been present in Windows for several releases.  It is a documented feature of Windows that even has tools such as Autologon for Windows v3.01 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](/sysinternals/downloads/autologon)*<p>It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret.|

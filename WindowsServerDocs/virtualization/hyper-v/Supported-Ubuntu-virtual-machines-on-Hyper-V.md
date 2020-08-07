@@ -150,6 +150,6 @@ The following feature distribution map indicates the features in each version. T
 
 * [Best Practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
 
-* [Ubuntu 14.04 in a Generation 2 VM - Ben Armstrong's Virtualization Blog](https://blogs.msdn.com/b/virtual_pc_guy/archive/2014/06/09/ubuntu-14-04-in-a-generation-2-vm.aspx)
+* [Ubuntu 14.04 in a Generation 2 VM - Ben Armstrong's Virtualization Blog](/archive/blogs/virtual_pc_guy/ubuntu-14-04-in-a-generation-2-vm)

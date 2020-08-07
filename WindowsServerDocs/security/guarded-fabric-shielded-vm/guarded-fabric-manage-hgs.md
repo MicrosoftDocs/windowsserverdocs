@@ -113,7 +113,7 @@ Events from HGS will show up in the Windows event log under 2 sources:
 You can view these events by opening Event Viewer and navigating to Microsoft-Windows-HostGuardianService-Attestation and Microsoft-Windows-HostGuardianService-KeyProtection.
 
 In a large environment, it is often preferable to forward events to a central Windows Event Collector to make analyzation of the events easier.
-For more information, check out the [Windows Event Forwarding documentation](https://msdn.microsoft.com/library/windows/desktop/bb427443.aspx).
+For more information, check out the [Windows Event Forwarding documentation](/windows/win32/wec/windows-event-collector).
 
 ### Using System Center Operations Manager
 You can also use System Center 2016 - Operations Manager to monitor HGS and your guarded hosts.
@@ -484,7 +484,7 @@ Add-HgsAttestationDumpPolicy -Name 'DumpEncryptionKey02' -PublicKeyHash '<paste 
 Be sure to add each unique dump encryption key to HGS if you choose to use different keys across your guarded fabric.
 Hosts that are encrypting memory dumps with a key not known to HGS will not pass attestation.
 
-Consult the Hyper-V documentation for more information about [configuring dump encryption on hosts](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/manage/about-dump-encryption).
+Consult the Hyper-V documentation for more information about [configuring dump encryption on hosts](../../virtualization/hyper-v/manage/about-dump-encryption.md).
 
 #### Check if the system passed attestation
 After registering the necessary information with HGS, you should check if the host passes attestation.

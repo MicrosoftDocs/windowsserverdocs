@@ -29,7 +29,7 @@ The TLS and SSL protocols can be divided into two layers. The first layer consis
 **TLS and SSL protocol layers**
 
 
-The Schannel SSP implements the TLS and SSL protocols without modification. The SSL protocol is proprietary, but the Internet Engineering Task Force produces the public TLS specifications. For information about which TLS or SSL version is supported in Windows versions, see [Protocols in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159(v=vs.85).aspx). The following table lists the specifications for each TLS version. Each specification contains information about:
+The Schannel SSP implements the TLS and SSL protocols without modification. The SSL protocol is proprietary, but the Internet Engineering Task Force produces the public TLS specifications. For information about which TLS or SSL version is supported in Windows versions, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). The following table lists the specifications for each TLS version. Each specification contains information about:
 
 -   The TLS Record Protocol
 
@@ -77,6 +77,3 @@ This additional functionality:
 -   Reduces the memory usage when multiple SSL websites are hosted on a single web server
 
 -   Allows more users to connect to SSL websites simultaneously
-
-
-

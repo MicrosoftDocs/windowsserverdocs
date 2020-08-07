@@ -32,13 +32,13 @@ For more info, see [Server Core app compatibility feature](../../get-started-19/
 
 - **Branch office improvements**
 
-    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by leveraging the new [fallback HGS](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office#fallback-configuration) and [offline mode](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
+    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by leveraging the new [fallback HGS](../../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
 
     Offline mode allows you to continue to start up your shielded VMs, even if HGS can't be reached, as long as the VM has started successfully once, and the host's security configuration has not changed.
 
 - **Troubleshooting improvements**
 
-    We've also made it easier to [troubleshoot your shielded virtual machines](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access.
+    We've also made it easier to [troubleshoot your shielded virtual machines](../../security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md) by enabling support for VMConnect Enhanced Session Mode and PowerShell Direct. These tools are particularly useful if you've lost network connectivity to your VM and need to update its configuration to restore access.
 
     These features do not need to be configured, and they become available automatically when a shielded VM is placed on a Hyper-V host running Windows Server version 1803 or later.
 
@@ -68,7 +68,7 @@ This feature helps prevent a virtual machine from using more than its share of s
 Set-VMProcessor TestVM -EnableHostResourceProtection $true
 ```
 
-For details about this cmdlet, see [Set-VMProcessor](https://docs.microsoft.com/powershell/module/hyper-v/set-vmprocessor).
+For details about this cmdlet, see [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor).
 
 ### Hot add and remove for network adapters and memory \(new\)
 
@@ -99,7 +99,7 @@ Linux operating systems running on generation 2 virtual machines can now boot wi
 Set-VMFirmware TestVM -SecureBootTemplate MicrosoftUEFICertificateAuthority
 ```
 
-For more information about Linux virtual machines on Hyper-V, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md). For more information about the cmdlet, see [Set-VMFirmware](https://docs.microsoft.com/powershell/module/hyper-v/set-vmfirmware).
+For more information about Linux virtual machines on Hyper-V, see [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md). For more information about the cmdlet, see [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware).
 
 ### More memory and processors for generation 2 virtual machines and Hyper-V hosts \(updated\)
 
@@ -113,13 +113,13 @@ This feature lets you use a virtual machine as a Hyper-V host and create virtual
 
 -   A processor with Intel VT-x (nested virtualization is available only for Intel processors at this time).
 
-For details and instructions, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
+For details and instructions, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
 
 ### Networking features \(new\)
 
 New networking features include:
 
--   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming).
+-   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
 
 -   **Virtual machine multi queues (VMMQ)**. Improves on VMQ throughput by allocating multiple hardware queues per virtual machine.  The default queue becomes a set of queues for a virtual machine, and traffic is spread between the queues.
 
@@ -136,7 +136,7 @@ Production checkpoints are "point-in-time" images of a virtual machine. These gi
 
 ### Rolling Hyper-V Cluster upgrade \(new\)
 
-You can now add a node running Windows Server 2019 or Windows Server 2016 to a Hyper-V Cluster with nodes running Windows Server 2012 R2. This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update-ClusterFunctionalLevel](https://docs.microsoft.com/powershell/module/failoverclusters/Update-ClusterFunctionalLevel).
+You can now add a node running Windows Server 2019 or Windows Server 2016 to a Hyper-V Cluster with nodes running Windows Server 2012 R2. This allows you to upgrade the cluster without downtime. The cluster runs at a  Windows Server 2012 R2  feature level until you upgrade all nodes in the cluster and update the cluster functional level with the Windows PowerShell cmdlet, [Update-ClusterFunctionalLevel](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel).
 
 > [!IMPORTANT]
 > After you update the cluster functional level, you can't return it to Windows Server 2012 R2.
@@ -168,15 +168,15 @@ For details and instructions, see the [Cluster Operating System Rolling Upgrade]
 ### Shared virtual hard disks \(updated\)
 You can now resize shared virtual hard disks (.vhdx files) used for guest clustering, without downtime. Shared virtual hard disks can be grown or shrunk while the virtual machine is online. Guest clusters can now also protect shared virtual hard disks by using Hyper-V Replica for disaster recovery.
 
-Enable replication on the collection. Enabling replication on a collection is **only exposed through the WMI interface**. See the documentation for [Msvm_CollectionReplicationService class](https://msdn.microsoft.com/library/mt167787%28v=vs.85%29.aspx) for more details. **You cannot manage replication of a collection through PowerShell cmdlet or UI.** The VMs should be on hosts that are part of a Hyper-V cluster to access features that are specific to a collection. This includes Shared VHD - shared VHDs on stand-alone hosts are not supported by Hyper-V Replica.
+Enable replication on the collection. Enabling replication on a collection is **only exposed through the WMI interface**. See the documentation for [Msvm_CollectionReplicationService class](/previous-versions/windows/desktop/clushyperv/msvm-collectionreplicationservice) for more details. **You cannot manage replication of a collection through PowerShell cmdlet or UI.** The VMs should be on hosts that are part of a Hyper-V cluster to access features that are specific to a collection. This includes Shared VHD - shared VHDs on stand-alone hosts are not supported by Hyper-V Replica.
 
-Follow the guidelines for shared VHDs in [Virtual Hard Disk Sharing Overview](https://technet.microsoft.com/library/dn281956.aspx), and be sure that your shared VHDs are part of a guest cluster.
+Follow the guidelines for shared VHDs in [Virtual Hard Disk Sharing Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11)), and be sure that your shared VHDs are part of a guest cluster.
 
 A collection with a shared VHD but no associated guest cluster cannot create reference points for the collection (regardless of whether the shared VHD is included in the reference point creation or not).
 
 ### Virtual machine backup\(new\)
 
-If you are backing up a single virtual machine (regardless of whether host is clustered or not), you should not use a VM group.  Nor should you use a snapshot collection. VM groups and snapshot collection are meant to be used solely for backing up guest clusters that are using shared vhdx. Instead, you should take a snapshot using the [Hyper-V WMI v2 provider](https://msdn.microsoft.com/library/windows/desktop/hh850319(v=vs.85).aspx). Likewise, do not use the [Failover Cluster WMI provider](https://msdn.microsoft.com/library/windows/desktop/mt167750(v=vs.85).aspx).
+If you are backing up a single virtual machine (regardless of whether host is clustered or not), you should not use a VM group.  Nor should you use a snapshot collection. VM groups and snapshot collection are meant to be used solely for backing up guest clusters that are using shared vhdx. Instead, you should take a snapshot using the [Hyper-V WMI v2 provider](/windows/win32/hyperv_v2/windows-virtualization-portal). Likewise, do not use the [Failover Cluster WMI provider](/previous-versions/windows/desktop/clushyperv/failover-clustering-hyper-v-wmi-provider-portal).
 
 ### Shielded virtual machines \(new\)
 
@@ -187,7 +187,7 @@ Shielded virtual machines use several features to make it harder for Hyper-V adm
 
 ### Start order priority for clustered virtual machines \(new\)
 
-This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as [New-ClusterGroupSet](https://docs.microsoft.com/powershell/module/failoverclusters/new-clustergroupset), [Get-ClusterGroupSet](https://docs.microsoft.com/powershell/module/failoverclusters/get-clustergroupset), and [Add-ClusterGroupSetDependency](https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergroupsetdependency).
+This feature gives you more control over which clustered virtual machines are started or restarted first. This makes it easier to start virtual machines that provide services before virtual machines that use those services. Define sets, place virtual machines in sets, and specify dependencies. Use Windows PowerShell cmdlets to manage the sets, such as [New-ClusterGroupSet](/powershell/module/failoverclusters/new-clustergroupset), [Get-ClusterGroupSet](/powershell/module/failoverclusters/get-clustergroupset), and [Add-ClusterGroupSetDependency](/powershell/module/failoverclusters/add-clustergroupsetdependency).
 .
 ### Storage quality of service (QoS) \(updated\)
 
@@ -211,7 +211,7 @@ For instructions on checking and upgrading the version, see [Upgrade virtual mac
 > [!IMPORTANT]
 > -   After you update the  version, you can't move the virtual machine to a server that runs  Windows Server 2012 R2.
 > -   You can't downgrade the configuration to a previous version.
-> -   The [Update-VMVersion](https://docs.microsoft.com/powershell/module/hyper-v/update-vmversion) cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2.
+> -   The [Update-VMVersion](/powershell/module/hyper-v/update-vmversion) cmdlet  is blocked on a Hyper-V Cluster when the cluster functional level is  Windows Server 2012 R2.
 
 ### Virtualization-based security for generation 2 virtual machines \(new)
 
@@ -231,7 +231,7 @@ Key features include:
 
 -   Ability to restrict container resources
 
-For details, including quick start guides, see the [Windows Containers Documentation](https://docs.microsoft.com/virtualization/windowscontainers/index).
+For details, including quick start guides, see the [Windows Containers Documentation](/virtualization/windowscontainers/index).
 
 ### Windows PowerShell Direct \(new\)
 

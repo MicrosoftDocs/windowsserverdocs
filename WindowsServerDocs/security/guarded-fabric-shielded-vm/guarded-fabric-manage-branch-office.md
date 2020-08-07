@@ -34,7 +34,7 @@ In order for the Hyper-V host to pass attestation with both the primary and fall
 Additionally, the certificates used to decrypt the virtual machine's TPM need to be available in both HGS clusters.
 You can configure each HGS with different certificates and configure the VM to trust both, or add a shared set of certificates to both HGS clusters.
 
-For additional information about configuring HGS in a branch office using fallback URLs, see the blog post [Improved branch office support for shielded VMs in Windows Server, version 1709](https://blogs.technet.microsoft.com/datacentersecurity/2017/11/15/improved-branch-office-support-for-shielded-vms-in-windows-server-version-1709/).
+For additional information about configuring HGS in a branch office using fallback URLs, see the blog post [Improved branch office support for shielded VMs in Windows Server, version 1709](/archive/blogs/datacentersecurity/improved-branch-office-support-for-shielded-vms-in-windows-server-version-1709).
 
 
 ## Offline mode

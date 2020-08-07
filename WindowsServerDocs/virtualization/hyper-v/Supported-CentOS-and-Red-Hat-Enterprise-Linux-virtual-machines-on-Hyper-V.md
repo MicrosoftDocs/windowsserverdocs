@@ -265,7 +265,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 
 See Also
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
 
 * [Supported Debian virtual machines on Hyper-V](Supported-Debian-virtual-machines-on-Hyper-V.md)
 

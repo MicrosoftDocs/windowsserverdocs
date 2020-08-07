@@ -20,13 +20,13 @@ You can also connect to virtual networks on the server that is running Hyper\-V 
 >
 > - [Manage Hyper-V Virtual Switch](Manage-Hyper-V-Virtual-Switch.md)
 > - [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](RDMA-and-Switch-Embedded-Teaming.md)
-> - [Network Switch Team Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/netswitchteam/new-netswitchteam?view=win10-ps)
-> - [What's New in VMM 2016](https://docs.microsoft.com/system-center/vmm/whats-new#networking)
-> - [Set up the VMM networking fabric](https://docs.microsoft.com/system-center/vmm/manage-networks)
-> - [Hyper-V forum](https://docs.microsoft.com/answers/topics/windows-server-hyper-v.html)
-> - [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](https://docs.microsoft.com/answers/topics/windows-server-hyper-v.html)
+> - [Network Switch Team Cmdlets in Windows PowerShell](/powershell/module/netswitchteam/new-netswitchteam?view=win10-ps)
+> - [What's New in VMM 2016](/system-center/vmm/whats-new#networking)
+> - [Set up the VMM networking fabric](/system-center/vmm/manage-networks)
+> - [Hyper-V forum](/answers/topics/windows-server-hyper-v.html)
+> - [Hyper-V: The WFP virtual switch extension should be enabled if it is required by third party extensions](/answers/topics/windows-server-hyper-v.html)
 >
-> For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
+> For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).
 
 Hyper\-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper\-V Manager when you install the Hyper\-V server role.
 

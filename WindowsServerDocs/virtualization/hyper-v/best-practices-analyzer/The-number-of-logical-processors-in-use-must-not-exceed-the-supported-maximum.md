@@ -35,7 +35,7 @@ In the following sections, italics indicates text that appears in the Best Pract
 
 *Remove some processors from this machine or use msconfig to limit the number of available processors.*
 
-See the following instructions to use Msconfig. For details about removing processors, see the instructions that came with the computer or contact the hardware manufacturer. For details about maximum supported configurations for Hyper-V, see [Plan for Hyper-V scalability in Windows Server 2016](../plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).
+See the following instructions to use Msconfig. For details about removing processors, see the instructions that came with the computer or contact the hardware manufacturer. For details about maximum supported configurations for Hyper-V, see [Plan for Hyper-V scalability in Windows Server 2016](../plan/plan-hyper-v-scalability-in-windows-server.md).
 
 ### To limit the number of available processors
 
@@ -46,6 +46,3 @@ See the following instructions to use Msconfig. For details about removing proce
 3.  Select **Number of processors** and then select a number in the list. Click **OK**.
 
 4.  Restart the computer to run it using the new number of processors.
-
-
-
