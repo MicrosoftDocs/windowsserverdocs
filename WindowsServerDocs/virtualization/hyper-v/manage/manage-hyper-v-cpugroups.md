@@ -108,7 +108,7 @@ This can be accomplished using a combination of the "minroot" configuration, whi
 The virtualization host can be configured to restrict the host partition to specific LPs, with one or more CPU groups affinitized to the remaining LPs.
 In this manner, the root and guest partitions can run on dedicated CPU resources, and completely isolated, with no CPU sharing.
 
-For more information about the "minroot" configuration, see [Hyper-V Host CPU Resource Management](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-minroot-2016).
+For more information about the "minroot" configuration, see [Hyper-V Host CPU Resource Management](./manage-hyper-v-minroot-2016.md).
 
 ## Using the CpuGroups Tool
 

@@ -17,18 +17,18 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 
 ## Secure the Hyper-V host
 - **Keep the host OS secure.**
-    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see the [Installation Options section](/windows-server/windows-server#installation-options) of the Windows Server technical content library. We don't recommend that you run production workloads on Hyper-V on Windows 10.
+    - Minimize the attack surface by using the minimum Windows Server installation option that you need for the management operating system. For more information, see the [Installation Options section](../../../index.yml#installation-options) of the Windows Server technical content library. We don't recommend that you run production workloads on Hyper-V on Windows 10.
     - Keep the Hyper-V host operating system, firmware, and device drivers up to date with the latest security updates. Check your vendor's recommendations to update firmware and drivers.
     - Don't use the Hyper-V host as a workstation or install any unnecessary software.
-    - Remotely manage the Hyper-V host. If you must manage the Hyper-V host locally, use Credential Guard. For more information, see [Protect derived domain credentials with Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard).
-    - Enable code integrity policies. Use virtualization-based security protected Code Integrity services. For more information, see [Device Guard Deployment Guide](https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide).
+    - Remotely manage the Hyper-V host. If you must manage the Hyper-V host locally, use Credential Guard. For more information, see [Protect derived domain credentials with Credential Guard](/windows/access-protection/credential-guard/credential-guard).
+    - Enable code integrity policies. Use virtualization-based security protected Code Integrity services. For more information, see [Device Guard Deployment Guide](/windows/device-security/device-guard/device-guard-deployment-guide).
 - **Use a secure network.**
     - Use a separate network with a dedicated network adapter for the physical Hyper-V computer.
     - Use a private or secure network to access VM configurations and virtual hard disk files.
     - Use a private/dedicated network for your live migration traffic. Consider enabling IPSec on this network to use encryption and secure your VM's data going over the network during migration. For more information, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 - **Secure storage migration traffic.**
 
-    Use SMB 3.0 for end-to-end encryption of SMB data and data protection tampering or eavesdropping on untrusted networks. Use a private network to access the SMB share contents to prevent man-in-the-middle attacks. For more information, see [SMB Security Enhancements](https://technet.microsoft.com/library/dn551363.aspx).
+    Use SMB 3.0 for end-to-end encryption of SMB data and data protection tampering or eavesdropping on untrusted networks. Use a private network to access the SMB share contents to prevent man-in-the-middle attacks. For more information, see [SMB Security Enhancements](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn551363(v=ws.11)).
 - **Configure hosts to be part of a guarded fabric.**
 
     For more information, see [Guarded fabric](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
@@ -42,7 +42,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 
 - **Harden the Hyper-V host operating system.**
 
-    Use the baseline security setting recommendations described in the [Windows Server Security Baseline](https://docs.microsoft.com/windows/device-security/windows-security-baselines).
+    Use the baseline security setting recommendations described in the [Windows Server Security Baseline](/windows/device-security/windows-security-baselines).
 
 - **Grant appropriate permissions.**
     - Add users that need to manage the Hyper-V host to the Hyper-V administrators group.
@@ -50,7 +50,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
 
 - **Configure anti-virus exclusions and options for Hyper-V.**
 
-    Windows Defender already has [automatic exclusions](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus) configured. For more information about exclusions, see [Recommended antivirus exclusions for Hyper-V hosts](https://support.microsoft.com/kb/3105657).
+    Windows Defender already has [automatic exclusions](/windows/security/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus) configured. For more information about exclusions, see [Recommended antivirus exclusions for Hyper-V hosts](https://support.microsoft.com/kb/3105657).
 
 - **Don't mount unknown VHDs.** This can expose the host to file system level attacks.
 
@@ -77,7 +77,7 @@ For more secure environments:
 
     - Install the latest security updates before you turn on a virtual machine in a production environment.
     - Install integration services for the supported guest operating systems that need it and keep it up to date. Integration service updates for guests that run supported Windows versions are available through Windows Update.
-    - Harden the operating system that runs in each virtual machine based on the role it performs. Use the baseline security setting recommendations that are described in the [Windows Security Baseline](https://docs.microsoft.com/windows/device-security/windows-security-baselines).
+    - Harden the operating system that runs in each virtual machine based on the role it performs. Use the baseline security setting recommendations that are described in the [Windows Security Baseline](/windows/device-security/windows-security-baselines).
 
 - **Use a secure network.**
 
@@ -93,7 +93,7 @@ For more secure environments:
 
 - **Enable virtualization based security for guests that run Windows 10 or Windows Server 2016 or later.**
 
-    For more information, see the [Device Guard Deployment Guide](https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide).
+    For more information, see the [Device Guard Deployment Guide](/windows/device-security/device-guard/device-guard-deployment-guide).
 
 - **Only enable Discrete Device Assignment if needed for a specific workload**.
 

@@ -22,13 +22,13 @@ Use the links below to view technical content for IT professionals for the diffe
 
 ## Windows Server 2016
 
-[Windows Server 2016 technical content](windows-server-2016.md)
+[Windows Server 2016 technical content](./index.yml)
 
 ## Windows Server 2012 R2 and Windows Server 2012
 
 [Windows Server 2012 R2 and Windows Server 2012 Technical Library](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/)
 
-[Windows Server 2012 R2 Developer Library on MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx)
+[Windows Server 2012 R2 Developer Library on MSDN](/windows/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
 
 ## Windows Server 2008 R2 and Windows Server 2008
 
@@ -53,4 +53,3 @@ Use the links below to view technical content for IT professionals for the diffe
 
 > [!TIP]
 > Are you having a problem? Start with [Microsoft Support](https://support.microsoft.com) - just type your problem into the search bar. You can get help with Windows, Office, Skype, you name it.
-

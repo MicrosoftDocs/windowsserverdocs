@@ -43,7 +43,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     |Setting name|Description|
     |----------------|---------------|
     |Allow management operating system to share this network adapter|Select this option if you want to allow the Hyper-V host to share the use of the virtual switch and NIC or NIC team with the virtual machine. With this enabled, the host can use any of the settings that you configure for the virtual switch like Quality of Service (QoS) settings, security settings, or other features of the Hyper-V virtual switch.|
-    |Enable single-root I/O virtualization (SR-IOV)|Select this option only if  you want to allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. For more information, see [Single-Root I/O Virtualization](https://technet.microsoft.com/library/dn641211.aspx#Sec4) in the Poster Companion Reference: Hyper-V Networking.|
+    |Enable single-root I/O virtualization (SR-IOV)|Select this option only if  you want to allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. For more information, see [Single-Root I/O Virtualization](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn641211(v=ws.11)#Sec4) in the Poster Companion Reference: Hyper-V Networking.|
 
 7.  If you want to isolate network traffic from the management Hyper-V host operating system or other virtual machines that share the same virtual switch, select **Enable virtual LAN identification for management operating system**. You can change the VLAN ID to any number or leave the default. This is the virtual LAN identification number that the management operating system will use for all network communication through this virtual switch.
 
@@ -67,7 +67,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     Get-NetAdapter
     ```
 
-4.  Create a virtual switch by using the [New-VMSwitch](https://technet.microsoft.com/library/hh848455.aspx) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.
+4.  Create a virtual switch by using the [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch?view=win10-ps) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.
 
     ```
     New-VMSwitch -name ExternalSwitch  -NetAdapterName Ethernet -AllowManagementOS $true
@@ -90,6 +90,3 @@ For more advanced Windows PowerShell scripts that cover improved or new virtual 
 
 ## Next step
 [Create a virtual machine in Hyper-V](Create-a-virtual-machine-in-Hyper-V.md)
-
-
-

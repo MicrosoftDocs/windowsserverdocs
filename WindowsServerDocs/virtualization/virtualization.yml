@@ -60,7 +60,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Microsoft Hyper-V Server 2016
-            url: /windows-server/virtualization/hyper-v/hyper-v-server-2016
+            url: ./hyper-v/hyper-v-server-2016.md
           - text: System requirements for Hyper-V on Windows Server
             url: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
 

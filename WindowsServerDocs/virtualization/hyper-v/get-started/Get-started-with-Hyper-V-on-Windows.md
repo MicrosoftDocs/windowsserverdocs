@@ -12,7 +12,7 @@ ms.date: 10/07/2016
 
 >Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
-Use the following resources to set up and try out Hyper-V on the Server Core or GUI installation option of Windows Server 2019 or Windows Server 2016. But before you install anything, check the [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md).
+Use the following resources to set up and try out Hyper-V on the Server Core or GUI installation option of Windows Server 2019 or Windows Server 2016. But before you install anything, check the [System Requirements for Windows Server](../../../get-started/system-requirements.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md).
 
 - [Download and install Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019)
 
