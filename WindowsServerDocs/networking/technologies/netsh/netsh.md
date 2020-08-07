@@ -22,7 +22,7 @@ In most cases, netsh commands provide the same functionality that is available w
 In addition, there are netsh commands for network technologies, such as for IPv6, network bridge, and Remote Procedure Call \(RPC\), that are not available in Windows Server as an MMC snap-in.
 
 >[!IMPORTANT]
->It is recommended that you use Windows PowerShell to manage networking technologies in [Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx) rather than Network Shell. Network Shell is included for compatibility with your scripts, however, and its use is supported.
+>It is recommended that you use Windows PowerShell to manage networking technologies in [Windows Server 2016 and Windows 10](/powershell/windows/get-started?view=win10-ps) rather than Network Shell. Network Shell is included for compatibility with your scripts, however, and its use is supported.
 
 ## Network Shell (Netsh) Technical Reference
 

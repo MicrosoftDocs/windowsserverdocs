@@ -164,7 +164,7 @@ For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md)
 
 SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.
 
-For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming)
+For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md)
 
 
 
@@ -174,6 +174,3 @@ The following networking scenarios are not supported in Windows Server 2016.
 -   VLAN-based tenant virtual networks.
 
 -   IPv6 is not supported in either the underlay or overlay.
-
-
-

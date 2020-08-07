@@ -121,7 +121,5 @@ The following device-related data is logged with UAL.
 UAL can be used on any computer running versions of Windows Server after Windows Server 2012.
 
 ## Additional References
-[User Access Logging](https://msdn.microsoft.com/library/windows/desktop/hh437528(v=vs.85).aspx) on MSDN.
+[User Access Logging](/previous-versions/windows/desktop/ual/user-access-logging) on MSDN.
 [Manage User Access Logging](Manage-User-Access-Logging.md)
-
-

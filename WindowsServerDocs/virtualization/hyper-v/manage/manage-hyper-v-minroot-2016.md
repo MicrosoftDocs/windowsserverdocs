@@ -12,12 +12,12 @@ Hyper-V host CPU resource controls introduced in Windows Server 2016 or later al
 Using these controls, administrators can dedicate a subset of the processors of a host system to the root partition.
 This can segregate the work done in a Hyper-V host from the workloads running in guest virtual machines by running them on separate subsets of the system processors.
 
-For details about hardware for Hyper-V hosts, see [Windows 10 Hyper-V System Requirements](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
+For details about hardware for Hyper-V hosts, see [Windows 10 Hyper-V System Requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
 
 ## Background
 
 Before setting controls for Hyper-V host CPU resources, it's helpful to review the basics of the Hyper-V architecture.
-You can find a general summary in the [Hyper-V Architecture](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/hyper-v-server/architecture) section.
+You can find a general summary in the [Hyper-V Architecture](../../../administration/performance-tuning/role/hyper-v-server/architecture.md) section.
 These are important concepts for this article:
 
 * Hyper-V creates and manages virtual machine partitions, across which compute resources are allocated and shared, under control of the hypervisor.  Partitions provide strong isolation boundaries between all guest virtual machines, and between guest VMs and the root partition.

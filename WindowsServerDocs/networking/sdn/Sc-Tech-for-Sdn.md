@@ -21,7 +21,7 @@ System Center includes the following technologies for use with Software Defined 
 ## <a name="bkmk_scom"></a>System Center Operations Manager
 System Center 2016 Operations Manager provides infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offers comprehensive monitoring for your datacenter and cloud, both private and public.
 
-For more information, see [Operations Manager](https://technet.microsoft.com/library/hh205987.aspx).
+For more information, see [Operations Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12)).
 
 ## <a name="bkmk_scvmm"></a>System Center Virtual Machine Manager
 With System Center 2016 Virtual Machine Manager (VMM), you can:
@@ -34,6 +34,4 @@ With System Center 2016 Virtual Machine Manager (VMM), you can:
 - Helps you to control traffic flow between virtual networks, including the ability to define guaranteed bandwidth for your critical applications and workloads.
 
 
-For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-overview).
-
-
+For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](/system-center/vmm/deploy-sdn?view=sc-vmm-2019).

@@ -24,7 +24,7 @@ This document describes important changes to Hyper-V's default and recommended u
 
 ## Background
 
-Starting with Windows Server 2016, Hyper-V supports several methods of scheduling and managing virtual processors, referred to as hypervisor scheduler types.  A detailed description of all hypervisor scheduler types can be found in [Understanding and using Hyper-V hypervisor scheduler types](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types).
+Starting with Windows Server 2016, Hyper-V supports several methods of scheduling and managing virtual processors, referred to as hypervisor scheduler types.  A detailed description of all hypervisor scheduler types can be found in [Understanding and using Hyper-V hypervisor scheduler types](./manage-hyper-v-scheduler-types.md).
 
 >[!NOTE]
 >New hypervisor scheduler types were first introduced with Windows Server 2016, and are not available in prior releases. All versions of Hyper-V prior to Windows Server 2016 support only the classic scheduler. Support for the core scheduler was only recently published.
@@ -70,7 +70,7 @@ These performance impacts can be minimized by following the deployment guidance 
 Deploying Hyper-V hosts with the maximum security posture requires use of the hypervisor core scheduler type. To ensure our customers are secure by default, Microsoft is changing the following default and recommended settings.
 
 >[!NOTE]
->While the hypervisor's internal support for the scheduler types was included in the initial release of Windows Server 2016, Windows Server 1709, and Windows Server 1803, updates are required in order to access the configuration control which allows selecting the hypervisor scheduler type.  Please refer to [Understanding and using Hyper-V hypervisor scheduler types](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types) for details on these updates.
+>While the hypervisor's internal support for the scheduler types was included in the initial release of Windows Server 2016, Windows Server 1709, and Windows Server 1803, updates are required in order to access the configuration control which allows selecting the hypervisor scheduler type.  Please refer to [Understanding and using Hyper-V hypervisor scheduler types](./manage-hyper-v-scheduler-types.md) for details on these updates.
 
 ### Virtualization host changes
 
@@ -160,7 +160,7 @@ The details of this guest enlightenment are provided below, however the key take
 
 ### NoNonArchitecturalCoreSharing enlightenment details
 
-Starting in Windows Server 2016, the hypervisor defines a new enlightenment to describe its handling of VP scheduling and placement to the guest OS. This enlightenment is defined in the [Hypervisor Top Level Functional Specification v5.0c](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/tlfs).
+Starting in Windows Server 2016, the hypervisor defines a new enlightenment to describe its handling of VP scheduling and placement to the guest OS. This enlightenment is defined in the [Hypervisor Top Level Functional Specification v5.0c](/virtualization/hyper-v-on-windows/reference/tlfs).
 
 Hypervisor synthetic CPUID leaf CPUID.0x40000004.EAX:18[NoNonArchitecturalCoreSharing = 1] indicates that a virtual processor will never share a physical core with another virtual processor, except for virtual processors that are reported as sibling SMT threads. For example, a guest VP will never run on an SMT thread alongside a root VP running simultaneously on a sibling SMT thread on the same processor core. This condition is only possible when running virtualized, and so represents a non-architectural SMT behavior that also has serious security implications. The guest OS can use NoNonArchitecturalCoreSharing = 1 as an indication that it is safe to enable optimizations, which may help it avoid the performance overhead of setting STIBP.
 

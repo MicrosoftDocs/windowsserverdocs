@@ -165,7 +165,7 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
     The default is 0, disabling SMB Signing. Changing this value to 1 enables SMB signing for all SMB communication, preventing SMB communication with computers where SMB signing is disabled. SMB signing can increase CPU cost and network round trips, but helps block man-in-the-middle attacks. If SMB signing is not required, ensure that this registry value is 0 on all clients and servers.
 
-    For more info, see [The Basics of SMB Signing](https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/).
+    For more info, see [The Basics of SMB Signing](/archive/blogs/josebda/the-basics-of-smb-signing-covering-both-smb1-and-smb2).
 
 -   **FileInfoCacheEntriesMax**
 

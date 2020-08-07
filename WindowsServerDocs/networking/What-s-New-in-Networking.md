@@ -30,7 +30,7 @@ The following sections contain information about these new networking features a
 
 Following are the new or improved SDN infrastructure technologies.
 
--   **Network Controller**. New in Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](https://technet.microsoft.com/library/mt427380.aspx).
+-   **Network Controller**. New in Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](/previous-versions/windows/server/mt427380(v=ws.12)).
 
 -   **Hyper-V Virtual Switch**. The Hyper-V Virtual Switch runs on Hyper-V hosts, and allows you to create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. For more information, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
@@ -45,7 +45,7 @@ Following are the new or improved SDN infrastructure technologies.
         For more information, see  [What's New in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
 
     - **Software Load Balancer (SLB) and Network Address Translation (NAT)**. The north-south and east-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer.
-       For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
+       For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](./sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md).
 
     For more information, see [Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).
 
@@ -140,5 +140,3 @@ IPAM provides highly customizable administrative and monitoring capabilities for
      You can use Windows PowerShell to set access scopes on IPAM objects.
 
 For more information, see [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](technologies/ipam/Manage-IPAM.md).
-
-

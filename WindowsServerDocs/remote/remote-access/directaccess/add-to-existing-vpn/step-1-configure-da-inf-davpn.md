@@ -11,7 +11,7 @@ author: eross-msft
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic describes how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan DirectAccess Infrastructure](Step-1-Plan-DirectAccess-Infrastructure.md).
+This topic describes how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan DirectAccess Infrastructure](./step-1-plan-da-inf-davpn.md).
 
 |Task|Description|
 |----|--------|
@@ -322,6 +322,3 @@ The network location server should be on a server with high availability, and a 
 13. Click **OK**, click **Enroll**, and then click **Finish**.
 
 14. In the details pane of the Certificates snap-in, verify that new certificate was enrolled with Intended Purposes of Server Authentication.
-
-
-

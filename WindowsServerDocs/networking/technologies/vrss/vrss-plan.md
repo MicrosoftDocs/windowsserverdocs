@@ -35,7 +35,7 @@ Following is additional information you need to complete these preparation steps
 
 3. **Absence of SR\-IOV**. Verify that a Single Root Input\-Output Virtualization \(SR\-IOV\) Virtual Function \(VF\) driver is not attached to the VM network interface. You can verify this by using the **Get-NetAdapterSriov** command. If a VF driver is loaded, RSS uses the scaling settings from this driver instead of those configured by vRSS. If the VF driver does not support RSS, then vRSS is disabled.
 
-4. **NIC Teaming Configuration**. If you are using NIC Teaming, it is important that you properly configure VMQ to work with the NIC Teaming settings. For detailed information about NIC Teaming deployment and management, see [NIC Teaming](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
+4. **NIC Teaming Configuration**. If you are using NIC Teaming, it is important that you properly configure VMQ to work with the NIC Teaming settings. For detailed information about NIC Teaming deployment and management, see [NIC Teaming](../nic-teaming/nic-teaming.md).
 
 5. **Number of LPs**. Verify that the VM has more than one logical processor \(LP\). vRSS relies on RSS in the VM or on the Hyper-V host to load balance received traffic to multiple LPs for parallel processing. You can observe how many LPs your VM has by running the Windows PowerShell command **Get-VMProcessor** in the host. After you run the command, you can observe the Count column entry for the number of LPs.
 

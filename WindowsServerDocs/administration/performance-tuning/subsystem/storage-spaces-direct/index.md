@@ -30,7 +30,7 @@ To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDire
 
 ## Additional References
 
-- [Understanding Storage Spaces Direct](../../../../storage/storage-spaces/understand-storage-spaces-direct.md)
-- [Planning Storage Spaces Direct](../../../../storage/storage-spaces/plan-storage-spaces-direct.md)
+- [Understanding Storage Spaces Direct](../../../../storage/storage-spaces/understand-the-cache.md)
+- [Planning Storage Spaces Direct](../../../../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)
 - [Performance tuning for file servers](../../role/file-server/index.md)
-- [Software-Defined Storage Design Considerations Guide](https://technet.microsoft.com/library/mt243829.aspx) (for Windows Server 2012 R2 and shared SAS storage)
+- [Software-Defined Storage Design Considerations Guide](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt243829(v=ws.11)) (for Windows Server 2012 R2 and shared SAS storage)

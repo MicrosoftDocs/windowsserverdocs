@@ -48,12 +48,10 @@ To configure NPS to act as a proxy server and forward connection requests from R
 
 1. Deploy your RADIUS clients \(VPN servers, dial-up servers, Terminal Services Gateway servers, 802.1X authenticating switches, and 802.1X wireless access points\) and configure them to send connection requests to your NPS proxy servers.
 
-2. On the NPS proxy, configure the network access servers as RADIUS clients. For more information, see [Configure RADIUS Clients](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-radius-clients-configure).
+2. On the NPS proxy, configure the network access servers as RADIUS clients. For more information, see [Configure RADIUS Clients](./nps-radius-clients-configure.md).
 
-3. On the NPS proxy, create one or more remote RADIUS server groups. During this process, add RADIUS servers to the remote RADIUS server groups. For more information, see [Configure Remote RADIUS Server Groups](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-crp-rrsg-configure).
+3. On the NPS proxy, create one or more remote RADIUS server groups. During this process, add RADIUS servers to the remote RADIUS server groups. For more information, see [Configure Remote RADIUS Server Groups](./nps-crp-rrsg-configure.md).
 
 4. On the NPS proxy, for each RADIUS server that you add to a remote RADIUS server group, click the RADIUS server **Load Balancing** tab, and then configure **Priority**, **Weight**, and **Advanced settings**.
 
-5. On the NPS proxy, configure connection request policies to forward authentication and accounting requests to remote RADIUS server groups. You must create one connection request policy per remote RADIUS server group. For more information, see [Configure Connection Request Policies](https://docs.microsoft.com/windows-server/networking/technologies/nps/nps-crp-configure).
-
-
+5. On the NPS proxy, configure connection request policies to forward authentication and accounting requests to remote RADIUS server groups. You must create one connection request policy per remote RADIUS server group. For more information, see [Configure Connection Request Policies](./nps-crp-configure.md).

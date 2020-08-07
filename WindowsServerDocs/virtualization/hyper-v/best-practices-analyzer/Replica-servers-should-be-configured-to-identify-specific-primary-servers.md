@@ -75,7 +75,4 @@ New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMSt
 ```
 
 ## See Also
-[New-VMReplicationAuthorizationEntry](https://technet.microsoft.com/library/hh848606.aspx)
-
-
-
+[New-VMReplicationAuthorizationEntry](/powershell/module/hyper-v/new-vmreplicationauthorizationentry?view=win10-ps)

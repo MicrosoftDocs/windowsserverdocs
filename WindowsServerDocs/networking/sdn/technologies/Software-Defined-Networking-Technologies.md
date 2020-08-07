@@ -66,7 +66,7 @@ SET is an alternative NIC Teaming solution that you can use in environments that
 SET allows you to group between one and eight physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
 SET member network adapters must all be installed in the same physical Hyper-V host to be placed in a team.
 
-In addition,  you can use Windows PowerShell commands to enable Data Center Bridging (DCB), create a Hyper-V Virtual Switch with an RDMA virtual NIC (vNIC), and create a Hyper-V Virtual Switch with SET and RDMA vNICs. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+In addition,  you can use Windows PowerShell commands to enable Data Center Bridging (DCB), create a Hyper-V Virtual Switch with an RDMA virtual NIC (vNIC), and create a Hyper-V Virtual Switch with SET and RDMA vNICs. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
 
 ## [Border Gateway Protocol (BGP)](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)
 
@@ -81,7 +81,7 @@ Windows Server Containers are a lightweight operating system virtualization meth
 
 ## System Center
 
-Deploy and manage the SDN infrastructure with [Virtual Machine Management (VMM)](https://docs.microsoft.com/system-center/vmm/) and [Operations Manager](https://docs.microsoft.com/system-center/scom/). With VMM, you provision and manage the resources needed to create and deploy virtual machines and services to private clouds.  With Operations Manager, you monitor services, devices, and operations across your enterprise to identify problems for immediate action.
+Deploy and manage the SDN infrastructure with [Virtual Machine Management (VMM)](/system-center/vmm/) and [Operations Manager](/system-center/scom/). With VMM, you provision and manage the resources needed to create and deploy virtual machines and services to private clouds.  With Operations Manager, you monitor services, devices, and operations across your enterprise to identify problems for immediate action.
 
 
 ---

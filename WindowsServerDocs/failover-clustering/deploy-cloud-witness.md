@@ -105,7 +105,7 @@ In the Azure Portal, navigate to your storage account, click **All settings** an
 ![Snapshot of the Cloud Witness endpoint links](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)
 **Figure 5: Cloud Witness endpoint URL links**
 
-For more information about creating and managing Azure Storage Accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)
+For more information about creating and managing Azure Storage Accounts, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create)
 
 ## Configure Cloud Witness as a quorum witness for your cluster
 Cloud Witness configuration is well-integrated within the existing Quorum Configuration Wizard built into the Failover Cluster Manager.
@@ -144,7 +144,7 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 ### Configuring Cloud Witness using PowerShell
 The existing Set-ClusterQuorum PowerShell command has new additional parameters corresponding to Cloud Witness.
 
-You can configure Cloud Witness using the [`Set-ClusterQuorum`](https://technet.microsoft.com/library/ee461013.aspx) following PowerShell command:
+You can configure Cloud Witness using the [`Set-ClusterQuorum`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461013(v=technet.10)) following PowerShell command:
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>

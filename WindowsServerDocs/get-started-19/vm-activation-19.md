@@ -123,7 +123,7 @@ The registry (KVP) on the virtualization server provides real-time tracking data
 
   - RDP addresses
 
-For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](https://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx).
+For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](/archive/blogs/virtual_pc_guy/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems).
 
 
 > [!NOTE]
@@ -145,4 +145,3 @@ Since the AVMA activation process is transparent, error messages are not display
 |Invalid Host|The virtualization server is unresponsive. This can happen when the server is not running a supported version of Windows.|
 |Invalid Data|This usually results from a failure in communication between the virtualization server and the virtual machine, often caused by corruption, encryption, or data mismatch.|
 |Activation Denied|The virtualization server could not activate the guest operating system because the AVMA ID did not match.|
-

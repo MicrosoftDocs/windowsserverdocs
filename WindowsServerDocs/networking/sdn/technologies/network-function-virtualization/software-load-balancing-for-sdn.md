@@ -144,7 +144,7 @@ The SLB Host Agent listens for SLB policy updates from Network Controller. In ad
 ### SDN Enabled Hyper-V Virtual Switch
 For a virtual switch to be compatible with SLB, you must use Hyper-V Virtual Switch Manager or Windows PowerShell commands to create the switch, and then you must enable Virtual Filtering Platform (VFP) for the virtual switch.
 
-For information on enabling VFP on virtual switches, see the Windows PowerShell commands [Get-VMSystemSwitchExtension](https://technet.microsoft.com/library/hh848603.aspx) and [Enable-VMSwitchExtension](https://technet.microsoft.com/library/hh848541.aspx?f=255&MSPPError=-2147217396).
+For information on enabling VFP on virtual switches, see the Windows PowerShell commands [Get-VMSystemSwitchExtension](/powershell/module/hyper-v/get-vmsystemswitchextension?view=win10-ps) and [Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?f=255&MSPPError=-2147217396&view=win10-ps).
 
 The SDN enabled Hyper-V Virtual Switch performs the following actions for SLB.
 
@@ -212,5 +212,3 @@ Following are some of the features and capabilities of SLB.
 -   You can deploy and configure SLB  with SCVMM
 
 -   SLB provides a multitenant unified edge by seamlessly integrating with Microsoft appliances such as the RAS Multitenant Gateway, Datacenter Firewall, and Route Reflector.
-
-

@@ -32,7 +32,7 @@ The following graphics virtualization technologies are available to Hyper-V VMs 
 - [Discrete Device Assignment (DDA)](#discrete-device-assignment-dda)
 - [RemoteFX vGPU](#remotefx-vgpu)
 
-In addition to VM workloads, Windows Server also supports GPU acceleration of containerized workloads within Windows Containers. For more information, see [GPU Acceleration in Windows containers](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/gpu-acceleration).
+In addition to VM workloads, Windows Server also supports GPU acceleration of containerized workloads within Windows Containers. For more information, see [GPU Acceleration in Windows containers](/virtualization/windowscontainers/deploy-containers/gpu-acceleration).
 
 ## Discrete Device Assignment (DDA)
 

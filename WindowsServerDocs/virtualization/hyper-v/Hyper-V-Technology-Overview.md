@@ -52,11 +52,11 @@ Hyper-V offers many features. This is an overview, grouped by what the features 
 
 **Security** - Secure boot and shielded virtual machines help protect against malware and other unauthorized access to a virtual machine and its data.
 
-For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server](What-s-new-in-Hyper-V-on-Windows.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).
+For a summary of the features introduced in this version, see [What's new in Hyper-V on Windows Server](What-s-new-in-Hyper-V-on-Windows.md). Some features or parts have a limit to how many can be configured. For details, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/plan-hyper-v-scalability-in-windows-server.md).
 
 ## How to get Hyper-V
 
-Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](https://docs.microsoft.com/virtualization/hyper-v-on-windows/index) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-2019).
+Hyper-V is available in Windows Server and Windows, as a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md). On Windows, it's available as [feature](/virtualization/hyper-v-on-windows/index) in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-2019).
 
 ## Supported operating systems
 
@@ -79,8 +79,8 @@ Hyper-V has required parts that work together so you can create and run virtual 
 Hyper-V also has tools for management and connectivity. You can install these on the same computer that Hyper-V role is installed on, and on computers without the Hyper-V role installed. These tools are:
 
 - Hyper-V Manager
-- [Hyper-V module for Windows PowerShell](https://docs.microsoft.com/powershell/module/hyper-v/index)
-- [Virtual Machine Connection](https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect) \(sometimes called VMConnect\)
+- [Hyper-V module for Windows PowerShell](/powershell/module/hyper-v/index)
+- [Virtual Machine Connection](./learn-more/hyper-v-virtual-machine-connect.md) \(sometimes called VMConnect\)
 - [Windows PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md)
 
 ## Related technologies
@@ -88,9 +88,9 @@ Hyper-V also has tools for management and connectivity. You can install these on
 These are some technologies from Microsoft that are often used with Hyper-V:
 
 - [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)
-- [Remote Desktop Services](../../remote/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md)
-- [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/overview)
+- [Remote Desktop Services](../../remote/remote-desktop-services/welcome-to-rds.md)
+- [System Center Virtual Machine Manager](/system-center/vmm/overview)
 
 Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct
 
-Windows containers offer another approach to virtualization. See the [Windows Containers](https://docs.microsoft.com/virtualization/windowscontainers/index) library on MSDN.
+Windows containers offer another approach to virtualization. See the [Windows Containers](/virtualization/windowscontainers/index) library on MSDN.

@@ -43,7 +43,7 @@ You can use this procedure to install the Network Controller server role on a vi
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.
 
 >[!NOTE]
->If you want to use Server Manager instead of Windows PowerShell to install Network Controller, see [Install the Network Controller server role using Server Manager](https://technet.microsoft.com/library/mt403348.aspx)
+>If you want to use Server Manager instead of Windows PowerShell to install Network Controller, see [Install the Network Controller server role using Server Manager](../technologies/network-controller/install-the-network-controller-server-role-using-server-manager.md)
 
 To install Network Controller by using Windows PowerShell, type the following commands at a Windows PowerShell prompt, and then press ENTER.
 
@@ -222,5 +222,3 @@ Install-NetworkController -Node @($a,$b,$c) -ClientAuthentication Kerberos -Clie
 If you are not using Kerberos with your Network Controller deployment, you must deploy certificates.
 
 For more information, see [Post-Deployment Steps for Network Controller](../technologies/network-controller/post-deploy-steps-nc.md).
-
-

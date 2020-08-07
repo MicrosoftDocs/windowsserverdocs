@@ -35,7 +35,7 @@ Then you can create the shielding data file:
 
 Since tenants are only able to connect to their shielded VMs using Remote Desktop Connection or other remote management tools, it is important to ensure that tenants can verify they are connecting to the right endpoint (that is, there is not a "man in the middle" intercepting the connection).
 
-One way to verify you are connecting to the intended server is to install and configure a certificate for Remote Desktop Services to present when you initiate a connection. The client machine connecting to the server will check whether it trusts the certificate and show a warning if it does not. Generally, to ensure the connecting client trusts the certificate, RDP certificates are issued from the tenant's PKI. More information about [Using certificates in Remote Desktop Services](https://technet.microsoft.com/library/dn781533.aspx) can be found on TechNet.
+One way to verify you are connecting to the intended server is to install and configure a certificate for Remote Desktop Services to present when you initiate a connection. The client machine connecting to the server will check whether it trusts the certificate and show a warning if it does not. Generally, to ensure the connecting client trusts the certificate, RDP certificates are issued from the tenant's PKI. More information about [Using certificates in Remote Desktop Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn781533(v=ws.11)) can be found on TechNet.
 
  To help you decide if you need to obtain a custom RDP certificate, consider the following:
 
@@ -99,7 +99,7 @@ When using substitution strings, it is important to ensure that the strings will
 Also, note that the networking-related substitution strings towards the end of the table are only used if you are leveraging VMM Static IP Address Pools. Your hosting service provider should be able to tell you if these substitution strings are required. For more information about static IP addresses in VMM templates, see the following in the VMM documentation:
 
 - [Guidelines for IP address pools](https://technet.microsoft.com/system-center-docs/vmm/plan/plan-network#guidelines-for-ip-address-pools)
-- [Set up static IP address pools in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-network-static-address-pools)
+- [Set up static IP address pools in the VMM fabric](/system-center/vmm/network-pool?view=sc-vmm-2019)
 
 Finally, it is important to note that the shielded VM deployment process will only encrypt the OS drive. If you deploy a shielded VM with one or more data drives, it is strongly recommended that you add an unattend command or Group Policy setting in the tenant domain to automatically encrypt the data drives.
 
@@ -202,10 +202,10 @@ Run the Shielding Data File wizard to create a shielding data (PDK) file. Here, 
 
 ## Create a shielding data file and add guardians using PowerShell
 
-As an alternative to the Shielding Data File wizard, you can run [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) to create a shielding data file.
+As an alternative to the Shielding Data File wizard, you can run [New-ShieldingDataFile](/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) to create a shielding data file.
 
 All shielding data files need to be configured with the correct owner and guardian certificates to authorize your shielded VMs to be run on a guarded fabric.
-You can check if you have any guardians installed locally by running [Get-HgsGuardian](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Owner guardians have private keys while guardians for your datacenter typically do not.
+You can check if you have any guardians installed locally by running [Get-HgsGuardian](/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Owner guardians have private keys while guardians for your datacenter typically do not.
 
 If you need to create an owner guardian, run the following command:
 
@@ -247,7 +247,7 @@ The disk name and signing certificate must match exactly for the version compari
 You can trust more than one template disk by providing a comma-separated list of volume ID qualifiers to the `-VolumeIDQualifier` parameter.
 Finally, if you have other files that need to accompany the answer file with the VM, use the `-OtherFile` parameter and provide a comma-separated list of file paths.
 
-See the cmdlet documentation for [New-ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) and [New-VolumeIDQualifier](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) to learn about additional ways to configure your shielding data file.
+See the cmdlet documentation for [New-ShieldingDataFile](/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) and [New-VolumeIDQualifier](/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) to learn about additional ways to configure your shielding data file.
 
 ## Additional References
 

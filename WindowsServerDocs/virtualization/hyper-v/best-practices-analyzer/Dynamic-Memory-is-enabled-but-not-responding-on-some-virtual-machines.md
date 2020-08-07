@@ -36,7 +36,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 As of Windows Server 2016, integration services are delivered through Windows Update. Ensure the virtual machines are configured to receive updates to get the latest version of integration services.
 
-Dynamic Memory works with specific versions of supported guests. See [Hyper-V Dynamic Memory Overview](https://technet.microsoft.com/library/hh831766.aspx) for versions older than Windows Server 2016 and Windows 10.
-
-
-
+Dynamic Memory works with specific versions of supported guests. See [Hyper-V Dynamic Memory Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831766(v=ws.11)) for versions older than Windows Server 2016 and Windows 10.

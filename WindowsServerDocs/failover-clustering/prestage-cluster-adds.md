@@ -130,5 +130,5 @@ An administrator on the failover cluster can now create the clustered role with 
 
 ## More information
 
-- [Failover Clustering](failover-clustering.md)
+- [Failover Clustering](./failover-clustering-overview.md)
 - [Configuring cluster accounts in Active Directory](configure-ad-accounts.md)

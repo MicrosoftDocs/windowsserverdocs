@@ -12,7 +12,7 @@ ms.topic: article
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-*Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))
+*Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 In organizations that have experienced catastrophic compromise events, assessments usually reveal that the organizations have limited visibility into the actual state of their IT infrastructures, which may differ significantly from their "as documented" states. These variances introduce vulnerabilities that expose the environment to compromise, often with little risk of discovery until the compromise has progressed to the point at which the attackers effectively "own" the environment.
 
@@ -50,7 +50,7 @@ Server populations, however, tend to be less consistently protected in many comp
 It is important not only to ensure that your systems are protected with current, comprehensive malware protection, but also to monitor systems for disabling or removal of antivirus and antimalware software and to automatically restart protection when it is manually disabled. Although no antivirus and antimalware software can guarantee prevention and detection of all infections, a properly configured and deployed antivirus and antimalware implementation can reduce the likelihood of infection.
 
 ### Incomplete Patching
-*Law Number Three: If you don't keep up with security fixes, your network won't be yours for long.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))
+*Law Number Three: If you don't keep up with security fixes, your network won't be yours for long.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 Microsoft releases security bulletins on the second Tuesday of each month, although on rare occasions security updates are released between the monthly security updates (these are also known as "out-of-band" updates) when the vulnerability is determined to pose an urgent risk to customer systems. Whether a small business configures its Windows computers to use Windows Update to manage system and application patching or a large organization uses management software such as Microsoft Endpoint Configuration Manager to deploy patches according to detailed, hierarchical plans, many customers patch their Windows infrastructures in a relatively timely manner.
 
@@ -73,7 +73,7 @@ Even in cases in which organizations have updated their domain controllers to Wi
 To eliminate legacy systems and applications, you should first focus on identifying and cataloging them, then on determining whether to upgrade or replace the application or host. Although it can be difficult to find replacements for highly specialized applications for which there is neither support nor an upgrade path, you may be able to leverage a concept called "creative destruction" to replace the legacy application with a new application that provides the necessary functionality. [Planning for Compromise](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md) is described in more depth in "Planning for Compromise" later in this document.
 
 ### Misconfiguration
-*Law Number Four: It doesn't do much good to install security fixes on a computer that was never secured to begin with.* - [10 Immutable Laws of Security Administration](/previous-versions//cc722488(v=technet.10))
+*Law Number Four: It doesn't do much good to install security fixes on a computer that was never secured to begin with.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 
 Even in environments where systems are generally kept current and patched, we commonly identify gaps or misconfigurations in the operating system, applications running on computers, and Active Directory. Some misconfigurations expose only the local computer to compromise, but after a computer is "owned," attackers usually focus on further propagating the compromise across other systems and eventually to Active Directory. Following are some of the common areas in which we identify configurations that introduce risk.
 

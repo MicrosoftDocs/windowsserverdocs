@@ -49,12 +49,7 @@ It is also important not to attempt to configure the same switch port VLAN setti
 
 For more information on the Windows PowerShell commands that are mentioned in this topic, see the following:
 
-- [Set-VmNetworkAdapterIsolation](https://technet.microsoft.com/library/dn464283.aspx)
-- [Get-VmNetworkAdapterIsolation](https://technet.microsoft.com/library/dn464277.aspx)
-- [Set-VMNetworkAdapterVlan](https://technet.microsoft.com/library/hh848475.aspx)
-- [Get-VMNetworkAdapterVlan](https://technet.microsoft.com/library/hh848516.aspx)
-
-
-
-
-
+- [Set-VmNetworkAdapterIsolation](/powershell/module/hyper-v/set-vmnetworkadapterisolation?view=win10-ps)
+- [Get-VmNetworkAdapterIsolation](/powershell/module/hyper-v/get-vmnetworkadapterisolation?view=win10-ps)
+- [Set-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=win10-ps)
+- [Get-VMNetworkAdapterVlan](/powershell/module/hyper-v/get-vmnetworkadaptervlan?view=win10-ps)

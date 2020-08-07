@@ -40,6 +40,6 @@ There are no configuration steps necessary to implement TLS, SSL or Schannel.
 
 ## Additional References ##
 
--   [The Schannel security package](https://docs.microsoft.com/windows/desktop/com/schannel)
--   [Secure Channel](https://docs.microsoft.com/windows/desktop/SecAuthN/secure-channel)
--   [Transport Layer Security Protocol](https://docs.microsoft.com/windows/desktop/SecAuthN/transport-layer-security-protocol)
+-   [The Schannel security package](/windows/desktop/com/schannel)
+-   [Secure Channel](/windows/desktop/SecAuthN/secure-channel)
+-   [Transport Layer Security Protocol](/windows/desktop/SecAuthN/transport-layer-security-protocol)

@@ -631,7 +631,7 @@ The procedure that follows describes how to open the GPMC on your domain control
 
     -   **Open the computer Configuration > Maintenance Scheduler extension of Group Policy**. In GPOE, navigate to *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**.
 
-For more information about the Group Policy, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx(v=ws.12)).
+For more information about the Group Policy, see [Group Policy Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831791(v=ws.11)).
 
 > [!TIP]
 > After you have opened the extension of Group Policy you want, you can use the following steps to enable, disable, or navigate between settings:

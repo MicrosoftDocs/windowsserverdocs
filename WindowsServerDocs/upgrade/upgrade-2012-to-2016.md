@@ -99,4 +99,4 @@ You can perform one more upgrade to go from Windows Server 2016 to Windows Serve
 
 ## Related articles
 
-- For more details and information about Windows Server 2016, see [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics).
+- For more details and information about Windows Server 2016, see [Get Started with Windows Server 2016](../get-started/server-basics.md).

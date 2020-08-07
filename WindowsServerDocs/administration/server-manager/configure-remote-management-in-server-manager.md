@@ -147,7 +147,7 @@ In Windows Server 2016, Server Manager relies on Windows remote Management (WinR
 
 ### To disable remote management by using an answer file during unattended installation
 
-1.  create an unattended installation answer file for Windows Server 2016 installations by using Windows System Image Manager (Windows SIM). For more information about how to create an answer file and use Windows SIM, see [What is Windows System Image Manager?](https://technet.microsoft.com/library/cc766347.aspx) and [Step-by-Step: Basic Windows Deployment for IT Professionals](https://technet.microsoft.com/library/dd349348.aspx).
+1.  create an unattended installation answer file for Windows Server 2016 installations by using Windows System Image Manager (Windows SIM). For more information about how to create an answer file and use Windows SIM, see [What is Windows System Image Manager?](/previous-versions/windows/it-pro/windows-vista/cc766347(v=ws.10)) and [Step-by-Step: Basic Windows Deployment for IT Professionals](/previous-versions/windows/it-pro/windows-7/dd349348(v=ws.10)).
 
 2.  In your answer file, locate the setting **Microsoft-Windows-Web-Services-for-Management-Core\EnableServerremoteManagement**.
 
@@ -177,8 +177,5 @@ for more information about how to configure WinRM listener settings, at a comman
 
 ## See Also
 [Add Servers to Server Manager](add-servers-to-server-manager.md)
-[Windows PowerShell: about_remote_Troubleshooting on the Windows Server TechCenter](https://technet.microsoft.com/library/dd347642.aspx)
+[Windows PowerShell: about_remote_Troubleshooting on the Windows Server TechCenter](/previous-versions/dd347642(v=technet.10))
 [Description of User Account Control](https://support.microsoft.com/kb/951016)
-
-
-

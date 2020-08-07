@@ -13,7 +13,7 @@ ms.date: 01/30/2019
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process.
-For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](https://technet.microsoft.com/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview).
+For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](./guarded-fabric-deploying-hgs-overview.md).
 
 Prefer video? See the Microsoft Virtual Academy course [Deploying Shielded VMs and a Guarded Fabric with Windows Server 2016](https://mva.microsoft.com/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474).
 
@@ -67,7 +67,7 @@ Let's imagine this scenario—you have an existing Hyper-V fabric, like Contoso.
 
 ## Step 1: Deploy the Hyper-V hosts running Windows Server 2016
 
-The Hyper-V hosts need to run Windows Server 2016 Datacenter edition or later. If you are upgrading hosts, you can [upgrade](https://technet.microsoft.com/windowsserver/dn527667.aspx) from Standard edition to Datacenter edition.
+The Hyper-V hosts need to run Windows Server 2016 Datacenter edition or later. If you are upgrading hosts, you can [upgrade](../../get-started/installation-and-upgrade.md) from Standard edition to Datacenter edition.
 
 ![Upgrade Hyper-V hosts](../../security/media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-one-upgrade-hyper-v.png)
 
@@ -154,7 +154,7 @@ The shielding data file also includes the security policy setting for the shield
 
     ![New encryption supported VM](../media/Guarded-Fabric-Shielded-VM/guarded-fabric-new-shielded-vm.png)
 
-You can add optional management pieces like VMM or Windows Azure Pack. If you'd like to create a VM without installing those pieces, see [Step by step – Creating Shielded VMs without VMM](https://blogs.technet.microsoft.com/datacentersecurity/2016/06/06/step-by-step-creating-shielded-vms-without-vmm/).
+You can add optional management pieces like VMM or Windows Azure Pack. If you'd like to create a VM without installing those pieces, see [Step by step – Creating Shielded VMs without VMM](/archive/blogs/datacentersecurity/step-by-step-creating-shielded-vms-without-vmm).
 
 ## Step 6: Create a shielded VM
 

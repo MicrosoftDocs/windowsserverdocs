@@ -32,7 +32,7 @@ When a capability is invoked, it provides an output to help explain the result o
 - **Error** - An unknown problem caused the capability to fail.
 - **None** - No prediction was made. This could be due to a lack of data or any other capability-specific reason for not making a prediction.
 
-Additionally, any capability-specific data contained in the result will be placed in a user-accessible JSON file, and the file path [can be found using PowerShell](https://docs.microsoft.com/windows-server/manage/system-insights/managing-capabilities#retrieving-capability-results).
+Additionally, any capability-specific data contained in the result will be placed in a user-accessible JSON file, and the file path [can be found using PowerShell](./managing-capabilities.md#retrieving-capability-results).
 
 ## Default capabilities
 In Windows Server 2019, System Insights introduces four default capabilities focused on capacity forecasting:

@@ -188,7 +188,7 @@ Each UWP app should be evaluated for applicability in each unique environment. Y
 
 ### Manage Windows Optional Features using PowerShell
 
-You can manage Windows Optional Features using PowerShell. For more information, see the [Windows Server powershell forum](https://docs.microsoft.com/answers/topics/windows-server-powershell.html). To enumerate currently installed Windows Features, run the following PowerShell command:
+You can manage Windows Optional Features using PowerShell. For more information, see the [Windows Server powershell forum](/answers/topics/windows-server-powershell.html). To enumerate currently installed Windows Features, run the following PowerShell command:
 
 ```powershell
 Get-WindowsOptionalFeature -Online
@@ -708,7 +708,7 @@ There are some registry settings that can increase network performance. This is 
 >[!NOTE]
 > Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
 
-The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](/windows-server/administration/performance-tuning/), published on Microsoft.com by the Windows Product Group.
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](../../administration/performance-tuning/index.md), published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling
 

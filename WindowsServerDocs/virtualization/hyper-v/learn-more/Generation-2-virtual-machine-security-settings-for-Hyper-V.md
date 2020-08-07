@@ -33,11 +33,11 @@ The templates described in the following table refer to the certificates that yo
 |-----------------|---------------|
 |Microsoft Windows|Select to secure boot the virtual machine for a Windows operating system.|
 |Microsoft UEFI Certificate Authority|Select to  secure boot the virtual machine for  a Linux distribution operating system.|
-|Open Source Shielded VM|This template is leveraged to secure boot for [Linux-based shielded VMs](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template).|
+|Open Source Shielded VM|This template is leveraged to secure boot for [Linux-based shielded VMs](../../../security/guarded-fabric-shielded-vm/guarded-fabric-create-a-linux-shielded-vm-template.md).|
 
 For more information, see the following topics.
 
-- [Windows 10 Security Overview](https://docs.microsoft.com/windows/security/threat-protection/overview-of-threat-mitigations-in-windows-10)
+- [Windows 10 Security Overview](/windows/security/threat-protection/overview-of-threat-mitigations-in-windows-10)
 - [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 

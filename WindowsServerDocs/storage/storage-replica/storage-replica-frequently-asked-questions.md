@@ -247,7 +247,7 @@ However, to get the improved replication performance of Windows Server 2019, all
 
 ## <a name="FAQ17"></a> How do I report an issue with Storage Replica or this guide?
 
-For technical assistance with Storage Replica, you can post at the [Microsoft forums](https://docs.microsoft.com/answers/index.html). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The [Windows Server general feedback site](https://windowsserver.uservoice.com/forums/295047-general-feedback) is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
+For technical assistance with Storage Replica, you can post at the [Microsoft forums](/answers/index.html). You can also email srfeed@microsoft.com for questions on Storage Replica or issues with this documentation. The [Windows Server general feedback site](https://windowsserver.uservoice.com/forums/295047-general-feedback) is preferred for design change requests, as it allows your fellow customers to provide support and feedback for your ideas.
 
 ## <a name="FAQ18"></a> Can Storage Replica be configured to replicate in both directions?
 

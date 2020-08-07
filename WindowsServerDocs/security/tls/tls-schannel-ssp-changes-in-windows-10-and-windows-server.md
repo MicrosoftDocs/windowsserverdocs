@@ -16,7 +16,7 @@ ms.date: 05/16/2018
 
 Windows 10, version 1511 and Windows Server 2016 add support for configuration of cipher suite order using Mobile Device Management (MDM).
 
-For cipher suite priority order changes, see [Cipher Suites in Schannel](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).
+For cipher suite priority order changes, see [Cipher Suites in Schannel](/windows/win32/secauthn/cipher-suites-in-schannel).
 
 Added support for the following cipher suites:
 
@@ -49,7 +49,7 @@ For more information, see [KeyExchangeAlgorithm - Diffie-Hellman key sizes](tls-
 
 ### SCH_USE_STRONG_CRYPTO option changes
 
-With Windows 10, version 1507 and Windows Server 2016, [SCH_USE_STRONG_CRYPTO](https://msdn.microsoft.com/library/windows/desktop/aa379810.aspx) option now disables NULL, MD5, DES, and export ciphers.
+With Windows 10, version 1507 and Windows Server 2016, [SCH_USE_STRONG_CRYPTO](/windows/win32/api/schannel/ns-schannel-schannel_cred) option now disables NULL, MD5, DES, and export ciphers.
 
 ## Elliptical Curve changes
 
@@ -109,7 +109,7 @@ Windows 10, version 1507 and Windows Server 2016 provide 30% more session resump
 
 Windows 10, version 1507 and Windows Server 2016 add support for RFC 7627: Transport Layer Security (TLS) Session Hash and Extended Master Secret Extension.
 
-Due to this change, Windows 10 and Windows Server 2016 requires 3rd party [CNG SSL provider](https://msdn.microsoft.com/library/windows/desktop/ff468652.aspx) updates to support NCRYPT_SSL_INTERFACE_VERSION_3, and to describe this new interface.
+Due to this change, Windows 10 and Windows Server 2016 requires 3rd party [CNG SSL provider](/windows/win32/seccng/cng-ssl-provider-functions) updates to support NCRYPT_SSL_INTERFACE_VERSION_3, and to describe this new interface.
 
 
 ## SSL support
@@ -135,5 +135,3 @@ In Windows 10 and Windows Server 2016, the constraints are relaxed and the serve
 The client may then continue or terminate the handshake.
 
 When validating server and client certificates, the Windows TLS stack strictly complies with the TLS 1.2 RFC and only allows the negotiated signature and hash algorithms in the server and client certificates.
-
-

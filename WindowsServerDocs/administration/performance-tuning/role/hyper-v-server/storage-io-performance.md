@@ -225,7 +225,7 @@ Some of the limitations are as follows:
 
 -   Shared VHDX is not supported
 
-For more info on Storage Quality of Service, see [Storage Quality of Service for Hyper-V](https://technet.microsoft.com/library/dn282281.aspx).
+For more info on Storage Quality of Service, see [Storage Quality of Service for Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282281(v=ws.11)).
 
 ### NUMA I/O
 

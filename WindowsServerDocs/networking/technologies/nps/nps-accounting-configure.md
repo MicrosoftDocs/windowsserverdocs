@@ -42,7 +42,7 @@ To run the Accounting Configuration Wizard, complete the following steps:
 
 You can configure Network Policy Server (NPS) to perform Remote Authentication Dial-In User Service (RADIUS) accounting for user authentication requests, Access-Accept messages, Access-Reject messages, accounting requests and responses, and periodic status updates. You can use this procedure to configure the log files in which you want to store the accounting data.
 
-For more information about interpreting log files, see [Interpret NPS Database Format Log Files](https://technet.microsoft.com/library/cc771748.aspx).
+For more information about interpreting log files, see [Interpret NPS Database Format Log Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771748(v=ws.10)).
 
 To prevent the log files from filling the hard drive, it is strongly recommended that you keep them on a partition that is separate from the system partition. The following provides more information about configuring accounting for NPS:
 

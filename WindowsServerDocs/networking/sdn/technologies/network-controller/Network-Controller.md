@@ -87,7 +87,7 @@ For more information, see [Datacenter Firewall Overview](../../../sdn/technologi
 
 This Network Controller feature allows you to enable multiple servers to host the same workload, providing high availability and scalability.
 
-For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../../../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
+For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](../network-function-virtualization/software-load-balancing-for-sdn.md).
 
 ### <a name="bkmk_virtual"></a>Virtual Network Management
 
@@ -120,7 +120,7 @@ For more information on the RAS Gateway, see [RAS Gateway for SDN](../../../sdn/
 
 ## Network Controller Deployment Options
 
-To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN Network Controller in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller).
+To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN Network Controller in the VMM fabric](/system-center/vmm/sdn-controller?view=sc-vmm-2019).
 
 To deploy Network Controller using scripts, see [Deploy a Software Defined Network Infrastructure Using Scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 

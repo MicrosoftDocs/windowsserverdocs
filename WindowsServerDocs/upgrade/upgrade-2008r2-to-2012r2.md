@@ -59,7 +59,7 @@ After you've collected all of your Windows Server-related information, we highly
 
     ![Screen to choose your installation type](media/upgrade-2008r2-2012r2/choose-install-upgrade.png)
 
-9. Setup reminds you to make sure your apps are compatible with Windows Server 2012 R2, using the information in the [Windows Server installation and upgrade](https://docs.microsoft.com/windows-server/get-started/installation-and-upgrade) article, and then select **Next**.
+9. Setup reminds you to make sure your apps are compatible with Windows Server 2012 R2, using the information in the [Windows Server installation and upgrade](../get-started/installation-and-upgrade.md) article, and then select **Next**.
 
     ![Screen reminding you to check your app compatibility](media/upgrade-2008r2-2012r2/compatibility-report.png)
 

@@ -334,7 +334,7 @@ The following articles contain examples of certreq usage:
 
 - [How to create a web server SSL certificate manually](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-create-a-web-server-ssl-certificate-manually/ba-p/1128529)
 
-- [Certificate Enrollment for System Center Operations Manager Agent](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
+- [Certificate Enrollment for System Center Operations Manager Agent](/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
 
 - [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 

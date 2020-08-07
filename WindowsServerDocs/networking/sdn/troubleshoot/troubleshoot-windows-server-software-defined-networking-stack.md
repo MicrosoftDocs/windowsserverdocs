@@ -15,7 +15,7 @@ ms.date: 08/14/2018
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
 
-For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../../sdn/Software-Defined-Networking--SDN-.md).
+For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../software-defined-networking.md).
 
 ## Error types
 The following list represents the class of problems most often seen with Hyper-V Network Virtualization (HNVv1) in Windows Server 2012 R2 from in-market production deployments and coincides in many ways with the same types of problems seen in Windows Server 2016 HNVv2 with the new Software Defined Network (SDN) Stack.
@@ -53,12 +53,12 @@ Import-Module hnvdiagnostics
 ```
 
 ### Network controller diagnostics
-These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between the Network Controller and the NC Host Agents running on the Hyper-V hosts.
+These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](/powershell/module/networkcontrollerdiagnostics/). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between the Network Controller and the NC Host Agents running on the Hyper-V hosts.
 
  The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node virtual machines. All other NC Diagnostic cmdlets can be run from any host which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller.
 
 ### Hyper-V host diagnostics
-These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics Cmdlet Topic](https://docs.microsoft.com/powershell/module/hnvdiagnostics/). They help identify problems in the data-path between tenant virtual machines (East/West) and ingress traffic through an SLB VIP (North/South).
+These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics Cmdlet Topic](/powershell/module/hnvdiagnostics/). They help identify problems in the data-path between tenant virtual machines (East/West) and ingress traffic through an SLB VIP (North/South).
 
 The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests which can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as descried above.
 

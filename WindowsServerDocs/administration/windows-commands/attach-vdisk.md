@@ -56,4 +56,4 @@ attach vdisk readonly
 
 - [merge vdisk](merge-vdisk.md)
 
-- [list](list_1.md)
+- [list](./list.md)

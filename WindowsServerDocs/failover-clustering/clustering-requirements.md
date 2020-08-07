@@ -57,7 +57,7 @@ When deploying a storage area network (SAN) with a failover cluster, follow thes
 - **Isolate storage devices, one cluster per device**: Servers from different clusters must not be able to access the same storage devices. In most cases, a LUN used for one set of cluster servers should be isolated from all other servers through LUN masking or zoning.
 - **Consider using multipath I/O software or teamed network adapters**: In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software or network adapter teaming (also called load balancing and failover, or LBFO). This provides the highest level of redundancy and availability. For Windows Server 2012 R2 or Windows Server 2012, your multipath solution must be based on Microsoft Multipath I/O (MPIO). Your hardware vendor will typically supply an MPIO device-specific module (DSM) for your hardware, although Windows Server includes one or more DSMs as part of the operating system.
 
-    For more information about LBFO, see [NIC Teaming Overview](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming) in the Windows Server Technical Library.
+    For more information about LBFO, see [NIC Teaming Overview](../networking/technologies/nic-teaming/nic-teaming.md) in the Windows Server Technical Library.
 
     >[!IMPORTANT]
     >Host bus adapters and multipath I/O software can be very version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running.
@@ -66,6 +66,6 @@ When deploying a storage area network (SAN) with a failover cluster, follow thes
 
 ## More information
 
-- [Failover Clustering](failover-clustering.md)
+- [Failover Clustering](./failover-clustering-overview.md)
 - [Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11)>)
 - [Using Guest Clustering for High Availability](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)

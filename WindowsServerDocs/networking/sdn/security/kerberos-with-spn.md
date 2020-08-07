@@ -15,7 +15,7 @@ ms.date: 08/23/2018
 
 Network Controller supports multiple authentication methods for communication with management clients. You can use Kerberos based authentication, X509 certificate-based authentication. You also have the option to use no authentication for test deployments.
 
-System Center Virtual Machine Manager uses Kerberos-based authentication. If you are using Kerberos-based  authentication, you must configure a Service Principal Name (SPN) for Network Controller in Active Directory. The SPN is a unique identifier for the Network Controller service instance, which is used by Kerberos authentication to associate a service instance with a service login account. For more details, see [Service Principal Names](https://docs.microsoft.com/windows/desktop/ad/service-principal-names).
+System Center Virtual Machine Manager uses Kerberos-based authentication. If you are using Kerberos-based  authentication, you must configure a Service Principal Name (SPN) for Network Controller in Active Directory. The SPN is a unique identifier for the Network Controller service instance, which is used by Kerberos authentication to associate a service instance with a service login account. For more details, see [Service Principal Names](/windows/desktop/ad/service-principal-names).
 
 ## Configure Service Principal Names (SPN)
 

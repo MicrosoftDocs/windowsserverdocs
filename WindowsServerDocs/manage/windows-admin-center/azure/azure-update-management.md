@@ -9,9 +9,9 @@ ms.localizationpriority: low
 ---
 # Use Windows Admin Center to manage operating system updates with Azure Update Management
 
-[Learn more about Azure integration with Windows Admin Center.](../plan/azure-integration-options.md)
+[Learn more about Azure integration with Windows Admin Center.](./index.md)
 
-Azure Update Management is a solution in Azure Automation that allows you to manage updates and patches for multiple machines from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your machines are Azure VMs, hosted by other cloud providers, or on premise. [Learn more about Azure Update Management.](https://docs.microsoft.com/azure/automation/automation-update-management)
+Azure Update Management is a solution in Azure Automation that allows you to manage updates and patches for multiple machines from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your machines are Azure VMs, hosted by other cloud providers, or on premise. [Learn more about Azure Update Management.](/azure/automation/automation-update-management)
 
 With Windows Admin Center, you can easily set up and use Azure Update Management to keep your managed servers up to date. If you don't already have a Log Analytics workspace in your Azure subscription, Windows Admin Center will automatically configure your server and create the necessary Azure resources in the subscription and location you specify. If you have an existing Log Analytics workspace, Windows Admin Center can automatically configure your server to consume updates from Azure Update Management.
 
@@ -21,5 +21,4 @@ Once you've configured your server to be managed by Azure Update Management, you
 
 [Learn how to stop using Azure Update Management to update your server.](azure-monitor.md#disabling-monitoring)
 
-Note that you must [register your Windows Admin Center gateway with Azure](../configure/azure-integration.md) before setting up Azure Update Management.
-
+Note that you must [register your Windows Admin Center gateway with Azure](./azure-integration.md) before setting up Azure Update Management.

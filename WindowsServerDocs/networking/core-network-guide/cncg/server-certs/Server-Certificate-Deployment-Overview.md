@@ -28,7 +28,7 @@ The following illustration shows the components that are required to deploy serv
 ![Server Certificate Deployment required infrastructure](../../../media/Nps-Certs/Nps-Certs.jpg)
 
 > [!NOTE]
-> In the illustration above, multiple servers are depicted: DC1, CA1, WEB1, and many SDN servers. This guide provides instructions for deploying and configuring CA1 and WEB1, and for configuring DC1, which this guide assumes you have already installed on your network. If you have not already installed your Active Directory domain, you can do so by using the [Core Network Guide](https://technet.microsoft.com/library/mt604042.aspx) for Windows Server 2016.
+> In the illustration above, multiple servers are depicted: DC1, CA1, WEB1, and many SDN servers. This guide provides instructions for deploying and configuring CA1 and WEB1, and for configuring DC1, which this guide assumes you have already installed on your network. If you have not already installed your Active Directory domain, you can do so by using the [Core Network Guide](../../core-network-guide.md) for Windows Server 2016.
 
 For more information on each item depicted in the illustration above, see the following:
 
@@ -110,6 +110,3 @@ The process of configuring server certificate enrollment occurs in these stages:
     > All domain member computers automatically receive the Enterprise Root CA's certificate without the configuration of autoenrollment. This certificate is different than the server certificate that you configure and distribute by using autoenrollment. The CA's certificate is automatically installed in the Trusted Root Certification Authorities certificate store for all domain member computers so that they will trust certificates that are issued by this CA.
 
 10. Verify that all servers have enrolled a valid server certificate.
-
-
-

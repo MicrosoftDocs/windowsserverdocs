@@ -49,7 +49,7 @@ Steps-by-step instructions to promote new and replica Windows Server 2012 domain
 - [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](./install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain--level-200-.md)
 - [Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)](./install-a-new-windows-server-2012-active-directory-child-or-tree-domain--level-200-.md)
 - [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](./rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-.md)
-- [Windows Server 2012 forum about domain controllers](https://docs.microsoft.com/answers/topics/windows-server-2012.html)
+- [Windows Server 2012 forum about domain controllers](/answers/topics/windows-server-2012.html)
 
 ## Windows Update considerations
 
@@ -169,7 +169,7 @@ The minimum system requirements for  Windows Server 2012  are listed in the foll
 
 This section covers disk space requirements only for upgrading domain controllers from  Windows Server 2008  or  Windows Server 2008 R2 . For more information about disk space requirements for upgrading domain controllers to earlier versions of Windows Server, see [Disk space requirements for upgrading to Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008) or [Disk space requirements for upgrading to Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008R2).
 
-Size the disk that hosts the Active Directory database and log files in order to accommodate the custom and application-driven schema extensions, application and administrator-initiated indexes, plus space for the objects and attributes that you will be added to the directory over deployment life of the domain controller (typically 5 to 8 years). Right sizing at deployment time is typically a good investment compared to greater touch costs required to expand disk storage after deployment. For more information, see [Capacity Planning for Active Directory Domain Services](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/active-directory-server/capacity-planning-for-active-directory-domain-services).
+Size the disk that hosts the Active Directory database and log files in order to accommodate the custom and application-driven schema extensions, application and administrator-initiated indexes, plus space for the objects and attributes that you will be added to the directory over deployment life of the domain controller (typically 5 to 8 years). Right sizing at deployment time is typically a good investment compared to greater touch costs required to expand disk storage after deployment. For more information, see [Capacity Planning for Active Directory Domain Services](../../../administration/performance-tuning/role/active-directory-server/capacity-planning-for-active-directory-domain-services.md).
 
 On domain controllers that you plan to upgrade, make sure that the drive that hosts the Active Directory database (NTDS.DIT) has free disk space that represents at least 20% of the NTDS.DIT file before you begin the operating system upgrade. If there is insufficient free disk space on the volume, the upgrade can fail and the upgrade compatibility report returns an error indicating insufficient free disk space:
 

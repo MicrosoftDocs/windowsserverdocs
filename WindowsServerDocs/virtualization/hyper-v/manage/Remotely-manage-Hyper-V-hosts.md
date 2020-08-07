@@ -114,7 +114,7 @@ To do this:
    Enable-WSManCredSSP -Role server
    ```
 
-    For details, see [Enable-PSRemoting](https://technet.microsoft.com/library/hh849694.aspx) and [Enable-WSManCredSSP](https://technet.microsoft.com/library/hh849872.aspx).
+    For details, see [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
 
 Next, configure the computer you'll use to manage the Hyper-V host.
 
@@ -137,7 +137,7 @@ Next, configure the computer you'll use to manage the Hyper-V host.
 >[!NOTE]
 > This will only work for Windows Server 2016 or Windows 10 **remote** hosts.
 
-For cmdlet details, see [Set-Item](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/set-item) and [Enable-WSManCredSSP](https://technet.microsoft.com/library/hh849872.aspx).
+For cmdlet details, see [Set-Item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
 
 ## Install Hyper-V Manager
 
@@ -145,7 +145,7 @@ To use a UI tool, choose the one appropriate for the operating system on the com
 
 On Windows Server, open Server Manager \> **Manage** \> **Add roles and features**. Move to the **Features** page and expand **Remote server administration tools** \> **Role administration tools** \> **Hyper-V management tools**.
 
-On Windows, Hyper-V Manager is available on [any Windows operating system that includes Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_compatibility).
+On Windows, Hyper-V Manager is available on [any Windows operating system that includes Hyper-V](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
 
 1. On the Windows desktop, click the Start button and begin typing **Programs and features**.
 1. In search results, click **Programs and Features**.
@@ -162,4 +162,3 @@ add-windowsfeature rsat-hyper-v-tools
 ## Additional References
 
 [Install Hyper-V](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)
-

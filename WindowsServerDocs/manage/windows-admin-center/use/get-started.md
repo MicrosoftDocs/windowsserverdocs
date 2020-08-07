@@ -112,7 +112,7 @@ specific browser session. If you reload your browser, you must re-enter your
 
 **Local Administrator Password Solution (LAPS)**
 
-If your environment uses [LAPS](https://technet.microsoft.com/mt227395.aspx), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](https://aka.ms/WACFeedback).
+If your environment uses [LAPS](/previous-versions/mt227395(v=msdn.10)), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](https://aka.ms/WACFeedback).
 
 ## Using tags to organize your connections
 

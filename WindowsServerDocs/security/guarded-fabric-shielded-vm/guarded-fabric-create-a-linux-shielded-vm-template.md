@@ -63,7 +63,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     You can do this by clicking "Connect to Server..." in the Actions pane or by right clicking on Hyper-V Manager and choosing "Connect to Server..."
     Provide the DNS name for your Hyper-V server and, if necessary, the credentials needed to connect to it.
 
-5.  Using Hyper-V Manager, [configure an external switch](https://docs.microsoft.com/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines) on your virtualization server so the Linux VM can access the Internet to obtain updates.
+5.  Using Hyper-V Manager, [configure an external switch](../../virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines.md) on your virtualization server so the Linux VM can access the Internet to obtain updates.
 
 6.  Next, create a new virtual machine to install the Linux OS onto.
     In the Actions pane, click **New** > **Virtual Machine** to bring up the wizard.
@@ -115,7 +115,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 
 13. If you are planning to use System Center Virtual Machine Manager to deploy your VMs, install the VMM guest agent to enable VMM to specialize your OS during VM provisioning.
     Specialization allows each VM to be set up securely with different users and SSH keys, networking configurations, and custom setup steps.
-    Learn how to [obtain and install the VMM guest agent](https://docs.microsoft.com/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
+    Learn how to [obtain and install the VMM guest agent](/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
 
 14. Next, [add the Microsoft Linux Software Repository to your package manager](../../administration/linux-package-repository-for-microsoft-software.md).
 
@@ -185,7 +185,7 @@ The VHDX you provide to the `-Path` parameter will be overwritten with the updat
 
 > [!IMPORTANT]
 > The Remote Server Administration Tools available on Windows Server 2016 or Windows 10 cannot be used to prepare a Linux shielded VM template disk.
-> Only use the [Protect-TemplateDisk](https://docs.microsoft.com/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
+> Only use the [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
 
 ```powershell
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below

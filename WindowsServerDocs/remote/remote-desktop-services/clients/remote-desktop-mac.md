@@ -156,4 +156,4 @@ Windows Server 2012 R2 introduced support for a new authentication method, Remot
 To learn more about this feature, check out [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
 
 > [!TIP]
-> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://docs.microsoft.com/answers/topics/windows-remote-desktop-client.html) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

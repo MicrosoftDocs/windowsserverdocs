@@ -26,7 +26,7 @@ ms.date: 8/16/2016
 In the following sections, italics indicates UI text that appears in the Best Practices Analyzer tool for this issue.
 
 > [!NOTE]
-> In Windows Server 2012 R2, virtual machine snapshots were renamed to virtual machine checkpoints in Hyper-V Manager to match the terminology used in System Center Virtual Machine Management. For details, see [Checkpoints and Snapshots Overview](https://technet.microsoft.com/library/dn818483.aspx).
+> In Windows Server 2012 R2, virtual machine snapshots were renamed to virtual machine checkpoints in Hyper-V Manager to match the terminology used in System Center Virtual Machine Management. For details, see [Checkpoints and Snapshots Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn818483(v=ws.11)).
 
 ## Issue
 
@@ -44,6 +44,3 @@ If physical disk space runs out, any running virtual machine that has checkpoint
 
 > [!NOTE]
 > Production checkpoints are now available as an alternative to standard checkpoints. For details, see [Choose between standard or production checkpoints](../manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md).
-
-
-

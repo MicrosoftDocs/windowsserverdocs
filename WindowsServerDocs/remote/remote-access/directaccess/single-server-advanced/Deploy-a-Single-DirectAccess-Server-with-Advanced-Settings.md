@@ -138,6 +138,5 @@ The following table provides links to additional resources.
 |--------|-------|
 |**Deployment**|[DirectAccess Deployment Paths in Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<p>[Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|
 |**Tools and settings**|[Remote Access PowerShell cmdlets](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831379(v=ws.11))|
-|**Community resources**|[DirectAccess Survival Guide](https://docs.microsoft.com/answers/topics/windows-server-infrastructure.html)<p>[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|
+|**Community resources**|[DirectAccess Survival Guide](/answers/topics/windows-server-infrastructure.html)<p>[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|
 |**Related technologies**|[How IPv6 works](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10))|
-

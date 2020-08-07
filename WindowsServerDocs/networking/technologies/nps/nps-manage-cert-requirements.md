@@ -62,7 +62,7 @@ When using PEAP and EAP-TLS, NPSs display a list of all installed certificates i
 
 - Registry-based and smart card-logon certificates are not displayed.
 
-For more information, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
+For more information, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../../core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md).
 
 ## Minimum client certificate requirements
 

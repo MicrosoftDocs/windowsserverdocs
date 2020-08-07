@@ -542,8 +542,8 @@ You can use the following commands to install and configure AD DS and DNS. You m
 
 >[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
->- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
->- [Install-ADDSForest](https://docs.microsoft.com/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
+>- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
+>- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 
@@ -1151,19 +1151,19 @@ For more information about the technologies in this guide, see the following res
 
  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
-- [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/library/mt163897.aspx)
+- [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](../../identity/whats-new-active-directory-domain-services.md)
 
-- [Active Directory Domain Services overview](https://technet.microsoft.com/library/hh831484.aspx) at https://technet.microsoft.com/library/hh831484.aspx.
+- [Active Directory Domain Services overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)) at https://technet.microsoft.com/library/hh831484.aspx.
 
-- [Domain Name System (DNS) overview](https://technet.microsoft.com/library/hh831667.aspx) at https://technet.microsoft.com/library/hh831667.aspx.
+- [Domain Name System (DNS) overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831667(v=ws.11)) at https://technet.microsoft.com/library/hh831667.aspx.
 
-- [Implementing the DNS Admins Role](https://technet.microsoft.com/library/cc756152(WS.10).aspx)
+- [Implementing the DNS Admins Role](/previous-versions/windows/it-pro/windows-server-2003/cc756152(v=ws.10))
 
-- [Dynamic Host Configuration Protocol (DHCP) overview](https://technet.microsoft.com/library/hh831825.aspx) at https://technet.microsoft.com/library/hh831825.aspx.
+- [Dynamic Host Configuration Protocol (DHCP) overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831825(v=ws.11)) at https://technet.microsoft.com/library/hh831825.aspx.
 
-- [Network Policy and Access Services overview](https://technet.microsoft.com/library/hh831683.aspx) at https://technet.microsoft.com/library/hh831683.aspx.
+- [Network Policy and Access Services overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) at https://technet.microsoft.com/library/hh831683.aspx.
 
-- [Web Server (IIS) overview](https://technet.microsoft.com/library/hh831725.aspx) at https://technet.microsoft.com/library/hh831725.aspx.
+- [Web Server (IIS) overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831725(v=ws.11)) at https://technet.microsoft.com/library/hh831725.aspx.
 
 ## <a name="BKMK_appendix"></a>Appendices A through E
 The following sections contain additional configuration information for computers that are running operating systems other than  Windows Server 2016, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.
@@ -1537,4 +1537,3 @@ The following three tables list pre-installation configuration items as describe
 Configuration items for the Windows Server Core Network NPS deployment procedures [Install Network Policy Server (NPS)](#BKMK_installNPS) and [Register the NPS in the Default Domain](#BKMK_registerNPS).
 
 - No additional configuration items are required to install and register NPS.
-

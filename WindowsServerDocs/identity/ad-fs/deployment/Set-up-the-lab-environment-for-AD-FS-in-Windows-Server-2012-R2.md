@@ -80,7 +80,7 @@ You must install a server Secure Socket Layer (SSL) certificate on the ADFS1 ser
 
 -   Subject Alternative Name (DNS): enterpriseregistration.contoso.com
 
-For more information about setting up SSL certificates, see [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)).
+For more information about setting up SSL certificates, see [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)).
 
 [Active Directory Federation Services How-To Video Series: Updating Certificates](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
 

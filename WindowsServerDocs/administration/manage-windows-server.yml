@@ -58,7 +58,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows PowerShell
-            url: https://docs.microsoft.com/powershell/scripting/overview
+            url: /powershell/scripting/overview
           - text: Windows Commands
             url: windows-commands/windows-commands.md
           - text: System Insights
@@ -80,4 +80,4 @@ landingContent:
           - text: Windows previous versions documentation
             url: /previous-versions/windows/
           - text: Search for specific information
-            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
+            url: /search/?dataSource=previousVersions&search=Windows+Server

@@ -38,7 +38,7 @@ Additionally, the approach is shifting from a server-based capacity planning exe
 
 Throughout this article, the following baseline requirements are expected:
 
-- Readers have read and are familiar with [Performance Tuning Guidelines for Windows Server 2012 R2](/previous-versions//dn529133(v=vs.85)).
+- Readers have read and are familiar with [Performance Tuning Guidelines for Windows Server 2012 R2](/previous-versions/dn529133(v=vs.85)).
 - The Windows Server platform is an x64 based architecture. But even if your Active Directory environment is installed on Windows Server 2003 x86 (now beyond the end of the support lifecycle) and has a directory information tree (DIT) that is less 1.5 GB in size and that can easily be held in memory, the guidelines from this article are still applicable.
 - Capacity planning is a continuous process and you should regularly review how well the environment is meeting expectations.
 - Optimization will occur over multiple hardware lifecycles as hardware costs change. For example, memory becomes cheaper, the cost per core decreases, or the price of different storage options change.
@@ -405,7 +405,7 @@ Unfortunately, due to the huge variability of client applications that leverage 
 
 As mentioned previously, when planning capacity for an entire site, the goal is to target a design with an *N* + 1 capacity design, such that failure of one system during the peak period will allow for continuation of service at a reasonable level of quality. That means that in an “*N*” scenario, load across all the boxes should be less than 100% (better yet, less than 80%) during the peak periods.
 
-Additionally, if the applications and clients in the site are using best practices for locating domain controllers (that is, using the [DsGetDcName function](https://docs.microsoft.com/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea)), the clients should be relatively evenly distributed with minor transient spikes due to any number of factors.
+Additionally, if the applications and clients in the site are using best practices for locating domain controllers (that is, using the [DsGetDcName function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea)), the clients should be relatively evenly distributed with minor transient spikes due to any number of factors.
 
 In the next example, the following assumptions are made:
 

@@ -16,16 +16,16 @@ Use the task lists in this topic to help you're the deployment of your MultiPoin
 |Task|Description|
 |--------|---------------|
 |**1**|[Plan your MultiPoint Services Deployment](planning-a-multipoint-services-deployment.md)|
-|**2**|[Collect hardware and device drivers needed for the installation](Collect-hardware-and-device-drivers-needed-for-the-installation.md)|
+|**2**|[Collect hardware and device drivers needed for the installation](./multipoint-hardware-device-drivers.md)|
 |**3**|[Set up the physical computer and primary station](Set-up-the-physical-computer-and-primary-station.md)|
 |**4**|[Install MultiPoint Services](Install-MultiPoint-services.md)|
 |**5**|[Update and install device drivers if needed](Update-and-install-device-drivers-if-needed.md)|
-|**6**|[Set the date, time, and time zone](Set-the-date--time--and-time-zone.md)|
-|**7**|[Join the MultiPoint Services computer to a domain - optional](Join-the-MultiPoint-services-computer-to-a-domain--optional-.md)|
+|**6**|[Set the date, time, and time zone](./set-the-date-time.md)|
+|**7**|[Join the MultiPoint Services computer to a domain - optional](./join-multipoint-services-to-a-domain.md)|
 |**8**|[Install updates](Install-updates.md)|
-|**9**|[Attach additional stations to your MultiPoint Services computer](Attach-additional-stations-to-your-MultiPoint-services-computer.md)|
-|**10**|[Activate MultiPoint Services and add CALs](manage-client-access-licenses-with-multipoint-services.md)|
-|**11**|[Install software on your MultiPoint Services system](Install-software-on-your-MultiPoint-services-system.md)|
+|**9**|[Attach additional stations to your MultiPoint Services computer](./multipoint-attach-additional-stations.md)|
+|**10**|[Activate MultiPoint Services and add CALs](./manage-client-access-licenses.md)|
+|**11**|[Install software on your MultiPoint Services system](./install-software-on-multipoint.md)|
 
 ## Task list: Optional configurations
 
@@ -41,7 +41,7 @@ Use the task lists in this topic to help you're the deployment of your MultiPoin
 |--------|
 |[Plan user accounts](Plan-user-accounts-for-your-MultiPoint-services-environment.md)|
 |[Create local user accounts](Create-local-user-accounts.md)|
-|[Limit users' access to the server](Limit-users--access-to-the-server-in-MultiPoint-services.md)|
+|[Limit users' access to the server](./limit-user-access-to-multipoint.md)|
 |[Configure stations for automatic logon](Configure-stations-for-automatic-logon.md)|
 |[Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md)|
 |[Enable file sharing](Enable-file-sharing-in-MultiPoint-services.md)|
@@ -51,4 +51,4 @@ Use the task lists in this topic to help you're the deployment of your MultiPoin
 |Task|
 |--------|
 |[Configure Disk Protection](Configure-Disk-Protection-in-MultiPoint-services.md)|
-|[Install Server Backup](Install-Server-Backup-on-your-MultiPoint-services-computer.md)|
+|[Install Server Backup](./install-server-backup-on-multipoint.md)|

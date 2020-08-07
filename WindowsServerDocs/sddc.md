@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 Software-defined datacenter (SDDC) is a common industry term that generally refers to a datacenter where all of the infrastructure is virtualized. Virtualization is the key, and it simply means that the hardware and software in the datacenter expand beyond a traditional one-to-one ratio. With a software hypervisor emulating hardware, operating systems and applications can be abstracted away from physical hardware, and multiplied to form elastic resource pools of processors, memory, I/O and networks.
 
-Microsoft's implementation of the SDDC consists of the Windows Server technologies highlighted in this article. It starts with the Hyper-V hypervisor that provides the virtualization platform upon which networking and storage are built. Security technologies, developed for the unique challenges of virtualized infrastructure, mitigate internal and external threats. With PowerShell built into Windows Server, and the addition of [System Center](https://docs.microsoft.com/system-center/) and/or [Operations Management Suite](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview), you can program and automate provisioning, deployment, configuration and management.
+Microsoft's implementation of the SDDC consists of the Windows Server technologies highlighted in this article. It starts with the Hyper-V hypervisor that provides the virtualization platform upon which networking and storage are built. Security technologies, developed for the unique challenges of virtualized infrastructure, mitigate internal and external threats. With PowerShell built into Windows Server, and the addition of [System Center](/system-center/) and/or [Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview), you can program and automate provisioning, deployment, configuration and management.
 
 The technologies built into Windows Server and System Center are the main building blocks of the Windows Server SDDC experience. But even though it's a virtualized platform, it still requires the right hardware underneath. Microsoft partners participating in the **Windows Server Software-Defined (WSSD) Solutions** and the **Azure Stack HCI Solutions** programs can help your enterprise acquire the right hardware and get it up and running on day zero.
 
@@ -51,7 +51,7 @@ Windows Server Virtualization technologies include updates to Hyper-V, Hyper-V V
 
 ![Image for spacing purposes only](media/sddc/spacer1.png)![Windows Server, hyper-converged infrastructure diagram](media/sddc/hyper-converged.png)
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Windows Server, Hyper-converged](https://docs.microsoft.com/windows-server/get-started/what-s-new-in-windows-server-2016#computevirtualizationvirtualizationmd)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Windows Server, Hyper-converged](./get-started/whats-new-in-windows-server-2016.md#compute)**
 
 ### Hyper-V hypervisor
 
@@ -72,7 +72,7 @@ Flexible and secure, and not bound to the underlying storage topology, Shared VH
 - Shared VHDX can reside on a Cluster Shared Volume (CSV) on block storage, or on SMB file-based storage.
 - Protected: Shared VHDX supports Hyper-V Replica and host-level backup.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about  Guest Clustering with Shared VHDX](https://technet.microsoft.com/library/dn281956(v=ws.11).aspx)**
+![Learn icon](media/sddc/learn.png)**[Learn more about  Guest Clustering with Shared VHDX](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281956(v=ws.11))**
 
 ### Hyper-V Replica
 
@@ -86,7 +86,7 @@ No need for other virtual machine replication technologies, reducing costs.
 - Handles live migration automatically.
 - Simple configuration and management — either through Hyper-V Manager, PowerShell, or with Azure Site Recovery.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Hyper-V Replica](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Hyper-V Replica](./virtualization/hyper-v/manage/set-up-hyper-v-replica.md)**
 
 ![Connect everything banner](media/sddc/networking.png)
 
@@ -100,7 +100,7 @@ A centralized, programmable point of automation to manage, configure, monitor, a
 
 Administrators use a Management Tool that interacts directly with Network Controller. Network Controller provides information about the network infrastructure, including both virtual and physical infrastructure, to the Management Tool.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Network Controller](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-controller/network-controller)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Network Controller](./networking/sdn/technologies/network-controller/network-controller.md)**
 
 ### Datacenter Firewall
 
@@ -112,17 +112,17 @@ When deployed and offered as a service, tenant administrators can install and co
 
 The service provider administrator or the tenant administrator can manage the Datacenter Firewall policies via the network controller.
 
-![Learn icon](media/sddc/learn.png)**[Learn More about Datacenter Firewall](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview)**
+![Learn icon](media/sddc/learn.png)**[Learn More about Datacenter Firewall](./networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview.md)**
 
 ### Switch Embedded Teaming
 
 ![Image of a line for spacing purposes](media/sddc/networking-line.png)
 
-SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the [Software Defined Networking (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking) stack.
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the [Software Defined Networking (SDN)](./networking/sdn/software-defined-networking.md) stack.
 
 ![Image for spacing purposes only](media/sddc/spacer1.png)![Switch Embedded Teaming diagram](media/sddc/teaming.png)
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Switch Embedded Teaming](https://docs.microsoft.com/windows-server/networking/sdn/technologies/set-for-sdn)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Switch Embedded Teaming](./networking/sdn/technologies/set-for-sdn.md)**
 
 ### Software Load Balancing
 
@@ -132,7 +132,7 @@ SLB enables multiple servers to host the same workload, providing high availabil
 
 ![Image for spacing purposes only](media/sddc/spacer1.png)![Software Load Balancing diagram](media/sddc/balancer.png)
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Software Load Balancing](https://docs.microsoft.com/windows-server/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Software Load Balancing](./networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)**
 
 ![storage diagram](media/sddc/storage.png)
 
@@ -157,7 +157,7 @@ Centrally monitor and manage storage performance for virtual machines using Hype
 
 Storage QoS is built into the Microsoft software-defined storage solution provided by Scale-Out File Server and Hyper-V using SMB3 protocol. A new Policy Manager provides central storage performance monitoring.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Storage QoS](https://docs.microsoft.com/windows-server/storage/storage-qos/storage-qos-overview)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Storage QoS](./storage/storage-qos/storage-qos-overview.md)**
 
 ### Storage Replica
 
@@ -178,7 +178,7 @@ Synchronous replication
 
 t & t1 : Data flushed to the volume, logs always write through
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-overview)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Storage Replica](./storage/storage-replica/storage-replica-overview.md)**
 
 ![security diagram](media/sddc/security.png)
 
@@ -190,7 +190,7 @@ As a cloud service provider or enterprise private cloud administrator, you can u
 
 ![guarded fabric diagram](media/sddc/spacer1.png)![Guarded fabric diagram](media/sddc/guarded-fabric.png)
 
-![Learn icon](media/sddc/learn.png)**[Learn more about guarded fabric](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms)**
+![Learn icon](media/sddc/learn.png)**[Learn more about guarded fabric](./security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)**
 
 ### Shielded VMs
 
@@ -204,7 +204,7 @@ The data and state of a shielded VM are protected against inspection, theft and 
 - Shielded VMs are encrypted by BitLocker, or other means, so that only designated owners can run them.
 - Running VMs can be converted to shielded.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about shielded VMs](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms)**
+![Learn icon](media/sddc/learn.png)**[Learn more about shielded VMs](./security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)**
 
 ### Host Guardian Service
 
@@ -214,7 +214,7 @@ Host Guardian Service holds the keys to legitimate fabrics, as well as encrypted
 
 ![Image for spacing purposes only](media/sddc/spacer1.png)![guardian diagram](media/sddc/guardian.png)
 
-![Learn icon](media/sddc/learn.png)**[Learn more about the Host Guardian Service](https://docs.microsoft.com/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs)**
+![Learn icon](media/sddc/learn.png)**[Learn more about the Host Guardian Service](./security/guarded-fabric-shielded-vm/guarded-fabric-manage-hgs.md)**
 
 ### Device Health Attestation
 
@@ -227,7 +227,7 @@ Attestation enables enterprises to raise the security bar of their organization 
 Hardware trusted mode, shown above, provides the highest
 level of assurance, with TPM v2.0 hardware rooted trust and compliance with code-integrity policy for key-release.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Device Health Attestation](https://docs.microsoft.com/windows-server/security/device-health-attestation)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Device Health Attestation](./security/device-health-attestation.md)**
 
 ![management diagram](media/sddc/management.png)
 
@@ -245,7 +245,7 @@ DSC supports  "continuous deployments," so you can deploy configurations over an
 -  DSC can be used on-premises, in a public, or in a private Cloud environment.
 -  You can integrate DSC with any Microsoft or non-Microsoft solution as long as you can execute a PowerShell script on the target system.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about PowerShell DSC](https://docs.microsoft.com/powershell/dsc/overview)**
+![Learn icon](media/sddc/learn.png)**[Learn more about PowerShell DSC](/powershell/dsc/overview)**
 
 ### System Center VMM
 
@@ -260,7 +260,7 @@ Virtual Machine Manager is part of the System Center suite, used to configure, m
 - Networking: VMM provides network virtualization, including support for creating and manage virtual networks and network gateways.
 - Storage: VMM can discover, classify, provision, allocate, and assign local and remote storage.
 
-![Learn icon](media/sddc/learn.png)**[Learn more about System Center VMM](https://docs.microsoft.com/system-center/vmm/)**
+![Learn icon](media/sddc/learn.png)**[Learn more about System Center VMM](/system-center/vmm/)**
 
 ### Windows Admin Center
 

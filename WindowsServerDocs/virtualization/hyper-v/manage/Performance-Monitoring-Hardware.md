@@ -18,13 +18,13 @@ To enable performance monitoring hardware in a virtual machine, you'll need:
 
 - An Intel processor with performance monitoring hardware (i.e. PMU, PEBS, LBR).  Refer to [this document]( https://software.intel.com/en-us/vtune-amplifier-cookbook-configuring-a-hyper-v-virtual-machine-for-hardware-based-hotspots-analysis) from Intel to determine which performance monitoring hardware your system supports.
 - Windows Server 2019 or Windows 10 Version 1809 (October 2018 Update) or later
-- A Hyper-V virtual machine _without_ [nested virtualization](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) that is also in the stopped state
+- A Hyper-V virtual machine _without_ [nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) that is also in the stopped state
 
 To enable upcoming Intel Processor Trace (IPT) performance monitoring hardware in a virtual machine, you’ll need:
 
 - An Intel processor that supports IPT and the PT2GPA feature.  Refer to [this document]( https://software.intel.com/en-us/vtune-amplifier-cookbook-configuring-a-hyper-v-virtual-machine-for-hardware-based-hotspots-analysis) from Intel to determine which performance monitoring hardware your system supports.
 - Windows Server version 1903 (SAC) or Windows 10 Version 1903 (May 2019 Update) or later
-- A Hyper-V virtual machine _without_ [nested virtualization](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) that is also in the stopped state
+- A Hyper-V virtual machine _without_ [nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) that is also in the stopped state
 
 ## Enabling performance monitoring components in a virtual machine
 
@@ -57,4 +57,3 @@ Set-VMProcessor MyVMName -Perfmon @()
 ## Effects of enabling performance monitoring hardware on save/restore, export, and live migration
 
 Microsoft does not recommend live migrating or saving/restoring virtual machines with performance monitoring hardware between systems with different Intel hardware. The specific behavior of performance monitoring hardware is often non-architectural and changes between Intel hardware systems.  Moving a running virtual machine between different systems can result in unpredictable behavior of the non-architectural counters.
-

@@ -43,7 +43,7 @@ This is a companion guide to the Windows Server 2016 Core Network Guide. To depl
 - Deploy a core network in your main office by using the Core Network Guide, or already have the technologies provided in the Core Network Guide installed and functioning correctly on your network. These technologies include TCP\/IP v4, DHCP, Active Directory Domain Services \(AD DS\), and DNS.
 
     > [!NOTE]
-    > The Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide) is available in the Windows Server 2016 Technical Library.
+    > The Windows Server 2016 [Core Network Guide](../../core-network-guide.md) is available in the Windows Server 2016 Technical Library.
 
 - Deploy BranchCache content servers that are running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 in your main office or in a cloud data center. For information on how to deploy BranchCache content servers, see [Additional Resources](11-Bc-Hcm-additional-resources.md).
 
@@ -78,7 +78,7 @@ This guide does not provide instructions for configuring computers that are runn
 
 In addition, if you have computers running Windows 7, you must configure your hosted cache server with a server certificate that is issued by a certification authority that client computers trust. \(If all of your client computers are running Windows 10, Windows 8.1, or Windows 8, you do not need to configure the hosted cache server with a server certificate.\)
 > [!IMPORTANT]
-> If your hosted cache servers are running Windows Server 2008 R2, use the Windows Server 2008 R2 [BranchCache Deployment Guide](https://technet.microsoft.com/library/ee649232(v=ws.10).aspx) instead of this guide to deploy BranchCache in hosted cache mode. Apply the Group Policy settings that are described in that guide to all BranchCache clients that are running versions of Windows from Windows 7 to Windows 10. Computers that are running Windows Server 2008 R2 cannot be configured by using the steps in this guide.
+> If your hosted cache servers are running Windows Server 2008 R2, use the Windows Server 2008 R2 [BranchCache Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649232(v=ws.10)) instead of this guide to deploy BranchCache in hosted cache mode. Apply the Group Policy settings that are described in that guide to all BranchCache clients that are running versions of Windows from Windows 7 to Windows 10. Computers that are running Windows Server 2008 R2 cannot be configured by using the steps in this guide.
 
 ## <a name="bkmk_tech"></a>Technology overviews
 
