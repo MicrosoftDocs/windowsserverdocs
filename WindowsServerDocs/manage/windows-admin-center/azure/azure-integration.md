@@ -1,13 +1,11 @@
 ---
 title: Configuring Azure Integration
 description: Configuring Azure Integration Windows Admin Center (Project Honolulu). Connecting your Windows Admin Center gateway to Azure.
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.date: 09/19/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Configuring Azure integration
@@ -22,7 +20,7 @@ To allow the Windows Admin Center gateway to communicate with Azure to leverage 
 
 The first time you try to use an Azure integration feature in Windows Admin Center, you will be prompted to register the gateway to Azure. You can also register the gateway by going to the **Azure** tab in Windows Admin Center Settings. Note that only Windows Admin Center gateway administrators can register the Windows Admin Center gateway with Azure. [Learn more about Windows Admin Center user and administrator permissions](../configure/user-access-control.md#gateway-access-role-definitions).
 
-The guided in-product steps will create an Azure AD app in your directory, which allows Windows Admin Center to communicate with Azure. To view the Azure AD app that is automatically created, go to the **Azure** tab of Windows Admin Center settings. The **View in Azure** hyperlink lets you view the Azure AD app in the Azure portal. 
+The guided in-product steps will create an Azure AD app in your directory, which allows Windows Admin Center to communicate with Azure. To view the Azure AD app that is automatically created, go to the **Azure** tab of Windows Admin Center settings. The **View in Azure** hyperlink lets you view the Azure AD app in the Azure portal.
 
 The Azure AD app created is used for all points of Azure integration in Windows Admin Center, including [Azure AD authentication to the gateway](../configure/user-access-control.md#azure-active-directory). Windows Admin Center automatically configures the permissions needed to create and manage Azure resources on your behalf:
 

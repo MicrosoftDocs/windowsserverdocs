@@ -2,8 +2,6 @@
 title: Selecting Hardware for Your MultiPoint Services System
 description: Hardware considerations for MultiPoint Services
 ms.date: 07/22/2016
-ms.prod: windows-server
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
 author: evaseydl

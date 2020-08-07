@@ -1,9 +1,7 @@
 ---
 title: Deploying a two-node clustered file server
 description: This article describes creating a two-node file server cluster
-ms.prod: windows-server
 manager: eldenc
-ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar

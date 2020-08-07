@@ -1,13 +1,11 @@
 ---
 title: Publishing Extensions for Windows Admin Center
 description: Publishing Extensions for Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Publishing Extensions
 
@@ -87,7 +85,7 @@ Here's an example .nuspec file and the list of required or recommended propertie
     <licenseUrl>http://YourLicenseLink</licenseUrl>
     <iconUrl>http://YourLogoLink</iconUrl>
     <description>Hello World extension by Contoso</description>
-    <copyright>(c) Contoso. All rights reserved.</copyright> 
+    <copyright>(c) Contoso. All rights reserved.</copyright>
     <tags></tags>
   </metadata>
   <files>

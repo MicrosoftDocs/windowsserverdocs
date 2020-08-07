@@ -7,8 +7,6 @@ ms.reviewer: anandy
 manager: mtillman
 ms.date: 07/17/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: active-directory-federation-services
 ---
 
 # Build a native client application using OAuth public clients with AD FS 2016 or later

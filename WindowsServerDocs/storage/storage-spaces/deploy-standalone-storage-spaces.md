@@ -1,11 +1,9 @@
 ---
 title: Deploy Storage Spaces on a stand-alone server
 description: Describes how to deploy Storage Spaces on a stand-alone Windows Server 2012-based server.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage-spaces
 ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---

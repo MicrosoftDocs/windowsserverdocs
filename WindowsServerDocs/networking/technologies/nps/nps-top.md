@@ -2,11 +2,9 @@
 title: Network Policy Server (NPS)
 description: This topic provides an overview of Network Policy Server in Windows Server 2016 and Windows Server 2019, and includes links to additional guidance about NPS.
 manager: dougkim
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ms.date: 06/20/2018
 ---
@@ -83,18 +81,18 @@ A RADIUS server has access to user account information and can check network acc
 
 You can use NPS as a RADIUS server when:
 
-- You are using an AD DS domain or the local SAM user accounts database as your user account database for access clients. 
-- You are using Remote Access on multiple dial-up servers, VPN servers, or demand-dial routers and you want to centralize both the configuration of network policies and connection logging and accounting. 
+- You are using an AD DS domain or the local SAM user accounts database as your user account database for access clients.
+- You are using Remote Access on multiple dial-up servers, VPN servers, or demand-dial routers and you want to centralize both the configuration of network policies and connection logging and accounting.
 - You are outsourcing your dial-up, VPN, or wireless access to a service provider. The access servers use RADIUS to authenticate and authorize connections that are made by members of your organization.
 - You want to centralize authentication, authorization, and accounting for a heterogeneous set of access servers.
 
-The following illustration shows NPS as a RADIUS server for a variety of access clients. 
+The following illustration shows NPS as a RADIUS server for a variety of access clients.
 
 ![NPS as a RADIUS Server](../../media/Nps-Server/Nps-Server.jpg)
 
 ### RADIUS proxy
 
-As a RADIUS proxy, NPS forwards authentication and accounting messages to NPS and other RADIUS servers. You can use NPS as a RADIUS proxy to provide the routing of RADIUS messages between RADIUS clients \(also called network access servers\) and RADIUS servers that perform user authentication, authorization, and accounting for the connection attempt. 
+As a RADIUS proxy, NPS forwards authentication and accounting messages to NPS and other RADIUS servers. You can use NPS as a RADIUS proxy to provide the routing of RADIUS messages between RADIUS clients \(also called network access servers\) and RADIUS servers that perform user authentication, authorization, and accounting for the connection attempt.
 
 When used as a RADIUS proxy, NPS is a central switching or routing point through which RADIUS access and accounting messages flow. NPS records information in an accounting log about the messages that are forwarded.
 
@@ -128,7 +126,7 @@ The following configuration examples demonstrate how you can configure NPS as a 
 
 **NPS as a RADIUS server**. In this example, NPS is configured as a RADIUS server, the default connection request policy is the only configured policy, and all connection requests are processed by the local NPS. The NPS can authenticate and authorize users whose accounts are in the domain of the NPS and in trusted domains.
 
-**NPS as a RADIUS proxy**. In this example, the NPS is configured as a RADIUS proxy that forwards connection requests to remote RADIUS server groups in two untrusted domains. The default connection request policy is deleted, and two new connection request policies are created to forward requests to each of the two untrusted domains. In this example, NPS does not process any connection requests on the local server. 
+**NPS as a RADIUS proxy**. In this example, the NPS is configured as a RADIUS proxy that forwards connection requests to remote RADIUS server groups in two untrusted domains. The default connection request policy is deleted, and two new connection request policies are created to forward requests to each of the two untrusted domains. In this example, NPS does not process any connection requests on the local server.
 
 **NPS as both RADIUS server and RADIUS proxy**. In addition to the default connection request policy, which designates that connection requests are processed locally, a new connection request policy is created that forwards connection requests to an NPS or other RADIUS server in an untrusted domain. This second policy is named the Proxy policy. In this example, the Proxy policy appears first in the ordered list of policies. If the connection request matches the Proxy policy, the connection request is forwarded to the RADIUS server in the remote RADIUS server group. If the connection request does not match the Proxy policy but does match the default connection request policy, NPS processes the connection request on the local server. If the connection request does not match either policy, it is discarded.
 
@@ -151,7 +149,7 @@ To configure NPS using a wizard, open the NPS console, select one of the precedi
 
 ### Advanced configuration
 
-When you use advanced configuration, you manually configure NPS as a RADIUS server or RADIUS proxy. 
+When you use advanced configuration, you manually configure NPS as a RADIUS server or RADIUS proxy.
 
 To configure NPS by using advanced configuration, open the NPS console, and then click the arrow next to **Advanced Configuration** to expand this section.
 

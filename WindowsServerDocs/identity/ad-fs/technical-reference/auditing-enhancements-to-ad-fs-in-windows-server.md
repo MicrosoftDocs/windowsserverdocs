@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Auditing Enhancements to AD FS in Windows Server 2016

@@ -1,10 +1,8 @@
 ---
 title: Supported Windows guest operating systems for Hyper-V on Windows Server
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
-ms.prod: windows-server
 
 manager: dongill
-ms.technology: compute-hyper-v
 
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786

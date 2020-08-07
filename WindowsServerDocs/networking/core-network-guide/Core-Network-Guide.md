@@ -2,8 +2,6 @@
 title: Core network components
 description: This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
 ms.author: lizross

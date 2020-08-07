@@ -1,9 +1,7 @@
 ---
 title: Stretch Cluster Replication Using Shared Storage
-ms.prod: windows-server
 manager: eldenc
 ms.author: nedpyle
-ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019

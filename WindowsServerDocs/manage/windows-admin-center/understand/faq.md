@@ -1,13 +1,11 @@
 ---
 title: Windows Admin Center Frequently Asked Questions
 description: Get answers about Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 12/02/2019
-ms.prod: windows-server
 ---
 
 # Windows Admin Center Frequently Asked Questions
@@ -99,12 +97,12 @@ Traffic from the browser to the Windows Admin Center gateway uses HTTPS. Traffic
 
 Yes, in a few cases Windows Admin Center requires CredSSP. This is required to pass your credentials for authentication to machines beyond the specific server you are targeting for management. For example, if you are managing virtual machines on **server B**, but want to store the vhdx files for those virtual machines on a file share hosted by **server C**, Windows Admin Center must use CredSSP to authenticate with **server C** to access the file share.
 
-Windows Admin Center handles the configuration of CredSSP automatically after prompting for consent from you. Before configuring CredSSP, Windows Admin Center will check to make sure that the system has the recent CredSSP [updates](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018). 
+Windows Admin Center handles the configuration of CredSSP automatically after prompting for consent from you. Before configuring CredSSP, Windows Admin Center will check to make sure that the system has the recent CredSSP [updates](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018).
 
 CredSSP is currently used in the following areas:
 
 - Using disaggregated SMB storage in the virtual machines tool (the example above.)
-- Using the Updates tool in either the Failover or Hyper-Converged cluster management solutions, which performs [Cluster-Aware Updating](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating) 
+- Using the Updates tool in either the Failover or Hyper-Converged cluster management solutions, which performs [Cluster-Aware Updating](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating)
 
 ## Are there any cloud dependencies?
 

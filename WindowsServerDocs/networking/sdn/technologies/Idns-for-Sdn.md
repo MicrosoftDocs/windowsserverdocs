@@ -2,8 +2,6 @@
 title: Internal DNS Service (iDNS) for SDN
 description: This topic explains how you can provide DNS services to your hosted tenant workloads by using Internal DNS (iDNS), which is integrated with Software Defined Networking in Windows Server 2016.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: get-started-article
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: anpaul

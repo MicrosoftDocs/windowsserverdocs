@@ -1,8 +1,6 @@
 ---
 title: Protected Users Security Group
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-credential-protection
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: Remote Desktop - Allow access to your PC
 description: Learn about your options for remotely accessing your PC
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
 author: lizap
@@ -15,10 +13,10 @@ ms.localizationpriority: medium
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-You can use Remote Desktop to connect to and control your PC from a remote device by using a [Microsoft Remote Desktop client](remote-desktop-clients.md) (available for Windows, iOS, macOS and Android). When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.  
+You can use Remote Desktop to connect to and control your PC from a remote device by using a [Microsoft Remote Desktop client](remote-desktop-clients.md) (available for Windows, iOS, macOS and Android). When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.
 
 > [!NOTE]
-> You can use Remote Desktop to connect to Windows 10 Pro and Enterprise, Windows 8.1 and 8 Enterprise and Pro, Windows 7 Professional, Enterprise, and Ultimate, and Windows Server versions newer than Windows Server 2008. You can't connect to computers running a Home edition (like Windows 10 Home). 
+> You can use Remote Desktop to connect to Windows 10 Pro and Enterprise, Windows 8.1 and 8 Enterprise and Pro, Windows 7 Professional, Enterprise, and Ultimate, and Windows Server versions newer than Windows Server 2008. You can't connect to computers running a Home edition (like Windows 10 Home).
 
 To connect to a remote PC, that computer must be turned on, it must have a network connection, Remote Desktop must be enabled, you must have network access to the remote computer (this could be through the Internet), and you must have permission to connect. For permission to connect, you must be on the list of users. Before you start a connection, it's a good idea to look up the name of the computer you're connecting to and to make sure Remote Desktop connections are allowed through its firewall.
 
@@ -39,7 +37,7 @@ You can configure your PC for remote access with a few easy steps.
 
 ### Windows 7 and early version of Windows 10
 
-To configure your PC for remote access, download and run the [Microsoft Remote Desktop Assistant](https://www.microsoft.com/download/details.aspx?id=50042). This assistant updates your system settings to enable remote access, ensures your computer is awake for connections, and checks that your firewall allows Remote Desktop connections. 
+To configure your PC for remote access, download and run the [Microsoft Remote Desktop Assistant](https://www.microsoft.com/download/details.aspx?id=50042). This assistant updates your system settings to enable remote access, ensures your computer is awake for connections, and checks that your firewall allows Remote Desktop connections.
 
 ### All versions of Windows (Legacy method)
 
@@ -53,7 +51,7 @@ Be aware that when you enable access to Remote Desktop, you are granting anyone 
 
 You should ensure that every account that has access to your PC is configured with a strong password.
 
-## Why allow connections only with Network Level Authentication? 
+## Why allow connections only with Network Level Authentication?
 
 If you want to restrict who can access your PC, choose to allow access only with Network Level Authentication (NLA). When you enable this option, users have to authenticate themselves to the network before they can connect to your PC. Allowing connections only from computers running Remote Desktop with NLA is a more secure authentication method that can help protect your computer from malicious users and software. To learn more about NLA and Remote Desktop, check out [Configure NLA for RDS Connections](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732713(v=ws.11)).
 

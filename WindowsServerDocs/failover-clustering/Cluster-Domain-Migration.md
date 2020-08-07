@@ -1,9 +1,7 @@
 ---
 title: Cross Domain Cluster Migration in Windows Server 2016/2019
 description: This article describes moving a Windows Server 2019 cluster from one domain to another
-ms.prod: windows-server
 manager: eldenc
-ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar

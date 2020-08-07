@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Migrate the AD FS 2.0 federation server to AD FS on Windows Server 2012 R2

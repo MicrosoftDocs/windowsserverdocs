@@ -1,9 +1,7 @@
 ---
 title: Resilient File System (ReFS) overview
-ms.prod: windows-server
 ms.author: gawatu
 manager: mchad
-ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
 ms.date: 06/29/2019

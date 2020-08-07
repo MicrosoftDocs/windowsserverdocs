@@ -1,11 +1,9 @@
 ---
 title: Guarded Fabric and Shielded VMs overview
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 

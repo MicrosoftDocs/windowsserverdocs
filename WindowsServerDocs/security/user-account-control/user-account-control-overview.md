@@ -1,8 +1,6 @@
 ---
 title: User Account Control Overview
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-tpm
 ms.topic: article
 ms.assetid: 1b7a39cd-fc10-4408-befd-4b2c45806732
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: Volume Shadow Copy Service
 ms.date: 01/30/2019
-ms.prod: windows-server
-ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend

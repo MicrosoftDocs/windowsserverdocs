@@ -1,10 +1,8 @@
 ---
 title: Understanding the cache in Storage Spaces Direct
 ms.assetid: 69b1adc0-ee64-4eed-9732-0fb216777992
-ms.prod: windows-server
 ms.author: cosdar
 manager: dongill
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/17/2019

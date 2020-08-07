@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
@@ -178,9 +176,9 @@ You are now ready to launch the Windows Azure Multi-Factor Authentication server
 
     > [!NOTE]
     > The **Multi-Factor Authentication AD FS Adapter** installation wizard creates a security group called **PhoneFactor Admins** in your Active Directory and then adds the AD FS service account of your federation service to this group.
-    > 
+    >
     > It is recommended that you verify on your domain controller that the **PhoneFactor Admins** group is indeed created and that the AD FS service account is a member of this group.
-    > 
+    >
     > If necessary, add the AD FS service account to the **PhoneFactor Admins** group on your domain controller manually.
 
     For additional details on installing the AD FS Adapter, click the Help link in the top right corner of the Multi-Factor Authentication Server.

@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot user profiles with events
 description: How to troubleshoot problems loading and unloading user profiles by using events and trace logs.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.date: 04/05/2018
 ms.localizationpriority: medium
 ---
@@ -65,7 +63,7 @@ Here's how to create and decode a trace for the User Profile Service:
 
 1. Sign on to the computer where the user is experiencing problems, using an account that is a member of the local Administrators group.
 2. From an elevated command prompt enter the following commands, where *\<Path\>* is the path to a local folder that you have previously created, for example C:\\logs:
-        
+
     ```PowerShell
     logman create trace -n RUP -o <Path>\RUP.etl -ets
     logman update RUP -p {eb7428f5-ab1f-4322-a4cc-1f1a9b2c5e98} 0x7FFFFFFF 0x7 -ets
@@ -74,12 +72,12 @@ Here's how to create and decode a trace for the User Profile Service:
 4. Reproduce the problem. The procedure to reproduce the problem is typically to sign on as the user experiencing the issue, sign the user off, or both.
 5. After reproducing the problem, sign on as the local administrator again.
 6. From an elevated command prompt run the following command to save the log into an ETL file:
-  
+
     ```PowerShell
     logman stop -n RUP -ets
     ```
 7. Type the following command to export the ETL file into a human-readable file in the current directory (likely your home folder or the %WINDIR%\\System32 folder):
-    
+
     ```PowerShell
     Tracerpt <path>\RUP.etl
     ```

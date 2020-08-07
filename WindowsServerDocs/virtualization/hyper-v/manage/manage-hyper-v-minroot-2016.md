@@ -4,7 +4,6 @@ description: Configuring Host CPU Resource Controls
 author: allenma
 ms.date: 12/15/2017
 ms.topic: article
-ms.prod: windows-server
 ---
 
 # Hyper-V Host CPU Resource Management

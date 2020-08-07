@@ -7,8 +7,6 @@ ms.author:  billmath
 manager: mtillman
 ms.date: 04/29/2020
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # AD FS Frequently Asked Questions (FAQ)

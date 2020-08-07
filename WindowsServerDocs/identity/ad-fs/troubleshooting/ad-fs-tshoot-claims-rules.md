@@ -6,15 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - Claims Rules Syntax
 A claim is a statement that one subject makes about itself or another subject.  Claims are issued by a relying party, and they are given one or more values and then packaged in security tokens that are issued by the AD FS server.  This article deals with the claims syntax and creation.  For information on claims issuance see [AD FS Troubleshooting - Claims Issuance](ad-fs-tshoot-claims-issuance.md).
 
->[!NOTE]  
->You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [ADFS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.   
+>[!NOTE]
+>You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [ADFS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
 
 ## How claim rules are processed
 Claim rules are processed through the [claims pipeline](../../ad-fs/technical-reference/The-Role-of-the-Claims-Pipeline.md) using the [claims engine](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md). The claims engine is a logical component of the Federation Service that examines the set of incoming claims presented by a user, and will then, depending on the logic in each rule, produce an output set of claims.
@@ -31,7 +29,7 @@ The claim rule language consists of the following components, separated by the â
 
 Example:
 
-```c:[type == "Name", value == "domain user"] => issue(type = "Role", value = "employee");``` 
+```c:[type == "Name", value == "domain user"] => issue(type = "Role", value = "employee");```
 
 The following claim has the following:
 - condition - `c:[type == "Name", value == "domain user"] ` - evaluates the input claim of whether the windows account name is a domain user

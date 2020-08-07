@@ -1,8 +1,6 @@
 ---
 title: Set up email discovery to subscribe to your RDS feed
 description: Learn how to integrate Azure AD Domain Services into your RDS deployment.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 3/27/2018
 ms.localizationpriority: medium

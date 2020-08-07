@@ -1,7 +1,6 @@
 ---
 title: Deploy graphics devices using RemoteFX vGPU
 description: Learn how to deploy and configure RemoteFX vGPU in Windows Server
-ms.prod: windows-server
 ms.reviewer: rickman
 author: rick-man
 ms.author: rickman
@@ -33,7 +32,7 @@ Guest VM requirements:
 
 Additional considerations for guest VMs:
 
-- OpenGL and OpenCL functionality is only available in guests running Windows 10 or Windows Server 2016.  
+- OpenGL and OpenCL functionality is only available in guests running Windows 10 or Windows Server 2016.
 - DirectX 11.0 is only available for guests running Windows 8 or later.
 
 ## Enable RemoteFX vGPU

@@ -1,8 +1,6 @@
 ---
 title: Virtual network peering
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.author: anpaul
 author: AnirbanPaul
@@ -14,7 +12,7 @@ ms.date: 08/08/2018
 
 >Applies to: Windows Server
 
-Virtual network peering lets you connect two virtual networks seamlessly. Once peered, for connectivity purposes, the virtual networks appear as one. 
+Virtual network peering lets you connect two virtual networks seamlessly. Once peered, for connectivity purposes, the virtual networks appear as one.
 
 The benefits of using virtual network peering include:
 

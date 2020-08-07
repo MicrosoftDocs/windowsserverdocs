@@ -2,7 +2,6 @@
 title: Performance history for virtual hard disks
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018

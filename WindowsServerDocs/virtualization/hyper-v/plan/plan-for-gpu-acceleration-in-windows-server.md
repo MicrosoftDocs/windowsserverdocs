@@ -1,7 +1,6 @@
 ---
 title: Plan for GPU acceleration in Windows Server
 description: Learn about the different Hyper-V technologies for GPU acceleration, including DDA and RemoteFX vGPU
-ms.prod: windows-server
 ms.reviewer: rickman
 author: rick-man
 ms.author: rickman

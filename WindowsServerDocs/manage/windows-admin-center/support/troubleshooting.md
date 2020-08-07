@@ -1,12 +1,10 @@
 ---
 title: Windows Admin Center Common Troubleshooting Steps
 description: Windows Admin Center Common Troubleshooting Steps (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server
 ms.date: 06/07/2019
 ---
 # Troubleshooting Windows Admin Center

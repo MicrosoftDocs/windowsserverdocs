@@ -1,13 +1,11 @@
 ---
 title: Manage Hyper-Converged Infrastructure with Windows Admin Center
 description: Manage Hyper-Converged Infrastructure with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 

@@ -2,11 +2,9 @@
 title: Configure Network Policy Server Accounting
 description: This topic provides information about text file and SQL Server logging for Network Policy Server in Windows Server 2016.
 manager: dougkim
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ms.date: 05/25/2018
 ---
@@ -27,7 +25,7 @@ By using the Accounting Configuration wizard, you can configure the following fo
 
 - **SQL logging only**. By using this setting, you can configure a data link to a SQL Server that allows NPS to connect to and send accounting data to the SQL server. In addition, the wizard can configure the database on the SQL Server to ensure that the database is compatible with NPS SQL server logging.
 - **Text logging only**. By using this setting, you can configure NPS to log accounting data to a text file.
-- **Parallel logging**. By using this setting, you can configure the SQL Server data link and database. You can also configure text file logging so that NPS logs simultaneously to the text file and the SQL Server database. 
+- **Parallel logging**. By using this setting, you can configure the SQL Server data link and database. You can also configure text file logging so that NPS logs simultaneously to the text file and the SQL Server database.
 - **SQL logging with backup**. By using this setting, you can configure the SQL Server data link and database. In addition, you can configure text file logging that NPS uses if SQL Server logging fails.
 
 In addition to these settings, both SQL Server logging and text logging allow you to specify whether NPS continues to process connection requests if logging fails. You can specify this in the **Logging failure action section** in local file logging properties, in SQL server logging properties, and while you are running the Accounting Configuration Wizard.
@@ -92,20 +90,20 @@ Membership in Domain Admins, or equivalent, is the minimum required to complete 
 1. Open the NPS console or the NPS Microsoft Management Console (MMC) snap-in.
 2. In the console tree, click **Accounting**.
 3. In the details pane, in **SQL Server Logging Properties**, click **Change SQL Server Logging Properties**. The **SQL Server Logging Properties** dialog box opens.
-4. In **Log the following information**, select the information that you want to log: 
+4. In **Log the following information**, select the information that you want to log:
 	- To log all accounting requests, click **Accounting requests**.
 	- To log authentication requests, click **Authentication requests**.
 	- To log periodic accounting status, click **Periodic accounting status**.
 	- To log periodic status, such as interim accounting requests, click **Periodic status**.
 5. To configure the number of concurrent sessions allowed between the server running NPS and the SQL Server, type a number in **Maximum number of concurrent sessions**.
-6. To configure the SQL Server data source, in **SQL Server Logging**, click **Configure**. The **Data Link Properties** dialog box opens. On the **Connection** tab, specify the following: 
+6. To configure the SQL Server data source, in **SQL Server Logging**, click **Configure**. The **Data Link Properties** dialog box opens. On the **Connection** tab, specify the following:
 	- To specify the name of the server on which the database is stored, type or select a name in **Select or enter a server name**.
 	- To specify the authentication method with which to log on to the server, click **Use Windows NT integrated security**. Or, click **Use a specific user name and password**, and then type credentials in **User name** and **Password**.
 	- To allow a blank password, click **Blank password**.
 	- To store the password, click **Allow saving password**.
 	- To specify which database to connect to on the computer running SQL Server, click **Select the database on the server**, and then select a database name from the list.
 7. To test the connection between NPS and SQL Server, click **Test Connection**. Click **OK** to close **Data Link Properties**.
-8. In **Logging failure action**, select **Enable text file logging for failover** if you want NPS to continue with text file logging if SQL Server logging fails. 
+8. In **Logging failure action**, select **Enable text file logging for failover** if you want NPS to continue with text file logging if SQL Server logging fails.
 9. In **Logging failure action**, select **If logging fails, discard connection requests** if you want NPS to stop processing Access-Request messages when log files are full or unavailable for some reason. If you want NPS to continue processing connection requests if logging fails, do not select this check box.
 
 ## Ping user-name

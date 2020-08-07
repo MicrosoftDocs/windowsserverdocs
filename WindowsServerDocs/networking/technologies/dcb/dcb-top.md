@@ -1,8 +1,6 @@
 ---
 title: Data Center Bridging (DCB)
 description: You can use this topic for introductory information about Data Center Bridging in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
@@ -32,11 +30,11 @@ Priority\-based flow control is essential if the upper layer protocol, such as F
 
 ## DCB Protocols and Management Options
 
-DCB consists of the following set of protocols. 
+DCB consists of the following set of protocols.
 
 - Enhanced Transmission Service \(ETS\) – IEEE 802.1Qaz, which builds on the 802.1P and 802.1Q
 standards
-- Priority Flow Control \(PFS\), IEEE 802.1Qbb 
+- Priority Flow Control \(PFS\), IEEE 802.1Qbb
 - DCB Exchange Protocol \(DCBX\), IEEE 802.1AB, as extended in the 802.1Qaz standard.
 
 The DCBX protocol allows you to configure DCB on a switch, which can then automatically configure an end device, such as a computer running Windows Server 2016.
@@ -88,7 +86,7 @@ For hosters who have already adopted, or who plan to adopt, iSCSI as their stora
 
 A Windows Server 2016\-based implementation of DCB alleviates many of the issues that can occur when converged fabric solutions are provided by multiple original equipment manufacturers \(OEMs\).
 
-Implementations of proprietary solutions provided by multiple OEMs might not interoperate with one another, might be difficult to manage, and will typically have different software maintenance schedules. 
+Implementations of proprietary solutions provided by multiple OEMs might not interoperate with one another, might be difficult to manage, and will typically have different software maintenance schedules.
 
 By contrast, Windows Server 2016 DCB is standards\-based, and you can deploy and manage DCB in a heterogeneous network.
 

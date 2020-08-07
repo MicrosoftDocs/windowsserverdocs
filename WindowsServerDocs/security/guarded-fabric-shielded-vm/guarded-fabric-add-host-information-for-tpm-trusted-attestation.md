@@ -1,12 +1,10 @@
 ---
 title: Add host information for TPM-trusted attestation
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 06/21/2019
 ---
 

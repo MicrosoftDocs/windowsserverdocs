@@ -1,12 +1,10 @@
 ---
 title: Obtain certificates for HGS
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
 ---
 
@@ -28,7 +26,7 @@ Hosters and service providers should consider using a well-known, public CA inst
 
 Both the signing and encryption certificates must be issued with the following certificiate properties (unless marked "recommended"):
 
-Certificate Template Property | Required value 
+Certificate Template Property | Required value
 ------------------------------|----------------
 Crypto provider               | Any Key Storage Provider (KSP). Legacy Cryptographic Service Providers (CSPs) are **not** supported.
 Key algorithm                 | RSA

@@ -6,14 +6,12 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # Troubleshooting Active Directory Replication Problems
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Active Directory replication problems can have several different sources. For example, Domain Name System (DNS) problems, networking issues, or security problems can all cause Active Directory replication to fail. 
+Active Directory replication problems can have several different sources. For example, Domain Name System (DNS) problems, networking issues, or security problems can all cause Active Directory replication to fail.
 
 The rest of this topic explains tools and a general methodology to fix Active Directory replication errors. The following subtopics cover symptoms, causes, and how to resolve specific replication errors:
 
@@ -32,7 +30,7 @@ For information about how Active Directory replication works, see the following 
 
 ## Event and tool solution recommendations
 
-Ideally, the red (Error) and yellow (Warning) events in the Directory Service event log suggest the specific constraint that is causing replication failure on the source or destination domain controller. If the event message suggests steps for a solution, try the steps that are described in the event. The Repadmin tool and other diagnostic tools also provide information that can help you resolve replication failures. 
+Ideally, the red (Error) and yellow (Warning) events in the Directory Service event log suggest the specific constraint that is causing replication failure on the source or destination domain controller. If the event message suggests steps for a solution, try the steps that are described in the event. The Repadmin tool and other diagnostic tools also provide information that can help you resolve replication failures.
 
 For detailed information about using Repadmin for troubleshooting replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
@@ -42,7 +40,7 @@ Sometimes replication errors occur because of intentional disruptions. For examp
 
 ### Intentional disconnections
 
-If replication errors are reported by a domain controller that is attempting replication with a domain controller that has been built in a staging site and is currently offline awaiting its deployment in the final production site (a remote site, such as a branch office), you can account for those replication errors. To avoid separating a domain controller from the replication topology for extended periods, which causes continuous errors until the domain controller is reconnected, consider adding such computers initially as member servers and using the install from media (IFM) method to install Active Directory Domain Services (AD DS). You can use the Ntdsutil command-line tool to create installation media that you can store on removable media (CD, DVD, or other media) and ship to the destination site. Then, you can use the installation media to install AD DS on the domain controllers at the site, without the use of replication. 
+If replication errors are reported by a domain controller that is attempting replication with a domain controller that has been built in a staging site and is currently offline awaiting its deployment in the final production site (a remote site, such as a branch office), you can account for those replication errors. To avoid separating a domain controller from the replication topology for extended periods, which causes continuous errors until the domain controller is reconnected, consider adding such computers initially as member servers and using the install from media (IFM) method to install Active Directory Domain Services (AD DS). You can use the Ntdsutil command-line tool to create installation media that you can store on removable media (CD, DVD, or other media) and ship to the destination site. Then, you can use the installation media to install AD DS on the domain controllers at the site, without the use of replication.
 
 ### Hardware failures or upgrades</title>
 
@@ -52,7 +50,7 @@ Periodic hardware upgrades can also cause domain controllers to be out of servic
 
 ### Firewall configuration
 
-By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=22578). 
+By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=22578).
 
 For information about the ports that Active Directory replication uses, see [Active Directory Replication Tools and Settings](https://go.microsoft.com/fwlink/?LinkId=123774).
 
@@ -60,13 +58,13 @@ For information about managing Active Directory replication over firewalls, see 
 
 ## Responding to failure of an outdated server running Windows 2000 Server
 
-If a domain controller running Windows 2000 Server has failed for longer than the number of days in the tombstone lifetime, the solution is always the same: 
+If a domain controller running Windows 2000 Server has failed for longer than the number of days in the tombstone lifetime, the solution is always the same:
 
 1. Move the server from the corporate network to a private network.
 2. Either forcefully remove Active Directory or reinstall the operating system.
-3. Remove the server metadata from Active Directory so that the server object cannot be revived. 
+3. Remove the server metadata from Active Directory so that the server object cannot be revived.
 
-You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see [Remove Active Directory Domain Controller Metadata](https://go.microsoft.com/fwlink/?LinkID=123599). 
+You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see [Remove Active Directory Domain Controller Metadata](https://go.microsoft.com/fwlink/?LinkID=123599).
 
 By default, NTDS Settings objects that are deleted are revived automatically for a period of 14 days. Therefore, if you do not remove server metadata (use Ntdsutil or the script mentioned previously to perform metadata cleanup), the server metadata is reinstated in the directory, which prompts replication attempts to occur. In this case, errors will be logged persistently as a result of the inability to replicate with the missing domain controller.
 
@@ -83,7 +81,7 @@ If you rule out intentional disconnections, hardware failures, and outdated Wind
 
 ## General approach to fixing problems
 
-Use the following general approach to fixing replication problems: 
+Use the following general approach to fixing replication problems:
 
 1. Monitor replication health daily, or use Repadmin.exe to retrieve replication status daily.
 2. Attempt to resolve any reported failure in a timely manner by using the methods that are described in event messages and this guide. If software might be causing the problem, uninstall the software before you continue with other solutions.
@@ -108,11 +106,11 @@ Replication status is an important way for you to evaluate the status of the dir
 
 Use Repadmin to monitor replication status daily by running a command that assesses the replication status of all the domain controllers in your forest. The procedure generates a .csv file that you can open in Microsoft Excel and filter for replication failures.
 
-You can use the following procedure to retrieve the replication status of all domain controllers in the forest. 
+You can use the following procedure to retrieve the replication status of all domain controllers in the forest.
 
 Requirements
 
-Membership in **Enterprise Admins**, or equivalent, is the minimum required to complete this procedure. 
+Membership in **Enterprise Admins**, or equivalent, is the minimum required to complete this procedure.
 
 Tools:
 
@@ -154,29 +152,29 @@ To identify Active Directory replication problems, use the <system>repadmin /sho
 |Repadmin error|Root Cause|Solution|
 | --- | --- | --- |
 |The time since last replication with this server has exceeded the tombstone lifetime.|A domain controller has failed inbound replication with the named source domain controller long enough for a deletion to have been tombstoned, replicated, and garbage-collected from AD DS.|Event ID 2042: It has been too long since this machine replicated|
-|No inbound neighbors.|If no items appear in the "Inbound Neighbors" section of the output that is generated by repadmin /showrepl, the domain controller was not able to establish replication links with another domain controller.|Fixing Replication Connectivity Problems (Event ID 1925)| 
-|Access is denied.|A replication link exists between two domain controllers, but replication cannot be performed properly as a result of an authentication failure.|Fixing Replication Security Problems| 
-|Last attempt at <date - time> failed with the "Target account name is incorrect."|This problem can be related to connectivity, DNS, or authentication issues. If this is a DNS error, the local domain controller could not resolve the globally unique identifier (GUID)-based DNS name of its replication partner.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088) Fixing Replication Security Problems Fixing Replication Connectivity Problems (Event ID 1925)| 
-|LDAP Error 49.|The domain controller computer account might not be synchronized with the Key Distribution Center (KDC).|Fixing Replication Security Problems| 
-|Cannot open LDAP connection to local host|The administration tool could not contact AD DS.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)| 
-|Active Directory replication has been preempted.|The progress of inbound replication was interrupted by a higher-priority replication request, such as a request that was generated manually with the repadmin /sync command.|Wait for replication to complete. This informational message indicates normal operation.| 
-|Replication posted, waiting.| The domain controller posted a replication request and is waiting for an answer. Replication is in progress from this source.|Wait for replication to complete. This informational message indicates normal operation.| 
+|No inbound neighbors.|If no items appear in the "Inbound Neighbors" section of the output that is generated by repadmin /showrepl, the domain controller was not able to establish replication links with another domain controller.|Fixing Replication Connectivity Problems (Event ID 1925)|
+|Access is denied.|A replication link exists between two domain controllers, but replication cannot be performed properly as a result of an authentication failure.|Fixing Replication Security Problems|
+|Last attempt at <date - time> failed with the "Target account name is incorrect."|This problem can be related to connectivity, DNS, or authentication issues. If this is a DNS error, the local domain controller could not resolve the globally unique identifier (GUID)-based DNS name of its replication partner.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088) Fixing Replication Security Problems Fixing Replication Connectivity Problems (Event ID 1925)|
+|LDAP Error 49.|The domain controller computer account might not be synchronized with the Key Distribution Center (KDC).|Fixing Replication Security Problems|
+|Cannot open LDAP connection to local host|The administration tool could not contact AD DS.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)|
+|Active Directory replication has been preempted.|The progress of inbound replication was interrupted by a higher-priority replication request, such as a request that was generated manually with the repadmin /sync command.|Wait for replication to complete. This informational message indicates normal operation.|
+|Replication posted, waiting.| The domain controller posted a replication request and is waiting for an answer. Replication is in progress from this source.|Wait for replication to complete. This informational message indicates normal operation.|
 
-The following table lists common events that might indicate problems with Active Directory replication, along with root causes of the problems and links to topics that provide solutions for the problems. 
+The following table lists common events that might indicate problems with Active Directory replication, along with root causes of the problems and links to topics that provide solutions for the problems.
 
 |Event ID and source|Root cause|Solution|
-| --- | --- | --- | 
-|1311 NTDS KCC|The replication configuration information in AD DS does not accurately reflect the physical topology of the network.|Fixing Replication Topology Problems (Event ID 1311)| 
+| --- | --- | --- |
+|1311 NTDS KCC|The replication configuration information in AD DS does not accurately reflect the physical topology of the network.|Fixing Replication Topology Problems (Event ID 1311)|
 |1388 NTDS Replication|Strict replication consistency is not in effect, and a lingering object has been replicated to the domain controller.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)|
-|1925 NTDS KCC|The attempt to establish a replication link for a writable directory partition failed. This event can have different causes, depending on the error.| Fixing Replication Connectivity Problems (Event ID 1925) Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)| 
+|1925 NTDS KCC|The attempt to establish a replication link for a writable directory partition failed. This event can have different causes, depending on the error.| Fixing Replication Connectivity Problems (Event ID 1925) Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)|
 |1988 NTDS Replication|The local domain controller has attempted to replicate an object from a source domain controller that is not present on the local domain controller because it may have been deleted and already garbage-collected. Replication does not proceed for this directory partition with this partner until the situation is resolved.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)|
-|2042 NTDS Replication|Replication has not occurred with this partner for a tombstone lifetime, and replication cannot proceed.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)| 
-|2087 NTDS Replication|AD DS could not resolve the DNS host name of the source domain controller to an IP address, and replication failed.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)| 
+|2042 NTDS Replication|Replication has not occurred with this partner for a tombstone lifetime, and replication cannot proceed.|Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)|
+|2087 NTDS Replication|AD DS could not resolve the DNS host name of the source domain controller to an IP address, and replication failed.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)|
 |2088 NTDS Replication |AD DS could not resolve the DNS host name of the source domain controller to an IP address, but replication succeeded.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)|
-|5805 Net Logon|A machine account failed to authenticate, which is usually caused by either multiple instances of the same computer name or the computer name not replicating to every domain controller.|Fixing Replication Security Problems| 
+|5805 Net Logon|A machine account failed to authenticate, which is usually caused by either multiple instances of the same computer name or the computer name not replicating to every domain controller.|Fixing Replication Security Problems|
 
 For more information about replication concepts, see [Active Directory Replication Technologies](https://go.microsoft.com/fwlink/?LinkId=41950).
-  
+
 ## Next steps
 
 For more information, including support articles specific to error codes see the support article: [How to troubleshoot common Active Directory replication errors](https://support.microsoft.com/help/3108513)

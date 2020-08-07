@@ -1,9 +1,7 @@
 ---
 title: Upgrade, backup, and restore SDN infrastructure
-description: In this topic, you learn how to update, backup and restore an SDN infrastructure. 
+description: In this topic, you learn how to update, backup and restore an SDN infrastructure.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: anpaul
@@ -15,19 +13,19 @@ ms.date: 08/27/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-In this topic, you learn how to update, backup and restore an SDN infrastructure. 
+In this topic, you learn how to update, backup and restore an SDN infrastructure.
 
 ## Upgrade the SDN infrastructure
 SDN infrastructure can be upgraded from Windows Server 2016 to Windows Server 2019. For upgrade ordering, follow the same sequence of steps as mentioned in the section "Update the SDN infrastructure". Before upgrade, it is recommended to take a backup of the Network Controller database.
 
-For Network Controller machines, use the Get-NetworkControllerNode cmdlet to check the status of the node after the upgrade has been completed. Ensure that the node comes back to "Up" status before upgrading the other nodes. Once you have upgraded all of the Network Controller nodes, the Network Controller updates the microservices running within the Network Controller cluster within an hour. You can trigger an immediate update using the update-networkcontroller cmdlet. 
+For Network Controller machines, use the Get-NetworkControllerNode cmdlet to check the status of the node after the upgrade has been completed. Ensure that the node comes back to "Up" status before upgrading the other nodes. Once you have upgraded all of the Network Controller nodes, the Network Controller updates the microservices running within the Network Controller cluster within an hour. You can trigger an immediate update using the update-networkcontroller cmdlet.
 
 Install the same Windows updates on all of the operating system components of the Software Defined Networking (SDN) system, which includes:
 
 - SDN enabled Hyper-V hosts
 - Network Controller VMs
 - Software Load Balancer Mux VMs
-- RAS Gateway VMs 
+- RAS Gateway VMs
 
 >[!IMPORTANT]
 >If you use System Center Virtual Manager, you must update it with the latest update rollups.
@@ -40,7 +38,7 @@ When you update each component, you can use any of the standard methods for inst
 
 3. Before proceeding to the next Network Controller VM, use the `get-networkcontrollernode` cmdlet to check the status of the node that you updated and restarted.
 
-4. During the reboot cycle, wait for the Network Controller node to go down and then come back up again.<p>After rebooting the VM, it can take several minutes before it goes back into the **_Up_** status. For an example of the output, see 
+4. During the reboot cycle, wait for the Network Controller node to go down and then come back up again.<p>After rebooting the VM, it can take several minutes before it goes back into the **_Up_** status. For an example of the output, see
 
 5. Install updates on each SLB Mux VM one at a time to ensure continuous availability of the load balancer infrastructure.
 
@@ -50,7 +48,7 @@ When you update each component, you can use any of the standard methods for inst
 
     b. Install updates on each Gateway VM on this host.
 
-    c. If the update requires the gateway VM to reboot then reboot the VM.  
+    c. If the update requires the gateway VM to reboot then reboot the VM.
 
     d. Install updates on the host containing the gateway VM that was just Updated.
 
@@ -59,9 +57,9 @@ When you update each component, you can use any of the standard methods for inst
     f. Repeat for each additional host containing a standby gateway.<p>If no standby gateways remain, then follow these same steps for all remaining hosts.
 
 
-### Example: Use the get-networkcontrollernode cmdlet 
+### Example: Use the get-networkcontrollernode cmdlet
 
-In this example, you see the output for the `get-networkcontrollernode` cmdlet run from within one of the Network Controller VMs.  
+In this example, you see the output for the `get-networkcontrollernode` cmdlet run from within one of the Network Controller VMs.
 
 The status of the nodes that you see in the example output is:
 
@@ -72,7 +70,7 @@ The status of the nodes that you see in the example output is:
 >[!IMPORTANT]
 >You must wait several minutes until the status for the node changes to _**Up**_ before you update any additional nodes, one at a time.
 
-Once you have updated all of the Network Controller nodes, the Network Controller updates the microservices running within the Network Controller cluster within an hour. 
+Once you have updated all of the Network Controller nodes, the Network Controller updates the microservices running within the Network Controller cluster within an hour.
 
 >[!TIP]
 >You can trigger an immediate update using the `update-networkcontroller` cmdlet.
@@ -103,7 +101,7 @@ Status          : Up
 ```
 
 ### Example: Use the update-networkcontroller cmdlet
-In this example, you see the output for the `update-networkcontroller` cmdlet to force Network Controller to update. 
+In this example, you see the output for the `update-networkcontroller` cmdlet to force Network Controller to update.
 
 >[!IMPORTANT]
 >Run this cmdlet when you have no more updates to install.
@@ -126,9 +124,9 @@ Regular backups of the Network Controller database ensures business continuity i
 
 **Procedure:**
 
-1. Use the VM backup method of your choice, or use Hyper-V to export a copy of each Network Controller VM.<p>Backing up the Network Controller VM ensures that the necessary certificates for decrypting the database are present.  
+1. Use the VM backup method of your choice, or use Hyper-V to export a copy of each Network Controller VM.<p>Backing up the Network Controller VM ensures that the necessary certificates for decrypting the database are present.
 
-2. If using System Center Virtual Machine Manager (SCVMM), stop the SCVMM service and back it up via SQL Server.<p>The goal here is to ensure that no updates get made to SCVMM during this time, which could create an inconsistency between the Network Controller backup and SCVMM.  
+2. If using System Center Virtual Machine Manager (SCVMM), stop the SCVMM service and back it up via SQL Server.<p>The goal here is to ensure that no updates get made to SCVMM during this time, which could create an inconsistency between the Network Controller backup and SCVMM.
 
    >[!IMPORTANT]
    >Do not re-start the SCVMM service until the Network Controller backup is complete.
@@ -259,7 +257,7 @@ PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential
 
 ## Restore the SDN infrastructure from a backup
 
-When you restore all the necessary components from backup, the SDN environment returns to an operational state.  
+When you restore all the necessary components from backup, the SDN environment returns to an operational state.
 
 >[!IMPORTANT]
 >The steps vary depending on the number of components restored.
@@ -267,7 +265,7 @@ When you restore all the necessary components from backup, the SDN environment r
 
 1. If necessary, redeploy Hyper-V hosts and the necessary storage.
 
-2. If necessary, restore the Network Controller VMs, RAS gateway VMs and Mux VMs from backup. 
+2. If necessary, restore the Network Controller VMs, RAS gateway VMs and Mux VMs from backup.
 
 3. Stop NC host agent and SLB host agent on all Hyper-V hosts:
 
@@ -305,7 +303,7 @@ Fetching ResourceType:     Gateways
 ```
 
 ### Example: Restoring a Network Controller database
- 
+
 ```Powershell
 $URI = "https://NC.contoso.com"
 $Credential = Get-Credential

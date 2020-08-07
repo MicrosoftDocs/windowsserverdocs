@@ -1,8 +1,6 @@
 ---
 title: Windows PowerShell Commands for RSS and vRSS
 description: In this topic, you learn how to quickly locate technical reference information about Windows PowerShell commands for Receive Side Scaling (RSS) and virtual RSS (vRSS).
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 49e93b9f-46d9-4cee-bcda-1c4634893ddd
 ms.localizationpriority: medium
@@ -31,7 +29,7 @@ vRSS requires that VMQ is enabled and configured. You can use the following Wind
 
 ## Enable and configure RSS on a native host
 
-Use the following PowerShell commands to configure RSS on a native host as well as manage RSS in a VM or on a host virtual NIC (vNIC). Some of the parameters of these commands might also affect Virtual Machine Queue \(VMQ\) in the Hyper-V host.  
+Use the following PowerShell commands to configure RSS on a native host as well as manage RSS in a VM or on a host virtual NIC (vNIC). Some of the parameters of these commands might also affect Virtual Machine Queue \(VMQ\) in the Hyper-V host.
 
 >[!IMPORTANT]
 >Enabling RSS in a VM or on a host vNIC is a prerequisite for enabling and using vRSS.
@@ -43,18 +41,18 @@ Use the following PowerShell commands to configure RSS on a native host as well 
 
 ## Enable vRSS on the Hyper\-V Virtual Switch port
 
-In addition to enabling RSS in the VM, vRSS requires that you enable vRSS on the Hyper\-V Virtual Switch port. 
+In addition to enabling RSS in the VM, vRSS requires that you enable vRSS on the Hyper\-V Virtual Switch port.
 
 Determine the present settings for vRSS and enable or disable the feature for a VM.
 
-   **View the current settings:** 
+   **View the current settings:**
 
    ```PowerShell
    Get-VMNetworkAdapter <vm-name> | fl
    ```
 
    **Enabled the feature:**
-   
+
    ```PowerShell
    Set-VMNetworkAdapter <vm-name> -VrssEnabled [$True|$False]
    ```
@@ -63,26 +61,26 @@ Determine the present settings for vRSS and enable or disable the feature for a 
 
 Determine the present settings for vRSS, and enable or disable the feature for a host vNIC.
 
-   **View the current settings:** 
+   **View the current settings:**
 
    ```PowerShell
    Get-VMNetworkAdapter -ManagementOS | fl
    ```
 
-   **Enable or disable the feature:** 
+   **Enable or disable the feature:**
 
    ```PowerShell
    Set-VMNetworkAdapter -ManagementOS -VrssEnabled [$True|$False]
    ```
 
-## Configure the scheduling mode on the Hyper-V virtual switch port 
+## Configure the scheduling mode on the Hyper-V virtual switch port
 >Applies to: Windows Server 2019
 
-In Windows Server 2019, vRSS can update the logical processors used to process network traffic dynamically.  Devices with supported drivers have this scheduling mode enabled by default. 
+In Windows Server 2019, vRSS can update the logical processors used to process network traffic dynamically.  Devices with supported drivers have this scheduling mode enabled by default.
 
 Determine the present scheduling mode on a system, or modify the scheduling mode for a VM.
 
-   **View the current settings:** 
+   **View the current settings:**
 
    ```PowerShell
    Get-VMNetworkAdapter <vm-name> | Select 'VRSSQueue'
@@ -99,20 +97,20 @@ Determine the present scheduling mode on a system, or modify the scheduling mode
 
 To determine the present scheduling mode or to modify the scheduling mode for a host vNIC, use the following Windows PowerShell commands:
 
-   **View the current settings:** 
+   **View the current settings:**
 
    ```PowerShell
    Get-VMNetworkAdapter -ManagementOS | Select 'VRSSQueue'
    ```
 
-   **Set or modify the scheduling mode:** 
+   **Set or modify the scheduling mode:**
 
    ```PowerShell
    Set-VMNetworkAdapter -ManagementOS -VrssQueueSchedulingMode -VrssQueueSchedulingMode [Dynamic|$StaticVrss|StaticVMQ]
    ```
 
 
-## Related topics 
+## Related topics
 For more information, see the following reference topics.
 
 - [Get-VMNetworkAdapter](https://technet.microsoft.com/itpro/powershell/windows/hyper-v/get-vmnetworkadapter)

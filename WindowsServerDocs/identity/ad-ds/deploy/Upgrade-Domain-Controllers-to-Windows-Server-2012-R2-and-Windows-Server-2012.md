@@ -6,8 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 

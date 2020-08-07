@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Add a Claim Description
@@ -15,7 +13,7 @@ ms.technology: identity-adfs
 
 In an account partner organization, administrators create claims to represent a user's membership in a group or role or to represent some data about a user, for example, a user's employee identification number.
 
-In a resource partner organization, administrators create corresponding claims to represent groups and users that can be recognized as resource users. Because outgoing claims in the account partner organization map to incoming claims in the resource partner organization, the resource partner is able to accept the credentials that the account partner provides. 
+In a resource partner organization, administrators create corresponding claims to represent groups and users that can be recognized as resource users. Because outgoing claims in the account partner organization map to incoming claims in the resource partner organization, the resource partner is able to accept the credentials that the account partner provides.
 
 You can use the following procedure to add a claim.
 
@@ -23,7 +21,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 ## To add a claim description
 
-1. In Server Manager, click **Tools**, and then select **AD FS Management**. 
+1. In Server Manager, click **Tools**, and then select **AD FS Management**.
 
 2. Expand **Service** and on the right click **Add Claim Description**.
    ![add claim description](media/Add-a-Claim-Description/claimdesc1.png)
@@ -49,5 +47,5 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ![add claim description](media/Add-a-Claim-Description/claimdesc2.png)
 
 
-## See Also  
-[AD FS Operations](../ad-fs-operations.md) 
+## See Also
+[AD FS Operations](../ad-fs-operations.md)

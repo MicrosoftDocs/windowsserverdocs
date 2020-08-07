@@ -50,13 +50,43 @@
         },
         "ms.prod": {
           "EssentialsDocs/**/*.md": "windows-server",
-          "administration/**/*.md": "windows-server"
+          "administration/**/*.md": "windows-server",
+          "failover-clustering/**/*.md": "windows-server",
+          "get-started/**/*.md": "windows-server",
+          "get-started-19/**/*.md": "windows-server",
+          "identity/**/*.md": "windows-server",
+          "manage/**/*.md": "windows-server",
+          "networking/**/*.md": "windows-server",
+          "remote/**/*.md": "windows-server",
+          "security/**/*.md": "windows-server",
+          "storage/**/*.md": "windows-server",
+          "troubleshoot/**/*.md": "windows-server",
+          "upgrade/**/*.md": "windows-server",
+          "virtualization/**/*.md": "windows-server",
+          "windows-server-licensing/**/*.md": "windows-server"
         },
         "ms.technology": {
           "EssentialsDocs/**/*.md": "essentials",
           "administration/**/*.md": "administration",
           "administration/windows-commands/*.md": "windows-commands",
-          "administration/windows-server-update-services/*.md": "wsus"
+          "administration/windows-server-update-services/*.md": "wsus",
+          "failover-clustering/**/*.md": "failover-clustering",
+          "get-started/**/*.md": "getting-started",
+          "get-started-19/**/*.md": "getting-started",
+          "identity/**/*.md": "security",
+          "identity/ad-ds/*.md": "ad-ds",
+          "identity/ad-fs/*.md": "ad-fs",
+          "manage/**/*.md": "manage",
+          "manage/windows-admin-center/*.md": "windows-admin-center",
+          "networking/**/*.md": "networking",
+          "remote/**/*.md": "remote",
+          "remote/remote-desktop-services/*.md": "remote-desktop-services",
+          "security/**/*.md": "security",
+          "storage/**/*.md": "storage",
+          "storage/storage-spaces/*.md": "storage-spaces",
+          "troubleshoot/**/*.md": "troubleshoot",
+          "upgrade/**/*.md": "upgrade",
+          "virtualization/**/*.md": "hyper-v"
           }
         },
     "template": [

@@ -1,12 +1,10 @@
 ---
 title: Failover Clustering system log events
 description: A list of Failover Clustering events in the Windows Server System log. These events can be used to troubleshoot a cluster.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
 ---
 # Failover Clustering system log events

@@ -1,13 +1,11 @@
 ---
 title: Manage Servers with Windows Admin Center
 description: Manage Servers with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 11/21/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Manage Servers with Windows Admin Center
 
@@ -45,7 +43,7 @@ The following tools are available for server connections:
 | ---- | ----------- |
 | [Overview](#overview) | View server details and control server state |
 | [Active Directory](#active-directory-preview) | Manage Active Directory |
-| [Backup](#backup) | View and configure Azure Backup |  
+| [Backup](#backup) | View and configure Azure Backup |
 | [Certificates](#certificates) | View and modify certificates |
 | [Containers](#containers) | View Containers |
 | [Devices](#devices) | View and modify devices |
@@ -111,7 +109,7 @@ The following Active Directory management are available:
 - Reset user password
 - User objects: configure basic properties & group memberships
 - Computer objects: configure delegation to a single machine
-- Group objects: manage membership (add/remove 1 user at a time)  
+- Group objects: manage membership (add/remove 1 user at a time)
 
 [**View feedback and proposed features for Active Directory**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BActive%20Directory%5D).
 

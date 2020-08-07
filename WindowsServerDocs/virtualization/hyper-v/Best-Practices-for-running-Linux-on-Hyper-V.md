@@ -1,9 +1,7 @@
 ---
 title: Best Practices for running Linux on Hyper-V
 description: Provides recommendations for running Linux on a virtual machine
-ms.prod: windows-server
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall

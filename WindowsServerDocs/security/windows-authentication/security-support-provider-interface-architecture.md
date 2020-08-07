@@ -1,8 +1,6 @@
 ---
 title: Security Support Provider Interface Architecture
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-windows-auth
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
 author: coreyp-at-msft

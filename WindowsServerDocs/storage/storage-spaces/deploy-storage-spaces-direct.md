@@ -1,9 +1,7 @@
 ---
 title: Deploy Storage Spaces Direct
-ms.prod: windows-server
 manager: eldenc
 ms.author: stevenek
-ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek

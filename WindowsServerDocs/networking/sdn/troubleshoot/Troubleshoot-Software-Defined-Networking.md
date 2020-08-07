@@ -2,8 +2,6 @@
 title: Troubleshoot SDN
 description: This topic provides links to contents about troubleshooting Software Defined Networking in Windows Server 2016.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
 ms.author: anpaul
@@ -15,10 +13,10 @@ author: AnirbanPaul
 
 The topics in this section provide information about troubleshooting the Software Defined Networking (SDN) technologies that are included in Windows Server 2016.
 
-> [!NOTE]  
-> For additional Software Defined Networking documentation, you can use the following library sections.  
->  
-> - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md) 
+> [!NOTE]
+> For additional Software Defined Networking documentation, you can use the following library sections.
+>
+> - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
 > - [Plan SDN](../plan/Plan-Software-Defined-Networking.md)
 > - [Deploy SDN](../deploy/Deploy-Software-Defined-Networking.md)
 > - [Manage SDN](../manage/manage-sdn.md)

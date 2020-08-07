@@ -1,9 +1,7 @@
 ---
 title: Supported Oracle Linux virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
-ms.prod: windows-server
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 author: shirgall
@@ -21,8 +19,8 @@ In this section:
 * [Oracle Linux 8.x Series](#oracle-linux-8x-series)
 * [Oracle Linux 7.x Series](#oracle-linux-7x-series)
 * [Oracle Linux 6.x Series](#oracle-linux-6x-series)
- 
-   
+
+
 ## Table legend
 
 * **Built in** - LIS are included as part of this Linux distribution. The kernel module version numbers for the built in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built in LIS is out of date.
@@ -30,7 +28,7 @@ In this section:
 * &#10004; - Feature available
 * (*blank*) - Feature not available
 * **RHCK** - Red Hat Compatable Kernel
-* **UEK** - Unbreakable Enterprise Kernel (UEK) 
+* **UEK** - Unbreakable Enterprise Kernel (UEK)
    * UEK4 - built on upstream Linux Kernel release 4.1.12
    * UEK5 - built on upstream Linux Kernel release 4.14
    * UEK6 - built on upstream Linux Kernel release 5.4
@@ -40,17 +38,17 @@ In this section:
 |       **Feature**     |       **Windows Server version**      |       **8.0-8.1 (RHCK)** |
 |-----------------------|---------------------------------------|-------------------|
 |       **Availability**        |   |
-|       **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019, 2016, 2012 R2 | &#10004; | 
-|       Windows Server 2016 Accurate Time       | 2019, 2016 | &#10004; | 
-|       **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   | 
-|       Jumbo frames        | 2019, 2016, 2012 R2 | &#10004; | 
-|       VLAN tagging and trunking       | 2019, 2016, 2012 R2 | &#10004;  | 
+|       **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019, 2016, 2012 R2 | &#10004; |
+|       Windows Server 2016 Accurate Time       | 2019, 2016 | &#10004; |
+|       **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |
+|       Jumbo frames        | 2019, 2016, 2012 R2 | &#10004; |
+|       VLAN tagging and trunking       | 2019, 2016, 2012 R2 | &#10004;  |
 |       Live Migration      | 2019, 2016, 2012 R2 | &#10004; |
-|       Static IP Injection     |  2019, 2016, 2012 R2 | &#10004; Note 2 | 
+|       Static IP Injection     |  2019, 2016, 2012 R2 | &#10004; Note 2 |
 |       vRSS     | 2019, 2016, 2012 R2 | &#10004; |
 |       TCP Segmentation and Checksum Offloads | 2019, 2016, 2012 R2 | &#10004;|
 |       SR-IOV  | 2019, 2016 |  &#10004;   |
-|       **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  | 
+|       **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |
 |       VHDX resize  | 2019, 2016, 2012 R2 | &#10004; |
 |       Virtual Fibre Channel | 2019, 2016, 2012 R2 | &#10004; Note 3  |
 |       Live virtual machine backup  | 2019, 2016, 2012 R2 | &#10004; Note 5 |
@@ -58,22 +56,22 @@ In this section:
 |       SCSI WWN | 2019, 2016, 2012 R2 | &#10004;  |
 |       **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** | |
 |       PAE Kernel Support  | 2019, 2016, 2012 R2 |  N/A |
-|       Configuration of MMIO gap  | 2019, 2016, 2012 R2 | &#10004; | 
+|       Configuration of MMIO gap  | 2019, 2016, 2012 R2 | &#10004; |
 |       Dynamic Memory - Hot-Add | 2019, 2016, 2012 R2  | &#10004; Note 7, 8, 9 |
 |       Dynamic Memory - Ballooning | 2019, 2016, 2012 R2 | &#10004; Note 7, 8, 9 |
 |       Runtime Memory Resize | 2019, 2016  | &#10004;  |
 |       **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** | |
-|       Hyper-V-specific video device | 2019, 2016, 2012 R2 | &#10004;   | 
+|       Hyper-V-specific video device | 2019, 2016, 2012 R2 | &#10004;   |
 |       **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** | |
-|       Key-Value Pair  | 2019, 2016, 2012 R2 | &#10004;   | 
-|       Non-Maskable Interrupt | 2019, 2016, 2012 R2 | &#10004;  | 
-|       File copy from host to guest | 2019, 2016, 2012 R2 | &#10004;  | 
-|       lsvmbus command | 2019, 2016, 2012 R2 | &#10004;  | 
-|       Hyper-V Sockets | 2019, 2016 | &#10004;  | 
-|       PCI Passthrough/DDA | 2019, 2016 | &#10004; | 
+|       Key-Value Pair  | 2019, 2016, 2012 R2 | &#10004;   |
+|       Non-Maskable Interrupt | 2019, 2016, 2012 R2 | &#10004;  |
+|       File copy from host to guest | 2019, 2016, 2012 R2 | &#10004;  |
+|       lsvmbus command | 2019, 2016, 2012 R2 | &#10004;  |
+|       Hyper-V Sockets | 2019, 2016 | &#10004;  |
+|       PCI Passthrough/DDA | 2019, 2016 | &#10004; |
 | **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** | |  |
-|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 12  |   
-|       Secure boot | 2019, 2016 |  &#10004; | 
+|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 12  |
+|       Secure boot | 2019, 2016 |  &#10004; |
 
 ## Oracle Linux 7.x Series
 
@@ -217,7 +215,7 @@ Windows Server 2016 Accurate Time
 <tr height="50px">
 <td width="20%">
 
- **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)** 
+ **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**
 </td>
 <td width="20%">
 
@@ -1264,11 +1262,11 @@ Secure boot
 
 This series only has 64-bit kernels.
 
-|       **Feature**     |       **Windows Server version**      |       **6.8-6.10 (RHCK)** |       **6.8-6.10 (UEK4)**     | 
+|       **Feature**     |       **Windows Server version**      |       **6.8-6.10 (RHCK)** |       **6.8-6.10 (UEK4)**     |
 |-----------------------|---------------------------------------|-------------------|-------------------|
 |       **Availability**     |   | LIS 4.3  | Built in  |
 |       **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019, 2016, 2012 R2 | &#10004; | &#10004;
-|       Windows Server 2016 Accurate Time       | 2019, 2016 | | 
+|       Windows Server 2016 Accurate Time       | 2019, 2016 | |
 |       **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |  |
 |       Jumbo frames        | 2019, 2016, 2012 R2 | &#10004; | &#10004;|
 |       VLAN tagging and trunking       | 2019, 2016, 2012 R2 | &#10004; Note 1 | &#10004; Note 1 |
@@ -1299,7 +1297,7 @@ This series only has 64-bit kernels.
 |       Hyper-V Sockets | 2019, 2016 | &#10004;  | &#10004; |
 |       PCI Passthrough/DDA | 2019, 2016 | &#10004; | &#10004; |
 | **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** | |  |
-|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 12  | &#10004; Note 12   
+|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 12  | &#10004; Note 12
 |       Secure boot | 2019, 2016 |  |  |
 
 

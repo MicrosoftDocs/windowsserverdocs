@@ -1,8 +1,6 @@
 ---
 title: How User Account Control Works
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-tpm
 ms.topic: article
 ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
 author: coreyp-at-msft

@@ -6,16 +6,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 09/08/2017
 ms.topic: article
-ms.prod: windows-server
 ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
-ms.technology: identity-adds
 ---
 
 # Active Directory Domain Services Component Updates
 
 >Applies To: Windows Server 2016, Windows Server 2012 R2
 
-This module introduces the components that received minor updates in the Directory Services and Identity spaces.  
+This module introduces the components that received minor updates in the Directory Services and Identity spaces.
 
 
 | About the Author |
@@ -25,34 +23,34 @@ This module introduces the components that received minor updates in the Directo
 | **Contributors** |
 |  **Reviewers**   |
 
-> [!NOTE]  
-> This content is written by a Microsoft customer support engineer, and is intended for experienced administrators and systems architects who are looking for deeper technical explanations of features and solutions in Windows Server 2012 R2 than topics on TechNet usually provide. However, it has not undergone the same editing passes, so some of the language may seem less polished than what is typically found on TechNet.  
+> [!NOTE]
+> This content is written by a Microsoft customer support engineer, and is intended for experienced administrators and systems architects who are looking for deeper technical explanations of features and solutions in Windows Server 2012 R2 than topics on TechNet usually provide. However, it has not undergone the same editing passes, so some of the language may seem less polished than what is typically found on TechNet.
 
-### What You Will Learn  
-After completing this module, you will be able to:  
+### What You Will Learn
+After completing this module, you will be able to:
 
--   Explain the component updates made within the Directory Services and Identity technology areas in Windows Server 2012 R2  
+-   Explain the component updates made within the Directory Services and Identity technology areas in Windows Server 2012 R2
 
-    -   [SPN and UPN uniqueness](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)  
+    -   [SPN and UPN uniqueness](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)
 
-    -   [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)  
+    -   [Winlogon Automatic Restart Sign-On &#40;ARSO&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)
 
-    -   [TPM Key Attestation](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md)  
+    -   [TPM Key Attestation](../../../ad-ds/manage/component-updates/TPM-Key-Attestation.md)
 
-    -   [CA Backup and Restore Windows PowerShell cmdlets](../../../ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-PowerShell-cmdlets.md)  
+    -   [CA Backup and Restore Windows PowerShell cmdlets](../../../ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-PowerShell-cmdlets.md)
 
-    -   [Command line process auditing](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)  
+    -   [Command line process auditing](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)
 
-    -   [Credentials Protection and Management](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))  
+    -   [Credentials Protection and Management](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))
 
-    -   [Directory Services component updates](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md)  
+    -   [Directory Services component updates](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md)
 
-        -   [Domain and Forest Functional Levels](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_FL)  
+        -   [Domain and Forest Functional Levels](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_FL)
 
-        -   [Deprecation of NTFRS](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_NTFRS)  
+        -   [Deprecation of NTFRS](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_NTFRS)
 
-        -   [LDAP Query Optimizer changes](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_LDAPQuery)  
+        -   [LDAP Query Optimizer changes](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_LDAPQuery)
 
-        -   [1644 Event improvements](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_1644)  
+        -   [1644 Event improvements](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_1644)
 
-        -   [Active Directory Replication throughput improvement](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
+        -   [Active Directory Replication throughput improvement](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)

@@ -6,8 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/09/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Device authentication controls in AD FS
@@ -32,7 +30,7 @@ The only type of device authentication supported in 2012 R2 was clientTLS.  In A
 - PKeyAuth
 - PRT
 
-To control the new behavior, the `DeviceAuthenticationEnabled` property is used in combination with a new property called `DeviceAuthenticationMethod`.  
+To control the new behavior, the `DeviceAuthenticationEnabled` property is used in combination with a new property called `DeviceAuthenticationMethod`.
 
 The device authentication method determines the type of device authentication that will be done: PRT, PKeyAuth, clientTLS, or some combination.
 It has the following values:

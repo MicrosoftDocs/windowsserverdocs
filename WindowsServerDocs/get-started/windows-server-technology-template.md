@@ -1,7 +1,6 @@
 ---
 title: Technology in Windows Server 2016
 description: Provides an overview of technology.
-ms.prod: windows-server
 ms.author: daveba
 ms.date: 10/17/2017
 ms.topic: article
