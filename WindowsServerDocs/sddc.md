@@ -51,7 +51,7 @@ Windows Server Virtualization technologies include updates to Hyper-V, Hyper-V V
 
 ![Image for spacing purposes only](media/sddc/spacer1.png)![Windows Server, hyper-converged infrastructure diagram](media/sddc/hyper-converged.png)
 
-![Learn icon](media/sddc/learn.png)**[Learn more about Windows Server, Hyper-converged](./get-started/whats-new-in-windows-server-2016.md#computevirtualizationvirtualizationmd)**
+![Learn icon](media/sddc/learn.png)**[Learn more about Windows Server, Hyper-converged](./get-started/whats-new-in-windows-server-2016.md#compute)**
 
 ### Hyper-V hypervisor
 

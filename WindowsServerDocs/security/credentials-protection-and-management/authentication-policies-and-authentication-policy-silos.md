@@ -218,7 +218,7 @@ The following table describes the events that are associated with Protected User
 
 The events are recorded in the Applications and Services Logs at **Microsoft\Windows\Authentication**.
 
-For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#troubleshoot-authentication-policies) and [Troubleshoot events related to Protected Users](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#troubleshoot-events-related-to-protected-users).
+For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies) and [Troubleshoot events related to Protected Users](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents).
 
 |Event ID and Log|Description|
 |----------|--------|
