@@ -248,18 +248,18 @@ To enable authenticated communication with the HCP services, we need to create 3
     - Run the .ps1 file in an elevated PowerShell command prompt.
 
     ```powershell
-    $source = \Program Files\PackageManagement\NuGet\Packages
-    $core = System.Data.SQLite.Core
-    $linq = System.Data.SQLite.Linq
-    $ef6 = System.Data.SQLite.EF6
-    $version = x.x.x.x
-    $target = C:\inetpub\wwwroot\MopriaCloudService\bin
-
-    xcopy /y $source\$core.$version\lib\net46\System.Data.SQLite.dll $target\
-    xcopy /y $source\$core.$version\build\net46\x86\SQLite.Interop.dll $target\x86\
-    xcopy /y $source\$core.$version\build\net46\x64\SQLite.Interop.dll $target\x64\
-    xcopy /y $source\$linq.$version\lib\net46\System.Data.SQLite.Linq.dll $target\
-    xcopy /y $source\$ef6.$version\lib\net46\System.Data.SQLite.EF6.dll $target\
+    $source = "\Program Files\PackageManagement\NuGet\Packages"
+    $core = "System.Data.SQLite.Core"
+    $linq = "System.Data.SQLite.Linq"
+    $ef6 = "System.Data.SQLite.EF6"
+    $version = "1.0.113.0"
+    $target = "C:\inetpub\wwwroot\MopriaCloudService\bin"
+ 
+    xcopy /y "$source\$core.$version\lib\net46\System.Data.SQLite.dll" "$target\"
+    xcopy /y "$source\$core.$version\build\net46\x86\SQLite.Interop.dll" "$target\x86\"
+    xcopy /y "$source\$core.$version\build\net46\x64\SQLite.Interop.dll" "$target\x64\"
+    xcopy /y "$source\$linq.$version\lib\net46\System.Data.SQLite.Linq.dll" "$target\"
+    xcopy /y "$source\$ef6.$version\lib\net46\System.Data.SQLite.EF6.dll" "$target\"
     ```
 
 10. Update the c:\inetpub\wwwroot\MopriaCloudService\web.config file to include the SQLite version x.x.x.x in the following `<runtime>/<assemblyBinding>` sections. This is the same version used in the previous step.
@@ -290,7 +290,7 @@ To enable authenticated communication with the HCP services, we need to create 3
     - Go to `c:\inetpub\wwwroot\MopriaCloudService\Database` directory.
     - Execute the following command to create the database in this directory:
 
-        `sqlite3.exe MopriaDeviceDb.db .read MopriaSQLiteDb.sql`
+        `"sqlite3.exe" MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
 
     - From File Explorer, open up the MopriaDeviceDb.db file properties to add users or groups which are allowed to publish to Mopria database in the Security tab. The users or groups must exist in on-premises Active Directory, and synchronized with Azure AD.
     - If the solution is deployed to a non-routable domain (e.g. *mydomain*.local), the Azure AD domain (e.g. *domainname*.onmicrosoft.com, or one purchased from third-party vendor) needs to be added as a UPN suffix to on-premises Active Directory. This is so the exact same user who will be publishing printers (e.g. admin@*domainname*.onmicrosoft.com) can be added in the security setting of the database file. See [Prepare a non-routable domain for directory synchronization](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization).
