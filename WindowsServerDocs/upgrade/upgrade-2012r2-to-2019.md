@@ -85,4 +85,4 @@ If you think something might have gone wrong during your upgrade, copy and zip t
 
 ## Related articles
 
-- For more details and information about Windows Server 2019, see [Get started with Windows Server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19).
+- For more details and information about Windows Server 2019, see [Get started with Windows Server 2019](../get-started-19/get-started-19.md).

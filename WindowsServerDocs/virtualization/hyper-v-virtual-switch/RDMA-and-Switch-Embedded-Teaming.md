@@ -182,7 +182,7 @@ The following illustration depicts SET architecture.
 
 Because SET is integrated into the Hyper-V Virtual Switch, you cannot use SET inside of a virtual machine (VM). You can, however use NIC Teaming within VMs.
 
-For more information, see [NIC Teaming in Virtual Machines (VMs)](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nict-vms).
+For more information, see [NIC Teaming in Virtual Machines (VMs)](../../networking/technologies/nic-teaming/nic-teaming.md).
 
 In addition, SET architecture does not expose team interfaces. Instead, you must configure Hyper-V Virtual Switch ports.
 
@@ -334,7 +334,7 @@ Following are lists that describe SET teaming MAC address replacement behavior, 
 
 It is recommended that you use System Center Virtual Machine Manager \(VMM\) to manage SET teams, however you can also use Windows PowerShell to manage SET. The following sections provide the Windows PowerShell commands that you can use to manage SET.
 
-For information on how to create a SET team using VMM, see the section "Set up a logical switch" in the System Center VMM library topic [Create logical switches](https://docs.microsoft.com/system-center/vmm/network-switch).
+For information on how to create a SET team using VMM, see the section "Set up a logical switch" in the System Center VMM library topic [Create logical switches](/system-center/vmm/network-switch).
 
 ### Create a SET team
 
@@ -368,7 +368,7 @@ Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"
 
 ### Removing a SET team
 
-You can remove a SET team only by removing the Hyper-V Virtual Switch that contains the SET team.  Use the topic [Remove-VMSwitch](https://technet.microsoft.com/itpro/powershell/windows/hyper-v/remove-vmswitch) for information on how to remove the Hyper-V Virtual Switch. The following example removes a Virtual Switch named **SETvSwitch**.
+You can remove a SET team only by removing the Hyper-V Virtual Switch that contains the SET team.  Use the topic [Remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch?view=win10-ps) for information on how to remove the Hyper-V Virtual Switch. The following example removes a Virtual Switch named **SETvSwitch**.
 
 ```
 Remove-VMSwitch "SETvSwitch"

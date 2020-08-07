@@ -26,13 +26,13 @@ Feature  | Generation | Guest operating system
 Checkpoints | 1 and 2 | Any supported guest
 Guest clustering | 1 and 2 | Guests that run cluster-aware applications and have iSCSI target software installed
 Replication | 1 and 2 | Any supported guest
-Domain Controller | 1 and 2 | Any supported Windows Server guest using only production checkpoints. See [Supported Windows Server guest operating systems](https://docs.microsoft.com/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows#supported-windows-server-guest-operating-systems)
+Domain Controller | 1 and 2 | Any supported Windows Server guest using only production checkpoints. See [Supported Windows Server guest operating systems](./supported-windows-guest-operating-systems-for-hyper-v-on-windows.md#supported-windows-server-guest-operating-systems)
 
 ## Compute
 
 Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------
-Dynamic memory | 1 and 2 | Specific versions of supported guests. See [Hyper-V Dynamic Memory Overview](https://technet.microsoft.com/library/hh831766.aspx) for versions older than Windows Server 2016 and Windows 10.
+Dynamic memory | 1 and 2 | Specific versions of supported guests. See [Hyper-V Dynamic Memory Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831766(v=ws.11)) for versions older than Windows Server 2016 and Windows 10.
 Hot add/removal of memory | 1 and 2 | Windows Server 2016, Windows 10
 Virtual NUMA | 1 and 2 | Any supported guest
 
@@ -81,10 +81,3 @@ SMB3 | 1 and 2 | All that support SMB3
 Storage spaces direct | 2 | Windows Server 2016
 Virtual Fibre Channel | 1 and 2 | Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 VHDX format | 1 and 2 | Any supported guest
-
-
-
-
-
-
-

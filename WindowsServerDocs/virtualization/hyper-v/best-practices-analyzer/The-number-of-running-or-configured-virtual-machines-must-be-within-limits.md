@@ -32,14 +32,14 @@ In the following sections, italics indicates text that appears in the Best Pract
 ## Resolution
 *Move one or more virtual machines to another server.*
 
-For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](../plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md).
+For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](../plan/plan-hyper-v-scalability-in-windows-server.md).
 
 To move a virtual machine to another server, you can:
 
 - Export the virtual machine from the current server and then import it to a new server as described below.
 - Do a live migration:
     - If this server belongs to a failover cluster, use the tools provided with the Failover Clustering feature. For instructions, see [Live Migrate, Quick Migrate, or Move a Virtual Machine from Node to Node](https://go.microsoft.com/fwlink/?LinkID=181519).
-    - If this is a standalone server, see instructions in [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](https://technet.microsoft.com//library/jj134199(v=ws.11).aspx)
+    - If this is a standalone server, see instructions in [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134199(v=ws.11))
 
 ### To export a virtual machine
 
@@ -86,8 +86,3 @@ Membership in the **Domain Administrators** group is required to complete this p
     2.  In the **Add Services** dialog box, click **Users or Computers**, select the remote computer, and then click **OK**.
 
     3.  In the **Available services** list, select the **cifs** protocol (also known as the Server Message Block (SMB) protocol), and then click **Add**.
-
-
-
-
-

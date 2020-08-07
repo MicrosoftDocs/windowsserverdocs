@@ -13,7 +13,7 @@ ms.date: 01/29/2019
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
 
 
-As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
+As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](/system-center/vmm/library-vm-templates?view=sc-vmm-2019)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
@@ -133,7 +133,7 @@ After the template is created, tenants can use it to create new virtual machines
 
 ## Prepare and protect the VHDX using PowerShell
 
-As an alternative to running the Template Disk Wizard, you can copy your template disk and certificate to a computer running RSAT and run [Protect-TemplateDisk](https://docs.microsoft.com/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps
+As an alternative to running the Template Disk Wizard, you can copy your template disk and certificate to a computer running RSAT and run [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps
 ) to initiate the signing process.
 The following example uses the name and version information specified by the _TemplateName_ and _Version_ parameters.
 The VHDX you provide to the `-Path` parameter will be overwritten with the updated template disk, so be sure to make a copy before running the command.
