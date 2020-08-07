@@ -15,37 +15,215 @@ author: greg-lindsay
 
 This topic provides information about how Anycast DNS works.
 
-## What is Anycast DNS?
+## What is Anycast?
 
-Anycast is a technology that enables you to scale a stateless service, such as DNS or HTTP, by placing a number of nodes behind the same IP address and using equal-cost multi-path (ECMP) routing to direct traffic between these nodes. When combined with routing rules, Anycast enables a geographical response. Therefore, with Anycast DNS you can enable a specified DNS server, or one of a group of servers, to respond to a DNS query based on the geographical location of a DNS client. This can enhance DNS response time and simplify DNS client settings. Anycast DNS also provides an extra layer of redundancy and can help protect against DNS denial of service attacks. 
+Anycast is a technology that provides multiple routing paths to a group of endpoints that are each assigned the same IP address. Each device in the group advertises the same address on a network, and routing protocols are used to choose which is the best destination.
 
-## How Anycast DNS works
+Anycast enables you to scale a stateless service, such as DNS or HTTP, by placing several nodes behind the same IP address and using equal-cost multi-path (ECMP) routing to direct traffic between these nodes. Anycast is different from unicast, in which each endpoint has its own, separate IP address. 
 
-Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preferred DNS server or group of DNS servers, usually one that is the closest to the DNS client. 
+## Why use Anycast with DNS?
 
-DNS servers that exist in multiple geographical locations each advertise a single, identical IP address called a <i>virtual IP address (VIP)</i> to their local gateway (router). When a DNS client query is initiated, the client's gateway evaluates which of the available routes to the destination is preferred and sends the DNS query to that location. In general, the closest location is preferred, but routing preferences can be adjusted to prefer one location over another irrespective of geographical location. 
+With Anycast DNS, you can enable a DNS server, or a group of servers, to respond to DNS queries based on the geographical location of a DNS client. This can enhance DNS response time and simplify DNS client settings. Anycast DNS also provides an extra layer of redundancy and can help protect against DNS denial of service attacks. 
 
-### Example of Anycast DNS
+### How Anycast DNS works
 
-The following is an example of how Anycast DNS can work.
+Anycast DNS works by using routing protocols such as Border Gateway Protocol (BGP) to send DNS queries to a preferred DNS server or group of DNS servers (for example: a group of DNS servers managed by a load balancer). This can optimize DNS communications by obtaining DNS responses from a DNS server that is closest to a client.
 
-1. A DNS client located in Seattle initiates a DNS query to the Anycast IP address 10.10.10.10.
-2. The DNS client's local router consults its route table and has two available paths. Utilizing the shortest path, it sends the packets to the SEA router.
-3. The SEA router sends the query to the 10.10.10.10 destination corresponding to the SEA Anycast address.
-4. The SEA load balancer randomly selects a DNS server from the pool of healthy, available DNS servers. In this case, the server chosen is SEA-DC16.
-5. The SEA-DC16 server responds to the DNS client query. 
-   - Optional: Servers have a non-AD integrated primary zone **loc.tst** that includes TXT records unique to the location and server identity for use in troubleshooting. For example, the client might issue the query **nslookup -type=TXT server.loc.tst** to determine the specific server that responded (SEA-DC16). All DNS servers have this zone, but only one is shown in the diagram. The zone name should be unique but can anything you choose.
-6. The load balancer returns the DNS response to the SEA router.
-7. The SEA router returns the DNS response to the local router.
-8. The DNS client receives the DNS response from the local router.
-
-See the following diagram:
+With Anycast, servers that exist in multiple geographical locations each advertise a single, identical IP address to their local gateway (router). When a DNS client initiates a query to the Anycast address, the available routes are evaluated, and the DNS query is sent to the preferred location. In general, this is the closest location based on network topology. See the following example.
 
 ![Anycast DNS](../../media/Anycast/anycast.png)
 
-Background processes: 
-- The SEA and LON load balancers monitor health of the DNS servers individually and withdraw servers from the pool that are not healthy.
-- The SEA and LON load balancers monitor health of their own local DNS services based on criteria specified in the load balancer configuration. If the service health drops below threshold, the 10.10.10.10 VIP is no longer announced as available, and the route is withdrawn, resulting in failover to the next closest VIP.
+**Figure 1**: Four DNS servers located at different sites on a network each announce the same Anycast IP address (black arrows) to the network. A DNS client device sends out a request to the Anycast IP address. Network devices analyze the available routes and send the client’s DNS query to the nearest location (blue arrow). 
+
+Anycast DNS is used commonly today to route DNS traffic for many global DNS services. For example, the root DNS server system depends heavily on Anycast DNS. Anycast also works with a variety of routing protocols and can be used exclusively on intranets.
+
+## Windows Server native BGP Anycast demo
+
+The following procedure demonstrates how native BGP on Windows Server can be used with Anycast DNS.  
+
+### Requirements
+
+- One physical device with the Hyper-V role installed.
+  - Windows Server 2012 R2, Windows 10, or later.
+- 2 client VMs (any operating system).
+  - Installation of BIND tools for DNS such as dig are recommended.
+- 3 server VMs (Windows Server 2016 or Windows Server 2019).
+  - If the Windows PowerShell LoopbackAdapter module is not already installed on server VMs (DC001, DC002), Internet access is temporarily required to install this module.
+
+### Hyper-V setup
+
+Configure your Hyper-V server as follows:
+
+- 2 private virtual switch networks are configured
+  - A mock Internet network 131.253.1.0/24
+  - A mock intranet network 10.10.10.0/24
+- 2 client VMs are attached to the 131.253.1.0/24 network
+- 2 server VMs are attached to the 10.10.10.0/24 network
+- 1 server is dual-homed and attached to both the 131.253.1.0/24 and 10.10.10.0/24 networks.
+
+### Virtual machine network configuration
+
+Configure network settings on virtual machines with the following settings:
+
+1.	Client1, client2
+  - Client1: 131.253.1.1
+  - Client2: 131.253.1.2
+  - Subnet mask: 255.255.255.0
+  - DNS: 51.51.51.51
+  - Gateway: 131.253.1.254
+2.	Gateway (Windows Server)
+  - NIC1: 131.253.1.254, subnet 255.255.255.0
+  - NIC2: 10.10.10.254, subnet 255.255.255.0
+  - DNS: 51.51.51.51
+  - Gateway: 131.253.1.100 (can be ignored for the demo)
+3.	DC001 (Windows Server)
+  - NIC1: 10.10.10.1
+  - Subnet: 255.255.255.0
+  - DNS: 10.10.10.1
+4.	DC002 (Windows Server)
+  - NIC1: 10.10.10.2
+  - Subnet 255.255.255.0
+  - DNS: 10.10.10.2
+
+### Configure DNS
+
+Use the Server Manager and the DNS management console or Windows PowerShell to install the following server roles and create a static DNS zone on each of two servers.
+
+1.	DC001, DC002
+  - Install Active Directory Domain Services and promote to domain controller (optional)
+  - Install the DNS role (required)
+  - Create a static zone (non-AD integrated) named **zone.tst** on both DC001 and DC002
+    - Add the single static record name **server** in the zone of type “TXT”
+    - Data (text) for the TXT record on DC001 = **DC001**
+    - Data (text) for the TXT record on DC002 = **DC002**
+
+### Configure loopback adapters
+
+Enter the following commands at an elevated Windows PowerShell prompt on DC001 and DC002 to configure loopback adapters. Note: The Install-Module command requires Internet access. This can be done by temporarily placing the VM on an external network if needed.
+
+```PowerShell
+$primary_interface = (Get-NetAdapter |?{$_.Status -eq "Up" -and !$_.Virtual}).Name
+$loopback_ipv4 = '51.51.51.51'
+$loopback_ipv4_length = '32'
+Install-Module -Name LoopbackAdapter -MinimumVersion 1.2.0.0 -Force
+Import-Module -Name LoopbackAdapter
+New-LoopbackAdapter -Name 'Loopback' -Force
+$interface_loopback = Get-NetAdapter -Name 'Loopback'
+$interface_main = Get-NetAdapter -Name $primary_interface
+Set-NetIPInterface -InterfaceIndex $interface_loopback.ifIndex -InterfaceMetric "254" -WeakHostReceive Enabled -WeakHostSend Enabled -DHCP Disabled
+Set-NetIPInterface -InterfaceIndex $interface_main.ifIndex -WeakHostReceive Enabled -WeakHostSend Enabled
+Set-NetIPAddress -InterfaceIndex $interface_loopback.ifIndex -SkipAsSource $True
+Get-NetAdapter ‘Loopback’ | Set-DNSClient –RegisterThisConnectionsAddress $False
+New-NetIPAddress -InterfaceAlias $loopback_name -IPAddress $loopback_ipv4 -PrefixLength $loopback_ipv4_length -AddressFamily ipv4
+Disable-NetAdapterBinding -Name $loopback_name -ComponentID ms_msclient
+Disable-NetAdapterBinding -Name $loopback_name -ComponentID ms_pacer
+Disable-NetAdapterBinding -Name $loopback_name -ComponentID ms_server
+Disable-NetAdapterBinding -Name $loopback_name -ComponentID ms_lltdio
+Disable-NetAdapterBinding -Name $loopback_name -ComponentID ms_rspndr
+```
+
+### Virtual machine routing configuration
+
+Use the following Windows PowerShell commands on VMs to configure routing.
+
+1.	Gateway
+```PowerShell
+Install-RemoteAccess -VpnType RoutingOnly
+Add-BgpRouter -BgpIdentifier “10.10.10.254” -LocalASN 8075
+```
+
+2.	DC001
+```PowerShell
+Install-RemoteAccess -VpnType RoutingOnly
+Add-BgpRouter -BgpIdentifier “10.10.10.1” -LocalASN 65511
+Add-BgpPeer -Name "Labgw" -LocalIPAddress 10.10.10.1 -PeerIPAddress 10.10.10.254 -PeerASN 8075 –LocalASN 65511
+Add-BgpCustomRoute -Network 51.51.51.0/24
+```
+
+3.	DC002
+```PowerShell
+Install-RemoteAccess -VpnType RoutingOnly
+Add-BgpRouter -BgpIdentifier "10.10.10.2" -LocalASN 65511
+Add-BgpPeer -Name "Labgw" -LocalIPAddress 10.10.10.2 -PeerIPAddress 10.10.10.254 -PeerASN 8075 –LocalASN 65511
+Add-BgpCustomRoute -Network 51.51.51.0/24
+```
+
+### Summary diagram
+
+![Anycast DNS](../../media/Anycast/anycast-lab.png)
+
+**Figure 2**: Lab setup for native BGP Anycast DNS demo
+
+## Anycast DNS demonstration
+
+
+1.	Verify BGP routing on the gateway server
+
+    PS C:\> Get-BgpRouteInformation
+
+    DestinationNetwork NextHop    LearnedFromPeer State LocalPref MED<br>
+    ------------------ -------    --------------- ----- --------- ---<br>
+    51.51.51.0/24      10.10.10.1 DC001           Best<br>
+    51.51.51.0/24      10.10.10.2 DC002           Best<br>
+
+2.	On client1 and client2, verify that you can reach 51.51.51.51
+
+    PS C:\> ping 51.51.51.51
+
+    Pinging 51.51.51.51 with 32 bytes of data:<br>
+    Reply from 51.51.51.51: bytes=32 time<1ms TTL=126<br>
+    Reply from 51.51.51.51: bytes=32 time<1ms TTL=126<br>
+    Reply from 51.51.51.51: bytes=32 time<1ms TTL=126<br>
+    Reply from 51.51.51.51: bytes=32 time<1ms TTL=126
+
+    Ping statistics for 51.51.51.51:<br>
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<br>
+    Approximate round trip times in milli-seconds:<br>
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+3.	On client1 and client2, use nslookup or dig to query the TXT record
+
+    PS C:\> dig server.zone.tst TXT +short<br>
+    PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51
+
+    One client will display “DC001” and the other client will display “DC002” verifying that Anycast is working properly.  You can also query from the gateway server.
+
+4.	Next, disable the Ethernet adapter on DC001.
+
+    PS C:\> (Get-NetAdapter).Name<br>
+    Loopback<br>
+    Ethernet 2<br>
+    PS C:\> Disable-NetAdapter "Ethernet 2"<br>
+    Confirm<br>
+    Are you sure you want to perform this action?<br>
+    Disable-NetAdapter 'Ethernet 2'<br>
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):<br>
+    PS C:\> (Get-NetAdapter).Status<br>
+    Up<br>
+    Disabled
+
+5.	Confirm that DNS clients that were previously receiving responses from DC001 have switched to DC002.
+
+    PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51<br>
+    Server:  UnKnown<br>
+    Address:  51.51.51.51<br>
+
+    server.zone.tst text =
+
+    "DC001"<br>
+    PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51<br>
+    Server:  UnKnown<br>
+    Address:  51.51.51.51<br>
+
+    server.zone.tst text =
+
+    "DC002"
+
+6.	Confirm that the BGP session is down on DC001 by using Get-BgpStatistics on the gateway server.
+7.	Enable the Ethernet adapter on DC001 again and confirm that the BGP session is restored and clients receive DNS responses from DC001 again.
+
+> [!NOTE]
+> A specific client will tend to use the same back-end DNS server if it is available. This creates a consistent path for the client. For more information, see section 4.4.3 of RFC4786: [Equal-Cost Paths](https://tools.ietf.org/html/rfc4786#page-10).
 
 ## Frequently asked questions
 
