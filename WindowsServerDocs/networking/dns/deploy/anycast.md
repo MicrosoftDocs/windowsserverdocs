@@ -240,7 +240,7 @@ Q: Is an Anycast DNS configuration supported by Microsoft customer service?<br>
 A: If you use a non-Microsoft load balancer to forward DNS queries, Microsoft will support issues related to the DNS Server service. Consult the load balancer vendor for issues related to DNS forwarding. 
  
 Q: What is the best practice for Anycast DNS with a large number (ex: >50) of domain controllers?<br>
-A: The best practice is to use a load balancer at each geographical location, similar to the diagram shown in this article. Load balancers are typically provided by an external vendor. 
+A: The best practice is to use a load balancer at each geographical location. Load balancers are typically provided by an external vendor. 
 
 Q: Do Anycast DNS and Azure DNS have similar functionality?<br>
 A: Azure DNS uses Anycast. To use Anycast with Azure DNS, configure your load balancer to forward requests to the Azure DNS server. 
