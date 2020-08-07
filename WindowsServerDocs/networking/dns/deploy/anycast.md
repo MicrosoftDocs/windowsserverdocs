@@ -99,7 +99,10 @@ Use the Server Manager and the DNS management console or Windows PowerShell to i
 
 ### Configure loopback adapters
 
-Enter the following commands at an elevated Windows PowerShell prompt on DC001 and DC002 to configure loopback adapters. Note: The Install-Module command requires Internet access. This can be done by temporarily placing the VM on an external network if needed.
+Enter the following commands at an elevated Windows PowerShell prompt on DC001 and DC002 to configure loopback adapters. 
+
+> [!NOTE]
+> The **Install-Module** command requires Internet access. This can be done by temporarily assigning the VM to an external network in Hyper-V.
 
 ```PowerShell
 $primary_interface = (Get-NetAdapter |?{$_.Status -eq "Up" -and !$_.Virtual}).Name
@@ -181,7 +184,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
     Approximate round trip times in milli-seconds:<br>
     Minimum = 0ms, Maximum = 0ms, Average = 0ms
 
-3.	On client1 and client2, use nslookup or dig to query the TXT record
+3.	On client1 and client2, use nslookup or dig to query the TXT record. Examples of both are shown below.
 
     PS C:\> dig server.zone.tst TXT +short<br>
     PS C:\> nslookup -type=txt server.zone.tst 51.51.51.51
