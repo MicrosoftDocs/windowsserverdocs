@@ -9,7 +9,7 @@ author: eross-msft
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.
 
@@ -53,13 +53,13 @@ To configure DNS policy for time of day application load balancing based query r
 - [Add Records to the Zone Scopes](#bkmk_records)
 - [Create the DNS Policies](#bkmk_policies)
 
->[!NOTE]
->You must perform these steps on the DNS server that is authoritative for the zone you want to configure. Membership in **DnsAdmins**, or equivalent, is required to perform the following procedures.
+> [!NOTE]
+> You must perform these steps on the DNS server that is authoritative for the zone you want to configure. Membership in **DnsAdmins**, or equivalent, is required to perform the following procedures.
 
 The following sections provide detailed configuration instructions.
 
->[!IMPORTANT]
->The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.
+> [!IMPORTANT]
+> The following sections include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.
 
 #### <a name="bkmk_subnets"></a>Create the DNS Client Subnets
 The first step is to identify the subnets or IP address space of the regions for which you want to redirect traffic. For example, if you want to redirect traffic for the U.S. and Europe, you need to identify the subnets or IP address spaces of these regions.
@@ -68,12 +68,12 @@ You can obtain this information from Geo-IP maps. Based on these Geo-IP distribu
 
 You can use the following Windows PowerShell commands to create DNS Client Subnets.
 
-```
-Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet "192.0.0.0/24, 182.0.0.0/24"
+```PowerShell
+Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet "192.0.0.0/24", "182.0.0.0/24"
 
-Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "141.1.0.0/24, 151.1.0.0/24"
-
+Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "141.1.0.0/24", "151.1.0.0/24"
 ```
+
 For more information, see [Add-DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
 
 #### <a name="bkmk_zscopes"></a>Create the Zone Scopes
@@ -83,17 +83,17 @@ For example, if you want to redirect traffic for the DNS name www.contosogiftser
 
 A zone scope is a unique instance of the zone. A DNS zone can have multiple zone scopes, with each zone scope containing its own set of DNS records. The same record can be present in multiple scopes, with different IP addresses or the same IP addresses.
 
->[!NOTE]
->By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope.
+> [!NOTE]
+> By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope.
 
 You can use the following Windows PowerShell commands to create zone scopes.
 
-```
+```PowerShell
 Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "SeattleZoneScope"
 
 Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScope"
-
 ```
+
 For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).
 
 #### <a name="bkmk_records"></a>Add Records to the Zone Scopes
@@ -103,12 +103,12 @@ For example, in **SeattleZoneScope**, the record <strong>www.contosogiftservices
 
 You can use the following Windows PowerShell commands to add records to the zone scopes.
 
-```
+```PowerShell
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "SeattleZoneScope
 
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.3" -ZoneScope "DublinZoneScope"
-
 ```
+
 The ZoneScope parameter is not included when you add a record in the default scope. This is the same as adding records to a standard DNS zone.
 
 For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
@@ -127,10 +127,10 @@ After you configure these DNS policies, the DNS server behavior is as follows:
 
 You can use the following Windows PowerShell commands to create a DNS policy that links the DNS Client Subnets and the zone scopes.
 
->[!NOTE]
->In this example, the DNS server is in the GMT time zone, so the peak hour time periods must be expressed in the equivalent GMT time.
+> [!NOTE]
+> In this example, the DNS server is in the GMT time zone, so the peak hour time periods must be expressed in the equivalent GMT time.
 
-```
+```PowerShell
 Add-DnsServerQueryResolutionPolicy -Name "America6To9Policy" -Action ALLOW -ClientSubnet "eq,AmericaSubnet" -ZoneScope "SeattleZoneScope,4;DublinZoneScope,1" -TimeOfDay "EQ,01:00-04:00" -ZoneName "contosogiftservices.com" -ProcessingOrder 1
 
 Add-DnsServerQueryResolutionPolicy -Name "Europe6To9Policy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "SeattleZoneScope,1;DublinZoneScope,4" -TimeOfDay "EQ,17:00-20:00" -ZoneName "contosogiftservices.com" -ProcessingOrder 2
@@ -140,8 +140,8 @@ Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ClientSu
 Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "DublinZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 4
 
 Add-DnsServerQueryResolutionPolicy -Name "RestOfWorldPolicy" -Action ALLOW --ZoneScope "DublinZoneScope,1;SeattleZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 5
-
 ```
+
 For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 Now the DNS server is configured with the required DNS policies to redirect traffic based on geo-location and time of day.
