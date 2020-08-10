@@ -117,7 +117,7 @@ $interface_main = Get-NetAdapter -Name $primary_interface
 Set-NetIPInterface -InterfaceIndex $interface_loopback.ifIndex -InterfaceMetric "254" -WeakHostReceive Enabled -WeakHostSend Enabled -DHCP Disabled
 Set-NetIPInterface -InterfaceIndex $interface_main.ifIndex -WeakHostReceive Enabled -WeakHostSend Enabled
 Set-NetIPAddress -InterfaceIndex $interface_loopback.ifIndex -SkipAsSource $True
-Get-NetAdapter ‘Loopback’ | Set-DNSClient –RegisterThisConnectionsAddress $False
+Get-NetAdapter $loopback_name | Set-DNSClient –RegisterThisConnectionsAddress $False
 New-NetIPAddress -InterfaceAlias $loopback_name -IPAddress $loopback_ipv4 -PrefixLength $loopback_ipv4_length -AddressFamily ipv4
 Disable-NetAdapterBinding -Name $loopback_name -ComponentID ms_msclient
 Disable-NetAdapterBinding -Name $loopback_name -ComponentID ms_pacer
