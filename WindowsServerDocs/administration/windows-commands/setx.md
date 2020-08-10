@@ -52,6 +52,14 @@ setx [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <FileName>
 -   You cannot use the **setx** command to remove values that have been added to the local or system environments. You can use **set** with a variable name and no value to remove a corresponding value from the local environment.
 -   REG_DWORD registry values are extracted and used in hexadecimal mode.
 -   File mode supports the parsing of carriage return and line feed (CRLF) text files only.
+-   Executing this command on an existing variable will remove any variable references and use expanded values.
+For instance, if the variable %PATH% had a reference to %JAVADIR%, and %PATH% is manipulated via **setx**,
+%JAVADIR% will be expanded and its value will be assigned directly to the target variable %PATH%.
+This means that future updates to %JAVADIR% **will not** be reflected into %PATH%.
+-   When assigning contents to a variable via **setx**, be aware of the limit of 1024 characters:
+the contents will be cropped to 1024 characters. Please, do check for the total length of the string
+being assigned, *specially when assigning to an existing variable*, since the string is cropped
+and the target variable updated. Note this may result in loss of data previous held by the target variable.
 
 ## Examples
 
