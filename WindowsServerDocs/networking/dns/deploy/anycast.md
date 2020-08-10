@@ -108,10 +108,11 @@ Enter the following commands at an elevated Windows PowerShell prompt on DC001 a
 $primary_interface = (Get-NetAdapter |?{$_.Status -eq "Up" -and !$_.Virtual}).Name
 $loopback_ipv4 = '51.51.51.51'
 $loopback_ipv4_length = '32'
+$loopback_name = 'Loopback'
 Install-Module -Name LoopbackAdapter -MinimumVersion 1.2.0.0 -Force
 Import-Module -Name LoopbackAdapter
-New-LoopbackAdapter -Name 'Loopback' -Force
-$interface_loopback = Get-NetAdapter -Name 'Loopback'
+New-LoopbackAdapter -Name $loopback_name -Force
+$interface_loopback = Get-NetAdapter -Name $loopback_name
 $interface_main = Get-NetAdapter -Name $primary_interface
 Set-NetIPInterface -InterfaceIndex $interface_loopback.ifIndex -InterfaceMetric "254" -WeakHostReceive Enabled -WeakHostSend Enabled -DHCP Disabled
 Set-NetIPInterface -InterfaceIndex $interface_main.ifIndex -WeakHostReceive Enabled -WeakHostSend Enabled
