@@ -72,6 +72,7 @@
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's new in DNS client in Windows Server](dns/What-s-New-in-DNS-Client.md)
 ### [What's new in DNS server in Windows Server](dns/What-s-New-in-DNS-Server.md)
+### [Anycast DNS](dns/deploy/anycast.md)
 ### [DNS policy scenario guidance](dns/deploy/DNS-Policy-Scenario-Guide.md)
 #### [DNS policies overview](dns/deploy/DNS-Policies-Overview.md)
 #### [Use DNS policy for geo-location traffic management with primary servers](dns/deploy/primary-geo-location.md)
