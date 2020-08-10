@@ -28,7 +28,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
 
 - Added functionality to auto-detect sovereign clouds from the user’s identity.
-- Added functionality to enable the custom URL subscription for all users.
+- Added functionality to enable custom URL subscriptions for all users.
 - Fixed an issue with app pinning on the feed taskbar.
 - Fixed a crash when subscribing with URL.
 - Improved experience when dragging remote app windows with touch or pen.
