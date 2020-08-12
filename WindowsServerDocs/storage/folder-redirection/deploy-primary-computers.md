@@ -1,11 +1,9 @@
 ---
 title: Deploy primary computers for Folder Redirection and Roaming User Profiles
 description: How to enable primary computer support and designate primary computers for users with Folder Redirection and Roaming User Profiles.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.date: 06/06/2019
 ms.localizationpriority: medium
 ---
@@ -24,7 +22,7 @@ This topic describes how to enable primary computer support and designate primar
 
 Primary computer support has the following requirements:
 
-- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema additions (installing a Windows Server 2012 domain controller automatically updates the schema). For information about updating the AD DS schema, see [Adprep.exe integration](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472161(v=ws.11)#adprepexe-integration>) and [Running Adprep.exe](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)>).
+- The Active Directory Domain Services (AD DS) schema must be updated to include Windows Server 2012 schema additions (installing a Windows Server 2012 domain controller automatically updates the schema). For information about updating the AD DS schema, see [Adprep.exe integration](</previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472161(v=ws.11)#adprepexe-integration>) and [Running Adprep.exe](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)>).
 - Client computers must run Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012.
 
 > [!TIP]
@@ -112,4 +110,4 @@ Here's how to test primary computer functionality:
 - [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md)
 - [Deploy Roaming User Profiles](deploy-roaming-user-profiles.md)
 - [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
-- [Digging a little deeper into Windows 8 Primary Computer](https://blogs.technet.com/b/askds/archive/2012/10/23/digging-a-little-deeper-into-windows-8-primary-computer.aspx)
+- [Digging a little deeper into Windows 8 Primary Computer](/archive/blogs/askds/digging-a-little-deeper-into-windows-8-primary-computer)

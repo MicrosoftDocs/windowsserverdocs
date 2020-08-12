@@ -1,8 +1,6 @@
 ---
 title: bdehdcfg newdriveletter
-description: Reference topic for the bdehdcfg newdriveletter command, which assigns a new drive letter to the portion of a drive used as the system drive.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bdehdcfg newdriveletter command, which assigns a new drive letter to the portion of a drive used as the system drive.
 ms.topic: article
 ms.assetid: f1f200a0-6850-4f0d-9047-f9f982a590f8
 author: coreyp-at-msft

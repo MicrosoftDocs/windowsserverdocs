@@ -1,8 +1,6 @@
 ---
 title: add
-description: Reference topic for the add command, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the add command, which adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment.
 ms.topic: article
 ms.assetid: 47efce7a-86d2-4872-ae31-baa108757afd
 author: coreyp-at-msft

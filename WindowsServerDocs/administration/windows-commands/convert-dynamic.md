@@ -1,8 +1,6 @@
 ---
 title: convert dynamic
-description: Reference topic for the convert dynamic command, which converts a basic disk into a dynamic disk.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the convert dynamic command, which converts a basic disk into a dynamic disk.
 ms.topic: article
 ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
 author: coreyp-at-msft
@@ -16,7 +14,7 @@ ms.date: 10/16/2017
 Converts a basic disk into a dynamic disk. A basic disk must be selected for this operation to succeed. Use the [select disk command](select-disk.md) to select a basic disk and shift the focus to it.
 
 > [!NOTE]
-> For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755238(v=ws.11))).
+> For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755238(v=ws.11))).
 
 ## Syntax
 

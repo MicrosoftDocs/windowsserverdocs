@@ -1,8 +1,6 @@
 ---
 title: create volume simple
-description: Reference topic for the create volume simple command, which creates a simple volume on the specified dynamic disk.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the create volume simple command, which creates a simple volume on the specified dynamic disk.
 ms.topic: article
 ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
 author: coreyp-at-msft

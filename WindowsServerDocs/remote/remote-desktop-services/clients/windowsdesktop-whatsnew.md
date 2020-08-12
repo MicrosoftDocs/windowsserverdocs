@@ -1,13 +1,11 @@
 ---
 title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 06/23/2020
+ms.date: 08/11/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -20,8 +18,32 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.1104 |
-|Insider    |1.2.1104 |
+|Public     |1.2.1186 |
+|Insider    |1.2.1272 |
+
+## Updates for version 1.2.1272 [INSIDER]
+
+*Date published: 08/11/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
+
+- Added functionality to auto-detect sovereign clouds from the user’s identity.
+- Added functionality to enable custom URL subscriptions for all users.
+- Fixed an issue with app pinning on the feed taskbar.
+- Fixed a crash when subscribing with URL.
+- Improved experience when dragging remote app windows with touch or pen.
+
+## Updates for version 1.2.1186
+
+*Date published: 07/28/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qy), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ciex), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qx)
+
+- You can now be subscribed to Workspaces with multiple user accounts, using the overflow menu (**...**) option on the command bar at the top of the client. To differentiate Workspaces, the Workspace titles now include the username, as do all app shortcuts titles.
+- Added additional information to subscription error messages to improve troubleshooting.
+- The collapsed/expanded state of Workspaces is now preserved during a refresh.
+- Added a **Send Diagnostics and Close** button to the **Connection information** dialog.
+- Fixed an issue with the CTRL + SHIFT keys in remote sessions.
 
 ## Updates for version 1.2.1104
 

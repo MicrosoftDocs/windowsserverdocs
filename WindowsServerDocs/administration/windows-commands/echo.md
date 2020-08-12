@@ -1,8 +1,6 @@
 ---
 title: echo
-description: Reference topic for the echo command, which displays messages or turns on or off the command echoing feature.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the echo command, which displays messages or turns on or off the command echoing feature.
 ms.topic: article
 ms.assetid: fb9fcd0f-5e73-4504-aa95-78204e1a79d3
 author: coreyp-at-msft

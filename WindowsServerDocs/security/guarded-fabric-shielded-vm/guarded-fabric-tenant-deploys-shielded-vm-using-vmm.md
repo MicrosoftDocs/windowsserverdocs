@@ -1,12 +1,10 @@
 ---
 title: Shielded VMs for tenants - Deploying a shielded VM by using Virtual Machine Manager
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 39d5e29c-835d-490a-b74d-798a0dcb3f39
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
@@ -14,7 +12,7 @@ ms.date: 08/29/2018
 
 If you have access to System Center 2016 - Virtual Machine Manager (VMM), you can deploy a shielded VM for which a shielded VM template has already been created.
 
-To deploy a shielded VM in VMM, use the instructions in [Provision a new shielded VM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms#provision-a-new-shielded-vm).
+To deploy a shielded VM in VMM, use the instructions in [Provision a new shielded VM](/system-center/vmm/guarded-deploy-vm?view=sc-vmm-2019#provision-a-new-shielded-vm).
 
 ## Additional References
 

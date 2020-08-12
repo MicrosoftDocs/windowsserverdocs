@@ -1,8 +1,6 @@
 ---
 title: writer
-description: Reference topic for writer, which verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for writer, which verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure.
 ms.topic: article
 ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140
 author: coreyp-at-msft

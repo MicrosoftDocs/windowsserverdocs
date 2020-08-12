@@ -1,8 +1,6 @@
 ---
 title: query session
-description: Reference topic for the query session command, which displays information about sessions on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the query session command, which displays information about sessions on a Remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: abc0ace8-0b74-4b6e-a937-a78bb4b61a1f
 author: coreyp-at-msft
@@ -18,7 +16,7 @@ Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows S
 Displays information about sessions on a Remote Desktop Session Host server. The list includes information not only about active sessions but also about other sessions that the server runs.
 
 > [!NOTE]
-> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 

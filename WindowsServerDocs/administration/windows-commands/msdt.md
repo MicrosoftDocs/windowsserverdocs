@@ -1,8 +1,6 @@
 ---
 title: msdt
-description: Reference topic for the msdt command, which invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the msdt command, which invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
 ms.topic: article
 ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
 author: coreyp-at-msft
@@ -25,14 +23,14 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 
 | Parameter | Description |
 | --------- | ----------- |
-| /id `<packagename>` | Specifies which diagnostic package to run. For a list of available packages, see [Available Troubleshooting packs](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs). |
+| /id `<packagename>` | Specifies which diagnostic package to run. For a list of available packages, see [Available Troubleshooting packs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs). |
 | /path `<directory|.diagpkg file|.diagcfg file>` | Specifies the full path to a diagnostic package. If you specify a directory, the directory must contain a diagnostic package. You cannot use the **/path** parameter in conjunction with the** /id**, **/dci**, or **/cab** parameters. |                                                                                   |
 | /dci `<passkey>` | Prepopulates the passkey field. This parameter is only used when a support provider has supplied a passkey. |
 | /dt `<directory>` | Displays the troubleshooting history in the specified directory. Diagnostic results are stored in the user’s **%LOCALAPPDATA%\Diagnostics** or **%LOCALAPPDATA%\ElevatedDiagnostics** directories. |
 | /af `<answerfile>` | Specifies an answer file in XML format that contains responses to one or more diagnostic interactions. |
 | /modal `<ownerHWND>` | Makes the troubleshooting pack modal to a window designated by the parent Console Window Handle (HWND), in decimal. This parameter is typically used by applications that launch a troubleshooting pack. For more information about obtaining Console Window Handles, see [How to Obtain a Console Window Handle (HWND)](https://support.microsoft.com/help/124103/how-to-obtain-a-console-window-handle-hwnd). |
 | /moreoptions `<true|false>` | Enables (true) or suppresses (false) the final troubleshooting screen that asks if the user wants to explore additional options. This parameter is typically used when the troubleshooting pack is launched by a troubleshooter that isn't part of the operating system. |
-| /param `<parameters>` | Specifies a set of interaction responses at the command line, similar to an answer file. This parameter isn't typically used within the context of troubleshooting packs created with TSP Designer. For more information about developing custom parameters, see [Windows Troubleshooting Platform](https://docs.microsoft.com/previous-versions/windows/desktop/wintt/windows-troubleshooting-toolkit-portal). |
+| /param `<parameters>` | Specifies a set of interaction responses at the command line, similar to an answer file. This parameter isn't typically used within the context of troubleshooting packs created with TSP Designer. For more information about developing custom parameters, see [Windows Troubleshooting Platform](/previous-versions/windows/desktop/wintt/windows-troubleshooting-toolkit-portal). |
 | /advanced | Expands the advanced link on the Welcome page by default when the troubleshooting pack is started. |
 | /custom | Prompts the user to confirm each possible resolution before it is applied. |
 
@@ -51,6 +49,6 @@ Troubleshooting packs comprise a set of root causes, each of which describes a s
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Available troubleshooting packs](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)
+- [Available troubleshooting packs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)
 
-- [TroubleshootingPack Powershell reference](https://docs.microsoft.com/powershell/module/troubleshootingpack/?view=win10-ps)
+- [TroubleshootingPack Powershell reference](/powershell/module/troubleshootingpack/?view=win10-ps)

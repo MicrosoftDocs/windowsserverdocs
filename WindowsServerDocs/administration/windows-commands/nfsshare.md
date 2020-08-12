@@ -1,8 +1,6 @@
 ---
 title: nfsshare
-description: Reference topic for the nfsshare command, which controls Network File System (NFS) shares.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the nfsshare command, which controls Network File System (NFS) shares.
 ms.topic: article
 ms.assetid: 437a2615-335a-442f-9713-d50d5f3983a3
 author: coreyp-at-msft
@@ -48,4 +46,4 @@ nfsshare {<sharename> | <drive>:<path> | * } /delete
 
 - [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
 
-- [NFS cmdlets reference](https://docs.microsoft.com/powershell/module/nfs)
+- [NFS cmdlets reference](/powershell/module/nfs)

@@ -1,8 +1,6 @@
 ---
 title: add alias
-description: Reference topic for the add alias command, which adds aliases to the alias environment.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the add alias command, which adds aliases to the alias environment.
 ms.topic: article
 ms.assetid: 5fe12f5d-11e9-4f3d-b7f9-40b26c8685e5
 author: coreyp-at-msft

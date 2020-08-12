@@ -1,8 +1,6 @@
 ---
 title: query process
-description: Reference topic for the query process command, which displays information about processes that are running on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the query process command, which displays information about processes that are running on a Remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: 36ce3ffc-0092-4eb1-a374-28e6616ca946
 author: coreyp-at-msft
@@ -28,7 +26,7 @@ Displays information about processes that are running on a Remote Desktop Sessio
 - ID of the process
 
 > [!NOTE]
-> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 

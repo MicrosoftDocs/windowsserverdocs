@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: Reference topic for the bitsadmin setclientcertificatebyname command, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setclientcertificatebyname command, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
 ms.topic: article
 ms.assetid: f308a6d9-d0da-48be-ae41-eced14b3cccb
 author: coreyp-at-msft

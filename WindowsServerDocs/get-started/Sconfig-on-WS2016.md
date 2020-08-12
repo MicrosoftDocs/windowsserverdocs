@@ -1,9 +1,7 @@
 ---
 title: Configure a Server Core installation of Windows Server with Sconfig.cmd
-description: Explains how to use Sconfig.cmd 
-ms.prod: windows-server
+description: Explains how to use Sconfig.cmd
 ms.date: 10/17/2017
-ms.technology: server-general
 ms.topic: article
 ms.assetid: e6cac074-c6fc-46dd-9664-fa0342c0a5e8
 author: jaimeo
@@ -53,7 +51,7 @@ To add additional users to the local administrators group, use the **Add Local A
 You can configure the IP address to be assigned automatically by a DHCP Server or you can assign a static IP address manually. This option allows you to configure DNS Server settings for the server as well.
 
 > [!NOTE]
-> These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](https://docs.microsoft.com/powershell/module/netadapter/?view=win10-ps) in the Windows Server Library.
+> These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](/powershell/module/netadapter/?view=win10-ps) in the Windows Server Library.
 
 ## Windows Update settings
 
@@ -95,12 +93,12 @@ You can enable various remote management scenarios from the **Configure Remote M
 
 - Windows PowerShell
 
-- Server Manager  
+- Server Manager
 
 ## To log off, restart, or shut down the server
 
-To log off, restart, or shut down the server, access the corresponding menu item from the main menu. These options are also available from the **Windows Security** menu which can be accessed from any application at any time by pressing CTRL+ALT+DEL.  
+To log off, restart, or shut down the server, access the corresponding menu item from the main menu. These options are also available from the **Windows Security** menu which can be accessed from any application at any time by pressing CTRL+ALT+DEL.
 
 ## To exit to the command line
-  
+
 Select the **Exit to the Command Line** option and press ENTER to exit to the command line. To return to the Server Configuration Tool, type **Sconfig.cmd**, and then press ENTER.

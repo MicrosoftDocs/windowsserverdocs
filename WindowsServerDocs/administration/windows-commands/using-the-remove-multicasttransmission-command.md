@@ -1,8 +1,6 @@
 ---
 title: remove-MulticastTransmission
-description: Reference topic for remove-MulticastTransmission, which disables multicast transmitting for an image. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for remove-MulticastTransmission, which disables multicast transmitting for an image.
 ms.topic: article
 ms.assetid: 9a7f5c31-bfbf-425d-9129-a6f9173fe83d
 author: coreyp-at-msft

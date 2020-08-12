@@ -1,12 +1,10 @@
 ---
 title: Troubleshooting a guarded fabric
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 55e954ec-6a5f-4b42-b6a7-1006f3e24556
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ---
 
 # Troubleshooting a Guarded Fabric

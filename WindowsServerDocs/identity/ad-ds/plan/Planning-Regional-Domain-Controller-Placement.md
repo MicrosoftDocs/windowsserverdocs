@@ -6,8 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Planning Regional Domain Controller Placement
@@ -76,4 +74,4 @@ If reducing the cost of maintaining domain controllers is more important than ne
 
 For a worksheet to assist you in documenting the placement of regional domain controllers and the number of users for each domain that is represented in each location, see [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Domain Controller Placement" (DSSTOPO_4.doc).
 
-You will need to refer to the information about locations in which you need to place regional domain controllers when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](https://technet.microsoft.com/library/cc755118.aspx).
+You will need to refer to the information about locations in which you need to place regional domain controllers when you deploy regional domains. For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755118(v=ws.10)).

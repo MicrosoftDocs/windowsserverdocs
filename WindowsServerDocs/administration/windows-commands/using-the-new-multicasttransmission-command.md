@@ -1,8 +1,6 @@
 ---
 title: new-MulticastTransmission
-description: Reference topic for new-MulticastTransmission, which creates a new multicast transmission for an image. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for new-MulticastTransmission, which creates a new multicast transmission for an image.
 ms.topic: article
 ms.assetid: c1f1dc46-dd50-4eb9-9f72-cf0e5d71bd3d
 author: coreyp-at-msft
@@ -68,7 +66,7 @@ wdsutil /New-MulticastTransmission /FriendlyName:WDS AutoCast Transmission
 ```
 To create a Scheduled-Cast transmission of an install image, type:
 ```
-wdsutil /New-MulticastTransmission /FriendlyName:WDS SchedCast Transmission /Server:MyWDSServemedia:Vista with Officemediatype:Install 
+wdsutil /New-MulticastTransmission /FriendlyName:WDS SchedCast Transmission /Server:MyWDSServemedia:Vista with Officemediatype:Install
 /Transmissiontype:ScheduledCast /time:2006/11/20:17:00 /Clients:100
 ```
 ## Additional References

@@ -2,10 +2,8 @@
 title: subst
 description: Learn how to associate a path with a drive letter.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
@@ -26,7 +24,7 @@ Associates a path with a drive letter. If used without parameters, **subst** dis
 ## Syntax
 
 ```
-subst [<Drive1>: [<Drive2>:]<Path>] 
+subst [<Drive1>: [<Drive2>:]<Path>]
 subst <Drive1>: /d
 ```
 
@@ -62,11 +60,11 @@ subst <Drive1>: /d
 
 To create a virtual drive Z for the path B:\User\Betty\Forms, type:
 ```
-subst z: b:\user\betty\forms 
+subst z: b:\user\betty\forms
 ```
 Instead of typing the full path, you can reach this directory by typing the letter of the virtual drive followed by a colon as follows:
 ```
-z: 
+z:
 ```
 
 ## Additional References

@@ -1,8 +1,6 @@
 ---
 title: logman update counter
-description: Reference topic for the logman update counter command, which updates an existing counter data collector's properties.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the logman update counter command, which updates an existing counter data collector's properties.
 ms.topic: article
 ms.assetid: 607df6d5-876c-428d-a0b3-f59cb244e2ce
 author: coreyp-at-msft

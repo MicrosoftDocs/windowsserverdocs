@@ -1,13 +1,11 @@
 ---
 title: Install Windows Admin Center
 description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
-ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.date: 07/17/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Install Windows Admin Center
 
@@ -21,7 +19,7 @@ This topic describes how to install Windows Admin Center on a Windows PC or on a
 
 ## Determine your installation type
 
-Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](https://docs.microsoft.com/windows-server/manage/windows-admin-center/plan/installation-options#installation-supported-operating-systems). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](../plan/installation-options.md#installation-supported-operating-systems). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 ## Install on Windows 10
 
@@ -55,7 +53,7 @@ If you have a Server Core installation of Windows Server, you can install Window
 
 Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
 
-```   
+```
 msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
 ```
 

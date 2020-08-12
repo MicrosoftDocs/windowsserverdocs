@@ -1,8 +1,6 @@
 ---
 title: ver
-description: Reference topic for ver, which displays the operating system version number. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for ver, which displays the operating system version number.
 ms.topic: article
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
 author: coreyp-at-msft

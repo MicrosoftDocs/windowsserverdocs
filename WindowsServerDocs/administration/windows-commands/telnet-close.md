@@ -1,8 +1,6 @@
 ---
 title: telnet close
-description: Reference topic for telnet close, which closes the current telnet connection.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for telnet close, which closes the current telnet connection.
 ms.topic: article
 ms.assetid: 9330a5e0-bdb5-446b-8c25-c2c460df8b6b
 author: coreyp-at-msft

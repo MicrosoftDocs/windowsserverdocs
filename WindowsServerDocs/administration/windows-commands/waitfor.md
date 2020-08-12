@@ -1,8 +1,6 @@
 ---
 title: waitfor
-description: Reference topic for waitfor, which sends or waits for a signal on a system. **Waitfor** is used to synchronize computers across a network.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for waitfor, which sends or waits for a signal on a system. **Waitfor** is used to synchronize computers across a network.
 ms.topic: article
 ms.assetid: a48ef70d-4d28-4035-b6b0-7d7b46ac2157
 author: coreyp-at-msft

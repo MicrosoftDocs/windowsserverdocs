@@ -1,8 +1,6 @@
 ---
 title: Approve-AutoaddDevices
-description: Reference topic for Approve-AutoaddDevices, which approves computers that are pending administrative approval. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Approve-AutoaddDevices, which approves computers that are pending administrative approval.
 ms.topic: article
 ms.assetid: 8d76e8d3-ab35-429c-be7b-904f95d0782d
 author: coreyp-at-msft
@@ -18,7 +16,7 @@ Approves computers that are pending administrative approval. When the Auto-add p
 
 ## Syntax
 ```
-wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<Request ID>| ALL} [/MachineName:<Device name>] [/OU:<DN of OU>] 
+wdsutil [Options] /Approve-AutoaddDevices [/Server:<Server name>] /RequestId:{<Request ID>| ALL} [/MachineName:<Device name>] [/OU:<DN of OU>]
 [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] [/WdsClientUnattend:<Relative path>] [/BootImagepath:<Relative path>]
 ```
 ### Parameters
@@ -42,7 +40,7 @@ wdsutil /Approve-AutoaddDevices /RequestId:12
 ```
 To approve the computer with a RequestID of 20 and deploy the image with the specified settings, type:
 ```
-wdsutil /Approve-AutoaddDevices /RequestId:20 /MachineName:computer1 /OU:OU=Test,CN=company,DC=Domain,DC=Com /User:Domain\User1 
+wdsutil /Approve-AutoaddDevices /RequestId:20 /MachineName:computer1 /OU:OU=Test,CN=company,DC=Domain,DC=Com /User:Domain\User1
 /JoinRights:Full /ReferralServer:MyWDSServer /BootProgram:boot\x86\pxeboot.n12 /WdsClientUnattend:WDSClientUnattend\Unattend.xml /BootImagepath:boot\x86\images\boot.wim
 ```
 To approve all pending computers, type:

@@ -1,8 +1,6 @@
 ---
 title: new-DiscoverImage
-description: Reference topic for new-DiscoverImage, which creates a new discover image from an existing boot image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for new-DiscoverImage, which creates a new discover image from an existing boot image.
 ms.topic: article
 ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
 author: coreyp-at-msft
@@ -49,7 +47,7 @@ WDSUTIL /New-DiscoverImage /Image:WinPE boot image /Architecture:x86 /Destinatio
 To create a discover image out of boot image, and name it WinPEDiscover.wim with the specified settings, type:
 ```
 WDSUTIL /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
-/Image:WinPE boot image /Architecture:x64 /Filename:boot.wim /DestinationImage /FilePath:\\Server\Share\WinPEDiscover.wim 
+/Image:WinPE boot image /Architecture:x64 /Filename:boot.wim /DestinationImage /FilePath:\\Server\Share\WinPEDiscover.wim
 /Name:New WinPE image /Description:WinPE image for WDS Client discovery /Overwrite:No
 ```
 

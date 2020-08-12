@@ -1,9 +1,7 @@
 ---
 title: Enable or disable checkpoints in Hyper-V
 description: Gives instructions for turning checkpoint capability on or off.
-ms.prod: windows-server
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 92e1d0d0-f2c1-4ba2-8510-c8eb091cf5d6
 author: kbdazure

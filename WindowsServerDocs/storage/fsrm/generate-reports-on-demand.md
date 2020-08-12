@@ -2,8 +2,6 @@
 title: Generate Reports on Demand
 description: This article describes how to generate reports on demand to analyze disk usage on the server
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

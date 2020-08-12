@@ -1,10 +1,8 @@
 ---
 title: Understanding the cache in Storage Spaces Direct
 ms.assetid: 69b1adc0-ee64-4eed-9732-0fb216777992
-ms.prod: windows-server
 ms.author: cosdar
 manager: dongill
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/17/2019
@@ -29,7 +27,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/NVMe-100px.png">
+			<img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)" >
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			NVMe (Non-Volatile Memory Express)
@@ -37,7 +35,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/SSD-100px.png">
+			<img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD" >
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			SATA/SAS SSD (Solid-State Drive)
@@ -45,7 +43,7 @@ Storage Spaces Direct currently works with three types of storage devices:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/HDD-100px.png">
+			<img src="media/understand-the-cache/HDD-100px.png"alt="Image of HDD" >
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			HDD (Hard Disk Drive)

@@ -1,8 +1,6 @@
 ---
 title: bootcfg ems
-description: Reference topic for the bootcfg ems command, which enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bootcfg ems command, which enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.
 ms.topic: article
 ms.assetid: 57abdc50-c64a-45f1-8470-3f8c3a51f743
 author: coreyp-at-msft

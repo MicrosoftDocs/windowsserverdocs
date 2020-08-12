@@ -1,8 +1,6 @@
 ---
 title: manage-bde wipefreespace
-description: Reference topic for the manage-bde wipefreespace command, which wipes the free space on the volume removing any data fragments that may have existed in the space.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the manage-bde wipefreespace command, which wipes the free space on the volume removing any data fragments that may have existed in the space.
 ms.topic: article
 ms.assetid: b8d83a2a-c5c8-4019-9041-23d1d6abf282
 author: coreyp-at-msft

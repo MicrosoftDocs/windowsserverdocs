@@ -2,8 +2,6 @@
 title: Move and Resize the Hosted Cache (Optional)
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-bc
 ms.topic: article
 ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55
 ms.author: lizross
@@ -29,24 +27,24 @@ You must be a member of the Administrators group to perform this procedure.
     > [!IMPORTANT]
     > Before running the following command, replace parameter values, such as –Path and –MoveTo, with values that are appropriate for your deployment.
 
-    ``` 
+    ```
     Set-BCCache -Path C:\datacache –MoveTo D:\datacache
-    ``` 
+    ```
 
 3.  Type the following command to resize the hosted cache –specifically the datacache \- on the local computer. Press ENTER.
 
     > [!IMPORTANT]
-    > Before running the following command, replace parameter values, such as \-Percentage, with values that are appropriate for your deployment.  
+    > Before running the following command, replace parameter values, such as \-Percentage, with values that are appropriate for your deployment.
 
-    ``` 
+    ```
     Set-BCCache -Percentage 20
-    ``` 
+    ```
 
 4.  To verify the hosted cache server configuration, type the following command and press ENTER.
 
-    ``` 
+    ```
     Get-BCStatus
-    ``` 
+    ```
 
     The results of the command display status for all aspects of your BranchCache installation. Following are a few of the BranchCache settings and the correct value for each item:
 

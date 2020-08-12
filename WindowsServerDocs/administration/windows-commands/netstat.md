@@ -1,8 +1,6 @@
 ---
 title: netstat
-description: Reference topic for the netstat command, which displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPv4 statistics, and IPv6 statistics.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the netstat command, which displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPv4 statistics, and IPv6 statistics.
 ms.topic: article
 ms.assetid: 60e2718f-93cc-4ceb-bf0e-58a6a6e4fc8b
 author: coreyp-at-msft
@@ -23,7 +21,7 @@ Displays active TCP connections, ports on which the computer is listening, Ether
 ## Syntax
 
 ```
-netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
+netstat [-a] [-b] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
 ```
 
 ### Parameters
@@ -31,6 +29,7 @@ netstat [-a] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
 | Parameter | Description |
 | --------- | ----------- |
 | -a | Displays all active TCP connections and the TCP and UDP ports on which the computer is listening. |
+| -b | Displays the executable involved in creating each connection or listening port. In some cases well-known executables host multiple independent components, and in these cases the sequence of components involved in creating the connection or listening port is displayed. In this case the executable name is in [] at the bottom, on top is the component it called, and so forth until TCP/IP was reached. Note that this option can be time-consuming and will fail unless you have sufficient permissions.
 | -e | Displays Ethernet statistics, such as the number of bytes and packets sent and received. This parameter can be combined with **-s**. |
 | -n | Displays active TCP connections, however, addresses and port numbers are expressed numerically and no attempt is made to determine names. |
 | -o | Displays active TCP connections and includes the process ID (PID) for each connection. You can find the application based on the PID on the Processes tab in Windows Task Manager. This parameter can be combined with **-a**, **-n**, and **-p**. |

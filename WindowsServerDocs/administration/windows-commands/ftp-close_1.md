@@ -1,8 +1,6 @@
 ---
 title: ftp close
-description: Reference topic for the ftp close command, which ends the ftp session with the remote server and remains at the ftp prompt.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ftp close command, which ends the ftp session with the remote server and remains at the ftp prompt.
 ms.topic: article
 ms.assetid: 1dc344a9-64f7-45bc-9d44-a48afc844e36
 author: coreyp-at-msft
@@ -35,4 +33,4 @@ close
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

@@ -1,8 +1,6 @@
 ---
 title: compact vdisk
-description: Reference topic for the compact vdisk command, which reduces the physical size of a dynamically expanding virtual hard disk (VHD) file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the compact vdisk command, which reduces the physical size of a dynamically expanding virtual hard disk (VHD) file.
 ms.topic: article
 ms.assetid: 40ca0820-67de-4160-b62a-e9bf63fe2790
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: Remote Desktop - Allow access to your PC from outside your network
 description: Learn about your options for remotely accessing your PC from outside the PC's network
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: haley-rowland
 manager: dongill
@@ -18,7 +16,7 @@ When you connect to your PC by using a Remote Desktop client, you're creating a 
 
 ## Enable port forwarding on your router
 
-Port forwarding simply maps the port on your router's IP address (your public IP) to the port and IP address of the PC you want to access. 
+Port forwarding simply maps the port on your router's IP address (your public IP) to the port and IP address of the PC you want to access.
 
 Specific steps for enabling port forwarding depend on the router you're using, so you'll need to search online for your router's instructions. For a general discussion of the steps, check out [wikiHow to Set Up Port Forwarding on a Router](https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router).
 
@@ -30,7 +28,7 @@ Before you map the port you'll need the following:
 
 - Your public IP address (the router's IP). There are many ways to find this - you can search (in Bing or Google) for "my IP" or view the [Wi-Fi network properties](https://binged.it/2Gwob34) (for Windows 10).
 - Port number being mapped. In most cases this is 3389 - that's the default port used by Remote Desktop connections.
-- Admin access to your router.  
+- Admin access to your router.
 
    >[!WARNING]
    > You're opening your PC up to the internet - make sure you have a strong password set for your PC.

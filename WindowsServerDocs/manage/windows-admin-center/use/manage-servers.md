@@ -1,13 +1,11 @@
 ---
 title: Manage Servers with Windows Admin Center
 description: Manage Servers with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 11/21/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Manage Servers with Windows Admin Center
 
@@ -45,7 +43,7 @@ The following tools are available for server connections:
 | ---- | ----------- |
 | [Overview](#overview) | View server details and control server state |
 | [Active Directory](#active-directory-preview) | Manage Active Directory |
-| [Backup](#backup) | View and configure Azure Backup |  
+| [Backup](#backup) | View and configure Azure Backup |
 | [Certificates](#certificates) | View and modify certificates |
 | [Containers](#containers) | View Containers |
 | [Devices](#devices) | View and modify devices |
@@ -111,7 +109,7 @@ The following Active Directory management are available:
 - Reset user password
 - User objects: configure basic properties & group memberships
 - Computer objects: configure delegation to a single machine
-- Group objects: manage membership (add/remove 1 user at a time)  
+- Group objects: manage membership (add/remove 1 user at a time)
 
 [**View feedback and proposed features for Active Directory**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BActive%20Directory%5D).
 
@@ -407,7 +405,7 @@ The following features are supported in Services:
 ### Features
 
 - View and modify user and system environment variables
-- View the configuration for monitoring alerts from [Azure Monitor](azure-monitor.md)
+- View the configuration for monitoring alerts from [Azure Monitor](../azure/azure-monitor.md)
 - View and modify the power configuration
 - View and modify Remote Desktop settings
 - View and modify role-based access control settings
@@ -432,7 +430,7 @@ The following features are supported in Storage:
 - Edit volume properties
 - Delete a volume
 - Install Quota Management
-- Manage File Server Resource Manager Quotas [Storage->Create/Update Quota](https://docs.microsoft.com/windows-server/storage/fsrm/quota-management)
+- Manage File Server Resource Manager Quotas [Storage->Create/Update Quota](../../../storage/fsrm/quota-management.md)
 
 [**View feedback and proposed features for Storage**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BStorage%5D)
 
@@ -447,7 +445,7 @@ The following features are supported in Storage:
 ## Storage Replica
 
 Use **Storage Replica** to manage server-to-server storage replication.
-[Learn more about Storage Replica](https://docs.microsoft.com/windows-server/storage/storage-replica/storage-replica-ui)
+[Learn more about Storage Replica](../../../storage/storage-replica/server-to-server-storage-replication.md)
 
 ## System Insights
 
@@ -469,7 +467,7 @@ The following features are supported in Updates:
 - View a list of update history
 - Install Updates
 - Check online for updates from Microsoft Update
-- Manage [Azure Update Management](https://docs.microsoft.com/azure/automation/automation-update-management) integration
+- Manage [Azure Update Management](/azure/automation/automation-update-management) integration
 
 [**View feedback and proposed features for Updates**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BUpdates%5D)
 

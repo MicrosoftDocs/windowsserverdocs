@@ -1,14 +1,12 @@
 ---
 title: Windows commands
 description: Reference
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
 manager: dongill
-ms.date: 06/09/2020
-ms.prod: windows-server
+ms.date: 06/29/2020
 ---
 
 # Windows commands
@@ -16,35 +14,6 @@ ms.prod: windows-server
 All supported versions of Windows (server and client) have a set of Win32 console commands built in.
 
 This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
-
-To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
-
-[A](#a) |
-[B](#b) |
-[C](#c) |
-[D](#d) |
-[E](#e) |
-[F](#f) |
-[G](#g) |
-[H](#h) |
-[I](#i) |
-[J](#j) |
-[K](#k) |
-[L](#l) |
-[M](#m) |
-[N](#n) |
-[O](#o) |
-[P](#p) |
-[Q](#q) |
-[R](#r) |
-[S](#s) |
-[T](#t) |
-[U](#u) |
-[V](#v) |
-[W](#w) |
-[X](#x) |
-Y |
-Z
 
 ## Prerequisites
 
@@ -64,14 +33,14 @@ The information that is contained in this topic applies to:
 
 The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all Commands that are available at the command line.
 
-Windows has two command shells: The Command shell and [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
+Windows has two command shells: The Command shell and [PowerShell](/powershell/scripting/overview). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
 
 PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run Windows Commands and PowerShell cmdlets in Powershell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
 
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
 > [!NOTE]
->You can also download and install [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
+>You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
@@ -85,34 +54,9 @@ For the most robust, up-to-date Windows automation, we recommend using PowerShel
 
 ## Command-line reference A-Z
 
-To find information about a specific Windows command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
 
-[A](#a) |
-[B](#b) |
-[C](#c) |
-[D](#d) |
-[E](#e) |
-[F](#f) |
-[G](#g) |
-[H](#h) |
-[I](#i) |
-[J](#j) |
-[K](#k) |
-[L](#l) |
-[M](#m) |
-[N](#n) |
-[O](#o) |
-[P](#p) |
-[Q](#q) |
-[R](#r) |
-[S](#s) |
-[T](#t) |
-[U](#u) |
-[V](#v) |
-[W](#w) |
-[X](#x) |
-Y |
-Z)
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [X](#x) | Y | Z
 
 ### A
 
@@ -280,7 +224,7 @@ Z)
   - [bootcfg raw](bootcfg-raw.md)
   - [bootcfg rmsw](bootcfg-rmsw.md)
   - [bootcfg timeout](bootcfg-timeout.md)
-- [break](break_1.md)
+- [break](./break.md)
 
 ### C
 
@@ -381,7 +325,7 @@ Z)
 - [eventtriggers](eventtriggers.md)
 - [Evntcmd](evntcmd.md)
 - [exec](exec.md)
-- [exit](exit_2.md)
+- [exit](./exit.md)
 - [expand](expand.md)
 - [expand vdisk](expand-vdisk.md)
 - [expose](expose.md)
@@ -457,7 +401,7 @@ Z)
   - [ftp type](ftp-type.md)
   - [ftp user](ftp-user.md)
   - [ftp verbose](ftp-verbose_1.md)
-  - [ftp mdelete](ftp-.mdelete_1.md)
+  - [ftp mdelete](./ftp.mdelete_1.md)
   - [ftp mdir](ftp.mdir.md)
 - [ftype](ftype.md)
 - [fveupdate](fveupdate.md)
@@ -694,6 +638,7 @@ Z)
 - [rdpsign](rdpsign.md)
 - [recover](recover.md)
 - [recover disk group](recover_1.md)
+- [refsutil](refsutil.md)
 - [reg](reg.md)
   - [reg add](reg-add.md)
   - [reg compare](reg-compare.md)
@@ -709,8 +654,7 @@ Z)
 - [regini](regini.md)
 - [regsvr32](regsvr32.md)
 - [relog](relog.md)
-- [rem batch file](rem.md)
-- [rem script](rem_1.md)
+- [rem](rem.md)
 - [remove](remove.md)
 - [ren](ren.md)
 - [rename](rename.md)

@@ -1,8 +1,6 @@
 ---
 title: ktpass
-description: Reference topic for the ktpass command, which configures the server principal name for the host or service in AD DS and generates a .keytab file that contains the shared secret key of the service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ktpass command, which configures the server principal name for the host or service in AD DS and generates a .keytab file that contains the shared secret key of the service.
 ms.topic: article
 ms.assetid: 47087676-311e-41f1-8414-199740d01444
 author: coreyp-at-msft

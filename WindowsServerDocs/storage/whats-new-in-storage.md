@@ -1,10 +1,8 @@
 ---
 ms.assetid: 0f2a7f7b-aca8-4e5d-ad67-4258e88bc52f
 title: What's new in storage in Windows Server
-ms.prod: windows-server
 ms.author: jgerend
 manager: dongill
-ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 05/29/2019
@@ -43,7 +41,7 @@ This capability is also available for servers running Windows Server 2019.
 
 ### Windows Admin Center enhancements
 
-A new release of Windows Admin Center is out, adding new functionality to Windows Server. For info on the latest features, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
+A new release of Windows Admin Center is out, adding new functionality to Windows Server. For info on the latest features, see [Windows Admin Center](../manage/windows-admin-center/overview.md).
 
 ## What's new in storage in Windows Server 2019 and Windows Server, version 1809
 
@@ -77,7 +75,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Two-server clusters using a USB flash drive as a witness**
 
-    Use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
+    Use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 - **Windows Admin Center**
 
@@ -89,7 +87,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Scale up to 4 PB per cluster**
 
-    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](storage-spaces/cluster-sets.md) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap/).
+    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](storage-spaces/cluster-sets.md) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 - **Mirror-accelerated parity is 2X faster**
 
@@ -160,7 +158,7 @@ Windows Server, version 1803 includes the ability to prevent the File Server Res
 
 Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
 
-For more information, see [Windows Server Semi-annual Channel Overview](../get-started/semi-annual-channel-overview.md).
+For more information, see [Windows Server Semi-annual Channel Overview](../get-started-19/servicing-channels-19.md).
 
 ### Storage Replica
 
@@ -248,7 +246,7 @@ For more information, see [Storage Quality of Service](storage-qos/storage-qos-o
 | [Support for Large Volumes](data-deduplication/whats-new.md#large-volume-support) | Updated | Prior to Windows Server 2016, volumes had to specifically sized for the expected churn, with volume sizes above 10 TB not being good candidates for deduplication. In Windows Server 2016, Data Deduplication supports volume sizes **up to 64 TB**. |
 | [Support for Large Files](data-deduplication/whats-new.md#large-file-support) | Updated | Prior to Windows Server 2016, files approaching 1 TB in size were not good candidates for deduplication. In Windows Server 2016, files **up to 1 TB** are fully supported. |
 | [Support for Nano Server](data-deduplication/whats-new.md#nano-server-support) | New | Data Deduplication is available and fully supported in the new Nano Server deployment option for Windows Server 2016. |
-| [Simplified Backup Support](data-deduplication/whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](https://technet.microsoft.com/library/hh758173.aspx), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
+| [Simplified Backup Support](data-deduplication/whats-new.md#simple-backup-support) | New | In Windows Server 2012 R2, Virtualized Backup Applications, such as Microsoft's [Data Protection Manager](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), were supported through a series of manual configuration steps. In Windows Server 2016, a new default Usage Type "Backup", has been added for seamless deployment of Data Deduplication for Virtualized Backup Applications. |
 | [Support for Cluster OS Rolling Upgrades](data-deduplication/whats-new.md#cluster-upgrade-support) | New | Data Deduplication fully supports the new [Cluster OS Rolling Upgrade](..//failover-clustering/cluster-operating-system-rolling-upgrade.md) feature of Windows Server 2016. |
 
 ### <a name="smb-hardening-improvements"></a>SMB hardening improvements for SYSVOL and NETLOGON connections
@@ -263,7 +261,7 @@ If SMB signing and mutual authentication are unavailable, a Windows 10 or Window
 > [!NOTE]
 > The registry values for these settings aren't present by default, but the hardening rules still apply until overridden by Group Policy or other registry values.
 
-For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).
+For more information on these security improvements - also referred to as UNC hardening, see Microsoft Knowledge Base article [3000483](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://msrc-blog.microsoft.com/2015/02/10/ms15-011-ms15-014-hardening-group-policy).
 
 ### Work Folders
 Improved change notification when the Work Folders server is running Windows Server 2016 and the Work Folders client is Windows 10.
@@ -292,4 +290,4 @@ ReFS introduces the following improvements:
 These capabilities are new in Windows Server 2016.
 
 ## Additional References
-* [What's New in Windows Server 2016](../get-started/what-s-new-in-windows-server-2016.md)
+* [What's New in Windows Server 2016](../get-started/whats-new-in-windows-server-2016.md)

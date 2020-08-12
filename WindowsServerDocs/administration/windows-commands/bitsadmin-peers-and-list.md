@@ -1,8 +1,6 @@
 ---
 title: bitsadmin peers and list
-description: Reference topic for the bitsadmin peers and list command, which lists all peers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin peers and list command, which lists all peers.
 ms.topic: article
 ms.assetid: 18ec60c9-34d2-466e-982c-6165478ef224
 author: coreyp-at-msft

@@ -1,10 +1,8 @@
 ---
 title: Removing servers in Storage Spaces Direct
 ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
-ms.prod: windows-server
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 description: How to remove servers from a Storage Spaces Direct cluster in Windows Server.
@@ -22,7 +20,7 @@ This topic describes how to remove servers in [Storage Spaces Direct](storage-sp
 
 If you intend to add the server back into the cluster soon, or if you intend to keep its drives by moving them to another server, you can remove the server from the cluster *without* removing its drives from the storage pool. This is the default behavior if you use Failover Cluster Manager to remove the server.
 
-Use the [Remove-ClusterNode](https://technet.microsoft.com/library/hh847251.aspx) cmdlet in PowerShell:
+Use the [Remove-ClusterNode](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831694(v=ws.11)) cmdlet in PowerShell:
 
 ```PowerShell
 Remove-ClusterNode <Name>

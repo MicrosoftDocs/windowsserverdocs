@@ -1,8 +1,6 @@
 ---
 title: ftp ascii
-description: Reference topic for the ftp ascii command, which sets the file transfer type to ASCII.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ftp ascii command, which sets the file transfer type to ASCII.
 ms.topic: article
 ms.assetid: 523be48e-eab0-4237-8fb5-ca222824f0b6
 author: coreyp-at-msft
@@ -37,4 +35,4 @@ ascii
 
 - [ftp binary command](ftp-binary.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

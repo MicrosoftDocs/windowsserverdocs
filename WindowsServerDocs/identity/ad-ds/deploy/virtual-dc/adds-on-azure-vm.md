@@ -5,9 +5,7 @@ author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 04/11/2019
-ms.technology: identity-adds
 ms.topic: article
-ms.prod: windows-server
 ---
 
 # Install a new Active Directory forest using Azure CLI
@@ -17,21 +15,21 @@ AD DS can run on an Azure virtual machine (VM) in the same way it runs in many o
 ## Components
 
 * A resource group to put everything in.
-* An [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview.md), subnet, network security group, and rule to allow RDP access to VMs.
-* An Azure virtual machine [availability set](https://docs.microsoft.com/azure/virtual-machines/windows/regions-and-availability#availability-sets) to put two Active Directory Domain Services (AD DS) domain controllers in.
+* An [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview.md), subnet, network security group, and rule to allow RDP access to VMs.
+* An Azure virtual machine [availability set](/azure/virtual-machines/windows/regions-and-availability#availability-sets) to put two Active Directory Domain Services (AD DS) domain controllers in.
 * Two Azure virtual machines to run AD DS and DNS.
 
 ### Items that are not covered
 
-* [Creating a site-to-site VPN connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) from an on-premises location
-* [Securing network traffic in Azure](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices.md)
-* [Designing the site topology](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/designing-the-site-topology)
-* [Planning operations master role placement](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
-* [Deploying Azure AD Connect to synchronize identities to Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express)
+* [Creating a site-to-site VPN connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) from an on-premises location
+* [Securing network traffic in Azure](/azure/security/azure-security-network-security-best-practices.md)
+* [Designing the site topology](../../plan/designing-the-site-topology.md)
+* [Planning operations master role placement](../../plan/planning-operations-master-role-placement.md)
+* [Deploying Azure AD Connect to synchronize identities to Azure AD](/azure/active-directory/hybrid/how-to-connect-install-express)
 
 ## Build the test environment
 
-We use the [Azure portal](https://portal.azure.com) and [Azure CLI](https://docs.microsoft.com/cli/azure/overview?view=azure-cli-latest) for creating the environment.
+We use the [Azure portal](https://portal.azure.com) and [Azure CLI](/cli/azure/overview?view=azure-cli-latest) for creating the environment.
 
 The Azure CLI is used to create and manage Azure resources from the command line or in scripts. This tutorial details using the Azure CLI to deploy virtual machines running Windows Server 2019. Once deployment is complete, we connect to the servers and install AD DS.
 
@@ -41,7 +39,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 The following script automates the process of building two Windows Server 2019 VMs, for the purpose of building domain controllers for a new Active Directory Forest in Azure. An administrator can modify the variables below to suit their needs, then complete, as one operation. The script creates the necessary resource group, network security group with a traffic rule for Remote Desktop, virtual network and subnet, and availability group. The VMs are each then built with a 20 GB data disk with caching disabled for AD DS to be installed to.
 
-The script below can be run directly from the Azure portal. If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+The script below can be run directly from the Azure portal. If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](/cli/azure/install-azure-cli?view=azure-cli-latest).
 
 | Variable Name | Purpose |
 | :---: | :--- |
@@ -150,12 +148,11 @@ az vm create \
 
 ## DNS and Active Directory
 
-If the Azure virtual machines created as part of this process will be an extension of an existing on-premises Active Directory infrastructure, the DNS settings on the virtual network must be changed to include your on-premises DNS servers before deployment. This step is important to allow the newly created Domain Controllers in Azure to resolve on-premises resources and allow for replication to occur. More information about DNS, Azure, and how to configure settings can be found in the section [Name resolution that uses your own DNS server](https://docs.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
+If the Azure virtual machines created as part of this process will be an extension of an existing on-premises Active Directory infrastructure, the DNS settings on the virtual network must be changed to include your on-premises DNS servers before deployment. This step is important to allow the newly created Domain Controllers in Azure to resolve on-premises resources and allow for replication to occur. More information about DNS, Azure, and how to configure settings can be found in the section [Name resolution that uses your own DNS server](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
 
-After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](https://docs.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers).
+After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
-Information about extending an on-premises network to Azure can be found in the article [Creating a site-to-site VPN connection](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal
-).
+Information about extending an on-premises network to Azure can be found in the article [Creating a site-to-site VPN connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal).
 
 ## Configure the VMs and install Active Directory Domain Services
 
@@ -189,7 +186,7 @@ When the VM has completed rebooting, log back in with the credentials used befor
    > [!NOTE]
    > The first logon after promotion to a domain controller may take longer than normal and this is OK. Grab a cup of tea, coffee, water, or other beverage of choice.
 
-[Azure virtual networks do now support IPv6](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , but in case you want to set your VMs to prefer IPv4 over IPv6, information on how to complete this task can be found in the KB article [Guidance for configuring IPv6 in Windows for advanced users](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
+[Azure virtual networks do now support IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , but in case you want to set your VMs to prefer IPv4 over IPv6, information on how to complete this task can be found in the KB article [Guidance for configuring IPv6 in Windows for advanced users](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
 ### Configure the second Domain Controller
 
@@ -218,11 +215,11 @@ When the wizard completes the install process, the VM reboots.
 
 When the VM has completed rebooting, log back in with the credentials used before, but this time as a member of the CONTOSO.com domain
 
-[Azure virtual networks do now support IPv6](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , but in case you want to set your VMs to prefer IPv4 over IPv6, information on how to complete this task can be found in the KB article [Guidance for configuring IPv6 in Windows for advanced users](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
+[Azure virtual networks do now support IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , but in case you want to set your VMs to prefer IPv4 over IPv6, information on how to complete this task can be found in the KB article [Guidance for configuring IPv6 in Windows for advanced users](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
 ### Configure DNS
 
-After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](https://docs.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers).
+After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
 ### Wrap up
 
@@ -247,9 +244,9 @@ az group delete --name ADonAzureVMs
 ## Next steps
 
 * [Safely virtualizing Active Directory Domain Services (AD DS)](../../Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)
-* [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
-* [Backup and recovery](https://docs.microsoft.com/azure/virtual-machines/windows/backup-recovery)
-* [Site to site VPN connectivity](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
-* [Monitoring](https://docs.microsoft.com/azure/virtual-machines/windows/monitor)
-* [Security and policy](https://docs.microsoft.com/azure/virtual-machines/windows/security-policy)
-* [Maintenance and updates](https://docs.microsoft.com/azure/virtual-machines/windows/maintenance-and-updates)
+* [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
+* [Backup and recovery](/azure/virtual-machines/windows/backup-recovery)
+* [Site to site VPN connectivity](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Monitoring](/azure/virtual-machines/windows/monitor)
+* [Security and policy](/azure/virtual-machines/windows/security-policy)
+* [Maintenance and updates](/azure/virtual-machines/windows/maintenance-and-updates)

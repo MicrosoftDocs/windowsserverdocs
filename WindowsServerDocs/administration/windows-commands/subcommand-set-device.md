@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-Device
-description: Reference topic for Subcommand set-Device, which changes the attributes of a prestaged computer. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand set-Device, which changes the attributes of a prestaged computer.
 ms.topic: article
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
 author: coreyp-at-msft
@@ -18,7 +16,7 @@ Changes the attributes of a prestaged computer. A prestaged computer is a comput
 
 ## Syntax
 ```
-wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] 
+wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>]
 [/WdsClientUnattend:<Relative path>] [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/Domain:<Domain>] [/resetAccount]
 ```
 ### Parameters
@@ -43,7 +41,7 @@ wdsutil /Set-Device /Device:computer1 /ReferralServer:MyWDSServer
 ```
 To set various settings for a computer, type:
 ```
-wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml 
+wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml
 /User:Domain\user /JoinRights:JoinOnly /JoinDomain:No /BootImagepath:boot\x86\images\boot.wim /Domain:NorthAmerica /resetAccount
 ```
 ## Additional References

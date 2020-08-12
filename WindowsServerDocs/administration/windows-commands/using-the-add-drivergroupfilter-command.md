@@ -1,8 +1,6 @@
 ---
 title: add-DriverGroupFilter
-description: Reference topic for add-DriverGroupFilter, which adds a filter to a driver group on a server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-DriverGroupFilter, which adds a filter to a driver group on a server.
 ms.topic: article
 ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
 author: coreyp-at-msft

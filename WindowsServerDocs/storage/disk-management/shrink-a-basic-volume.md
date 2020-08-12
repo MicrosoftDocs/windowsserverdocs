@@ -2,18 +2,16 @@
 title: Shrink a basic volume
 description: This article describes how to shrink a basic volume
 ms.date: 06/07/2019
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 # Shrink a basic volume
 
 > **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need an additional partition but do not have additional disks, you can shrink the existing partition from the end of the volume to create new unallocated space that can then be used for a new partition. The shrink operation can be blocked by the presence of certain file types. For more information, see [Additional considerations](#additional-considerations) 
+You can decrease the space used by primary partitions and logical drives by shrinking them into adjacent, contiguous space on the same disk. For example, if you discover that you need an additional partition but do not have additional disks, you can shrink the existing partition from the end of the volume to create new unallocated space that can then be used for a new partition. The shrink operation can be blocked by the presence of certain file types. For more information, see [Additional considerations](#additional-considerations)
 
 When you shrink a partition, any ordinary files are automatically relocated on the disk to create the new unallocated space. There is no need to reformat the disk to shrink the partition.
 
@@ -57,7 +55,7 @@ When you shrink a partition, any ordinary files are automatically relocated on t
 
 ## Additional considerations
 
--   When you shrink a partition, certain files (for example, the paging file or the shadow copy storage area) cannot be automatically relocated, and you cannot decrease the allocated space beyond the point where the unmovable files are located. 
+-   When you shrink a partition, certain files (for example, the paging file or the shadow copy storage area) cannot be automatically relocated, and you cannot decrease the allocated space beyond the point where the unmovable files are located.
 If the shrink operation fails, check the Application Log for Event 259, which will identify the unmovable file. If you know the cluster(s) associated with the file that is preventing the shrink operation, you can also use the **fsutil** command at a command prompt (type **fsutil volume querycluster /?** for usage). When you provide the **querycluster** parameter, the command output will identify the unmovable file that is preventing the shrink operation from succeeding.
 In some cases, you can relocate the file temporarily. For example, if you need to shrink the partition further, you can use Control Panel to move the paging file or stored shadow copies to another disk, delete the stored shadow copies, shrink the volume, and then move the paging file back to the disk. If the number of bad clusters detected by dynamic bad-cluster remapping is too high, you cannot shrink the partition. If this occurs, you should consider moving the data and replacing the disk.
 

@@ -1,8 +1,6 @@
 ---
 title: bcdedit
-description: Reference topic for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
 ms.topic: article
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 author: coreyp-at-msft
@@ -101,7 +99,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 ## Additional References
 
-For examples of how to use BCDEdit, see the [BCDEdit Options Reference](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
+For examples of how to use BCDEdit, see the [BCDEdit Options Reference](/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
 
 ## Additional References
 

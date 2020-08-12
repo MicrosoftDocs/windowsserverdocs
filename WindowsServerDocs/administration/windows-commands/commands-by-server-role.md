@@ -1,8 +1,6 @@
 ---
 title: Commands by Server role
-description: Reference topic for Commands by Server role, which describes the primary function of the server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Commands by Server role, which describes the primary function of the server.
 ms.topic: article
 ms.assetid: 343597ec-9b92-4b92-8d6c-faef4b565068
 author: coreyp-at-msft

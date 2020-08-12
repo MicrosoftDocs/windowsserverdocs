@@ -1,13 +1,11 @@
 ---
 title: Using PowerShell in your extension
 description: Using PowerShell in your extension Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Using PowerShell in your extension #
@@ -20,12 +18,12 @@ Let's go more in-depth into the Windows Admin Center Extensions SDK - let's talk
 
 The gulp build process has a generate step that will take any ```{!ScriptName}.ps1``` that is placed in the ```\src\resources\scripts``` folder and build them into the ```powershell-scripts``` class under the ```\src\generated``` folder.
 
->[!NOTE] 
+>[!NOTE]
 > Don't manually update the ```powershell-scripts.ts``` nor the ```strings.ts``` files. Any change you make will be overwritten on the next generate.
 
 ## Running a PowerShell Script ##
-Any scripts that you want to run on a node can be placed in ```\src\resources\scripts\{!ScriptName}.ps1```. 
->[!IMPORTANT] 
+Any scripts that you want to run on a node can be placed in ```\src\resources\scripts\{!ScriptName}.ps1```.
+>[!IMPORTANT]
 > Any changes make in a ```{!ScriptName}.ps1``` file will not be reflected in your project until ```gulp generate``` has been run.
 
 The API works by first creating a PowerShell session on the nodes you are targeting, creating the PowerShell script with any parameters that need to be passed in, and then running the script on the sessions that were created.
@@ -42,7 +40,7 @@ Param
 
 We will create a PowerShell session for our target node :
 ``` ts
-const session = this.appContextService.powerShell.createSession('{!TargetNode}'); 
+const session = this.appContextService.powerShell.createSession('{!TargetNode}');
 ```
 Then we will create the PowerShell script with an input parameter:
 ```ts
@@ -65,7 +63,7 @@ Lastly, we need to run that script in the session we created:
             }
             return 'no response';
         }
-      ) 
+      )
     );
   }
 
@@ -82,12 +80,12 @@ this.getNodeName().subscribe(
      }
 );
 ```
-By providing the node name to the createSession method, a new PowerShell session is created, used, and then immediately destroyed upon completion of the PowerShell call. 
+By providing the node name to the createSession method, a new PowerShell session is created, used, and then immediately destroyed upon completion of the PowerShell call.
 
 ### Key Options ###
-A few options are available when calling the PowerShell API. Each time a session is created it can be created with or without a key. 
+A few options are available when calling the PowerShell API. Each time a session is created it can be created with or without a key.
 
-**Key:** This creates a keyed session that can be looked up and reused, even across components (meaning that Component1 can create a session with key "SME-ROCKS," and Component2 can use that same session).If a key is provided, the session that is created must be disposed of by calling dispose() as was done in the example above. A session should not be kept without being disposed of for more than 5 minutes. 
+**Key:** This creates a keyed session that can be looked up and reused, even across components (meaning that Component1 can create a session with key "SME-ROCKS," and Component2 can use that same session).If a key is provided, the session that is created must be disposed of by calling dispose() as was done in the example above. A session should not be kept without being disposed of for more than 5 minutes.
 ```ts
   const session = this.appContextService.powerShell.createSession('{!TargetNode}', '{!Key}');
 ```
@@ -97,8 +95,8 @@ A few options are available when calling the PowerShell API. Each time a session
 ```ts
   const session = this.appContextService.powerShell.createSession('{!TargetNodeName}');
 ```
-or 
-``` ts 
+or
+``` ts
 const session = this.appContextService.powerShell.createAutomaticSession('{!TargetNodeName}');
 ```
 In most situations, create a keyed session in the ```ngOnInit()``` method, and then dispose of it in ```ngOnDestroy()```. Follow this pattern when there are multiple PowerShell scripts in a component but the underlying session IS NOT shared across components.
@@ -113,13 +111,13 @@ this.appContextService.powerShellStream.run(session, script);
 ```
 
 ### Long Running Scripts ###
-If you have a long running script that you would like to run in the background, a work item can be submitted. The state of the script will be tracked by the Gateway and updates to the status can be sent to a notification. 
+If you have a long running script that you would like to run in the background, a work item can be submitted. The state of the script will be tracked by the Gateway and updates to the status can be sent to a notification.
 ```ts
 const workItem: WorkItemSubmitRequest = {
 	typeId: 'Long Running Script',
 	objectName: 'My long running service',
 	powerShellScript: script,
-	
+
 	//in progress notifications
 	inProgressTitle: 'Executing long running request',
 	startedMessage: 'The long running request has been started',
@@ -145,7 +143,7 @@ const workItem: WorkItemSubmitRequest = {
 return this.appContextService.workItem.submit('{!TargetNode}', workItem);
 ```
 
->[!NOTE] 
+>[!NOTE]
 > For progress to be shown, Write-Progress must be included in the script that you have written. For example:
 > ``` ps1
 >  Write-Progress -Activity ‘The script is almost done!' -percentComplete 95
@@ -155,7 +153,7 @@ return this.appContextService.workItem.submit('{!TargetNode}', workItem);
 
 | function | Explanation |
 | ----- | ----------- |
-| submit() | Submits the work item 
+| submit() | Submits the work item
 | submitAndWait() | Submit the work item and wait for the completion of its execution
 | wait() | Wait for existing work item to complete
 | query() | Query for an existing work item by id
@@ -167,7 +165,7 @@ If you need to run the same script on multiple nodes, then a batch PowerShell se
 const batchSession = this.appContextService.powerShell.createBatchSession(
 	['{!TargetNode1}', '{!TargetNode2}', sessionKey);
   this.appContextService.powerShell.runBatchSingleCommand(batchSession, command).subscribe((responses: PowerShellBatchResponseItem[]) => {
-	for (const response of responses) {	
+	for (const response of responses) {
 	  if (response.error || response.errors) {
 	    //handle error
 	  } else {
@@ -177,7 +175,7 @@ const batchSession = this.appContextService.powerShell.createBatchSession(
 	  }
 	}
      },
-     Error => { /* handle error */ });	
+     Error => { /* handle error */ });
 
 ```
 
@@ -185,6 +183,6 @@ const batchSession = this.appContextService.powerShell.createBatchSession(
 #### PowerShellBatch options ####
 | option | Explanation |
 | ----- | ----------- |
-| runSingleCommand | Run a single command against all the nodes in the array 
+| runSingleCommand | Run a single command against all the nodes in the array
 | run | Run corresponding command on paired node
 | cancel | Cancel the command on all nodes in the array

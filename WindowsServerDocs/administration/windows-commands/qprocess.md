@@ -1,8 +1,6 @@
 ---
 title: qprocess
-description: Reference topic for the qprocess command, which displays information about processes that are running on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the qprocess command, which displays information about processes that are running on a Remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: 9825cb01-11e0-4cd1-8142-57910e2f4056
 author: coreyp-at-msft
@@ -15,7 +13,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays information about processes that are running on a Remote Desktop Session Host server. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+Displays information about processes that are running on a Remote Desktop Session Host server. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 > [!NOTE]
 > This command is the same as the [query process command](query-process.md).

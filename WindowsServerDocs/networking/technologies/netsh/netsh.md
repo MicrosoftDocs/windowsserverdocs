@@ -1,8 +1,6 @@
 ---
 title: Network Shell (Netsh)
 description: This topic provides an overview of the Network Shell (netsh) command line utility in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: aedef092-8445-4e53-b9d4-525ecd98b02d
 manager: dougkim
@@ -24,14 +22,14 @@ In most cases, netsh commands provide the same functionality that is available w
 In addition, there are netsh commands for network technologies, such as for IPv6, network bridge, and Remote Procedure Call \(RPC\), that are not available in Windows Server as an MMC snap-in.
 
 >[!IMPORTANT]
->It is recommended that you use Windows PowerShell to manage networking technologies in [Windows Server 2016 and Windows 10](https://technet.microsoft.com/library/mt156917.aspx) rather than Network Shell. Network Shell is included for compatibility with your scripts, however, and its use is supported.
+>It is recommended that you use Windows PowerShell to manage networking technologies in [Windows Server 2016 and Windows 10](/powershell/windows/get-started?view=win10-ps) rather than Network Shell. Network Shell is included for compatibility with your scripts, however, and its use is supported.
 
 ## Network Shell (Netsh) Technical Reference
 
-The Netsh Technical Reference provides a comprehensive netsh command reference, including syntax, parameters, and examples for netsh commands. You can use the Netsh Technical Reference to build scripts and batch files by using netsh commands for local or remote management of network technologies on computers running Windows Server 2016 and Windows 10.  
-  
-### Content availability  
-  
-The Network Shell Technical Reference is available for download in Windows Help \(*.chm\) format from TechNet Gallery: [Netsh Technical Reference](https://gallery.technet.microsoft.com/Netsh-Technical-Reference-c46523dc)  
-  
+The Netsh Technical Reference provides a comprehensive netsh command reference, including syntax, parameters, and examples for netsh commands. You can use the Netsh Technical Reference to build scripts and batch files by using netsh commands for local or remote management of network technologies on computers running Windows Server 2016 and Windows 10.
+
+### Content availability
+
+The Network Shell Technical Reference is available for download in Windows Help \(*.chm\) format from TechNet Gallery: [Netsh Technical Reference](https://gallery.technet.microsoft.com/Netsh-Technical-Reference-c46523dc)
+
 ---

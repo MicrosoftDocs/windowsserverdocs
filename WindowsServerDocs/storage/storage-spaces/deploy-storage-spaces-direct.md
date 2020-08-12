@@ -1,24 +1,22 @@
 ---
 title: Deploy Storage Spaces Direct
-ms.prod: windows-server
 manager: eldenc
 ms.author: stevenek
-ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 06/07/2019
-description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure.
+ms.date: 07/24/2020
+description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
-> Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
+> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://azure.microsoft.com/products/azure-stack/hci/catalog/).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
@@ -45,7 +43,7 @@ Gather the following information:
 
 The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server 2016 Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
 
-When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../index.yml).
 
 ### Step 1.2: Connect to the servers
 
@@ -96,7 +94,7 @@ From the management system, open a PowerShell console with Administrator privile
 Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force
 ```
 
-If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](https://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) for more info):
+If your storage administrator account isn't a member of the Domain Admins group, add your storage administrator account to the local Administrators group on each node - or better yet, add the group you use for storage administrators. You can use the following command (or write a Windows PowerShell function to do so - see [Use PowerShell to Add Domain Users to a Local Group](https://devblogs.microsoft.com/scripting/use-powershell-to-add-domain-users-to-a-local-group/) for more info):
 
 ```
 Net localgroup Administrators <Domain\Account> /add
@@ -113,7 +111,7 @@ The next step is to install server roles on every server. You can do this by usi
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-To install via PowerShell, use the [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
 
 ```PowerShell
 Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
@@ -378,7 +376,7 @@ CD $ScriptFolder
 
 ## Next steps
 
-After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](https://technet.microsoft.com/library/dn894707.aspx).
+After deploying your clustered file server, we recommend testing the performance of your solution using synthetic workloads prior to bringing up any real workloads. This lets you confirm that the solution is performing properly and work out any lingering issues before adding the complexity of workloads. For more info, see [Test Storage Spaces Performance Using Synthetic Workloads](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11)).
 
 ## Additional References
 
@@ -387,4 +385,4 @@ After deploying your clustered file server, we recommend testing the performance
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
--   [To RDMA, or not to RDMA – that is the question](https://blogs.technet.microsoft.com/filecab/2017/03/27/to-rdma-or-not-to-rdma-that-is-the-question/) (TechNet blog)
+-   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

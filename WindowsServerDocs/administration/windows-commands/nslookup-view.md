@@ -1,8 +1,6 @@
 ---
 title: nslookup view
-description: Reference topic for the nslookup view command, which sorts and lists the output of the previous **ls** commands or subcommands.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the nslookup view command, which sorts and lists the output of the previous **ls** commands or subcommands.
 ms.topic: article
 ms.assetid: c1d9fff7-b567-451c-af80-6be8f604e193
 author: coreyp-at-msft

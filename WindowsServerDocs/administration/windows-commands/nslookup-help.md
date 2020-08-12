@@ -1,8 +1,6 @@
 ---
 title: nslookup help
-description: Reference topic for the nslookup help command, which displays the subcommand help content.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the nslookup help command, which displays the subcommand help content.
 ms.topic: article
 ms.assetid: 20ffe3e4-4cf3-4bc4-9392-a6be4ccd2c23
 author: coreyp-at-msft

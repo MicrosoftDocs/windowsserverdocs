@@ -6,8 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Reviewing the Domain Models
@@ -32,7 +30,7 @@ It is best to minimize the number of domains that you deploy in your forest. Thi
 | Increased likelihood of objects moving between domains | The greater the number of domains, the greater the likelihood that users will need to move from one domain to another. This move can potentially impact end users. |
 
 > [!NOTE]
-> Windows Server fine-grained password and account lockout policies can also impact the domain design model that you select. Before this release of  Windows Server 2008, you could apply only one password and account lockout policy, which is specified in the domain Default Domain Policy, to all users in the domain. As a result, if you wanted different password and account lockout settings for different sets of users, you had to either create a password filter or deploy multiple domains. You can now use fine-grained password policies to specify multiple password policies and to apply different password restrictions and account lockout policies to different sets of users within a single domain. For more information about fine-grained password and account lockout policies, see the article [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).
+> Windows Server fine-grained password and account lockout policies can also impact the domain design model that you select. Before this release of  Windows Server 2008, you could apply only one password and account lockout policy, which is specified in the domain Default Domain Policy, to all users in the domain. As a result, if you wanted different password and account lockout settings for different sets of users, you had to either create a password filter or deploy multiple domains. You can now use fine-grained password policies to specify multiple password policies and to apply different password restrictions and account lockout policies to different sets of users within a single domain. For more information about fine-grained password and account lockout policies, see the article [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770842(v=ws.10)).
 
 ## Single domain model
 

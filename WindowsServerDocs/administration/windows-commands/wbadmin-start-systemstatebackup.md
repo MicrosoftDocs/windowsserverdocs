@@ -1,8 +1,6 @@
 ---
 title: wbadmin start systemstatebackup
-description: Reference topic for wbadmin start systemstatebackup, which creates a system state backup of the local computer and stores it on the location specified.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for wbadmin start systemstatebackup, which creates a system state backup of the local computer and stores it on the location specified.
 ms.topic: article
 ms.assetid: 998366c1-0a64-45e6-9ed3-4c3f5b8406f0
 author: coreyp-at-msft
@@ -52,4 +50,4 @@ wbadmin start systemstatebackup -backupTarget:f:
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBBackup](https://technet.microsoft.com/library/jj902459.aspx) cmdlet
+-   [Start-WBBackup](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10)) cmdlet

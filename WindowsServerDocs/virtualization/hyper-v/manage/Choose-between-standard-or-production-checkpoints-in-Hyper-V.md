@@ -1,9 +1,7 @@
 ---
 title: Choose between standard or production checkpoints in Hyper-V
 description: Gives instructions for configuring a virtual machine to use standard or production checkpoints
-ms.prod: windows-server
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 92bb573b-03b7-470e-b72e-e35edf52b349
 author: kbdazure

@@ -2,10 +2,8 @@
 title: tcmsetup
 description: Learn how to set up and disable the TAPI client.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 15e0c10f-996f-4301-92e5-943f7ee8212d
@@ -25,7 +23,7 @@ Sets up or disables the TAPI client.
 ## Syntax
 
 ```
-tcmsetup [/q] [/x] /c <Server1> [<Server2> …] 
+tcmsetup [/q] [/x] /c <Server1> [<Server2> …]
 tcmsetup  [/q] /c /d
 ```
 
@@ -52,9 +50,8 @@ tcmsetup  [/q] /c /d
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)
+[Command shell overview](/previous-versions/windows/it-pro/windows-server-2003/cc737438(v=ws.10))
 
-[Specify telephony servers on a client computer](https://technet.microsoft.com/library/cc759226(v=ws.10).aspx)
+[Specify telephony servers on a client computer](/previous-versions/windows/it-pro/windows-server-2003/cc759226(v=ws.10))
 
-[Assign a telephony user to a line or phone](https://technet.microsoft.com/library/cc736875(v=ws.10).aspx)
-
+[Assign a telephony user to a line or phone](/previous-versions/windows/it-pro/windows-server-2003/cc736875(v=ws.10))

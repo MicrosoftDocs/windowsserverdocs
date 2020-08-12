@@ -1,8 +1,6 @@
 ---
 title: ntfrsutl
-description: Reference topic for the ntfrsutl command, which dumps the internal tables, thread, and memory information for the NT File Replication Service (NTFRS).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ntfrsutl command, which dumps the internal tables, thread, and memory information for the NT File Replication Service (NTFRS).
 ms.topic: article
 ms.assetid: d7721a19-5a87-4ab6-b816-65d2da2c811f
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: delete volume
-description: Reference topic for the delete volume command, which deletes the selected volume.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the delete volume command, which deletes the selected volume.
 ms.topic: article
 ms.assetid: f625933d-0f47-409e-93b2-a3e234049a5d
 author: coreyp-at-msft

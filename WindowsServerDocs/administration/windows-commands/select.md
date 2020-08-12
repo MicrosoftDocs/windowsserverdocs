@@ -1,11 +1,9 @@
 ---
 title: select
-description: Reference topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 9eeb40c0-4258-46e2-8dbc-94f63497e771

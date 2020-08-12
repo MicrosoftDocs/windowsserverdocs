@@ -1,8 +1,6 @@
 ---
 title: telnet quit
-description: Reference topic for telnet quit,which exits telnet.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for telnet quit,which exits telnet.
 ms.topic: article
 ms.assetid: a6e033f2-f0c2-404c-9cb4-abd1d7af0eea
 author: coreyp-at-msft

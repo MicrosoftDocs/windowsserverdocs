@@ -1,8 +1,6 @@
 ---
-title: remove-ImageGroup 
-description: Reference topic for remove-ImageGroup, which removes an image group from a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+title: remove-ImageGroup
+description: Reference article for remove-ImageGroup, which removes an image group from a server.
 ms.topic: article
 ms.assetid: 5b2c9813-5df2-4272-8449-26f3bb16f82b
 author: coreyp-at-msft
@@ -29,11 +27,11 @@ mediaGroup:<Image group name>|Specifies the name of the image group to be remove
 To remove the image group, type one of the following:
 ```
 wdsutil /remove-ImageGroumediaGroup:ImageGroup1
-wdsutil /verbose /remove-ImageGroumediaGroup:My Image Group /Server:MyWDSServer 
+wdsutil /verbose /remove-ImageGroumediaGroup:My Image Group /Server:MyWDSServer
 ```
 ## Additional References
-- [Command-Line Syntax Key](command-line-syntax-key.md)  
-[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)  
-[Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)  
-[Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)  
-[Subcommand: set-ImageGroup](subcommand-set-imagegroup.md)  
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+[Using the add-ImageGroup Command](using-the-add-imagegroup-command.md)
+[Using the get-AllImageGroups Command](using-the-get-allimagegroups-command.md)
+[Using the get-ImageGroup Command](using-the-get-imagegroup-command.md)
+[Subcommand: set-ImageGroup](subcommand-set-imagegroup.md)

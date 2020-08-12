@@ -1,8 +1,6 @@
 ---
 title: add-ImageDriverPackage
-description: Reference topic for add-ImageDriverPackage, which adds a driver package that is in the driver store to an existing boot image on the server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-ImageDriverPackage, which adds a driver package that is in the driver store to an existing boot image on the server.
 ms.topic: article
 ms.assetid: 6c2a4833-6427-47f8-9ffb-20b3786cb406
 author: coreyp-at-msft
@@ -18,7 +16,7 @@ Adds a driver package that is in the driver store to an existing boot image on t
 
 ## Syntax
 ```
-wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
+wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64}
 ```
 ```
 [/Filename:<File name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}

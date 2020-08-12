@@ -1,8 +1,6 @@
 ---
 title: add-DriverGroup
-description: Reference topic for add-DriverGroup, which adds a driver group to the server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-DriverGroup, which adds a driver group to the server.
 ms.topic: article
 ms.assetid: 2a92fe8f-03f9-462a-b99e-f23275259807
 author: coreyp-at-msft

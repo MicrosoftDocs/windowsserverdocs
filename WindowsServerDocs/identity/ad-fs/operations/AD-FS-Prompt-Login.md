@@ -7,8 +7,6 @@ manager: femila
 ms.date: 06/27/2017
 ms.topic: article
 ms.custom: it-pro
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Active Directory Federation Services prompt=login parameter support
@@ -28,7 +26,7 @@ These parameters mean:
 - `wfresh=0`: do fresh authentication
 - `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`: use username/password for the fresh authentication request
 
-This can cause problems with corporate intranet and multi-factor authentication scenarios in which an authentication type other than username and password, as  requested by the `wauth` parameter, is desired.  
+This can cause problems with corporate intranet and multi-factor authentication scenarios in which an authentication type other than username and password, as  requested by the `wauth` parameter, is desired.
 
 AD FS in Windows Server 2012 R2 with the July 2016 update rollup introduced native support for the `prompt=login` parameter. This means that now Azure AD can send this parameter as-is to AD FS service as part of Azure AD and Office 365 authentication requests.
 

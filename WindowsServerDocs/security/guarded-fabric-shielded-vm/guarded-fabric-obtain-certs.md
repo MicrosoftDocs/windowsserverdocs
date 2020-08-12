@@ -1,12 +1,10 @@
 ---
 title: Obtain certificates for HGS
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
 ---
 
@@ -28,7 +26,7 @@ Hosters and service providers should consider using a well-known, public CA inst
 
 Both the signing and encryption certificates must be issued with the following certificiate properties (unless marked "recommended"):
 
-Certificate Template Property | Required value 
+Certificate Template Property | Required value
 ------------------------------|----------------
 Crypto provider               | Any Key Storage Provider (KSP). Legacy Cryptographic Service Providers (CSPs) are **not** supported.
 Key algorithm                 | RSA
@@ -80,7 +78,7 @@ Subject name             | Name of your HGS cluster (known as the distributed ne
 Subject alternative name | If you will be using a different DNS name to reach your HGS cluster (e.g. if it is behind a load balancer), be sure to include those DNS names in the SAN field of your certificate request.
 
 The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-initialize-hgs.md).
-You can also add or change the SSL certificate at a later time using the [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver?view=win10-ps) cmdlet.
+You can also add or change the SSL certificate at a later time using the [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps) cmdlet.
 
 ## Next step
 

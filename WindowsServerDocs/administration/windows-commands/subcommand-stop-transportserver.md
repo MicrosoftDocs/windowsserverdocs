@@ -1,11 +1,9 @@
 ---
 title: Subcommand stop-TransportServer
-description: Reference topic for stop-TransportServer
-
-ms.prod: windows-server
+description: Reference article for stop-TransportServer
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
