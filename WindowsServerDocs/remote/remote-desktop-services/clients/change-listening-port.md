@@ -15,9 +15,10 @@ When you connect to a computer (either a Windows client or Windows Server) throu
 
 1. Start the registry editor. (Type regedit in the Search box.)
 2. Navigate to the following registry subkey:
-HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\PortNumber
-3. Click **Edit > Modify**, and then click **Decimal**.
-4. Type the new port number, and then click **OK**.
-5. Close the registry editor, and restart your computer.
+   **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp**
+3. Find **PortNumber**
+4. Click **Edit > Modify**, and then click **Decimal**.
+5. Type the new port number, and then click **OK**. 
+6. Close the registry editor, and restart your computer.
 
 The next time you connect to this computer by using the Remote Desktop connection, you must type the new port. If you're using a firewall, make sure to configure your firewall to permit connections to the new port number.
