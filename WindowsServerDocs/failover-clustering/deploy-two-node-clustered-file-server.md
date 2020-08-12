@@ -315,28 +315,31 @@ To configure a file server failover cluster, follow the below steps.
    > [!NOTE]
    > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
 
-6. Choose **Next**.
+9. Choose **Next**.
 
-7. In the **Select Storage** window, select the additional drive (not the witness) that will hold your shares and **Next**.
+10. In the **Select Storage** window, select the additional drive (not the witness) that will hold your shares, and click **Next**.
 
-8. On the **Confirmation** page, verify your configuration and select **Next**.
+11. On the **Confirmation** page, verify your configuration and select **Next**.
 
-9. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the file server role creation.
+12. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the file server role creation.
 
-10. Under **Roles** in the console tree, you will see the new role you created listed as the name you created.  With it highlighted, under the **Actions** pane on the right, choose **Add a share**.
+   > [!NOTE]
+   > If the role does not add or start correctly, the CNO (Cluster Name Object) may not have permission to create objects in Active Directory. The File Server role requires a Computer object of the same name as the "Client Access Point" provided in Step 8.
 
-11. Run through the share wizard inputting the following:
+13. Under **Roles** in the console tree, you will see the new role you created listed as the name you created.  With it highlighted, under the **Actions** pane on the right, choose **Add a share**.
+
+14. Run through the share wizard inputting the following:
 
     - Type of share it will be
     - Location/path the folder shared will be
     - The name of the share users will connect to
-    - Additional settings such as Access-based enumeration, caching, encryption, etc
+    - Additional settings such as Access-based enumeration, caching, encryption, etc.
     - File level permissions if they will be other than the defaults
 
-12. On the **Confirmation** page, verify what you have configured and select **Create** to create the file server share.
+15. On the **Confirmation** page, verify what you have configured, and select **Create** to create the file server share.
 
-13. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
+16. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
 
-14. Choose **Close**.
+17. Choose **Close**.
 
-15. Repeat this process for any additional shares.
+18. Repeat this process for any additional shares.
