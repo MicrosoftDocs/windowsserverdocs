@@ -30,7 +30,7 @@ A “full” virtual desktop environment can present a complete desktop session,
 
 The optimization settings could take place on a reference machine.  A virtual machine (VM) would be an ideal place to build the VM, because state can be saved, checkpoints can be made, backups can be made, etc. A default OS installation is performed to the base VM. That base VM is then optimized by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, etc.
 
-There are other types of virtual desktop technology such as Remote Desktop Session (RDS) and the recently released Microsoft Azure [Windows Virtual Desktop](https://azure.microsoft.com/en-us/services/virtual-desktop/). An in-depth discussion regarding these technologies is outside the scope of this article. This article focuses on the Windows base image settings, without reference to other factors in the environment such as host hardware optimization.
+There are other types of virtual desktop technology such as Remote Desktop Session (RDS) and the recently released Microsoft Azure [Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/). An in-depth discussion regarding these technologies is outside the scope of this article. This article focuses on the Windows base image settings, without reference to other factors in the environment such as host hardware optimization.
 
 Security and stability are among the highest priorities for Microsoft when it comes to products and services. In the virtual desktop realm, security is not handled much differently than physical devices. Enterprise customers may choose to utilize the built-in to Windows services of Windows Security, which comprises a suite of services that work well connected or not connected to the Internet. For those virtual desktop environments not connected to the Internet, security signatures can be downloaded proactively several times per day, because Microsoft may release more than one signature update per day. Those signatures can then be provided to the virtual desktop devices and scheduled to be installed during production, regardless of persistent or non-persistent. That way the VM protection is as current as possible.
 
@@ -89,14 +89,14 @@ Depending on the architecture of virtual desktop device, things like PreFetch an
 
 ### To Sysprep or not Sysprep
 
-Windows 10 has a built-in capability called the ‘[System Preparation Tool](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)’, (AKA Sysprep).  The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting OS is properly unique to run in production.
+Windows 10 has a built-in capability called the ‘[System Preparation Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)’, (AKA Sysprep).  The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting OS is properly unique to run in production.
 
 There are reasons for and against running Sysprep. In the case of virtual desktop environments, you may want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You may have apps that you want installed, but also able to control per-app settings.
 
 The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications.  You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](https://blogs.technet.microsoft.com/secguide/2016/01/21/lgpo-exe-local-group-policy-object-utility-v1-0/) tool.
 
 For information about image preparation for Azure, see the following article:
-[Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
+[Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
 
 ### Supportability
 
@@ -104,7 +104,7 @@ Anytime that Windows defaults are changed, questions arise regarding supportabil
 
 This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service virtual desktop images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in virtual desktop environments, except for security software updates. Microsoft has published guidance for Windows Security in virtual desktop environments, here:
 
-**Microsoft**: [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
+**Microsoft**: [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
 
 Please consider supportability when altering default Windows settings. Occasionally difficult to solve problems arise when altering system services, policies, or scheduled tasks, in the name of hardening, “lightening”, etc. Please consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub will be maintained with respect to known issues, if any arise. In addition you can report issues in a number of ways to Microsoft.
 
@@ -147,7 +147,7 @@ If you modify your base .WIM that you use to install Windows 10 and remove unnee
 
 A good strategy for the virtual desktop environment is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. There is a great paper on this topic, recently published, and available here:
 
-Microsoft: [Universal Windows Platform Apps](https://docs.citrix.com/en-us/xenapp-and-xendesktop/current-release/manage-deployment/applications-manage/universal-apps.html)
+Microsoft: [Universal Windows Platform Apps](https://docs.citrix.com/xenapp-and-xendesktop/current-release/manage-deployment/applications-manage/universal-apps.html)
 
 #### Delete the payload of UWP apps
 
@@ -260,7 +260,7 @@ RestartNeeded : False
 
 You can use the built-in Dism.exe tool to enumerate and control Windows Optional Features. A Dism.exe script could be developed and run during an operating system installation task sequence. The Windows technology involved is called Features on Demand. See the following article for more about Features on Demand in Windows:
 
-Microsoft: [Features on Demand](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities)
+Microsoft: [Features on Demand](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities)
 
 ### Default User Settings
 
@@ -270,11 +270,11 @@ To reduce the transmitting of graphical data over the virtual desktop infrastruc
 
 The following settings are applied to the default user profile registry hive, mainly to reduce animations. If some or all of these settings are not desired, delete out the settings that you do not wish to have applied to new user profiles based on this image. The goal with these settings is to enable the following equivalent settings:
 
-![Performance Options](media/rds-vdi-recommendations-2002-Performance.png)
+![Performance Options](media/performance-options.png)
 
 And, new to this version of settings is a method to disable the following two privacy settings for any user profile created after this optimization has been run:
 
-![](media/PrivacySettings.png)
+![](media/privacy-settings.png)
 
 The following are the optimization settings applied to the default user profile registry hive to optimize performance.  Note that this operation is performed by first loading the default user profile registry hive ‘**NTUser.dat**’, as the ephemeral key name ‘**Temp**’, and then making the below listed modifications:
 
@@ -516,7 +516,7 @@ If considering disabling system services to conserve resources, great care shoul
 
 Most of these recommendations mirror recommendations for Windows Server 2016, installed with the Desktop Experience, per the following Microsoft article:
 
-**Microsoft**: [Guidance on disabling system services on Windows Server 2016 with Desktop Experience](https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)
+**Microsoft**: [Guidance on disabling system services on Windows Server 2016 with Desktop Experience](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)
 
 Many services that may seem like good candidates to disable are set to manual service start type. This means that the service will not automatically start and is not started unless process or event triggers a request to the service being consider for disabling. Services that are already set to start type manual are usually not listed here.
 
@@ -528,46 +528,46 @@ The following table contains some services that may be considered to disable in 
 
 | Windows Service | Service Name | Item | Comment|
 | --------------- | ------------ | ---- | ------ |
-|Cellular Time|autotimesvc|This service sets time based on NITZ messages from a Mobile Network|Virtual desktop environments may not have such devices available. <p>[https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support)|
-|GameDVR and Broadcast user service|BcastDVRUserService|This (per-user) service is used for Game Recordings and Live Broadcasts|NOTE: This is a “per-user service”, and as such, the template service must be disabled. This user service is used for Game Recordings and Live Broadcasts.<p>[https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/mb-nitz-support)|
-|CaptureService|CaptureService|Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API.|OneCore capture service: enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API<p> [https://docs.microsoft.com/en-us/uwp/api/windows.graphics.capture?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/windows.graphics.capture?view=winrt-19041)|
-|Connected Devices Platform Service|CDPSvc|This service is used for Connected Devices Platform scenarios|Connected Devices Platform Service <p>[https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736)|
-|CDP User Service|CDPUserSvc|This user service is used for Connected Devices Platform scenarios|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled (CDPUserSvc).||Connected Devices Platform User Service.[https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4)|
+|Cellular Time|autotimesvc|This service sets time based on NITZ messages from a Mobile Network|Virtual desktop environments may not have such devices available. <p>[https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support)|
+|GameDVR and Broadcast user service|BcastDVRUserService|This (per-user) service is used for Game Recordings and Live Broadcasts|NOTE: This is a “per-user service”, and as such, the template service must be disabled. This user service is used for Game Recordings and Live Broadcasts.<p>[https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support)|
+|CaptureService|CaptureService|Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API.|OneCore capture service: enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API<p> [https://docs.microsoft.com/uwp/api/windows.graphics.capture?view=winrt-19041](https://docs.microsoft.com/uwp/api/windows.graphics.capture?view=winrt-19041)|
+|Connected Devices Platform Service|CDPSvc|This service is used for Connected Devices Platform scenarios|Connected Devices Platform Service <p>[https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736](https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736)|
+|CDP User Service|CDPUserSvc|This user service is used for Connected Devices Platform scenarios|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled (CDPUserSvc).||Connected Devices Platform User Service.[https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4](https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4)|
 |Optimize drives|defragsvc|Helps the computer run more efficiently by optimizing files on storage drives.|Virtual desktop solutions do not normally benefit from disk optimization. The “drives” are often not traditional drives and often just a temporary storage allocation.|
 |Diagnostic Execution Service|DiagSvc|Executes diagnostic actions for troubleshooting support|Disabling this service disables the ability to run Windows diagnostics Diagnostic Execution Service.|
-|Connected User Experiences and Telemetry|DiagTrack|This service enables features that support in-application and connected user experiences. Additionally, this service manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.|Consider disabling if on disconnected network [https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)|
-|Diagnostic Policy Service|DPS|The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components.  If this service is stopped, diagnostics will no longer function.|Disabling this service disables the ability to run Windows diagnostics [https://docs.microsoft.com/en-us/uwp/api/Windows.System.Diagnostics?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.System.Diagnostics?view=winrt-19041)|
+|Connected User Experiences and Telemetry|DiagTrack|This service enables features that support in-application and connected user experiences. Additionally, this service manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.|Consider disabling if on disconnected network [https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)|
+|Diagnostic Policy Service|DPS|The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components.  If this service is stopped, diagnostics will no longer function.|Disabling this service disables the ability to run Windows diagnostics [https://docs.microsoft.com/uwp/api/Windows.System.Diagnostics?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.System.Diagnostics?view=winrt-19041)|
 |Device Setup Manager|DsmSvc|Enables the detection, download and installation of device-related software. |If this service is disabled, devices may be configured with outdated software, and may not work correctly. <p>**NOTE**: Virtual desktop environments very closely control what software is installed and maintain that consistency across the environment.|
-|Data Usage service|DusmSvc|Network data usage, data limit, restrict background data, metered networks.|[https://docs.microsoft.com/en-us/uwp/schemas/mobilebroadbandschema/dusm/schema-root](https://docs.microsoft.com/en-us/uwp/schemas/mobilebroadbandschema/dusm/schema-root)|
-|Windows Mobile Hotspot Service|icssvc|Provides the ability to share a cellular data connection with another device.|[https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041)|
+|Data Usage service|DusmSvc|Network data usage, data limit, restrict background data, metered networks.|[https://docs.microsoft.com/uwp/schemas/mobilebroadbandschema/dusm/schema-root](https://docs.microsoft.com/uwp/schemas/mobilebroadbandschema/dusm/schema-root)|
+|Windows Mobile Hotspot Service|icssvc|Provides the ability to share a cellular data connection with another device.|[https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041)|
 |Microsoft Store Install Service|InstallService|Provides infrastructure support for the Microsoft Store.  |This service is started on demand and if disabled then installations will not function properly.<p>**NOTE**: Consider disabling this service on non-persistent virtual desktop, leave as-is for persistent virtual desktop solutions.|
-|Geolocation Service|Lfsvc|Monitors the current location of the system and manages geofences (a geographical location with associated events). |If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences. [https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Geolocation?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Geolocation?view=winrt-19041)|
-|Downloaded Maps Manager|MapsBroker|Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps.|Disabling this service will prevent apps from accessing maps. [https://docs.microsoft.com/en-us/uwp/api/Windows.Services.Maps?view=winrt-19041](https://docs.microsoft.com/en-us/uwp/api/Windows.Services.Maps?view=winrt-19041)|
+|Geolocation Service|Lfsvc|Monitors the current location of the system and manages geofences (a geographical location with associated events). |If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences. [https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation?view=winrt-19041)|
+|Downloaded Maps Manager|MapsBroker|Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps.|Disabling this service will prevent apps from accessing maps. [https://docs.microsoft.com/uwp/api/Windows.Services.Maps?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.Services.Maps?view=winrt-19041)|
 |MessagingService|MessagingService|Service supporting text messaging and related functionality.|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
 |Sync Host|OneSyncSvc|This service synchronizes mail, contacts, calendar and various other user data. |(UWP) Mail and other applications dependent on this functionality will not work properly when this service is not running. <p>**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
 |Contact Data|PimIndexMaintenanceSvc|Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
-|Power|Power|Manages power policy and power policy notification delivery.|Virtual machines have virtually no influence on power properties. If this service is disabled, power management and reporting are not available. [https://docs.microsoft.com/en-us/windows-hardware/drivers/powermeter/user-mode-power-service](https://docs.microsoft.com/en-us/windows-hardware/drivers/powermeter/user-mode-power-service)|
+|Power|Power|Manages power policy and power policy notification delivery.|Virtual machines have virtually no influence on power properties. If this service is disabled, power management and reporting are not available. [https://docs.microsoft.com/windows-hardware/drivers/powermeter/user-mode-power-service](https://docs.microsoft.com/windows-hardware/drivers/powermeter/user-mode-power-service)|
 |Payments and NFC/SE Manager|SEMgrSvc|Manages payments and Near Field Communication (NFC) based secure elements.|May not need this service for payments, in the enterprise environment.|
-|Microsoft Windows SMS Router Service|SmsRouter|Routes messages based on rules to appropriate clients.|May not need this service, if other tools are used for messaging, such as Teams, Skype, or other. For more info on this service, see:[https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/routing-service](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/routing-service)|
+|Microsoft Windows SMS Router Service|SmsRouter|Routes messages based on rules to appropriate clients.|May not need this service, if other tools are used for messaging, such as Teams, Skype, or other. For more info on this service, see:[https://docs.microsoft.com/dotnet/framework/wcf/feature-details/routing-service](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/routing-service)|
 |Superfetch (SysMain)|SysMain|Maintains and improves system performance over time.|Superfetch generally does not improve performance in virtual desktop environments for various reasons.  The underlying storage is often virtualized and possibly striped across multiple drives.  In some virtual desktop solutions the accumulated user state is discarded when the user logs off.  The SysMain feature should be evaluated in each environment.|
 |Touch Keyboard and Handwriting Panel Service|TabletInputService|Enables Touch Keyboard and Handwriting Panel pen and ink functionality|Not needed unless there is an active touchscreen in use, or a handwriting input device.|
 |Update Orchestrator Service|UsoSvc|Manages Windows Updates. If stopped, your devices will not be able to download and install the latest updates.|Virtual desktop devices are often carefully managed with respect to updates. Servicing is usually performed during maintenance windows. In some cases, an update client may be utilized, such as SCCM. The exception would be security signature updates, that would be applied at any time, to any virtual desktop device, so as to maintain up-to-date signatures. If you disable this service, test to ensure that security signatures are still able to be installed.|
-|Volume Shadow Copy|VSS|Manages and implements Volume Shadow Copies used for backup and other purposes. |If this service is stopped, shadow copies will be unavailable for backup and the backup may fail. If this service is disabled, any services that explicitly depend on it will fail to start. [https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)|
+|Volume Shadow Copy|VSS|Manages and implements Volume Shadow Copies used for backup and other purposes. |If this service is stopped, shadow copies will be unavailable for backup and the backup may fail. If this service is disabled, any services that explicitly depend on it will fail to start. [https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)|
 |Diagnostic System Host|WdiSystemHost|The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.  If this service is stopped, any diagnostics that depend on it will no longer function.|Disabling this service disables the ability to run Windows diagnostics
-|Windows Error Reporting|WerSvc|Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. If this service is stopped, error reporting might not work correctly, and results of diagnostic services and repairs might not be displayed.|With virtual desktop environments, diagnostics are often performed in an “offline” scenario, and not in mainstream production. In addition, some customers disable WER anyway.  WER incurs a tiny amount of resources for many different things, including failure to install a device, or failure to install an update. [https://docs.microsoft.com/en-us/windows/win32/wer/windows-error-reporting](https://docs.microsoft.com/en-us/windows/win32/wer/windows-error-reporting)|
-|Windows Search|WSearch|Provides content indexing, property caching, and search results for files, e-mail, and other content.|Disabling this service prevents indexing of e-mail and other things. Test before disabling this service. [https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service](https://docs.microsoft.com/en-us/windows/win32/search/-search-3x-wds-overview#windows-search-service)|
+|Windows Error Reporting|WerSvc|Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. If this service is stopped, error reporting might not work correctly, and results of diagnostic services and repairs might not be displayed.|With virtual desktop environments, diagnostics are often performed in an “offline” scenario, and not in mainstream production. In addition, some customers disable WER anyway.  WER incurs a tiny amount of resources for many different things, including failure to install a device, or failure to install an update. [https://docs.microsoft.com/windows/win32/wer/windows-error-reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)|
+|Windows Search|WSearch|Provides content indexing, property caching, and search results for files, e-mail, and other content.|Disabling this service prevents indexing of e-mail and other things. Test before disabling this service. [https://docs.microsoft.com/windows/win32/search/-search-3x-wds-overview#windows-search-service](https://docs.microsoft.com/windows/win32/search/-search-3x-wds-overview#windows-search-service)|
 |Xbox Live Auth Manager|XblAuthManager|Provides authentication and authorization services for interacting with Xbox Live. |If this service is stopped, some applications may not operate correctly.
 |Xbox Live Game Save|XblGameSave|This service syncs save data for Xbox Live save enabled games. |If this service is stopped, game save data will not upload to or download from Xbox Live.
 |Xbox Accessory Management Service|XboxGipSvc|This service manages connected Xbox Accessories.||
 |Xbox Live Networking Service|XboxNetApiSvc|This service supports the Windows.Networking.XboxLive application programming interface.||
 
 #### Per-user services in Windows
-[https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows](https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows)
+[https://docs.microsoft.com/windows/application-management/per-user-services-in-windows](https://docs.microsoft.com/windows/application-management/per-user-services-in-windows)
 Per-user services are services that are created when a user signs into Windows or Windows Server and are stopped and deleted when that user signs out. These services run in the security context of the user account - this provides better resource management than the previous approach of running these kinds of services in Explorer, associated with a preconfigured account, or as tasks.
 
 If you intend to change a service start value, the preferred method is to open an elevated .CMD prompt and run the Service Control Manager tool ‘SC.EXE’. You can find more information on using ‘SC.EXE’ at this Internet location:
 
-**Microsoft**: [SC](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11))
+**Microsoft**: [SC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11))
 
 ### Scheduled tasks
 Like other items in Windows, ensure an item is not needed before disabling a scheduled task.  Some tasks in virtual desktop environments, such as “**StartComponentCleanup**”, may not be desirable to run in production, but may be good to run during a maintenance window on the “gold image” (reference image).
@@ -650,20 +650,20 @@ The following are some system traces that could be considered for disablement fo
 
 |Name|Comment|
 |---|--------|
-|Cellcore|[https://docs.microsoft.com/en-us/windows-hardware/drivers/network/cellular-architecture-and-driver-model](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/cellular-architecture-and-driver-model)|
-|CloudExperienceHostOOBE|Documented [here](https://docs.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-how-it-works-technology#cloud-experience-host).|
-|DiagLog|A log generated by the Diagnostic Policy Service, which is documented [here](https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)|
-|RadioMgr|https://docs.microsoft.com/en-us/windows-hardware/drivers/nfc/what-s-new-in-nfc-device-drivers|
-|ReadyBoot|Documentation [here](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/xperf/readyboot-analysis).|
+|Cellcore|[https://docs.microsoft.com/windows-hardware/drivers/network/cellular-architecture-and-driver-model](https://docs.microsoft.com/windows-hardware/drivers/network/cellular-architecture-and-driver-model)|
+|CloudExperienceHostOOBE|Documented [here](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-technology#cloud-experience-host).|
+|DiagLog|A log generated by the Diagnostic Policy Service, which is documented [here](https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)|
+|RadioMgr|https://docs.microsoft.com/windows-hardware/drivers/nfc/what-s-new-in-nfc-device-drivers|
+|ReadyBoot|Documentation [here](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/readyboot-analysis).|
 |WDIContextLog|Wireless Local Area Network (WLAN) Device Driver Interface, and is documented here. |
-|WiFiDriverIHVSession|Documented [here](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/user-initiated-feedback-normal-mode).|
+|WiFiDriverIHVSession|Documented [here](https://docs.microsoft.com/windows-hardware/drivers/network/user-initiated-feedback-normal-mode).|
 |WiFiSession|Diagnostic log for WLAN technology. If Wi-Fi not implemented, no need for this logger|
 |WinPhoneCritical|Diagnostic log for phone (Windows?). If not using phones, no need for this logger|
 
 #### Windows Defender optimization in the virtual desktop environment
 Microsoft has recently published documentation regarding Windows Defender in a virtual desktop environment, at this location:
 
-[Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
+[Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
 
 The above article contains procedures to service the ‘gold’ virtual desktop image, and how to maintain the virtual desktop clients as they are running. To reduce network bandwidth when virtual desktop devices need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where practical, have those files shares on the same or close networking segments as the virtual desktop devices.
 
@@ -673,7 +673,7 @@ There are some registry settings that can increase network performance. This is 
 > [!NOTE]
 > Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
 
-The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/) information, published on Microsoft.com by the Windows Product Group.
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](https://docs.microsoft.com/windows-server/administration/performance-tuning/) information, published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling
 
@@ -711,9 +711,9 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 ```
 
 #### Additional settings from the Windows Restricted Traffic Limited Functionality Baseline guidance
-Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/en-us/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
+Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/windows/device-security/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
 
-The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) settings are called out in the group policy table with an asterisk.
+The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) settings are called out in the group policy table with an asterisk.
 
 #### Disk cleanup (including using the Disk Cleanup Wizard)
 
@@ -722,7 +722,7 @@ Disk cleanup can be especially helpful with gold/master image virtual desktop im
 > [!NOTE]
 > Disk cleanup settings and are in the Settings category ‘System’ called ‘Storage’. The technology ‘Storage Sense’ by default runs when a low disk free space threshold is reached.<p>
 > Microsoft has provided guidance on using ‘Storage Sense’ with Azure custom VHD images.  You can locate that guidance here:<p>
-> [Prepare and customize a master VHD image](https://docs.microsoft.com/en-us/azure/virtual-desktop/set-up-customize-master-image)<p>
+> [Prepare and customize a master VHD image](https://docs.microsoft.com/azure/virtual-desktop/set-up-customize-master-image)<p>
 > “For Windows Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**”
 
 Here are suggestions for various disk cleanup tasks.  These should all be tested before implementing:
@@ -752,7 +752,7 @@ Clear-BCCache -Force -ErrorAction SilentlyContinue
 3. Delete any unused profiles on the system
     1. wmic path win32_UserProfile where LocalPath="C:\\users\\<users>" Delete
 
-For any questions or concerns about the information in this paper, contact your Microsoft account team, research the [Microsoft virtual desktop IT Pro blog](https://community.windows.com/en-us/stories/virtual-desktop-windows-10), post a message to [Microsoft Virtual Desktop forums](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/bd-p/WindowsVirtualDesktop), or contact [Microsoft](https://support.microsoft.com/en-us/contactus/) for questions or concerns.
+For any questions or concerns about the information in this paper, contact your Microsoft account team, research the [Microsoft virtual desktop IT Pro blog](https://community.windows.com/stories/virtual-desktop-windows-10), post a message to [Microsoft Virtual Desktop forums](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/bd-p/WindowsVirtualDesktop), or contact [Microsoft](https://support.microsoft.com/contactus/) for questions or concerns.
 
 ### Additional Notes
 
@@ -788,4 +788,4 @@ If you would like to enable the use of Windows Update, as in the case of persist
 ## Reference
 Citrix: [What is VDI (Virtual Desktop Infrastructure)](https://www.citrix.com/glossary/vdi.html)?
 
-Microsoft: [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/en-us/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).
+Microsoft: [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).
