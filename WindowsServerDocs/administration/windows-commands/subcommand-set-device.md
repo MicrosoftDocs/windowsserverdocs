@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-Device
 description: Reference article for Subcommand set-Device, which changes the attributes of a prestaged computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
 author: coreyp-at-msft

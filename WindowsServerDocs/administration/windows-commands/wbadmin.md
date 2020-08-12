@@ -2,10 +2,8 @@
 title: wbadmin
 description: Reference article for wbadmin, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 4b0b3f32-d21f-4861-84bb-b2eadbf1e7b8
@@ -48,4 +46,4 @@ You must run **wbadmin** from an elevated command prompt. (To open an elevated c
 ## Additional References
 
 -   [Backup and Recovery](https://go.microsoft.com/fwlink/?LinkID=195054)
--   [Windows Server Backup Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/jj902428.aspx)
+-   [Windows Server Backup Cmdlets in Windows PowerShell](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)

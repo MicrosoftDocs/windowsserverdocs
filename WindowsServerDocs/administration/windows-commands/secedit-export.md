@@ -2,10 +2,8 @@
 title: secedit:export
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 49a8b241-aa8c-45b7-844d-67a29fab708e

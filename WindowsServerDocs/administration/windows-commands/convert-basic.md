@@ -1,8 +1,6 @@
 ---
 title: convert basic
 description: Reference article for the convert basic command, which converts an empty dynamic disk to a basic disk.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 61329896-3b56-4959-8d58-45cbe18ba860
 author: coreyp-at-msft
@@ -19,7 +17,7 @@ Converts an empty dynamic disk to a basic disk. A dynamic disk must be selected 
 > The disk must be empty to convert it to a basic disk. Back up your data, and then delete all partitions or volumes before converting the disk.
 
 > [!NOTE]
-> For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755238(v=ws.11))).
+> For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755238(v=ws.11))).
 
 ## Syntax
 

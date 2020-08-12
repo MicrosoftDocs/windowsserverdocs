@@ -1,8 +1,6 @@
 ---
 title: ftp quit
 description: Reference article for the ftp quit command, which ends the ftp session with the remote computer, and then exits.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: f5de9a79-5177-4e3a-80d9-df8f4d7660b7
 author: coreyp-at-msft
@@ -38,4 +36,4 @@ quit
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

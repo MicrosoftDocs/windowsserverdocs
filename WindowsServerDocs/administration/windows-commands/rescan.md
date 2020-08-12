@@ -2,10 +2,8 @@
 title: rescan
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 87d7f7a1-104c-4a5d-b4ec-7d532263888c

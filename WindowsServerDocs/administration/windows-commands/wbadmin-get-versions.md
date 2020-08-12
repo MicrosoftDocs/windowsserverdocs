@@ -1,8 +1,6 @@
 ---
 title: wbadmin get versions
 description: Reference article for wbadmin get versions, which lists details about the available backups that are stored on the local computer or another computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
 author: coreyp-at-msft
@@ -53,4 +51,4 @@ wbadmin get versions -backupTarget:\\servername\share -machine:server01
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBBackupTarget](https://technet.microsoft.com/library/jj902447.aspx) cmdlet
+-   [Get-WBBackupTarget](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) cmdlet

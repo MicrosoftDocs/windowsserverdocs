@@ -2,8 +2,6 @@
 title: Contact the Datacenter and Cloud Networking Team
 description: This page is designed to inform customers on the best methods for reaching the SDN team in various contexts.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: anpaul
@@ -27,11 +25,11 @@ Go [here](https://github.com/Microsoft/SDN/issues) to submit issues to the SDN t
 
 > GitHub is the best place to contact us about topics that involve more detail than the kinds of things you could easily fit in a Tweet. *Need help with your SDN deployment? Unsure about how our features could suit your organization's unique needs? Being held up by a potential bug?* All good reasons to get in touch with us by submitting a GitHub issue.
 
-## [Microsoft Docs](https://docs.microsoft.com/)
-Our [Container Networking documentation](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) can be found on [Microsoft Docs (docs.microsoft.com)](https://docs.microsoft.com/), which has **built-in commenting functionality**. To leave or to reply to a comment on Microsoft Docs just sign in, scroll down to the bottom of the Microsoft Docs page that you wish to reference, then make and submit your comment there.
+## [Microsoft Docs](/)
+Our [Container Networking documentation](/virtualization/windowscontainers/manage-containers/container-networking) can be found on [Microsoft Docs (docs.microsoft.com)](/), which has **built-in commenting functionality**. To leave or to reply to a comment on Microsoft Docs just sign in, scroll down to the bottom of the Microsoft Docs page that you wish to reference, then make and submit your comment there.
 
-> [Microsoft Docs](https://docs.microsoft.com/) is Microsoft's new unified documentation site. While most of our team's [SDN documentation](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) remains on TechNet, our [Container Networking documentation](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) is now on Microsoft Docs.
-> 
+> [Microsoft Docs](/) is Microsoft's new unified documentation site. While most of our team's [SDN documentation](./software-defined-networking.md) remains on TechNet, our [Container Networking documentation](/virtualization/windowscontainers) is now on Microsoft Docs.
+>
 > *In general, If you run into a topic on Microsoft Docs that sparks a question or leaves you wanting more, just leave a comment on that page to share your feedback with the Microsoft team that can help.*
 
 ## Container-Specific Forums
@@ -39,5 +37,5 @@ Feel free to use any avenue on this page to provide feedback related to containe
 - [User voice](https://windowsserver.uservoice.com/forums/304624-containers) - best for *feature requests*
 - [Github (Virtualization repo)](https://github.com/Microsoft/Virtualization-Documentation) - best for seeking *troubleshooting help* and *reporting bugs*
 
-### Not seeing the forum for you? 
+### Not seeing the forum for you?
 Whenever possible, we encourage use of our public forums so that the broader community can benefit from access to the questions and comments that come our way. However, we also recognize that there are situations where email is simply the preferred way to get in touch with us. If you're in one of those situations, please send us an email at sdn_feedback@microsoft.com and we'll be happy to hear from you.

@@ -2,10 +2,8 @@
 title: sxstrace
 description: Learn how to diagnose side-by-side problems.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: fcd26eeb-fbd9-4a86-b6a9-dfa5e9c6e4fc

@@ -1,8 +1,6 @@
 ---
 title: reg restore
 description: Reference article for the reg restore command, which writes saved subkeys and entries back to the registry.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: a51f1c0c-969b-4b76-930a-c8bb14dea26e
 author: coreyp-at-msft

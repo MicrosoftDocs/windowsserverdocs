@@ -1,10 +1,8 @@
 ---
 title: Using Storage Spaces Direct in a virtual machine
 description: How to deploy Storage Spaces Direct in a virtual machine guest cluster - for example, in Microsoft Azure.
-ms.prod: windows-server
 ms.author: eldenc
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 07/15/2020
@@ -19,7 +17,7 @@ You can deploy Storage Spaces Direct (sometimes called S2D) on a cluster of phys
 
 To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared Disks](/azure/virtual-machines/windows/disks-shared).
 
-![](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
+![Storage Spaces Direct diagram](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
 ## Deploying in Azure Iaas VM guest clusters
 
@@ -85,4 +83,4 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
 - [Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
-- [Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+- [Additional Storage Spaces Direct Overview](./storage-spaces-direct-overview.md)

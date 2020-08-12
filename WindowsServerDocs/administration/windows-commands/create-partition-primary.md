@@ -1,8 +1,6 @@
 ---
 title: create partition primary
 description: Reference article for the create partition primary command, which creates a primary partition on the basic disk with focus.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 6d652d8e-3935-4a91-8ced-b17c0e7937be
 author: coreyp-at-msft

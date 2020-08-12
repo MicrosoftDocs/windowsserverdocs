@@ -7,9 +7,7 @@ ms.author: billmath
 manager: daveba
 ms.date: 04/01/2020
 ms.topic: article
-ms.prod: windows-server-threshold
 
-ms.technology: identity-adfs
 ---
 
 # Creating an AD FS Farm without domain admin privileges
@@ -162,7 +160,7 @@ if ($pscmdlet.ShouldProcess("$ou", "Creating DKM container and assinging access"
     }
     else
     {
-        write-verbose "ADFS administrator account is a standard AD user"    
+        write-verbose "ADFS administrator account is a standard AD user"
         $objUser = New-Object System.Security.Principal.NTAccount($AdfsAdministratorAccount)
         $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
     }

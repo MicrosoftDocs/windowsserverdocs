@@ -2,7 +2,6 @@
 title: "Manage Client Computer Backup in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 author: nnamuhcs

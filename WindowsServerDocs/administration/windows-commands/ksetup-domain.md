@@ -1,8 +1,6 @@
 ---
 title: ksetup domain
 description: Reference article for the ksetup domain command, which sets the domain name for all Kerberos operations.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 2ef766e3-6071-44f2-946b-22ea5b61a508
 author: coreyp-at-msft

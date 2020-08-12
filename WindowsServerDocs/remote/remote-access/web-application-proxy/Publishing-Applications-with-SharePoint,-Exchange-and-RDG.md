@@ -6,20 +6,18 @@ manager: mtillman
 ms.author: billmath
 ms.date: 04/30/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: web-app-proxy
 ---
 
 # Publishing Applications with SharePoint, Exchange and RDG
 
 > Applies To: Windows Server 2016
 
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
 This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway (RDP) through Web Application Proxy.
 
 > [!NOTE]
-> This information is provided as-is.  Remote Desktop Services supports and recommends using [Azure App Proxy to provide secure remote access to on-premises applications](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
+> This information is provided as-is.  Remote Desktop Services supports and recommends using [Azure App Proxy to provide secure remote access to on-premises applications](/azure/active-directory/active-directory-application-proxy-get-started).
 
 ## <a name="BKMK_6.1"></a>Publish SharePoint Server
 You can publish a SharePoint site through Web Application Proxy when the SharePoint site is configured for claims-based authentication or Integrated Windows authentication. If you want to use Active Directory Federation Services (AD FS) for pre-authentication, you must configure a relying party using one of the wizards.
@@ -30,7 +28,7 @@ You can publish a SharePoint site through Web Application Proxy when the SharePo
 
     To allow users to authenticate using Integrated Windows authentication, the Web Application Proxy server must be joined to a domain.
 
-    You must configure the application to support Kerberos constrained delegation. You can do this on the domain controller for any application. You can also configure the application directly on the backend server if it is running on  Windows Server 2012 R2  or  Windows Server 2012 . For more information, see [What's New in Kerberos Authentication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers. For a walkthrough of how to configure Web Application Proxy to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/dn308246(v=ws.11)).
+    You must configure the application to support Kerberos constrained delegation. You can do this on the domain controller for any application. You can also configure the application directly on the backend server if it is running on  Windows Server 2012 R2  or  Windows Server 2012 . For more information, see [What's New in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831747(v=ws.11)). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers. For a walkthrough of how to configure Web Application Proxy to publish an application using Integrated Windows authentication, see [Configure a site to use Integrated Windows authentication](/previous-versions/orphan-topics/ws.11/dn308246(v=ws.11)).
 
 If your SharePoint site is configured using either alternate access mappings (AAM) or host-named site collections, you can use different external and backend server URLs to publish your application. However, if you do not configure your SharePoint site using AAM or host-named site collections, you must use the same external and backend server URLs.
 
@@ -49,9 +47,9 @@ To publish Outlook Web App using Integrated Windows authentication, you must use
 
 To allow users to authenticate using Kerberos constrained delegation the Web Application Proxy server must be joined to a domain.
 
-You must configure the application to support Kerberos authentication. Additionally you need to register a service principal name (SPN) to the account that the web service is running under. You can do this on the domain controller or on the backend servers. In a load balanced Exchange environment this would require using the Alternate Service Account, see [Configuring Kerberos authentication for load-balanced Client Access servers](https://docs.microsoft.com/exchange/configuring-kerberos-authentication-for-load-balanced-client-access-servers-exchange-2013-help)
+You must configure the application to support Kerberos authentication. Additionally you need to register a service principal name (SPN) to the account that the web service is running under. You can do this on the domain controller or on the backend servers. In a load balanced Exchange environment this would require using the Alternate Service Account, see [Configuring Kerberos authentication for load-balanced Client Access servers](/exchange/configuring-kerberos-authentication-for-load-balanced-client-access-servers-exchange-2013-help)
 
-You can also configure the application directly on the backend server if it is running on Windows Server 2012 R2 or Windows Server 2012. For more information, see [What's New in Kerberos Authentication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers.
+You can also configure the application directly on the backend server if it is running on Windows Server 2012 R2 or Windows Server 2012. For more information, see [What's New in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831747(v=ws.11)). You must also make sure that the Web Application Proxy servers are configured for delegation to the service principal names of the backend servers.
 
 ## Publishing Remote Desktop Gateway through Web Application Proxy
 If you want to restrict access to your Remote Access Gateway and add pre-authentication for remote access, you can roll it out through Web Application Proxy. This is a really good way to make sure you have rich pre-authentication for RDG including MFA. Publishing without pre-authentication is also an option and provides a single point of entry into your  systems.
@@ -154,12 +152,12 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
 
             This tells the Collection server to include the custom RDP properties in the RDP files that are sent to clients. These tell the client that pre-authentication is required and to pass the cookies for the pre-authentication server address to the Remote Desktop Connection client (mstsc.exe) . This, in conjunction with disabling HttpOnly on the Web Application Proxy application, allows the Remote Desktop Connection client (mstsc.exe) to utilize the Web Application Proxy authentication cookie obtained through the browser.
 
-            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731249(v=ws.10)).
+            For more information on RDP, see [Configuring the TS Gateway OTP Scenario](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731249(v=ws.10)).
 
 ## <a name="BKMK_Links"></a>See also
 
-- [Planning to Publish Applications Using Web Application Proxy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11))
+- [Planning to Publish Applications Using Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn383650(v=ws.11))
 
-- [Troubleshooting Web Application Proxy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))
+- [Troubleshooting Web Application Proxy](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn770156(v=ws.11))
 
-- [Web Application Proxy Walkthrough Guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))
+- [Web Application Proxy Walkthrough Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn280944(v=ws.11))

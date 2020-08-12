@@ -2,10 +2,8 @@
 title: retain
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: eeab0aef-2ba5-441a-a10d-bbef6f0d7e3e

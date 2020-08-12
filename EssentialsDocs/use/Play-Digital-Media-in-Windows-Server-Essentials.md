@@ -2,7 +2,6 @@
 title: "Play Digital Media in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
@@ -61,11 +60,9 @@ Digital media refers to audio, video, and photo content that has been digitally 
 
  You can use either of the following ways to search for and play digital media files that are stored on your server:
 
-
 -   [Search for and play media files on Windows Server Essentials from a computer or digital media player on the network](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)
 
 -   [Send media files on Windows Server Essentials to Windows Media Player, Xbox 360, or to a networked digital media player in the network](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)
-
 
 
 ###  <a name="BKMK_2.1"></a> Search for and play media files on Windows Server Essentials from a computer or digital media player on the network
@@ -83,7 +80,6 @@ Digital media refers to audio, video, and photo content that has been digitally 
 -   [Search for and play media files by using the Shared Folders feature of the Launchpad](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)
 
 -   [Search for and play shared media by using Remote Web Access](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)
-
 
 
 ####  <a name="BKMK_WMC"></a> Search for and play media files from a computer that is running Windows Media Center
@@ -181,7 +177,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
 
 
 > [!NOTE]
->  You can also upload media files to the server by using the My Server app for Windows Phone. You can download the My Server app from the [Windows Phone store](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). For more information about the My Server app for Windows Phone, see the blog post [My Server phone app for Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx).
+>  You can also upload media files to the server by using the My Server app for Windows Phone. You can download the My Server app from the [Windows Phone store](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). For more information about the My Server app for Windows Phone, see the blog post [My Server phone app for Windows Server Essentials](/archive/blogs/sbs/my-server-phone-app-for-windows-server-2012-essentials).
 
 #### To add digital media files to shared folders on the server
 
@@ -221,7 +217,7 @@ Digital media refers to audio, video, and photo content that has been digitally 
   Before the actual download begins, the .exe or .zip file is created. Depending on the number of files and the total size of the files to be downloaded, this may take several minutes. After the download file is created, downloading the file occurs in the background. This allows you to continue working while the download process completes.
 
 ##  <a name="BKMK_6"></a> Easy File Upload tool
- The Easy File Upload tool streamlines the process of uploading files on your  Windows Server Essentials server. You can add as many files as you want to the Easy File Upload tool, and then upload them to the Shared Folders on the  Windows Server Essentials server in a single batch. For more information, see the blog post [Understanding Remote Web Access File Sharing](https://blogs.technet.com/b/sbs/archive/2012/04/19/understanding-remote-web-access-file-sharing.aspx).
+ The Easy File Upload tool streamlines the process of uploading files on your  Windows Server Essentials server. You can add as many files as you want to the Easy File Upload tool, and then upload them to the Shared Folders on the  Windows Server Essentials server in a single batch. For more information, see the blog post [Understanding Remote Web Access File Sharing](/archive/blogs/sbs/understanding-remote-web-access-file-sharing).
 
 ##  <a name="BKMK_7"></a> View and browse shared digital media
  You can view or browse resources either by using the Dashboard, the Launchpad, the Remote Web Access website, or the My Server app for Windows Phone.
@@ -256,19 +252,8 @@ Digital media refers to audio, video, and photo content that has been digitally 
 
 -   [Manage Digital Media](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)
 
-
 -   [Get Connected](Get-Connected-in-Windows-Server-Essentials.md)
 
 -   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)
 
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
-
-<<<<<<< HEAD
--   [Get Connected](../use/Get-Connected-in-Windows-Server-Essentials.md)
-
--   [Use Shared Folders](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)
-
--   [Work Remotely](../use/Work-Remotely-in-Windows-Server-Essentials.md)
-
-=======
->>>>>>> 97724df67237ac603cf9eb996732230bdb7c0b88

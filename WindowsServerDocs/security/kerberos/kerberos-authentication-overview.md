@@ -1,8 +1,6 @@
 ---
 title: Kerberos Authentication Overview
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-kerberos
 ms.topic: article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 author: coreyp-at-msft

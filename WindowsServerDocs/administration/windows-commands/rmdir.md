@@ -1,8 +1,6 @@
 ---
 title: rmdir
 description: Reference article for the rmdir command, which deletes a directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: e4d7162b-7132-413c-a416-6eb3dc032a26
 author: coreyp-at-msft
@@ -15,7 +13,7 @@ ms.date: 10/16/2017
 
 Deletes a directory.
 
-The **rmdir** command can also run from the Windows Recovery Console, using different parameters. For more information, see [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+The **rmdir** command can also run from the Windows Recovery Console, using different parameters. For more information, see [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 > [!NOTE]
 > This command is the same as the [rd command](rd.md).

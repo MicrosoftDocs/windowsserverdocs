@@ -1,10 +1,8 @@
 ---
 ms.assetid: 1368bc83-9121-477a-af09-4ae73ac16789
 title: Choosing drives for Storage Spaces Direct
-ms.prod: windows-server
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/01/2020
@@ -23,7 +21,7 @@ Storage Spaces Direct currently works with four types of drives:
 <table>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/pmem-100px.png">
+			<img src="media/understand-the-cache/pmem-100px.png" alt="Image of PMem (persistent memory)">
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			<b>PMem</b> refers to persistent memory, a new type of low latency, high performance storage.
@@ -31,7 +29,7 @@ Storage Spaces Direct currently works with four types of drives:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/NVMe-100px.png">
+			<img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)">
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			<b>NVMe</b> (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except persistent memory.
@@ -39,7 +37,7 @@ Storage Spaces Direct currently works with four types of drives:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px" >
-			<img src="media/understand-the-cache/SSD-100px.png">
+			<img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD drive">
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			<b>SSD</b> refers to solid-state drives which connect via conventional SATA or SAS.
@@ -47,7 +45,7 @@ Storage Spaces Direct currently works with four types of drives:
 	</tr>
 	<tr style="border: 0;">
 		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/HDD-100px.png">
+			<img src="media/understand-the-cache/HDD-100px.png" alt="Image of HDD">
 		</td>
 		<td style="padding: 10px; border: 0;" valign="middle">
 			<b>HDD</b> refers to rotational, magnetic hard disk drives which offer vast storage capacity.
@@ -112,7 +110,7 @@ For workloads which require vast capacity and write infrequently, such as archiv
 
 Every server must have at least two cache drives (the minimum required for redundancy). We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have 4 cache drives, you will experience more consistent performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
 
-The cache should be sized to accommodate the working set of your applications and workloads, i.e. all the data they are actively reading and writing at any given time. There is no cache size requirement beyond that. For deployments with HDDs, a fair starting place is 10% of capacity – for example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server. For all-flash deployments, especially with very [high endurance](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/) SSDs, it may be fair to start closer to 5% of capacity – for example, if each server has 24 x 1.2 TB SSD = 28.8 TB of capacity, then 2 x 750 GB NVMe = 1.5 TB of cache per server. You can always add or remove cache drives later to adjust.
+The cache should be sized to accommodate the working set of your applications and workloads, i.e. all the data they are actively reading and writing at any given time. There is no cache size requirement beyond that. For deployments with HDDs, a fair starting place is 10% of capacity – for example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server. For all-flash deployments, especially with very [high endurance](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024) SSDs, it may be fair to start closer to 5% of capacity – for example, if each server has 24 x 1.2 TB SSD = 28.8 TB of capacity, then 2 x 750 GB NVMe = 1.5 TB of cache per server. You can always add or remove cache drives later to adjust.
 
 ### General
 

@@ -1,14 +1,12 @@
 ---
 title: Get started with the iOS client
 description: Learn how to set up the Remote Desktop client for iOS
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: lizross
 ms.author: helohr
-date: 06/01/2020
+ms.date: 07/16/2020
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client
@@ -66,7 +64,10 @@ To add a workspace:
 
 1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
 2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
-   - If you use a URL, use the one your admin gave you. This URL is usually <https://rdweb.wvd.microsoft.com>.
+   - If you use a URL, use the one your admin gave you.
+      - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
+        - For the Fall 2019 version, use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+        - For the Spring 2020 version, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you use an email address, enter your email address. Entering your email address tells the client ot search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.
@@ -165,7 +166,7 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 
 ## Supported input devices
 
-The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS. 
+The client has [Bluetooth mouse support](https://support.apple.com/HT210546) for iOS 13 and iPadOS as an accessibility feature. You can use Swiftpoint GT or ProPoint mice for deeper mouse integration. The client also supports external keyboards that are compatible with iOS and iPadOS.
 
 For more information about device support, see [What's new in the iOS client](ios-whatsnew.md) and the [iOS App Store](https://aka.ms/rdios).
 
@@ -183,4 +184,4 @@ If Bluetooth is enabled for your iOS device, the client automatically detects th
 While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 
 > [!TIP]
-> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winrdc) and start a new thread. If you have a feature suggestion, you can tell us using the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

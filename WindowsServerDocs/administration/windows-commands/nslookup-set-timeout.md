@@ -1,8 +1,6 @@
 ---
 title: nslookup set timeout
 description: Reference article for the nslookup set timeout command, which changes the initial number of seconds to wait for a reply to a lookup request.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 07afdaf4-ffec-496f-a188-4e91cf1a28f8
 author: coreyp-at-msft

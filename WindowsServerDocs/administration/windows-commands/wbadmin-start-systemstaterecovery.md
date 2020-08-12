@@ -1,8 +1,6 @@
 ---
 title: wbadmin start systemstaterecovery
 description: Reference article for wbadmin start systemstaterecovery, which performs a system state recovery to a location, and from a backup, that you specify.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
 author: coreyp-at-msft
@@ -78,4 +76,4 @@ wbadmin start systemstaterecovery
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) cmdlet
+-   [Start-WBSystemStateRecovery](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10)) cmdlet

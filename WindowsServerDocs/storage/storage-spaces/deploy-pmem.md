@@ -1,9 +1,7 @@
 ---
 title: Understand and deploy persistent memory
 description: Detailed info on what persistent memory is and how to set it up with storage spaces direct in Windows Server 2019.
-ms.prod: windows-server
 ms.author: adagashe
-ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 1/27/2020

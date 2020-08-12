@@ -2,8 +2,6 @@
 title: Assign a mount point folder path to a drive.
 description: This article describes how to assign a mount point folder path (rather than a drive letter) to a drive.
 ms.date: 06/07/2020
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -60,4 +58,4 @@ To remove the mount point so that the drive is no longer accessible via a folder
 -   You can also create a mounted drive using the [mountvol](https://go.microsoft.com/fwlink/?linkid=64111) command.
 
 ## Additional References
--   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
+-   [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))

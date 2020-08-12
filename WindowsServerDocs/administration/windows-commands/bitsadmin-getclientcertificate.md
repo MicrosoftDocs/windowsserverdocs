@@ -1,8 +1,6 @@
 ---
 title: bitsadmin getclientcertificate
 description: Reference article for the bitsadmin getclientcertificate command, which retrieves the client certificate from the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4fc8f408-085e-43a0-9fa8-3d798ef107b1
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: ftp recv
 description: Reference article for the ftp recv command, which copies a remote file to the local computer using the current file transfer type.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: f249ce61-247d-421b-9b93-48bce5108800
 author: coreyp-at-msft
@@ -57,4 +55,4 @@ recv test.txt test1.txt
 
 - [ftp binary command](ftp-binary.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

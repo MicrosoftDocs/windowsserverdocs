@@ -3,7 +3,6 @@ title: Troubleshooting ADBA clients
 description: Walks through a troubleshooting process for a Windows activation issue
 ms.topic: troubleshooting
 ms.date: 09/24/2019
-ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
@@ -15,7 +14,7 @@ ms.localizationpriority: medium
 > [!NOTE]
 > This article was originally published as a TechNet blog on March 26, 2018.
 
-Hello everyone! My name is Mike Kammer, and I have been a Platforms PFE with Microsoft for just over two years now. I recently helped a customer with deploying Windows Server 2016 in their environment. We took this opportunity to also migrate their activation methodology from a KMS Server to [Active Directory Based Activation](https://docs.microsoft.com/previous-versions/windows/hh852637(v=win.10)).
+Hello everyone! My name is Mike Kammer, and I have been a Platforms PFE with Microsoft for just over two years now. I recently helped a customer with deploying Windows Server 2016 in their environment. We took this opportunity to also migrate their activation methodology from a KMS Server to [Active Directory Based Activation](/previous-versions/windows/hh852637(v=win.10)).
 
 As proper procedure for making all changes, we started our migration in the customer’s test environment. We began our deployment by following the instructions in this excellent blog post by Charity Shelbourne, [Active Directory-Based Activation vs. Key Management Services](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/Active-Directory-Based-Activation-vs-Key-Management-Services/ba-p/256016). The domain controllers in our test environment were all running Windows Server 2012 R2, so we did not need to prep our forest. We installed the role on a Windows Server 2012 R2 Domain Controller and chose Active Directory Based Activation as our volume activation method. We installed our KMS key and gave it a name of "KMS AD Activation ( ** LAB)". We pretty much followed the blog post step by step.
 
@@ -65,7 +64,7 @@ While looking up this code, I found an article that says my error code means tha
 
 So I know DNS is fine. Active Directory is properly configured as a KMS activation source. My physical server has been activated properly. Could this be an issue with just VMs? As an interesting side note at this point, my customer informs me that someone in a different department has decided to build more than a dozen virtual Windows Server 2016 machines as well. So now I assume I’ve got another dozen servers to deal with that won’t be activating. But no! Those servers activated just fine.
 
-Well, I headed back to my **slmgr** command to figure out how to get these monsters activated. This time I’m going to use the **/ipk** switch, which will allow me to install a product key. I went to [this site](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612867(v=ws.11)) to get the appropriate keys for my Standard version of Windows Server 2016. Some of my servers are Datacenter, but I need to fix this one first.
+Well, I headed back to my **slmgr** command to figure out how to get these monsters activated. This time I’m going to use the **/ipk** switch, which will allow me to install a product key. I went to [this site](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj612867(v=ws.11)) to get the appropriate keys for my Standard version of Windows Server 2016. Some of my servers are Datacenter, but I need to fix this one first.
 
 ![Image that shows the list of KMS client setup keys](./media/032618_1700_Troubleshoo9.png)
 

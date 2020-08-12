@@ -2,8 +2,6 @@
 title: What's New in Hyper-V Network Virtualization in Windows Server 2016
 description: This topic provides information about new features in Hyper-V Network Virtualization in Windows Server 2016
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
 ms.author: anpaul
@@ -55,4 +53,4 @@ HNV implements correct L2 Ethernet headers to ensure interoperability with third
 
 -   [Hyper-V Network Virtualization technical details](hyperv-network-virtualization-technical-details-windows-server.md)
 
--   [Software Defined Networking](../../Software-Defined-Networking--SDN-.md)
+-   [Software Defined Networking](../../software-defined-networking.md)

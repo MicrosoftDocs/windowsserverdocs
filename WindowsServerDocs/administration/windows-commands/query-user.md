@@ -1,8 +1,6 @@
 ---
 title: query user
 description: Reference article for the query user command, which displays information about user sessions on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: a670fb78-c055-464a-b61d-3a85632c52c5
 author: coreyp-at-msft
@@ -30,7 +28,7 @@ Displays information about user sessions on a Remote Desktop Session Host server
 - Date and time the user logged on
 
 > [!NOTE]
-> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 

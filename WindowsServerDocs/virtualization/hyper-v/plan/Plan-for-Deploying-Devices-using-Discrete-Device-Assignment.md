@@ -1,15 +1,12 @@
 ---
 title: Plan for deploying devices using Discrete Device Assignment
 description: Learn about how DDA works in Windows Server
-ms.prod: windows-server
-
-ms.technology: hyper-v
-
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.date: 08/21/2019
 ---
+
 # Plan for Deploying Devices using Discrete Device Assignment
 >Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
 
@@ -23,7 +20,7 @@ To learn about other methods of GPU virtualization, see [Plan for GPU accelerati
 Discrete Device Assignment is supported for Generation 1 or 2 VMs.  Additionally, the guests supported include Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012r2 with [KB 3133690](https://support.microsoft.com/kb/3133690) applied, and various distributions of the [Linux OS.](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md)
 
 ## System Requirements
-In addition to the [System Requirements for Windows Server](../../../get-started/System-Requirements--and-Installation.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md), Discrete Device Assignment requires server class hardware that is capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support "Access Control Services" (ACS), which enables Hyper-V to force all PCIe traffic through the I/O MMU.
+In addition to the [System Requirements for Windows Server](../../../get-started/system-requirements.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md), Discrete Device Assignment requires server class hardware that is capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support "Access Control Services" (ACS), which enables Hyper-V to force all PCIe traffic through the I/O MMU.
 
 These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings.  For example, the same capabilities are required for SR-IOV support and in the BIOS you may need to set "Enable SR-IOV."  Please reach out to your system vendor if you are unable to identify the correct setting in your BIOS.
 
@@ -37,7 +34,7 @@ Device manufactures can reach out to their Microsoft representative for more det
 ## Device Driver
 As Discrete Device Assignment passes the entire PCIe device into the Guest VM, a host driver is not required to be installed prior to the device being mounted within the VM.  The only requirement on the host is that the device's [PCIe Location Path](#pcie-location-path) can be determined.  The device's driver can optionally be installed if this helps in identifying the device.  For example, a GPU without its device driver installed on the host may appear as a Microsoft Basic Render Device.  If the device driver is installed, its manufacturer and model will likely be displayed.
 
-Once the device is mounted inside the guest, the Manufacturer's device driver can now be installed like normal inside the guest virtual machine.  
+Once the device is mounted inside the guest, the Manufacturer's device driver can now be installed like normal inside the guest virtual machine.
 
 ## Virtual Machine Limitations
 Due to the nature of how Discrete Device Assignment is implemented, some features of a virtual machine are restricted while a device is attached.  The following features are not available:
@@ -47,7 +44,7 @@ Due to the nature of how Discrete Device Assignment is implemented, some feature
 - Adding the VM to a high availability (HA) cluster
 
 ## Security
-Discrete Device Assignment passes the entire device into the VM.  This means all capabilities of that device are accessible from the guest operating system. Some capabilities, like firmware updating, may adversely impact the stability of the system. As such, numerous warnings are presented to the admin when dismounting the device from the host. We highly recommend that Discrete Device Assignment is only used where the tenants of the VMs are trusted.  
+Discrete Device Assignment passes the entire device into the VM.  This means all capabilities of that device are accessible from the guest operating system. Some capabilities, like firmware updating, may adversely impact the stability of the system. As such, numerous warnings are presented to the admin when dismounting the device from the host. We highly recommend that Discrete Device Assignment is only used where the tenants of the VMs are trusted.
 
 If the admin desires to use a device with an untrusted tenant, we have provided device manufactures with the ability to create a Device Mitigation driver that can be installed on the host.  Please contact the device manufacturer for details on whether they provide a Device Mitigation Driver.
 
@@ -58,9 +55,9 @@ The PCIe Location path is required to dismount and mount the device from the Hos
 
 ### Getting the Location Path by Using Device Manager
 ![Device Manager](../deploy/media/dda-devicemanager.png)
-- Open Device Manager and locate the device.  
+- Open Device Manager and locate the device.
 - Right click the device and select “Properties.”
-- Navigate to the Details tab and select “Location Paths” in the Property drop down.  
+- Navigate to the Details tab and select “Location Paths” in the Property drop down.
 - Right click the entry that begins with “PCIROOT” and select "Copy."  You now have the location path for that device.
 
 ## MMIO Space

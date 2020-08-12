@@ -1,8 +1,6 @@
 ---
 title: color
 description: Reference article for the color command, which changes the foreground and background colors in the Command Prompt window for the current session.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: f5b67131-d196-45ec-a3f9-b5d9f091fd86
 author: coreyp-at-msft

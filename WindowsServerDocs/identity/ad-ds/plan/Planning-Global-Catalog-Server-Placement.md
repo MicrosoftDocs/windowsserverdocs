@@ -6,8 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Planning Global Catalog Server Placement
@@ -44,6 +42,6 @@ Roaming users need to contact the global catalog servers whenever they log on fo
 
 ## Enabling universal group membership caching
 
-For locations that include less than 100 users and that do not include a large number of roaming users or applications that require a global catalog server, you can deploy domain controllers that are running Windows Server 2008 and enable universal group membership caching. Ensure that the global catalog servers are not more than one replication hop from the domain controller on which universal group membership caching is enabled so that universal group information in the cache can be refreshed. For information about how universal group caching works, see the article [How the Global Catalog Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737410(v=ws.10)).
+For locations that include less than 100 users and that do not include a large number of roaming users or applications that require a global catalog server, you can deploy domain controllers that are running Windows Server 2008 and enable universal group membership caching. Ensure that the global catalog servers are not more than one replication hop from the domain controller on which universal group membership caching is enabled so that universal group information in the cache can be refreshed. For information about how universal group caching works, see the article [How the Global Catalog Works](/previous-versions/windows/it-pro/windows-server-2003/cc737410(v=ws.10)).
 
 For a worksheet to assist you in documenting where you plan to place global catalog servers and domain controllers with universal group caching enabled, see [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open Domain Controller Placement (DSSTOPO_4.doc). See the information about locations in which you need to place global catalog servers when you deploy the forest root domain and regional domains.

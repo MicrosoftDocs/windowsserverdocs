@@ -1,11 +1,9 @@
 ---
 title: fsutil volume
 description: Reference article for the fsutil volume command, which dismounts a volume, or queries the hard disk drive to determine how much free space is currently available on the hard disk drive or which file is using a particular cluster.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: 0397c204-b3f8-4fd8-b71d-b7efb117766d
 ms.topic: article
 ms.date: 10/16/2017
@@ -88,4 +86,4 @@ fsutil volume querycluster C: 50 0x2000
 
 - [fsutil](fsutil.md)
 
-- [How NTFS Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10))
+- [How NTFS Works](/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10))

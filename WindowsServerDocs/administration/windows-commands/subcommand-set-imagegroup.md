@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-ImageGroup
 description: Reference article for Subcommand set-ImageGroup, which changes the attributes of an image group.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4d86946a-e261-4d41-8b0c-1ab0ba2e3430
 author: coreyp-at-msft

@@ -1,9 +1,7 @@
 ---
 title: DFS Namespaces overview
-ms.prod: windows-server
 ms.author: jgerend
 manager: daveba
-ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019
@@ -26,7 +24,7 @@ Here's a description of the elements that make up a DFS namespace:
 
 This topic discusses how to install DFS, what's new, and where to find evaluation and deployment information.
 
-You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps), the **DfsUtil** command, or scripts that call WMI.
+You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](/powershell/module/dfsn/?view=win10-ps), the **DfsUtil** command, or scripts that call WMI.
 
 ## Server requirements and limits
 
@@ -59,7 +57,7 @@ The following table describes additional factors to consider when choosing serve
 
 DFS Namespaces and DFS Replication are a part of the File and Storage Services role. The management tools for DFS (DFS Management, the DFS Namespaces module for Windows PowerShell, and command-line tools) are installed separately as part of the Remote Server Administration Tools.
 
-Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md), Server Manager, or PowerShell, as described in the next sections.
+Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admin-center/overview.md), Server Manager, or PowerShell, as described in the next sections.
 
 ### To install DFS by using Server Manager
 
@@ -108,7 +106,7 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; ho
 
 - You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory.
 
-To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](https://docs.microsoft.com/azure/virtual-machines/).
+To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](/azure/virtual-machines/).
 
 ## Additional References
 
@@ -116,10 +114,10 @@ For additional related information, see the following resources.
 
 | Content type        | References |
 | ------------------  | ----------------|
-| **Product evaluation** | [What's New in DFS Namespaces and DFS Replication in Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx) |
-| **Deployment**    | [DFS Namespace Scalability Considerations](https://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
-| **Operations**    | [DFS Namespaces: Frequently Asked Questions](https://technet.microsoft.com/library/ee404780.aspx) |
-| **Community resources** | [The File Services and Storage TechNet Forum](https://social.technet.microsoft.com/forums/winserverfiles/threads/) |
-| **Protocols**        | [File Services Protocols in Windows Server](https://msdn.microsoft.com/library/cc239318.aspx) (Deprecated) |
+| **Product evaluation** | [What's New in DFS Namespaces and DFS Replication in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281957(v=ws.11)) |
+| **Deployment**    | [DFS Namespace Scalability Considerations](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) |
+| **Operations**    | [DFS Namespaces: Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee404780(v=ws.10)) |
+| **Community resources** | [The File Services and Storage TechNet Forum](/answers/topics/windows-server-storage.html) |
+| **Protocols**        | [File Services Protocols in Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546) (Deprecated) |
 | **Related technologies** | [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
 | **Support** | [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|

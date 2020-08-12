@@ -73,11 +73,11 @@ landingContent:
           - text: Storage-class memory
             url: storage-spaces/Storage-class-memory-health.md
           - text: BitLocker Drive Encryption
-            url: https://technet.microsoft.com/library/cc766295(v=ws.10).aspx
+            url: /previous-versions/windows/it-pro/windows-vista/cc766295(v=ws.10)
           - text: NTFS
-            url: https://technet.microsoft.com/library/dn466522(v=ws.11).aspx
+            url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466522(v=ws.11)
           - text: Network File System (NFS)
-            url: https://technet.microsoft.com/library/jj592688(v=ws.11).aspx
+            url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj592688(v=ws.11)
 
   # Card
   - title: In Azure
@@ -97,6 +97,6 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows previous versions documentation
-            url: https://docs.microsoft.com/previous-versions/windows/
+            url: /previous-versions/windows/
           - text: Search for specific information
-            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
+            url: /search/?dataSource=previousVersions&search=Windows Server

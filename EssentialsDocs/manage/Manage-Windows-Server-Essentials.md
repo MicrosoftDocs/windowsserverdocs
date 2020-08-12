@@ -2,7 +2,6 @@
 title: "Manage Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 4f1902f1-a0e0-49a6-afa7-3c4b61a11b48
 author: nnamuhcs
@@ -46,11 +45,11 @@ The following topics provide information about the server and network management
 
 ## End-to-end solution guides
 
--    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](https://technet.microsoft.com/library/dn582043.aspx).
+-    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](/previous-versions/orphan-topics/ws.11/dn582043(v=ws.11)).
 
--    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](https://technet.microsoft.com/library/dn629457.aspx).
+-    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn629457(v=ws.11)).
 
--    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](https://technet.microsoft.com/library/dn747893.aspx).
+-    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn747893(v=ws.11)).
 
 ## Additional References
 

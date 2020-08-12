@@ -1,7 +1,6 @@
 ---
 title: Changes to Nano Server in Windows Server Semi-Annual Channel
 description: In the new Windows Server servicing model, Nano Server is a container operating system only, with certain feature changes.
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jasongerend

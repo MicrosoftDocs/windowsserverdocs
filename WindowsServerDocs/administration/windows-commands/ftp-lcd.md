@@ -1,8 +1,6 @@
 ---
 title: ftp lcd
 description: Reference article for the ftp lcd command, which changes the working directory on the local computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 60a25808-6abb-408b-8373-0bbdcd0994b4
 author: coreyp-at-msft
@@ -41,4 +39,4 @@ lcd c:\dir1
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

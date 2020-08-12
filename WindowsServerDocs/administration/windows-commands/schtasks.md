@@ -2,10 +2,8 @@
 title: schtasks
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 2e713203-3dd8-491b-b9e1-9423618dc7e8

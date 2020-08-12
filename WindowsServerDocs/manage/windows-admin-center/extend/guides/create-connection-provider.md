@@ -1,13 +1,11 @@
 ---
 title: Create a connection provider for a solution extension
 description: Develop a solution extension Windows Admin Center SDK (Project Honolulu) - create a connection provider
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Create a connection provider for a solution extension
 
@@ -69,7 +67,7 @@ An entry point of type "connnectionProvider" indicates to the Windows Admin Cent
 
 | Property | Description |
 | -------- | ----------- |
-| entryPointType | This is a required property. There are three valid values: "tool", "solution", and "connectionProvider". | 
+| entryPointType | This is a required property. There are three valid values: "tool", "solution", and "connectionProvider". |
 | name | Identifies the Connection Provider within the scope of a Solution. This value must be unique inside a full Windows Admin Center instance (not just a Solution). |
 | path | Represents the URL path for the "Add Connection" UI, if it will be configured by the Solution. This value must map to a route that is configured in app-routing.module.ts file. When the Solution entry point is configured to use the connections rootNavigationBehavior, this route will load the module that is used by the Shell to display the Add Connection UI. More information available in the section on rootNavigationBehavior. |
 | displayName | The value entered here is displayed on the right hand side of the shell, below the black Windows Admin Center bar when a user loads a Solution's connections page. |
@@ -325,7 +323,7 @@ export class AddExampleComponent implements OnInit {
   public newConnectionName: string;
   public strings = MsftSme.resourcesStrings<Strings>().SolutionExample;
   private connectionType = 'msft.sme.connection-type.example'; // This needs to match the connectionTypes value used in the manifest.json.
-  
+
   constructor(private appContextService: AppContextService, private route: ActivatedRoute) {
     // TODO:
   }

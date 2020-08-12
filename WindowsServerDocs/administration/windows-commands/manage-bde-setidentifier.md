@@ -1,8 +1,6 @@
 ---
 title: manage-bde setidentifier
 description: Reference article for the manage-bde setidentifier command, which sets the drive identifier field on the drive to the value specified in the Provide the unique identifiers for your organization Group Policy setting.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 7092d18f-4ac9-4c73-a20f-1246ca60e75e
 author: coreyp-at-msft
@@ -45,4 +43,4 @@ manage-bde –setidentifier C:
 
 - [manage-bde command](manage-bde.md)
 
-- [BitLocker Recovery Guide](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-recovery-guide-plan)
+- [BitLocker Recovery Guide](/windows/security/information-protection/bitlocker/bitlocker-recovery-guide-plan)

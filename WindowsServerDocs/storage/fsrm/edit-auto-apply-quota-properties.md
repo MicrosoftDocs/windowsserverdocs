@@ -2,8 +2,6 @@
 title: Edit Auto Apply Quota Properties
 description: This article describes how to edit auto apply quota properties
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic

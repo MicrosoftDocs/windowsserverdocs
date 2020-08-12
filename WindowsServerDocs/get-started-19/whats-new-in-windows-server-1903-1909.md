@@ -1,8 +1,6 @@
 ---
 title: What's New in Windows Server, version 1903 and 1909
-description: This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases. 
-ms.prod: windows-server
-ms.technology: server-general
+description: This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases.
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -16,12 +14,12 @@ This topic describes some of the new features in Windows Server, version 1903 wh
 
 Windows Server, version 1909 is the next Semi-Annual Channel release of Windows Server, focused on reliability, performance, and other general improvements, but no new features. Like other Semi-Annual Channel releases, it’s supported for 18 months from its first availability. For more info on the support dates of Semi-Annual Channel releases, see [Windows Server release info](../get-started/windows-server-release-info.md).
 
-To instead find out what's new in other releases of Windows Server, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md). Also see [What's new in Windows 10, version 1903 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903).
+To instead find out what's new in other releases of Windows Server, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md). Also see [What's new in Windows 10, version 1903 IT Pro content](/windows/whats-new/whats-new-windows-10-version-1903).
 
 The system requirements for this release are the same as for Windows Server 2019—see [System requirements](../get-started-19/sys-reqs-19.md) for more info. To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903](../get-started-19/removed-features-1903.md)
 
 > [!NOTE]
-> Windows containers must use the same version of Windows as the host server, or an *earlier* version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more info, see [Windows container version compatibility](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/version-compatibility).
+> Windows containers must use the same version of Windows as the host server, or an *earlier* version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more info, see [Windows container version compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility).
 
 ## Enhanced support for non-Microsoft container services
 
@@ -38,7 +36,7 @@ We're enabling support for hardware acceleration of DirectX APIs in Windows cont
 
 ## Updated container identity and group managed service account documentation
 
-We added more examples and compatibility info to the [Group Managed Service Accounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts) documentation, and made the [Credential Spec PowerShell module](https://www.powershellgallery.com/packages/CredentialSpec) available in the PowerShell Gallery. For more info, see the [What's new for container identity](https://techcommunity.microsoft.com/t5/Containers/What-s-new-for-container-identity/ba-p/389151) blog post.
+We added more examples and compatibility info to the [Group Managed Service Accounts](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts) documentation, and made the [Credential Spec PowerShell module](https://www.powershellgallery.com/packages/CredentialSpec) available in the PowerShell Gallery. For more info, see the [What's new for container identity](https://techcommunity.microsoft.com/t5/Containers/What-s-new-for-container-identity/ba-p/389151) blog post.
 
 ## Add Task Scheduler and Hyper-V Manager to Server Core installations
 
@@ -72,14 +70,14 @@ This capability is also available for servers running Windows Server 2019.
 
 ## Windows Admin Center enhancements
 
-A new release of Windows Admin Center is out, adding new functionality to Windows Server. For info on the latest features, see [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
+A new release of Windows Admin Center is out, adding new functionality to Windows Server. For info on the latest features, see [Windows Admin Center](../manage/windows-admin-center/overview.md).
 
 ## Security baseline for Windows 10 and Windows Server
 
-The draft release of the [security configuration baseline settings](https://blogs.technet.microsoft.com/secguide/2019/04/24/security-baseline-draft-for-windows-10-v1903-and-windows-server-v1903/) for Windows 10 version 1903, and for Windows Server version 1903 is available.
+The draft release of the [security configuration baseline settings](/archive/blogs/secguide/security-baseline-draft-for-windows-10-v1903-and-windows-server-v1903) for Windows 10 version 1903, and for Windows Server version 1903 is available.
 
 ## SetupDiag
-[SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag) version 1.4.1 is available.
+[SetupDiag](/windows/deployment/upgrade/setupdiag) version 1.4.1 is available.
 
 SetupDiag is a command-line tool that can help diagnose why a Windows update failed. SetupDiag works by searching Windows Setup log files. When searching log files, SetupDiag uses a set of rules to match known issues. In the current version of SetupDiag there are 53 rules contained in the rules.xml file, which is extracted when SetupDiag is run. The rules.xml file will be updated as new versions of SetupDiag are made available.
 
@@ -87,14 +85,14 @@ SetupDiag is a command-line tool that can help diagnose why a Windows update fai
 
 Servers can now automatically recover from startup failures by removing updates if the startup failure was introduced after the installation of recent driver or quality updates. When a device is unable to start up properly after the recent installation of Quality of driver updates, Windows will now automatically uninstall the updates to get the device back up and running normally.
 
-This functionality requires the server to be using the Server Core installation option with a [Windows Recovery Environment](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) partition.
+This functionality requires the server to be using the Server Core installation option with a [Windows Recovery Environment](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) partition.
 
 ## Microsoft Defender Advanced Threat Protection (ATP) improvements
 
-Windows Server includes Microsoft Defender Advanced Thread Protection (for more info, see [Windows Defender Antivirus on Windows Server](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016)). This release includes the following improvements:
+Windows Server includes Microsoft Defender Advanced Thread Protection (for more info, see [Windows Defender Antivirus on Windows Server](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-on-windows-server-2016)). This release includes the following improvements:
 
-- [Attack surface area reduction](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/overview-attack-surface-reduction) – IT admins can configure devices with advanced web protection that enables them to define allow and deny lists for specific URL's and IP addresses.
-- [Next generation protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) – Controls have been extended to protection from ransomware, credential misuse, and attacks that are transmitted through removable storage.
+- [Attack surface area reduction](/windows/security/threat-protection/windows-defender-atp/overview-attack-surface-reduction) – IT admins can configure devices with advanced web protection that enables them to define allow and deny lists for specific URL's and IP addresses.
+- [Next generation protection](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) – Controls have been extended to protection from ransomware, credential misuse, and attacks that are transmitted through removable storage.
     - Integrity enforcement capabilities – Enable remote runtime attestation.
     - Tamper-proofing capabilities – Uses virtualization-based security to isolate critical ATP security capabilities away from the OS and attackers.
 - Microsoft Defender ATP next-gen protection technologies:

@@ -1,11 +1,9 @@
-﻿---
+---
 title: Vssadmin list writers
 description: A description of the vssadmin list writer command.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
 ---
@@ -27,5 +25,5 @@ No parameters.
 
 ## Additional References
 
-* [Command-line syntax key](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
+* [Command-line syntax key](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
 * [Vssadmin](vssadmin.md)

@@ -2,11 +2,9 @@
 title: Access Permission
 description: This topic provides an overview of network policy access permission for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: d6d1ca5e-bde0-4509-9e14-dc3fa9ff447e
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 
@@ -14,9 +12,9 @@ author: eross-msft
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Access permission is configured on the **Overview** tab of each network policy in Network Policy Server (NPS). 
+Access permission is configured on the **Overview** tab of each network policy in Network Policy Server (NPS).
 
-This setting allows you to configure the policy to either grant or deny access to users if the conditions and constraints of the network policy are matched by the connection request. 
+This setting allows you to configure the policy to either grant or deny access to users if the conditions and constraints of the network policy are matched by the connection request.
 
 Access permission settings have the following effect:
 
@@ -42,7 +40,7 @@ When NPS evaluates connection requests against configured network policies, it p
 
 ## Ignore user account dial-in properties
 
-You can configure NPS network policy to ignore the dial-in properties of user accounts by selecting or clearing the **Ignore user account dial-in properties** check box on the **Overview** tab of a network policy. 
+You can configure NPS network policy to ignore the dial-in properties of user accounts by selecting or clearing the **Ignore user account dial-in properties** check box on the **Overview** tab of a network policy.
 
 Normally when NPS performs authorization of a connection request, it checks the dial-in properties of the user account, where the network access permission setting value can affect whether the user is authorized to connect to the network. When you configure NPS to ignore the dial-in properties of user accounts during authorization, network policy settings determine whether the user is granted access to the network.
 

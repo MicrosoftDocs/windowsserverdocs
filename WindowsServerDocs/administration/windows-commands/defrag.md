@@ -1,8 +1,6 @@
 ---
 title: defrag
 description: Reference article for the defrag command, which locates and consolidates fragmented files on local volumes to improve system performance.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
 author: coreyp-at-msft
@@ -135,4 +133,4 @@ The defragmentation process runs scheduled task as a maintenance task, which typ
 
 - [fsutil dirty](fsutil-dirty.md)
 
-- [Optimize-Volume Powershell](https://docs.microsoft.com/powershell/module/storage/optimize-volume?view=win10-ps)
+- [Optimize-Volume Powershell](/powershell/module/storage/optimize-volume?view=win10-ps)

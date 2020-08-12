@@ -2,7 +2,6 @@
 title: "Work Remotely in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
@@ -70,7 +69,7 @@ manager: dongill
 
 - [Install My Server 2012 R2 for Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)
 
-  For more information about the My Server phone app, see the blog entry [My Server phone app for Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). For more information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](https://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).
+  For more information about the My Server phone app, see the blog entry [My Server phone app for Windows Server Essentials](/archive/blogs/sbs/my-server-phone-app-for-windows-server-2012-essentials). For more information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](/archive/blogs/sbs/my-server-2012-r2-windows-and-windows-phone-apps).
 
 ##  <a name="BKMK_O365"></a> Use Microsoft Office 365 with Windows Server Essentials
 
@@ -86,4 +85,3 @@ manager: dongill
 -   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)
 
 -   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)
-

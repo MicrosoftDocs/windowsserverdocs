@@ -1,8 +1,6 @@
 ---
 title: diskpart
 description: Reference article for the diskpart command interpreter, which helps you manage your computer's drives.
-ms.prod: windows-server
-ms.technology: storage
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
@@ -98,6 +96,6 @@ You can run the following commands from the Diskpart command interpreter:
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Disk management overview](https://docs.microsoft.com/windows-server/storage/disk-management/overview-of-disk-management)
+- [Disk management overview](../../storage/disk-management/overview-of-disk-management.md)
 
-- [Storage Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/)
+- [Storage Cmdlets in Windows PowerShell](/powershell/module/storage/)

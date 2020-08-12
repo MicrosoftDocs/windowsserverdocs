@@ -6,8 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Identifying Your Functional Level Upgrade
@@ -49,7 +47,7 @@ To use all the forest-level and domain-level features in  Windows Server 2008  o
 
 - Introduce newly installed  Windows Server 2008 -based or  Windows Server 2008 R2 -based domain controllers into the forest, and then retire all domain controllers running Windows 2000.
 
-- Perform an in-place upgrade of all existing domain controllers running Windows 2000 in the forest to domain controllers running Windows Server 2003. Then, perform an in-place upgrade of those domain controllers to  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10)).
+- Perform an in-place upgrade of all existing domain controllers running Windows 2000 in the forest to domain controllers running Windows Server 2003. Then, perform an in-place upgrade of those domain controllers to  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
 
     > [!IMPORTANT]
     >  Windows Server 2008 R2  is an x64-based operating system. If your server is running an x64-based version of Windows Server 2003, you can successfully perform an in-place upgrade of this computer's operating system to  Windows Server 2008 R2 . If your server is running an x86-based version of Windows Server 2003, you cannot upgrade this computer to  Windows Server 2008 R2 .
@@ -61,7 +59,7 @@ To use the  Windows Server 2008  or  Windows Server 2008 R2  domain-level featur
 
 After you replace all the Windows 2000-based domain controllers in the forest with domain controllers that run  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows 2000 native or higher to  Windows Server 2008  or  Windows Server 2008 R2 .
 
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 ## Upgrading functional levels in a Windows Server 2003 Active Directory forest
 In a Windows Server 2003 environment that consists of only Windows Server 2003-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
@@ -74,7 +72,7 @@ To use all the forest-level and domain-level features in  Windows Server 2008  o
 
 - Introduce a newly installed  Windows Server 2008 -based or  Windows Server 2008 R2 -based domain controller into the forest, and then retire all domain controllers running Windows Server 2003 or upgrade them to  Windows Server 2008  or  Windows Server 2008 R2 .
 
-- Perform an in-place upgrade of all existing domain controllers running Windows Server 2003 to domain controllers running  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10)).
+- Perform an in-place upgrade of all existing domain controllers running Windows Server 2003 to domain controllers running  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
 
 > [!IMPORTANT]
 > Windows Server 2008 R2  is an x64-based operating system. If your server is running an x64-based version of Windows Server 2003, you can successfully perform an in-place upgrade of this computer's operating system to  Windows Server 2008 R2 . If your server is running an x86-based version of Windows Server 2003, you cannot upgrade this computer to run  Windows Server 2008 R2 .
@@ -86,7 +84,7 @@ To use all the  Windows Server 2008  or  Windows Server 2008 R2  domain-level fe
 
 After you upgrade all the Windows Server 2003-based domain controllers in the forest to  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows Server 2003 to  Windows Server 2008  or  Windows Server 2008 R2 .
 
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 ## Upgrading functional levels in a new Windows Server 2008 forest
 When you install the first domain controller in a new  Windows Server 2008  forest, functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
@@ -100,7 +98,7 @@ Functional levels are set at these default levels to give you the option of addi
 > [!IMPORTANT]
 > If the forest operates at the  Windows Server 2008  functional level and you attempt to install Active Directory on a Windows Server 2003-based member server or a Windows 2000-based member server, the installation fails.
 
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 ## Upgrading functional levels in a new Windows Server 2008 R2 forest
 When you install the first domain controller in a new  Windows Server 2008 R2  forest, functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
@@ -114,7 +112,7 @@ Functional levels are set at these default levels to give you the option of addi
 > [!IMPORTANT]
 > If the forest operates at the  Windows Server 2008 R2  functional level and you attempt to install Active Directory on a  Windows Server 2008 -based or Windows Server 2003-based member server, or on a Windows 2000-based member server, the installation fails.
 
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 > [!NOTE]
 > Although ADMT v3.1 must be installed on Windows Server 2008, you can use ADMT v3.1 to migrate objects to a domain that is hosted by one or more  Windows Server 2008 R2 domain controllers. For more information, see article 976659 in the Microsoft Knowledge Base, [Known issues that may occur when you use ADMT 3.1 to migrate to a domain that contains Windows Server 2008 R2 domain controllers](https://support.microsoft.com/help/976659/).

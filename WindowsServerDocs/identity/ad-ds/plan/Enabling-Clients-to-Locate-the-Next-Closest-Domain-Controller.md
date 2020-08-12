@@ -6,8 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Enabling Clients to Locate the Next Closest Domain Controller
@@ -26,7 +24,7 @@ By default, the **Try Next Closest Site** setting is not enabled. When the setti
 - If no domain controller is available in the same site, try to find any domain controller in the domain.
 
 > [!NOTE]
-> This is the same algorithm that DC Locator used in previous versions of Active Directory. For more information, see the article [How DNS Support for Active Directory Works](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759550(v=ws.10)).
+> This is the same algorithm that DC Locator used in previous versions of Active Directory. For more information, see the article [How DNS Support for Active Directory Works](/previous-versions/windows/it-pro/windows-server-2003/cc759550(v=ws.10)).
 
 If you enable the **Try Next Closest Site** setting, DC Locator uses the following algorithm to locate a domain controller:
 
@@ -49,4 +47,4 @@ If the setting is not enabled, the client tries to find a domain controller in S
 > [!NOTE]
 > The **Try Next Closest Site** setting works in coordination with automatic site coverage. For example, if the next closest site has no domain controller, DC Locator tries to find the domain controller that performs automatic site coverage for that site.
 
-To apply the **Try Next Closest Site** setting, you can create a Group Policy object (GPO) and link it to the appropriate object for your organization, or you can modify the Default Domain Policy to have it affect all clients that run Windows Vista or newer and Windows Server 2008 or newer in the domain. For more information about how to set the **Try Next Closest Site** setting, see [Enable Clients to Locate a Domain Controller in the Next Closest Site](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772592(v=ws.10)).
+To apply the **Try Next Closest Site** setting, you can create a Group Policy object (GPO) and link it to the appropriate object for your organization, or you can modify the Default Domain Policy to have it affect all clients that run Windows Vista or newer and Windows Server 2008 or newer in the domain. For more information about how to set the **Try Next Closest Site** setting, see [Enable Clients to Locate a Domain Controller in the Next Closest Site](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772592(v=ws.10)).

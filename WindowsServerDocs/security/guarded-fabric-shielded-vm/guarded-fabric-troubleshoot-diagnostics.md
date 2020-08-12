@@ -1,12 +1,10 @@
 ---
 title: Troubleshooting Using the Guarded Fabric Diagnostic Tool
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 01/14/2020
 ---
 
@@ -16,7 +14,7 @@ ms.date: 01/14/2020
 
 This topic describes the use of the Guarded Fabric Diagnostic Tool to identify and remediate common failures in the deployment, configuration, and on-going operation of guarded fabric infrastructure. This includes the Host Guardian Service (HGS), all guarded hosts, and supporting services such as DNS and Active Directory. The diagnostic tool can be used to perform a first-pass at triaging a failing guarded fabric, providing administrators with a starting point for resolving outages and identifying misconfigured assets. The tool is not a replacement for a sound grasp of operating a guarded fabric and only serves to rapidly verify the most common issues encountered during day-to-day operations.
 
-Full documentation of the cmdlets used in this article can be found in the [HgsDiagnostics module reference](https://docs.microsoft.com/powershell/module/hgsdiagnostics/?view=win10-ps).
+Full documentation of the cmdlets used in this article can be found in the [HgsDiagnostics module reference](/powershell/module/hgsdiagnostics/?view=win10-ps).
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)]
 
@@ -45,7 +43,7 @@ This means that diagnostic tools will be available on all guarded hosts, HGS nod
 
 Every host targeted by diagnostics is referred to as a "trace target."  Trace targets are identified by their hostnames and roles.  Roles describe the function a given trace target performs in a guarded fabric.  Presently, trace targets support `HostGuardianService` and `GuardedHost` roles.  Note it is possible for a host to occupy multiple roles at once and this is also supported by diagnostics, however this should not be done in production environments.  The HGS and Hyper-V hosts should be kept separate and distinct at all times.
 
-Administrators can begin any diagnostic tasks by running `Get-HgsTrace`.  This command performs two distinct functions based on the switches provided at runtime: trace collection and diagnosis.  These two combined make up the entirety of the Guarded Fabric Diagnostic Tool.  Though not explicitly required, most useful diagnostics require traces that can only be collected with administrator credentials on the trace target.  If insufficient privileges are held by the user executing trace collection, traces requiring elevation will fail while all others will pass.  This allows partial diagnosis in the event an under-privileged operator is performing triage. 
+Administrators can begin any diagnostic tasks by running `Get-HgsTrace`.  This command performs two distinct functions based on the switches provided at runtime: trace collection and diagnosis.  These two combined make up the entirety of the Guarded Fabric Diagnostic Tool.  Though not explicitly required, most useful diagnostics require traces that can only be collected with administrator credentials on the trace target.  If insufficient privileges are held by the user executing trace collection, traces requiring elevation will fail while all others will pass.  This allows partial diagnosis in the event an under-privileged operator is performing triage.
 
 ### Trace collection
 
@@ -102,10 +100,10 @@ Get-HgsTrace -RunDiagnostics -Target $server
 ```
 This example will generate a prompt to collect the remote user credentials, and then diagnostics will run using the remote host at `hgs-01.secure.contoso.com` to complete trace collection.  The resulting traces are downloaded to the localhost and then diagnosed.  The results of diagnosis are presented the same as when performing [local diagnosis](#local-diagnosis).  Similarly, it is not necessary to specify a role as it can be inferred based on the Windows PowerShell modules installed on the remote system.
 
-Remote diagnosis utilizes Windows PowerShell remoting for all accesses to the remote host.  Therefore it is a prerequisite that the trace target have Windows PowerShell remoting enabled (see [Enable PSRemoting](https://technet.microsoft.com/library/hh849694.aspx)) and that the localhost is properly configured for launching connections to the target.
+Remote diagnosis utilizes Windows PowerShell remoting for all accesses to the remote host.  Therefore it is a prerequisite that the trace target have Windows PowerShell remoting enabled (see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7)) and that the localhost is properly configured for launching connections to the target.
 
 > [!NOTE]
-> In most cases, it is only necessary that the localhost be a part of the same Active Directory forest and that a valid DNS hostname is used.  If your environment utilizes a more complicated federation model or you wish to use direct IP addresses for connectivity, you may need to perform additional configuration such as setting the WinRM [trusted hosts](https://technet.microsoft.com/library/ff700227.aspx).
+> In most cases, it is only necessary that the localhost be a part of the same Active Directory forest and that a valid DNS hostname is used.  If your environment utilizes a more complicated federation model or you wish to use direct IP addresses for connectivity, you may need to perform additional configuration such as setting the WinRM [trusted hosts](/previous-versions/technet-magazine/ff700227(v=msdn.10)).
 
 You can verify that a trace target is properly instantiated and configured for accepting connections by using the `Test-HgsTraceTarget` cmdlet:
 ```PowerShell
@@ -119,7 +117,7 @@ This command will return `$True` if and only if `Get-HgsTrace` would be able to 
 When performing remote diagnosis from a user with sufficient privileges to connect remotely to the trace target, it is not necessary to supply credentials to `New-HgsTraceTarget`.  The `Get-HgsTrace` cmdlet will automatically reuse the credentials of the user that invoked the cmdlet when opening a connection.
 
 > [!WARNING]
-> Some restrictions apply to reusing credentials, particularly when performing what is known as a "second hop."  This occurs when attempting to reuse credentials from inside a remote session to another machine.  It is necessary to [setup CredSSP](https://technet.microsoft.com/library/hh849872.aspx) to support this scenario, but this is outside of the scope of guarded fabric management and troubleshooting.
+> Some restrictions apply to reusing credentials, particularly when performing what is known as a "second hop."  This occurs when attempting to reuse credentials from inside a remote session to another machine.  It is necessary to [setup CredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7) to support this scenario, but this is outside of the scope of guarded fabric management and troubleshooting.
 
 #### Using Windows PowerShell Just Enough Administration (JEA) and Diagnostics
 
@@ -200,7 +198,7 @@ Following the instructions to collect and assemble a trace folder specified abov
 ```PowerShell
 $hgs03 = New-HgsTraceTarget -HostName "hgs-03.secure.contoso.com" -Credential (Enter-Credential)
 Get-HgsTrace -RunDiagnostics -Target $hgs03 -Path .\FabricTraces
-``` 
+```
 
 The diagnostic cmdlet will identify all pre-collected hosts, and the one additional host that still needs to be traced and will perform the necessary tracing.  The sum of all pre-collected and freshly gathered traces will then be diagnosed.  The resulting trace folder will contain both the old and new traces.
 

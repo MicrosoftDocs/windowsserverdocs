@@ -1,8 +1,6 @@
 ---
 title: bitsadmin cache and info
 description: Reference article for the bitsadmin cache and info command, which dumps a specific cache entry.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 15975cbf-dba6-49ca-a725-d15ce1952de5
 author: coreyp-at-msft

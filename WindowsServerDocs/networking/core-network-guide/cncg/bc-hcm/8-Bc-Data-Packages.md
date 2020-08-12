@@ -2,8 +2,6 @@
 title: Create Content Server Data Packages for Web and File Content (Optional)
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
 ms.author: lizross
@@ -14,7 +12,7 @@ author: eross-msft
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can use this procedure to prehash content on Web and file servers, and then create data packages to import on your hosted cache server. 
+You can use this procedure to prehash content on Web and file servers, and then create data packages to import on your hosted cache server.
 
 This procedure is optional because you are not required to prehash and preload content on your hosted cache servers. If you do not preload content, data is added to the hosted cache automatically as clients download it over the WAN connection.
 
@@ -35,24 +33,24 @@ To perform this procedure, you must be a member of the Administrators group.
 
     > [!NOTE]
     > The value for the –Path parameter is the folder where your content is located. You must replace the example values in the commands below with a valid folder location on your content server that contains data that you want to prehash and add to a package.
-  
+
     - If the content that you want to prehash is on a file server, type the following command, and then press ENTER.
 
-        ```  
+        ```
         Publish-BCFileContent -Path D:\share -StageData
-        ```  
+        ```
 
     -   If the content that you want to prehash is on a Web server, type the following command, and then press ENTER.
 
-        ```  
+        ```
         Publish-BCWebContent –Path D:\inetpub\wwwroot -StageData
-        ```  
+        ```
 
 4. Create the data package by running the following command on each of your content servers. Replace the example value \(D:\\temp\) for the –Destination parameter with the location that you identified or created at the beginning of this procedure.
 
-    ```  
+    ```
     Export-BCDataPackage –Destination D:\temp
-    ```  
+    ```
 
 5. From the content server, access the share on your hosted cache servers where you want to preload content, and copy the data packages to the shares on the hosted cache servers.
 

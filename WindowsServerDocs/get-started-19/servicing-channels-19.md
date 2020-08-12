@@ -1,8 +1,6 @@
 ---
 title: Servicing Channels
 description: Explanation of Windows Server service channels - LTSC and SAC
-ms.prod: windows-server
-ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -22,7 +20,7 @@ You can keep servers on the Long-Term Servicing Channel (LTSC), move them to the
 
 This is the release model you're already familiar with (formerly called the “Long-Term Servicing *Branch*”) where a new major version of Windows Server is released every 2-3 years. Users are entitled to 5 years of mainstream support and 5 years of extended support. This channel is appropriate for systems that require a longer servicing option and functional stability. Deployments of Windows Server 2019 and earlier versions of Windows Server will not be affected by the new Semi-Annual Channel releases. The Long-Term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
 
-> [!Note]
+> [!NOTE]
 > **The current LTSC product is Windows Server 2019**. If you want to stay in this channel, you should install (or continue using) Windows Server 2019, which can be installed in Server Core installation option or Server with Desktop Experience installation option.
 
 ## Semi-Annual Channel
@@ -33,7 +31,7 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 
 The Semi-Annual Channel is available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
-> [!Note]  
+> [!NOTE]
 > **The current Semi-Annual Channel release is Windows Server, version 1909**. If you want to put servers in this channel, you should install Windows Server, version 1909, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
 
 In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
@@ -43,19 +41,18 @@ In this model, Windows Server releases are identified by the year and month of r
 These are the key differences to take into account:
 
 - Do you need to step up on new technology on Devops, Containers and Microservices? If so, you should consider **joining the Semi-Annual Channel** by installing **Windows Server, version 1909**. As described in this topic, you will receive new versions twice a year, with 18 months of mainstream production support per release. You get it through volume licensing, Azure, or Visual Studio Subscription Services. Currently, releases in the Semi-Annual Channel require volume licensing and Software Assurance if you intend to run the product in production.
-- Do you need stability and predictability? Do you need to run virtual machines and traditional workloads on physical servers? If so, you should consider **keeping those servers on the Long-Term Servicing Channel**. The current LTSC release is **Windows Server 2019**. As described in this topic, you'll have access to new versions every 2-3 years, with 5 years of mainstream support followed by 5 years of extended support per release. LTSC releases are available through all release mechanisms. Releases in the LTSC are available to anyone regardless of the licensing model they are using. 
+- Do you need stability and predictability? Do you need to run virtual machines and traditional workloads on physical servers? If so, you should consider **keeping those servers on the Long-Term Servicing Channel**. The current LTSC release is **Windows Server 2019**. As described in this topic, you'll have access to new versions every 2-3 years, with 5 years of mainstream support followed by 5 years of extended support per release. LTSC releases are available through all release mechanisms. Releases in the LTSC are available to anyone regardless of the licensing model they are using.
 
 The following table summarizes the key differences between the channels:
 
-
-|                       |                                                              Long-Term Servicing Channel (Windows Server 2019)                                                               |                                   Semi-Annual Channel (Windows Server)                                   |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| Description | Long-Term Servicing Channel (Windows Server 2019) | Semi-Annual Channel (Windows Server) |
+| -----------------------|--|--|
 | Recommended scenarios | General purpose file servers, Microsoft and non-Microsoft workloads, traditional apps, infrastructure roles, software-defined Datacenter, and hyper-converged infrastructure | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
-|     New releases      |                                                                               Every 2–3 years                                                                                |                                              Every 6 months                                              |
-|        Support        |                                                       5 years of mainstream support, plus 5 years of extended support                                                        |                                                18 months                                                 |
-|       Editions        |                                                                    All available Windows Server editions                                                                     |                                     Standard and Datacenter editions                                     |
-|      Who can use      |                                                                      All customers through all channels                                                                      |                               Software Assurance and cloud customers only                                |
-| Installation options  |                                                                Server Core and Server with Desktop Experience                                                                |                 Server Core for container host and image and Nano Server container image                 |
+| New releases | Every 2–3 years | Every 6 months |
+| Support | 5 years of mainstream support, plus 5 years of extended support | 18 months |
+| Editions | All available Windows Server editions | Standard and Datacenter editions |
+| Who can use | All customers through all channels | Software Assurance and cloud customers only |
+| Installation options | Server Core and Server with Desktop Experience | Server Core for container host and image and Nano Server container image |
 
 ## Device compatibility
 
@@ -86,7 +83,7 @@ Semi-Annual Channel releases should be installed as a clean installation.
 - Visual Studio Subscriptions: Visual Studio Subscribers can obtain Semi-Annual Channel releases by downloading them from the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347). If you are not already a subscriber, go to [Visual Studio Subscriptions](https://www.visualstudio.com/subscriptions/) to sign up, and then visit the [Visual Studio Subscriber download page](https://my.visualstudio.com/downloads?pid=2347) as above. Releases obtained through Visual Studio Subscriptions are for development and testing only.
 
 - Obtain preview releases through the Windows Insider Program: Testing the early builds of Windows Server helps both Microsoft and its customers because of the opportunity to discover possible issues before release. It also gives customers a unique opportunity to directly influence the functionality in the product.
-Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model. To get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](https://docs.microsoft.com/windows-insider/at-work/).
+Microsoft depends on receiving feedback throughout the development process so that adjustments may be made as quickly as possible. Early testing and feedback is essential to the rapid release model. To get involved with the Windows Insider Program, see the [Windows Insider Program for Server docs](/windows-insider/at-work/).
 
 ## Activating Semi-Annual Channel releases
 
@@ -110,7 +107,7 @@ Nano Server is available as a container operating system in the Semi-Annual Chan
 Generally speaking, Long-Term Servicing Channel releases such as Windows Server 2019 are released at the same time as a new version of the Semi-Annual Channel, for example, Windows Server, version 1809. This can make it a little tricky to determine whether a server is running Semi-Annual Channel release. Instead of looking at the build number, you must look at the product name: Semi-Annual Channel releases use the Windows Server Standard or Windows Server Datacenter product name, without a version number, while Long-Term Servicing Channel releases include the version number, for example, Windows Server 2019 Datacenter.
 
 > [!Note]
-> The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) is a better starting point for App Developers.
+> The below guidance is intended to help identify and differentiate between LTSC and SAC for lifecycle and general inventory purposes only.  It is not intended for application compatibility or to represent a specific API surface.  App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. [Operating System Version](/windows/desktop/sysinfo/operating-system-version) is a better starting point for App Developers.
 
 Open Powershell and use the Get-ItemProperty Cmdlet, or the Get-ComputerInfo Cmdlet, to check these properties in the registry.  Along with build number, this will indicate LTSC or SAC by the presence, or lack thereof, of the branded year, i.e. 2019.  LTSC has this, SAC does not.  This will also return the timing of the release with ReleaseId or WindowsVersion, i.e. 1809, as well as whether the installation is Server Core or Server with Desktop Experience.
 
@@ -160,7 +157,7 @@ OsVersion                     : 10.0.17763
 OsHardwareAbstractionLayer    : 10.0.17763.107
 ````
 
-To query if the new [Server Core App Compatibility FOD](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19) is present on a server, use [Get-WindowsCapability](https://docs.microsoft.com/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
+To query if the new [Server Core App Compatibility FOD](./install-fod-19.md) is present on a server, use [Get-WindowsCapability](/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
 ````
 Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
 State   :     Installed
@@ -172,8 +169,8 @@ State   :     Installed
 
 [Windows Server support lifecycle](https://support.microsoft.com/lifecycle)
 
-[Determining whether Server Core is running](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)
+[Determining whether Server Core is running](/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)?f=255&MSPPError=-2147217396)
 
-[GetProductInfo function](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
+[GetProductInfo function](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
 
-[Software Inventory Logging Cmdlets](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
+[Software Inventory Logging Cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)

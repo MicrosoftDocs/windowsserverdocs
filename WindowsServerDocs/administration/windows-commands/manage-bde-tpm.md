@@ -1,8 +1,6 @@
 ---
 title: manage-bde tpm
 description: Reference article for the manage-bde tpm command, which configures the computer's Trusted Platform Module (TPM).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 11a8530d-edd7-4fe3-ae81-b943766760fe
 author: coreyp-at-msft
@@ -53,6 +51,6 @@ manage-bde  tpm  takeownership 0wnerP@ss
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [TPM Management cmdlets for Windows PowerShell](https://docs.microsoft.com/powershell/module/trustedplatformmodule/)
+- [TPM Management cmdlets for Windows PowerShell](/powershell/module/trustedplatformmodule/)
 
 - [manage-bde command](manage-bde.md)

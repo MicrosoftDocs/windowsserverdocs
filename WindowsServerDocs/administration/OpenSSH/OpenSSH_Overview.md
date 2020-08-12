@@ -4,7 +4,6 @@ description: Overview about the OpenSSH tools used by administrators of Linux an
 ms.date: 01/07/2019
 contributor: damaerteMSFT
 author: maertendmsft
-ms.product: windows-server
 ms.type: conceptual
 ---
 

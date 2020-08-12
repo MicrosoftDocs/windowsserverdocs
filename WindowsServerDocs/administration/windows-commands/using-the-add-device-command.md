@@ -1,8 +1,6 @@
 ---
 title: add-Device
 description: Reference article for add-Device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 1e599cc4-464a-421b-b6bb-c101af154131
 author: coreyp-at-msft
@@ -50,4 +48,4 @@ wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6}
 [Using the get-AllDevices Command](using-the-get-alldevices-command.md)
 [Using the get-Device Command](using-the-get-device-command.md)
 [Subcommand: set-Device](subcommand-set-device.md)
-[New-WdsClient](https://technet.microsoft.com/library/dn283430.aspx)
+[New-WdsClient](/previous-versions/windows/powershell-scripting/dn283430(v=wps.630))

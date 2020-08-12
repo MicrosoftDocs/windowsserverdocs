@@ -98,11 +98,11 @@ If there is no noticeable TCP/IP issue, look for SMB errors. To do this, follow 
 
 1. Always check SMB errors against the MS-SMB2 protocol specification. Many SMB errors are benign (not harmful). Refer to the following information to determine why SMB returned the error before you conclude that the error is related to any of the following issues:
 
-   - The [MS-SMB2 Message Syntax](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/6eaf6e75-9c23-4eda-be99-c9223c60b181) topic details each SMB command and its options.
+   - The [MS-SMB2 Message Syntax](/openspecs/windows_protocols/ms-smb2/6eaf6e75-9c23-4eda-be99-c9223c60b181) topic details each SMB command and its options.
     
-   - The [MS-SMB2 Client Processing](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/df0625a5-6516-4fbe-bf97-01bef451cab2) topic details how the SMB client creates requests and responds to server messages.
+   - The [MS-SMB2 Client Processing](/openspecs/windows_protocols/ms-smb2/df0625a5-6516-4fbe-bf97-01bef451cab2) topic details how the SMB client creates requests and responds to server messages.
 
-   - The [MS-SMB2 Server Processing](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/e1d08834-42e0-41ca-a833-fc26f5132a6f) topic details how the SMB server creates requests and responds to client requests.
+   - The [MS-SMB2 Server Processing](/openspecs/windows_protocols/ms-smb2/e1d08834-42e0-41ca-a833-fc26f5132a6f) topic details how the SMB server creates requests and responds to client requests.
 
 2. Check whether a TCP reset command is sent immediately after an FSCTL\_VALIDATE\_NEGOTIATE\_INFO (validate negotiate) command. If so, refer to the following information:
 
@@ -196,4 +196,4 @@ We recommend that you update the following components before you troubleshoot SM
 
 ## Reference
 
-[Microsoft SMB Protocol Packet Exchange Scenario](https://docs.microsoft.com/windows/win32/fileio/microsoft-smb-protocol-packet-exchange-scenario)
+[Microsoft SMB Protocol Packet Exchange Scenario](/windows/win32/fileio/microsoft-smb-protocol-packet-exchange-scenario)

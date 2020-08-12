@@ -1,8 +1,6 @@
 ---
 title: setlocal
 description: Reference article for setlocal, which starts localization of environment variables in a batch file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: e4e4b6d3-3f1a-4851-a782-25ee2470e16e
 author: coreyp-at-msft

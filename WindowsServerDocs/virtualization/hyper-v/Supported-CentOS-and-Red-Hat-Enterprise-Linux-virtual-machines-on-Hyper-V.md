@@ -1,8 +1,6 @@
 ---
 title: Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V
 description: Lists the versions of Linux integration services for supported CentOS and Red Hat Enterprise distributions
-ms.prod: windows-server
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 4bf8783d-dee5-4b3e-8cce-2b11b117c189
 author: danihalfin
@@ -44,11 +42,11 @@ In this section:
 
 ## RHEL/CentOS 8.x Series
 
-|       **Feature**     |       **Windows Server version**      |       **8.1**     |       **8.0**     | 
+|       **Feature**     |       **Windows Server version**      |       **8.1**     |       **8.0**     |
 |-----------------------|---------------------------------------|-------------------|-------------------|
 |       **Availability**        |   |   |
 |       **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**      | 2019, 2016, 2012 R2 | &#10004; | &#10004;
-|       Windows Server 2016 Accurate Time       | 2019, 2016 | &#10004; | &#10004; 
+|       Windows Server 2016 Accurate Time       | 2019, 2016 | &#10004; | &#10004;
 |       **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**      |   |  |
 |       Jumbo frames        | 2019, 2016, 2012 R2 | &#10004; | &#10004;|
 |       VLAN tagging and trunking       | 2019, 2016, 2012 R2 | &#10004;  | &#10004; |
@@ -79,7 +77,7 @@ In this section:
 |       Hyper-V Sockets | 2019, 2016 | &#10004;  | &#10004; |
 |       PCI Passthrough/DDA | 2019, 2016 | &#10004; | &#10004; |
 | **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** | |  |
-|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 14  | &#10004; Note 14   
+|       Boot using UEFI | 2019, 2016, 2012 R2 |  &#10004; Note 14  | &#10004; Note 14
 |       Secure boot | 2019, 2016 |  &#10004; |  &#10004; |
 
 
@@ -267,7 +265,7 @@ This series has a supported 32-bit PAE kernel available. There is no built-in LI
 
 See Also
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
 
 * [Supported Debian virtual machines on Hyper-V](Supported-Debian-virtual-machines-on-Hyper-V.md)
 

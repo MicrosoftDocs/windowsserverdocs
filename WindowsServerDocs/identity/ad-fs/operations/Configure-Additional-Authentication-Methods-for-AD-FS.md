@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 07/26/2019
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Configure Additional Authentication Methods for AD FS
@@ -25,7 +23,7 @@ You can also configure and enable Microsoft and third-party authentication metho
 Below is an alphabetical list of Microsoft and third-party providers with MFA offerings currently available for AD FS in Windows Server 2012 R2.
 
 |Provider|Offering|Link to learn more|
-|-|-|-| 
+|-|-|-|
 |aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona ASM ADFS Adapter](https://www.apersona.com/adfs)|
 |Cyphercor Inc.|LoginTC Multi-Factor Authentication for AD FS|[LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
@@ -33,7 +31,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |Gemalto|Gemalto Identity & Security Services|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Login People|Login People MFA API connector for AD FS 2012 R2 (public beta)|[https://www.loginpeople.com](https://www.loginpeople.com)|
-|Microsoft Corp.|Microsoft Azure MFA|[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](https://technet.microsoft.com/library/dn280946.aspx) (see step 3)|
+|Microsoft Corp.|Microsoft Azure MFA|[Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280946(v=ws.11)) (see step 3)|
 Mideye | Mideye Authentication Provider for ADFS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://www.mideye.com/support/administrators/documentation/integration/microsoft-adfs/)|
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (ADFS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Starling 2FA AD FS|[Starling 2FA AD FS Adapter](https://www.oneidentity.com/products/starling-two-factor-authentication/)|
@@ -52,5 +50,3 @@ We now provide instructions for building your own custom authentication method f
 
 ## See Also
 [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-
-

@@ -1,8 +1,6 @@
 ---
 title: wmic
 description: Reference article for wmic, which displays WMI information inside an interactive command shell.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
 author: coreyp-at-msft

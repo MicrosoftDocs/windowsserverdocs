@@ -1,8 +1,6 @@
 ---
-title: add
+title: Using the add command
 description: Reference article for the various add commands.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 6fcdd154-baaf-4288-a355-2a95a3028bce
 author: coreyp-at-msft
@@ -10,7 +8,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# add
+
+# Using the add command
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

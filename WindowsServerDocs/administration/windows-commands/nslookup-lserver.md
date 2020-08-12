@@ -1,8 +1,6 @@
 ---
 title: nslookup lserver
 description: Reference article for the nslookup lserver command, which changes the initial server to the specified Domain Name System (DNS) domain.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
 author: coreyp-at-msft

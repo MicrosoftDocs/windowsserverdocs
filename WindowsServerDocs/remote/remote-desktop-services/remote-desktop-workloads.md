@@ -1,8 +1,6 @@
 ---
 title: Remote Desktop workloads
 description: A brief overview of different types of workloads for virtual machines managed by Remote Desktop.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 12/02/2019
 ms.topic: article

@@ -1,8 +1,6 @@
 ---
 title: date
 description: Reference article for the date command, which displays or sets the system date. If used without parameters,
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ce6700fb-32f9-4350-a1af-5aee61d4448c
 author: coreyp-at-msft

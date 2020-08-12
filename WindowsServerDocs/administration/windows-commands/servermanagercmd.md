@@ -2,10 +2,8 @@
 title: Servermanagercmd
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 507c4b87-8e13-4872-8b34-0c7508eecbc1

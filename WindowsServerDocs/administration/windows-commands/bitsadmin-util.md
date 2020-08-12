@@ -1,8 +1,6 @@
 ---
 title: bitsadmin util
 description: Reference article for the bitsadmin util command, which lists the Util switches.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: e8278a28-1ecc-42be-92e2-c93dee59751d
 author: coreyp-at-msft

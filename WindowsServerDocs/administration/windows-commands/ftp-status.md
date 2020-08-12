@@ -1,8 +1,6 @@
 ---
 title: ftp status
 description: Reference article for the ftp status command, which displays the current status of your ftp connections.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: d78c5629-6f73-4587-af0b-bd3cc3af5225
 author: coreyp-at-msft
@@ -35,4 +33,4 @@ status
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

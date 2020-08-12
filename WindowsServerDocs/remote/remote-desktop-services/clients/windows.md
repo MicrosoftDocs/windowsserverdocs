@@ -1,8 +1,6 @@
 ---
 title: Get started with the Windows Store client
 description: Basic set up steps for the Remote Desktop client for Windows Store.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
@@ -89,14 +87,14 @@ To set up a new gateway:
 
 1. In the Connection Center, tap **Settings**.
 2. Next to Gateway, tap **+** to add a new gateway.
-      
+
       >[!NOTE]
       >You can also add a gateway when you add a new connection.
 
 3. Enter the following information:
    - **Server name** – The name of the computer you want to use as a gateway. The server name can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
    - **User account** - Select or add a user account to use with the Remote Desktop Gateway you're connecting to. You can also select **Use desktop user account** to use the same credentials that you used for the remote desktop connection.
-4. Tap **Save**.  
+4. Tap **Save**.
 
 ## Global app settings
 
@@ -197,4 +195,4 @@ Two mouse modes are available to interact with the session.
 | Mouse pointer | Zoom                 | With two fingers, pinch to zoom in and move fingers apart to zoom out |
 
 > [!TIP]
-> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winrdc) and start a new thread. If you have a feature suggestion, you can tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=605).
+> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=605).

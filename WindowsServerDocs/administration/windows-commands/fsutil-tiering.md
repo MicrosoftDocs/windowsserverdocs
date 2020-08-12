@@ -1,11 +1,9 @@
 ---
 title: fsutil tiering
 description: Reference article for the fsutil tiering command, which enables management of storage tier functions, such as setting and disabling flags and listing of tiers.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: e5f55f3e-8d2a-4526-8d67-36a539126c22
 ms.topic: article
 ms.date: 10/16/2017

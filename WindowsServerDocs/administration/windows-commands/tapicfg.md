@@ -2,10 +2,8 @@
 title: tapicfg
 description: Learn how to manage a TAPI application directory partition.
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: c0e642ce-5d98-4edb-9a65-1dff09aef4e1

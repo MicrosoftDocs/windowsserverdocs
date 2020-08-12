@@ -2,8 +2,6 @@
 title: File Server Resource Manager Command-Line Tools
 description: This article describes Windows Server 2016 command-line tools
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -13,7 +11,7 @@ ms.author: jgerend
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-File Server Resource Manager installs the [FileServerResourceManager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager)
+File Server Resource Manager installs the [FileServerResourceManager](/powershell/module/fileserverresourcemanager/?view=win10-ps)
 PowerShell cmdlets as well as the following command-line tools:
 
 -   **Dirquota.exe**. Use to create and manage quotas, auto apply quotas, and quota templates.

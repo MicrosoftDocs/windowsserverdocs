@@ -2,10 +2,8 @@
 title: rsh
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 9e3b2b29-208d-4257-8379-0b4738274146

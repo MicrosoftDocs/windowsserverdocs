@@ -1,8 +1,6 @@
 ---
 title: logman delete
 description: Reference article for the logman delete command, which deletes an existing data collector.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 8f3b2422-3dce-4fb4-adbb-8536b1d7da2b
 author: coreyp-at-msft

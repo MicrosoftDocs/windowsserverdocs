@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Walkthrough Guide: Manage Risk with Conditional Access Control
@@ -118,13 +116,10 @@ In this step you will verify the conditional access control policy that you set 
 
     You will be granted access to the application.
 
-3.  Type in the credentials of another AD user that does NOT belong to the **Finance** group. (For more information on how to create user accounts in AD, see [https://technet.microsoft.com/library/cc7833232.aspx](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx).
+3.  Type in the credentials of another AD user that does NOT belong to the **Finance** group. (For more information on how to create user accounts in AD, see [https://technet.microsoft.com/library/cc7833232.aspx](/previous-versions/windows/it-pro/windows-server-2003/cc783323(v=ws.10)).
 
-    At this point, because of the access control policy that you set up in the previous step, an 'access denied' message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign-in experience, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
+    At this point, because of the access control policy that you set up in the previous step, an 'access denied' message is displayed for this AD user that does NOT belong to the **Finance** group. The default message text is **You are not authorized to access this site. Click here to sign out and sign in again or contact your administrator for permissions.** However, this text is fully customizable. For more information about how to customize the sign-in experience, see [Customizing the AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)).
 
 ## See Also
 [Manage Risk with Conditional Access Control](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 [Set up the lab environment for AD FS in Windows Server 2012 R2](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
-
-
-

@@ -1,8 +1,6 @@
 ---
 title: tsecimp
 description: Reference article for tsecimp, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: d7488ec6-0eff-45ff-89ee-9cbe752416bf
 author: coreyp-at-msft
@@ -151,4 +149,4 @@ tsecimp /d
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Command shell overview](https://technet.microsoft.com/library/cc737438(v=ws.10).aspx)
+[Command shell overview](/previous-versions/windows/it-pro/windows-server-2003/cc737438(v=ws.10))

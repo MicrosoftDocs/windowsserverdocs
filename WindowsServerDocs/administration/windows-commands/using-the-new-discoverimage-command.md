@@ -1,8 +1,6 @@
 ---
 title: new-DiscoverImage
 description: Reference article for new-DiscoverImage, which creates a new discover image from an existing boot image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
 author: coreyp-at-msft

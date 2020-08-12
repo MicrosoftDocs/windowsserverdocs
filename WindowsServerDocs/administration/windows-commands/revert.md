@@ -2,10 +2,8 @@
 title: revert
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 75ad40e4-502a-401e-b11e-8b31e00424b5

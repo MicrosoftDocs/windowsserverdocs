@@ -1,8 +1,6 @@
 ---
 title: sfc
 description: Reference article for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c58c25da-e028-42a6-9e10-973484a4b953
 author: coreyp-at-msft

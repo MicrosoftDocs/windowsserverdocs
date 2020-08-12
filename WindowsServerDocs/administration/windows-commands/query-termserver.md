@@ -1,8 +1,6 @@
 ---
 title: query termserver
 description: Reference article for the query termserver command, which displays a list of all Remote Desktop Session Host servers on the network.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 3b89d3b4-236f-4376-90b6-939a0ec4b288
 author: coreyp-at-msft
@@ -22,7 +20,7 @@ Displays a list of all Remote Desktop Session Host servers on the network. This 
 - Network (and node address if the /address option is used)
 
 > [!NOTE]
-> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 

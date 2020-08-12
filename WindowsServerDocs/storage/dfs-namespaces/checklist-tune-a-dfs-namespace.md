@@ -2,8 +2,6 @@
 title: Checklist Tune a DFS Namespace
 description: This article describes how to optimize how the DFS Namespace handles referrals and polls AD DS for updated namespace data
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -28,8 +26,6 @@ In addition, by using a DFS Namespaces enhancement known as target priority, yo
 
 ## Additional References
 
--   [Namespaces](https://technet.microsoft.com/library/cc771914(v=ws.11).aspx)
+-   [Namespaces](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771914(v=ws.11))
 -   [Checklist: Deploy DFS Namespaces](checklist-deploy-dfs-namespaces.md)
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
-
-

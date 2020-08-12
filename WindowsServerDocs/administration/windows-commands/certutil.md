@@ -1,8 +1,6 @@
 ---
 title: certutil
 description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
 author: coreyp-at-msft
@@ -1098,7 +1096,7 @@ Where:
 - The `-f` option can be used to override validation errors for the specified **sitename** or to delete all CA sitenames.
 
 > [!NOTE]
-> For more information about configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](https://social.technet.microsoft.com/wiki/contents/articles/14106.ad-ds-site-awareness-for-ad-cs-and-pki-clients.aspx).
+> For more information about configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)).
 
 ### -enrollmentserverURL
 
@@ -1998,12 +1996,8 @@ This section defines all of the options you're able to specify, based on the com
 
 For some more examples about how to use this command, see
 
-- [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
+- [Active Directory Certificate Services (AD CS)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 
-- [Certutil tasks for managing certificates](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
-
-- [Binary Request Export Using the certutil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
-
-- [Root CA certificate renewal](https://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
+- [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
 - [certutil command](certutil.md)
