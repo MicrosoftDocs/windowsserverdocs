@@ -34,7 +34,7 @@ DCB consists of the following set of protocols.
 
 - Enhanced Transmission Service \(ETS\) – IEEE 802.1Qaz, which builds on the 802.1P and 802.1Q
 standards
-- Priority Flow Control \(PFS\), IEEE 802.1Qbb
+- Priority Flow Control \(PFC\), IEEE 802.1Qbb
 - DCB Exchange Protocol \(DCBX\), IEEE 802.1AB, as extended in the 802.1Qaz standard.
 
 The DCBX protocol allows you to configure DCB on a switch, which can then automatically configure an end device, such as a computer running Windows Server 2016.
