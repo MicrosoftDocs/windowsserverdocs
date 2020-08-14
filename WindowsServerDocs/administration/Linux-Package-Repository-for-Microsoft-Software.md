@@ -38,26 +38,27 @@ Repositories can be configured automatically by installing the Linux package tha
 
  - Enterprise Linux 8 (EL8)<p>`sudo rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm`
 
+### SUSE
+
+ - SUSE Linux Enterprise Server 12<p>`sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm`
+
+ - SUSE Linux Enterprise Server 15<p>`sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm`
+
 ### Ubuntu
 
- - Ubuntu 16.04 (Xenial)<p>`curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod`<p>`sudo apt-get update`
+ - Ubuntu 16.04 (Xenial)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod`<p>`sudo apt-get update`
 
- - Ubuntu 18.04 (Bionic)<p>`curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod`<p>`sudo apt-get update`
+ - Ubuntu 18.04 (Bionic)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod`<p>`sudo apt-get update`
 
- - Ubuntu 20.04 (Disco)<p>`curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod`<p>`sudo apt-get update`
-
-### SUSE Linux Enterprise 12
-
-`sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm`
-
+ - Ubuntu 20.04 (Disco)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod`<p>`sudo apt-get update`
 
 ## Manual Configuration
 
 The repository configuration files are available from [packages.microsoft.com/config](https://packages.microsoft.com/config/). The name and location of these files can be located using the following URI naming convention:
 
-https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
+`https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)`
 
-**Package and Repository Signing Key**
+### Package and Repository Signing Key
 
 - Microsoft's GPG public key may be downloaded here: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
 - Public Key ID: Microsoft (Release signing) <gpgsecurity@microsoft.com>
@@ -82,7 +83,7 @@ sudo rpm --import ./microsoft.asc
 # Install repository configuration
 curl -sSL https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list
 
-# Install Microsoft GPG public keya
+# Install Microsoft GPG public key
 curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
 # Update package index files
