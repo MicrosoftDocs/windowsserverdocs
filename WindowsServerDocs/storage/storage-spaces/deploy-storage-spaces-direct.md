@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016 
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
@@ -41,15 +41,15 @@ Gather the following information:
 
 ### Step 1.1: Install the operating system
 
-The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server 2016 Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
+The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server 2019 Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
 
-When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../index.yml).
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Install Server Core](/windows-server/get-started/getting-started-with-server-core).
 
 ### Step 1.2: Connect to the servers
 
 This guide focuses the Server Core installation option and deploying/managing remotely from a separate management system, which must have:
 
-- Windows Server 2016 with the same updates as the servers it's managing
+- Windows Server 2019 with the same updates as the servers it's managing
 - Network connectivity to the servers it's managing
 - Joined to the same domain or a fully trusted domain
 - Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server and can be installed without installing other features. You can also install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) on a Windows 10 management PC.
@@ -134,18 +134,18 @@ Invoke-Command ($ServerList) {
 
 If you're deploying Storage Spaces Direct inside virtual machines, skip this section.
 
-Storage Spaces Direct requires high-bandwidth, low-latency networking between servers in the cluster. At least 10 GbE networking is required and remote direct memory access (RDMA) is recommended. You can use either iWARP or RoCE as long as it has the Windows Server 2016 logo, but iWARP is usually easier to set up.
+Storage Spaces Direct requires high-bandwidth, low-latency networking between servers in the cluster. At least 10 GbE networking is required and remote direct memory access (RDMA) is recommended. You can use either iWARP or RoCE as long as it has the Windows Server 2019 logo, but iWARP is usually easier to set up.
 
 > [!Important]
 > Depending on your networking equipment, and especially with RoCE v2, some configuration of the top-of-rack switch may be required. Correct switch configuration is important to ensure reliability and performance of Storage Spaces Direct.
 
-Windows Server 2016 introduces switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
+Windows Server 2016 introduced switch-embedded teaming (SET) within the Hyper-V virtual switch. This allows the same physical NIC ports to be used for all network traffic while using RDMA, reducing the number of physical NIC ports required. Switch-embedded teaming is recommended for Storage Spaces Direct.
 
 Switched or switchless node interconnects
 - Switched: Network switches must be properly configured to handle the bandwidth and networking type. If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important.
 - Switchless: Nodes can be interconnected using direct connections, avoiding using a switch. It is required that every node have a direct connection with every other node of the cluster.
 
-For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 Converged NIC and Guest RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
+For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 and 2019 RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 
 ## Step 3: Configure Storage Spaces Direct
 
@@ -380,7 +380,7 @@ After deploying your clustered file server, we recommend testing the performance
 
 ## Additional References
 
--   [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
+-   [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 -   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
