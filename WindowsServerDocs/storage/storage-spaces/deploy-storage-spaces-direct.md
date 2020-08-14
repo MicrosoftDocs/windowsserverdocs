@@ -145,7 +145,7 @@ Switched or switchless node interconnects
 - Switched: Network switches must be properly configured to handle the bandwidth and networking type. If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important.
 - Switchless: Nodes can be interconnected using direct connections, avoiding using a switch. It is required that every node have a direct connection with every other node of the cluster.
 
-For instructions to set up networking for Storage Spaces Direct, see [Windows Server 2016 and 2019 RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
+For instructions to set up networking for Storage Spaces Direct, see the [Windows Server 2016 and 2019 RDMA Deployment Guide](https://github.com/Microsoft/SDN/blob/master/Diagnostics/S2D%20WS2016_ConvergedNIC_Configuration.docx).
 
 ## Step 3: Configure Storage Spaces Direct
 
