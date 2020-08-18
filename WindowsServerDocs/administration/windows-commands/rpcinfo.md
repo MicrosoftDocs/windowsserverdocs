@@ -5,7 +5,7 @@ description: Learn how to list the programs on a remote computer.
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7c342232-a8f0-42ff-8f11-d18c4981f5ca
 author: coreyp-at-msft
 ms.author: coreyp

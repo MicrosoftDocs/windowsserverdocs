@@ -1,7 +1,7 @@
 ---
 title: wbadmin start backup
 description: Reference article for wbadmin start backup, which creates a backup using specified parameters.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 56f3e752-d99a-4c3d-8e97-10303c37dd78
 author: coreyp-at-msft
 ms.author: coreyp

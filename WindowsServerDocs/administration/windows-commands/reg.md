@@ -1,7 +1,7 @@
 ---
 title: reg
 description: Reference article for the reg commands, which perform operations on registry subkey information and values in registry entries.
-ms.topic: article
+ms.topic: reference
 ms.assetid: c97496b2-d1ff-4887-b5d2-6e1524be465a
 author: coreyp-at-msft
 ms.author: coreyp

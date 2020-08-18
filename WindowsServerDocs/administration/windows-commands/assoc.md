@@ -1,7 +1,7 @@
 ---
 title: assoc
 description: Reference article for the assoc command, which displays or modifies file name extension associations.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
 author: coreyp-at-msft
 ms.author: coreyp

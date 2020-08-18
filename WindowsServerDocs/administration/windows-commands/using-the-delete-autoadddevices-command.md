@@ -1,7 +1,7 @@
 ---
 title: delete-AutoaddDevices
 description: Reference article for delete-AutoaddDevices, which deletes computers that are pending, rejected, or approved from the Auto-add database.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
 author: coreyp-at-msft
 ms.author: coreyp

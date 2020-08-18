@@ -1,7 +1,7 @@
 ---
 title: change logon
 description: Reference article for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 41466260-aee9-4333-bcb6-178112c22afd
 author: coreyp-at-msft
 ms.author: coreyp
@@ -16,7 +16,7 @@ ms.date: 10/16/2017
 Enables or disables logons from client sessions, or displays current logon status. This utility is useful for system maintenance. You must be an administrator to run this command.
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
+> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 

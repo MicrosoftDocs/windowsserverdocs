@@ -1,7 +1,7 @@
 ---
 title: bitsadmin wrap
 description: Reference article for the bitsadmin wrap command, which wraps any line of output text extending beyond the rightmost edge of the command window to the next line.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 14e57522-539d-4621-ad15-09f7a44ccab7
 author: coreyp-at-msft
 ms.author: coreyp

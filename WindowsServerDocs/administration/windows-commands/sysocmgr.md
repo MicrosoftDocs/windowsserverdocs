@@ -1,7 +1,7 @@
 ---
 title: sysocmgr
 description: Reference article for sysocmgr, which has been deprecated and is not guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9ab50021-7433-4fac-92be-f164b2c7453a
 author: coreyp-at-msft
 ms.author: coreyp

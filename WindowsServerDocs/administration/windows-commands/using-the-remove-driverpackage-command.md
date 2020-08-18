@@ -1,7 +1,7 @@
 ---
 title: remove-DriverPackage
 description: Reference article for remove-DriverPackage, which removes a driver package from a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6b201e91-0d44-4e4a-8252-8b0235df1002
 author: coreyp-at-msft
 ms.author: coreyp

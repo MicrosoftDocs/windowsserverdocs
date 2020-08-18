@@ -1,7 +1,7 @@
 ---
 title: bitsadmin cache and setlimit
 description: Reference article for the bitsadmin cache and setlimit command, which sets the cache size limit.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 46578835-d5ce-423b-be4d-62ddb9e1908d
 author: coreyp-at-msft
 ms.author: coreyp

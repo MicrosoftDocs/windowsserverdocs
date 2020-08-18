@@ -1,7 +1,7 @@
 ---
 title: Using the add-AllDriverPackages subcommand
 description: Reference article for add-AllDriverPackages, which adds all driver packages that are stored in a folder to a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ba6641c1-d7e9-43a9-9819-702dad5484ed
 author: coreyp-at-msft
 ms.author: coreyp

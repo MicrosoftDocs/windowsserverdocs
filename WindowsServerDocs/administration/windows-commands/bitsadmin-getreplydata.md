@@ -1,7 +1,7 @@
 ---
 title: bitsadmin getreplydata
 description: Reference article for the bitsadmin getreplydata command, which retrieves the server's upload-reply data in hexadecimal format for the job.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 819f97d5-b255-4b2d-9f63-0daa73915434
 author: coreyp-at-msft
 ms.author: coreyp

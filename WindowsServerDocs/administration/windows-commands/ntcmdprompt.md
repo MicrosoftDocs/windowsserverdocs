@@ -1,7 +1,7 @@
 ---
 title: ntcmdprompt
 description: Reference article for the ntcmdprompt command, which runs the command interpreter **Cmd.exe**, rather than **Command.com**, after running a Terminate and Stay Resident (TSR) or after starting the command prompt from within an MS-DOS application.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0063bdbb-dc2b-41c4-99ee-b011603aaa86
 author: coreyp-at-msft
 ms.author: coreyp

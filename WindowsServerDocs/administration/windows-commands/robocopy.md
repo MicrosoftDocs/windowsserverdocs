@@ -1,7 +1,7 @@
 ---
 title: robocopy
 description: Learn how to use the robocopy command in Windows and Windows Server to copy files
-ms.topic: article
+ms.topic: reference
 ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: jasongerend
 ms.author: jgerend

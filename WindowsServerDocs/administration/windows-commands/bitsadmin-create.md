@@ -1,7 +1,7 @@
 ---
 title: bitsadmin create
 description: Reference article for the bitsadmin create command, which creates a transfer job with the given display name.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9a8c53af-900b-4c24-9265-5b8b08213fac
 author: coreyp-at-msft
 ms.author: coreyp

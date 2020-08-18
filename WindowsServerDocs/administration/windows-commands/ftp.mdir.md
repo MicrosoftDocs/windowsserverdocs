@@ -1,7 +1,7 @@
 ---
 title: ftp mdir
 description: Reference article for the ftp mdir command, which displays a directory list of files and subdirectories in a remote directory.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 90eec45b-558b-4b8d-bbe4-b56d98e1ca70
 author: coreyp-at-msft
 ms.author: coreyp

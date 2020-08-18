@@ -1,7 +1,7 @@
 ---
 title: exec
 description: Reference article for the exec command, which runs a script file on the local computer.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 364e8baf-576f-401b-a431-7d3c06621614
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: nslookup set type
 description: Reference article for the nslookup set type command, which changes the resource record type for the query.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5248e314-fac1-413e-81dc-bbe0a0873ba5
 author: coreyp-at-msft
 ms.author: coreyp

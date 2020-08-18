@@ -1,7 +1,7 @@
 ---
 title: Using the add command
 description: Reference article for the various add commands.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6fcdd154-baaf-4288-a355-2a95a3028bce
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: ftp ls
 description: Reference article for the ftp ls command, which displays an abbreviated list of files and subdirectories from the remote computer.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5e03c7db-1e2b-419c-acb2-8a68f3db9615
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: winsat mfmedia
 description: Reference for winsat mfmedia, which measures the performance of video decoding (playback) using the Media Foundation framework.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 09a3b3dd-f746-4e6e-b684-76a9bde0c78d
 author: coreyp-at-msft
 ms.author: coreyp

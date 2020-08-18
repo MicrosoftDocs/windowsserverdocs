@@ -1,7 +1,7 @@
 ---
 title: bitsadmin cache and help
 description: Reference article for the bitsadmin cache and help command, which displays the command-line usage for the **cache** switches.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0b14db49-84ac-4c2f-bf1f-f65e13cbfb35
 author: coreyp-at-msft
 ms.author: coreyp
