@@ -111,21 +111,6 @@ Use the following steps to validate that host networking is setup correctly.
 
    ``winrm id -r:<Hyper-V Host FQDN>``
 
-### Nano installation requirements and notes
-
-If you use Nano as your Hyper-V hosts (physical servers) for the deployment, the following are additional requirements:
-
-1. All Nano nodes need to have the DSC package installed with the language pack:
-
-   - Microsoft-NanoServer-DSC-Package.cab
-   - Microsoft-NanoServer-DSC-Package_en-us.cab
-
-     ``dism /online /add-package /packagepath:<Path> /loglevel:4``
-
-2. The SDN Express scripts must be run from a non-Nano host  (Windows Server Core or Windows Server w/ GUI). PowerShell Workflows are not supported on Nano.
-
-3. Invoking the Network Controller NorthBound API using PowerShell or NC REST Wrappers (which rely on Invoke-WebRequest and Invoke-RestMethod) must be done from a non-Nano host.
-
 ### Run SDN Express scripts
 
 1. Go to the [Microsoft SDN GitHub Repository](https://github.com/Microsoft/SDN.git) for the installation files.
