@@ -24,7 +24,7 @@ We regularly update the [Windows Store client](windows.md), adding new features 
 - Added functionality to subscribe and connect to sovereign cloud deployments.
 - Added functionality to enable backup and restore of workspaces (bookmarks) in release to manufacturing (RTM).
 - Updated functionality to use existing Azure Active Directory (Azure AD) tokens during the subscription process to reduce the number of times users must sign in.
-- Updated subscription flow to be able to detect whether you're using Windows Virtual Desktop or Windows Virtual Desktop (classic).
+- Updated subscription can now detect whether you're using Windows Virtual Desktop or Windows Virtual Desktop (classic).
 - Fixed issue with copying files to remote PCs.
 - Fixed commonly reported accessibility issues with buttons.
 
@@ -57,7 +57,7 @@ We regularly update the [Windows Store client](windows.md), adding new features 
 *Date published: 03/15/2019*
 
 - You can now set a display name for user accounts so you can save the same username with different passwords.
-- It is now possible to select an existing user account when adding Remote Resources.
+- It's now possible to select an existing user account when adding Remote Resources.
 - Fixed an issue where the client wasn't terminating correctly.
 - The client now properly handles being suspended when secondary windows are open.
 - Additional bug fixes.
@@ -70,7 +70,7 @@ We regularly update the [Windows Store client](windows.md), adding new features 
 - Fixed a crash when closing the client window while a connection is still active.
 - Fix a hang when reconnecting after the client is minimized.
 - Allow desktops to be dragged anywhere in a group.
-- Ensure launching a connection from the jumplist results in a separate window when needed.
+- Ensure launching a connection from the jump list results in a separate window when needed.
 - Additional bug fixes.
 
 ## Updates for version 10.1.1060
