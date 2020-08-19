@@ -5,12 +5,28 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/20/2020
+ms.date: 08/19/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Store client
 
 We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.2.1519.0 (Insider)
+
+*Date published: 08/19/2020*
+
+- Rewrote the client to use the same underlying RDP core engine as the iOS, macOS, and Android clients.
+- Added support for the Azure Resource Manager-integrated version of Windows Virtual Desktop.
+- Added support for x64 and ARM64.
+- Updated the side panel design to full screen.
+- Added support for light and dark modes.
+- Added functionality to subscribe and connect to sovereign cloud deployments.
+- Added functionality to enable backup and restore of workspaces (bookmarks) in release to manufacturing (RTM).
+- Updated functionality to use existing Azure Active Directory (Azure AD) tokens during the subscription process to reduce the number of times users must sign in.
+- Updated subscription flow to be able to detect whether you're using Windows Virtual Desktop or Windows Virtual Desktop (classic).
+- Fixed issue with copying files to remote PCs.
+- Fixed commonly reported accessibility issues with buttons.
 
 ## Updates for version 10.1.1215
 
