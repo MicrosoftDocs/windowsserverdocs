@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/08/2020
+ms.date: 08/19/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,50 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.4.0
+
+*Date published: 8/20/20*
+
+In this release, we've made substantial updates to the underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting. Here are some changes you may notice:
+
+- PC Quick Connect (CMD+K) allows you to connect to a PC without creating a bookmark.
+- Auto-reconnect now recovers from transient network glitches for PC connections.
+- When resuming a suspended MacBook, you can use auto-reconnect to reconnect to any disconnected PC connections.
+- Added support for HTTP proxies when subscribing and connecting to Windows Virtual Desktop resources.
+- Implemented support for HTTP proxy automatic configuration with PAC files.
+- Integrated support for NETBIOS name resolution so you can connect to PCs on your local network more easily.
+- Fixed an issue where the system menu bar wouldn't respond while the app was in focus.
+- Fixed a client-side race condition that could cause decryption errors on the server.
+- Made improvements to monitor layout and geometry heuristics for multimon scenarios involving Retina-class monitors.
+- Multimon layout configurations are now maintained across session redirection scenarios.
+- Addressed an issue that prevented the menu bar from dropping in multimon scenarios.
+- User account UI that interacts with the macOS keychain will now surface keychain access errors.
+- Hitting cancel during workspace subscription will now result in nothing being added to the Connection Center.
+- Added key mappings for CMD+Z and CMD+F to map to CTRL+Z and CTRL+F respectively.
+- Fixed a bug that caused remote apps to open behind the Connection Center when launched.
+- Worked around an issue where AAC audio playback on macOS 10.15 would cause the client to stall.
+- Shift+left-click now works in Unicode mode.
+- Fixed a bug where using the Shift key triggered the Sticky Keys alert in Unicode mode.
+- Added a check for network availability before connection initiation.
+- Addressed pulsing of PC thumbnails that sometimes happened during the connection sequence.
+- Fixed a bug where the password field in the Add/Edit User Account sheet become multiline.
+- The "Collapse All" option is now greyed out if all workspaces are collapsed.
+- The "Expand All" option is now greyed out if all workspaces are expanded.
+- The first-run permissions UI is no longer shown on High Sierra.
+- Fixed an issue where users were unable to connect to Windows Virtual Desktop endpoints using saved credentials in the DOMAIN\USERNAME format.
+- The username field in the credential prompt is now always prepopulated for Windows Virtual Desktop connections.
+- Fixed a bug that clipped the Edit, Delete, and Refresh buttons for workspaces if the Connection Center wasn't wide enough.
+- The "email or workspace URL" field in the Add Workspace sheet is no longer case-sensitive.
+- Fixed a number of accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
+- Lots of updates to improve interoperability with current and upcoming features in the Windows Virtual Desktop service.
+- You can now configure the AVC support level advertised by the client from a terminal prompt. Here are the support levels you can configure:
+  
+   - Don't advertise AVC support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel disabled`
+   - Advertise AVC420 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc420`
+   - Advertise support for AVC444 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc444`
+
+Thanks again to everyone who reported bugs and took the time to help us diagnose problems!
 
 ## Updates for version 10.3.9
 
