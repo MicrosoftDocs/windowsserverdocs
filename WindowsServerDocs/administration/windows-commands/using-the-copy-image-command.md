@@ -1,8 +1,6 @@
 ---
 title: copy-Image
-description: Reference topic for copy-Image, which copies images that are within the same image group. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for copy-Image, which copies images that are within the same image group.
 ms.topic: article
 ms.assetid: bea41cf4-36e6-4181-afa5-00170ebd4fdc
 author: coreyp-at-msft
@@ -43,7 +41,7 @@ wdsutil /copy-Imagmedia:Windows Vista with Officemediatype:Install /DestinationI
 ```
 To create a copy of the specified image, apply the specified settings, and name the copy WindowsVista.wim, type:
 ```
-wdsutil /verbose /Progress /copy-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /verbose /Progress /copy-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /DestinationImage /Name:copy of Windows Vista with Office /Filename:WindowsVista.wim /Description:This is a copy of the original Windows image with Office installed
 ```
 ## Additional References

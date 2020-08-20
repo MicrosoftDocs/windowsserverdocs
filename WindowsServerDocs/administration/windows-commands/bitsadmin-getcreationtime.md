@@ -1,8 +1,6 @@
 ---
 title: bitsadmin getcreationtime
-description: Reference topic for the bitsadmin getcreationtime command, which retrieves the creation time for the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin getcreationtime command, which retrieves the creation time for the specified job.
 ms.topic: article
 ms.assetid: be409cb5-ce72-41d9-aafa-edd4e230fd14
 author: coreyp-at-msft

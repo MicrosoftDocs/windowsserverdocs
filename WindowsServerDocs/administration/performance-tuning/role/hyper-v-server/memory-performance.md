@@ -1,8 +1,6 @@
 ---
 title: Hyper-V Memory Performance
 description: Memory considerations in performance tuning Hyper-V
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
@@ -36,7 +34,7 @@ The root partition must have sufficient memory to provide services such as I/O v
 
 Hyper-V in Windows Server 2016 monitors the runtime health of the root partition's management operating system to determine how much memory can safely be allocated to child partitions, while still ensuring high performance and reliability of the root partition.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

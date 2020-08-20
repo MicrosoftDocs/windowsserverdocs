@@ -1,8 +1,6 @@
 ---
 title: change logon
-description: Reference topic for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
 ms.topic: article
 ms.assetid: 41466260-aee9-4333-bcb6-178112c22afd
 author: coreyp-at-msft
@@ -18,7 +16,7 @@ ms.date: 10/16/2017
 Enables or disables logons from client sessions, or displays current logon status. This utility is useful for system maintenance. You must be an administrator to run this command.
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 
@@ -46,7 +44,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 ### Examples
 
 - To display the current logon status, type:
-  
+
   ```
   change logon /query
   ```
@@ -62,7 +60,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
   ```
   change logon /disable
   ```
-  
+
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

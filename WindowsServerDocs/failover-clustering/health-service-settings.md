@@ -1,9 +1,7 @@
 ---
 title: Health Service settings
-ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
-ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 08/14/2017
@@ -21,7 +19,7 @@ Use the following PowerShell cmdlet to set or modify settings.
 ### Usage
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>  
+Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name <SettingName> -Value <Value>
 ```
 
 #### Example
@@ -93,7 +91,7 @@ See the previous section.
 "System.LogLevel" = 4
 ```
 
-## See also
+## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)
 - [Storage Spaces Direct in Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)

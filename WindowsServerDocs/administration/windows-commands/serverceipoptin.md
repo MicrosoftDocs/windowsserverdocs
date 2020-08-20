@@ -1,11 +1,9 @@
 ---
 title: serverceipoptin
-description: Reference topic for **** -
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 3d7d7fa7-0689-4797-b802-36fe260d21a0

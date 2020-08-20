@@ -1,10 +1,8 @@
 ---
 title: tlntadmn
-description: Reference topic for tlntadmn, which administers a local or remote computer, running the telnet Server Service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for tlntadmn, which administers a local or remote computer, running the telnet Server Service.
 ms.topic: article
-ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8 vhorne
+ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -59,5 +57,5 @@ tlntadmn -s
 ```
 
 ## Additional References
--   [telnet Operations Guide](https://technet.microsoft.com/library/cc753164(v=ws.10).aspx)
+-   [telnet Operations Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753164(v=ws.10))
 - [Command-Line Syntax Key](command-line-syntax-key.md)

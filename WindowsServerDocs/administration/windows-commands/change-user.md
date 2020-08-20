@@ -1,8 +1,6 @@
 ---
 title: change user
-description: Reference topic for the change user command, which changes the install mode for the Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the change user command, which changes the install mode for the Remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: 6202f024-8cf5-411e-89b1-ee37ff46499d
 author: coreyp-at-msft
@@ -17,7 +15,7 @@ ms.date: 10/16/2017
 Changes the install mode for the Remote Desktop Session Host server.
 
 > [!NOTE]
-> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> In Windows Server 2008 R2, Terminal Services was renamed Remote Desktop Services. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 
@@ -44,7 +42,7 @@ change user {/execute | /install | /query}
 
 - When the system is running **change user /install**, several things occur. All registry entries that are created are shadowed under **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentversion\Terminal Server\Install**, in either the **\SOFTWARE** subkey or the **\MACHINE** subkey. Subkeys added to **HKEY_CURRENT_USER** are copied under the **\SOFTWARE** subkey, and subkeys added to **HKEY_LOCAL_MACHINE** are copied under the **\MACHINE** subkey. If the application queries the Windows directory by using system calls, such as GetWindowsdirectory, the rd Session Host server returns the systemroot directory. If any .ini file entries are added by using system calls, such as WritePrivateProfileString, they are added to the .ini files under the systemroot directory.
 
-- When the system returns to **change user /execute**, and the application tries to read a registry entry under **HKEY_CURRENT_USER** that does not exist, Remote Desktop Services checks to see whether a copy of the key exists under the **\Terminal Server\Install** subkey. If it does, the subkeys are copied to the appropriate location under **HKEY_CURRRENT_USER**. If the application tries to read from an .ini file that does not exist, Remote Desktop Services searches for that .ini file under the system root. If the .ini file is in the system root, it is copied to the \Windows subdirectory of the user's home directory. If the application queries the Windows directory, the rd Session Host server returns the \Windows subdirectory of the user's home directory.
+- When the system returns to **change user /execute**, and the application tries to read a registry entry under **HKEY_CURRENT_USER** that does not exist, Remote Desktop Services checks to see whether a copy of the key exists under the **\Terminal Server\Install** subkey. If it does, the subkeys are copied to the appropriate location under **HKEY_CURRENT_USER**. If the application tries to read from an .ini file that does not exist, Remote Desktop Services searches for that .ini file under the system root. If the .ini file is in the system root, it is copied to the \Windows subdirectory of the user's home directory. If the application queries the Windows directory, the rd Session Host server returns the \Windows subdirectory of the user's home directory.
 
 - When you log on, Remote Desktop Services checks whether its system .ini files are newer than the .ini files on your computer. If the system version is newer, your .ini file is either replaced or merged with the newer version. This depends on whether or not the INISYNC bit, 0x40, is set for this .ini file. Your previous version of the .ini file is renamed as Inifile.ctx. If the system registry values under the **\Terminal Server\Install** subkey are newer than your version under **HKEY_CURRENT_USER**, your version of the subkeys is deleted and replaced with the new subkeys from **\Terminal Server\Install**.
 

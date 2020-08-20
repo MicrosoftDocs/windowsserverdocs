@@ -1,8 +1,6 @@
 ---
-title: set
-description: Reference topic for set, which sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+title: Using the set command
+description: Reference article for set, which sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
 ms.topic: article
 ms.assetid: 5def6be0-83b9-4133-bc1b-bbe6d407eca7
 author: coreyp-at-msft
@@ -10,7 +8,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# set
+
+# Using the set command
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

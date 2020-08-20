@@ -1,11 +1,9 @@
 ---
 title: secedit:import
-description: Reference topic for **** -
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 1dd59d4c-9d48-444a-871b-b957eb682597

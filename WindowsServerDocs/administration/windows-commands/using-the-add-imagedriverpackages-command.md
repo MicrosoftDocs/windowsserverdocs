@@ -1,8 +1,6 @@
 ---
 title: add-ImageDriverPackages
-description: Reference topic for add-ImageDriverPackages, which adds driver packages from the driver store to a boot image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-ImageDriverPackages, which adds driver packages from the driver store to a boot image.
 ms.topic: article
 ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
 author: coreyp-at-msft
@@ -18,7 +16,7 @@ Adds driver packages from the driver store to a boot image. The image version mu
 
 ## Syntax
 ```
-wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
+wdsutil /add-ImageDriverPackages [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64}
 [/Filename:<File name>] /Filtertype:<Filter type> /Operator:{Equal | NotEqual | GreaterOrEqual | LessOrEqual | Contains} /Value:<Value> [/Value:<Value> ...]
 ```
 ### Parameters

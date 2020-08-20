@@ -1,8 +1,6 @@
 ---
 title: Performance Tuning Remote Desktop Virtualization Hosts
 description: Performance Tuning for Remote Desktop Virtualization Hosts
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: hammadbu; vladmis; denisgun
 author: phstee
@@ -101,7 +99,7 @@ Each specific service should be evaluated appropriately prior to any broad deplo
 | Internet connection sharing                  | Consumer centric service                                                                                                                                                                                  |
 | Media Center extended services               | Consumer centric service                                                                                                                                                                                  |
 > [!NOTE]
-> This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](https://blogs.technet.com/b/jeff_stokes/archive/2013/04/09/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe.aspx).
+> This list is not meant to be a complete list, because any changes will affect the intended goals and scenarios. For more info, see [Hot off the presses, get it now, the Windows 8 VDI optimization script, courtesy of PFE!](/archive/blogs/jeff_stokes/hot-off-the-presses-get-it-now-the-windows-8-vdi-optimization-script-courtesy-of-pfe).
 
 
 > [!NOTE]

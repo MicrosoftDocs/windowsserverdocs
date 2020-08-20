@@ -1,8 +1,6 @@
 ---
 title: evntcmd
-description: Reference topic for the evntcmd command, which configures the translation of events to traps, trap destinations, or both based on information in a configuration file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the evntcmd command, which configures the translation of events to traps, trap destinations, or both based on information in a configuration file.
 ms.topic: article
 ms.assetid: c1aabb74-76e7-4304-95a6-50ad87e92fd9
 author: coreyp-at-msft

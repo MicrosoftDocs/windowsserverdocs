@@ -1,12 +1,6 @@
 ---
 title: nfsshare
-description: Reference topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the nfsshare command, which controls Network File System (NFS) shares.
 ms.topic: article
 ms.assetid: 437a2615-335a-442f-9713-d50d5f3983a3
 author: coreyp-at-msft
@@ -17,40 +11,39 @@ ms.date: 10/16/2017
 
 # nfsshare
 
-
-
-You can use **nfsshare** to control Network File System (NFS) shares.
+Controls Network File System (NFS) shares. Used without parameters, this command displays all Network File System (NFS) shares exported by Server for NFS.
 
 ## Syntax
 
 ```
-nfsshare <ShareName>=<Drive:Path> [-o <Option=value>...]
-nfsshare {<ShareName> | <Drive>:<Path> | * } /delete
+nfsshare <sharename>=<drive:path> [-o <option=value>...]
+nfsshare {<sharename> | <drive>:<path> | * } /delete
 ```
 
-## Description
+### Parameters
 
-Without arguments, the **nfsshare** command-line utility lists all Network File System (NFS) shares exported by Server for NFS. With *ShareName* as the only argument, **nfsshare** lists the properties of the NFS share identified by *ShareName*. When *ShareName* and <em>Drive</em>**:**<em>Path</em> are provided, **nfsshare** exports the folder identified by <em>Drive</em>**:**<em>Path</em> as *ShareName*. When the **/delete** option is used, the specified folder is no longer made available to NFS clients.
+| Parameter | Description |
+| --------- | ----------- |
+| -o anon=`{yes|no}` | Specifies whether anonymous (unmapped) users can access the share directory. |
+| -o rw=`[<host>[:<host>]...]` | Provides read-write access to the shared directory by the hosts or client groups specified by *host*. You must separate host and group names with a colon (**:**). If *host* isn't specified, all hosts and client groups (except those specified with the **ro** option) get read-write access. If neither the **ro** nor the **rw** option is set, all clients have read-write access to the shared directory. |
+| -o ro=`[<host>[:<host>]...]` | Provides read-only access to the shared directory by the hosts or client groups specified by *host*. You must separate host and group names with a colon (**:**). If *host* isn't specified, all clients (except those specified with the **rw** option) get read-only access. If the **ro** option is set for one or more clients, but the **rw** option isn't set, only the clients specified with the **ro** option have access to the shared directory. |
+| -o encoding=`{euc-jp|euc-tw|euc-kr|shift-jis|Big5|Ksc5601|Gb2312-80|Ansi)` | Specifies the language encoding to configure on an NFS share. You can use only one language on the share. This value can include any of the following values:<ul><li>**euc-jp:** Japanese</li><li>**euc-tw:** Chinese</li><li>**euc-kr:** Korean</li><li>**shift-jis:** Japanese</li><li>**Big5:** Chinese</li><li>**Ksc5601:** Korean</li><li>**Gb2312-80:** Simplified Chinese</li><li>**Ansi:** ANSI-encoded</li></ul> |
+| -o anongid=`<gid>` | Specifies that anonymous (unmapped) users access the share directory using *gid* as their group identifier (GID). The default is **-2**. The anonymous GID is used when reporting the owner of a file owned by an unmapped user, even if anonymous access is disabled. |
+| -o  anonuid=`<uid>` | Specifies that anonymous (unmapped) users access the share directory using *uid* as their user identifier (UID). The default is **-2**. The anonymous UID is used when reporting the owner of a file owned by an unmapped user, even if anonymous access is disabled. |
+| -o root=`[<host>[:<host>]...]` | Provides root access to the shared directory by the hosts or client groups specified by *host*. You must separate host and group names with a colon (**:**). If *host* isn't specified, all clients get root access. If the **root** option isn't set, no clients have root access to the shared directory. |
+| /delete | If *sharename* or `<drive>:<path>` is specified, this parameter deletes the specified share. If a wildcard (*) is specified, this parameter deletes all NFS shares. |
+| /? | Displays help at the command prompt. |
 
-## Options
+#### Remarks
 
-The **nfsshare** command accepts the following options and arguments:
+- If *sharename* as the only parameter, this command lists the properties of the NFS share identified by *sharename*.
 
+- If *sharename* and `<drive>:<path>` are used, this command exports the folder identified by `<drive>:<path>` as *sharename*. If you use the **/delete** option, the specified folder stops being available to NFS clients.
 
-|             Term              |                                                                                                                                                                                                                      Definition                                                                                                                                                                                                                       |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         -o anon={yes          |                                                                                                                                                                                                                          no}                                                                                                                                                                                                                          |
-|  -o rw[=\<Host>[:<Host>]...]  |                       Provides read-write access to the shared directory by the hosts or client groups specified by *Host*. Separate host and group names with a colon (**:**). If *Host* is not specified, all hosts and client groups (except those specified with the **ro** option) have read-write access. If neither the **ro** nor the **rw** option is set, all clients have read-write access to the shared directory.                       |
-|  -o ro[=\<Host>[:<Host>]...]  | Provides read-only access to the shared directory by the hosts or client groups specified by *Host*. Separate host and group names with a colon (**:**). If *Host* is not specified, all clients (except those specified with the **rw** option) have read-only access. If the **ro** option is set for one or more clients, but the **rw** option is not set, only the clients specified with the **ro** option have access to the shared directory. |
-|       -o encoding={big5       |                                                                                                                                                                                                                        euc-jp                                                                                                                                                                                                                         |
-|       -o anongid=\<gid>       |                                                                                     Specifies that anonymous (unmapped) users will access the share directory using *gid* as their group identifier (GID). The default is -2. The anonymous GID will be used when reporting the owner of a file owned by an unmapped user, even if anonymous access is disabled.                                                                                      |
-|      -o  anonuid=\<uid>       |                                                                                      Specifies that anonymous (unmapped) users will access the share directory using *uid* as their user identifier (UID). The default is -2. The anonymous UID will be used when reporting the owner of a file owned by an unmapped user, even if anonymous access is disabled.                                                                                      |
-| -o root[=\<Host>[:<Host>]...] |                                                                         Provides root access to the shared directory by the hosts or client groups specified by *Host*. Separate host and group names with a colon (**:**). If *Host* is not specified, all clients have root access. If the **root** option is not set, no clients have root access to the shared directory.                                                                         |
-|            /delete            |                                                                                                                                                       If *ShareName* or <em>Drive</em>**:**<em>Path</em> is specified, deletes the specified share. If \* is specified, deletes all NFS shares.                                                                                                                                                       |
+## Additional References
 
-> [!NOTE]
-> To view the complete syntax for this command, at a command prompt, type:</br>> **nfsshare /?**
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
-## See also
+- [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
 
-[Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
+- [NFS cmdlets reference](/powershell/module/nfs)

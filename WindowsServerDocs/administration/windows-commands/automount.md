@@ -1,8 +1,6 @@
 ---
 title: automount
-description: Reference topic for the automount command, which enables or disables the automount feature.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the automount command, which enables or disables the automount feature.
 ms.topic: article
 ms.assetid: 4635fc91-a477-4f17-8dcc-aa08854bfe45
 author: coreyp-at-msft
@@ -57,4 +55,4 @@ automount disable
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [diskpart commands](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770877(v%3dws.11))
+- [diskpart commands](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770877(v%3dws.11))

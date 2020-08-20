@@ -2,24 +2,22 @@
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
-author: dcuomo
-ms.author: dacuo
+author: dahavey
+ms.author: dahavey
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: networking
 ---
 
 # Accurate Time for Windows Server 2016
 
 >Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 or later
 
-The Windows Time service is a component that uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are third-party plug-ins available. One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) or [MS-NTP](https://msdn.microsoft.com/library/cc246877.aspx) to synchronize the local system time to an NTP and/or MS-NTP compliant reference server. The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider using stratum level first, followed by root delay, root dispersion, and finally time offset.
+The Windows Time service is a component that uses a plug-in model for client and server time synchronization providers.  There are two built-in client providers on Windows, and there are third-party plug-ins available. One provider uses [NTP (RFC 1305)](https://tools.ietf.org/html/rfc1305) or [MS-NTP](/openspecs/windows_protocols/ms-sntp/8106cb73-ab3a-4542-8bc8-784dd32031cc) to synchronize the local system time to an NTP and/or MS-NTP compliant reference server. The other provider is for Hyper-V and synchronizes virtual machines (VM) to the Hyper-V host.  When multiple providers exist, Windows will pick the best provider using stratum level first, followed by root delay, root dispersion, and finally time offset.
 
 > [!NOTE]
 > For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
 
-In this topic, we discuss ... these topics as they relate to enabling accurate time: 
+In this topic, we discuss ... these topics as they relate to enabling accurate time:
 
 - Improvements
 - Measurements
@@ -28,8 +26,8 @@ In this topic, we discuss ... these topics as they relate to enabling accurate t
 > [!IMPORTANT]
 > An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf).  This document provides more details about our testing and measurement methodologies.
 
-> [!NOTE] 
-> The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
+> [!NOTE]
+> The windows time provider plugin model is [documented on TechNet](/windows/win32/sysinfo/time-provider).
 
 ## Domain Hierarchy
 Domain and Standalone configurations work differently.
@@ -40,8 +38,8 @@ Domain and Standalone configurations work differently.
 
 Since Hyper-V guests will have at least two Windows Time providers to choose from, the host time and NTP, you might see different behaviors with either Domain or Standalone when running as a guest.
 
-> [!NOTE] 
-> For more information about the domain hierarchy and scoring system, see the ["What is Windows Time Service?"](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/) blog post.
+> [!NOTE]
+> For more information about the domain hierarchy and scoring system, see the ["What is Windows Time Service?"](/archive/blogs/w32time/what-is-windows-time-service) blog post.
 
 > [!NOTE]
 > Stratum is a concept used in both the NTP and Hyper-V providers, and its value indicates the clocks location in the hierarchy.  Stratum 1 is reserved for the highest-level clock, and stratum 0 is reserved for the hardware assumed to be accurate and has little or no delay associated with it.  Stratum 2 talk to stratum 1 servers, stratum 3 to stratum 2 and so on.  While a lower stratum often indicates a more accurate clock, it is possible to find discrepancies.  Also, W32time only accepts time from stratum 15 or below.  To see the stratum of a client, use *w32tm /query /status*.
@@ -53,9 +51,9 @@ In every case for accurate time, there are three critical factors:
 2. **Stable client clock** - A stable client clocks assures that the natural drift of the oscillator is containable.  NTP uses multiple samples from potentially multiple NTP servers to condition and discipline your local computers clock.  It does not step the time changes, but rather slows or speeds up the local clock so that you approach the accurate time quickly and stay accurate between NTP requests.  However, if the client computer clock's oscillator is not stable, then more fluctuations in between adjustments can occur and the algorithms Windows uses to condition the clock don't work accurately.  In some cases, firmware updates might be needed for accurate time.
 3. **Symmetrical NTP communication** - It is critical that the connection for NTP communication is symmetrical.  NTP uses calculations to adjust the time that assume the network patch is symmetrical.  If the path the NTP packet takes going to the server takes a different amount of time to return, the accuracy is affected.  For example, the path could change due to changes in network topology, or packets being routed through devices that have different interface speeds.
 
-For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time's ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings. 
+For battery powered devices, both mobile and portable, you must consider different strategies.  As per our recommendation, keeping accurate time requires the clock to be disciplined once a second, which correlates to the Clock Update Frequency. These settings will consume more battery power than expected and can interfere with power saving modes available in Windows for such devices. Battery powered devices also have certain power modes which stop all applications from running, which interferes with W32time's ability to discipline the clock and maintain accurate time. Additionally, clocks in mobile devices may not be very accurate to begin with.  Ambient environmental conditions affect clock accuracy and a mobile device can move from one ambient condition to the next which may interfere with its ability to keep time accurately.  Therefore, Microsoft does not recommend that you set up battery powered portable devices with high accuracy settings.
 
-## Why is time important?  
+## Why is time important?
 There are many different reasons you might need accurate time.  The typical case for Windows is Kerberos, which requires 5 minutes of accuracy between the client and server.  However, there are many other areas that can be affected by time accuracy including:
 
 
@@ -65,10 +63,10 @@ There are many different reasons you might need accurate time.  The typical case
 - Cryptography Algorithms
 - Distributed systems like Cluster/SQL/Exchange and Document DBs
 - Blockchain framework for bitcoin transactions
-- Distributed Logs and Threat Analysis 
+- Distributed Logs and Threat Analysis
 - AD Replication
 - PCI (Payment Card Industry), currently 1 second accuracy
 
+## Additional references
 
-
-[!INCLUDE [windows-server-2016-improvements](windows-server-2016-improvements.md)]
+- [Time accuracy improvements for Windows Server 2016](windows-server-2016-improvements.md)]

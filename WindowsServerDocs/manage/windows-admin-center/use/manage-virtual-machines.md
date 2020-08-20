@@ -1,13 +1,11 @@
 ---
 title: Managing Virtual Machines with Windows Admin Center
 description: Managing Hyper-V hosts and virtual machines with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Managing Virtual Machines with Windows Admin Center
 

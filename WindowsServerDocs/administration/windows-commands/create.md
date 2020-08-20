@@ -1,8 +1,6 @@
 ---
 title: create
-description: Reference topic for the create command, which creates a partition or shadow partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the create command, which creates a partition or shadow partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD).
 ms.topic: article
 ms.assetid: b45acde1-8f4f-4ec3-b905-d8188f884af8
 author: coreyp-at-msft

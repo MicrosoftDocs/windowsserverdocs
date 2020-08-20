@@ -1,11 +1,9 @@
 ---
 title: secedit:validate
-description: Reference topic for **** -
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 9fb06354-f55a-4ca4-9fbc-9a872eb9b9cf

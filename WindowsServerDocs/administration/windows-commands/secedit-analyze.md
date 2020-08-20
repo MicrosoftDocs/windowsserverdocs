@@ -1,11 +1,9 @@
 ---
 title: secedit:analyze
-description: Reference topic for **** -
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 3430cf9d-1411-48b1-b5a9-2e47701dc87f

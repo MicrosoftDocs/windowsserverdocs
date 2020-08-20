@@ -1,8 +1,6 @@
 ---
-title: disable
-description: Reference topic for disable, which disables all services for Windows Deployment Services. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+title: Using the disable command
+description: Reference article for disable, which disables all services for Windows Deployment Services.
 ms.topic: article
 ms.assetid: 08d1b9ea-1e25-486a-b7df-ad26c53b4e77
 author: coreyp-at-msft
@@ -10,7 +8,8 @@ ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
 ---
-# disable
+
+# Using the disable command
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

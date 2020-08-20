@@ -1,12 +1,6 @@
 ---
 title: nslookup set debug
-description: Reference topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
+description: Reference article for the nslookup set debug command, which turns debugging mode on and off.
 ms.topic: article
 ms.assetid: b51e04e7-5f6f-4183-88bf-5628a506bdab
 author: coreyp-at-msft
@@ -17,9 +11,7 @@ ms.date: 10/16/2017
 
 # nslookup set debug
 
-
-
-Turns Debugging Mode on or off.
+Turns debugging mode on or off.
 
 ## Syntax
 
@@ -29,15 +21,12 @@ set [no]debug
 
 ### Parameters
 
-|  Parameter  |                         Description                          |
-|-------------|--------------------------------------------------------------|
-| **nodebug** | Turns off Debugging Mode. The default syntax is **nodebug**. |
-|  **debug**  |                   Turns on Debugging Mode.                   |
-|  \*\*{help  |                            ?}\*\*                            |
-
-## Remarks
-
--   With Debugging Mode turned on, more information is printed about the packet sent to the server and the resulting answer.
+| Parameter | Description |
+| ---------- | ---------- |
+| nodebug | Turns off debugging mode. This is the default value. |
+| debug | Turns on debugging mode. By turning debugging mode on, you can view more information about the packet sent to the server and the resulting answer. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
 ## Additional References
 

@@ -1,14 +1,12 @@
 ---
 title: Get started with the Android client
 description: General information about the Android client.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/12/2020
+ms.date: 07/16/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Android client
@@ -29,7 +27,7 @@ Use the following information to get started. Be sure to check out the [FAQ](rem
 
 Here's how to set up the Remote Desktop client on your Android device:
 
-1. Download the Microsoft Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android).
+1. Download the Microsoft Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx).
 2. Launch **RD client** from your list of apps.
 3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or [remote resources](#add-remote-resources). You use a connection to connect directly to a Windows PC and remote resources to access apps and desktops published to you by an admin.
 
@@ -70,7 +68,9 @@ Remote resources are RemoteApp programs, session-based desktops, and virtual des
 
 1. In the Connection Center, tap **+**, and then tap **Remote Resource Feed**.
 2. Enter the **Feed URL**. This can be a URL or email address:
-   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use `https://rdweb.wvd.microsoft.com`.
+   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs depending on which version you're using:
+     - If you're using the Fall 2019 version, use: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+     - If you're using the Spring 2020 version, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
 3. Tap **Next**.
 4. Provide your sign in information when prompted. This can vary based on the deployment and can include:
@@ -120,12 +120,12 @@ To change the display settings tap **Settings**, and then tap **Display** from t
 You can set the following display settings:
 
 - **Orientation** sets the preferred orientation (landscape or portrait) for your session.
-  
+
   >[!NOTE]
   > If you connect to a PC running Windows 8 or earlier, the session won't scale correctly if the orientation of the device changes. To make the client scale correctly, disconnect from the PC, then reconnect in the orientation you want to use. You can also ensure correct scaling by using a PC with Windows 10 instead.
 
 - **Resolution** sets the remote resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual connection, this setting won't change that.
-  
+
   >[!NOTE]
   >When you change the display settings, the changes only apply to new connections you make after the you changed the setting. To apply your changes to the session you're currently connected to, refresh your session by disconnecting and reconnecting.
 

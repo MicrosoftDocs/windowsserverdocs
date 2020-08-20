@@ -1,8 +1,6 @@
 ---
 title: Hyper-V Network I/O Performance
 description: Network i/o performance considerations in Hyper-V performance tuning
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
@@ -30,7 +28,7 @@ Additionally, increasing the number of send and receive buffers on each network 
 
 Windows Server 2012 R2 introduced an option to speed up Live Migration by compressing memory before transferring over the network or use Remote Direct Memory Access (RDMA), if your hardware supports it.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

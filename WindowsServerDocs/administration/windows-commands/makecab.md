@@ -1,8 +1,6 @@
 ---
 title: makecab
-description: Reference topic for the makecab command, which packages existing files into a cabinet (.cab) file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the makecab command, which packages existing files into a cabinet (.cab) file.
 ms.topic: article
 ms.assetid: 4da95297-c593-427b-9f76-2f389c46cbf4
 author: coreyp-at-msft
@@ -15,7 +13,11 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Package existing files into a cabinet (.cab) file. This command performs the same actions as the **diantz** command.
+Package existing files into a cabinet (.cab) file.
+
+
+> [!NOTE]
+> This command is the same as the [diantz command](diantz.md).
 
 ## Syntax
 
@@ -40,4 +42,6 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Microsoft Cabinet format](https://docs.microsoft.com/previous-versions/bb417343(v=msdn.10))
+- [diantz command](diantz.md)
+
+- [Microsoft Cabinet format](/previous-versions/bb417343(v=msdn.10))

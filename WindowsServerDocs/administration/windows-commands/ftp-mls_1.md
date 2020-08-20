@@ -1,8 +1,6 @@
 ---
 title: ftp mls
-description: Reference topic for the ftp mls command, which displays an abbreviated list of files and subdirectories in a remote directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ftp mls command, which displays an abbreviated list of files and subdirectories in a remote directory.
 ms.topic: article
 ms.assetid: 4738fd49-0e80-4bdf-a773-0f973db3a710
 author: coreyp-at-msft
@@ -48,4 +46,4 @@ mls dir1 dir2 dirlist.txt
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

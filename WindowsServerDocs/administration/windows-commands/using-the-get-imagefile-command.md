@@ -1,8 +1,6 @@
 ---
 title: get-ImageFile
-description: Reference topic for get-ImageFile, which retrieves information about the images contained in a Windows Image (.wim) file. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-ImageFile, which retrieves information about the images contained in a Windows Image (.wim) file.
 ms.topic: article
 ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
 author: coreyp-at-msft

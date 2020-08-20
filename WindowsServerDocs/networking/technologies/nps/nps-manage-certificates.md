@@ -2,11 +2,9 @@
 title: Manage Certificates Used with NPS
 description: This topic provides information about using server certificates with Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 204a4ef4-9d78-4a62-9940-43cc0e1c39d0
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 
@@ -41,7 +39,7 @@ In some circumstances, you might want to increase or decrease the TLS handle exp
 For example, you might want to decrease the TLS handle expiry time in circumstances where a user's certificate is revoked by an administrator and the certificate has expired. In this scenario, the user can still connect to the network if an NPS has a cached TLS handle that has not expired. Reducing the TLS handle expiry might help prevent such users with revoked certificates from reconnecting.
 
 >[!NOTE]
->The best solution to this scenario is to disable the user account in Active Directory, or to remove the user account from the Active Directory group that is granted permission to connect to the network in network policy. The propagation of these changes to all domain controllers might also be delayed, however, due to replication latency. 
+>The best solution to this scenario is to disable the user account in Active Directory, or to remove the user account from the Active Directory group that is granted permission to connect to the network in network policy. The propagation of these changes to all domain controllers might also be delayed, however, due to replication latency.
 
 ## Configure the TLS Handle Expiry Time on Client Computers
 
@@ -95,7 +93,7 @@ Use this procedure to obtain the Secure Hash Algorithm (SHA-1) hash of a trusted
 
 When using Group Policy, you can designate one or more trusted root CA certificates that clients must use in order to authenticate the NPS during the process of mutual authentication with EAP or PEAP. To designate a trusted root CA certificate that clients must use to validate the server certificate, you can enter the SHA-1 hash of the certificate.
 
-This procedure demonstrates how to obtain the SHA-1 hash of a trusted root CA certificate by using the Certificates Microsoft Management Console (MMC) snap-in. 
+This procedure demonstrates how to obtain the SHA-1 hash of a trusted root CA certificate by using the Certificates Microsoft Management Console (MMC) snap-in.
 
 To complete this procedure, you must be a member of the **Users** group on the local computer.
 
@@ -119,7 +117,7 @@ To complete this procedure, you must be a member of the **Users** group on the l
 
 9. In the lower pane, the hexadecimal string that is the SHA-1 hash of your certificate is displayed. Select the SHA-1 hash, and then press the Windows keyboard shortcut for the Copy command \(CTRL\+C\) to copy the hash to the Windows clipboard.
 
-10. Open the location to which you want to paste the SHA-1 hash, correctly locate the cursor, and then press the Windows keyboard shortcut for the Paste command \(CTRL\+V\). 
+10. Open the location to which you want to paste the SHA-1 hash, correctly locate the cursor, and then press the Windows keyboard shortcut for the Paste command \(CTRL\+V\).
 
 For more information about certificates and NPS, see [Configure Certificate Templates for PEAP and EAP Requirements](nps-manage-cert-requirements.md).
 

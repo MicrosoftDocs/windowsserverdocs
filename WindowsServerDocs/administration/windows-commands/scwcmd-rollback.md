@@ -1,11 +1,9 @@
 ---
 title: Scwcmd rollback
-description: Reference topic for **** -
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: 4fd9f89b-0420-420a-ad20-4a328636b1e7

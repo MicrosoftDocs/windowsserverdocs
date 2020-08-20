@@ -1,8 +1,6 @@
 ---
 title: get-Namespace
-description: Reference topic for get-Namespace, which displays information about a custom namespace. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-Namespace, which displays information about a custom namespace.
 ms.topic: article
 ms.assetid: ea641bab-e97b-4909-918e-447730027dc1
 author: coreyp-at-msft

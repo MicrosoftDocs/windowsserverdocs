@@ -1,8 +1,6 @@
 ---
 title: auditpol resourceSACL
-description: Reference topic for the auditpol resourceSACL command, which configures global resource system access control lists (SAcls).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the auditpol resourceSACL command, which configures global resource system access control lists (SAcls).
 ms.topic: article
 ms.assetid: 28771ba7-967a-45e9-9bf0-b2a2673070f0
 author: coreyp-at-msft
@@ -46,7 +44,7 @@ auditpol /resourceSACL
 | /type | The resource for which object access auditing is being configured. The supported, case-sensitive, argument values are *File* (for directories and files) and *Key* (for registry keys). |
 | /success | Specifies success auditing. |
 | /failure | Specifies failure auditing. |
-| /user | Specifies a user in one of the following forms:<ul><li> DomainName\Account (such as DOM\Administrators)</li><li>StandaloneServer\Group Account (see [LookupAccountName function](https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-lookupaccountnamea))</li><li>{S-1-x-x-x-x} (x is expressed in decimal, and the entire SID must be enclosed in curly braces). For example: {S-1-5-21-5624481-130208933-164394174-1001}<p>**Note:** If the SID form is used, no check is done to verify the existence of this account.</li></ul> |
+| /user | Specifies a user in one of the following forms:<ul><li> DomainName\Account (such as DOM\Administrators)</li><li>StandaloneServer\Group Account (see [LookupAccountName function](/windows/win32/api/winbase/nf-winbase-lookupaccountnamea))</li><li>{S-1-x-x-x-x} (x is expressed in decimal, and the entire SID must be enclosed in curly braces). For example: {S-1-5-21-5624481-130208933-164394174-1001}<p>**Note:** If the SID form is used, no check is done to verify the existence of this account.</li></ul> |
 | /access | Specifies a permission mask that can be specified through:<p>Generic access rights, including:<ul><li>GA - GENERIC ALL</li><li>GR - GENERIC READ</li><li>GW - GENERIC WRITE</li><li>GX - GENERIC EXECUTE</li></ul><p>Access rights for files, including:<ul><li>FA - FILE ALL ACCESS</li><li>FR - FILE GENERIC READ</li><li>FW - FILE GENERIC WRITE</li><li>FX - FILE GENERIC EXECUTE</li></ul><p>Access rights for registry keys, including:<ul><li>KA - KEY ALL ACCESS</li><li>KR - KEY READ</li><li>KW - KEY WRITE</li><li>KX - KEY EXECUTE</li></ul><p>For example: `/access:FRFW` enables audit events for read and write operations.<p>A hexadecimal value representing the access mask (such as 0x1200a9)<p>This is useful when using resource-specific bit masks that are not part of the security descriptor definition language (SDDL) standard. If omitted, Full access is used. |
 
 ## Examples

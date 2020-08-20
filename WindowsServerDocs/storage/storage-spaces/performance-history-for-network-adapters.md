@@ -2,7 +2,6 @@
 title: Performance history for network adapters
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
@@ -68,12 +67,12 @@ The `rdma.*` series are collected from the `RDMA Activity` performance counter s
 
 ## Usage in PowerShell
 
-Use the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) cmdlet:
+Use the [Get-NetAdapter](/powershell/module/netadapter/get-netadapter) cmdlet:
 
 ```PowerShell
 Get-NetAdapter <Name> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

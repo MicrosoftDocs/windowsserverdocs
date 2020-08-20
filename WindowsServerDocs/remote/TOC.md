@@ -1,4 +1,4 @@
-# [Remote](index.md)
+# [Remote](index.yml)
 ## [MultiPoint Services](multipoint-services/MultiPoint-Services.md)
 ### [Planning a MultiPoint Services Deployment](multipoint-services/Planning-a-MultiPoint-Services-Deployment.md)
 #### [Introducing MultiPoint Services](multipoint-services/Introducing-MultiPoint-services.md)
@@ -197,13 +197,13 @@
 ###### [Install and Configure Deployment for remote Management of DirectAccess Clients](remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-remote-Management-of-directAccess-Clients.md)
 ####### [Step 1: Configure the Remote Access Infrastructure](remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md)
 ####### [Step 2: Configure the Remote Access Server](remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md)
-####### [Step 3: Verify the Deployment](remote-access/directaccess/single-server-advanced/Step-3-verify-the-Deployment.md)
+####### [Step 3: Verify the Deployment](./remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md)
 
 ### [Virtual Private Networking (VPN)](remote-access/vpn/vpn-top.md)
 #### [VPN Device Tunnels in Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
-#### [Windows 10 VPN technical guide](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-guide)
-#### [How to configure Diffie Hellman protocol over IKEv2 VPN connections](https://docs.microsoft.com/windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections)
-#### [How to use single sign on (SSO) over VPN and Wi-Fi connections](https://docs.microsoft.com/windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections)
+#### [Windows 10 VPN technical guide](/windows/security/identity-protection/vpn/vpn-guide)
+#### [How to configure Diffie Hellman protocol over IKEv2 VPN connections](/windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections)
+#### [How to use single sign on (SSO) over VPN and Wi-Fi connections](/windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections)
 
 
 #### [DirectAccess](remote-access/directaccess/directAccess.md)
@@ -244,7 +244,7 @@
 ###### [Test Lab Guide: Demonstrate DirectAccess with OTP Authentication and RSA SecurID](remote-access/directaccess/tlg-otp-securid/Test-Lab-Guide-Demonstrate-directAccess-with-OTP-Authentication-and-RSA-SecurID.md)
 ####### [Overview of the Test Lab Scenario](remote-access/directaccess/tlg-otp-securid/Overview-of-the-Test-Lab-Scenario.md)
 ####### [Configuration Requirements](remote-access/directaccess/tlg-multisite/Configuration-Requirements.md)
-####### [Steps for Configuring the Test Lab](remote-access/directaccess/tlg-cluster-nlb/Steps-for-Configuring-the-Test-Lab.md)
+####### [Steps for Configuring the Test Lab](./remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md)
 ######## [STEP 1: complete the DirectAccess Configuration](remote-access/directaccess/tlg-cluster-nlb/STEP-1-complete-the-directAccess-Configuration.md)
 ######## [STEP 2: Configure APP1](remote-access/directaccess/tlg-otp-securid/STEP-2-Configure-APP1.md)
 ######## [STEP 3: Configure DC1](remote-access/directaccess/tlg-otp-securid/STEP-3-Configure-DC1.md)
@@ -252,7 +252,7 @@
 ######## [STEP 5: Verify OTP Health on EDGE1](remote-access/directaccess/tlg-otp-securid/STEP-5-verify-OTP-Health-on-EDGE1.md)
 ######## [STEP 6: Test DirectAccess Connectivity from the Homenet Subnet](remote-access/directaccess/tlg-otp-securid/STEP-6-Test-directAccess-Connectivity-from-the-Homenet-Subnet.md)
 ######## [STEP 7: Test DirectAccess Connectivity from the Internet](remote-access/directaccess/tlg-otp-securid/STEP-7-Test-directAccess-Connectivity-from-the-Internet.md)
-######## [STEP 8: Snapshot the Configuration](remote-access/directaccess/tlg-cluster-nlb/STEP-8-Snapshot-the-Configuration.md)
+######## [STEP 8: Snapshot the Configuration](./remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot.md)
 ##### [DirectAccess Known Issues](remote-access/directaccess/directAccess-Known-Issues.md)
 ##### [DirectAccess Capacity Planning](remote-access/directaccess/directAccess-Capacity-Planning.md)
 ##### [DirectAccess offline Domain Join](remote-access/directaccess/directAccess-offline-Domain-Join.md)
@@ -286,4 +286,3 @@
 ### [Publishing Applications using AD FS Preauthentication](remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 ### [Publishing Applications with SharePoint, Exchange and RDG](remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)
 ### [Troubleshooting Web Application Proxy](remote-access//web-application-proxy/Troubleshooting-Web-Application-Proxy.md)
-

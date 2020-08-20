@@ -1,8 +1,6 @@
 ---
 title: attributes disk
-description: Reference topic for the attributes disk command, which displays, sets, or clears the attributes of a disk.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the attributes disk command, which displays, sets, or clears the attributes of a disk.
 ms.topic: article
 ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92
 author: coreyp-at-msft

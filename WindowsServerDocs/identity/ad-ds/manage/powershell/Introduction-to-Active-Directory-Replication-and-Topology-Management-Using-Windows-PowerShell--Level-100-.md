@@ -6,8 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
@@ -18,7 +16,7 @@ Windows PowerShell for Active Directory includes the ability to manage replicati
 
 > [!NOTE]
 > The Windows PowerShell for Active Directory replication and topology cmdlets are available in the following environments:
-> 
+>
 > -    Windows Server 2012  domain controller
 > -    Windows Server 2012  with the Remote Server Administration Tools for AD DS and AD LDS installed.
 > -   Windows&reg; 8 with the Remote Server Administration Tools for AD DS and AD LDS installed.
@@ -56,7 +54,7 @@ To complete the steps in the following procedures, you must be a member of the D
 
     > [!TIP]
     > You can use the Tab key to auto-complete commands in Windows PowerShell.
-    > 
+    >
     > Example: Type `Get-ADRep` and press Tab multiple times to skip through the matching commands until you reach `Get-ADReplicationSite`. Auto-complete also works for parameter names such as `Filter`.
 
     To format the output from the `Get-ADReplicationSite` command as a table and limit the display to specific fields, you can pipe the output to the `Format-Table` command (or "`ft`" for short):

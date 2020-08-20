@@ -1,10 +1,8 @@
 ---
 title: rundll32 printui.dll,PrintUIEntry
-description: Reference topic for the rundll32 printui.dll,PrintUIEntry command, which automates many printer configuration tasks.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the rundll32 printui.dll,PrintUIEntry command, which automates many printer configuration tasks.
 ms.topic: article
-ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84 jpjofre
+ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
@@ -17,29 +15,29 @@ ms.date: 05/25/2018
 
 Automates many printer configuration tasks. printui.dll is the executable file that contains the functions used by the printer configuration dialog boxes. These functions can also be called from within a script or a command-line batch file, or they can be run interactively from the command prompt.
 
-## Syntax  
+## Syntax
 
-```  
-rundll32 printui.dll PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
-```  
-
-You can also use the following alternate syntaxes, although the examples in this topic use the previous syntax:  
-
-```  
-rundll32 printui.dll,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+```
+rundll32 printui.dll PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
 ```
 
-```  
-rundll32 printui PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+You can also use the following alternate syntaxes, although the examples in this topic use the previous syntax:
+
+```
+rundll32 printui.dll,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
 ```
 
-```  
-rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]  
+```
+rundll32 printui PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
+```
+
+```
+rundll32 printui,PrintUIEntry [BaseParameter] [ModificationParameter1] [ModificationParameter2] [ModificationParameterN]
 ```
 
 ### Parameters
 
-There are two types of parameters: base parameters and modification parameters. Base parameters specify the function that the command is to perform. Only one of these parameters can appear in a given command line. Then, you can modify the base parameter by using one or more of the modification parameters if they are applicable to the base parameter (not all modification parameters are supported by all base parameters).  
+There are two types of parameters: base parameters and modification parameters. Base parameters specify the function that the command is to perform. Only one of these parameters can appear in a given command line. Then, you can modify the base parameter by using one or more of the modification parameters if they are applicable to the base parameter (not all modification parameters are supported by all base parameters).
 
 |     Base Parameters     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -95,39 +93,39 @@ There are two types of parameters: base parameters and modification parameters. 
 |        /W[flags]        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Specifies any parameters or options for the add printer wizard, the add printer Driver Wizard, and the Network printer Installation Wizard.<p>**r**: Enables the wizards to be restarted from the last page.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |        /G[flags]        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Specifies global parameters and options that you want to use.<p>**w**: Suppresses setup driver warnings to the user.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-## Remarks  
-- The **PrintUIEntry** keyword is case sensitive, and you must enter the syntax for this command with the exact capitalization shown in the examples in this topic.  
-- For more examples, at a command prompt type: **rundll32 printui.dll,PrintUIEntry /?**  
-  ## Examples  
-  To add a new remote printer, printer1, for a computer, Client1, which is visible for the user account where this command is run, type:  
-  ```  
-  rundll32 printui.dll PrintUIEntry /in /n\\client1\printer1  
-  ```  
-  To add a printer using the add printer wizard and using an .inf file, InfFile.inf, located on drive c: at Infpath, type:  
-  ```  
-  rundll32 printui.dll PrintUIEntry /ii /f c:\Infpath\InfFile.inf  
-  ```  
-  To delete an existing printer, printer1, on a computer, Client1, type:  
-  ```  
-  rundll32 printui.dll PrintUIEntry /dn /n\\client1\printer1  
-  ```  
-  To add a per computer printer connection, printer2, for all users of a computer, Client2, type (the connection will be applied when a user logs on):  
-  ```  
-  rundll32 printui.dll PrintUIEntry /ga /n\\client2\printer2  
-  ```  
-  To delete a per computer printer connection, printer2, for all users of a computer, Client2, type (the connection will be deleted when a user logs on):  
-  ```  
-  rundll32 printui.dll PrintUIEntry /gd /n\\client2\printer2  
-  ```  
-  To view the properties of the print server, printServer1, type:  
-  ```  
-  rundll32 printui.dll PrintUIEntry /s /t1 /c\\printserver1  
-  ```  
-  To view the properties of a printer, printer3, type:  
-  ```  
-  rundll32 printui.dll PrintUIEntry /p /n\\printer3  
-  ```  
-  ## Additional References  
+## Remarks
+- The **PrintUIEntry** keyword is case sensitive, and you must enter the syntax for this command with the exact capitalization shown in the examples in this topic.
+- For more examples, at a command prompt type: **rundll32 printui.dll,PrintUIEntry /?**
+  ## Examples
+  To add a new remote printer, printer1, for a computer, Client1, which is visible for the user account where this command is run, type:
+  ```
+  rundll32 printui.dll PrintUIEntry /in /n\\client1\printer1
+  ```
+  To add a printer using the add printer wizard and using an .inf file, InfFile.inf, located on drive c: at Infpath, type:
+  ```
+  rundll32 printui.dll PrintUIEntry /ii /f c:\Infpath\InfFile.inf
+  ```
+  To delete an existing printer, printer1, on a computer, Client1, type:
+  ```
+  rundll32 printui.dll PrintUIEntry /dn /n\\client1\printer1
+  ```
+  To add a per computer printer connection, printer2, for all users of a computer, Client2, type (the connection will be applied when a user logs on):
+  ```
+  rundll32 printui.dll PrintUIEntry /ga /n\\client2\printer2
+  ```
+  To delete a per computer printer connection, printer2, for all users of a computer, Client2, type (the connection will be deleted when a user logs on):
+  ```
+  rundll32 printui.dll PrintUIEntry /gd /n\\client2\printer2
+  ```
+  To view the properties of the print server, printServer1, type:
+  ```
+  rundll32 printui.dll PrintUIEntry /s /t1 /c\\printserver1
+  ```
+  To view the properties of a printer, printer3, type:
+  ```
+  rundll32 printui.dll PrintUIEntry /p /n\\printer3
+  ```
+  ## Additional References
 
-- [rundll32](rundll32.md)  
-- [print Command Reference](print-command-reference.md)  
+- [rundll32](rundll32.md)
+- [print Command Reference](print-command-reference.md)

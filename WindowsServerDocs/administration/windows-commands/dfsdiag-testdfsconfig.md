@@ -1,8 +1,6 @@
 ---
 title: dfsdiag testdfsconfig
-description: Reference topic for the dfsdiag testdfsconfig, which checks the configuration of a Distributed File System (DFS) namespace.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the dfsdiag testdfsconfig, which checks the configuration of a Distributed File System (DFS) namespace.
 ms.topic: article
 ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2
 author: coreyp-at-msft

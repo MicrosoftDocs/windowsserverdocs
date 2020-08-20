@@ -1,8 +1,6 @@
 ---
 title: remove-DriverGroupPackage
-description: Reference topic for remove-DriverGroupPackage, which removes a driver package from a driver group on a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for remove-DriverGroupPackage, which removes a driver package from a driver group on a server.
 ms.topic: article
 ms.assetid: 2e48616d-d6a4-45f0-a5c6-efe62bf6a0ed
 author: coreyp-at-msft

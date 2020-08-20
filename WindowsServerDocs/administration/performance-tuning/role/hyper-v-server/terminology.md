@@ -1,8 +1,6 @@
 ---
 title: Hyper-V terminology
-description: Hyper-v terminology useful in Hyper-V performance tuning 
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
+description: Hyper-v terminology useful in Hyper-V performance tuning
 ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
@@ -32,7 +30,7 @@ This section summarizes key terminology specific to virtual machine technology t
 | *virtualization stack*|A collection of software components in the root partition that work together to support virtual machines. The virtualization stack works with and sits above the hypervisor. It also provides management capabilities.|
 |*VMBus*|Channel-based communication mechanism used for inter-partition communication and device enumeration on systems with multiple active virtualized partitions. The VMBus is installed with Hyper-V Integration Services.|
 
-## See also
+## Additional References
 
 -   [Hyper-V architecture](architecture.md)
 

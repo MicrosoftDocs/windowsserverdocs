@@ -1,8 +1,6 @@
 ---
 title: shrink
-description: Reference topic for DiskPart shrink, which reduces the size of the selected volume by the amount you specify.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for DiskPart shrink, which reduces the size of the selected volume by the amount you specify.
 ms.topic: article
 ms.assetid: ec87cc7c-9846-465e-a10d-4ee10db4f4e6
 author: coreyp-at-msft
@@ -50,4 +48,4 @@ shrink querymax [noerr]
   shrink querymax
   ```
 
-[Resize-Partition](https://technet.microsoft.com/library/hh848680.aspx)
+[Resize-Partition](/powershell/module/storage/resize-partition?view=win10-ps)

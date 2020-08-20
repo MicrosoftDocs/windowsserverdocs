@@ -1,11 +1,9 @@
 ---
 title: san
-description: Reference topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: d57c2df1-eb82-4b81-b8cd-e30564c6a929

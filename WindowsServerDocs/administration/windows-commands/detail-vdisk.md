@@ -1,8 +1,6 @@
 ---
 title: detail vdisk
-description: Reference topic for the detail vdisk command, which displays the properties of the selected virtual hard disk (VHD).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the detail vdisk command, which displays the properties of the selected virtual hard disk (VHD).
 ms.topic: article
 ms.assetid: da0f350c-1ce3-4c3f-988c-15f83402e716
 author: coreyp-at-msft

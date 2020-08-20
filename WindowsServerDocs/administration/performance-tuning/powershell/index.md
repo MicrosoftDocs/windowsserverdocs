@@ -1,8 +1,6 @@
 ---
 title: Performance Tuning for PowerShell
 description: Performance Tuning for PowerShell
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: jasonsh
 author: lzybkr

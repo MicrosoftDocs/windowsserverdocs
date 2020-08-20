@@ -1,8 +1,6 @@
 ---
 title: xcopy
-description: Reference topic for xcopy, which copies files and directories, including subdirectories.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for xcopy, which copies files and directories, including subdirectories.
 ms.topic: article
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
 author: coreyp-at-msft
@@ -10,6 +8,7 @@ ms.author: coreyp
 manager: dongill
 ms.date: 01/05/2019
 ---
+
 # xcopy
 
 Copies files and directories, including subdirectories.
@@ -186,7 +185,7 @@ copyit c:\prgmcode b:
 
 The command interpreter substitutes **C:\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **/e** and **/s** command-line options. If **xcopy** encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **IF ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
 
-**9.** This example all the non-empty directories, plus files whose name match the pattern given with the asterisk symbol.
+**9.** This example copies all the non-empty directories, plus files whose name match the pattern given with the asterisk symbol.
 
 ```
 xcopy .\toc*.yml ..\..\Copy-To\ /S /Y
@@ -198,14 +197,14 @@ rem  .\d2\toc.yml
 rem  3 File(s) copied
 ```
 
-In the preceding example, this particular source parameter value **.\\toc\*.yml** copy the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
+In the preceding example, this particular source parameter value **.\\toc\*.yml** copies the same 3 files even if its two path characters **.\\** were removed. However, no files would be copied if the asterisk wildcard was removed from the source parameter, making it just **.\\toc.yml**.
 
 ## Additional References
 
--   [Copy](copy.md)
--   [Move](move.md)
--   [Dir](dir.md)
--   [Attrib](attrib.md)
--   [Diskcopy](diskcopy.md)
--   [If](if.md)
+- [Copy](copy.md)
+- [Move](move.md)
+- [Dir](dir.md)
+- [Attrib](attrib.md)
+- [Diskcopy](diskcopy.md)
+- [If](if.md)
 - [Command-Line Syntax Key](command-line-syntax-key.md)

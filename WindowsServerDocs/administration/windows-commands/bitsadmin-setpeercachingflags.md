@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setpeercachingflags
-description: Reference topic for the bitsadmin setpeercachingflags command, which sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setpeercachingflags command, which sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers.
 ms.topic: article
 ms.assetid: 3f54a127-fb68-49a5-b843-664ec833df67
 author: coreyp-at-msft

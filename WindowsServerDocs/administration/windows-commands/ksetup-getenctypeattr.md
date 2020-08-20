@@ -1,8 +1,6 @@
 ---
 title: ksetup getenctypeattr
-description: Reference topic for the ksetup getenctypeattr command, which retrieves the encryption type attribute for the domain.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ksetup getenctypeattr command, which retrieves the encryption type attribute for the domain.
 ms.topic: article
 ms.assetid: 6c7ec002-355e-474d-bc27-27215049f1a8
 author: coreyp-at-msft

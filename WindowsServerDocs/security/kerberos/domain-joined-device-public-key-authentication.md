@@ -1,11 +1,9 @@
 ---
 title: Domain-joined Device Public Key Authentication
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
 manager: alanth
 author: michikos
-ms.technology: security-authentication
 ms.date: 08/18/2017
 ---
 
@@ -13,16 +11,16 @@ ms.date: 08/18/2017
 
 >Applies to: Windows Server 2016, Windows 10
 
-Kerberos added support for domain-joined devices to sign-in using a certificate beginning with Windows Server 2012 and Windows 8. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication. 
+Kerberos added support for domain-joined devices to sign-in using a certificate beginning with Windows Server 2012 and Windows 8. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication.
 
 ## Automatic public key provisioning
 
 Beginning with Windows 10 version 1507 and Windows Server 2016, domain-joined devices automatically provision a bound public key to a Windows Server 2016 domain controller (DC). Once a key is provisioned, then Windows can use public key authentication to the domain.
 
 ### Key generation
-If the device is running Credential Guard, then a public/private key pair is created protected by Credential Guard. 
+If the device is running Credential Guard, then a public/private key pair is created protected by Credential Guard.
 
-If Credential Guard is not available and a TPM is, then a public/private key pair is created protected by the TPM. 
+If Credential Guard is not available and a TPM is, then a public/private key pair is created protected by the TPM.
 
 If neither is available, then a key pair is not generated and the device can only authenticate using password.
 

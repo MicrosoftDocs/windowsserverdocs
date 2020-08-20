@@ -2,8 +2,6 @@
 title: Wireless Access Deployment Planning
 description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
 ms.author: lizross
@@ -76,7 +74,7 @@ The necessary distance between APs depends upon the type of AP and AP antenna, a
 
 Temporarily install wireless APs in the locations specified on your architectural drawings. Then, using a laptop equipped with an 802.11 wireless adapter and the site survey software that is commonly supplied with wireless adapters, determine the signal strength within each coverage area.
 
-In coverage areas where signal strength is low, position the AP to improve signal strength for the coverage area, install additional wireless APs to provide the necessary coverage, relocate or remove sources of signal interference.  
+In coverage areas where signal strength is low, position the AP to improve signal strength for the coverage area, install additional wireless APs to provide the necessary coverage, relocate or remove sources of signal interference.
 
 Update your architectural drawings to indicate the final placement of all wireless APs. Having an accurate AP placement map will assist later during troubleshooting operations or when you want to upgrade or replace APs.
 
@@ -109,20 +107,20 @@ The following list summarizes items commonly configured on 802.1X\-capable wirel
 
 - **Service set identifier \(SSID\)**. This is the name of the wireless network \(for example, ExampleWlan\), and the name that is advertised to wireless clients. To reduce confusion, the SSID that you choose to advertise should not match the SSID that is broadcast by any wireless networks that are within reception range of your wireless network.
 
-    In cases in which multiple wireless APs are deployed as part of the same wireless network, configure each wireless AP with the same SSID. In cases in which multiple wireless APs are deployed as part of the same wireless network, configure each wireless AP with the same SSID.  
+    In cases in which multiple wireless APs are deployed as part of the same wireless network, configure each wireless AP with the same SSID. In cases in which multiple wireless APs are deployed as part of the same wireless network, configure each wireless AP with the same SSID.
 
-    In cases where you have a need to deploy different wireless networks to meet specific business needs, your wireless AP's on one network should broadcast a different SSID than the SSID your other network\(s\). For example, if you need a separate wireless network for your employees and guests, you could configure your wireless APs for the business network with the SSID set to broadcast **ExampleWLAN**. For your guest network, you could then set each wireless AP's SSID to broadcast **GuestWLAN**. In this way your employees and guests can connect to the intended network without unnecessary confusion.  
+    In cases where you have a need to deploy different wireless networks to meet specific business needs, your wireless AP's on one network should broadcast a different SSID than the SSID your other network\(s\). For example, if you need a separate wireless network for your employees and guests, you could configure your wireless APs for the business network with the SSID set to broadcast **ExampleWLAN**. For your guest network, you could then set each wireless AP's SSID to broadcast **GuestWLAN**. In this way your employees and guests can connect to the intended network without unnecessary confusion.
 
-    > [!TIP]  
-    > Some wireless AP's have the ability to broadcast multiple SSID's to accommodate multi\-network deployments. Wireless AP's that can broadcast multiple SSID's can reduce deployment and operational maintenance costs.  
+    > [!TIP]
+    > Some wireless AP's have the ability to broadcast multiple SSID's to accommodate multi\-network deployments. Wireless AP's that can broadcast multiple SSID's can reduce deployment and operational maintenance costs.
 
 - **Wireless authentication and encryption**.
 
-    Wireless authentication is the security authentication that is used when the wireless client associates with a wireless access point.  
+    Wireless authentication is the security authentication that is used when the wireless client associates with a wireless access point.
 
-    Wireless encryption is the security encryption cipher that is used with wireless authentication to protect the communications that are sent between the wireless AP and the wireless client.  
+    Wireless encryption is the security encryption cipher that is used with wireless authentication to protect the communications that are sent between the wireless AP and the wireless client.
 
-- **Wireless AP IP address \(static\)**. On each wireless AP, configure a unique static IP address. If the subnet is serviced by a DHCP server, ensure that all AP IP addresses fall within a DHCP exclusion range so that the DHCP server does not try to issue the same IP address to another computer or device. Exclusion ranges are documented in the procedure "To create and activate a new DHCP Scope" in the [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide). If you are planning to configure APs as RADIUS clients by group in NPS, each AP in the group must have an IP address from the same IP address range.
+- **Wireless AP IP address \(static\)**. On each wireless AP, configure a unique static IP address. If the subnet is serviced by a DHCP server, ensure that all AP IP addresses fall within a DHCP exclusion range so that the DHCP server does not try to issue the same IP address to another computer or device. Exclusion ranges are documented in the procedure "To create and activate a new DHCP Scope" in the [Core Network Guide](../../core-network-guide.md). If you are planning to configure APs as RADIUS clients by group in NPS, each AP in the group must have an IP address from the same IP address range.
 
 - **DNS name**. Some wireless APs can be configured with a DNS name. Configure each wireless AP with a unique name. For example, if you have a deployed wireless APs in a multi\-story building, you might name the first three wireless APs that are deployed on the third floor AP3\-01, AP3\-02, and AP3\-03.
 
@@ -152,17 +150,17 @@ When planning the deployment of 802.1X\-authenticated wireless access, you must 
 
     Determine whether all of the wireless network adapters on all of the wireless client computers support the same wireless standards, or whether you need to support varying standards. For example, determine whether some network adapter hardware drivers support WPA2\-Enterprise and AES, while others support only WPA\-Enterprise and TKIP.
 
-- **Planning client authentication mode**. Authentication modes define how Windows clients process domain credentials. You can select from the following three network authentication modes in the wireless network policies.  
+- **Planning client authentication mode**. Authentication modes define how Windows clients process domain credentials. You can select from the following three network authentication modes in the wireless network policies.
 
-    1. **User re\-authentication**. This mode specifies that authentication is always performed by using security credentials based on the computer's current state. When no users are logged on to the computer, authentication is performed by using the computer credentials. When a user is logged on to the computer, authentication is always performed by using the user credentials.  
+    1. **User re\-authentication**. This mode specifies that authentication is always performed by using security credentials based on the computer's current state. When no users are logged on to the computer, authentication is performed by using the computer credentials. When a user is logged on to the computer, authentication is always performed by using the user credentials.
 
-    2. **Computer only**. Computer only mode specifies that authentication is always performed by using only the computer credentials.  
+    2. **Computer only**. Computer only mode specifies that authentication is always performed by using only the computer credentials.
 
-    3.  **User authentication**. User authentication mode specifies that authentication is only performed when the user is logged on to the computer. When there are no users logged on to the computer, authentication attempts are not performed.  
+    3.  **User authentication**. User authentication mode specifies that authentication is only performed when the user is logged on to the computer. When there are no users logged on to the computer, authentication attempts are not performed.
 
-- **Planning wireless restrictions**. Determine whether you want to provide all of your wireless users with the same level of access to your wireless network, or whether you want to restrict access for some of your wireless users. You can apply restrictions in NPS against specific groups of wireless users.  For example, you can define specific days and hours that certain groups are permitted access to the wireless network.  
+- **Planning wireless restrictions**. Determine whether you want to provide all of your wireless users with the same level of access to your wireless network, or whether you want to restrict access for some of your wireless users. You can apply restrictions in NPS against specific groups of wireless users.  For example, you can define specific days and hours that certain groups are permitted access to the wireless network.
 
-- **Planning methods for adding new wireless computers**. For wireless\-capable computers that are joined to your domain before you deploy your wireless network, if the computer is connected to a segment of the wired network that is not protected by 802.1X, the wireless configuration settings are automatically applied after you configure Wireless Network \(IEEE 802.11\) Policies on the domain controller and after Group Policy is refreshed on the wireless client.  
+- **Planning methods for adding new wireless computers**. For wireless\-capable computers that are joined to your domain before you deploy your wireless network, if the computer is connected to a segment of the wired network that is not protected by 802.1X, the wireless configuration settings are automatically applied after you configure Wireless Network \(IEEE 802.11\) Policies on the domain controller and after Group Policy is refreshed on the wireless client.
 
     For computers that are not already joined to your domain, however, you must plan a method to apply the settings that are required for 802.1X\-authenticated access. For example, determine whether you want to join the computer to the domain by using one of the following methods.
 
@@ -180,7 +178,7 @@ You can deploy wireless APs that are configured with the standards that you want
 
 For example, if your network has wireless computers that support WPA2\-Enterprise and AES, other computers that support WPA\-Enterprise and AES, and other computers that support only WPA\-Enterprise and TKIP, you must determine whether you want to:
 
-- Configure a single profile to support all of the wireless computers by using the weakest encryption method that all of your computers support - in this case, WPA\-Enterprise and TKIP.  
+- Configure a single profile to support all of the wireless computers by using the weakest encryption method that all of your computers support - in this case, WPA\-Enterprise and TKIP.
 - Configure two profiles to provide the best possible security that is supported by each wireless computer. In this instance you would configure one profile that specifies the strongest encryption \(WPA2\-Enterprise and AES\), and one profile that uses the weaker WPA\-Enterprise and TKIP encryption. In this example, it is essential that you place the profile that uses WPA2\-Enterprise and AES highest in the preference order. Computers that are not capable of using WPA2\-Enterprise and AES will automatically skip to the next profile in the preference order and process the profile that specifies WPA\-Enterprise and TKIP.
 
 > [!IMPORTANT]
@@ -194,7 +192,7 @@ This guide provides instructions to create an access environment that places all
 
 When you configure NPS network policies, you specify the wireless users security group as the object that NPS processes when determining authorization.
 
-However, if your deployment requires support for varying levels of access you need only do the following:  
+However, if your deployment requires support for varying levels of access you need only do the following:
 
 1. Create more than one Wireless Users Security Group to create additional wireless security groups in Active Directory Users and Computers. For example, you can create a group that contains users who have full access, a group for those who only have access during regular working hours, and other groups that fit other criteria that match your requirements.
 
@@ -210,7 +208,7 @@ In some cases, however, it might not be practical to use a wired connection to j
 
 To join a computer to the domain by using a wireless connection or for users to log on to the domain the first time by using a domain\-joined computer and a wireless connection, wireless clients must first establish a connection to the wireless network on a segment that has access to the network domain controllers by using one of the following methods.
 
-1. **A member of the IT staff joins a wireless computer to the domain, and then configures a Single Sign On bootstrap wireless profile.** With this method, an IT administrator connects the wireless computer to the wired Ethernet network, and then joins the computer to the domain. Then the administrator distributes the computer to the user. When the user starts the computer, the domain credentials that they manually specify for the user logon process are used to both establish a connection to the wireless network and log on to the domain.  
+1. **A member of the IT staff joins a wireless computer to the domain, and then configures a Single Sign On bootstrap wireless profile.** With this method, an IT administrator connects the wireless computer to the wired Ethernet network, and then joins the computer to the domain. Then the administrator distributes the computer to the user. When the user starts the computer, the domain credentials that they manually specify for the user logon process are used to both establish a connection to the wireless network and log on to the domain.
 
 2. **The user manually configures wireless computer with bootstrap wireless profile, and then joins the domain.** With this method, users manually configure their wireless computers with a bootstrap wireless profile based on instructions from an IT administrator. The bootstrap wireless profile allows users to establish a wireless connection, and then join the computer to the domain. After joining the computer to the domain and restarting the computer, the user can log on to the domain by using a wireless connection and their domain account credentials.
 

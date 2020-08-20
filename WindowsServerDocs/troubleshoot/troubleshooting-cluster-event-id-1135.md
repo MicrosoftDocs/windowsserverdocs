@@ -2,12 +2,12 @@
 title: Troubleshooting cluster issue with Event ID 1135
 description: Describes how to troubleshoot the Cluster Service Startup issue with Event ID 1135.
 ms.date: 05/28/2020
+author: Deland-Han
+ms.author: delhan
 ---
 # Troubleshooting cluster issue with Event ID 1135
 
 This article helps you diagnose and resolve Event ID 1135, which may be logged during the startup of the Cluster service in Failover Clustering environment.
-
-This article provides information about resolving
 
 ## Start Page
 
@@ -38,11 +38,11 @@ Follow the following command according to your Windows operation system to valid
 
 #### For Windows Server 2008 R2 cluster
 
-from elevated cmd prompt run: **cluster.exe node /stat**  
+from elevated cmd prompt run: **cluster.exe node /stat**
 
 #### For Windows Server 2012\ and Windows Server 2012 R2 cluster
 
-run PS command: **cluster node /status**  
+run PS command: **cluster node /status**
 
 Is the cluster service continuously running and available on all the nodes?
 
@@ -150,7 +150,7 @@ Additionally, when you use Live Migration together with Cluster Shared Volumes, 
 
 The Cluster service controls server cluster operations and manages the cluster database. A cluster is a collection of independent computers that act as a single computer. Managers, programmers, and users see the cluster as a single system. The software distributes data among the nodes of the cluster. If a node fails, other nodes provide the services and data that were formerly provided by the missing node. When a node is added or repaired, the cluster software migrates some data to that node.
 
-System service name: **ClusSvc**  
+System service name: **ClusSvc**
 
 |Application|Protocol|Ports|
 |---|---|---|
@@ -247,7 +247,7 @@ Check if you encounter any of the following issues.
 
 ##### Cluster installed in the VmWare virtualization platform
 
-Verify VMware adapter issues in case of VMware environment. 
+Verify VMware adapter issues in case of VMware environment.
 
 This issue may occur if the packets are dropped during high traffic bursts. Ensure that there is no traffic filtering occurring (for example, with a mail filter). After eliminating this possibility, gradually increase the number of buffers in the guest operating system and verify.
 
@@ -255,8 +255,8 @@ To reduce burst traffic drops, follow these steps:
 
 1. Open Run box by using Windows Key + R.
 2. Type devmgmt.msc and press **Enter**.
-3. Expand **Network adapters**  
-4. Right-click **vmxnet3 and click Properties.**  
+3. Expand **Network adapters**
+4. Right-click **vmxnet3 and click Properties.**
 5. Click the **Advanced** tab.
 6. Click **Small Rx Buffers** and increase the value. The default value is 512 and the maximum is 8192.
 7. Click **Rx Ring #1** Size and increase the value. The default value is 1024 and the maximum is 4096.

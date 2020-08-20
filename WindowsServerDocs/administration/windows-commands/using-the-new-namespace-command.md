@@ -1,8 +1,6 @@
 ---
 title: new-Namespace
-description: Reference topic for new-Namespace, which creates and configures a new namespace.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for new-Namespace, which creates and configures a new namespace.
 ms.topic: article
 ms.assetid: 6df60703-30bd-4d59-a8d9-9fe3efe96add
 author: coreyp-at-msft
@@ -44,7 +42,7 @@ wdsutil /New-Namespace /FriendlyName:Custom AutoCast Namespace /Namespace:Custom
 ```
 To create a Scheduled-Cast namespace, type:
 ```
-wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider 
+wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider
 /Namespacetype:ScheduledCast /time:2006/11/20:17:00 /Clients:20
 ```
 ## Additional References

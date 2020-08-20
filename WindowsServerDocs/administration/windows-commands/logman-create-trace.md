@@ -1,8 +1,6 @@
 ---
 title: logman create trace
-description: Reference topic for the logman create trace command, which creates an event trace data collector.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the logman create trace command, which creates an event trace data collector.
 ms.topic: article
 ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
 author: coreyp-at-msft
@@ -64,7 +62,7 @@ logman create trace <[-n] <name>> [options]
 
 ### Examples
 
-To create an event trace data collector called trace_log, using no fewer than 16 and no more than 256 buffers, with each buffer being 64kb in size, putting the results in c:\logfile, type:
+To create an event trace data collector called *trace_log*, using no fewer than 16 and no more than 256 buffers, with each buffer being 64kb in size, putting the results in c:\logfile, type:
 
 ```
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile
@@ -74,4 +72,6 @@ logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman update trace command](logman-update-trace.md)
+
+- [logman command](logman.md)

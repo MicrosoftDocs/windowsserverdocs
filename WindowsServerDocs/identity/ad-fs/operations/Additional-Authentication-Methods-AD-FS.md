@@ -6,16 +6,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 09/19/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Configure 3rd party authentication providers as primary authentication in AD FS 2019
 
 
-Organizations are experiencing attacks that attempt to brute force, compromise, or otherwise lock out user accounts by sending password based authentication requests.  To help protect organizations from compromise, AD FS has introduced capabilities such as extranet “smart” lockout and IP address based blocking.  
+Organizations are experiencing attacks that attempt to brute force, compromise, or otherwise lock out user accounts by sending password based authentication requests.  To help protect organizations from compromise, AD FS has introduced capabilities such as extranet “smart” lockout and IP address based blocking.
 
-However, these mitigations are reactive.  To provide a proactive way, to reduce the severity of these attacks,  AD FS has the ability to prompt for non-password factors prior to collecting the password.  
+However, these mitigations are reactive.  To provide a proactive way, to reduce the severity of these attacks,  AD FS has the ability to prompt for non-password factors prior to collecting the password.
 
 For example, AD FS 2016 introduced Azure MFA as primary authentication so that OTP codes from the Authenticator App could be used as the first factor.
 Building on this, with AD FS 2019 you can configure external authentication providers as primary authentication factors.
@@ -26,7 +24,7 @@ There are two key scenarios this enables:
 Protect password-based login from brute-force attacks and lockouts by prompting for an additional, external factor first.  Only if the external authentication is successfully completed does the user then see a password prompt.  This eliminates a convenient way attackers have been trying to compromise or disable accounts.
 
 This scenario consists of two components:
-- Prompting for Azure MFA or an external authentication factor as primary authentication
+- Prompting for Azure MFA (available in AD FS 2016 onwards) or an external authentication factor as primary authentication
 - Username and password as additional authentication in AD FS
 
 ## Scenario 2: password-free!
@@ -49,7 +47,7 @@ Once an external provider is enabled for extranet, intranet, or both, it becomes
 Before configuring external authentication providers as primary, ensure you have the following pre-requisites in place
 - The AD FS farm behavior level (FBL) has been raised to ‘4' (this value translates to AD FS 2019)
     - This is the default FBL value for new AD FS 2019 farms
-    - For AD FS farms based on Windows Server 2012 R2 or 2016, the FBL can be raised using the PowerShell commandlet Invoke-AdfsFarmBehaviorLevelRaise.  For more details on upgrading an AD FS farm, see the farm upgrade article for SQL farms or WID farms 
+    - For AD FS farms based on Windows Server 2012 R2 or 2016, the FBL can be raised using the PowerShell commandlet Invoke-AdfsFarmBehaviorLevelRaise.  For more details on upgrading an AD FS farm, see the farm upgrade article for SQL farms or WID farms
     - You can check the FBL value using the cmdlet Get-AdfsFarmInformation
 - The AD FS 2019 farm is configured to use the new 2019 ‘paginated' user facing pages
     - This is the default behavior for new AD FS 2019 farms
@@ -63,7 +61,7 @@ Once you have verified the prerequisites, there are two ways to configure AD FS 
 
 ```powershell
 PS C:\> Set-AdfsGlobalAuthenticationPolicy -AllowAdditionalAuthenticationAsPrimary $true
-``` 
+```
 
 
 The AD FS service must be restarted after enabling or disabling additional authentication as primary.
@@ -87,7 +85,7 @@ PS C:\> $providers = (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticati
 PS C:\>$providers = $providers + "FormsAuthentication"
 
 PS C:\>Set-AdfsGlobalAuthenticationPolicy -AdditionalAuthenticationProvider $providers
-``` 
+```
 
 ### Using the AD FS Management console
 In the AD FS Management console, under **Service** -> **Authentication Methods**, under **Additional Authentication Methods**, click **Edit**

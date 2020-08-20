@@ -1,8 +1,6 @@
 ---
 title: assign
-description: Reference topic for the assign command, which assigns a drive letter or mount point to the volume with focus.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the assign command, which assigns a drive letter or mount point to the volume with focus.
 ms.topic: article
 ms.assetid: 57912b73-622e-489b-b053-a369021ba8e1
 author: coreyp-at-msft
@@ -33,7 +31,7 @@ assign [{letter=<d> | mount=<path>}] [noerr]
 | Parameter | Description |
 | --------- | ----------- |
 | `letter=<d>` | The drive letter you want to assign to the volume. |
-| `mount=<path>` | The mount point path you want to assign to the volume. For instructions about how to use this command, see [Assign a mount point folder path to a drive](https://docs.microsoft.com/windows-server/storage/disk-management/assign-a-mount-point-folder-path-to-a-drive). |
+| `mount=<path>` | The mount point path you want to assign to the volume. For instructions about how to use this command, see [Assign a mount point folder path to a drive](../../storage/disk-management/assign-a-mount-point-folder-path-to-a-drive.md). |
 | noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
 ## Examples

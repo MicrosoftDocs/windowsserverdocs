@@ -1,8 +1,6 @@
 ---
 title: bitsadmin takeownership
-description: Reference topic for the bitsadmin takeownership command, which lets a user with administrative privileges take ownership of the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin takeownership command, which lets a user with administrative privileges take ownership of the specified job.
 ms.topic: article
 ms.assetid: ea0ce7cb-440a-498f-a3ef-8368fa43e399
 author: coreyp-at-msft

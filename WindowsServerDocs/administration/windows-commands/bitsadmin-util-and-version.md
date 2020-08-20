@@ -1,8 +1,6 @@
 ---
 title: bitsadmin util and version
-description: Reference topic for the bitsadmin util and version command, which displays the version of BITS service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin util and version command, which displays the version of BITS service.
 ms.topic: article
 ms.assetid: 98f17328-dfbd-4cbb-93c1-b8d424bc3f0a
 author: coreyp-at-msft

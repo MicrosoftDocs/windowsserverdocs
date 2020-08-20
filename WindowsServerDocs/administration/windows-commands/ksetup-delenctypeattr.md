@@ -1,8 +1,6 @@
 ---
 title: ksetup delenctypeattr
-description: Reference topic for the ksetup delenctypeattr, which removes the encryption type attribute for the domain.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ksetup delenctypeattr, which removes the encryption type attribute for the domain.
 ms.topic: article
 ms.assetid: 4fc25ef3-e271-4229-a712-72c507df55aa
 author: coreyp-at-msft

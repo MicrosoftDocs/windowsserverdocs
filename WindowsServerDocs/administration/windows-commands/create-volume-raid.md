@@ -1,8 +1,6 @@
 ---
 title: create volume raid
-description: Reference topic for the create volume raid command, which creates a RAID-5 volume using three or more specified dynamic disks.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the create volume raid command, which creates a RAID-5 volume using three or more specified dynamic disks.
 ms.topic: article
 ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
 author: coreyp-at-msft

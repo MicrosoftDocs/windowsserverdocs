@@ -1,8 +1,6 @@
 ---
 title: get-TransportServer
-description: Reference topic for get-TransportServer, which displays information about a specified Transport Server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-TransportServer, which displays information about a specified Transport Server.
 ms.topic: article
 ms.assetid: de634123-0179-41b2-9c6f-726508130ff5
 author: coreyp-at-msft

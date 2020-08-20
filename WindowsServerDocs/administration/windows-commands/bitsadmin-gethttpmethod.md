@@ -1,8 +1,6 @@
 ---
 title: bitsadmin gethttpmethod
-description: Reference topic for the bitsadmin gethttpmethod command, which gets the HTTP verb to use with the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin gethttpmethod command, which gets the HTTP verb to use with the job.
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp

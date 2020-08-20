@@ -1,8 +1,6 @@
 ---
 title: dir
-description: Reference topic for the dir command, which displays a list of a directory's files and subdirectories.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the dir command, which displays a list of a directory's files and subdirectories.
 ms.topic: article
 ms.assetid: edcbf69b-eaa4-466e-b210-3dd8892f4d93
 author: coreyp-at-msft
@@ -15,12 +13,12 @@ ms.date: 10/16/2017
 
 Displays a list of a directory's files and subdirectories. If used without parameters, this command displays the disk's volume label and serial number, followed by a list of directories and files on the disk (including their names and the date and time each was last modified). For files, this command displays the name extension and the size in bytes. This command also displays the total number of files and directories listed, their cumulative size, and the free space (in bytes) remaining on the disk.
 
-The **dir** command can also run from the Windows Recovery Console, using different parameters. For more information, see [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+The **dir** command can also run from the Windows Recovery Console, using different parameters. For more information, see [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ## Syntax
 
 ```
-dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>]][/o[[:]<sortorder>]] [/t[[:]<timefield>]] [/s] [/b] [/l] [/n] [/x] [/c] [/4]
+dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>]][/o[[:]<sortorder>]] [/t[[:]<timefield>]] [/s] [/b] [/l] [/n] [/x] [/c] [/4] [/r]
 ```
 
 ### Parameters
@@ -43,6 +41,7 @@ dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>
 | /x | Displays the short names generated for non-8dot3 file names. The display is the same as the display for **/n**, but the short name is inserted before the long name. |
 | /c | Displays the thousand separator in file sizes. This is the default behavior. Use **/c** to hide separators. |
 | /4 | Displays years in four-digit format. |
+| /r | Display alternate data streams of the file. |
 | /? | Displays help at the command prompt. |
 
 #### Remarks

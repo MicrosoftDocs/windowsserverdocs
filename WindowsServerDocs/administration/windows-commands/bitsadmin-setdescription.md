@@ -1,8 +1,6 @@
 ---
 title: bitsadmin setdescription
-description: Reference topic for the bitsadmin setdescription command, which sets the description of the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin setdescription command, which sets the description of the specified job.
 ms.topic: article
 ms.assetid: 1e46a5dd-4637-4a2e-b88f-d3f85b177db8
 author: coreyp-at-msft

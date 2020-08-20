@@ -1,14 +1,12 @@
 ---
 title: rsh
-description: Reference topic for **** - 
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
-ms.assetid: 9e3b2b29-208d-4257-8379-0b4738274146 vhorne
+ms.assetid: 9e3b2b29-208d-4257-8379-0b4738274146
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

@@ -1,8 +1,6 @@
 ---
 title: Subcommand start-Server
-description: Reference topic for Subcommand start-Server, which starts all services for a Windows Deployment Services server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand start-Server, which starts all services for a Windows Deployment Services server.
 ms.topic: article
 ms.assetid: 1e4343e2-0a16-4e65-8769-c09adaef5680
 author: coreyp-at-msft

@@ -2,8 +2,6 @@
 title: Migrate a Domain-based Namespace to Windows Server 2008 Mode
 description: This article describes how to migrate a domain-based namespace to Windows Server 2008 mode
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -21,7 +19,7 @@ To migrate a domain-based namespace from Windows 2000 Server mode to Windows Ser
 
 1.  Open a Command Prompt window and type the following command to export the namespace to a file, where \\\\*domain*\\*namespace* is the name of the appropriate domain, and namespace and *path\\filename* is the path and file name of the  file for export:
      ```
-     Dfsutil root export \\domain\namespace path\filename.xml 
+     Dfsutil root export \\domain\namespace path\filename.xml
      ```
 2.  Write down the path ( \\\\*server* \\*share* ) for each namespace server. You must manually add namespace servers to the re-created namespace because Dfsutil cannot import namespace servers.
 3.  In DFS Management, right-click the namespace and then click **Delete**, or type the following command at a command prompt, <br /> where \\\\*domain*\\*namespace* is the name of the appropriate domain and namespace:
@@ -41,12 +39,12 @@ To migrate a domain-based namespace from Windows 2000 Server mode to Windows Ser
     > To minimize the time required to import a large namespace, run the **Dfsutil** root import command locally on a namespace server.
 6.  Add any remaining namespace servers to the re-created namespace by right-clicking the namespace in DFS Management and then clicking **Add Namespace Server**, or by typing the following command at a command prompt, where <br /> \\\\*server*\\*share* is the name of the appropriate server and share for the namespace root:
      ```
-     Dfsutil target add \\server\share 
+     Dfsutil target add \\server\share
      ```
 
     > [!NOTE]
     > You can add namespace servers before importing the namespace, but doing so causes the namespace servers to incrementally download the metadata for the namespace instead of immediately downloading the entire namespace after being added as a namespace server.
 
-## See also
+## Additional References
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Choose a Namespace Type](choose-a-namespace-type.md)

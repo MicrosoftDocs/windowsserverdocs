@@ -61,17 +61,17 @@ The server responds by returning a list of valid network interfaces. Then, the S
 
 For more information, see the following articles:
 
-- [3.2.4.20.10 Application Requests Querying Server's Network Interfaces](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/147adde4-d936-4597-924a-8caa3429c6b0)
+- [3.2.4.20.10 Application Requests Querying Server's Network Interfaces](/openspecs/windows_protocols/ms-smb2/147adde4-d936-4597-924a-8caa3429c6b0)
 
-- [2.2.32.5 NETWORK\_INTERFACE\_INFO Response](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/fcd862d1-1b85-42df-92b1-e103199f531f)
+- [2.2.32.5 NETWORK\_INTERFACE\_INFO Response](/openspecs/windows_protocols/ms-smb2/fcd862d1-1b85-42df-92b1-e103199f531f)
 
-- [3.2.5.14.11 Handling a Network Interfaces Response](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/5459722b-1eaa-4ead-b465-284363264cad)
+- [3.2.5.14.11 Handling a Network Interfaces Response](/openspecs/windows_protocols/ms-smb2/5459722b-1eaa-4ead-b465-284363264cad)
 
 In the following scenarios, an adapter cannot be used:
 
 - There is a routing issue on the client. This is typically caused by an incorrect routing table that forces traffic over the wrong interface.
 
-- Multichannel constraints have been set. For more information, see [New-SmbMultichannelConstraint](https://docs.microsoft.com/powershell/module/smbshare/new-smbmultichannelconstraint).
+- Multichannel constraints have been set. For more information, see [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint).
 
 - Something blocked the network interface request and response packets.
 

@@ -1,8 +1,6 @@
 ---
 title: logman import and logman export
-description: Reference topic for logman import and logman export, which imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for logman import and logman export, which imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 ms.topic: article
 ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
 author: coreyp-at-msft
@@ -20,8 +18,8 @@ Imports a Data Collector Set from an XML file, or exports a Data Collector Set t
 ## Syntax
 
 ```
-logman import <[-n] <name>> <-xml <name>> [options]
-logman export <[-n] <name>> <-xml <name>> [options]
+logman import <[-n] <name> <-xml <name> [options]
+logman export <[-n] <name> <-xml <name> [options]
 ```
 
 ### Parameters
@@ -49,4 +47,4 @@ logman import perf_log -s server_1 -xml c:\windows\perf_log.xml
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [logman command](logman.md)

@@ -1,8 +1,6 @@
 ---
-title: HNV Gateway Performance Tuning in Software Defined Networks  
+title: HNV Gateway Performance Tuning in Software Defined Networks
 description: HNV gateway performance tuning guidelines on Software Defined Networks
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: grcusanz; anpaul
 author: phstee

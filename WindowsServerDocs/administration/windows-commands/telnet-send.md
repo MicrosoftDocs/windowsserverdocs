@@ -1,10 +1,8 @@
 ---
 title: telnet send
-description: Reference topic for telnet send, which sends telnet commands to the telnet server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for telnet send, which sends telnet commands to the telnet server.
 ms.topic: article
-ms.assetid: 7c217abc-1182-466e-914c-1ff16755021b vhorne
+ms.assetid: 7c217abc-1182-466e-914c-1ff16755021b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

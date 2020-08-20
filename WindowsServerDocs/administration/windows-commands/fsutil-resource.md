@@ -1,11 +1,9 @@
 ---
 title: fsutil resource
-description: Reference topic for the fsutil resource command, which manages a Transactional Resource Manager and its behavior.
-ms.prod: windows-server
+description: Reference article for the fsutil resource command, which manages a Transactional Resource Manager and its behavior.
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: b198d8ca-a5b7-430f-8911-5cbb9f50484c
 ms.topic: article
 ms.date: 10/16/2017
@@ -87,4 +85,4 @@ fsutil resource setautoreset true c:\
 
 - [fsutil](fsutil.md)
 
-- [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730726(v=ws.10))
+- [Transactional NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v=ws.10))

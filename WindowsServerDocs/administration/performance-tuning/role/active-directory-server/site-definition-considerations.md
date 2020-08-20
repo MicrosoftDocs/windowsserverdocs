@@ -1,8 +1,6 @@
 ---
 title: Site definition and domain controller placement in ADDS performance tuning
 description: Site definition and domain controller placement considerations in Active Directory performance tuning.
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
@@ -20,8 +18,8 @@ An additional area of consideration is locating Read/Write DCs for scenarios whe
 -   Where a writable Domain Controller may be necessary.  Place read-write Domain Controllers at central locations to minimize latency.
 
 For further information reference:
--   [Application Compatibility with RODCs](https://technet.microsoft.com/library/cc772597.aspx)
--   [Active Directory Service Interface (ADSI) and the Read Only Domain Controller (RODC) – Avoiding performance issues](https://blogs.technet.microsoft.com/fieldcoding/2012/06/24/active-directory-service-interface-adsi-and-the-read-only-domain-controller-rodc-avoiding-performance-issues/)
+-   [Application Compatibility with RODCs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772597(v=ws.10))
+-   [Active Directory Service Interface (ADSI) and the Read Only Domain Controller (RODC) – Avoiding performance issues](/archive/blogs/fieldcoding/active-directory-service-interface-adsi-and-the-read-only-domain-controller-rodc-avoiding-performance-issues)
 
 ## Optimize for referrals
 
@@ -51,9 +49,9 @@ Cross domain trust scenarios are an area that has been consistently a pain point
 
 -   Domain controllers in the trusting domain will attempt to locate domain controllers in the trusted domain that are in the same site first and then failback to the generic locators.
 
-    -   For more info on how DCLocator works, see [Finding a Domain Controller in the Closest Site](https://technet.microsoft.com/library/cc978016.aspx).
+    -   For more info on how DCLocator works, see [Finding a Domain Controller in the Closest Site](/previous-versions/windows/it-pro/windows-2000-server/cc978016(v=technet.10)).
 
-    -   Converge site names between the trusted and trusting domains to reflect domain controller in the same location. Ensure subnet and IP address mappings are properly linked to sites in both forests. For more info, see [Domain Locator Across a Forest Trust](https://blogs.technet.com/b/askds/archive/2008/09/24/domain-locator-across-a-forest-trust.aspx).
+    -   Converge site names between the trusted and trusting domains to reflect domain controller in the same location. Ensure subnet and IP address mappings are properly linked to sites in both forests. For more info, see [Domain Locator Across a Forest Trust](/archive/blogs/askds/domain-locator-across-a-forest-trust).
 
     -   Ensure ports are open, according to DCLocator needs, for domain controller location. If firewalls exist between the domains, ensure that the firewalls are properly configured for ALL trusts. If firewalls are not open, the trusting domain controller will still attempt to access the trusted domain. If communication fails for any reason, the trusting domain controller will eventually time out the request to the trusted domain controller. However, these time outs can take several seconds per request and can exhaust network ports on the trusting domain controller if the volume of incoming requests is high. The client may experience the waits to timeout at the domain controller as hung threads, which could translate to hung applications (if the application runs the request in the foreground thread). For more info, see [How to configure a firewall for domains and trusts](https://support.microsoft.com/kb/179442).
 
@@ -62,7 +60,7 @@ Cross domain trust scenarios are an area that has been consistently a pain point
         > [!NOTE]
         > There is a practical limit of about 50 to the number of domain controllers the client can consume. These should be the most site-optimal and highest capacity domain controllers.
 
-    
+
     -  Consider placing domain controllers from trusted and trusting domains in the same physical location.
 
 For all trust scenarios, credentials are routed according to the domain specified in the authentication requests. This is also true for queries to the LookupAccountName and LsaLookupNames (as well as others, these are just the most commonly used) APIs. When the domain parameters for these APIs are passed a NULL value, the domain controller will attempt to find the account name specified in every trusted domain available.
@@ -71,9 +69,9 @@ For all trust scenarios, credentials are routed according to the domain specifie
 
 -   Disable passing authentication requests with NULL domain specified across all available trusts. [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/kb/923241/EN-US)
 
-## See also
+## Additional References
 - [Performance tuning Active Directory Servers](index.md)
 - [Hardware considerations](hardware-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
-- [Troubleshooting ADDS performance](troubleshoot.md) 
+- [Troubleshooting ADDS performance](troubleshoot.md)
 - [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)

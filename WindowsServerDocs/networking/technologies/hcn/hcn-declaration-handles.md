@@ -2,7 +2,6 @@
 title: RPC context handles for HCN
 ms.author: jmesser
 author: jmesser81
-ms.prod: windows-server
 ms.date: 11/05/2018
 ---
 
@@ -141,7 +140,7 @@ HRESULT
 WINAPI
 HcnCloseNetwork(
     _In_ HCN_NETWORK Network
-    ); 
+    );
 ```
 
 ## HCN_Endpoint
@@ -275,7 +274,7 @@ WINAPI
 HcnCloseEndpoint(
     _In_ HCN_ENDPOINT Endpoint
     );
- 
+
 ```
 
 ## HCN_Namespace

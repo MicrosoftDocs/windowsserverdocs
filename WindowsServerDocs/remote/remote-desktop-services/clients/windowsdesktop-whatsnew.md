@@ -1,13 +1,11 @@
 ---
 title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/27/2020
+ms.date: 08/11/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -20,8 +18,45 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.1026 |
-|Insider    |1.2.1026 |
+|Public     |1.2.1186 |
+|Insider    |1.2.1272 |
+
+## Updates for version 1.2.1272 [INSIDER]
+
+*Date published: 08/11/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
+
+- Added functionality to auto-detect sovereign clouds from the user’s identity.
+- Added functionality to enable custom URL subscriptions for all users.
+- Fixed an issue with app pinning on the feed taskbar.
+- Fixed a crash when subscribing with URL.
+- Improved experience when dragging remote app windows with touch or pen.
+
+## Updates for version 1.2.1186
+
+*Date published: 07/28/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qy), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ciex), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qx)
+
+- You can now be subscribed to Workspaces with multiple user accounts, using the overflow menu (**...**) option on the command bar at the top of the client. To differentiate Workspaces, the Workspace titles now include the username, as do all app shortcuts titles.
+- Added additional information to subscription error messages to improve troubleshooting.
+- The collapsed/expanded state of Workspaces is now preserved during a refresh.
+- Added a **Send Diagnostics and Close** button to the **Connection information** dialog.
+- Fixed an issue with the CTRL + SHIFT keys in remote sessions.
+
+## Updates for version 1.2.1104
+
+*Date published: 06/23/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
+
+- Updated the automatic discovery logic for the **Subscribe** option to support the Windows Virtual Desktop Spring 2020 update. Customers with only Spring Update resources should no longer need to provide consent for the Fall 2019 release.
+- Improved support for high-DPI devices with scale factor up to 400%.
+- Fixed an issue where the disconnect dialog didn't appear.
+- Fixed an issue where command bar tooltips would remain visible longer than expected.
+- Fixed a crash when you tried to subscribe immediately after a refresh.
+- Fixed a crash from incorrect parsing of date and time in some languages.
 
 ## Updates for version 1.2.1026
 
@@ -70,8 +105,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 03/24/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSh), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSi), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4sllb)
-
 - Renamed the "Update" action for Workspaces to "Refresh" for consistency with other Remote Desktop clients.
 - You can now refresh a Workspace directly from its context menu.
 - Manually refreshing a Workspace now ensures all local content is updated.
@@ -84,8 +117,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 02/25/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qeak), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7h), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7g)
-
 - Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope properties has been modified.
 - When a Workspace is empty or has been removed, the Connection Center no longer appears to be empty.
 - Added the activity ID and error code on disconnect messages to improve troubleshooting. You can copy the dialog message with **Ctrl+C**.
@@ -96,8 +127,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.605
 
 *Date published: 01/29/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
 
 - You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select **Settings**.
 - Fixed an issue where the connection settings didn't display the correct available scale factors.
@@ -110,8 +139,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 12/04/2019*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
-
 - You can now access information about updates directly from the more options button on the command bar at the top of the client.
 - You can now report feedback from the command bar of the client.
 - The Feedback option is now only shown if the Feedback Hub is available.
@@ -122,8 +149,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.431
 
 *Date published: 11/12/2019*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
 
 - The 32-bit and ARM64 versions of the client are now available!
 - The client now saves any changes you make to the connection bar (such as its position, size, and pinned state) and applies those changes across sessions.
@@ -142,8 +167,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.247
 
 *Date published: 09/17/2019*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
 
 - Improved the fallback languages for localized version. (For example, FR-CA will properly display in French instead of English.)
 - When removing a subscription, the client now properly removes the saved credentials from Credential Manager.

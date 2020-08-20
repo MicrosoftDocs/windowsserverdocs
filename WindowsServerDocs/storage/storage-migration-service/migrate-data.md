@@ -6,8 +6,6 @@ ms.author: jgerend
 manager: elizapo
 ms.date: 03/25/2020
 ms.topic: article
-ms.prod: windows-server
-ms.technology: storage
 ---
 # Use Storage Migration Service to migrate a server
 
@@ -17,13 +15,13 @@ This topic discusses how to migrate a server, including its files and configurat
 
 Before you get started, install Storage Migration Service and make sure that the necessary firewall ports are open.
 
-1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md) on your PC or a management server if you haven't already. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
+1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/overview.md) on your PC or a management server if you haven't already. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
 2. In Windows Admin Center, connect to the orchestrator server running Windows Server 2019. <br>This is the server that you'll install Storage Migration Service on and use to manage the migration. If you're migrating only one server, you can use the destination server as long as it's running Windows Server 2019. We recommend you use a separate orchestration server for any multi-server migrations.
 3. Go to **Server Manager** (in Windows Admin Center) > **Storage Migration Service** and select **Install** to install Storage Migration Service and its required components (shown in Figure 1).
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
      **Figure 1: Installing Storage Migration Service**
-4. Install the Storage Migration Service proxy on all destination servers running Windows Server 2019. This doubles the transfer speed when installed on destination servers. <br>To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, select **Storage Migration Service Proxy**, and then select **Install**. 
-5. If you intend to migrate to or from Windows Failver Clusters, install the Failover Clustering tools on the orchestrator server. <br>To do so, connect to the orchestrator server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**, select **Failover Clustering Tools**, and then select **Install**. 
+4. Install the Storage Migration Service proxy on all destination servers running Windows Server 2019. This doubles the transfer speed when installed on destination servers. <br>To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, select **Storage Migration Service Proxy**, and then select **Install**.
+5. If you intend to migrate to or from Windows Failver Clusters, install the Failover Clustering tools on the orchestrator server. <br>To do so, connect to the orchestrator server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**, select **Failover Clustering Tools**, and then select **Install**.
 6. On all source servers and on any destination servers running Windows Server 2012 R2 or Windows Server 2016, in Windows Admin Center, connect to each server, go to **Server Manager** (in Windows Admin Center) > **Firewall** > **Incoming rules**, and then check that the following rules are enabled:
     - File and Printer Sharing (SMB-In)
     - Netlogon Service (NP-In)
@@ -39,7 +37,7 @@ Before you get started, install Storage Migration Service and make sure that the
 In this step, you specify what servers to migrate and then scan them to collect info on their files and configurations.
 
 1. Select **New job**, name the job, and then select whether to migrate Windows servers and clusters or Linux servers that use Samba. Then select **OK**.
-2. On the **Enter credentials** page, type admin credentials that work on the servers you want to migrate from, and then select **Next**. <br>If you're migrating from Linux servers, instead enter credentials on the **Samba credentials** and **Linux credentials** pages, including an SSH password or private key. 
+2. On the **Enter credentials** page, type admin credentials that work on the servers you want to migrate from, and then select **Next**. <br>If you're migrating from Linux servers, instead enter credentials on the **Samba credentials** and **Linux credentials** pages, including an SSH password or private key.
 
 3. Select **Add a device**, type a source server name or the name of a clustered file server, and then select **OK**. <br>Repeat this for any other servers that you want to inventory.
 
@@ -54,17 +52,17 @@ In this step, you specify what servers to migrate and then scan them to collect 
 In this step you transfer data after specifying where to put it on the destination servers.
 
 1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
-2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also click "Create a new Azure VM" then use the wizard to deploy a new destination server in Azure. This will automatically size your VM, provision storage, format disks, join the domain, and add the Storage Migration Service proxy to a Windows Server 2019 destination. You can choose from Windows Server 2019 (recommended), Windows Server 2016, and Windows Server 2012 R2 VMs of any size and use managed disks.   
+2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also click "Create a new Azure VM" then use the wizard to deploy a new destination server in Azure. This will automatically size your VM, provision storage, format disks, join the domain, and add the Storage Migration Service proxy to a Windows Server 2019 destination. You can choose from Windows Server 2019 (recommended), Windows Server 2016, and Windows Server 2012 R2 VMs of any size and use managed disks.
 
     > [!NOTE]
     > Using "Create a new Azure VM" requires that you have:
     > - A valid Azure subscription.
     > - An existing Azure Compute resource group where you have Create rights.
-    > - An existing Azure Virtual Network and subnet. 
+    > - An existing Azure Virtual Network and subnet.
     > - An Azure Express Route or VPN solution tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
-   
+
     Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
-    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ] 
+    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
 
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
    ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
@@ -84,7 +82,7 @@ In this step you transfer data after specifying where to put it on the destinati
 8. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
    > [!NOTE]
-   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** or the other log save options to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. 
+   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** or the other log save options to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run.
 
 At this point, you have three options:
 
@@ -92,7 +90,7 @@ At this point, you have three options:
 - **Consider the migration complete** without taking over the source servers' identities.
 - **Transfer again**, copying only files that were updated since the last transfer.
 
-If your goal is to sync the files with Azure, you could set up the destination servers with Azure File Sync after transferring files, or after cutting over to the destination servers (see [Planning for an Azure File Sync deployment](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)).
+If your goal is to sync the files with Azure, you could set up the destination servers with Azure File Sync after transferring files, or after cutting over to the destination servers (see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning)).
 
 ## Step 3: Cut over to the new servers
 
@@ -103,7 +101,7 @@ In this step you cut over from the source servers to the destination servers, mo
 
    If your destination is a clustered file server, you might need to provide credentials with permissions to remove the cluster from the domain and then add it back with the new name.
 
-3. On the **Configure cutover** page, specify which network adapter on the destination should take over the settings from each adapter on the source. This moves the IP address from the source to the destination as part of the cutover, giving the source server a new DHCP or static IP address. You have the option to skip all network migrations or certain interfaces. 
+3. On the **Configure cutover** page, specify which network adapter on the destination should take over the settings from each adapter on the source. This moves the IP address from the source to the destination as part of the cutover, giving the source server a new DHCP or static IP address. You have the option to skip all network migrations or certain interfaces.
 4. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address. If using a static address, the new subnet must be the same as the old subnet or cutover will fail.
     ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png)
     **Figure 4: A source server and how its network configuration will move to the destination**
@@ -112,8 +110,8 @@ In this step you cut over from the source servers to the destination servers, mo
 7. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
 8. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, as well as Active Directory and DNS replication times.
 
-## See also
+## Additional References
 
 - [Storage Migration Service overview](overview.md)
 - [Storage Migration Services frequently asked questions (FAQ)](faq.md)
-- [Planning for an Azure File Sync deployment](https://docs.microsoft.com/azure/storage/files/storage-sync-files-planning)
+- [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning)

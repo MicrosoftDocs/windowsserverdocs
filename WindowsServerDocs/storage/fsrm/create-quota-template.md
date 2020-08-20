@@ -2,8 +2,6 @@
 title: Create a Quota Template
 description: This article describes how to create a quota template to define a storage space limit
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -82,7 +80,7 @@ For example, you could configure thresholds to send an e-mail message to the adm
 
 8. Repeat these steps if you want to configure additional notification thresholds for the quota template.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -    [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
