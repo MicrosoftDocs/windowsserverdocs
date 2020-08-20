@@ -20,7 +20,7 @@ If you encounter any issues, you can always contact us by navigating to **Help**
 
 In this release, we've made substantial updates to the underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting. Here are some changes you may notice:
 
-- PC Quick Connect (CMD+K) allows you to connect to a PC without creating a bookmark.
+- PC Quick Connect (Cmd+K) allows you to connect to a PC without creating a bookmark.
 - Auto-reconnect now recovers from transient network glitches for PC connections.
 - When resuming a suspended MacBook, you can use auto-reconnect to reconnect to any disconnected PC connections.
 - Added support for HTTP proxies when subscribing and connecting to Windows Virtual Desktop resources.
@@ -33,7 +33,7 @@ In this release, we've made substantial updates to the underlying code that powe
 - Addressed an issue that prevented the menu bar from dropping in multimon scenarios.
 - User account UI that interacts with the macOS keychain will now surface keychain access errors.
 - Hitting cancel during workspace subscription will now result in nothing being added to the Connection Center.
-- Added key mappings for CMD+Z and CMD+F to map to CTRL+Z and CTRL+F respectively.
+- Added key mappings for Cmd+Z and Cmd+F to map to Ctrl+Z and Ctrl+F respectively.
 - Fixed a bug that caused remote apps to open behind the Connection Center when launched.
 - Worked around an issue where AAC audio playback on macOS 10.15 would cause the client to stall.
 - Shift+left-click now works in Unicode mode.
@@ -370,8 +370,8 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Addressed issues where RemoteApp windows appeared behind the Connection Center.
 - Fixed a problem that occurred when you edit local resources after importing from Remote Desktop 8.
 - You can now start a connection by pressing ENTER on a desktop tile.
-- When you're in full screen view, CMD+M now correctly maps to WIN+M.
-- The Connection Center, Preferences, and About windows now respond to CMD+M.
+- When you're in full screen view, Cmd+M now correctly maps to WIN+M.
+- The Connection Center, Preferences, and About windows now respond to Cmd+M.
 - You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources*- page.
 - Fixed an issue where a new remote resources feed showed up empty in the Connection Center until after you refreshed.
 
