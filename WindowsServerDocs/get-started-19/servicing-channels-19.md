@@ -1,6 +1,6 @@
 ---
-title: Servicing Channels
-description: Explanation of Windows Server service channels - LTSC and SAC
+title: Windows Server servicing channels
+description: Explanation of Windows Server service channels – LTSC and SAC
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -31,8 +31,8 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 
 The Semi-Annual Channel is available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
-> [!NOTE]
-> **The current Semi-Annual Channel release is Windows Server, version 1909**. If you want to put servers in this channel, you should install Windows Server, version 1909, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
+> [!Note]
+> **The current Semi-Annual Channel release is Windows Server, version 2004**. If you want to put servers in this channel, you should install Windows Server, version 2004, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
 
 In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
 
@@ -40,7 +40,8 @@ In this model, Windows Server releases are identified by the year and month of r
 
 These are the key differences to take into account:
 
-- Do you need to step up on new technology on Devops, Containers and Microservices? If so, you should consider **joining the Semi-Annual Channel** by installing **Windows Server, version 1909**. As described in this topic, you will receive new versions twice a year, with 18 months of mainstream production support per release. You get it through volume licensing, Azure, or Visual Studio Subscription Services. Currently, releases in the Semi-Annual Channel require volume licensing and Software Assurance if you intend to run the product in production.
+- Do you need to innovate rapidly? Do you need early access to the newest Windows Server features? Do you need to support fast-cadence hybrid applications, dev-ops, and Hyper-V fabrics? If so, you should consider **joining the Semi-Annual Channel** by installing **Windows Server, version 2004**. As described in this topic, you will receive new versions twice a year, with 18 months of mainstream production support per release. You get it through volume licensing, Azure, or Visual Studio Subscription Services. Currently, releases in the Semi-Annual Channel require volume licensing and Software Assurance if you intend to run the product in production.
+
 - Do you need stability and predictability? Do you need to run virtual machines and traditional workloads on physical servers? If so, you should consider **keeping those servers on the Long-Term Servicing Channel**. The current LTSC release is **Windows Server 2019**. As described in this topic, you'll have access to new versions every 2-3 years, with 5 years of mainstream support followed by 5 years of extended support per release. LTSC releases are available through all release mechanisms. Releases in the LTSC are available to anyone regardless of the licensing model they are using.
 
 The following table summarizes the key differences between the channels:
@@ -165,12 +166,12 @@ State   :     Installed
 
 ## Additional References
 
-[Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md)
+- [Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md)
 
-[Windows Server support lifecycle](https://support.microsoft.com/lifecycle)
+- [Windows Server support lifecycle](https://support.microsoft.com/lifecycle)
 
-[Determining whether Server Core is running](/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)?f=255&MSPPError=-2147217396)
+- [Determining whether Server Core is running](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)
 
-[GetProductInfo function](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
+- [GetProductInfo function](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
 
-[Software Inventory Logging Cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
+- [Software Inventory Logging Cmdlets](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
