@@ -15,6 +15,7 @@ Displays or modifies file name extension associations. If used without parameter
 
 > [!NOTE]
 > This command is only supported within cmd.exe and is not available from PowerShell.
+> Though you can use `cmd /c assoc` as a workaround.
 
 ## Syntax
 
