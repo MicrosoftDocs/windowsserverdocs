@@ -289,32 +289,32 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 13. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
 
-    ```
-    <div id="loginArea">
-    <form method="post" id="loginForm" >
-    <!-- These inputs are required by the presentation framework. Do not modify or remove -->
-    <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
-    <input id="context" type="hidden" name="Context" value="%Context%"/>
-    <!-- End inputs are required by the presentation framework. -->
-    <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
-    <label for="challengeQuestionInput" class="block">Question text</label>
-    <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
-    <div id="submissionArea" class="submitMargin">
-    <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
-    </div>
-    </form>
-    <div id="intro" class="groupMargin">
-    <p id="supportEmail">Support information</p>
-    </div>
-    <script type="text/javascript" language="JavaScript">
-    //<![CDATA[
-    function AuthPage() { }
-    AuthPage.submitAnswer = function () { return true; };
-    //]]>
-    </script></div>
-    ```
+       ```html
+       <div id="loginArea">
+        <form method="post" id="loginForm" >
+        <!-- These inputs are required by the presentation framework. Do not modify or remove -->
+        <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
+        <input id="context" type="hidden" name="Context" value="%Context%"/>
+        <!-- End inputs are required by the presentation framework. -->
+        <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
+        <label for="challengeQuestionInput" class="block">Question text</label>
+        <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
+        <div id="submissionArea" class="submitMargin">
+        <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
+        </div>
+        </form>
+        <div id="intro" class="groupMargin">
+        <p id="supportEmail">Support information</p>
+        </div>
+        <script type="text/javascript" language="JavaScript">
+        //<![CDATA[
+        function AuthPage() { }
+        AuthPage.submitAnswer = function () { return true; };
+        //]]>
+        </script></div>
+       ```
 
-14. Then, select **Project->Add Component... Resources** file and name the file **Resources**, and click **Add:**
+14. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
 
    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
 
