@@ -1,8 +1,6 @@
 ---
 title: wbadmin get items
-description: Reference topic for wbadmin get items, which lists the items included in a specific backup.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for wbadmin get items, which lists the items included in a specific backup.
 ms.topic: article
 ms.assetid: 27d08ce3-6e06-4260-b264-fc1bde132d09
 author: coreyp-at-msft
@@ -51,4 +49,4 @@ wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -ma
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   [Get-WBBackupSet](https://technet.microsoft.com/library/jj902473.aspx) cmdlet
+-   [Get-WBBackupSet](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) cmdlet

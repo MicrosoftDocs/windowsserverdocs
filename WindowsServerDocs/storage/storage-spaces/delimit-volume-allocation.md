@@ -2,7 +2,6 @@
 title: Delimit the allocation of volumes in Storage Spaces Direct
 ms.author: cosmosdarwin
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/29/2018
@@ -32,7 +31,7 @@ Windows Server 2019 introduces an option to manually delimit the allocation of v
 
 ### Review: regular allocation
 
-With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this deep dive blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/).
+With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this deep dive blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959).
 
 ![Diagram showing the volume being divided into three stacks of slabs and distributed evenly across every server.](media/delimit-volume-allocation/regular-allocation.png)
 

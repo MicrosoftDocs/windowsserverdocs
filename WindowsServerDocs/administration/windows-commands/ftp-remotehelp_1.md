@@ -1,8 +1,6 @@
 ---
 title: ftp remotehelp
-description: Reference topic for the ftp remotehelp command, which displays help for remote commands.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ftp remotehelp command, which displays help for remote commands.
 ms.topic: article
 ms.assetid: ef23adf3-ead4-44c8-ac1d-c8a6f4b2bf73
 author: coreyp-at-msft
@@ -51,4 +49,4 @@ remotehelp feat
 
 - [ftp literal](ftp-literal_1.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

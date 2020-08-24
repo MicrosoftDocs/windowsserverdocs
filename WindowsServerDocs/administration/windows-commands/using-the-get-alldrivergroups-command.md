@@ -1,8 +1,6 @@
 ---
 title: get-AllDriverGroups
-description: Reference topic for get-AllDriverGroups, which displays information about all the driver groups on a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-AllDriverGroups, which displays information about all the driver groups on a server.
 ms.topic: article
 ms.assetid: f245ba53-f150-41b1-8418-38dcf0410a05
 author: coreyp-at-msft

@@ -6,15 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 10/18/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Walkthrough: Workplace Join with an iOS Device
 
 
-> [!IMPORTANT] 
-> This method is relevant for only fully on-prem customers. Hybrid or cloud-only customers must not use this method to register their iOS devices. And this method is not compatible when the on-prem customers decide to move to cloud. The device must be unregistered and registered with the cloud. 
+> [!IMPORTANT]
+> This method is relevant for only fully on-prem customers. Hybrid or cloud-only customers must not use this method to register their iOS devices. And this method is not compatible when the on-prem customers decide to move to cloud. The device must be unregistered and registered with the cloud.
 
 This topic demonstrates Workplace Join on an iOS device. You must complete the steps in the [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) section before you can try out this walkthrough. You can use the device to access the same company web application that you accessed in [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md).
 
@@ -23,7 +21,7 @@ This topic demonstrates Workplace Join on an iOS device. You must complete the s
 
 > [!IMPORTANT]
 > When on-premises DRS is configured, the iOS device must trust the Secure Socket Layer (SSL) certificate that was used to configure Active Directory Federation Services (AD FS) in [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4), for Workplace Join to succeed.
-> 
+>
 > -   If the AD FS SSL certificate was issued from a test certification authority (CA), you must install the certification authority certificate on your iOS device.
 > -   If your certification authority certificate is published on a website, you can browse to the website from your iOS device and install the certificate.
 
@@ -35,10 +33,10 @@ In this demonstration, you join the device to the workplace.
        Open Apple Safari and navigate to Azure Active Directory Device Registration service Over-the-Air Profile endpoint for iOS devices, <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` >
        Where <`yourdomainname`> is the domain name that you have configured with Azure Active Directory. For example, if your domain name is contoso.com, the URL would be: `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`
 
-   -   **When On-premises DRS is the configured DRS**: 
+   -   **When On-premises DRS is the configured DRS**:
        Open Apple Safari and navigate to the Device Registration Service (DRS) Over-the-Air Profile endpoint for iOS devices, `https://adf1s.contoso.com/enrollmentserver/otaprofile`
 
-   There are many ways to communicate this URL to your users. One recommended way is to publish this URL in a custom application access denied message in AD FS. This is covered in the upcoming section: [Create an application access policy and custom access denied message](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
+   There are many ways to communicate this URL to your users. One recommended way is to publish this URL in a custom application access denied message in AD FS. This is covered in the upcoming section: [Create an application access policy and custom access denied message](/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
 
 2. Log on to the webpage by using a company domain account:  <strong>roberth@contoso.com</strong> and password: <strong>P@ssword</strong>.
 
@@ -61,6 +59,3 @@ In this demonstration, you join the device to the workplace.
 - [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 - [Walkthrough: Workplace Join with a Windows Device](Walkthrough--Workplace-Join-with-a-Windows-Device.md)
-
-
-

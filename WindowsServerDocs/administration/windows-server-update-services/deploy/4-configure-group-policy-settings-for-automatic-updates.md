@@ -1,8 +1,6 @@
 ---
 title: Step 4 - Configure Group Policy Settings for Automatic Updates
 description: Windows Server Update Service (WSUS) topic - Configure Group Policy Settings for Automatic Updates is step four in a four step process for deploying WSUS
-ms.prod: windows-server
-ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
 author: coreyp-at-msft
@@ -633,7 +631,7 @@ The procedure that follows describes how to open the GPMC on your domain control
 
     -   **Open the computer Configuration > Maintenance Scheduler extension of Group Policy**. In GPOE, navigate to *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**.
 
-For more information about the Group Policy, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx(v=ws.12)).
+For more information about the Group Policy, see [Group Policy Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831791(v=ws.11)).
 
 > [!TIP]
 > After you have opened the extension of Group Policy you want, you can use the following steps to enable, disable, or navigate between settings:

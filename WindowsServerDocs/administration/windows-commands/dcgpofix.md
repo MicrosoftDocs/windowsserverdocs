@@ -1,8 +1,6 @@
 ---
 title: dcgpofix
-description: Reference topic for the dcgpofix command, which recreates the default Group Policy Objects (GPOs) for a domain.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the dcgpofix command, which recreates the default Group Policy Objects (GPOs) for a domain.
 ms.topic: article
 ms.assetid: 81d5fa65-2aea-49d3-b353-357441846c00
 author: coreyp-at-msft

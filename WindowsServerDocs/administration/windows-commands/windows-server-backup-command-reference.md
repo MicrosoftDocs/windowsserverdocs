@@ -1,8 +1,6 @@
 ---
 title: Windows Server Backup Command Reference
-description: Reference topic for backup command reference. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for backup command reference.
 ms.topic: article
 ms.assetid: 03de0a65-21f0-4dd7-a3ae-251c98bbf6eb
 author: coreyp-at-msft

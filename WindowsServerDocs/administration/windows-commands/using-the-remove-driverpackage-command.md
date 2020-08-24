@@ -1,8 +1,6 @@
 ---
 title: remove-DriverPackage
-description: Reference topic for remove-DriverPackage, which removes a driver package from a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for remove-DriverPackage, which removes a driver package from a server.
 ms.topic: article
 ms.assetid: 6b201e91-0d44-4e4a-8252-8b0235df1002
 author: coreyp-at-msft
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # remove-DriverPackage
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Removes a driver package from a server.
 

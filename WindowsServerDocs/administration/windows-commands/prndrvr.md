@@ -1,8 +1,6 @@
 ---
 title: prndrvr
-description: Reference topic for the prndrvr command, which adds, deletes, and lists printer drivers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the prndrvr command, which adds, deletes, and lists printer drivers.
 ms.topic: article
 ms.assetid: 82b09e3e-bd38-4df1-9953-b0e9ee2565a3
 author: coreyp-at-msft

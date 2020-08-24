@@ -1,9 +1,7 @@
 ---
 title: Updating Nano Server
-description: 
-ms.prod: windows-server
+description:
 manager: DonGill
-ms.technology: server-nano
 ms.date: 09/06/2017
 ms.topic: get-started-article
 author: jaimeo
@@ -13,11 +11,11 @@ ms.localizationpriority: medium
 # Updating Nano Server
 
 > [!IMPORTANT]
-> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means. 
+> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
 
-Nano Server offers a variety of methods for staying up to date. Compared to other installation options of Windows Server, Nano Server follows a more active servicing model similar to that of Windows 10. These periodic releases are known as **Current Branch for Business (CBB)** releases. This approach supports customers who want to innovate more quickly and move at a cloud cadence of rapid development lifecycles. More information about CBB is available on the [Windows Server Blog](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
+Nano Server offers a variety of methods for staying up to date. Compared to other installation options of Windows Server, Nano Server follows a more active servicing model similar to that of Windows 10. These periodic releases are known as **Current Branch for Business (CBB)** releases. This approach supports customers who want to innovate more quickly and move at a cloud cadence of rapid development lifecycles. More information about CBB is available on the [Windows Server Blog](https://cloudblogs.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
-**Between these CBB releases**, Nano Server stays current with a series of *cumulative updates*. For example, the first cumulative update for Nano Server was released on September 26, 2016 with [KB4093120](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120). With this and subsequent cumulative updates, we provide various options for installing these updates on Nano Server. In this article, we'll use the KB3192366 update as an example to illustrate how to obtain and apply cumulative updates to Nano Server. For more information on the cumulative update model, see the [Microsoft Update blog](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/).
+**Between these CBB releases**, Nano Server stays current with a series of *cumulative updates*. For example, the first cumulative update for Nano Server was released on September 26, 2016 with [KB4093120](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120). With this and subsequent cumulative updates, we provide various options for installing these updates on Nano Server. In this article, we'll use the KB3192366 update as an example to illustrate how to obtain and apply cumulative updates to Nano Server. For more information on the cumulative update model, see the [Microsoft Update blog](/archive/blogs/mu/patching-with-windows-server-2016).
 
 > [!NOTE]
 > If you install an optional Nano Server package from media or online repository, it won't have recent security fixes included. To avoid a version mismatch between the optional packages and base operating system, you should install the latest cumulative update immediately after installing any optional packages and **before** restarting the server.
@@ -106,7 +104,7 @@ Enter-PSSession $s
    ```powershell
    # Apply the servicing stack update first and then restart
    dism.exe /Online /Add-Package /PackagePath:C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab
-   
+
    # After the operation completes successfully and you are prompted to restart, it's safe to
    # press Ctrl+C to cancel the pipeline and return to the prompt
    Restart-Computer; exit
@@ -127,7 +125,7 @@ Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Creden
 
 - Scan for available updates
    ```powershell
-   $ci = New-CimInstance -Namespace root/Microsoft/Windows/WindowsUpdate -ClassName MSFT_WUOperationsSession  
+   $ci = New-CimInstance -Namespace root/Microsoft/Windows/WindowsUpdate -ClassName MSFT_WUOperationsSession
    $result = $ci | Invoke-CimMethod -MethodName ScanForUpdates -Arguments @{SearchCriteria="IsInstalled=0";OnlineScan=$true}
    $result.Updates
    ```
@@ -145,13 +143,13 @@ Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Creden
    $result = $ci | Invoke-CimMethod -MethodName ScanForUpdates -Arguments @{SearchCriteria="IsInstalled=1";OnlineScan=$true}
    $result.Updates
    ```
-   
+
 ## Additional Options
 Other methods for updating Nano Server might overlap or complement the options above. Such options include using Windows Server Update Services (WSUS), System Center Virtual Machine Manager (VMM), Task Scheduler, or a non-Microsoft solution.
-- [Configuring Windows Update for WSUS](https://msdn.microsoft.com/library/dd939844(v=ws.10).aspx) by setting the following registry keys:
+- [Configuring Windows Update for WSUS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939844(v=ws.10)) by setting the following registry keys:
   - WUServer
   - WUStatusServer (generally uses the same value as WUServer)
   - UseWUServer
   - AUOptions
-- [Managing Fabric Updates in VMM](https://technet.microsoft.com/library/gg675084(v=sc.12).aspx)
-- [Registering a Scheduled Task](https://technet.microsoft.com/library/jj649811.aspx)
+- [Managing Fabric Updates in VMM](/previous-versions/system-center/system-center-2012-R2/gg675084(v=sc.12))
+- [Registering a Scheduled Task](/previous-versions/system-center/system-center-2012-R2/gg675084(v=sc.12))

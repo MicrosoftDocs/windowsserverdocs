@@ -1,8 +1,6 @@
 ---
 title: clean
-description: Reference topic for the Diskpart clean command, which removes all partitions or volume formatting from the disk with focus.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the Diskpart clean command, which removes all partitions or volume formatting from the disk with focus.
 ms.topic: article
 ms.assetid: 9bbe6fd3-e07e-487b-9035-910957a1d326
 author: coreyp-at-msft
@@ -18,7 +16,7 @@ ms.date: 10/16/2017
 Removes all partitions or volume formatting from the disk with focus.
 
 >[!NOTE]
-> For a PowerShell version of this command, see [clear-disk command](https://docs.microsoft.com/powershell/module/storage/clear-disk).
+> For a PowerShell version of this command, see [clear-disk command](/powershell/module/storage/clear-disk).
 
 ## Syntax
 
@@ -50,6 +48,6 @@ clean
 
 ## Additional References
 
-- [clear-disk command](https://docs.microsoft.com/powershell/module/storage/clear-disk)
+- [clear-disk command](/powershell/module/storage/clear-disk)
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

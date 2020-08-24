@@ -2,7 +2,6 @@
 title: Performance history for Storage Spaces Direct
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
@@ -21,7 +20,7 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 Performance history is collected by default with Storage Spaces Direct in Windows Server 2019. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
 
-To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md):
+To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md):
 
 ![Performance history in Windows Admin Center](media/performance-history/perf-history-in-wac.png)
 

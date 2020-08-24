@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-ImageGroup
-description: Reference topic for Subcommand set-ImageGroup, which changes the attributes of an image group.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand set-ImageGroup, which changes the attributes of an image group.
 ms.topic: article
 ms.assetid: 4d86946a-e261-4d41-8b0c-1ab0ba2e3430
 author: coreyp-at-msft
@@ -34,7 +32,7 @@ wdsutil /Set-ImageGroumediaGroup:ImageGroup1 /Name:New Image Group Name
 ```
 To specify various settings for an image group, type:
 ```
-wdsutil /verbose /Set-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /Name:New Image Group Name 
+wdsutil /verbose /Set-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /Name:New Image Group Name
 /Security:O:BAG:S-1-5-21-2176941838-3499754553-4071289181-513 D:AI(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA) (A;ID;0x1200a9;;;AU)(A;OICIIOID;GXGR;;;AU)
 ```
 ## Additional References

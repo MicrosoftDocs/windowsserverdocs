@@ -4,28 +4,27 @@ description: Configuring Host CPU Resource Controls
 author: allenma
 ms.date: 12/15/2017
 ms.topic: article
-ms.prod: windows-server
 ---
 
 # Hyper-V Host CPU Resource Management
 
-Hyper-V host CPU resource controls introduced in Windows Server 2016 or later allow Hyper-V administrators to better manage and allocate host server CPU resources between the "root", or management partition, and guest VMs. 
-Using these controls, administrators can dedicate a subset of the processors of a host system to the root partition. 
+Hyper-V host CPU resource controls introduced in Windows Server 2016 or later allow Hyper-V administrators to better manage and allocate host server CPU resources between the "root", or management partition, and guest VMs.
+Using these controls, administrators can dedicate a subset of the processors of a host system to the root partition.
 This can segregate the work done in a Hyper-V host from the workloads running in guest virtual machines by running them on separate subsets of the system processors.
 
-For details about hardware for Hyper-V hosts, see [Windows 10 Hyper-V System Requirements](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
+For details about hardware for Hyper-V hosts, see [Windows 10 Hyper-V System Requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
 
 ## Background
 
-Before setting controls for Hyper-V host CPU resources, it's helpful to review the basics of the Hyper-V architecture.  
-You can find a general summary in the [Hyper-V Architecture](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/hyper-v-server/architecture) section.
+Before setting controls for Hyper-V host CPU resources, it's helpful to review the basics of the Hyper-V architecture.
+You can find a general summary in the [Hyper-V Architecture](../../../administration/performance-tuning/role/hyper-v-server/architecture.md) section.
 These are important concepts for this article:
 
 * Hyper-V creates and manages virtual machine partitions, across which compute resources are allocated and shared, under control of the hypervisor.  Partitions provide strong isolation boundaries between all guest virtual machines, and between guest VMs and the root partition.
 
 * The root partition is itself a virtual machine partition, although it has unique properties and much greater privileges than guest virtual machines.  The root partition provides the management services that control all guest virtual machines, provides virtual device support for guests, and manages all device I/O for guest virtual machines.  Microsoft strongly recommends not running any application workloads in a host partition.
 
-* Each virtual processor (VP) of the root partition is mapped 1:1 to an underlying logical processor (LP).  A host VP will always run on the same underlying LP – there is no migration of the root partition's VPs.  
+* Each virtual processor (VP) of the root partition is mapped 1:1 to an underlying logical processor (LP).  A host VP will always run on the same underlying LP – there is no migration of the root partition's VPs.
 
 * By default, the LPs on which host VPs run can also run guest VPs.
 
@@ -47,7 +46,7 @@ The minroot configuration is controlled via hypervisor BCD entries. To enable mi
 ```
      bcdedit /set hypervisorrootproc n
 ```
-Where n is the number of root VPs. 
+Where n is the number of root VPs.
 
 The system must be rebooted, and the new number of root processors will persist for the lifetime of the OS boot.  The minroot configuration cannot be changed dynamically at runtime.
 
@@ -59,7 +58,6 @@ Note that with multiple NUMA nodes, you must ensure the VM's topology is such th
 
 You can verify the host's minroot configuration using Task Manager, as shown below.
 
-![](./media/minroot-taskman.png)
+![Host's minroot configuration shown in Task Manager](./media/minroot-taskman.png)
 
 When Minroot is active, Task Manager will display the number of logical processors currently allotted to the host, in addition to the total number of logical processors in the system.
- 

@@ -1,8 +1,6 @@
 ---
 title: add-DriverPackage
-description: Reference topic for add-DriverPackage, which adds a driver package to the server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for add-DriverPackage, which adds a driver package to the server.
 ms.topic: article
 ms.assetid: 3ac9e8d5-63ec-4ce8-86fc-85d28011050b
 author: coreyp-at-msft

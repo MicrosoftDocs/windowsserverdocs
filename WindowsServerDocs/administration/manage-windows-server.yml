@@ -5,11 +5,11 @@ summary: Once you have deployed Windows Server into your environment, including 
 
 metadata:
   title: Windows Server Management documentation
-  description: Learn about tools, recommendations and guidance on managing Windows Server. 
+  description: Learn about tools, recommendations and guidance on managing Windows Server.
   ms.topic: landing-page # Required
   author: lizap
   ms.author: elizapo
-  ms.date: 06/09/2020 
+  ms.date: 06/09/2020
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -32,7 +32,7 @@ landingContent:
 
   # Card
   - title: Gather information about your environment
-    linkLists:            
+    linkLists:
       - linkListType: overview
         links:
           - text: Setup and Boot Event Collection
@@ -40,7 +40,7 @@ landingContent:
           - text: Software Inventory Logging (SIL)
             url: software-inventory-logging/get-started-with-software-inventory-logging.md
           - text: User Access Logging (UAL)
-            url: user-access-logging/get-started-with-user-access-logging.md                  
+            url: user-access-logging/get-started-with-user-access-logging.md
 
   # Card
   - title: Tune your Windows Server environment for performance
@@ -58,7 +58,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows PowerShell
-            url: https://docs.microsoft.com/powershell/scripting/overview
+            url: /powershell/scripting/overview
           - text: Windows Commands
             url: windows-commands/windows-commands.md
           - text: System Insights
@@ -78,6 +78,6 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows previous versions documentation
-            url: https://docs.microsoft.com/previous-versions/windows/
+            url: /previous-versions/windows/
           - text: Search for specific information
-            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
+            url: /search/?dataSource=previousVersions&search=Windows+Server

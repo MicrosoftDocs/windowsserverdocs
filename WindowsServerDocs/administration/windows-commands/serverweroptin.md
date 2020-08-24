@@ -1,11 +1,9 @@
 ---
 title: serverweroptin
-description: Reference topic for **** -
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: f3c0b0af-cafb-4f09-8b36-5a357ddf392d

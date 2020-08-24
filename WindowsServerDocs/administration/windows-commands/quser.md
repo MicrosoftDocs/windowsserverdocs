@@ -1,8 +1,6 @@
 ---
 title: quser
-description: Reference topic for the quser command, which displays information about user sessions on a Remote Desktop Session Host server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the quser command, which displays information about user sessions on a Remote Desktop Session Host server.
 ms.topic: article
 ms.assetid: 8056204f-ed11-4c91-bb1d-c799283a48a4
 author: coreyp-at-msft
@@ -30,7 +28,7 @@ Displays information about user sessions on a Remote Desktop Session Host server
 - Date and time the user logged on
 
 > [!NOTE]
-> This command is the same as the [query user command](query-user.md). To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> This command is the same as the [query user command](query-user.md). To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 

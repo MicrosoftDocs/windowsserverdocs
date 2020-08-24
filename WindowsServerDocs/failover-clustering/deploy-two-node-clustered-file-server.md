@@ -1,9 +1,7 @@
 ---
 title: Deploying a two-node clustered file server
 description: This article describes creating a two-node file server cluster
-ms.prod: windows-server
 manager: eldenc
-ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
@@ -66,10 +64,10 @@ The following will be needed for a two-node failover cluster.
 
 - **Device Controllers or appropriate adapters for storage:**
     - **Serial Attached SCSI or Fibre Channel:** If you are using Serial Attached SCSI or Fibre Channel, in all clustered servers, all components of the storage stack should be identical. It is required that the multipath I/O (MPIO) software and Device Specific Module (DSM) software components be identical.  It is recommended that the mass-storage device controllers—that is, the host bus adapter (HBA), HBA drivers, and HBA firmware—that are attached to cluster storage be identical. If you use dissimilar HBAs, you should verify with the storage vendor that you are following their supported or recommended configurations.
-    - **iSCSI:** If you are using iSCSI, each clustered server must have one or more network adapters or host bus adapters that are dedicated to the ISCSI storage. The network you use for iSCSI cannot be used for network communication. In all clustered servers, the network adapters you use to connect to the iSCSI storage target should be identical, and we recommend that you use Gigabit Ethernet or higher.  
+    - **iSCSI:** If you are using iSCSI, each clustered server must have one or more network adapters or host bus adapters that are dedicated to the ISCSI storage. The network you use for iSCSI cannot be used for network communication. In all clustered servers, the network adapters you use to connect to the iSCSI storage target should be identical, and we recommend that you use Gigabit Ethernet or higher.
 
 - **Storage:** You must use shared storage that is certified for Windows Server 2016 or Windows Server 2019.
-  
+
     For a two-node failover cluster, the storage should contain at least two separate volumes (LUNs) if using a witness disk for quorum. The witness disk is a disk in the cluster storage that is designated to hold a copy of the cluster configuration database. For this two-node cluster example, the quorum configuration will be Node and Disk Majority. Node and Disk Majority means that the nodes and the witness disk each contain copies of the cluster configuration, and the cluster has quorum as long as a majority (two out of three) of these copies are available. The other volume (LUN) will contain the files that are being shared to users.
 
     Storage requirements include the following:
@@ -77,7 +75,7 @@ The following will be needed for a two-node failover cluster.
     - To use the native disk support included in failover clustering, use basic disks, not dynamic disks.
     - We recommend that you format the partitions with NTFS (for the witness disk, the partition must be NTFS).
     - For the partition style of the disk, you can use either master boot record (MBR) or GUID partition table (GPT).
-    - The storage must respond correctly to specific SCSI commands, the storage must follow the standard called SCSI Primary Commands-3 (SPC-3). In particular, the storage must support Persistent Reservations as specified in the SPC-3 standard. 
+    - The storage must respond correctly to specific SCSI commands, the storage must follow the standard called SCSI Primary Commands-3 (SPC-3). In particular, the storage must support Persistent Reservations as specified in the SPC-3 standard.
     -  The miniport driver used for the storage must work with the Microsoft Storport storage driver.
 
 ## Deploying storage area networks with failover clusters
@@ -249,7 +247,7 @@ Before creating a cluster, we strongly recommend that you validate your configur
     ```
 4. To view the results of the tests after you close the wizard, see the file specified (in SystemRoot\Cluster\Reports\), then make any necessary changes in the configuration and rerun the tests.
 
-For more info, see [Validating a Failover Cluster Configuration](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
+For more info, see [Validating a Failover Cluster Configuration](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v=ws.11)).
 
 ### Step 4: Create the Cluster
 
@@ -288,7 +286,7 @@ The following will create a cluster out of the machines and configuration you ha
 
 3. Run the following command to create the cluster if you are using DHCP for IP Addresses.  For example, the machine names are NODE1 and NODE2, and the name of the cluster will be CLUSTER.
 
-   ```PowerShell    
+   ```PowerShell
    New-Cluster -Name CLUSTER -Node "NODE1","NODE2"
    ```
 
@@ -317,28 +315,31 @@ To configure a file server failover cluster, follow the below steps.
    > [!NOTE]
    > If you are using static IP Addresses, you will need to select the network to use and input the IP Address it will use for the cluster name.  If you are using DHCP for your IP Addresses, the IP Address will be configured automatically for you.
 
-6. Choose **Next**.
+9. Choose **Next**.
 
-7. In the **Select Storage** window, select the additional drive (not the witness) that will hold your shares and **Next**.
+10. In the **Select Storage** window, select the additional drive (not the witness) that will hold your shares, and click **Next**.
 
-8. On the **Confirmation** page, verify your configuration and select **Next**.
+11. On the **Confirmation** page, verify your configuration and select **Next**.
 
-9. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the file server role creation.
+12. On the **Summary** page, it will give you the configuration it has created.  You can select View Report to see the report of the file server role creation.
 
-10. Under **Roles** in the console tree, you will see the new role you created listed as the name you created.  With it highlighted, under the **Actions** pane on the right, choose **Add a share**.
+   > [!NOTE]
+   > If the role does not add or start correctly, the CNO (Cluster Name Object) may not have permission to create objects in Active Directory. The File Server role requires a Computer object of the same name as the "Client Access Point" provided in Step 8.
 
-11. Run through the share wizard inputting the following:
+13. Under **Roles** in the console tree, you will see the new role you created listed as the name you created.  With it highlighted, under the **Actions** pane on the right, choose **Add a share**.
+
+14. Run through the share wizard inputting the following:
 
     - Type of share it will be
     - Location/path the folder shared will be
     - The name of the share users will connect to
-    - Additional settings such as Access-based enumeration, caching, encryption, etc
+    - Additional settings such as Access-based enumeration, caching, encryption, etc.
     - File level permissions if they will be other than the defaults
 
-12. On the **Confirmation** page, verify what you have configured and select **Create** to create the file server share.
+15. On the **Confirmation** page, verify what you have configured, and select **Create** to create the file server share.
 
-13. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
+16. On the **Results** page, select Close if it created the share.  If it could not create the share, it will give you the errors incurred.
 
-14. Choose **Close**.
+17. Choose **Close**.
 
-15. Repeat this process for any additional shares.
+18. Repeat this process for any additional shares.

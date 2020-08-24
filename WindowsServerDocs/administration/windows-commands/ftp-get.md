@@ -1,8 +1,6 @@
 ---
 title: ftp get
-description: Reference topic for the ftp get command, which copies a remote file to the local computer using the current file transfer type.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ftp get command, which copies a remote file to the local computer using the current file transfer type.
 ms.topic: article
 ms.assetid: d70355c4-58ef-43e0-916b-c7ecf77e6ee4
 author: coreyp-at-msft
@@ -57,4 +55,4 @@ get test.txt test1.txt
 
 - [ftp binary command](ftp-binary.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

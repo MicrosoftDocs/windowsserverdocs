@@ -2,8 +2,6 @@
 title: Create a DFS Namespace
 description: This article describes how to create a DFS namespace.
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -13,7 +11,7 @@ ms.author: jgerend
 
 > Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session.
+To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session.
 
 The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
@@ -38,5 +36,3 @@ Alernatively, you can use the following procedure to create a namespace after in
 -   [Choose a Namespace Type](choose-a-namespace-type.md)
 -   [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md).
-
-

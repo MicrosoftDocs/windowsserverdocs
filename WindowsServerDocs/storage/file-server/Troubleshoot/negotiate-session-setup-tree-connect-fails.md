@@ -45,7 +45,7 @@ Additionally, make the following checks:
 
 Make sure that the user account credentials have both share and NT file system (NTFS) permissions to the folder.
 
-The cause of common Tree Connect errors can be found in [3.3.5.7 Receiving an SMB2 TREE\_CONNECT Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87). The following are the solutions for two common status codes.
+The cause of common Tree Connect errors can be found in [3.3.5.7 Receiving an SMB2 TREE\_CONNECT Request](/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87). The following are the solutions for two common status codes.
 
 \[STATUS\_BAD\_NETWORK\_NAME\]
 
@@ -87,10 +87,10 @@ Follow these guidelines as you troubleshoot:
 For more information, see the following articles.
 
 [3.3.5.4 Receiving an SMB2 NEGOTIATE
-Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/b39f253e-4963-40df-8dff-2f9040ebbeb1)
+Request](/openspecs/windows_protocols/ms-smb2/b39f253e-4963-40df-8dff-2f9040ebbeb1)
 
 [3.3.5.5 Receiving an SMB2 SESSION\_SETUP
-Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/e545352b-9f2b-4c5e-9350-db46e4f6755e)
+Request](/openspecs/windows_protocols/ms-smb2/e545352b-9f2b-4c5e-9350-db46e4f6755e)
 
 [3.3.5.7 Receiving an SMB2 TREE\_CONNECT
-Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87?redirectedfrom=MSDN)
+Request](/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87)

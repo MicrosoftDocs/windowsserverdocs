@@ -1,8 +1,6 @@
 ---
 title: gpfixup
-description: Reference topic for the gpfixup command, which fixes domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the gpfixup command, which fixes domain name dependencies in Group Policy Objects and Group Policy links after a domain rename operation.
 ms.topic: article
 ms.assetid: 2b145410-fc75-4526-932d-f16b7ee3aaef
 author: coreyp-at-msft
@@ -60,4 +58,4 @@ gpfixup /olddns: MyOldDnsName /newdns:MyNewDnsName /dc:MyDcDnsName 2>&1 >gpfixup
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Administering Active Directory Domain Rename](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794869(v=ws.10))
+- [Administering Active Directory Domain Rename](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc794869(v=ws.10))

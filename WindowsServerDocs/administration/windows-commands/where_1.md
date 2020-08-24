@@ -1,8 +1,6 @@
 ---
 title: where
-description: Reference topic for where, which displays the location of files that match the given search pattern. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for where, which displays the location of files that match the given search pattern.
 ms.topic: article
 ms.assetid: 0b3486a5-896b-4d92-84b8-e463a0b76487
 author: coreyp-at-msft
@@ -22,7 +20,7 @@ Displays the location of files that match the given search pattern.
 ## Syntax
 
 ```
-where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...] 
+where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...]
 ```
 
 ### Parameters
@@ -45,7 +43,7 @@ where [/r <Dir>] [/q] [/f] [/t] [$<ENV>:|<Path>:]<Pattern>[ ...]
 
 To find all files named Test in drive C of the current computer and its subdirectories, type:
 ```
-where /r c:\ test 
+where /r c:\ test
 ```
 To list all files in the Public directory, type:
 ```

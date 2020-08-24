@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # The Role of Claims
@@ -85,7 +83,7 @@ Each claim description includes a claim type URI, name, publishing state, and de
 
 - **Publish this claim in federation metadata as a claim type that this Federation Service can send** \(Publish as Sent\)—Indicates the claim types that are offered by this Federation Service. These are the claim types the Federation Service publishes to others as those it is willing to send. The actual claim types sent by the claims provider are often a subset of this list.
 
-For more information about how to set the publishing state of a claim type, see [Add a Claim Description](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/add-a-claim-description) in the AD FS Deployment Guide.
+For more information about how to set the publishing state of a claim type, see [Add a Claim Description](../operations/add-a-claim-description.md) in the AD FS Deployment Guide.
 
 ### When generating Federation Metadata
 

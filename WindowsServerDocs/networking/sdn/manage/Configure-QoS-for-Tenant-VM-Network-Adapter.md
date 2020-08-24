@@ -2,8 +2,6 @@
 title: Configure Quality of Service (QoS) for a tenant VM network adapter
 description: When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: anpaul
@@ -18,12 +16,12 @@ When you configure QoS for a tenant VM network adapter, you have a choice betwee
 
 1.    **DCB**. You can configure DCB by using the Windows PowerShell NetQoS cmdlets. For an example, see the section "Enable Data Center Bridging"  in the topic [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
 
-2.    **SDN QoS**. You can enable SDN QoS by using Network Controller, which can be set to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users.  You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM is accessible regardless of the amount of network traffic.  
+2.    **SDN QoS**. You can enable SDN QoS by using Network Controller, which can be set to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users.  You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM is accessible regardless of the amount of network traffic.
 
 Apply all SDN QoS settings through the Port settings of the Network Interface properties. Refer to the table below for more details.
 
 |Element name|Description|
-|------------|-----------| 
+|------------|-----------|
 |macSpoofing| Allows VMs to change the source media access control \(MAC\) address in outgoing packets to a MAC address not assigned to the VM.<p>Allowed values:<ul><li>Enabled – Use a different MAC address.</li><li>Disabled – Use only the MAC address assigned to it.</li></ul>|
 |arpGuard| Allows ARP guard only addresses specified in ArpFilter to pass through the port.<p>Allowed values:<ul><li>Enabled - Allowed</li><li>Disabled – Not allowed</li></ul>|
 |dhcpGuard| Allows or drops any DHCP messages from a VM that claims to be a DHCP server. <p>Allowed values:<ul><li>Enabled – Drops DHCP messages because the virtualized DHCP server is considered untrusted.</li><li>Disabled – Allows the message to be received because the virtualized DHCP server is considered trustworthy.</li></ul>|

@@ -1,8 +1,6 @@
 ---
 title: Hyper-V Configuration
 description: Hyper-V configuration considerations for performance tuning
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
@@ -53,7 +51,7 @@ For additional recommendations and insight on leveraging power plans to optimize
 
 Windows Server 2016 feature the Server Core installation option. Server Core offers a minimal environment for hosting a select set of server roles including Hyper-V. It features a smaller disk footprint for the host OS, and a smaller attack and servicing surface. Therefore, we highly recommend that Hyper-V virtualization servers use the Server Core installation option.
 
-A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](https://technet.microsoft.com/library/hh848559.aspx) so administrators can manage it remotely.
+A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](/powershell/module/hyper-v/?view=win10-ps) so administrators can manage it remotely.
 
 ## Dedicated server role
 
@@ -63,7 +61,7 @@ System administrators should consider carefully what software is installed in th
 
 ## Guest operating systems
 
-Hyper-V supports and has been tuned for a number of different guest operating systems. The number of virtual processors that are supported per guest depends on the guest operating system. For a list of the supported guest operating systems, see [Hyper-V Overview](https://technet.microsoft.com/library/hh831531.aspx).
+Hyper-V supports and has been tuned for a number of different guest operating systems. The number of virtual processors that are supported per guest depends on the guest operating system. For a list of the supported guest operating systems, see [Hyper-V Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
 ## CPU statistics
 

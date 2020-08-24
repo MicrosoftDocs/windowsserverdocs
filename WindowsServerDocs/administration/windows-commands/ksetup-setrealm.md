@@ -1,8 +1,6 @@
 ---
 title: ksetup setrealm
-description: Reference topic for the ksetup setrealm command, which sets the name of a Kerberos realm.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ksetup setrealm command, which sets the name of a Kerberos realm.
 ms.topic: article
 ms.assetid: ab268c40-276b-46ef-ab16-d5ce7667fbed
 author: coreyp-at-msft

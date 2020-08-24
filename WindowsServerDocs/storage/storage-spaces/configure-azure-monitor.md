@@ -1,9 +1,7 @@
 ---
 title: Understand and Configure Azure Monitor
 description: Detailed setup information on what Azure Monitor is and how to configure email and sms alerts for your storage spaces direct cluster in Windows Server 2016 and 2019.
-ms.prod: windows-server
 ms.author: adagashe
-ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 01/10/2020
@@ -29,11 +27,11 @@ This management pack includes:
 
 All data collected by Azure Monitor fits into one of two fundamental types: metrics and logs.
 
-1. [Metrics](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection#metrics) are numerical values that describe some aspect of a system at a particular point in time. They are lightweight and capable of supporting near real-time scenarios. You'll see data collected by Azure Monitor right in their Overview page in the Azure portal.
+1. [Metrics](/azure/azure-monitor/platform/data-collection#metrics) are numerical values that describe some aspect of a system at a particular point in time. They are lightweight and capable of supporting near real-time scenarios. You'll see data collected by Azure Monitor right in their Overview page in the Azure portal.
 
 ![image of metrics ingesting in metrics explorer](media/configure-azure-monitor/metrics.png)
 
-2. [Logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-collection#logs) contain different kinds of data organized into records with different sets of properties for each type. Telemetry such as events and traces are stored as logs in addition to performance data so that it can all be combined for analysis. Log data collected by Azure Monitor can be analyzed with [queries](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview) to quickly retrieve, consolidate, and analyze collected data. You can create and test queries using [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/log-query/portals) in the Azure portal and then either directly analyze the data using these tools or save queries for use with [visualizations](https://docs.microsoft.com/azure/azure-monitor/visualizations) or [alert rules](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview).
+2. [Logs](/azure/azure-monitor/platform/data-collection#logs) contain different kinds of data organized into records with different sets of properties for each type. Telemetry such as events and traces are stored as logs in addition to performance data so that it can all be combined for analysis. Log data collected by Azure Monitor can be analyzed with [queries](/azure/azure-monitor/log-query/log-query-overview) to quickly retrieve, consolidate, and analyze collected data. You can create and test queries using [Log Analytics](/azure/azure-monitor/log-query/portals) in the Azure portal and then either directly analyze the data using these tools or save queries for use with [visualizations](/azure/azure-monitor/visualizations) or [alert rules](/azure/azure-monitor/platform/alerts-overview).
 
 ![image of logs ingesting in log analytics](media/configure-azure-monitor/logs.png)
 
@@ -70,9 +68,9 @@ When you run the cmdlet above to set the Health Settings, you cause the events w
 
 Now that you have setup the proper logging on your cluster, the next step is to properly configure log analytics.
 
-To give an overview, [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows) can collect data directly from your physical or virtual Windows computers in your datacenter or other cloud environment into a single repository for detailed analysis and correlation.
+To give an overview, [Azure Log Analytics](/azure/azure-monitor/platform/agent-windows) can collect data directly from your physical or virtual Windows computers in your datacenter or other cloud environment into a single repository for detailed analysis and correlation.
 
-To understand the supported configuration, review [supported Windows operating systems](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
+To understand the supported configuration, review [supported Windows operating systems](/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
@@ -82,7 +80,7 @@ Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft
 
 #### Create a workspace
 
-For more details on the steps listed below, see the [Azure Monitor documentation](https://docs.microsoft.com/azure/azure-monitor/learn/quick-collect-windows-computer).
+For more details on the steps listed below, see the [Azure Monitor documentation](/azure/azure-monitor/learn/quick-collect-windows-computer).
 
 1. In the Azure portal, click **All services**. In the list of resources, type **Log Analytics**. As you begin typing, the list filters based on your input. Select **Log Analytics**.<br><br>
 
@@ -129,7 +127,7 @@ When complete, the **Microsoft Monitoring Agent** appears in **Control Panel**. 
 
 ![MMA connection status to Log Analytics](media/configure-azure-monitor/log-analytics-mma-laworkspace-status.png)
 
-To understand the supported configuration, review [supported Windows operating systems](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
+To understand the supported configuration, review [supported Windows operating systems](/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
 
 ## Setting up alerts using Windows Admin Center
 
@@ -245,5 +243,5 @@ Below is an example of the email that you will be send by Azure Monitor:
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- For more detailed information, read the [Azure Monitor documentation](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-viewdata).
+- For more detailed information, read the [Azure Monitor documentation](/azure/azure-monitor/learn/tutorial-viewdata).
 - Read this for an overview on how to [connect to other Azure hybrid services](../../manage/windows-admin-center/azure/index.md).

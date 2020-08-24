@@ -1,8 +1,6 @@
 ---
 title: doskey
-description: Reference topic for the doskey command and Doskey.exe, which recalls previously entered command-line commands, edits command lines, and creates macros.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the doskey command and Doskey.exe, which recalls previously entered command-line commands, edits command lines, and creates macros.
 ms.topic: article
 ms.assetid: 4874fd43-d5ea-45f3-ae24-388ae925ed76
 author: coreyp-at-msft

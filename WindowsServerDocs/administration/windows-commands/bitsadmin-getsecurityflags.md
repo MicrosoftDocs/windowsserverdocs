@@ -1,8 +1,6 @@
 ---
 title: bitsadmin getsecurityflags
-description: Reference topic for the bitsadmin getsecurityflags command, which reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin getsecurityflags command, which reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
 ms.topic: article
 ms.assetid: c2e73519-34f4-487b-af11-97d5d08ef9bb
 author: coreyp-at-msft

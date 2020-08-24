@@ -1,8 +1,6 @@
 ---
 title: erase
-description: Reference topic for the erase command, which deletes one or more files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the erase command, which deletes one or more files.
 ms.topic: article
 ms.assetid: 024a4d0f-8679-4e06-b46f-61fdaf5464bc
 author: coreyp-at-msft

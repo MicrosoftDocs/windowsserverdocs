@@ -1,8 +1,6 @@
 ---
 title: logman update alert
-description: Reference topic for the logman update alert command, which updates the properties of an existing alert data collector.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the logman update alert command, which updates the properties of an existing alert data collector.
 ms.topic: article
 ms.assetid: ede94a76-931c-40ed-9fda-6766bed8ff72
 author: coreyp-at-msft

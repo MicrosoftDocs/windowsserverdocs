@@ -1,9 +1,7 @@
 ---
 title: Configure virtual local area networks for Hyper-V
 description: Gives instructions for configuring a virtual local area network (VLAN) for use by virtual machines on a Hyper-V host.
-ms.prod: windows-server
 manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
 author: kbdazure
@@ -46,8 +44,8 @@ If the virtual machine needs to use more VLANs, do one of the following:
 
 - Connect more virtual network adapters to appropriate virtual switches and assign the VLAN IDs. Make sure to configure the IP addresses correctly and that the traffic you want to route through the VLAN also uses the correct IP address.
 
-- Configure the virtual network adapter in trunk mode using the [Set\-VMNetworkAdapterVlan](https://technet.microsoft.com/library/hh848475.aspx) cmdlet.
+- Configure the virtual network adapter in trunk mode using the [Set\-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=win10-ps) cmdlet.
 
 ## See Also
 
-[Hyper\-V Virtual Switch](https://technet.microsoft.com/windows-server-docs/networking/technologies/hyper-v-virtual-switch/hyper-v-virtual-switch)
+[Hyper\-V Virtual Switch](../../hyper-v-virtual-switch/hyper-v-virtual-switch.md)

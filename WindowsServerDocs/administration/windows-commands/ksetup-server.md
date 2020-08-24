@@ -1,8 +1,6 @@
 ---
 title: ksetup server
-description: Reference topic for the ksetup server command, which allows you to specify a name for a computer running the Windows operating system, so changes made by the ksetup command update the target computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ksetup server command, which allows you to specify a name for a computer running the Windows operating system, so changes made by the ksetup command update the target computer.
 ms.topic: article
 ms.assetid: e3407111-ac92-457f-aa1f-a04fe9109d59
 author: coreyp-at-msft

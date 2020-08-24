@@ -2,8 +2,6 @@
 title: Set Target Priority to Override Referral Ordering
 description: This article describes how to set the target priority to override referral ordering
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -47,7 +45,7 @@ To set target priority on a folder target, use the following procedure:
 4.  On the **Advanced** tab, click **Override referral ordering**  and then click the priority that you want.
 
 > [!NOTE]
-> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](https://technet.microsoft.com/library/jj884266.aspx) and [Set-DfsnFolderTarget](https://technet.microsoft.com/library/jj884264.aspx) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
+> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
 
 ## Additional References
 

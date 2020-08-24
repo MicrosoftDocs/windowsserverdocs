@@ -1,8 +1,6 @@
 ---
 title: get-AllNamespaces
-description: Reference topic for get-AllNamespaces, which displays information about all namespaces on a server. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for get-AllNamespaces, which displays information about all namespaces on a server.
 ms.topic: article
 ms.assetid: e8fe896d-a69a-4180-923b-9f18185f5941
 author: coreyp-at-msft

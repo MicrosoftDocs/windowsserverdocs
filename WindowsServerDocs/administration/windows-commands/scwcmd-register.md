@@ -1,11 +1,9 @@
 ---
 title: Scwcmd register
-description: Reference topic for **** -
-
-ms.prod: windows-server
+description: Reference article for **** -
 
 
-ms.technology: manage-windows-commands
+
 
 ms.topic: article
 ms.assetid: fe4d126a-9f27-4076-b7b1-fbefa45f378a

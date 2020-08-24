@@ -2,11 +2,9 @@
 title: Connection Request Policies
 description: This topic provides an overview of Network Policy Server connection request policies in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 4ec45e0c-6b37-4dfb-8158-5f40677b0157
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 
@@ -25,14 +23,14 @@ Connection request policies are sets of conditions and settings that allow netwo
 
 You can create connection request policies so that some RADIUS request messages sent from RADIUS clients are processed locally (NPS is used as a RADIUS server) and other types of messages are forwarded to another RADIUS server (NPS is used as a RADIUS proxy).
 
-With connection request policies, you can use NPS as a RADIUS server or as a RADIUS proxy, based on factors such as the following: 
+With connection request policies, you can use NPS as a RADIUS server or as a RADIUS proxy, based on factors such as the following:
 
 - The time of day and day of the week
 - The realm name in the connection request
 - The type of connection being requested
 - The IP address of the RADIUS client
 
-RADIUS Access-Request messages are processed or forwarded by NPS only if the settings of the incoming message match at least one of the connection request policies configured on the NPS. 
+RADIUS Access-Request messages are processed or forwarded by NPS only if the settings of the incoming message match at least one of the connection request policies configured on the NPS.
 
 If the policy settings match and the policy requires that the NPS process the message, NPS acts as a RADIUS server, authenticating and authorizing the connection request. If the policy settings match and the policy requires that the NPS forwards the message, NPS acts as a RADIUS proxy and forwards the connection request to a remote RADIUS server for processing.
 
@@ -80,7 +78,7 @@ The Connection Properties attribute group contains the following attributes.
 - **Service Type**. Used to designate the type of service being requested. Examples include framed (for example, PPP connections) and login (for example, Telnet connections). For more information about RADIUS service types, see RFC 2865, "Remote Authentication Dial-in User Service (RADIUS)."
 - **Tunnel Type**. Used to designate the type of tunnel that is being created by the requesting client. Tunnel types include the Point-to-Point Tunneling Protocol (PPTP) and the Layer Two Tunneling Protocol (L2TP).
 
-### Day and Time Restrictions attribute group 
+### Day and Time Restrictions attribute group
 
 The Day and Time Restrictions attribute group contains the Day and Time Restrictions attribute. With this attribute, you can designate the day of the week and the time of day of the connection attempt. The day and time is relative to the day and time of the NPS.
 
@@ -102,7 +100,7 @@ The Machine Identity attribute group contains the Machine Identity attribute. By
 
 The RADIUS Client Properties attribute group contains the following attributes.
 
-- **Calling Station ID**. Used to designate the phone number used by the caller (the access client). This attribute is a character string. You can use pattern-matching syntax to specify area codes.  In 802.1x authentications the MAC Address is typically populated and can be matched from the client.  This field is typically used for Mac Address Bypass scenarios when the connection request policy is configured for 'Accept users without validating credentials'.  
+- **Calling Station ID**. Used to designate the phone number used by the caller (the access client). This attribute is a character string. You can use pattern-matching syntax to specify area codes.  In 802.1x authentications the MAC Address is typically populated and can be matched from the client.  This field is typically used for Mac Address Bypass scenarios when the connection request policy is configured for 'Accept users without validating credentials'.
 - **Client Friendly Name**. Used to designate the name of the RADIUS client computer that is requesting authentication. This attribute is a character string. You can use pattern-matching syntax to specify client names.
 - **Client IPv4 Address**. Used to designate the IPv4 address of the network access server (the RADIUS client). This attribute is a character string. You can use pattern-matching syntax to specify IP networks.
 - **Client IPv6 Address**. Used to designate the IPv6 address of the network access server (the RADIUS client). This attribute is a character string. You can use pattern-matching syntax to specify IP networks.
@@ -177,7 +175,7 @@ For examples of how to use regular expressions to create routing rules that forw
 You can set advanced properties to specify the series of RADIUS attributes that are:
 
 - Added to the RADIUS response message when the NPS is being used as a RADIUS authentication or accounting server. When there are attributes specified on both a network policy and the connection request policy, the attributes that are sent in the RADIUS response message are the combination of the two sets of attributes.
-- Added to the RADIUS message when the NPS is being used as a RADIUS authentication or accounting proxy. If the attribute already exists in the message that is forwarded, it is replaced with the value of the attribute specified in the connection request policy. 
+- Added to the RADIUS message when the NPS is being used as a RADIUS authentication or accounting proxy. If the attribute already exists in the message that is forwarded, it is replaced with the value of the attribute specified in the connection request policy.
 
 In addition, some attributes that are available for configuration on the connection request policy **Settings** tab in the **Advanced** category provide specialized functionality. For example, you can configure the **Remote RADIUS to Windows User Mapping** attribute when you want to split the authentication and authorization of a connection request between two user accounts databases.
 

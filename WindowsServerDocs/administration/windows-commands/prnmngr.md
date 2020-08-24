@@ -1,8 +1,6 @@
 ---
 title: prnmngr
-description: Reference topic for the prnmngr command, which adds, deletes, and lists printers or printer connections, in addition to setting and displaying the default printer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the prnmngr command, which adds, deletes, and lists printers or printer connections, in addition to setting and displaying the default printer.
 ms.topic: article
 ms.assetid: 39eee1a8-4b41-4c9f-941e-486495135eb8
 author: coreyp-at-msft

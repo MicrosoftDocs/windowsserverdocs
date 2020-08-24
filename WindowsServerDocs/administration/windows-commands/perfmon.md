@@ -1,8 +1,6 @@
 ---
 title: perfmon
-description: Reference topic for the perfmon command, which starts the Windows Reliability and Performance Monitor in a specific standalone mode.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the perfmon command, which starts the Windows Reliability and Performance Monitor in a specific standalone mode.
 ms.topic: article
 ms.assetid: 9a8d5eca-8473-463e-a6e0-7bbd590b18e1
 author: coreyp-at-msft
@@ -34,4 +32,4 @@ perfmon </res|report|rel|sys>
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749154(v%3dws.11))
+- [Windows Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc749154(v%3dws.11))

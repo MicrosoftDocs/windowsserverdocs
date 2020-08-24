@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
@@ -127,7 +125,7 @@ Complete the following procedures in order to download and configure and select 
 
         -   **Per Enabled User** - purchasing model that charges per enabled user.  Typically used for employee-facing scenarios such as Office 365.
 
-        For additional information on usage models, see [Windows Azure pricing details](http://www.windowsazure.com/pricing/details/active-directory/).
+        For additional information on usage models, see [Windows Azure pricing details](https://www.windowsazure.com/pricing/details/active-directory/).
 
     3.  **Directory** - The Windows Azure Active Directory tenant that the Multi-Factor Authentication Provider is associated with. This is optional as the provider does not have to be linked to Windows Azure Active Directory when securing on-premises applications.
 
@@ -178,9 +176,9 @@ You are now ready to launch the Windows Azure Multi-Factor Authentication server
 
     > [!NOTE]
     > The **Multi-Factor Authentication AD FS Adapter** installation wizard creates a security group called **PhoneFactor Admins** in your Active Directory and then adds the AD FS service account of your federation service to this group.
-    > 
+    >
     > It is recommended that you verify on your domain controller that the **PhoneFactor Admins** group is indeed created and that the AD FS service account is a member of this group.
-    > 
+    >
     > If necessary, add the AD FS service account to the **PhoneFactor Admins** group on your domain controller manually.
 
     For additional details on installing the AD FS Adapter, click the Help link in the top right corner of the Multi-Factor Authentication Server.
@@ -190,7 +188,7 @@ You are now ready to launch the Windows Azure Multi-Factor Authentication server
 9. To configure Windows Azure Multi-Factor Authentication as the additional authentication method, in the AD FS Management Console, navigate to the **Authentication Policies** node, and under **Multi-factor Authentication** section, click the **Edit** link next to the **Global Settings** sub-section. In the **Edit Global Authentication Policy** window, select **Multi-Factor Authentication** as an additional authentication method, and then click **OK**.
 
     > [!NOTE]
-    > You can customize the name and description of the Windows Azure Multi-Factor Authentication method, as well as any configured third-party authentication method, as it appears in your AD FS UI, by running the **Set-AdfsAuthenticationProviderWebContent** cmdlet. For more information, see [https://technet.microsoft.com/library/dn479401.aspx](https://technet.microsoft.com/library/dn479401.aspx)
+    > You can customize the name and description of the Windows Azure Multi-Factor Authentication method, as well as any configured third-party authentication method, as it appears in your AD FS UI, by running the **Set-AdfsAuthenticationProviderWebContent** cmdlet. For more information, see [https://technet.microsoft.com/library/dn479401.aspx](/powershell/module/adfs/set-adfsauthenticationproviderwebcontent?view=win10-ps)
 
 ### <a name="BKMK_6"></a>Set up MFA policy
 In order to enable MFA, you must set up the MFA policy on your federation server. For this walkthrough, per our MFA policy, **Robert Hatley** account is required to undergo MFA because he belongs to the **Finance** group that you set up in [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
@@ -235,15 +233,12 @@ In this step you will verify the MFA functionality that you set up in the previo
 
 2.  Type in the credentials of the **Robert Hatley** AD account.
 
-    At this point, because of the MFA policy that you configured, the user will be prompted to undergo additional authentication. The default message text is **For security reasons, we require additional information to verify your account.** However, this text is fully customizable. For more information about how to customize the sign-in experience, see [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
+    At this point, because of the MFA policy that you configured, the user will be prompted to undergo additional authentication. The default message text is **For security reasons, we require additional information to verify your account.** However, this text is fully customizable. For more information about how to customize the sign-in experience, see [Customizing the AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)).
 
     If you configured Certificate authentication as the additional authentication method, the default message text is **Select a certificate that you want to use for authentication. If you cancel the operation, please close your browser and try again.**
 
-    If you configured Windows Azure Multi-Factor Authentication as the additional authentication method, the default message text is **A call will be placed to your phone to complete your authentication.** For more information about signing in with Windows Azure Multi-Factor Authentication and using various options for the preferred method of verification, see [Windows Azure Multi-Factor Authentication Overview](https://technet.microsoft.com/library/dn249479.aspx).
+    If you configured Windows Azure Multi-Factor Authentication as the additional authentication method, the default message text is **A call will be placed to your phone to complete your authentication.** For more information about signing in with Windows Azure Multi-Factor Authentication and using various options for the preferred method of verification, see [Windows Azure Multi-Factor Authentication Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)).
 
 ## See Also
 [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 [Set up the lab environment for AD FS in Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
-
-
-

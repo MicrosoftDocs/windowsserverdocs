@@ -1,8 +1,6 @@
 ---
 title: bitsadmin getreplyfilename
-description: Reference topic for the bitsadmin getreplyfilename command, which gets the path of the file that contains the server upload-reply for the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the bitsadmin getreplyfilename command, which gets the path of the file that contains the server upload-reply for the job.
 ms.topic: article
 ms.assetid: 85447184-1732-4816-a365-2e3599551bf8
 author: coreyp-at-msft

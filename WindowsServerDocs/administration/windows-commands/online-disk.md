@@ -1,8 +1,6 @@
 ---
 title: online disk
-description: Reference topic for the online disk command, which takes the offline disk to the online state.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the online disk command, which takes the offline disk to the online state.
 ms.topic: article
 ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 author: coreyp-at-msft
@@ -31,7 +29,7 @@ online disk [noerr]
 
 ### Parameters
 
-For instructions about using this command, see [Reactivate a Missing or Offline Dynamic Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732026(v=ws.11)).
+For instructions about using this command, see [Reactivate a Missing or Offline Dynamic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732026(v=ws.11)).
 
 | Parameter | Description |
 |--|--|

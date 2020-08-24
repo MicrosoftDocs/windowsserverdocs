@@ -1,8 +1,6 @@
 ---
 title: ftp rename
-description: Reference topic for the ftp rename command, which renames remote files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the ftp rename command, which renames remote files.
 ms.topic: article
 ms.assetid: 977b7c95-6428-4980-80ec-79c3ae7e8c4d
 author: coreyp-at-msft
@@ -42,4 +40,4 @@ rename example.txt example1.txt
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

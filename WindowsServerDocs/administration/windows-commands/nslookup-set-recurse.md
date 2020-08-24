@@ -1,10 +1,8 @@
 ---
 title: nslookup set recurse
-description: Reference topic for the nslookup set recurse command, which tells the Domain Name System (DNS) name server to query other servers if it can't find the information on the specified server.
-ms.prod: windows-server
+description: Reference article for the nslookup set recurse command, which tells the Domain Name System (DNS) name server to query other servers if it can't find the information on the specified server.
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: d1b7a93f-dfb0-4ccd-b230-e0953057fada

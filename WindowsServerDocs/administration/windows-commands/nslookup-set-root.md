@@ -1,8 +1,6 @@
 ---
 title: nslookup set root
-description: Reference topic for the nslookup set root command, which changes the name of the root server that's used for queries.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the nslookup set root command, which changes the name of the root server that's used for queries.
 ms.topic: article
 ms.assetid: 8ad5393c-d4fd-4594-8187-576b1dcde60a
 author: coreyp-at-msft

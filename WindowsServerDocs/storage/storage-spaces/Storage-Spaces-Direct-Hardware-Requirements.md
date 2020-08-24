@@ -1,20 +1,18 @@
 ---
 title: Storage Spaces Direct Hardware Requirements
-ms.prod: windows-server
 description: Minimum hardware requirements for testing Storage Spaces Direct.
 ms.author: eldenc
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 08/05/2019
+ms.date: 07/24/2020
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-This topic describes minimum hardware requirements for Storage Spaces Direct.
+This topic describes minimum hardware requirements for Storage Spaces Direct on Windows Server. For hardware requirements on Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Stack HCI: Determine hardware requirements](/azure-stack/hci/deploy/before-you-start#determine-hardware-requirements).
 
 For production, Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
 
@@ -27,7 +25,7 @@ Systems, components, devices, and drivers must be **Windows Server 2016 Certifie
 
 ![screenshot of the Windows Server catalog showing the SDDC AQs](media/hardware-requirements/sddc-aqs.png)
 
-The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) per the wizard in Failover Cluster Manager or with the `Test-Cluster` [cmdlet](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) in PowerShell.
+The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) per the wizard in Failover Cluster Manager or with the `Test-Cluster` [cmdlet](/powershell/module/failoverclusters/test-cluster?view=win10-ps) in PowerShell.
 
 In addition, the following requirements apply:
 
@@ -54,35 +52,36 @@ In addition, the following requirements apply:
 
 ## Networking
 
-Storage Spaces Direct requires a reliable high bandwidth, low latency network connection between each node.  
+Storage Spaces Direct requires a reliable high bandwidth, low latency network connection between each node.
 
 Minimum interconnect for small scale 2-3 node
 - 10 Gbps network interface card (NIC), or faster
 - Two or more network connections from each node recommended for redundancy and performance
 
-Recommended interconnect for high performance, at scale, or deployments of 4+ 
+Recommended interconnect for high performance, at scale, or deployments of 4+
 - NICs that are remote-direct memory access (RDMA) capable, iWARP (recommended) or RoCE
 - Two or more network connections from each node recommended for redundancy and performance
 - 25 Gbps NIC or faster
 
 Switched or switchless node interconnects
-- Switched: Network switches must be properly configured to handle the bandwidth and networking type.  If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important. 
+- Switched: Network switches must be properly configured to handle the bandwidth and networking type.  If using RDMA that implements the RoCE protocol, network device and switch configuration is even more important.
 - Switchless: Nodes can be interconnected using direct connections, avoiding using a switch.  It is required that every node have a direct connection with every other node of the cluster.
 
 
 ## Drives
 
-Storage Spaces Direct works with direct-attached SATA, SAS, or NVMe drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) topic.
+Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) and [Understand and deploy persistent memory](deploy-pmem.md) topics.
 
-- SATA, SAS, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
+- SATA, SAS, persistent memory, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
 - 512n, 512e, and 4K native drives are all supported
-- Solid-state drives must provide [power-loss protection](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
+- Solid-state drives must provide [power-loss protection](https://techcommunity.microsoft.com/t5/storage-at-microsoft/don-t-do-it-consumer-grade-solid-state-drives-ssd-in-storage/ba-p/425914)
 - Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
 - Cache devices must be 32 GB or larger
+- Persistent memory devices are used in block storage mode
 - When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)
-- NVMe driver is the Microsoft-provided one included in Windows. (stornvme.sys)
+- NVMe driver is the Microsoft-provided one included in Windows (stornvme.sys)
 - Recommended: Number of capacity drives is a whole multiple of the number of cache drives
-- Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
+- Recommended: Cache drives should have high write endurance: at least 3 drive-writes-per-day (DWPD) or at least 4 terabytes written (TBW) per day – see [Understanding drive writes per day (DWPD), terabytes written (TBW), and the minimum recommended for Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024)
 
 Here's how drives can be connected for Storage Spaces Direct:
 

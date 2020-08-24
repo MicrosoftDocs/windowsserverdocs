@@ -1,13 +1,11 @@
 ---
 title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 06/23/2020
+ms.date: 08/20/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -20,8 +18,32 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.1104 |
-|Insider    |1.2.1104 |
+|Public     |1.2.1186 |
+|Insider    |1.2.1272 |
+
+## Updates for version 1.2.1272 [INSIDER]
+
+*Date published: 08/11/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
+
+- Added functionality to auto-detect sovereign clouds from the user’s identity.
+- Added functionality to enable custom URL subscriptions for all users.
+- Fixed an issue with app pinning on the feed taskbar.
+- Fixed a crash when subscribing with URL.
+- Improved experience when dragging remote app windows with touch or pen.
+
+## Updates for version 1.2.1186
+
+*Date published: 07/28/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qy), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ciex), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qx)
+
+- You can now be subscribed to Workspaces with multiple user accounts, using the overflow menu (**...**) option on the command bar at the top of the client. To differentiate Workspaces, the Workspace titles now include the username, as do all app shortcuts titles.
+- Added additional information to subscription error messages to improve troubleshooting.
+- The collapsed/expanded state of Workspaces is now preserved during a refresh.
+- Added a **Send Diagnostics and Close** button to the **Connection information** dialog.
+- Fixed an issue with the CTRL + SHIFT keys in remote sessions.
 
 ## Updates for version 1.2.1104
 
@@ -29,7 +51,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
 
-- Updated the automatic discovery logic for the **Subscribe** option to support the Windows Virtual Desktop Spring 2020 update. Customers with only Spring Update resources should no longer need to provide consent for the Fall 2019 release.
+- Updated the automatic discovery logic for the **Subscribe** option to support the Azure Resource Manager-integrated version of Windows Virtual Desktop. Customers with only Windows Virtual Desktop resources should no longer need to provide consent for Windows Virtual Desktop (classic).
 - Improved support for high-DPI devices with scale factor up to 400%.
 - Fixed an issue where the disconnect dialog didn't appear.
 - Fixed an issue where command bar tooltips would remain visible longer than expected.
@@ -43,7 +65,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xsGB), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xd8P), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xq7m)
 
 - When subscribing, you can now choose your account instead of typing your email address.
-- Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to WVD Spring 2020 Update Workspaces.
+- Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to Windows Virtual Desktop workspaces.
 - Added support to subscribe to a Workspace using a new [URI scheme](remote-desktop-uri.md) that can be sent in an email to users or added to a support website.
 - Added a new **Connection information** dialog that provides client, network, and server details for desktop and app sessions. You can access the dialog from the connection bar in full screen mode or from the System menu when windowed.
 - Desktop sessions launched in windowed mode now always maximize instead of going full screen when maximizing the window. Use the **Full screen** option from the system menu to enter full screen.

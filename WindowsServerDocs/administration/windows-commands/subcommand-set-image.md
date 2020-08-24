@@ -1,8 +1,6 @@
 ---
 title: Subcommand set-Image
-description: Reference topic for Subcommand set-Image, which changes the attributes of an image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for Subcommand set-Image, which changes the attributes of an image.
 ms.topic: article
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
 author: coreyp-at-msft
@@ -19,7 +17,7 @@ Changes the attributes of an image.
 ## Syntax
 for boot images:
 ```
-wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>] [/Name:<Name>] 
+wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>] [/Name:<Name>]
 [/Description:<Description>] [/Enabled:{Yes | No}]
 ```
 for install images:
@@ -53,13 +51,13 @@ mediatype:{Boot &#124; Install}|Specifies the type of image.|
 To set values for a boot image, type one of the following:
 ```
 wdsutil /Set-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86 /Description:New description
-wdsutil /verbose /Set-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x86 /Filename:boot.wim 
+wdsutil /verbose /Set-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x86 /Filename:boot.wim
 /Name:New Name /Description:New Description /Enabled:Yes
 ```
 To set values for an install image, type one of the following:
 ```
-wdsutil /Set-Imagmedia:Windows Vista with Officemediatype:Install /Description:New description 
-wdsutil /verbose /Set-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /Set-Imagmedia:Windows Vista with Officemediatype:Install /Description:New description
+wdsutil /verbose /Set-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /Name:New name /Description:New description /UserFilter:O:BAG:DUD:AI(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;AU) /Enabled:Yes /UnattendFile:\\server\share\unattend.xml /OverwriteUnattend:Yes
 ```
 ## Additional References

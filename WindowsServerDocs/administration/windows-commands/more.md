@@ -1,8 +1,6 @@
 ---
 title: more
-description: Reference topic for the more command, which displays one screen of output at a time.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
+description: Reference article for the more command, which displays one screen of output at a time.
 ms.topic: article
 ms.assetid: ded14f6a-d82f-4aeb-a2d8-7ec1c94dfb8f
 author: coreyp-at-msft
@@ -105,4 +103,4 @@ The **more** prompt asks you for the number of lines to skip, as follows: `-- Mo
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Windows Recovery Environment (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)

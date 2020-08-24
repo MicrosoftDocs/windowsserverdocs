@@ -1,11 +1,9 @@
 ---
 title: fsutil file
-description: Reference topic for the fsutil file command, which finds a file by user name, queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, or creates a new file.
-ms.prod: windows-server
+description: Reference article for the fsutil file command, which finds a file by user name, queries allocated ranges for a file, sets a file's short name, sets a file's valid data length, sets zero data for a file, or creates a new file.
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: 9f3dc104-dd69-4b03-b824-a29896780164
 ms.topic: article
 ms.date: 10/16/2017

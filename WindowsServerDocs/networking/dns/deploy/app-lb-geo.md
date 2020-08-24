@@ -2,8 +2,6 @@
 title: Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
 ms.author: lizross
@@ -16,10 +14,10 @@ author: eross-msft
 
 You can use this topic to learn how to configure DNS policy to load balance an application with geo-location awareness.
 
-The previous topic in this guide, [Use DNS Policy for Application Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/app-lb), uses an example of a fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named contosogiftservices.com. Contoso Gift Services load balances their online Web application between servers in North American datacenters located in Seattle, WA, Chicago, IL, and Dallas, TX.
+The previous topic in this guide, [Use DNS Policy for Application Load Balancing](./app-lb.md), uses an example of a fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named contosogiftservices.com. Contoso Gift Services load balances their online Web application between servers in North American datacenters located in Seattle, WA, Chicago, IL, and Dallas, TX.
 
 >[!NOTE]
->It is recommended that you familiarize yourself with the topic [Use DNS Policy for Application Load Balancing](https://technet.microsoft.com/windows-server-docs/networking/dns/deploy/app-lb) before performing the instructions in this scenario.
+>It is recommended that you familiarize yourself with the topic [Use DNS Policy for Application Load Balancing](./app-lb.md) before performing the instructions in this scenario.
 
 This topic uses the same fictional company and network infrastructure as a basis for a new example deployment that includes geo-location awareness.
 
@@ -48,13 +46,14 @@ You can obtain this information from Geo-IP maps. Based on these Geo-IP distribu
 
 A DNS Client Subnet is a logical grouping of IPv4 or IPv6 subnets from which queries are sent to a DNS server.
 
-You can use the following Windows PowerShell commands to create DNS Client Subnets. 
+You can use the following Windows PowerShell commands to create DNS Client Subnets.
 
-    
-    Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet 192.0.0.0/24,182.0.0.0/24
-    Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet 141.1.0.0/24,151.1.0.0/24
-    
-For more information, see [Add-DnsServerClientSubnet](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
+```powershell
+Add-DnsServerClientSubnet -Name "AmericaSubnet" -IPv4Subnet 192.0.0.0/24,182.0.0.0/24
+Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet 141.1.0.0/24,151.1.0.0/24
+```
+
+For more information, see [Add-DnsServerClientSubnet](/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
 
 ### <a name="bkmk_zscopes2"></a>Create the Zone Scopes
 
@@ -67,31 +66,31 @@ A zone scope is a unique instance of the zone. A DNS zone can have multiple zone
 
 The previous scenario on application load balancing demonstrates how to configure three zone scopes for datacenters in North America.
 
-With the commands below, you can create two more zone scopes, one each for the Dublin and Amsterdam datacenters. 
+With the commands below, you can create two more zone scopes, one each for the Dublin and Amsterdam datacenters.
 
 You can add these zone scopes without any changes to the three existing North America zone scopes in the same zone. In addition, after you create these zone scopes, you do not need to restart your DNS server.
 
 You can use the following Windows PowerShell commands to create zone scopes.
 
-    
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScope"
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AmsterdamZoneScope"
-    
+```powershell
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScope"
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AmsterdamZoneScope"
+```
 
-For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
 ### <a name="bkmk_records2"></a>Add Records to the Zone Scopes
 
 Now you must add the records representing the web server host into the zone scopes.
 
 The records for the America datacenters were added in the previous scenario. You can use the following Windows PowerShell commands to add records to the zone scopes for European datacenters.
- 
-    
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "151.1.0.1" -ZoneScope "DublinZoneScope”
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.1" -ZoneScope "AmsterdamZoneScope"
-    
 
-For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+```powershell
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "151.1.0.1" -ZoneScope "DublinZoneScope”
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.1" -ZoneScope "AmsterdamZoneScope"
+```
+
+For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
 ### <a name="bkmk_policies2"></a>Create the DNS Policies
 
@@ -105,16 +104,13 @@ For this example, query distribution across application servers in different dat
 
 You can use the following Windows PowerShell commands to implement these DNS policies.
 
-    
-    Add-DnsServerQueryResolutionPolicy -Name "AmericaLBPolicy" -Action ALLOW -ClientSubnet "eq,AmericaSubnet" -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1; TexasZoneScope,1" -ZoneName "contosogiftservices.com" –ProcessingOrder 1
-    
-    Add-DnsServerQueryResolutionPolicy -Name "EuropeLBPolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "DublinZoneScope,1;AmsterdamZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 2
-    
-    Add-DnsServerQueryResolutionPolicy -Name "WorldWidePolicy" -Action ALLOW -FQDN "eq,*.contoso.com" -ZoneScope "SeattleZoneScope,1;ChicagoZoneScope,1; TexasZoneScope,1;DublinZoneScope,1;AmsterdamZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 3
-    
-    
+```powershell
+Add-DnsServerQueryResolutionPolicy -Name "AmericaLBPolicy" -Action ALLOW -ClientSubnet "eq,AmericaSubnet" -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1; TexasZoneScope,1" -ZoneName "contosogiftservices.com" –ProcessingOrder 1
+Add-DnsServerQueryResolutionPolicy -Name "EuropeLBPolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "DublinZoneScope,1;AmsterdamZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 2
+Add-DnsServerQueryResolutionPolicy -Name "WorldWidePolicy" -Action ALLOW -FQDN "eq,*.contoso.com" -ZoneScope "SeattleZoneScope,1;ChicagoZoneScope,1; TexasZoneScope,1;DublinZoneScope,1;AmsterdamZoneScope,1" -ZoneName "contosogiftservices.com" -ProcessingOrder 3
+```
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 You have now successfully created a DNS policy that provides application load balancing across Web servers that are located in five different datacenters on multiple continents.
 
