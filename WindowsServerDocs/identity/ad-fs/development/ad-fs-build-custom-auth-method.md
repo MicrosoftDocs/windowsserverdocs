@@ -63,9 +63,139 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
         using Claim = System.Security.Claims.Claim;
 
         namespace MFAadapter
-        {
-        class MyAdapter : IAuthenticationAdapter
-        {
+         {
+         class MyAdapter : IAuthenticationAdapter
+         {
+         public IAuthenticationAdapterMetadata Metadata
+         {
+         //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+         }
+
+         public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+         {
+         //return new instance of IAdapterPresentationForm derived class
+
+         }
+
+         public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+         {
+         return true; //its all available for now
+
+         }
+
+         public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+         {
+         //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+
+         }
+
+         public void OnAuthenticationPipelineUnload()
+         {
+
+         }
+
+         public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+         {
+         //return new instance of IAdapterPresentationForm derived class
+
+         }
+
+         public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+         {
+         //return new instance of IAdapterPresentationForm derived class
+
+         }
+
+         }
+         }
+
+10. We are not ready to build yet... there are two more interfaces to go.
+
+    Add two more classes to your project: one is for the metadata, and the other for the presentation form.  You can add these within the same file as the class above.
+
+        class MyMetadata : IAuthenticationAdapterMetadata
+         {
+
+         }
+
+         class MyPresentationForm : IAdapterPresentationForm
+         {
+
+         }
+
+11. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
+
+        class MyMetadata : IAuthenticationAdapterMetadata
+         {
+         //Returns the name of the provider that will be shown in the AD FS management UI (not visible to end users)
+         public string AdminName
+         {
+         get { return "My Example MFA Adapter"; }
+         }
+
+         //Returns an array of strings containing URIs indicating the set of authentication methods implemented by the adapter 
+         /// AD FS requires that, if authentication is successful, the method actually employed will be returned by the
+         /// final call to TryEndAuthentication(). If no authentication method is returned, or the method returned is not
+         /// one of the methods listed in this property, the authentication attempt will fail.
+         public virtual string[] AuthenticationMethods 
+         {
+         get { return new[] { "http://example.com/myauthenticationmethod1", "http://example.com/myauthenticationmethod2" }; }
+         }
+
+         /// Returns an array indicating which languages are supported by the provider. AD FS uses this information
+         /// to determine the best language\locale to display to the user.
+         public int[] AvailableLcids
+         {
+         get
+         {
+         return new[] { new CultureInfo("en-us").LCID, new CultureInfo("fr").LCID};
+         }
+         }
+
+         /// Returns a Dictionary containing the set of localized friendly names of the provider, indexed by lcid. 
+         /// These Friendly Names are displayed in the "choice page" offered to the user when there is more than 
+         /// one secondary authentication provider available.
+         public Dictionary<int, string> FriendlyNames
+         {
+         get
+         {
+         Dictionary<int, string> _friendlyNames = new Dictionary<int, string>();
+         _friendlyNames.Add(new CultureInfo("en-us").LCID, "Friendly name of My Example MFA Adapter for end users (en)");
+         _friendlyNames.Add(new CultureInfo("fr").LCID, "Friendly name translated to fr locale");
+         return _friendlyNames;
+         }
+         }
+
+         /// Returns a Dictionary containing the set of localized descriptions (hover over help) of the provider, indexed by lcid. 
+         /// These descriptions are displayed in the "choice page" offered to the user when there is more than one 
+         /// secondary authentication provider available.
+         public Dictionary<int, string> Descriptions
+         {
+         get 
+         {
+         Dictionary<int, string> _descriptions = new Dictionary<int, string>();
+         _descriptions.Add(new CultureInfo("en-us").LCID, "Description of My Example MFA Adapter for end users (en)");
+         _descriptions.Add(new CultureInfo("fr").LCID, "Description translated to fr locale");
+         return _descriptions; 
+         }
+         }
+
+         /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
+         /// Note that although the property is an array, only the first element is currently used.
+         /// MUST BE ONE OF THE FOLLOWING
+         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+         /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
+         /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
+         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
+         public string[] IdentityClaims
+         {
+         get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
+         }
+
+         //All external providers must return a value of "true" for this property.
+         public bool RequiresIdentity
+         {
+         get { return true; }
          }
         }
     ```
@@ -441,16 +571,15 @@ Once the above pre-requisites are met, open a Windows PowerShell command window 
 2. Next, configure global or relying-party-specific rules to trigger MFA:
 
    Example 1: to create global rule to require MFA for External requests:
-
-   ```powershell
-   Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );
+   
    ```
-
+   PS C:\>Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
+   ```
    Example 2: to create MFA rules to require MFA for external requests to a specific relying party. (Note that individual providers cannot be connected to individual relying parties in AD FS in Windows Server 2012 R2).
 
     ```powershell
-    $rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
-    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );
+    PS C:\>$rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
+    PS C:\>Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
     ```
 
 ### Authenticate with MFA using your adapter
