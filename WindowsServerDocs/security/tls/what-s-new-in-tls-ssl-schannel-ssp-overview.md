@@ -1,8 +1,6 @@
 ---
 title:  TLS - SSL (Schannel SSP) Overview
 description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-tls-ssl
 ms.topic: article
 ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
 author: justinha
@@ -18,7 +16,7 @@ This topic for the IT professional describes the changes in functionality in the
 
 Schannel is a Security Support Provider (SSP) that implements the SSL, TLS and DTLS Internet standard authentication protocols. The Security Support Provider Interface (SSPI) is an API used by Windows systems to perform security-related functions including authentication. The SSPI functions as a common interface to several Security Support Providers (SSPs), including the Schannel SSP.
 
-For more information about Microsoft's implementation of TLS and SSL in the Schannel SSP, see the [TLS/SSL Technical Reference (2003)](https://technet.microsoft.com/library/cc784149(v=ws.10).aspx).
+For more information about Microsoft's implementation of TLS and SSL in the Schannel SSP, see the [TLS/SSL Technical Reference (2003)](/previous-versions/windows/it-pro/windows-server-2003/cc784149(v=ws.10)).
 
 
 ## TLS/SSL (Schannel SSP) features
@@ -88,11 +86,11 @@ If the  **Trusted Root Certifictation Authorities** store that was used contains
 
 The Schannel SSP architecture in Windows Server 2012 will by default use the stores as described above to manage the Trusted Issuers list. You can still use the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as Certutil to manage certificates.
 
-For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](https://technet.microsoft.com/library/hh848365(v=wps.620).aspx).
+For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](/powershell/module/adcsadministration/?view=winserver2012-ps).
 
-For information about managing certificates using the certificate utility, see [certutil.exe](https://technet.microsoft.com/library/cc732443.aspx).
+For information about managing certificates using the certificate utility, see [certutil.exe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732443(v=ws.11)).
 
-For information about what data, including the application-defined store, is defined for an Schannel credential, see [SCHANNEL_CRED structure (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa379810(v=vs.85).aspx).
+For information about what data, including the application-defined store, is defined for an Schannel credential, see [SCHANNEL_CRED structure (Windows)](/windows/win32/api/schannel/ns-schannel-schannel_cred).
 
 **Defaults for Trust Modes**
 
@@ -142,4 +140,4 @@ Applications that use DTLS over UDP can use the SSPI model in Windows Server 201
 In the Schannel SSP for Windows Server 2012 and Windows 8, there are no deprecated features or functionality.
 
 ## Additional References
--   [Private Cloud Security Model - Wrapper Functionality](https://docs.microsoft.com/archive/blogs/cloudsolutions/cloud-services-foundation-reference-architecture-overview)
+-   [Private Cloud Security Model - Wrapper Functionality](/archive/blogs/cloudsolutions/cloud-services-foundation-reference-architecture-overview)

@@ -1,8 +1,6 @@
 ---
 title: gpupdate
 description: Reference article for the gpupdate command, which updates Group Policy settings.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 2fd4e567-2ce1-4637-b611-c2f0895e5708
 author: coreyp-at-msft

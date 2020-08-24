@@ -4,8 +4,6 @@ description: Reference article for the ReFSUtil tool, which attempts to diagnose
 author: laknight5
 ms.author: laknight
 ms.date: 6/29/2020
-ms.prod: windows-server
-ms.technology: windows-commands
 ms.topic: article
 ---
 

@@ -36,7 +36,7 @@ This guide describes how to migrate an existing Windows Server 2008 Foundation d
 
 3.  [Join computers to the new Windows Server Essentials network](Join-computers-to-the-new-Windows-Server-Essentials-network.md).  This section covers joining client computers to the new  Windows Server Essentials network and updating Group Policy settings.
 
-4.  [Move Windows Server 2008 Foundation settings and data to the Destination Server](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  This section provides information about migrating data and settings from the Source Server.
+4.  [Move Windows Server 2008 Foundation settings and data to the Destination Server](./move-windows-server-2008-foundation-to-the-destination-server-for-migration.md).  This section provides information about migrating data and settings from the Source Server.
 
 5.  [Demote and remove the Source Server from the new Windows Server Essentials network](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md).  Prior to removing the Source Server from the network, you must force a Group Policy update and demote the Source Server.
 

@@ -1,8 +1,6 @@
 ---
 title: Windows Server release information
-description: Release information about Windows Server 
-ms.prod: windows-server
-ms.technology: server-general
+description: Release information about Windows Server
 ms.topic: article
 ms.date: 04/14/2020
 author: jasongerend

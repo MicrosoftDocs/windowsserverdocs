@@ -1,7 +1,6 @@
 ---
 title: Why Privileged Access Workstations can help secure your organization
 description: How PAW can increase your organization's security posture
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 93589778-3907-4410-8ed5-e7b6db406513
 ms.date: 03/13/2019
@@ -23,7 +22,7 @@ In simplest terms, a PAW is a hardened and locked down workstation designed to p
 > [!NOTE]
 > The PAW architecture doesn't require a 1:1 mapping of accounts to workstations, though this is a common configuration. PAW creates a trusted workstation environment that can be used by one or more accounts.
 
-In order to provide the greatest security, PAWs should always run the most up-to-date and secure operating system available: Microsoft strongly recommends Windows 10 Enterprise, which includes several additional security features not available in other editions (in particular, [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) and [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+In order to provide the greatest security, PAWs should always run the most up-to-date and secure operating system available: Microsoft strongly recommends Windows 10 Enterprise, which includes several additional security features not available in other editions (in particular, [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard) and [Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)).
 
 > [!NOTE]
 > Organizations without access to Windows 10 Enterprise can use Windows 10 Pro, which includes many of the critical foundational technologies for PAWs, including Trusted Boot, BitLocker, and Remote Desktop.  Education customers can use Windows 10 Education.  Windows 10 Home should not be used for a PAW.
@@ -132,7 +131,7 @@ This methodology is appropriate for accounts with access to high value assets:
 * **High Sensitivity Information workers** - The approach used in a PAW can also provide protection for highly sensitive information worker tasks and personnel such as those involving pre-announcement Merger and Acquisition activity, pre-release financial reports, organizational social media presence, executive communications, unpatented trade secrets, sensitive research, or other proprietary or sensitive data. This guidance does not discuss the configuration of these information worker scenarios in depth or include this scenario in the technical instructions.
 
     > [!NOTE]
-    > Microsoft IT uses PAWs (internally referred to as "secure admin workstations", or SAWs) to manage secure access to internal high-value systems within Microsoft. This guidance has additional details below on PAW usage at Microsoft in the section "How Microsoft uses admin workstations". For more detailed information on this high value asset environment approach, please refer to the article, [Protecting high-value assets with secure admin workstations](/previous-versions//mt186538(v=technet.10)).
+    > Microsoft IT uses PAWs (internally referred to as "secure admin workstations", or SAWs) to manage secure access to internal high-value systems within Microsoft. This guidance has additional details below on PAW usage at Microsoft in the section "How Microsoft uses admin workstations". For more detailed information on this high value asset environment approach, please refer to the article, [Protecting high-value assets with secure admin workstations](/previous-versions/mt186538(v=technet.10)).
 
 This document will describe why this practice is recommended for protecting high impact privileged accounts, what these PAW solutions look like for protecting administrative privileges, and how to quickly deploy a PAW solution for domain and cloud services administration.
 
@@ -569,7 +568,7 @@ In this section, we will configure group policies to prevent privileged administ
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a batch job, select **Define these policy settings** and add the Tier 0 groups:
 
-   ```
+      ```
      Enterprise Admins
      Domain Admins
      Schema Admins
@@ -587,14 +586,14 @@ In this section, we will configure group policies to prevent privileged administ
      > [!NOTE]
      > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
 
-         Other Delegated Groups
+      Other Delegated Groups
 
      > [!NOTE]
      > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
 
    * In Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignment\Deny log on as a service, select **Define these policy settings** and add the Tier 0 groups:
 
-     ```
+      ```
      Enterprise Admins
      Domain Admins
      Schema Admins
@@ -607,7 +606,7 @@ In this section, we will configure group policies to prevent privileged administ
      Read-Only Domain Controllers
      Group Policy Creators Owners
      Cryptographic Operators
-     ```
+      ```
 
      > [!NOTE]
      > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
@@ -1087,7 +1086,7 @@ Once the template disk and shielding data file are ready, you can deploy an admi
 
 [Device Guard Overview](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-[Protecting high-value assets with secure admin workstations](/previous-versions//mt186538(v=technet.10))
+[Protecting high-value assets with secure admin workstations](/previous-versions/mt186538(v=technet.10))
 
 [Isolated User Mode in Windows 10 with Dave Probert (Channel 9)](https://channel9.msdn.com/Blogs/Seth-Juarez/Isolated-User-Mode-in-Windows-10-with-Dave-Probert)
 

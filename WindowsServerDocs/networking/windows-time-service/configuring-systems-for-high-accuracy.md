@@ -2,12 +2,10 @@
 ms.assetid:
 title: Configuring Systems for High Accuracy
 description: Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
-author: dcuomo
-ms.author: dacuo
+author: dahavey
+ms.author: dahavey
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: networking
 ---
 
 # Configuring Systems for High Accuracy

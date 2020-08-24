@@ -1,9 +1,7 @@
 ---
 title: Nested resiliency for Storage Spaces Direct
-ms.prod: windows-server
 ms.author: jgerend
-manager: dansimp
-ms.technology: storagespaces
+manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/15/2019
@@ -124,7 +122,7 @@ New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFrie
 
 Volumes that use nested resiliency appear in [Windows Admin Center](../../manage/windows-admin-center/overview.md) with clear labeling, as in the screenshot below. Once they're created, you can manage and monitor them using Windows Admin Center just like any other volume in Storage Spaces Direct.
 
-![](media/nested-resiliency/windows-admin-center.png)
+![Volume management in Windows Admin Center](media/nested-resiliency/windows-admin-center.png)
 
 ### Optional: Extend to cache drives
 

@@ -1,8 +1,6 @@
 ---
 title: shift
 description: Reference article for shift, which changes the position of batch parameters in a batch file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: b56574e8-570a-4cc9-bbac-1b94fbf6a47a
 author: coreyp-at-msft

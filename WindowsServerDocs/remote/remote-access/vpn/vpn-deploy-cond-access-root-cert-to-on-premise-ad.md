@@ -1,12 +1,10 @@
 ---
 title: Deploy Conditional Access root certificates to on-premises AD
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.date: 06/28/2019
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 # Step 7.4. Deploy conditional access root certificates to on-premises AD

@@ -1,8 +1,6 @@
 ---
 title: makecab
 description: Reference article for the makecab command, which packages existing files into a cabinet (.cab) file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4da95297-c593-427b-9f76-2f389c46cbf4
 author: coreyp-at-msft

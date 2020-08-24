@@ -1,11 +1,9 @@
 ---
 title: Improve performance of a file server with SMB Direct
 description: Describes the SMB Direct feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
 ---

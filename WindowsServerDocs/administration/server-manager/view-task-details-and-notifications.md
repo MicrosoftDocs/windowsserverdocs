@@ -1,12 +1,6 @@
 ---
 title: View Task details and Notifications
 description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
 ms.topic: article
 ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3
 author: coreyp-at-msft
@@ -37,7 +31,7 @@ Items in the **Notifications** menu show a progress bar, a brief description of 
 
 Notifications are particularly useful for installing or uninstalling roles, role services, and features. For example, if you start a feature installation on a remote server, you can close the add Roles and Features Wizard while the installation is still in progress, but the active task remains in the **Notifications** list. The **Notifications** item shows a progress bar for the installation, and lets you reopen the add Roles and Features Wizard, if needed, by clicking **add Roles and Features Wizard**. The items in this list notify you if an installation failed, or if additional configuration steps are required to finish deploying the feature.
 
-Notifications also play an IMPORTANT part in troubleshooting problems with tasks or processes in Server Manager. For more information about how to use messages in the **Notifications** area and **Task details** dialog box to troubleshoot unsuccessful tasks or processes, see the [Server Manager forum](https://docs.microsoft.com/answers/topics/windows-server-manager.html).
+Notifications also play an IMPORTANT part in troubleshooting problems with tasks or processes in Server Manager. For more information about how to use messages in the **Notifications** area and **Task details** dialog box to troubleshoot unsuccessful tasks or processes, see the [Server Manager forum](/answers/topics/windows-server-manager.html).
 
 To delete a notification that you no longer want to see from the **Notifications** list, hover your mouse cursor over the notification, and then click **remove Task** (**X**).
 
@@ -48,4 +42,4 @@ The bottom pane is particularly useful for troubleshooting failed tasks. If Serv
 
 ## See Also
 [Filter, sort, and query Data in Server Manager Tiles](filter-sort-and-query-data-in-server-manager-tiles.md)
-[Server Manager forum](https://docs.microsoft.com/answers/topics/windows-server-manager.html).
+[Server Manager forum](/answers/topics/windows-server-manager.html).

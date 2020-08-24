@@ -1,8 +1,6 @@
 ---
 title: rem
 description: Reference article for the rem command, which records comments in a script, batch, or config.sys file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 1a45b585-a83c-4ff6-badd-ff40f34cec23
 author: coreyp-at-msft

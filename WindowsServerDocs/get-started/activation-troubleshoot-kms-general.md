@@ -3,7 +3,6 @@ title: Guidelines for troubleshooting KMS
 description: Provides information about the KMS service, and suggests tools and approaches for troubleshooting activation issues
 ms.topic: troubleshooting
 ms.date: 9/24/2019
-ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm

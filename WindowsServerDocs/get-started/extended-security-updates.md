@@ -1,8 +1,6 @@
 ---
 title: Windows Server 2008 and 2008 R2 extended security updates
 description: Learn how to use Extended Security Updates (ESU) for Windows Server 2008 and 2008 R2 after the end of their support lifecycle.
-ms.prod: windows-server
-ms.technology: server-general
 ms.mktglfcycl: manage
 author: iainfoulds
 ms.author: iainfou
@@ -95,7 +93,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     If the team doesn't approve your request, you'll see the following error:
 
-    [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://docs.microsoft.com/windows-server/get-started/extended-security-updates)
+    [The resource type could not be found in the namespace 'Microsoft.WindowsESU']()
 
 6. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.
 

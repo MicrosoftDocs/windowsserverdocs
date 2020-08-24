@@ -1,11 +1,9 @@
 ---
 title: Vssadmin delete shadows
 description: A description of the vssadmin delete shadows command.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
 ---

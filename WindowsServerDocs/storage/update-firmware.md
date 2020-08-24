@@ -1,10 +1,8 @@
 ---
 ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: Updating drive firmware
-ms.prod: windows-server
 ms.author: toklima
 manager: dmoss
-ms.technology: storage-spaces
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
@@ -19,13 +17,13 @@ Updating the firmware for drives has historically been a cumbersome task with a 
 
 ## Drive compatibility
 
-To use Windows Server to update drive firmware, you must have supported drives. To ensure common device behavior, we began by defining new and - for Windows 10 and Windows Server 2016 - optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions. 
+To use Windows Server to update drive firmware, you must have supported drives. To ensure common device behavior, we began by defining new and - for Windows 10 and Windows Server 2016 - optional Hardware Lab Kit (HLK) requirements for SAS, SATA, and NVMe devices. These requirements outline which commands a SATA, SAS, or NVMe device must support to be firmware-updatable using these new, Windows-native PowerShell cmdlets. To support these requirements, there is a new HLK test to verify if vendor products support the right commands and get them implemented in future revisions.
 
 Contact your solution vendor for info about whether your hardware supports Windows updating the drive firmware.
 Here are links to the various requirements:
 
 -   SATA: [Device.Storage.Hd.Sata](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragehdsata) - in the **[If Implemented\] Firmware Download & Activate** section
-    
+
 -   SAS: [Device.Storage.Hd.Sas](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragehdsas) - in the **[If Implemented\] Firmware Download & Activate** section
 
 -   NVMe: [Device.Storage.ControllerDrive.NVMe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragecontrollerdrivenvme) - in sections **5.7** and **5.8**.
@@ -59,7 +57,7 @@ The second cmdlet, Update-StorageFirmware, enables administrators to update the 
 
 The drive will first load the new firmware image to an internal staging area. While this happens, I/O typically continues. The image activates after downloading. During this time the drive will not be able to respond to I/O commands as an internal reset occurs. This means that this drive serves no data during the activation. An application accessing data on this drive would have to wait for a response until the firmware activation completes. Here's an example of the cmdlet in action:
 
-   ```powershell 
+   ```powershell
    $pd | Update-StorageFirmware -ImagePath C:\Firmware\J3E160@3.enc -SlotNumber 0
    $pd | Get-StorageFirmwareInformation
 
@@ -75,7 +73,7 @@ Drives typically do not complete I/O requests when they activate a new firmware 
 
 This drive performed the firmware update within ~5.8 seconds, as shown here:
 
-```powershell 
+```powershell
 Measure-Command {$pd | Update-StorageFirmware -ImagePath C:\\Firmware\\J3E16101.enc -SlotNumber 0}
 
  Days : 0

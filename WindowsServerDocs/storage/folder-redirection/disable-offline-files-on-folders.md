@@ -1,11 +1,9 @@
 ---
 title: Disable Offline Files on individual redirected folders
 description: How to disable Offline Files caching on individual folders that are redirected to network shares by using Folder Redirection.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.date: 09/10/2018
 ms.localizationpriority: medium
 ---

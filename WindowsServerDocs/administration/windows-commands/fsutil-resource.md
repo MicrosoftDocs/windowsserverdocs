@@ -1,11 +1,9 @@
 ---
 title: fsutil resource
 description: Reference article for the fsutil resource command, which manages a Transactional Resource Manager and its behavior.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: b198d8ca-a5b7-430f-8911-5cbb9f50484c
 ms.topic: article
 ms.date: 10/16/2017

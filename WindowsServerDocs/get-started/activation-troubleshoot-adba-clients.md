@@ -3,7 +3,6 @@ title: Troubleshooting ADBA clients
 description: Walks through a troubleshooting process for a Windows activation issue
 ms.topic: troubleshooting
 ms.date: 09/24/2019
-ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm

@@ -3,7 +3,6 @@ title: Troubleshooting Windows volume activation
 description: Lists resources that provide information about best practices for volume activation, and information about troubleshooting activation issues
 ms.topic: troubleshooting
 ms.date: 09/24/2019
-ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm

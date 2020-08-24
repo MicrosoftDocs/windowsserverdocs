@@ -6,8 +6,6 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
@@ -51,7 +49,7 @@ Steps-by-step instructions to promote new and replica Windows Server 2012 domain
 - [Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)](./install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain--level-200-.md)
 - [Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)](./install-a-new-windows-server-2012-active-directory-child-or-tree-domain--level-200-.md)
 - [Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)](./rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-.md)
-- [Windows Server 2012 forum about domain controllers](https://docs.microsoft.com/answers/topics/windows-server-2012.html)
+- [Windows Server 2012 forum about domain controllers](/answers/topics/windows-server-2012.html)
 
 ## Windows Update considerations
 
@@ -148,31 +146,30 @@ There are some changes related to AD DS:
 
 Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000.
 
-|||||
-|-|-|-|-|
-|Encryption type or policy|Windows Server 2008 default|Windows Server 2012 and Windows Server 2008 R2 default|Comment|
-|AllowNT4Crypto|Disabled|Disabled|Third-party Server Message Block (SMB) clients may be incompatible with the secure default settings on domain controllers. In all cases, these settings can be relaxed to allow interoperability, but only at the expense of security. For more information, see [article 942564](https://go.microsoft.com/fwlink/?LinkId=164558) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=164558).|
-|DES|Enabled|Disabled|[Article 977321](https://go.microsoft.com/fwlink/?LinkId=177717) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717)|
-|CBT/Extended Protection for Integrated Authentication|N/A|Enabled|See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [article 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) in the Microsoft Knowledge Base as required.|
-|LMv2|Enabled|Disabled|[Article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251)|
+| Encryption type or policy | Windows Server 2008 default | Windows Server 2012 and Windows Server 2008 R2 default | Comment |
+|--|--|--|--|
+| AllowNT4Crypto | Disabled | Disabled | Third-party Server Message Block (SMB) clients may be incompatible with the secure default settings on domain controllers. In all cases, these settings can be relaxed to allow interoperability, but only at the expense of security. For more information, see [article 942564](https://go.microsoft.com/fwlink/?LinkId=164558) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=164558). |
+| DES | Enabled | Disabled | [Article 977321](https://go.microsoft.com/fwlink/?LinkId=177717) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717) |
+| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [article 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) in the Microsoft Knowledge Base as required. |
+| LMv2 | Enabled | Disabled | [Article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="BKMK_SysReqs"></a>Operating system requirements
 
 The minimum system requirements for  Windows Server 2012  are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.
 
-|||
-|-|-|
-|Processor|1.4 Ghz 64-bit processor|
-|RAM|512 MB|
-|Free disk space requirements|32 GB|
-|Screen resolution|800 x 600 or higher|
-|Miscellaneous|DVD drive, keyboard, Internet access|
+| Requirement | Value |
+|--|--|
+| Processor | 1.4 Ghz 64-bit processor |
+| RAM | 512 MB |
+| Free disk space requirements | 32 GB |
+| Screen resolution | 800 x 600 or higher |
+| Miscellaneous | DVD drive, keyboard, Internet access |
 
 ### <a name="BKMK_DiskSpaceDCWin8"></a>Disk space requirements for upgrading domain controllers
 
 This section covers disk space requirements only for upgrading domain controllers from  Windows Server 2008  or  Windows Server 2008 R2 . For more information about disk space requirements for upgrading domain controllers to earlier versions of Windows Server, see [Disk space requirements for upgrading to Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008) or [Disk space requirements for upgrading to Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008R2).
 
-Size the disk that hosts the Active Directory database and log files in order to accommodate the custom and application-driven schema extensions, application and administrator-initiated indexes, plus space for the objects and attributes that you will be added to the directory over deployment life of the domain controller (typically 5 to 8 years). Right sizing at deployment time is typically a good investment compared to greater touch costs required to expand disk storage after deployment. For more information, see [Capacity Planning for Active Directory Domain Services](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/active-directory-server/capacity-planning-for-active-directory-domain-services).
+Size the disk that hosts the Active Directory database and log files in order to accommodate the custom and application-driven schema extensions, application and administrator-initiated indexes, plus space for the objects and attributes that you will be added to the directory over deployment life of the domain controller (typically 5 to 8 years). Right sizing at deployment time is typically a good investment compared to greater touch costs required to expand disk storage after deployment. For more information, see [Capacity Planning for Active Directory Domain Services](../../../administration/performance-tuning/role/active-directory-server/capacity-planning-for-active-directory-domain-services.md).
 
 On domain controllers that you plan to upgrade, make sure that the drive that hosts the Active Directory database (NTDS.DIT) has free disk space that represents at least 20% of the NTDS.DIT file before you begin the operating system upgrade. If there is insufficient free disk space on the volume, the upgrade can fail and the upgrade compatibility report returns an error indicating insufficient free disk space:
 
@@ -195,14 +192,14 @@ The following Windows client and Windows Server operating systems are supported 
 
 Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Server 2008 R2 can be upgraded to  Windows Server 2012 . You cannot upgrade domain controllers that run Windows Server 2003 or 32-bit versions of Windows Server 2008. To replace them, install domain controllers that run a later version of Windows Server in the domain, and then remove the domain controllers that Windows Server 2003.
 
-|If you are running these editions|You can upgrade to these editions|
-|-------------------------------------|-------------------------------------|
-|Windows Server 2008 Standard with SP2<p>OR<p>Windows Server 2008 Enterprise with SP2|Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter|
-|Windows Server 2008 Datacenter with SP2|Windows Server 2012 Datacenter|
-|Windows Web Server 2008|Windows Server 2012 Standard|
-|Windows Server 2008 R2 Standard with SP1<p>OR<p>Windows Server 2008 R2 Enterprise with SP1|Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter|
-|Windows Server 2008 R2 Datacenter with SP1|Windows Server 2012 Datacenter|
-|Windows Web Server 2008 R2|Windows Server 2012 Standard|
+| If you are running these editions | You can upgrade to these editions |
+|--|--|
+| Windows Server 2008 Standard with SP2<p>OR<p>Windows Server 2008 Enterprise with SP2 | Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter |
+| Windows Server 2008 Datacenter with SP2 | Windows Server 2012 Datacenter |
+| Windows Web Server 2008 | Windows Server 2012 Standard |
+| Windows Server 2008 R2 Standard with SP1<p>OR<p>Windows Server 2008 R2 Enterprise with SP1 | Windows Server 2012 Standard<p>OR<p>Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 Datacenter with SP1 | Windows Server 2012 Datacenter |
+| Windows Web Server 2008 R2 | Windows Server 2012 Standard |
 
 For more information about supported upgrade paths, see [Evaluation Versions and Upgrade Options for Windows Server 2012](https://go.microsoft.com/fwlink/?LinkId=260917). Note that you cannot convert a domain controller that runs an evaluation version of Windows Server 2012 directly to a retail version. Instead, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version.
 
@@ -294,42 +291,41 @@ The following table covers common Active Directory-integrated Microsoft applicat
 
 The following table lists known issues related to AD DS installation.
 
-||||
-|-|-|-|
-|KB article number and title|Technology area impacted|Issue/description|
-|[2830145](https://support.microsoft.com/kb/2830145): SID S-1-18-1 and SID S-1-18-2 can't be mapped on Windows 7 or Windows Server 2008 R2-based computers in a domain environment|AD DS Management/App compat|Applications that map SID S-1-18-1 and SID S-1-18-2, which are new in Windows Server 2012, may fail because the SIDs cannot be resolved on Windows 7-based or Windows Server 2008 R2-based computers. To resolve this issue, install the hotfix on the Windows 7-based and Windows Server 2008 R2-based computers in the domain.|
-|[2737129](https://support.microsoft.com/kb/2737129): Group Policy preparation is not performed when you automatically prepare an existing domain for Windows Server 2012|AD DS Installation|Adprep /domainprep /gpprep is not automatically run as part of installing the first DC that runs Windows Server 2012 in a domain. If it has never been run previously in the domain, it must be run manually.|
-|[2737416](https://support.microsoft.com/kb/2737416): Windows PowerShell-based domain controller deployment repeats warnings|AD DS Installation|Warnings can appear during prerequisite validation and then reappear during the installation.|
-|[2737424](https://support.microsoft.com/kb/2737424): "Format of the specified domain name is invalid" error when you try to remove Active Directory Domain Services from a domain controller|AD DS Installation|This error appears if you are removing the last DC in a domain where pre-created RODC accounts still exist. This affects Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008.|
-|[2737463](https://support.microsoft.com/kb/2737463): Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed|AD DS Installation|A DC does not start because an administrator used Dism.exe, Pkgmgr.exe, or Ocsetup.exe to remove the DirectoryServices-DomainController role.|
-|[2737516](https://support.microsoft.com/kb/2737516): IFM verification limitations in Windows Server 2012 Server Manager|AD DS Installation|IFM verification can have limitations as explained in the KB article.|
-|[2737535](https://support.microsoft.com/kb/2737535): Install-AddsDomainController cmdlet returns parameter set error for RODC|AD DS Installation|You can receive an error when you try to attach a server to an RODC account if you specify arguments that are already populated on the pre-created RODC account.|
-|[2737560](https://support.microsoft.com/kb/2737560): "Unable to perform Exchange schema conflict check" error, and prerequisites check fails|AD DS Installation|Prerequisite check fails when you configure the first Windows Server 2012 DC in an existing domain because DCs are missing the SeServiceLogonRight for Network Service or because WMI or DCOM protocols are blocked.|
-|[2737797](https://support.microsoft.com/kb/2737797): AddsDeployment module with the -Whatif argument shows incorrect DNS results|AD DS Installation|The -WhatIf parameter shows DNS server will not be installed but it will be.|
-|[2737807](https://support.microsoft.com/kb/2737807): The Next button is not available on the Domain Controller Options page|AD DS Installation|The Next button is disabled on the Domain Controller Options page because the IP address of the target DC does not map to an existing subnet or site, or because the DSRM password is not typed and confirmed correctly.|
-|[2737935](https://support.microsoft.com/kb/2737935): Active Directory installation stalls at the "Creating the NTDS settings object" stage|AD DS Installation|The installation hangs because the local Administrator password matches the domain Administrator password, or because networking problems prevent critical replication from completing.|
-|[2738060](https://support.microsoft.com/kb/2738060): "Access is denied" error message when you create a child domain remotely by using Install-AddsDomain|AD DS Installation|You receive the error when you run Install-ADDSDomain with the Invoke-Command cmdlet if the DNSDelegationCredential has a bad password.|
-|[2738697](https://support.microsoft.com/kb/2738697): "The server is not operational" domain controller configuration error when you configure a server by using Server Manager|AD DS Installation|You receive this error when you try to install AD DS on a workgroup computer because NTLM authentication is disabled.|
-|[2738746](https://support.microsoft.com/kb/2738746): You receive access denied errors after you log on to a local administrator domain account|AD DS Installation|When you log on using a local Administrator account rather than the built-in Administrator account and then create a new domain, the account is not added to the Domain Admins group.|
-|[2743345](https://support.microsoft.com/kb/2743345): "The system cannot find the file specified" Adprep /gpprep error, or tool crashes|AD DS Installation|You receive this error when you run adprep /gpprep because the infrastructure master is implements a disjoint namespace|
-|[2743367](https://support.microsoft.com/kb/2743367): Adprep "not a valid Win32 application" error on Windows Server 2003, 64-bit version|AD DS Installation|You receive this error because Windows Server 2012 Adprep cannot be run on Windows Server 2003.|
-|[2753560](https://support.microsoft.com/kb/2753560): ADMT 3.2 and PES 3.1 installation errors on Windows Server 2012|ADMT|ADMT 3.2 cannot be installed on Windows Server 2012 by design.|
-|[2750857](https://support.microsoft.com/kb/2750857): DFS Replication diagnostic reports do not display correctly in Internet Explorer 10|DFS Replication|DFS Replication diagnostic report does not display correctly because of changes in Internet Explorer 10.|
-|[2741537](https://support.microsoft.com/kb/2741537): Remote Group Policy updates are visible to users|Group Policy|This is due to scheduled tasks run in the context of each user who is logged on. The Windows Task Scheduler design requires an interactive prompt in this scenario.|
-|[2741591](https://support.microsoft.com/kb/2741591): ADM files are not present in SYSVOL in the GPMC Infrastructure Status option|Group Policy|GP replication can report "replication in progress" because GPMC Infrastructure Status does not follow customized filtering rules.|
-|[2737880](https://support.microsoft.com/kb/2737880): "The service cannot be started" error during AD DS configuration|Virtual DC cloning|You receive this error while installing or removing AD DS, or cloning, because the DS Role Server service is disabled.|
-|[2742836](https://support.microsoft.com/kb/2742836): Two DHCP leases are created for each domain controller when you use the VDC cloning feature|Virtual DC cloning|This happens because the cloned domain controller received a lease before cloning and again when cloning was complete.|
-|[2742844](https://support.microsoft.com/kb/2742844): Domain controller cloning fails and the server restarts in DSRM in Windows Server 2012|Virtual DC cloning|The cloned DC starts in DSRM because cloning failed for any of a variety of reasons listed in the KB article.|
-|[2742874](https://support.microsoft.com/kb/2742874): Domain controller cloning does not re-create all service principal names|Virtual DC cloning|Some three-part SPNs are not recreated on the cloned DC because of a limitation of the domain rename process.|
-|[2742908](https://support.microsoft.com/kb/2742908): "No logon servers are available" error after cloning domain controller|Virtual DC cloning|You receive this error when you try to log on after cloning a virtualized DC because cloning failed and the DC is started in DSRM. Log on as .\administrator to troubleshoot the cloning failure.|
-|[2742916](https://support.microsoft.com/kb/2742916): Domain controller cloning fails with error 8610 in dcpromo.log|Virtual DC cloning|Cloning fails because the PDC emulator has not performed inbound replication of the domain partition, likely because the role was transferred.|
-|[2742927](https://support.microsoft.com/kb/2742927): "Index was out of range" New-AdDcCloneConfig error|Virtual DC cloning|You receive the error after you run New-ADDCCloneConfigFile cmdlet while cloning virtual DCs, either because the cmdlet was not run from an elevated command prompt or because your access token does not contain the Administrators group.|
-|[2742959](https://support.microsoft.com/kb/2742959): Domain controller cloning fails with error 8437: "invalid parameter was specified for this replication operation"|Virtual DC cloning|Cloning failed because an invalid clone name or a duplicate NetBIOS name was specified.|
-|[2742970](https://support.microsoft.com/kb/2742970): DC Cloning fails with no DSRM, duplicate source and clone computer|Virtual DC cloning|The cloned virtual DC boots in Directory Services Repair Mode (DSRM), using a duplicate name as the source DC because the DCCloneConfig.xml file was not created in the correct location or because the source DC was rebooted before cloning.|
-|[2743278](https://support.microsoft.com/kb/2743278): Domain controller cloning error 0x80041005|Virtual DC cloning|The cloned DC boots into DSRM because only one WINS server was specified. If any WINS server is specified, both Preferred and Alternate WINS servers must be specified.|
-|[2745013](https://support.microsoft.com/kb/2745013): "Server is not operational" error message if you run New-AdDcCloneConfigFile in Windows Server 2012|Virtual DC cloning|You receive this error after you run the New-ADDCCloneConfigFile cmdlet because the server cannot contact a global catalog server.|
-|[2747974](https://support.microsoft.com/kb/2747974): Domain controller cloning event 2224 provides incorrect guidance|Virtual DC cloning|Event ID 2224 incorrectly states that managed service accounts must be removed before cloning. Standalone MSAs must be removed but Group MSAs do not block cloning.|
-|[2748266](https://support.microsoft.com/kb/2748266): You cannot unlock a BitLocker-encrypted drive after you upgrade to Windows 8|BitLocker|You receive an "Application not found" error when you try to unlock a drive on a computer that was upgraded from Windows 7.|
+| KB article number and title | Technology area impacted | Issue/description |
+|--|--|--|
+| [2830145](https://support.microsoft.com/kb/2830145): SID S-1-18-1 and SID S-1-18-2 can't be mapped on Windows 7 or Windows Server 2008 R2-based computers in a domain environment | AD DS Management/App compat | Applications that map SID S-1-18-1 and SID S-1-18-2, which are new in Windows Server 2012, may fail because the SIDs cannot be resolved on Windows 7-based or Windows Server 2008 R2-based computers. To resolve this issue, install the hotfix on the Windows 7-based and Windows Server 2008 R2-based computers in the domain. |
+| [2737129](https://support.microsoft.com/kb/2737129): Group Policy preparation is not performed when you automatically prepare an existing domain for Windows Server 2012 | AD DS Installation | Adprep /domainprep /gpprep is not automatically run as part of installing the first DC that runs Windows Server 2012 in a domain. If it has never been run previously in the domain, it must be run manually. |
+| [2737416](https://support.microsoft.com/kb/2737416): Windows PowerShell-based domain controller deployment repeats warnings | AD DS Installation | Warnings can appear during prerequisite validation and then reappear during the installation. |
+| [2737424](https://support.microsoft.com/kb/2737424): "Format of the specified domain name is invalid" error when you try to remove Active Directory Domain Services from a domain controller | AD DS Installation | This error appears if you are removing the last DC in a domain where pre-created RODC accounts still exist. This affects Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008. |
+| [2737463](https://support.microsoft.com/kb/2737463): Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed | AD DS Installation | A DC does not start because an administrator used Dism.exe, Pkgmgr.exe, or Ocsetup.exe to remove the DirectoryServices-DomainController role. |
+| [2737516](https://support.microsoft.com/kb/2737516): IFM verification limitations in Windows Server 2012 Server Manager | AD DS Installation | IFM verification can have limitations as explained in the KB article. |
+| [2737535](https://support.microsoft.com/kb/2737535): Install-AddsDomainController cmdlet returns parameter set error for RODC | AD DS Installation | You can receive an error when you try to attach a server to an RODC account if you specify arguments that are already populated on the pre-created RODC account. |
+| [2737560](https://support.microsoft.com/kb/2737560): "Unable to perform Exchange schema conflict check" error, and prerequisites check fails | AD DS Installation | Prerequisite check fails when you configure the first Windows Server 2012 DC in an existing domain because DCs are missing the SeServiceLogonRight for Network Service or because WMI or DCOM protocols are blocked. |
+| [2737797](https://support.microsoft.com/kb/2737797): AddsDeployment module with the -Whatif argument shows incorrect DNS results | AD DS Installation | The -WhatIf parameter shows DNS server will not be installed but it will be. |
+| [2737807](https://support.microsoft.com/kb/2737807): The Next button is not available on the Domain Controller Options page | AD DS Installation | The Next button is disabled on the Domain Controller Options page because the IP address of the target DC does not map to an existing subnet or site, or because the DSRM password is not typed and confirmed correctly. |
+| [2737935](https://support.microsoft.com/kb/2737935): Active Directory installation stalls at the "Creating the NTDS settings object" stage | AD DS Installation | The installation hangs because the local Administrator password matches the domain Administrator password, or because networking problems prevent critical replication from completing. |
+| [2738060](https://support.microsoft.com/kb/2738060): "Access is denied" error message when you create a child domain remotely by using Install-AddsDomain | AD DS Installation | You receive the error when you run Install-ADDSDomain with the Invoke-Command cmdlet if the DNSDelegationCredential has a bad password. |
+| [2738697](https://support.microsoft.com/kb/2738697): "The server is not operational" domain controller configuration error when you configure a server by using Server Manager | AD DS Installation | You receive this error when you try to install AD DS on a workgroup computer because NTLM authentication is disabled. |
+| [2738746](https://support.microsoft.com/kb/2738746): You receive access denied errors after you log on to a local administrator domain account | AD DS Installation | When you log on using a local Administrator account rather than the built-in Administrator account and then create a new domain, the account is not added to the Domain Admins group. |
+| [2743345](https://support.microsoft.com/kb/2743345): "The system cannot find the file specified" Adprep /gpprep error, or tool crashes | AD DS Installation | You receive this error when you run adprep /gpprep because the infrastructure master is implements a disjoint namespace |
+| [2743367](https://support.microsoft.com/kb/2743367): Adprep "not a valid Win32 application" error on Windows Server 2003, 64-bit version | AD DS Installation | You receive this error because Windows Server 2012 Adprep cannot be run on Windows Server 2003. |
+| [2753560](https://support.microsoft.com/kb/2753560): ADMT 3.2 and PES 3.1 installation errors on Windows Server 2012 | ADMT | ADMT 3.2 cannot be installed on Windows Server 2012 by design. |
+| [2750857](https://support.microsoft.com/kb/2750857): DFS Replication diagnostic reports do not display correctly in Internet Explorer 10 | DFS Replication | DFS Replication diagnostic report does not display correctly because of changes in Internet Explorer 10. |
+| [2741537](https://support.microsoft.com/kb/2741537): Remote Group Policy updates are visible to users | Group Policy | This is due to scheduled tasks run in the context of each user who is logged on. The Windows Task Scheduler design requires an interactive prompt in this scenario. |
+| [2741591](https://support.microsoft.com/kb/2741591): ADM files are not present in SYSVOL in the GPMC Infrastructure Status option | Group Policy | GP replication can report "replication in progress" because GPMC Infrastructure Status does not follow customized filtering rules. |
+| [2737880](https://support.microsoft.com/kb/2737880): "The service cannot be started" error during AD DS configuration | Virtual DC cloning | You receive this error while installing or removing AD DS, or cloning, because the DS Role Server service is disabled. |
+| [2742836](https://support.microsoft.com/kb/2742836): Two DHCP leases are created for each domain controller when you use the VDC cloning feature | Virtual DC cloning | This happens because the cloned domain controller received a lease before cloning and again when cloning was complete. |
+| [2742844](https://support.microsoft.com/kb/2742844): Domain controller cloning fails and the server restarts in DSRM in Windows Server 2012 | Virtual DC cloning | The cloned DC starts in DSRM because cloning failed for any of a variety of reasons listed in the KB article. |
+| [2742874](https://support.microsoft.com/kb/2742874): Domain controller cloning does not re-create all service principal names | Virtual DC cloning | Some three-part SPNs are not recreated on the cloned DC because of a limitation of the domain rename process. |
+| [2742908](https://support.microsoft.com/kb/2742908): "No logon servers are available" error after cloning domain controller | Virtual DC cloning | You receive this error when you try to log on after cloning a virtualized DC because cloning failed and the DC is started in DSRM. Log on as .\administrator to troubleshoot the cloning failure. |
+| [2742916](https://support.microsoft.com/kb/2742916): Domain controller cloning fails with error 8610 in dcpromo.log | Virtual DC cloning | Cloning fails because the PDC emulator has not performed inbound replication of the domain partition, likely because the role was transferred. |
+| [2742927](https://support.microsoft.com/kb/2742927): "Index was out of range" New-AdDcCloneConfig error | Virtual DC cloning | You receive the error after you run New-ADDCCloneConfigFile cmdlet while cloning virtual DCs, either because the cmdlet was not run from an elevated command prompt or because your access token does not contain the Administrators group. |
+| [2742959](https://support.microsoft.com/kb/2742959): Domain controller cloning fails with error 8437: "invalid parameter was specified for this replication operation" | Virtual DC cloning | Cloning failed because an invalid clone name or a duplicate NetBIOS name was specified. |
+| [2742970](https://support.microsoft.com/kb/2742970): DC Cloning fails with no DSRM, duplicate source and clone computer | Virtual DC cloning | The cloned virtual DC boots in Directory Services Repair Mode (DSRM), using a duplicate name as the source DC because the DCCloneConfig.xml file was not created in the correct location or because the source DC was rebooted before cloning. |
+| [2743278](https://support.microsoft.com/kb/2743278): Domain controller cloning error 0x80041005 | Virtual DC cloning | The cloned DC boots into DSRM because only one WINS server was specified. If any WINS server is specified, both Preferred and Alternate WINS servers must be specified. |
+| [2745013](https://support.microsoft.com/kb/2745013): "Server is not operational" error message if you run New-AdDcCloneConfigFile in Windows Server 2012 | Virtual DC cloning | You receive this error after you run the New-ADDCCloneConfigFile cmdlet because the server cannot contact a global catalog server. |
+| [2747974](https://support.microsoft.com/kb/2747974): Domain controller cloning event 2224 provides incorrect guidance | Virtual DC cloning | Event ID 2224 incorrectly states that managed service accounts must be removed before cloning. Standalone MSAs must be removed but Group MSAs do not block cloning. |
+| [2748266](https://support.microsoft.com/kb/2748266): You cannot unlock a BitLocker-encrypted drive after you upgrade to Windows 8 | BitLocker | You receive an "Application not found" error when you try to unlock a drive on a computer that was upgraded from Windows 7. |
 
 ## See Also
 

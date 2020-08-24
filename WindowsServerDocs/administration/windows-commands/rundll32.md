@@ -2,10 +2,8 @@
 title: rundll32
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 46d9cd64-8186-4cd4-a500-44700340fe81

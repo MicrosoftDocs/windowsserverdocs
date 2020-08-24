@@ -1,8 +1,6 @@
 ---
 title: wbadmin restore catalog
 description: Reference article for wbadmin restore catalog, which recovers a backup catalog for the local computer from a storage location that you specify.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ce1e24a0-821d-4353-b09d-8f82c5c4ad56
 author: coreyp-at-msft

@@ -8,9 +8,8 @@ manager: mtillman
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
+
 # Winlogon automatic restart sign-on (ARSO)
 
 During a Windows Update, there are user specific processes that must happen for the update to be complete. These processes require the user to be logged in to their device. On the first login after an update has been initiated, users must wait until these user specific processes are complete before they can start using their device.
@@ -25,10 +24,9 @@ By automatically logging in and locking the user on the console, Windows Update 
 
 ARSO treats unmanaged and managed devices differently. For unmanaged devices, device encryption is used but not required for the user to get ARSO. For managed devices, TPM 2.0, SecureBoot, and BitLocker are required for ARSO configuration. IT admins can override this requirement via Group Policy. ARSO for managed devices is currently only available for devices that are joined to Azure Active Directory.
 
-|   | Windows Update| shutdown -g -t 0  | User-initiated reboots | APIs with SHUTDOWN_ARSO / EWX_ARSO flags |
-| --- | :---: | :---: | :---: | :---: |
-| Managed Devices | :heavy_check_mark:  | :heavy_check_mark: |   | :heavy_check_mark: |
-| Unmanaged Devices | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Windows Update | shutdown -g -t 0 | User-initiated reboots | APIs with SHUTDOWN_ARSO / EWX_ARSO flags |
+|--|--|--|--|
+| Managed devices - Yes<p>Unmanaged devices - Yes | Managed devices - Yes<p>Unmanaged devices - Yes | Managed devices - No<p>Unmanaged devices - Yes | Managed devices - Yes<p>Unmanaged devices - Yes |
 
 > [!NOTE]
 > After a Windows Update induced reboot, the last interactive user is automatically logged in and the session is locked. This gives the ability for a user's lock screen apps to still run despite the Windows Update reboot.
@@ -153,12 +151,12 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 ### Credentials stored
 
-|   | Password hash | Credential key | Ticket-granting ticket | Primary refresh token |
-| --- | :---: | :---: | :---: | :---: |
-| Local account | :heavy_check_mark: | :heavy_check_mark: |   |   |
-| MSA account | :heavy_check_mark: | :heavy_check_mark: |   |   |
-| Azure AD joined account | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: (if hybrid) | :heavy_check_mark: |
-| Domain joined account | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: (if hybrid) |
+| Password hash | Credential key | Ticket-granting ticket | Primary refresh token |
+|--|--|--|--|
+| Local account - Yes | Local account - Yes | Local account - No | Local account - No |
+| MSA account - Yes | MSA account - Yes | MSA account - No | MSA account - No |
+| Azure AD joined account - Yes | Azure AD joined account - Yes | Azure AD joined account - Yes (if hybrid) | Azure AD joined account - Yes |
+| Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes | Domain joined account - Yes (if hybrid) |
 
 ### Credential Guard interaction
 

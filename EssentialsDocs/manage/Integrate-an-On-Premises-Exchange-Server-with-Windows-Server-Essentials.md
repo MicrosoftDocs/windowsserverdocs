@@ -265,9 +265,9 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
  You must configure an SMTP Send connector and an SMTP Receive connector for outbound/inbound transmission of email messages.
 
- To create an SMTP Send connector, follow the instructions in the Exchange Server article [Create an SMTP Send Connector](https://technet.microsoft.com/library/aa997285.aspx).
+ To create an SMTP Send connector, follow the instructions in the Exchange Server article [Create an SMTP Send Connector](/previous-versions/office/exchange-server-2010/aa997285(v=exchg.141)).
 
- To create an SMTP Receive connector, follow the instructions in the Exchange Server article [Create an SMTP Receive Connector](https://technet.microsoft.com/library/bb125159.aspx).
+ To create an SMTP Receive connector, follow the instructions in the Exchange Server article [Create an SMTP Receive Connector](/previous-versions/office/exchange-server-2010/bb125159(v=exchg.141)).
 
  As an option, you can refer to the script earlier in this document for creating the send and receive connectors by using Exchange PowerShell cmdlets.
 
@@ -342,7 +342,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 6. Copy the SSL certificate file for Exchange Server to the server that is running Windows Server Essentials. The certificate file must contain the private key, and it must be in the PFX file format.
 
    > [!NOTE]
-   >  If you are using a self-issued certificate, follow the instruction in the Exchange Server article [Export an Exchange Certificate](https://technet.microsoft.com/library/dd351274.aspx) to export the certificate.
+   >  If you are using a self-issued certificate, follow the instruction in the Exchange Server article [Export an Exchange Certificate](/previous-versions/office/exchange-server-2010/dd351274(v=exchg.141)) to export the certificate.
 
 7. Depending on which version of Windows Server Essentials you are running, do one of the following:
 

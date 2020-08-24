@@ -2,10 +2,8 @@
 title: risetup
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: ce81ac89-a929-40a5-87c2-6a64a3b27a7a

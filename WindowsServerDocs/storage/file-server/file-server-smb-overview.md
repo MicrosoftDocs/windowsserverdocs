@@ -1,11 +1,9 @@
 ---
 title: Overview of file sharing using the SMB 3 protocol in Windows Server
 description: An overview of using the SMB 3 protocol for file shares and file serving with Windows Server.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 01/10/2020
 ms.localizationpriority: medium
 ---

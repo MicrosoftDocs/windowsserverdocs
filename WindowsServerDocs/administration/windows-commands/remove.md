@@ -1,8 +1,6 @@
 ---
 title: remove
 description: Reference article for the remove command, which removes a drive letter or mount point from a volume.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: b0886140-da8b-4231-8cb2-f280874d99c0
 author: coreyp-at-msft

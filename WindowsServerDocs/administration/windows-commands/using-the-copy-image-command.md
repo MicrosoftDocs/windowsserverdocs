@@ -1,8 +1,6 @@
 ---
 title: copy-Image
 description: Reference article for copy-Image, which copies images that are within the same image group.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: bea41cf4-36e6-4181-afa5-00170ebd4fdc
 author: coreyp-at-msft

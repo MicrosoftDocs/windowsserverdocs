@@ -1,8 +1,6 @@
 ---
 title: Manage Windows Server
 description: Learns about tools, recommendations and guidance on managing Windows Server
-ms.prod: windows-server
-ms.technology: manage
 ms.topic: article
 author: lizap
 ms.author: elizapo
@@ -14,7 +12,7 @@ ms.localizationpriority: medium
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 >[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
  <ul class="cardse panelContent cols cols3">
     <li>

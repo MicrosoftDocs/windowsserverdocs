@@ -1,8 +1,6 @@
 ---
 title: ftp append
 description: Reference article for the ftp append command, which appends a local file to a file on the remote computer using the current file type setting.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 7c1a133c-31dc-41a4-9eb9-258efd79804d
 author: coreyp-at-msft

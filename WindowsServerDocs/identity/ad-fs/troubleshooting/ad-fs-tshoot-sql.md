@@ -6,8 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/12/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - SQL Connectivity
@@ -21,7 +19,8 @@ The first thing to test when checking SQL connectivity is, if AD FS has the corr
 2. Enter the following: `$adfs = gwmi -Namespace root/ADFS -Class SecurityTokenService` and hit Enter
 3. Enter the following:  `$adfs.ConfigurationDatabaseConnectionString` and hit enter.
 4. You should see the connect string information.
-![](media/ad-fs-tshoot-sql/sql2.png)
+
+![PowerShell command screen running command](media/ad-fs-tshoot-sql/sql2.png)
 
 ## Create a Universal Data Link (UDL) file to test connectivity
 A Universal Data Link file or UDL file is basically a text file that contains the a database connection string.  By using the information we obtained above we can test whether or not the SQL server is responding to connections.

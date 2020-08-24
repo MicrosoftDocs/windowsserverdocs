@@ -1,9 +1,7 @@
 ---
 title: Health Service reports
-ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
-ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
@@ -103,7 +101,7 @@ public void DiscoverObjects(CimSession Session)
 
 These are the same objects you get in PowerShell using cmdlets like **Get-StorageSubSystem**, **Get-StorageNode**, and **Get-Volume**.
 
-You can access all the same properties, documented at [Storage Management API Classes](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx).
+You can access all the same properties, documented at [Storage Management API Classes](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
 
 ```
 using System.Diagnostics;
@@ -123,7 +121,7 @@ The complete list of metrics available at each scope in Windows Server 2016 is d
 
 ### IObserver.OnNext()
 
-This sample code uses the [Observer Design Pattern](https://msdn.microsoft.com/library/ee850490(v=vs.110).aspx) to implement an Observer whose **OnNext()** method will be invoked when each new sample of metrics arrives. Its **OnCompleted()** method will be called if/when streaming ends. For example, you might use it to reinitiate streaming, so it continues indefinitely.
+This sample code uses the [Observer Design Pattern](/dotnet/standard/events/observer-design-pattern) to implement an Observer whose **OnNext()** method will be invoked when each new sample of metrics arrives. Its **OnCompleted()** method will be called if/when streaming ends. For example, you might use it to reinitiate streaming, so it continues indefinitely.
 
 ```
 class MetricsObserver<T> : IObserver<T>

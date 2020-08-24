@@ -1,8 +1,6 @@
 ---
 title: ftp literal
 description: Reference article for the ftp literal command, which sends verbatim arguments to the remote ftp server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14
 author: coreyp-at-msft

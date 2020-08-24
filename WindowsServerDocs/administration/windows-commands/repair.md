@@ -2,10 +2,8 @@
 title: repair
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 9f84f661-f3cd-48c8-bf08-87819cf626fe

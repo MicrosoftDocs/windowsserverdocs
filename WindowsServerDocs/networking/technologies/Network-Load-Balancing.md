@@ -2,8 +2,6 @@
 title: Network Load Balancing
 description: In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.
 manager: dougkim
-ms.prod: windows-server
-ms.technology: networking-nlb
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
 ms.author: lizross
@@ -17,7 +15,7 @@ ms.date: 09/13/2018
 In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.
 
 > [!NOTE]
-> Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md).
+> Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md).
 
 The Network Load Balancing \(NLB\) feature distributes traffic across several servers by using the TCP\/IP networking protocol. By combining two or more computers that are running applications into a single virtual cluster, NLB provides reliability and performance for web servers and other mission\-critical servers.
 
@@ -55,7 +53,7 @@ Scalability is the measure of how well a computer, service, or application can g
 ### Manageability
 To support manageability, you can do the following with NLB:
 
--   Manage and configure multiple NLB clusters and the cluster hosts from a single computer by using NLB Manager or the [Network Load Balancing (NLB) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh801274.aspx).
+-   Manage and configure multiple NLB clusters and the cluster hosts from a single computer by using NLB Manager or the [Network Load Balancing (NLB) Cmdlets in Windows PowerShell](/previous-versions/windows/powershell-scripting/hh801274(v=wps.630)).
 
 -   Specify the load balancing behavior for a single IP port or group of ports by using port management rules.
 
@@ -137,7 +135,7 @@ Install-WindowsFeature NLB -IncludeManagementTools
 
 After installation is complete, no restart of the computer is required.
 
-For more information, see [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature?view=win10-ps).
+For more information, see [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps).
 
 ### Network Load Balancing Manager
 To open Network Load Balancing Manager in Server Manager, click **Tools**, and then click **Network Load Balancing Manager**.
@@ -147,8 +145,8 @@ The following table provides links to additional information about the NLB featu
 
 |Content type|References|
 |----------------|--------------|
-|Deployment|[Network Load Balancing Deployment Guide](https://technet.microsoft.com/library/cc754833(WS.10).aspx) &#124; [Configuring Network Load Balancing with Terminal Services](https://technet.microsoft.com/library/cc771300(v=WS.10).aspx)|
-|Operations|[Managing Network Load Balancing Clusters](https://technet.microsoft.com/library/cc753954(WS.10).aspx) &#124; [Setting Network Load Balancing Parameters](https://technet.microsoft.com/library/cc731619(WS.10).aspx) &#124; [Controlling Hosts on Network Load Balancing Clusters](https://technet.microsoft.com/library/cc770870(WS.10).aspx)|
-|Troubleshooting|[Troubleshooting Network Load Balancing Clusters](https://technet.microsoft.com/library/cc732592(WS.10).aspx) &#124; [NLB Cluster Events and Errors](https://technet.microsoft.com/library/cc731678(WS.10).aspx)|
+|Deployment|[Network Load Balancing Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10)) &#124; [Configuring Network Load Balancing with Terminal Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771300(v=ws.10))|
+|Operations|[Managing Network Load Balancing Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753954(v=ws.10)) &#124; [Setting Network Load Balancing Parameters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731619(v=ws.10)) &#124; [Controlling Hosts on Network Load Balancing Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770870(v=ws.10))|
+|Troubleshooting|[Troubleshooting Network Load Balancing Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732592(v=ws.10)) &#124; [NLB Cluster Events and Errors](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731678(v=ws.10))|
 |Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
 |Community resources|[High Availability \(Clustering\) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)

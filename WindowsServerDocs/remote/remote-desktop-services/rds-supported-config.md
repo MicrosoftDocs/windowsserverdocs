@@ -1,8 +1,6 @@
 ---
 title: Supported configurations for Remote Desktop Services
 description: Provides information about supported configurations for RDS in Windows Server 2016 and Windows Server 2019.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/14/2020
 ms.topic: article
@@ -131,4 +129,4 @@ For more information about creating VDI deployment of Remote Desktop Services, c
 
 ## Using Remote Desktop Services with application proxy services
 
-You can use Remote Desktop Services, except for the web client, with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-application-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.
+You can use Remote Desktop Services with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-application-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.

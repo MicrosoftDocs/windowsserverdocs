@@ -1,8 +1,6 @@
 ---
 title: certutil
 description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
 author: coreyp-at-msft
@@ -1098,7 +1096,7 @@ Where:
 - The `-f` option can be used to override validation errors for the specified **sitename** or to delete all CA sitenames.
 
 > [!NOTE]
-> For more information about configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)).
+> For more information about configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)).
 
 ### -enrollmentserverURL
 

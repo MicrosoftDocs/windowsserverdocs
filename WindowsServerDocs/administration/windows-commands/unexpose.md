@@ -1,8 +1,6 @@
 ---
 title: unexpose
 description: Reference article for unexpose, which unexposes a shadow copy that was exposed by using the expose command.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 58dc7d0f-52e9-4587-9487-d3b4c3e52640
 author: coreyp-at-msft

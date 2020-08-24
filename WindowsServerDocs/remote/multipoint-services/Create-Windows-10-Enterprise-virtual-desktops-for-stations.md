@@ -2,8 +2,6 @@
 title: Create Windows 10 Enterprise virtual desktops for stations
 description: Learn how to create Windows Server 2016 desktops for station
 ms.date: 07/22/2016
-ms.prod: windows-server
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: evaseydl
@@ -27,7 +25,7 @@ To prepare to create station virtual desktops, ensure that your MultiPoint Servi
 | Graphics | DX11 |
 | BIOS | BIOS CPU setting configured to enable virtualization – Second Level Address Translation (SLAT) |
 
--   **Stations** - Set up the stations for your MultiPoint Services system. For more information, see [Attach additional stations to MultiPoint Services](Attach-additional-stations-to-your-MultiPoint-services-computer.md).
+-   **Stations** - Set up the stations for your MultiPoint Services system. For more information, see [Attach additional stations to MultiPoint Services](./multipoint-attach-additional-stations.md).
 
 -   **Domain** - In a domain environment, the Windows MultiPoint Server computer has been added to the domain, and a domain user has been added to the local Administrators group on the MultiPoint Services host operating system.
 

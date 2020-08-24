@@ -4,8 +4,6 @@ description: This topic is part of the guide Deploy Server Certificates for 802.
 manager: brianlic
 ms.topic: article
 ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
-ms.prod: windows-server
-ms.technology: networking
 ms.author: lizross
 author: eross-msft
 ---
@@ -85,4 +83,4 @@ For more information, see [Active Directory Certificate Services Overview](/prev
 
 The Web Server (IIS) role in  Windows Server 2016 provides a secure, easy-to-manage, modular, and extensible platform for reliably hosting websites, services, and applications. With IIS, you can share information with users on the Internet, an intranet, or an extranet. IIS is a unified web platform that integrates IIS, ASP.NET, FTP services, PHP, and Windows Communication Foundation (WCF).
 
-For more information, see [Web Server (IIS) Overview](https://technet.microsoft.com/library/hh831725.aspx).
+For more information, see [Web Server (IIS) Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831725(v=ws.11)).

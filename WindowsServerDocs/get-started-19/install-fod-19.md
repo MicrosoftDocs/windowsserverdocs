@@ -1,8 +1,6 @@
 ---
 title: Server Core App Compatibility Feature on Demand (FOD)
 description: How to install Windows Server Features on Demand
-ms.prod: windows-server
-ms.technology: server-general
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 author: jasongerend
@@ -51,7 +49,7 @@ Operating system components that are available as part of the Server Core App Co
 
     -   Requires addition of the Failover Clustering Windows Server feature first.
 
-        -   From an elevated PowerShell session: 
+        -   From an elevated PowerShell session:
 
             ```PowerShell
             Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
@@ -103,7 +101,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 ## To optionally add Internet Explorer 11 to Server Core (after adding the Server Core App Compatibility FOD)
 
- >[!NOTE]  
+ >[!NOTE]
    > The Server Core App Compatibility FOD is required for the addition of Internet Explorer 11, but Internet Explorer 11 is not required to add the Server Core App Compatibility FOD.
 
 1. Sign in as Administrator on the Server Core computer that has the App Compatibility FOD already added and the Server FOD optional package ISO copied locally.
@@ -141,8 +139,8 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 - To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is absolutely necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps) to add IIS Management Console.
 
-- As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions. 
-    
+- As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions.
+
   - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017).
   - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017).
 

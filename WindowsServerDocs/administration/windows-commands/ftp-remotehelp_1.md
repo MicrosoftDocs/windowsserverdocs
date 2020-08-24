@@ -1,8 +1,6 @@
 ---
 title: ftp remotehelp
 description: Reference article for the ftp remotehelp command, which displays help for remote commands.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ef23adf3-ead4-44c8-ac1d-c8a6f4b2bf73
 author: coreyp-at-msft

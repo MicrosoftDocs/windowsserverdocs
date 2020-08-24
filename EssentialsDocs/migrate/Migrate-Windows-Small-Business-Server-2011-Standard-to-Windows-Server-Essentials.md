@@ -41,7 +41,7 @@ This guide describes how to migrate an existing Windows Small Business Server 20
 
 3.  [Join computers to the new Windows Server Essentials server](Join-computers-to-the-new-Windows-Server-Essentials-server.md).  This section covers joining client computers to the new  Windows Server Essentials network and updating Group Policy settings.
 
-4.  [Move SBS 2011 settings and data to the Destination Server](Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  This section provides information about migrating data and settings from the Source Server.
+4.  [Move SBS 2011 settings and data to the Destination Server](./move-windows-sbs-2011-standard-to-the-destination-server-for-migration.md).  This section provides information about migrating data and settings from the Source Server.
 
 5.  [Enable folder redirection on the Windows Server Essentials Destination Server](Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md).  If folder redirection is enabled on the Source Server, you can enable folder redirection on the Destination Server, and then delete the old Folder Redirection Group Policy setting.
 

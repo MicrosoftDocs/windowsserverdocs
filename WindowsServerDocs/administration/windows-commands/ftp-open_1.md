@@ -1,8 +1,6 @@
 ---
 title: ftp open
 description: Reference article for the ftp open command, which connects to the specified ftp server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4b61926a-dc60-4b4c-96d3-64e5c91c18ba
 author: coreyp-at-msft

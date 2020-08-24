@@ -14,7 +14,7 @@ manager: dongill
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 > [!NOTE]
->  You must first create a multilingual Windows image as described in the [Language Packs and Deployment](https://technet.microsoft.com/library/hh824829) before you add the  Windows Server Essentials language pack.
+>  You must first create a multilingual Windows image as described in the [Language Packs and Deployment](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824829(v=win.10)) before you add the  Windows Server Essentials language pack.
 
  Language packs are only available for creating multi-lingual images. The information in this section is specific to installing or removing language packs on  Windows Server Essentials.
 
@@ -50,4 +50,3 @@ manager: dongill
  [Additional Customizations](Additional-Customizations.md)
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-

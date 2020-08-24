@@ -1,9 +1,7 @@
 ---
 title: Configure the VPN device tunnel in Windows 10
 description: Learn how to create a VPN device tunnel in Windows 10.
-ms.prod: windows-server
 ms.date: 11/05/2018
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: v-tea
@@ -83,7 +81,7 @@ Following is the sample VPN profileXML.
 </VPNProfile>
 ```
 
-Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](https://docs.microsoft.com/answers/topics/windows-server-infrastructure.html).
+Depending on the needs of each particular deployment scenario, another VPN feature that can be configured with the device tunnel is [Trusted Network Detection](/answers/topics/windows-server-infrastructure.html).
 
 ```
  <!-- inside/outside detection -->

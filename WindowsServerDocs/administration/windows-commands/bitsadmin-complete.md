@@ -1,8 +1,6 @@
 ---
 title: bitsadmin complete
 description: Reference article for the bitsadmin complete command, which completes the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: a5e86677-8f7b-43b3-929e-97706c57e7f1
 author: coreyp-at-msft

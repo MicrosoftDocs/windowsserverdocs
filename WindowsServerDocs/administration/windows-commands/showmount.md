@@ -1,8 +1,6 @@
 ---
 title: showmount
 description: Reference article for showmount, which displays mounted directories.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: a6dd562e-e3bd-4ee6-be3b-6d29e29fd20e
 author: coreyp-at-msft

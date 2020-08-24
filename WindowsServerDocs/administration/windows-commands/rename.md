@@ -1,8 +1,6 @@
 ---
 title: rename
 description: Reference article for the rename command, which renames a file or directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 7f2ea658-0fa9-4015-8031-22c2b0089231
 author: coreyp-at-msft

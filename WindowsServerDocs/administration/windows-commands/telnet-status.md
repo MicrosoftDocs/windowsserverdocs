@@ -1,8 +1,6 @@
 ---
 title: telnet status
 description: Reference article for telnet status, which displays status information.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4e819f11-3dc4-44d1-957b-1bcecf9fc1fc
 author: coreyp-at-msft

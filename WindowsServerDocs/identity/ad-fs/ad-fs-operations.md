@@ -6,14 +6,12 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 # AD FS Operations
 
 
 
-This document contains a list of all of the documentation operations for AD FS. 
+This document contains a list of all of the documentation operations for AD FS.
 
 ## Service Configuration
 - [Update SSL Certificates in AD FS and WAP 2016](./operations/manage-ssl-certificates-ad-fs-wap.md)
@@ -23,7 +21,7 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Customize HTTP security response headers with AD FS 2019](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
 - [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
 - [Fine tune SQL and address latency](../ad-fs/operations/adfs-sql-latency.md)
-- [AlwaysOn Availability Groups](../ad-fs/operations/ad-fs-always-on.md) 
+- [AlwaysOn Availability Groups](../ad-fs/operations/ad-fs-always-on.md)
 
 
 ## Authentication Configuration
@@ -49,7 +47,7 @@ This document contains a list of all of the documentation operations for AD FS.
 
 
 ### Device
-- [Device Authentication Controls in AD FS](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
+- [Device Authentication Controls in AD FS](../ad-fs/operations/device-authentication-controls-in-AD-FS.md)
 
 
 ## Authorization Configuration
@@ -58,8 +56,8 @@ This document contains a list of all of the documentation operations for AD FS.
 
 ## RPT & CPT configuration
 - [Configure AD FS to authenticate users stored in LDAP directories](../ad-fs/operations/Configure-AD-FS-to-authenticate-users-stored-in-LDAP-directories.md)
-- [Configure Claim Rules](../ad-fs/operations/Configure-Claim-Rules.md) 
-- [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md) 
+- [Configure Claim Rules](../ad-fs/operations/Configure-Claim-Rules.md)
+- [Create a Claims Provider Trust](../ad-fs/operations/Create-a-Claims-Provider-Trust.md)
 - [Create a Non-Claims Aware Relying Party Trust](../ad-fs/operations/Create-a-Non-Claims-Aware-Relying-Party-Trust.md)
 - [Create a Relying Party Trust](../ad-fs/operations/Create-a-Relying-Party-Trust.md)
 - [Configure AD FS to work with Aggregated federation provider (e.g. InCommon)](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
@@ -81,4 +79,4 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Walkthrough: Workplace Join with a Windows Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 - [Walkthrough: Workplace Join with an iOS Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
-  
+

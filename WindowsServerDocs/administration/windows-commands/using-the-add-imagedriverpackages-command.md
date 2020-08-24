@@ -1,8 +1,6 @@
 ---
 title: add-ImageDriverPackages
 description: Reference article for add-ImageDriverPackages, which adds driver packages from the driver store to a boot image.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
 author: coreyp-at-msft

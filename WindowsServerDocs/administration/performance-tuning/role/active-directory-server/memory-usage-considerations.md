@@ -1,8 +1,6 @@
 ---
 title: Memory usage considerations in AD DS performance tuning
 description: Memory usage by the Lsass.exe process on domain controllers that are running Windows Server 2012 R2, 2016 and 2019.
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: v-tea; lindakup
 author: teresa-motiv
@@ -11,9 +9,9 @@ ms.date: 7/3/2019
 
 # Memory usage considerations for AD DS performance tuning
 
-This article describes some basics of the Local Security Authority Subsystem Service (LSASS, also known as the Lsass.exe process), best practices for the configuration of LSASS, and expectations for memory usage. This article should be used as a guide in the analysis of LSASS performance and memory use on domain controllers (DCs). The information in this article may be useful if you have questions about how to tune and configure servers and DCs to optimize this engine.  
+This article describes some basics of the Local Security Authority Subsystem Service (LSASS, also known as the Lsass.exe process), best practices for the configuration of LSASS, and expectations for memory usage. This article should be used as a guide in the analysis of LSASS performance and memory use on domain controllers (DCs). The information in this article may be useful if you have questions about how to tune and configure servers and DCs to optimize this engine.
 
-LSASS is responsible for management of local security authority (LSA) domain authentication and Active Directory management. LSASS handles authentication for both the client and the server, and it also governs the Active Directory engine. LSASS is responsible for the following components:  
+LSASS is responsible for management of local security authority (LSA) domain authentication and Active Directory management. LSASS handles authentication for both the client and the server, and it also governs the Active Directory engine. LSASS is responsible for the following components:
 
 - Local Security Authority
 - NetLogon service
@@ -28,15 +26,15 @@ The Active Directory database services (NTDSAI.dll) work with the Extensible Sto
 
 Here is a visual diagram of LSASS memory usage on a DC:
 
-![Diagram of the components that use LSASS memory](media/domain-controller-lsass-memory-usage.png)  
+![Diagram of the components that use LSASS memory](media/domain-controller-lsass-memory-usage.png)
 
 The amount of memory that LSASS uses on a DC increases in accordance with Active Directory usage. When data is queried, it is cached in memory. As a result, it is normal to see LSASS using an amount of memory that is larger than the size of the Active Directory database file (NTDS.dit).
 
 As illustrated in the diagram, LSASS memory usage can be divided into several parts, including the ESE database buffer cache, the ESE version store, and others. The rest of this article provides insight into each of these parts.
 
-## ESE database buffer cache  
-The largest variable memory usage within LSASS is the ESE database buffer cache. The size of the cache can range from less than 1 MB to the size of the entire database. Because a larger cache improves performance, the database engine for Active Directory (ESENT) attempts to keep the cache as large as possible. While the size of the cache varies with memory pressure in the computer, the maximum size of the ESE database buffer cache is *only* limited by physical RAM installed in the computer. As long as there is no other memory pressure, the cache can grow to the size of the Active Directory NTDS.dit database file. The more of the database that can be cached, the better the performance of the DC will be.  
-  
+## ESE database buffer cache
+The largest variable memory usage within LSASS is the ESE database buffer cache. The size of the cache can range from less than 1 MB to the size of the entire database. Because a larger cache improves performance, the database engine for Active Directory (ESENT) attempts to keep the cache as large as possible. While the size of the cache varies with memory pressure in the computer, the maximum size of the ESE database buffer cache is *only* limited by physical RAM installed in the computer. As long as there is no other memory pressure, the cache can grow to the size of the Active Directory NTDS.dit database file. The more of the database that can be cached, the better the performance of the DC will be.
+
 > [!NOTE]
 > Because of the way that the database caching algorithm works, on a 64-bit system on which the database size is smaller than the available RAM, the database cache can grow larger than the database size by 30 to 40 percent.
 
@@ -63,10 +61,10 @@ When you notice that a DC has performance problems, also watch for processes wit
 There are built-in OS facilities that can consume significant RAM depending on the usage profile:
 
 - **File server**. DCs are also file servers for SYSVOL and Netlogon shares, servicing group policy and scripts for policy and startup/logon scripts.
-  However, we see customers use DCs to service other file content. The SMB file server would then consume RAM to track the active clients, but foremost, the file content would make the OS file cache grow, and compete with the ESE database cache for RAM.  
+  However, we see customers use DCs to service other file content. The SMB file server would then consume RAM to track the active clients, but foremost, the file content would make the OS file cache grow, and compete with the ESE database cache for RAM.
 
-- **WMI queries**. Monitoring solutions often make many WMI queries. An individual query may be cheap to execute. Often it is the volume of calls that incurs some overhead, especially as the monitoring solutions extract new events from the various event logs that Windows manages.  
+- **WMI queries**. Monitoring solutions often make many WMI queries. An individual query may be cheap to execute. Often it is the volume of calls that incurs some overhead, especially as the monitoring solutions extract new events from the various event logs that Windows manages.
 
-  The event log that produces the most volume is typically the Security Event log. And this is also the event log that security administrators want to collect, especially from DCs.  
+  The event log that produces the most volume is typically the Security Event log. And this is also the event log that security administrators want to collect, especially from DCs.
 
-  The WMI service uses a dynamic memory allocation scheme that optimizes queries. Therefore, the WMI service may allocate a lot of memory, again competing with the ESE database cache.  
+  The WMI service uses a dynamic memory allocation scheme that optimizes queries. Therefore, the WMI service may allocate a lot of memory, again competing with the ESE database cache.

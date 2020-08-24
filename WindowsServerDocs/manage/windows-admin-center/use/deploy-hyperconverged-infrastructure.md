@@ -3,8 +3,6 @@ title: Deploy hyperconverged infrastructure with Windows Admin Center
 ms.topic: article
 author: cosmosdarwin
 ms.author: cosdar
-ms.prod: windows-server
-ms.technology: manage
 ms.date: 11/04/2019
 ---
 
@@ -12,9 +10,9 @@ ms.date: 11/04/2019
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-You can use Windows Admin Center [version 1910](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) or later to deploy hyperconverged infrastructure using two or more suitable Windows Servers. This new feature takes the form of a multi-stage workflow that guides you through installing features, configuring networking, creating the cluster, and deploying Storage Spaces Direct and/or software-defined networking (SDN) if selected.
+You can use Windows Admin Center [version 1910](../overview.md) or later to deploy hyperconverged infrastructure using two or more suitable Windows Servers. This new feature takes the form of a multi-stage workflow that guides you through installing features, configuring networking, creating the cluster, and deploying Storage Spaces Direct and/or software-defined networking (SDN) if selected.
 
-As of Windows Admin Center version 2007, Windows Admin Center supports the Azure Stack HCI OS. Read about [how to deploy a cluster in Windows Admin Center in the Azure Stack HCI docs](https://docs.microsoft.com/azure-stack/hci/getting-started). Althought this documentation is focused on Azure Stack HCI, the instructions are also suitable for Windows Server deployments. 
+As of Windows Admin Center version 2007, Windows Admin Center supports the Azure Stack HCI OS. Read about [how to deploy a cluster in Windows Admin Center in the Azure Stack HCI docs](/azure-stack/hci/getting-started). Althought this documentation is focused on Azure Stack HCI, the instructions are also suitable for Windows Server deployments.
 
 ## Undo and start over
 
@@ -85,5 +83,5 @@ You're now ready to start the workflow.
 
 ## Additional References
 
-- [Hello, Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center)
-- [Deploy Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/deploy-storage-spaces-direct)
+- [Hello, Windows Admin Center](../overview.md)
+- [Deploy Storage Spaces Direct](../../../storage/storage-spaces/deploy-storage-spaces-direct.md)

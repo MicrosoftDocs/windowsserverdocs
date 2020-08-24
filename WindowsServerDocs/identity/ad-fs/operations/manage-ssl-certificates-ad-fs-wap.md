@@ -7,8 +7,6 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Managing SSL Certificates in AD FS and WAP in Windows Server 2016
@@ -119,6 +117,6 @@ Enter the credentials of a domain user who is local administrator on the AD FS s
 Install-WebApplicationProxy -FederationServiceTrustCredential $cred -CertificateThumbprint '<thumbprint of new cert>' -FederationServiceName 'fs.contoso.com'
 ```
 
-## Additional references  
+## Additional references
 * [AD FS support for alternate hostname binding for certificate authentication](../operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 * [AD FS and certificate KeySpec property Information](../technical-reference/AD-FS-and-KeySpec-Property.md)

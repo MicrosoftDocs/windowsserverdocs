@@ -1,8 +1,6 @@
 ---
 title: Netsh commands for interface portproxy
 description: Use the netsh interface portproxy commands to act as proxies between IPv4 and IPv6 networks and applications.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 manager: dougkim
 ms.author: lizross
@@ -171,7 +169,7 @@ The portproxy server deletes an IPv4 port and address from the list of IPv4 addr
 
 ### Syntax
 
-```PowerShell 
+```PowerShell
 delete v4tov6 listenport= {Integer | ServiceName} [[listenaddress=] {IPv4Address | HostName} [[protocol=]tcp]
 ```
 
@@ -293,7 +291,7 @@ Modifies the parameter values of an existing entry on the portproxy server creat
 
 ### Syntax
 
-```PowerShell 
+```PowerShell
 set v6tov6 listenport= {Integer | ServiceName} [[connectaddress=] {IPv6Address | HostName} [[connectport=] {Integer | ServiceName}] [[listenaddress=] {IPv6Address | HostName} [[protocol=]tcp]
 ```
 

@@ -5,8 +5,6 @@ author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 02/24/2020
 ms.topic: article
-ms.prod: windows-server
-ms.technology: networking
 ---
 
 # Windows Time service tools and settings
@@ -250,7 +248,7 @@ In the following tables, "All versions" refers to versions of Windows that inclu
 > Some of the parameters in the registry are measured in clock ticks and some are measured in seconds. To convert the time from clock ticks to seconds, use these conversion factors:
 > - 1 minute = 60 sec
 > - 1 sec = 1000 ms
-> - 1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](https://docs.microsoft.com/dotnet/api/system.datetime.ticks).
+> - 1 ms = 10,000 clock ticks on a Windows system, as described at [DateTime.Ticks Property](/dotnet/api/system.datetime.ticks).
 >
 > For example, 5 minutes becomes 5 &times; 60 &times; 1000 &times; 10000 = 3,000,000,000 clock ticks.
 

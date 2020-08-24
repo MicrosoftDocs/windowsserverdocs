@@ -2,8 +2,6 @@
 title: Internal DNS Service (iDNS) for SDN
 description: This topic explains how you can provide DNS services to your hosted tenant workloads by using Internal DNS (iDNS), which is integrated with Software Defined Networking in Windows Server 2016.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: get-started-article
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: anpaul
@@ -61,7 +59,7 @@ When you deploy SDN in Windows Server 2016 by using scripts, iDNS is automatical
 
 For more information, see the following topics.
 
-- [Deploy a Software Defined Network infrastructure using scripts](https://docs.microsoft.com/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts)
+- [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md)
 
 
 ## Understanding iDNS Deployment Steps
@@ -74,14 +72,16 @@ Following is a summary of the steps needed to deploy iDNS.
 
 ### Step 1: Deploy DNS
 You can deploy a DNS server by using the following example Windows PowerShell command.
-    
-    Install-WindowsFeature DNS -IncludeManagementTools
-    
+
+```powershell
+Install-WindowsFeature DNS -IncludeManagementTools
+```
+
 ### Step 2: Configure iDNS information in Network Controller
-This script segment is a REST call that is made by the administrator to Network Controller, informing it about the iDNS zone configuration - such as the IP address of the iDNSServer and the zone that is used to host the iDNS names. 
+This script segment is a REST call that is made by the administrator to Network Controller, informing it about the iDNS zone configuration - such as the IP address of the iDNSServer and the zone that is used to host the iDNS names.
 
 ```
-    Url: https://<url>/networking/v1/iDnsServer/configuration
+Url: https://<url>/networking/v1/iDnsServer/configuration
 Method: PUT
 {
       "properties": {
@@ -102,11 +102,10 @@ Method: PUT
 ```
 
 >[!NOTE]
->This is an excerpt from the section **Configuration ConfigureIDns** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts).
+>This is an excerpt from the section **Configuration ConfigureIDns** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md).
 
 ### Step 3: Configure the iDNS Proxy Service
 The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge between the virtual networks of tenants and the physical network where the iDNS servers are located. The following registry keys must be created on every Hyper-V host.
-
 
 **DNS port:** Fixed port 53
 
@@ -114,7 +113,6 @@ The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge b
 - ValueName = "Port"
 - ValueData = 53
 - ValueType = "Dword"
-       
 
 **DNS Proxy Port:** Fixed port 53
 
@@ -122,7 +120,7 @@ The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge b
 - ValueName = "ProxyPort"
 - ValueData = 53
 - ValueType = "Dword"
-        
+
 **DNS IP:** Fixed IP address configured on the network interface, in case the tenant chooses to use the iDNS service
 
 - Registry Key = HKLM\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService"
@@ -130,7 +128,6 @@ The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge b
 - ValueData = "169.254.169.254"
 - ValueType = "String"
 
-        
 **Mac Address:** Media Access Control address of the DNS server
 
 - Registry Key = HKLM\SYSTEM\CurrentControlSet\Services\NcHostAgent\Parameters\Plugins\Vnet\InfraServices\DnsProxyService
@@ -145,42 +142,43 @@ The iDNS Proxy Service runs on each of the Hyper-V hosts, providing the bridge b
 - ValueData = "10.0.0.9"
 - ValueType = "String"
 
-
-
 >[!NOTE]
->This is an excerpt from the section **Configuration ConfigureIDnsProxy** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts).
+>This is an excerpt from the section **Configuration ConfigureIDnsProxy** in SDNExpress.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md).
 
 ### Step 4: Restart the Network Controller Host Agent Service
 You can use the following Windows PowerShell command to restart the Network Controller Host Agent Service.
-    
-    Restart-Service nchostagent -Force
-    
-For more information, see [Restart-Service](https://technet.microsoft.com/library/hh849823.aspx).
+
+```powershell
+Restart-Service nchostagent -Force
+```
+
+For more information, see [Restart-Service](/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7).
 
 ### Enable firewall rules for the DNS proxy service
 You can use the following Windows PowerShell command to create a firewall rule that allows exceptions for the proxy to communicate with the VM and the iDNS server.
-    
-    Enable-NetFirewallRule -DisplayGroup 'DNS Proxy Firewall'
 
-For more information, see [Enable-NetFirewallRule](https://technet.microsoft.com/library/jj554869.aspx).
-    
+```powershell
+Enable-NetFirewallRule -DisplayGroup 'DNS Proxy Firewall'
+```
+
+For more information, see [Enable-NetFirewallRule](/powershell/module/netsecurity/enable-netfirewallrule?view=winserver2012r2-ps).
+
 ### Validate the iDNS Service
 To validate the iDNS Service, you must deploy a sample tenant workload.
 
-For more information, see [Create a VM and Connect to a Tenant Virtual Network or VLAN](https://technet.microsoft.com/windows-server-docs/networking/sdn/manage/create-a-tenant-vm).
+For more information, see [Create a VM and Connect to a Tenant Virtual Network or VLAN](../manage/create-a-tenant-vm.md).
 
-If you want the tenant VM to use the iDNS service, you must leave the VM network interfaces DNS Server configuration blank and allow the interfaces to use DHCP. 
+If you want the tenant VM to use the iDNS service, you must leave the VM network interfaces DNS Server configuration blank and allow the interfaces to use DHCP.
 
 After the VM with such a network interface is initiated, it automatically receives a configuration that allows the VM to use iDNS, and the VM immediately starts performing name resolution by using the iDNS service.
 
-If you configure the tenant VM to use the iDNS service by leaving network interface DNS Server and Alternate DNS Server information blank, Network Controller provides the VM with an IP address, and performs a DNS name registration on behalf of the VM with the iDNS Server. 
+If you configure the tenant VM to use the iDNS service by leaving network interface DNS Server and Alternate DNS Server information blank, Network Controller provides the VM with an IP address, and performs a DNS name registration on behalf of the VM with the iDNS Server.
 
-Network Controller also informs the iDNS proxy about the VM and the required details to perform name resolution for the VM. 
+Network Controller also informs the iDNS proxy about the VM and the required details to perform name resolution for the VM.
 
-When the VM initiates a DNS query, the proxy acts as a forwarder of the query from the Virtual Network to the iDNS service. 
+When the VM initiates a DNS query, the proxy acts as a forwarder of the query from the Virtual Network to the iDNS service.
 
 The DNS proxy also ensures that the tenant VM queries are isolated. If the iDNS server is authoritative for the query, the iDNS server responds with an authoritative response. If the iDNS server is not authoritative for the query, it performs a DNS recursion to resolve Internet names.
 
 >[!NOTE]
->This information is included in the section **Configuration AttachToVirtualNetwork** in SDNExpressTenant.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](https://technet.microsoft.com/windows-server-docs/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure-using-scripts).
-
+>This information is included in the section **Configuration AttachToVirtualNetwork** in SDNExpressTenant.ps1. For more information, see [Deploy a Software Defined Network infrastructure using scripts](../deploy/deploy-a-software-defined-network-infrastructure-using-scripts.md).

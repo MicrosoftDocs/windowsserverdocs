@@ -1,10 +1,8 @@
 ---
 title: Supported Windows 10 security configurations for Remote Desktop Services VDI
 description: Provides information about supported configurations for Windows 10 VDI with RDS in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 10/27/2016  
+ms.date: 10/27/2016
 ms.topic: article
 ms.assetid: 8f164f5d-a498-4f91-a12f-3e01d554f810
 author: lizap
@@ -34,10 +32,10 @@ Remote Credential Guard is only supported for direct connections to the target m
 > [!NOTE]
 > If you have a Connection Broker in a single-instance environment, and the DNS name matches the computer name, you may be able to use Remote Credential Guard, although this is not supported.
 
-## Shielded VMs and Encryption Supported VMs: 
+## Shielded VMs and Encryption Supported VMs:
 
-- Shielded VMs are not supported in Remote Desktop Services VDI 
+- Shielded VMs are not supported in Remote Desktop Services VDI
 
 For leveraging Encryption Supported VMs:
-- Use an unmanaged collection and a provisioning technology outside of the Remote Desktop Services collection creation process to provision the virtual machines. 
-- User Profile Disks are not supported as they rely on differential disks 
+- Use an unmanaged collection and a provisioning technology outside of the Remote Desktop Services collection creation process to provision the virtual machines.
+- User Profile Disks are not supported as they rely on differential disks

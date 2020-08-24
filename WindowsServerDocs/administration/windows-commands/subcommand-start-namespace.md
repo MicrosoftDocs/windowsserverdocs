@@ -1,8 +1,6 @@
 ---
 title: Subcommand start-Namespace
 description: Reference article for Subcommand start-Namespace, which starts a Scheduled-Cast namespace.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 2dd1c11e-6ab7-4129-9e3a-3f80e0ba59c0
 author: coreyp-at-msft

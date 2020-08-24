@@ -1,13 +1,11 @@
 ---
 title: Configuring user access control and permissions
 description: Learn how to configure user access control and permissions using Active Directory or Azure AD (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Configure User Access Control and Permissions
 
@@ -76,7 +74,7 @@ Users and administrators can view their currently logged-in account and as well 
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center
 
-[To set up Azure AD authentication, you must first register your gateway with Azure](azure-integration.md) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
+[To set up Azure AD authentication, you must first register your gateway with Azure](../azure/azure-integration.md) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
 
 If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
 
@@ -97,7 +95,7 @@ Using the **Azure** tab of Windows Admin Center general settings, users and admi
 
 One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication.
 
-[Learn more about configuring conditional access with Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+[Learn more about configuring conditional access with Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
 ## Configure single sign-on
 
@@ -105,7 +103,7 @@ One of the benefits of using Azure AD as an additional layer of security to cont
 
 When you install Windows Admin Center on Windows 10, it's ready to use single sign-on. If you're going to use Windows Admin Center on Windows Server, however, you need to set up some form of Kerberos delegation in your environment before you can use single sign-on. The delegation configures the gateway computer as trusted to delegate to the target node.
 
-To configure [Resource-based constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) in your environment, use the following PowerShell example. This example shows how you would configure a Windows Server [node01.contoso.com] to accept delegation from your Windows Admin Center gateway [wac.contoso.com] in the contoso.com domain.
+To configure [Resource-based constrained delegation](../../../security/kerberos/kerberos-constrained-delegation-overview.md) in your environment, use the following PowerShell example. This example shows how you would configure a Windows Server [node01.contoso.com] to accept delegation from your Windows Admin Center gateway [wac.contoso.com] in the contoso.com domain.
 
 ```powershell
 Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToAccount (Get-ADComputer wac)

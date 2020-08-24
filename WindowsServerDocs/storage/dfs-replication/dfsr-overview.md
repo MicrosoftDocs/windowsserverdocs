@@ -1,8 +1,6 @@
 ---
 title: DFS Replication overview
 ms.date: 03/08/2019
-ms.prod: windows-server
-ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend

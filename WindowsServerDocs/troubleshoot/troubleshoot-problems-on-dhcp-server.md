@@ -1,10 +1,8 @@
 ---
 title: Troubleshoot problems on the DHCP server
 description: This artilce introduces how to troubleshoot problems on the DHCP server and collect data.
-ms.prod: windows-server
 ms.service: na
 manager: dcscontentpm
-ms.technology: server-general
 ms.date: 5/26/2020
 ms.topic: article
 author: Deland-Han
@@ -21,7 +19,7 @@ Check the following settings:
 
   - The DHCP server service is started and running. To check this setting, run the **net start** command, and look for **DHCP Server**.
 
-  - The DHCP server is authorized. See [Windows DHCP Server Authorization in Domain Joined Scenario](https://docs.microsoft.com/openspecs/windows_protocols/ms-dhcpe/56f8870b-a7c1-4db1-8a86-f69079fe5077).
+  - The DHCP server is authorized. See [Windows DHCP Server Authorization in Domain Joined Scenario](/openspecs/windows_protocols/ms-dhcpe/56f8870b-a7c1-4db1-8a86-f69079fe5077).
 
   - Verify that IP address leases are available in the DHCP server scope for the subnet the DHCP client is on. To do this, see the statistic for the appropriate scope in the DHCP server management console.
 

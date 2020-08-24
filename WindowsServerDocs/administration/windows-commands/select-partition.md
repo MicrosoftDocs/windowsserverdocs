@@ -2,10 +2,8 @@
 title: select partition
 description: Reference article for **** -
 
-ms.prod: windows-server
 
 
-ms.technology: manage-windows-commands
 
 ms.topic: article
 ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670

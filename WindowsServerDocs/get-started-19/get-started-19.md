@@ -1,9 +1,7 @@
 ---
-title: Get Started
+title: Get started with Windows Server 2019
 description: Detailed info about Windows Server 2019 and getting ready to deploy, upgrade, or migrate.
-ms.prod: windows-server
 manager: jasgroce
-ms.technology: get-started
 ms.topic: landing-page
 author: jasongerend
 ms.author: jgerend
@@ -17,8 +15,8 @@ This collection contains detailed information to help you determine if you're re
 
 If you're looking for info about Windows Server 2016, see [Get started with Windows Server 2016](../get-started/server-basics.md). For even earlier versions, see our [Windows previous versions library](/previous-versions/windows/).
 
-|       | 
-|   -   | 
+|       |
+|   -   |
 | [**What's new?**](whats-new-19.md)<br>Find out what's new in Windows Server 2019. |
 
 |       |        |        |

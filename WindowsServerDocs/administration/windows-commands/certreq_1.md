@@ -1,8 +1,6 @@
 ---
 title: certreq
 description: Reference article for the certreq command, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
 author: coreyp-at-msft
@@ -336,7 +334,7 @@ The following articles contain examples of certreq usage:
 
 - [How to create a web server SSL certificate manually](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-create-a-web-server-ssl-certificate-manually/ba-p/1128529)
 
-- [Certificate Enrollment for System Center Operations Manager Agent](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
+- [Certificate Enrollment for System Center Operations Manager Agent](/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
 
 - [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 

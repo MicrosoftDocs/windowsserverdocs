@@ -1,8 +1,6 @@
 ---
 title: ksetup setenctypeattr
 description: Reference article for the ksetup setenctypeattr command, which sets the encryption type attribute for the domain.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 88fb913e-6b57-48d9-8c16-a035ab2977ac
 author: coreyp-at-msft

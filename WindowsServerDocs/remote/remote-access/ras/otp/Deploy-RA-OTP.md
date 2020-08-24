@@ -2,8 +2,6 @@
 title: Deploy Remote Access with OTP Authentication
 description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
 ms.author: lizross
@@ -29,7 +27,7 @@ Before you begin deploying this scenario, review this list for important require
 
 -   A Public Key Infrastructure must be deployed.
 
-    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](https://docs.microsoft.com/answers/topics/windows-server-2012.html)
+    For more information see: [Test Lab Guide Mini-Module: Basic PKI for Windows Server 2012.](/answers/topics/windows-server-2012.html)
 
 -   Changing policies outside of the DirectAccess management console or Windows PowerShell cmdlets is not supported.
 
@@ -123,4 +121,3 @@ The following are known issues when configuring an OTP scenario:
         -   HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\DirectAccess\\OTP\\ RadiusProbePass
 
 -   If you change the IPsec root certificate in a configured and running DirectAccess deployment, OTP stops working. To resolve this issue, on each DirectAccess server, at a Windows PowerShell prompt, run the command: `iisreset`
-

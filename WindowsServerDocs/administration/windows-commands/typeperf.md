@@ -1,8 +1,6 @@
 ---
 title: typeperf
 description: Reference article for typeperf, which writes performance data to the command window or to a log file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
 author: coreyp-at-msft

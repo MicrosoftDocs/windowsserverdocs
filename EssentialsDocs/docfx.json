@@ -7,7 +7,6 @@
             ],
             "exclude": [
                "**/obj/**",
-               "window-server-docs/essentials/**",
                "**/includes/**"
             ]
          }
@@ -20,7 +19,6 @@
             ],
             "exclude": [
                "**/obj/**",
-               "window-server-docs/essentials/**",
                "**/includes/**"
             ]
          }
@@ -34,7 +32,14 @@
             }
          }
       },
-      "fileMetadata": {},
+      "fileMetadata": {
+         "ms.prod": {
+            "**/*.md": "windows-server"
+         },
+         "ms.technology": {
+            "**/*.md": "essentials"
+         }
+      },
        "template": [],
        "dest": "window-server-docs/essentials",
        "markdownEngineName": "markdig"

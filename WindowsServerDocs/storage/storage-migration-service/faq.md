@@ -6,8 +6,6 @@ ms.author: nedpyle
 manager: siroy
 ms.date: 06/02/2020
 ms.topic: article
-ms.prod: windows-server
-ms.technology: storage
 ---
 # Storage Migration Service frequently asked questions (FAQ)
 
@@ -46,28 +44,28 @@ The Storage Migration Service doesn't currently migrate domain controllers in Wi
 
 Storage Migration Service migrates all flags, settings, and security of SMB shares. That list of flags that Storage Migration Service migrates includes:
 
-    - Share State
-    - Availability Type
-    - Share Type
-    - Folder Enumeration Mode *(aka Access-Based Enumeration or ABE)*
-    - Caching Mode
-    - Leasing Mode
-    - Smb Instance
-    - CA Timeout
-    - Concurrent User Limit
-    - Continuously Available
-    - Description
-    - Encrypt Data
-    - Identity Remoting
-    - Infrastructure
-    - Name
-    - Path
-    - Scoped
-    - Scope Name
-    - Security Descriptor
-    - Shadow Copy
-    - Special
-    - Temporary
+- Share State
+- Availability Type
+- Share Type
+- Folder Enumeration Mode *(aka Access-Based Enumeration or ABE)*
+- Caching Mode
+- Leasing Mode
+- Smb Instance
+- CA Timeout
+- Concurrent User Limit
+- Continuously Available
+- Description
+- Encrypt Data
+- Identity Remoting
+- Infrastructure
+- Name
+- Path
+- Scoped
+- Scope Name
+- Security Descriptor
+- Shadow Copy
+- Special
+- Temporary
 
 ## Can I consolidate multiple servers into one server?
 
@@ -122,7 +120,7 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
 
 - **Enable high-performance processing.** Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required. Don't forget to return these to appropriate states after completing migration.
 
-- **Tune hardware** Review the [Performance Tuning Guidelines for Windows Server 2016](/windows-server/administration/performance-tuning/) for tuning the orchestrator and destination computers running Windows Server 2019 and Windows Server 2016. The [Network Subsystem Performance Tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md) section contains especially valuable information.
+- **Tune hardware** Review the [Performance Tuning Guidelines for Windows Server 2016](../../administration/performance-tuning/index.md) for tuning the orchestrator and destination computers running Windows Server 2019 and Windows Server 2016. The [Network Subsystem Performance Tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md) section contains especially valuable information.
 
 - **Use faster storage.** While it may be difficult to upgrade the source computer storage speed, you should ensure the destination storage is at least as fast at write IO performance as the source is at read IO performance in order to ensure there is no unnecessary  bottleneck in transfers. If the destination is a VM, ensure that, at least for the purposes of migration, it runs in the fastest storage layer of your hypervisor hosts, such as on the flash tier or with Storage Spaces Direct HCI clusters utilizing mirrored all-flash or hybrid spaces. When the SMS migration is complete the VM can be live migrated to a slower tier or host.
 
@@ -177,7 +175,7 @@ To file bugs:
 To get support:
 
  - Post a question on the [Windows Server Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server)
- - Post on the [Windows Server 2019 forum](https://docs.microsoft.com/answers/topics/windows-server-2019.html)
+ - Post on the [Windows Server 2019 forum](/answers/topics/windows-server-2019.html)
  - Open a support case via [Microsoft Support](https://support.microsoft.com)
 
 ## Additional References

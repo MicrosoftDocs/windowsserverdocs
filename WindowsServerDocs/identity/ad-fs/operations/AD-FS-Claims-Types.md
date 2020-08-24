@@ -5,8 +5,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 
@@ -23,7 +21,7 @@ This AD FS claim represents a "best attempt" at ascertaining the IP address of t
 
 - A single IP address - The IP address of the client that is directly connected to Exchange Online
 
-    >![Note] 
+    >![Note]
     >The IP address of a client on the corporate network will appear as the external interface IP address of the organization's outbound proxy or gateway.
 
 - One or more IP addresses
@@ -34,8 +32,8 @@ This AD FS claim represents a "best attempt" at ascertaining the IP address of t
     >IP addresses related to Exchange Online infrastructure will not be present in the list.
 
 
->![Warning] 
->Exchange Online currently supports only IPV4 addresses; it does not support IPV6 addresses. 
+>![Warning]
+>Exchange Online currently supports only IPV4 addresses; it does not support IPV6 addresses.
 
 
 ## X-MS-Client-Application
@@ -46,7 +44,7 @@ This AD FS claim represents the protocol used by the end client, which correspon
 
 
 
-- In the case of devices that use Exchange Active Sync, the value is Microsoft.Exchange.ActiveSync. 
+- In the case of devices that use Exchange Active Sync, the value is Microsoft.Exchange.ActiveSync.
 - Use of the Microsoft Outlook client may result in any of the following values:
     - Microsoft.Exchange.Autodiscover
     - Microsoft.Exchange.OfflineAddressBook
@@ -65,7 +63,7 @@ This AD FS claim represents the protocol used by the end client, which correspon
 Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
 This AD FS claim provides a string to represent the device type that the client is using to access the service. This can be used when customers would like to prevent access for certain devices (such as particular types of smart phones).  This claim is populated from an HTTP header that is currently only set by Exchange Online, which populates the header when passing the authentication request to AD FS. Example values for this claim include (but are not limited to) the values below.
->![Note] 
+>![Note]
 >The below are examples of what the x-ms-user-agent value might contain for a client whose x-ms-client-application is "Microsoft.Exchange.ActiveSync"
 
 - Vortex/1.0
@@ -76,7 +74,7 @@ This AD FS claim provides a string to represent the device type that the client 
 - SAMSUNGSPHD700/100.202
 - Android/0.3
 
->![Note] 
+>![Note]
 >It is also possible that this value is empty.
 
 
@@ -84,7 +82,7 @@ This AD FS claim provides a string to represent the device type that the client 
 
 Claim type: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
-This AD FS claim indicates that the request has passed through the federation server proxy.  This claim is populated by the federation server proxy, which populates the header when passing the authentication request to the back end Federation Service. AD FS then converts it to a claim. 
+This AD FS claim indicates that the request has passed through the federation server proxy.  This claim is populated by the federation server proxy, which populates the header when passing the authentication request to the back end Federation Service. AD FS then converts it to a claim.
 
 The value of the claim is the DNS name of the federation server proxy that passed the request.
 

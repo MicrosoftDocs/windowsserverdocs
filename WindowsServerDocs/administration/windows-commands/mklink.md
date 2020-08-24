@@ -1,8 +1,6 @@
 ---
 title: mklink
 description: Reference article for the mklink command, which creates a directory or file symbolic or hard link.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 0ce4df22-2dbc-48fc-9c16-b721ae85f857
 author: coreyp-at-msft

@@ -1,8 +1,6 @@
 ---
 title: ren
 description: Reference article for the ren command, which renames a file or directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
 author: coreyp-at-msft

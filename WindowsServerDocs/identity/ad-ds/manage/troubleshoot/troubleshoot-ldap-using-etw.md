@@ -2,9 +2,7 @@
 title: Using ETW to troubleshoot LDAP connections
 description: How to turn on and use ETW to trace LDAP connections between AD DS domain controllers.
 author: Teresa-Motiv
-manager: dcscontentpm
-ms.prod: windows-server-dev
-ms.technology: active-directory-lightweight-directory-services
+manager: dcscontentpm-dev
 audience: Admin
 ms.author: v-tea
 ms.topic: article
@@ -25,7 +23,7 @@ ms.date: 11/22/2019
 
    In this subkey, *ProcessName* is the full name of the process that you want to trace, including its extension (for example, "Svchost.exe").
 
-1. (**Optional**) Under this subkey, create a new entry that is named **PID**. To use this entry, assign a process ID as a DWORD value.  
+1. (**Optional**) Under this subkey, create a new entry that is named **PID**. To use this entry, assign a process ID as a DWORD value.
 
    If you specify a process ID, ETW traces only the instance of the application that has this process ID.
 
@@ -39,8 +37,8 @@ ms.date: 11/22/2019
 
    The placeholders in this command represent the following values.
 
-  - \<*SessionName*> is an arbitrary identifier that is used to label the tracing session.  
-  > [!NOTE]  
+  - \<*SessionName*> is an arbitrary identifier that is used to label the tracing session.
+  > [!NOTE]
   > You will have to refer to this session name later when you stop the tracing session.
   - \<*FileName*> specifies the log file to which events will be written.
   - \<*TraceFlags*> should be one or more of the values that are listed in the [trace flags table](#values-for-trace-flags).
@@ -65,7 +63,7 @@ ms.date: 11/22/2019
 
 To use a flag, substitute the flag value for the <*TraceFlags*> placeholder in the arguments of the **tracelog.exe -start** command.
 
-> [!NOTE]  
+> [!NOTE]
 > You can specify multiple flags by using the sum of the appropriate flag values. For example, to specify the **DEBUG\_SEARCH** (0x00000001) and **DEBUG\_CACHE** (0x00000010) flags, the appropriate \<*TraceFlags*> value is **0x00000011**.
 
 |Flag name |Flag value |Flag description |
@@ -133,5 +131,5 @@ Consider an application, App1.exe, that sets passwords for user accounts. Suppos
     tracerpt.exe .\ldap.etl -o -report
     ```
 
-   > [!NOTE]  
+   > [!NOTE]
    > In this command, **tracerpt.exe** is a [trace consumer](https://go.microsoft.com/fwlink/p/?linkid=83876) tool.

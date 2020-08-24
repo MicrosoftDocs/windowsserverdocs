@@ -1,8 +1,6 @@
 ---
 title: shrink
 description: Reference article for DiskPart shrink, which reduces the size of the selected volume by the amount you specify.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: ec87cc7c-9846-465e-a10d-4ee10db4f4e6
 author: coreyp-at-msft

@@ -1,11 +1,9 @@
 ---
 title: Vssadmin list writers
 description: A description of the vssadmin list writer command.
-ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
 ---

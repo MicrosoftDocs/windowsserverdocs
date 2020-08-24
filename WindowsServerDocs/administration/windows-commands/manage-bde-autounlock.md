@@ -1,8 +1,6 @@
 ---
 title: manage-bde autounlock
 description: Reference article for the manage-bde autounlock command, which manages the automatic unlocking of BitLocker-protected data drives.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 063528bf-d235-4b44-887a-52a7d983e01a
 author: coreyp-at-msft

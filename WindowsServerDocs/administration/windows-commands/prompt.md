@@ -1,8 +1,6 @@
 ---
 title: prompt
 description: Reference article for the prompt command, which customizes your Cmd.exe command prompt.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
 author: coreyp-at-msft

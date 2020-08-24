@@ -1,7 +1,6 @@
 ---
 title: Deploy graphics devices using RemoteFX vGPU
 description: Learn how to deploy and configure RemoteFX vGPU in Windows Server
-ms.prod: windows-server
 ms.reviewer: rickman
 author: rick-man
 ms.author: rickman
@@ -33,7 +32,7 @@ Guest VM requirements:
 
 Additional considerations for guest VMs:
 
-- OpenGL and OpenCL functionality is only available in guests running Windows 10 or Windows Server 2016.  
+- OpenGL and OpenCL functionality is only available in guests running Windows 10 or Windows Server 2016.
 - DirectX 11.0 is only available for guests running Windows 8 or later.
 
 ## Enable RemoteFX vGPU
@@ -71,10 +70,10 @@ You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the
 
 Use the following PowerShell cmdlets to add, review, and configure the adapter:
 
-- [Add-VMRemoteFx3dVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/add-vmremotefx3dvideoadapter?view=win10-ps)
-- [Get-VMRemoteFx3dVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/get-vmremotefx3dvideoadapter?view=win10-ps)
-- [Set-VMRemoteFx3dVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/set-vmremotefx3dvideoadapter?view=win10-ps)
-- [Get-VMRemoteFXPhysicalVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter?view=win10-ps)
+- [Add-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/add-vmremotefx3dvideoadapter?view=win10-ps)
+- [Get-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/get-vmremotefx3dvideoadapter?view=win10-ps)
+- [Set-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/set-vmremotefx3dvideoadapter?view=win10-ps)
+- [Get-VMRemoteFXPhysicalVideoAdapter](/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter?view=win10-ps)
 
 ## Monitor performance
 
@@ -104,4 +103,4 @@ Usually, graphics devices and drivers are tuned to run only a few applications o
 
 When a GPU is low on resources, read and write operations take a long time to complete. Administrators can use performance counters to know when to adjust resources and prevent downtime for users.
 
-Learn more about performance counters for monitoring RemoteFX vGPU behavior at [Diagnose graphics performance issues in Remote Desktop](https://docs.microsoft.com/azure/virtual-desktop/remotefx-graphics-performance-counters).
+Learn more about performance counters for monitoring RemoteFX vGPU behavior at [Diagnose graphics performance issues in Remote Desktop](/azure/virtual-desktop/remotefx-graphics-performance-counters).

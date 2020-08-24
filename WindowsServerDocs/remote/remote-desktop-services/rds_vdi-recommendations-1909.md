@@ -1,9 +1,7 @@
 ---
 title: Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role
 description: Recommended settings and configuration to minimize overhead for Windows 10, version 1909 desktops used as VDI images.
-ms.prod: windows-server
 ms.reviewer: robsmi
-ms.technology: remote-desktop-services
 ms.author: helohr
 ms.topic: article
 author: heidilohr
@@ -190,7 +188,7 @@ Each UWP app should be evaluated for applicability in each unique environment. Y
 
 ### Manage Windows Optional Features using PowerShell
 
-You can manage Windows Optional Features using PowerShell. For more information, see the [Windows Server powershell forum](https://docs.microsoft.com/answers/topics/windows-server-powershell.html). To enumerate currently installed Windows Features, run the following PowerShell command:
+You can manage Windows Optional Features using PowerShell. For more information, see the [Windows Server powershell forum](/answers/topics/windows-server-powershell.html). To enumerate currently installed Windows Features, run the following PowerShell command:
 
 ```powershell
 Get-WindowsOptionalFeature -Online
@@ -710,7 +708,7 @@ There are some registry settings that can increase network performance. This is 
 >[!NOTE]
 > Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
 
-The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](/windows-server/administration/performance-tuning/), published on Microsoft.com by the Windows Product Group.
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](../../administration/performance-tuning/index.md), published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling
 

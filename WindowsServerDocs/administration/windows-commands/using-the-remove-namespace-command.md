@@ -1,8 +1,6 @@
 ---
 title: remove-Namespace
 description: Reference article for remove-Namespace, which removes a custom namespace.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: 4eb758b6-8519-4e26-9fe0-2e19bb0e8702
 author: coreyp-at-msft

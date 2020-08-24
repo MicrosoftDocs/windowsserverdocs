@@ -6,7 +6,6 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
 ---
 
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
@@ -31,7 +30,7 @@ You can find the following documentation about Active Directory Domain Services 
 
 - For more information about deploying the forest root domain, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
-- For more information about securing domain controllers, see [AD DS Design and Planning](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+- For more information about securing domain controllers, see [AD DS Design and Planning](./ad-ds-design-and-planning.md).
 
 - For more information about deploying regional domains, see [Deploying Windows Server 2008 Regional Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755118(v=ws.10)).
 

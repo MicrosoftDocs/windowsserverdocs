@@ -1,8 +1,6 @@
 ---
 title: Remote Desktop Services - Multi-Factor Authentication
 description: Planning information for using MFA with RDS.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 09ea784e-5644-417a-a3d9-bdbcebc313f9
 author: lizap

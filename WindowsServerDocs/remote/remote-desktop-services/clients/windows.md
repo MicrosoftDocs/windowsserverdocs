@@ -1,8 +1,6 @@
 ---
 title: Get started with the Windows Store client
 description: Basic set up steps for the Remote Desktop client for Windows Store.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
@@ -197,4 +195,4 @@ Two mouse modes are available to interact with the session.
 | Mouse pointer | Zoom                 | With two fingers, pinch to zoom in and move fingers apart to zoom out |
 
 > [!TIP]
-> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](https://docs.microsoft.com/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=605).
+> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=605).

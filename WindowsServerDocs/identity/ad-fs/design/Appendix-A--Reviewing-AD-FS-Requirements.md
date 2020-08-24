@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Appendix A: Reviewing AD FS Requirements
@@ -15,7 +13,7 @@ ms.technology: identity-adfs
 So that the organizational partners in your Active Directory Federation Services (AD FS) deployment can collaborate successfully, you must first make sure that your corporate network infrastructure is configured to support AD FS requirements for accounts, name resolution, and certificates. AD FS has the following types of requirements:
 
 > [!TIP]
-> You can find additional AD FS resource links at the [Understanding Key AD FS Concepts](https://docs.microsoft.com/windows-server/identity/ad-fs/technical-reference/understanding-key-ad-fs-concepts).
+> You can find additional AD FS resource links at the [Understanding Key AD FS Concepts](../technical-reference/understanding-key-ad-fs-concepts.md).
 
 ## Hardware requirements
 The following minimum and recommended hardware requirements apply to the federation server and federation server proxy computers.

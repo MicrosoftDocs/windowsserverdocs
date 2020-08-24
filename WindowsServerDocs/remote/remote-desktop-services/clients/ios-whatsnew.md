@@ -1,13 +1,11 @@
 ---
 title: What's new in the iOS client
 description: Learn about recent changes to the Remote Desktop client for iOS
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/06/2020
+ms.date: 08/17/2020
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -17,6 +15,15 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 ## How to report issues
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
+
+## Updates for version 10.1.2
+
+*Date published 8/17/2020*
+
+In this update, we've addressed issues that were reported in the version 10.1.1 update.
+
+- Fixed a crash that occurred for some users when subscribing to a Windows Virtual Desktop feed using non-brokered authentication.
+- Fixed the layout of workspace icons on the iPhone X, iPhone XS, and iPhone 11 Pro.
 
 ## Updates for version 10.0.7
 

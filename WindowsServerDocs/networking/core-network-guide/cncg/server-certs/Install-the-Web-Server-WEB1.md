@@ -2,7 +2,6 @@
 title: Install the Web Server WEB1
 description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
 manager: brianlic
-ms.technology: networking
 ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 ms.author: lizross

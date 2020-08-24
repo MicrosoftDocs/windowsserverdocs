@@ -5,7 +5,6 @@ ms.date: 09/27/2018
 ms.topic: conceptual
 contributor: maertendMSFT
 author: maertendmsft
-ms.product: windows-server
 ---
 
 # OpenSSH key management

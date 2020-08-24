@@ -5,9 +5,7 @@ author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
 ms.date: 04/11/2019
-ms.technology: identity-adds
 ms.topic: article
-ms.prod: windows-server
 ---
 
 # Install a new Active Directory forest using Azure CLI

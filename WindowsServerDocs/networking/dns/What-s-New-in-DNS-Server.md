@@ -2,8 +2,6 @@
 title: What's New in DNS Server in Windows Server
 description: This topic provides an overview of new features in DNS Server in Windows Server 2016 and later versions
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: lizross
@@ -141,13 +139,9 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
 
 For more information, see the following Windows Server 2016 Windows PowerShell command reference topics.
 
-- [DnsServer Module](https://docs.microsoft.com/powershell/module/dnsserver/?view=win10-ps)
-- [DnsClient Module](https://docs.microsoft.com/powershell/module/dnsclient/?view=win10-ps)
+- [DnsServer Module](/powershell/module/dnsserver/?view=win10-ps)
+- [DnsClient Module](/powershell/module/dnsclient/?view=win10-ps)
 
 ## Additional References
 
 -   [What's New in DNS Client](What-s-New-in-DNS-Client.md)
-
-
-
-

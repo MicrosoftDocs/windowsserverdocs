@@ -1,24 +1,22 @@
 ---
 title: Deploy Storage Spaces Direct
-ms.prod: windows-server
 manager: eldenc
 ms.author: stevenek
-ms.technology: storage-spaces
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 06/07/2019
-description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyper-converged infrastructure or converged (also known as disaggregated) infrastructure.
+ms.date: 07/24/2020
+description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
-> Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends purchasing a validated hardware/software solution from our partners, which include deployment tools and procedures. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. For Windows Server 2019 solutions, visit the [Azure Stack HCI solutions website](https://azure.microsoft.com/overview/azure-stack/hci). For Windows Server 2016 solutions, learn more at [Windows Server Software-Defined](https://microsoft.com/wssd).
+> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://azure.microsoft.com/products/azure-stack/hci/catalog/).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
@@ -45,7 +43,7 @@ Gather the following information:
 
 The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server 2016 Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
 
-When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../get-started/Windows-Server-2016.md).
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Installation Options for Windows Server 2016](../../index.yml).
 
 ### Step 1.2: Connect to the servers
 

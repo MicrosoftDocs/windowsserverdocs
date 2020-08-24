@@ -1,8 +1,6 @@
 ---
 title: online disk
 description: Reference article for the online disk command, which takes the offline disk to the online state.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 author: coreyp-at-msft
