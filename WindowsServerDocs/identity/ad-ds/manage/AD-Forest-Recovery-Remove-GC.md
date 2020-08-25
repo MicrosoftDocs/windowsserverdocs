@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Remove the global catalog
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 60087a62-11e6-4750-a70e-510f35315688

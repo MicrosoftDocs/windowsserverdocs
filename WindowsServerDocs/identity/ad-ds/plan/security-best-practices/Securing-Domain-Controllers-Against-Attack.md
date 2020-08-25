@@ -1,9 +1,9 @@
 ---
 ms.assetid: ba28bd05-16e6-465f-982b-df49633cfde4
 title: Securing Domain Controllers Against Attack
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 06/18/2017
 ms.topic: article
 ---

@@ -1,9 +1,9 @@
 ---
 ms.assetid: e6b72a80-e8b7-4305-be0c-0a290f468d36
 title: Deploying AD DS in a Windows Server 2003 Organization
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

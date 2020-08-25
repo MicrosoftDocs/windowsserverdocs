@@ -1,9 +1,9 @@
 ---
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Windows Server 2016 Functional Levels
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/25/2020
 ms.topic: article
 ms.custom: it-pro

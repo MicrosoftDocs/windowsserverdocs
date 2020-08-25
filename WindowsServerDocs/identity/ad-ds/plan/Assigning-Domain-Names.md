@@ -1,9 +1,9 @@
 ---
 ms.assetid: 73897497-b189-4305-b234-e057ffda163a
 title: Assigning Domain Names
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

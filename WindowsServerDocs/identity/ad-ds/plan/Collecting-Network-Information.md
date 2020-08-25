@@ -1,9 +1,9 @@
 ---
 ms.assetid: 8be8c48d-790c-4199-b9d3-9f4a07d5ced2
 title: Collecting Network Information
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
 ---

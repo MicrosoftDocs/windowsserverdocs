@@ -1,9 +1,9 @@
 ---
 ms.assetid: 11f36f2b-9981-4da0-9e7c-4eca78035f37
 title: Appendix D - Securing Built-In Administrator Accounts in Active Directory
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

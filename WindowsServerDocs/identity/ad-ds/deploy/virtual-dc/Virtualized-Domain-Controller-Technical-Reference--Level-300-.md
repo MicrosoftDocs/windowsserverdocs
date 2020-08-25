@@ -1,9 +1,9 @@
 ---
 ms.assetid: 956f23b8-0c74-4436-ad43-e041f63302ce
 title: Virtualized Domain Controller Technical Reference (Level 300)
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

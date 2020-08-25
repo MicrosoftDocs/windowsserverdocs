@@ -1,9 +1,9 @@
 ---
 ms.assetid: f7002265-60fa-40b8-9dd7-4bf131d9320a
 title: Computer Naming
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

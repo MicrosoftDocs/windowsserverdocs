@@ -1,9 +1,9 @@
 ---
 ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Appendix A - Reviewing Key AD DS Terms
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

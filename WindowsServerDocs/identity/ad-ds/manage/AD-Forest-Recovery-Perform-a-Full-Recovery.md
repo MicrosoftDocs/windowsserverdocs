@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Performing a full server recovery
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
