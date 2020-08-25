@@ -1,9 +1,9 @@
 ---
 ms.assetid: 28aad3ba-f129-46f2-ba94-c3da831c9811
 title: Appendix A - Locations and Subnet Prefixes
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

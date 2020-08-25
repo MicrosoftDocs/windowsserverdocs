@@ -2,9 +2,9 @@
 ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon automatic restart sign-on (ARSO)
 description: How Windows automatic restart sign-on can help make your users more productive.
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.reviewer: cahick
 ms.date: 08/20/2019
 ms.topic: article
