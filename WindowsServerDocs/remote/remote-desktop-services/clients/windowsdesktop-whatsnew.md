@@ -5,12 +5,12 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/20/2020
+ms.date: 08/25/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 
-You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client below.
+You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client in this article.
 
 ## Latest client versions
 
@@ -18,12 +18,12 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Version  |
 |-----------|---------|
-|Public     |1.2.1186 |
+|Public     |1.2.1272 |
 |Insider    |1.2.1272 |
 
-## Updates for version 1.2.1272 [INSIDER]
+## Updates for version 1.2.1272
 
-*Date published: 08/11/2020*
+*Date published: 08/25/2020*
 
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
 
