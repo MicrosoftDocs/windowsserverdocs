@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Windows Server 2003 Recovery
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 07/07/2017
 ms.topic: article
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383

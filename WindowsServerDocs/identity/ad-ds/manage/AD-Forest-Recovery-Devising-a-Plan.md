@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Devising an AD Forest Recovery Plan
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 17381f30-55f2-4e00-977a-b701675fa4ff

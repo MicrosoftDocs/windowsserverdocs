@@ -1,9 +1,9 @@
 ---
 ms.assetid: 9ad81367-f3fe-4b2e-bd7c-5900b2b9f77f
 title: Designing the Logical Structure
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

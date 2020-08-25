@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/06/2020
+ms.date: 08/25/2020
 ms.localizationpriority: medium
 ---
 
@@ -29,7 +29,7 @@ If you remote into your personal desktop, there are additional redirections that
 | Keyboard    | X                         | X                           | X             | X       | X   | X     | X             |
 | Mouse       | X                         | X                           | X             | X       | X\* | X     | X             |
 | Touch       | X                         | X                           | X             | X       | X   |       | X (except IE) |
-| Pen         | X                         | X                           |               |         |     |       |               |
+| Pen         | X                         | X                           |               | X (as touch) |  X (as touch)  |       |               |
 
 *View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
 
@@ -46,7 +46,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 | Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| Cameras             | X                         | X                           |               |         |   X         | X                               |               |
+| Cameras             | X                         | X                           |               |     X    |   X         | X                               |               |
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
 | Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
 | Location            | X                         | X                           |               |         |             |                                 |               |

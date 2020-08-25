@@ -1,9 +1,9 @@
 ---
 ms.assetid: f3506489-f695-4d7d-b27a-ec714843c002
 title: Appendix A - DNS Inventory
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
 ---

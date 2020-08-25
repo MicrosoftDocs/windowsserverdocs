@@ -1,9 +1,9 @@
 ---
 ms.assetid: 87bca912-b912-4bbe-9533-2c34a7abc52d
 title: Determining the Number of Domains Required
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
 ---

@@ -1,9 +1,9 @@
 ---
 ms.assetid: 28ecaf5c-9131-406c-b211-a230162e462e
 title: Determining the Schedule
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

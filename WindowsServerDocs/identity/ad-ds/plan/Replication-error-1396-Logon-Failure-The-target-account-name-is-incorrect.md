@@ -1,9 +1,9 @@
 ---
 ms.assetid: 399a8bbe-3375-4bb0-b55b-5f46e7050028
 title: Replication error 1396 Logon Failure The target account name is incorrect
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
