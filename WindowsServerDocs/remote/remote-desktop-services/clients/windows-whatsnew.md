@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-## Updates for version 10.2.1521
+## Updates for version 10.2.1522
 
 *Date published: 08/26/2020*
 
