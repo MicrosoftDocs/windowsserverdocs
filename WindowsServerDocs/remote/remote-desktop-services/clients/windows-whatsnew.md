@@ -5,16 +5,16 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/19/2020
+ms.date: 08/26/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Store client
 
 We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-## Updates for version 10.2.1519 (Insider)
+## Updates for version 10.2.1522
 
-*Date published: 08/19/2020*
+*Date published: 08/26/2020*
 
 - Rewrote the client to use the same underlying RDP core engine as the iOS, macOS, and Android clients.
 - Added support for the Azure Resource Manager-integrated version of Windows Virtual Desktop.
