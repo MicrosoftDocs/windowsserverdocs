@@ -1,9 +1,9 @@
 ---
 ms.assetid: 173b72c1-ac83-4f42-abab-cf58f43769f0
 title: Determining the Number of Forests Required
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

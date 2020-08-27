@@ -70,7 +70,7 @@ To work around this issue:
     <bindings>
       <netTcpBinding>
         <binding name="NetTcpBindingSms"
-                 sendTimeout="00:01:00"
+                 sendTimeout="00:10:00"
     ```
 
 2. Restart the "Storage Migration Service" service on the orchestrator computer.

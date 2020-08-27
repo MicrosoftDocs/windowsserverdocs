@@ -1,9 +1,9 @@
 ---
 ms.assetid: 45a65504-70b5-46ea-b2e0-db45263fabaa
 title: Support for using Hyper-V Replica for virtualized domain controllers
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

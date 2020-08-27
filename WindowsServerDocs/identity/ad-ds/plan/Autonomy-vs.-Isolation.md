@@ -1,9 +1,9 @@
 ---
 ms.assetid: ef63d40c-a262-4a18-938d-b95c10680c0b
 title: Autonomy vs. Isolation
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

@@ -6,7 +6,7 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 07/16/2020
+ms.date: 08/20/2020
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client
@@ -66,8 +66,8 @@ To add a workspace:
 2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
    - If you use a URL, use the one your admin gave you.
       - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
-        - For the Fall 2019 version, use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-        - For the Spring 2020 version, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+        - For Windows Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+        - For Windows Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you use an email address, enter your email address. Entering your email address tells the client ot search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.

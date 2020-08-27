@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Cleaning metadata of removed dcs
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: e7543381-4081-407f-adad-a9de792c6616
