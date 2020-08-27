@@ -47,7 +47,7 @@ rmdir [<drive>:]<path> [/s [/q]]
 
     If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then try again.
 
-### Examples
+## Examples
 
 To change to the parent directory so you can safely remove the desired directory, type:
 

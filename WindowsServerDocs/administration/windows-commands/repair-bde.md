@@ -24,7 +24,7 @@ Attempts to reconstruct critical parts of a severely damaged drive and salvage r
 repair-bde <inputvolume> <outputvolumeorimage> [-rk] [–rp] [-pw] [–kp] [–lf] [-f] [{-?|/?}]
 ```
 
-#### Parameters
+### Parameters
 
 | Parameter | Description |
 |--|--|
