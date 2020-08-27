@@ -5,7 +5,7 @@ description: Transfer files to and from a remote computer.
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef
 author: coreyp-at-msft
 ms.author: coreyp

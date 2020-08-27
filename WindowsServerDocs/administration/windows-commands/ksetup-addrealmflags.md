@@ -1,7 +1,7 @@
 ---
 title: ksetup addrealmflags
 description: Reference article for the ksetup addrealmflags command, which adds additional realm flags to the specified realm.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 80ca1e16-8871-494b-b9be-6bc9d63de860
 author: coreyp-at-msft
 ms.author: coreyp

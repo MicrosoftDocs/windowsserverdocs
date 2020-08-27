@@ -1,7 +1,7 @@
 ---
 title: remove-MulticastTransmission
 description: Reference article for remove-MulticastTransmission, which disables multicast transmitting for an image.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9a7f5c31-bfbf-425d-9129-a6f9173fe83d
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: ftp lcd
 description: Reference article for the ftp lcd command, which changes the working directory on the local computer.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 60a25808-6abb-408b-8373-0bbdcd0994b4
 author: coreyp-at-msft
 ms.author: coreyp

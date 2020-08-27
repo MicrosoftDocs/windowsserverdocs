@@ -1,7 +1,7 @@
 ---
 title: ftp glob
 description: Reference article for the ftp glob command, which toggles allowing wildcard expansion for local file names.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 111494f9-0083-4f48-9d35-46366debafae
 author: coreyp-at-msft
 ms.author: coreyp

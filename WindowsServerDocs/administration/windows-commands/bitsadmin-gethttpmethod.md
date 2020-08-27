@@ -1,7 +1,7 @@
 ---
 title: bitsadmin gethttpmethod
 description: Reference article for the bitsadmin gethttpmethod command, which gets the HTTP verb to use with the job.
-ms.topic: article
+ms.topic: reference
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill

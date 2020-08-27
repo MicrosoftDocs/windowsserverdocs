@@ -1,7 +1,7 @@
 ---
 title: Sc.exe query
 description: Learn how to obtain information about services, drivers, type of services, or type of drivers using the sc.exe utility
-ms.topic: article
+ms.topic: reference
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: compact
 description: Reference article for the compact command, which displays or alters the compression of files or directories on NTFS partitions.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 429b3752-df0a-43a4-a210-df2f3ad03c3b
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: Using the copy command
 description: Reference article for copy, which copies an image or a driver group.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5228b72f-659f-4692-960b-0fae0d16cf2e
 author: coreyp-at-msft
 ms.author: coreyp

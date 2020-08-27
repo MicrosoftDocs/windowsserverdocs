@@ -5,7 +5,7 @@ description: Reference article for verify, which tells **cmd** whether to verify
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: dfe8bc91-d948-4e47-84ad-a79a60506ffa
 
 author: coreyp-at-msft

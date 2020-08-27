@@ -1,7 +1,7 @@
 ---
 title: ipconfig
 description: Reference article for the ipconfig command, which displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 15071c2c-4815-4893-93b2-ab30232e312e
 author: coreyp-at-msft
 ms.author: coreyp

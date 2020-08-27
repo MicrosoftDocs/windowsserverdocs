@@ -1,7 +1,7 @@
 ---
 title: ftp rename
 description: Reference article for the ftp rename command, which renames remote files.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 977b7c95-6428-4980-80ec-79c3ae7e8c4d
 author: coreyp-at-msft
 ms.author: coreyp

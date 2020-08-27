@@ -1,7 +1,7 @@
 ---
 title: offline volume
 description: Reference article for the offline volume command, which takes the online volume with focus to the offline state.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b8f7192f-ea38-47d0-9d4e-58ef68336ae6
 author: coreyp-at-msft
 ms.author: coreyp

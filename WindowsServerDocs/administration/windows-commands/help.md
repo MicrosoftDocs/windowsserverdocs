@@ -1,7 +1,7 @@
 ---
 title: help
 description: Reference article for the help command, which displays a list of the available commands or detailed help information on a specified command.
-ms.topic: article
+ms.topic: reference
 ms.assetid: c65b5ac3-711a-4368-95b8-ba82e2d00713
 author: coreyp-at-msft
 ms.author: coreyp

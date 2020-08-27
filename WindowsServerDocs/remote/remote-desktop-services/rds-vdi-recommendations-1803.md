@@ -577,7 +577,7 @@ One very important consideration for non-persistent VDI VMs are security updates
 For Windows Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Plus, the VM won't be behind on updates because only the latest available will apply. The same might be true for non-Microsoft definition files.
 
 > [!NOTE]
-> Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
+> Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Microsoft 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
 
 ### Windows Defender optimization with VDI
 

@@ -1,7 +1,7 @@
 ---
 title: telnet
 description: Reference article for telnet, which communicates with a computer running the telnet Server service.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b70a6156-9413-4300-84ce-a34c467e2b4e
 author: coreyp-at-msft
 ms.author: coreyp

@@ -5,7 +5,7 @@ description: Reference article for stop-TransportServer
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
 author: coreyp-at-msft
 ms.author: coreyp

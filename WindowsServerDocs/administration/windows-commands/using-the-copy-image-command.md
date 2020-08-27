@@ -1,7 +1,7 @@
 ---
 title: copy-Image
 description: Reference article for copy-Image, which copies images that are within the same image group.
-ms.topic: article
+ms.topic: reference
 ms.assetid: bea41cf4-36e6-4181-afa5-00170ebd4fdc
 author: coreyp-at-msft
 ms.author: coreyp

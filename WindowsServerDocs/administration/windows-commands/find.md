@@ -1,7 +1,7 @@
 ---
 title: find
 description: Reference article for the find command, which searches for a string of text in files, displaying the specified text string in the file.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 2ca66b22-3b7c-4166-8503-eb75fc53ab46
 author: coreyp-at-msft
 ms.author: coreyp

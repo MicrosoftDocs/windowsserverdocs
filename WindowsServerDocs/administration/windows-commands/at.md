@@ -1,7 +1,7 @@
 ---
 title: at
 description: Reference article for the at command, which schedules commands and programs to run on a computer at a specified time and date.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ff18fd16-9437-4c53-8794-bfc67f5256b3
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: convert-RiprepImage
 description: Reference article for convert-RiprepImage, which converts an existing Remote Installation Preparation (RIPrep) image to Windows Image (.wim) format.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 88c2b96f-5947-4b64-9dcf-1946b3c013cf
 author: coreyp-at-msft
 ms.author: coreyp

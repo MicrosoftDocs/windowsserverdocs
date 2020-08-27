@@ -1,7 +1,7 @@
 ---
 title: Export-Image
 description: Reference article for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
 author: coreyp-at-msft
 ms.author: coreyp
