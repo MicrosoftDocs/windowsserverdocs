@@ -42,7 +42,7 @@ For more information, see the [Extended Security Updates frequently asked questi
 If you run Windows Server 2008 or 2008 R2 VMs in Azure, they're automatically enabled for Extended Security Updates. You don't need to configure anything, and there's no additional charge for using Extended Security Updates with Azure VMs. Extended Security Updates are automatically delivered to Azure VMs if they're configured to receive updates.
 
 > [!NOTE]
-> Microsoft.ClassicCompute type VMs require additional configuration for ESU deployment, as they do not have access to the Azure Resource Manager, in particular the [Azure Instance Metadata Service](https://docs.microsoft.com/azure/virtual-machines/windows/instance-metadata-service), which is used for evaluating ESU eligibility. Please contact [Microsoft support](http://support.microsoft.com/contactus?PID=17336) for more help.
+> Microsoft.ClassicCompute type VMs require additional configuration for Extended Security Updates deployment, as they don't have access to the Azure Resource Manager, in particular the [Azure Instance Metadata Service](https://docs.microsoft.com/azure/virtual-machines/windows/instance-metadata-service), which is used for determining ESU eligibility. Please contact [Microsoft support](http://support.microsoft.com/contactus?PID=17336) for more help.
 
 For other environments, such as on-premises VMs or physical servers, you need to manually request and configure Extended Security Updates. You can purchase Extended Security Updates through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE).
 
