@@ -2,7 +2,7 @@
 title: Set up email discovery to subscribe to your RDS feed
 description: Learn how to integrate Azure AD Domain Services into your RDS deployment.
 ms.author: chrimo
-ms.date: 8/14/2020
+ms.date: 8/28/2020
 ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
@@ -10,9 +10,6 @@ author: christianmontoya
 # Set up email discovery to subscribe to your RDS feed
 
 Have you ever had trouble getting your end users connected to their published RDS feed, either because of a single missing character in the feed URL or because they lost the email with the URL? Nearly all Remote Desktop client applications support finding your subscription by entering your email address, making it easier than ever to get your users connected to their RemoteApps and desktops.
-
->[!IMPORTANT]
->The Microsoft Remote Desktop app in the Microsoft Store does not support email address subscription at this time.
 
 Before you set up email discovery, do the following:
 
