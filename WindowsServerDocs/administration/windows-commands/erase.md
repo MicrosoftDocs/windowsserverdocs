@@ -16,7 +16,6 @@ Deletes one or more files. If you use **erase** to delete a file from your disk,
 > [!NOTE]
 > This command is the same as the [del command](del.md).
 
-
 ## Syntax
 
 ```
