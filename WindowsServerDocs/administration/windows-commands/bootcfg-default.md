@@ -1,7 +1,7 @@
 ---
 title: bootcfg default
 description: Reference article for the bootcfg default command, which specifies the operating system entry to designate as the default.
-ms.topic: article
+ms.topic: reference
 ms.assetid: e21824d7-8278-41d7-a2c5-ce09803d513a
 author: coreyp-at-msft
 ms.author: coreyp

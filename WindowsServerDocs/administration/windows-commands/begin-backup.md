@@ -1,7 +1,7 @@
 ---
 title: begin backup
 description: Reference article for the begin backup command, which starts a full backup session.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8a53b5d5-e24c-4fc3-a3d8-c622c1bbf8f0
 author: coreyp-at-msft
 ms.author: coreyp

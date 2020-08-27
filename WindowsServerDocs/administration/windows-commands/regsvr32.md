@@ -1,7 +1,7 @@
 ---
 title: regsvr32
 description: Reference article for the regsvr32 command, which registers .dll files as command components in the registry.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 3345e964-7d3e-42b8-abeb-42ed6edfe2b2
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: telnet status
 description: Reference article for telnet status, which displays status information.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4e819f11-3dc4-44d1-957b-1bcecf9fc1fc
 author: coreyp-at-msft
 ms.author: coreyp

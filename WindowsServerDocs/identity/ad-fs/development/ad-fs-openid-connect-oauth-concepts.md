@@ -75,7 +75,7 @@ The claims present in any given security token are dependent upon the type of to
 
  2.	AD FS validates the client ID in the auth request with the client ID obtained during client and resource registration in AD FS. If using confidential client, then AD FS also validates the client secret provided in the auth request. AD FS also validate the redirect uri of the Client.
 
- 3.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]//[scope values e.g., openid]*.
+ 3.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values e.g., openid]*.
 
     If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose polices (e.g.,MFA, Issuance or authorization policy) can't be configured.
 

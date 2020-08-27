@@ -1,7 +1,7 @@
 ---
 title: logman update trace
 description: Reference article for the logman update trace command, which updates the properties of an existing event trace data collector.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b7111f7f-4162-4d1a-8e53-d766db0ede1f
 author: coreyp-at-msft
 ms.author: coreyp

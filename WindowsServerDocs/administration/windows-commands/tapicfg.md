@@ -5,7 +5,7 @@ description: Learn how to manage a TAPI application directory partition.
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: c0e642ce-5d98-4edb-9a65-1dff09aef4e1
 author: coreyp-at-msft
 ms.author: coreyp

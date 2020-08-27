@@ -1,9 +1,9 @@
 ---
 title: Upgrade Domain Controllers to Windows Server 2016
 description: This document describes how to upgrade from Windows Server 2012 R2 to Windows Server 2016
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

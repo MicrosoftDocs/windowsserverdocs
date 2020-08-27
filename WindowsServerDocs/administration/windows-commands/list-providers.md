@@ -1,7 +1,7 @@
 ---
 title: list providers
 description: Reference article for the list providers command, which lists shadow copy providers that are currently registered on the system.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 844b4036-c0b9-449d-8347-7d58ef9bf16d
 author: coreyp-at-msft
 ms.author: coreyp

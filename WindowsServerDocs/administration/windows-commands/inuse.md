@@ -1,7 +1,7 @@
 ---
 title: inuse
 description: Reference article for the inuse command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 62ff1af0-adba-4beb-8e3c-d1c87e0b38f3
 author: coreyp-at-msft
 ms.author: coreyp

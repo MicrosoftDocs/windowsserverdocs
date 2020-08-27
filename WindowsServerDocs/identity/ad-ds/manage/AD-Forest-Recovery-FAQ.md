@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - FAQ
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: ac9e5a3d-8b1e-41b7-8e02-f64b7acf1359

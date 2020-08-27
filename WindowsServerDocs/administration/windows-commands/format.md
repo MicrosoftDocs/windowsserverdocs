@@ -3,7 +3,7 @@ title: format
 description: Reference article for the format command, which formats a disk to accept Windows files.
 manager: dongill
 ms.author: jgerend
-ms.topic: article
+ms.topic: reference
 ms.assetid: 51ec7423-9a01-4219-868a-25d69cdcc832
 author: jasongerend
 ms.date: 10/16/2017

@@ -1,7 +1,7 @@
 ---
 title: ftp prompt
 description: Reference article for the ftp prompt command, which toggles Prompt mode on and off.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 930df39b-45c4-4e0b-bfe2-1d1963be817a
 author: coreyp-at-msft
 ms.author: coreyp

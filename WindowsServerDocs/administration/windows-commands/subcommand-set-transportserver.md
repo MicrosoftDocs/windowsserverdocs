@@ -1,7 +1,7 @@
 ---
 title: Subcommand set-TransportServer
 description: Reference article for Subcommand set-TransportServer, which sets configuration settings for a Transport Server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7863225c-f4b2-4cd0-b929-78a454bef249
 author: coreyp-at-msft
 ms.author: coreyp

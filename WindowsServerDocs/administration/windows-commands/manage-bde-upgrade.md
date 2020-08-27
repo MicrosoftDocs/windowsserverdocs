@@ -1,7 +1,7 @@
 ---
 title: manage-bde upgrade
 description: Reference article for the manage-bde upgrade command, which upgrades the BitLocker version.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 23bfa824-6ff0-44cc-9b8b-b199a769fb8d
 author: coreyp-at-msft
 ms.author: coreyp

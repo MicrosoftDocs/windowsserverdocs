@@ -1,7 +1,7 @@
 ---
 title: prncnfg
 description: Reference article for the prncnfg command, which configures or displays configuration information about a printer.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 38a4e8fa-3122-495b-a125-35b926bc6415
 author: coreyp-at-msft
 ms.author: coreyp

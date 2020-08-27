@@ -1,9 +1,9 @@
 ---
 ms.assetid: c0d64566-5530-482e-a332-af029a5fb575
 title: Mapping Design Requirements to Forest Design Models
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
 ---

@@ -1,7 +1,7 @@
 ---
 title: bitsadmin removecredentials
 description: Reference article for the bitsadmin removecredentials command, which removes credentials from a job.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4a78ce9a-1feb-4811-a000-cce81287b22b
 author: coreyp-at-msft
 ms.author: coreyp

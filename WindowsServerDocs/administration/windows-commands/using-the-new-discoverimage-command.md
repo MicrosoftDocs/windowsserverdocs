@@ -1,7 +1,7 @@
 ---
 title: new-DiscoverImage
 description: Reference article for new-DiscoverImage, which creates a new discover image from an existing boot image.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
 author: coreyp-at-msft
 ms.author: coreyp

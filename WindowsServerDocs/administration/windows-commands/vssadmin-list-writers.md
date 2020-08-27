@@ -1,7 +1,7 @@
 ---
 title: Vssadmin list writers
 description: A description of the vssadmin list writer command.
-ms.topic: article
+ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2018

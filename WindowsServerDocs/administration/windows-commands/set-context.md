@@ -1,7 +1,7 @@
 ---
 title: Set context
 description: Reference article for Set context, which sets the context for shadow copy creation.
-ms.topic: article
+ms.topic: reference
 ms.assetid: fc16c7dd-e8f0-4c2a-8742-0bddb2848bfd
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: get-ImageGroup
 description: Reference article for get-ImageGroup, which retrieves information about an image group and the images in it.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0fc25aca-a529-44ee-bc8e-96bc8affb458
 author: coreyp-at-msft
 ms.author: coreyp

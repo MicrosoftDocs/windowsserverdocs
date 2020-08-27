@@ -1,9 +1,9 @@
 ---
 ms.assetid: e02bb152-d0db-40b0-9942-846dce75f6c7
 title: AD DS Deployment Requirements
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
