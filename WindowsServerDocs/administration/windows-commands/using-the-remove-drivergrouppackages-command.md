@@ -1,7 +1,7 @@
 ---
 title: remove-DriverGroupPackages
 description: Reference article for remove-DriverGroupPackages, which removes driver packages from a driver group on a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7b499635-6285-491c-8854-5665489f4364
 author: coreyp-at-msft
 ms.author: coreyp

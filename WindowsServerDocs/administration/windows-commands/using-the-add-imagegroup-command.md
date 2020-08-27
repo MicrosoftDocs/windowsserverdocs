@@ -1,7 +1,7 @@
 ---
 title: add-ImageGroup
 description: Reference article for add-ImageGroup, which adds an image group to a Windows Deployment Services server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6ca88671-51de-4924-b969-88f3dfd84270
 author: coreyp-at-msft
 ms.author: coreyp

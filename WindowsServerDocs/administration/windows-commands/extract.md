@@ -1,7 +1,7 @@
 ---
 title: extract
 description: Reference article for the extract command, which extracts files from a source location.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 20dab03e-f6e1-4eb8-b8a1-fd6f1d97ee83
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: ftp open
 description: Reference article for the ftp open command, which connects to the specified ftp server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4b61926a-dc60-4b4c-96d3-64e5c91c18ba
 author: coreyp-at-msft
 ms.author: coreyp

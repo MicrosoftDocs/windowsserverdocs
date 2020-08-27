@@ -1,7 +1,7 @@
 ---
 title: verifier
 description: Reference article for verifier, which runs the Driver verifier manager.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 782173d6-f196-4bc4-a547-76109829453c
 
 author: coreyp-at-msft

@@ -1,7 +1,7 @@
 ---
 title: Using the progress command
 description: Reference article for progress, which displays progress while a command is running.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8ce5e77b-e13f-4ac3-948d-31770a6c7e25
 author: coreyp-at-msft
 ms.author: coreyp

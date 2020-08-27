@@ -1,7 +1,7 @@
 ---
 title: Using the set command
 description: Reference article for set, which sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5def6be0-83b9-4133-bc1b-bbe6d407eca7
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: Commands by Server role
 description: Reference article for Commands by Server role, which describes the primary function of the server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 343597ec-9b92-4b92-8d6c-faef4b565068
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: bitsadmin cache and setexpirationtime
 description: Reference article for the bitsadmin cache and setexpirationtime command, which sets the cache expiration time.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 00ea6e4e-b707-4b31-88dd-b61a78565c8d
 author: coreyp-at-msft
 ms.author: coreyp

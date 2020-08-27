@@ -1,7 +1,7 @@
 ---
 title: cd
 description: Reference article for the cd command, which displays the name of or changes the current directory.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 932d9cc1-3dff-40da-835c-1cb0894874f1
 author: coreyp-at-msft
 ms.author: coreyp

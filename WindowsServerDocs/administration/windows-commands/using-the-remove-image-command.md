@@ -1,7 +1,7 @@
 ---
 title: remove-Image
 description: Reference article for remove-Image, which deletes an image from a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ce5e2384-2264-4b22-92af-74eec8c10ae0
 author: coreyp-at-msft
 ms.author: coreyp

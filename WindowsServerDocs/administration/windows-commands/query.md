@@ -1,7 +1,7 @@
 ---
 title: query
 description: Reference article for the query command, which displays information about processes, sessions, and Remote Desktop Session Host servers.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 675c5128-f3cf-4e8f-8a3f-b29ab2a8b6de
 author: coreyp-at-msft
 ms.author: coreyp

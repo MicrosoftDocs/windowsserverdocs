@@ -5,7 +5,7 @@ description: Learn how to get access to a file by becoming the owner of the file
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0683cd65-a6db-4cab-962b-45a0ff61f43c
 author: coreyp-at-msft
 ms.author: coreyp

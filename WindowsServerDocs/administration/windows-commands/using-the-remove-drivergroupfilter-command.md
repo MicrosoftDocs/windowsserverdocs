@@ -1,7 +1,7 @@
 ---
 title: remove-DriverGroupFilter
 description: Reference article for remove-DriverGroupFilter, which removes a filter rule from a driver group on a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 837bd5d4-c79d-4714-942d-9875bd8e61dc
 author: coreyp-at-msft
 ms.author: coreyp

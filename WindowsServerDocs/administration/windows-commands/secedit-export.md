@@ -5,7 +5,7 @@ description: Reference article for **** -
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 49a8b241-aa8c-45b7-844d-67a29fab708e
 author: coreyp-at-msft
 ms.author: coreyp

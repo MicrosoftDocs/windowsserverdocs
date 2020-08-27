@@ -1,7 +1,7 @@
 ---
 title: net print
 description: Reference article for the net print command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: f59b2015-4698-415d-9a74-09566c466f40
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: telnet display
 description: Reference article for telnet display, which displays operating parameters.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9272086c-3aaa-405d-ac71-652f25e2eb34
 author: coreyp-at-msft
 ms.author: coreyp

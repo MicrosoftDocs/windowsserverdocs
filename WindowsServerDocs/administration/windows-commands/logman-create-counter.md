@@ -1,7 +1,7 @@
 ---
 title: logman create counter
 description: Reference article for the logman create counter command, which creates a counter data collector.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
 author: coreyp-at-msft
 ms.author: coreyp

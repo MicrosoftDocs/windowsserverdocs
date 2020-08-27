@@ -1,7 +1,7 @@
 ---
 title: set
 description: Reference article for set, which displays, sets, or removes cmd.exe environment variables.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
 author: coreyp-at-msft
 ms.author: coreyp

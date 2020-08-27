@@ -1,7 +1,7 @@
 ---
 title: fc
 description: Reference article for the fc command, which compares two files or sets of files and displays the differences between them.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 485fc3d8-b7c5-496d-87be-0011112f27d5
 author: coreyp-at-msft
 ms.author: coreyp

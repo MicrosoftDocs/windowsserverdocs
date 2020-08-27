@@ -1,7 +1,7 @@
 ---
 title: break
 description: Reference article for the break command, which breaks the mirrored volume with focus into two simple volumes.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ffc4901c-457b-46a6-a671-3052355f8a3c
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: remove-Namespace
 description: Reference article for remove-Namespace, which removes a custom namespace.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4eb758b6-8519-4e26-9fe0-2e19bb0e8702
 author: coreyp-at-msft
 ms.author: coreyp

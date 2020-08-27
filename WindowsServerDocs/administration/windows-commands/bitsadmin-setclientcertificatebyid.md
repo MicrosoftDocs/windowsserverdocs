@@ -1,7 +1,7 @@
 ---
 title: bitsadmin setclientcertificatebyid
 description: Reference article for the bitsadmin setclientcertificatebyid command, which specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8585a7a1-7472-437b-b04a-a11925782a3a
 author: coreyp-at-msft
 ms.author: coreyp

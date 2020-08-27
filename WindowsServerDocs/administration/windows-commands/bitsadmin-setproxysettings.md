@@ -1,7 +1,7 @@
 ---
 title: bitsadmin setproxysettings
 description: Reference article for the bitsadmin setproxysettings command, which sets the proxy settings for the specified job.
-ms.topic: article
+ms.topic: reference
 ms.assetid: be8edb1b-614e-4d0b-a8f8-64b4bde3e64b
 author: coreyp-at-msft
 ms.author: coreyp
