@@ -54,7 +54,15 @@ To connect to a session in full-screen mode, type:
 ```
 mstsc /f
 ```
+or
+```
+mstsc /v:computer1 /f
+```
+To assign width/height, type:
 
+```
+mstsc /v:computer1 /w:1920 /h:1080
+```
 To open a file called *filename.rdp* for editing, type:
 
 ```
