@@ -39,7 +39,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | Option | Description |
 |--|--|
 | /s | Copies subdirectories. This option automatically excludes empty directories. |
-| /e | Copies subdirectories. This option automatically excludes empty directories. |
+| /e | Copies subdirectories. This option automatically includes empty directories. |
 | /lev:`<n>` | Copies only the top *n* levels of the source directory tree. |
 | /z | Copies files in restartable mode. |
 | /b | Copies files in Backup mode. |
