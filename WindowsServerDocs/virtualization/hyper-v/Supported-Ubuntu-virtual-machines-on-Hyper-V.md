@@ -54,7 +54,7 @@ The following feature distribution map indicates the features in each version. T
 |Non-Maskable Interrupt|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |File copy from host to guest|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |lsvmbus command|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Hyper-V Sockets|2019, 2016|||||
+|Hyper-V Sockets|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
 |PCI Passthrough/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|||||
 |Boot using UEFI|2019, 2016, 2012 R2|&#10004; Note 10, 11|&#10004; Note 10, 11|&#10004; Note 10, 11|&#10004; Note 10, 11|
