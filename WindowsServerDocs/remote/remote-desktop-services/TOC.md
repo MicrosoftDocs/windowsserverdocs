@@ -72,9 +72,9 @@
 #### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
 #### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
 #### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
-### Windows Store client
-#### [Get started with the Windows Store client](clients/windows.md)
-#### [What's new in the Windows Store client](clients/windows-whatsnew.md)
+### Microsoft Store Client
+#### [Get started with the Microsoft Store Client](clients/windows.md)
+#### [What's new in the Microsoft Store Client](clients/windows-whatsnew.md)
 ### Android client
 #### [Get started with the Android client](clients/remote-desktop-android.md)
 #### [What's new in the Android client](clients/android-whatsnew.md)

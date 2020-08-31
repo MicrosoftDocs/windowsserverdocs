@@ -1,5 +1,5 @@
 ---
-title: Get started with the Windows Store client
+title: Get started with the Microsoft Store Client
 description: Basic set up steps for the Remote Desktop client for Windows Store.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
@@ -9,7 +9,7 @@ ms.author: elizapo
 ms.date: 06/01/2020
 ms.localizationpriority: medium
 ---
-# Get started with the Windows Store client
+# Get started with the Microsoft Store Client
 
 >Applies to: Windows 10
 
@@ -18,7 +18,7 @@ You can use the Remote Desktop client for Windows to work with Windows apps and 
 Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
 
 > [!NOTE]
-> - Curious about the new releases for the Windows Store client? Check out [What's new in the Windows Store client](windows-whatsnew.md)
+> - Curious about the new releases for the Microsoft Store Client? Check out [What's new in the Microsoft Store Client](windows-whatsnew.md)
 > - You can run the client on any supported version of Windows 10.
 
 ## Get the RD client and start using it
