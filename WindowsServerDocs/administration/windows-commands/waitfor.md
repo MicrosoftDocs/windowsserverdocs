@@ -1,7 +1,7 @@
 ---
 title: waitfor
 description: Reference article for waitfor, which sends or waits for a signal on a system. **Waitfor** is used to synchronize computers across a network.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a48ef70d-4d28-4035-b6b0-7d7b46ac2157
 author: coreyp-at-msft
 ms.author: coreyp

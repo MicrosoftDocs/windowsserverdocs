@@ -1,7 +1,7 @@
 ---
 title: replace-Image
 description: Reference article for replace-Image, which replaces an existing image with a new version of that image.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 68ded3df-e309-420f-9f5d-caeb609385a5
 author: coreyp-at-msft
 ms.author: coreyp

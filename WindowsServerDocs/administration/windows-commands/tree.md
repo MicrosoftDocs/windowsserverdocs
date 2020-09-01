@@ -1,7 +1,7 @@
 ---
 title: tree
 description: Reference article for tree, which displays the directory structure of a path, or of the disk in a drive, graphically.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 345d3192-401e-4a3b-a8ac-36a85c7be79d
 author: coreyp-at-msft
 ms.author: coreyp

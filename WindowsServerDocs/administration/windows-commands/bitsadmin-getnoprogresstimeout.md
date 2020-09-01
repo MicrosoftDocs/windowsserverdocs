@@ -1,7 +1,7 @@
 ---
 title: bitsadmin getnoprogresstimeout
 description: Reference article for the bitsadmin getnoprogresstimeout command, which retrieves the length of time, in seconds, that the service will try to transfer the file after a transient error occurs.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9cd9b19b-cbb4-4352-8419-978080f016b6
 author: coreyp-at-msft
 ms.author: coreyp

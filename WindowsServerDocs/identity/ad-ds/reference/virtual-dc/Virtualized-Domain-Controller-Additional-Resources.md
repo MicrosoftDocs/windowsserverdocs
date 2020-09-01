@@ -1,9 +1,9 @@
 ---
 ms.assetid: 47a7cede-f94a-4233-872b-fa65a5b9d8f1
 title: Virtualized Domain Controller Additional Resources
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

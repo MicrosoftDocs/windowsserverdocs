@@ -1,7 +1,7 @@
 ---
 title: auditpol
 description: Reference article for the auditpol command, which displays information about and performs functions to manipulate audit policies.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a02cfb9d-732f-4e77-aeba-f18265daa3af
 author: coreyp-at-msft
 ms.author: coreyp

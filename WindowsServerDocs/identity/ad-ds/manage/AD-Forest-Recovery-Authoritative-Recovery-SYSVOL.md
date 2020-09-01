@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Authoritative sync of SYSVOL
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 38a1c543-c76d-4b8e-a06b-53742aaa172f

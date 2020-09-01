@@ -1,7 +1,7 @@
 ---
 title: bitsadmin util and help
 description: Reference article for the bitsadmin util and help command, which displays the command-line usage for the /util switches.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 806e377a-3022-4764-b451-0aa4f754f195
 author: coreyp-at-msft
 ms.author: coreyp

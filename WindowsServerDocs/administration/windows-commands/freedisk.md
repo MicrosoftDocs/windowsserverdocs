@@ -1,7 +1,7 @@
 ---
 title: freedisk
 description: Reference article for the freedisk command, which checks to see if the specified amount of disk space is available before continuing with an installation process.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 91c15166-5baa-4b80-9e0c-4cd815d00530
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: new-MulticastTransmission
 description: Reference article for new-MulticastTransmission, which creates a new multicast transmission for an image.
-ms.topic: article
+ms.topic: reference
 ms.assetid: c1f1dc46-dd50-4eb9-9f72-cf0e5d71bd3d
 author: coreyp-at-msft
 ms.author: coreyp

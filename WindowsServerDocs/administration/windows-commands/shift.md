@@ -1,7 +1,7 @@
 ---
 title: shift
 description: Reference article for shift, which changes the position of batch parameters in a batch file.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b56574e8-570a-4cc9-bbac-1b94fbf6a47a
 author: coreyp-at-msft
 ms.author: coreyp

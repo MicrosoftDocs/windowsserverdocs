@@ -1,7 +1,7 @@
 ---
 title: bitsadmin getproxyusage
 description: Reference article for the bitsadmin getproxyusage command, which retrieves the proxy usage setting for the specified job.
-ms.topic: article
+ms.topic: reference
 ms.assetid: f940a70e-3b02-497e-a47f-b37b905c299e
 author: coreyp-at-msft
 ms.author: coreyp

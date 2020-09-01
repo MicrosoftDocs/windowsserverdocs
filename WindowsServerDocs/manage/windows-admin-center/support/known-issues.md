@@ -205,7 +205,7 @@ Hyper-V needs to be installed on virtual machines running the Azure Stack HCI OS
 To install Hyper-V on virtual machines running the Azure Stack HCI OS, run the following command:
 
 ```PowerShell
-Enable-windowsoptionalfeature -online -featurename Microsoft-hyper-v
+Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
 ```
 
 ### Step 1.7

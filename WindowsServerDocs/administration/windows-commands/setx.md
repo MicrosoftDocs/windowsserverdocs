@@ -1,7 +1,7 @@
 ---
 title: setx
 description: Reference article for setx, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ef37482f-f8a8-4765-951a-2518faac3f44
 author: coreyp-at-msft
 ms.author: coreyp

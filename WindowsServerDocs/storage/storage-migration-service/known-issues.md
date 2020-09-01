@@ -70,14 +70,14 @@ To work around this issue:
     <bindings>
       <netTcpBinding>
         <binding name="NetTcpBindingSms"
-                 sendTimeout="00:01:00"
+                 sendTimeout="00:10:00"
     ```
 
 2. Restart the "Storage Migration Service" service on the orchestrator computer.
 
 3. On the orchestrator computer, start Regedit.exe
 
-4. Locate and then click the following registry subkey:
+4. Create the following registry subkey if it doesn't already exist:
 
     `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
@@ -95,7 +95,7 @@ To work around this issue:
 
 11. Attempt to download the errors-only CSV file again.
 
-We intend to change this behavior in a later release of Windows Server 2019.
+You may need to increase this timeout to more than 10 minutes if you are migrating an extremely large number of files. 
 
 ## Validation warnings for destination proxy and credential administrative privileges
 

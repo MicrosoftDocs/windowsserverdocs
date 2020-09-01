@@ -1,7 +1,7 @@
 ---
 title: get-AllDriverPackages
 description: Reference article for get-AllDriverPackages, which displays information about all the driver packages on a server that match the specified search criteria.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9eb8fcb7-ef46-4c8d-9623-8969a3c8b8a4
 author: coreyp-at-msft
 ms.author: coreyp

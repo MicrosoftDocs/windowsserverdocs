@@ -1,7 +1,7 @@
 ---
 title: convert gpt
 description: Reference article for the convert gpt command, which converts an empty basic disk with the master boot record (MBR) partition style into a basic disk with the GUID partition table (GPT) partition style.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b3b1b747-0a7a-4be2-8487-2c4be16ee190
 author: coreyp-at-msft
 ms.author: coreyp

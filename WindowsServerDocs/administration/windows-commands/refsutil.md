@@ -4,7 +4,7 @@ description: Reference article for the ReFSUtil tool, which attempts to diagnose
 author: laknight5
 ms.author: laknight
 ms.date: 6/29/2020
-ms.topic: article
+ms.topic: reference
 ---
 
 # ReFSUtil

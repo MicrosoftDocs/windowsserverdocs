@@ -1,7 +1,7 @@
 ---
 title: Sc.exe create
 description: Learn how register new services with Windows Service Manager using the sc.exe utility
-ms.topic: article
+ms.topic: reference
 ms.assetid: 59416460-0661-4fef-85cc-73e9d8f4beb4
 author: coreyp-at-msft
 ms.author: coreyp

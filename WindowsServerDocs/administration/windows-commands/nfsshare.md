@@ -1,7 +1,7 @@
 ---
 title: nfsshare
 description: Reference article for the nfsshare command, which controls Network File System (NFS) shares.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 437a2615-335a-442f-9713-d50d5f3983a3
 author: coreyp-at-msft
 ms.author: coreyp

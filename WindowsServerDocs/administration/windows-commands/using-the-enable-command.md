@@ -1,7 +1,7 @@
 ---
 title: Using the enable command
 description: Reference article for Enable, which enables all services for Windows Deployment Services.
-ms.topic: article
+ms.topic: reference
 ms.assetid: aafebfb2-fff0-41c9-a095-8884acf49f50
 author: coreyp-at-msft
 ms.author: coreyp

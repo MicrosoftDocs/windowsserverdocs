@@ -10,7 +10,7 @@ ms.reviewer: deverette
 ---
 # Step 7.2. Create conditional access root certificates for VPN authentication with Azure AD
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking](vpn-config-eap-tls-to-ignore-crl-checking.md)
 - [**Next:** Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
@@ -26,7 +26,7 @@ In this step, you configure conditional access root certificates for VPN authent
 
 When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Azure AD issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client. 
 
-The VPN client then sends the certificate issues by Azure AD to the VPN for credential validation. 
+The VPN client then sends the certificate issued by Azure AD to the VPN for credential validation. 
 
 > [!NOTE]
 > Azure AD uses the most recently created certificate in the VPN connectivity blade as the Issuer.
@@ -40,8 +40,8 @@ The VPN client then sends the certificate issues by Azure AD to the VPN for cred
 5. On the **Conditional Access | Policies** page, in the **Manage** section, click **VPN Connectivity**.
 5. On the **VPN connectivity** page, click **New certificate**.
 6. On the **New** page, perform the following steps:
-   a. For **Select duration**, select either 1, 2 or 3 years.
-   b. Select **Create**.
+    a. For **Select duration**, select either 1, 2 or 3 years.
+    b. Select **Create**.
 
 ## Next steps
 

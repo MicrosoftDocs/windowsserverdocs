@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Backing up the System State data
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: iainfou
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 9238cb27-0020-42f7-90d6-fcebf7e3c0bc

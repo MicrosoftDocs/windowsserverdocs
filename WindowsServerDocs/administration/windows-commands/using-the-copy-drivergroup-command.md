@@ -1,7 +1,7 @@
 ---
 title: copy-DriverGroup
 description: Reference article for copy-DriverGroup, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0aaf6fa5-8b5b-4a1e-ae9b-8b5c6d89f571
 author: coreyp-at-msft
 ms.author: coreyp

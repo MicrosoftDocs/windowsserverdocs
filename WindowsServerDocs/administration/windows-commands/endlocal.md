@@ -1,7 +1,7 @@
 ---
 title: endlocal
 description: Reference article for the endlocal command, which ends localization of environment changes in a batch file, and restores environment variables to their values before the corresponding setlocal command was run.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 765fae3c-0c0a-4639-99a4-cf613489b949
 author: coreyp-at-msft
 ms.author: coreyp

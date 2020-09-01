@@ -1,9 +1,9 @@
 ---
 ms.assetid: f0398494-773d-4070-aa4e-25b4815b001e
 title: Identifying Your AD DS Design and Deployment Requirements
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

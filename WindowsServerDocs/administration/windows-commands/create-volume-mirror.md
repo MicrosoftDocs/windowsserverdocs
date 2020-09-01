@@ -1,7 +1,7 @@
 ---
 title: create volume mirror
 description: Reference article for the create volume mirror command, which creates a volume mirror by using the two specified dynamic disks.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 48776917-783a-47ff-8da4-1cab77cea34b
 author: coreyp-at-msft
 ms.author: coreyp

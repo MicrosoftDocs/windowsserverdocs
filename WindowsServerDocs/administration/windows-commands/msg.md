@@ -1,7 +1,7 @@
 ---
 title: msg
 description: Reference article for the msg command, which sends a message to a user on a Remote Desktop Session Host server
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9501cf3e-568e-4982-9987-8daecc6c17ff
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: sort
 description: Reference article for sort, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 77116469-4790-4442-8a21-9fa73b65ef9f
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: bitsadmin getclientcertificate
 description: Reference article for the bitsadmin getclientcertificate command, which retrieves the client certificate from the job.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4fc8f408-085e-43a0-9fa8-3d798ef107b1
 author: coreyp-at-msft
 ms.author: coreyp

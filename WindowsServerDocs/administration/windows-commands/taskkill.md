@@ -1,7 +1,7 @@
 ---
 title: taskkill
 description: Reference article for taskkill, which ends one or more tasks or processes.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 2b71e792-08b6-46d4-95a5-cb6336a79524
 author: coreyp-at-msft
 ms.author: coreyp

@@ -1,7 +1,7 @@
 ---
 title: pagefileconfig
 description: Reference article for the pagefileconfig command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a18c98ce-a0dc-41cc-8d44-dc7eee0131e8
 author: coreyp-at-msft
 ms.author: coreyp
