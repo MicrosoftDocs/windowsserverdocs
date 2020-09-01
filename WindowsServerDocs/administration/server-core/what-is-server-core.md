@@ -55,7 +55,7 @@ You'll need a Microsoft Home, Work or School account, enrolled to an active Visu
 Latest Server Insider FoD. This is downloadable at [Server Insider webpage](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). 
 You'll need a Microsoft Home, Work or School account, enrolled to the Insider Program, to access the FoD download.
 
-### Feature on Demand - available feature in Feature on Demand Package 1809
+### Feature on Demand - available features in Feature on Demand Package 1809
 
 > [!NOTE]
 > This list is intended for quick reference - it is not intended to be a complete list.
