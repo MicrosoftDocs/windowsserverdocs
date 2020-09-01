@@ -37,7 +37,20 @@ In addition to no UI, Server Core also differs from the Server with Desktop Expe
 - No OOBE (out-of-box-experience) for setting up Server Core
 - No audio support
 
-The following table shows which applications are available *locally* on Server Core vs Server with Desktop Experience. **Important**: In most cases, applications that are listed as "not available" below can be run remotely from a Windows client computer and used to manage your Server Core installation.
+The following table shows which applications are available *locally* on Server Core vs Server with Desktop Experience. **Important**: In most cases, applications that are listed as "not available" below can be run remotely from a Windows client computer or [Windows Admin Center](../../manage/windows-admin-center/overview.md) to manage your Server Core installation. 
+
+### Versioning and downloads of Feature on Demand for Server Core
+
+The list below reflects the FoD level as of Version 1809 (Server 2019 LTSC). 
+You can greatly enchance your Server Core compatibility by applying a later FoD package.
+
+Either from Windows Server (SAC), which can be obtained in your specific [MS Licensing Center](https://businessaccount.microsoft.com/), if you have active Software Assurance
+You need a Microsoft Work or School Account enrolled to VLSC or Business Center, to access the FoD download.
+
+Or using the latest Server Insider FoD. Downlaodable at [Server Insider webpage](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). 
+You need a Microsoft Home, Work or School account, enrolled to the Insider Program, to access the FoD download.
+
+### Feature on Demand - available feature in Feature on Demand Package 1809
 
 > [!NOTE]
 > This list is intended for quick reference - it is not intended to be a complete list.
