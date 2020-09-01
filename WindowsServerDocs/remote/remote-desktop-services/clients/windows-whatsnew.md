@@ -1,5 +1,5 @@
 ---
-title: What's new in the Windows Store client
+title: What's new in the Microsoft Store Client
 description: Learn about recent changes to the Remote Desktop client for Windows Store
 ms.topic: article
 author: heidilohr
@@ -8,9 +8,9 @@ ms.author: helohr
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ---
-# What's new in the Windows Store client
+# What's new in the Microsoft Store Client
 
-We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+We regularly update the [Microsoft Store Client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 ## Updates for version 10.2.1522
 
