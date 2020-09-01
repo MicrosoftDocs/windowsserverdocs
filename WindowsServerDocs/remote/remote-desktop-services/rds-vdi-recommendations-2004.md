@@ -13,64 +13,63 @@ ms.date: 07/10/2020
 
 # Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
 
-This article is intended to provide suggestions for configurations for Windows 10, build 2004, for optimal performance in Virtualized Desktop environments, including Virtual Desktop Infrastructure (VDI) and Windows Virtual Desktop (WVD). All settings in this guide are suggested optimization settings only and are in no way requirements.
+This article is intended to provide suggestions for configurations for Windows 10, build 2004, for optimal performance in Virtualized Desktop environments, including Virtual Desktop Infrastructure (VDI) and Windows Virtual Desktop. All settings in this guide are suggested optimization settings only and are in no way requirements.
 
 The information in this guide is pertinent to Windows 10, version 2004, operating system (OS) build 19041.
 
-The guiding principles to optimize performance of Windows 10 in a virtual desktop environment are to minimize graphic redraws and “effects”, background activities that have no major benefit to the virtual desktop environment, and generally reduce running processes to the bare minimum. A secondary goal is to reduce disk space usage in the base image to the bare minimum.  With virtual desktop implementations, the smallest possible base, or “gold” image size, can slightly reduce memory utilization on the host system, as well as a small reduction in overall network operations required to deliver the desktop environment to the consumer.
+The guiding principles to optimize performance of Windows 10 in a virtual desktop environment are to minimize graphic redraws and :effects," background activities that have no major benefit to the virtual desktop environment, and generally reduce running processes to the bare minimum. A secondary goal is to reduce disk space usage in the base image to the bare minimum. With virtual desktop implementations, the smallest possible base, or "gold" image size, can slightly reduce memory utilization on the host system, as well as a small reduction in overall network operations required to deliver the desktop environment to the consumer.
 
-No optimizations should reduce the user experience.  Each optimization setting has been carefully reviewed to ensure that there is no appreciable degradation to the user experience.
+No optimizations should reduce the user experience. Each optimization setting has been carefully reviewed to ensure that there is no appreciable degradation to the user experience.
 
 > [!NOTE]
 > The settings in this article can be applied to other Windows 10 installations, such as version 1909, physical devices, or other virtual machines. There are no recommendations in this article that should affect supportability of Windows 10 in a virtual desktop environment.
 
-## VDI Optimization Principles
+## VDI optimization principles
 
-A “full” virtual desktop environment can present a complete desktop session, including applications, to a computer user over a network. The network delivery vehicle can be an on-premises network, the Internet, or both. Some implementations of virtual desktop environments use a “base” operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of virtual desktop implementations such as “persistent”, “non-persistent”, and “desktop session”. The persistent type preserves changes to the virtual desktop operating system from one session to the next. The non-persistent type does not preserve changes to the virtual desktop operating system from one session to the next. To the user this desktop is little different than other virtual or physical device, other than it is accessed over a network.
+A "full" virtual desktop environment can present a complete desktop session, including applications, to a computer user over a network. The network delivery vehicle can be an on-premises network, the Internet, or both. Some implementations of virtual desktop environments use a "base" operating system image, which then becomes the basis for the desktops subsequently presented to the users for work. There are variations of virtual desktop implementations such as "persistent", "non-persistent", and "desktop session." The persistent type preserves changes to the virtual desktop operating system from one session to the next. The non-persistent type does not preserve changes to the virtual desktop operating system from one session to the next. To the user this desktop is little different than other virtual or physical device, other than it is accessed over a network.
 
-The optimization settings could take place on a reference machine.  A virtual machine (VM) would be an ideal place to build the VM, because state can be saved, checkpoints can be made, backups can be made, etc. A default OS installation is performed to the base VM. That base VM is then optimized by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, etc.
+The optimization settings could take place on a reference machine. A virtual machine (VM) would be an ideal place to build the VM, because state can be saved, checkpoints can be made, backups can be made, and so on. A default OS installation is performed to the base VM. That base VM is then optimized by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, and so on.
 
 There are other types of virtual desktop technology such as Remote Desktop Session (RDS) and the recently released Microsoft Azure [Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/). An in-depth discussion regarding these technologies is outside the scope of this article. This article focuses on the Windows base image settings, without reference to other factors in the environment such as host hardware optimization.
 
 Security and stability are among the highest priorities for Microsoft when it comes to products and services. In the virtual desktop realm, security is not handled much differently than physical devices. Enterprise customers may choose to utilize the built-in to Windows services of Windows Security, which comprises a suite of services that work well connected or not connected to the Internet. For those virtual desktop environments not connected to the Internet, security signatures can be downloaded proactively several times per day, because Microsoft may release more than one signature update per day. Those signatures can then be provided to the virtual desktop devices and scheduled to be installed during production, regardless of persistent or non-persistent. That way the VM protection is as current as possible.
 
-There are some security settings that are not applicable to virtual desktop environments that are not connected to the Internet, and thus not able to participate in cloud-enabled security. There are other settings that “normal” Windows devices may utilize such as Cloud Experience, The Windows Store, etc. Removing access to unused features reduces footprint, network bandwidth, and attack surface.
+There are some security settings that are not applicable to virtual desktop environments that are not connected to the Internet, and thus not able to participate in cloud-enabled security. There are other settings that "normal" Windows devices may utilize such as Cloud Experience, The Windows Store, and so on. Removing access to unused features reduces footprint, network bandwidth, and attack surface.
 
-Regarding updates, Windows 10 utilizes a monthly update rhythm. In some cases virtual desktop administrators control the process of updating through a process of shutting down VMs based on a “master” or “gold” image, unseal that image which is read-only, patch the image, then reseal it and bring it back into production. Therefore, there is no need to have virtual desktop devices checking Windows Update. There are cases however, as in the case of persistent “personal” virtual desktop devices, where normal patching procedures take place. In some cases, Windows Update can be utilized. In some cases, Intune could be utilized.  In some cases Microsoft Endpoint Configuration Manager (formerly SCCM) is utilized to handle update and other package delivery.  It is up to each organization to determine the best approach to updating virtual desktop devices, while reducing overhead cycles.
+Regarding updates, Windows 10 utilizes a monthly update rhythm. In some cases virtual desktop administrators control the process of updating through a process of shutting down VMs based on a "master" or "gold" image, unseal that image which is read-only, patch the image, then reseal it and bring it back into production. Therefore, there is no need to have virtual desktop devices checking Windows Update. However, there are cases where normal patching procedures take place, like the case of persistent "personal" virtual desktop devices. In some cases, Windows Update can be utilized. In some cases, Intune could be utilized. In some cases Microsoft Endpoint Configuration Manager (formerly SCCM) is utilized to handle update and other package delivery. It is up to each organization to determine the best approach to updating virtual desktop devices, while reducing overhead cycles.
 
-The local policy settings, as well as many other settings in this guide can be overridden with domain-based policy.  It is recommended to go through the policy settings thoroughly and remove or not use any that are not desired or applicable to your environment.  The settings listed in this document try to achieve the best balance of performance optimization in virtual desktop environments, while maintaining a quality user experience.
+The local policy settings, as well as many other settings in this guide, can be overridden with domain-based policy. It is recommended to go through the policy settings thoroughly and remove or not use any that are not desired or applicable to your environment. The settings listed in this document try to achieve the best balance of performance optimization in virtual desktop environments, while maintaining a quality user experience.
 
 > [!NOTE]
-> There is a set of scripts available at GitHub.com, that will do all the work items documented in this paper. The Internet URL for the optimization scripts can be found at [https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool](https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool).  This script was designed to be easily customizable for your environment and requirements. The main code is PowerShell, and the work is done by calling input files, which are plain text (now .JSON), with also Local Group Policy Object (LGPO) tool export files. These text files contain lists of the apps to be removed, services to be disabled, and so on. If you do not wish to remove a particular app or disable a particular service, you can edit the corresponding text file and remove the item you do not want acted upon.  Finally, there is an export of local policy settings that can be imported into your environment machines. It is better to have some of the settings within the base image, than to have the settings applied through group policy, as some of the settings take effect on the next restart or when a component is first used.
+> There is a set of scripts available at GitHub.com, that will do all the work items documented in this paper. The Internet URL for the optimization scripts can be found at [https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool](https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool). This script was designed to be easily customizable for your environment and requirements. The main code is PowerShell, and the work is done by calling input files, which are plain text (now .JSON), with also Local Group Policy Object (LGPO) tool export files. These text files contain lists of the apps to be removed, services to be disabled, and so on. If you don't want to remove a particular app or disable a particular service, you can edit the corresponding text file and remove the item you do not want acted upon. Finally, there is an export of local policy settings that can be imported into your environment machines. It's better to have some of the settings within the base image, than to have the settings applied through group policy, as some of the settings take effect on the next restart or when a component is first used.
 
+### Persistent virtual desktop environments
 
-### Persistent Virtual Desktop Environments
-
-Persistent virtual desktop is at the basic level, a device that saves operating system state in between reboots. Other software layers of the virtual desktop solution provide the users easy and seamless access to their assigned VMs, often with a single sign-on solution.  
+Persistent virtual desktop is at the basic level, a device that saves operating system state in between reboots. Other software layers of the virtual desktop solution provide the users easy and seamless access to their assigned VMs, often with a single sign-on solution.
 
 There are several different implementations of persistent virtual desktop.
 
-- Traditional virtual machine (VM), where the VM has its own virtual disk file, starts up normally, and saves changes from one session to the next. The difference is how the user accesses this VM. There may be a web portal the user logs into that automatically directs the user to their one or more assigned virtual desktop devices (VMs).
-- Image-based persistent VM, optionally with personal virtual disks (PVD). In this type of implementation there is a base/gold image on one or more host servers. A VM is created, and one or more virtual disks are created and assigned to this disk for persistent storage.
+- Traditional VMs, where the VM has its own virtual disk file, starts up normally, and saves changes from one session to the next. The difference is how the user accesses this VM. There may be a web portal the user logs into that automatically directs the user to their one or more assigned virtual desktop devices (VMs).
+- Image-based persistent VMs, optionally with personal virtual disks (PVD). In this type of implementation there is a base/gold image on one or more host servers. A VM is created, and one or more virtual disks are created and assigned to this disk for persistent storage.
   - When the VM is started, a copy of the base image is read into the memory space of that VM. At the same time, a persistent virtual disk assigned to that VM, with any previous OS deltas is merged through a complex process.
-  - Changes such as event log writes, log writes, etc. are redirected to the read/write virtual disk assigned to that VM.
+  - Changes such as event log writes, log writes, and so on. are redirected to the read/write virtual disk assigned to that VM.
   - In this circumstance, OS and app servicing may operate normally, using traditional servicing software such as Windows Server Update Services, or other management technologies.
-- The difference between a persistent virtual desktop device and a “normal” virtual desktop device” is the relationship to the master/gold image. At some point updates must be applied to the master. It is at this point where organizations decide how the user persistent changes are handled. In some cases, the disk with the user changes is discarded and/or reset.  It may also be that the changes the user makes to the machine are kept through monthly Quality Updates, and the base is reset following a Feature Update.
+- The difference between a persistent virtual desktop device and a "normal" virtual desktop device is the relationship to the master/gold image. At some point updates must be applied to the master. It is at this point where organizations decide how the user persistent changes are handled. In some cases, the disk with the user changes is discarded or reset. It may also be that the changes the user makes to the machine are kept through monthly Quality Updates, and the base is reset following a Feature Update.
 
-### Non-Persistent Virtual Desktop Environments
+### Non-persistent virtual desktop environments
 
-When a non-persistent virtual desktop implementation is based on a base or “gold” image, the optimizations are mostly performed in the base image, and then through local settings and local policies.
+When a non-persistent virtual desktop implementation is based on a base or "gold" image, the optimizations are mostly performed in the base image, and then through local settings and local policies.
 
-With image-based non-persistent (NP) virtual desktop environments, the base image is read-only. When a NP virtual desktop device (VM) is started, a copy of the base image is streamed to the VM.  Activity that occurs during startup and thereafter until the next reboot is redirected to a temporary location. Usually the users are provided network locations to store their data.  In some cases, the user’s profile is merged with the standard VM to provide the user their settings.
+With image-based non-persistent (NP) virtual desktop environments, the base image is read-only. When a NP virtual desktop device (VM) is started, a copy of the base image is streamed to the VM. Activity that occurs during startup and thereafter until the next reboot is redirected to a temporary location. Usually the users are provided network locations to store their data. In some cases, the user’s profile is merged with the standard VM to provide the user their settings.
 
-One important aspect of NP virtual desktop that is based on a single image, is servicing.  Updates to the operating system (OS) and components of the OS are delivered usually once per month.  With image based virtual desktop environment, there are a set of processes that must be performed to get updates to the image:
+One important aspect of NP virtual desktop that is based on a single image, is servicing. Updates to the operating system (OS) and components of the OS are delivered usually once per month. With image based virtual desktop environment, there are a set of processes that must be performed to get updates to the image:
 
-- On a given host, all the VMs on that host, based from the base image must be shut down / turned off. This means the users are redirected to other VMs.
+- On a given host, all the VMs on that host, based from the base image must be shut down or turned off. This means the users are redirected to other VMs.
 
-- In some implementations, this is referred to as “draining”.  The virtual machine or session host, when set to draining mode, stops accepting new requests, but continues servicing users currently connected to the device.
+- In some implementations, this is referred to as "draining." The virtual machine or session host, when set to draining mode, stops accepting new requests, but continues servicing users currently connected to the device.
 
 - In draining mode, when the last user logs off the device, that device is then ready for servicing operations.
-- The base image is then opened and started up.  All maintenance activities are then performed, such as OS updates, .NET updates, app updates, etc.
+- The base image is then opened and started up. All maintenance activities are then performed, such as OS updates, .NET updates, app updates, and so on.
 - Any new settings that need to be applied are applied at this time.
 - Any other maintenance is performed at this time.
 - The base image is then shut down.
@@ -78,25 +77,28 @@ One important aspect of NP virtual desktop that is based on a single image, is s
 - Users are allowed to log back on.
 
 > [!NOTE]
-> Windows 10 performs a set of maintenance tasks, automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command: <p>**Get-ScheduledTask | Where-Object {$_.Settings.MaintenanceSettings}**
+> Windows 10 performs a set of maintenance tasks, automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
+>
+> ```powershell
+> Get-ScheduledTask | Where-Object {$_.Settings.MaintenanceSettings}
+> ```
 
-One of the challenges with non-persistent virtual desktop is that when a user logs off, nearly all the operating system (OS) activity is discarded.  The user’s profile and/or state may be saved to a centralized location, but the virtual machine itself discards nearly all changes that were made since last boot. Therefore, optimizations intended for a Windows computer that saves state from one session to the next are not applicable.
+One of the challenges with non-persistent virtual desktop is that when a user logs off, nearly all the OS activity is discarded. The user’s profile and/or state may be saved to a centralized location, but the virtual machine itself discards nearly all changes that were made since last boot. Therefore, optimizations intended for a Windows computer that saves state from one session to the next are not applicable.
 
 Depending on the architecture of virtual desktop device, things like PreFetch and SuperFetch are not going to help from one session to the next, as all the optimizations are discarded on VM restart. Indexing may be a partial waste of resources, as would be any disk optimizations such as a traditional defragmentation.
 
 > [!NOTE]
-> If preparing an image using virtualization, and if connected to the Internet during image creation process, on first logon you should postpone Feature Updates by going to ‘**Settings**’, ‘**Windows Update**’.
+> If preparing an image using virtualization, and if connected to the Internet during image creation process, on first logon you should postpone Feature Updates by going to **Settings** > **Windows Update**.
 
-### To Sysprep or not Sysprep
+### To sysprep or not sysprep
 
-Windows 10 has a built-in capability called the ‘[System Preparation Tool](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)’, (AKA Sysprep).  The Sysprep tool is used to prepare a customized Windows 10 image for duplication. The Sysprep process assures the resulting OS is properly unique to run in production.
+Windows 10 has a built-in capability called the [System Preparation Tool](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), also known as sysprep. The sysprep tool is used to prepare a customized Windows 10 image for duplication. The sysprep process assures the resulting OS is properly unique to run in production.
 
-There are reasons for and against running Sysprep. In the case of virtual desktop environments, you may want the ability to customize the default user profile which would be used as the profile template for subsequent users that log on using this image. You may have apps that you want installed, but also able to control per-app settings.
+There are reasons for and against running sysprep. In the case of virtual desktop environments, you may want the ability to customize the default user profile which would be used as the profile template for subsequent users that sign in using this image. You may have apps that you want installed, but also able to control per-app settings.
 
-The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications.  You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](https://blogs.technet.microsoft.com/secguide/2016/01/21/lgpo-exe-local-group-policy-object-utility-v1-0/) tool.
+The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](/archive/blogs/secguide/lgpo-exe-local-group-policy-object-utility-v1-0) tool.
 
-For information about image preparation for Azure, see the following article:
-[Prepare a Windows VHD or VHDX to upload to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
+To learn more about image preparation for Azure, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
 
 ### Supportability
 
@@ -106,16 +108,14 @@ This document intentionally avoids touching system services, policies, or tasks 
 
 **Microsoft**: [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
 
-Please consider supportability when altering default Windows settings. Occasionally difficult to solve problems arise when altering system services, policies, or scheduled tasks, in the name of hardening, “lightening”, etc. Please consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub will be maintained with respect to known issues, if any arise. In addition you can report issues in a number of ways to Microsoft.
+Please consider supportability when altering default Windows settings. Occasionally difficult to solve problems arise when altering system services, policies, or scheduled tasks, in the name of hardening, "lightening," and so on. Consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub will be maintained with respect to known issues, if any arise. In addition you can report issues in a number of ways to Microsoft.
 
-You can use your favorite search engine with the terms ""start value" site:support.microsoft.com" to bring up known issues regarding default start values for services and so on.
+You can use your favorite search engine with the terms `"start value" site:support.microsoft.com` to bring up known issues regarding default start values for services.
 
-You may note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings in a supported and robust manner, start with the project known as “**AaronLocker**”, which can be found at this Internet location:
+You may note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings in a supported and robust manner, start with the project known as "**AaronLocker**", which can be found at [ANNOUNCING: Application whitelisting with "AaronLocker"](https://blogs.msdn.microsoft.com/aaron_margosis/2018/06/26/announcing-application-whitelisting-with-aaronlocker/)
 
-**Microsoft**: [ANNOUNCING: Application whitelisting with “AaronLocker”](https://blogs.msdn.microsoft.com/aaron_margosis/2018/06/26/announcing-application-whitelisting-with-aaronlocker/)
+### Virtual desktop optimization categories
 
-
-### Virtual Desktop Optimization Categories
 - Universal Windows Platform (UWP) app cleanup
 - Optional Features cleanup
 - Local policy settings
@@ -125,34 +125,32 @@ You may note that this document and the associated scripts on GitHub do not modi
 - Automatic Windows traces
 - Windows Defender optimization with VDI
 - Client network performance tuning by registry settings
-- Additional settings from the “Windows Restricted Traffic Limited Functionality Baseline” guidance.
+- Additional settings from the "Windows Restricted Traffic Limited Functionality Baseline" guidance.
 - Disk cleanup
 
 ### Universal Windows Platform (UWP) application cleanup
 
-One of the goals of a virtual desktop image is to be as light as possible with respect to persistent storage. One way to reduce the size of the image is to remove UWP applications (apps) that will not be used in the environment. With UWP apps, there are the main application files, also known as the payload. There is a small amount of data stored in each user’s profile for application specific settings. There is also a small amount of data in the ‘All User’s’ profile.
+One of the goals of a virtual desktop image is to be as light as possible with respect to persistent storage. One way to reduce the size of the image is to remove UWP applications (apps) that won't be used in the environment. With UWP apps, there are the main application files, also known as the payload. There is a small amount of data stored in each user’s profile for application specific settings. There is also a small amount of data in the ‘All User’s’ profile.
 
-In addition, all UWP apps are registered at either the user or machine level at some point after startup for the device, and login for the user. The UWP apps, which include the Start Menu and the Windows Shell, perform various tasks at or after installation, and again when a user logs in for the first time, and to a lesser extent at subsequent logins.  For all UWP apps, there are occasional evaluations that take place, such as:
+In addition, all UWP apps are registered at either the user or machine level at some point after startup for the device, and login for the user. The UWP apps, which include the Start Menu and the Windows Shell, perform various tasks at or after installation, and again when a user logs in for the first time, and to a lesser extent at subsequent logins. For all UWP apps, there are occasional evaluations that take place, such as:
 
-- Is the app current...does it need an update?
+- Do you need to update the app to the latest version?
 - The app, if pinned to the Start Menu, might have live tile data to download
 - Does the app have a cache of data that needs to be updated, such as maps or weather?
-- Does the app have persistent data from the user's profile that needs to be presented at login (ex. Sticky Notes)
- 
-With a default installation of Windows 10, not all UWP apps may be used by an organization. Therefore, if those apps are removed, there are less evaluations to take place…less caching, etc.  The second method here is to direct Windows to disable “consumer experiences”.  This reduces Store activity by having to check for every user what apps are installed, what apps are available, and then to start downloading some UWP apps.  The performance savings can be significant when there are hundreds or thousands of users, all start work at approximately the same time, or even starting work at rolling times across time zones.
+- Does the app have persistent data from the user's profile that needs to be presented at login (for example, Sticky Notes)
+
+With a default installation of Windows 10, not all UWP apps may be used by an organization. Therefore, if those apps are removed, there are less evaluations to take place, less caching, and so on. The second method here is to direct Windows to disable "consumer experiences." This reduces Store activity by having to check for every user what apps are installed, what apps are available, and then to start downloading some UWP apps. The performance savings can be significant when there are hundreds or thousands of users, all start work at approximately the same time, or even starting work at rolling times across time zones.
 
 Connectivity and timing are important factors when it comes to UWP app cleanup. If you deploy your base image to a device with no network connectivity, Windows 10 cannot connect to the Microsoft Store and download apps and try to install them while you are trying to uninstall them. This might be a good strategy to allow you time to customize your image, and then update what remains at a later stage of the image creation process.
 
-If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps will not be installed from the beginning and your subsequent profile creation times will be shorter.  There is a link later in this section with information on how to remove UWP apps from your installation .WIM file.
+If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps will not be installed from the beginning and your subsequent profile creation times will be shorter. There is a link later in this section with information on how to remove UWP apps from your installation .WIM file.
 
-A good strategy for the virtual desktop environment is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. There is a great paper on this topic, recently published, and available here:
-
-Microsoft: [Universal Windows Platform Apps](https://docs.citrix.com/xenapp-and-xendesktop/current-release/manage-deployment/applications-manage/universal-apps.html)
+A good strategy for the virtual desktop environment is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. To learn more, see our paper at [Universal Windows Platform Apps](https://docs.citrix.com/xenapp-and-xendesktop/current-release/manage-deployment/applications-manage/universal-apps.html).
 
 #### Delete the payload of UWP apps
 
-UWP apps that are not needed are still in the file system consuming a small amount of disk space. For apps that will never be needed, the payload of unwanted UWP apps can be removed from the base image using PowerShell commands.  If you delete UWP app payloads out of the installation .WIM file using the links provided later in this section, you can start from the beginning with a very slim list of UWP apps.
- 
+UWP apps that are not needed are still in the file system consuming a small amount of disk space. For apps that will never be needed, the payload of unwanted UWP apps can be removed from the base image using PowerShell commands. If you delete UWP app payloads out of the installation .WIM file using the links provided later in this section, you can start from the beginning with a very slim list of UWP apps.
+
 Run the following command to enumerate provisioned UWP apps from a running OS, as in this truncated example output from PowerShell:
 
 ```powershell
@@ -161,36 +159,38 @@ Get-AppxProvisionedPackage -Online
 DisplayName  : Microsoft.3DBuilder
 Version      : 13.0.10349.0  
 Architecture : neutral
-ResourceId   : \~ 
+ResourceId   : \~
 PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
 Regions      :
 
 DisplayName  : Microsoft.Appconnector
 Version      : 2015.707.550  
 Architecture : neutral
-ResourceId   : \~ 
+ResourceId   : \~
 PackageName  : Microsoft.Appconnector_2015.707.550.0_neutral_\~_8wekyb3d8bbwe
 Regions      :
 ...
 ```
-UWP apps that are provisioned to a system can be removed during OS installation as part of a task sequence, or later after the OS is installed. This may be the preferred method because it makes the overall process of creating and/or maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build you edit an existing script rather than repeat the process from scratch. Here are some links to information on this topic:
 
-- Microsoft: [Removing Windows 10 in-box apps during a task sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
-- Microsoft: [Removing Built-in apps from Windows 10 WIM-File with PowerShell - Version 1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
-- Microsoft: [Windows 10 1607: Keeping apps from coming back when deploying the feature update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
-- Microsoft: [Removing Windows 10 in-box apps during a task sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
+UWP apps that are provisioned to a system can be removed during OS installation as part of a task sequence, or later after the OS is installed. This may be the preferred method because it makes the overall process of creating or  maintaining an image modular. Once you develop the scripts, if something changes in a subsequent build you edit an existing script rather than repeat the process from scratch.
 
-Then run the Remove-AppxProvisionedPackage PowerShell command to remove UWP app payloads is as follows:
+If you want to learn more, here are some resources that can help you:
+
+- [Removing Windows 10 in-box apps during a task sequence](/archive/blogs/mniehaus/removing-windows-10-in-box-apps-during-a-task-sequence)
+- [Removing Built-in apps from Windows 10 WIM-File with PowerShell - Version 1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
+- [Windows 10 1607: Keeping apps from coming back when deploying the feature update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
+- [Removing Windows 10 in-box apps during a task sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
+
+Then run the following PowerShell command to remove UWP app payloads:
 
 ```powershell
-Remove-AppxProvisionedPackage -Online - PackageName MyAppxPackage 
+Remove-AppxProvisionedPackage -Online - PackageName MyAppxPackage
 ```
 
-As a final note on this topic, each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10 2004, then note which apps are running and consuming memory. For example, you may want to consider removing apps that start automatically, or apps that automatically display information on the Start Menu, such as Weather and News, and that may not be of use in your environment.
+As a final note on this topic, each UWP app should be evaluated for applicability in each unique environment. You will want to install a default installation of Windows 10, version 2004, then note which apps are running and consuming memory. For example, you may want to consider removing apps that start automatically, or apps that automatically display information on the Start Menu, such as Weather and News, and that may not be of use in your environment.
 
-> [!NOTE] 
-> If utilizing the scripts from GitHub, you can easily control which apps are removed before running the script. After downloading the script files, locate the file ‘AppxPackage.json’, edit that file, and remove entries for apps that you want to keep, such as Calculator, Sticky Notes, etc.
-
+> [!NOTE]
+> If utilizing the scripts from GitHub, you can easily control which apps are removed before running the script. After downloading the script files, locate the AppxPackage.json file, edit that file, and remove entries for apps that you want to keep, such as Calculator, Sticky Notes, and so on.
 
 ## Windows Optional Features cleanup
 
@@ -276,7 +276,7 @@ And, new to this version of settings is a method to disable the following two pr
 
 ![](media/privacy-settings.png)
 
-The following are the optimization settings applied to the default user profile registry hive to optimize performance.  Note that this operation is performed by first loading the default user profile registry hive ‘**NTUser.dat**’, as the ephemeral key name ‘**Temp**’, and then making the below listed modifications:
+The following are the optimization settings applied to the default user profile registry hive to optimize performance. Note that this operation is performed by first loading the default user profile registry hive ‘**NTUser.dat**’, as the ephemeral key name ‘**Temp**’, and then making the below listed modifications:
 
 ```
 Load HKLM\Temp C:\Users\Default\NTUSER.DAT
@@ -320,7 +320,7 @@ add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" 
 Unload HKLM\Temp
 ```
 
-Another series of default user settings recently added is to disable several Windows apps from starting and running in the background.  While not significant on a single device, Windows 10 starts up a number of processes for each user session on a given device (host).  The Skype app is one example, and Microsoft Edge is another.  The settings included turn off several apps from being able to run in the background.  If this functionality is desired as it is, just delete out the lines in the ‘DefaultUserSettings.txt’ that include the app names ‘**Windows.Photos**’, ‘**SkypeApp**’, ‘**YourPhone**’, and/or ‘**MicrosoftEdge**’.
+Another series of default user settings recently added is to disable several Windows apps from starting and running in the background. While not significant on a single device, Windows 10 starts up a number of processes for each user session on a given device (host). The Skype app is one example, and Microsoft Edge is another. The settings included turn off several apps from being able to run in the background. If this functionality is desired as it is, just delete out the lines in the ‘DefaultUserSettings.txt’ that include the app names ‘**Windows.Photos**’, ‘**SkypeApp**’, ‘**YourPhone**’, and/or ‘**MicrosoftEdge**’.
 
 ### Local Policy Settings
 
@@ -350,10 +350,10 @@ Background Intelligent Transfer Service (BITS)|Do not allow the computer to act 
 |*Fonts|Enabled Font Providers||**Disabled** (With this setting disabled, Windows does not connect to an online font provider and only enumerates locally installed fonts)|
 |Hotspot Authentication|Enable hotspot Authentication||**Disabled** (This policy setting defines whether WLAN hotspots are probed for Wireless Internet Service Provider roaming (WISPr) protocol support.With this policy setting disabled, WLAN hotspots are not probed for WISPr protocol support, and users can only authenticate with WLAN hotspots using a web browser.)|
 |Microsoft Peer-to-Peer Networking Services|Turn off Microsoft Peer-to-Peer Networking Services||**Enabled** (This setting turns off Microsoft Peer-to-Peer Networking Services in its entirety and will cause all dependent applications to stop working.If you enable this setting, peer-to-peer protocols will be turned off.)|
-|Network Connectivity Status Indicator<p>(**NOTE**: There are other settings in this section that can be used in isolated networks)|Specify passive polling|Disable passive poling (**checkbox**)|**Enabled** (This Policy setting enables you to specify passive polling behavior. NCSI polls various measurements throughout the network stack on a frequent interval to determine if network connectivity has been lost.  Use the options to control the passive polling behavior.)<P>**NOTE**: Disabling NCIS passive polling can improve CPU workload on servers or other machines whose network connectivity is static.|
+|Network Connectivity Status Indicator<p>(**NOTE**: There are other settings in this section that can be used in isolated networks)|Specify passive polling|Disable passive poling (**checkbox**)|**Enabled** (This Policy setting enables you to specify passive polling behavior. NCSI polls various measurements throughout the network stack on a frequent interval to determine if network connectivity has been lost. Use the options to control the passive polling behavior.)<P>**NOTE**: Disabling NCIS passive polling can improve CPU workload on servers or other machines whose network connectivity is static.|
 |Offline Files|Allow or Disallow use of the Offline Files feature||**Disabled** (This policy setting determines whether the Offline Files feature is enabled. Offline Files saves a copy of network files on the user's computer for use when the computer is not connected to the network.With this policy setting disabled, Offline Files feature is disabled and users cannot enable it.)|
 |*TCPIP Settings\ IPv6 Transition Technologies|	Set Teredo State|Disabled State|**Enabled** (With this setting enabled, and set to "Disabled State", no Teredo interfaces are present on the host)|
-*WLAN Service\ WLAN Settings|Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services||**Disabled** (This policy setting determines whether users can enable the following WLAN settings: "Connect to suggested open hotspots," "Connect to networks shared by my contacts," and "Enable paid services". With this policy setting disabled, "Connect to suggested open hotspots," "Connect to networks shared by my contacts," and "Enable paid services" will be turned off and users on this device will be prevented from enabling them.)|
+*WLAN Service\ WLAN Settings|Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services||**Disabled** (This policy setting determines whether users can enable the following WLAN settings: "Connect to suggested open hotspots," "Connect to networks shared by my contacts," and "Enable paid services." With this policy setting disabled, "Connect to suggested open hotspots," "Connect to networks shared by my contacts," and "Enable paid services" will be turned off and users on this device will be prevented from enabling them.)|
 |WWAN Service\ Cellular Data Access|Let Windows apps access cellular data|Default for all apps: **Force Deny**|**Enabled** (If you choose the "Force Deny" option, Windows apps are not allowed to access cellular data and users cannot change it.)|
 |Local Computer Policy \ Computer Configuration \ Administrative Templates \ Start Menu and Taskbar|||
 |*Notifications|Turn off notifications network usage||**Enabled** (With this policy setting enabled, applications and system features will not be able receive notifications from the network from WNS or via notification polling APIs)|
@@ -362,7 +362,7 @@ Background Intelligent Transfer Service (BITS)|Do not allow the computer to act 
 |Device Installation|Prevent creation of a system restore point during device activity that would normally prompt creation of a restore point||**Enabled** (With this policy setting enabled, Windows does not create a system restore point when one would normally be created.)|
 |Device Installation|Prevent device metadata retrieval from the Internet||**Enabled** (This policy setting allows you to prevent Windows from retrieving device metadata from the Internet. With this policy setting enabled, Windows does not retrieve device metadata for installed devices from the Internet. This policy setting overrides the setting in the Device Installation Settings dialog box (Control Panel > System and Security > System > Advanced System Settings > Hardware tab).)|
 |Device Installation|Turn off "Found New Hardware" balloons during device installation||**Enabled** (This policy setting allows you to turn off "Found New Hardware" balloons during device installation.With this policy setting enabled, "Found New Hardware" balloons do not appear while a device is being installed.)|
-|Filesystem\NTFS|Short name creation options|Short name creation options: Disabled on all volumes|**Enabled** (These settings provide control over whether or not short names are generated during file creation.  Some applications require short names for compatibility, but short names have a negative performance impact on the system. With short names disabled on all volumes then they will never be generated.)|
+|Filesystem\NTFS|Short name creation options|Short name creation options: Disabled on all volumes|**Enabled** (These settings provide control over whether or not short names are generated during file creation. Some applications require short names for compatibility, but short names have a negative performance impact on the system. With short names disabled on all volumes then they will never be generated.)|
 |*Group Policy|Continue experiences on this device||**Disabled** (This policy setting determines whether the Windows device is allowed to participate in cross-device experiences (continue experiences). Disabling this policy prevents this device from being discoverable by other devices, and thus cannot participate in cross-device experiences.)|
 |Internet Communication Management\ Internet Communication settings|Turn off Event Viewer "Events.asp" links||**Enabled** (This policy setting specifies whether "Events.asp" hyperlinks are available for events within the Event Viewer application.)|
 |Internet Communication Management\ Internet Communication settings|Turn off handwriting personalization data sharing||**Enabled** (Turns off data sharing from the handwriting recognition personalization tool.)|
@@ -382,7 +382,7 @@ Internet Communication Management\ Internet Communication settings|Turn off the 
 |Logon|Do not enumerate connected users on domain-joined computers||**Enabled** (With this setting enabled, the Logon UI will not enumerate any connected users on domain-joined computers.)|
 |Logon|Enumerate local users on domain-joined computers||**Disabled** (With this setting disabled, the Logon UI will not enumerate local users on domain-joined computers.)|
 |Logon|Show clear logon background||**Enabled** (This policy setting disables the acrylic blur effect on logon background image. With this setting enabled, the logon background image shows without blur.)|
-|Logon|Show first sign-in animation||**Disabled** (This policy setting allows you to control whether users see the first sign-in animation when signing in to the computer for the first time.  This applies to both the first user of the computer who completes the initial setup and users who are added to the computer later.  It also controls if Microsoft account users will be offered the opt-in prompt for services during their first sign-in.<p>With this setting disabled, users will not see the first logon animation and Microsoft account users will not see the opt-in prompt for services.)|
+|Logon|Show first sign-in animation||**Disabled** (This policy setting allows you to control whether users see the first sign-in animation when signing in to the computer for the first time. This applies to both the first user of the computer who completes the initial setup and users who are added to the computer later. It also controls if Microsoft account users will be offered the opt-in prompt for services during their first sign-in.<p>With this setting disabled, users will not see the first logon animation and Microsoft account users will not see the opt-in prompt for services.)|
 |Logon|Turn off app notifications on the lock screen||**Enabled** (This policy setting allows you to prevent app notifications from appearing on the lock screen. With this setting enabled, no app notifications are displayed on the lock screen.)|
 |Power Management|Select an active power plan|Active Power Plan: High Performance|**Enabled** (If you enable this policy setting, specify a power plan from the Active Power Plan list.) <p>**NOTE**: With the ‘Power’ service disabled, the ‘Powercfg.cpl’ UI is not able to display these power options, and instead returns an RPC error.|
 |Power Management \ Video and Display Settings|Turn on desktop background slideshow (plugged-in)||**Disabled** (This policy setting allows you to specify if Windows should enable the desktop background slideshow.) With this setting disabled, the desktop background slideshow is disabled. NOTE: This setting likely has no effect to a VM|
@@ -392,7 +392,7 @@ Internet Communication Management\ Internet Communication settings|Turn off the 
 |Troubleshooting and Diagnostics\ Scheduled Maintenance|Configure Scheduled Maintenance Behavior||**Disabled** (Determines whether scheduled diagnostics will run to proactively detect and resolve system problems. With this policy setting disabled, Windows will not be able to detect, troubleshoot or resolve problems on a scheduled basis.)|
 |Troubleshooting and Diagnostics\ Scripted Diagnostics|Troubleshooting: Allow users to access and run Troubleshooting wizards||**Disabled** (With this setting disabled, users cannot access or run the troubleshooting tools from the Control Panel.)|
 |Troubleshooting and Diagnostics\ Scripted Diagnostics|Troubleshooting: Allow users to access online troubleshooting content on Microsoft servers from the Troubleshooting Control Panel (via the Windows Online Troubleshooting Service – WOTS)||**Disabled** (With this setting disabled, users can only access and search troubleshooting content that is available locally on their computers, even if they are connected to the Internet. They are prevented from connecting to the Microsoft servers that host the Windows Online Troubleshooting Service.|
-|Troubleshooting and Diagnostics\ Windows Boot Performance Diagnostics|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows Boot Performance Diagnostics. If you disable this policy setting, Windows will not be able to detect, troubleshoot or resolve any Windows Boot Performance problems that are handled by the DPS.)<p>**NOTE**: This setting can be very useful during design, test, development, or maintenance phases.  This setting could be enabled on an isolated VM or session host, measurements taken, and results noted in event logs under ‘Microsoft-Windows-Diagnostics-Performance/Operational’ Source: Diagnostics-Performance, Task Category ‘Boot Performance Monitoring’.<p>**ALSO**: With the DPS service disabled, this setting has no effect, as Windows will not be logging performance data.|
+|Troubleshooting and Diagnostics\ Windows Boot Performance Diagnostics|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows Boot Performance Diagnostics. If you disable this policy setting, Windows will not be able to detect, troubleshoot or resolve any Windows Boot Performance problems that are handled by the DPS.)<p>**NOTE**: This setting can be very useful during design, test, development, or maintenance phases. This setting could be enabled on an isolated VM or session host, measurements taken, and results noted in event logs under ‘Microsoft-Windows-Diagnostics-Performance/Operational’ Source: Diagnostics-Performance, Task Category ‘Boot Performance Monitoring’.<p>**ALSO**: With the DPS service disabled, this setting has no effect, as Windows will not be logging performance data.|
 |Troubleshooting and Diagnostics\ Windows Memory Leak Diagnostics|Configure Scenario Execution Level||**Disabled** (This policy setting determines whether Diagnostic Policy Service (DPS) diagnoses memory leak problems. With this setting disabled, the DPS is not able to diagnose memory leak problems.) <p>**NOTE**: Many diagnostics modes can be enabled, and tools used such as WPT, though these are usually done in dev/test/maintenance scenarios and not enabled and used on production VMs or sessions|
 |Troubleshooting and Diagnostics\ Windows Performance PerfTrack|Enable/Disable PerfTrack||**Disabled** (This policy setting specifies whether to enable or disable tracking of responsiveness events. With this setting disabled, responsiveness events are not processed.)|
 |Troubleshooting and Diagnostics\ Windows Resource Exhaustion Detection and Resolution|Configure Scenario Execution Level||**Disabled** (Determines the execution level for Windows Resource Exhaustion Detection and Resolution. With this setting disabled, Windows will not be able to detect, troubleshoot or resolve any Windows Resource Exhaustion problems that are handled by the DPS.)|
@@ -453,9 +453,9 @@ Internet Communication Management\ Internet Communication settings|Turn off the 
 |*Microsoft Edge|Allow extended telemetry for the Books tab||**Disabled** (With this setting disabled, Microsoft Edge only sends basic telemetry data, depending on your device configuration.)|
 |Microsoft Edge|Allow Microsoft Edge to pre-launch at Windows startup, when the system is idle, and each time Microsoft Edge is closed|Configure pre-launch: Prevent pre-launching|**Enabled** (With this setting enabled and configured to prevent pre-launch, Microsoft Edge won’t pre-launch during Windows sign in, when the system is idle, or each time Microsoft Edge is closed.)|
 |Microsoft Edge|Allow Microsoft Edge to start and load the Start and New Tab page at Windows startup and each time Microsoft Edge is closed|Configure tab preloading: Prevent tab-preloading|**Enabled** (This policy setting lets you decide whether Microsoft Edge can load the Start and New Tab page during Windows sign in and each time Microsoft Edge is closed. By default this setting is to allow preloading. With preloading disabled, Microsoft Edge won’t load the Start or New Tab page during Windows sign in and each time Microsoft Edge is closed.)|
-|Microsoft Edge|Allow web content on New Tab page||**Disabled** (With this setting disabled, Edge opens a new tab with a blank page.  If this setting is configured, users cannot change the setting.)|
+|Microsoft Edge|Allow web content on New Tab page||**Disabled** (With this setting disabled, Edge opens a new tab with a blank page. If this setting is configured, users cannot change the setting.)|
 |*Microsoft Edge|Prevent the First Run webpage from opening on Microsoft Edge||**Enabled** (users won’t see the First Run page when opening Microsoft Edge for the first time)|
-|OneDrive|Prevent OneDrive from generating network traffic until the user signs in to OneDrive||**Enabled** (Enable this setting to prevent the OneDrive sync client (OneDrive.exe) from generating network traffic (checking for updates, etc.) until the user signs in to OneDrive or starts syncing files to the local computer)|
+|OneDrive|Prevent OneDrive from generating network traffic until the user signs in to OneDrive||**Enabled** (Enable this setting to prevent the OneDrive sync client (OneDrive.exe) from generating network traffic (checking for updates, and so on.) until the user signs in to OneDrive or starts syncing files to the local computer)|
 |Online Assistance|Turn off Active Help||**Enabled** (With this policy setting enabled, active content links are not rendered. The text is displayed, but there are no clickable links for these elements.)|
 |OOBE|Don’t launch privacy settings experience on user logon||**Enabled** (When logging into a new user account for the first time or after an upgrade in some scenarios, that user may be presented with a screen or series of screens that prompts the user to choose privacy settings for their account. Enable this policy to prevent this experience from launching.)|
 |RSS Feeds|Prevent automatic discovery of feeds and Web Slices||**Enabled** (This policy setting prevents users from having Internet Explorer automatically discover whether a feed or Web Slice is available for an associated webpage.)|
@@ -508,7 +508,7 @@ Internet Communication Management\ Internet Communication settings|Turn off the 
 |File Explorer|Turn off common control and window animations||**Enabled** (Disabling animations can improve usability for users with some visual disabilities as well as improving performance and battery life in some scenarios.)|
 |File Explorer|Turn off display of recent search entries in the File Explorer search box||**Enabled** (Disables suggesting recent queries for the Search Box and prevents entries into the Search Box from being stored in the registry for future references.)|
 |File Explorer|Turn off the caching of thumbnails in hidden thumbs.db files||**Enabled** (With this policy setting enabled, File Explorer does not create, read from, or write to thumbs.db files.)|
-\* Comes from the “[Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887).”
+\* Comes from the "[Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887)."
 
 ### System services
 
@@ -529,32 +529,32 @@ The following table contains some services that may be considered to disable in 
 | Windows Service | Service Name | Item | Comment|
 | --------------- | ------------ | ---- | ------ |
 |Cellular Time|autotimesvc|This service sets time based on NITZ messages from a Mobile Network|Virtual desktop environments may not have such devices available. <p>[https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support)|
-|GameDVR and Broadcast user service|BcastDVRUserService|This (per-user) service is used for Game Recordings and Live Broadcasts|NOTE: This is a “per-user service”, and as such, the template service must be disabled. This user service is used for Game Recordings and Live Broadcasts.<p>[https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support)|
+|GameDVR and Broadcast user service|BcastDVRUserService|This (per-user) service is used for Game Recordings and Live Broadcasts|NOTE: This is a "per-user service", and as such, the template service must be disabled. This user service is used for Game Recordings and Live Broadcasts.<p>[https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support](https://docs.microsoft.com/windows-hardware/drivers/network/mb-nitz-support)|
 |CaptureService|CaptureService|Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API.|OneCore capture service: enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API<p> [https://docs.microsoft.com/uwp/api/windows.graphics.capture?view=winrt-19041](https://docs.microsoft.com/uwp/api/windows.graphics.capture?view=winrt-19041)|
 |Connected Devices Platform Service|CDPSvc|This service is used for Connected Devices Platform scenarios|Connected Devices Platform Service <p>[https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736](https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736)|
-|CDP User Service|CDPUserSvc|This user service is used for Connected Devices Platform scenarios|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled (CDPUserSvc).||Connected Devices Platform User Service.[https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4](https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4)|
-|Optimize drives|defragsvc|Helps the computer run more efficiently by optimizing files on storage drives.|Virtual desktop solutions do not normally benefit from disk optimization. The “drives” are often not traditional drives and often just a temporary storage allocation.|
+|CDP User Service|CDPUserSvc|This user service is used for Connected Devices Platform scenarios|**NOTE**: This is a "per-user service", and as such, the template service must be disabled (CDPUserSvc).||Connected Devices Platform User Service.[https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4](https://docs.microsoft.com/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4)|
+|Optimize drives|defragsvc|Helps the computer run more efficiently by optimizing files on storage drives.|Virtual desktop solutions do not normally benefit from disk optimization. The "drives" are often not traditional drives and often just a temporary storage allocation.|
 |Diagnostic Execution Service|DiagSvc|Executes diagnostic actions for troubleshooting support|Disabling this service disables the ability to run Windows diagnostics Diagnostic Execution Service.|
 |Connected User Experiences and Telemetry|DiagTrack|This service enables features that support in-application and connected user experiences. Additionally, this service manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.|Consider disabling if on disconnected network [https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)|
-|Diagnostic Policy Service|DPS|The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components.  If this service is stopped, diagnostics will no longer function.|Disabling this service disables the ability to run Windows diagnostics [https://docs.microsoft.com/uwp/api/Windows.System.Diagnostics?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.System.Diagnostics?view=winrt-19041)|
+|Diagnostic Policy Service|DPS|The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function.|Disabling this service disables the ability to run Windows diagnostics [https://docs.microsoft.com/uwp/api/Windows.System.Diagnostics?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.System.Diagnostics?view=winrt-19041)|
 |Device Setup Manager|DsmSvc|Enables the detection, download and installation of device-related software. |If this service is disabled, devices may be configured with outdated software, and may not work correctly. <p>**NOTE**: Virtual desktop environments very closely control what software is installed and maintain that consistency across the environment.|
 |Data Usage service|DusmSvc|Network data usage, data limit, restrict background data, metered networks.|[https://docs.microsoft.com/uwp/schemas/mobilebroadbandschema/dusm/schema-root](https://docs.microsoft.com/uwp/schemas/mobilebroadbandschema/dusm/schema-root)|
 |Windows Mobile Hotspot Service|icssvc|Provides the ability to share a cellular data connection with another device.|[https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041)|
-|Microsoft Store Install Service|InstallService|Provides infrastructure support for the Microsoft Store.  |This service is started on demand and if disabled then installations will not function properly.<p>**NOTE**: Consider disabling this service on non-persistent virtual desktop, leave as-is for persistent virtual desktop solutions.|
+|Microsoft Store Install Service|InstallService|Provides infrastructure support for the Microsoft Store. |This service is started on demand and if disabled then installations will not function properly.<p>**NOTE**: Consider disabling this service on non-persistent virtual desktop, leave as-is for persistent virtual desktop solutions.|
 |Geolocation Service|Lfsvc|Monitors the current location of the system and manages geofences (a geographical location with associated events). |If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences. [https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation?view=winrt-19041)|
 |Downloaded Maps Manager|MapsBroker|Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps.|Disabling this service will prevent apps from accessing maps. [https://docs.microsoft.com/uwp/api/Windows.Services.Maps?view=winrt-19041](https://docs.microsoft.com/uwp/api/Windows.Services.Maps?view=winrt-19041)|
-|MessagingService|MessagingService|Service supporting text messaging and related functionality.|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
-|Sync Host|OneSyncSvc|This service synchronizes mail, contacts, calendar and various other user data. |(UWP) Mail and other applications dependent on this functionality will not work properly when this service is not running. <p>**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
-|Contact Data|PimIndexMaintenanceSvc|Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.|**NOTE**: This is a “per-user service”, and as such, the template service must be disabled.|
+|MessagingService|MessagingService|Service supporting text messaging and related functionality.|**NOTE**: This is a "per-user service", and as such, the template service must be disabled.|
+|Sync Host|OneSyncSvc|This service synchronizes mail, contacts, calendar and various other user data. |(UWP) Mail and other applications dependent on this functionality will not work properly when this service is not running. <p>**NOTE**: This is a "per-user service", and as such, the template service must be disabled.|
+|Contact Data|PimIndexMaintenanceSvc|Indexes contact data for fast contact searching. If you stop or disable this service, contacts might be missing from your search results.|**NOTE**: This is a "per-user service", and as such, the template service must be disabled.|
 |Power|Power|Manages power policy and power policy notification delivery.|Virtual machines have virtually no influence on power properties. If this service is disabled, power management and reporting are not available. [https://docs.microsoft.com/windows-hardware/drivers/powermeter/user-mode-power-service](https://docs.microsoft.com/windows-hardware/drivers/powermeter/user-mode-power-service)|
 |Payments and NFC/SE Manager|SEMgrSvc|Manages payments and Near Field Communication (NFC) based secure elements.|May not need this service for payments, in the enterprise environment.|
 |Microsoft Windows SMS Router Service|SmsRouter|Routes messages based on rules to appropriate clients.|May not need this service, if other tools are used for messaging, such as Teams, Skype, or other. For more info on this service, see:[https://docs.microsoft.com/dotnet/framework/wcf/feature-details/routing-service](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/routing-service)|
-|Superfetch (SysMain)|SysMain|Maintains and improves system performance over time.|Superfetch generally does not improve performance in virtual desktop environments for various reasons.  The underlying storage is often virtualized and possibly striped across multiple drives.  In some virtual desktop solutions the accumulated user state is discarded when the user logs off.  The SysMain feature should be evaluated in each environment.|
+|Superfetch (SysMain)|SysMain|Maintains and improves system performance over time.|Superfetch generally does not improve performance in virtual desktop environments for various reasons. The underlying storage is often virtualized and possibly striped across multiple drives. In some virtual desktop solutions the accumulated user state is discarded when the user logs off. The SysMain feature should be evaluated in each environment.|
 |Touch Keyboard and Handwriting Panel Service|TabletInputService|Enables Touch Keyboard and Handwriting Panel pen and ink functionality|Not needed unless there is an active touchscreen in use, or a handwriting input device.|
 |Update Orchestrator Service|UsoSvc|Manages Windows Updates. If stopped, your devices will not be able to download and install the latest updates.|Virtual desktop devices are often carefully managed with respect to updates. Servicing is usually performed during maintenance windows. In some cases, an update client may be utilized, such as SCCM. The exception would be security signature updates, that would be applied at any time, to any virtual desktop device, so as to maintain up-to-date signatures. If you disable this service, test to ensure that security signatures are still able to be installed.|
 |Volume Shadow Copy|VSS|Manages and implements Volume Shadow Copies used for backup and other purposes. |If this service is stopped, shadow copies will be unavailable for backup and the backup may fail. If this service is disabled, any services that explicitly depend on it will fail to start. [https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)|
-|Diagnostic System Host|WdiSystemHost|The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context.  If this service is stopped, any diagnostics that depend on it will no longer function.|Disabling this service disables the ability to run Windows diagnostics
-|Windows Error Reporting|WerSvc|Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. If this service is stopped, error reporting might not work correctly, and results of diagnostic services and repairs might not be displayed.|With virtual desktop environments, diagnostics are often performed in an “offline” scenario, and not in mainstream production. In addition, some customers disable WER anyway.  WER incurs a tiny amount of resources for many different things, including failure to install a device, or failure to install an update. [https://docs.microsoft.com/windows/win32/wer/windows-error-reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)|
+|Diagnostic System Host|WdiSystemHost|The Diagnostic System Host is used by the Diagnostic Policy Service to host diagnostics that need to run in a Local System context. If this service is stopped, any diagnostics that depend on it will no longer function.|Disabling this service disables the ability to run Windows diagnostics
+|Windows Error Reporting|WerSvc|Allows errors to be reported when programs stop working or responding and allows existing solutions to be delivered. Also allows logs to be generated for diagnostic and repair services. If this service is stopped, error reporting might not work correctly, and results of diagnostic services and repairs might not be displayed.|With virtual desktop environments, diagnostics are often performed in an "offline" scenario, and not in mainstream production. In addition, some customers disable WER anyway. WER incurs a tiny amount of resources for many different things, including failure to install a device, or failure to install an update. [https://docs.microsoft.com/windows/win32/wer/windows-error-reporting](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)|
 |Windows Search|WSearch|Provides content indexing, property caching, and search results for files, e-mail, and other content.|Disabling this service prevents indexing of e-mail and other things. Test before disabling this service. [https://docs.microsoft.com/windows/win32/search/-search-3x-wds-overview#windows-search-service](https://docs.microsoft.com/windows/win32/search/-search-3x-wds-overview#windows-search-service)|
 |Xbox Live Auth Manager|XblAuthManager|Provides authentication and authorization services for interacting with Xbox Live. |If this service is stopped, some applications may not operate correctly.
 |Xbox Live Game Save|XblGameSave|This service syncs save data for Xbox Live save enabled games. |If this service is stopped, game save data will not upload to or download from Xbox Live.
@@ -570,7 +570,7 @@ If you intend to change a service start value, the preferred method is to open a
 **Microsoft**: [SC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11))
 
 ### Scheduled tasks
-Like other items in Windows, ensure an item is not needed before disabling a scheduled task.  Some tasks in virtual desktop environments, such as “**StartComponentCleanup**”, may not be desirable to run in production, but may be good to run during a maintenance window on the “gold image” (reference image).
+Like other items in Windows, ensure an item is not needed before disabling a scheduled task. Some tasks in virtual desktop environments, such as "**StartComponentCleanup**", may not be desirable to run in production, but may be good to run during a maintenance window on the "gold image" (reference image).
 
 The following list of tasks are those that perform optimizations or data collections on computers that maintain their state across reboots. When a virtual desktop device reboots and discards all changes since last boot, optimizations intended for physical computers are not helpful.
 
@@ -621,13 +621,13 @@ At some point during the image optimization process available Windows updates sh
 
 ![Additional updates](media/rds-vdi-recommendations-1909/servicing.png)
 
-This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image.  That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
+This would be a good setting in case you are going to install Microsoft applications such as Microsoft Office to the base image. That way Office is up to date when the image is put in service. There are also .NET updates and certain third-party components such as Adobe that have updates available through Windows Update.
 
-One very important consideration for non-persistent virtual desktop devices are security updates, including security software definition files.  These updates may be released once or even more than once per day.
+One very important consideration for non-persistent virtual desktop devices are security updates, including security software definition files. These updates may be released once or even more than once per day.
 
-For Windows Defender it may be best to allow the updates to occur, even on non-persistent virtual desktop environments.  The updates are going to apply nearly every logon session, but the updates are small and should not be a problem.  Plus, the device won’t be behind on updates because only the latest available will apply.  The same may be true for third-party definition files.
+For Windows Defender it may be best to allow the updates to occur, even on non-persistent virtual desktop environments. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Plus, the device won’t be behind on updates because only the latest available will apply. The same may be true for third-party definition files.
 
-**Note** that Store apps (UWP apps) update through the Windows Store.  Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
+**Note** that Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
 
 #### Windows system startup event traces (AutoLoggers)
 Windows is configured, by default, to collect and save diagnostic data. The purpose is to enable diagnostics, or to record data if further troubleshooting is necessary. Automatic system traces can be found at the location depicted in the following illustration:
@@ -668,7 +668,7 @@ Microsoft has recently published documentation regarding Windows Defender in a v
 The above article contains procedures to service the ‘gold’ virtual desktop image, and how to maintain the virtual desktop clients as they are running. To reduce network bandwidth when virtual desktop devices need to update their Windows Defender signatures, stagger reboots, and schedule reboots during off hours where possible. The Windows Defender signature updates can be contained internally on file shares, and where practical, have those files shares on the same or close networking segments as the virtual desktop devices.
 
 #### Client network performance tuning by registry settings
-There are some registry settings that can increase network performance. This is especially important in environments where the virtual desktop device or physical computer has a workload that is primarily network based.  The settings in this section are recommended to tune performance for the networking workload profile, by setting up additional buffering and caching of things like directory entries and so on.
+There are some registry settings that can increase network performance. This is especially important in environments where the virtual desktop device or physical computer has a workload that is primarily network based. The settings in this section are recommended to tune performance for the networking workload profile, by setting up additional buffering and caching of things like directory entries and so on.
 
 > [!NOTE]
 > Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
@@ -717,19 +717,19 @@ The [Windows Restricted Traffic Limited Functionality Baseline](https://docs.mic
 
 #### Disk cleanup (including using the Disk Cleanup Wizard)
 
-Disk cleanup can be especially helpful with gold/master image virtual desktop implementations. After the gold/master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup.  The optimization scripts on Github.com have PowerShell code to perform common disk cleanup tasks
+Disk cleanup can be especially helpful with gold/master image virtual desktop implementations. After the gold/master image is prepared, updated, and configured, one of the last tasks to perform is disk cleanup. The optimization scripts on Github.com have PowerShell code to perform common disk cleanup tasks
 
 > [!NOTE]
 > Disk cleanup settings and are in the Settings category ‘System’ called ‘Storage’. The technology ‘Storage Sense’ by default runs when a low disk free space threshold is reached.<p>
-> Microsoft has provided guidance on using ‘Storage Sense’ with Azure custom VHD images.  You can locate that guidance here:<p>
+> Microsoft has provided guidance on using ‘Storage Sense’ with Azure custom VHD images. You can locate that guidance here:<p>
 > [Prepare and customize a master VHD image](https://docs.microsoft.com/azure/virtual-desktop/set-up-customize-master-image)<p>
-> “For Windows Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**”
+> "For Windows Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**"
 
-Here are suggestions for various disk cleanup tasks.  These should all be tested before implementing:
+Here are suggestions for various disk cleanup tasks. These should all be tested before implementing:
 
-1. Storage Sense may be utilized manually or automatically.  For more information on Storage Sense, see this article:
+1. Storage Sense may be utilized manually or automatically. For more information on Storage Sense, see this article:
 Use OneDrive and Storage Sense in Windows 10 to manage disk space
-2. Manually cleanup temporary files and logs.  From an elevated command prompt:
+2. Manually cleanup temporary files and logs. From an elevated command prompt:
    1. Del C:\*.tmp /s
    2. C:\*.etl /s
    3. C:\*.evtx /s
@@ -783,7 +783,7 @@ If you would like to enable the use of Windows Update, as in the case of persist
   * Task Scheduler Library \ Microsoft \ Windows \ InstallService\ ScanForUpdates
   * Task Scheduler Library \ Microsoft \ Windows \ InstallService\ ScanForUpdatesAsUser
 * To make all these settings take effect, **restart the device**
-* If you do not want this device offered Feature Updates, go to 'Settings' \ 'Windows Update' \ 'Advanced options' \ 'Choose when updates are installed' and manually set the option 'A feature update includes new capabilities and improvements. It can be deferred for this many days' to some non-zero value, such as 180, 365, etc.
+* If you do not want this device offered Feature Updates, go to 'Settings' \ 'Windows Update' \ 'Advanced options' \ 'Choose when updates are installed' and manually set the option 'A feature update includes new capabilities and improvements. It can be deferred for this many days' to some non-zero value, such as 180, 365, and so on.
 
 ## Reference
 Citrix: [What is VDI (Virtual Desktop Infrastructure)](https://www.citrix.com/glossary/vdi.html)?
