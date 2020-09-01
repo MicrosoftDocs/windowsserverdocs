@@ -422,6 +422,30 @@ To configure this by using Group Policy, follow these steps:
 
 6. Restart the targeted systems to finish disabling SMB v1.
 
+### Auditing SMBv1 usage
+
+To determine which clients are attempting to connect to an SMB server with SMBv1, you can enable auditing on Windows Server 2016, Windows 10, and Windows Server 2019. You can also audit on Windows 7 and Windows Server 2008 R2 if they installed the May 2018 monthly update and on Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 if they installed the July 2017 monthly update. 
+
+- Enable:
+  
+  ```PowerShell
+  Set-SmbServerConfiguration –AuditSmb1Access $true
+  ```
+
+- Disable: 
+  
+  ```PowerShell
+  Set-SmbServerConfiguration –AuditSmb1Access $false
+  ```
+  
+- Detect: 
+  
+  ```PowerShell
+  Get-SmbServerConfiguration | Select AuditSmb1Access
+  ```
+
+When SMBv1 auditing is enabled, event 3000 appears in the "Microsoft-Windows-SMBServer\Audit" event log, identifying each client that attempts to connect with SMBv1.
+
 ### Summary
 
 If all the settings are in the same Group Policy Object (GPO), Group Policy Management displays the following settings.
