@@ -353,9 +353,9 @@ Copy files and add to GAC.
 
 5. Add your .dll file(s) to the GAC on each AD FS federation server in the farm:
 
-    Example: using command line tool GACutil.exe to add a dll to the GAC: `C:>.gacutil.exe /if .<yourdllname>.dll`
+    Example: using command line tool GACutil.exe to add a dll to the GAC: `C:>gacutil.exe /if <yourdllname>.dll`
 
-    To view the resulting entry in the GAC:`C:>.gacutil.exe /l <yourassemblyname>`
+    To view the resulting entry in the GAC:`C:>gacutil.exe /l <yourassemblyname>`
 
 6.
 
@@ -473,58 +473,58 @@ By completing the procedures above, you created a basic adapter implementation a
 
 Recall your TryEndAuthentication implementation:
 
-```
+```csharp
 public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
 {
-//return new instance of IAdapterPresentationForm derived class
-outgoingClaims = new Claim[0];
-return new MyPresentationForm();
+    //return new instance of IAdapterPresentationForm derived class
+    outgoingClaims = new Claim[0];
+    return new MyPresentationForm();
 }
 ```
 
 Let's update it so it doesn't always return MyPresentationForm(). For this you can create one simple utility method within your class:
 
-```
+```csharp
 static bool ValidateProofData(IProofData proofData, IAuthenticationContext authContext)
 {
-if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
-{
-throw new ExternalAuthenticationException("Error - no answer found", authContext);
-}
+    if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
+    {
+        throw new ExternalAuthenticationException("Error - no answer found", authContext);
+    }
 
-if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
-{
-return true;
-}
-else
-{
-return false;
-}
+    if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 ```
 
 Then, update TryEndAuthentication as below:
 
-```
+```csharp
 public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
 {
-outgoingClaims = new Claim[0];
-if (ValidateProofData(proofData, authContext))
-{
-//authn complete - return authn method
-outgoingClaims = new[]
-{
-// Return the required authentication method claim, indicating the particulate authentication method used.
-new Claim( "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",
-"http://example.com/myauthenticationmethod1" )
-};
-return null;
-}
-else
-{
-//authentication not complete - return new instance of IAdapterPresentationForm derived class
-return new MyPresentationForm();
-}
+    outgoingClaims = new Claim[0];
+    if (ValidateProofData(proofData, authContext))
+    {
+        //authn complete - return authn method
+        outgoingClaims = new[]
+        {
+            // Return the required authentication method claim, indicating the particulate authentication method used.
+            new Claim("http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",
+                      "http://example.com/myauthenticationmethod1")
+        };
+        return null;
+    }
+    else
+    {
+        //authentication not complete - return new instance of IAdapterPresentationForm derived class
+        return new MyPresentationForm();
+    }
 }
 ```
 
@@ -554,11 +554,11 @@ Note that the AD FS service must be restarted after this operation.
 
 1. First, use the following command to find the fully qualified strong name of the entry:`C:>.gacutil.exe /l <yourAdapterAssemblyName>`
 
-    Example:`C:>.gacutil.exe /l mfaadapter`
+    Example:`C:>gacutil.exe /l mfaadapter`
 
 2. Then, use the following command to remove it from the GAC:`.gacutil /u “<output from the above command>”`
 
-    Example:`C:>.gacutil /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
+    Example:`C:>gacutil /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
 
 ### Add the updated assembly to GAC
 
@@ -566,7 +566,7 @@ Make sure you paste the updated .dll locally first. `C:>.gacutil.exe /if .MFAAda
 
 ### View assembly in the GAC (cmd line)
 
-`C:> .gacutil.exe /l mfaadapter`
+`C:>gacutil.exe /l mfaadapter`
 
 ### Register your provider in AD FS
 
