@@ -49,8 +49,8 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 8. In the new file MyAdapter.cs, replace the existing code with the following:
 
-    ```
-    using System;
+    ```csharp
+        using System;
         using System.Collections.Generic;
         using System.Linq;
         using System.Text;
@@ -63,56 +63,54 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
         using Claim = System.Security.Claims.Claim;
 
         namespace MFAadapter
-         {
-         class MyAdapter : IAuthenticationAdapter
-         {
-         public IAuthenticationAdapterMetadata Metadata
-         {
-         //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
-         }
+        {
+            class MyAdapter : IAuthenticationAdapter
+            {
+                public IAuthenticationAdapterMetadata Metadata
+                {
+                    //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+                }
 
-         public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
-         {
-         //return new instance of IAdapterPresentationForm derived class
+                public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+                {
+                    //return new instance of IAdapterPresentationForm derived class
+                }
 
-         }
+                public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+                {
+                    return true; //its all available for now
+                }
 
-         public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
-         {
-         return true; //its all available for now
+                public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+                {
+                    //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+                }
 
-         }
+                public void OnAuthenticationPipelineUnload()
+                {
 
-         public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
-         {
-         //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+                }
 
-         }
+                public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+                {
+                    //return new instance of IAdapterPresentationForm derived class
+                }
 
-         public void OnAuthenticationPipelineUnload()
-         {
-
-         }
-
-         public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
-         {
-         //return new instance of IAdapterPresentationForm derived class
-
-         }
-
-         public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-         {
-         //return new instance of IAdapterPresentationForm derived class
-
-         }
-
-         }
-         }
+                public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+                {
+                //return new instance of IAdapterPresentationForm derived class
+       
+                }
+       
+            }
+        }
+```
 
 10. We are not ready to build yet... there are two more interfaces to go.
 
     Add two more classes to your project: one is for the metadata, and the other for the presentation form.  You can add these within the same file as the class above.
 
+```csharp
         class MyMetadata : IAuthenticationAdapterMetadata
          {
 
@@ -122,9 +120,11 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
          {
 
          }
+```
 
 11. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
 
+```csharp
         class MyMetadata : IAuthenticationAdapterMetadata
          {
          //Returns the name of the provider that will be shown in the AD FS management UI (not visible to end users)
