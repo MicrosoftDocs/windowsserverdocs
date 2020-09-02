@@ -198,52 +198,6 @@ class MyPresentationForm : IAdapterPresentationForm
  }
 ```
 
-Now you should be able to F12 (right click – Go To Definition) on IAuthenticationAdapter to see the set of required interface members.
-Next, you can do a simple implementation of these.
-
-9. Replace the entire contents of your class with the following:
-
-```csharp
-    namespace MFAadapter
-    {
-    class MyAdapter : IAuthenticationAdapter
-    {
-    public IAuthenticationAdapterMetadata Metadata
-    {
-    //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
-    }
-
-    public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-    }
-
-    public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
-    {
-    return true; //its all available for now
-    }
-
-    public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
-    {
-    //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
-    }
-
-    public void OnAuthenticationPipelineUnload()
-    {
-     }
-
-    public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-    }
-
-    public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-            }
-        }
-    }
-```
 
 
 Next, the presentation form:
@@ -274,81 +228,83 @@ Next, the presentation form:
 ```
 
 3.  Note the ‘todo' for the **Resources.FormPageHtml** element above.
+You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
 
-    You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
+Now you should be able to F12 (right click – Go To Definition) on IAuthenticationAdapter to see the set of required interface members.
+Next, you can do a simple implementation of these.
 
 ```csharp
-    class MyAdapter : IAuthenticationAdapter
-    {
-    public IAuthenticationAdapterMetadata Metadata
-    {
-    //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
-    get { return new MyMetadata(); }
-    }
+class MyAdapter : IAuthenticationAdapter
+{
+public IAuthenticationAdapterMetadata Metadata
+{
+//get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+get { return new MyMetadata(); }
+}
 
-    public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
-    {
-    //return new instance of IAdapterPresentationForm derived class
+public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+{
+//return new instance of IAdapterPresentationForm derived class
+return new MyPresentationForm();
+}
+
+public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+{
+return true; //its all available for now
+}
+
+public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+{
+//this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+
+}
+
+public void OnAuthenticationPipelineUnload()
+{
+
+}
+
+public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+{
+//return new instance of IAdapterPresentationForm derived class
     return new MyPresentationForm();
-    }
+}
 
-    public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
-    {
-    return true; //its all available for now
-    }
+public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+{
+//return new instance of IAdapterPresentationForm derived class
+outgoingClaims = new Claim[0];
+return new MyPresentationForm();
+}
 
-    public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
-    {
-    //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
-
-    }
-
-    public void OnAuthenticationPipelineUnload()
-    {
-
-    }
-
-    public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-        return new MyPresentationForm();
-    }
-
-    public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-    outgoingClaims = new Claim[0];
-    return new MyPresentationForm();
-    }
-
-    }
+}
 ```
 
 13. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
 
 ```html
-       <div id="loginArea">
-        <form method="post" id="loginForm" >
-        <!-- These inputs are required by the presentation framework. Do not modify or remove -->
-        <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
-        <input id="context" type="hidden" name="Context" value="%Context%"/>
-        <!-- End inputs are required by the presentation framework. -->
-        <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
-        <label for="challengeQuestionInput" class="block">Question text</label>
-        <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
-        <div id="submissionArea" class="submitMargin">
-        <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
-        </div>
-        </form>
-        <div id="intro" class="groupMargin">
-        <p id="supportEmail">Support information</p>
-        </div>
-        <script type="text/javascript" language="JavaScript">
-        //<![CDATA[
-        function AuthPage() { }
-        AuthPage.submitAnswer = function () { return true; };
-        //]]>
-        </script></div>
+<div id="loginArea">
+ <form method="post" id="loginForm" >
+ <!-- These inputs are required by the presentation framework. Do not modify or remove -->
+ <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
+ <input id="context" type="hidden" name="Context" value="%Context%"/>
+ <!-- End inputs are required by the presentation framework. -->
+ <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
+ <label for="challengeQuestionInput" class="block">Question text</label>
+ <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
+ <div id="submissionArea" class="submitMargin">
+ <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
+ </div>
+ </form>
+ <div id="intro" class="groupMargin">
+ <p id="supportEmail">Support information</p>
+ </div>
+ <script type="text/javascript" language="JavaScript">
+ //<![CDATA[
+ function AuthPage() { }
+ AuthPage.submitAnswer = function () { return true; };
+ //]]>
+ </script></div>
 ```
 
 14. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
@@ -359,12 +315,12 @@ Next, the presentation form:
 
    Ensure your GetFormHtml code resolves the name of the new resource correctly by the resources file (.resx file) name prefix followed by the name of the resource itself:
 
-```
-    public string GetFormHtml(int lcid)
-    {
+```csharp
+public string GetFormHtml(int lcid)
+{
     string htmlTemplate = Resources.MfaFormHtml; //Resxfilename.resourcename
     return htmlTemplate;
-    }
+}
 ```
 
    You should now be able to build.
