@@ -120,7 +120,7 @@ class MyPresentationForm : IAdapterPresentationForm
 }
 ```
 
-11. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
+10. Next, you can add the required members for each. First, the metadata (with helpful inline comments)
 
 ```csharp
  class MyMetadata : IAuthenticationAdapterMetadata
@@ -198,9 +198,7 @@ class MyPresentationForm : IAdapterPresentationForm
  }
 ```
 
-
-
-Next, the presentation form:
+11. Next, the presentation form:
 
 ```csharp
 class MyPresentationForm : IAdapterPresentationForm
@@ -231,53 +229,48 @@ class MyPresentationForm : IAdapterPresentationForm
 3.  Note the ‘todo' for the **Resources.FormPageHtml** element above.
 You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
 
-Now you should be able to F12 (right click – Go To Definition) on IAuthenticationAdapter to see the set of required interface members.
-Next, you can do a simple implementation of these.
-
 ```csharp
 class MyAdapter : IAuthenticationAdapter
 {
-public IAuthenticationAdapterMetadata Metadata
-{
-//get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
-get { return new MyMetadata(); }
-}
-
-public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
-{
-//return new instance of IAdapterPresentationForm derived class
-return new MyPresentationForm();
-}
-
-public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
-{
-return true; //its all available for now
-}
-
-public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
-{
-//this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
-
-}
-
-public void OnAuthenticationPipelineUnload()
-{
-
-}
-
-public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
-{
-//return new instance of IAdapterPresentationForm derived class
-    return new MyPresentationForm();
-}
-
-public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-{
-//return new instance of IAdapterPresentationForm derived class
-outgoingClaims = new Claim[0];
-return new MyPresentationForm();
-}
-
+    public IAuthenticationAdapterMetadata Metadata
+    {
+        //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+        get { return new MyMetadata(); }
+    }
+    
+    public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+    {
+        //return new instance of IAdapterPresentationForm derived class
+        return new MyPresentationForm();
+    }
+    
+    public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+    {
+        return true; //its all available for now
+    }
+    
+    public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+    {
+        //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+    }
+    
+    public void OnAuthenticationPipelineUnload()
+    {
+    
+    }
+    
+    public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+    {
+        //return new instance of IAdapterPresentationForm derived class
+        return new MyPresentationForm();
+    }
+    
+    public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+    {
+        //return new instance of IAdapterPresentationForm derived class
+        _outgoingClaims = new Claim[0];_
+        _return new MyPresentationForm();_
+    }
 }
 ```
 
