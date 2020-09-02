@@ -226,7 +226,7 @@ class MyPresentationForm : IAdapterPresentationForm
 }
 ```
 
-3.  Note the ‘todo' for the **Resources.FormPageHtml** element above.
+12. Note the ‘todo' for the **Resources.FormPageHtml** element above.
 You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
 
 ```csharp
