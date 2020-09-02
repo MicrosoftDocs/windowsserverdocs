@@ -227,7 +227,7 @@ class MyPresentationForm : IAdapterPresentationForm
 ```
 
 12. Note the ‘todo' for the **Resources.FormPageHtml** element above.
-You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
+You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class.
 
 ```csharp
 class MyAdapter : IAuthenticationAdapter
@@ -268,8 +268,8 @@ class MyAdapter : IAuthenticationAdapter
     public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
     {
         //return new instance of IAdapterPresentationForm derived class
-        _outgoingClaims = new Claim[0];_
-        _return new MyPresentationForm();_
+        outgoingClaims = new Claim[0];
+        return new MyPresentationForm();
     }
 }
 ```
