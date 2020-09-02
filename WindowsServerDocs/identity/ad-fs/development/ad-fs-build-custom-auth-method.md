@@ -558,11 +558,11 @@ Note that the AD FS service must be restarted after this operation.
 
 2. Then, use the following command to remove it from the GAC:`.gacutil /u “<output from the above command>”`
 
-    Example:`C:>gacutil /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
+    Example:`C:>gacutil.exe /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
 
 ### Add the updated assembly to GAC
 
-Make sure you paste the updated .dll locally first. `C:>.gacutil.exe /if .MFAAdapter.dll`
+Make sure you paste the updated .dll locally first. `C:>gacutil.exe /if .MFAAdapter.dll`
 
 ### View assembly in the GAC (cmd line)
 
