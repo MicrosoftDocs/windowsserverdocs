@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/20/2020
+ms.date: 09/04/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -148,3 +148,12 @@ To retrieve the client logs:
 1. Ensure no sessions are active and the client process isn't running in the background by right-clicking on the **Remote Desktop** icon in the system tray and selecting **Disconnect all sessions**.
 2. Open **File Explorer**.
 3. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
+
+## Give us feedback
+
+Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
+
+You can also give us feedback by selecting the button that looks like a smiley face emoticon in the client app.
+
+>[!NOTE]
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback).
