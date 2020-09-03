@@ -32,7 +32,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 
         To configure a fallback HGS server, repeat this command and specify the fallback URLs for the Key Protection and Attestation services. For more information, see [Fallback configuration](guarded-fabric-manage-branch-office.md#fallback-configuration).
 
-    - **Through VMM**: If you are using System Center 2016 - Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
+    - **Through VMM**: If you are using System Center Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
 
     >**Notes**
     > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-hgs-https.md), begin the URLs with `https://`.
@@ -55,7 +55,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     ```
 
     > [!IMPORTANT]
-    > If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` return a failure for the **Code Integrity Policy Active** diagnostic.
+    > If you're using Windows Server 2019 or Windows 10, version 1809 or later, and are using code integrity policies, `Get-HgsTrace` return a failure for the **Code Integrity Policy Active** diagnostic.
     > You can safely ignore this result when it is the only failing diagnostic.
 
 ## Next step
