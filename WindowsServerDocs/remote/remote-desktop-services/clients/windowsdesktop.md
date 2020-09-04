@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/04/2020
+ms.date: 09/05/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -151,9 +151,12 @@ To retrieve the client logs:
 
 ## Give us feedback
 
-Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app).
+Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://aka.ms/rddesktopfeedback).
 
-You can also give us feedback by selecting the button that looks like a smiley face emoticon in the client app.
+You can also give us feedback by selecting the button that looks like a smiley face emoticon in the client app, as shown in the following image:
+
+> [!div class="mx-imgBorder"]
+> ![A screenshot of the smiley face icon that takes you to the feedback hub.](../media/smiley-face-icon.png)
 
 >[!NOTE]
->To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback).
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
