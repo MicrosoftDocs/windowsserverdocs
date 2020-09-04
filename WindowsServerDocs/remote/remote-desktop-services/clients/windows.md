@@ -196,7 +196,7 @@ Two mouse modes are available to interact with the session.
 
 ## Give us feedback
 
-Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](http://aka.ms/rdstorefeedback).
+Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://aka.ms/rdstorefeedback).
 
 You can also give us feedback by selecting the ellipsis button (**...**) in the client app, then selecting **Feedback**, as shown in the following image.
 
