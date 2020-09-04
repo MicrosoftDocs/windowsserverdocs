@@ -126,29 +126,6 @@ The client will use the settings configured by your admin unless you turn off th
 - **Resolution** lets you specify the resolution of the remote desktop. The session will retain this resolution for its entire duration. This setting is only available in **Single display** mode and when **Update the resolution on resize** is disabled.
 - **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is only available in **Single display** mode and when **Update the resolution on resize** is disabled.
 
-## Provide feedback
-
-Have a feature suggestion or want to report a problem? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883). You can also access the Feedback Hub through the client:
-
-1. From the Connection Center, tap the **Send feedback** option on the command bar at the top of the client to open the Feedback Hub app.
-2. Enter the required information in the **Summary** and **Details** fields. When you're done, tap **Next**.
-3. Select whether it's a **Problem** or **Suggestion**.
-4. Check to see if the category is in **Apps** > **Remote Desktop**. If it is, tap **Next**.
-5. Review the existing feedback topics to see if someone else has reported the same problem. If not, select **Make a new bug**, then tap **Next**.
-6. On the next page, you can give us more information so we can help you solve the problem. You can write more detailed information, submit screenshots, and even create a recording of the problem to show us what happened. To make a recording, select **Start recording**, then do what you did up to the point where the problem happened. When you're done, return to the Feedback Hub and select **Stop recording**.
-7. When you're satisfied with the information, tap **Submit**.
-8. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to your feedback that you can share with others as needed.
-
-### Access client logs
-
-You might need the client logs when investigating a problem.
-
-To retrieve the client logs:
-
-1. Ensure no sessions are active and the client process isn't running in the background by right-clicking on the **Remote Desktop** icon in the system tray and selecting **Disconnect all sessions**.
-2. Open **File Explorer**.
-3. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
-
 ## Give us feedback
 
 Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://aka.ms/rddesktopfeedback).
@@ -160,3 +137,13 @@ You can also give us feedback by selecting the button that looks like a smiley f
 
 >[!NOTE]
 >To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
+
+### Access client logs
+
+You might need the client logs when investigating a problem.
+
+To retrieve the client logs:
+
+1. Ensure no sessions are active and the client process isn't running in the background by right-clicking on the **Remote Desktop** icon in the system tray and selecting **Disconnect all sessions**.
+2. Open **File Explorer**.
+3. Navigate to the **%temp%\DiagOutputDir\RdClientAutoTrace** folder.
