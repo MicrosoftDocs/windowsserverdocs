@@ -1,7 +1,7 @@
 ---
 title: OpenSSH key management for Windows
 description: OpenSSH Server key management for Windows using the Windows tools or PowerShell.
-ms.date: 09/27/2018
+ms.date: 09/04/2020
 ms.topic: conceptual
 contributor: maertendMSFT
 author: maertendmsft
@@ -36,27 +36,38 @@ During authentication the user is prompted for the passphrase, which is used alo
 
 ## Host key generation
 
-Public keys have specific ACL requirements that, on Windows, equate to only allowing access to administrators and System.
-To make this easier,
-
-* The OpenSSHUtils PowerShell module has been created to set the key ACLs properly, and should be installed on the server
-* On first use of sshd, the key pair for the host will be automatically generated. If ssh-agent is running, the keys will be automatically added to the local store.
-
-To make key authentication easy with an SSH server, run the following commands from an elevated PowerShell prompt:
+If you didn't perform the following action during the initial configuration of the SSH Server,
+launch PowerShell as an administrator, then run the following command to start the SSHD service:
 
 ```powershell
-
-# Install the OpenSSHUtils module to the server. This will be valuable when deploying user keys.
-Install-Module -Force OpenSSHUtils -Scope AllUsers
-
-# Start the ssh-agent service to preserve the server keys
-Start-Service ssh-agent
-
-# Now start the sshd service
 Start-Service sshd
 ```
 
-Since there is no user associated with the sshd service, the host keys are stored under \ProgramData\ssh.
+Starting the `sshd` service generates the necessary host keys if they don't exist.
+
+Since there is no user associated with the sshd service, the host keys are stored under `\ProgramData\ssh`.
+
+If you want to modify the host key files, e.g. increase the key bit size,
+you can overwrite the generated host key using `ssh-keygen.exe` and then
+restarting the `sshd` service.
+
+```powershell
+PS C:\ProgramData\ssh> ssh-keygen.exe -l -f .\ssh_host_ecdsa_key
+256 SHA256:9WaAqYltPN1IVEYWolkFAeUe3jIQrd+oDMiAwDEU/O8 nt authority\system@server (ECDSA)
+PS C:\ProgramData\ssh> ssh-keygen.exe -b 521 -t ecdsa -f ssh_host_ecdsa_key
+Generating public/private ecdsa key pair.
+ssh_host_ecdsa_key already exists.
+Overwrite (y/n)? y
+[...]
+PS C:\ProgramData\ssh> Restart-Service sshd
+```
+
+Verify that the newly generated key has the correct information.
+
+```
+PS C:\ProgramData\ssh> ssh-keygen.exe -l -f .\ssh_host_ecdsa_key
+521 SHA256:Cq+HsQY4B9wobPsQeIf+Lnqd92HJuP4TAw5aYJmQNio username@server (ECDSA)
+```
 
 ## User key generation
 
