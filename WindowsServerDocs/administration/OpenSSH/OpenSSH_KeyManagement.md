@@ -136,7 +136,6 @@ Get-Service ssh-agent
 
 # Now load your key files into ssh-agent
 ssh-add ~\.ssh\id_ed25519
-
 ```
 
 After completing these steps, whenever a private key is needed for authentication from this client, ssh-agent will automatically retrieve the local private key and pass it to your SSH client.
@@ -153,9 +152,7 @@ After completing these steps, whenever a private key is needed for authenticatio
 To use the user key that was created above, the public key needs to be placed on the server into a text file called *authorized_keys* under users\username\\.ssh\\.
 The OpenSSH tools include scp, which is a secure file-transfer utility, to help with this.
 
-To move the contents of your public key (~\.ssh\id_ed25519.pub) into a text file called authorized_keys in ~\.ssh\ on your server/host.
-
-This example uses the Repair-AuthorizedKeyPermissions function in the OpenSSHUtils module which was previously installed on the host in the instructions above.
+To move the contents of your public key (~\.ssh\id_ed25519.pub) into a text file called authorized_keys in ~\.ssh\ on your server.
 
 ```powershell
 # Make sure that the .ssh directory exists in your server's home folder
@@ -163,9 +160,6 @@ ssh user1@domain1@contoso.com mkdir C:\users\user1\.ssh\
 
 # Use scp to copy the public key file generated previously to authorized_keys on your server
 scp C:\Users\user1\.ssh\id_ed25519.pub user1@domain1@contoso.com:C:\Users\user1\.ssh\authorized_keys
-
-# Appropriately ACL the authorized_keys file on your server
-ssh --% user1@domain1@contoso.com powershell -c $ConfirmPreference = 'None'; Repair-AuthorizedKeyPermission C:\Users\user1\.ssh\authorized_keys
 ```
 
 These steps complete the configuration required to use key-based authentication with SSH on Windows.
