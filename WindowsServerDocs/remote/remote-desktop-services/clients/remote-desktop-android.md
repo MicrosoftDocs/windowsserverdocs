@@ -21,7 +21,7 @@ This article will show you how to get started using the client. If you have any 
 > - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).
 > - The Android client supports devices running Android 4.1 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome at [Chrome OS Systems Supporting Android Apps](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
-## Download the Remote Desktop client from the Google Play store
+## Download the Remote Desktop client
 
 Here's how to set up the Remote Desktop client on your Android device:
 
@@ -35,7 +35,7 @@ Now that you have the client on your device, you can add Remote Desktop connecti
 
 Before you add a connection, if you haven't done so already, [set up your PC to accept remote connections](remote-desktop-allow-access.md).
 
-To create a Remote Desktop connection:
+To add a Remote Desktop connection:
 
 1. In the Connection Center, tap **+**, and then tap **Desktop**.
 2. Enter the name of the remote PC into **PC name**. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, MyDesktop:3389 or 10.0.0.1:3389). This is the only required field.
@@ -76,7 +76,7 @@ To add remote resources:
      - If you're using Windows Virtual Desktop, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
 3. Tap **Next**.
-4. Provide your sign in information when prompted. This can vary based on the deployment and can include:
+4. Provide your sign-in information when prompted. This can vary based on the deployment and can include:
    - The **User name** that has permission to access the resources.
    - The **Password** associated with the user name.
    - **Additional factor**, which you may be prompted for a if authentication was configured that way by your admin.
@@ -92,7 +92,7 @@ To remove remote resources:
 2. Tap **Remove**.
 3. Confirm you've removed the resource.
 
-## Use a widget to pin a saved desktop to your home screen
+## Pin a connection to your home screen
 
 The Remote Desktop client supports pinning connections to your home screen by using the Android widget feature. The way that you add a widget depends on the type of Android device you are using and its operating system.
 
@@ -184,7 +184,7 @@ To start a session:
 1. Tap **the name of your Remote Desktop connection** to start the session.
 2. If you're asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don't ask me again for connections to this computer** to always accept the certificate by default.
 
-## Control your session with the connection bar
+## Use the connection bar
 
 The connection bar gives you access to additional navigation controls. By default, the connection bar is placed in the middle at the top of the screen. Drag the bar to the left or right to move it.
 
@@ -195,7 +195,7 @@ The connection bar gives you access to additional navigation controls. By defaul
 - **Additional options**: Tap the additional options icon to display the session selection bar and command bar.
 - **Keyboard**: Tap the keyboard icon to display or hide the keyboard. The pan control is displayed automatically when the keyboard is displayed.
 
-## View and change connections with the session selection bar
+## Use the session selection bar
 
 You can have multiple connections open to different PCs at the same time. Tap the connection bar to display the session selection bar on the left side of the screen. The session selection bar lets you view your open connections and switch between them.
 
@@ -205,11 +205,11 @@ To start a new session within your current connection, tap **Start New**, then c
 
 To disconnect a session, tap **X** in the left side of the session tile.
 
-## Change mouse modes and inputs with the command bar
+## Use the command bar
 
 Tap the connection bar to display the command bar on the right side of the screen. On the command bar, you can switch between mouse modes (direct touch and mouse pointer) or tap the Home button to return to the Connection Center. You can also tap the Back button to return to the Connection Center. Returning to the Connection Center won't disconnect your active session.
 
-## Use touch gestures and mouse modes in a remote session
+## Touch gestures and mouse modes
 
 The Remote Desktop for Android client uses standard touch gestures. You can also use touch gestures to replicate mouse actions on the remote desktop. The following table explains which gestures match which mouse actions in each mouse mode.
 
