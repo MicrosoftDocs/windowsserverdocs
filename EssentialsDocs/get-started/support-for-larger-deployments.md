@@ -30,7 +30,7 @@ Windows server 2012 R2 Essentials supports only one domain per server, which is 
 
 ## Support for multiple domain controllers
 
- Windows Server Essentials 2012 R2 blocks any services that leverage Azure Active Directory, such as Office 365, where more than one domain controller is deployed. The reason is that account and password synchronization between the local domain controllers and Azure Active Directory can lead to account credentials with passwords that are out of sync. This limitation has been removed in Windows Server 2016 Essentials.
+ Windows Server Essentials 2012 R2 blocks any services that leverage Azure Active Directory, such as Microsoft 365, where more than one domain controller is deployed. The reason is that account and password synchronization between the local domain controllers and Azure Active Directory can lead to account credentials with passwords that are out of sync. This limitation has been removed in Windows Server 2016 Essentials.
 
 ## Ability to specify a designated domain controller
 
