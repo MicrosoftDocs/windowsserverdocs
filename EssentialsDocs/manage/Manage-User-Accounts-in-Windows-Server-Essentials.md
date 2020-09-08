@@ -48,7 +48,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 
 -   Select email options if applicable.
 
--   Assign a Microsoft Online Services account (referred to as an  Office 365 account in  Windows Server Essentials) if applicable.
+-   Assign a Microsoft Online Services account (referred to as a Microsoft 365 account in  Windows Server Essentials) if applicable.
 
 -   Assign user groups ( Windows Server Essentials only).
 
@@ -155,7 +155,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 ###  <a name="BKMK_Manage6"></a> Deactivate a user account
  When you deactivate a user account, account access to the server is temporarily suspended. Because of this, the assigned user cannot use the account to access network resources such as shared folders or the Remote Web Access site until you activate the account.
 
- If the user account has a Microsoft online account assigned, the online account is also deactivated. The user cannot use resources in  Office 365 and other online services that you subscribe to, but the user's data, including email, is retained in Microsoft Online Services.
+ If the user account has a Microsoft online account assigned, the online account is also deactivated. The user cannot use resources in Microsoft 365 and other online services that you subscribe to, but the user's data, including email, is retained in Microsoft Online Services.
 
 > [!NOTE]
 >  You can only deactivate a user account that is currently active.
@@ -190,7 +190,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
  Windows Server Essentials makes it possible to perform common administrative tasks by using the Windows Server Essentials Dashboard. By default, the **Users** page of the Dashboard includes two tabs: **Users** and **Users Groups**.
 
 > [!NOTE]
-> - If you integrate your server that is running  Windows Server Essentials with Office 365, a new tab called **Distribution Groups** is also added within the **Users** page of the Dashboard.
+> - If you integrate your server that is running  Windows Server Essentials with Microsoft 365, a new tab called **Distribution Groups** is also added within the **Users** page of the Dashboard.
 >   -   In  Windows Server Essentials, the **Users** page of the Dashboard includes only a single tab - **Users**.
 
  The **Users** tab includes the following:
@@ -209,9 +209,9 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 
   -   The user account status. A user account can be **Active**, **Inactive**, or **Incomplete**.
 
-  -   In  Windows Server Essentials, if the server is integrated with  Office 365 or Windows Intune, the Microsoft online account is displayed.
+  -   In  Windows Server Essentials, if the server is integrated with Microsoft 365 or Windows Intune, the Microsoft online account is displayed.
 
-  -   In  Windows Server Essentials, if the server is integrated with Microsoft Office 365, the status of the Office 365 account (known in  Windows Server Essentials as the Microsoft online account) for the user account is displayed.
+  -   In  Windows Server Essentials, if the server is integrated with Microsoft 365, the status of the account (known in  Windows Server Essentials as the Microsoft online account) for the user account is displayed.
 
 - A details pane with additional information about a selected user account.
 
@@ -224,7 +224,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   The following table describes the various user account tasks that are available from the **Users** tab. Some of the tasks are user account-specific, and they are only visible when you select a user account in the list.
 
 > [!NOTE]
->  If you integrate  Office 365 with Windows Server Essentials, additional tasks will become available. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).
+>  If you integrate Microsoft 365 with Windows Server Essentials, additional tasks will become available. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).
 
 ### User account tasks in the Dashboard
 
@@ -236,10 +236,10 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
 |Remove the user account|Enables you to remove the selected user account.|
 |Change the user account password|Enables you to reset the network password for the selected user account.|
 |Add a user account|Starts the Add a User Account Wizard, which enables you to create a single new user account that has either standard user access or administrator access.|
-|Assign a Microsoft online account|Adds a Microsoft online account to the local network user account that is selected.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Office 365.|
-|Add Microsoft online accounts|Adds Microsoft online accounts and associates them to local network user accounts.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Office 365.|
+|Assign a Microsoft online account|Adds a Microsoft online account to the local network user account that is selected.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Microsoft 365.|
+|Add Microsoft online accounts|Adds Microsoft online accounts and associates them to local network user accounts.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Microsoft 365.|
 |Set the password policy|Enables you to change the values of the password polices for your network.|
-|Import Microsoft online accounts|Performs a bulk import of accounts from Microsoft online services into the local network.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Office 365.|
+|Import Microsoft online accounts|Performs a bulk import of accounts from Microsoft online services into the local network.<br /><br /> This task is displayed when your server is integrated with Microsoft online services, such as Microsoft 365.|
 |Refresh|Refreshes the Users tab.<br /><br /> This task is applicable to  Windows Server Essentials.|
 |Change File History settings|Enables you to change File History settings, such as backup frequency, or backup duration.<br /><br /> This task is applicable to  Windows Server Essentials.|
 |Export all remote connections|Creates a .CSV-format file of all remote connections to the server that have occurred over the past 30 days.|
@@ -293,7 +293,7 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
    > [!IMPORTANT]
    > - You may not be able to change your password if the password policy for your account has been set to **Passwords never expire**.
    >   -   Non-ASCII characters are not supported in  Azure AD. Therefore, if your server is integrated with  Azure AD, do not use any non-ASCII characters in your password.
-   >   -   If a Microsoft online account (known in  Windows Server Essentials as an  Office 365 account) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Office 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).
+   >   -   If a Microsoft online account (known in  Windows Server Essentials as a Microsoft 365 account) is assigned to the user, the password is synchronized with the online account password. The user will use the new password to sign in on the server or sign in to Microsoft 365. For more information, see [Manage Online Accounts for Users](Manage-Online-Accounts-for-Users.md).
 
 ###  <a name="BKMK_Access3"></a> What you should know about password policies
  The password policy is a set of rules that define how users create and use passwords. The policy helps to prevent unauthorized access to user data and other information that is stored on the server. The password policy is applied to all user accounts that access the network.
@@ -319,10 +319,10 @@ The Users page of the Windows Server Essentials Dashboard centralizes informatio
   > [!NOTE]
   >  Passwords cannot contain the user name or email address.
   >
-  >  If you integrate with Office 365, the integration enforces the **Strong** password policy, and updates the policy to include the following requirements:
+  >  If you integrate with Microsoft 365, the integration enforces the **Strong** password policy, and updates the policy to include the following requirements:
   >
   > - Passwords must contain 8 �16 characters.
-  >   -   Passwords cannot contain a space or the Office 365 email name.
+  >   -   Passwords cannot contain a space or the Microsoft 365 email name.
 
   By default, server installation sets the default password policy to the **Strong** option.
 

@@ -6,7 +6,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 06/01/2020
+ms.date: 09/05/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Microsoft Store Client
@@ -192,7 +192,16 @@ Two mouse modes are available to interact with the session.
 | Mouse pointer | Right-click          | Tap with two fingers                                                          |
 | Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                              |
 | Mouse pointer | Mouse wheel          | Tap and hold with two fingers, then drag up or down                          |
-| Mouse pointer | Zoom                 | With two fingers, pinch to zoom in and move fingers apart to zoom out |
+| Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and move fingers apart to zoom in |
 
-> [!TIP]
-> Questions and comments are always welcome. However, if you post support requests or product feedback in this article's comments section, we won't be able to respond to your feedback. If you need help or want to troubleshoot your client, we highly recommend you go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. If you have a feature suggestion, you can tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=605).
+## Give us feedback
+
+Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://aka.ms/rdstorefeedback).
+
+You can also give us feedback by selecting the ellipsis button (**...**) in the client app, then selecting **Feedback**, as shown in the following image.
+
+> [!div class="mx-imgBorder"]
+> ![A screenshot showing the ellipsis button highlighted in red. A drop-down menu has opened beneath the button, and the "Feedback" option is also highlighted in red.](../media/ellipsis-icon.png)
+
+>[!NOTE]
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
