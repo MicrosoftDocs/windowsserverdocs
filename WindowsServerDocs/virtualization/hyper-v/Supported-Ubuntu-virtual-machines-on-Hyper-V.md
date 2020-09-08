@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
-ms.date: 04/08/2020
+ms.date: 08/29/2020
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
@@ -22,7 +22,7 @@ The following feature distribution map indicates the features in each version. T
 
 * (*blank*) - Feature not available
 
-|**Feature**|**Windows Server operating system version**|**19.10**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|
+|**Feature**|**Windows Server operating system version**|**20.04 LTS**|**18.04 LTS**|**16.04 LTS**|**14.04 LTS**|
 |-|-|-|-|-|-|
 |**Availability**||Built-in|Built-in|Built-in|Built-in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -38,26 +38,26 @@ The following feature distribution map indicates the features in each version. T
 |**[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|||||
 |VHDX resize|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |Virtual Fibre Channel|2019, 2016, 2012 R2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|&#10004; Note 2|
-|Live virtual machine backup|2019, 2016, 2012 R2|&#10004; Note 3, 4, 6|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|
+|Live virtual machine backup|2019, 2016, 2012 R2|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|&#10004; Note 3, 4, 5|
 |TRIM support|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |SCSI WWN|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|||||
 |PAE Kernel Support|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |Configuration of MMIO gap|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Dynamic Memory - Hot-Add|2019, 2016, 2012 R2|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|
-|Dynamic Memory - Ballooning|2019, 2016, 2012 R2|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|&#10004; Note 7, 8, 9|
+|Dynamic Memory - Hot-Add|2019, 2016, 2012 R2|&#10004; Note 6, 7, 8|&#10004; Note 6, 7, 8|&#10004; Note 6, 7, 8|&#10004; Note 6, 7, 8|
+|Dynamic Memory - Ballooning|2019, 2016, 2012 R2|&#10004; Note 6, 7, 8|&#10004; Note 6, 7, 8|&#10004; Note 6, 7, 8|&#10004; Note 6, 7, 8|
 |Runtime Memory Resize|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||
 |Hyper-V specific video device|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|||||
-|Key/value pair|2019, 2016, 2012 R2|&#10004; Note 6, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|&#10004; Note 5, 10|
+|Key/value pair|2019, 2016, 2012 R2|&#10004; Note 5, 9|&#10004; Note 5, 9|&#10004; Note 5, 9|&#10004; Note 5, 9|
 |Non-Maskable Interrupt|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |File copy from host to guest|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
 |lsvmbus command|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|
-|Hyper-V Sockets|2019, 2016|||||
+|Hyper-V Sockets|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
 |PCI Passthrough/DDA|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
 |**[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|||||
-|Boot using UEFI|2019, 2016, 2012 R2|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12|&#10004; Note 11, 12|
+|Boot using UEFI|2019, 2016, 2012 R2|&#10004; Note 10, 11|&#10004; Note 10, 11|&#10004; Note 10, 11|&#10004; Note 10, 11|
 |Secure boot|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|
 
 ## Notes
@@ -72,43 +72,31 @@ The following feature distribution map indicates the features in each version. T
 
 5. On long term support (LTS) releases use latest virtual Hardware Enablement (HWE) kernel for up to date Linux Integration Services.
 
-   To install the Azure-tuned kernel on 14.04, 16.04 and 18.04, run the following commands as root (or sudo):
+   To install the Azure-tuned kernel on 16.04, 18.04 and 20.04, run the following commands as root (or sudo):
 
    ```bash
    # apt-get update
    # apt-get install linux-azure
    ```
+6. Dynamic memory support is only available on 64-bit virtual machines.
 
-6. On Ubuntu 19.10, use the latest virtual kernel to have up-to-date Hyper-V capabilities.
-
-   To install the virtual kernel on 19.10, run the following commands as root (or sudo):
-
-   ```bash
-   # apt-get update
-   # apt-get install linux-azure
-   ```
-
-   Whenever the kernel is updated, the virtual machine must be rebooted to use it.
-
-7. Dynamic memory support is only available on 64-bit virtual machines.
-
-8. Dynamic Memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:
+7. Dynamic Memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:
 
    * Startup memory and minimal memory should be equal to or greater than the amount of memory that the distribution vendor recommends.
 
    * Applications that tend to consume the entire available memory on a system are limited to consuming up to 80 percent of available RAM.
 
-9. If you are using Dynamic Memory on Windows Server 2019, Windows Server 2016 or Windows Server 2012/2012 R2 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
+8. If you are using Dynamic Memory on Windows Server 2019, Windows Server 2016 or Windows Server 2012/2012 R2 operating systems, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to Hot-Add failures, and you might not see any memory increase on a guest operating system.
 
-10. In Windows Server 2019, Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
+9. In Windows Server 2019, Windows Server 2016 or Windows Server 2012 R2, the key/value pair infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
 
-11. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
+10. On Windows Server 2012 R2, Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
 
     ```Powershell
     Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
     ```
 
-12. Before attempting to copy the VHD of an existing Generation 2 VHD virtual machine to create new Generation 2 virtual machines, follow these steps:
+11. Before attempting to copy the VHD of an existing Generation 2 VHD virtual machine to create new Generation 2 virtual machines, follow these steps:
 
     1. Log in to the existing Generation 2 virtual machine.
 
