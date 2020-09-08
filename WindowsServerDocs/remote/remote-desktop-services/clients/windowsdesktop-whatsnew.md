@@ -27,7 +27,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
-- Fixed an issue where SSO didn’t work on Win7.
+- Fixed an issue where secure sign-on (SSO) didn't work on Windows 7.
 
 ## Updates for version 1.2.1272
 
