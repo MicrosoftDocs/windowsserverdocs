@@ -54,7 +54,7 @@
 ##### [Build Multi-Language Client Restore Media](install/Build-Multi-Language-Client-Restore-Media.md)
 ##### [Automate Installation of Add-Ins During Setup](install/Automate-Installation-of-Add-Ins-During-Setup.md)
 ##### [Add Microsoft Online Service Partner Agreement Partner-of-Record Information](install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)
-##### [Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement](install/Replace-Microsoft 365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
+##### [Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement](install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
 ##### [Create a Server Recovery DVD for Remotely Administered Servers](install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)
 ##### [Create a Server Recovery DVD for Multi-Language Support](install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
 #### [Preparing the Image for Deployment](install/Preparing-the-Image-for-Deployment.md)
