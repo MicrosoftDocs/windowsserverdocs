@@ -3,9 +3,9 @@ title: bitsadmin util
 description: Reference article for the bitsadmin util command, which lists the Util switches.
 ms.topic: reference
 ms.assetid: e8278a28-1ecc-42be-92e2-c93dee59751d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin util

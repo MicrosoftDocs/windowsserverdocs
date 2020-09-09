@@ -3,9 +3,9 @@ title: Create the Key Distribution Services KDS Root Key
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Create the Key Distribution Services KDS Root Key

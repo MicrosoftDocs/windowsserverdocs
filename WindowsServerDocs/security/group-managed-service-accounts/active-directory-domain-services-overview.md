@@ -3,9 +3,9 @@ title: Overview of Active Directory Domain Services
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 

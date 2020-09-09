@@ -3,9 +3,9 @@ title: bitsadmin setvalidationstate
 description: Reference article for the bitsadmin setvalidationstate command, which sets the content validation state of the given file within the job.
 ms.topic: reference
 ms.assetid: e8fc8e8c-171c-4681-8057-6986b018e576
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

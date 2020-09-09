@@ -3,9 +3,9 @@ title: append
 description: Reference article for the append command, which allows programs to open data files in specified directories, as if they were in the current directory.
 ms.topic: reference
 ms.assetid: 9c3fea20-9502-40ad-a442-7a927aad88eb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

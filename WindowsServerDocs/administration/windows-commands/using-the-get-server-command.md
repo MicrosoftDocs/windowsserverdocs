@@ -3,9 +3,9 @@ title: get-Server
 description: Reference article for get-Server, which retrieves information from the specified Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: bef60db4-d58d-4304-ab4b-be53dd3271c3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-Server

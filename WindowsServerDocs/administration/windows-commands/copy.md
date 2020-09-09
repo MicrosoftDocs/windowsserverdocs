@@ -3,9 +3,9 @@ title: copy
 description: Reference article for the copy command, which copies one or more files from one location to another.
 ms.topic: reference
 ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -3,9 +3,9 @@ title: Set ID
 description: Reference article for the Diskpart Set ID, which changes the partition type field for the partition with focus.
 ms.topic: reference
 ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Set ID

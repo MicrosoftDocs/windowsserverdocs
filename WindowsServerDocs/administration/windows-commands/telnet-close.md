@@ -3,9 +3,9 @@ title: telnet close
 description: Reference article for telnet close, which closes the current telnet connection.
 ms.topic: reference
 ms.assetid: 9330a5e0-bdb5-446b-8c25-c2c460df8b6b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # telnet: close

@@ -3,9 +3,9 @@ title: nfsadmin
 description: Reference article for the nfsadmin command, which manages both Server for NFS and Client for NFS.
 ms.topic: reference
 ms.assetid: 7375b2cf-c6b8-45b5-abf6-6c10e462defd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

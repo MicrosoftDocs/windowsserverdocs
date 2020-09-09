@@ -2,8 +2,9 @@
 title: What's New in Windows Server, version 1709
 description: What are the new features in compute, identity, management, automation, networking, security, storage.
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.localizationpriority: medium
 ms.date: 06/03/2019
 ---

@@ -7,8 +7,8 @@ metadata:
   title: Windows Server Security documentation
   description: An overview of Security in Windows Server.
   ms.topic: landing-page # Required
-  author: coreyp-at-msft
-  ms.author: coreyp
+  author: eross-msft
+  ms.author: lizross
   ms.date: 5/19/2020
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new

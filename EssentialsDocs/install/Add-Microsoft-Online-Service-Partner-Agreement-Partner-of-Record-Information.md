@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9bd191d6-ecc5-4230-a88e-f3fc281cb956
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Add Microsoft Online Service Partner Agreement Partner-of-Record Information

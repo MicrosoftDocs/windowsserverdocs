@@ -5,8 +5,8 @@ ms.date: 05/04/2018
 ms.topic: article
 ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Create a Bootable USB Flash Drive

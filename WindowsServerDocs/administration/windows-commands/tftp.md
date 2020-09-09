@@ -7,9 +7,9 @@ description: Transfer files to and from a remote computer.
 
 ms.topic: reference
 ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # tftp

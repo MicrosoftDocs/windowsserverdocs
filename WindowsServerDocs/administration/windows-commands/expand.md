@@ -3,9 +3,9 @@ title: expand
 description: Reference article for the expand command, which expands one or more compressed files.
 ms.topic: reference
 ms.assetid: 66de0488-a0c4-40c2-9b03-e40c107ba343
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

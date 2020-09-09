@@ -3,9 +3,9 @@ title: "What's New in Windows Server 2019 Essentials"
 description: "Describes what's changed in Windows Server Essentials 2019"
 ms.topic: article
 ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: jasgroce
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ---
 
 # What's New in Windows Server 2019 Essentials

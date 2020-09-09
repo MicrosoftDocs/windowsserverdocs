@@ -3,9 +3,9 @@ title: ftp remotehelp
 description: Reference article for the ftp remotehelp command, which displays help for remote commands.
 ms.topic: reference
 ms.assetid: ef23adf3-ead4-44c8-ac1d-c8a6f4b2bf73
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
