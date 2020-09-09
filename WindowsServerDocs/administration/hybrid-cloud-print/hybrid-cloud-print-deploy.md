@@ -4,8 +4,8 @@ description: How to set up Microsoft Hybrid Cloud Print
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247c5e9
 ms.topic: how-to
 author: msjimwu
-ms.author: coreyp
-manager: dongill
+ms.author: jimwu
+manager: mtillman
 ms.date: 3/15/2018
 ---
 

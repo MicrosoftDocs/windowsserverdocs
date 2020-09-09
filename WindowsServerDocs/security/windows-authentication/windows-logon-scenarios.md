@@ -3,9 +3,9 @@ title: Windows Logon Scenarios
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 66b7c568-67b7-4ac9-a479-a5a3b8a66142
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Windows Logon Scenarios

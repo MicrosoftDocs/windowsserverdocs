@@ -3,9 +3,9 @@ title: nslookup ls
 description: Reference article for the nslookup ls command, which lists DNS domain information.
 ms.topic: reference
 ms.assetid: f15f06fe-67e7-41a9-93b5-192ab14ab380
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

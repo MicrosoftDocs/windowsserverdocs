@@ -3,9 +3,9 @@ title: nslookup set domain
 description: Reference article for the nslookup set domain command, which changes the default Domain Name System (DNS) domain name to the specified name.
 ms.topic: reference
 ms.assetid: 9d4d28e8-6e88-42cc-801f-94e9d8e051f4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

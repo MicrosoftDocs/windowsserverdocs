@@ -3,9 +3,9 @@ title: get-TransportServer
 description: Reference article for get-TransportServer, which displays information about a specified Transport Server.
 ms.topic: reference
 ms.assetid: de634123-0179-41b2-9c6f-726508130ff5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-TransportServer

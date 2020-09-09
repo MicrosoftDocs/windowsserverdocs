@@ -3,9 +3,9 @@ title: nslookup finger
 description: Reference article for the nslookup finger command, which connects with the finger server on the current device.
 ms.topic: reference
 ms.assetid: 11ea2bde-8ccb-4b87-bbad-231dd9e5e858
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

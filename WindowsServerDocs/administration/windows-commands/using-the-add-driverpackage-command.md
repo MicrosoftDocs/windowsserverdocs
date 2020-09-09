@@ -3,9 +3,9 @@ title: add-DriverPackage
 description: Reference article for add-DriverPackage, which adds a driver package to the server.
 ms.topic: reference
 ms.assetid: 3ac9e8d5-63ec-4ce8-86fc-85d28011050b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

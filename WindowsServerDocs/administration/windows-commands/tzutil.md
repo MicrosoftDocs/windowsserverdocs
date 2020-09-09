@@ -3,9 +3,9 @@ title: tzutil
 description: Reference article for tzutil, which displays the Windows Time Zone utility.
 ms.topic: reference
 ms.assetid: bcf6e007-c9b6-4df5-83c5-ed7b4b1b5913
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # tzutil

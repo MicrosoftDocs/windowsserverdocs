@@ -3,9 +3,9 @@ title: set_2
 description: Reference article for set_2, which sets the context, options, verbose mode, and metadata file for shadow copy creation.
 ms.topic: reference
 ms.assetid: acf24663-1a50-4321-b48d-1717655e9476
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

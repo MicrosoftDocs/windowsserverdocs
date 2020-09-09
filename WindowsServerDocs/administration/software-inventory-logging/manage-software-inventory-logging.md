@@ -4,8 +4,8 @@ description: Describes how to manage Software Inventory Logging
 ms.topic: article
 ms.assetid: 812173d1-2904-42f4-a9e2-de19effec201
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage Software Inventory Logging

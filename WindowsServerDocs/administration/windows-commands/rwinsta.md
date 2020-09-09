@@ -7,9 +7,9 @@ description: Learn how to reset an RDSH sessionf from the command line.
 
 ms.topic: reference
 ms.assetid: 82bee0e4-1c2c-43fe-afd3-04a6ce0f4518
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # rwinsta

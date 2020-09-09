@@ -3,9 +3,9 @@ title: ping
 description: Reference article for the ping command, which verifies network connectivity.
 ms.topic: reference
 ms.assetid: 49272671-2eec-4fa5-881f-65c24cfbef52
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
 ---
 

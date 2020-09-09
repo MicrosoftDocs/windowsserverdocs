@@ -3,9 +3,9 @@ title: Software Restriction Policies Technical Overview
 description: Windows Server Security
 ms.topic: article
 ms.assetid: dc7013b0-0efd-40fd-bd6d-75128adbd0b8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Software Restriction Policies Technical Overview

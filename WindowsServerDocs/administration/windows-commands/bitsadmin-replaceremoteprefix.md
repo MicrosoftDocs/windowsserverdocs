@@ -3,9 +3,9 @@ title: bitsadmin replaceremoteprefix
 description: Reference article for the bitsadmin replaceremoteprefix command, which changes the remote URL for all files in the job from *oldprefix* to *newprefix*, as necessary.
 ms.topic: reference
 ms.assetid: d0e0abb1-bdb4-4c74-abbc-16c809f5fd81
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

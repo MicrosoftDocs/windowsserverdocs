@@ -3,9 +3,9 @@ title: cmstp
 description: Reference article for cmstp, which installs or removes a Connection Manager service profile.
 ms.topic: reference
 ms.assetid: 34aad544-11c3-4e85-8bbf-5bc5a971da93
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -3,9 +3,9 @@ title: eventcreate
 description: Reference article for the eventcreate command, which enables an administrator to create a custom event in a specified event log.
 ms.topic: reference
 ms.assetid: f2b1b26d-a70e-49a6-832b-91eb5a1a159a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

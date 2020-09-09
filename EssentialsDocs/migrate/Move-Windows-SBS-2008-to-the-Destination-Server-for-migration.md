@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4950469d-d800-430d-8d10-53bafc4a9932
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Move Windows SBS 2008 settings and data to the Destination Server for Windows Server Essentials migration

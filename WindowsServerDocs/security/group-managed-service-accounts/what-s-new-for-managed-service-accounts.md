@@ -3,9 +3,9 @@ title: What's New for Managed Service Accounts
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 2f2a8b6b-c152-4c40-b712-bfabff0e408b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # What&#39;s New for Managed Service Accounts

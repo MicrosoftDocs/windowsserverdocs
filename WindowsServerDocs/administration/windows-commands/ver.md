@@ -3,9 +3,9 @@ title: ver
 description: Reference article for ver, which displays the operating system version number.
 ms.topic: reference
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

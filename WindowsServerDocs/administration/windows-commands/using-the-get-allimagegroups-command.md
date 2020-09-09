@@ -3,9 +3,9 @@ title: get-AllImageGroups
 description: Reference article for get-AllImageGroups, which retrieves information about all image groups on a server and all images in those image groups.
 ms.topic: reference
 ms.assetid: 2ca06533-bcf5-4590-ac8e-263d6c9874f8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-AllImageGroups
