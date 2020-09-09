@@ -3,9 +3,9 @@ title: repair-bde
 description: Reference article for the repair-bde command, which can try to reconstruct critical parts of a severely damaged drive and salvage recoverable data if the drive was encrypted by using BitLocker.
 ms.topic: reference
 ms.assetid: 534dca1a-05f7-4ea8-ac24-4fe5f14f988a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

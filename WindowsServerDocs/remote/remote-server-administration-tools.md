@@ -3,8 +3,9 @@ title: Remote Server Administration Tools
 description: Top level topic for Remote Server Administration Tools
 ms.topic: get-started-article
 ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
-author: coreyp-at-msft
-ms.author: coreyp
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 manager: dansimp
 
 ---

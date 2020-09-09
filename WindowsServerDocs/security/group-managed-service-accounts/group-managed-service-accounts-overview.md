@@ -3,9 +3,9 @@ title: Group Managed Service Accounts Overview
 description: Windows Server Security
 ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Group Managed Service Accounts Overview

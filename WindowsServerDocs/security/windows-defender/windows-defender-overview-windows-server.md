@@ -3,9 +3,9 @@ title: Windows Defender Overview for Windows Server
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Windows Defender Antivirus for Windows Server

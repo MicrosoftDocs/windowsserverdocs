@@ -8,9 +8,9 @@ description: Reference article for verify, which tells **cmd** whether to verify
 ms.topic: reference
 ms.assetid: dfe8bc91-d948-4e47-84ad-a79a60506ffa
 
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

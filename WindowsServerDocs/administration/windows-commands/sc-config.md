@@ -3,9 +3,9 @@ title: Sc.exe config
 description: Learn how to change service configurations using the sc.exe utility
 ms.topic: reference
 ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 06/05/2018
 ---
 

@@ -4,8 +4,9 @@ description: This topic is part of the Test Lab Guide - Demonstrate a DirectAcce
 manager: brianlic
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ---
 
 # STEP 8: Configure INET1

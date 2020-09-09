@@ -3,9 +3,9 @@ title: Group Policy Settings Used in Windows Authentication
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 9e237f89-45b1-4a4e-9b72-11dc7d6a470b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Group Policy Settings Used in Windows Authentication

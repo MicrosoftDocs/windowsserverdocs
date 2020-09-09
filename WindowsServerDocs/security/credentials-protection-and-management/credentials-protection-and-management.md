@@ -3,9 +3,9 @@ title: Credentials Protection and Management
 description: Windows Server Security
 ms.topic: article
 ms.assetid: e457229c-0126-40fe-948c-101c943e1b57
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Credentials Protection and Management

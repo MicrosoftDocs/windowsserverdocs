@@ -3,9 +3,9 @@ title: nslookup set srchlist
 description: Reference article for the nslookup set srchlist command, which changes the default Domain Name System (DNS) domain name and search list.
 ms.topic: reference
 ms.assetid: 8486266d-22ac-4ce5-aad6-1cd0c08110a2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

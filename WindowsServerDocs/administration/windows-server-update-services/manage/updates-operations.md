@@ -3,9 +3,9 @@ title: Updates Operations
 description: Windows Server Update Service (WSUS) topic - How to manage updates, including the approval process
 ms.topic: article
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Updates Operations

@@ -3,9 +3,9 @@ title: klist
 description: Reference article for the klist command, which displays a list of currently cached Kerberos tickets.
 ms.topic: reference
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

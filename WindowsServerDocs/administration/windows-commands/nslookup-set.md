@@ -3,9 +3,9 @@ title: nslookup set
 description: Reference article for the nslookup set command, which changes configuration settings affecting how lookups behave.
 ms.topic: reference
 ms.assetid: 1fe5b36d-e93e-468b-abca-43b0204b32d1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
