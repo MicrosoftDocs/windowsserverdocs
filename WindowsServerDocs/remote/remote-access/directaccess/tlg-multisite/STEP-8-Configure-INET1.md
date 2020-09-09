@@ -1,7 +1,6 @@
 ---
 title: STEP 8 Configure INET1
 description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
-manager: brianlic
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: lizross

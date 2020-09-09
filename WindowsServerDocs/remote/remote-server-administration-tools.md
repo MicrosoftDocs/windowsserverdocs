@@ -6,8 +6,6 @@ ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 ms.author: lizross
 author: eross-msft
 manager: mtillman
-manager: dansimp
-
 ---
 # Remote Server Administration Tools
 
