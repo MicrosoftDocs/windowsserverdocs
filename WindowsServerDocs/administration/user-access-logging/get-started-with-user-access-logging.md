@@ -4,7 +4,7 @@ desctription: Describes the User Access Logging feature and how to start using i
 ms.topic: article
 ms.assetid: 5c395b8b-3b35-4042-b9cc-07e438f86d50
 author: brentfor
-author: brentf
+ms.author: brentf
 manager: mtillman
 ms.date: 10/16/2017
 ---

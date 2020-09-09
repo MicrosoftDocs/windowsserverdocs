@@ -4,7 +4,7 @@ description: Describes how to install and manage Software Inventory Logging Aggr
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor
-author: brentf
+ms.author: brentf
 manager: mtillman
 ms.date: 10/16/2017
 ---
