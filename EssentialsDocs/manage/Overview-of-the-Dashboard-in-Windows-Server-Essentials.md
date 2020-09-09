@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f70a79de-9c56-4496-89b5-20a1bff2293e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 
@@ -91,7 +91,7 @@ manager: dongill
 |Devices|After you connect computers to the Windows Server Essentials network, you can manage the computers from the **Devices** page of the Dashboard. Tasks that you can perform on this page include:<br /><br /> - View a list of computers that are joined to your network.<br /><br /> - Manage mobile devices by leveraging the Microsoft 365 Mobile Device Management capability.<br /><br /> **Note:** This feature is only available in Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled.<br /><br /> - View the computer properties and health alerts for each computer.<br /><br /> - Set up and manage computer backups.<br /><br /> - Restore files and folders to computers.<br /><br /> - Establish a Remote Desktop connection to a computer<br /><br /> - Customize Computer Backup and File History settings<br /><br /> For information about managing computers and backups, see [Manage Devices](Manage-Devices-in-Windows-Server-Essentials.md).|
 |Storage|Depending on the version of Windows Server Essentials you are running, the **Storage** section of the Dashboard contains the following sections by default.<br /><br /> - The **Server Folders** subsection includes tasks that help you view and manage the properties for server folders. The page also includes tasks to open and add server folders.<br /><br /> - The **Hard Drives** page includes tasks that help you view and check the health of the drives that are attached to the server.<br /><br /> - In Windows Server Essentials and Windows Server 2012 R2 Standard with the Windows Server Essentials Experience role enabled, the **SharePoint Libraries** page includes tasks that help you manage the SharePoint Libraries in Microsoft 365 service.<br /><br /> For information about managing server folders, see [Manage Server Folders](Manage-Server-Folders-in-Windows-Server-Essentials.md).<br /><br /> For information about managing hard drives, see [Manage Server Storage](Manage-Server-Storage-in-Windows-Server-Essentials.md).|
 |Applications|- The **Applications** section of the Windows Server Essentials Dashboard contains two subsections by default.<br /><br /> For information about managing add-in applications, see [Manage Applications](Manage-Applications-in-Windows-Server-Essentials.md).<br /><br /> - The **Add-ins** subsection displays a list of installed add-ins, and provides tasks that enable you to remove an add-in, and to access additional information about a selected add-in.<br /><br /> - The **Microsoft Pinpoint** subsection displays a list of applications that are available from Microsoft Pinpoint.|
-|Office 365|The **Office 365** tab displays only when Windows Server Essentials is integrated with Microsoft 365. This section contains Office 365 subscription and administrator account information.|
+|Microsoft 365|The **Microsoft 365** tab displays only when Windows Server Essentials is integrated with Microsoft 365. This section contains Microsoft 365 subscription and administrator account information.|
 
 > [!NOTE]
 >  If you install an add-in for the Windows Server Essentials Dashboard, the add-in may create additional administrative sections. These sections may appear on the main navigation bar, or on a subsection tab.
