@@ -2,7 +2,7 @@
 title: Performance Tuning Software Defined Networks
 description: Software Defined Network (SDN) performance tuning guidelines
 ms.topic: article
-ms.author: grcusanz; anpaul
+ms.author: grcusanz
 author: phstee
 ms.date: 10/16/2017
 ---
