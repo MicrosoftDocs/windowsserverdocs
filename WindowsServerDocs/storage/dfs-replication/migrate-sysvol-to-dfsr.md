@@ -73,6 +73,6 @@ This document assumes that you have a basic knowledge of Active Directory Domain
 
 [SYSVOL Migration Series: Part 5 – Migrating to the 'ELIMINATED' state](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-5-8211-migrating-to-the-8216/ba-p/423516)
 
-[Distributed File Systems Step-By-Step Guide for Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732863(v=ws.10))
+[Distributed File Systems Step-by-Step Guide for Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732863(v=ws.10))
 
 [FRS Technical Reference](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759297(v=ws.10))
