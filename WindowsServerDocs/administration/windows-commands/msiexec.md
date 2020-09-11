@@ -206,7 +206,7 @@ msiexec.exe [/f{p|o|e|d|c|a|u|m|s|v}] <product_code>
 | /fu | Repairs all the required user-specific registry entries. |
 | /fm | Repairs all the required computer-specific registry entries. |
 | /fs | Repairs all existing shortcuts. |
-| /fc | Runs from source and re-caches the local package. |
+| /fv | Runs from source and re-caches the local package. |
 
 #### Examples
 
