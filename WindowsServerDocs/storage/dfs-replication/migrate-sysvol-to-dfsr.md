@@ -63,16 +63,16 @@ This document assumes that you have a basic knowledge of Active Directory Domain
 
 ## Additional references
 
-[SYSVOL Migration Series: Part 1—Introduction to the SYSVOL migration process](https://go.microsoft.com/fwlink/?linkid=121756)
+[SYSVOL Migration Series: Part 1—Introduction to the SYSVOL migration process](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-1-8211-introduction-to-the-sysvol/ba-p/423456)
 
-[SYSVOL Migration Series: Part 2—Dfsrmig.exe: The SYSVOL migration tool](https://go.microsoft.com/fwlink/?linkid=121757)
+[SYSVOL Migration Series: Part 2—Dfsrmig.exe: The SYSVOL migration tool](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-2-8211-dfsrmig-exe-the-sysvol/ba-p/423470)
 
-[SYSVOL Migration Series: Part 3—Migrating to the 'PREPARED' state](https://go.microsoft.com/fwlink/?linkid=121758)
+[SYSVOL Migration Series: Part 3—Migrating to the 'PREPARED' state](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-3-migrating-to-the-prepared-state/ba-p/423503)
 
-[SYSVOL Migration Series: Part 4—Migrating to the 'REDIRECTED' state](https://go.microsoft.com/fwlink/?linkid=121759)
+[SYSVOL Migration Series: Part 4—Migrating to the 'REDIRECTED' state](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-4-8211-migrating-to-the-8216/ba-p/423514)
 
-[SYSVOL Migration Series: Part 5—Migrating to the 'ELIMINATED' state](https://go.microsoft.com/fwlink/?linkid=121760)
+[SYSVOL Migration Series: Part 5—Migrating to the 'ELIMINATED' state](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-5-8211-migrating-to-the-8216/ba-p/423516)
 
-[Step-by-Step Guide for Distributed File Systems in Windows Server 2008](https://go.microsoft.com/fwlink/?linkid=85231)
+[Distributed File Systems Step-By-Step Guide for Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732863(v=ws.10))
 
-[FRS Technical Reference](https://go.microsoft.com/fwlink/?linkid=121764)
+[FRS Technical Reference](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759297(v=ws.10))
