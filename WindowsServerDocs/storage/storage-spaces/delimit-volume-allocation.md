@@ -1,9 +1,9 @@
 ---
 title: Delimit the allocation of volumes in Storage Spaces Direct
-ms.author: cosmosdarwin
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
+ms.author: cosdar
 ms.date: 03/29/2018
 ---
 
