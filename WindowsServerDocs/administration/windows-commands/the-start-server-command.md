@@ -3,9 +3,9 @@ title: start-server
 description: Reference article for start-server, which starts the multicast transmission, namespace, Transport Server, or all services on the Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: 7bbb68e0-1275-4c5f-b276-383a5be4534b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # start-server

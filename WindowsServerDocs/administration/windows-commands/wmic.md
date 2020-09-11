@@ -3,9 +3,9 @@ title: wmic
 description: Reference article for wmic, which displays WMI information inside an interactive command shell.
 ms.topic: reference
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

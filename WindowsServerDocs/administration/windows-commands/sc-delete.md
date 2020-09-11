@@ -3,9 +3,9 @@ title: Sc.exe delete
 description: Learn how unregister services using the sc.exe utility
 ms.topic: reference
 ms.assetid: 2fe94fb3-e4d1-47b5-b999-39995ecbb644
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

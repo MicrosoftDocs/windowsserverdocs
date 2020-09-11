@@ -3,9 +3,9 @@ title: Set option
 description: Reference article for Set option, which sets the options for shadow copy creation.
 ms.topic: reference
 ms.assetid: 4d8d4921-9fdd-4a3c-bb0f-9df5458c4b84
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

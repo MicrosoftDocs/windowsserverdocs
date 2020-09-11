@@ -3,9 +3,9 @@ title: stop-server
 description: Reference article for stop-server, which stops services for Windows Deployment Services.
 ms.topic: reference
 ms.assetid: adff42ca-464f-4f05-ba25-e24e8d702981
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # stop-server

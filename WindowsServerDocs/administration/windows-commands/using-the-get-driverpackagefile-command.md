@@ -3,9 +3,9 @@ title: get-DriverPackageFile
 description: Reference article for get-DriverPackageFile, which displays information about a driver package, including the drivers and files it contains.
 ms.topic: reference
 ms.assetid: f01a2c67-7e9c-4aad-b625-383f5a1fca25
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

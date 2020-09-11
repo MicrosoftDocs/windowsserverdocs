@@ -3,9 +3,9 @@ title: shutdown
 description: Reference article for shutdown, which enables you to shut down or restart local or remote computers one at a time.
 ms.topic: reference
 ms.assetid: c432f5cf-c5aa-4665-83af-0ec52c87112e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

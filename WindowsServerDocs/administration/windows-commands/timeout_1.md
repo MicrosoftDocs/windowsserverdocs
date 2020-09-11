@@ -3,9 +3,9 @@ title: timeout
 description: Reference article for timeout, which pauses the command processor for the specified number of seconds.
 ms.topic: reference
 ms.assetid: e26b4a84-0e30-46e1-aa10-0667b7d3cb4c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/25/2020
+ms.date: 09/10/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,19 +19,28 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Version  |
 |-----------|---------|
 |Public     |1.2.1272 |
-|Insider    |1.2.1272 |
+|Insider    |1.2.1357 |
 
-## Updates for version 1.2.1272
+## Updates for version 1.2.1357 (Insiders)
+
+*Date published: 09/09/2020*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Fixed an issue where secure sign-on (SSO) didn't work on Windows 7.
+
+## Updates for version 1.2.1275
 
 *Date published: 08/25/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYR), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYS), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Fg3H)
 
 - Added functionality to auto-detect sovereign clouds from the user’s identity.
 - Added functionality to enable custom URL subscriptions for all users.
 - Fixed an issue with app pinning on the feed taskbar.
 - Fixed a crash when subscribing with URL.
 - Improved experience when dragging remote app windows with touch or pen.
+- Fixed an issue with localization.
 
 ## Updates for version 1.2.1186
 
@@ -49,8 +58,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 06/23/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
-
 - Updated the automatic discovery logic for the **Subscribe** option to support the Azure Resource Manager-integrated version of Windows Virtual Desktop. Customers with only Windows Virtual Desktop resources should no longer need to provide consent for Windows Virtual Desktop (classic).
 - Improved support for high-DPI devices with scale factor up to 400%.
 - Fixed an issue where the disconnect dialog didn't appear.
@@ -61,8 +68,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.1026
 
 *Date published: 05/27/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xsGB), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xd8P), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xq7m)
 
 - When subscribing, you can now choose your account instead of typing your email address.
 - Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to Windows Virtual Desktop workspaces.
@@ -82,8 +87,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.945
 
 *Date published: 04/28/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNM), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNO), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vuSV)
 
 - Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
   - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.

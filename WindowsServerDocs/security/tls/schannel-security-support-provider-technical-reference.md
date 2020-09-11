@@ -3,9 +3,9 @@ title: Schannel Security Support Provider Technical Reference
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 5bf9c4a5-cdc1-49eb-bf9a-8bf987410b63
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 08/08/2018
 ---
 # Schannel Security Support Provider Technical Reference

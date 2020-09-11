@@ -3,9 +3,9 @@ title: get-Device
 description: Reference article for get-Device, which retrieves Windows Deployment Services information about a prestaged computer (that is, a physical computer that has been lined to a computer account in active directory Domain Services.
 ms.topic: reference
 ms.assetid: 1da79286-7e1d-45f2-aea2-d446e16a6911
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -7,9 +7,9 @@ description: Reference article for **** -
 
 ms.topic: reference
 ms.assetid: 640dd892-0bb9-416d-8318-60a26605bcf4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

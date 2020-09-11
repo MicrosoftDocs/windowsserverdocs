@@ -3,9 +3,9 @@ title: bitsadmin getcustomheaders
 description: Reference article for the bitsadmin getcustomheaders command, which retrieves the custom HTTP headers from the job.
 ms.topic: reference
 ms.assetid: 1f0d38d3-e865-4474-81e8-773d65c3d1cc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

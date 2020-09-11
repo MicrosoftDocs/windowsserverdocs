@@ -3,9 +3,9 @@ title: Configuring Additional LSA Protection
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Configuring Additional LSA Protection

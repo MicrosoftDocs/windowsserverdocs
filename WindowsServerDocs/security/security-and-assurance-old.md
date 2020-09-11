@@ -4,8 +4,9 @@ description: An overview of Security in Windows Server 2016
 ms.topic: article
 ms.date: 07/27/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
-author: coreyp-at-msft
-ms.author: coreyp
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.localizationpriority: medium
 ---
 # Security and Assurance in Windows Server

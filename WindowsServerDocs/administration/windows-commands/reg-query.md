@@ -3,9 +3,9 @@ title: reg query
 description: Reference article for the reg query command, which returns a list of the next tier of subkeys and entries that are located under a specified subkey in the registry.
 ms.topic: reference
 ms.assetid: 0e6a0d7c-ed9b-4318-833d-33f265a81f39
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
