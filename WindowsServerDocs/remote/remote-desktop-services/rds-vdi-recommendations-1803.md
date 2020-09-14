@@ -1,11 +1,9 @@
 ---
 title: Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
 description: Recommended settings and configuration to minimize overhead for Windows 10 1803) desktops used as VDI images
-ms.reviewer: robsmi
-ms.author: jaimeo, robsmi
+ms.author: robsmi
 ms.topic: article
 author: jaimeo
-manager: dougkim
 ---
 
 # Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role

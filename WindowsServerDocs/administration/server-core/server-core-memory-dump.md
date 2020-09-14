@@ -3,7 +3,8 @@ title: Configure memory dump files for Server Core installation
 description: Learn how to configure memory dump files for a Server Core installation of Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 10/17/2017
 ---
