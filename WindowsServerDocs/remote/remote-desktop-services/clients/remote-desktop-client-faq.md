@@ -168,7 +168,7 @@ In order to make use of the right-click inside an open session you have three op
 
 - Standard PC two button USB mouse
 - Apple Magic Mouse: To enable right-click, click **System Preferences** in the dock, click **Mouse**, and then enable **Secondary click**.
-- Apple Magic Trackpad or MacBook Trackpad: To enable right-click, click **System Preferences** in the dock, click **Mouse**, and then enable **Secondary click**.
+- Apple Magic Trackpad or MacBook Trackpad: To enable right-click, click **System Preferences** in the dock, click **Trackpad**, and then enable **Secondary click**.
 
 ### Is AirPrint supported?
 No, the Remote Desktop client doesn't support AirPrint. (This is true for both Mac and iOS clients.)
