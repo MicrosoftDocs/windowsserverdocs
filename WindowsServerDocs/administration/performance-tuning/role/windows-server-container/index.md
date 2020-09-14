@@ -2,7 +2,7 @@
 title: Performance Tuning Windows Server Containers
 description: Performance tuning recommendations for containers on Windows Server 16
 ms.topic: landing-page
-ms.author: davso; ericam; yashi
+ms.author: ericam
 author: akino
 ms.date: 10/16/2017
 ---

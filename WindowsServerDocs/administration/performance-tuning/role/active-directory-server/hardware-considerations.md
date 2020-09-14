@@ -2,7 +2,7 @@
 title: Hardware considerations in AD performance tuning
 description: Hardware considerations in AD performance tuning
 ms.topic: article
-ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
+ms.author: timwi
 author: phstee
 ms.date: 10/16/2017
 ---

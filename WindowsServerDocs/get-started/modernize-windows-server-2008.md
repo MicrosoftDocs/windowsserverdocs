@@ -3,8 +3,8 @@ title: Upgrade Windows Server 2008 and Windows Server 2008 R2
 description: Windows Server 2008 and 2008 R2 are approaching end of service. Learn how to upgrade on-premises or rehost to Azure.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: mikeblodge
-ms.author: mikeblodge
+author: eross-msft
+ms.author: thierryp
 ms.date: 07/12/2018
 ms.topic: get-started-article
 ms.localizationpriority: high

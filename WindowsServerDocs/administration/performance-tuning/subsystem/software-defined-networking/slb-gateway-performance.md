@@ -2,7 +2,7 @@
 title: SLB Gateway Performance Tuning in Software Defined Networks
 description: SLB Gateway performance tuning guidelines on SDN networks
 ms.topic: article
-ms.author: grcusanz; anpaul
+ms.author: grcusanz
 author: phstee
 ms.date: 10/16/2017
 ---

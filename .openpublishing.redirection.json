@@ -171,6 +171,36 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/networking/technologies/hcn/example-c-sharp.md",
+      "redirect_url": "/windows-server/networking/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hcn/example-go.md",
+      "redirect_url": "/windows-server/networking/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hcn/hcn-declaration-handles.md",
+      "redirect_url": "/windows-server/networking/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hcn/hcn-json-document-schemas.md",
+      "redirect_url": "/windows-server/networking/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hcn/hcn-scenarios.md",
+      "redirect_url": "/windows-server/networking/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hcn/hcn-top.md",
+      "redirect_url": "/windows-server/networking/index",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-fs/technical-reference/WinServer2016expiry.md",
       "redirect_url": "/windows-server/identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server",
       "redirect_document_id": false
