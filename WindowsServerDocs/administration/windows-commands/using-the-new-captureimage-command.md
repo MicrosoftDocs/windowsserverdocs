@@ -3,9 +3,9 @@ title: new-CaptureImage
 description: Reference article for new-CaptureImage, which creates a new capture image from an existing boot image.
 ms.topic: reference
 ms.assetid: 2dfd08f0-be59-4715-96e6-c498305873f4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

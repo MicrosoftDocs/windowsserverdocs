@@ -2,9 +2,9 @@
 title: Express update delivery ISV support
 description: Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can configure Express update delivery using WSUS
 ms.topic: get-started article
-author: sakitong
-ms.author: coreyp
-manager: lizapo
+author: brentfor
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Express update delivery ISV support

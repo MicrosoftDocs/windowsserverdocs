@@ -3,9 +3,9 @@ title: bitsadmin setnoprogresstimeout
 description: Reference article for the bitsadmin setnoprogresstimeout command, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
 ms.topic: reference
 ms.assetid: 7fac50d9-cc6b-46a4-a96f-fab751ee1756
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

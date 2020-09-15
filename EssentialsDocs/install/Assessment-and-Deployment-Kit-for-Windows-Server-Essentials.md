@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Assessment and Deployment Kit for Windows Server Essentials
@@ -66,7 +66,7 @@ The  Windows Server&reg; 2012 Essentials Assessment and Deployment Kit (ADK) is 
 
     -   [Add Microsoft Online Service Partner Agreement Partner-of-Record Information](Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)
 
-    -   [Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
+    -   [Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
 
     -   [Create a Server Recovery DVD for Remotely Administered Servers](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)
 

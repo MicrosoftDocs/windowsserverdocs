@@ -7,9 +7,9 @@ description: Learn how to manage a TAPI application directory partition.
 
 ms.topic: reference
 ms.assetid: c0e642ce-5d98-4edb-9a65-1dff09aef4e1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
 ---
 # tapicfg

@@ -3,9 +3,9 @@ title: reg delete
 description: Reference article for the reg delete command, which deletes a subkey or entries from the registry.
 ms.topic: reference
 ms.assetid: cee05071-1607-4ab1-b8ab-65caebeb85c3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

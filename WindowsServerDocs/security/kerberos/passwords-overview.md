@@ -3,9 +3,9 @@ title: Passwords Overview
 description: Windows Server Security
 ms.topic: article
 ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Passwords Overview

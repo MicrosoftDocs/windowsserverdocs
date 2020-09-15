@@ -3,9 +3,9 @@ title: del
 description: Reference article for the del command, which deletes one or more files.
 ms.topic: reference
 ms.assetid: 346eede2-2085-44f5-9936-6877b5d5a833
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

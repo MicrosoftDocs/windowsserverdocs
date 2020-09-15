@@ -3,9 +3,9 @@ title: Getting Started with Group Managed Service Accounts
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Getting Started with Group Managed Service Accounts

@@ -3,9 +3,9 @@ title: bitsadmin getowner
 description: Reference article for the bitsadmin getowner command, which retrieves the owner of the specified job.
 ms.topic: reference
 ms.assetid: 5203f84c-a879-4f31-ae3e-7ea74bd63ca5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

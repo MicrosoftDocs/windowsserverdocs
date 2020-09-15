@@ -3,9 +3,9 @@ title: ftp binary
 description: Reference article for the ftp binary command, which sets the file transfer type to binary.
 ms.topic: reference
 ms.assetid: ee925b4d-85d2-47b1-b7d6-3832b7ec5505
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

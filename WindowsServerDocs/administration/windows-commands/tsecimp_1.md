@@ -3,9 +3,9 @@ title: tsecimp
 description: Reference article for tsecimp, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
 ms.topic: reference
 ms.assetid: d7488ec6-0eff-45ff-89ee-9cbe752416bf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

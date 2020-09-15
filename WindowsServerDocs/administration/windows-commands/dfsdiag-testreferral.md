@@ -3,9 +3,9 @@ title: dfsdiag testreferral
 description: Reference article for the dfsdiag testreferral command, which checks Distributed File System (DFS) referrals.
 ms.topic: reference
 ms.assetid: 877c60dc-e993-4bd5-87dd-e892e3f98a1a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

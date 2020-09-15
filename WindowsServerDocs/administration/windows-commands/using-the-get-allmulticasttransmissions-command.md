@@ -3,9 +3,9 @@ title: get-AllMulticastTransmissions
 description: Reference article for get-AllMulticastTransmissions, which displays information about all multicast transmissions on a server.
 ms.topic: reference
 ms.assetid: 95b8fb79-7a8a-4f0c-88f4-92bc1111c67f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-AllMulticastTransmissions

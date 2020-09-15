@@ -1,12 +1,13 @@
 ---
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment.
-ms.author:
+ms.author: kaushika
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
 ---
+
 # Troubleshoot Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016

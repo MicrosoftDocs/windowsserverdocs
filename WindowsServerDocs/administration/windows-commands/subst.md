@@ -7,9 +7,9 @@ description: Learn how to associate a path with a drive letter.
 
 ms.topic: reference
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

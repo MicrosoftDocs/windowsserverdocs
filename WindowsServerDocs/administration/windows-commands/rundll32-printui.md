@@ -3,9 +3,9 @@ title: rundll32 printui.dll,PrintUIEntry
 description: Reference article for the rundll32 printui.dll,PrintUIEntry command, which automates many printer configuration tasks.
 ms.topic: reference
 ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/25/2018
 ---
 

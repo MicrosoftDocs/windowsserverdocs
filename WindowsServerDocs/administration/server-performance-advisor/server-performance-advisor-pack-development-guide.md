@@ -1,9 +1,9 @@
 ---
 title: Server Performance Advisor Pack Development Guide
 description: Server Performance Advisor Pack Development Guide
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Server Performance Advisor Pack Development Guide

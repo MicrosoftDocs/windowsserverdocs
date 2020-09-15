@@ -1,7 +1,6 @@
 ---
 title: Troubleshoot problems on the DHCP server
 description: This artilce introduces how to troubleshoot problems on the DHCP server and collect data.
-ms.service: na
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: article

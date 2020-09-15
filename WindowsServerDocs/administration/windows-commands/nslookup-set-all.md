@@ -3,9 +3,9 @@ title: nslookup set all
 description: Reference article for the nslookup set all command, which outputs the current configuration setting values.
 ms.topic: reference
 ms.assetid: 04b695cb-38b2-4adf-aa55-9d1b628eb8ac
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

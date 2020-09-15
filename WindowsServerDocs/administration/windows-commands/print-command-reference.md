@@ -3,9 +3,9 @@ title: Print command-line tool reference
 description: Reference article for using the print command-line tools.
 ms.topic: reference
 ms.assetid: 88d8fa87-6fa8-4774-9294-080b0157ea8d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
