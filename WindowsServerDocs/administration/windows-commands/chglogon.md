@@ -4,9 +4,9 @@ description: Reference article for the chglogon command, which enables or disabl
 ms.topic: reference
 ms.assetid: 8280c5b3-ac10-48ae-87ca-678594837f03
 ms.date: 10/16/2017
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ---
 
 # chglogon

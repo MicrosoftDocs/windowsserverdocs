@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2974fb3a-5150-43fd-a73f-3e5074eb5d03
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 # Migrate from Previous Versions to Windows Server Essentials or Windows Server Essentials Experience
 

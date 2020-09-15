@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c8325f87-fd79-471b-bf70-3f052692c383
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Migrate Windows Small Business Server 2011 Standard to Windows Server Essentials

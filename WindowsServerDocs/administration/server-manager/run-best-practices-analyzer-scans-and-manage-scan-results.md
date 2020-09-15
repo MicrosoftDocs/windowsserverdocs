@@ -3,9 +3,9 @@ title: Run Best Practices Analyzer Scans and Manage Scan Results_1
 description: Server Manager
 ms.topic: article
 ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Run Best Practices Analyzer Scans and Manage Scan Results

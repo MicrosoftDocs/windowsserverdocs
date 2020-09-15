@@ -7,9 +7,9 @@ description: Reference article for wbadmin, which lets you back up and restore y
 
 ms.topic: reference
 ms.assetid: 4b0b3f32-d21f-4861-84bb-b2eadbf1e7b8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

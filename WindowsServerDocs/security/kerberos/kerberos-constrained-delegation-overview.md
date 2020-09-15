@@ -3,9 +3,9 @@ title: Kerberos Constrained Delegation Overview
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Kerberos Constrained Delegation Overview

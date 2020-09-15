@@ -61,7 +61,7 @@ For more information about the capabilities of SMBv2 and SMBv3 capabilities, see
 - Detect: 
 
   ```PowerShell
-  Get-WindowsFeature FS-SMB1
+  Get-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
 - Disable: 

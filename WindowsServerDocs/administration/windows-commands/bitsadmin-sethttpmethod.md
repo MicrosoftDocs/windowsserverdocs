@@ -2,9 +2,9 @@
 title: bitsadmin sethttpmethod
 description: Reference article for the bitsadmin sethttpmethod command, which sets the HTTP verb to use.
 ms.topic: reference
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 03/01/2019
 ---
 

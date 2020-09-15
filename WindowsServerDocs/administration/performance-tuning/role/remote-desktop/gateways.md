@@ -2,7 +2,7 @@
 title: Performance Tuning Remote Desktop Gateways
 description: Performance tuning recommendations for Remote Desktop Gateways
 ms.topic: article
-ms.author: hammadbu; vladmis
+ms.author: hammadbu
 author: phstee
 ms.date: 10/16/2017
 ---

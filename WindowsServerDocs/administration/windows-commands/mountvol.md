@@ -3,9 +3,9 @@ title: mountvol
 description: Reference article for the mountvol command, which creates, deletes, or lists a volume mount point.
 ms.topic: reference
 ms.assetid: fea8ad4d-f04a-4aaa-a3e5-75931e867b39
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

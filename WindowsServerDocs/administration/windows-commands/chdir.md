@@ -3,9 +3,9 @@ title: chdir
 description: Reference article for the chdir command, which performs the same actions as the cd command.
 ms.topic: reference
 ms.assetid: 8d78901e-4f6e-4cb6-9ff8-ccf5a9d04fac
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # chdir

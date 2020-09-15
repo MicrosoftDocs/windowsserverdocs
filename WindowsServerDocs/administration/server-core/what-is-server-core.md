@@ -3,7 +3,8 @@ title: What is Server Core?
 description: Learn about the Server Core installation option in Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/20/2018
 ---

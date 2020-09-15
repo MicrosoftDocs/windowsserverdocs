@@ -3,8 +3,9 @@ title: Cmdlets for configuring persistent memory devices for Hyper-V VMs
 description: How to configure persistent memory devices for Hyper-V VMs
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc08039ba1d
-author: coreyp-at-msft
-ms.author: coreyp
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ---
 
 # Cmdlets for configuring persistent memory devices for Hyper-V VMs

@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 86f158a5-c807-4242-b73d-e97b604adb5f
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Use Windows Server Essentials

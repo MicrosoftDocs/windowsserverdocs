@@ -8,9 +8,9 @@ description: Learn how to diagnose side-by-side problems.
 ms.topic: reference
 ms.assetid: fcd26eeb-fbd9-4a86-b6a9-dfa5e9c6e4fc
 
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # sxstrace

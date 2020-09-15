@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ee2173c3-e464-4001-9f43-6d926a575092
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Add Top-Level Categories to the Launchpad (Macintosh Operating System)

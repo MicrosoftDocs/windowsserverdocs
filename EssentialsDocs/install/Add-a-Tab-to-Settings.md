@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: aac6b7f3-9020-46c3-a83f-b81542300385
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Add a Tab to Settings

@@ -3,7 +3,7 @@ title: OpenSSH Server Configuration for Windows
 description: Configuration information about OpenSSH Server for Windows 10 1809 and Server 2019.
 ms.date: 09/27/2018
 ms.topic: conceptual
-contributor: maertendMSFT
+ms.author: damaerte
 author: maertendmsft
 ---
 

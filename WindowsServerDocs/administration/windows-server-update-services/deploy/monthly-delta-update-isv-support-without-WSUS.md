@@ -2,9 +2,9 @@
 title: Monthly Delta update ISV support without WSUS
 description: Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can temporarily use Monthly Delta update instead of WSUS Express update delivery to reduce package size
 ms.topic: get-started article
-author: sakitong
-ms.author: coreyp
-manager: dougkim
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Monthly Delta update ISV support without WSUS

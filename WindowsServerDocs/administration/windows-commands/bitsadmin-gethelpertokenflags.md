@@ -2,9 +2,9 @@
 title: bitsadmin gethelpertokenflags
 description: Reference article for the bitsadmin gethelpertokenflags command, which returns the usage flags for a helper token that is associated with a BITS transfer job.
 ms.topic: reference
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 03/01/2019
 ---
 

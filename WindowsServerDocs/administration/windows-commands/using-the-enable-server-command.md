@@ -3,9 +3,9 @@ title: enable-Server
 description: Reference article for enable-Server, which enables all services for Windows Deployment Services.
 ms.topic: reference
 ms.assetid: 939ffbfb-cf3c-4310-9627-6e7e0c0644d6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # enable-Server

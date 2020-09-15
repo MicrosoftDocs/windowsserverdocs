@@ -2,9 +2,9 @@
 title: Windows Server Update Services tools and utilities
 description: WSUS tools and utilities
 ms.assetid: d54a1f5e-af68-497e-99be-94445769b7a6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: lizapo
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Windows Server Update Services Tools and Utilities

@@ -3,9 +3,9 @@ title: break (shadow copy volume)
 description: Reference article for the break command, which disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
 ms.topic: reference
 ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
