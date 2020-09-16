@@ -93,7 +93,7 @@ To set up a new gateway:
 
 3. Enter the following information:
    - **Server name** – The name of the computer you want to use as a gateway. The server name can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-   - **User account** - Select or add a user account to use with the Remote PC Gateway you're connecting to. You can also select **Use desktop user account** to use the same credentials that you used for the remote desktop connection.
+   - **User account** - Select or add a user account to use with the Remote PC Gateway you're connecting to. You can also select **Use desktop user account** to use the same credentials that you used for the remote PC connection.
 4. Tap **Save**.
 
 ## Global app settings
@@ -121,7 +121,7 @@ You can set the following global settings in your client by tapping **Settings**
 
 ### Manage your user accounts
 
-When you connect to a PC or workspace, you can save the account's information to connect to it later. You can also define user accounts within the client instead of saving the user data when you connect to a desktop.
+When you connect to a PC or workspace, you can save the account's information to connect to it later. You can also define user accounts within the client instead of saving the user data when you connect to a PC.
 
 To create a new user account:
 
@@ -140,19 +140,19 @@ To delete a user account:
 4. Tap **Remove this account** at the bottom to delete the user account.
 5. You can also edit the user account and tap **Save**.
 
-## Navigate the Remote Desktop session
+## Navigate your remote session
 
-When you start a remote desktop connection, there are tools available that you can use to navigate the session.
+This section describes the tools available to help you navigate your remote session once you've connected to the service.
 
-### Start a Remote Desktop connection
+### Start a remote session
 
-1. Tap the Remote Desktop connection to start the session.
+1. Tap the name of the connection you want to use to start the session.
 2. If you haven't saved credentials for the connection, you'll be prompted to provide a **Username** and **Password**.
-3. If you're asked to verify the certificate for the remote desktop, review the information and ensure you trust this PC before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
+3. If you're asked to verify the certificate for your workspace or PC, review the information and ensure you trust this PC before tapping **Connect**. You can also select **Don't ask about this certificate again** to always accept this certificate.
 
 ### Connection bar
 
-The connection bar gives you access to additional navigation controls. By default, the connection bar is placed in the middle at the top of the screen. Tap and drag the bar to the left or right to move it.
+The connection bar gives you access to additional navigation controls. By default, the connection bar is placed in the middle of the top of the screen. Tap and drag the bar to the left or right to move it.
 
 - **Pan Control** - The pan control enables the screen to be enlarged and moved around. Pan control is only available on touch-enabled devices and using the direct touch mode.
    - To enable or disable the pan control, tap the pan icon in the connection bar to display the pan control. The screen will zoom in while the pan control is active. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
@@ -171,9 +171,9 @@ Tap the **...** on the connection bar to display the command bar on the right si
 - **Full-screen** - Enters or exits full screen mode.
 - **Touch or Mouse** - You can switch between the mouse modes (Direct Touch and Mouse Pointer).
 
-### Use direct touch gestures and mouse modes in a remote session
+### Use direct touch gestures and mouse modes
 
-Two mouse modes are available to interact with the session.
+You can interact with your session with two available mouse modes:
 
 - **Direct touch**: Passes all of the touch contacts to the session to be interpreted remotely.
   - Used in the same way you would use Windows with a touch screen.
