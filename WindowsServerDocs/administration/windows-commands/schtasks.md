@@ -1,10 +1,6 @@
 ---
 title: schtasks
-description: Reference article for **** -
-
-
-
-
+description: Reference article for the schtasks command, which schedules commands and programs to run periodically or at a specific time.
 ms.topic: reference
 ms.assetid: 2e713203-3dd8-491b-b9e1-9423618dc7e8
 ms.author: lizross
@@ -14,8 +10,6 @@ ms.date: 10/16/2017
 ---
 
 # schtasks
-
-
 
 Schedules commands and programs to run periodically or at a specific time. Adds and removes tasks from the schedule, starts and stops tasks on demand, and displays and changes scheduled tasks.
 
