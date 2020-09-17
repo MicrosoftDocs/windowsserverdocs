@@ -58,7 +58,7 @@ If the farm is not using delegated administration, grant the gMSA account admin 
 
 ### Create the JEA Role File
 
-On the AD FS server, create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/role-capabilities).
+On the AD FS server, create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](/powershell/scripting/learn/remoting/jea/role-capabilities).
 
 The commandlets delegated in this example are `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity`.
 
@@ -74,7 +74,7 @@ VisibleCmdlets = 'Reset-AdfsAccountLockout', 'Get-ADFSAccountActivity', 'Set-ADF
 
 
 ### Create the JEA Session Configuration File
-Follow the instructions to create the [JEA session configuration](https://docs.microsoft.com/powershell/scripting/learn/remoting/jea/session-configurations) file. The configuration file determines who can use the JEA endpoint, and what capabilities they have access to.
+Follow the instructions to create the [JEA session configuration](/powershell/scripting/learn/remoting/jea/session-configurations) file. The configuration file determines who can use the JEA endpoint, and what capabilities they have access to.
 
 Role capabilities are referenced by the flat name (filename without the extension) of the role capability file. If multiple role capabilities are available on the system with the same flat name, PowerShell uses its implicit search order to select the effective role capability file. It does not give access to all role capability files with the same name.
 

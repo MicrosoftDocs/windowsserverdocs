@@ -170,8 +170,8 @@ State   :     Installed
 
 - [Windows Server support lifecycle](https://support.microsoft.com/lifecycle)
 
-- [Determining whether Server Core is running](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396)
+- [Determining whether Server Core is running](/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)?f=255&MSPPError=-2147217396)
 
-- [GetProductInfo function](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
+- [GetProductInfo function](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo)
 
-- [Software Inventory Logging Cmdlets](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
+- [Software Inventory Logging Cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
