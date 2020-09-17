@@ -1,11 +1,10 @@
 ---
 title: One or more network adapters should be configured as the source for Port Mirroring
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 147fd00f-1440-44d1-94e3-3a8af63aa7ed
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # One or more network adapters should be configured as the source for Port Mirroring

@@ -22,7 +22,7 @@ Using Network Controller, you can automate the configuration of network infrastr
 > - [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 > - [Install the Network Controller server role using Server Manager](Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [Post-Deployment Steps for Network Controller](post-deploy-steps-nc.md)
-> - [Network Controller Cmdlets](https://docs.microsoft.com/powershell/module/networkcontroller/?view=win10-ps)
+> - [Network Controller Cmdlets](/powershell/module/networkcontroller/?view=win10-ps)
 
 ## <a name="bkmk_overview"></a>Network Controller Overview
 

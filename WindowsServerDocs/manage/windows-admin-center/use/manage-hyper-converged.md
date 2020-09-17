@@ -19,7 +19,7 @@ Hyper-Converged Infrastructure consolidates software-defined compute, storage, a
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
 
 > [!IMPORTANT]
-> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](https://aka.ms/windowsadmincenter)
+> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](../overview.md)
 
 ## What is Windows Admin Center
 
@@ -90,7 +90,7 @@ Once your Hyper-Converged Infrastructure is deployed, you can manage it using Wi
 
 ### Install Windows Admin Center
 
-If you haven't already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](https://aka.ms/windowsadmincenter) or [learn more about other installation options](../deploy/install.md).
+If you haven't already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](../overview.md) or [learn more about other installation options](../deploy/install.md).
 
 ### Add Hyper-Converged Cluster
 

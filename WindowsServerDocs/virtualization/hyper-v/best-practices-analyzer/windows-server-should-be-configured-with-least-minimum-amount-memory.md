@@ -1,11 +1,10 @@
 ---
 title: Windows Server 2016 should be configured with at least the minimum amount of memory
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d324af73-af73-40b0-bd5b-8003ba3e921b
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows Server 2016 should be configured with at least the minimum amount of memory

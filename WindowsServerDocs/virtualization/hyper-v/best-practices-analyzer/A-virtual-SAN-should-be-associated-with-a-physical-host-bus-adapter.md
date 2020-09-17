@@ -1,11 +1,10 @@
 ---
 title: A virtual SAN should be associated with a physical host bus adapter
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 14bca69b-e779-4e90-b5c1-1b015625572f
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # A virtual SAN should be associated with a physical host bus adapter

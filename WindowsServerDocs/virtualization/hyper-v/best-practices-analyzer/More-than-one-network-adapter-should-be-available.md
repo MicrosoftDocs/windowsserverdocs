@@ -1,11 +1,10 @@
 ---
 title: More than one network adapter should be available
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # More than one network adapter should be available

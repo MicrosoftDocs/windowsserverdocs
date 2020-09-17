@@ -1,11 +1,10 @@
 ---
 title: The WFP virtual switch extension should be enabled if it is required by third party extensions
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 8aa8a9a5-e3fa-4c9b-8331-ba5a3de22429
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # The WFP virtual switch extension should be enabled if it is required by third party extensions
