@@ -72,4 +72,4 @@ You can enable high availability of the gateway service by deploying Windows Adm
 [Learn how to deploy Windows Admin Center with high availability.](../deploy/high-availability.md)
 
 > [!Tip]
-> Ready to install Windows Admin Center? [Download now](https://aka.ms/windowsadmincenter)
+> Ready to install Windows Admin Center? [Download now](../overview.md)

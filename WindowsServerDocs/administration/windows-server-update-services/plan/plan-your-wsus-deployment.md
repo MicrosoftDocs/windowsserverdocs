@@ -107,7 +107,7 @@ WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
 
--   Any supported Microsoft SQL Server version. For more information, see [Microsoft Lifecycle Policy](https://aka.ms/sqllifecycle).
+-   Any supported Microsoft SQL Server version. For more information, see [Microsoft Lifecycle Policy](/lifecycle/products/?products=sql-server).
 
 The following editions of SQL Server are supported by WSUS:
 

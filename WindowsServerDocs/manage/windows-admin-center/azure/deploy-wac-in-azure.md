@@ -155,7 +155,7 @@ Before installing Windows Admin Center on your desired gateway VM, install a SSL
 > [!NOTE]
 > These instructions are for installing on Windows Server with Desktop Experience, not on a Server Core installation.
 
-1. [Download Windows Admin Center](https://aka.ms/windowsadmincenter) to your local computer.
+1. [Download Windows Admin Center](../overview.md) to your local computer.
 
 2. Establish a remote desktop connection to the VM, then copy the MSI from your local machine and paste into the VM.
 

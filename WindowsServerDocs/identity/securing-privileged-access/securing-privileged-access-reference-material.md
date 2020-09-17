@@ -133,7 +133,7 @@ Because of the large number of assets that depend on identity systems like Activ
 
 ![Diagram showing that you should minimize the number of systems your Active Directory and Domain Controllers depend on](../media/securing-privileged-access-reference-material/PAW_RM_Fig010.JPG)
 
-For more information on hardening the top risks of active directory, see [this page](https://aka.ms/hardenAD).
+For more information on hardening the top risks of active directory, see [this page](../ad-ds/plan/security-best-practices/reducing-the-active-directory-attack-surface.md).
 
 ## Operational standards based on clean source principle
 
@@ -308,7 +308,7 @@ Administrators can only sign in to admin workstations with their administrative 
 > [!NOTE]
 > This is required because logging onto a host interactively grants control of the credentials to that host.
 >
-> See the [Administrative Tools and Logon Types](https://aka.ms/admintoolsecurity) for details about logon types, common management tools, and credential exposure.
+> See the [Administrative Tools and Logon Types]() for details about logon types, common management tools, and credential exposure.
 
 ##### Use of approved support technology and methods
 
@@ -324,7 +324,7 @@ Administrators who support remote systems and users must follow these guidelines
 Ensure that the following practices are applied for this scenario:
 
 - **Remote server support** - When remotely accessing a server, Tier 0 administrators must follow these guidelines:
-  - **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Administrative Tools and Logon Types](https://aka.ms/admintoolsecurity).
+  - **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Administrative Tools and Logon Types]().
   - **Primary (interactive)** - Use RDP RestrictedAdmin or a Standard RDP Session from an admin workstation with a domain account
 
     > [!NOTE]
@@ -483,7 +483,7 @@ An administrative forest design should include the following considerations:
 
 - **Workstation Hardening** - Build the administrative workstations using the [Privileged Access Workstations](../securing-privileged-access/privileged-access-workstations.md) (through Phase 3), but change the domain membership to the administrative forest instead of the production environment.
 - **Server and DC hardening** - For all domain controllers and servers in the administrative forest:
-   - Ensure all media is validated using the guidance in [Clean Source for installation media](https://aka.ms/cleansource)
+   - Ensure all media is validated using the guidance in [Clean Source for installation media]()
    - Ensure the administrative forest servers should have the latest operating systems installed, even if this is not feasible in production.
    - Admin forest hosts should be automatically updated with security updates.
 

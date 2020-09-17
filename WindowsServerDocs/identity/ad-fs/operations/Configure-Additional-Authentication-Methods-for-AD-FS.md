@@ -15,7 +15,7 @@ In order to enable multi-factor authentication (MFA), you must select at least o
 > [!NOTE]
 > If you select Certificate Authentication, ensure that the smart card certificates have been provisioned securely and have pin requirements.
 
-Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](https://aka.ms/m2w274).<p>Create a hybrid identity solution in Microsoft Azure:<br /> - [Learn about Azure Multi-Factor Authentication.](https://aka.ms/ey6o9r)<br /> - [Manage identities for single-forest hybrid environments using cloud authentication.](https://aka.ms/g1jat8)<br /> - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications.](https://aka.ms/kt1bbm)
+Did you know that Microsoft Azure provides similar functionality in the cloud? Learn more about [Microsoft Azure identity solutions](https://aka.ms/m2w274).<p>Create a hybrid identity solution in Microsoft Azure:<br /> - [Learn about Azure Multi-Factor Authentication.](/azure/active-directory/authentication/concept-mfa-howitworks)<br /> - [Manage identities for single-forest hybrid environments using cloud authentication.](/previous-versions/windows/it-pro/solutions-guidance/dn550986(v=ws.11))<br /> - [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications.](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280946(v=ws.11))
 
 ## Microsoft and third-party additional authentication methods
 You can also configure and enable Microsoft and third-party authentication methods in AD FS in Windows Server 2012 R2. Once installed and registered with AD FS, you can enforce MFA as part of the global or per-relying-party authentication policy.

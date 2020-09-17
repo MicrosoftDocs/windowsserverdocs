@@ -84,7 +84,7 @@ We will need a connection to on-premises in order to deploy the domain controlle
 * ExpressRoute
 
 It is recommended to use ExpressRoute. ExpressRoute lets you create private connections between Azure datacenters and infrastructure that's on your premises or in a co-location environment. ExpressRoute connections do not go over the public Internet. They offer more reliability, faster speeds, lower latencies and higher security than typical connections over the Internet.
-While it is recommended to use ExpressRoute, you may choose any connection method best suited for your organization. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](https://aka.ms/Azure/ExpressRoute).
+While it is recommended to use ExpressRoute, you may choose any connection method best suited for your organization. To learn more about ExpressRoute and the various connectivity options using ExpressRoute, read [ExpressRoute technical overview](/azure/expressroute/expressroute-introduction).
 
 ### 2. Create storage accounts
 In order to maintain high availability and avoid dependence on a single storage account, you can create two storage accounts. Divide the machines in each availability set into two groups and then assign each group a separate storage account.
@@ -117,7 +117,7 @@ The next step is to deploy virtual machines that will host the different roles i
 | contosowap1 |WAP |DMZ |contosowapset |contososac1 |Static |
 | contosowap2 |WAP |DMZ |contosowapset |contososac2 |Static |
 
-As you might have noticed, no NSG has been specified. This is because azure lets you use NSG at the subnet level. Then, you can control machine network traffic by using the individual NSG associated with either the subnet or else the NIC object. Read more on [What is a Network Security Group (NSG)](https://aka.ms/Azure/NSG).
+As you might have noticed, no NSG has been specified. This is because azure lets you use NSG at the subnet level. Then, you can control machine network traffic by using the individual NSG associated with either the subnet or else the NIC object. Read more on [What is a Network Security Group (NSG)](/azure/virtual-network/tutorial-filter-network-traffic).
 Static IP address is recommended if you are managing the DNS. You can use Azure DNS and instead in the DNS records for your domain, refer to the new machines by their Azure FQDNs.
 Your virtual machine pane should look like below after the deployment is completed:
 
@@ -352,12 +352,12 @@ You can use an existing virtual network or create a new VNET while deploying thi
 
 ## Additional resources
 * [Availability Sets](https://aka.ms/Azure/Availability)
-* [Azure Load Balancer](https://aka.ms/Azure/ILB)
-* [Internal Load Balancer](https://aka.ms/Azure/ILB/Internal)
-* [Internet Facing Load Balancer](https://aka.ms/Azure/ILB/Internet)
+* [Azure Load Balancer](/azure/load-balancer/load-balancer-overview)
+* [Internal Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-internal-powershell)
+* [Internet Facing Load Balancer](/azure/load-balancer/quickstart-load-balancer-standard-public-powershell)
 * [Storage Accounts](https://aka.ms/Azure/Storage)
-* [Azure Virtual Networks](https://aka.ms/Azure/VNet)
-* [AD FS and Web Application Proxy Links](https://aka.ms/ADFSLinks)
+* [Azure Virtual Networks](/azure/virtual-network/virtual-networks-overview)
+* [AD FS and Web Application Proxy Links](/archive/blogs/tangent_thoughts/qrg-quick-reference-guide-active-directory-federation-services)
 
 ## Next steps
 * [Integrating your on-premises identities with Azure Active Directory](/azure/active-directory/hybrid/whatis-hybrid-identity)
