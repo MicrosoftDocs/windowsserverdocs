@@ -6,7 +6,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 09/05/2020
+ms.date: 09/17/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Microsoft Store Client
