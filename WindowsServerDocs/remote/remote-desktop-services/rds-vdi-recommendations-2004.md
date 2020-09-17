@@ -8,7 +8,7 @@ author: Heidilohr
 ms.author: helohr
 ms.topic: article
 manager: 
-ms.date: 09/08/2020
+ms.date: 09/17/2020
 ---
 
 # Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
@@ -545,7 +545,7 @@ The following table contains some services that may be considered to disable in 
 |Optimize drives|defragsvc|Helps the computer run more efficiently by optimizing files on storage drives.|Virtual desktop solutions do not normally benefit from disk optimization. The "drives" are often not traditional drives and often just a temporary storage allocation.|
 |Diagnostic Execution Service|DiagSvc|Executes diagnostic actions for troubleshooting support|Disabling this service disables the ability to run Windows diagnostics Diagnostic Execution Service.|
 |Connected User Experiences and Telemetry|DiagTrack|This service enables features that support in-application and connected user experiences. Additionally, this service manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.|Consider disabling if on disconnected network. To learn more, see [this article](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).|
-|Diagnostic Policy Service|DPS|The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function.|Disabling this service disables the ability to run Windows diagnostics. For more information, see [this article](/uwp/api/Windows.System.Diagnostics?view=winrt-19041).|
+|Diagnostic Policy Service|DPS|The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function.|Disabling this service disables the ability to run Windows diagnostics. For more information, see [this article](/uwp/api/Windows.System.Diagnostics?view=winrt-19041&preserve-view=true).|
 |Device Setup Manager|DsmSvc|Enables the detection, download and installation of device-related software. |If this service is disabled, devices may be configured with outdated software, and may not work correctly. <p>Virtual desktop environments very closely control what software is installed and maintain that consistency across the environment.|
 |Data Usage service|DusmSvc|Network data usage, data limit, restrict background data, metered networks.| For more information, see [this article](/uwp/schemas/mobilebroadbandschema/dusm/schema-root). |
 |Windows Mobile Hotspot Service|icssvc|Provides the ability to share a cellular data connection with another device.|To learn more, see [this article](/uwp/api/Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration?view=winrt-19041&preserve-view=true).|
@@ -719,7 +719,7 @@ Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536.
 
 Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
 
-You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration?view=win10-ps) and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
+You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration?view=win10-ps&preserve-view=true) and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps&preserve-view=true) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
