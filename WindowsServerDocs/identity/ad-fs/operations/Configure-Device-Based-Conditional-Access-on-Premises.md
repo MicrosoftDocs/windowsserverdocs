@@ -26,7 +26,7 @@ The following per-requisites are required before you can begin with on-premises 
 |Azure AD Connect|November 2015 QFE or later.  Get the latest version [here](https://www.microsoft.com/download/details.aspx?id=47594).
 |Windows Server 2016|Build 10586 or newer for AD FS
 |Windows Server 2016 Active Directory schema|Schema level 85 or higher is required.
-|Windows Server 2016 domain controller|This is only required for Hello For Business key-trust deployments.  Additional information can be found at [here](https://aka.ms/whfbdocs).
+|Windows Server 2016 domain controller|This is only required for Hello For Business key-trust deployments.  Additional information can be found at [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 |Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Microsoft Passport for Work scenarios only
 |Azure AD user account with Azure AD Premium license assigned|For registering the device
 

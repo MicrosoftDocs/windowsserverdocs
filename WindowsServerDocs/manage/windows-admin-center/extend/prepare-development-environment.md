@@ -23,7 +23,7 @@ To prepare your development environment, perform the following steps:
 
 To begin developing with the SDK, download and install the following prerequisites:
 
-* [Windows Admin Center](https://aka.ms/WACDownloadPage) (GA or preview version)
+* [Windows Admin Center](../overview.md) (GA or preview version)
 * Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
 * [Node.js](https://nodejs.org/en/download/releases/) (version 10.3.0)
 * [Node Package Manager](https://npmjs.com/get-npm) (8.12.0 or later)
@@ -66,4 +66,3 @@ Now that your environment is prepared, you are ready to start creating content.
 ## SDK design toolkit
 
 Check out our Windows Admin Center [SDK design toolkit](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)! This toolkit is designed to help you rapidly mock up extensions in PowerPoint using Windows Admin Center styles, controls, and page templates. See what your extension can look like in Windows Admin Center before you start coding!
-

@@ -71,7 +71,7 @@ If you use Group Policy to configure User Rights Assignment, ensure that the gMS
 
 ## JEA security groups
 
-When you set up HGS, a [Just Enough Administration (JEA)](https://aka.ms/JEAdocs) PowerShell endpoint is configured to allow admins to manage HGS without needing full local administrator privileges.
+When you set up HGS, a [Just Enough Administration (JEA)](/powershell/scripting/learn/remoting/jea/overview) PowerShell endpoint is configured to allow admins to manage HGS without needing full local administrator privileges.
 You are not required to use JEA to manage HGS, but it still must be configured when running Initialize-HgsServer.
 The configuration of the JEA endpoint consists of designating 2 security groups that contain your HGS admins and HGS reviewers.
 Users who belong to the admin group can add, change, or remove policies on HGS; reviewers can only view the current configuration.

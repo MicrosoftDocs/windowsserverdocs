@@ -77,9 +77,9 @@ This provider is included by default in versions designated in the **Applies to*
 
 -   [Microsoft Kerberos (Windows)](/windows/win32/secauthn/microsoft-kerberos)
 
--   [\[MS-KILE\]: Kerberos Protocol Extensions](https://msdn.microsoft.com/library/cc233855(PROT.10).aspx)
+-   [\[MS-KILE\]: Kerberos Protocol Extensions](/openspecs/windows_protocols/ms-kile/2a32282e-dd48-4ad9-a542-609804b02cc9)
 
--   [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx)
+-   [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94)
 
 -   [Kerberos SSP/AP (Windows)](/windows/win32/secauthn/kerberos-ssp-ap)
 
@@ -133,7 +133,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 -   [Microsoft Digest Authentication (Windows)](/windows/win32/secauthn/microsoft-digest-ssp)
 
--   [\[MS-DPSP\]: Digest Protocol Extensions](https://msdn.microsoft.com/library/cc227906(PROT.13).aspx)
+-   [\[MS-DPSP\]: Digest Protocol Extensions](/openspecs/windows_protocols/ms-dpsp/3e44be62-2067-472a-9ef0-e937298b68fb)
 
 ### <a name="BKMK_SchannelSSP"></a>Schannel Security Support Provider
 The Secure Channel (Schannel) is used for web-based server authentication, such as when a user attempts to access a secure web server.
@@ -171,7 +171,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 -   [TLS/SSL Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc784149(v=ws.10))
 
--   [\[MS-TLSP\]: Transport Layer Security (TLS) Profile](https://msdn.microsoft.com/library/dd207968(PROT.13).aspx)
+-   [\[MS-TLSP\]: Transport Layer Security (TLS) Profile](/openspecs/windows_protocols/ms-tlsp/58aba05b-62b0-4cd1-b88b-dc8a24920346)
 
 ### <a name="BKMK_NegoSSP"></a>Negotiate Security Support Provider
 The Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) forms the basis for the Negotiate SSP, whichcan be used to negotiate a specific authentication protocol. When an application calls into SSPI to log on to a network, it can specify an SSP to process the request. If the application specifies the Negotiate SSP, it analyzes the request and picks the appropriate provider to handle the request, based on customer-configured security policies.
@@ -188,9 +188,9 @@ This provider is included by default in versions designated in the **Applies to*
 
 -   [Microsoft Negotiate (Windows)](/windows/win32/secauthn/microsoft-negotiate)
 
--   [\[MS-SPNG\]: Simple and Protected GSS-API Negotiation Mechanism (SPNEGO)  Extensions](https://msdn.microsoft.com/library/cc247021(PROT.13).aspx)
+-   [\[MS-SPNG\]: Simple and Protected GSS-API Negotiation Mechanism (SPNEGO)  Extensions](/openspecs/windows_protocols/ms-spng/f377a379-c24f-4a0f-a3eb-0d835389e28a)
 
--   [\[MS-N2HT\]: Negotiate and Nego2 HTTP Authentication Protocol Specification](https://msdn.microsoft.com/library/dd303576(PROT.13).aspx)
+-   [\[MS-N2HT\]: Negotiate and Nego2 HTTP Authentication Protocol Specification](/openspecs/windows_protocols/ms-n2ht/4b88aa77-4b12-4933-8740-0f32d8f4eacf)
 
 ### <a name="BKMK_CredSSP"></a>Credential Security Support Provider
 The Credential Security Service Provider (CredSSP) provides a single sign-on (SSO) user experience when starting new Terminal Services and Remote Desktop Services sessions. CredSSP enables applications to delegate users' credentials from the client computer (by using the client-side SSP) to the target server (through the server-side SSP), based on the client's policies. CredSSP policies are configured by using Group Policy, and the delegation of credentials is turned off by default.
@@ -201,7 +201,7 @@ This provider is included by default in versions designated in the **Applies to*
 
 **Additional resources for the Credentials SSP**
 
--   [\[MS-CSSP\]: Credential Security Support Provider (CredSSP) Protocol Specification](https://msdn.microsoft.com/library/cc226764(PROT.13).aspx)
+-   [\[MS-CSSP\]: Credential Security Support Provider (CredSSP) Protocol Specification](/openspecs/windows_protocols/ms-cssp/85f57821-40bb-46aa-bfcb-ba9590b8fc30)
 
 -   [Credential Security Service Provider and SSO for Terminal Services Logon](/previous-versions/windows/it-pro/windows-vista/cc749211(v=ws.10))
 

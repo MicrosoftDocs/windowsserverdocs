@@ -60,7 +60,7 @@ You can keep track of cutover progress through descriptions of each stage that a
 |  Progress | Description                                                                                               |  Notes |
 |:-----|:--------------------------------------------------------------------------------------------------------------------|:---|
 |  0% | The cutover is idle. |   |
-| 2%  | Connecting to the source computer... |   Please ensure that the [requirements for both source and destination computers](https://docs.microsoft.com/windows-server/storage/storage-migration-service/overview#security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports) are fulfilled.|
+| 2%  | Connecting to the source computer... |   Please ensure that the [requirements for both source and destination computers](./overview.md#security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports) are fulfilled.|
 | 5%  | Connecting to the destination computer... |   |
 | 6%  | Setting security permissions on the computer object in Active Directory... |   Replicates the source computer's Active Directory object security permissions on the destination computer.|
 | 8%  | Making sure that the temporary account that we created was successfully deleted on the source computer... |   Makes sure that we can create a temporary account with the same name.|
@@ -89,7 +89,7 @@ You can keep track of cutover progress through descriptions of each stage that a
 | 52% | Waiting for the source computer to respond after the 1st restart... |   |
 | 55% | Waiting for the source computer to respond after the 2nd restart... |   |
 | 56% | Waiting for the source computer to respond after the 3rd restart... |   |
-| 57% | Removing alternate computer names on the source... |   Ensures that the source is unreachable to other users and apps. For more info, see [Netdom computername](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)). |
+| 57% | Removing alternate computer names on the source... |   Ensures that the source is unreachable to other users and apps. For more info, see [Netdom computername](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)). |
 | 58% | Removing a temporary local account we created on the source computer... |   |
 | 61% | Resetting the local account token filter policy on the source computer... |   Enables the policy.|
 | 63% | Removing the destination computer from the domain... |   |
@@ -113,20 +113,20 @@ You can keep track of cutover progress through descriptions of each stage that a
 
 ### __Is domain controller migration supported?__
 
-Not currently, but see the [FAQ page](https://docs.microsoft.com/windows-server/storage/storage-migration-service/faq#is-domain-controller-migration-supported) for a workaround.
+Not currently, but see the [FAQ page](./faq.md#is-domain-controller-migration-supported) for a workaround.
 
 
 ## Known issues
 >Ensure that you have fulfilled the requirements from the [Storage Migration Service overview](overview.md) and installed the latest Windows update on the computer running Storage Migration Service.
 
-See the [known issues page](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues) for more information on the following issues.
-* [__Storage Migration Service cutover validation fails with error "Access is denied for the token filter policy on destination computer"__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer)
+See the [known issues page](./known-issues.md) for more information on the following issues.
+* [__Storage Migration Service cutover validation fails with error "Access is denied for the token filter policy on destination computer"__](./known-issues.md#storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer)
 
-* [__Error "CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed against netName resource" and Windows Server 2008 R2 cluster cutover fails__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails)
+* [__Error "CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed against netName resource" and Windows Server 2008 R2 cluster cutover fails__](./known-issues.md#error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails)
 
-* [__Cutover hangs on "38% Mapping network interfaces on the source computer..." when using static IPs__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-static-ips)
+* [__Cutover hangs on "38% Mapping network interfaces on the source computer..." when using static IPs__](./known-issues.md#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-static-ips)
 
-* [__Cutover hangs on "38% Mapping network interfaces on the source computer..."__](https://docs.microsoft.com/windows-server/storage/storage-migration-service/known-issues#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer)
+* [__Cutover hangs on "38% Mapping network interfaces on the source computer..."__](./known-issues.md#cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer)
 
 ## Additional References
 

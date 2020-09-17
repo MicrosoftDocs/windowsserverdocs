@@ -53,7 +53,7 @@ This allows them to connect to the machine remotely and ensures they have suffic
 However, some users may not need unrestricted access to the machine to perform their jobs.
 You can use **role-based access control** in Windows Admin Center to provide such users with limited access to the machine instead of making them full local administrators.
 
-Role-based access control in Windows Admin Center works by configuring each managed server with a PowerShell [Just Enough Administration](https://aka.ms/jeadocs) endpoint.
+Role-based access control in Windows Admin Center works by configuring each managed server with a PowerShell [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview) endpoint.
 This endpoint defines the roles, including what aspects of the system each role is allowed to manage and which users are assigned to the role.
 When a user connects to the restricted endpoint, a temporary local administrator account is created to manage the system on their behalf.
 This ensures that even tools which do not have their own delegation model can still be managed with Windows Admin Center.
