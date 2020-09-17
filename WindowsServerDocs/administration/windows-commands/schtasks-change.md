@@ -51,106 +51,80 @@ schtasks /change /tn <Taskname> [/s <computer> [/u [<domain>\]<user> [/p <passwo
 | /ri `<interval>` | Specifies the repetition interval for the scheduled task, in minutes. Valid range is 1 - 599940 (599940 minutes = 9999 hours). If either the **/et** or **/du** parameters are specified, the default is **10 minutes**. |
 | /et `<Endtime>` | Specifies the end time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
 | /du `<duration>` | A value that specifies the duration to run the task. The time format is HH:mm (24-hour time). For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
-|
-
-
-
-
-/k	Stops the program that the task runs at the time specified by /et or /du. Without /k, schtasks does not start the program again after it reaches the time specified by /et or /du, but it does not stop the program if it is still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule.
-/sd <StartDate>	Specifies the first date on which the task should be run. The date format is MM/DD/YYYY.
-/ed <EndDate>	Specifies the last date on which the task should be run. The format is MM/DD/YYYY.
-/ENABLE	Specifies to enable the scheduled task.
-/DISABLE	Specifies to disable the scheduled task.
-/it	Specifies to run the scheduled task only when the run as user (the user account under which the task runs) is logged on to the computer.
-This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You cannot use a change command to remove the interactive-only property from a task.
-By default, the run as user is the current user of the local computer when the task is scheduled or the account specified by the /u parameter, if one is used. However, if the command includes the /ru parameter, then the run as user is the account specified by the /ru parameter.
-/z	Specifies to delete the task upon the completion of its schedule.
-/?	Displays help at the command prompt.
+| /k | Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, schtasks does not start the program again after it reaches the time specified by **/et** or **/du**, but it does not stop the program if it's still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
+| /sd `<Startdate>` | Specifies the first date on which the task should be run. The date format is MM/DD/YYYY. |
+| /ed `<Enddate>` | Specifies the last date on which the task should be run. The format is MM/DD/YYYY. |
+| /ENABLE | Specifies to enable the scheduled task. |
+| /DISABLE | Specifies to disable the scheduled task. |
+| /it | Specifies to run the scheduled task only when the run as user (the user account under which the task runs) is logged on to the computer.|This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You can't use a change command to remove the interactive-only property from a task. By default, run as user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the run as user is the account specified by the **/ru** parameter. |
+| /z | Specifies to delete the task upon the completion of its schedule. |
+| /? | Displays help at the command prompt. |
 
 #### Remarks
-The /tn and /s parameters identify the task. The /tr, /ru, and /rp parameters specify properties of the task that you can change.
-The /ru, and /rp parameters specify the permissions under which the task runs. The /u and /p parameters specify the permissions used to change the task.
-To change tasks on a remote computer, the user must be logged on to the local computer with an account that is a member of the Administrators group on the remote computer.
-To run a /change command with the permissions of a different user (/u, /p), the local computer must be in the same domain as the remote computer or must be in a domain that the remote computer domain trusts.
-The System account does not have interactive logon rights. Users do not see and cannot interact with programs run with system permissions.
-To identify tasks with the /it property, use a verbose query (/query /v). In a verbose query display of a task with /it, the Logon Mode field has a value of Interactive only.
-Examples
-To change the program that a task runs
-The following command changes the program that the Virus Check task runs from VirusCheck.exe to VirusCheck2.exe. This command uses the /tn parameter to identify the task and the /tr parameter to specify the new program for the task. (You cannot change the task name.)
 
+- The **/tn** and **/s** parameters identify the task. The **/tr**, **/ru**, and **/rp** parameters specify properties of the task that you can change.
 
-Copy
+- The **/ru** and **/rp** parameters specify the permissions under which the task runs. The **/u** and **/p** parameters specify the permissions used to change the task.
+
+- To change tasks on a remote computer, the user must be logged on to the local computer with an account that is a member of the Administrators group on the remote computer.
+
+- To run a **/change** command with the permissions of a different user (**/u**, **/p**), the local computer must be in the same domain as the remote computer or must be in a domain that the remote computer domain trusts.
+
+- The System account doesn't have interactive logon rights. Users don't see, and can't interact with, programs run with system permissions.
+To identify tasks with the **/it** property, use a verbose query (**/query /v**). In a verbose query display of a task with **/it**, the Logon Mode field has a value of Interactive only.
+
+## Examples
+
+To change the program that the Virus Check task runs from *VirusCheck.exe* to *VirusCheck2.exe*, type:
+
+```
 schtasks /change /tn Virus Check /tr C:\VirusCheck2.exe
-In response, SchTasks.exe displays the following success message:
+```
 
+This command uses the **/tn** parameter to identify the task and the **/tr** parameter to specify the new program for the task. (You can't change the task name.)
 
-Copy
-SUCCESS: The parameters of the scheduled task Virus Check have been changed.
-As a result of this command, the Virus Check task now runs VirusCheck2.exe.
+To change the password of the user account for the *RemindMe* task on the remote computer, *Svr01*, type:
 
-To change the password for a remote task
-The following command changes the password of the user account for the RemindMe task on the remote computer, Svr01. The command uses the /tn parameter to identify the task and the /s parameter to specify the remote computer. It uses the /rp parameter to specify the new password, p@ssWord3.
-
-This procedure is required whenever the password for a user account expires or changes. If the password saved in a task is no longer valid, then the task does not run.
-
-
-Copy
+```
 schtasks /change /tn RemindMe /s Svr01 /rp p@ssWord3
-In response, SchTasks.exe displays the following success message:
+```
 
+This procedure is required whenever the password for a user account expires or changes. If the password saved in a task is no longer valid, then the task doesn't run. The command uses the **/tn** parameter to identify the task and the **/s** parameter to specify the remote computer. It uses the **/rp** parameter to specify the new password, *p@ssWord3*.
 
-Copy
-SUCCESS: The parameters of the scheduled task RemindMe have been changed.
-As a result of this command, the RemindMe task now runs under its original user account, but with a new password.
+To change the ChkNews task, which starts Notepad.exe every morning at 9:00 A.M., to start Internet Explorer instead, type:
 
-To change the program and user account for a task
-The following command changes the program that a task runs and changes the user account under which the task runs. Essentially, it uses an old schedule for a new task. This command changes the ChkNews task, which starts Notepad.exe every morning at 9:00 A.M., to start Internet Explorer instead.
-
-The command uses the /tn parameter to identify the task. It uses the /tr parameter to change the program that the task runs and the /ru parameter to change the user account under which the task runs.
-
-The /ru, and /rp parameter, which provides the password for the user account, is omitted. You must provide a password for the account, but you can use the /ru, and /rp parameter and type the password in clear text, or wait for SchTasks.exe to prompt you for a password, and then enter the password in obscured text.
-
-
-Copy
+```
 schtasks /change /tn ChkNews /tr c:\program files\Internet Explorer\iexplore.exe /ru DomainX\Admin01
-In response, SchTasks.exe requests the password for the user account. It obscures the text you type, so the password is not visible.
+```
 
+The command uses the **/tn** parameter to identify the task. It uses the **/tr** parameter to change the program that the task runs and the /ru parameter to change the user account under which the task runs. The **/ru** and **/rp** parameters, which provide the password for the user account, is not used. You must provide a password for the account, but you can use the **/ru** and **/rp** parameter and type the password in clear text, or wait for SchTasks.exe to prompt you for a password, and then enter the password in obscured text.
 
-Copy
-Please enter the password for DomainX\Admin01:
-Note that the /tn parameter identifies the task and that the /tr and /ru parameters change the properties of the task. You cannot use another parameter to identify the task and you cannot change the task name.
+To change the SecurityScript task so that it runs with permissions of the System account, type:
 
-In response, SchTasks.exe displays the following success message:
-
-
-Copy
-SUCCESS: The parameters of the scheduled task ChkNews have been changed.
-As a result of this command, the ChkNews task now runs Internet Explorer with the permissions of an Administrator account.
-
-To change a program to the System account
-The following command changes the SecurityScript task so that it runs with permissions of the System account. It uses the **/ru ** parameter to indicate the System account.
-
-
-Copy
+```
 schtasks /change /tn SecurityScript /ru
-In response, SchTasks.exe displays the following success message:
+```
 
+The command uses the **/ru** parameter to indicate the System account. Because tasks run with System account permissions do not require a password, SchTasks.exe does not prompt for one.
 
-Copy
-INFO: The run as user name for the scheduled task SecurityScript will be changed to NT AUTHORITY\SYSTEM.
-SUCCESS: The parameters of the scheduled task SecurityScript have been changed.
-Because tasks run with System account permissions do not require a password, SchTasks.exe does not prompt for one.
+To add the interactive-only property to MyApp, an existing task, type:
 
-To run a program only when I am logged on
-The following command adds the interactive-only property to MyApp, an existing task. This property assures that the task runs only when the run as user, that is, the user account under which the task runs, is logged on to the computer.
-
-The command uses the /tn parameter to identify the task and the /it parameter to add the interactive-only property to the task. Because the task already runs with the permissions of my user account, I do not need to change the /ru parameter for the task.
-
-
-Copy
+```
 schtasks /change /tn MyApp /it
-In response, SchTasks.exe displays the following success message.
+```
 
+This property assures that the task runs only when the run as user, that is, the user account under which the task runs, is logged on to the computer. The command uses the **/tn** parameter to identify the task and the **/it** parameter to add the interactive-only property to the task. Because the task already runs with the permissions of my user account, you don't need to change the **/ru** parameter for the task.
 
-Copy
-SUCCESS: The parameters of the scheduled task MyApp have been changed.
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [schtasks create command](schtasks-create.md)
+
+- [schtasks delete command](schtasks-delete.md)
+
+- [schtasks end command](schtasks-end.md)
+
+- [schtasks query command](schtasks-query.md)
+
+- [schtasks run command](schtasks-run.md)
