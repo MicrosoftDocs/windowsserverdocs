@@ -38,7 +38,7 @@ Before you add a connection, if you haven't done so already, [set up your PC to 
 To add a Remote Desktop connection:
 
 1. In the Connection Center, tap **+**, and then tap **Desktop**.
-2. Enter the name of the remote PC into **PC name**. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, MyDesktop:3389 or 10.0.0.1:3389). This is the only required field.
+2. Enter the name of the remote PC into **PC name**. This name can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, MyDesktop:3389 or 10.0.0.1:3389). This field is the only required field.
 3. Select the **User name** you use to access the Remote PC.
 
    - Select **Enter every time** for the client to ask for your credentials every time you connect to the remote PC.
@@ -70,13 +70,13 @@ Remote resources are RemoteApp programs, session-based desktops, and virtual des
 To add remote resources:
 
 1. In the Connection Center, tap **+**, and then tap **Remote Resource Feed**.
-2. Enter the **Feed URL**. This can be a URL or email address:
+2. Enter the **Feed URL**. This URL can be a URL or an email address:
    - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs depending on which version you're using:
      - If you're using Windows Virtual Desktop (classic), use: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
      - If you're using Windows Virtual Desktop, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-   - If you plan to use **Email**, enter your email address in this field. This tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
+   - If you plan to use **Email**, enter your email address in this field. Filling out this field tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
 3. Tap **Next**.
-4. Provide your sign-in information when prompted. This can vary based on the deployment and can include:
+4. Provide your sign-in information when prompted. The credentials you should use can vary based on the deployment and can include:
    - The **User name** that has permission to access the resources.
    - The **Password** associated with the user name.
    - **Additional factor**, which you may be prompted for a if authentication was configured that way by your admin.
@@ -94,7 +94,7 @@ To remove remote resources:
 
 ## Pin a connection to your home screen
 
-The Remote Desktop client supports pinning connections to your home screen by using the Android widget feature. The way that you add a widget depends on the type of Android device you are using and its operating system.
+The Remote Desktop client supports using the Android widget feature to pin connections to your home screen. The widget adding process depends on which type of Android device and Android OS version you're using.
 
 To add a widget:
 
@@ -145,7 +145,7 @@ To set up a new RD Gateway:
 1. In the Connection Center, tap **Settings**, and then tap **Gateways**.
 2. Tap **+** to add a new gateway.
 3. Enter the following information:
-   - Enter the name of the computer you want to use as a gateway into **Server name**. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: RDGateway:443 or 10.0.0.1:443).
+   - Enter the name of the computer you want to use as a gateway into **Server name**. This name can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: RDGateway:443 or 10.0.0.1:443).
    - Select the **User account** you'll use to access the RD Gateway.
      - Select **Use desktop user account** to use the same credentials that you specified for the remote PC.
      - Select **Add user account** to save an account that you use frequently so you don't have to enter credentials every time you sign in. For more information, see [Manage your user accounts](#manage-your-user-accounts).
@@ -229,6 +229,6 @@ The Remote Desktop for Android client uses standard touch gestures. You can also
 
 ## Join the Beta channel
 
-If you want to help us test new builds or identify issues before new versions are released, we recommend you join our Beta channel. Enterprise admins can also use the Beta channel to validate new versions of the Android client for users in their environments.
+If you want to help us test new builds or find issues in upcoming version updates before they're released, you should join our Beta channel. Enterprise admins can use the Beta channel to validate new versions of the Android client for their users.
 
 To join the Beta, [download our Beta client](https://play.google.com/apps/testing/com.microsoft.rdc.androidx) and give consent to access preview versions and download the client. You'll receive preview versions directly through the Google Play Store.
