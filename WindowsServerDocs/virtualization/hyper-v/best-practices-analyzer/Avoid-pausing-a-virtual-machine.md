@@ -1,11 +1,10 @@
 ---
 title: Avoid pausing a virtual machine
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Avoid pausing a virtual machine

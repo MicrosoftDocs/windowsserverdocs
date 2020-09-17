@@ -1,9 +1,8 @@
 ---
 title: Export and import virtual machines
 description: Shows you how to export and import virtual machines using Hyper-V Manager or Windows PowerShell.
-author: kbdazure
-ms.author: kathydav
-manager: dongill
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/13/2016
 ms.topic: article
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34

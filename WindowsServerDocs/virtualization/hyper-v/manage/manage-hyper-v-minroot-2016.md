@@ -1,7 +1,8 @@
 ---
 title: Minroot
 description: Configuring Host CPU Resource Controls
-author: allenma
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/15/2017
 ms.topic: article
 ---
