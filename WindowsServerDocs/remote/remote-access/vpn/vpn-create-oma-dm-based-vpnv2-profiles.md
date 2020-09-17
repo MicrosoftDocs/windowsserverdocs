@@ -44,7 +44,7 @@ Windows 10 client computer has already been configured with a VPN connection usi
     <TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
     ```
 
-4. Select the **Conditional Access** blade and toogle **Conditional access for this VPN connection** to **Enabled**.
+4. Select the **Conditional Access** blade and toggle **Conditional access for this VPN connection** to **Enabled**.
 
    Enabling this setting changes the **\<DeviceCompliance>\<Enabled>true\</Enabled>** setting in the VPNv2 Profile XML.
 
