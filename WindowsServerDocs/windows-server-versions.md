@@ -4,6 +4,7 @@ description: Get Windows Server technical articles for current and previous rele
 ms.topic: article
 ms.date: 01/17/2018
 ms.assetid: 0c3dc323-8beb-4d7d-a2e0-12bda848ddcb
+ms.prod: windows-server
 author: lizap
 ms.author: elizapo
 manager: dongill

@@ -1,11 +1,10 @@
 ---
 title: The Hyper-V Virtual Machine Management service must be running
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
-author: kbdazure
 ms.date: 10/03/2016
 ---
 # The Hyper-V Virtual Machine Management service must be running

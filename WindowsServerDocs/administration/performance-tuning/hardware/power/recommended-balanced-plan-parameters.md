@@ -2,7 +2,7 @@
 title: Recommended balanced power plan parameters for quick response times
 description: Recommended balanced power plan parameters for quick response times
 ms.topic: conceptual
-ms.author: qizha;tristanb
+ms.author: qizha
 author: phstee
 ms.date: 10/16/2017
 ---

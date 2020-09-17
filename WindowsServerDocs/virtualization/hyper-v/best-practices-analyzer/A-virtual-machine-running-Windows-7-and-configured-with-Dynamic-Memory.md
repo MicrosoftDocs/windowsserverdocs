@@ -1,11 +1,10 @@
 ---
 title: A virtual machine running Windows 7 and configured with Dynamic Memory should use recommended values for memory settings
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: c3a0292a-a619-4d1c-8f9d-391c741411c1
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows 7 and configured with Dynamic Memory should use recommended values for memory settings

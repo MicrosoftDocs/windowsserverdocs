@@ -1,11 +1,10 @@
 ---
 title: Authorization entries should have distinct trust group names for primary servers with virtual machines that are not part of the same trust group
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 8827a3a7-9f3c-4f51-826a-8e2ec43e01df
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Authorization entries should have distinct trust group names for primary servers with virtual machines that are not part of the same trust group

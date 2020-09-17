@@ -1,11 +1,10 @@
 ---
 title: Supported SUSE virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
-manager: dongill
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 04/07/2020
 ---
 # Supported SUSE virtual machines on Hyper-V

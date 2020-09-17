@@ -1,11 +1,10 @@
 ---
 title: A virtual machine running Windows Server 2012 and configured with Dynamic Memory should use recommended values for memory settings
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 0aa35e36-8e3b-498b-b71d-003a0a0947be
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Server 2012 and configured with Dynamic Memory should use recommended values for memory settings

@@ -5,21 +5,21 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 
 You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client in this article.
 
-## Latest client versions
+## Supported client versions
 
 The client can be configured for different [user groups](windowsdesktop-admin.md#configure-user-groups). The following table lists the current versions available for each user group:
 
-|User group |Version  |
-|-----------|---------|
-|Public     |1.2.1272 |
-|Insider    |1.2.1357 |
+|User group |Latest version  |Minimum supported version |
+|-----------|----------------|--------------------------|
+|Public     |1.2.1272        |1.2.945                   |
+|Insider    |1.2.1357        |1.2.1357                  |
 
 ## Updates for version 1.2.1357 (Insiders)
 
@@ -27,7 +27,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
-- Fixed an issue where secure sign-on (SSO) didn't work on Windows 7.
+- Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
 
 ## Updates for version 1.2.1275
 
