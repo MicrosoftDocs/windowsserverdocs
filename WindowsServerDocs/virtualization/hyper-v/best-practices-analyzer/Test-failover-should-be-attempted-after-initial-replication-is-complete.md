@@ -1,11 +1,10 @@
 ---
 title: Test failover should be attempted after initial replication is complete
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: cea7eeaa-c1a7-4f87-89be-d4e1208c546f
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Test failover should be attempted after initial replication is complete

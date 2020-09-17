@@ -1,11 +1,10 @@
 ---
 title: Resynchronization of replication should be scheduled for off-peak hours
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 093a7bb7-8e0a-486b-b42b-04edd8809710
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Resynchronization of replication should be scheduled for off-peak hours

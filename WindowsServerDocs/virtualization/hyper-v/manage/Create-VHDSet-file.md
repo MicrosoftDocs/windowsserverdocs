@@ -3,12 +3,9 @@ title: Create Hyper-V VHD Set files
 description: Steps to create a VHDset file on Hyper-v 2016
 author: jiwool
 ms.author: jiwool
-manager: senthilr
 ms.date: 01/26/2017
 ms.topic: article
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
-audience: IT Pros
-ms.reviewer: kathydav
 ---
 
 # Create Hyper-V VHD Set files

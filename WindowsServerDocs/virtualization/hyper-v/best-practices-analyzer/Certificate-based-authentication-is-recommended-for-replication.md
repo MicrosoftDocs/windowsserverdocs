@@ -1,11 +1,10 @@
 ---
 title: Certificate-based authentication is recommended for replication
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Certificate-based authentication is recommended for replication

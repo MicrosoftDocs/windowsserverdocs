@@ -1,11 +1,10 @@
 ---
 title: Generation 2 virtual machine security settings for Hyper-V
 description: Describes the security settings available in Hyper-V Manager for generation 2 virtual machines
-manager: dongill
 ms.topic: article
 ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
-author: larsiwer
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 10/04/2016
 ---
 # Generation 2 virtual machine security settings for Hyper-V

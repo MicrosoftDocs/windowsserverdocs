@@ -1,7 +1,8 @@
 ---
 title: Virtual Machine Resource Controls
 description: Using VM CPU Groups
-author: allenma
+ms.author: benarm
+author: BenjaminArmstrong
 ms.prod: windows-server
 ms.date: 06/18/2018
 ms.topic: article
