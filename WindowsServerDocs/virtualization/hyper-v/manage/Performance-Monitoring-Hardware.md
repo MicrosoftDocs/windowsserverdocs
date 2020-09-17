@@ -22,27 +22,26 @@ To enable performance monitoring hardware in a virtual machine, you'll need:
 
 To enable upcoming Intel Processor Trace (IPT) performance monitoring hardware in a virtual machine, you’ll need:
 
-- An Intel processor that supports IPT and the PT2GPA feature.  Refer to [this document]( https://software.intel.com/en-us/vtune-amplifier-cookbook-configuring-a-hyper-v-virtual-machine-for-hardware-based-hotspots-analysis) from Intel to determine which performance monitoring hardware your system supports.
+- An Intel processor that supports IPT and the PT2GPA feature. [^1]  Refer to [this document]( https://software.intel.com/en-us/vtune-amplifier-cookbook-configuring-a-hyper-v-virtual-machine-for-hardware-based-hotspots-analysis) from Intel to determine which performance monitoring hardware your system supports.
 - Windows Server version 1903 (SAC) or Windows 10 Version 1903 (May 2019 Update) or later
 - A Hyper-V virtual machine _without_ [nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) that is also in the stopped state
+- PMU needs to be enabled via the command line using the command seen below.
+
+[^1]: PT2GPA refers to the “Intel PT uses guest physical addresses” bit. This is described in 25.5.4.1 of the Intel SDM
 
 ## Enabling performance monitoring components in a virtual machine
 
 To enable different performance monitoring components for a specific guest virtual machine, use the `Set-VMProcessor` PowerShell cmdlet while running as Administrator:
-
-``` Powershell
-# Enable all components except IPT
-Set-VMProcessor MyVMName -Perfmon @("pmu", "lbr", "pebs")
-```
-
-``` Powershell
-# Enable a specific component
-Set-VMProcessor MyVMName -Perfmon @("pmu")
-```
-
+> [!NOTE]
+> The virtual machine generation must be 9.1 or higher. If nested virtualization is offered to the guest as well, then this needs 9.3 and up
 ``` Powershell
 # Enable IPT
-Set-VMProcessor MyVMName -Perfmon @("ipt")
+Set-VMProcessor MyVMName -Perfmon @("ipt", "pmu")
+```
+
+``` Powershell
+# Enable all components
+Set-VMProcessor MyVMName -Perfmon @("ipt", "pmu", "lbr", "pebs")
 ```
 
 ``` Powershell
@@ -52,6 +51,8 @@ Set-VMProcessor MyVMName -Perfmon @()
 > [!NOTE]
 > When enabling the performance monitoring components, if `"pebs"` is specified, then `"pmu"` must also be specified.
 > PEBS is only supported on hardware that has a PMU Version >= 4.
+> Also, any command that attempts to enable `"ipt"` must also specify `"pmu"`.
+>
 > Enabling a component that is not supported by the host's physical processors will result in a virtual machine start failure.
 
 ## Effects of enabling performance monitoring hardware on save/restore, export, and live migration
