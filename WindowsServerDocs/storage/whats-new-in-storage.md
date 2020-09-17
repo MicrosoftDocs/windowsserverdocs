@@ -120,7 +120,7 @@ To gain the increased performance, all members of the replication group must run
 
 #### Test failover
 
-You can now temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+You can now temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.md).
 
 #### Windows Admin Center support
 
@@ -164,7 +164,7 @@ For more information, see [Windows Server Semi-annual Channel Overview](../get-s
 
 The disaster recovery protection added by Storage Replica is now expanded to include:
 
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.md).
 - **Windows Admin Center support**: Support for graphical management of replication is now available in Windows Admin Center via the Server Manager tool. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
 
 Storage Replica also contains the following improvements:

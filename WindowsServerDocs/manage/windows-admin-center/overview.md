@@ -145,7 +145,7 @@ Here are some videos from Microsoft Ignite 2019 sessions:
 - [How to use Microsoft Azure hybrid services together with Windows Admin Center and Windows Server](https://aka.ms/WAC-THR2073)
 - [Live Q&A: Manage your hybrid server environment with Windows Admin Center](https://aka.ms/WAC-MLS1055)
 - [Learning Path: Hybrid management technologies](https://aka.ms/WAC-HybridMgmtTech)
-- [Hands on Lab: Windows Admin Center and Hybrid](https://aka.ms/WAC-HOL2019)
+- [Hands on Lab: Windows Admin Center and Hybrid](/learn/?WT.mc_id=sitertzn_homepage_learn-redirect-handsonlabs)
 
 Here are some videos from Windows Server Summit 2019 sessions:
 

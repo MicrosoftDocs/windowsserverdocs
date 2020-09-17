@@ -149,7 +149,7 @@ Windows Admin Center is the official product name for "Project Honolulu" and rei
 
 ## Where can I learn more about Windows Admin Center, or get more details on the topics above?
 
-Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
+Our [launch page](../overview.md) is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
 
 ## What is the version history of Windows Admin Center?
 

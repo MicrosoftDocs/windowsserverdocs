@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 > [!IMPORTANT]
-> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](https://aka.ms/upgradecenter). To download Windows Server 2019, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
+> Extended support for Windows Server 2008 R2 and Windows Server 2008 ends in January 2020. [Learn about your upgrade options](../upgrade/upgrade-overview.md). To download Windows Server 2019, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
 
 Is it time to move to a newer version of Windows Server? Depending on what you're running now, you have lots of options to get there.
 
