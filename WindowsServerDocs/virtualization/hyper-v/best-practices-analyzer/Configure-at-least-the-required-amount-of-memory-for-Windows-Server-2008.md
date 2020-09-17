@@ -1,11 +1,10 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows Server 2008 and enabled for Dynamic Memory
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 0aaa7138-ce83-4b17-add7-fdfa3d469bea
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows Server 2008 and enabled for Dynamic Memory

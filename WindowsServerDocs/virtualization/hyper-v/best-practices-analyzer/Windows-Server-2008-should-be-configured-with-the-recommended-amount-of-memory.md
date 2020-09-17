@@ -1,11 +1,10 @@
 ---
 title: Windows Server 2008 should be configured with the recommended amount of memory
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: a98a8594-603b-487a-8739-78887c568e57
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows Server 2008 should be configured with the recommended amount of memory

@@ -1,11 +1,10 @@
 ---
 title: Best practices for running FreeBSD on Hyper-V
 description: Provides recommendations for running FreeBSD on virtual machines
-manager: dongill
 ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 01/09/2017
 ---
 # Best practices for running FreeBSD on Hyper-V

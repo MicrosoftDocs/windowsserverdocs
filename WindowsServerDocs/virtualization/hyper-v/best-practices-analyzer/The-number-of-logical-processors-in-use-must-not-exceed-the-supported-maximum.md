@@ -1,11 +1,10 @@
 ---
 title: The number of logical processors in use must not exceed the supported maximum
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # The number of logical processors in use must not exceed the supported maximum

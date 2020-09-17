@@ -1,11 +1,10 @@
 ---
 title: Dynamic Memory is enabled but not responding on some virtual machines
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 91b7f50f-a071-4ab6-beb1-1b29f92f52b6
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Dynamic Memory is enabled but not responding on some virtual machines

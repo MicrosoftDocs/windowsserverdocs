@@ -1,11 +1,10 @@
 ---
 title: Use RAM that provides error correction
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Use RAM that provides error correction

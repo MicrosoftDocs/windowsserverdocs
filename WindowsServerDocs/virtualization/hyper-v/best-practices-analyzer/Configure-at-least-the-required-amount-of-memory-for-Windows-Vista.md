@@ -1,11 +1,10 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows Vista and enabled for Dynamic Memory
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d3de7614-6eee-4839-a939-d390bca9ba89
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows Vista and enabled for Dynamic Memory

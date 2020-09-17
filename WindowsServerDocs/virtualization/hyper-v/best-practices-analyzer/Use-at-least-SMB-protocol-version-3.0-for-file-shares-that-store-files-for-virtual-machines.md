@@ -1,11 +1,10 @@
 ---
 title: Use at least SMB protocol version 3.0 for file shares that store files for virtual machines.
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 4bb832b8-f1aa-4c1f-a0f2-324dd53553ea
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Use at least SMB protocol version 3.0 for file shares that store files for virtual machines.
