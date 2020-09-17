@@ -21,7 +21,7 @@ There are three SDK versions you can choose from:
 * ```next``` – this SDK package contains the most recent functionality
 
 > [!NOTE]
-> Find out more about the different [versions](https://aka.ms/WACDownloadPage) of Windows Admin Center that are available to download.
+> Find out more about the different [versions](../overview.md) of Windows Admin Center that are available to download.
 
 ## Targeting SDK version on a new project
 

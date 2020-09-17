@@ -1,11 +1,10 @@
 ---
 title: Display adapters should be enabled in virtual machines to provide video capabilities
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: ac5992e6-3c0b-46c2-a48e-6ef37b679228
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Display adapters should be enabled in virtual machines to provide video capabilities

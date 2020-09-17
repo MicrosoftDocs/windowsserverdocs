@@ -1,11 +1,10 @@
 ---
 title: Use all virtual functions for networking when they are available
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: bf895484-6a0d-4aa4-9a42-9fac739e875d
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Use all virtual functions for networking when they are available

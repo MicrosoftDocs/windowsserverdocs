@@ -1,11 +1,10 @@
 ---
 title: Windows 7 should be configured with the recommended amount of memory
 description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d77d648c-6e26-43fa-be0a-6eb4b28f9cb4
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Windows 7 should be configured with the recommended amount of memory

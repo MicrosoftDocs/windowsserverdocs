@@ -15,7 +15,7 @@ This topic describes how to install Windows Admin Center on a Windows PC or on a
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../overview.md) or [Download now](https://aka.ms/windowsadmincenter).
+> [Learn more about Windows Admin Center](../overview.md) or [Download now](../overview.md).
 
 ## Determine your installation type
 

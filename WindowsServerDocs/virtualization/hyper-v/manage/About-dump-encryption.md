@@ -1,11 +1,10 @@
 ---
 title: About dump encryption
 description: Describes how to encrypt dump files and troubleshoot encryption.
-manager: dongill
 ms.topic: article
-author: larsiwer
+ms.author: benarm
+author: BenjaminArmstrong
 ms.asset: b78ab493-e7c3-41f5-ab36-29397f086f32
-ms.author: kathydav
 ms.date: 11/03/2016
 ---
 

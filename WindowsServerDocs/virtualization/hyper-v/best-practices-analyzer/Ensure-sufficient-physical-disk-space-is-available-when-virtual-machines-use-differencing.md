@@ -1,11 +1,10 @@
 ---
 title: Ensure sufficient physical disk space is available when virtual machines use differencing virtual hard disks
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 71f99aab-f994-4022-9da0-d661965b95ac
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Ensure sufficient physical disk space is available when virtual machines use differencing virtual hard disks

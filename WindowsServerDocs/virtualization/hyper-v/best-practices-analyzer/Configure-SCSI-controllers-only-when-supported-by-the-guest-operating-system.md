@@ -1,11 +1,10 @@
 ---
 title: Configure SCSI controllers only when supported by the guest operating system
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 861f194f-467e-4b07-a1c5-55b35f6327c4
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Configure SCSI controllers only when supported by the guest operating system

@@ -14,7 +14,7 @@ ms.date: 02/15/2019
 
 > [!Tip]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../overview.md) or [Download now](https://aka.ms/windowsadmincenter).
+> [Learn more about Windows Admin Center](../overview.md) or [Download now](../overview.md).
 
 ## Windows Admin Center installed on Windows 10
 

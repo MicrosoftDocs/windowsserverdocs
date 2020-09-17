@@ -1,7 +1,6 @@
 ---
 title: Manage Hyper-V on Windows Server
 description: Gives links to articles on managing Hyper-V
-manager: dongill
 ms.topic: article
 ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
 author: jasongerend

@@ -16,7 +16,7 @@ In Windows Server 2019, System Insights exposes a variety of settings that can b
 >[!TIP]
 >You can also use these short videos to help you get started and confidently manage System Insights: [Getting started with System Insights in 10 minutes](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)
 
-Though this section provides PowerShell examples, you can use the [System Insights PowerShell documentation](https://aka.ms/systeminsightspowershell) to see all of the cmdlets, parameters, and parameter sets within System Insights.
+Though this section provides PowerShell examples, you can use the [System Insights PowerShell documentation](/powershell/module/systeminsights/) to see all of the cmdlets, parameters, and parameter sets within System Insights.
 
 ## Viewing capabilities
 

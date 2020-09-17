@@ -277,7 +277,7 @@ DFS Management is included with Windows Server 2012 R2, Windows Server 2012, W
 
 
 > [!IMPORTANT]
-> To view or manage replication groups that contain read-only replicated folders or members that are failover clusters, you must use the version of DFS Management that is included with Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, the <a href="https://go.microsoft.com/fwlink/p/?linkid=238560">Remote Server Administration Tools for Windows 8</a>, or the <a href="https://technet.microsoft.com/library/ee449475">Remote Server Administration Tools for Windows 7</a>.
+> To view or manage replication groups that contain read-only replicated folders or members that are failover clusters, you must use the version of DFS Management that is included with Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, the <a href="https://go.microsoft.com/fwlink/p/?linkid=238560">Remote Server Administration Tools for Windows 8</a>, or the <a href="/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee449475(v=ws.10)">Remote Server Administration Tools for Windows 7</a>.
 <br>
 
 

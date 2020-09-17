@@ -1,11 +1,10 @@
 ---
 title: Supported Ubuntu virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
-manager: dongill
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
-author: shirgall
-ms.author: shirgall
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/29/2020
 ---
 # Supported Ubuntu virtual machines on Hyper-V

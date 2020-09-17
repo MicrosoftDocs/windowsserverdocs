@@ -2,11 +2,10 @@
 title: Recovery snapshots should be removed after failover
 description: Online version of the text for this Best Practices Analyzer rule.
 
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 922115fa-e8dd-4055-aaf1-4a4437c5cf28
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Recovery snapshots should be removed after failover
