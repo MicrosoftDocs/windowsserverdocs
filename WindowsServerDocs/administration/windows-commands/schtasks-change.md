@@ -41,7 +41,7 @@ schtasks /change /tn <Taskname> [/s <computer> [/u [<domain>\]<user> [/p <passwo
 | Parameter | Description |
 |--|--|
 | /tn `<Taskname>` | Identifies the task to be changed. Enter the task name. |
-| /s `<computer>` | Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer. The **/u** and **/p** parameters are valid only when you use **/s**. |
+| /s `<computer>` | Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer. |
 | /u `[<domain>]` | Runs this command with the permissions of the specified user account. By default, the command runs with the permissions of the current user of the local computer. The specified user account must be a member of the Administrators group on the remote computer. The **/u** and **/p** parameters are valid only when you use **/s**. |
 | /p `<password>` | Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter without the **/p** parameter or the password argument, schtasks will prompt you for a password. The **/u** and **/p** parameters are valid only when you use **/s**. |
 | /ru `<username>` | Changes the user name under which the scheduled task has to run. For the system account, valid values are *""*, *"NT AUTHORITY\SYSTEM"*, or *"SYSTEM"*. |

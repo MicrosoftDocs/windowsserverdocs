@@ -10,74 +10,72 @@ ms.date: 09/16/2020
 
 # schtasks create
 
-Combined syntax and parameter descriptions
-Syntax
+Schedules a task.
 
-Copy
-schtasks /create /sc <ScheduleType> /tn <TaskName> /tr <TaskRun> [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]] [/ru {[<Domain>\]<User> | System}] [/rp <Password>] [/mo <Modifier>] [/d <Day>[,<Day>...] | *] [/m <Month>[,<Month>...]] [/i <IdleTime>] [/st <StartTime>] [/ri <Interval>] [{/et <EndTime> | /du <Duration>} [/k]] [/sd <StartDate>] [/ed <EndDate>] [/it] [/z] [/f]
-Parameters
-/sc <ScheduleType>
-Specifies the schedule type. Valid values are MINUTE, HOURLY, DAILY, WEEKLY, MONTHLY, ONCE, ONSTART, ONLOGON, ONIDLE.
+## Syntax
 
-/SC <SCHEDULETYPE>
-Schedule type	Description
-MINUTE, HOURLY, DAILY, WEEKLY, MONTHLY	Specifies the time unit for the schedule.
-ONCE	The task runs once at a specified date and time.
-ONSTART	The task runs every time the system starts. You can specify a start date, or run the task the next time the system starts.
-ONLOGON	The task runs whenever a user (any user) logs on. You can specify a date, or run the task the next time the user logs on.
-ONIDLE	The task runs whenever the system is idle for a specified period of time. You can specify a date, or run the task the next time the system is idle.
-/tn <TaskName>
-Specifies a name for the task. Each task on the system must have a unique name. The name must conform to the rules for file names and must not exceed 238 characters. Use quotation marks to enclose names that include spaces.
+```
+schtasks /create /sc <scheduletype> /tn <taskname> /tr <taskrun> [/s <computer> [/u [<domain>\]<user> [/p <password>]]] [/ru {[<domain>\]<user> | system}] [/rp <password>] [/mo <modifier>] [/d <day>[,<day>...] | *] [/m <month>[,<month>...]] [/i <idletime>] [/st <starttime>] [/ri <interval>] [{/et <endtime> | /du <duration>} [/k]] [/sd <startdate>] [/ed <enddate>] [/it] [/z] [/f]
+```
 
-/tr <TaskRun>
-Specifies the program or command that the task runs. Type the fully qualified path and file name of an executable file, script file, or batch file. The path name must not exceed 262 characters. If you omit the path, schtasks assumes that the file is in the SystemRoot\System32 directory.
+### Parameters
 
-/s <Computer>
-Schedules a task on the specified remote computer. Type the name or IP address of a remote computer (with or without backslashes). The default is the local computer. The /u and /p parameters are valid only when you use /s.
+| Parameter | Description |
+|--|--|
+| /sc `<scheduletype>` | Specifies the schedule type. The valid values include:<ul><li>**MINUTE** - Specifies the number of minutes before the task should run.</li><li>**HOURLY** - Specifies the number of hours before the task should run.</li><li>**DAILY** - Specifies the number of days before the task should run.</li><li>**WEEKLY** Specifies the number of weeks before the task should run.</li><li>**MONTHLY** - Specifies the number of months before the task should run.</li><li>**ONCE** - Specifies that that task runs once at a specified date and time.</li><li>**ONSTART** - Specifies that the task runs every time the system starts. You can specify a start date, or run the task the next time the system starts.</li><li>**ONLOGON** - Specifies that the task runs whenever a user (any user) logs on. You can specify a date, or run the task the next time the user logs on.</li><li>**ONIDLE** - Specifies that the task runs whenever the system is idle for a specified period of time. You can specify a date, or run the task the next time the system is idle.</li></ul> |
+| /tn `<taskname>` | Specifies a name for the task. Each task on the system must have a unique name and must conform to the rules for file names, not exceeding 238 characters. Use quotation marks to enclose names that include spaces. |
+| /tr `<Taskrun>` | Specifies the program or command that the task runs. Type the fully qualified path and file name of an executable file, script file, or batch file. The path name must not exceed 262 characters. If you don't add the path, **schtasks** assumes that the file is in the `<systemroot>\System32` directory. |
+| /s `<computer>` | Specifies the name or IP address of a remote computer (with or without backslashes). The default is the local computer. |
+| /u `[<domain>]` | Runs this command with the permissions of the specified user account. The default is the permissions of the current user of the local computer. The **/u** and **/p** parameters are valid only when you use **/s**. The permissions of the specified account are used to schedule the task and to run the task. To run the task with the permissions of a different user, use the **/ru** parameter. The user account must be a member of the Administrators group on the remote computer. Also, the local computer must be in the same domain as the remote computer, or must be in a domain that is trusted by the remote computer domain. |
+| /p `<password>` | Specifies the password of the user account specified in the **/u** parameter. If you use the **/u** parameter without the **/p** parameter or the password argument, schtasks will prompt you for a password. The **/u** and **/p** parameters are valid only when you use **/s**. |
+| /ru `{[<domain>\]<user> | system}` | Runs the task with permissions of the specified user account. By default, the task runs with the permissions of the current user of the local computer, or with the permission of the user specified by the **/u** parameter, if one is included. The **/ru** parameter is valid when scheduling tasks on local or remote computers. The valid options include:<ul><li>**Domain** - Specifies an alternate user account.</li><li>**System** - Specifies the local System account, a highly privileged account used by the operating system and system services.</li></ul> |
+| /rp `<password>` | Specifies a the password for the existing user account, or the user account specified by the **/ru** parameter. If you don't use this parameter when specifying a user account, SchTasks.exe will prompt you for the password next time you sign in. Don't use the **/rp** parameter for tasks that run with System account credentials (**/ru System**). The System account doesn't have a password and SchTasks.exe doesn't prompt for one. |
+| /mo `<modifiers>` | Specifies how often the task runs within its schedule type. The valid options include:<ul><li>**MINUTE** - Specifies that the task runs every <n> minutes. You can use any value between 1 - 1439 minutes. By default, this is 1 minute.</li><li>**HOURLY** - Specifies that the task runs every <n> hours. You can use any value between 1 - 23 hours. By default, this is 1 hour.</li><li>**DAILY** - Specifies that the task runs every <n> days. You can use any value between 1 - 365 days. By default, this is 1 day.</li><li>**WEEKLY** - Specifies that the task runs every <n> weeks. You can use any value between 1 - 52 weeks. By default, this is 1 week.</li><li>***MONTHLY** - Specifies that the task runs every <n> months. You can use any of the following values:<ul><li>A number between 1 - 12 months</li><li>**LASTDAY** - To run the task on the last day of the month</li><li>**FIRST, SECOND, THIRD, or FOURTH along with the /d <day> parameter** - Specifies the particular week and day to run the task. For example, on the third Wednesday of the month.</li></ul></li><li>**ONCE** - Specifies that the task runs once.</li><li>**ONSTART** - Specifies that the task runs at startup.</li><li>**ONLOGON** - Specifies that the task runs when the user specified by the **/u** parameter logs on.</li><li>**ONIDLE** - Specifies that the task runs after the system is idle for the number of minutes specified by the **/i** parameter</li></ul> |
 
-/u [<Domain>]
-Runs this command with the permissions of the specified user account. The default is the permissions of the current user of the local computer. The /u and /p parameters are valid only for scheduling a task on a remote computer (/s).
 
-The permissions of the specified account are used to schedule the task and to run the task. To run the task with the permissions of a different user, use the /ru parameter.
 
-The user account must be a member of the Administrators group on the remote computer. Also, the local computer must be in the same domain as the remote computer, or must be in a domain that is trusted by the remote computer domain.
 
-/p <Password>
-Provides the password for the user account specified in the /u parameter. If you use the /u parameter, but omit the /p parameter or the password argument, schtasks prompts you for a password and obscures the text you type.
 
-The /u and /p parameters are valid only for scheduling a task on a remote computer (/s).
 
-/ru {[<Domain>] | System}
-Runs the task with permissions of the specified user account. By default, the task runs with the permissions of the current user of the local computer, or with the permission of the user specified by the /u parameter, if one is included. The /ru parameter is valid when scheduling tasks on local or remote computers.
 
-/RU {[<DOMAIN>] | SYSTEM}
-Value	Description
-[<Domain>]	Specifies an alternate user account.
-System or	Specifies the local System account, a highly privileged account used by the operating system and system services.
-/rp <Password>
-Provides the password for the user account that is specified in the /ru parameter. If you omit this parameter when specifying a user account, SchTasks.exe prompts you for the password and obscures the text you type.
 
-Do not use the /rp parameter for tasks run with System account credentials (/ru System). The System account does not have a password and SchTasks.exe does not prompt for one.
+
+
+
+| /st `<Starttime>` | Specifies the start time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
+| /ri `<interval>` | Specifies the repetition interval for the scheduled task, in minutes. Valid range is 1 - 599940 (599940 minutes = 9999 hours). If either the **/et** or **/du** parameters are specified, the default is **10 minutes**. |
+| /et `<Endtime>` | Specifies the end time for the task, using the 24-hour time format, HH:mm. For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
+| /du `<duration>` | A value that specifies the duration to run the task. The time format is HH:mm (24-hour time). For example, a value of 14:30 is equivalent to the 12-hour time of 2:30 PM. |
+| /k | Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, schtasks does not start the program again after it reaches the time specified by **/et** or **/du**, but it does not stop the program if it's still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
+| /sd `<Startdate>` | Specifies the first date on which the task should be run. The date format is MM/DD/YYYY. |
+| /ed `<Enddate>` | Specifies the last date on which the task should be run. The format is MM/DD/YYYY. |
+| /ENABLE | Specifies to enable the scheduled task. |
+| /DISABLE | Specifies to disable the scheduled task. |
+| /it | Specifies to run the scheduled task only when the run as user (the user account under which the task runs) is logged on to the computer.|This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You can't use a change command to remove the interactive-only property from a task. By default, run as user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the run as user is the account specified by the **/ru** parameter. |
+| /z | Specifies to delete the task upon the completion of its schedule. |
+| /? | Displays help at the command prompt. |
+
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/schtasks#schtasks-create
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /mo <Modifier>
 Specifies how often the task runs within its schedule type. This parameter is valid, but optional, for a MINUTE, HOURLY, DAILY, WEEKLY, and MONTHLY schedule. The default value is 1.
 
 /MO <MODIFIER>
 Schedule type	Modifier values	Description
-MINUTE	1 - 1439	The task runs every <N> minutes.
-HOURLY	1 - 23	The task runs every <N> hours.
-DAILY	1 - 365	The task runs every <N> days.
-WEEKLY	1 - 52	The task runs every <N> weeks.
-ONCE	No modifiers.	The task runs once.
-ONSTART	No modifiers.	The task runs at startup.
-ONLOGON	No modifiers.	The task runs when the user specified by the /u parameter logs on.
-ONIDLE	No modifiers.	The task runs after the system is idle for the number of minutes specified by the /i parameter, which is required for use with ONIDLE.
-MONTHLY	1 - 12	The task runs every <N> months.
-MONTHLY	LASTDAY	The task runs on the last day of the month.
-MONTHLY	FIRST, SECOND, THIRD, FOURTH, LAST	Use with the /d<Day> parameter to run a task on a particular week and day. For example, on the third Wednesday of the month.
-/d Day[,Day...] | *
-Specifies a day (or days) of the week or a day (or days) of a month. Valid only with a WEEKLY or MONTHLY schedule.
-
 /D DAY[,DAY...] | *
 Schedule type	Modifier	Day values (/d)	Description
 WEEKLY	1 - 52	MON - SUN[,MON - SUN...]	*
@@ -161,6 +159,8 @@ Specifies to create the task and suppress warnings if the specified task already
 
 /?
 Displays help at the command prompt.
+
+## Examples
 
 To schedule a task that runs every N minutes
 Minute Schedule Syntax
