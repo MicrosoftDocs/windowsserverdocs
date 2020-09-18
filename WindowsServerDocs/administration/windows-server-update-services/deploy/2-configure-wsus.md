@@ -6,7 +6,7 @@ ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
 ms.author: lizross
 author: eross-msft
 manager: mtillman
-ms.date: 10/16/2017
+ms.date: 9/18/2020
 ---
 # Step 2: Configure WSUS
 
@@ -418,14 +418,14 @@ The following instructions configure a downstream server to synchronize to an up
 
 7.  select the **Use SSL when synchronizing update information** check box, and then click **OK**.
 
-### additional SSL resources
+### Additional SSL resources
 The steps that are required to set up a certification authority, bind the certificate to the WSUS website, and establish a trust between the client computers and the certificate are beyond the scope of this guide. For more information and for instructions about how to install certificates and set up this environment, see the following topics:
 
 -   [Suite B PKI Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkID=203858)
 
 -   [Implementing and Administering Certificate Templates](https://go.microsoft.com/fwlink/?LinkID=203859)
 
--   [active directory Certificate Services Upgrade and Migration Guide](https://go.microsoft.com/fwlink/?LinkID=203860)
+-   [Active Directory Certificate Services Upgrade and Migration Guide](https://go.microsoft.com/fwlink/?LinkID=203860)
 
 -   [Configure Certificate Autoenrollment](https://go.microsoft.com/fwlink/?LinkID=203861)
 
