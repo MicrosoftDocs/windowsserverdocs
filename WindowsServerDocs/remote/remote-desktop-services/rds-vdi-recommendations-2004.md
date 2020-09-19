@@ -8,7 +8,7 @@ author: Heidilohr
 ms.author: helohr
 ms.topic: article
 manager: 
-ms.date: 09/17/2020
+ms.date: 09/21/2020
 ---
 
 # Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
@@ -346,7 +346,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | Network List Manager policies | All networks properties | Network location | **User cannot change location** (This is set to prevent the right-hand side pop-up when a new network is detected) |
 | Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Control Panel | N/A | N/A |
 | Control Panel | Allow Online Tips | N/A  | **Disabled** (Settings will not contact Microsoft content services to retrieve tips and help content) |
-| Control Panel \ Personalization | Force a specific default lock screen and logon image | [![UI to set path to the Lock screen](media/lock-screen-image-settings.png)](media/lock-screen-image-settings.png) | Enabled (This setting allows you to force a specific default lock screen and logon image by entering the path (location) of the image file. The same image will be used for both the lock and logon screens. <p>The reason for this recommendation is to reduce bytes transmitted over the network for virtual desktop environments. This setting can be removed or customized for each environment.)|
+| Control Panel \ Personalization | Force a specific default lock screen and logon image) | N/A | Enabled (This setting allows you to force a specific default lock screen and logon image by entering the path (location) of the image file. The same image will be used for both the lock and logon screens. <p>The reason for this recommendation is to reduce bytes transmitted over the network for virtual desktop environments. This setting can be removed or customized for each environment.)|
 |Control Panel\ Regional and Language Options\Handwriting personalization|Turn off automatic learning| N/A |**Enabled** (With this policy setting enabled, automatic learning stops, and any stored data is deleted. Users cannot configure this setting in Control Panel)|
 |Local Computer Policy \\ Computer Configuration \\ Administrative Templates \\ Network|N/A|N/A|N/A|
 |Background Intelligent Transfer Service (BITS)|Allow BITS Peercaching| N/A |**Disabled** (This policy setting determines if the Background Intelligent Transfer Service (BITS) peer caching feature is enabled on a specific computer.)|
@@ -541,7 +541,7 @@ The following table contains some services that may be considered to disable in 
 |GameDVR and Broadcast user service|BcastDVRUserService|This (per-user) service is used for Game Recordings and Live Broadcasts|NOTE: This is a "per-user service", and as such, the template service must be disabled. This user service is used for Game Recordings and Live Broadcasts.<p>To learn more, see [this article](/windows-hardware/drivers/network/mb-nitz-support). |
 |CaptureService|CaptureService|Enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API.|OneCore capture service: enables optional screen capture functionality for applications that call the Windows.Graphics.Capture API<p> For more information, see [this article](/uwp/api/windows.graphics.capture?view=winrt-19041&preserve-view=true).|
 |Connected Devices Platform Service|CDPSvc|This service is used for Connected Devices Platform scenarios|Connected Devices Platform Service <p> To learn more, see [this article](/openspecs/windows_protocols/ms-cdp/929c2238-6d49-4ba4-a36a-37e732c4f736)|
-|CDP User Service|CDPUserSvc|This user service is used for Connected Devices Platform scenarios|**NOTE**: This is a "per-user service", and as such, the template service must be disabled (CDPUserSvc).| N/A |Connected Devices Platform User Service. To learn more, see [this article](/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4). |
+|CDP User Service|CDPUserSvc| N/A |Connected Devices Platform User Service. To learn more, see [this article](/openspecs/windows_protocols/ms-cdp/f5a15c56-ac3a-48f9-8c51-07b2eadbe9b4).<p> This user service is used for Connected Devices Platform scenarios|This is a "per-user service", and as such, the template service must be disabled (CDPUserSvc).|
 |Optimize drives|defragsvc|Helps the computer run more efficiently by optimizing files on storage drives.|Virtual desktop solutions do not normally benefit from disk optimization. The "drives" are often not traditional drives and often just a temporary storage allocation.|
 |Diagnostic Execution Service|DiagSvc|Executes diagnostic actions for troubleshooting support|Disabling this service disables the ability to run Windows diagnostics Diagnostic Execution Service.|
 |Connected User Experiences and Telemetry|DiagTrack|This service enables features that support in-application and connected user experiences. Additionally, this service manages the event driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.|Consider disabling if on disconnected network. To learn more, see [this article](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).|
