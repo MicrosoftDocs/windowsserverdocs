@@ -102,7 +102,7 @@ The following table lists the capabilities in SMB 3.0, the common Windows file s
 </tr>
 <tr class="odd">
 <td>File System</td>
-<td>Resilient File System (<a href="https://docs.microsoft.com/windows-server/storage/refs/refs-overview">ReFS</a>)</td>
+<td>Resilient File System (<a href="/windows-server/storage/refs/refs-overview">ReFS</a>)</td>
 <td>Recommended with Storage Spaces Direct</td>
 <td>Recommended with Storage Spaces Direct</td>
 </tr>
@@ -248,7 +248,7 @@ The following table lists the features that are part of this scenario and descri
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="failover-clustering.md">Failover Clustering</a></td>
+<td><a href="/windows-server/failover-clustering/failover-clustering-overview">Failover Clustering</a></td>
 <td>Failover clusters added the following features in Windows Server 2012 to support scale-Out file server: Distributed Network Name, the Scale-Out File Server resource type, Cluster Shared Volumes (CSV) 2, and the Scale-Out File Server High Availability role. For more information about these features, see <a href="/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">What&#39;s New in Failover Clustering in Windows Server 2012 [redirected]</a>.</td>
 </tr>
 <tr class="even">
