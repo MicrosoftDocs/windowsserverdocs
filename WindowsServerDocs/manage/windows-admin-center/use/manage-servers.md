@@ -50,7 +50,7 @@ The following tools are available for server connections:
 | [DHCP](#dhcp) | View and manage DHCP server configuration |
 | [DNS](#dns) | View and manage DNS server configuration |
 | [Events](#events) | View events |
-| [Files & file sharing](#files-&-file-sharing) | Browse files and folders |
+| [Files and file sharing](#files-and-file-sharing) | Browse files and folders |
 | [Firewall](#firewall) | View and modify firewall rules |
 | [Installed Apps](#installed-apps) | View and remove installed apps |
 | [Local Users and Groups](#local-users-and-groups) | View and modify local users and groups |
@@ -211,9 +211,9 @@ The following features are supported in Events:
 
 [**View feedback and proposed features for Events**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BEvents%5D).
 
-## Files & file sharing
+## Files and file sharing
 
-**Files & file sharing** allows you to manage files and folders on a computer or server.
+**Files and file sharing** allows you to manage files and folders on a computer or server.
 
 ### Features
 
@@ -233,7 +233,7 @@ The following features are supported in Files and file sharing:
 - Modify user and group permissions on file shares
 - Modify file server security
 
-[**View feedback and proposed features for Files & file sharing**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BFiles%5D).
+[**View feedback and proposed features for Files and file sharing**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BFiles%5D).
 
 ## Firewall
 
