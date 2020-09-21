@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/16/2020
+ms.date: 09/22/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,10 +18,20 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1272        |1.2.945                   |
-|Insider    |1.2.1357        |1.2.1357                  |
+|Public     |1.2.1363        |1.2.945                   |
+|Insider    |1.2.1363        |1.2.945                   |
 
-## Updates for version 1.2.1357 (Insiders)
+## Updates for version 1.2.1363
+
+*Date published: 09/22/2020*
+
+Download: Windows [64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
+- Fixed a failure occurring when calling or joining a Teams call when another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
+- Fixed a failure to enumerate audio or video devices in Teams when media optimization for Teams is enabled.
+
+## Updates for version 1.2.1357
 
 *Date published: 09/09/2020*
 
@@ -45,8 +55,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.1186
 
 *Date published: 07/28/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qy), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ciex), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qx)
 
 - You can now be subscribed to Workspaces with multiple user accounts, using the overflow menu (**...**) option on the command bar at the top of the client. To differentiate Workspaces, the Workspace titles now include the username, as do all app shortcuts titles.
 - Added additional information to subscription error messages to improve troubleshooting.
