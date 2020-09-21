@@ -48,7 +48,7 @@ schtasks /create /sc <scheduletype> /tn <taskname> /tr <taskrun> [/s <computer> 
 
 ## Examples
 
-### To schedule a task that runs every `<n>` minutes
+## Examples: Schedule a task that runs every `<n>` minutes
 
 In a minute schedule, the **/sc minute** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of minutes between each run of the task. The default value for **/mo** is *1* (every minute). The **/et** (end time) and **/du** (duration) parameters are optional and can be used with or without the **/k** (end task) parameter.
 
