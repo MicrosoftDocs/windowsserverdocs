@@ -149,81 +149,73 @@ Weekly schedules also have an optional **/d** parameter to schedule the task to 
 
 ### To schedule a task that runs every `<n>` months
 
-In this schedule type, the **/sc monthly** parameter is required. The **/mo** (modifier) parameter, which specifies the number of months between each run of the task, is optional and the default is *1* (every month).
+In this schedule type, the **/sc monthly** parameter is required. The **/mo** (modifier) parameter, which specifies the number of months between each run of the task, is optional and the default is *1* (every month). This schedule type also has an optional **/d** parameter to schedule the task to run on a specified date of the month. The default is *1* (the first day of the month).
 
-This schedule type also has an optional **/d** parameter to schedule the task to run on a specified date of the month. The default is *1* (the first day of the month).
+- To schedule the MyApp program to run on the first day of every month, type:
 
+    ```
+    schtasks /create /tn My App /tr myapp.exe /sc monthly
+    ```
+    Because a value of *1* is the default for both the **/mo** (modifier) parameter and the **/d** (day) parameter, these parameters are not required in the command.
 
+- To schedule the MyApp program to run every three months, type:
 
-Examples
-To schedule a task that runs on the first day of every month
-The following command schedules the MyApp program to run on the first day of every month. Because a value of 1 is the default for both the /mo (modifier) parameter and the /d (day) parameter, these parameters are omitted from the command.
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 3
+    ```
 
+    This command uses the **/mo** parameter to specify the interval of 3 months.
 
-Copy
-schtasks /create /tn My App /tr myapp.exe /sc monthly
-To schedule a task that runs every three months
-The following command schedules the MyApp program to run every three months. It uses the /mo parameter to specify the interval.
+- To schedule the MyApp program to run every other month on the 21st day of the month at midnight for a year, from July 2, 2002 to June 30, 2003, type:
 
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00:00 /sd 2002/07/01 /ed 2003/06/30
+    ```
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 3
-To schedule a task that runs at midnight on the 21st day of every other month
-The following command schedules the MyApp program to run every other month on the 21st day of the month at midnight. The command specifies that this task should run for one year, from July 2, 2002 to June 30, 2003.
+    The command uses the **/mo** parameter to specify the monthly interval (every two months), the **/d** parameter to specify the date, and the **/st** parameter to specify the time. It also uses the **/sd** and **/ed** parameters to specify the start date and end date, respectively. Because the local computer is set to the English (South Africa) option in **Regional and Language Options**, the dates are specified in the local format, YYYY/MM/DD.
 
-The command uses the /mo parameter to specify the monthly interval (every two months), the /d parameter to specify the date, and the /st to specify the time. It also uses the /sd and /ed parameters to specify the start date and end date, respectively. Because the local computer is set to the English (South Africa) option in Regional and Language Options in Control Panel, the dates are specified in the local format, YYYY/MM/DD.
+### To schedule a task that runs on a specific day of the week
 
+The day of the week schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is *1* (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days `(*)`. The default is *MON (Monday)*. The every day option `(/d *)` is equivalent to scheduling a daily task.
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00:00 /sd 2002/07/01 /ed 2003/06/30
-To schedule a task that runs on a specific day of the week
-Weekly Schedule Syntax
+- To schedule the MyApp program to run every week on Wednesday.
 
-Copy
-schtasks /create /tn <TaskName> /tr <TaskRun> /sc weekly [/d {<MON - SUN>[,MON - SUN...] | *}] [/mo {1 - 52}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
-Remarks
-The day of the week schedule is a variation of the weekly schedule. In a weekly schedule, the /sc weekly parameter is required. The /mo (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for /mo is 1 (every week). The /d parameter, which is optional, schedules the task to run on specified days of the week, or on all days (*). The default is MON (Monday). The every day option (/d *) is equivalent to scheduling a daily task.
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /d WED
+    ```
 
-Examples
-To schedule a task that runs every Wednesday
-The following command schedules the MyApp program to run every week on Wednesday. The command uses the /d parameter to specify the day of the week. Because the command omits the /mo parameter, the task runs every week.
+    The command uses the **/d** parameter to specify the day of the week. Because the command leaves out the **/mo** parameter, the task runs every week.
 
+- To schedule a task to run on Monday and Friday of every eighth week.
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /d WED
-To schedule a task that runs every eight weeks on Monday and Friday
-The following command schedules a task to run on Monday and Friday of every eighth week. It uses the /d parameter to specify the days and the /mo parameter to specify the eight-week interval.
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 8 /d MON,FRI
+    ```
 
+    This command uses the **/d** parameter to specify the days and the **/mo** parameter to specify the eight-week interval.
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 8 /d MON,FRI
-To schedule a task that runs on a specific week of the month
-Specific Week Syntax
+### To schedule a task that runs on a specific week of the month
 
-Copy
-schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /mo {FIRST | SECOND | THIRD | FOURTH | LAST} /d MON - SUN [/m {JAN - DEC[,JAN - DEC...] | *}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
-Remarks
-In this schedule type, the /sc monthly parameter, the /mo (modifier) parameter, and the /d (day) parameter are required. The /mo (modifier) parameter specifies the week on which the task runs. The /d parameter specifies the day of the week. (You can specify only one day of the week for this schedule type.) This schedule also has an optional /m (month) parameter that lets you schedule the task for particular months or every month (*). The default for the /m parameter is every month (*).
+In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. You can specify only one day of the week for this schedule type. This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month `(*)`. The default for the **/m** parameter is every month `(*)`.
 
-Examples
-To schedule a task for the second Sunday of every month
-The following command schedules the MyApp program to run on the second Sunday of every month. It uses the /mo parameter to specify the second week of the month and the /d parameter to specify the day.
+- To schedule the MyApp program to run on the second Sunday of every month.
 
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo SECOND /d SUN
+    ```
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo SECOND /d SUN
-To schedule a task for the first Monday in March and September
-The following command schedules the MyApp program to run on the first Monday in March and September. It uses the /mo parameter to specify the first week of the month and the /d parameter to specify the day. It uses /m parameter to specify the month, separating the month arguments with a comma.
+    This command uses the **/mo** parameter to specify the second week of the month and the **/d** parameter to specify the day.
 
+- To schedule the MyApp program to run on the first Monday in March and September.
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo FIRST /d MON /m MAR,SEP
-To schedule a task that runs on a specific date each month
-Specific date syntax
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo FIRST /d MON /m MAR,SEP
+    ```
 
-Copy
-schtasks /create /tn <TaskName> /tr <TaskRun> /sc monthly /d {1 - 31} [/m {JAN - DEC[,JAN - DEC...] | *}] [/st <HH:MM>] [/sd <StartDate>] [/ed <EndDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
-Remarks
+    This command uses the **/mo** parameter to specify the first week of the month and the **/d** parameter to specify the day. It uses the **/m** parameter to specify the month, separating the month arguments with a comma.
+
+### To schedule a task that runs on a specific date each month
+
 In the specific date schedule type, the /sc monthly parameter and the /d (day) parameter are required. The /d parameter specifies a date of the month (1 - 31), not a day of the week. You can specify only one day in the schedule. The /mo (modifier) parameter is not valid with this schedule type.
 
 The /m (month) parameter is optional for this schedule type and the default is every month (). *Schtasks does not let you schedule a task for a date that does not occur in a month specified by the /m parameter. However, if omit the /m parameter, and schedule a task for a date that does not appear in every month, such as the 31st day, then the task does not run in the shorter months. To schedule a task for the last day of the month, use the last day schedule type.
