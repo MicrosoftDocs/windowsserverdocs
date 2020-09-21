@@ -33,14 +33,14 @@ schtasks /create /sc <scheduletype> /tn <taskname> /tr <taskrun> [/s <computer> 
 | /mo `<modifiers>` | Specifies how often the task runs within its schedule type. The valid options include:<ul><li>**MINUTE** - Specifies that the task runs every <n> minutes. You can use any value between 1 - 1439 minutes. By default, this is 1 minute.</li><li>**HOURLY** - Specifies that the task runs every <n> hours. You can use any value between 1 - 23 hours. By default, this is 1 hour.</li><li>**DAILY** - Specifies that the task runs every <n> days. You can use any value between 1 - 365 days. By default, this is 1 day.</li><li>**WEEKLY** - Specifies that the task runs every <n> weeks. You can use any value between 1 - 52 weeks. By default, this is 1 week.</li><li>**MONTHLY** - Specifies that the task runs every <n> months. You can use any of the following values:<ul><li>A number between 1 - 12 months</li><li>**LASTDAY** - To run the task on the last day of the month</li><li>**FIRST, SECOND, THIRD, or FOURTH along with the `/d <day>` parameter** - Specifies the particular week and day to run the task. For example, on the third Wednesday of the month.</li></ul></li><li>**ONCE** - Specifies that the task runs once.</li><li>**ONSTART** - Specifies that the task runs at startup.</li><li>**ONLOGON** - Specifies that the task runs when the user specified by the **/u** parameter logs on.</li><li>**ONIDLE** - Specifies that the task runs after the system is idle for the number of minutes specified by the **/i** parameter</li></ul> |
 | /d DAY[,DAY...] | Specifies how often the task runs within its schedule type. The valid options include:<ul><li>**WEEKLY** - Specifies that the task runs weekly by providing a value between 1-52 weeks. Optionally, you can also add a specific day of the week by adding a value of MON - SUN or a range of [MON - SUN...]).</li><li>**MONTHLY** - Specifies that the task runs weekly each month by providing a value of FIRST, SECOND, THIRD, FOURTH, LAST. Optionally, you can also add a specific day of the week by adding a value of MON - SUN or by providing a number between 1 - 12 months. If you use this option, you can also add a specific day of the month, by providing a number between 1-31.<p>**NOTE:** The date value of 1 - 31 is valid only without the **/mo** parameter, or if the **/mo** parameter is monthly (1 - 12). The default is day 1 (the first day of the month).</li></ul> |
 | /m MONTH[,MONTH...] | Specifies a month or months of the year during which the scheduled task should run. The valid options include JAN - DEC and `*` (every month). The **/m** parameter is valid only with a MONTHLY schedule. It's required when the LASTDAY modifier is used. Otherwise, it's optional and the default value is `*` (every month). |
-| /i <Idletime> | Specifies how many minutes the computer is idle before the task starts. A valid value is a whole number from 1 to 999. This parameter is valid only with an ONIDLE schedule, and then it is required. |
+| /i <Idletime> | Specifies how many minutes the computer is idle before the task starts. A valid value is a whole number from 1 to 999. This parameter is valid only with an ONIDLE schedule, and then it's required. |
 | /st `<Starttime>` | Specifies the start time for the task, using the 24-hour time format, HH:mm. The default value is the current time on the local computer. The **/st** parameter is valid with MINUTE, HOURLY, DAILY, WEEKLY, MONTHLY, and ONCE schedules. It's required for a ONCE schedule. |
 | /ri `<interval>` | Specifies the repetition interval for the scheduled task, in minutes. This isn't applicable for schedule types: MINUTE, HOURLY, ONSTART, ONLOGON, and ONIDLE. Valid range is 1 - 599940 (599940 minutes = 9999 hours). If either the **/et** or **/du** parameters are specified, the default is **10 minutes**. |
 | /et `<Endtime>` | Specifies the time of day that a minute or hourly task schedule ends in <HH:MM> 24-hour format. After the specified end time, schtasks does not start the task again until the start time recurs. By default, task schedules have no end time. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
 | /du `<duration>` | Specifies a maximum length of time for a minute or hourly schedule in <HHHH:MM> 24-hour format. After the specified time elapses, schtasks does not start the task again until the start time recurs. By default, task schedules have no maximum duration. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
 | /k | Stops the program that the task runs at the time specified by **/et** or **/du**. Without **/k**, schtasks doesn't start the program again after it reaches the time specified by **/et** or **/du** nor does it stop the program if it's still running. This parameter is optional and valid only with a MINUTE or HOURLY schedule. |
 | /sd <Startdate> | Specifies the date on which the task schedule starts. The default value is the current date on the local computer. The format for **Startdate** varies with the locale selected for the local computer in **Regional and Language Options**. Only one format is valid for each locale. The valid date formats include (be sure to choose the format most similar to the format selected for **Short date** in **Regional and Language Options** on the local computer):<ul><li>`<MM>//` - Specifies to use month-first formats, such as English (United States) and Spanish (Panama).</li><li>`<DD>//` - Specifies to use day-first formats, such as Bulgarian and Dutch (Netherlands).</li><li>`<YYYY>//` - Specifies to use for year-first formats, such as Swedish and French (Canada).</li></ul> |
-| /ed `<Enddate>` | Specifies the date on which the schedule ends. This parameter is optional. It is not valid in a ONCE, ONSTART, ONLOGON, or ONIDLE schedule. By default, schedules have no ending date. The default value is the current date on the local computer. The format for **Enddate** varies with the locale selected for the local computer in **Regional and Language Options**. Only one format is valid for each locale. The valid date formats include (be sure to choose the format most similar to the format selected for **Short date** in **Regional and Language Options** on the local computer):<ul><li>`<MM>//` - Specifies to use month-first formats, such as English (United States) and Spanish (Panama).</li><li>`<DD>//` - Specifies to use day-first formats, such as Bulgarian and Dutch (Netherlands).</li><li>`<YYYY>//` - Specifies to use for year-first formats, such as Swedish and French (Canada).</li></ul> |
+| /ed `<Enddate>` | Specifies the date on which the schedule ends. This parameter is optional. It isn't valid in a ONCE, ONSTART, ONLOGON, or ONIDLE schedule. By default, schedules have no ending date. The default value is the current date on the local computer. The format for **Enddate** varies with the locale selected for the local computer in **Regional and Language Options**. Only one format is valid for each locale. The valid date formats include (be sure to choose the format most similar to the format selected for **Short date** in **Regional and Language Options** on the local computer):<ul><li>`<MM>//` - Specifies to use month-first formats, such as English (United States) and Spanish (Panama).</li><li>`<DD>//` - Specifies to use day-first formats, such as Bulgarian and Dutch (Netherlands).</li><li>`<YYYY>//` - Specifies to use for year-first formats, such as Swedish and French (Canada).</li></ul> |
 | /it | Specifies to run the scheduled task only when the run as user (the user account under which the task runs) is logged on to the computer. This parameter has no effect on tasks that run with system permissions or tasks that already have the interactive-only property set. You can't use a change command to remove the interactive-only property from a task. By default, run as user is the current user of the local computer when the task is scheduled or the account specified by the **/u** parameter, if one is used. However, if the command includes the **/ru** parameter, then the run as user is the account specified by the **/ru** parameter. |
 | /z | Specifies to delete the task upon the completion of its schedule. |
 | /f | Specifies to create the task and suppress warnings if the specified task already exists. |
@@ -58,7 +58,7 @@ In a minute schedule, the **/sc minute** parameter is required. The **/mo** (mod
     schtasks /create /sc minute /mo 20 /tn Security Script /tr \\central\data\scripts\sec.vbs
     ```
 
-    Because the command does not include a starting date or time, the task starts 20 minutes after the command completes, and runs every 20 minutes thereafter whenever the system is running. Notice that the security script source file is located on a remote computer, but that the task is scheduled and executes on the local computer.
+    Because this example doesn't include a starting date or time, the task starts 20 minutes after the command completes, and runs every 20 minutes thereafter whenever the system is running. Notice that the security script source file is located on a remote computer, but that the task is scheduled and executes on the local computer.
 
 - To schedule a security script, *Sec.vbs*, to run on the local computer every 100 minutes between 5:00 P.M. and 7:59 A.M. each day, type:
 
@@ -66,7 +66,7 @@ In a minute schedule, the **/sc minute** parameter is required. The **/mo** (mod
     schtasks /create /tn Security Script /tr sec.vbs /sc minute /mo 100 /st 17:00 /et 08:00 /k
     ```
 
-    The command uses the **/sc** parameter to specify a minute schedule and the **/mo** parameter to specify an interval of 100 minutes. It uses the **/st** and **/et** parameters to specify the start time and end time of each day's schedule. It also uses the **/k** parameter to stop the script if it is still running at 7:59 A.M. Without **/k**, schtasks would not start the script after 7:59 A.M., but if the instance started at 6:20 A.M. was still running, it wouldn't stop it.
+    This example uses the **/sc** parameter to specify a minute schedule and the **/mo** parameter to specify an interval of 100 minutes. It uses the **/st** and **/et** parameters to specify the start time and end time of each day's schedule. It also uses the **/k** parameter to stop the script if it's still running at 7:59 A.M. Without **/k**, schtasks wouldn't start the script after 7:59 A.M., but if the instance started at 6:20 A.M. was still running, it wouldn't stop it.
 
 ## To schedule a task to run every `<n>` hours
 
@@ -80,7 +80,7 @@ In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (mo
     schtasks /create /sc hourly /mo 5 /sd 03/01/2002 /tn My App /tr c:\apps\myapp.exe
     ```
 
-    Because the local computer is set to use the English (Zimbabwe) option in **Regional and Language Options**, the format for the start date is MM/DD/YYYY (03/01/2002).
+    In this example, the local computer uses the **English (Zimbabwe)** option in **Regional and Language Options**, so the format for the start date is MM/DD/YYYY (03/01/2002).
 
 - To schedule the MyApp program to run hourly, beginning at five minutes past midnight, type:
 
@@ -94,7 +94,7 @@ In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (mo
     schtasks /create /tn My App /tr myapp.exe /sc hourly /mo 3 /st 00:00 /du 0010:00
     ```
 
-    In this example, the task runs at 12:00 A.M., 3:00 A.M., 6:00 A.M., and 9:00 A.M. Because the duration is 10 hours, the task is not run again at 12:00 P.M. Instead, it starts again at 12:00 A.M. the next day. Because the program runs for just a few minutes, the /k parameter, which stops the program if it is still running when the duration expires, is not necessary.
+    In this example, the task runs at 12:00 A.M., 3:00 A.M., 6:00 A.M., and 9:00 A.M. Because the duration is 10 hours, the task isn't run again at 12:00 P.M. Instead, it starts again at 12:00 A.M. the next day. Also, because the program runs for just a few minutes, the **/k** parameter, which stops the program if it's still running when the duration expires, isn't necessary.
 
 ## To schedule a task to run every `<n>` days
 
@@ -108,7 +108,7 @@ In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modif
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc daily /st 08:00 /ed 31/12/2021
     ```
 
-    Because the local computer system is set to the English (United Kingdom) option in **Regional and Language Options**, the format for the end date is DD/MM/YYYY (31/12/2021). Additionally, because this example doesn't include the **/mo** parameter, the default interval of *1* is used to run the command every day.
+     In this example, the local computer system is set to the **English (United Kingdom)** option in **Regional and Language Options**, so the format for the end date is DD/MM/YYYY (31/12/2021). Additionally, because this example doesn't include the **/mo** parameter, the default interval of *1* is used to run the command every day.
 
 - To schedule the MyApp program to run every twelve days at 1:00 P.M. (13:00) beginning on December 31, 2021, type:
 
@@ -116,7 +116,7 @@ In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modif
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc daily /mo 12 /sd 12/31/2002 /st 13:00
     ```
 
-    Because the system is set to the English (Zimbabwe) option in **Regional and Language Options**, the format for the end date is MM/DD/YYYY (12/31/2021).
+    In this example, the system is set to the **English (Zimbabwe)** option in **Regional and Language Options**, so the format for the end date is MM/DD/YYYY (12/31/2021).
 
 - To schedule a security script, *Sec.vbs*, to run every 70 days, type:
 
@@ -124,7 +124,7 @@ In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modif
     schtasks /create /tn Security Script /tr sec.vbs /sc daily /mo 70 /it
     ```
 
-    The command uses the **/it** parameter to specify that the task runs only when the user under whose account the task runs is logged onto the computer. Because the task will run with the permissions of a specific user account, then the task will run only when that user is logged on.
+    In this example, the **/it** parameter is used to specify that the task runs only when the user under whose account the task runs is logged onto the computer. Because the task runs with the permissions of a specific user account, this task only runs when that user is logged on.
 
     > [!NOTE]
     > To identify tasks with the interactive-only (**/it**) property, use a verbose query (**/query /v**). In a verbose query display of a task with /it, the **Logon Mode** field has a value of Interactive only.
@@ -143,7 +143,7 @@ Weekly schedules also have an optional **/d** parameter to schedule the task to 
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 6 /s Server16 /u Admin01
     ```
 
-    Because this command leaves out the **/d** parameter, the task runs on Mondays. This command also uses the /s parameter to specify the remote computer and the /u parameter to run the command with the permissions of the user's Administrator account. Additionally, because the **/p** parameter is left out, SchTasks.exe prompts the user for the Administrator account password, and because the command is run remotely, all paths in the command, including the path to MyApp.exe, refer to paths on the remote computer.
+    Because this example leaves out the **/d** parameter, the task runs on Mondays. This example also uses the **/s** parameter to specify the remote computer and the **/u** parameter to run the command with the permissions of the user's Administrator account. Additionally, because the **/p** parameter is left out, SchTasks.exe prompts the user for the Administrator account password, and because the command is run remotely, all paths in the command, including the path to MyApp.exe, refer to paths on the remote computer.
 
 - To schedule a task to run every other Friday, type:
 
@@ -151,7 +151,7 @@ Weekly schedules also have an optional **/d** parameter to schedule the task to 
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 2 /d FRI
     ```
 
-    This example uses the **/mo** parameter to specify the two-week interval and the **/d** parameter to specify the day of the week. To schedule a task that runs every Friday, omit the /mo parameter or set it to 1.
+    This example uses the **/mo** parameter to specify the two-week interval and the **/d** parameter to specify the day of the week. To schedule a task that runs every Friday, leave out the **/mo** parameter or set it to *1*.
 
 ## To schedule a task to run every `<n>` months
 
@@ -164,7 +164,8 @@ In this schedule type, the **/sc monthly** parameter is required. The **/mo** (m
     ```
     schtasks /create /tn My App /tr myapp.exe /sc monthly
     ```
-    Because a value of *1* is the default for both the **/mo** (modifier) parameter and the **/d** (day) parameter, these parameters are not required in the command.
+
+    The default value for both the **/mo** (modifier) parameter and the **/d** (day) parameter is *1*, so you don't need to use either of those parameters for this example.
 
 - To schedule the MyApp program to run every three months, type:
 
@@ -172,7 +173,7 @@ In this schedule type, the **/sc monthly** parameter is required. The **/mo** (m
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 3
     ```
 
-    This command uses the **/mo** parameter to specify the interval of 3 months.
+    This example uses the **/mo** parameter to specify an interval of 3 months.
 
 - To schedule the MyApp program to run every other month on the 21st day of the month at midnight for a year, from July 2, 2002 to June 30, 2003, type:
 
@@ -180,11 +181,11 @@ In this schedule type, the **/sc monthly** parameter is required. The **/mo** (m
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo 2 /d 21 /st 00:00 /sd 2002/07/01 /ed 2003/06/30
     ```
 
-    The command uses the **/mo** parameter to specify the monthly interval (every two months), the **/d** parameter to specify the date, and the **/st** parameter to specify the time. It also uses the **/sd** and **/ed** parameters to specify the start date and end date, respectively. Because the local computer is set to the English (South Africa) option in **Regional and Language Options**, the dates are specified in the local format, YYYY/MM/DD.
+    This example uses the **/mo** parameter to specify the monthly interval (every two months), the **/d** parameter to specify the date,  the **/st** parameter to specify the time, and the **/sd** and **/ed** parameters to specify the start date and end date, respectively. Also in this example, the local computer is set to the **English (South Africa)** option in **Regional and Language Options**, so the dates are specified in the local format, YYYY/MM/DD.
 
 ## To schedule a task to run on a specific day of the week
 
-The day of the week schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is *1* (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days `(*)`. The default is *MON (Monday)*. The every day option `(/d *)` is equivalent to scheduling a daily task.
+The day of the week schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is *1* (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days (**&#42;**) . The default is *MON (Monday)*. The every day option `(/d *)` is equivalent to scheduling a daily task.
 
 ### Examples
 
@@ -194,7 +195,7 @@ The day of the week schedule is a variation of the weekly schedule. In a weekly 
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /d WED
     ```
 
-    The command uses the **/d** parameter to specify the day of the week. Because the command leaves out the **/mo** parameter, the task runs every week.
+    This example uses the **/d** parameter to specify the day of the week. Because the command leaves out the **/mo** parameter, the task runs every week.
 
 - To schedule a task to run on Monday and Friday of every eighth week, type:
 
@@ -202,11 +203,11 @@ The day of the week schedule is a variation of the weekly schedule. In a weekly 
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc weekly /mo 8 /d MON,FRI
     ```
 
-    This command uses the **/d** parameter to specify the days and the **/mo** parameter to specify the eight-week interval.
+    This example uses the **/d** parameter to specify the days and the **/mo** parameter to specify the eight-week interval.
 
 ## To schedule a task to run on a specific week of the month
 
-In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. You can specify only one day of the week for this schedule type. This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month `(*)`. The default for the **/m** parameter is every month `(*)`.
+In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. You can specify only one day of the week for this schedule type. This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month (**&#42;**) . The default for the **/m** parameter is every month (**&#42;**) .
 
 ### Examples
 
@@ -216,7 +217,7 @@ In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) par
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo SECOND /d SUN
     ```
 
-    This command uses the **/mo** parameter to specify the second week of the month and the **/d** parameter to specify the day.
+    This example uses the **/mo** parameter to specify the second week of the month and the **/d** parameter to specify the day.
 
 - To schedule the MyApp program to run on the first Monday in March and September, type:
 
@@ -224,7 +225,7 @@ In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) par
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo FIRST /d MON /m MAR,SEP
     ```
 
-    This command uses the **/mo** parameter to specify the first week of the month and the **/d** parameter to specify the day. It uses the **/m** parameter to specify the month, separating the month arguments with a comma.
+    This example uses the **/mo** parameter to specify the first week of the month and the **/d** parameter to specify the day. It uses the **/m** parameter to specify the month, separating the month arguments with a comma.
 
 ## To schedule a task to run on a specific day each month
 
@@ -248,7 +249,7 @@ Schtasks won't let you schedule a task for a date that's not in a month specifie
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /d 15 /m MAY,JUN /st 15:00
     ```
 
-    This command uses the **/d** parameter to specify the date and the **/m** parameter to specify the months. It also uses the **/st** parameter to specify the start time.
+    This example uses the **/d** parameter to specify the date and the **/m** parameter to specify the months. It also uses the **/st** parameter to specify the start time.
 
 ## To schedule a task to run on the last day of a month
 
@@ -262,7 +263,7 @@ In the last day schedule type, the **/sc monthly** parameter, the **/mo LASTDAY*
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo lastday /m *
     ```
 
-    This command uses the **/mo** parameter to specify the last day and the **/m** parameter with the wildcard character `(*)` to indicate that the program runs every month.
+    This example uses the **/mo** parameter to specify the last day and the **/m** parameter with the wildcard character (**&#42;**) to indicate that the program runs every month.
 
 - To schedule the MyApp program to run on the last day of February and the last day of March at 6:00 P.M., type:
 
@@ -270,7 +271,7 @@ In the last day schedule type, the **/sc monthly** parameter, the **/mo LASTDAY*
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /mo lastday /m FEB,MAR /st 18:00
     ```
 
-    This command uses the **/mo** parameter to specify the last day, the **/m** parameter to specify the months, and the **/st** parameter to specify the start time.
+    This example uses the **/mo** parameter to specify the last day, the **/m** parameter to specify the months, and the **/st** parameter to specify the start time.
 
 ## To schedule to run once
 
@@ -278,7 +279,7 @@ In the run-once schedule type, the **/sc once** parameter is required. The **/st
 
 Schtasks won't let you schedule a task to run once if the date and time specified are in the past, based on the time of the local computer. To schedule a task that runs once on a remote computer in a different time zone, you must schedule it before that date and time occurs on the local computer.
 
-### Examples
+### Example
 
 - To schedule the MyApp program to run at midnight on January 1, 2003, type:
 
@@ -286,72 +287,70 @@ Schtasks won't let you schedule a task to run once if the date and time specifie
     schtasks /create /tn My App /tr c:\apps\myapp.exe /sc once /sd 01/01/2003 /st 00:00
     ```
 
-    This command uses the **/sc** parameter to specify the schedule type and the **/sd** and **/st** parameters to specify the date and time.Because the local computer uses the English (United States) option in **Regional and Language Options**, the format for the start date is MM/DD/YYYY.
+    This example uses the **/sc** parameter to specify the schedule type and the **/sd** and **/st** parameters to specify the date and time. Also in this example, the local computer uses the **English (United States)** option in **Regional and Language Options**, the format for the start date is MM/DD/YYYY.
 
 ## To schedule a task to run every time the system starts
 
 In the on-start schedule type, the **/sc onstart** parameter is required. The **/sd** (start date) parameter is optional and the default is the current date.
 
-To schedule a task that runs when the system starts
-This command schedules the MyApp program to run every time the system starts, beginning on March 15, 2001:
+### Example
 
-Because the local computer is uses the English (United States) option in Regional and Language Options in Control Panel, the format for the start date is MM/DD/YYYY.
+- To schedule the MyApp program to run every time the system starts, beginning on March 15, 2001, type:
 
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onstart /sd 03/15/2001
+    ```
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onstart /sd 03/15/2001
-To schedule a task that runs when a user logs on
-Syntax
+    In this example, the local computer uses the **English (United States)** option in **Regional and Language Options**, the format for the start date is MM/DD/YYYY.
 
-Copy
-schtasks /create /tn <TaskName> /tr <TaskRun> /sc onlogon [/sd <StartDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
-Remarks
-The on logon schedule type schedules a task that runs whenever any user logs on to the computer. In the on logon schedule type, the /sc onlogon parameter is required. The /sd (start date) parameter is optional and the default is the current date.
+## To schedule a task to run when a user logs on
 
-Examples
-To schedule a task that runs when a user logs on to a remote computer
-This command schedules a batch file to run every time a user (any user) logs on to the remote computer. This command uses the /s parameter to specify the remote computer. Because the command is remote, all paths in the command, including the path to the batch file, refer to a path on the remote computer.
+The on logon schedule type schedules a task that runs whenever any user logs on to the computer. In the on logon schedule type, the **/sc onlogon** parameter is required. The **/sd** (start date) parameter is optional and the default is the current date.
 
+### Example
 
-Copy
-schtasks /create /tn Start Web Site /tr c:\myiis\webstart.bat /sc onlogon /s Server23
-To schedule a task that runs when the system is idle
-Syntax
+- To schedule a task that runs when a user logs on to a remote computer, type:
 
-Copy
-schtasks /create /tn <TaskName> /tr <TaskRun> /sc onidle /i {1 - 999} [/sd <StartDate>] [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
-Remarks
-The on idle schedule type schedules a task that runs whenever there is no user activity during the time specified by the /i parameter. In the on idle schedule type, the /sc onidle parameter and the /i parameter are required. The /sd (start date) is optional and the default is the current date.
+    ```
+    schtasks /create /tn Start Web Site /tr c:\myiis\webstart.bat /sc onlogon /s Server23
+    ```
 
-Examples
-To schedule a task that runs whenever the computer is idle
-This command schedules the MyApp program to run whenever the computer is idle. This command uses the required /i parameter to specify that the computer must remain idle for ten minutes before the task starts.
+    This example schedules a batch file to run every time a user (any user) logs on to the remote computer. It uses the **/s** parameter to specify the remote computer. Because the command is remote, all paths in the command, including the path to the batch file, refer to a path on the remote computer.
 
+## To schedule a task to run when the system is idle
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onidle /i 10
-To schedule a task that runs now
-Schtasks does not have a run now option, but you can simulate that option by creating a task that runs once and starts in a few minutes.
+The on idle schedule type schedules a task that runs whenever there is no user activity during the time specified by the **/i** parameter. In the on idle schedule type, the **/sc onidle** parameter and the **/i** parameter are required. The **/sd** (start date) is optional and the default is the current date.
 
-Syntax
+### Example
 
-Copy
-schtasks /create /tn <TaskName> /tr <TaskRun> /sc once [/st <HH:MM>] /sd <MM/DD/YYYY> [/it] [/ru {[<Domain>\]<User> [/rp <Password>] | System}] [/s <Computer> [/u [<Domain>\]<User> [/p <Password>]]]
-Examples
-To schedule a task that runs a few minutes from now.
-This command schedules a task to run once, on November 13, 2002 at 2:18 P.M. local time.
+- To schedule the MyApp program to run whenever the computer is idle, type:
 
-Because the local computer is uses the English (United States) option in Regional and Language Options in Control Panel, the format for the start date is MM/DD/YYYY.
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc onidle /i 10
+    ```
 
+    This example uses the required **/i** parameter to specify that the computer must remain idle for ten minutes before the task starts.
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc once /st 14:18 /sd 11/13/2002
+## To schedule a task to run now
+
+Schtasks doesn't have a Run Now option, but you can simulate that option by creating a task that runs once and starts in a few minutes.
+
+### Example
+
+- To schedule a task to run once, on November 13, 2020 at 2:18 P.M. local time, type:
+
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc once /st 14:18 /sd 11/13/2002
+    ```
+
+    In this example, the local computer uses the **English (United States)** option in **Regional and Language Options**, so the format for the start date is MM/DD/YYYY.
+
 To schedule a task that runs with different permissions
 You can schedule tasks of all types to run with permissions of an alternate account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the /ru parameter is required and the /rp parameter is optional.
 
 Examples
 To run a task with Administrator permissions on the local computer
-This command schedules the MyApp program to run on the local computer. This command uses the /ru to specify that the task should run with the permissions of the user's Administrator account (Admin06). In this example, the task is scheduled to run every Tuesday, but you can use any schedule type for a task run with alternate permissions.
+This example schedules the MyApp program to run on the local computer. This example uses the /ru to specify that the task should run with the permissions of the user's Administrator account (Admin06). In this example, the task is scheduled to run every Tuesday, but you can use any schedule type for a task run with alternate permissions.
 
 
 Copy
@@ -363,11 +362,11 @@ Copy
 Please enter the run as password for Admin06: ********
 SUCCESS: The scheduled task My App has successfully been created.
 To run a task with alternate permissions on a remote computer
-This command schedules the MyApp program to run on the Marketing computer every four days.
+This example schedules the MyApp program to run on the Marketing computer every four days.
 
-The command uses the /sc parameter to specify a daily schedule and /mo parameter to specify an interval of four days.
+This example uses the /sc parameter to specify a daily schedule and /mo parameter to specify an interval of four days.
 
-The command uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer (Admin01 on the Marketing computer). It also uses the /ru parameter to specify that the task should run with the permissions of the user's non-Administrator account (User01 in the Reskits domain). Without the /ru parameter, the task would run with the permissions of the account specified by /u.
+This example uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer (Admin01 on the Marketing computer). It also uses the /ru parameter to specify that the task should run with the permissions of the user's non-Administrator account (User01 in the Reskits domain). Without the /ru parameter, the task would run with the permissions of the account specified by /u.
 
 
 Copy
@@ -382,11 +381,11 @@ Please enter the run as password for Reskits\User01: ********
 
 SUCCESS: The scheduled task My App has successfully been created.
 To run a task only when a particular user is logged on
-This command schedules the AdminCheck.exe program to run on the Public computer every Friday at 4:00 A.M., but only if the administrator of the computer is logged on.
+This example schedules the AdminCheck.exe program to run on the Public computer every Friday at 4:00 A.M., but only if the administrator of the computer is logged on.
 
-The command uses the /sc parameter to specify a weekly schedule, the /d parameter to specify the day, and the /st parameter to specify the start time.
+This example uses the /sc parameter to specify a weekly schedule, the /d parameter to specify the day, and the /st parameter to specify the start time.
 
-The command uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer. It also uses the /ru parameter to configure the task to run with the permissions of the administrator of the Public computer (Public\Admin01) and the /it parameter to indicate that the task runs only when the Public\Admin01 account is logged on.
+This example uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer. It also uses the /ru parameter to configure the task to run with the permissions of the administrator of the Public computer (Public\Admin01) and the /it parameter to indicate that the task runs only when the Public\Admin01 account is logged on.
 
 
 Copy
@@ -395,7 +394,7 @@ Note
 
 To identify tasks with the interactive-only (/it) property, use a verbose query (/query /v). In a verbose query display of a task with /it, the Logon Mode field has a value of Interactive only.
 To schedule a task that runs with system permissions
-Tasks of all types can run with permissions of the System account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the /ru system (or **/ru **) parameter is required and the /rp parameter is not valid.
+Tasks of all types can run with permissions of the System account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the /ru system (or **/ru **) parameter is required and the /rp parameter isn't valid.
 
 Important
 
@@ -407,9 +406,9 @@ To identify tasks that run with system permissions, use a verbose query (/query 
 
 Examples
 To run a task with system permissions
-This command schedules the MyApp program to run on the local computer with permissions of the System account. In this example, the task is scheduled to run on the fifteenth day of every month, but you can use any schedule type for a task run with system permissions.
+This example schedules the MyApp program to run on the local computer with permissions of the System account. In this example, the task is scheduled to run on the fifteenth day of every month, but you can use any schedule type for a task run with system permissions.
 
-The command uses the /ru System parameter to specify the system security context. Because system tasks do not use a password, the /rp parameter is omitted.
+This example uses the /ru System parameter to specify the system security context. Because system tasks don't use a password, the /rp parameter is omitted.
 
 
 Copy
@@ -421,11 +420,11 @@ Copy
 INFO: The task will be created under user name (NT AUTHORITY\SYSTEM).
 SUCCESS: The Scheduled task My App has successfully been created.
 To run a task with system permissions on a remote computer
-This command schedules the MyApp program to run on the Finance01 computer every morning at 4:00 A.M. with system permissions.
+This example schedules the MyApp program to run on the Finance01 computer every morning at 4:00 A.M. with system permissions.
 
-The command uses the /tn parameter to name the task and the /tr parameter to specify the remote copy of the MyApp program. This command uses the /sc parameter to specify a daily schedule, but omits the /mo parameter because 1 (every day) is the default. This command uses the /st parameter to specify the start time, which is also the time the task will run each day.
+This example uses the /tn parameter to name the task and the /tr parameter to specify the remote copy of the MyApp program. This example uses the /sc parameter to specify a daily schedule, but omits the /mo parameter because 1 (every day) is the default. This example uses the /st parameter to specify the start time, which is also the time the task will run each day.
 
-The command uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer. It also uses the /ru parameter to specify that the task should run under the System account. Without the /ru parameter, the task would run with the permissions of the account specified by /u.
+This example uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer. It also uses the /ru parameter to specify that the task should run under the System account. Without the /ru parameter, the task would run with the permissions of the account specified by /u.
 
 
 Copy
@@ -455,7 +454,7 @@ C:\Windows\System32\Perfmon.exe
 Save the file as MyApps.bat.
 Use Schtasks.exe to create a task that runs MyApps.bat.
 
-This command creates the Monitor task, which runs whenever anyone logs on. This command uses the /tn parameter to name the task, and the /tr parameter to run MyApps.bat. It uses the /sc parameter to indicate the OnLogon schedule type and the /ru parameter to run the task with the permissions of the user's Administrator account.
+This example creates the Monitor task, which runs whenever anyone logs on. This example uses the /tn parameter to name the task, and the /tr parameter to run MyApps.bat. It uses the /sc parameter to indicate the OnLogon schedule type and the /ru parameter to run the task with the permissions of the user's Administrator account.
 
 
 Copy
@@ -470,7 +469,7 @@ You can use the /u parameter only when the local and remote computers are in the
 The task must have sufficient permission to run on the remote computer. The permissions required vary with the task. By default, the task runs with the permission of the current user of the local computer or, if the /u parameter is used, the task runs with the permission of the account specified by the /u parameter. However, you can use the /ru parameter to run the task with permissions of a different user account or with system permissions.
 Examples
 An Administrator schedules a task on a remote computer
-This command schedules the MyApp program to run on the SRV01 remote computer every ten days starting immediately. The command uses the /s parameter to provide the name of the remote computer. Because the local current user is an Administrator of the remote computer, the /u parameter, which provides alternate permissions for scheduling the task, is not necessary.
+This example schedules the MyApp program to run on the SRV01 remote computer every ten days starting immediately. This example uses the /s parameter to provide the name of the remote computer. Because the local current user is an Administrator of the remote computer, the /u parameter, which provides alternate permissions for scheduling the task, isn't necessary.
 
 Please note that when scheduling tasks on a remote computer, all parameters refer to the remote computer. Therefore, the executable file specified by the /tr parameter refers to the copy of MyApp.exe on the remote computer.
 
@@ -480,7 +479,7 @@ schtasks /create /s SRV01 /tn My App /tr c:\program files\corpapps\myapp.exe /sc
 In response, schtasks displays a success message indicating that the task is scheduled.
 
 A user schedules a command on a remote computer (Case 1)
-This command schedules the MyApp program to run on the SRV06 remote computer every three hours. Because Administrator permissions are required to schedule a task, the command uses the /u and /p parameters to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). By default, these permissions are also used to run the task. However, because the task does not need Administrator permissions to run, the command includes the /u and /rp parameters to override the default and run the task with permission of the user's non-Administrator account on the remote computer.
+This example schedules the MyApp program to run on the SRV06 remote computer every three hours. Because Administrator permissions are required to schedule a task, the command uses the /u and /p parameters to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). By default, these permissions are also used to run the task. However, because the task does not need Administrator permissions to run, the command includes the /u and /rp parameters to override the default and run the task with permission of the user's non-Administrator account on the remote computer.
 
 
 Copy
@@ -488,7 +487,7 @@ schtasks /create /s SRV06 /tn My App /tr c:\program files\corpapps\myapp.exe /sc
 In response, schtasks displays a success message indicating that the task is scheduled.
 
 A user schedules a command on a remote computer (Case 2)
-This command schedules the MyApp program to run on the SRV02 remote computer on the last day of every month. Because the local current user (user03) is not an Administrator of the remote computer, the command uses the /u parameter to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). The Administrator account permissions will be used to schedule the task and to run the task.
+This example schedules the MyApp program to run on the SRV02 remote computer on the last day of every month. Because the local current user (user03) isn't an Administrator of the remote computer, the command uses the /u parameter to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). The Administrator account permissions will be used to schedule the task and to run the task.
 
 
 Copy
@@ -503,7 +502,7 @@ SUCCESS: The scheduled task My App has successfully been created.
 
 WARNING: The Scheduled task My App has been created, but may not run because
 the account information could not be set.
-This warning indicates that the remote domain could not authenticate the account specified by the /u parameter. In this case, the remote domain could not authenticate the user account because the local computer is not a member of a domain that the remote computer domain trusts. When this occurs, the task job appears in the list of scheduled tasks, but the task is actually empty and it will not run.
+This warning indicates that the remote domain could not authenticate the account specified by the /u parameter. In this case, the remote domain could not authenticate the user account because the local computer isn't a member of a domain that the remote computer domain trusts. When this occurs, the task job appears in the list of scheduled tasks, but the task is actually empty and it won't run.
 
 The following display from a verbose query exposes the problem with the task. In the display, note that the value of Next Run Time is Never and that the value of Run As User is Could not be retrieved from the task scheduler database.
 
@@ -546,9 +545,9 @@ Remarks
 To run a /create command with the permissions of a different user, use the /u parameter. The /u parameter is valid only for scheduling tasks on remote computers.
 To view more schtasks /create examples, type schtasks /create /? at a command prompt.
 To schedule a task that runs with permissions of a different user, use the /ru parameter. The /ru parameter is valid for tasks on local and remote computers.
-To use the /u parameter, the local computer must be in the same domain as the remote computer or must be in a domain that the remote computer domain trusts. Otherwise, either the task is not created, or the task job is empty and the task does not run.
+To use the /u parameter, the local computer must be in the same domain as the remote computer or must be in a domain that the remote computer domain trusts. Otherwise, either the task isn't created, or the task job is empty and the task does not run.
 Schtasks always prompts for a password unless you provide one, even when you schedule a task on the local computer using the current user account. This is normal behavior for schtasks.
-Schtasks does not verify program file locations or user account passwords. If you do not enter the correct file location or the correct password for the user account, the task is created, but it does not run. Also, if the password for an account changes or expires, and you do not change the password saved in the task, then the task does not run.
-The System account does not have interactive logon rights. Users do not see and cannot interact with programs run with system permissions.
+Schtasks does not verify program file locations or user account passwords. If you don't enter the correct file location or the correct password for the user account, the task is created, but it does not run. Also, if the password for an account changes or expires, and you don't change the password saved in the task, then the task does not run.
+The System account does not have interactive logon rights. Users don't see and cannot interact with programs run with system permissions.
 Each task runs only one program. However, you can create a batch file that starts multiple tasks, and then schedule a task that runs the batch file.
 You can test a task as soon as you create it. Use the run operation to test the task and then check the SchedLgU.txt file (SystemRoot\SchedLgU.txt) for errors.
