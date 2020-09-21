@@ -30,7 +30,7 @@ Download: Windows [64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
 - Fixed the connection failure that happened when calling or joining a Teams call while another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
 - Fixed a failure to enumerate audio or video devices in Teams when media optimization for Teams is enabled.
-- Added a "Help" link to the desktop settings page.
+- Added a "Need help with settings?" link to the desktop settings page.
 - Fixed an issue with the "Subscribe" button that happened when using high-contrast dark themes.
 
 ## Updates for version 1.2.1275
