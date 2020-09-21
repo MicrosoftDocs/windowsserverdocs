@@ -50,6 +50,8 @@ schtasks /create /sc <scheduletype> /tn <taskname> /tr <taskrun> [/s <computer> 
 
 In a minute schedule, the **/sc minute** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of minutes between each run of the task. The default value for **/mo** is *1* (every minute). The **/et** (end time) and **/du** (duration) parameters are optional and can be used with or without the **/k** (end task) parameter.
 
+### Examples
+
 - To schedule a security script, *Sec.vbs*, to run every 20 minutes, type:
 
     ```
@@ -69,6 +71,8 @@ In a minute schedule, the **/sc minute** parameter is required. The **/mo** (mod
 ## To schedule a task to run every `<n>` hours
 
 In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of hours between each run of the task. The default value for **/mo** is *1* (every hour). The **/k** (end task) parameter is optional and can be used with either **/et** (end at the specified time) or **/du** (end after the specified interval).
+
+### Examples
 
 - To schedule the MyApp program to run every five hours, beginning on the first day of March 2002, type:
 
@@ -95,6 +99,8 @@ In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (mo
 ## To schedule a task to run every `<n>` days
 
 In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of days between each run of the task. The default value for **/mo** is *1* (every day).
+
+### Examples
 
 - To schedule the MyApp program to run once a day, every day, at 8:00 A.M. until December 31, 2021, type:
 
@@ -129,6 +135,8 @@ In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (mod
 
 Weekly schedules also have an optional **/d** parameter to schedule the task to run on specified days of the week, or on all days (). The default is *MON (Monday)*. The every day () option is equivalent to scheduling a daily task.
 
+### Examples
+
 - To schedule the MyApp program to run on a remote computer every six weeks, type:
 
     ```
@@ -148,6 +156,8 @@ Weekly schedules also have an optional **/d** parameter to schedule the task to 
 ## To schedule a task to run every `<n>` months
 
 In this schedule type, the **/sc monthly** parameter is required. The **/mo** (modifier) parameter, which specifies the number of months between each run of the task, is optional and the default is *1* (every month). This schedule type also has an optional **/d** parameter to schedule the task to run on a specified date of the month. The default is *1* (the first day of the month).
+
+### Examples
 
 - To schedule the MyApp program to run on the first day of every month, type:
 
@@ -176,6 +186,8 @@ In this schedule type, the **/sc monthly** parameter is required. The **/mo** (m
 
 The day of the week schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is *1* (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days `(*)`. The default is *MON (Monday)*. The every day option `(/d *)` is equivalent to scheduling a daily task.
 
+### Examples
+
 - To schedule the MyApp program to run every week on Wednesday, type:
 
     ```
@@ -195,6 +207,8 @@ The day of the week schedule is a variation of the weekly schedule. In a weekly 
 ## To schedule a task to run on a specific week of the month
 
 In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. You can specify only one day of the week for this schedule type. This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month `(*)`. The default for the **/m** parameter is every month `(*)`.
+
+### Examples
 
 - To schedule the MyApp program to run on the second Sunday of every month, type:
 
@@ -218,6 +232,8 @@ In this schedule type, the **/sc monthly** parameter and the **/d** (day) parame
 
 Schtasks won't let you schedule a task for a date that's not in a month specified by the **/m** parameter. For example, trying to schedule the 31st day of February. However, if you don't use the **/m** parameter, and schedule a task for a date that doesn't appear in every month, then the task won't run in the shorter months. To schedule a task for the last day of the month, use the last day schedule type.
 
+### Examples
+
 - To schedule the MyApp program to run on the first day of every month, type:
 
     ```
@@ -237,6 +253,8 @@ Schtasks won't let you schedule a task for a date that's not in a month specifie
 ## To schedule a task to run on the last day of a month
 
 In the last day schedule type, the **/sc monthly** parameter, the **/mo LASTDAY** (modifier) parameter, and the **/m** (month) parameter are required. The **/d** (day) parameter isn't valid.
+
+### Examples
 
 - To schedule the MyApp program to run on the last day of every month, type:
 
@@ -259,6 +277,8 @@ In the last day schedule type, the **/sc monthly** parameter, the **/mo LASTDAY*
 In the run-once schedule type, the **/sc once** parameter is required. The **/st** parameter, which specifies the time that the task runs, is required. The **/sd** parameter, which specifies the date that the task runs, is optional, while the **/mo** (modifier) and **/ed** (end date) parameters aren't valid.
 
 Schtasks won't let you schedule a task to run once if the date and time specified are in the past, based on the time of the local computer. To schedule a task that runs once on a remote computer in a different time zone, you must schedule it before that date and time occurs on the local computer.
+
+### Examples
 
 - To schedule the MyApp program to run at midnight on January 1, 2003, type:
 
