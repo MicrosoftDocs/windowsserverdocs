@@ -31,11 +31,10 @@ You can use up to 80% of total physical memory for the CSV in-memory read cache.
 
 ## Configuring the in-memory read cache
 
-The CSV in-memory read cache is available in Azure Stack HCI, Windows Server 2019, and Windows Server 2016 with the same functionality. In Azure Stack HCI and Windows Server 2019, it's on by default with 1 GiB allocated. In Windows Server 2016, it's off by default.
+The CSV in-memory read cache is available in Windows Server 2019, and Windows Server 2016 with the same functionality. In Windows Server 2019, it's on by default with 1 GiB allocated. In Windows Server 2016, it's off by default.
 
 | OS version             | Default CSV cache size           |
 |------------------------|----------------------------------|
-| Azure Stack HCI        | 1 GiB                            |
 | Windows Server 2019    | 1 GiB                            |
 | Windows Server 2016    | 0 (disabled)                     |
 | Windows Server 2012 R2 | enabled - user must specify size |

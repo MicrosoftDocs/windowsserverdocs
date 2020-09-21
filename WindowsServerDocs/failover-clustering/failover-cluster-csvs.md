@@ -191,7 +191,7 @@ The CSV cache provides caching at the block level of read-only unbuffered I/O op
 >[!NOTE]
 >We recommend that you enable the CSV cache for all clustered Hyper-V and Scale-Out File Server deployments.
 
-In Azure Stack HCI and Windows Server 2019, the CSV cache is on by default with 1 gibibyte (GiB) allocated. In Windows Server 2016 and Windows Server 2012, it's off by default. In Windows Server 2012 R2, the CSV cache is enabled by default; however, you must still allocate the size of the block cache to reserve.
+In Windows Server 2019, the CSV cache is on by default with 1 gibibyte (GiB) allocated. In Windows Server 2016 and Windows Server 2012, it's off by default. In Windows Server 2012 R2, the CSV cache is enabled by default; however, you must still allocate the size of the block cache to reserve.
 
 The following table describes the two configuration settings that control the CSV cache.
 
