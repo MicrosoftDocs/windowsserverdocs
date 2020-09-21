@@ -5,7 +5,7 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 06/07/2019
+ms.date: 09/21/2020
 ms.localizationpriority: medium
 ---
 # Use Cluster Shared Volumes in a failover cluster
@@ -191,7 +191,7 @@ The CSV cache provides caching at the block level of read-only unbuffered I/O op
 >[!NOTE]
 >We recommend that you enable the CSV cache for all clustered Hyper-V and Scale-Out File Server deployments.
 
-By default in Windows Server 2012, the CSV cache is disabled. In Windows Server 2012 R2 and later, the CSV cache is enabled by default. However, you must still allocate the size of the block cache to reserve.
+In Azure Stack HCI and Windows Server 2019, the CSV cache is on by default with 1 gibibyte (GiB) allocated. In Windows Server 2016 and Windows Server 2012, it's off by default. In Windows Server 2012 R2, the CSV cache is enabled by default; however, you must still allocate the size of the block cache to reserve.
 
 The following table describes the two configuration settings that control the CSV cache.
 
