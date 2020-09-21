@@ -46,7 +46,7 @@ schtasks /create /sc <scheduletype> /tn <taskname> /tr <taskrun> [/s <computer> 
 | /f | Specifies to create the task and suppress warnings if the specified task already exists. |
 | /? | Displays help at the command prompt. |
 
-## Examples: Schedule a task to run every `<n>` minutes
+## To schedule a task to run every `<n>` minutes
 
 In a minute schedule, the **/sc minute** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of minutes between each run of the task. The default value for **/mo** is *1* (every minute). The **/et** (end time) and **/du** (duration) parameters are optional and can be used with or without the **/k** (end task) parameter.
 
@@ -66,7 +66,7 @@ In a minute schedule, the **/sc minute** parameter is required. The **/mo** (mod
 
     The command uses the **/sc** parameter to specify a minute schedule and the **/mo** parameter to specify an interval of 100 minutes. It uses the **/st** and **/et** parameters to specify the start time and end time of each day's schedule. It also uses the **/k** parameter to stop the script if it is still running at 7:59 A.M. Without **/k**, schtasks would not start the script after 7:59 A.M., but if the instance started at 6:20 A.M. was still running, it wouldn't stop it.
 
-## Examples: Schedule a task to run every `<n>` hours
+## To schedule a task to run every `<n>` hours
 
 In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of hours between each run of the task. The default value for **/mo** is *1* (every hour). The **/k** (end task) parameter is optional and can be used with either **/et** (end at the specified time) or **/du** (end after the specified interval).
 
@@ -92,7 +92,7 @@ In an hourly schedule, the **/sc hourly** parameter is required. The **/mo** (mo
 
     In this example, the task runs at 12:00 A.M., 3:00 A.M., 6:00 A.M., and 9:00 A.M. Because the duration is 10 hours, the task is not run again at 12:00 P.M. Instead, it starts again at 12:00 A.M. the next day. Because the program runs for just a few minutes, the /k parameter, which stops the program if it is still running when the duration expires, is not necessary.
 
-## Examples: Schedule a task to run every `<n>` days
+## To schedule a task to run every `<n>` days
 
 In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of days between each run of the task. The default value for **/mo** is *1* (every day).
 
@@ -123,7 +123,7 @@ In a daily schedule, the **/sc daily** parameter is required. The **/mo** (modif
     > [!NOTE]
     > To identify tasks with the interactive-only (**/it**) property, use a verbose query (**/query /v**). In a verbose query display of a task with /it, the **Logon Mode** field has a value of Interactive only.
 
-## Examples: Schedule a task to run every `<n>` weeks
+## To schedule a task to run every `<n>` weeks
 
 In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is *1* (every week).
 
@@ -145,7 +145,7 @@ Weekly schedules also have an optional **/d** parameter to schedule the task to 
 
     This example uses the **/mo** parameter to specify the two-week interval and the **/d** parameter to specify the day of the week. To schedule a task that runs every Friday, omit the /mo parameter or set it to 1.
 
-## Examples: Schedule a task to run every `<n>` months
+## To schedule a task to run every `<n>` months
 
 In this schedule type, the **/sc monthly** parameter is required. The **/mo** (modifier) parameter, which specifies the number of months between each run of the task, is optional and the default is *1* (every month). This schedule type also has an optional **/d** parameter to schedule the task to run on a specified date of the month. The default is *1* (the first day of the month).
 
@@ -172,7 +172,7 @@ In this schedule type, the **/sc monthly** parameter is required. The **/mo** (m
 
     The command uses the **/mo** parameter to specify the monthly interval (every two months), the **/d** parameter to specify the date, and the **/st** parameter to specify the time. It also uses the **/sd** and **/ed** parameters to specify the start date and end date, respectively. Because the local computer is set to the English (South Africa) option in **Regional and Language Options**, the dates are specified in the local format, YYYY/MM/DD.
 
-## Examples: Schedule a task to run on a specific day of the week
+## To schedule a task to run on a specific day of the week
 
 The day of the week schedule is a variation of the weekly schedule. In a weekly schedule, the **/sc weekly** parameter is required. The **/mo** (modifier) parameter is optional and specifies the number of weeks between each run of the task. The default value for **/mo** is *1* (every week). The **/d** parameter, which is optional, schedules the task to run on specified days of the week, or on all days `(*)`. The default is *MON (Monday)*. The every day option `(/d *)` is equivalent to scheduling a daily task.
 
@@ -192,7 +192,7 @@ The day of the week schedule is a variation of the weekly schedule. In a weekly 
 
     This command uses the **/d** parameter to specify the days and the **/mo** parameter to specify the eight-week interval.
 
-## Examples: Schedule a task to run on a specific week of the month
+## To schedule a task to run on a specific week of the month
 
 In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) parameter, and the **/d** (day) parameter are required. The **/mo** (modifier) parameter specifies the week on which the task runs. The **/d** parameter specifies the day of the week. You can specify only one day of the week for this schedule type. This schedule also has an optional **/m** (month) parameter that lets you schedule the task for particular months or every month `(*)`. The default for the **/m** parameter is every month `(*)`.
 
@@ -212,7 +212,7 @@ In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) par
 
     This command uses the **/mo** parameter to specify the first week of the month and the **/d** parameter to specify the day. It uses the **/m** parameter to specify the month, separating the month arguments with a comma.
 
-## Examples: Schedule a task to run on a specific day each month
+## To schedule a task to run on a specific day each month
 
 In the specific date schedule type, the /sc monthly parameter and the /d (day) parameter are required. The /d parameter specifies a date of the month (1 - 31), not a day of the week. You can specify only one day in the schedule. The /mo (modifier) parameter is not valid with this schedule type.
 
