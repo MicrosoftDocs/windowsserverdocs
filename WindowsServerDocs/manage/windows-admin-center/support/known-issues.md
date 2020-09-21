@@ -51,7 +51,7 @@ If you encounter an issue not described on this page, please [let us know](https
 
 ### Google Chrome
 
-- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the websockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
+- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the WebSockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
 
 - Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
 
@@ -239,7 +239,7 @@ Disable-WsmanCredSSP -Role Server
 Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
 ```
 
-3. Reset group policy propogated data using the command
+3. Reset group policy propagated data using the command
 ```Command Line
 gpupdate /force
 ```
