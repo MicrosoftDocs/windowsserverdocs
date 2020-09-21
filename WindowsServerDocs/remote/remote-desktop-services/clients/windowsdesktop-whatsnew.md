@@ -28,16 +28,10 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: Windows [64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
-- Fixed a failure occurring when calling or joining a Teams call when another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
+- Fixed the connection failure that happened when calling or joining a Teams call while another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
 - Fixed a failure to enumerate audio or video devices in Teams when media optimization for Teams is enabled.
-
-## Updates for version 1.2.1357
-
-*Date published: 09/09/2020*
-
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
-
-- Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
+- Added a "Help" link to the desktop settings page.
+- Fixed an issue with the "Subscribe" button that happened when using high-contrast dark themes.
 
 ## Updates for version 1.2.1275
 
