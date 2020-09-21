@@ -26,10 +26,10 @@ Storage Spaces Direct currently works with four types of storage devices:
 
 | Type of drive | Description |
 |----------------------|--------------------------|
-|![PMem](media/choose-drives/pmem-100px.png)|**PMem** refers to persistent memory, a new type of low latency, high performance storage.|
-|![NVMe](media/choose-drives/NVMe-100-px.png)|**NVMe** (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except PMem.|
-|![SSD](media/choose-drives/SSD-100-px.png)|**SSD** refers to solid-state drives, which connect via conventional SATA or SAS.|
-|![HDD](media/choose-drives/HDD-100-px.png)|**HDD** refers to rotational, magnetic hard disk drives, which offer vast storage capacity.|
+|![PMem](media/understand-the-cache/pmem-100px.png)|**PMem** refers to persistent memory, a new type of low latency, high performance storage.|
+|![NVMe](media/understand-the-cache/NVMe-100px.png)|**NVMe** (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except PMem.|
+|![SSD](media/understand-the-cache/SSD-100px.png)|**SSD** refers to solid-state drives, which connect via conventional SATA or SAS.|
+|![HDD](media/understand-the-cache/HDD-100px.png)|**HDD** refers to rotational, magnetic hard disk drives, which offer vast storage capacity.|
 
 These can be combined in various ways, which we group into two categories: "all-flash" and "hybrid".
 
