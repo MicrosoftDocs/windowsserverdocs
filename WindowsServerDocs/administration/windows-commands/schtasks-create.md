@@ -231,7 +231,7 @@ In this schedule type, the **/sc monthly** parameter, the **/mo** (modifier) par
 
 In this schedule type, the **/sc monthly** parameter and the **/d** (day) parameter are required. The **/d** parameter specifies a date of the month (1 - 31), not a day of the week, and you can specify only one day in the schedule. The **/m** (month) parameter is optional, with the default being every month *()*, while the **/mo** (modifier) parameter isn't valid with this schedule type.
 
-Schtasks won't let you schedule a task for a date that's not in a month specified by the **/m** parameter. For example, trying to schedule the 31st day of February. However, if you don't use the **/m** parameter, and schedule a task for a date that doesn't appear in every month, then the task won't run in the shorter months. To schedule a task for the last day of the month, use the last day schedule type.
+Schtasks.exe won't let you schedule a task for a date that's not in a month specified by the **/m** parameter. For example, trying to schedule the 31st day of February. However, if you don't use the **/m** parameter, and schedule a task for a date that doesn't appear in every month, then the task won't run in the shorter months. To schedule a task for the last day of the month, use the last day schedule type.
 
 ### Examples
 
@@ -345,209 +345,237 @@ Schtasks doesn't have a Run Now option, but you can simulate that option by crea
 
     In this example, the local computer uses the **English (United States)** option in **Regional and Language Options**, so the format for the start date is MM/DD/YYYY.
 
-To schedule a task that runs with different permissions
-You can schedule tasks of all types to run with permissions of an alternate account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the /ru parameter is required and the /rp parameter is optional.
+## To schedule a task that runs with different permissions
 
-Examples
-To run a task with Administrator permissions on the local computer
-This example schedules the MyApp program to run on the local computer. This example uses the /ru to specify that the task should run with the permissions of the user's Administrator account (Admin06). In this example, the task is scheduled to run every Tuesday, but you can use any schedule type for a task run with alternate permissions.
+You can schedule tasks of all types to run with permissions of an alternate account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the **/ru** parameter is required and the **/rp** parameter is optional.
 
+### Examples
 
-Copy
-schtasks /create /tn My App /tr myapp.exe /sc weekly /d TUE /ru Admin06
-In response, SchTasks.exe prompts for the run as password for the Admin06 account and then displays a success message.
+- To run the MyApp program on the local computer, type:
 
+    ```
+    schtasks /create /tn My App /tr myapp.exe /sc weekly /d TUE /ru Admin06
+    ```
 
-Copy
-Please enter the run as password for Admin06: ********
-SUCCESS: The scheduled task My App has successfully been created.
-To run a task with alternate permissions on a remote computer
-This example schedules the MyApp program to run on the Marketing computer every four days.
+    This example uses the **/ru** parameter to specify that the task should run with the permissions of the user's Administrator account (*Admin06*). Also in this example, the task is scheduled to run every Tuesday, but you can use any schedule type for a task run with alternate permissions.
 
-This example uses the /sc parameter to specify a daily schedule and /mo parameter to specify an interval of four days.
+    In response, SchTasks.exe prompts for the run as password for the *Admin06* account, and then displays a success message:
 
-This example uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer (Admin01 on the Marketing computer). It also uses the /ru parameter to specify that the task should run with the permissions of the user's non-Administrator account (User01 in the Reskits domain). Without the /ru parameter, the task would run with the permissions of the account specified by /u.
+    ```
+    Please enter the run as password for Admin06: ********
+    SUCCESS: The scheduled task My App has successfully been created.
+    ```
 
+- To run the MyApp program on the *Marketing* computer every four days, type:
 
-Copy
-schtasks /create /tn My App /tr myapp.exe /sc daily /mo 4 /s Marketing /u Marketing\Admin01 /ru Reskits\User01
-Schtasks first requests the password of the user named by the /u parameter (to run the command) and then requests the password of the user named by the /ru parameter (to run the task). After authenticating the passwords, schtasks displays a message indicating that the task is scheduled.
+    ```
+    schtasks /create /tn My App /tr myapp.exe /sc daily /mo 4 /s Marketing /u Marketing\Admin01 /ru Reskits\User01
+    ```
 
+    This example uses the **/sc** parameter to specify a daily schedule, and the **/mo** parameter to specify an interval of four days. Additionally, this example uses the **/s** parameter to provide the name of the remote computer and the **/u** parameter to specify an account with permission to schedule a task on the remote computer (*Admin01 on the Marketing computer*). Finally, this example uses the **/ru** parameter to specify that the task should run with the permissions of the user's non-Administrator account (*User01* in the *Reskits* domain). Without the **/ru** parameter, the task would run with the permissions of the account specified by **/u**.
 
-Copy
-Type the password for Marketing\Admin01:********
+    When running this example, Schtasks first requests the password of the user named by the **/u** parameter (to run the command) and then requests the password of the user named by the **/ru** parameter (to run the task). After authenticating the passwords, schtasks displays a message indicating that the task is scheduled:
 
-Please enter the run as password for Reskits\User01: ********
+    ```
+    Type the password for Marketing\Admin01:********
+    Please enter the run as password for Reskits\User01: ********
+    SUCCESS: The scheduled task My App has successfully been created.
+    ```
 
-SUCCESS: The scheduled task My App has successfully been created.
-To run a task only when a particular user is logged on
-This example schedules the AdminCheck.exe program to run on the Public computer every Friday at 4:00 A.M., but only if the administrator of the computer is logged on.
+- To run schedule the *AdminCheck.exe* program to run on the *Public* computer every Friday at 4:00 A.M., but only if the administrator of the computer is logged on, type:
 
-This example uses the /sc parameter to specify a weekly schedule, the /d parameter to specify the day, and the /st parameter to specify the start time.
+    ```
+    schtasks /create /tn Check Admin /tr AdminCheck.exe /sc weekly /d FRI /st 04:00 /s Public /u Domain3\Admin06 /ru Public\Admin01 /it
+    ```
 
-This example uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer. It also uses the /ru parameter to configure the task to run with the permissions of the administrator of the Public computer (Public\Admin01) and the /it parameter to indicate that the task runs only when the Public\Admin01 account is logged on.
+    This example uses the **/sc** parameter to specify a weekly schedule, the **/d** parameter to specify the day, and the **/st** parameter to specify the start time. It also uses the **/s** parameter to provide the name of the remote computer, the **/u** parameter to specify an account with permission to schedule a task on the remote computer, the **/ru** parameter to configure the task to run with the permissions of the administrator of the Public computer (*Public\Admin01*), and the **/it** parameter to indicate that the task runs only when the *Public\Admin01* account is logged on.
 
+    > [!NOTE]
+    > To identify tasks with the interactive-only (**/it**) property, use a verbose query (`/query /v`). In a verbose query display of a task with **/it**, the **Logon Mode** field has a value of **Interactive only**.
 
-Copy
-schtasks /create /tn Check Admin /tr AdminCheck.exe /sc weekly /d FRI /st 04:00 /s Public /u Domain3\Admin06 /ru Public\Admin01 /it
-Note
+## To schedule a task that runs with system permissions
 
-To identify tasks with the interactive-only (/it) property, use a verbose query (/query /v). In a verbose query display of a task with /it, the Logon Mode field has a value of Interactive only.
-To schedule a task that runs with system permissions
-Tasks of all types can run with permissions of the System account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the /ru system (or **/ru **) parameter is required and the /rp parameter isn't valid.
+Tasks of all types can run with permissions of the **System** account on both the local and a remote computer. In addition to the parameters required for the particular schedule type, the **/ru system** (or **/ru**) parameter is required, while the **/rp** parameter isn't valid.
 
-Important
+> [!IMPORTANT]
+> The **System** account doesn't have interactive logon rights. Users can't see or interact with programs or tasks run with system permissions. The **/ru** parameter determines the permissions under which the task runs, not the permissions used to schedule the task. Only Administrators can schedule tasks, regardless of the value of the **/ru** parameter.
+>
+> To identify tasks that run with system permissions, use a verbose query (`/query /v`). In a verbose query display of a system-run task, the **Run As User** field has a value of **NT AUTHORITY\SYSTEM** and the **Logon Mode** field has a value of **Background only**.
 
-The System account does not have interactive logon rights. Users cannot see or interact with programs or tasks run with system permissions.
-The /ru parameter determines the permissions under which the task runs, not the permissions used to schedule the task. Only Administrators can schedule tasks, regardless of the value of the /ru parameter.
-Note
+### Examples
 
-To identify tasks that run with system permissions, use a verbose query (/query /v). In a verbose query display of a system-run task, the Run As User field has a value of NT AUTHORITY\SYSTEM and the Logon Mode field has a value of Background only.
+- To schedule the MyApp program to run on the local computer with permissions of the **System** account, type:
 
-Examples
-To run a task with system permissions
-This example schedules the MyApp program to run on the local computer with permissions of the System account. In this example, the task is scheduled to run on the fifteenth day of every month, but you can use any schedule type for a task run with system permissions.
+    ```
+    schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /d 15 /ru System
+    ```
 
-This example uses the /ru System parameter to specify the system security context. Because system tasks don't use a password, the /rp parameter is omitted.
+    In this example, the task is scheduled to run on the fifteenth day of every month, but you can use any schedule type for a task run with system permissions. Additionally, this example uses the **/ru System** parameter to specify the system security context. Because system tasks don't use a password, the **/rp** parameter is left out.
 
+    In response, SchTasks.exe displays an informational message and a success message, without prompting for a password:
 
-Copy
-schtasks /create /tn My App /tr c:\apps\myapp.exe /sc monthly /d 15 /ru System
-In response, SchTasks.exe displays an informational message and a success message. It does not prompt for a password.
+    ```
+    INFO: The task will be created under user name (NT AUTHORITY\SYSTEM).
+    SUCCESS: The Scheduled task My App has successfully been created.
+    ```
 
+- To schedule the MyApp program to run on the *Finance01* computer every morning at 4:00 A.M., using system permissions, type:
 
-Copy
-INFO: The task will be created under user name (NT AUTHORITY\SYSTEM).
-SUCCESS: The Scheduled task My App has successfully been created.
-To run a task with system permissions on a remote computer
-This example schedules the MyApp program to run on the Finance01 computer every morning at 4:00 A.M. with system permissions.
+    ```
+    schtasks /create /tn My App /tr myapp.exe /sc daily /st 04:00 /s Finance01 /u Admin01 /ru System
+    ```
 
-This example uses the /tn parameter to name the task and the /tr parameter to specify the remote copy of the MyApp program. This example uses the /sc parameter to specify a daily schedule, but omits the /mo parameter because 1 (every day) is the default. This example uses the /st parameter to specify the start time, which is also the time the task will run each day.
+    This example uses the **/tn** parameter to name the task and the **/tr** parameter to specify the remote copy of the MyApp program, the **/sc** parameter to specify a daily schedule, but leaves out the **/mo** parameter because *1* (every day) is the default. This example also uses the **/st** parameter to specify the start time, which is also the time the task will run each day, the **/s** parameter to provide the name of the remote computer, the **/u** parameter to specify an account with permission to schedule a task on the remote computer, and the **/ru** parameter to specify that the task should run under the System account. Without the **/ru** parameter, the task would run using the permissions of the account specified by the **/u** parameter.
 
-This example uses the /s parameter to provide the name of the remote computer and the /u parameter to specify an account with permission to schedule a task on the remote computer. It also uses the /ru parameter to specify that the task should run under the System account. Without the /ru parameter, the task would run with the permissions of the account specified by /u.
+    Schtasks.exe requests the password of the user named by the **/u** parameter and, after authenticating the password, displays a message indicating that the task is created and that it will run with permissions of the **System** account:
 
+    ```
+    Type the password for Admin01:**********
 
-Copy
-schtasks /create /tn My App /tr myapp.exe /sc daily /st 04:00 /s Finance01 /u Admin01 /ru System
-Schtasks requests the password of the user named by the /u parameter and, after authenticating the password, displays a message indicating that the task is created and that it will run with permissions of the System account.
+    INFO: The Schedule Task My App will be created under user name (NT AUTHORITY\
+    SYSTEM).
+    SUCCESS: The scheduled task My App has successfully been created.
+    ```
 
+## To schedule a task that runs more than one program
 
-Copy
-Type the password for Admin01:**********
+Each task runs only one program. However, you can create a batch file that runs multiple programs and then schedule a task to run the batch file.
 
-INFO: The Schedule Task My App will be created under user name (NT AUTHORITY\
-SYSTEM).
-SUCCESS: The scheduled task My App has successfully been created.
-To schedule a task that runs more than one program
-Each task runs only one program. However, you can create a batch file that runs multiple programs and then schedule a task to run the batch file. The following procedure demonstrates this method:
+1. Using a text editor, such as Notepad, create a batch file that includes the name and fully-qualified path to the .exe file required to start the Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe) programs.
 
-Create a batch file that starts the programs you want to run.
+    ```
+    C:\Windows\System32\Eventvwr.exe
+    C:\Windows\System32\Perfmon.exe
+    ```
 
-In this example, you create a batch file that starts Event Viewer (Eventvwr.exe) and System Monitor (Perfmon.exe).
+2. Save the file as *MyApps.bat*, open schtasks.exe, and then create a task to run *MyApps.bat* by typing:
 
-Open a text editor, such as Notepad.
-Type the name and fully qualified path to the executable file for each program. In this case, the file includes the following statements.
+    ```
+    schtasks /create /tn Monitor /tr C:\MyApps.bat /sc onlogon /ru Reskit\Administrator
+    ```
 
-Copy
-C:\Windows\System32\Eventvwr.exe
-C:\Windows\System32\Perfmon.exe
-Save the file as MyApps.bat.
-Use Schtasks.exe to create a task that runs MyApps.bat.
+    This command creates the Monitor task, which runs whenever anyone logs on. It uses the **/tn** parameter to name the task, the **/tr** parameter to run MyApps.bat, the **/sc** parameter to indicate the OnLogon schedule type and the **/ru** parameter to run the task with the permissions of the user's Administrator account.
 
-This example creates the Monitor task, which runs whenever anyone logs on. This example uses the /tn parameter to name the task, and the /tr parameter to run MyApps.bat. It uses the /sc parameter to indicate the OnLogon schedule type and the /ru parameter to run the task with the permissions of the user's Administrator account.
+    As a result of this command, whenever a user logs on to the computer, the task starts both Event Viewer and System Monitor.
 
+## To schedule a task that runs on a remote computer
 
-Copy
-schtasks /create /tn Monitor /tr C:\MyApps.bat /sc onlogon /ru Reskit\Administrator
-As a result of this command, whenever a user logs on to the computer, the task starts both Event Viewer and System Monitor.
+To schedule a task to run on a remote computer, you must add the task to the remote computer's schedule. Tasks of all types can be scheduled on a remote computer, but the following conditions must be met:
 
-To schedule a task that runs on a remote computer
-To schedule a task to run on a remote computer, you must add the task to the remote computer's schedule. Tasks of all types can be scheduled on a remote computer, but the following conditions must be met.
+- You must have permission to schedule the task. As such, you must be logged on to the local computer with an account that is a member of the Administrators group on the remote computer, or you must use the **/u** parameter to provide the credentials of an Administrator of the remote computer.
 
-You must have permission to schedule the task. As such, you must be logged on to the local computer with an account that is a member of the Administrators group on the remote computer, or you must use the /u parameter to provide the credentials of an Administrator of the remote computer.
-You can use the /u parameter only when the local and remote computers are in the same domain or the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer cannot authenticate the user account specified and it cannot verify that the account is a member of the Administrators group.
-The task must have sufficient permission to run on the remote computer. The permissions required vary with the task. By default, the task runs with the permission of the current user of the local computer or, if the /u parameter is used, the task runs with the permission of the account specified by the /u parameter. However, you can use the /ru parameter to run the task with permissions of a different user account or with system permissions.
-Examples
-An Administrator schedules a task on a remote computer
-This example schedules the MyApp program to run on the SRV01 remote computer every ten days starting immediately. This example uses the /s parameter to provide the name of the remote computer. Because the local current user is an Administrator of the remote computer, the /u parameter, which provides alternate permissions for scheduling the task, isn't necessary.
+- You can use the **/u** parameter only when the local and remote computers are in the same domain or the local computer is in a domain that the remote computer domain trusts. Otherwise, the remote computer cannot authenticate the user account specified and it cannot verify that the account is a member of the Administrators group.
 
-Please note that when scheduling tasks on a remote computer, all parameters refer to the remote computer. Therefore, the executable file specified by the /tr parameter refers to the copy of MyApp.exe on the remote computer.
+- The task must have sufficient permission to run on the remote computer. The permissions required vary with the task. By default, the task runs with the permission of the current user of the local computer or, if the **/u** parameter is used, the task runs with the permission of the account specified by the **/u** parameter. However, you can use the **/ru** parameter to run the task with permissions of a different user account or with system permissions.
 
+### Examples
 
-Copy
-schtasks /create /s SRV01 /tn My App /tr c:\program files\corpapps\myapp.exe /sc daily /mo 10
-In response, schtasks displays a success message indicating that the task is scheduled.
+- To schedule the MyApp program (as an administrator) to run on the *SRV01* remote computer every ten days starting immediately,type:
 
-A user schedules a command on a remote computer (Case 1)
-This example schedules the MyApp program to run on the SRV06 remote computer every three hours. Because Administrator permissions are required to schedule a task, the command uses the /u and /p parameters to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). By default, these permissions are also used to run the task. However, because the task does not need Administrator permissions to run, the command includes the /u and /rp parameters to override the default and run the task with permission of the user's non-Administrator account on the remote computer.
+    ```
+    schtasks /create /s SRV01 /tn My App /tr c:\program files\corpapps\myapp.exe /sc daily /mo 10
+    ```
 
+    This example uses the **/s** parameter to provide the name of the remote computer. Because the local current user is an Administrator of the remote computer, the **/u** parameter, which provides alternate permissions for scheduling the task, isn't necessary.
 
-Copy
-schtasks /create /s SRV06 /tn My App /tr c:\program files\corpapps\myapp.exe /sc hourly /mo 3 /u reskits\admin01 /p R43253@4$ /ru SRV06\user03 /rp MyFav!!Pswd
-In response, schtasks displays a success message indicating that the task is scheduled.
+    > [!NOTE]
+    > When scheduling tasks on a remote computer, all parameters refer to the remote computer. Therefore, the file specified by the **/tr** parameter refers to the copy of MyApp.exe on the remote computer.
 
-A user schedules a command on a remote computer (Case 2)
-This example schedules the MyApp program to run on the SRV02 remote computer on the last day of every month. Because the local current user (user03) isn't an Administrator of the remote computer, the command uses the /u parameter to provide the credentials of the user's Administrator account (Admin01 in the Reskits domain). The Administrator account permissions will be used to schedule the task and to run the task.
+- To schedule the MyApp program (as a user) to run on the *SRV06* remote computer every three hours, type:
 
+    ```
+    schtasks /create /s SRV06 /tn My App /tr c:\program files\corpapps\myapp.exe /sc hourly /mo 3 /u reskits\admin01 /p R43253@4$ /ru SRV06\user03 /rp MyFav!!Pswd
+    ```
 
-Copy
-schtasks /create /s SRV02 /tn My App /tr c:\program files\corpapps\myapp.exe /sc monthly /mo LASTDAY /m * /u reskits\admin01
-Because the command did not include the /p (password) parameter, schtasks prompts for the password. Then it displays a success message and, in this case, a warning.
+    Because Administrator permissions are required to schedule a task, the command uses the **/u** and **/p** parameters to provide the credentials of the user's Administrator account (*Admin01* in the *Reskits* domain). By default, these permissions are also used to run the task. However, because the task does not need Administrator permissions to run, the command includes the **/u** and **/rp** parameters to override the default and run the task with permission of the user's non-Administrator account on the remote computer.
 
+- To schedule the MyApp program (as a user) to run on the *SRV02* remote computer on the last day of every month.
 
-Copy
-Type the password for reskits\admin01:********
+    ```
+    schtasks /create /s SRV02 /tn My App /tr c:\program files\corpapps\myapp.exe /sc monthly /mo LASTDAY /m * /u reskits\admin01
+    ```
 
-SUCCESS: The scheduled task My App has successfully been created.
+    Because the local current user (*user03*) isn't an Administrator of the remote computer, the command uses the **/u** parameter to provide the credentials of the user's Administrator account (*Admin01* in the *Reskits* domain). The Administrator account permissions will be used to schedule the task and to run the task.
 
-WARNING: The Scheduled task My App has been created, but may not run because
-the account information could not be set.
-This warning indicates that the remote domain could not authenticate the account specified by the /u parameter. In this case, the remote domain could not authenticate the user account because the local computer isn't a member of a domain that the remote computer domain trusts. When this occurs, the task job appears in the list of scheduled tasks, but the task is actually empty and it won't run.
+    Because the command did not include the **/p** (password) parameter, schtasks prompts for the password. Then it displays a success message and, in this case, a warning:
 
-The following display from a verbose query exposes the problem with the task. In the display, note that the value of Next Run Time is Never and that the value of Run As User is Could not be retrieved from the task scheduler database.
+    ```
+    Type the password for reskits\admin01:********
 
-Had this computer been a member of the same domain or a trusted domain, the task would have been successfully scheduled and would have run as specified.
+    SUCCESS: The scheduled task My App has successfully been created.
+    WARNING: The scheduled task My App has been created, but may not run because the account information could not be set.
+    ```
 
+    This warning indicates that the remote domain could not authenticate the account specified by the **/u** parameter. In this case, the remote domain could not authenticate the user account because the local computer isn't a member of a domain that the remote computer domain trusts. When this occurs, the task job appears in the list of scheduled tasks, but the task is actually empty and it won't run.
 
-Copy
-HostName: SRV44
-TaskName: My App
-Next Run Time: Never
-Status:
-Logon mode: Interactive/Background
-Last Run Time: Never
-Last Result: 0
-Creator: user03
-Schedule: At 3:52 PM on day 31 of every month, start
- starting 12/14/2001
-Task To Run: c:\program files\corpapps\myapp.exe
-Start In: myapp.exe
-Comment: N/A
-Scheduled Task State: Disabled
-Scheduled Type: Monthly
-Start Time: 3:52:00 PM
-Start Date: 12/14/2001
-End Date: N/A
-Days: 31
-Months: JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NO
-V,DEC
-Run As User: Could not be retrieved from the task sched
-uler database
-Delete Task If Not Rescheduled: Enabled
-Stop Task If Runs X Hours and X Mins: 72:0
-Repeat: Every: Disabled
-Repeat: Until: Time: Disabled
-Repeat: Until: Duration: Disabled
-Repeat: Stop If Still Running: Disabled
-Idle Time: Disabled
-Power Management: Disabled
-Remarks
-To run a /create command with the permissions of a different user, use the /u parameter. The /u parameter is valid only for scheduling tasks on remote computers.
-To view more schtasks /create examples, type schtasks /create /? at a command prompt.
-To schedule a task that runs with permissions of a different user, use the /ru parameter. The /ru parameter is valid for tasks on local and remote computers.
-To use the /u parameter, the local computer must be in the same domain as the remote computer or must be in a domain that the remote computer domain trusts. Otherwise, either the task isn't created, or the task job is empty and the task does not run.
-Schtasks always prompts for a password unless you provide one, even when you schedule a task on the local computer using the current user account. This is normal behavior for schtasks.
-Schtasks does not verify program file locations or user account passwords. If you don't enter the correct file location or the correct password for the user account, the task is created, but it does not run. Also, if the password for an account changes or expires, and you don't change the password saved in the task, then the task does not run.
-The System account does not have interactive logon rights. Users don't see and cannot interact with programs run with system permissions.
-Each task runs only one program. However, you can create a batch file that starts multiple tasks, and then schedule a task that runs the batch file.
-You can test a task as soon as you create it. Use the run operation to test the task and then check the SchedLgU.txt file (SystemRoot\SchedLgU.txt) for errors.
+    The following display from a verbose query exposes the problem with the task. In the display, note that the value of **Next Run Time** is **Never** and that the value of **Run As User** is **Could not be retrieved from the task scheduler database**.
+
+    Had this computer been a member of the same domain or a trusted domain, the task would have been successfully scheduled and would have run as specified.
+
+    ```
+    HostName: SRV44
+    TaskName: My App
+    Next Run Time: Never
+    Status:
+    Logon mode: Interactive/Background
+    Last Run Time: Never
+    Last Result: 0
+    Creator: user03
+    Schedule: At 3:52 PM on day 31 of every month, start
+    starting 12/14/2001
+    Task To Run: c:\program files\corpapps\myapp.exe
+    Start In: myapp.exe
+    Comment: N/A
+    Scheduled Task State: Disabled
+    Scheduled Type: Monthly
+    Start Time: 3:52:00 PM
+    Start Date: 12/14/2001
+    End Date: N/A
+    Days: 31
+    Months: JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NO
+    V,DEC
+    Run As User: Could not be retrieved from the task sched
+    uler database
+    Delete Task If Not Rescheduled: Enabled
+    Stop Task If Runs X Hours and X Mins: 72:0
+    Repeat: Every: Disabled
+    Repeat: Until: Time: Disabled
+    Repeat: Until: Duration: Disabled
+    Repeat: Stop If Still Running: Disabled
+    Idle Time: Disabled
+    Power Management: Disabled
+    ```
+
+#### Remarks
+
+- To run the **/create** command with the permissions of a different user, use the **/u** parameter. The **/u** parameter is valid only for scheduling tasks on remote computers.
+
+- To view more `schtasks /create` examples, type `schtasks /create /?` at a command prompt.
+
+- To schedule a task that runs with permissions of a different user, use the **/ru** parameter. The **/ru** parameter is valid for tasks on local and remote computers.
+
+- To use the **/u** parameter, the local computer must be in the same domain as the remote computer or it must be in a domain that the remote computer domain trusts. Otherwise, either the task isn't created, or the task job is empty and the task doesn't run.
+
+- Schtasks always prompts for a password unless you provide one, even when you schedule a task on the local computer using the current user account. This is normal behavior for schtasks.
+
+- Schtasks doesn't verify program file locations or user account passwords. If you don't enter the correct file location or the correct password for the user account, the task is created, but it won't run. Also, if the password for an account changes or expires, and you don't change the password saved in the task, then the task won't run.
+
+- The **System** account doesn't have interactive logon rights. Users don't see and can't interact with programs run with system permissions.
+
+- Each task runs only one program. However, you can create a batch file that starts multiple tasks, and then schedule a task that runs the batch file.
+
+- You can test a task as soon as you create it. Use the run operation to test the task and then check the SchedLgU.txt file (SystemRoot\SchedLgU.txt) for errors.
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [schtasks change command](schtasks-change.md)
+
+- [schtasks delete command](schtasks-delete.md)
+
+- [schtasks end command](schtasks-end.md)
+
+- [schtasks query command](schtasks-query.md)
+
+- [schtasks run command](schtasks-run.md)
