@@ -15,7 +15,7 @@ ms.date: 06/21/2019
 For TPM mode, the fabric administrator captures three kinds of host information, each of which needs to be added to the HGS configuration:
 
 - A TPM identifier (EKpub) for each Hyper-V host
-- Code Integrity policies, a white list of allowed binaries for the Hyper-V hosts
+- Code Integrity policies, an allowlist of allowed binaries for the Hyper-V hosts
 - A TPM baseline (boot measurements) that represents a set of Hyper-V hosts that run on the same class of hardware
 
 After the fabric administrator captures the information, add it to the HGS configuration as described in the following procedure.
