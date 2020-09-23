@@ -65,3 +65,13 @@ scwcmd configure /ou:OU=WebServers,DC=Marketing,DC=ABCCompany,DC=com /p:webpolic
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [scwcmd analyze command](scwcmd-analyze.md)
+
+- [scwcmd register command](scwcmd-register.md)
+
+- [scwcmd rollback command](scwcmd-rollback.md)
+
+- [scwcmd transform command](scwcmd-transform.md)
+
+- [scwcmd view command](scwcmd-view.md)

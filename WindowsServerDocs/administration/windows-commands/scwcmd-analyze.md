@@ -68,3 +68,13 @@ scwcmd analyze /ou:OU=WebServers,DC=Marketing,DC=ABCCompany,DC=com /p:webpolicy.
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [scwcmd configure command](scwcmd-configure.md)
+
+- [scwcmd register command](scwcmd-register.md)
+
+- [scwcmd rollback command](scwcmd-rollback.md)
+
+- [scwcmd transform command](scwcmd-transform.md)
+
+- [scwcmd view command](scwcmd-view.md)
