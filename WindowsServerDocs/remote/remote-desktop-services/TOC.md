@@ -60,6 +60,7 @@
 ## [Run and tune](rds-run-and-tune.md)
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
 ### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
+### [Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-2004.md)
 ### [Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role](rds_vdi-recommendations-1909.md)
 ### [Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-1803.md)
 ### [Manage users in your RDS collection](rds-user-management.md)
