@@ -8,7 +8,7 @@ author: Heidilohr
 ms.author: helohr
 ms.topic: article
 manager: 
-ms.date: 09/21/2020
+ms.date: 09/24/2020
 ---
 
 # Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
@@ -353,7 +353,6 @@ The following settings were chosen to not counter or conflict with any setting t
 |Background Intelligent Transfer Service (BITS)|Do not allow the BITS client to use Windows Branch Cache|N/A|**Enabled** (With this policy setting enabled, the BITS client does not use Windows Branch Cache.)<p>The reason for this recommendation is so that virtual desktop devices are not used for content caching, and the devices will not be allowed to use the network bandwidth to do so.|
 |Background Intelligent Transfer Service (BITS)|Do not allow the computer to act as a BITS Peercaching client|N/A|**Enabled** (With this policy setting enabled, the computer will no longer use the BITS peer caching feature to download files; files will be downloaded only from the origin server.)|
 Background Intelligent Transfer Service (BITS)|Do not allow the computer to act as a BITS Peercaching server|N/A|**Enabled** (With this policy setting enabled, the computer will no longer cache downloaded files and offer them to its peers.)|
-
 |BranchCache|Turn on BranchCache|N/A|**Disabled** (With this selection disabled, BranchCache is turned off for all client computers where the policy is applied.)|
 |*Fonts|Enabled Font Providers|N/A|**Disabled** (With this setting disabled, Windows does not connect to an online font provider and only enumerates locally installed fonts)|
 |Hotspot Authentication|Enable hotspot Authentication| N/A |**Disabled** (This policy setting defines whether WLAN hotspots are probed for Wireless Internet Service Provider roaming (WISPr) protocol support. With this policy setting disabled, WLAN hotspots are not probed for WISPr protocol support, and users can only authenticate with WLAN hotspots using a web browser.)|
@@ -511,7 +510,8 @@ Internet Communication Management\ Internet Communication settings|Turn off the 
 |Windows Components / Cloud Content|Configure Windows spotlight on lock screen| N/A |**Disabled** (With this policy disabled, Windows spotlight will be turned off and users will no longer be able to select it as their lock screen. Users will see the default lock screen image and will be able to select another image, unless you have enabled the "Prevent changing lock screen image" policy.)|
 |*Windows Components / Cloud Content|Do not suggest third-party content in Windows spotlight| N/A |**Enabled** (With this policy enabled, Windows spotlight features like lock screen spotlight, suggested apps in Start menu or Windows tips will no longer suggest apps and content from third-party software publishers. Users may still see suggestions and tips to make them more productive with Microsoft features and apps.)|
 |Windows Components / Cloud Content|Do not use diagnostic data for tailored experiences| N/A |**Enabled** (With this policy setting enabled, Windows will not use diagnostic data from this device (this data may include browser, app and feature usage, depending on the "diagnostic data" setting value) to customize content shown on lock screen, Windows tips, Microsoft consumer features and other related features.)|
-|Windows Components / Cloud Content|Turn off all Windows spotlight features| N/A |**Enabled** (Windows spotlight on lock screen, Windows tips, Microsoft consumer features and other related features will be turned off. You should enable this policy setting if your goal is to minimize network traffic from target devices.) Edge UI|Turn off tracking of app usage| N/A |**Enabled** (This policy setting prevents Windows from keeping track of the apps that are used and searched most frequently. If you enable this policy setting, apps will be sorted alphabetically in:<p> - search results<p> - the Search and Share panes<p> - the drop-down app list in the Picker)|
+|Windows Components / Cloud Content|Turn off all Windows spotlight features| N/A |**Enabled** (Windows spotlight on lock screen, Windows tips, Microsoft consumer features and other related features will be turned off. You should enable this policy setting if your goal is to minimize network traffic from target devices.)|
+|Edge UI|Turn off tracking of app usage| N/A |**Enabled** (This policy setting prevents Windows from keeping track of the apps that are used and searched most frequently. If you enable this policy setting, apps will be sorted alphabetically in:<p> - search results<p> - the Search and Share panes<p> - the drop-down app list in the Picker)|
 |File Explorer|Turn off caching of thumbnail pictures| N/A |**Enabled** (With this policy setting enabled, thumbnail views are not cached.)|
 |File Explorer|Turn off common control and window animations| N/A |**Enabled** (Disabling animations can improve usability for users with some visual disabilities as well as improving performance and battery life in some scenarios.)|
 |File Explorer|Turn off display of recent search entries in the File Explorer search box| N/A |**Enabled** (Disables suggesting recent queries for the Search Box and prevents entries into the Search Box from being stored in the registry for future references.)|
