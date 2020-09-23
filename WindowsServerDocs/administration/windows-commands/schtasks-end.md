@@ -33,7 +33,7 @@ schtasks /end /tn <taskname> [/s <computer> [/u [<domain>\]<user> [/p <password>
 To stop the instance of Notepad.exe started by the *My Notepad* task, type:
 
 ```
-schtasks /end /tn My Notepad
+schtasks /end /tn "My Notepad"
 ```
 
 To stop the instance of Internet Explorer started by the *InternetOn* task on the remote computer, *Svr01*,type:
