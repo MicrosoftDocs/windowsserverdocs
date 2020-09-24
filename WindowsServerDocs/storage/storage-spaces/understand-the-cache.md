@@ -5,7 +5,7 @@ ms.author: cosdar
 manager: dongill
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/17/2019
+ms.date: 09/21/2020
 ms.localizationpriority: medium
 ---
 # Understanding the cache in Storage Spaces Direct
@@ -22,36 +22,16 @@ The following video goes into details on how caching works for Storage Spaces Di
 
 ## Drive types and deployment options
 
-Storage Spaces Direct currently works with three types of storage devices:
+Storage Spaces Direct currently works with four types of storage devices:
 
-<table>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)" >
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			NVMe (Non-Volatile Memory Express)
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD" >
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			SATA/SAS SSD (Solid-State Drive)
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/HDD-100px.png"alt="Image of HDD" >
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			HDD (Hard Disk Drive)
-		</td>
-	</tr>
-</table>
+| Type of drive | Description |
+|----------------------|--------------------------|
+|![PMem](media/understand-the-cache/pmem-100px.png)|**PMem** refers to persistent memory, a new type of low latency, high performance storage.|
+|![NVMe](media/understand-the-cache/NVMe-100px.png)|**NVMe** (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except PMem.|
+|![SSD](media/understand-the-cache/SSD-100px.png)|**SSD** refers to solid-state drives, which connect via conventional SATA or SAS.|
+|![HDD](media/understand-the-cache/HDD-100px.png)|**HDD** refers to rotational, magnetic hard disk drives, which offer vast storage capacity.|
 
-These can be combined in six ways, which we group into two categories: "all-flash" and "hybrid".
+These can be combined in various ways, which we group into two categories: "all-flash" and "hybrid".
 
 ### All-flash deployment possibilities
 
@@ -163,7 +143,7 @@ There are several other unrelated caches in the Windows software-defined storage
 
 With Storage Spaces Direct, the Storage Spaces write-back cache should not be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
 
-You may choose to use the CSV cache, or not – it's up to you. It is off by default in Storage Spaces Direct, but it does not conflict with the new cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional).
+You may choose to use the CSV cache, or not – it's up to you. It does not conflict with the cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional).
 
 ## Manual configuration
 
