@@ -5,7 +5,7 @@ ms.author: eldenc
 manager: eldenc
 ms.topic: article
 author: eldenchristensen
-ms.date: 07/24/2020
+ms.date: 09/24/2020
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
@@ -21,7 +21,7 @@ For production, Microsoft recommends purchasing a validated hardware/software so
 
 ## Base requirements
 
-Systems, components, devices, and drivers must be **Windows Server 2016 Certified** per the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, we recommend that servers, drives, host bus adapters, and network adapters have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
+Systems, components, devices, and drivers must be certified for the operating system you’re using in the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, we recommend that servers, drives, host bus adapters, and network adapters have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
 
 ![screenshot of the Windows Server catalog showing the SDDC AQs](media/hardware-requirements/sddc-aqs.png)
 
