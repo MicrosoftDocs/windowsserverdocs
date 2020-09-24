@@ -86,6 +86,8 @@ select volume
 
 - [fsutil volume command](fsutil-volume.md)
 
+- [list volume command](list-volume.md)
+
 - [offline volume command](offline-volume.md)
 
 - [onine volume command](online-volume.md)
