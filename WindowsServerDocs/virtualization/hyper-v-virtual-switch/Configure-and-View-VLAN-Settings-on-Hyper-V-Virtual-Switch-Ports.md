@@ -17,11 +17,11 @@ When you want to configure VLAN settings on Hyper-V Virtual Switch ports, you ca
 
 If you are using VMM, VMM uses the following Windows PowerShell command to configure the switch port.
 
-```
-Set-VMNetworkAdapterIsolation <VM-name|-managementOS> -IsolationMode VLAN -DefaultIsolationID <vlan-value> -AllowUntaggedTraffic $True
+```powershell
+Set-VMNetworkAdapterIsolation <VM-name|-ManagementOS -IsolationMode VLAN -DefaultIsolationID <vlan-value> -AllowUntaggedTraffic $True
 ```
 If you are not using VMM and are configuring the switch port in Windows Server, you can use the Hyper-V Manager console or the following Windows PowerShell command.
-```
+```powershell
 Set-VMNetworkAdapterVlan <VM-name|-managementOS> -Access -VlanID <vlan-value>
 ```
 
@@ -40,8 +40,8 @@ To configure and view VLAN switch port settings, you must do the following:
 
 If you do not follow these guidelines you might encounter the following issues.
 
-- In circumstances where you have deployed SDN and use VMM, Network Controller, or the **VMNetworkAdapterIsolation** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use Hyper-V Manager or **Get VMNetworkAdapterVlan** to view the configuration settings, the command output will not display your VLAN settings. Instead you must use the **Get-VMNetworkIsolation** cmdlet to view the VLAN settings.
-- In circumstances where you have not deployed SDN, and instead use Hyper-V Manager or the **VMNetworkAdapterVlan** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use the **Get-VMNetworkIsolation** cmdlet to view the configuration settings, the command output will not display your VLAN settings. Instead you must use the **Get VMNetworkAdapterVlan** cmdlet to view the VLAN settings.
+- In circumstances where you have deployed SDN and use VMM, Network Controller, or the **VMNetworkAdapterIsolation** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use Hyper-V Manager or **Get VMNetworkAdapterVlan** to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get-VMNetworkIsolation** cmdlet to view the VLAN settings.
+- In circumstances where you have not deployed SDN, and instead use Hyper-V Manager or the **VMNetworkAdapterVlan** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use the **Get-VMNetworkIsolation** cmdlet to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get VMNetworkAdapterVlan** cmdlet to view the VLAN settings.
 
 It is also important not to attempt to configure the same switch port VLAN settings by using both of these configuration methods. If you do this, the switch port is incorrectly configured, and the result might be a failure in network communication.
 
