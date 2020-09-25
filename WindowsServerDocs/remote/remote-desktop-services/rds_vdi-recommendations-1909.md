@@ -110,7 +110,7 @@ Consider supportability when altering default Windows settings. Difficult proble
 
 You can use your favorite search engine with the terms ""start value" site:support.microsoft.com" to bring up known issues regarding default start values for services.
 
-You might note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings, start with the project known as **AaronLocker**. For more information, see [ANNOUNCING: Application whitelisting with "AaronLocker"](https://docs.microsoft.com/archive/blogs/aaron_margosis/announcing-application-whitelisting-with-aaronlocker).
+You might note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings, start with the project known as **AaronLocker**. For more information, see [“AaronLocker” overview](https://github.com/microsoft/AaronLocker).
 
 #### VDI Optimization Categories
 
