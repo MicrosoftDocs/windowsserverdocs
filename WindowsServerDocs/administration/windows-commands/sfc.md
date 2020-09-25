@@ -1,6 +1,6 @@
 ---
 title: sfc
-description: Reference article for sfc, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
+description: Reference article for the sfc command, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 ms.topic: reference
 ms.assetid: c58c25da-e028-42a6-9e10-973484a4b953
 ms.author: lizross
@@ -8,14 +8,15 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # sfc
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 
-
 ## Syntax
+
 ```
 sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir=<offline windows directory> /offbootdir=<offline boot directory>]
 ```
