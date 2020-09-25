@@ -29,7 +29,7 @@ NTFS continuously monitors and corrects transient corruption issues in the backg
 
 - **Support for BitLocker Drive Encryption**—BitLocker Drive Encryption provides additional security for critical system information and other data stored on NTFS volumes. Beginning in Windows Server 2012 R2 and Windows 8.1, BitLocker provides support for device encryption on x86 and x64-based computers with a Trusted Platform Module (TPM) that supports connected stand-by (previously available only on Windows RT devices). Device encryption helps protect data on Windows-based computers, and it helps block malicious users from accessing the system files they rely on to discover the user's password, or from accessing a drive by physically removing it from the PC and installing it on a different one. For more information, see [What's new in BitLocker](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn306081(v%3dws.11)).
 
-- **Support for large volumes**—NTFS can support volumes as large as 256 terabytes. Supported volume sizes are affected by the cluster size and the number of clusters. With (2<sup>32</sup> – 1) clusters (the maximum number of clusters that NTFS supports), the following volume and file sizes are supported.
+- **Support for large volumes**—Starting with Windows Server 2019 and Windows 10 version 1809, NTFS can support volumes as large as 8 petabytes. In prior versions the maximum size is 256 terabytes. Supported volume sizes are affected by the cluster size and the number of clusters. With (2<sup>32</sup> – 1) clusters (the maximum number of clusters that NTFS supports), the following volume and file sizes are supported.
 
   |Cluster size|Largest volume|Largest file|
   |---|---|---|
@@ -37,7 +37,12 @@ NTFS continuously monitors and corrects transient corruption issues in the backg
   |8 KB|32 TB|32 TB|
   |16 KB|64 TB|64 TB|
   |32 KB|128 TB|128 TB|
-  |64 KB (maximum size)|256 TB|256 TB|
+  |64 KB|256 TB|256 TB|
+  |128 KB|512 TB|512 TB|
+  |256 KB|1 PB|1 PB|
+  |512 KB|2 PB|2 PB|
+  |1 MB|4 PB|4 PB|
+  |2 MB (maximum size)|8 PB|8 PB|
 
 >[!IMPORTANT]
 >Services and apps might impose additional limits on file and volume sizes. For example, the volume size limit is 64 TB if you're using the Previous Versions feature or a backup app that makes use of Volume Shadow Copy Service (VSS) snapshots (and you're not using a SAN or RAID enclosure). However, you might need to use smaller volume sizes depending on your workload and the performance of your storage.
