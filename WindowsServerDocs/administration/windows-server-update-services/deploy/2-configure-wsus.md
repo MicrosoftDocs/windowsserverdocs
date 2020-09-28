@@ -223,7 +223,7 @@ This procedure assumes that you are using the WSUS Configuration Wizard, which a
 Now that you have performed the basic WSUS configuration, read the next sections for more details about changing the settings by using WSUS Management Console.
 
 ## 2.3. Configure WSUS computer groups
-computer groups are an IMPORTANT part of Windows Server Update Services (WSUS) deployments. Computer groups permit you to test and target updates to specific computers. There are two default computer groups: All computers and Unassigned computers. By default, when each client computer first contacts the WSUS server, the server adds that client computer to both of these groups.
+Computer groups are an IMPORTANT part of Windows Server Update Services (WSUS) deployments. Computer groups permit you to test and target updates to specific computers. There are two default computer groups: All computers and Unassigned computers. By default, when each client computer first contacts the WSUS server, the server adds that client computer to both of these groups.
 
 You can create as many custom computer groups as you need to manage updates in your organization. As a best practice, create at least one computer group to test updates before you deploy them to other computers in your organization.
 
