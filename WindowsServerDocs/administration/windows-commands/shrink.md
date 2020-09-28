@@ -66,4 +66,4 @@ shrink querymax
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Resize-Partition](/powershell/module/storage/resize-partition?view=win10-ps)
+- [Resize-Partition](/powershell/module/storage/resize-partition?view=win10-ps&preserve-view=true)
