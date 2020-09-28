@@ -290,6 +290,77 @@
       "redirect_url": "/windows-server/administration/windows-commands/set",
       "redirect_document_id": false
     },
+
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-server.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-namespace.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-multicasttransmission.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-multicasttransmission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-transportserver.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-transportserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-server.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-imagegroup.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-imagegroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-image.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-driverpackage.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-driverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-drivergroupfilter.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroupfilter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-drivergroup.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-device.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-transportserver.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-transportserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-stop-server.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-stop-transportserver.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-transportserver",
+      "redirect_document_id": false
+    },
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-optimize-pool.md",
       "redirect_url": "/windows-server/storage/storage-spaces/add-nodes#optimizing-drive-usage-after-adding-drives-or-servers",
