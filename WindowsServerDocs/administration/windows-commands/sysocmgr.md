@@ -1,6 +1,6 @@
 ---
 title: sysocmgr
-description: Reference article for sysocmgr, which has been deprecated and is not guaranteed to be supported in future releases of Windows.
+description: Reference article for the sysocmgr command. This command has been deprecated and is not guaranteed to be supported in future releases of Windows.
 ms.topic: reference
 ms.assetid: 9ab50021-7433-4fac-92be-f164b2c7453a
 ms.author: lizross
@@ -11,6 +11,4 @@ ms.date: 10/16/2017
 
 # sysocmgr
 
-Sysocmgr is deprecated, and is not guaranteed to be supported in future releases of Windows.
-
-This tool is included in Windows Server 2003. For more information, see [Sysocmgr](/previous-versions/orphan-topics/ws.10/cc773290(v=ws.10)).
+The sysocmger command has been deprecated and isn't guaranteed to be supported in future releases of Windows.

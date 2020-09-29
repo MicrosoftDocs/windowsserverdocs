@@ -45,7 +45,7 @@ takeown [/s <Computer> [/u [<Domain>\]<User name> [/p [<Password>]]]] /f <File n
 -   Mixed patterns using (**?** and **&#42;**) are not supported by **takeown** command.
 -   After deleting the lock with **takeown**, you might have to use Windows Explorer or the **cacls** command to give yourself full permissions to the files and directories before you can delete them. For more information about **cacls**, see "Additional References" at the end of this topic.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To take ownership of a file named Lostfile, type:
 ```
