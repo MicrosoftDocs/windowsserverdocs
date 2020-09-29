@@ -5,7 +5,7 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 12/25/2019
+ms.date: 09/29/2020
 ---
 
 # How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
