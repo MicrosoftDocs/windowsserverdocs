@@ -631,6 +631,17 @@ Guidance: Check the detailed error and make sure the inventory requirements are 
 
 This issue is caused by a code defect in the Storage Migration Service. The only workaround currently is to rename the computer to have the same name as the NetBIOS name, then use [NETDOM COMPUTERNAME /ADD](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) to add an alternate computer name that contains the longer name that was in use prior to starting Inventory. Storage Migration Service supports migrating alternate computer names.
 
+## Storage Migration Service inventory fails with "a parameter cannot be found that matches parameter name 'IncludeDFSN'" 
+
+When using the 2009 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you receive the following error when you attempt to inventory a source computer:
+
+```
+Remote exception : a parameter cannot be found that matches parameter name 'IncludeDFSN'" 
+```
+
+To resolve, update the Storage Migration Service extension to at least version 1.113.0 in Windows Admin Center. The update should automatically appear in the feed and prompt for installation.
+
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
