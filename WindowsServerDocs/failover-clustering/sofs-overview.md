@@ -1,18 +1,18 @@
 ---
 title: Scale-Out File Server for application data overview
-description: Overview of the Scale-Out File Server feature for Windows Server 201 R2 and Windows Server 2012.
+description: Scale-Out File Server is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provides the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 04/26/2018
+ms.date: 09/29/2020
 ms.localizationpriority: medium
 ---
 # Scale-Out File Server for application data overview
 
->Applies to: Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Scale-Out File Server is a feature that is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provides the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
+Scale-Out File Server is designed to provide scale-out file shares that are continuously available for file-based server application storage. Scale-out file shares provides the ability to share the same folder from multiple nodes of the same cluster. This scenario focuses on how to plan for and deploy Scale-Out File Server.
 
 You can deploy and configure a clustered file server by using either of the following methods:
 
@@ -66,7 +66,7 @@ The following table lists the capabilities in SMB 3.0, the common Windows file s
 <tbody>
 <tr class="odd">
 <td>SMB</td>
-<td>SMB Continuous Availability</td>
+<td>SMB Continuous Availability (*)</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
@@ -217,7 +217,10 @@ The following table lists the capabilities in SMB 3.0, the common Windows file s
 </tbody>
 </table>
 
-\* Folder Redirection, Offline Files, Roaming User Profiles, or Home Directories generate a large number of writes that must be immediately written to disk (without buffering) when using continuously available file shares, reducing performance as compared to general purpose file shares. Continuously available file shares are also incompatible with File Server Resource Manager and PCs running Windows XP. Additionally, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a share, which could frustrate users who aren't yet using the Always Offline mode of Offline Files.
+\* <a href="https://docs.microsoft.com/windows-server/storage/storage-spaces/cluster-sets#scale-out-file-server-and-cluster-sets">SMB loopback Continuous Availability (CA) in hyper-converged configurations</a> is avalable in Windows Server 2019. 
+
+>[!NOTE]
+>Folder Redirection, Offline Files, Roaming User Profiles, or Home Directories generate a large number of writes that must be immediately written to disk (without buffering) when using continuously available file shares, reducing performance as compared to general purpose file shares. Continuously available file shares are also incompatible with File Server Resource Manager and PCs running Windows XP. Additionally, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a share, which could frustrate users who aren't yet using the Always Offline mode of Offline Files.
 
 ## Practical applications
 
