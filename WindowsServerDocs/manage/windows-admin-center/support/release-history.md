@@ -10,7 +10,8 @@ ms.date: 01/06/2020
 
 Here's a listing of our latest released features:
 
-- Version [2007](https://aka.ms/wac2007) is the most recent GA release - it includes support for the new Azure Stack HCI and new features for several tools.
+- Version [2009](https://aka.ms/wac2009) is the most recent GA release - it includes support for Azure Kubernetes Service on Azure Stack HCI and major updates to the Virtual machines, File shares, and Containers tools.
+- Version [2007](https://aka.ms/wac2007) includes support for the new Azure Stack HCI and new features for several tools.
 - Version [1910.2](https://aka.ms/wac1910.2) includes updates to the platform’s accessibility and numerous bug fixes
 - Version [1910](https://aka.ms/wac1910) introduces several new Azure hybrid services and brings features that were previously in preview to the GA channel.
 - Version [1909](https://aka.ms/wac1909) introduces the Azure VM specific connection type and unifies the connection types for traditional failover clusters and HCI clusters.

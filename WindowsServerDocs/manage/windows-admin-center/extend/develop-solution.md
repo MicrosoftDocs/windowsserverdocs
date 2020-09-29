@@ -69,8 +69,9 @@ Now that you've created an extension with the Windows Admin Center CLI, you are 
 - Create a [custom connection provider](guides/create-connection-provider.md)
 - Modify [root navigation behavior](guides/modify-root-navigation.md)
 
-Even more examples can be found our [GitHub SDK site](https://aka.ms/wacsdk):
--  [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a fully functioning extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.
+Even more examples can be found in our Developer Guide. The Developer Guide is a fully functioning solution extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension. 
+
+Enable the Developer Guide extension on the **Advanced** page of your Windows Admin Center settings. 
 
 ## Build and side load your extension
 
