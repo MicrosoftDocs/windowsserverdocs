@@ -1,6 +1,6 @@
 ---
 title: NTFS overview
-description: An explanation of what NTFS is.
+description: NTFS—the primary file system for recent versions of Windows and Windows Server—provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata, and can be used with Cluster Shared Volumes (CSV) to provide continuously available volumes that can be accessed simultaneously from multiple nodes of a failover cluster.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 NTFS—the primary file system for recent versions of Windows and Windows Server—provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata, and can be used with Cluster Shared Volumes (CSV) to provide continuously available volumes that can be accessed simultaneously from multiple nodes of a failover cluster.
 
-To learn more about new and changed functionality in NTFS in Windows Server 2012 R2, see [What's New in NTFS](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)). For additional feature information, see the [Additional information](#additional-information) section of this topic. To learn more about the newer Resilient File System (ReFS), see [Resilient File System (ReFS) overview](../refs/refs-overview.md).
+For additional feature information, see the [Additional information](#additional-information) section of this topic. To learn about the newer Resilient File System (ReFS), see [Resilient File System (ReFS) overview](../refs/refs-overview.md).
 
 ## Increased reliability
 
