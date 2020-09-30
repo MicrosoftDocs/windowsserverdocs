@@ -28,6 +28,7 @@ The available netsh mbn commands are:
 - [help](#help)
 - [set](#set)
 - [show](#show)
+- [test](#test)
 
 ## add
 
@@ -1125,3 +1126,45 @@ show visibleproviders [interface=]<string>
 ```powershell
 show visibleproviders interface="Cellular"
 ```
+
+## test
+
+Runs tests for a specific feature area, while collecting logs.
+
+**Syntax**
+```
+test [feature=<feature area>] [testPath=<path>] [taefPath=<path>] [param=<test input params>]
+```
+
+**Parameters**
+|   |   |   |
+|---|---|---|
+| **feature** | A feature area out of the supported feature areas listed below | Required |
+| **testpath** | Path containing the test binaries | Optional if HLK Server is installed |
+| **taefpath** | Path containing the TAEF binaries | Optional if HLK Server is installed |
+| **param** | Comma separated parameters, to be used for the tests | Required for certain feature areas, optional for others |
+
+**Remarks**
+
+Supported feature areas are:
+- connectivity
+- power
+- radio
+- esim
+- sms
+- dssa
+- lte
+- bringup
+
+Some tests require additional test parameters that need to be provided in the `param` field.
+The required parameters for the features are listed below.
+- **connectivity**: AccessString, UserName (If applicable), Password (If applicable)
+- **radio**: AccessString, UserName (If applicable), Password (If applicable)
+- **esim**: ActivationCode
+- **bringup**: AccessString, UserName (If applicable), Password (If applicable)
+
+**Examples**
+
+    test feature=connectivity param="AccessString=internet"
+    test feature=lte testpath="C:\\data\\test\\bin" taefpath="C:\\data\\test\\bin"
+    test feature=lte
