@@ -1138,7 +1138,7 @@ test [feature=<feature area>] [testPath=<path>] [taefPath=<path>] [param=<test i
 
 **Parameters**
 
-|   |   |   |
+| Tag | Value | Optional? |
 |---|---|---|
 | **feature** | A feature area out of the supported feature areas listed below | Required |
 | **testpath** | Path containing the test binaries | Optional if HLK Server is installed |
