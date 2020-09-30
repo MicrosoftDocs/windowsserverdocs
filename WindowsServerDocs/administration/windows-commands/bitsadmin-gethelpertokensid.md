@@ -1,10 +1,10 @@
 ---
 title: bitsadmin gethelpertokensid
 description: Reference article for the bitsadmin gethelpertokensid command, which returns the SID of a BITS transfer job's helper token, if one is set.
-ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.topic: reference
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 03/01/2019
 ---
 

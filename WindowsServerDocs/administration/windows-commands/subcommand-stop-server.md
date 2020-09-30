@@ -1,11 +1,11 @@
 ---
 title: Subcommand stop-Server
 description: Reference article for Subcommand stop-Server, which stops all services on a Windows Deployment Services server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 09f411c0-099f-4591-95fd-b77b3fd9118a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Subcommand: stop-Server

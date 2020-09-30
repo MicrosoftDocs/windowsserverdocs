@@ -1,11 +1,11 @@
 ---
 title: wbadmin start systemstatebackup
 description: Reference article for wbadmin start systemstatebackup, which creates a system state backup of the local computer and stores it on the location specified.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 998366c1-0a64-45e6-9ed3-4c3f5b8406f0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

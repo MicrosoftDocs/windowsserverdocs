@@ -9,9 +9,9 @@ metadata:
   ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.prod: windows-server
   ms.technology: manage-rsat
-  author: coreyp-at-msft
-  ms.author: coreyp
-  manager: dougkim
+  author: eross-msft
+  ms.author: lizross
+  manager: mtillman
   ms.localizationpriority: high
   ms.topic: landing-page # Required
   ms.date: 06/29/2020 #Required; mm/dd/yyyy format.

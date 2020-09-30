@@ -1,11 +1,11 @@
 ---
 title: telnet quit
 description: Reference article for telnet quit,which exits telnet.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a6e033f2-f0c2-404c-9cb4-abd1d7af0eea
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # telnet: quit

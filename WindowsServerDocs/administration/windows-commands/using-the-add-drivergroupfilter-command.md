@@ -1,11 +1,11 @@
 ---
 title: add-DriverGroupFilter
 description: Reference article for add-DriverGroupFilter, which adds a filter to a driver group on a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: Deploy NVMe Storage Devices using Discrete Device Assignment
 description: Learn how to use DDA to deploy storage devices
 ms.topic: article
-author: chrishuybregts
-ms.author: chrihu
+ms.author: benarm
+author: BenjaminArmstrong
 ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
 ---
 # Deploy NVMe Storage Devices using Discrete Device Assignment

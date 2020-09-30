@@ -15,4 +15,4 @@ Use Azure File Sync to centralize your organization's file shares in Azure, whil
 
 Once your files have synced to the cloud, you can connect multiple servers to the same Azure file share to sync and cache the content locally—permissions (ACLs) are always transported as well. Azure Files offers a snapshot capability that can generate differential snapshots of your Azure file share. These snapshots can even be mounted as read-only network drives via SMB for easy browsing and restore. Combined with cloud tiering, running an on-premises file server has never been easier.
 
-For more info, see [Planning for an Azure File Sync deployment](https://aka.ms/afs).
+For more info, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).

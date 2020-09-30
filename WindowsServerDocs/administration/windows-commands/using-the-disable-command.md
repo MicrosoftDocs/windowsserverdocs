@@ -1,11 +1,11 @@
 ---
 title: Using the disable command
 description: Reference article for disable, which disables all services for Windows Deployment Services.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 08d1b9ea-1e25-486a-b7df-ad26c53b4e77
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

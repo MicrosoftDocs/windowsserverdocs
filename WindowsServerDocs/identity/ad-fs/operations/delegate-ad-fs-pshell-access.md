@@ -58,7 +58,7 @@ If the farm is not using delegated administration, grant the gMSA account admin 
 
 ### Create the JEA Role File
 
-On the AD FS server, create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](/powershell/jea/role-capabilities).
+On the AD FS server, create the JEA role in a notepad file. Instructions to create the role is provided on [JEA role capabilities](/powershell/scripting/learn/remoting/jea/role-capabilities).
 
 The commandlets delegated in this example are `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity`.
 
@@ -74,7 +74,7 @@ VisibleCmdlets = 'Reset-AdfsAccountLockout', 'Get-ADFSAccountActivity', 'Set-ADF
 
 
 ### Create the JEA Session Configuration File
-Follow the instructions to create the [JEA session configuration](/powershell/jea/session-configurations) file. The configuration file determines who can use the JEA endpoint, and what capabilities they have access to.
+Follow the instructions to create the [JEA session configuration](/powershell/scripting/learn/remoting/jea/session-configurations) file. The configuration file determines who can use the JEA endpoint, and what capabilities they have access to.
 
 Role capabilities are referenced by the flat name (filename without the extension) of the role capability file. If multiple role capabilities are available on the system with the same flat name, PowerShell uses its implicit search order to select the effective role capability file. It does not give access to all role capability files with the same name.
 
@@ -94,7 +94,7 @@ RoleDefinitions = @{ JEAcontoso = @{ RoleCapabilityFiles = 'C:\Program Files\Win
 
 Save the session configuration file.
 
-It is strongly recommended to [test your session configuration file](/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile?view=powershell-5.1) if you have edited the pssc file manually using a text editor to ensure the syntax is correct. If a session configuration file does not pass this test, it is not successfully registered on the system.
+It is strongly recommended to [test your session configuration file](/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile) if you have edited the pssc file manually using a text editor to ensure the syntax is correct. If a session configuration file does not pass this test, it is not successfully registered on the system.
 
 ### Install the JEA session configuration on the AD FS Server
 

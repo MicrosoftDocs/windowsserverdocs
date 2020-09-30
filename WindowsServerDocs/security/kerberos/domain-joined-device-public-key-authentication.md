@@ -2,8 +2,8 @@
 title: Domain-joined Device Public Key Authentication
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
-manager: alanth
-author: michikos
+author: justinha
+ms.author: Justinha
 ms.date: 08/18/2017
 ---
 

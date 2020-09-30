@@ -1,11 +1,11 @@
 ---
 title: wbadmin get status
 description: Reference article for wbadmin get status, which reports the status of the backup or recovery operation that is currently running.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 2911b944-7b95-46aa-8c1e-1d55a2fcc94c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

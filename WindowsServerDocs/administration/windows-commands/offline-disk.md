@@ -1,11 +1,11 @@
 ---
 title: offline disk
 description: Reference article for the offline disk command, which takes the online disk with focus to the offline state.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8fb9b3c3-0b2c-4192-a2e7-f706292653e3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

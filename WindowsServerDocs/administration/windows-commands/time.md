@@ -5,11 +5,11 @@ description: Learn how to set and display the system time.
 
 
 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1276a257-7283-41da-ae80-fb4cfb311f9d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

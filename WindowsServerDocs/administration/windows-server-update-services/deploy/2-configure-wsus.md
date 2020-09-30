@@ -3,10 +3,10 @@ title: Step 2 - Configure WSUS
 description: Windows Server Update Service (WSUS) topic - Configure WSUS is step two in a four step process for deploying WSUS
 ms.topic: article
 ms.assetid: d4adc568-1f23-49f3-9a54-12a7bec5f27c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017
+ms.author: lizross
+author: eross-msft
+manager: mtillman
+ms.date: 9/18/2020
 ---
 # Step 2: Configure WSUS
 
@@ -223,7 +223,7 @@ This procedure assumes that you are using the WSUS Configuration Wizard, which a
 Now that you have performed the basic WSUS configuration, read the next sections for more details about changing the settings by using WSUS Management Console.
 
 ## 2.3. Configure WSUS computer groups
-computer groups are an IMPORTANT part of Windows Server Update Services (WSUS) deployments. Computer groups permit you to test and target updates to specific computers. There are two default computer groups: All computers and Unassigned computers. By default, when each client computer first contacts the WSUS server, the server adds that client computer to both of these groups.
+Computer groups are an IMPORTANT part of Windows Server Update Services (WSUS) deployments. Computer groups permit you to test and target updates to specific computers. There are two default computer groups: All computers and Unassigned computers. By default, when each client computer first contacts the WSUS server, the server adds that client computer to both of these groups.
 
 You can create as many custom computer groups as you need to manage updates in your organization. As a best practice, create at least one computer group to test updates before you deploy them to other computers in your organization.
 
@@ -418,14 +418,14 @@ The following instructions configure a downstream server to synchronize to an up
 
 7.  select the **Use SSL when synchronizing update information** check box, and then click **OK**.
 
-### additional SSL resources
+### Additional SSL resources
 The steps that are required to set up a certification authority, bind the certificate to the WSUS website, and establish a trust between the client computers and the certificate are beyond the scope of this guide. For more information and for instructions about how to install certificates and set up this environment, see the following topics:
 
 -   [Suite B PKI Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkID=203858)
 
 -   [Implementing and Administering Certificate Templates](https://go.microsoft.com/fwlink/?LinkID=203859)
 
--   [active directory Certificate Services Upgrade and Migration Guide](https://go.microsoft.com/fwlink/?LinkID=203860)
+-   [Active Directory Certificate Services Upgrade and Migration Guide](https://go.microsoft.com/fwlink/?LinkID=203860)
 
 -   [Configure Certificate Autoenrollment](https://go.microsoft.com/fwlink/?LinkID=203861)
 

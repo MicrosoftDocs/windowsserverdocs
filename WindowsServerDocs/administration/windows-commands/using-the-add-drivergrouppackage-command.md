@@ -1,11 +1,11 @@
 ---
 title: add-DriverGroupPackage
 description: Reference article for add-DriverGroupPackage, which adds a driver package to a driver group.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7cd323ae-9049-448e-a460-6c7d6462d4c8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # add-DriverGroupPackage

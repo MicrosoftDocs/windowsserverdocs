@@ -4,7 +4,7 @@ description: Learn how to troubleshoot activation error codes
 ms.topic: troubleshooting
 ms.date: 9/18/2019
 author: kaushika-msft
-ms.author: kaushika-msft; v-tea
+ms.author: kaushika
 ms.localizationpriority: medium
 ms.custom:
   - CI ID 116803
@@ -21,7 +21,7 @@ This article provides troubleshooting information to help you respond to error m
 
 For more information about volume activation, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client).
 
-For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
+For more information about volume activation for current and recent versions of Windows, see [Volume Activation [client]](/windows/deployment/volume-activation/volume-activation-windows-10).
 
 For more information about volume activation for older versions of Windows, see KB 929712, [Volume Activation information for Windows Vista, Windows Server 2008, Windows Server 2008 R2 and Windows 7](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
 

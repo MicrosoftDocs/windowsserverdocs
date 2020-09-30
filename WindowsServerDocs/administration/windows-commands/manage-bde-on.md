@@ -1,11 +1,11 @@
 ---
 title: manage-bde on
 description: Reference article for the manage-bde on command, which encrypts the drive and turns on BitLocker.
-ms.topic: article
+ms.topic: reference
 ms.assetid: f6a12814-df74-416c-a04a-62ea8512263e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

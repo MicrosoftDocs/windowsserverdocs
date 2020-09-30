@@ -1,9 +1,9 @@
 ---
 ms.assetid: 407d5e81-c04c-4275-9ae9-35f65b4a371a
 title: Planning Global Catalog Server Placement
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: iainfou
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

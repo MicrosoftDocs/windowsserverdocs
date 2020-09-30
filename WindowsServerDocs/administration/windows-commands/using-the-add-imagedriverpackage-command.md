@@ -1,11 +1,11 @@
 ---
 title: add-ImageDriverPackage
 description: Reference article for add-ImageDriverPackage, which adds a driver package that is in the driver store to an existing boot image on the server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6c2a4833-6427-47f8-9ffb-20b3786cb406
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # add-ImageDriverPackage

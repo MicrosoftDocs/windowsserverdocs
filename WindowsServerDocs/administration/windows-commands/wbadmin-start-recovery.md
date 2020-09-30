@@ -1,11 +1,11 @@
 ---
 title: wbadmin start recovery
 description: Reference article for wbadmin start recovery, which runs a recovery operation based on the parameters that you specify.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 52381316-a0fa-459f-b6a6-01e31fb21612
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

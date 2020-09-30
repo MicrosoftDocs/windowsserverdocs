@@ -1,11 +1,11 @@
 ---
 title: wbadmin enable backup
 description: Reference article for wbadmin enable backup, which creates and enables a daily backup schedule or modifies an existing backup schedule.
-ms.topic: article
+ms.topic: reference
 ms.assetid: c0e57f8a-70fa-4c60-9754-e762e8ad8772
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

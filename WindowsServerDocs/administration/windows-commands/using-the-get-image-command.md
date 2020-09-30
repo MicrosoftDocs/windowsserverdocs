@@ -1,11 +1,11 @@
 ---
 title: get-Image
 description: Reference article for get-Image, which retrieves information about an image.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-Image

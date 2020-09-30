@@ -1,11 +1,11 @@
 ---
 title: telnet send
 description: Reference article for telnet send, which sends telnet commands to the telnet server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7c217abc-1182-466e-914c-1ff16755021b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # telnet: send

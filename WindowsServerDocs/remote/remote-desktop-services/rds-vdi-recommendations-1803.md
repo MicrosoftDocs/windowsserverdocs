@@ -1,11 +1,9 @@
 ---
 title: Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
 description: Recommended settings and configuration to minimize overhead for Windows 10 1803) desktops used as VDI images
-ms.reviewer: robsmi
-ms.author: jaimeo, robsmi
+ms.author: robsmi
 ms.topic: article
 author: jaimeo
-manager: dougkim
 ---
 
 # Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
@@ -577,7 +575,7 @@ One very important consideration for non-persistent VDI VMs are security updates
 For Windows Defender it might be best to allow the updates to occur, even on non-persistent VDI. The updates are going to apply nearly every logon session, but the updates are small and should not be a problem. Plus, the VM won't be behind on updates because only the latest available will apply. The same might be true for non-Microsoft definition files.
 
 > [!NOTE]
-> Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Office 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
+> Store apps (UWP apps) update through the Windows Store. Modern versions of Office such as Microsoft 365 update through their own mechanisms when directly connected to the Internet, or via management technologies when not.
 
 ### Windows Defender optimization with VDI
 
@@ -594,7 +592,7 @@ This is especially important in environments where the VDI or physical computer 
 
 Note that some settings in this section are *registry-based only* and should be incorporated in the base image before the image is deployed for production use.
 
-The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](/windows-server/administration/performance-tuning/)
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](../../administration/performance-tuning/index.md)
 information, published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling

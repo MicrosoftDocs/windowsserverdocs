@@ -1,11 +1,11 @@
 ---
 title: start
 description: Reference article for start, which starts a separate Command Prompt window to run a specified program or command.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

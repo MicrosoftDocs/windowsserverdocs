@@ -1,11 +1,11 @@
 ---
 title: begin restore
 description: Reference article for the begin restore command, which starts a restore session and issues a PreRestore event to involved writers.
-ms.topic: article
+ms.topic: reference
 ms.assetid: f629bbd5-315d-4cbb-9cb0-9d75cf617092
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

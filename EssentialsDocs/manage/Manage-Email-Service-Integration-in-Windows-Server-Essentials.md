@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4c35d230-02ec-4374-b4c5-2da19fe151ee
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage Email Service Integration in Windows Server Essentials
@@ -21,8 +21,8 @@ Use the following topic to set up an email solution for your organization.
 
 ## Additional References
 
--   [Manage Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)
+-   [Manage Microsoft 365](Manage-Office-365-in-Windows-Server-Essentials.md)
 
--   [Quick Start Guide to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)
+-   [Quick Start Guide to Using Microsoft 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)
 
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

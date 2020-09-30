@@ -1,11 +1,11 @@
 ---
 title: telnet unset
 description: Reference article for telnet unset, which turns off previously set options.
-ms.topic: article
+ms.topic: reference
 ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # telnet: unset

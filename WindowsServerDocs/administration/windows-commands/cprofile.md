@@ -1,11 +1,11 @@
 ---
 title: cprofile
 description: Reference article for the cprofile command. This command has been deprecated and is not guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: d83742c0-9c38-4d24-8f63-2eaad0c3c382
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

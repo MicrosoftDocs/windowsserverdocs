@@ -1,11 +1,11 @@
 ---
 title: bitsadmin peers
 description: Reference article for the bitsadmin peers command, which lists the /peers switches.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5effbd52-993a-4657-b331-596c64deb8fb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin peers

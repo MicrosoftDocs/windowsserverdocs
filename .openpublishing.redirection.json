@@ -286,6 +286,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/windows-commands/set_2.md",
+      "redirect_url": "/windows-server/administration/windows-commands/set",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-optimize-pool.md",
       "redirect_url": "/windows-server/storage/storage-spaces/add-nodes#optimizing-drive-usage-after-adding-drives-or-servers",
       "redirect_document_id": false

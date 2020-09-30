@@ -1,11 +1,11 @@
 ---
 title: get-AllNamespaces
 description: Reference article for get-AllNamespaces, which displays information about all namespaces on a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: e8fe896d-a69a-4180-923b-9f18185f5941
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-AllNamespaces

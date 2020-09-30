@@ -3,9 +3,9 @@ title: Windows Server 2019 Activation
 description: How to activate Windows Server 2019
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
-author: coreyp-at-msft
-ms.author: coreyp
-manager: jasgroce
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.localizationpriority: medium
 ---
 # Windows Server 2019 Activation

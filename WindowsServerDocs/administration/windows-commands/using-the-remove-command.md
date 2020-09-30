@@ -1,11 +1,11 @@
 ---
 title: Using the remove command
 description: Reference article for remove, which removes various driver-related information.
-ms.topic: article
+ms.topic: reference
 ms.assetid: e3f1644d-6028-4c47-a9fd-227bcdcc6123
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

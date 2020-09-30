@@ -1,11 +1,11 @@
 ---
 title: ftp status
 description: Reference article for the ftp status command, which displays the current status of your ftp connections.
-ms.topic: article
+ms.topic: reference
 ms.assetid: d78c5629-6f73-4587-af0b-bd3cc3af5225
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

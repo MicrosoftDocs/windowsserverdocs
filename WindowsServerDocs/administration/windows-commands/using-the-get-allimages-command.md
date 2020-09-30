@@ -1,11 +1,11 @@
 ---
 title: get-AllImages
 description: Reference article for get-AllImages, which retrieves information about all images on a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 19de3720-4315-415a-8dc6-486caa0b2100
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-AllImages

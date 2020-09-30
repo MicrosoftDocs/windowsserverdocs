@@ -1,11 +1,10 @@
 ---
 title: Replication is paused for one or more virtual machines on this server
 description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: e1119a40-eda3-4058-8648-7df81cbc6c29
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Replication is paused for one or more virtual machines on this server

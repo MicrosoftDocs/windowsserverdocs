@@ -1,11 +1,11 @@
 ---
 title: get-Namespace
 description: Reference article for get-Namespace, which displays information about a custom namespace.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ea641bab-e97b-4909-918e-447730027dc1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-Namespace

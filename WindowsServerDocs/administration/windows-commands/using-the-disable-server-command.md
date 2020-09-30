@@ -1,11 +1,11 @@
 ---
 title: disable-Server
 description: Reference article for disable-Server, which disables all services for a Windows Deployment Services server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b69fcfe0-b744-4794-bc75-2c9218c0ba66
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Disconnect-Client
 description: Reference article for Disconnect-Client, which disconnects a client from a multicast transmission or namespace.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 876bbe6c-76ab-4de5-879b-d2066e700326
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

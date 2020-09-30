@@ -1,11 +1,11 @@
 ---
 title: showmount
 description: Reference article for showmount, which displays mounted directories.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a6dd562e-e3bd-4ee6-be3b-6d29e29fd20e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # showmount

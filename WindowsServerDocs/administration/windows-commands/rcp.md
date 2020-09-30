@@ -1,11 +1,11 @@
 ---
 title: rcp
 description: Reference article for the rcp command, which copies files between computers. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 83ad713c-63c9-458c-8ad8-39a6ddeb1690
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

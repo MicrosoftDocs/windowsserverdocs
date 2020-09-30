@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/26/2020
+ms.date: 09/05/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -64,8 +64,8 @@ There are two ways you can subscribe to a Workspace. The client can try to disco
 1. From the main page of the client, tap **Subscribe with URL**.
 2. Enter the Workspace URL or your email address:
    - If you use the **Workspace URL**, use the one your admin gave you. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs:
-     - Windows Virtual Desktop Fall 2019: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
-     - Windows Virtual Desktop Spring 2020: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
+     - Windows Virtual Desktop (classic): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
+     - Windows Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
    - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery.md).
 3. Tap **Next**.
 4. Sign in with your user account when prompted.
@@ -126,18 +126,17 @@ The client will use the settings configured by your admin unless you turn off th
 - **Resolution** lets you specify the resolution of the remote desktop. The session will retain this resolution for its entire duration. This setting is only available in **Single display** mode and when **Update the resolution on resize** is disabled.
 - **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is only available in **Single display** mode and when **Update the resolution on resize** is disabled.
 
-## Provide feedback
+## Give us feedback
 
-Have a feature suggestion or want to report a problem? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883). You can also access the Feedback Hub through the client:
+Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://aka.ms/rddesktopfeedback).
 
-1. From the Connection Center, tap the **Send feedback** option on the command bar at the top of the client to open the Feedback Hub app.
-2. Enter the required information in the **Summary** and **Details** fields. When you're done, tap **Next**.
-3. Select whether it's a **Problem** or **Suggestion**.
-4. Check to see if the category is in **Apps** > **Remote Desktop**. If it is, tap **Next**.
-5. Review the existing feedback topics to see if someone else has reported the same problem. If not, select **Make a new bug**, then tap **Next**.
-6. On the next page, you can give us more information so we can help you solve the problem. You can write more detailed information, submit screenshots, and even create a recording of the problem to show us what happened. To make a recording, select **Start recording**, then do what you did up to the point where the problem happened. When you're done, return to the Feedback Hub and select **Stop recording**.
-7. When you're satisfied with the information, tap **Submit**.
-8. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to your feedback that you can share with others as needed.
+You can also give us feedback by selecting the button that looks like a smiley face emoticon in the client app, as shown in the following image:
+
+> [!div class="mx-imgBorder"]
+> ![A screenshot of the smiley face icon that takes you to the feedback hub.](../media/smiley-face-icon.png)
+
+>[!NOTE]
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
 
 ### Access client logs
 

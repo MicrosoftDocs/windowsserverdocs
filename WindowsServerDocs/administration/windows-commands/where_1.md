@@ -1,11 +1,11 @@
 ---
 title: where
 description: Reference article for where, which displays the location of files that match the given search pattern.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0b3486a5-896b-4d92-84b8-e463a0b76487
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

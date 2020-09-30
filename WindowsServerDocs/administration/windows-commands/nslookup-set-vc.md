@@ -1,11 +1,11 @@
 ---
 title: nslookup set vc
 description: Reference article for the nslookup set vc command, which specifies whether to use a virtual circuit when sending requests to the server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: e9232c92-cd8d-4eff-8ae5-0647bd03bdcb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

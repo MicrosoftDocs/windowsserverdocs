@@ -1,11 +1,11 @@
 ---
 title: diantz
 description: Reference article for the diantz command, which packages existing files into a cabinet (.cab) file.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 218ed5d7-1203-4d68-ad9b-65cdd022d54f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # diantz

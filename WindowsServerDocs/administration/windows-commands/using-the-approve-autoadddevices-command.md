@@ -1,11 +1,11 @@
 ---
 title: Approve-AutoaddDevices
 description: Reference article for Approve-AutoaddDevices, which approves computers that are pending administrative approval.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8d76e8d3-ab35-429c-be7b-904f95d0782d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Approve-AutoaddDevices

@@ -1,9 +1,9 @@
 ---
 title: How to Configure Protected Accounts
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # How to Configure Protected Accounts

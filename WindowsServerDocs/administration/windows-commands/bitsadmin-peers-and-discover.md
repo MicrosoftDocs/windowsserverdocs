@@ -1,11 +1,11 @@
 ---
 title: bitsadmin peers and discover
 description: Reference article for the bitsadmin peers and discover command, which discovers peers again.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 254fa0a3-4501-4272-a020-6ccdb3fcb29b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

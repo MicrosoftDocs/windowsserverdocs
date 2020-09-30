@@ -1,11 +1,11 @@
 ---
 title: prompt
 description: Reference article for the prompt command, which customizes your Cmd.exe command prompt.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
 ---
 

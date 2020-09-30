@@ -1,11 +1,10 @@
 ---
 title: Install the Hyper-V role on Windows Server
 description: Gives instructions for installing Hyper-V using Server Manager or Windows PowerShell
-manager: dongill
 ms.topic: get-started-article
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/02/2016
 ---
 # Install the Hyper-V role on Windows Server

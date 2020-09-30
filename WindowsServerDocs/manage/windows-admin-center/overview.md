@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It is a free product and is ready to use in production.
 
 To find out what's new, see [Release history](support/release-history.md).
 
@@ -145,7 +145,7 @@ Here are some videos from Microsoft Ignite 2019 sessions:
 - [How to use Microsoft Azure hybrid services together with Windows Admin Center and Windows Server](https://aka.ms/WAC-THR2073)
 - [Live Q&A: Manage your hybrid server environment with Windows Admin Center](https://aka.ms/WAC-MLS1055)
 - [Learning Path: Hybrid management technologies](https://aka.ms/WAC-HybridMgmtTech)
-- [Hands on Lab: Windows Admin Center and Hybrid](https://aka.ms/WAC-HOL2019)
+- [Hands on Lab: Windows Admin Center and Hybrid](/learn/?WT.mc_id=sitertzn_homepage_learn-redirect-handsonlabs)
 
 Here are some videos from Windows Server Summit 2019 sessions:
 

@@ -3,9 +3,9 @@ title: Kerberos Constrained Delegation Overview
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Kerberos Constrained Delegation Overview
@@ -24,7 +24,7 @@ In Windows Server 2012 R2 and Windows Server 2012 , ability to configure constra
 
 For detailed information about constrained delegation as introduced in Windows Server 2003, see [Kerberos Protocol Transition and Constrained Delegation](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
 
-The Windows Server 2012 R2  and Windows Server 2012 implementation of the Kerberos protocol includes extensions specifically for constrained delegation.  Service for User to Proxy (S4U2Proxy)  allows a service to use its Kerberos service ticket for a user to obtain a service ticket from the Key Distribution Center (KDC) to a back-end service. These extensions allow constrained delegation to be configured on the back-end service's account, which can be in another domain. For more information about these extensions, see [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](https://msdn.microsoft.com/library/cc246071(PROT.13).aspx) in the MSDN Library.
+The Windows Server 2012 R2  and Windows Server 2012 implementation of the Kerberos protocol includes extensions specifically for constrained delegation.  Service for User to Proxy (S4U2Proxy)  allows a service to use its Kerberos service ticket for a user to obtain a service ticket from the Key Distribution Center (KDC) to a back-end service. These extensions allow constrained delegation to be configured on the back-end service's account, which can be in another domain. For more information about these extensions, see [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94) in the MSDN Library.
 
 **Practical applications**
 
@@ -46,7 +46,7 @@ This also shifts the decision of whether a server should trust the source of a d
 
 A change in the underlying protocol allows constrained delegation across domains. The  Windows Server 2012 R2  and Windows Server 2012 implementation of the Kerberos protocol includes extensions to Service for User to Proxy (S4U2Proxy) protocol. This is a set of extensions to the Kerberos protocol that allows a service to use its Kerberos service ticket for a user to obtain a service ticket from the Key Distribution Center (KDC) to a back-end service.
 
-For implementation information about these extensions, see [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](https://msdn.microsoft.com/library/cc246071(PROT.10).aspx) in MSDN.
+For implementation information about these extensions, see [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94) in MSDN.
 
 For more information about the basic message sequence for Kerberos delegation with a forwarded ticket-granting ticket (TGT) as compared to Service for User (S4U) extensions, see section [1.3.3 Protocol Overview](/openspecs/windows_protocols/ms-sfu/1fb9caca-449f-4183-8f7a-1a5fc7e7290a) in the [MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification.
 

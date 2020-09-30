@@ -22,7 +22,7 @@ The following client apps are available:
 | Device          | Get the app                                                                                                  | Set up instructions                                                                |
 |-----------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client)                                               | [Get started with the Windows Desktop client](windowsdesktop.md) |
-| Windows Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709)                   | [Get started with the Windows Store client](windows.md)          |
+| Windows Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709)                   | [Get started with the Microsoft Store Client](windows.md)          |
 | Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)     | [Get started with the Android client](remote-desktop-android.md) |
 | iOS             | [iOS client in the iTunes store](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [Get started with the iOS client](remote-desktop-ios.md)         |
 | macOS           | [macOS client in the iTunes store](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started with the macOS client](remote-desktop-mac.md)       |

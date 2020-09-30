@@ -1,11 +1,11 @@
 ---
 title: Subcommand start-TransportServer
 description: Reference article for Subcommand start-TransportServer, which starts all services for a Transport Server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0e93bc84-5b9e-4f9d-8cf0-1634417da0f6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Subcommand: start-TransportServer

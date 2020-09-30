@@ -1,11 +1,11 @@
 ---
 title: nslookup lserver
 description: Reference article for the nslookup lserver command, which changes the initial server to the specified Domain Name System (DNS) domain.
-ms.topic: article
+ms.topic: reference
 ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

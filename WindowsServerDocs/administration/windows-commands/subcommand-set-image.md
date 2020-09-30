@@ -1,11 +1,11 @@
 ---
 title: Subcommand set-Image
 description: Reference article for Subcommand set-Image, which changes the attributes of an image.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Subcommand: set-Image

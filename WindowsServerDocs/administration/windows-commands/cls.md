@@ -1,11 +1,11 @@
 ---
 title: cls
 description: Reference article for the cls command, which clears the Command Prompt window.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ce9bf55c-bed4-47fb-8f79-a134202c4ed3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

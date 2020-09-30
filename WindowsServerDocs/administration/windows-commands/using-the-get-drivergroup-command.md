@@ -1,11 +1,11 @@
 ---
 title: get-DriverGroup
 description: Reference article for get-DriverGroup, which displays information about the driver groups on a server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7cfe10c3-a63f-48e7-bef9-f6b474b4ddbe
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-DriverGroup

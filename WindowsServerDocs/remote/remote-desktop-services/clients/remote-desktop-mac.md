@@ -6,7 +6,7 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 07/16/2020
+ms.date: 08/20/2020
 ms.localizationpriority: medium
 ---
 # Get started with the macOS client
@@ -43,8 +43,8 @@ To subscribe to a feed:
 1. Select **Add feed** on the main page to connect to the service and retrieve your resources.
 2. Enter the feed URL. This can be a URL or email address:
    - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
-      - For the Fall 2019 version, use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-      - For the Spring 2020 version, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+      - For Windows Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+      - For Windows Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - To use email, enter your email address. This tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Select **Subscribe**.
 4. Sign in with your user account when prompted.
@@ -153,7 +153,7 @@ Windows Server 2012 R2 introduced support for a new authentication method, Remot
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.
 
-To learn more about this feature, check out [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
+To learn more about this feature, check out [https://aka.ms/paa-sample](/samples/browse/?redirectedfrom=MSDN-samples).
 
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

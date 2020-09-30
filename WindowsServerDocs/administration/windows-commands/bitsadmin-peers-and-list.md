@@ -1,11 +1,11 @@
 ---
 title: bitsadmin peers and list
 description: Reference article for the bitsadmin peers and list command, which lists all peers.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 18ec60c9-34d2-466e-982c-6165478ef224
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

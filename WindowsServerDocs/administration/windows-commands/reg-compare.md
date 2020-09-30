@@ -1,11 +1,11 @@
 ---
 title: reg compare
 description: Reference article for the reg compare command, which compares specified registry subkeys or entries.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 177dc6a3-034e-4846-a394-330d03c14e0b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: eventtriggers
 description: Reference article for the eventtriggers command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8f78050b-24b2-4f67-a58a-77eeb66f7755
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

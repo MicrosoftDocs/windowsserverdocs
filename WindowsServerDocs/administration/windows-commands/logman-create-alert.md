@@ -1,11 +1,11 @@
 ---
 title: logman create alert
 description: Reference article for the logman create alert command, which creates an alert data collector.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 93e6fc2b-5bf5-413b-84b4-be8b9dd3a57d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

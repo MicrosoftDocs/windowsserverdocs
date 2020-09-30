@@ -1,11 +1,11 @@
 ---
 title: Subcommand set-Server
 description: Reference article for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: da55c29d-a94a-4d73-877b-af480f906ca0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Subcommand: set-Server

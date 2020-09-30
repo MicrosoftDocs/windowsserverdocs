@@ -1,11 +1,11 @@
 ---
 title: uninitialize-Server
 description: Reference article for uninitialize-Server, which reverts changes made to the server during the initial server configuration.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 015efb04-fe84-469f-bd81-49d0046296b2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # uninitialize-Server

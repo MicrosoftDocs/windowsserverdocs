@@ -1,11 +1,11 @@
 ---
 title: enable-TransportServer
 description: Reference article for enable-TransportServer, which enables all services for the Transport Server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9d79dba1-4b57-4a00-8cba-877e6b8618e6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # enable-TransportServer

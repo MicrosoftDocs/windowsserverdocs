@@ -1,11 +1,11 @@
 ---
 title: forfiles
 description: Reference article for forfiles command, which selects and runs a command on a file or set of files.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 43f6b004-446d-4fdd-91c5-5653613524a4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/20/2020
 ---
 

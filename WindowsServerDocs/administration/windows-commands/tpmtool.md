@@ -1,10 +1,10 @@
 ---
 title: tpmtool
 description: Reference article for tpmtool, which gets information about the Trusted Platform Module.
-ms.topic: article
+ms.topic: reference
 author: ashleytqy
-ms.author: ashleytqy
-manager: ronaldai
+ms.author: asteoh
+manager: raigner
 ms.date: 05/07/2019
 ---
 # tpmtool

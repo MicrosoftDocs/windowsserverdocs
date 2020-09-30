@@ -1,11 +1,11 @@
 ---
 title: get-MulticastTransmission
 description: Reference article for get-MulticastTransmission, which displays information about the multicast transmission for a specified image.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b733737b-1e81-43d4-a058-d6985a613bef
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # get-MulticastTransmission

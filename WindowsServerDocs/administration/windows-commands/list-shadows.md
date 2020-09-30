@@ -1,11 +1,11 @@
 ---
 title: list shadows
 description: Reference article for the list shadows command, which lists persistent and existing non-persistent shadow copies that are on the system.
-ms.topic: article
+ms.topic: reference
 ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

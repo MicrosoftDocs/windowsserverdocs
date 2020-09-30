@@ -61,7 +61,7 @@ For more info, see [Server-to-server replication with Storage Replica](../../../
 
 ### Extend storage capacity
 
-- **Sync your file server with the cloud by using [Azure File Sync](https://aka.ms/afs)**
+- **Sync your file server with the cloud by using [Azure File Sync](/azure/storage/files/storage-sync-files-planning)**
 Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering to free up space and cache only the most frequently used files on the server, tiering cold data to the cloud. Data in the cloud can be backed up, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
 For more info, see [Sync your file server with the cloud by using Azure File Sync](azure-file-sync.md).
 

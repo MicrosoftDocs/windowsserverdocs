@@ -1,11 +1,11 @@
 ---
 title: list writers
 description: Reference article for the list writers command, which lists writers that are on the system.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1c30cbc4-f568-4fa7-b564-66c41d3ca82d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

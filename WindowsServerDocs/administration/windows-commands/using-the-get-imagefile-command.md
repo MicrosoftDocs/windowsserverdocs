@@ -1,11 +1,11 @@
 ---
 title: get-ImageFile
 description: Reference article for get-ImageFile, which retrieves information about the images contained in a Windows Image (.wim) file.
-ms.topic: article
+ms.topic: reference
 ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
