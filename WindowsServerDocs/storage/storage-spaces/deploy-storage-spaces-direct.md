@@ -49,7 +49,7 @@ When you install Windows Server using the Setup wizard, you can choose between *
 
 This guide focuses the Server Core installation option and deploying/managing remotely from a separate management system, which must have:
 
-- Windows Server 2019 with the same updates as the servers it's managing
+- A version of Windows Server or Windows 10 at least as new as the servers it's managing, and with the latest updates
 - Network connectivity to the servers it's managing
 - Joined to the same domain or a fully trusted domain
 - Remote Server Administration Tools (RSAT) and PowerShell modules for Hyper-V and Failover Clustering. RSAT tools and PowerShell modules are available on Windows Server and can be installed without installing other features. You can also install the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) on a Windows 10 management PC.
