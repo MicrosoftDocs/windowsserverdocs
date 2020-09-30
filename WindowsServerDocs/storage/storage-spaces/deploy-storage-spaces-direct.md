@@ -41,7 +41,7 @@ Gather the following information:
 
 ### Step 1.1: Install the operating system
 
-The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server 2019 Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
+The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
 
 When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Install Server Core](/windows-server/get-started/getting-started-with-server-core).
 
