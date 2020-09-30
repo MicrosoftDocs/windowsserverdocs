@@ -60,6 +60,14 @@ setx [/s <computer> [/u [<domain>\]<user name> [/p [<password>]]]] /f <filename>
 
 - File mode supports the parsing of carriage return and line feed (CRLF) text files only.
 
+- Running this command on an existing variable removes any variable references and uses expanded values.
+
+  For instance, if the variable %PATH% has a reference to %JAVADIR%, and %PATH% is manipulated using **setx**, %JAVADIR% is expanded and its value is assigned directly to the target variable %PATH%. This means that future updates to %JAVADIR% **will not** be reflected in the %PATH% variable.
+
+- Be aware there's a limit of 1024 characters when assigning contents to a variable using **setx**.
+
+  This means that the content is cropped if you go over 1024 characters, and that the cropped text is what's applied to the target variable. If this cropped text is applied to an existing variable, it can result in loss of data previously held by the target variable.
+
 ## Examples
 
 To set the *MACHINE* environment variable in the local environment to the value *Brand1*, type:
