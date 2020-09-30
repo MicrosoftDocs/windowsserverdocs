@@ -1137,6 +1137,7 @@ test [feature=<feature area>] [testPath=<path>] [taefPath=<path>] [param=<test i
 ```
 
 **Parameters**
+
 |   |   |   |
 |---|---|---|
 | **feature** | A feature area out of the supported feature areas listed below | Required |
@@ -1165,6 +1166,8 @@ The required parameters for the features are listed below.
 
 **Examples**
 
-    test feature=connectivity param="AccessString=internet"
-    test feature=lte testpath="C:\\data\\test\\bin" taefpath="C:\\data\\test\\bin"
-    test feature=lte
+```
+test feature=connectivity param="AccessString=internet"
+test feature=lte testpath="C:\\data\\test\\bin" taefpath="C:\\data\\test\\bin"
+test feature=lte
+```
