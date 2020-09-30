@@ -84,6 +84,10 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets.
 
 > [!NOTE]
+> If you plan to use ReFS for CSV (Cluster Shared Volumes), please consider the limitations to pre-format your later CSV volumes with ReFS.
+> For CSV: NTFS should be used for SANs. ReFS should be used for CSV in top of S2D.
+
+> [!NOTE]
 > Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. Basic disks do not include Storage Spaces.
 
 ### Backup target
@@ -165,3 +169,4 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - [ReFS block cloning](block-cloning.md)
 - [ReFS integrity streams](integrity-streams.md)
 - [Troubleshoot ReFS with ReFSUtil](../../administration/windows-commands/refsutil.md)
+- [Use of ReFS with Cluster-Shared Volumes (../../failover-clustering/failover-cluster-csvs.md)
