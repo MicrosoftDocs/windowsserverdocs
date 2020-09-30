@@ -83,7 +83,7 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 Deploying ReFS on basic disks is best suited for applications that implement their own software resiliency and availability solutions.
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets.
 
-> [!NOTE]
+> [!IMPORTANT]
 > If you plan to use ReFS for CSV (Cluster Shared Volumes), please consider the limitations to pre-format your later CSV volumes with ReFS.
 > For CSV: NTFS should be used for traditional SANs. ReFS should be used on top of S2D.
 
@@ -117,7 +117,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 |---------------------------|------------------|-----------------------|
 | BitLocker encryption | Yes | Yes |
 | Data Deduplication | Yes<sup>1</sup> | Yes |
-| Cluster Shared Volume (CSV) support | Yes<sup>2</sup> | Yes |
+| Cluster Shared Volume (CSV) support | Yes<sup>2</sup> <sup>4</sup> | Yes |
 | Soft links | Yes | Yes |
 | Failover cluster support | Yes | Yes |
 | Access-control lists | Yes | Yes |
@@ -133,9 +133,10 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Named streams | Yes | Yes |
 | Thin Provisioning | Yes<sup>3</sup> | Yes |
 | Trim/Unmap | Yes<sup>3</sup> | Yes |
-1. Available on Windows Server, version 1709 and later.
+1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
 3. Storage Spaces only
+4. CSV will not use Direct I/O in junction with Storage Space, Storage Spaces Direct (S2D) or SAN
 
 #### The following features are only available on ReFS:
 
@@ -152,7 +153,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | File system compression | No | Yes |
 | File system encryption | No | Yes |
 | Transactions | No | Yes |
-| Hard links | No | Yes |
+| Hard links | Yes<sup>1</sup> | Yes |
 | Object IDs | No | Yes |
 | Offloaded Data Transfer (ODX) | No | Yes |
 | Short names | No | Yes |
@@ -162,6 +163,8 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Page file support | No | Yes |
 | Supported on removable media | No | Yes |
 
+1. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536. Added hardlink support if **fresh formatted volume. Can't use hardlink if upgraded from previous version**
+
 ## Additional References
 
 - [Cluster size recommendations for ReFS and NTFS](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
@@ -170,3 +173,4 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 - [ReFS integrity streams](integrity-streams.md)
 - [Troubleshoot ReFS with ReFSUtil](../../administration/windows-commands/refsutil.md)
 - [Use of ReFS with Cluster-Shared Volumes](../../failover-clustering/failover-cluster-csvs.md)
+- [ReFS versions and compatibility matrix(https://gist.github.com/0xbadfca11/da0598e47dd643d933dc)
