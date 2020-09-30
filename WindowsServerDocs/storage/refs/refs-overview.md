@@ -85,7 +85,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 
 > [!NOTE]
 > If you plan to use ReFS for CSV (Cluster Shared Volumes), please consider the limitations to pre-format your later CSV volumes with ReFS.
-> For CSV: NTFS should be used for SANs. ReFS should be used for CSV in top of S2D.
+> For CSV: NTFS should be used for traditional SANs. ReFS should be used on top of S2D.
 
 > [!NOTE]
 > Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. Basic disks do not include Storage Spaces.
