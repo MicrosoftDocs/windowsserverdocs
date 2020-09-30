@@ -134,7 +134,7 @@ Invoke-Command ($ServerList) {
 
 If you're deploying Storage Spaces Direct inside virtual machines, skip this section.
 
-Storage Spaces Direct requires high-bandwidth, low-latency networking between servers in the cluster. At least 10 GbE networking is required and remote direct memory access (RDMA) is recommended. You can use either iWARP or RoCE as long as it has the Windows Server 2019 logo, but iWARP is usually easier to set up.
+Storage Spaces Direct requires high-bandwidth, low-latency networking between servers in the cluster. At least 10 GbE networking is required and remote direct memory access (RDMA) is recommended. You can use either iWARP or RoCE as long as it has the Windows Server logo that matches your operating system version, but iWARP is usually easier to set up.
 
 > [!Important]
 > Depending on your networking equipment, and especially with RoCE v2, some configuration of the top-of-rack switch may be required. Correct switch configuration is important to ensure reliability and performance of Storage Spaces Direct.
