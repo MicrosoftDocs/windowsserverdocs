@@ -18,6 +18,9 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 ## Updates for 1.0.22.0
 *Date published: 9/2/2020*
 
+> [!IMPORTANT]
+> In version 1.0.22.0 we introduced a regression that impacts some Chromebook operating systems. Users on impacted operating systems will not be able to connect to a remote session using the web client. We are investigating the issue and will release a new version of the web client as soon as we fix this regression. In the meantime, you may revert to version 1.0.21.0. 
+
 - Users can now move the minimized menu.
 - Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
 - Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Windows Virtual Desktop with the web client](/azure-docs/articles/virtual-desktop/connect-web.md).
