@@ -79,7 +79,6 @@ In Windows Server 2012 R2, you can view the state of a CSV volume on a per node 
 > * If you plan to use CSV in junction with SAN(-FrontEnd) attached disks, format drives with NTFS before converting them to a CSV to leverage the performance benefits of Direct I/O.
 > * This behaviour is by design. Please consult links in chapter "More information".
 
-> * 
 > * Because of the integration of CSV with SMB 3.0 features such as SMB Multichannel and SMB Direct, redirected I/O traffic can stream across multiple cluster networks.
 > * You should plan your cluster networks to allow for the potential increase in network traffic to the coordinator node during I/O redirection.
 
