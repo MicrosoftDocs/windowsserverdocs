@@ -46,4 +46,4 @@ wdsutil /verbose /add-ImageDriverPackagemedia:WinPE Boot Image /Server:MyWDSServ
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 [wdsutiladd-ImageDriverPackage command](wdsutil-add-imagedriverpackage.md)
-[wdsutiladd-AllDriverPackages subcommand](wdsutil-add-alldriverpackages-subcommand.md)
+[wdsutiladd-AllDriverPackages subcommand](wdsutil-add-alldriverpackages.md)
