@@ -1,6 +1,6 @@
 ---
-title: get-AutoaddDevices
-description: Reference article for get-AutoaddDevices, which displays all computers that are in the Auto-add database on a Windows Deployment Services server.
+title:  wdsutil get-autoadddevices
+description: Reference article for wdsutil get-autoadddevices, which displays all computers that are in the Auto-add database on a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-AutoaddDevices
+
+# wdsutil get-autoadddevices
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -34,6 +35,6 @@ wdsutil /verbose /Get-AutoaddDevices /Devicetype:RejectedDevices /Server:MyWDSSe
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutildelete-AutoaddDevices command](wdsutil-delete-autoadddevices.md)
-[wdsutilApprove-AutoaddDevices command](wdsutil-approve-autoadddevices.md)
-[Using The Reject-AutoaddDevices command](wdsutil-reject-autoadddevices.md)
+- [wdsutil delete-autoadddevices command](wdsutil-delete-autoadddevices.md)
+- [wdsutil approve-autoadddevices command](wdsutil-approve-autoadddevices.md)
+- [wdsutil reject-autoadddevices command](wdsutil-reject-autoadddevices.md)

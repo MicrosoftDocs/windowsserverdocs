@@ -1,6 +1,6 @@
 ---
-title: get-Device
-description: Reference article for get-Device, which retrieves Windows Deployment Services information about a prestaged computer (that is, a physical computer that has been lined to a computer account in active directory Domain Services.
+title: wdsutil get-device
+description: Reference article for wdsutil get-device, which retrieves Windows Deployment Services information about a prestaged computer (that is, a physical computer that has been lined to a computer account in active directory Domain Services.
 ms.topic: reference
 ms.assetid: 1da79286-7e1d-45f2-aea2-d446e16a6911
 ms.author: lizross
@@ -9,7 +9,7 @@ manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# get-Device
+# wdsutil get-device
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -41,6 +41,6 @@ wdsutil /verbose /Get-Device /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6 /forest:Yes
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutil  set-Device](wdsutil-set-device.md)
-[wdsutiladd-Device command](wdsutil-add-device.md)
-[wdsutilget-AllDevices command](wdsutil-get-alldevices.md)
+- [wdsutil set-device command](wdsutil-set-device.md)
+- [wdsutil add-device command](wdsutil-add-device.md)
+- [wdsutil get-alldevices command](wdsutil-get-alldevices.md)

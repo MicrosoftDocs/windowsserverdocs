@@ -1,6 +1,6 @@
 ---
-title: Using the add-AllDriverPackages subcommand
-description: Reference article for add-AllDriverPackages, which adds all driver packages that are stored in a folder to a server.
+title: wdsutil add-alldriverpackages
+description: Reference article for wdsutil add-alldriverpackages, which adds all driver packages that are stored in a folder to a server.
 ms.topic: reference
 ms.assetid: ba6641c1-d7e9-43a9-9819-702dad5484ed
 ms.author: lizross
@@ -9,7 +9,7 @@ manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# add-AllDriverPackages
+# wdsutil add-alldriverpackages
 
 Adds all driver packages that are stored in a folder to a server.
 
@@ -42,4 +42,4 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers\Printers /DriverGroup
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-[Add-WdsDriverPackage](/previous-versions/windows/powershell-scripting/dn283440(v=wps.630))
+- [wsdutil add-wdsdriverpackage](/previous-versions/windows/powershell-scripting/dn283440(v=wps.630))

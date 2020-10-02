@@ -1,6 +1,6 @@
 ---
-title: get-AllNamespaces
-description: Reference article for get-AllNamespaces, which displays information about all namespaces on a server.
+title: wdsutil get-allnamespaces
+description: Reference article for wdsutil get-allnamespaces, which displays information about all namespaces on a server.
 ms.topic: reference
 ms.assetid: e8fe896d-a69a-4180-923b-9f18185f5941
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-AllNamespaces
+
+# wdsutil get-allnamespaces
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -47,8 +48,9 @@ To view all namespaces except those that are deactivated, type:
   ```
   wdsutil /Get-AllNamespaces /Server:MyWDSServer /ContentProvider:MyContentProv /details:Clients /ExcludedeletePending
   ```
-  ## Additional References
-  - [Command-Line Syntax Key](command-line-syntax-key.md)
-  [wdsutilnew-Namespace command](wdsutil-new-namespace.md)
-  [wdsutilremove-Namespace command](wdsutil-remove-namespace.md)
-  [wdsutil  start-Namespace](wdsutil-start-namespace.md)
+
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+- [wdsutil new-namespace command](wdsutil-new-namespace.md)
+- [wdsutil remove-namespace command](wdsutil-remove-namespace.md)
+- [wdsutil start-nmespace command](wdsutil-start-namespace.md)

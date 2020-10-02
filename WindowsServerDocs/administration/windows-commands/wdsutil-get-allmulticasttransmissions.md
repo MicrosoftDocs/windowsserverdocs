@@ -1,6 +1,6 @@
 ---
-title: get-AllMulticastTransmissions
-description: Reference article for get-AllMulticastTransmissions, which displays information about all multicast transmissions on a server.
+title: wdsutil get-allmulticasttransmissions
+description: Reference article for wdsutil get-allmulticasttransmissions, which displays information about all multicast transmissions on a server.
 ms.topic: reference
 ms.assetid: 95b8fb79-7a8a-4f0c-88f4-92bc1111c67f
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-AllMulticastTransmissions
+
+# wdsutil get-allmulticasttransmissions
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -40,9 +41,10 @@ To view information about all transmissions, type:
   To view information about all transmissions except deactivated transmissions, type:
 - Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
 - Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
-  ## Additional References
-  - [Command-Line Syntax Key](command-line-syntax-key.md)
-  [wdsutilget-MulticastTransmission command](wdsutil-get-multicasttransmission.md)
-  [wdsutilnew-MulticastTransmission command](wdsutil-new-multicasttransmission.md)
-  [wdsutilremove-MulticastTransmission command](wdsutil-remove-multicasttransmission.md)
-  [wdsutil  start-MulticastTransmission](wdsutil-start-multicasttransmission.md)
+
+## Additional References
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+- [wdsutil get-multicasttransmission command](wdsutil-get-multicasttransmission.md)
+- [wdsutil new-multicasttransmission command](wdsutil-new-multicasttransmission.md)
+- [wdsutil remove-multicasttransmission command](wdsutil-remove-multicasttransmission.md)
+- [wdsutil start-multicasttransmission command](wdsutil-start-multicasttransmission.md)

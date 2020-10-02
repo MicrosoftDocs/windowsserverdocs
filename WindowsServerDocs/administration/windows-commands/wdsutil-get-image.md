@@ -1,6 +1,6 @@
 ---
-title: get-Image
-description: Reference article for get-Image, which retrieves information about an image.
+title: wdsutil get-image
+description: Reference article for wdsutil get-image, which retrieves information about an image.
 ms.topic: reference
 ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-Image
+
+# wdsutil get-image
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -17,37 +18,37 @@ Retrieves information about an image.
 ## Syntax
 for boot images:
 ```
-wdsutil [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>]
+wdsutil [Options] /Get-Image image:<Image name> [/Server:<Server name> imagetype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>]
 ```
 for install images:
 ```
-wdsutil [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>] [/Filename:<File name>]
+wdsutil [Options] /Get-image image:<Image name> [/Server:<Server name> imagetype:Install imagegroup:<Image group name>] [/Filename:<File name>]
 ```
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-media:<Image name>|Specifies the name of the image.|
+| \image:<Image name>|Specifies the name of the image.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-mediatype:{Boot &#124; Install}|Specifies the type of image.|
+| imagetype:{Boot &#124; Install}|Specifies the type of image.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image. Because it is possible to have the same image name for boot images in different architectures, specifying the architecture value ensures that the correct image is returned.|
 |[/Filename:<File name>]|if the image cannot be uniquely identified by name, you must use this option to specify the file name.|
-|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group is specified and only one image group exists on the server, that group will be used. If more than one image group exists on the server, you must use this parameter to specify the image group.|
+|\imagegroup:<Image group name>]|Specifies the image group that contains the image. If no image group is specified and only one image group exists on the server, that group will be used. If more than one image group exists on the server, you must use this parameter to specify the image group.|
 ## Examples
 To retrieve information about a boot image, type one of the following:
 ```
-wdsutil /Get-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86
-wdsutil /verbose /Get-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x86 /Filename:boot.wim
+wdsutil /Get-Image image:WinPE boot imagetype:Boot /Architecture:x86
+wdsutil /verbose /Get-Image image:WinPE boot image /Server:MyWDSServer imagetype:Boot /Architecture:x86 /Filename:boot.wim
 ```
 To retrieve information about an install image, type one of the following:
 ```
-wdsutil /Get-Imagmedia:Windows Vista with Officemediatype:Install
-wdsutil /verbose /Get-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
+wdsutil /Get-Image:Windows Vista with Office imagetype:Install
+wdsutil /verbose /Get-Image:Windows Vista with Office /Server:MyWDSServer imagetype:Install imagegroup:ImageGroup1 /Filename:install.wim
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutiladd-Image command](wdsutil-add-image.md)
-[wdsutilcopy-Image command](wdsutil-copy-image.md)
-[wdsutilExport-Image command](wdsutil-export-image.md)
-[wdsutilremove-Image command](wdsutil-remove-image.md)
-[wdsutilreplace-Image command](wdsutil-replace-image.md)
-[wdsutil  set-Image](wdsutil-set-image.md)
+- [wdsutil add-image command](wdsutil-add-image.md)
+- [wdsutil copy-image command](wdsutil-copy-image.md)
+- [wdsutil export-image command](wdsutil-export-image.md)
+- [wdsutil remove-image command](wdsutil-remove-image.md)
+- [wdsutil replace-image command](wdsutil-replace-image.md)
+- [wdsutil set-image command](wdsutil-set-image.md)

@@ -1,6 +1,6 @@
 ---
-title: get-DriverGroup
-description: Reference article for get-DriverGroup, which displays information about the driver groups on a server.
+title: wdsutil get-drivergroup
+description: Reference article for wdsutil get-drivergroup, which displays information about the driver groups on a server.
 ms.topic: reference
 ms.assetid: 7cfe10c3-a63f-48e7-bef9-f6b474b4ddbe
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-DriverGroup
+
+# wdsutil get-drivergroup
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -34,4 +35,4 @@ wdsutil /Get-DriverGroup /DriverGroup:printerdrivers /Server:MyWdsServer /Show:F
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutilget-AllDriverGroups command](wdsutil-get-alldrivergroups.md)
+- [wdsutil get-alldrivergroups command](wdsutil-get-alldrivergroups.md)
