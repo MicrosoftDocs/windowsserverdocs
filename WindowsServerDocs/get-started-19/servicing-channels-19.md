@@ -35,6 +35,7 @@ The Semi-Annual Channel is available to volume-licensed customers with [Software
 > **The current Semi-Annual Channel release is Windows Server, version 2004**. If you want to put servers in this channel, you should install Windows Server, version 2004, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
 
 In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
+Starting with fall 2020 (20H2) releases, we changed the identifcation. Instead of a month, we will name the release based on the release cycle. For example: **version 20H2**, for a release in second half of the year 2020, or **version 21H1**, for a release in the first half of the year 2021.
 
 ## Should you keep servers on the LTSC or move them to the Semi-Annual Channel?
 
@@ -56,7 +57,8 @@ The following table summarizes the key differences between the channels:
 | Installation options | Server Core and Server with Desktop Experience | Server Core for container host and image and Nano Server container image |
 
 > [!IMPORTANT]
-> Please understand that the set of roles and features in Windows Server SAC differs from Windows Server LTSC Core. For example you cannot use Windows Server SAC as foundation for services like S2D (Storage Spaces Direct). 
+> Please understand that the set of roles and features in Windows Server SAC, only available as Server Core, differs from Windows Server LTSC, installed in Server Core.
+> For example you cannot use Windows Server SAC as foundation for services like S2D (Storage Spaces Direct).
 
 ## Device compatibility
 
