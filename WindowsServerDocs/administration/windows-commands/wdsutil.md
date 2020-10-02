@@ -30,7 +30,7 @@ wdsutil is a command-line utility used for managing your Windows Deployment Serv
 |[wdsutil get command](wdsutil-get.md)|Retrieves properties and attributes about the specified object.|
 |[wdsutil initialize-server command](wdsutil-initialize-server.md)|Configures a Windows Deployment Services server for initial use.|
 |[wdsutil new command](wdsutil-new.md)|creates new capture and discover images as well as multicast transmissions and namespaces.|
-|[wdsutil progress command](the-progress.md)|Displays the progress status while a command is being executed.|
+|[wdsutil progress command](wdsutil-progress.md)|Displays the progress status while a command is being executed.|
 |[wdsutil reject-autoadddevices command](wdsutil-reject-autoadddevices.md)|Rejects computers that are pending administrator approval.|
 |[wdsutil remove command](wdsutil-remove.md)|removes objects.|
 |[wdsutil replace-image command](wdsutil-replace-image.md)|replaces a boot or installation image with a new version of that image.|
