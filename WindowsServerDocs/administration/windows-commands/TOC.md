@@ -761,7 +761,7 @@
 #### [wdsutil remove multicasttransmission](wdsutil-remove-multicasttransmission.md)
 #### [wdsutil remove namespace](wdsutil-remove-namespace.md)
 #### [wdsutil replace image](wdsutil-replace-image.md)
-#### [wdsutil set](wdsutil-set.md)(wdsutil-set-drivergroup.md)
+#### [wdsutil set](wdsutil-set.md)
 #### [wdsutil set device](wdsutil-set-device.md)
 #### [wdsutil set drivergroup](wdsutil-set-drivergroup.md)
 #### [wdsutil set drivergroupfilter](wdsutil-set-drivergroupfilter.md)

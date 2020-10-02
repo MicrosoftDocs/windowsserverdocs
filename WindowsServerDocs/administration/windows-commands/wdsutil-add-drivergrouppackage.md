@@ -37,6 +37,6 @@ wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /DriverPackage:XYZ
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutiladd-DriverGroupPackages command](wdsutil-add-drivergrouppackages.md)
-[wdsutiladd-DriverPackage command](wdsutil-add-driverpackage.md)
-[wdsutiladd-AllDriverPackages subcommand](wdsutil-add-alldriverpackages-subcommand.md)
+[wdsutil add-DriverGroupPackages command](wdsutil-add-drivergrouppackages.md)
+[wdsutil add-DriverPackage command](wdsutil-add-driverpackage.md)
+[wdsutil add-AllDriverPackages command](wdsutil-add-alldriverpackages.md)

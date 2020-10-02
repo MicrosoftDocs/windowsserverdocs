@@ -1,6 +1,6 @@
 ---
-title: get-AllImages
-description: Reference article for get-AllImages, which retrieves information about all images on a server.
+title: wdsutil get-allimages
+description: Reference article for wdsutil get-allimages, which retrieves information about all images on a server.
 ms.topic: reference
 ms.assetid: 19de3720-4315-415a-8dc6-486caa0b2100
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-AllImages
+
+# wdsutil get-allimages
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -32,9 +33,9 @@ wdsutil /verbose /Get-AllImages /Server:MyWDSServer /Show:All /detailed
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutiladd-Image command](wdsutil-add-image.md)
-[wdsutilcopy-Image command](wdsutil-copy-image.md)
-[wdsutilExport-Image command](wdsutil-export-image.md)
-[wdsutilremove-Image command](wdsutil-remove-image.md)
-[wdsutilreplace-Image command](wdsutil-replace-image.md)
-[wdsutil  set-Image](wdsutil-set-image.md)
+- [wdsutil add-image command](wdsutil-add-image.md)
+- [wdsutil copy-image command](wdsutil-copy-image.md)
+- [wdsutil export-image command](wdsutil-export-image.md)
+- [wdsutil remove-image command](wdsutil-remove-image.md)
+- [wdsutil replace-image command](wdsutil-replace-image.md)
+- [wdsutil set-image command](wdsutil-set-image.md)

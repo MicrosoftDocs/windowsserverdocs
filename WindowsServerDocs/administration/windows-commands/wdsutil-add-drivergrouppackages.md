@@ -38,6 +38,6 @@ wdsutil /verbose /add-DriverGroupPackages /DriverGroup:DisplayDriversX86 /Filter
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutiladd-DriverGroupPackage command](wdsutil-add-drivergrouppackage.md)
-[wdsutiladd-DriverPackage command](wdsutil-add-driverpackage.md)
-[wdsutiladd-AllDriverPackages subcommand](wdsutil-add-alldriverpackages-subcommand.md)
+[wdsutil add-DriverGroupPackage command](wdsutil-add-drivergrouppackage.md)
+[wdsutil add-DriverPackage command](wdsutil-add-driverpackage.md)
+[wdsutil add-AllDriverPackages](wdsutil-add-alldriverpackages.md)
