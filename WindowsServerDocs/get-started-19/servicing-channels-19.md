@@ -55,6 +55,9 @@ The following table summarizes the key differences between the channels:
 | Who can use | All customers through all channels | Software Assurance and cloud customers only |
 | Installation options | Server Core and Server with Desktop Experience | Server Core for container host and image and Nano Server container image |
 
+> [!IMPORTANT]
+> Please understand that the set of roles and features in Windows Server SAC differs from Windows Server LTSC Core. For example you cannot use Windows Server SAC as foundation for services like S2D (Storage Spaces Direct). 
+
 ## Device compatibility
 
 Unless otherwise communicated, the minimum hardware requirements to run the Semi-Annual Channel releases will be the same as the most recent Long-Term Servicing Channel release of Windows Server. For example, **the current Long-Term Servicing Channel release is Windows Server 2019**. Most hardware drivers will continue to function in these releases.
@@ -75,7 +78,7 @@ You've likely already chosen to use at least one of these options based on your 
 
 ## Where to obtain Semi-Annual Channel releases
 
-Semi-Annual Channel releases should be installed as a clean installation.
+Semi-Annual Channel releases should be installed as a clean installation. It is possible to use inplace upgrade via ISO from one SAC to a later version.
 
 - Volume Licensing Service Center (VLSC): Volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release.
 
@@ -90,6 +93,10 @@ Microsoft depends on receiving feedback throughout the development process so th
 
 - If you're using Microsoft Azure, this release should automatically be activated.
 - If you've obtained this release from the Volume Licensing Service Center or Visual Studio Subscriptions, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment. For more info, see [KMS client setup keys](../get-started/kmsclientkeys.md).
+
+> [!Note]
+> For easier maintenance and management of activation you can use ADBA (Active Directory based activation) for Servers 2012 or later, including Windows Server SAC.
+> In addition you can manage your licenses using VAMT 3.x (Volume Activation Management Tool) which is part of the latest ADK.
 
 Semi-Annual Channel releases that were released before Windows Server 2019 use the Windows Server 2016 CSVLK.
 
