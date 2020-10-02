@@ -1,6 +1,6 @@
 ---
-title: wdsutil add-imagedriverpackage
-description: Reference article for wdsutil add-imagedriverpackage, which adds driver packages from the driver store to a boot image.
+title: wdsutil add-imagedriverpackages
+description: Reference article for wdsutil add-imagedriverpackages, which adds driver packages from the driver store to a boot image.
 ms.topic: reference
 ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
 ms.author: lizross
@@ -9,7 +9,7 @@ manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# wdsutil add-imagedriverpackage
+# wdsutil add-imagedriverpackages
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

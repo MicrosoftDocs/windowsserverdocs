@@ -6338,7 +6338,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-stop-server-command.md",
       "redirect_url": "/windows-server/administration/windows-commands/the-stop-server-command",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-uninitialize-server-option.md",
