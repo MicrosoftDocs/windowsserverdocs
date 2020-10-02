@@ -1,6 +1,6 @@
 ---
-title: Export-Image
-description: Reference article for Export-Image, which exports an existing image from the image store to another Windows Image (.wim) file.
+title: wdsutil export-image
+description: Reference article for wdsutil export-image, which exports an existing image from the image store to another Windows Image (.wim) file.
 ms.topic: reference
 ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Export-Image
+
+# wdsutil export-image
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -17,8 +18,8 @@ Exports an existing image from the image store to another Windows Image (.wim) f
 ## Syntax
 for boot images:
 ```
-wdsutil [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
-   mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>]
+wdsutil [Options] /Export-Image image:<Image name> [/Server:<Server name>]
+    imagetype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>]
      /DestinationImage
          /Filepath:<File path and name>
          [/Name:<Name>]
@@ -27,8 +28,8 @@ wdsutil [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
 ```
 for install images:
 ```
-wdsutil [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
-   mediatype:InstallmediaGroup:<Image group name>]
+wdsutil [Options] /Export-Image image:<Image name> [/Server:<Server name>]
+    imagetype:Install imageGroup:<Image group name>]
      [/Filename:<File name>]
      /DestinationImage
          /Filepath:<File path and name>
@@ -39,10 +40,10 @@ wdsutil [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-media:<Image name>|Specifies the name of the image to be exported.|
+| image:<Image name>|Specifies the name of the image to be exported.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-mediatype:{Boot &#124; Install}|Specifies the type of image to be exported.|
-|\mediaGroup:<Image group name>]|Specifies the image group containing the image to be exported. If no image group name is specified and only one image group exists on the server, that image group will be used by default. If more than one image group exists on the server, the image group must be specified.|
+| imagetype:{Boot &#124; Install}|Specifies the type of image to be exported.|
+|\imageGroup:<Image group name>]|Specifies the image group containing the image to be exported. If no image group name is specified and only one image group exists on the server, that image group will be used by default. If more than one image group exists on the server, the image group must be specified.|
 |/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the image to be exported. Because it is possible to have the same image name for boot images in different architectures, specifying the architecture value ensures that the correct image will be returned.|
 |[/Filename:<Filename>]|if the image cannot be uniquely identified by name, the file name must be specified.|
 |/DestinationImage|Specifies the settings for the destination image. You can specify these settings using the following options:<p>-   /Filepath:<File path and name> - Specifies the full file path for the new image.<br />-   [/Name:<Name>] - Sets the display name of the image. If no name is specified, the display name of the source image will be used.<br />-   [/Description: <Description>] - Sets the description of the image.|
@@ -50,21 +51,21 @@ mediatype:{Boot &#124; Install}|Specifies the type of image to be exported.|
 ## Examples
 To export a boot image, type one of the following:
 ```
-wdsutil /Export-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86 /DestinationImage /Filepath:C:\temp\boot.wim
-wdsutil /verbose /Progress /Export-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim
+wdsutil /Export-Image image:WinPE boot image imagetype:Boot /Architecture:x86 /DestinationImage /Filepath:C:\temp\boot.wim
+wdsutil /verbose /Progress /Export-Image image:WinPE boot image /Server:MyWDSServer imagetype:Boot /Architecture:x64 /Filename:boot.wim
 /DestinationImage /Filepath:\\Server\Share\ExportImage.wim /Name:Exported WinPE image /Description:WinPE Image from WDS server /Overwrite:Yes
 ```
 To export an install image, type one of the following:
 ```
-wdsutil /Export-Imagmedia:Windows Vista with Officemediatype:Install /DestinationImage /Filepath:C:\Temp\Install.wim
-wdsutil /verbose /Progress /Export-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
+wdsutil /Export-Image image:Windows Vista with Office imagetype:Install /DestinationImage /Filepath:C:\Temp\Install.wim
+wdsutil /verbose /Progress /Export-Image image:Windows Vista with Office /Server:MyWDSServer imagetype:Instal imageGroup:ImageGroup1
 /Filename:install.wim /DestinationImage /Filepath:\\server\share\export.wim /Name:Exported Windows image /Description:Windows Vista image from WDS server /Overwrite:append
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutiladd-Image command](wdsutil-add-image.md)
-[wdsutilcopy-Image command](wdsutil-copy-image.md)
-[wdsutilget-Image command](wdsutil-get-image.md)
-[wdsutilremove-Image command](wdsutil-remove-image.md)
-[wdsutilreplace-Image command](wdsutil-replace-image.md)
-[wdsutil  set-Image](wdsutil-set-image.md)
+- [wdsutil add-image command](wdsutil-add-image.md)
+- [wdsutil copy-image command](wdsutil-copy-image.md)
+- [wdsutil get-image command](wdsutil-get-image.md)
+- [wdsutil remove-image command](wdsutil-remove-image.md)
+- [wdsutil replace-image command](wdsutil-replace-image.md)
+- [wdsutil set-image command](wdsutil-set-image.md)

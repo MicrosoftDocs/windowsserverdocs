@@ -1,6 +1,6 @@
 ---
-title: add-Image
-description: Reference article for add-Image, which adds images to a Windows Deployment Services server.
+title: wdsutil add-image
+description: Reference article for wdsutil add-image, which adds images to a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: d5b6f4da-90ba-4b0e-9423-66c8ef5172e2
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# add-Image
+
+# wdsutil add-image
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -17,16 +18,16 @@ Adds images to a Windows Deployment Services server.
 ## Syntax
 for boot images, use the following syntax:
 ```
-wdsutil /add-ImagmediaFile:<wim file path> [/Server:<Server name>mediatype:Boot [/Skipverify] [/Name:<Image name>] [/Description:<Image description>]
+wdsutil /add-Image imageFile:<wim file path> [/Server:<Server name> imagetype:Boot [/Skipverify] [/Name:<Image name>] [/Description:<Image description>]
 [/Filename:<New wim file name>]
 ```
 for install images, use the following syntax:
 ```
-wdsutil /add-ImagmediaFile:<wim file path>
+wdsutil /add-Image imageFile:<wim file path>
      [/Server:<Server name>]
-   mediatype:Install
+    imagetype:Install
      [/Skipverify]
-    mediaGroup:<Image group name>]
+     imageGroup:<Image group name>]
      [/SingleImage:<Single image name>]
          [/Name:<Name>]
          [/Description:<Description>]
@@ -36,35 +37,35 @@ wdsutil /add-ImagmediaFile:<wim file path>
 ### Parameters
 |Parameter|Description|
 |-------|--------|
-mediaFile:<.wim file path>|Specifies the full path and file name of the Windows Image (.wim) file that contains the images to be added.|
+|imageFile:<.wim file path>|Specifies the full path and file name of the Windows Image (.wim) file that contains the images to be added.|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If a server name is not specified, the local server will be used.|
-mediatype:{Boot&#124;Install}|Specifies the type of images to be added.|
+| imagetype:{Boot&#124;Install}|Specifies the type of images to be added.|
 |[/Skipverify]|Specifies that integrity verification will not be performed on the source image file before the image is added.|
 |[/Name:<Name>]|Sets the display name of the image.|
 |[/Description:<Description>]|Sets the description of the image.|
 |[/Filename:<Filename>]|Specifies the new file name for the .wim file. This enables you to change the file name of the .wim file when adding the image. If no file name is specified, the source image file name will be used. In all cases, Windows Deployment Services checks to determine whether the file name is unique in the boot image store of the destination computer.|
-|\mediaGroup:<Image group name>]|Specifies the name of the image group in which the images are to be added. If more than one image group exists on the server, the image group must be specified. If this is not specified and an image group does not already exist, a new image group will be created. Otherwise, the existing image group will be used.|
+|\imageGroup:<Image group name>]|Specifies the name of the image group in which the images are to be added. If more than one image group exists on the server, the image group must be specified. If this is not specified and an image group does not already exist, a new image group will be created. Otherwise, the existing image group will be used.|
 |[/SingleImage:<Single image name>] [/Name:<Name>] [/Description:<Description>]|Copies the specified single image out of a .wim file, and sets the image's display name and description.|
 |[/UnattendFile:<Unattend file path>]|Specifies the full path to the unattended installation file to be associated with the images that are being added. If **/SingleImage** is not specified, the same unattend file will be associated with all of the images in the .wim file.|
 ## Examples
 To add a boot image, type:
 ```
-wdsutil /add-ImagmediaFile:C:\MyFolder\Boot.wimmediatype:Boot
-wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share\Boot.wim /Server:MyWDSServemediatype:Boot /Name:My WinPE Image
+wdsutil /add-Image imageFile:C:\MyFolder\Boot.wim imagetype:Boot
+wdsutil /verbose /Progress /add-Image imageFile:\\MyServer\Share\Boot.wim /Server:MyWDSServer imagetype:Boot /Name:My WinPE Image
 /Description:WinPE Image containing the WDS Client /Filename:WDSBoot.wim
 ```
 To add an install image, type one of the following:
 ```
-wdsutil /add-ImagmediaFile:C:\MyFolder\Install.wimmediatype:Install
-wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
+wdsutil /add-Image imageFile:C:\MyFolder\Install.wim imagetype:Install
+wdsutil /verbose /Progress /add-Image imageFile:\\MyServer\Share \Install.wim /Server:MyWDSServer imagetype:Instal imageGroup:ImageGroup1
 /SingleImage:Windows Pro /Name:My WDS Image
 /Description:Windows Pro image with Microsoft Office /Filename:Win Pro.wim /UnattendFile:\\server\share\unattend.xml
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutilcopy-Image command](wdsutil-copy-image.md)
-[wdsutilExport-Image command](wdsutil-export-image.md)
-[wdsutilget-Image command](wdsutil-get-image.md)
-[wdsutilremove-Image command](wdsutil-remove-image.md)
-[wdsutilreplace-Image command](wdsutil-replace-image.md)
-[wdsutil  set-Image](wdsutil-set-image.md)
+- [wdsutil copy-image command](wdsutil-copy-image.md)
+- [wdsutil export-image command](wdsutil-export-image.md)
+- [wdsutil get-image command](wdsutil-get-image.md)
+- [wdsutil remove-image command](wdsutil-remove-image.md)
+- [wdsutil replace-image command](wdsutil-replace-image.md)
+- [wdsutil set-image command](wdsutil-set-image.md)

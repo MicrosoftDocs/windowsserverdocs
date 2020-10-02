@@ -1,6 +1,6 @@
 ---
-title: delete-AutoaddDevices
-description: Reference article for delete-AutoaddDevices, which deletes computers that are pending, rejected, or approved from the Auto-add database.
+title: wdsutil delete-autoadddevices
+description: Reference article for wdsutil delete-autoadddevices, which deletes computers that are pending, rejected, or approved from the Auto-add database.
 ms.topic: reference
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# delete-AutoaddDevices
+
+# wdsutil delete-autoadddevices
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -34,6 +35,6 @@ wdsutil /verbose /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:Approved
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutilApprove-AutoaddDevices command](wdsutil-approve-autoadddevices.md)
-[wdsutilget-AutoaddDevices command](wdsutil-get-autoadddevices.md)
-[Using The Reject-AutoaddDevices command](wdsutil-reject-autoadddevices.md)
+- [wdsutil approve-autoadddevices command](wdsutil-approve-autoadddevices.md)
+- [wdsutil get-autoadddevices command](wdsutil-get-autoadddevices.md)
+- [wdsutil reject-autoadddevices command](wdsutil-reject-autoadddevices.md)

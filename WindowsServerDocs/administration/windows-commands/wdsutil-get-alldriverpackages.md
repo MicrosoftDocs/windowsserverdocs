@@ -1,6 +1,6 @@
 ---
-title: get-AllDriverPackages
-description: Reference article for get-AllDriverPackages, which displays information about all the driver packages on a server that match the specified search criteria.
+title: wdsutil get-alldriverpackages
+description: Reference article for wdsutil get-alldriverpackages, which displays information about all the driver packages on a server that match the specified search criteria.
 ms.topic: reference
 ms.assetid: 9eb8fcb7-ef46-4c8d-9623-8969a3c8b8a4
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-AllDriverPackages
+
+# wdsutil get-alldriverpackages
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -38,5 +39,5 @@ wdsutil /Get-AllDriverPackages /Show:Drivers /Filtertype:Packagedateadded /Opera
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutilget-DriverPackage command](wdsutil-get-driverpackage.md)
-[wdsutilget-DriverPackageFile command](wdsutil-get-driverpackagefile.md)
+- [wdsutil get-driverpackage command](wdsutil-get-driverpackage.md)
+- [wdsutil get-driverpackagefile command](wdsutil-get-driverpackagefile.md)

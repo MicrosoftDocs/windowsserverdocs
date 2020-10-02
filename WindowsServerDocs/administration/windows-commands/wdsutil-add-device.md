@@ -1,6 +1,6 @@
 ---
-title: add-Device
-description: Reference article for add-Device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
+title: wdsutil add-device
+description: Reference article for wdsutil add-device, which prestages a computer in active directory Domain Services. Prestaged computers are also called known computers.
 ms.topic: reference
 ms.assetid: 1e599cc4-464a-421b-b6bb-c101af154131
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# add-Device
+
+# wdsutil add-device
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -45,7 +46,7 @@ wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6}
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutilget-AllDevices command](wdsutil-get-alldevices.md)
-[wdsutilget-Device command](wdsutil-get-device.md)
-[wdsutil  set-Device](wdsutil-set-device.md)
-[New-WdsClient](/previous-versions/windows/powershell-scripting/dn283430(v=wps.630))
+- [wdsutil get-alldevices command](wdsutil-get-alldevices.md)
+- [wdsutil get-device command](wdsutil-get-device.md)
+- [wdsutil set-device command](wdsutil-set-device.md)
+- [New-WdsClient](/previous-versions/windows/powershell-scripting/dn283430(v=wps.630))

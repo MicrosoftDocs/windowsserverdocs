@@ -1,6 +1,6 @@
 ---
-title: enable-Server
-description: Reference article for enable-Server, which enables all services for Windows Deployment Services.
+title: wdsutil enable-server
+description: Reference article for wdsutil enable-server, which enables all services for Windows Deployment Services.
 ms.topic: reference
 ms.assetid: 939ffbfb-cf3c-4310-9627-6e7e0c0644d6
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# enable-Server
+
+# wdsutil enable-server
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -30,10 +31,10 @@ wdsutil /verbose /Enable-Server /Server:MyWDSServer
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutildisable-Server command](wdsutil-disable-server.md)
-[wdsutilget-Server command](wdsutil-get-server.md)
-[wdsutilInitialize-Server command](wdsutil-initialize-server.md)
-[wdsutil  set-Server](wdsutil-set-server.md)
-[wdsutil  start-Server](wdsutil-start-server.md)
-[wdsutil  stop-Server](wdsutil-stop-server.md)
-[The uninitialize-Server Option](the-uninitialize-server-option.md)
+[wdsutil disable-server command](wdsutil-disable-server.md)
+[wdsutil get-Server command](wdsutil-get-server.md)
+[wdsutil initialize-server command](wdsutil-initialize-server.md)
+[wdsutil set-server command](wdsutil-set-server.md)
+[wdsutil start-server command](wdsutil-start-server.md)
+[wdsutil stop-server command](wdsutil-stop-server.md)
+[wdsutil uninitialize-server command](wdsutil-uninitialize-server.md)

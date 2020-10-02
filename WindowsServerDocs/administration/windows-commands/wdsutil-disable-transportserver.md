@@ -1,6 +1,6 @@
 ---
-title: disable-TransportServer
-description: Reference article for disable-TransportServer, which disables all services for a Transport Server.
+title: wdsutil disable-transportserver
+description: Reference article for wdsutil disable-transportserver, which disables all services for a Transport Server.
 ms.topic: reference
 ms.assetid: a009706b-8e89-486b-8e3d-512cd9f4de74
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# disable-TransportServer
+
+# wdsutil disable-transportserver
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -30,8 +31,8 @@ wdsutil /verbose /Disable-TransportServer /Server:MyWDSServer
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutilenable-TransportServer command](wdsutil-enable-transportserver.md)
-[wdsutilget-TransportServer command](wdsutil-get-transportserver.md)
-[wdsutil  set-TransportServer](wdsutil-set-transportserver.md)
-[wdsutil  start-TransportServer](wdsutil-start-transportserver.md)
-[wdsutil  stop-TransportServer](wdsutil-stop-transportserver.md)
+- [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)
+- [wdsutil get-transportserver command](wdsutil-get-transportserver.md)
+- [wdsutil set-transportserver command](wdsutil-set-transportserver.md)
+- [wdsutil start-transportserver command](wdsutil-start-transportserver.md)
+- [wdsutil stop-transportserver command](wdsutil-stop-transportserver.md)

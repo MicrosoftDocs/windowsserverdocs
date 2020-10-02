@@ -1,6 +1,6 @@
 ---
-title: get-AllImageGroups
-description: Reference article for get-AllImageGroups, which retrieves information about all image groups on a server and all images in those image groups.
+title: wdsutil get-allimagegroups
+description: Reference article for wdsutil get-allimagegroups, which retrieves information about all image groups on a server and all images in those image groups.
 ms.topic: reference
 ms.assetid: 2ca06533-bcf5-4590-ac8e-263d6c9874f8
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-AllImageGroups
+
+# wdsutil get-allimagegroups
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -31,7 +32,7 @@ wdsutil /verbose /Get-AllImageGroups /Server:MyWDSServer /detailed
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutiladd-ImageGroup command](wdsutil-add-imagegroup.md)
-[wdsutilget-ImageGroup command](wdsutil-get-imagegroup.md)
-[wdsutilremove-ImageGroup command](wdsutil-remove-imagegroup.md)
-[wdsutil  set-ImageGroup](wdsutil-set-imagegroup.md)
+- [wdsutil add-imagegroup command](wdsutil-add-imagegroup.md)
+- [wdsutil get-imagegroup command](wdsutil-get-imagegroup.md)
+- [wdsutil remove-imagegroup command](wdsutil-remove-imagegroup.md)
+- [wdsutil set-imagegroup command](wdsutil-set-imagegroup.md)

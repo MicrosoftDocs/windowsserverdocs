@@ -1,6 +1,6 @@
 ---
-title: Approve-AutoaddDevices
-description: Reference article for Approve-AutoaddDevices, which approves computers that are pending administrative approval.
+title: wdsutil approve-autoadddevices
+description: Reference article for wdsutil approve-autoadddevices, which approves computers that are pending administrative approval.
 ms.topic: reference
 ms.assetid: 8d76e8d3-ab35-429c-be7b-904f95d0782d
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Approve-AutoaddDevices
+
+# wdsutil approve-autoadddevices
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -49,6 +50,6 @@ wdsutil /verbose /Approve-AutoaddDevices /RequestId:ALL
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutildelete-AutoaddDevices command](wdsutil-delete-autoadddevices.md)
-[wdsutilget-AutoaddDevices command](wdsutil-get-autoadddevices.md)
-[Using The Reject-AutoaddDevices command](wdsutil-reject-autoadddevices.md)
+- [wdsutil delete-autoadddevices command](wdsutil-delete-autoadddevices.md)
+- [wdsutil get-autoadddevices command](wdsutil-get-autoadddevices.md)
+- [wdsutil reject-autoadddevices command](wdsutil-reject-autoadddevices.md)

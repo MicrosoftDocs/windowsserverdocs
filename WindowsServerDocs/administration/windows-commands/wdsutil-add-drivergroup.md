@@ -1,6 +1,6 @@
 ---
-title: add-DriverGroup
-description: Reference article for add-DriverGroup, which adds a driver group to the server.
+title: wdsutil add-drivergroup
+description: Reference article for wdsutil add-drivergroup, which adds a driver group to the server.
 ms.topic: reference
 ms.assetid: 2a92fe8f-03f9-462a-b99e-f23275259807
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# add-DriverGroup
+
+# wdsutil add-drivergroup
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -16,8 +17,7 @@ Adds a driver group to the server.
 
 ## Syntax
 ```
-wdsutil /add-DriverGroup /DriverGroup:<Group Name>\n\
-[/Server:<Server name>] [/Enabled:{Yes | No}] [/Applicability:{Matched | All}] [/Filtertype:<Filter type> /Policy:{Include | Exclude} /Value:<Value> [/Value:<Value> ...]]
+wdsutil /add-DriverGroup /DriverGroup:<Group Name>\n\ [/Server:<Server name>] [/Enabled:{Yes | No}] [/Applicability:{Matched | All}] [/Filtertype:<Filter type> /Policy:{Include | Exclude} /Value:<Value> [/Value:<Value> ...]]
 ```
 ### Parameters
 
@@ -41,6 +41,6 @@ wdsutil /add-DriverGroup /DriverGroup:printerdrivers /Applicability:All /Filtert
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutiladd-DriverGroupPackage command](wdsutil-add-drivergrouppackage.md)
-[wdsutiladd-DriverGroupPackages command](wdsutil-add-drivergrouppackages.md)
-[wdsutiladd-DriverGroupFilter command](wdsutil-add-drivergroupfilter.md)
+- [wdsutiladd-drivergrouppackage command](wdsutil-add-drivergrouppackage.md)
+- [wdsutiladd-drivergrouppackages command](wdsutil-add-drivergrouppackages.md)
+- [wdsutiladd-drivergroupfilter command](wdsutil-add-drivergroupfilter.md)

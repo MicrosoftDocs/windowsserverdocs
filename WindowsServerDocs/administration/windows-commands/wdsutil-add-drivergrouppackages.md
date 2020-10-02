@@ -1,6 +1,6 @@
 ---
-title: add-DriverGroupPackages
-description: Reference article for add-DriverGroupPackages, which add driver group packages.
+title: wdsutil add-drivergrouppackages
+description: Reference article for wdsutil add-drivergrouppackages, which add driver group packages.
 ms.topic: reference
 ms.assetid: 29022f53-ce14-4b2d-a81a-679c18e022b2
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# add-DriverGroupPackages
+
+# wdsutil add-drivergrouppackages
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -38,6 +39,6 @@ wdsutil /verbose /add-DriverGroupPackages /DriverGroup:DisplayDriversX86 /Filter
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutil add-DriverGroupPackage command](wdsutil-add-drivergrouppackage.md)
-[wdsutil add-DriverPackage command](wdsutil-add-driverpackage.md)
-[wdsutil add-AllDriverPackages](wdsutil-add-alldriverpackages.md)
+- [wdsutil add-drivergrouppackage command](wdsutil-add-drivergrouppackage.md)
+- [wdsutil add-driverpackage command](wdsutil-add-driverpackage.md)
+- [wdsutil add-alldriverpackages command](wdsutil-add-alldriverpackages.md)

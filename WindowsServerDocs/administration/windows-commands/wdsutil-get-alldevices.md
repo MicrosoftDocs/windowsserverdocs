@@ -1,6 +1,6 @@
 ---
-title: get-AllDevices
-description: Reference article for get-AllDevices, which displays the Windows Deployment Services properties of all prestaged computers.
+title: wdsutil get-alldevices
+description: Reference article for wdsutil get-alldevices, which displays the Windows Deployment Services properties of all prestaged computers.
 ms.topic: reference
 ms.assetid: 5824b3d2-2df1-4ed6-a289-e6c47c13fea2
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# get-AllDevices
+
+# wdsutil get-alldevices
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -31,6 +32,6 @@ wdsutil /verbose /Get-AllDevices /forest:Yes /ReferralServer:MyWDSServer
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutil  set-Device](wdsutil-set-device.md)
-[wdsutiladd-Device command](wdsutil-add-device.md)
-[wdsutilget-Device command](wdsutil-get-device.md)
+- [wdsutil set-device command](wdsutil-set-device.md)
+- [wdsutil add-device command](wdsutil-add-device.md)
+- [wdsutil get-device command](wdsutil-get-device.md)

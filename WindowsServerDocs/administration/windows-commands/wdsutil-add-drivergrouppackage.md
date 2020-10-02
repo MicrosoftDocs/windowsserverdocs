@@ -1,6 +1,6 @@
 ---
-title: add-DriverGroupPackage
-description: Reference article for add-DriverGroupPackage, which adds a driver package to a driver group.
+title: wdsutil add-drivergrouppackage
+description: Reference article for wdsutil add-drivergrouppackage, which adds a driver package to a driver group.
 ms.topic: reference
 ms.assetid: 7cd323ae-9049-448e-a460-6c7d6462d4c8
 ms.author: lizross
@@ -8,7 +8,8 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# add-DriverGroupPackage
+
+# wdsutil add-drivergrouppackage
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -37,6 +38,6 @@ wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /DriverPackage:XYZ
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[wdsutil add-DriverGroupPackages command](wdsutil-add-drivergrouppackages.md)
-[wdsutil add-DriverPackage command](wdsutil-add-driverpackage.md)
-[wdsutil add-AllDriverPackages command](wdsutil-add-alldriverpackages.md)
+- [wdsutil add-drivergrouppackages command](wdsutil-add-drivergrouppackages.md)
+- [wdsutil add-driverpackage command](wdsutil-add-driverpackage.md)
+- [wdsutil add-alldriverpackages command](wdsutil-add-alldriverpackages.md)
