@@ -1,6 +1,6 @@
 ---
-title: Subcommand set-Image
-description: Reference article for Subcommand set-Image, which changes the attributes of an image.
+title: wdsutil set-image
+description: Reference article for wdsutil set-image, which changes the attributes of an image.
 ms.topic: reference
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
 ms.author: lizross
@@ -8,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: set-Image
+# wdsutil set-image
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -62,9 +62,9 @@ wdsutil /verbose /Set-Imagmedia:Windows Vista with Office /Server:MyWDSServemedi
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the add-Image Command](using-the-add-image-command.md)
-[Using the copy-Image Command](using-the-copy-image-command.md)
-[Using the Export-Image Command](using-the-export-image-command.md)
-[Using the get-Image Command](using-the-get-image-command.md)
-[Using the remove-Image Command](using-the-remove-image-command.md)
-[Using the replace-Image Command](using-the-replace-image-command.md)
+- [wdsutil add-image command](wdsutil-add-image.md)
+- [wdsutil copy-image command](wdsutil-copy-image.md)
+- [wdsutil Export-image command](wdsutil-export-image.md)
+- [wdsutil get-image command](wdsutil-get-image.md)
+- [wdsutil remove-image command](wdsutil-remove-image.md)
+- [wdsutil replace-image command](wdsutil-replace-image.md)

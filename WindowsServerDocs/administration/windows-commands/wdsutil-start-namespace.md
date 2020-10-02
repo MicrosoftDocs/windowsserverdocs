@@ -1,5 +1,5 @@
 ---
-title: Subcommand start-Namespace
+title: wdsutil start-namespace
 description: Reference article for Subcommand start-Namespace, which starts a Scheduled-Cast namespace.
 ms.topic: reference
 ms.assetid: 2dd1c11e-6ab7-4129-9e3a-3f80e0ba59c0
@@ -8,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: start-Namespace
+# wdsutil start-namespace
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -33,6 +33,6 @@ wdsutil /start-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the get-AllNamespaces Command](using-the-get-allnamespaces-command.md)
-[Using the new-Namespace Command](using-the-new-namespace-command.md)
-[Using the remove-Namespace Command](using-the-remove-namespace-command.md)
+- [wdsutil get-allnamespaces command](wdsutil-get-allnamespaces.md)
+- [wdsutil new-namespace command](wdsutil-new-namespace.md)
+- [wdsutil remove-namespace command](wdsutil-remove-namespace.md)

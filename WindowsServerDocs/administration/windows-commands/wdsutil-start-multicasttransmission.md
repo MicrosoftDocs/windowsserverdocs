@@ -1,5 +1,5 @@
 ---
-title: Subcommand start-MulticastTransmission
+title: wdsutil start-multicasttransmission
 description: Reference article for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
 ms.topic: reference
 ms.assetid: a1b2d459-1ece-49d4-997c-9d206c463b61
@@ -8,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: start-MulticastTransmission
+# wdsutil start-multicasttransmission
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -59,7 +59,7 @@ wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemedia
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the get-AllMulticastTransmissions Command](using-the-get-allmulticasttransmissions-command.md)
-[Using the get-MulticastTransmission Command](using-the-get-multicasttransmission-command.md)
-[Using the new-MulticastTransmission Command](using-the-new-multicasttransmission-command.md)
-[Using the remove-MulticastTransmission Command](using-the-remove-multicasttransmission-command.md)
+- [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)
+- [wdsutil get-multicasttransmission command](wdsutil-get-multicasttransmission.md)
+- [wdsutil new-multicasttransmission command](wdsutil-new-multicasttransmission.md)
+- [wdsutil remove-multicasttransmission command](wdsutil-remove-multicasttransmission.md)

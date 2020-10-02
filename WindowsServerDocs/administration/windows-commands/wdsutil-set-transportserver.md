@@ -1,5 +1,5 @@
 ---
-title: Subcommand set-TransportServer
+title: wdsutil set-transportserver
 description: Reference article for Subcommand set-TransportServer, which sets configuration settings for a Transport Server.
 ms.topic: reference
 ms.assetid: 7863225c-f4b2-4cd0-b929-78a454bef249
@@ -8,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: set-TransportServer
+# wdsutil set-transportserver
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -51,8 +51,8 @@ wdsutil /Set-TransportServer /Server:MyWDSServer /ObtainIpv4From:Range /start:23
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the disable-TransportServer Command](using-the-disable-transportserver-command.md)
-[Using the enable-TransportServer Command](using-the-enable-transportserver-command.md)
-[Using the get-TransportServer Command](using-the-get-transportserver-command.md)
-[Subcommand: start-TransportServer](subcommand-start-transportserver.md)
-[Subcommand: stop-TransportServer](subcommand-stop-transportserver.md)
+- [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md)
+- [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)
+- [wdsutil get-transportserver command](wdsutil-get-transportserver.md)
+- [wdsutil start-transportserver command](wdsutil-start-transportserver.md)
+- [wdsutil stop-transportserver command](wdsutil-stop-transportserver.md)

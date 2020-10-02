@@ -1,10 +1,6 @@
 ---
-title: Subcommand stop-TransportServer
+title: wdsutil stop-transportserver
 description: Reference article for stop-TransportServer
-
-
-
-
 ms.topic: reference
 ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
 ms.author: lizross
@@ -12,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: stop-TransportServer
+# wdsutil stop-transportserver
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -33,8 +29,8 @@ wdsutil /verbose /Stop-TransportServer /Server:MyWDSServer
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the disable-TransportServer Command](using-the-disable-transportserver-command.md)
-[Using the enable-TransportServer Command](using-the-enable-transportserver-command.md)
-[Using the get-TransportServer Command](using-the-get-transportserver-command.md)
-[Subcommand: set-TransportServer](subcommand-set-transportserver.md)
-[Subcommand: start-TransportServer](subcommand-start-transportserver.md)
+- [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md)
+- [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)
+- [wdsutil get-transportserver command](wdsutil-get-transportserver.md)
+- [wdsutil set-transportserver command](wdsutil-set-transportserver.md)
+- [wdsutil start-transportserver command](wdsutil-start-transportserver.md)

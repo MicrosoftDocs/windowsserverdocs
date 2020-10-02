@@ -1,5 +1,5 @@
 ---
-title: Subcommand start-Server
+title: wdsutil start-server
 description: Reference article for Subcommand start-Server, which starts all services for a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: 1e4343e2-0a16-4e65-8769-c09adaef5680
@@ -8,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: start-Server
+# wdsutil start-server
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -30,10 +30,11 @@ wdsutil /verbose /start-Server /Server:MyWDSServer
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the disable-Server Command](using-the-disable-server-command.md)
-[Using the enable-Server Command](using-the-enable-server-command.md)
-[Using the get-Server Command](using-the-get-server-command.md)
-[Using the Initialize-Server Command](using-the-initialize-server-command.md)
-[Subcommand: set-Server](subcommand-set-server.md)
-[Subcommand: stop-Server](subcommand-stop-server.md)
-[The uninitialize-Server Option](the-uninitialize-server-option.md)
+- [wdsutil disable-server command](wdsutil-disable-server.md)
+- [wdsutil enable-server command](wdsutil-enable-server.md)
+- [wdsutil get-server command](wdsutil-get-server.md)
+- [wdsutil initialize-server command](wdsutil-initialize-server.md)
+- [wdsutil set-server command](wdsutil-set-server.md)
+- [wdsutil stop-server command](wdsutil-stop-server.md)
+- [wdsutil start-server command](wdsutil-start-server.md)
+- [wdsutil uninitialize-server command](wdsutil-uninitialize-server.md)

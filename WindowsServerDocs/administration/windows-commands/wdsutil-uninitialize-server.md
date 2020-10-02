@@ -1,32 +1,32 @@
 ---
-title: wdsutil stop-server
-description: Reference article for Subcommand stop-Server, which stops all services on a Windows Deployment Services server.
+title: wdsutil uninitialize-server
+description: Reference article for uninitialize-Server, which reverts changes made to the server during the initial server configuration.
 ms.topic: reference
-ms.assetid: 09f411c0-099f-4591-95fd-b77b3fd9118a
+ms.assetid: 015efb04-fe84-469f-bd81-49d0046296b2
 ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# wdsutil stop-server
+# wdsutil uninitialize-server
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Stops all services on a Windows Deployment Services server.
+Reverts changes made to the server during the initial server configuration. This includes changes made by either the **/initialize-server** option or the Windows Deployment Services mmc snap-in. Note that this command resets the server to an unconfigured state. This command does not modify the contents of the remoteInstall shared folder. Rather, it resets the server's state so that you can reinitialize the server.
 
 ## Syntax
 ```
-wdsutil [Options] /Stop-Server [/Server:<Server name>]
+wdsutil [Options] /Uninitialize-Server [/Server:<Server name>]
 ```
 ### Parameters
 |Parameter|Description|
 |-------|--------|
 |[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 ## Examples
-To stop the services, type one of the following:
+To reinitialize the server, type one of the following:
 ```
-wdsutil /Stop-Server
-wdsutil /verbose /Stop-Server /Server:MyWDSServer
+wdsutil /Uninitialize-Server
+wdsutil /verbose /Uninitialize-Server /Server:MyWDSServer
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
@@ -36,5 +36,4 @@ wdsutil /verbose /Stop-Server /Server:MyWDSServer
 - [wdsutil initialize-server command](wdsutil-initialize-server.md)
 - [wdsutil set-server command](wdsutil-set-server.md)
 - [wdsutil start-server command](wdsutil-start-server.md)
-- [wdsutil uninitialize-server command](wdsutil-uninitialize-server.md)
-
+- [wdsutil stop-server command](wdsutil-stop-server.md)

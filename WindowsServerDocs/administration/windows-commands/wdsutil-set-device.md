@@ -1,6 +1,6 @@
 ---
-title: Subcommand set-Device
-description: Reference article for Subcommand set-Device, which changes the attributes of a prestaged computer.
+title: wdsutil set-device
+description: Reference article for wdsutil set-device, which changes the attributes of a prestaged computer.
 ms.topic: reference
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
 ms.author: lizross
@@ -8,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: set-Device
+# wdsutil set-device
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -46,6 +46,6 @@ wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientU
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the add-Device command](using-the-add-device-command.md)
-[Using the get-AllDevices Command](using-the-get-alldevices-command.md)
-[Using the get-Device Command](using-the-get-device-command.md)
+- [wdsutil add-device command](wdsutil-add-device.md)
+- [wdsutil get-alldevices command](wdsutil-get-alldevices.md)
+- [wdsutil get-device command](wdsutil-get-device.md)

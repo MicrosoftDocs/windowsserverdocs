@@ -1,5 +1,5 @@
 ---
-title: Subcommand set-Server
+title: wdsutil set-server
 description: Reference article for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: da55c29d-a94a-4d73-877b-af480f906ca0
@@ -8,7 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
-# Subcommand: set-Server
+# wdsutil set-server
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -164,10 +164,10 @@ wdsutil /Set-server /UseDhcpPorts:No /DhcpOption60:Yes
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Using the disable-Server Command](using-the-disable-server-command.md)
-[Using the enable-Server Command](using-the-enable-server-command.md)
-[Using the get-Server Command](using-the-get-server-command.md)
-[Using the Initialize-Server Command](using-the-initialize-server-command.md)
-[Subcommand: start-Server](subcommand-start-server.md)
-[Subcommand: stop-Server](subcommand-stop-server.md)
-[The uninitialize-Server Option](the-uninitialize-server-option.md)
+- [wdsutil disable-server command](wdsutil-disable-server.md)
+- [wdsutil enable-server command](wdsutil-enable-server.md)
+- [wdsutil get-server command](wdsutil-get-server.md)
+- [wdsutil initialize-server command](wdsutil-initialize-server.md)
+- [wdsutil start-server command](wdsutil-start-server.md)
+- [wdsutil stop-server command](wdsutil-stop-server.md)
+- [wdsutil uninitialize-server command](wdsutil-uninitialize-server.md)
