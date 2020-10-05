@@ -654,7 +654,7 @@
 ### [tlntadmn](tlntadmn.md)
 ### [tpmtool](tpmtool.md)
 ### [tpmvscmgr](tpmvscmgr.md)
-### [tracerpt](tracerpt_1.md)
+### [tracerpt](tracerpt.md)
 ### [tracert](tracert.md)
 ### [tree](tree.md)
 ### [tscon](tscon.md)

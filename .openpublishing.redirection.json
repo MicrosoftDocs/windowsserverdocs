@@ -6376,16 +6376,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/management/windows-commands/timeout_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/timeout_1",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/title_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/title_1",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "WindowsServerDocs/management/windows-commands/tlntadmn.md",
       "redirect_url": "/windows-server/administration/windows-commands/tlntadmn",
       "redirect_document_id": true
@@ -6393,11 +6383,6 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/tpmvscmgr.md",
       "redirect_url": "/windows-server/administration/windows-commands/tpmvscmgr",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/tracerpt_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/tracerpt_1",
       "redirect_document_id": true
     },
     {
