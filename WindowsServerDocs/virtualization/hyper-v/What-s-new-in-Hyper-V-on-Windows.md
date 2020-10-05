@@ -156,7 +156,7 @@ After you update the cluster functional level:
 
 -   You can enable new Hyper-V features.
 
--   To make new virtual machine features available, use the Update-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+-   To make new virtual machine features available, use the `Update-vmVersion` cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 -   You can't add a node to the Hyper-V Cluster that runs Windows Server 2012 R2.
 
 > [!NOTE]
