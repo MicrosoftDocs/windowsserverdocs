@@ -291,6 +291,76 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-server.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-namespace.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-multicasttransmission.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-multicasttransmission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-transportserver.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-transportserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-server.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-imagegroup.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-imagegroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-image.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-driverpackage.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-driverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-drivergroupfilter.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroupfilter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-drivergroup.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-set-device.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-start-transportserver.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-transportserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-stop-server.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/subcommand-stop-transportserver.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-transportserver",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-optimize-pool.md",
       "redirect_url": "/windows-server/storage/storage-spaces/add-nodes#optimizing-drive-usage-after-adding-drives-or-servers",
       "redirect_document_id": false
@@ -6268,7 +6338,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-stop-server-command.md",
       "redirect_url": "/windows-server/administration/windows-commands/the-stop-server-command",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-uninitialize-server-option.md",
@@ -6378,336 +6448,6 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/unlodctr_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/unlodctr_1",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-alldriverpackages-subcommand.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-alldriverpackages-subcommand",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-device-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-device-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-drivergroup-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-drivergroup-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-drivergroupfilter-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-drivergroupfilter-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-drivergrouppackage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-drivergrouppackage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-drivergrouppackages-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-drivergrouppackages-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-driverpackage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-driverpackage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-image-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-image-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-imagedriverpackage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-imagedriverpackage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-imagedriverpackages-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-imagedriverpackages-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-add-imagegroup-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-add-imagegroup-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-approve-autoadddevices-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-approve-autoadddevices-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-convert-riprepimage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-convert-riprepimage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-copy-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-copy-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-copy-drivergroup-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-copy-drivergroup-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-copy-image-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-copy-image-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-delete-autoadddevices-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-delete-autoadddevices-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-disable-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-disable-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-disable-server-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-disable-server-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-disable-transportserver-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-disable-transportserver-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-disconnect-client-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-disconnect-client-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-enable-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-enable-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-enable-server-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-enable-server-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-enable-transportserver-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-enable-transportserver-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-export-image-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-export-image-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-alldevices-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-alldevices-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-alldrivergroups-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-alldrivergroups-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-alldriverpackages-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-alldriverpackages-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-allimagegroups-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-allimagegroups-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-allimages-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-allimages-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-allmulticasttransmissions-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-allmulticasttransmissions-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-allnamespaces-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-allnamespaces-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-allservers-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-allservers-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-autoadddevices-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-autoadddevices-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-device-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-device-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-drivergroup-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-drivergroup-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-driverpackage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-driverpackage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-driverpackagefile-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-driverpackagefile-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-image-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-image-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-imagefile-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-imagefile-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-imagegroup-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-imagegroup-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-multicasttransmission-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-multicasttransmission-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-namespace-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-namespace-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-server-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-server-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-get-transportserver-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-get-transportserver-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-initialize-server-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-initialize-server-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-new-captureimage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-new-captureimage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-new-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-new-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-new-discoverimage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-new-discoverimage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-new-multicasttransmission-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-new-multicasttransmission-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-new-namespace-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-new-namespace-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-reject-autoadddevices-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-reject-autoadddevices-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-drivergroup-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-drivergroup-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-drivergroupfilter-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-drivergroupfilter-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-drivergrouppackage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-drivergrouppackage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-drivergrouppackages-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-drivergrouppackages-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-driverpackage-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-driverpackage-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-driverpackages-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-driverpackages-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-image-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-image-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-imagegroup-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-imagegroup-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-multicasttransmission-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-multicasttransmission-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-remove-namespace-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-remove-namespace-command",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/using-the-replace-image-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/using-the-replace-image-command",
       "redirect_document_id": true
     },
     {
@@ -6909,6 +6649,371 @@
       "source_path": "WindowsServerDocs/management/windows-commands/xcopy.md",
       "redirect_url": "/windows-server/administration/windows-commands/xcopy",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/the-progress-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-progress",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-alldriverpackages-subcommand.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-alldriverpackages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-device-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-drivergroup-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-drivergroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-drivergroupfilter-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-drivergroupfilter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-drivergrouppackage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-drivergrouppackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-drivergrouppackages-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-drivergrouppackages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-driverpackage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-driverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-image-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-imagedriverpackage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-imagedriverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-imagedriverpackages-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-imagedriverpackages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-imagegroup-command .md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-imagegroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-approve-autoadddevices-command.md ",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-approve-autoadddevices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-convert-riprepimage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-convert-riprepimage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-copy-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-copy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-copy-drivergroup-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-copy-drivergroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-copy-image-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-copy-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-delete-autoadddevices-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-delete-autoadddevices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-disable-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-disable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-disable-server-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-disable-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-disable-transportserver-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-disable-transportserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-disconnect-client-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-disconnect-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-enable-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-enable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-enable-server-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-enable-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-enable-transportserver-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-enable-transportserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-export-image-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-export-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-alldevices-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-alldevices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-alldrivergroups-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-alldrivergroups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-alldriverpackages-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-alldriverpackages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-allimagegroups-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-allimagegroups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-allimages-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-allimages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-allmulticasttransmissions-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-allmulticasttransmissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-allnamespaces-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-allnamespaces",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-allservers-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-allservers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-autoadddevices-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-autoadddevices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-device-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-drivergroup-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-drivergroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-driverpackage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-driverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-driverpackagefile-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-driverpackagefile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-image-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-imagefile-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-imagefile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-imagegroup-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-imagegroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-multicasttransmission-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-multicasttransmission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-namespace-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-server-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-get-transportserver-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-get-transportserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-initialize-server-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-initialize-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-new-captureimage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-new-captureimage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-new-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-new-discoverimage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-new-discoverimage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-new-multicasttransmission-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-new-multicasttransmission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-new-namespace-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-new-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-reject-autoadddevices-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-reject-autoadddevices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-drivergroup-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-drivergroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-drivergroupfilter-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-drivergroupfilter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-drivergrouppackage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-drivergrouppackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-drivergrouppackages-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-drivergrouppackages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-driverpackage-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-driverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-driverpackages-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-driverpackages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-image-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-imagegroup-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-imagegroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-multicasttransmission-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-multicasttransmission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-remove-namespace-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-remove-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/using-the-replace-image-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-replace-image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/the-set-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/the-start-server-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/ the-stop-server-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/the-uninitialize-server-option.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-uninitialize-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/the-update-serverfiles-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-update-serverfiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/the-verbose-command.md",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-verbose",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/1--install-the-wsus-server-role.md",

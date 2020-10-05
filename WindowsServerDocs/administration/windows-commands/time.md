@@ -42,7 +42,7 @@ time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 -   Valid *HH* values are 0 through 24.
 -   Valid *MM* and *SS* values are 0 through 59.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 If command extensions are enabled, to display the current system time, type:
 ```
