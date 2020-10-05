@@ -8,6 +8,7 @@ author: eross-msft
 manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # taskkill
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -29,9 +30,9 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 |      /s \<computer>       |                                                                                    Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer.                                                                                     |
 | /u \<Domain>\\\<UserName> | Runs the command with the account permissions of the user who is specified by *UserName* or *Domain*\\*UserName*. **/u** can be specified only if **/s** is specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command. |
 |      /p \<Password>       |                                                                                                   Specifies the password of the user account that is specified in the **/u** parameter.                                                                                                   |
-|       /fi \<Filter>       |          Applies a filter to select a set of tasks. You can use more than one filter or use the wildcard character (**\\**\*) to specify all tasks or image names. See the following [table for valid filter names](#filter-names-operators-and-values), operators, and values.           |
+|       /fi \<Filter>       |          Applies a filter to select a set of tasks. You can use more than one filter or use the wildcard character (`*`) to specify all tasks or image names. See the following [table for valid filter names](#filter-names-operators-and-values), operators, and values.           |
 |     /pid \<ProcessID>     |                                                                                                                 Specifies the process ID of the process to be terminated.                                                                                                                 |
-|     /im \<ImageName>      |                                                                                Specifies the image name of the process to be terminated. Use the wildcard character (**\\**\*) to specify all image names.                                                                                |
+|     /im \<ImageName>      |                                                                                Specifies the image name of the process to be terminated. Use the wildcard character (`*`) to specify all image names.                                                                                |
 |            /f             |                                                                    Specifies that processes be forcefully terminated. This parameter is ignored for remote processes; all remote processes are forcefully terminated.                                                                     |
 |            /t             |                                                                                                          Terminates the specified process and any child processes started by it.                                                                                                          |
 
@@ -52,7 +53,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 
 ## Remarks
 * The WINDOWTITLE and STATUS filters are not supported when a remote system is specified.
-* The wildcard character (**\\**<em>) is accepted for the **/im</em>* option only when a filter is applied.
+* The wildcard character (`*`) is accepted for the **/im** option only when a filter is applied.
 * Termination of remote processes is always carried out forcefully, regardless of whether the **/f** option is specified.
 * Supplying a computer name to the hostname filter causes a shutdown and all processes are stopped.
 * You can use **tasklist** to determine the process ID (PID) for the process to be terminated.
@@ -68,25 +69,25 @@ taskkill /pid 1230 /pid 1241 /pid 1253
 To forcefully end the process Notepad.exe if it was started by the system, type:
 
 ```
-taskkill /f /fi USERNAME eq NT AUTHORITY\SYSTEM /im notepad.exe
+taskkill /f /fi "USERNAME eq NT AUTHORITY\SYSTEM" /im notepad.exe
 ```
 
 To end all processes on the remote computer Srvmain with an image name beginning with note, while using the credentials for the user account Hiropln, type:
 
 ```
-taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi IMAGENAME eq note* /im *
+taskkill /s srvmain /u maindom\hiropln /p p@ssW23 /fi "IMAGENAME eq note*" /im *
 ```
 
 To end the process with the process ID 2134 and any child processes that it started, but only if those processes were started by the Administrator account, type:
 
 ```
-taskkill /pid 2134 /t /fi username eq administrator
+taskkill /pid 2134 /t /fi "username eq administrator"
 ```
 
 To end all processes that have a process ID greater than or equal to 1000, regardless of their image names, type:
 
 ```
-taskkill /f /fi PID ge 1000 /im *
+taskkill /f /fi "PID ge 1000" /im *
 ```
 
 ## Additional References
