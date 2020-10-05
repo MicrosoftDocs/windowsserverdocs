@@ -40,7 +40,7 @@ PowerShell was designed to extend the capabilities of the Command shell to run P
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
 > [!NOTE]
->You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
+>You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6&preserve-view=true), the open source version of PowerShell.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
