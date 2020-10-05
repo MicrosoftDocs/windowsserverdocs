@@ -33,7 +33,7 @@ There are some security settings that are not applicable to VDI environments tha
 Regarding updates, Windows 10 utilizes a monthly update algorithm, so there is no need for clients to attempt to update. In most cases VDI administrators control the process of updating through a process of shutting down VMs based on a "master", or "gold" image, unseal that image which is read-only, patch the image, then reseal it and bring it back into production. Therefore, there is no need to have VDI VMs checking Windows Update. In certain instances, for example, persistent VDI VMs, normal patching procedures do take place. Windows Update or Microsoft Intune can also be used. System Center Configuration Manager can be used to handle update and other package delivery. It's up to each organization to determine the best approach to updating VDI.
 
 > [!TIP]
-> A script that implements the optimizations discussed in this topic--as well as a GPO export file that you can import with **LGPO.exe**--is available at [TheVDIGuys](https://github.com/TheVDIGuys) on GitHub.
+> A script that implements the optimizations discussed in this topic--as well as a GPO export file that you can import with **LGPO.exe**--is available at [The Virtual Desktop Team](https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool) on GitHub.
 
 This script was designed to suit your environment and requirements. The main code is PowerShell, and the work is done by using input files (plain text), with Local Group Policy Object (LGPO) tool export files. These files contain lists of apps to be removed, and services to be disabled. If you do not wish to remove a particular app or disable a particular service, edit the corresponding text file and remove the item. Finally, there are local policy settings that can be imported into your device. It is better to have some settings within the base image, than to have the settings applied through the group policy, as some of the settings are effective on the next restart, or when a component is first used.
 
@@ -81,7 +81,7 @@ One important aspect of non-persistent VDI that is based on a single image is se
 > Windows 10 performs a set of maintenance tasks, automatically, on a periodic basis. There is a scheduled task that is set to run at 3:00 AM every day by default. This scheduled task performs a list of tasks, including Windows Update cleanup. You can view all the categories of maintenance that take place automatically with this PowerShell command:
 >
 >```powershell
->Get-ScheduledTask | ? {$_.Settings.MaintenanceSettings}
+>Get-ScheduledTask | Where-Object {$_.Settings.MaintenanceSettings}
 >```
 >
 
@@ -110,7 +110,7 @@ Consider supportability when altering default Windows settings. Difficult proble
 
 You can use your favorite search engine with the terms ""start value" site:support.microsoft.com" to bring up known issues regarding default start values for services.
 
-You might note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings, start with the project known as **AaronLocker**. For more information, see [“AaronLocker” overview](https://github.com/microsoft/AaronLocker).
+You might note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings, start with the project known as **AaronLocker**. For more information, see ["AaronLocker" overview](https://github.com/microsoft/AaronLocker).
 
 #### VDI Optimization Categories
 
@@ -144,7 +144,7 @@ Connectivity and timing are important factors when it comes to UWP app cleanup. 
 
 If you modify your base .WIM that you use to install Windows 10 and remove unneeded UWP apps from the .WIM before you install, the apps won't be installed to begin with and your profile creation times will be shorter. Later in this section there is information on how to remove UWP apps from your installation .WIM file.
 
-A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. For more information see [Universal Windows Platform Apps](https://docs.citrix.com/citrix-virtual-apps-desktops/manage-deployment/applications-manage/universal-apps.html)
+A good strategy for VDI is to provision the apps you want in the base image, then limit or block access to the Microsoft Store afterward. Store apps are updated periodically in the background on normal computers. The UWP apps can be updated during the maintenance window when other updates are applied. For more information see [Universal Windows Platform Apps](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/manage-deployment/applications-manage/universal-apps.html)
 
 #### Delete the payload of UWP apps
 
@@ -566,7 +566,7 @@ Many services that might seem like good candidates to disable are set to manual 
 | Diagnostic Policy Service | Enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function. | |
 | Downloaded Maps Manager | Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps. | |
 | Geolocation Service | Monitors the current location of the system and manages geofences | |
-| GameDVR and Broadcast user service | This user service is used for Game Recordings and Live Broadcasts | This is a per-user service, and as such, the template service must be disabled. |
+| GameDVR and Broadcast user service | This user service is used for Game Recordings and Live Broadcasts | This is a per-user service, and as such, the *template service* must be disabled. |
 | MessagingService | Service supporting text messaging and related functionality. | This is a per-user service, and as such, the *template service* must be disabled. |
 | Optimize drives | Helps the computer run more efficiently by optimizing files on storage drives. | VDI solutions do not normally benefit from disk optimization. These "drives" are not traditional drives and often just a temporary storage allocation. |
 | Superfetch | Maintains and improves system performance over time. | Generally doesn't improve performance on VDI, especially non-persistent, given that the operating system state is discarded each reboot. |
@@ -717,7 +717,7 @@ The above article contains procedures to service the 'gold' VDI image, and how t
 
 There are some registry settings that can increase network performance. This is especially important in environments where the VDI or computer has a workload that is primarily network-based. The settings in this section are recommended to bias performance toward networking, by setting up additional buffering and caching of things like directory entries.
 
->[!NOTE]
+> [!NOTE]
 > Some settings in this section are registry-based only and should be incorporated in the base image before the image is deployed for production use.
 
 The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](../../administration/performance-tuning/index.md), published on Microsoft.com by the Windows Product Group.
