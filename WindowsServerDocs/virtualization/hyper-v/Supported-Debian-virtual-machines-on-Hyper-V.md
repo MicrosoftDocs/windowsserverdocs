@@ -71,11 +71,11 @@ The following feature distribution map indicates the features that are present i
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
    ```
-4. The latest upstream kernel capabilities are only available by using the kernel included [Debian backports](https://wiki.debian.org/Backports).
+4. The latest upstream kernel capabilities are only available by using the kernels available in the [Debian Backports repository](https://wiki.debian.org/Backports).
 
 5. While Debian 7.x is out of support and uses an older kernel, the kernel included in Debian backports for Debian 7.x has improved Hyper-V capabilities.
 
-See Also
+## See Also
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 
