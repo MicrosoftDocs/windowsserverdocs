@@ -6356,6 +6356,21 @@
       "redirect_document_id": true
     },
     {
+    "source_path": "WindowsServerDocs/management/windows-commands/timeout_1.md",
+    "redirect_url": "/windows-server/administration/windows-commands/timeout",
+    "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/management/windows-commands/title_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/title",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/management/windows-commands/tracerpt_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/tracerpt",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/management/windows-commands/time.md",
       "redirect_url": "/windows-server/administration/windows-commands/time",
       "redirect_document_id": true
