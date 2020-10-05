@@ -7,9 +7,10 @@ ms.author: jgerend
 ms.date: 07/09/2018
 ms.localizationpriority: medium
 ---
+
 # Deploy Storage Spaces on a stand-alone server
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to deploy Storage Spaces on a stand-alone server. For information about how to create a clustered storage space, see [Deploy a Storage Spaces cluster on Windows Server 2012 R2](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt270997(v%3dws.11)>).
 
@@ -17,8 +18,8 @@ To create a storage space, you must first create one or more storage pools. A st
 
 From a storage pool, you can create one or more virtual disks. These virtual disks are also referred to as *storage spaces*. A storage space appears to the Windows operating system as a regular disk from which you can create formatted volumes. When you create a virtual disk through the File and Storage Services user interface, you can configure the resiliency type (simple, mirror, or parity), the provisioning type (thin or fixed), and the size. Through Windows PowerShell, you can set additional parameters such as the number of columns, the interleave value, and which physical disks in the pool to use. For information about these additional parameters, see [New-VirtualDisk](/powershell/module/storage/new-virtualdisk?view=win10-ps) and the [Windows Server storage forum](/answers/topics/windows-server-storage.html).
 
->[!NOTE]
->You can't use a storage space to host the Windows operating system.
+> [!NOTE]
+> You can't use a storage space to host the Windows operating system.
 
 From a virtual disk, you can create one or more volumes. When you create a volume, you can configure the size, drive letter or folder, file system (NTFS file system or Resilient File System (ReFS)), allocation unit size, and an optional volume label.
 
@@ -28,8 +29,8 @@ The following figure illustrates the Storage Spaces workflow.
 
 **Figure 1: Storage Spaces workflow**
 
->[!NOTE]
->This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [PowerShell](/powershell/scripting/powershell-scripting?view=powershell-6).
+> [!NOTE]
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [PowerShell](/powershell/scripting/powershell-scripting?view=powershell-6).
 
 ## Prerequisites
 
@@ -43,7 +44,7 @@ To use Storage Spaces on a stand-alone Windows Server 2012−based server, make 
 |Disk bus types|- Serial Attached SCSI (SAS)<br>- Serial Advanced Technology Attachment (SATA)<br>- iSCSI and Fibre Channel Controllers. |You can also use USB drives. However, it's not optimal to use USB drives in a server environment.<br>Storage Spaces is supported on iSCSI and Fibre Channel (FC) controllers as long as the virtual disks created on top of them are non-resilient (Simple with any number of columns).<br>|
 |Disk configuration|- Physical disks must be at least 4 GB<br>- Disks must be blank and not formatted. Do not create volumes.||
 |HBA considerations|- Simple host bus adapters (HBAs) that do not support RAID functionality are recommended<br>- If RAID-capable, HBAs must be in non-RAID mode with all RAID functionality disabled<br>- Adapters must not abstract the physical disks, cache data, or obscure any attached devices. This includes enclosure services that are provided by attached just-a-bunch-of-disks (JBOD) devices. |Storage Spaces is compatible only with HBAs where you can completely disable all RAID functionality.|
-|JBOD enclosures|- JBOD enclosures are optional<br>- Recommended to use Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br>`Get-PhysicalDisk \| ? {$_.BusType –eq "SAS"} \| fc`<br><br>If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.||
+|JBOD enclosures|- JBOD enclosures are optional<br>- Recommended to use Storage Spaces certified enclosures listed on the Windows Server Catalog<br>- If you're using a JBOD enclosure, verify with your storage vendor that the enclosure supports Storage Spaces to ensure full functionality<br>- To determine whether the JBOD enclosure supports enclosure and slot identification, run the following Windows PowerShell cmdlet:<br><br> Get-PhysicalDisk \| ? {$_.BusType –eq "SAS"} \| fc <br> | If the **EnclosureNumber** and **SlotNumber** fields contain values, then the enclosure supports these features.|
 
 To plan for the number of physical disks and the desired resiliency type for a stand-alone server deployment, use the following guidelines.
 
@@ -63,8 +64,8 @@ You must first group available physical disks into one or more storage pools.
 
     By default, available disks are included in a pool that is named the *primordial* pool. If no primordial pool is listed under **STORAGE POOLS**, this indicates that the storage does not meet the requirements for Storage Spaces. Make sure that the disks meet the requirements that are outlined in the Prerequisites section.
 
-    >[!TIP]
-    >If you select the **Primordial** storage pool, the available physical disks are listed under **PHYSICAL DISKS**.
+    > [!TIP]
+    > If you select the **Primordial** storage pool, the available physical disks are listed under **PHYSICAL DISKS**.
 
 3. Under **STORAGE POOLS**, select the **TASKS** list, and then select **New Storage Pool**. The New Storage Pool Wizard will open.
 
@@ -82,8 +83,8 @@ You must first group available physical disks into one or more storage pools.
 
 8. On the **View results** page, verify that all tasks completed, and then select **Close**.
 
-    >[!NOTE]
-    >Optionally, to continue directly to the next step, you can select the **Create a virtual disk when this wizard closes** check box.
+    > [!NOTE]
+    > Optionally, to continue directly to the next step, you can select the **Create a virtual disk when this wizard closes** check box.
 
 9. Under **STORAGE POOLS**, verify that the new storage pool is listed.
 
@@ -132,8 +133,8 @@ Next, you must create one or more virtual disks from the storage pool. When you 
 
 6. On the **Select the storage layout** page, select the desired layout, then select **Next**.
 
-    >[!NOTE]
-    >If you select a layout where you do not have enough physical disks, you will receive an error message when you select **Next**. For information about which layout to use and the disk requirements, see [Prerequisites](#prerequisites)).
+    > [!NOTE]
+    > If you select a layout where you do not have enough physical disks, you will receive an error message when you select **Next**. For information about which layout to use and the disk requirements, see [Prerequisites](#prerequisites)).
 
 7. If you selected **Mirror** as the storage layout, and you have five or more disks in the pool, the **Configure the resiliency settings** page will appear. Select one of the following options:
 
@@ -150,8 +151,8 @@ Next, you must create one or more virtual disks from the storage pool. When you 
 
      With fixed provisioning, the storage capacity is allocated immediately, at the time a virtual disk is created. Therefore, fixed provisioning uses space from the storage pool that is equal to the virtual disk size.
 
-     >[!TIP]
-     >With Storage Spaces, you can create both thin- and fixed-provisioned virtual disks in the same storage pool. For example, you could use a thin-provisioned virtual disk to host a database and a fixed-provisioned virtual disk to host the associated log files.
+     > [!TIP]
+     > With Storage Spaces, you can create both thin- and fixed-provisioned virtual disks in the same storage pool. For example, you could use a thin-provisioned virtual disk to host a database and a fixed-provisioned virtual disk to host the associated log files.
 
 9. On the **Specify the size of the virtual disk** page, do the following:
 
@@ -173,8 +174,8 @@ Next, you must create one or more virtual disks from the storage pool. When you 
 
 11. On the **View results** page, verify that all tasks completed, and then select **Close**.
 
-    >[!TIP]
-    >By default, the **Create a volume when this wizard closes** check box is selected. This takes you directly to the next step.
+    > [!TIP]
+    > By default, the **Create a volume when this wizard closes** check box is selected. This takes you directly to the next step.
 
 ### Windows PowerShell equivalent commands for creating virtual disks
 
@@ -200,8 +201,8 @@ New-VirtualDisk –StoragePoolFriendlyName StoragePool1 –FriendlyName VirtualD
 
 The following example creates a virtual disk named *VirtualDisk1* on a storage pool named *StoragePool1*. The virtual disk uses three-way mirroring and is a fixed size of 20 GB.
 
->[!NOTE]
->You must have at least five physical disks in the storage pool for this cmdlet to work. (This does not include any disks that are allocated as hot spares.)
+> [!NOTE]
+> You must have at least five physical disks in the storage pool for this cmdlet to work. (This does not include any disks that are allocated as hot spares.)
 
 ```PowerShell
 New-VirtualDisk -StoragePoolFriendlyName StoragePool1 -FriendlyName VirtualDisk1 -ResiliencySettingName Mirror -NumberOfDataCopies 3 -Size 20GB -ProvisioningType Fixed
@@ -233,8 +234,8 @@ Next, you must create a volume from the virtual disk. You can assign an optional
 
     2. In the **Allocation unit size** list, either leave the setting at **Default** or set the allocation unit size.
 
-        >[!NOTE]
-        >For more information about allocation unit size, see [Default cluster size for NTFS, FAT, and exFAT](https://support.microsoft.com/help/140365/default-cluster-size-for-ntfs-fat-and-exfat).
+        > [!NOTE]
+        > For more information about allocation unit size, see [Default cluster size for NTFS, FAT, and exFAT](https://support.microsoft.com/help/140365/default-cluster-size-for-ntfs-fat-and-exfat).
 
 
     3. Optionally, in the **Volume label** box, enter a volume label name, for example **HR Data**.

@@ -9,21 +9,17 @@ ms.date: 02/19/2019
 ms.topic: article
 ---
 
-
-
-
-
 # Customize HTTP security response headers with AD FS 2019
 
 To protect against common security vulnerabilities and provide administrators the ability to take advantage of the latest advancements in browser-based protection mechanisms, AD FS 2019 added the functionality to customize the HTTP security response headers sent by AD FS. This is accomplished through the introduction of two new cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders`.
 
->[!NOTE]
->The functionality to customize the HTTP security response headers (except CORS Headers) using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/help/4507459/windows-10-update-kb4507459).
+> [!NOTE]
+> The functionality to customize the HTTP security response headers (except CORS Headers) using cmdlets: `Get-AdfsResponseHeaders` and `Set-AdfsResponseHeaders` was backported to AD FS 2016. You can add the functionality to your AD FS 2016 by installing [KB4493473](https://support.microsoft.com/help/4493473/windows-10-update-kb4493473) and [KB4507459](https://support.microsoft.com/help/4507459/windows-10-update-kb4507459).
 
 In this document we will discuss commonly used security response headers to demonstrate how to customize headers sent by AD FS 2019.
 
->[!NOTE]
->The document assumes that AD FS 2019 has been installed.
+> [!NOTE]
+> The document assumes that AD FS 2019 has been installed.
 
 
 Before we discuss headers, let's look into a few scenarios creating the need for admins to customize security headers
@@ -141,8 +137,8 @@ To better understand CORS request, let's walkthrough a scenario where a single p
     - Access-Control-Request-Method – identifies the HTTP method (eg, DELETE) to be used when actual request is made
     - Access-Control-Request-Headers - identifies the HTTP headers to be used when actual request is made
 
-   >[!NOTE]
-   >CORS request resembles a standard HTTP request, however, the presence of an origin header signals the incoming request is CORS related.
+   > [!NOTE]
+   > CORS request resembles a standard HTTP request, however, the presence of an origin header signals the incoming request is CORS related.
 3. AD FS verifies that the web API origin included in the header is listed in the trusted origins configured in AD FS (details on how to modify trusted origins in CORS Customization section below). AD FS then responds with following headers:
     - Access-Control-Allow-Origin – value same as in the Origin header
     - Access-Control-Allow-Method – value same as in the Access-Control-Request-Method header
@@ -171,7 +167,7 @@ Set-AdfsResponseHeaders -CORSTrustedOrigins https://example1.com,https://example
 > Admins can allow CORS requests from any origin by including "*" in the list of trusted origins, although this approach is not recommended due to security vulnerabilities and a warning message is provided if they choose to.
 
 ### Content Security Policy (CSP)
-This HTTP security response header is used to prevent cross-site scripting, clickjacking and other data injection attacks by preventing browsers from inadvertently executing malicious content. Browsers that don't support CSP simply ignores the CSP response headers.
+This HTTP security response header is used to prevent cross-site scripting, clickjacking and other data injection attacks by preventing browsers from inadvertently executing malicious content. Browsers that don't support CSP simply ignore the CSP response headers.
 
 #### CSP Customization
 Customization of CSP header involves modifying the security policy that defines the resources browser is allowed to load for the web page. The default security policy is
@@ -204,8 +200,8 @@ The following sources can be defined for the default-src policy:
 - ‘none' – specifying this restricts the content from any origin to load
 - data: - specifying data: URIs allows content creators to embed small files inline in documents. Usage not recommended.
 
->[!NOTE]
->AD FS uses JavaScript in the authentication process and therefore enables JavaScript by including ‘unsafe-inline' and ‘unsafe-eval' sources in default policy.
+> [!NOTE]
+> AD FS uses JavaScript in the authentication process and therefore enables JavaScript by including ‘unsafe-inline' and ‘unsafe-eval' sources in default policy.
 
 ### Custom Headers
 In addition to the above listed security response headers (HSTS, CSP, X-Frame-Options, X-XSS-Protection and CORS), AD FS 2019 provides the ability to Set new headers.

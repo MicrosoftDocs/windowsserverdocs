@@ -11,9 +11,9 @@ author: maertendmsft
 
 Most authentication in Windows environments is done with a username-password pair.
 This works well for systems that share a common domain.
-When working across domains, such as between on-premise and cloud-hosted systems, it becomes more difficult.
+When working across domains, such as between on-premise and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 
-By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication.
+By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication which doesn't require the use of guessable passowrds.
 OpenSSH includes tools to help support this, specifically:
 
 * __ssh-keygen__ for generating secure keys
