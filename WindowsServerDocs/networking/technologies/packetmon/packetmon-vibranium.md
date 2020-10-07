@@ -11,7 +11,7 @@ ms.date: 10/7/2020
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
 
-Packet Monitor (PacketMon) is an in-box cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, since it provides visibility within the networking stack. It is available in-box via pktmon.exe command, and via Windows Admin Center extensions. Use this page to understand pktmon syntax, commands, formatting, and output.
+Packet Monitor (PacketMon) is an in-box cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, since it provides visibility within the networking stack. PacketMon is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands, formatting, and output.
 
 >[!NOTE]
 >This same version is also going to be backported to Windows 10 and Windows Server version 1809 (RS5).
@@ -46,7 +46,7 @@ PS C:\Test> pktmon stop
 PS C:\Test> pktmon format <etl file>
 ```
 
-See [Analyze PacketMon TXT Output](#Analyze PacketMon TXT output) below for analyzing output.
+See [Analyze PacketMon TXT Output](#Analyze-PacketMon-TXT-output) below for analyzing output.
 
 ## Capture filters
 
@@ -301,7 +301,7 @@ pktmon pcapng log.etl [-o log.pcapng]
 Example: pktmon pcapng C:\tmp\PktMon.etl -d -c nics
 ```
 
-### Analyze PacketMon TXT output
+## Analyze PacketMon TXT output
 
 PacketMon captures a snapshot of the packet by each component of the networking stack. Accordingly,there will be multiple snapshots of each packet (represented in the image below by the lines the blue box).
 Each of these packet snapshots is represented by a couple of lines (red and green boxes). There is at least one line that includes some data about the packet instance starting with the timestamp. Right after, there is at least one line (bolded in the image below) to show the parsed raw packet in text format (without a timestamp); it could be multiple lines if the packet is encapsulated, like the packet in the green box.

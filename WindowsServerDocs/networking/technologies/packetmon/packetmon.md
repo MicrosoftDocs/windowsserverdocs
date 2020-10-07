@@ -57,7 +57,7 @@ The following resources are available to help you get started using Packet Monit
 
 ### Pktmon - Vibranium OS
 
-PacketMon is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, command , formatting, and output.
+PacketMon is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands, formatting, and output.
 
 >[!NOTE]
 >This same version is also going to be backported to Windows 10 and Windows Server version 1809 (RS5).
