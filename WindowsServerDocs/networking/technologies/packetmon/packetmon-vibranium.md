@@ -46,7 +46,7 @@ PS C:\Test> pktmon stop
 PS C:\Test> pktmon format <etl file>
 ```
 
-See [Analyze PacketMon TXT Output](#Analyze-PacketMon-TXT-output) below for analyzing output.
+See [Analyze PacketMon TXT Output](#Analyze PacketMon TXT output) below for analyzing output.
 
 ## Capture filters
 
@@ -315,11 +315,11 @@ Components with 2 edges will report 2 snapshots at each edge (like the snapshots
 
 At the bottom of each log file, the filters list is presented as shown in the image below (highlighted in blue). Each filter displays the parameter(s) specified (Protocol ICMP in the example below), and zeros for the rest of the parameters.
 
-:::image type="content" source="media/pktmon-log-example-components.png" alt-text="Example of PacketMon's txt log output components" border="false":::
+:::image type="content" source="media/pktmon-log-example-components.png" alt-text="Example of PacketMon's txt log output components":::
 
 For dropped packets, the word "drop" appears before any of the lines representing the snapshot where the packet got dropped. Each dropped packet also provides dropReason and dropLocation values. This dropReason parameter provides a short description of the packet drop reason; for example, MTU Mismatch, Filtered VLAN, etc., while the dropLocation parameter is represented by a code. This code can be used for locating the source code line responsible for the packet drop decision.
 
-:::image type="content" source="media/dropped-packet-log-example.png" alt-text="Example of a dropped packet log" border="false":::
+:::image type="content" source="media/dropped-packet-log-example.png" alt-text="Example of a dropped packet log":::
 
 ## Packet counters
 
