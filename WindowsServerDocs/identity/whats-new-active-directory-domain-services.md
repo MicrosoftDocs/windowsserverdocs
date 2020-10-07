@@ -62,11 +62,11 @@ Benefits:
    - Access to Microsoft Store with work account
    - Live tiles and notifications
 
-- **Access organizational resources** on mobile devices (phones, phablets) that can't be joined to a Windows Domain, whether they are corp-owned or BYOD
+- **Access organizational resources** on mobile devices (phones, tablets) that can't be joined to a Windows Domain, whether they are corp-owned or BYOD.
 - **Single-Sign On** to Office 365 and other organizational apps, websites and resources.
 - **On BYOD devices**, add a work account (from an on-premises domain or Azure AD) to a personally-owned device and enjoy SSO to work resources, via apps and on the web, in a way that helps ensure compliance with new capabilities such as Conditional Account Control and Device Health attestation.
-- **MDM integration** lets you auto-enroll devices to your MDM (Intune or third-party)
-- **Set up "kiosk" mode and shared devices** for multiple users in your organization
+- **MDM integration** lets you auto-enroll devices to your MDM (Intune or third-party).
+- **Set up "kiosk" mode and shared devices** for multiple users in your organization.
 - **Developer experience** lets you build apps that cater to both enterprise and personal contexts with a shared programing stack.
 - **Imaging** option lets you choose between imaging and allowing your users to configure corp-owned devices directly during the first-run experience.
 
