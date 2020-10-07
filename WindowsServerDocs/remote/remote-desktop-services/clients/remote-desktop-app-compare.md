@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/25/2020
+ms.date: 10/07/2020
 ms.localizationpriority: medium
 ---
 
@@ -24,7 +24,7 @@ If you remote into your personal desktop, there are additional redirections that
 
 ### Input redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client    |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client    |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|---------------|
 | Keyboard    | X                         | X                           | X             | X       | X   | X     | X             |
 | Mouse       | X                         | X                           | X             | X       | X\* | X     | X             |
@@ -35,7 +35,7 @@ If you remote into your personal desktop, there are additional redirections that
 
 ### Port redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|------------|
 | Serial port | X                         | X                           |               |         |     |       |            |
 | USB         | X                         | X                           |               |         |     |       |            |
@@ -44,7 +44,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 ### Other redirection (devices, etc.)
 
-| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS         | macOS                           | Web client    |
+| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
 | Cameras             | X                         | X                           |               |     X    |   X         | X                               |               |
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
