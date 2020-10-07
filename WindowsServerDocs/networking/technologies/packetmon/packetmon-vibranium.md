@@ -46,7 +46,7 @@ PS C:\Test> pktmon stop
 PS C:\Test> pktmon format <etl file>
 ```
 
-See [Analyze PacketMon TXT Output](Analyze-PacketMon-TXT-output) below for analyzing output.
+See Analyze PacketMon TXT output (below) for analyzing output.
 
 ## Capture filters
 
