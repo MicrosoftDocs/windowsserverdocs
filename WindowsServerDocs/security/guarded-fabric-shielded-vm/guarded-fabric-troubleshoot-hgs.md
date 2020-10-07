@@ -174,3 +174,36 @@ If your TPM should have an EKcert but one was not found in the platform identifi
 
 If you received the error that your EKcert is untrusted, ensure that you have [installed the trusted TPM root certificates package](guarded-fabric-install-trusted-tpm-root-certificates.md) on each HGS server and that the root certificate for your TPM vendor is present in the local machine's **TrustedTPM\_RootCA** store. Any applicable intermediate certificates also need to be installed in the **TrustedTPM\_IntermediateCA** store on the local machine.
 After installing the root and intermediate certificates, you should be able to run `Add-HgsAttestationTpmHost` successfully.
+
+## Group managed service account (gMSA) privileges
+
+HGS service account (gMSA used for Key Protection Service application pool in IIS) needs to be gratned [Generate security audits](/windows/security/threat-protection/security-policy-settings/generate-security-audits) privilege, also known as `SeAuditPrivilege`. If this privilege is missing, initial HGS configuration succeeds and IIS starts, however the Key Protection Service is non-functional and returns HTTP error 500 _(“Server Errror in /KeyProtection Application”)._ You may also observe the following warning messages in Application event log.
+```
+System.ComponentModel.Win32Exception (0x80004005): A required privilege is not held by the client
+at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.NativeUtility.RegisterAuditSource(String pszSourceName, SafeAuditProviderHandle& phAuditProvider)
+at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.RegisterAuditSource(String sourceName)
+```
+or
+```
+Failed to register the security event source.
+   at System.Web.HttpApplicationFactory.EnsureAppStartCalledForIntegratedMode(HttpContext context, HttpApplication app)
+   at System.Web.HttpApplication.RegisterEventSubscriptionsWithIIS(IntPtr appContext, HttpContext context, MethodInfo[] handlers)
+   at System.Web.HttpApplication.InitSpecial(HttpApplicationState state, MethodInfo[] handlers, IntPtr appContext, HttpContext context)
+   at System.Web.HttpApplicationFactory.GetSpecialApplicationInstance(IntPtr appContext, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.InitializeApplication(IntPtr appContext)
+
+Failed to register the security event source.
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.RegisterAuditSource(String sourceName)
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.ReportAudit(EventLogEntryType eventType, UInt32 eventId, Object[] os)
+   at Microsoft.Windows.KpsServer.KpsServerHttpApplication.Application_Start()
+
+A required privilege is not held by the client
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.NativeUtility.RegisterAuditSource(String pszSourceName, SafeAuditProviderHandle& phAuditProvider)
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.RegisterAuditSource(String sourceName)
+```
+Additionally, you may notice that none of the Key Protection Service cmdlets (e.g. [Get-HgsKeyProtectionCertificate](/powershell/module/hgskeyprotection/get-hgskeyprotectioncertificate)) work and instead return errors.
+
+To resolve this issue, you need to grant gMSA the “Generate security audits” (SeAuditPrivilege). To do that, you may use either Local security policy `SecPol.msc` on every node of the HGS cluster, or Group Policy. Alternatively, you could use [SecEdit.exe](/windows-server/administration/windows-commands/secedit) tool to export the current Security policy, make the necessary edits in the configuration file (which is a plain text) and then import it back.
+
+> [!NOTE]
+> When configuring this setting, the list of security principles defined for a privilege fully overrides the defaults (it does not concatenate). Hence, when defining this policy setting, be sure to include both default holders of this privilege (Network service and Local service) in addition to the gMSA that you are adding.
