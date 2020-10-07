@@ -46,7 +46,7 @@ PS C:\Test> pktmon stop
 PS C:\Test> pktmon format <etl file>
 ```
 
-See "Analyze PacketMon's TXT Output" guide below for analyzing output.
+See [Analyze PacketMon TXT Output](#Analyze-PacketMon-TXT-output) below for analyzing output.
 
 ## Capture filters
 
@@ -301,25 +301,25 @@ pktmon pcapng log.etl [-o log.pcapng]
 Example: pktmon pcapng C:\tmp\PktMon.etl -d -c nics
 ```
 
-### Analyze PacketMon's TXT output
+### Analyze PacketMon TXT output
 
 PacketMon captures a snapshot of the packet by each component of the networking stack. Accordingly,there will be multiple snapshots of each packet (represented in the image below by the lines the blue box).
 Each of these packet snapshots is represented by a couple of lines (red and green boxes). There is at least one line that includes some data about the packet instance starting with the timestamp. Right after, there is at least one line (bolded in the image below) to show the parsed raw packet in text format (without a timestamp); it could be multiple lines if the packet is encapsulated, like the packet in the green box.
 
 For correlating all snapshots of the same packets, monitor the PktGroupId and PktNumber values (highlighted in yellow); all snapshots of the same packet should have these 2 values in common. The Appearance value (highlighted in blue) acts as a counter for each subsequent snapshot of the same packet. For example, the first snapshot of the packet (where the packet first appeared in the networking stack) has the value 1 for appearance, the next snapshot has the value 2, and so on.
 
-:::image type="content" source="media/pktmon-log-example.png" alt-text="Example of PacketMon's txt log output":::
+:::image type="content" source="media/pktmon-log-example.png" alt-text="Example of PacketMon's txt log output" border="false":::
 
 Each packet snapshot has a component id (underlined in the image above) denoting the component associated with the snapshot. To resolve the component name, and parameters, search for this component id in the components list at the bottom of the log file. A portion of the components table is shown in the image below highlighting "Component 1" in yellow (this was the component where the last snapshot above was captured).
 Components with 2 edges will report 2 snapshots at each edge (like the snapshots with the Appearance 3 and Appearance 4 for example in the image above).
 
 At the bottom of each log file, the filters list is presented as shown in the image below (highlighted in blue). Each filter displays the parameter(s) specified (Protocol ICMP in the example below), and zeros for the rest of the parameters.
 
-:::image type="content" source="media/pktmon-log-example-components.png" alt-text="Example of PacketMon's txt log output components":::
+:::image type="content" source="media/pktmon-log-example-components.png" alt-text="Example of PacketMon's txt log output components" border="false":::
 
 For dropped packets, the word "drop" appears before any of the lines representing the snapshot where the packet got dropped. Each dropped packet also provides dropReason and dropLocation values. This dropReason parameter provides a short description of the packet drop reason; for example, MTU Mismatch, Filtered VLAN, etc., while the dropLocation parameter is represented by a code. This code can be used for locating the source code line responsible for the packet drop decision.
 
-:::image type="content" source="media/dropped-packet-log-example.png" alt-text="Example of a dropped packet log":::
+:::image type="content" source="media/dropped-packet-log-example.png" alt-text="Example of a dropped packet log" border="false":::
 
 ## Packet counters
 
@@ -332,11 +332,11 @@ PacketMon counters provide a high level view of the networking traffic throughou
 
 In the following example, a new capture was started, then **pktmon counters** command was used to query the counters before the capture was stopped. The counters show a single packet making it out of the networking stack, starting from the protocol layer all the way to the physical network adapter, and its response coming back in the other direction. If the ping or the response was missing, it's easy to detect this through the counters.
 
-:::image type="content" source="media/pktmon-counters-with-perfect-flow.png" alt-text="Example of a packet counter with perfect flow":::
+:::image type="content" source="media/pktmon-counters-with-perfect-flow.png" alt-text="Example of a packet counter with perfect flow" border="false":::
 
 In the next example, drops are reported under the "Counter" column. Retrieve the Last Drop Reason for each component by requesting counters data in JSON format using **pktmon counters --json** or analyze the output log to get more detailed information.
 
-:::image type="content" source="media/pktmon-counters-drop-example.png" alt-text="Example of a packet counter with a dropped packet":::
+:::image type="content" source="media/pktmon-counters-drop-example.png" alt-text="Example of a packet counter with a dropped packet" border="false":::
 
 As shown through these examples, the counters could provide a lot of information through a diagram that can be analyzed by just a quick look.
 
@@ -365,7 +365,7 @@ pktmon [comp] counters [-t { all | drop | flow }] [-z] [--json]
 
 Examine the networking stack layout through the command **pktmon list**.
 
-:::image type="content" source="media/pktmon-networking-stack-example.png" alt-text="Example of the networking stack layout":::
+:::image type="content" source="media/pktmon-networking-stack-example.png" alt-text="Example of the networking stack layout" border="false":::
 
 The command shows networking components (drivers) arranged by adapters bindings.
 
