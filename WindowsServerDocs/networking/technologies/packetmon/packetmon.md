@@ -36,12 +36,12 @@ Packetmon's functionality has been evolving through Windows releases. The table 
 | Packet monitoring and counting at multiple locations along networking stack | &#x2611;    | &#x2611;     | &#x2611;          |
 | Packets drop detection at multiple stack locations                          | &#x2611;    | &#x2611;     | &#x2611;          |
 | Flexible runtime packet filtering                                           | &#x2611;    | &#x2611;     | &#x2611;          |
-| Encapsulation support                                                       |             | &#x2611;     | &#x2611;          |
-| Network analysis based on TcpDump packet parsing                            |             | &#x2611;     | &#x2611;          |
-| Packet metadata (OOB) analysis                                              |             |              | &#x2611;          |
-| Real-time on-screen packet monitoring                                       |             |              | &#x2611;          |
-| High volume in-memory logging                                               |             |              | &#x2611;          |
-| Wireshark and Network Monitor format support                                |             |              | &#x2611;          |
+| Encapsulation support                                                       | &#x2610;    | &#x2611;     | &#x2611;          |
+| Network analysis based on TcpDump packet parsing                            | &#x2610;    | &#x2611;     | &#x2611;          |
+| Packet metadata (OOB) analysis                                              | &#x2610;    | &#x2610;     | &#x2611;          |
+| Real-time on-screen packet monitoring                                       | &#x2610;    | &#x2610;     | &#x2611;          |
+| High volume in-memory logging                                               | &#x2610;    | &#x2610;     | &#x2611;          |
+| Wireshark and Network Monitor format support                                | &#x2610;    | &#x2610;     | &#x2611;          |
 
 ## Packet Monitor limitations
 
