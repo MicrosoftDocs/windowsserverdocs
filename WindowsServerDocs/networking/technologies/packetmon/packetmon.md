@@ -17,7 +17,9 @@ Packet Monitor (PacketMon) is an in-box cross-component network diagnostics tool
 
 Any machine that communicates over the network has at least one network adapter. All the components between this adapter and an application form a networking stack. A networking stack is a set of networking components that process and move networking traffic. In traditional scenarios, the networking stack is small, and all the packet routing and switching happens in external devices. 
 
-:::image type="content" align="center" source="media/networking-stack.png" alt-text="Networking stack in traditional scenarios" border="false":::
+<div align="center">
+:::image type="content" source="media/networking-stack.png" alt-text="Networking stack in traditional scenarios" border="false":::
+</div>
 
 However, with the advent of network virtualization, the size of the networking stack has multiplied. This extended networking stack now includes components, like the Virtual Switch, that handle packet processing and switching. Such flexible environment allows for much better resource utilization and security isolation, but it also leaves more room for configuration mistakes that are hard to diagnose. Accordingly, a visibility within the networking stack is needed to pinpoint these mistakes, and PacketMon provides that visibility.
 
@@ -33,7 +35,7 @@ Packetmon's functionality has been evolving through Windows releases. The table 
 
 | Capability                                                                  | RS5 (17763) | 19H1 (18362) | Vibranium (19041) |
 |:---------------------------------------------------------------------------:|:-----------:|:------------:|:-----------------:|
-| Packet monitoring and counting at multiple locations along networking stack | [x]         | [x]          | [x]               |
+| Packet monitoring and counting at multiple locations along networking stack | &#x2611;    | [x]          | [x]               |
 | Packets drop detection at multiple stack locations                          | [x]         | [x]          | [x]               |
 | Flexible runtime packet filtering                                           | [x]         | [x]          | [x]               |
 | Encapsulation support                                                       |             | [x]          | [x]               |
