@@ -4,17 +4,14 @@ description: Use this page to understand pktmon syntax, commands, formatting, an
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 10/7/2020
+ms.date: 10/8/2020
 ---
 
 # Packet Monitor \(PacketMon\) - Vibranium builds
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10
 
 Packet Monitor (PacketMon) is an in-box cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, since it provides visibility within the networking stack. PacketMon is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands, formatting, and output.
-
->[!NOTE]
->This same version is also going to be backported to Windows 10 and Windows Server version 1809 (RS5).
 
 ## Get started
 
@@ -23,27 +20,27 @@ Use the following steps to get started in generic scenarios:
 Identify the type of packets needed for the capture, i.e. specific IP addresses, ports, or protocols associated with the packet. Then, check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
 
 ```PowerShell
-PS C:\Test> pktmon filter add help
-PS C:\Test> pktmon filter add <filters>
+C:\Test> pktmon filter add help
+C:\Test> pktmon filter add <filters>
 ```
 
 Start the capture and enable packet logging.
 
 ```PowerShell
-PS C:\Test> pktmon start --etw
+C:\Test> pktmon start --etw
 ```
 
 Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high level view of how the traffic flowed in the machine.
 
 ```PowerShell
-PS C:\Test> pktmon counters
+C:\Test> pktmon counters
 ```
 
 Stop the capture and retrieve the logs in txt format for analysis.
 
 ```PowerShell
-PS C:\Test> pktmon stop
-PS C:\Test> pktmon format <etl file>
+C:\Test> pktmon stop
+C:\Test> pktmon format <etl file>
 ```
 
 See Analyze PacketMon TXT output (below) for analyzing output.
@@ -55,8 +52,8 @@ It's highly recommended to apply filters before starting any packet capture sinc
 For example, the following set of filters will capture any ICMP traffic from or to the IP address 10.0.0.10 as well as any traffic on port 53.
 
 ```PowerShell
-PS C:\Test> pktmon filter add -i 10.0.0.10 -t icmp
-PS C:\Test> pktmon filter add -p 53
+C:\Test> pktmon filter add -i 10.0.0.10 -t icmp
+C:\Test> pktmon filter add -p 53
 ```
 
 ### Filtering capability
@@ -66,7 +63,7 @@ PacketMon supports filtering by MAC Addresses, IP Addresses, Ports, EtherType, T
 For example, the following filter will capture all the SYN packets sent or received by the IP address 10.0.0.10:
 
 ```PowerShell
-PS C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
+C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
 ```
 
 PacketMon can apply a filter to encapsulated inner packets, in addition to the outer packet if the [-e] flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
@@ -74,7 +71,7 @@ PacketMon can apply a filter to encapsulated inner packets, in addition to the o
 ### Pktmon filters syntax
 
 ```PowerShell
-PS C:\Test> pktmon filter help
+C:\Test> pktmon filter help
 pktmon filter { list | add | remove } [OPTIONS | help]
 
 Commands
@@ -85,7 +82,7 @@ Commands
 help
     Show help text for a command.
 
-PS C:\Test> pktmon filter add help
+C:\Test> pktmon filter add help
 pktmon filter add <name> [-m mac [mac2]] [-v vlan] [-d { IPv4 | IPv6 | number }]
                          [-t { TCP [flags...] | UDP | ICMP | ICMPv6 | number }]
                          [-i ip [ip2]] [-p port [port2]] [-e [port]]
@@ -151,13 +148,13 @@ Select components to monitor through the **[-c]** parameter. It can be all compo
 For example, the following command will capture packet counters of all the network adapters without logging packets:
 
 ```PowerShell
-PS C:\Test> pktmon start -c nics
+C:\Test> pktmon start -c nics
 ```
 
 However, the following command will capture only the dropped packets that pass through components 4 and 5, and log them:
 
 ```PowerShell
-PS C:\Test> pktmon start --etw -c 4,5 -d
+C:\Test> pktmon start --etw -c 4,5 -d
 ```
 
 ### Packet logging capability
@@ -176,7 +173,7 @@ Specify the size of the log file through the **[-s]** parameter. This will be th
 ### Pktmon start syntax
 
 ```PowerShell
-PS C:\Test> pktmon start help
+C:\Test> pktmon start help
 pktmon start [-c { all | nics | [ids...] }] [-d] [--etw [-p size] [-k keywords]]
              [-f] [-s] [--log-mode {circular | multi-file | real-time | memory}]
     Start packet monitoring.
@@ -254,7 +251,7 @@ PacketMon generates log files in ETL format. There are multiple ways to format t
 ### Pktmon format syntax
 
 ```PowerShell
-PS C:\Test> pktmon format help
+C:\Test> pktmon format help
 pktmon format log.etl [-o log.txt] [-b] [-v [level]] [-x] [-e] [-l [port]
     Convert log file to text format.
 
@@ -284,7 +281,7 @@ Network packet formatting options
 
 Example: pktmon format C:\tmp\PktMon.etl
 
-PS C:\Test> pktmon pcapng help
+C:\Test> pktmon pcapng help
 pktmon pcapng log.etl [-o log.pcapng]
     Convert log file to pcapng format.
     Dropped packets are not included by default.
@@ -343,7 +340,7 @@ As shown through these examples, the counters could provide a lot of information
 ### Pktmon counters syntax
 
 ```PowerShell
-PS C:\Test> pktmon counters help
+C:\Test> pktmon counters help
 pktmon [comp] counters [-t { all | drop | flow }] [-z] [--json]
     Display current per-component counters.
 
@@ -371,7 +368,7 @@ The command shows networking components (drivers) arranged by adapters bindings.
 
 A typical binding consists of:
 
-A single network adapter (NIC)
+A single network interface card (NIC)
 A few (possibly zero) filter drivers
 One or more protocol drivers (TCPIP or others)
 
@@ -383,7 +380,7 @@ Each component is uniquely identified by a PacketMon component ID, which are use
 ### Pktmon List Syntax
 
 ```powershell
-PS C:\Test> pktmon list help
+C:\Test> pktmon list help
 pktmon [comp] list
     List all active components.
 
