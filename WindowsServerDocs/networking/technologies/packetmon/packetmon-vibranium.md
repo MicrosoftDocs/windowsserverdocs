@@ -9,7 +9,7 @@ ms.date: 10/8/2020
 
 # Packet Monitor \(PacketMon\) - Vibranium builds
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Packet Monitor (PacketMon) is an in-box cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, since it provides visibility within the networking stack. PacketMon is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands, formatting, and output.
 
