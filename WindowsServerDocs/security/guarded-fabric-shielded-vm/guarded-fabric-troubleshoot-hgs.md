@@ -4,8 +4,9 @@ ms.topic: article
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill
 author: rpsqrd
+description: Resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
 ms.author: ryanpu
-ms.date: 09/25/2019
+ms.date: 10/12/2020
 ---
 
 # Troubleshooting the Host Guardian Service
