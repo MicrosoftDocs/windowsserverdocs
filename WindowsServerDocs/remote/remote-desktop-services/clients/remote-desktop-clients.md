@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-You can use a Microsoft Remote Desktop (RD) client on your mobile smartphone to connect to a remote PC. Through the smartphone client, you operate the apps that are installed on the PC. This client gives you the same powers you would have if you could reach the PC's keyboard. And you can leave the apps open when you end the client.
+You can use a Microsoft Remote Desktop client on your mobile smartphone to connect to a remote PC. Through the smartphone client, you operate the apps that are installed on the PC. This client gives you the same powers you would have if you could reach the PC's keyboard. And you can leave the apps open when you end the client.
 
 Before you start, see the [supported configuration](remote-desktop-supported-config.md) article. The article discusses the PCs that you can connect to by using the Remote Desktop clients. Also see the [client FAQ](remote-desktop-client-faq.md) article.
 
