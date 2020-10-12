@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -32,6 +32,7 @@ Download: Windows [64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Fixed a failure to enumerate audio or video devices in Teams when media optimization for Teams is enabled.
 - Added a "Need help with settings?" link to the desktop settings page.
 - Fixed an issue with the "Subscribe" button that happened when using high-contrast dark themes.
+- A limit of up to 20 credentials per app is allowed.
 
 ## Updates for version 1.2.1275
 
