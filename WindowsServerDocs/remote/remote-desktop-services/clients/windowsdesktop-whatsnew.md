@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/09/2020
+ms.date: 10/13/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,7 +19,17 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.1364        |1.2.945                   |
-|Insider    |1.2.1364        |1.2.945                   |
+|Insider    |1.2.1440        |1.2.945                   |
+
+## Updates for version 1.2.1440 (Insiders)
+
+*Date published: 10/13/2020*
+
+Download: Windows [64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- The client now distinguishes between different feeds in the Connection Center.
+- Fixed an issue where the subscription account doesn't match the account the user signed in with.
+- Fixed an issue with Smartcard redirection.
 
 ## Updates for version 1.2.1364
 
