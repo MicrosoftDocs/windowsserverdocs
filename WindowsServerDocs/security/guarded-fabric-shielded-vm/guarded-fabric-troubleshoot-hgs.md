@@ -13,7 +13,7 @@ ms.date: 10/12/2020
 
 > Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic describes resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
+This article describes resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
 If you are unsure of the nature of your problem, first try running the [guarded fabric diagnostics](guarded-fabric-troubleshoot-diagnostics.md) on your HGS servers and Hyper-V hosts to narrow down the potential causes.
 
 ## Certificates
@@ -41,10 +41,10 @@ If you are using a self-signed certificate or a certificate issued by a certific
 1. Open local certificate manager (certlm.msc)
 2. Expand **Personal > Certificates** and find the signing or encryption certificate that you want to update.
 3. Right-click the certificate and select **All Tasks > Manage Private Keys**.
-4. Click **Add** to grant a new user access to the certificate's private key.
-5. In the object picker, enter the gMSA account name for HGS found earlier, then click **OK**.
+4. Select **Add** to grant a new user access to the certificate's private key.
+5. In the object picker, enter the gMSA account name for HGS found earlier, then select **OK**.
 6. Ensure the gMSA has **Read** access to the certificate.
-7. Click **OK** to close the permission window.
+7. Select **OK** to close the permission window.
 
 If you are running HGS on Server Core or are managing the server remotely, you will not be able to manage private keys using the local certificate manager.
 Instead, you will need to download the [Guarded Fabric Tools PowerShell module](https://www.powershellgallery.com/packages/GuardedFabricTools) which will allow you to manage the permissions in PowerShell.
@@ -147,7 +147,7 @@ It is advised that you do not remove any policies allowing hosts from the previo
 
 **Known issue when switching from TPM to AD mode**
 
-If you initialized your HGS cluster in TPM mode and later switch to Active Directory mode, there is a known issue which will prevent other nodes in your HGS cluster from switching to the new attestation mode.
+If you initialized your HGS cluster in TPM mode and later switch to Active Directory mode, there is a known issue that prevents other nodes in your HGS cluster from switching to the new attestation mode.
 To ensure all HGS servers are enforcing the correct attestation mode, run `Set-HgsServer -TrustActiveDirectory` **on each node** of your HGS cluster.
 This issue does not apply if you are switching from TPM mode to AD mode *and* the cluster was originally set up in AD mode.
 
