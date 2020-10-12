@@ -40,8 +40,8 @@ If you are using a self-signed certificate or a certificate issued by a certific
 
 1. Open local certificate manager (certlm.msc)
 2. Expand **Personal > Certificates** and find the signing or encryption certificate that you want to update.
-3. Right click the certificate and select **All Tasks > Manage Private Keys**.
-4. Click **Add** to grant a new user access to the certiciate's private key.
+3. Right-click the certificate and select **All Tasks > Manage Private Keys**.
+4. Click **Add** to grant a new user access to the certificate's private key.
 5. In the object picker, enter the gMSA account name for HGS found earlier, then click **OK**.
 6. Ensure the gMSA has **Read** access to the certificate.
 7. Click **OK** to close the permission window.
@@ -114,7 +114,7 @@ Key Usage    | Encryption/Encrypt/DataEncipherment
 
 **Active Directory Certificate Services Templates**
 
-If you are using Active Directory Certificate Services (ADCS) certificate templates to create the certificates it is recommended you use a template with the following settings:
+If you are using Active Directory Certificate Services (ADCS) certificate templates to create the certificates, we recommended you use a template with the following settings:
 
 ADCS Template Property | Required Value
 -----------------------|---------------
@@ -147,7 +147,7 @@ It is advised that you do not remove any policies allowing hosts from the previo
 
 **Known issue when switching from TPM to AD mode**
 
-If you intialized your HGS cluster in TPM mode and later switch to Active Directory mode, there is a known issue which will prevent other nodes in your HGS cluster from switching to the new attestation mode.
+If you initialized your HGS cluster in TPM mode and later switch to Active Directory mode, there is a known issue which will prevent other nodes in your HGS cluster from switching to the new attestation mode.
 To ensure all HGS servers are enforcing the correct attestation mode, run `Set-HgsServer -TrustActiveDirectory` **on each node** of your HGS cluster.
 This issue does not apply if you are switching from TPM mode to AD mode *and* the cluster was originally set up in AD mode.
 
@@ -178,7 +178,7 @@ After installing the root and intermediate certificates, you should be able to r
 
 ## Group managed service account (gMSA) privileges
 
-HGS service account (gMSA used for Key Protection Service application pool in IIS) needs to be gratned [Generate security audits](/windows/security/threat-protection/security-policy-settings/generate-security-audits) privilege, also known as `SeAuditPrivilege`. If this privilege is missing, initial HGS configuration succeeds and IIS starts, however the Key Protection Service is non-functional and returns HTTP error 500 _(“Server Errror in /KeyProtection Application”)._ You may also observe the following warning messages in Application event log.
+HGS service account (gMSA used for Key Protection Service application pool in IIS) needs to be granted [Generate security audits](/windows/security/threat-protection/security-policy-settings/generate-security-audits) privilege, also known as `SeAuditPrivilege`. If this privilege is missing, initial HGS configuration succeeds and IIS starts, however the Key Protection Service is non-functional and returns HTTP error 500 _(“Server Error in /KeyProtection Application”)._ You may also observe the following warning messages in Application event log.
 ```
 System.ComponentModel.Win32Exception (0x80004005): A required privilege is not held by the client
 at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.NativeUtility.RegisterAuditSource(String pszSourceName, SafeAuditProviderHandle& phAuditProvider)
