@@ -13,13 +13,13 @@ ms.localizationpriority: medium
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-You can use a Microsoft Remote Desktop (RD) client to connect to a remote PC from your mobile smartphone. You can then operate the apps that are installed on the PC just as if you were sitting at the PC's keyboard. You can leave the apps open when you terminate the RD connection.
+You can use a Microsoft Remote Desktop (RD) client on your mobile smartphone to connect to a remote PC. Through the smartphone client, you operate the apps that are installed on the PC. This client gives you the same powers you would have if you could reach the PC's keyboard. And you can leave the apps open when you end the client.
 
 Before you start, see the [supported configuration](remote-desktop-supported-config.md) article. The article discusses the PCs that you can connect to by using the Remote Desktop clients. Also see the [client FAQ](remote-desktop-client-faq.md) article.
 
 The following client apps are available:
 
-| Device          | Get the app                                                                                                  | Set up instructions                                                                |
+| Device          | Get the app                                                                                                  | Set-up instructions                                                                |
 |-----------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client)                                               | [Get started with the Windows Desktop client](windowsdesktop.md) |
 | Windows Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709)                   | [Get started with the Microsoft Store Client](windows.md)          |
