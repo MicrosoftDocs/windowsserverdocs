@@ -89,7 +89,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 - The Unsubscribe prompt now displays a warning icon and shows the workspace names as a bulleted list.
 - Added the details section to additional error dialogs to help diagnose issues.
 - Added a timestamp to the details section of error dialogs.
-- Fixed an issue where the RDP file setting **desktop size id** didn't work properly.
+- Fixed an issue where the RDP file setting **desktop size ID** didn't work properly.
 - Fixed an issue where the **Update the resolution on resize** display setting didn't apply after launching the session.
 - Fixed localization issues in the desktop settings panel.
 - Fixed the size of the focus box when tabbing through controls on the desktop settings panel.
