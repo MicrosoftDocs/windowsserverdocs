@@ -18,7 +18,7 @@ Disconnects a session from a Remote Desktop Session Host server. If you don't sp
 > You must have **Full Control access** permission or **Disconnect special access** permission to disconnect another user from a session.
 
 > [!NOTE]
-> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server 2012](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11)) in the Windows Server TechNet Library.
+> To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 
