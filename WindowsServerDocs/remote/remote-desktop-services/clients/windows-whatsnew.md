@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/02/2020
+ms.date: 10/14/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Microsoft Store Client
@@ -27,6 +27,7 @@ We regularly update the [Microsoft Store Client](windows.md), adding new feature
 - Updated subscription can now detect whether you're using Windows Virtual Desktop or Windows Virtual Desktop (classic).
 - Fixed issue with copying files to remote PCs.
 - Fixed commonly reported accessibility issues with buttons.
+- A limit of up to 20 credentials per app is allowed.
 
 ## Updates for version 10.1.1215
 
