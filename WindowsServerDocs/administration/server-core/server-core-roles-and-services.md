@@ -73,7 +73,7 @@ The Server Core installation option includes the following role services.
 | Remote Access                         | DirectAccess and VPN (RAS)                                     | DirectAccess-VPN        | N                     |
 |                                       | Routing                                                        | Routing                 | N                     |
 |                                       | Web Application Proxy                                          | Web-Application-Proxy   | N                     |
-| Remote Desktop Services               | Remote Desktop Connection Broker                               | RDS-Connection-Broker   | N                     |
+| Remote Desktop Services               | Remote Desktop Connection Broker*                               | RDS-Connection-Broker   | N                     |
 |                                       | Remote Desktop Licensing                                       | RDS-Licensing           | N                     |
 |                                       | Remote Desktop Virtualization Host                             | RDS-Virtualization      | N                     |
 | Web Server (IIS)                      | Web Server                                                     | Web-WebServer           | N                     |
@@ -234,3 +234,5 @@ The Server Core installation option includes the following features.
 | WINS Server                                            | WINS                               | N                     |
 | WoW64 Support                                          | WoW64-Support                      | Y                     |
 |                                                        |                                    |                       |
+
+*Services indicated with a * are no longer available in server core starting with Server 2019 1903.
