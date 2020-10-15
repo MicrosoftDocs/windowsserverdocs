@@ -235,4 +235,4 @@ The Server Core installation option includes the following features.
 | WoW64 Support                                          | WoW64-Support                      | Y                     |
 |                                                        |                                    |                       |
 
-*Services indicated with a * are no longer available in server core starting with Server 2019 1903.
+*Services indicated with a * are no longer available in server core starting with Server 2019 1803.
