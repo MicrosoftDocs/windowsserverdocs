@@ -22,7 +22,7 @@ TPM mode uses a TPM identifier (also called a platform identifier or endorsement
 
     -  This is applicable to all Hyper-V hosts that run on the same class of hardware
 
-3.  Code integrity policy (a whitelist of allowed binaries)
+3.  Code integrity policy (an allowlist of allowed binaries)
 
     -  This is applicable to all Hyper-V hosts that share common hardware and software
 

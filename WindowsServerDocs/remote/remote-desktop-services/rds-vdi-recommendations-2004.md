@@ -112,7 +112,7 @@ Please consider supportability when altering default Windows settings. Occasiona
 
 You can use your favorite search engine with the terms `"start value" site:support.microsoft.com` to bring up known issues regarding default start values for services.
 
-You may note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings in a supported and robust manner, start with the project known as "**AaronLocker**", which can be found at [ANNOUNCING: Application whitelisting with "AaronLocker"](https://blogs.msdn.microsoft.com/aaron_margosis/2018/06/26/announcing-application-whitelisting-with-aaronlocker/)
+You might note that this document and the associated scripts on GitHub do not modify any default permissions. If you are interested in increasing your security settings, start with the project known as **AaronLocker**. For more information, see ["AaronLocker" overview](https://github.com/microsoft/AaronLocker).
 
 ### Virtual desktop optimization categories
 

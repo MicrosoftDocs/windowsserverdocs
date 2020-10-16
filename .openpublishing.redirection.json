@@ -6341,6 +6341,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/windows-commands/tsecimp_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/tsecimp.md",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/management/windows-commands/the-uninitialize-server-option.md",
       "redirect_url": "/windows-server/administration/windows-commands/the-uninitialize-server-option",
       "redirect_document_id": true
@@ -6356,18 +6361,23 @@
       "redirect_document_id": true
     },
     {
+    "source_path": "WindowsServerDocs/administration/windows-commands/timeout_1.md",
+    "redirect_url": "/windows-server/administration/windows-commands/timeout",
+    "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/title_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/title",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/tracerpt_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/tracerpt",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/management/windows-commands/time.md",
       "redirect_url": "/windows-server/administration/windows-commands/time",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/timeout_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/timeout_1",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/title_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/title_1",
       "redirect_document_id": true
     },
     {
@@ -6378,11 +6388,6 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/tpmvscmgr.md",
       "redirect_url": "/windows-server/administration/windows-commands/tpmvscmgr",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/management/windows-commands/tracerpt_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/tracerpt_1",
       "redirect_document_id": true
     },
     {
@@ -6666,8 +6671,18 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/windows-commands/verify_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/verify",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-device-command.md",
       "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/where_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/where",
       "redirect_document_id": false
     },
     {
@@ -8773,6 +8788,11 @@
     {
       "source_path": "WindowsServerDocs/administration/windows-commands/add_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/add",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/unlodctr_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/unlodctr",
       "redirect_document_id": false
     },
     {
