@@ -1,57 +1,60 @@
 {
-	"build": {
-		"content": [{
-			"files": [
-				"**/*.md",
-				"**/*.yml"
-			],
-			"exclude": [
-				"**/obj/**",
-				"**/includes/**",
-				"_themes/**",
-				"_themes.pdf/**",
-				"**/docfx.json",
-				"_repo.en-us/**",
-				"README.md",
-				"LICENSE",
-				"LICENSE-CODE",
-				"ThirdPartyNotices.md"
-			]
-		}],
-		"resource": [{
-			"files": [
-				"**/*.png",
-				"**/*.jpg"
-			],
-			"exclude": [
-				"**/obj/**",
-				"**/includes/**",
-				"_themes/**",
-				"_themes.pdf/**",
-				"**/docfx.json",
-				"_repo.en-us/**"
-			]
-		}],
-		"overwrite": [],
-		"externalReference": [],
-		"globalMetadata": {
-			"breadcrumb_path": "/windows/release-information/breadcrumb/toc.json",
-			"ms.prod": "w10",
-      			"ms.date": "4/30/2019",
-      			"audience": "ITPro",
-      			"titleSuffix": "Windows Release Information",
-			"extendBreadcrumb": true,
-			"feedback_system": "None",
-			"_op_documentIdPathDepotMapping": {
-				"./": {
-					"depot_name": "TechNet.release-information",
-					"folder_relative_path_in_docset": "./"
-				}
-			}
-		},
-		"fileMetadata": {},
-		"template": [],
-		"dest": "rel-info",
-		"markdownEngineName": "markdig"
-	}
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+	"contributors_to_exclude": ["DocsPreview", "direeshk", "ShenLanJohn", "greglin"],
+      "breadcrumb_path": "/windows/release-information/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "feedback_system": "None",
+	  "hide_comments": true
+    },
+    "fileMetadata": {
+      "open_to_public_contributors": {
+        "docs/windows/release-information/**.md": false
+      },
+	   "hideEdit": {
+        "/windows/**/*.md": true
+      }
+	  },
+    "template": [],
+    "dest": "rel-info",
+    "markdownEngineName": "markdig"
+  }
 }
