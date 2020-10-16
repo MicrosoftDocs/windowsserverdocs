@@ -821,7 +821,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [wdsutil](wdsutil.md)
 - [wecutil](wecutil.md)
 - [wevtutil](wevtutil.md)
-- [where](where_1.md)
+- [where](where.md)
 - [whoami](whoami.md)
 - [winnt](winnt.md)
 - [winnt32](winnt32.md)

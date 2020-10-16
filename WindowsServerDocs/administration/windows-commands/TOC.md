@@ -781,7 +781,7 @@
 #### [wdsutil verbose](wdsutil-verbose.md)
 ### [wecutil](wecutil.md)
 ### [wevtutil](wevtutil.md)
-### [where](where_1.md)
+### [where](where.md)
 ### [whoami](whoami.md)
 ### [winnt](winnt.md)
 ### [winnt32](winnt32.md)

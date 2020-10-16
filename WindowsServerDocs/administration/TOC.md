@@ -62,11 +62,11 @@
 #### [Manage User Access Logging](user-access-logging/manage-user-access-logging.md)
 
 ## Tune your Windows Server performance
-### [Performance Tuning Guidelines](performance-tuning/index.md) 
+### [Performance Tuning Guidelines](performance-tuning/index.md)
 ### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
 #### [Server Performance Advisor User's Guide](server-performance-advisor/server-performance-advisor-users-guide.md)
 #### [Server Performance Advisor Pack Development Guide](server-performance-advisor/server-performance-advisor-pack-development-guide.md)
 
 ## Automate Windows Server management
-### [Windows PowerShell scripting](/powershell/scripting/powershell-scripting?view=powershell-5.1)
+### [Windows PowerShell scripting](/powershell/scripting/overview)
 ### [Windows Commands](windows-commands/windows-commands.md)

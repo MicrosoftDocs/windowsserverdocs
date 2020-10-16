@@ -6681,6 +6681,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/administration/windows-commands/where_1.md",
+      "redirect_url": "/windows-server/administration/windows-commands/where",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/administration/windows-commands/using-the-add-drivergroup-command.md",
       "redirect_url": "/windows-server/administration/windows-commands/wdsutil-add-drivergroup",
       "redirect_document_id": false

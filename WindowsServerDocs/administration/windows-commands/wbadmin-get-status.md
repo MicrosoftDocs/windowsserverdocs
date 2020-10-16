@@ -1,6 +1,6 @@
 ---
 title: wbadmin get status
-description: Reference article for wbadmin get status, which reports the status of the backup or recovery operation that is currently running.
+description: Reference article for the wbadmin get status command, which reports the status of the backup or recovery operation that is currently running.
 ms.topic: reference
 ms.assetid: 2911b944-7b95-46aa-8c1e-1d55a2fcc94c
 ms.author: lizross
@@ -11,11 +11,12 @@ ms.date: 10/16/2017
 
 # wbadmin get status
 
-
-
 Reports the status of the backup or recovery operation that is currently running.
 
-To use this subcommand, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt. (To open an elevated command prompt right-click **Command Prompt**, and then click **Run as administrator**.)
+To get the status of the currently running backup or recovery operation using this command, you must be a member of the **Backup Operators** group or the **Administrators** group, or you must have been delegated the appropriate permissions. In addition, you must run **wbadmin** from an elevated command prompt, by right-clicking **Command Prompt**, and then selecting **Run as administrator**.
+
+> [!IMPORTANT]
+> This command doesn't stop until the backup or recovery operation is finished. The command continues to run even if you close the command window. To stop the current backup or recovery operation, run the [wbadmin stop job](wbadmin-stop-job.md) command.
 
 ## Syntax
 
@@ -23,17 +24,12 @@ To use this subcommand, you must be a member of the **Backup Operators** group o
 wbadmin get status
 ```
 
-### Parameters
-
-This subcommand has no parameters.
-
-## Remarks
-
--   This subcommand will not stop until the current backup or recovery operation is finished—the subcommand will continue to run even if you close the command window.
--   If you want to stop the current backup or recovery operation, use the **wbadmin stop job** subcommand.
-
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Wbadmin](wbadmin.md)
--   [Get-WBJob](/powershell/module/windowserverbackup/?view=winserver2012r2-ps) cmdlet
+
+- [wbadmin command](wbadmin.md)
+
+- [wbadmin stop job command](wbadmin-stop-job.md)
+
+- [Get-WBJob](/powershell/module/windowserverbackup/Get-WBJob)
