@@ -40,7 +40,7 @@ PowerShell was designed to extend the capabilities of the Command shell to run P
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
 > [!NOTE]
->You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
+>You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6&preserve-view=true), the open source version of PowerShell.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
@@ -764,17 +764,17 @@ To find information about a specific command, in the following A-Z menu, click t
   - [telnet unset](telnet-unset.md)
 - [tftp](tftp.md)
 - [time](time.md)
-- [timeout](timeout_1.md)
-- [title](title_1.md)
+- [timeout](timeout.md)
+- [title](title.md)
 - [tlntadmn](tlntadmn.md)
 - [tpmtool](tpmtool.md)
 - [tpmvscmgr](tpmvscmgr.md)
-- [tracerpt](tracerpt_1.md)
+- [tracerpt](tracerpt.md)
 - [tracert](tracert.md)
 - [tree](tree.md)
 - [tscon](tscon.md)
 - [tsdiscon](tsdiscon.md)
-- [tsecimp](tsecimp_1.md)
+- [tsecimp](tsecimp.md)
 - [tskill](tskill.md)
 - [tsprof](tsprof.md)
 - [type](type.md)
@@ -785,13 +785,13 @@ To find information about a specific command, in the following A-Z menu, click t
 
 - [unexpose](unexpose.md)
 - [uniqueid](uniqueid.md)
-- [unlodctr](unlodctr_1.md)
+- [unlodctr](unlodctr.md)
 
 ### V
 
 - [ver](ver.md)
 - [verifier](verifier.md)
-- [verify](verify_1.md)
+- [verify](verify.md)
 - [vol](vol.md)
 - [vssadmin](vssadmin.md)
   - [vssadmin delete shadows](vssadmin-delete-shadows.md)
@@ -821,7 +821,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [wdsutil](wdsutil.md)
 - [wecutil](wecutil.md)
 - [wevtutil](wevtutil.md)
-- [where](where_1.md)
+- [where](where.md)
 - [whoami](whoami.md)
 - [winnt](winnt.md)
 - [winnt32](winnt32.md)
