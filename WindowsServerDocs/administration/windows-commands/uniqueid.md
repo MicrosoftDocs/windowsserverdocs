@@ -23,8 +23,8 @@ uniqueid disk [id={<dword> | <GUID>}] [noerr]
 
 | Parameter | Description |
 |--|--|
-| id=`{<dword> | <GUID>}` | For MBR disks, this parameter specifies a four-byte (DWORD) value in hexadecimal form for the signature. For GPT disks, this parameter specifies a GUID for the identifier. |
-| noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
+| id=`{<dword> | <GUID>}` | For MBR disks, this parameter specifies a 4-byte (DWORD) value in hexadecimal form for the signature. For GPT disks, this parameter specifies a GUID for the identifier. |
+| noerr | For scripting only. When an error occurs, DiskPart continues to process commands as if the error didn't occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
 ## Examples
 
