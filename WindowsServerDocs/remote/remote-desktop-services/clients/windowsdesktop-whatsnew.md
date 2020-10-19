@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/13/2020
+ms.date: 10/14/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -42,7 +42,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Fixed a failure to enumerate audio or video devices in Teams when media optimization for Teams is enabled.
 - Added a "Need help with settings?" link to the desktop settings page.
 - Fixed an issue with the "Subscribe" button that happened when using high-contrast dark themes.
-- A limit of up to 20 credentials per app is allowed.
 
 ## Updates for version 1.2.1275
 
@@ -90,7 +89,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 - The Unsubscribe prompt now displays a warning icon and shows the workspace names as a bulleted list.
 - Added the details section to additional error dialogs to help diagnose issues.
 - Added a timestamp to the details section of error dialogs.
-- Fixed an issue where the RDP file setting **desktop size id** didn't work properly.
+- Fixed an issue where the RDP file setting **desktop size ID** didn't work properly.
 - Fixed an issue where the **Update the resolution on resize** display setting didn't apply after launching the session.
 - Fixed localization issues in the desktop settings panel.
 - Fixed the size of the focus box when tabbing through controls on the desktop settings panel.
