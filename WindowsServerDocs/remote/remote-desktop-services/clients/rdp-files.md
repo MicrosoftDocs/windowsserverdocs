@@ -38,8 +38,8 @@ The table also highlights which settings are supported as custom properties with
 | RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | autoreconnection enabled:i:value | Determines whether the client will automatically try to reconnect to the remote computer if the connection is dropped, such as when there's a network connectivity interruption. | - 0: Client does not automatically try to reconnect</br>- 1: Client automatically tries to reconnect | 1 | Yes |
-| bandwidthautodetect:i:value | Determines whether automatic network type detection is enabled | - 0: Disable automatic network type detection</br>- 1: Enable automatic network type detection | 1 | Yes |
-| networkautodetect:i:value | Determines whether or not to use automatic network bandwidth detection. Requires bandwidthautodetect to be set to 1. | - 0: Don't use automatic network bandwidth detection</br> - 1: Use automatic network bandwidth detection | 1 | Yes |
+| bandwidthautodetect:i:value | Determines whether or not to use automatic network bandwidth detection. Requires bandwidthautodetect to be set to 1. | - 0: Disable automatic network type detection</br>- 1: Enable automatic network type detection | 1 | Yes |
+| networkautodetect:i:value | Determines whether automatic network type detection is enabled | - 0: Don't use automatic network bandwidth detection</br> - 1: Use automatic network bandwidth detection | 1 | Yes |
 | compression:i:value | Determines whether bulk compression is enabled when it is transmitted by RDP to the local computer.|- 0: Disable RDP bulk compression</br>- 1: Enable RDP bulk compression | 1 | Yes |
 | videoplaybackmode:i:value| Determines if the connection will use RDP-efficient multimedia streaming for video playback.|- 0: Don't use RDP efficient multimedia streaming for video playback</br>- 1: Use RDP-efficient multimedia streaming for video playback when possible | 1 | Yes |
 
