@@ -372,7 +372,7 @@ Registry entry: **Start** REG_DWORD: **4**= Disabled
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation** 
 
-Registry entry: **DependOnService** REG_MULTI_SZ: **"Browser","MRxSmb20″,"NSI"**   
+Registry entry: **DependOnService** REG_MULTI_SZ: **"Bowser","MRxSmb20″,"NSI"**   
 
 > [!NOTE]
 > The default included MRxSMB10 which is now removed as dependency.
@@ -406,7 +406,7 @@ To configure this by using Group Policy, follow these steps:
    - **Value name**: DependOnService
    - **Value type**: REG_MULTI_SZ 
    - **Value data**:
-      - Browser
+      - Bowser
       - MRxSmb20
       - NSI
  
