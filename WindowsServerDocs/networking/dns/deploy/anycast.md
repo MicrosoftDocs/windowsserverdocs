@@ -30,7 +30,7 @@ Anycast DNS works by using routing protocols such as Border Gateway Protocol (BG
 
 With Anycast, servers that exist in multiple geographical locations each advertise a single, identical IP address to their local gateway (router). When a DNS client initiates a query to the Anycast address, the available routes are evaluated, and the DNS query is sent to the preferred location. In general, this is the closest location based on network topology. See the following example.
 
-![Anycast DNS](../../media/Anycast/anycast.png)
+![Four DNS servers, located at different sites, announce the same Anycast IP address to the network](../../media/Anycast/anycast.png)
 
 **Figure 1**: Four DNS servers located at different sites on a network each announce the same Anycast IP address (black arrows) to the network. A DNS client device sends out a request to the Anycast IP address. Network devices analyze the available routes and send the client’s DNS query to the nearest location (blue arrow).
 
@@ -153,7 +153,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 ### Summary diagram
 
-![Anycast DNS](../../media/Anycast/anycast-lab.png)
+![Lab setup for native BGP Anycast DNS demo](../../media/Anycast/anycast-lab.png)
 
 **Figure 2**: Lab setup for native BGP Anycast DNS demo
 
