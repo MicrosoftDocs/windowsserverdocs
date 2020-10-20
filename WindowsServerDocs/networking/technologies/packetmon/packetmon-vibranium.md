@@ -43,7 +43,7 @@ C:\Test> pktmon stop
 C:\Test> pktmon format <etl file>
 ```
 
-See [Analyze Packet Monitor output](#Analyze-packet-monitor-output) for instructions on analyzing txt output.
+See [Analyze Packet Monitor output](#analyze-packet-monitor-output) for instructions on analyzing txt output.
 
 ## Capture filters
 
