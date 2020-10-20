@@ -15,7 +15,7 @@ Find information on known issues for Windows Server 2012. Looking for a specific
 
 |               |               |               |               |
 | ------------- | ------------- | ------------- | ------------- |
-| ![Windows 10, version 2004 is now available](https://docs.microsoft.com/office/media/icons/whats-new-megaphone-blue.png) | **[Windows 10, version 2004 is now available](https://aka.ms/how-to-get-2004)** <br/> Find out how to get the update >| ![What’s new for IT pros](https://docs.microsoft.com/office/media/icons/education-tutorial-blue.png) | **[What’s new for IT pros](https://aka.ms/whats-new-2004)** <br/> Explore the latest features and servicing innovations in Windows 10 >|
+| ![Windows 10, version 20H2 is now available](https://docs.microsoft.com/office/media/icons/whats-new-megaphone-blue.png) | **[Windows 10, version 20H2 is now available](https://aka.ms/how-to-get-20H2)** <br/> Find out how to get the update >| ![What’s new for IT pros](https://docs.microsoft.com/office/media/icons/education-tutorial-blue.png) | **[What’s new for IT pros](https://aka.ms/new-in-20H2)** <br/> Explore the latest features and servicing innovations in Windows 10, version 20H2 >|
 <div align='right' style='font-size:0.87rem'><a class='is-size-7' href='https://docs.microsoft.com/windows/release-information/windows-message-center'>See all messages ></a></div><hr class='cardsM'>
 
 ## Known issues
