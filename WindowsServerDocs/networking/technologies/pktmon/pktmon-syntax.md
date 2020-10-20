@@ -172,7 +172,7 @@ Packet Monitor supports multiple logging modes:
 
 Specify how much of the packet to log through the **[-p]** parameter. Log the whole packet of every packet no matter its size by setting that parameter to 0. The default is 128 bytes which should include the headers of most packets.
 
-Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before PacketMon starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multiple file logging mode before PacketMon creates a new file to log the next packets. Use this parameter also to set the buffer size for the memory logging mode.
+Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before Packet Monitor starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multiple file logging mode before Packet Monitor creates a new file to log the next packets. Use this parameter also to set the buffer size for the memory logging mode.
 
 ### Pktmon start syntax
 
@@ -250,7 +250,7 @@ Packet Monitor generates log files in ETL format. There are multiple ways to for
 - Convert the log to PCAPNG format to analyze it using [Wireshark](https://osgwiki.com/wiki/PacketMon%27s_WireShark_(Pcapng_Format)_Support)*
 - Open the ETL file with [Network Monitor](https://osgwiki.com/wiki/PacketMon%27s_Microsoft_Network_Monitor_(Netmon)_Support)*
 
-*Use the hyperlinks above to learn how to parse and analyze PacketMon's logs in Wireshark and Network Monitor.
+*Use the hyperlinks above to learn how to parse and analyze Packet Monitor's logs in Wireshark and Network Monitor.
 
 ### Pktmon format syntax
 
@@ -311,7 +311,7 @@ For correlating all snapshots of the same packets, monitor the PktGroupId and Pk
 
 <center>
 
-:::image type="content" source="media/pktmon-log-example.png" alt-text="Example of PacketMon's txt log output" border="false":::
+:::image type="content" source="media/pktmon-log-example.png" alt-text="Example of Packet Monitor's txt log output" border="false":::
 
 </center>
 
@@ -322,7 +322,7 @@ At the bottom of each log file, the filters list is presented as shown in the im
 
 <center>
 
-:::image type="content" source="media/pktmon-log-example-components.png" alt-text="Example of PacketMon's txt log output components":::
+:::image type="content" source="media/pktmon-log-example-components.png" alt-text="Example of Packet Monitor's txt log output components":::
 
 </center>
 
@@ -338,7 +338,7 @@ For dropped packets, the word "drop" appears before any of the lines representin
 
 ## Packet counters
 
-Packet Monitor counters provide a high level view of the networking traffic throughout the networking stack without the need to analyze a log, which can be an expensive process. Examine traffic patterns by querying packet counters with **pktmon counters** after starting the PacketMon capture. Reset counters to zero using **pktmon reset** or stop monitoring all together using **pktmon stop**.
+Packet Monitor counters provide a high level view of the networking traffic throughout the networking stack without the need to analyze a log, which can be an expensive process. Examine traffic patterns by querying packet counters with **pktmon counters** after starting the Packet Monitor capture. Reset counters to zero using **pktmon reset** or stop monitoring all together using **pktmon stop**.
 
 - Counters are arranged by binding stacks with network adapters on the top and protocols on the bottom.
 - Tx/Rx: Counters are separated into two columns for Send (Tx) and Receive (Rx) directions.  
@@ -398,10 +398,10 @@ A single network interface card (NIC)
 A few (possibly zero) filter drivers
 One or more protocol drivers (TCPIP or others)
 
-Each component is uniquely identified by a PacketMon component ID, which are used for targeting individual components for monitoring.
+Each component is uniquely identified by a Packet Monitor component ID, which are used for targeting individual components for monitoring.
 
 >[!NOTE]
->IDs are not persistent and may change across reboots and as PacketMon's driver restarts.
+>IDs are not persistent and may change across reboots and as Packet Monitor's driver restarts.
 
 ### Pktmon List Syntax
 
