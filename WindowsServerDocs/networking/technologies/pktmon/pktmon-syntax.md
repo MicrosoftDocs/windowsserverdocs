@@ -19,29 +19,29 @@ Use the following steps to get started in generic scenarios:
 
 1. Identify the type of packets needed for the capture, i.e. specific IP addresses, ports, or protocols associated with the packet. Then, check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
 
-```PowerShell
-C:\Test> pktmon filter add help
-C:\Test> pktmon filter add <filters>
-```
+   ```PowerShell
+   C:\Test> pktmon filter add help
+   C:\Test> pktmon filter add <filters>
+   ```
 
 2. Start the capture and enable packet logging.
 
-```PowerShell
-C:\Test> pktmon start --etw
-```
+   ```PowerShell
+   C:\Test> pktmon start --etw
+   ```
 
 3. Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high-level view of how the traffic flowed in the machine.
 
-```PowerShell
-C:\Test> pktmon counters
-```
+   ```PowerShell
+   C:\Test> pktmon counters
+   ```
 
 4. Stop the capture and retrieve the logs in txt format for analysis.
 
-```PowerShell
-C:\Test> pktmon stop
-C:\Test> pktmon format <etl file>
-```
+   ```PowerShell
+   C:\Test> pktmon stop
+   C:\Test> pktmon format <etl file>
+   ```
 
 See [Analyze Packet Monitor output](#analyze-packet-monitor-output) for instructions on analyzing txt output.
 
@@ -165,14 +165,14 @@ C:\Test> pktmon start --etw -c 4,5 -d
 
 Packet Monitor supports multiple logging modes:
 
-- Circular: new packets overwrite the oldest ones when the maximum file size is reached. This is the default logging mode.
-- Multi-file: new log file is created when the maximum file size is reached. Log files are sequentially numbered: PktMon1.etl, PktMon2.etl, etc. Apply this logging mode to keep all the log, but be wary of storage utilization. Note: use the file creation timestamp of each log file as an indication to a specific time frame in the capture.
-- Real-time: packets are displayed on screen at real time. No log file is created. Use Ctrl+C to stop monitoring.
-- Memory: events are written to a circular memory buffer. Buffer size is specified in **[-s]** parameter. Buffer contents is written to a log file after stopping the capture. Use this logging mode for very noisy scenarios to capture a huge amount of traffic in very short amount of time in the memory buffer. Otherwise, some traffic might get lost using any other logging modes in very noisy scenarios.
+- Circular: New packets overwrite the oldest ones when the maximum file size is reached. This is the default logging mode.
+- Multi-file: A new log file is created when the maximum file size is reached. Log files are sequentially numbered: PktMon1.etl, PktMon2.etl, etc. Apply this logging mode to keep all the log, but be wary of storage utilization. Note: use the file creation timestamp of each log file as an indication to a specific time frame in the capture.
+- Real-time: Packets are displayed on screen at real time. No log file is created. Use Ctrl+C to stop monitoring.
+- Memory: Events are written to a circular memory buffer. Buffer size is specified through the **[-s]** parameter. Buffer contents are written to a log file after stopping the capture. Use this logging mode for very noisy scenarios to capture a huge amount of traffic in very short amount of time in the memory buffer. Using any other logging modes, some traffic might get lost.
 
 Specify how much of the packet to log through the **[-p]** parameter. Log the whole packet of every packet no matter its size by setting that parameter to 0. The default is 128 bytes which should include the headers of most packets.
 
-Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before Packet Monitor starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multiple file logging mode before Packet Monitor creates a new file to log the next packets. Use this parameter also to set the buffer size for the memory logging mode.
+Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before Packet Monitor starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multi-file logging mode before Packet Monitor creates a new file to log the next packets. You can also use this parameter to set the buffer size for the memory logging mode.
 
 ### Pktmon start syntax
 
@@ -307,13 +307,13 @@ Example: pktmon pcapng C:\tmp\PktMon.etl -d -c nics
 Packet Monitor captures a snapshot of the packet by each component of the networking stack. Accordingly, there will be multiple snapshots of each packet (represented in the image below by the lines the blue box).
 Each of these packet snapshots is represented by a couple of lines (red and green boxes). There is at least one line that includes some data about the packet instance starting with the timestamp. Right after, there is at least one line (bolded in the image below) to show the parsed raw packet in text format (without a timestamp); it could be multiple lines if the packet is encapsulated, like the packet in the green box.
 
-For correlating all snapshots of the same packets, monitor the PktGroupId and PktNumber values (highlighted in yellow); all snapshots of the same packet should have these 2 values in common. The Appearance value (highlighted in blue) acts as a counter for each subsequent snapshot of the same packet. For example, the first snapshot of the packet (where the packet first appeared in the networking stack) has the value 1 for appearance, the next snapshot has the value 2, and so on.
-
 <center>
 
 :::image type="content" source="media/pktmon-log-example.png" alt-text="Example of Packet Monitor's txt log output" border="false":::
 
 </center>
+
+For correlating all snapshots of the same packets, monitor the PktGroupId and PktNumber values (highlighted in yellow); all snapshots of the same packet should have these 2 values in common. The Appearance value (highlighted in blue) acts as a counter for each subsequent snapshot of the same packet. For example, the first snapshot of the packet (where the packet first appeared in the networking stack) has the value 1 for appearance, the next snapshot has the value 2, and so on.
 
 Each packet snapshot has a component id (underlined in the image above) denoting the component associated with the snapshot. To resolve the component name, and parameters, search for this component id in the components list at the bottom of the log file. A portion of the components table is shown in the image below highlighting "Component 1" in yellow (this was the component where the last snapshot above was captured).
 Components with 2 edges will report 2 snapshots at each edge (like the snapshots with the Appearance 3 and Appearance 4 for example in the image above).
@@ -394,16 +394,16 @@ The command shows networking components (drivers) arranged by adapters bindings.
 
 A typical binding consists of:
 
-A single network interface card (NIC)
-A few (possibly zero) filter drivers
-One or more protocol drivers (TCPIP or others)
+- A single network interface card (NIC)
+- A few (possibly zero) filter drivers
+- One or more protocol drivers (TCP/IP or others)
 
 Each component is uniquely identified by a Packet Monitor component ID, which are used for targeting individual components for monitoring.
 
 >[!NOTE]
 >IDs are not persistent and may change across reboots and as Packet Monitor's driver restarts.
 
-### Pktmon List Syntax
+### Pktmon list syntax
 
 ```powershell
 C:\Test> pktmon list help
