@@ -225,8 +225,8 @@
 ### [Create a New NIC Team on a host computer or VM](technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
 ### [Troubleshooting NIC Teaming](technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
-## [Packet Monitor (PacketMon)](technologies/packetmon/packetmon.md)
-### [PacketMon - Vibranium builds](technologies/packetmon/packetmon-vibranium.md)
+## [Packet Monitor (Pktmon)](technologies/pktmon/pktmon.md)
+### [Pktmon command syntax and formatting](technologies/pktmon/pktmon-syntax.md)
 
 ## [Quality of Service (QoS) policy](technologies/qos/qos-policy-top.md)
 ### [Getting started with QoS policy](technologies/qos/qos-policy-get-started.md)

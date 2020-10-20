@@ -70,9 +70,9 @@ Below are some of Packet Monitor's most significant limitations.
 
 The following resources are available to help you get started using Packet Monitor.
 
-### Pktmon - Vibranium OS
+### Pktmon command syntax and formatting
 
-Packet Monitor is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands, formatting, and output.
+Packet Monitor is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can [use this topic](pktmon-syntax.md) to learn how to understand pktmon syntax, commands, formatting, and output.
 
 ### Packet Monitoring extension in Windows Admin Center
 
