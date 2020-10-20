@@ -30,7 +30,7 @@ C:\Test> pktmon filter add <filters>
 C:\Test> pktmon start --etw
 ```
 
-3. Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high level view of how the traffic flowed in the machine.
+3. Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high-level view of how the traffic flowed in the machine.
 
 ```PowerShell
 C:\Test> pktmon counters
@@ -145,9 +145,9 @@ Example 3: Subnet filter
 
 ## Packet capture and logging
 
-Packet Monitor can capture networking traffic with or without packet logging. For more information about capturing traffic without packet logging, please check the Packet Counters section below. To capture and log packets, add the **[--etw]** parameter to the start command.
+Packet Monitor can capture networking traffic with or without packet logging. For more information about capturing traffic without packet logging, check the Packet Counters section below. To capture and log packets, add the **[--etw]** parameter to the start command.
 
-Select components to monitor through the **[-c]** parameter. It can be all components, NICs only, or a list of component ids. The defaults is to capture traffic at all components. Monitor dropped packets only with [-d] parameter. The default is to capture flowing and dropped packets.
+Select components to monitor through the **[-c]** parameter. It can be all components, NICs only, or a list of component ids. The default is to capture traffic at all components. Monitor dropped packets only with [-d] parameter. The default is to capture flowing and dropped packets.
 
 For example, the following command will capture packet counters of all the network adapters without logging packets:
 
